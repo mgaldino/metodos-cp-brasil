@@ -1,0 +1,20 @@
+{
+  "subfield": "Public Policy/Administration",
+  "is_empirical_quant_paper": true,
+  "general_goal_of_analysis": "Explain",
+  "evidence_type": "quantitative",
+  "method_status": "explicit",
+  "main_causal_research_design": "Kitchen Sink Linear Model",
+  "makes_explicit_causal_claim": true,
+  "makes_implicit_causal_claim": true,
+  "statement_of_identification_assumptions": false,
+  "placebo_test": false,
+  "references_power_analysis": false,
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "discusses_threats_to_causality": false,
+  "sample_size": null,
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": "structure_systematize",
+  "brief_justification": "This paper investigates the causal effect of the Bolsa Família program on Lula's vote share in the 2006 presidential election using municipal-level data from MDS, IBGE, and TSE. The authors run a regression controlling for city characteristics (urban/rural, population size, etc.) and claim the program was responsible for 45% of Lula's total votes, making an explicit causal claim without formal identification strategy. The analysis uses publicly available administrative data aggregated at the municipality level, not survey data, and the research design is a standard linear regression with controls (kitchen sink approach).",
+  "pid": "S0101-31572009000100007"
+}

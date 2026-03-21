@@ -1,0 +1,20 @@
+{
+  "subfield": "Other",
+  "is_empirical_quant_paper": false,
+  "general_goal_of_analysis": "Describe",
+  "evidence_type": "theoretical-normative",
+  "method_status": "essayistic",
+  "main_causal_research_design": null,
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": false,
+  "statement_of_identification_assumptions": null,
+  "placebo_test": null,
+  "references_power_analysis": null,
+  "mentions_pre_registered_design_and_analysis_plan": null,
+  "discusses_threats_to_causality": null,
+  "sample_size": null,
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": null,
+  "brief_justification": "This article is an essayistic, theoretical analysis of Alan Greenspan's monetary policy strategy ('confidence strategy') contrasted with the mainstream 'credibility strategy.' Published in the Brazilian Journal of Political Economy, it belongs to political economy/macroeconomic policy rather than a core political science subfield. It does not conduct any empirical quantitative analysis, uses no data or formal methods, and relies entirely on interpretive discussion of Greenspan's speeches, testimonies, and secondary literature.",
+  "pid": "S0101-31572006000400002"
+}

@@ -1,0 +1,49 @@
+{
+  "error_in_raw_text": false,
+  "subfield": "public policy",
+  "is_empirical_quant_paper": false,
+  "general_goal_of_analysis": "descriptive",
+  "single_country_study": true,
+  "single_region": null,
+  "countries_of_focus": [
+    "Brazil"
+  ],
+  "paper_uses_survey_data": false,
+  "uses_original_dataset": true,
+  "seeks_determinants": true,
+  "main_causal_research_design": null,
+  "other_research_design": null,
+  "instrumental_variable_instrument": null,
+  "placebo_test": null,
+  "independent_variables": [
+    "government policy preferences",
+    "institutional design strength (law-based vs decree-based)",
+    "policy community insertion"
+  ],
+  "dependent_variables": [
+    "normative status of collegiate bodies (revoked/altered/unchanged)",
+    "activity status (active/inactive)",
+    "activity intensity"
+  ],
+  "main_variable_relationship": "The effect of government preferences and councils' institutional resilience (design strength and policy community insertion) on the deinstitutionalization of participatory councils under Bolsonaro",
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "strong_non_causal_causal_qualification": false,
+  "sample_size": 103,
+  "sample_size_quote": "103 national collegiate bodies",
+  "claims_any_statistically_significant_results": false,
+  "references_power_analysis": false,
+  "clearly_defined_explanatory_variable": true,
+  "clear_causal_quantity_of_interest": false,
+  "specifies_estimate_equations": false,
+  "discusses_threats_to_causality": false,
+  "statement_of_identification_assumptions_quote": null,
+  "statement_of_identification_assumptions": false,
+  "effort_to_explore_mechanisms": true,
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "evidence_type": "observational",
+  "method_status": "qualitative",
+  "qualitative_method": "comparative case study",
+  "brief_justification": "Mixed-methods study of 103 Brazilian federal participatory councils under Bolsonaro (2019-2022). Uses original legal/administrative dataset to classify councils by normative and activity status across policy areas. Develops a typology of institutional resilience based on design strength and policy community insertion. Primarily descriptive/typological with qualitative comparative logic rather than formal quantitative causal inference. Implicit causal claims about government preferences and institutional design driving differential deinstitutionalization, but no regression models, statistical tests, or formal causal design.",
+  "pid": "S0011-52582024000400209"
+}

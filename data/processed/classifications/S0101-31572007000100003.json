@@ -1,0 +1,20 @@
+{
+  "subfield": "Other",
+  "is_empirical_quant_paper": false,
+  "general_goal_of_analysis": "Describe",
+  "evidence_type": "theoretical-normative",
+  "method_status": "essayistic",
+  "main_causal_research_design": null,
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "statement_of_identification_assumptions": null,
+  "placebo_test": null,
+  "references_power_analysis": null,
+  "mentions_pre_registered_design_and_analysis_plan": null,
+  "discusses_threats_to_causality": null,
+  "sample_size": null,
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": null,
+  "brief_justification": "This is a theoretical paper published in the Brazilian Journal of Political Economy that applies Minsky's financial fragility hypothesis to analyze reflex cycles in peripheral Latin American economies (Brazil, Argentina, Mexico) driven by international liquidity. It is primarily a theoretical-analytical piece grounded in Post-Keynesian economics, with no explicit empirical methodology, quantitative data analysis, or formal research design -- it uses theoretical frameworks to describe and interpret macroeconomic phenomena rather than conducting original empirical analysis. The subfield is classified as 'Other' because it is a political economy / macroeconomics paper rather than fitting neatly into standard political science subfields.",
+  "pid": "S0101-31572007000100003"
+}

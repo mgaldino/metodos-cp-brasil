@@ -1,0 +1,20 @@
+{
+  "subfield": "Other",
+  "is_empirical_quant_paper": false,
+  "general_goal_of_analysis": "Explain",
+  "evidence_type": "theoretical-normative",
+  "method_status": "essayistic",
+  "main_causal_research_design": null,
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "statement_of_identification_assumptions": null,
+  "placebo_test": null,
+  "references_power_analysis": null,
+  "mentions_pre_registered_design_and_analysis_plan": null,
+  "discusses_threats_to_causality": null,
+  "sample_size": null,
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": null,
+  "brief_justification": "This is a short theoretical/analytical paper in political economy (published in the Brazilian Journal of Political Economy) that proposes an explanation for why Brazil's inter-bank interest rate is high relative to other emerging economies, arguing that the interplay between bank reserves and government securities markets transmits the public debt risk premium into the inter-bank rate. It contains no empirical data analysis, no figures, tables, or equations, has only 2 references and 8 pages, and reads as an essayistic argument rather than a formal empirical or methodological study. The subfield is classified as 'Other' because it falls under political economy/macroeconomics rather than a standard political science subfield.",
+  "pid": "S0101-31572006000200004"
+}

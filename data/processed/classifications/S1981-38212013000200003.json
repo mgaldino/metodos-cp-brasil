@@ -1,0 +1,47 @@
+{
+  "error_in_raw_text": false,
+  "subfield": "Comparative Politics",
+  "is_empirical_quant_paper": true,
+  "general_goal_of_analysis": "Describe",
+  "single_country_study": "single_country",
+  "single_region": false,
+  "countries_of_focus": [
+    "Brazil"
+  ],
+  "paper_uses_survey_data": true,
+  "uses_original_dataset": true,
+  "seeks_determinants": false,
+  "main_causal_research_design": null,
+  "other_research_design": null,
+  "instrumental_variable_instrument": null,
+  "placebo_test": false,
+  "independent_variables": [
+    "perceptions of justice",
+    "perceptions of inequality",
+    "trust in institutions"
+  ],
+  "dependent_variables": [
+    "dissatisfaction with democracy",
+    "support for judicialization of politics"
+  ],
+  "main_variable_relationship": "The article explores how perceptions of justice and inequality relate to attitudes toward the judiciary and dissatisfaction with democracy in Brazil.",
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": false,
+  "strong_non_causal_causal_qualification": false,
+  "sample_size": null,
+  "sample_size_quote": null,
+  "claims_any_statistically_significant_results": false,
+  "references_power_analysis": false,
+  "clearly_defined_explanatory_variable": false,
+  "clear_causal_quantity_of_interest": false,
+  "specifies_estimate_equations": false,
+  "discusses_threats_to_causality": false,
+  "statement_of_identification_assumptions_quote": null,
+  "statement_of_identification_assumptions": false,
+  "effort_to_explore_mechanisms": false,
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "evidence_type": "quantitative",
+  "method_status": "explicit",
+  "brief_justification": "This is a descriptive empirical paper that uses original survey data from four Brazilian metropolitan regions to explore citizens' perceptions of justice, trust in the judiciary, and dissatisfaction with democracy. It does not employ a causal research design or make causal claims; rather, it describes and explores attitudinal patterns regarding the judicialization of politics in Brazil. The analysis is based on survey responses but the abstract does not indicate regression modeling, causal inference techniques, or significance testing. The paper's goal is to argue descriptively that discontent with political institutions extends to the judiciary, undermining the normative basis for judicialization.",
+  "pid": "S1981-38212013000200003"
+}

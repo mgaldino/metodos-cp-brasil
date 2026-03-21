@@ -1,0 +1,93 @@
+{
+  "error_in_raw_text": "Missing/Corrupt",
+  "subfield": "Comparative Politics",
+  "is_empirical_quant_paper": true,
+  "general_goal_of_analysis": "Explain",
+  "single_country_study": "single_country",
+  "single_region": "single_region",
+  "countries_of_focus": "Brazil",
+  "paper_uses_survey_data": "uses_public_available_survey",
+  "uses_original_dataset": "structure_systematize",
+  "seeks_determinants": true,
+  "main_causal_research_design": "Kitchen Sink Linear Model",
+  "other_research_design": null,
+  "instrumental_variable_instrument": null,
+  "placebo_test": null,
+  "independent_variables": [
+    {
+      "variable_name": "inflation",
+      "variable_description": "Inflation rate"
+    },
+    {
+      "variable_name": "unemployment",
+      "variable_description": "Unemployment rate"
+    },
+    {
+      "variable_name": "exchange_rate",
+      "variable_description": "Exchange rate"
+    },
+    {
+      "variable_name": "c_bond_spread",
+      "variable_description": "C-Bond spread"
+    },
+    {
+      "variable_name": "bovespa_index",
+      "variable_description": "São Paulo Stock Exchange Index (Ibovespa)"
+    }
+  ],
+  "dependent_variables": [
+    {
+      "variable_name": "voting_intention",
+      "variable_description": "Self-reported voting intention for presidential candidates"
+    }
+  ],
+  "main_variable_relationship": [
+    {
+      "iv_var_name": "inflation",
+      "dv_var_name": "voting_intention",
+      "relationship_type": "Unknown",
+      "statistically_significant": true,
+      "substantively_significant": true
+    },
+    {
+      "iv_var_name": "unemployment",
+      "dv_var_name": "voting_intention",
+      "relationship_type": "Unknown",
+      "statistically_significant": true,
+      "substantively_significant": true
+    },
+    {
+      "iv_var_name": "c_bond_spread",
+      "dv_var_name": "voting_intention",
+      "relationship_type": "Unknown",
+      "statistically_significant": false,
+      "substantively_significant": false
+    },
+    {
+      "iv_var_name": "bovespa_index",
+      "dv_var_name": "voting_intention",
+      "relationship_type": "Unknown",
+      "statistically_significant": false,
+      "substantively_significant": false
+    }
+  ],
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "strong_non_causal_causal_qualification": null,
+  "sample_size": null,
+  "sample_size_quote": null,
+  "claims_any_statistically_significant_results": true,
+  "references_power_analysis": false,
+  "clearly_defined_explanatory_variable": true,
+  "clear_causal_quantity_of_interest": null,
+  "specifies_estimate_equations": null,
+  "discusses_threats_to_causality": true,
+  "statement_of_identification_assumptions_quote": null,
+  "statement_of_identification_assumptions": null,
+  "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "evidence_type": "quantitative",
+  "method_status": "explicit",
+  "brief_justification": "The XML contains only metadata (title, abstracts, references) with no article body text, so classification relies on the English and French abstracts. The paper is an empirical quantitative study of economic voting in Brazilian presidential elections (1994, 1998, 2002), testing hypotheses about the relationship between macroeconomic indicators and aggregate voting intentions using time-series data. The abstract describes testing simultaneity between economic indicators and vote intention, consistent with a VAR or similar time-series approach, and concludes that retrospective voting based on economic fundamentals (not financial markets) predominates in Brazil.",
+  "pid": "S0011-52582006000100002"
+}

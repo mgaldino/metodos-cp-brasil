@@ -1,0 +1,75 @@
+{
+  "error_in_raw_text": "No Error",
+  "subfield": "Comparative Politics",
+  "is_empirical_quant_paper": true,
+  "general_goal_of_analysis": "Explain",
+  "single_country_study": "single_country",
+  "single_region": "single_region",
+  "countries_of_focus": "Brazil",
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": "structure_systematize",
+  "seeks_determinants": true,
+  "main_causal_research_design": "Kitchen Sink Linear Model",
+  "other_research_design": null,
+  "instrumental_variable_instrument": null,
+  "placebo_test": false,
+  "independent_variables": [
+    {
+      "variable_name": "Incumbent alignment",
+      "variable_description": "Whether municipal government is aligned with the federal incumbent president/party"
+    },
+    {
+      "variable_name": "Social modernization",
+      "variable_description": "Indicators of urbanization, education, and socioeconomic development at the municipal level"
+    },
+    {
+      "variable_name": "Political pluralism",
+      "variable_description": "Degree of party fragmentation and political competition in the municipality"
+    },
+    {
+      "variable_name": "Social inclusion",
+      "variable_description": "Coverage of social programs (e.g., Bolsa Família) and human development indicators (IDHM)"
+    }
+  ],
+  "dependent_variables": [
+    {
+      "variable_name": "Municipal ideology score",
+      "variable_description": "Vote-revealed ideological position of the municipality, constructed from proportional representation election results weighted by party ideology scores from the Brazilian Legislative Survey"
+    }
+  ],
+  "main_variable_relationship": [
+    {
+      "iv_var_name": "Incumbent alignment",
+      "dv_var_name": "Municipal ideology score",
+      "relationship_type": "Positive",
+      "statistically_significant": true,
+      "substantively_significant": true
+    },
+    {
+      "iv_var_name": "Social inclusion",
+      "dv_var_name": "Municipal ideology score",
+      "relationship_type": "Negative",
+      "statistically_significant": true,
+      "substantively_significant": true
+    }
+  ],
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "strong_non_causal_causal_qualification": false,
+  "sample_size": null,
+  "sample_size_quote": null,
+  "claims_any_statistically_significant_results": true,
+  "references_power_analysis": false,
+  "clearly_defined_explanatory_variable": true,
+  "clear_causal_quantity_of_interest": "FALSE",
+  "specifies_estimate_equations": false,
+  "discusses_threats_to_causality": false,
+  "statement_of_identification_assumptions_quote": null,
+  "statement_of_identification_assumptions": false,
+  "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "evidence_type": "quantitative",
+  "method_status": "explicit",
+  "brief_justification": "This is an empirical quantitative study that constructs a municipal-level ideology index from proportional representation election results in Brazil (1994-2018) and tests four sets of explanatory factors using regression analysis. The paper uses a model-based approach (kitchen sink linear model) without an explicit identification strategy or stated identification assumptions. It makes implicit causal claims by framing incumbency alignment as having a 'gravitational effect' on local ideology, though it does not use explicit causal language such as 'causes' or 'causal effect.'",
+  "pid": "S1981-38212019000100200"
+}
