@@ -1,0 +1,168 @@
+[
+  {
+    "pid": "S0101-31572006000200004",
+    "subfield": "Other",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": null,
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "brief_justification": "Short theoretical/analytical paper in political economy proposing an explanation for Brazil's high inter-bank interest rate. No empirical data analysis."
+  },
+  {
+    "pid": "S0101-31572006000400002",
+    "subfield": "Other",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": false,
+    "brief_justification": "Essayistic analysis of Alan Greenspan's monetary policy strategy. No empirical quantitative analysis."
+  },
+  {
+    "pid": "S0101-31572007000100003",
+    "subfield": "Other",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "brief_justification": "Theoretical paper applying Minsky's financial fragility hypothesis to Latin American reflex cycles."
+  },
+  {
+    "pid": "S0101-31572009000100007",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "brief_justification": "Investigates effect of Bolsa Família on Lula's 2006 vote share using municipal-level regression with controls. Kitchen sink approach without identification strategy."
+  },
+  {
+    "pid": "S0101-31572010000100002",
+    "subfield": "Methodology and Formal Theory",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": null,
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": false,
+    "brief_justification": "Philosophy of science essay on models of scientific explanation in economics."
+  },
+  {
+    "pid": "S0101-31572012000200001",
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Other",
+    "is_empirical_quant_paper": false,
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "brief_justification": "XML contains only metadata, no article body text."
+  },
+  {
+    "pid": "S0101-31572013000100006",
+    "subfield": "Other",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "quantitative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": false,
+    "brief_justification": "Descriptive comparative study of export patterns in Brazil, China, and India using trade data."
+  },
+  {
+    "pid": "S0101-31572014000200004",
+    "subfield": "Political Theory and Philosophy",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Structural-historical analysis of three cycles of development in Brazil."
+  },
+  {
+    "pid": "S0101-31572015000300557",
+    "subfield": "Other",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Conceptual and historical analysis of energy nationalism in the global oil industry."
+  },
+  {
+    "pid": "S0101-31572016000300536",
+    "subfield": "International Relations",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "qualitative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Essayistic qualitative analysis of Brazilian geopolitics and foreign policy regarding South American integration and Pacific projection."
+  },
+  {
+    "pid": "S0101-31572018000300526",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "qualitative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Qualitative policy review of social policies under Lula and Dilma governments (2003-2016)."
+  },
+  {
+    "pid": "S0101-31572019000100039",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "qualitative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Institutional analysis of Brazil's fiscal golden rule. No quantitative analysis."
+  },
+  {
+    "pid": "S0101-31572020000300566",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "theoretical-normative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Advocacy-oriented essay about Universal Basic Income, describing Brazil's legislation and Kenya's UBI experience."
+  },
+  {
+    "pid": "S0101-31572020000400669",
+    "subfield": "Other",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Describe",
+    "evidence_type": "qualitative",
+    "method_status": "essayistic",
+    "main_causal_research_design": null,
+    "brief_justification": "Literature review on effects of capital account liberalization. No original empirical analysis."
+  },
+  {
+    "pid": "S0101-31572022000300572",
+    "subfield": "Other",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "main_causal_research_design": "Instrumental Variable",
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "statement_of_identification_assumptions": true,
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": true,
+    "brief_justification": "Empirical macro paper using 2SLS and GMM to test whether capital flow influences productive investment in Brazil. Acknowledges endogeneity and uses IV."
+  }
+]

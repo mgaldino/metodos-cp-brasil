@@ -6,8 +6,8 @@ Replicação e expansão de Torreblanca et al. (2026) "The Credibility Revolutio
 
 ## Stack
 
-- Python: coleta e classificação (API SciELO + LLM)
-- R: análise e gráficos
+- Python: coleta (API SciELO) e classificação (LLM)
+- **R: análise de dados, visualização e gráficos** (usar R para toda análise, não Python)
 - Dados: `data/raw/`, `data/processed/`
 
 ## Corpus
@@ -82,9 +82,28 @@ Para cada artigo:
 - (a) Status do método: explícito vs. ensaístico/implícito
 - (b) Natureza das evidências: quantitativa, qualitativa, mista, teórico/normativo
 - (c) Objetivo: descritivo, explicativo, preditivo
-- (d) Técnica metodológica principal
+- (d) Técnica metodológica principal (ver lista abaixo)
 - (e) Pretensão de causalidade: explícita, implícita, ausente
 - (f) Declara suposições de identificação
+
+### Técnicas metodológicas (expandido para o contexto brasileiro)
+
+**Quantitativas (design-based):** Field Experiment, Survey Experiment, Lab Experiment, Diff-in-Diff, Instrumental Variable, Regression Discontinuity, Regression Kink, Synthetic Control, Matching/Weighting/Balancing
+
+**Quantitativas (model-based):** Kitchen Sink Linear Model (OLS/Logit sem identificação), time-series (ARMA, VAR, GARCH)
+
+**Qualitativas com método explícito (inspirado em Soares 2005):**
+- Process tracing
+- Estudo de caso comparado
+- QCA / Fuzzy-set QCA
+- Análise de conteúdo (manual ou assistida por software)
+- Análise de discurso
+- Entrevistas focalizadas / semiestruturadas
+- Grupos focais
+- Observação participante / Etnografia
+- Pesquisa documental / arquivística sistemática
+
+**Outras:** Network analysis, text-as-data, agent-based modeling, simulação, meta-análise
 
 ## Vulnerabilidades conhecidas (Devil's Advocate, 2026-03-20)
 
