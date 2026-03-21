@@ -1,0 +1,33 @@
+{
+  "timestamp": "20260320T201759Z",
+  "base_url": "https://articlemeta.scielo.org/api/v1",
+  "collection": "scl",
+  "period_from": "2005-01-01",
+  "period_until": "2025-12-31",
+  "relevant_subjects_filter": [
+    "political science",
+    "public administration",
+    "international relations",
+    "ciência política",
+    "ciencias politicas",
+    "administração pública",
+    "relações internacionais",
+    "public policy",
+    "políticas públicas"
+  ],
+  "known_issns": [
+    "0011-5258",
+    "0034-7329",
+    "0101-3300",
+    "0102-6445",
+    "0102-6909",
+    "0104-6276",
+    "1678-9873",
+    "1981-3821"
+  ],
+  "total_journals_scanned": 423,
+  "total_relevant": 16,
+  "total_rejected": 407,
+  "total_articles_estimated": 11863,
+  "count_errors": 0
+}

@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260320T225359Z",
+  "pub_year_from": 2005,
+  "pub_year_until": 2025,
+  "journals_count": 15,
+  "pids_found": 11963,
+  "articles_total": 10967,
+  "articles_in_csv": 8400,
+  "articles_collected_this_run": 10967,
+  "articles_excluded": 996,
+  "articles_with_xml": 8400,
+  "articles_failed": 0,
+  "incomplete_issns": [],
+  "xml_coverage_pct": 100.0,
+  "per_journal": {
+    "Brazilian Journal of Political Economy (0101-3157)": 1839,
+    "Lua Nova: Revista de Cultura e Política (0102-6445)": 1210,
+    "Revista de Administração Pública (0034-7612)": 1202,
+    "Revista Brasileira de Ciências Sociais (0102-6909)": 1004,
+    "Revista Brasileira de Política Internacional (0034-7329)": 789,
+    "Revista de Sociologia e Política (0104-4478)": 812,
+    "Novos estudos CEBRAP (0101-3300)": 663,
+    "Dados (0011-5258)": 868,
+    "Contexto Internacional (0102-8529)": 527,
+    "Civitas - Revista de Ciências Sociais (1519-6089)": 532,
+    "Opinião Pública (0104-6276)": 557,
+    "Revista Brasileira de Ciência Política (0103-3352)": 406,
+    "Brazilian Political Science Review (1981-3821)": 316,
+    "Cadernos Gestão Pública e Cidadania (2236-5710)": 143,
+    "Sur. Revista Internacional de Direitos Humanos (1806-6445)": 99
+  }
+}

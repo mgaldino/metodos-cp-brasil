@@ -1,0 +1,2117 @@
+[
+  {
+    "code": "1676-5648",
+    "collection": "scl",
+    "processing_date": "2012-08-24"
+  },
+  {
+    "code": "0101-8108",
+    "collection": "scl",
+    "processing_date": "2012-08-27"
+  },
+  {
+    "code": "1516-9332",
+    "collection": "scl",
+    "processing_date": "2012-08-27"
+  },
+  {
+    "code": "0102-261X",
+    "collection": "scl",
+    "processing_date": "2012-08-27"
+  },
+  {
+    "code": "0104-5687",
+    "collection": "scl",
+    "processing_date": "2012-09-10"
+  },
+  {
+    "code": "0103-1759",
+    "collection": "scl",
+    "processing_date": "2013-03-07"
+  },
+  {
+    "code": "0101-8175",
+    "collection": "scl",
+    "processing_date": "2013-04-15"
+  },
+  {
+    "code": "2179-6491",
+    "collection": "scl",
+    "processing_date": "2013-07-03"
+  },
+  {
+    "code": "1980-6523",
+    "collection": "scl",
+    "processing_date": "2013-10-17"
+  },
+  {
+    "code": "0100-4239",
+    "collection": "scl",
+    "processing_date": "2013-11-11"
+  },
+  {
+    "code": "0373-5524",
+    "collection": "scl",
+    "processing_date": "2013-11-11"
+  },
+  {
+    "code": "0100-7386",
+    "collection": "scl",
+    "processing_date": "2014-01-14"
+  },
+  {
+    "code": "0034-7108",
+    "collection": "scl",
+    "processing_date": "2014-01-27"
+  },
+  {
+    "code": "0102-2555",
+    "collection": "scl",
+    "processing_date": "2014-01-28"
+  },
+  {
+    "code": "1517-7491",
+    "collection": "scl",
+    "processing_date": "2014-02-03"
+  },
+  {
+    "code": "0103-3131",
+    "collection": "scl",
+    "processing_date": "2014-02-07"
+  },
+  {
+    "code": "0103-0663",
+    "collection": "scl",
+    "processing_date": "2014-03-24"
+  },
+  {
+    "code": "1516-8034",
+    "collection": "scl",
+    "processing_date": "2014-11-03"
+  },
+  {
+    "code": "0001-3714",
+    "collection": "scl",
+    "processing_date": "2015-03-26"
+  },
+  {
+    "code": "1519-566X",
+    "collection": "scl",
+    "processing_date": "2015-05-11"
+  },
+  {
+    "code": "0102-3586",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "1678-5878",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "0101-546X",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "0328-0381",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "1676-2649",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "1413-9596",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "0104-7930",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "1413-9251",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "0100-4158",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "0100-8455",
+    "collection": "scl",
+    "processing_date": "2015-05-14"
+  },
+  {
+    "code": "0102-8839",
+    "collection": "scl",
+    "processing_date": "2015-05-25"
+  },
+  {
+    "code": "1413-8050",
+    "collection": "scl",
+    "processing_date": "2015-09-11"
+  },
+  {
+    "code": "0103-5665",
+    "collection": "scl",
+    "processing_date": "2015-09-11"
+  },
+  {
+    "code": "0002-0591",
+    "collection": "scl",
+    "processing_date": "2015-09-11"
+  },
+  {
+    "code": "2179-8397",
+    "collection": "scl",
+    "processing_date": "2015-09-11"
+  },
+  {
+    "code": "1983-3288",
+    "collection": "scl",
+    "processing_date": "2015-11-25"
+  },
+  {
+    "code": "0104-6500",
+    "collection": "scl",
+    "processing_date": "2015-11-25"
+  },
+  {
+    "code": "2197-0025",
+    "collection": "scl",
+    "processing_date": "2015-11-25"
+  },
+  {
+    "code": "0100-8404",
+    "collection": "scl",
+    "processing_date": "2015-11-25"
+  },
+  {
+    "code": "1807-0302",
+    "collection": "scl",
+    "processing_date": "2015-11-25"
+  },
+  {
+    "code": "0103-9733",
+    "collection": "scl",
+    "processing_date": "2016-01-20"
+  },
+  {
+    "code": "1678-3166",
+    "collection": "scl",
+    "processing_date": "2016-02-12"
+  },
+  {
+    "code": "0041-8781",
+    "collection": "scl",
+    "processing_date": "2016-07-08"
+  },
+  {
+    "code": "1517-3151",
+    "collection": "scl",
+    "processing_date": "2016-07-08"
+  },
+  {
+    "code": "0004-2730",
+    "collection": "scl",
+    "processing_date": "2016-07-08"
+  },
+  {
+    "code": "1677-0420",
+    "collection": "scl",
+    "processing_date": "2016-07-08"
+  },
+  {
+    "code": "1415-5419",
+    "collection": "scl",
+    "processing_date": "2016-07-08"
+  },
+  {
+    "code": "1809-4872",
+    "collection": "scl",
+    "processing_date": "2016-07-08"
+  },
+  {
+    "code": "0034-7299",
+    "collection": "scl",
+    "processing_date": "2016-07-20"
+  },
+  {
+    "code": "0370-4467",
+    "collection": "scl",
+    "processing_date": "2016-07-28"
+  },
+  {
+    "code": "2238-1031",
+    "collection": "scl",
+    "processing_date": "2016-10-26"
+  },
+  {
+    "code": "0102-7972",
+    "collection": "scl",
+    "processing_date": "2017-05-16"
+  },
+  {
+    "code": "2317-1782",
+    "collection": "scl",
+    "processing_date": "2017-05-16"
+  },
+  {
+    "code": "1413-3555",
+    "collection": "scl",
+    "processing_date": "2017-06-30"
+  },
+  {
+    "code": "1807-5509",
+    "collection": "scl",
+    "processing_date": "2017-07-10"
+  },
+  {
+    "code": "1413-294X",
+    "collection": "scl",
+    "processing_date": "2017-09-12"
+  },
+  {
+    "code": "0034-8910",
+    "collection": "scl",
+    "processing_date": "2018-04-04"
+  },
+  {
+    "code": "2318-0331",
+    "collection": "scl",
+    "processing_date": "2018-04-04"
+  },
+  {
+    "code": "1516-8484",
+    "collection": "scl",
+    "processing_date": "2018-04-06"
+  },
+  {
+    "code": "1807-8621",
+    "collection": "scl",
+    "processing_date": "2018-04-19"
+  },
+  {
+    "code": "1807-8672",
+    "collection": "scl",
+    "processing_date": "2018-04-19"
+  },
+  {
+    "code": "0103-5150",
+    "collection": "scl",
+    "processing_date": "2018-04-23"
+  },
+  {
+    "code": "0080-2107",
+    "collection": "scl",
+    "processing_date": "2018-05-03"
+  },
+  {
+    "code": "0104-8023",
+    "collection": "scl",
+    "processing_date": "2018-09-19"
+  },
+  {
+    "code": "1806-0013",
+    "collection": "scl",
+    "processing_date": "2018-09-19"
+  },
+  {
+    "code": "1983-3083",
+    "collection": "scl",
+    "processing_date": "2018-09-19"
+  },
+  {
+    "code": "2448-2455",
+    "collection": "scl",
+    "processing_date": "2018-09-19"
+  },
+  {
+    "code": "1677-5449",
+    "collection": "scl",
+    "processing_date": "2018-10-25"
+  },
+  {
+    "code": "1809-4341",
+    "collection": "scl",
+    "processing_date": "2019-01-03"
+  },
+  {
+    "code": "2237-2660",
+    "collection": "scl",
+    "processing_date": "2019-01-03"
+  },
+  {
+    "code": "2175-3369",
+    "collection": "scl",
+    "processing_date": "2019-01-15"
+  },
+  {
+    "code": "1808-1657",
+    "collection": "scl",
+    "processing_date": "2019-01-21"
+  },
+  {
+    "code": "0074-0276",
+    "collection": "scl",
+    "processing_date": "2019-01-31"
+  },
+  {
+    "code": "1807-2577",
+    "collection": "scl",
+    "processing_date": "2019-03-08"
+  },
+  {
+    "code": "2175-7860",
+    "collection": "scl",
+    "processing_date": "2019-03-13"
+  },
+  {
+    "code": "0104-1428",
+    "collection": "scl",
+    "processing_date": "2019-03-18"
+  },
+  {
+    "code": "2326-4594",
+    "collection": "scl",
+    "processing_date": "2019-03-19"
+  },
+  {
+    "code": "0103-7307",
+    "collection": "scl",
+    "processing_date": "2019-04-05"
+  },
+  {
+    "code": "1517-8382",
+    "collection": "scl",
+    "processing_date": "2019-05-07"
+  },
+  {
+    "code": "1809-9823",
+    "collection": "scl",
+    "processing_date": "2019-05-17"
+  },
+  {
+    "code": "2446-4740",
+    "collection": "scl",
+    "processing_date": "2019-06-25"
+  },
+  {
+    "code": "1984-8250",
+    "collection": "scl",
+    "processing_date": "2019-06-26"
+  },
+  {
+    "code": "0482-5004",
+    "collection": "scl",
+    "processing_date": "2019-07-16"
+  },
+  {
+    "code": "1516-3598",
+    "collection": "scl",
+    "processing_date": "2019-07-19"
+  },
+  {
+    "code": "1413-2478",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "2523-3106",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "0104-0707",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "0071-1276",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "0101-9880",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "1806-6445",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "1413-7372",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "0101-4714",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "1982-5676",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "1984-2201",
+    "collection": "scl",
+    "processing_date": "2019-08-29"
+  },
+  {
+    "code": "0100-1965",
+    "collection": "scl",
+    "processing_date": "2019-09-03"
+  },
+  {
+    "code": "1414-3283",
+    "collection": "scl",
+    "processing_date": "2019-09-09"
+  },
+  {
+    "code": "0103-0582",
+    "collection": "scl",
+    "processing_date": "2019-10-31"
+  },
+  {
+    "code": "0080-6234",
+    "collection": "scl",
+    "processing_date": "2019-12-06"
+  },
+  {
+    "code": "1415-4757",
+    "collection": "scl",
+    "processing_date": "2019-12-09"
+  },
+  {
+    "code": "2358-1883",
+    "collection": "scl",
+    "processing_date": "2020-01-10"
+  },
+  {
+    "code": "0104-6632",
+    "collection": "scl",
+    "processing_date": "2020-01-16"
+  },
+  {
+    "code": "1981-8122",
+    "collection": "scl",
+    "processing_date": "2020-01-22"
+  },
+  {
+    "code": "0031-1049",
+    "collection": "scl",
+    "processing_date": "2020-01-29"
+  },
+  {
+    "code": "1983-4632",
+    "collection": "scl",
+    "processing_date": "2020-01-31"
+  },
+  {
+    "code": "1984-2961",
+    "collection": "scl",
+    "processing_date": "2020-02-06"
+  },
+  {
+    "code": "0104-1290",
+    "collection": "scl",
+    "processing_date": "2020-02-06"
+  },
+  {
+    "code": "1806-6690",
+    "collection": "scl",
+    "processing_date": "2020-02-06"
+  },
+  {
+    "code": "0102-695X",
+    "collection": "scl",
+    "processing_date": "2020-03-03"
+  },
+  {
+    "code": "0101-2800",
+    "collection": "scl",
+    "processing_date": "2020-03-16"
+  },
+  {
+    "code": "0085-5626",
+    "collection": "scl",
+    "processing_date": "2020-05-14"
+  },
+  {
+    "code": "1806-8324",
+    "collection": "scl",
+    "processing_date": "2020-06-01"
+  },
+  {
+    "code": "0104-6497",
+    "collection": "scl",
+    "processing_date": "2020-06-25"
+  },
+  {
+    "code": "0102-7182",
+    "collection": "scl",
+    "processing_date": "2020-07-21"
+  },
+  {
+    "code": "1413-7739",
+    "collection": "scl",
+    "processing_date": "2020-07-21"
+  },
+  {
+    "code": "1679-8759",
+    "collection": "scl",
+    "processing_date": "2020-07-21"
+  },
+  {
+    "code": "1983-4195",
+    "collection": "scl",
+    "processing_date": "2020-08-31"
+  },
+  {
+    "code": "2236-4633",
+    "collection": "scl",
+    "processing_date": "2020-09-21"
+  },
+  {
+    "code": "1983-4063",
+    "collection": "scl",
+    "processing_date": "2020-09-23"
+  },
+  {
+    "code": "1980-0037",
+    "collection": "scl",
+    "processing_date": "2020-11-13"
+  },
+  {
+    "code": "0034-7329",
+    "collection": "scl",
+    "processing_date": "2020-11-20"
+  },
+  {
+    "code": "2526-8910",
+    "collection": "scl",
+    "processing_date": "2021-01-15"
+  },
+  {
+    "code": "2358-0429",
+    "collection": "scl",
+    "processing_date": "2021-01-21"
+  },
+  {
+    "code": "0101-3122",
+    "collection": "scl",
+    "processing_date": "2021-01-29"
+  },
+  {
+    "code": "2176-9451",
+    "collection": "scl",
+    "processing_date": "2021-02-12"
+  },
+  {
+    "code": "1519-6984",
+    "collection": "scl",
+    "processing_date": "2021-02-19"
+  },
+  {
+    "code": "0100-8358",
+    "collection": "scl",
+    "processing_date": "2021-02-23"
+  },
+  {
+    "code": "1982-4513",
+    "collection": "scl",
+    "processing_date": "2021-02-25"
+  },
+  {
+    "code": "0034-7094",
+    "collection": "scl",
+    "processing_date": "2021-03-08"
+  },
+  {
+    "code": "1984-7726",
+    "collection": "scl",
+    "processing_date": "2021-03-17"
+  },
+  {
+    "code": "1516-7313",
+    "collection": "scl",
+    "processing_date": "2021-03-24"
+  },
+  {
+    "code": "0303-7657",
+    "collection": "scl",
+    "processing_date": "2021-03-30"
+  },
+  {
+    "code": "2179-8451",
+    "collection": "scl",
+    "processing_date": "2021-04-05"
+  },
+  {
+    "code": "2675-9462",
+    "collection": "scl",
+    "processing_date": "2021-04-12"
+  },
+  {
+    "code": "0100-4670",
+    "collection": "scl",
+    "processing_date": "2021-04-14"
+  },
+  {
+    "code": "2675-2824",
+    "collection": "scl",
+    "processing_date": "2021-05-19"
+  },
+  {
+    "code": "1984-4670",
+    "collection": "scl",
+    "processing_date": "2021-05-19"
+  },
+  {
+    "code": "1984-6487",
+    "collection": "scl",
+    "processing_date": "2021-05-19"
+  },
+  {
+    "code": "1678-9199",
+    "collection": "scl",
+    "processing_date": "2021-05-21"
+  },
+  {
+    "code": "2178-2822",
+    "collection": "scl",
+    "processing_date": "2021-05-25"
+  },
+  {
+    "code": "2236-8906",
+    "collection": "scl",
+    "processing_date": "2021-08-04"
+  },
+  {
+    "code": "1983-2117",
+    "collection": "scl",
+    "processing_date": "2021-08-09"
+  },
+  {
+    "code": "0102-4698",
+    "collection": "scl",
+    "processing_date": "2021-08-18"
+  },
+  {
+    "code": "0011-5258",
+    "collection": "scl",
+    "processing_date": "2021-08-19"
+  },
+  {
+    "code": "1809-6891",
+    "collection": "scl",
+    "processing_date": "2021-08-26"
+  },
+  {
+    "code": "0103-8478",
+    "collection": "scl",
+    "processing_date": "2021-08-30"
+  },
+  {
+    "code": "2236-3459",
+    "collection": "scl",
+    "processing_date": "2021-09-15"
+  },
+  {
+    "code": "1984-8234",
+    "collection": "scl",
+    "processing_date": "2021-09-21"
+  },
+  {
+    "code": "0034-7280",
+    "collection": "scl",
+    "processing_date": "2021-11-12"
+  },
+  {
+    "code": "0301-8059",
+    "collection": "scl",
+    "processing_date": "2021-11-18"
+  },
+  {
+    "code": "0102-3098",
+    "collection": "scl",
+    "processing_date": "2021-12-17"
+  },
+  {
+    "code": "1808-1851",
+    "collection": "scl",
+    "processing_date": "2021-12-22"
+  },
+  {
+    "code": "2177-7055",
+    "collection": "scl",
+    "processing_date": "2022-01-03"
+  },
+  {
+    "code": "1807-5932",
+    "collection": "scl",
+    "processing_date": "2022-01-03"
+  },
+  {
+    "code": "0104-530X",
+    "collection": "scl",
+    "processing_date": "2022-01-07"
+  },
+  {
+    "code": "2176-9133",
+    "collection": "scl",
+    "processing_date": "2022-01-14"
+  },
+  {
+    "code": "1517-7076",
+    "collection": "scl",
+    "processing_date": "2022-02-03"
+  },
+  {
+    "code": "1516-1439",
+    "collection": "scl",
+    "processing_date": "2022-02-08"
+  },
+  {
+    "code": "1519-6089",
+    "collection": "scl",
+    "processing_date": "2022-02-18"
+  },
+  {
+    "code": "1982-6125",
+    "collection": "scl",
+    "processing_date": "2022-03-17"
+  },
+  {
+    "code": "2175-6236",
+    "collection": "scl",
+    "processing_date": "2022-03-21"
+  },
+  {
+    "code": "1807-1775",
+    "collection": "scl",
+    "processing_date": "2022-04-08"
+  },
+  {
+    "code": "1677-3225",
+    "collection": "scl",
+    "processing_date": "2022-04-18"
+  },
+  {
+    "code": "1679-4508",
+    "collection": "scl",
+    "processing_date": "2022-04-27"
+  },
+  {
+    "code": "0103-9016",
+    "collection": "scl",
+    "processing_date": "2022-04-29"
+  },
+  {
+    "code": "0102-6720",
+    "collection": "scl",
+    "processing_date": "2022-05-26"
+  },
+  {
+    "code": "1984-0292",
+    "collection": "scl",
+    "processing_date": "2022-06-02"
+  },
+  {
+    "code": "2594-5033",
+    "collection": "scl",
+    "processing_date": "2022-07-22"
+  },
+  {
+    "code": "2238-3875",
+    "collection": "scl",
+    "processing_date": "2022-08-08"
+  },
+  {
+    "code": "0103-3786",
+    "collection": "scl",
+    "processing_date": "2022-08-09"
+  },
+  {
+    "code": "0104-9313",
+    "collection": "scl",
+    "processing_date": "2022-10-17"
+  },
+  {
+    "code": "1516-0572",
+    "collection": "scl",
+    "processing_date": "2022-10-26"
+  },
+  {
+    "code": "0101-6083",
+    "collection": "scl",
+    "processing_date": "2022-11-01"
+  },
+  {
+    "code": "2317-1529",
+    "collection": "scl",
+    "processing_date": "2022-11-16"
+  },
+  {
+    "code": "0102-4450",
+    "collection": "scl",
+    "processing_date": "2022-11-23"
+  },
+  {
+    "code": "0066-782X",
+    "collection": "scl",
+    "processing_date": "2022-12-01"
+  },
+  {
+    "code": "2359-5647",
+    "collection": "scl",
+    "processing_date": "2022-12-01"
+  },
+  {
+    "code": "2358-4114",
+    "collection": "scl",
+    "processing_date": "2022-12-06"
+  },
+  {
+    "code": "2175-9146",
+    "collection": "scl",
+    "processing_date": "2023-01-02"
+  },
+  {
+    "code": "1981-9854",
+    "collection": "scl",
+    "processing_date": "2023-01-31"
+  },
+  {
+    "code": "1519-3829",
+    "collection": "scl",
+    "processing_date": "2023-02-01"
+  },
+  {
+    "code": "0104-7183",
+    "collection": "scl",
+    "processing_date": "2023-02-03"
+  },
+  {
+    "code": "1414-462X",
+    "collection": "scl",
+    "processing_date": "2023-03-07"
+  },
+  {
+    "code": "1984-6398",
+    "collection": "scl",
+    "processing_date": "2023-03-07"
+  },
+  {
+    "code": "0104-5970",
+    "collection": "scl",
+    "processing_date": "2023-03-07"
+  },
+  {
+    "code": "0034-7612",
+    "collection": "scl",
+    "processing_date": "2023-03-07"
+  },
+  {
+    "code": "1679-3951",
+    "collection": "scl",
+    "processing_date": "2023-03-07"
+  },
+  {
+    "code": "1413-4152",
+    "collection": "scl",
+    "processing_date": "2023-03-07"
+  },
+  {
+    "code": "2317-1537",
+    "collection": "scl",
+    "processing_date": "2023-03-16"
+  },
+  {
+    "code": "0101-2061",
+    "collection": "scl",
+    "processing_date": "2023-04-03"
+  },
+  {
+    "code": "1809-2950",
+    "collection": "scl",
+    "processing_date": "2023-04-05"
+  },
+  {
+    "code": "1413-9936",
+    "collection": "scl",
+    "processing_date": "2023-04-05"
+  },
+  {
+    "code": "1415-790X",
+    "collection": "scl",
+    "processing_date": "2023-04-19"
+  },
+  {
+    "code": "1517-4522",
+    "collection": "scl",
+    "processing_date": "2023-05-03"
+  },
+  {
+    "code": "2178-2792",
+    "collection": "scl",
+    "processing_date": "2023-05-03"
+  },
+  {
+    "code": "0102-7786",
+    "collection": "scl",
+    "processing_date": "2023-05-03"
+  },
+  {
+    "code": "0104-4060",
+    "collection": "scl",
+    "processing_date": "2023-05-10"
+  },
+  {
+    "code": "0103-507X",
+    "collection": "scl",
+    "processing_date": "2023-05-22"
+  },
+  {
+    "code": "2359-5639",
+    "collection": "scl",
+    "processing_date": "2023-06-02"
+  },
+  {
+    "code": "1679-7825",
+    "collection": "scl",
+    "processing_date": "2023-06-05"
+  },
+  {
+    "code": "1517-9702",
+    "collection": "scl",
+    "processing_date": "2023-06-07"
+  },
+  {
+    "code": "0102-7638",
+    "collection": "scl",
+    "processing_date": "2023-06-15"
+  },
+  {
+    "code": "1678-765X",
+    "collection": "scl",
+    "processing_date": "2023-06-19"
+  },
+  {
+    "code": "0006-8705",
+    "collection": "scl",
+    "processing_date": "2023-06-21"
+  },
+  {
+    "code": "2176-6681",
+    "collection": "scl",
+    "processing_date": "2023-07-07"
+  },
+  {
+    "code": "1413-7852",
+    "collection": "scl",
+    "processing_date": "2023-07-07"
+  },
+  {
+    "code": "0104-4036",
+    "collection": "scl",
+    "processing_date": "2023-07-07"
+  },
+  {
+    "code": "1983-3652",
+    "collection": "scl",
+    "processing_date": "2023-07-24"
+  },
+  {
+    "code": "1518-7632",
+    "collection": "scl",
+    "processing_date": "2023-08-08"
+  },
+  {
+    "code": "1414-4077",
+    "collection": "scl",
+    "processing_date": "2023-08-08"
+  },
+  {
+    "code": "0100-5405",
+    "collection": "scl",
+    "processing_date": "2023-08-08"
+  },
+  {
+    "code": "2965-1565",
+    "collection": "scl",
+    "processing_date": "2023-08-08"
+  },
+  {
+    "code": "1982-8918",
+    "collection": "scl",
+    "processing_date": "2023-08-16"
+  },
+  {
+    "code": "0100-736X",
+    "collection": "scl",
+    "processing_date": "2023-08-18"
+  },
+  {
+    "code": "0101-7330",
+    "collection": "scl",
+    "processing_date": "2023-08-22"
+  },
+  {
+    "code": "1678-6971",
+    "collection": "scl",
+    "processing_date": "2023-08-23"
+  },
+  {
+    "code": "2317-7721",
+    "collection": "scl",
+    "processing_date": "2023-08-24"
+  },
+  {
+    "code": "1984-3143",
+    "collection": "scl",
+    "processing_date": "2023-09-01"
+  },
+  {
+    "code": "0034-737X",
+    "collection": "scl",
+    "processing_date": "2023-10-05"
+  },
+  {
+    "code": "0100-6045",
+    "collection": "scl",
+    "processing_date": "2023-10-05"
+  },
+  {
+    "code": "0004-2749",
+    "collection": "scl",
+    "processing_date": "2023-10-05"
+  },
+  {
+    "code": "0036-4665",
+    "collection": "scl",
+    "processing_date": "2023-10-16"
+  },
+  {
+    "code": "1518-2924",
+    "collection": "scl",
+    "processing_date": "2023-10-17"
+  },
+  {
+    "code": "1413-7054",
+    "collection": "scl",
+    "processing_date": "2023-10-18"
+  },
+  {
+    "code": "1676-2444",
+    "collection": "scl",
+    "processing_date": "2023-10-24"
+  },
+  {
+    "code": "0100-204X",
+    "collection": "scl",
+    "processing_date": "2023-10-31"
+  },
+  {
+    "code": "0103-2186",
+    "collection": "scl",
+    "processing_date": "2023-11-22"
+  },
+  {
+    "code": "1516-1498",
+    "collection": "scl",
+    "processing_date": "2023-11-22"
+  },
+  {
+    "code": "1678-8621",
+    "collection": "scl",
+    "processing_date": "2023-11-22"
+  },
+  {
+    "code": "1983-2125",
+    "collection": "scl",
+    "processing_date": "2023-12-12"
+  },
+  {
+    "code": "1982-2170",
+    "collection": "scl",
+    "processing_date": "2023-12-12"
+  },
+  {
+    "code": "2447-536X",
+    "collection": "scl",
+    "processing_date": "2023-12-12"
+  },
+  {
+    "code": "1517-106X",
+    "collection": "scl",
+    "processing_date": "2023-12-19"
+  },
+  {
+    "code": "1808-2386",
+    "collection": "scl",
+    "processing_date": "2023-12-19"
+  },
+  {
+    "code": "2237-101X",
+    "collection": "scl",
+    "processing_date": "2023-12-22"
+  },
+  {
+    "code": "1413-8123",
+    "collection": "scl",
+    "processing_date": "2023-12-22"
+  },
+  {
+    "code": "1980-6574",
+    "collection": "scl",
+    "processing_date": "2024-01-04"
+  },
+  {
+    "code": "0104-4230",
+    "collection": "scl",
+    "processing_date": "2024-01-19"
+  },
+  {
+    "code": "0102-0188",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "2525-510X",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "0103-6351",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "0004-282X",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "2175-8026",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "2595-3192",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "1413-8271",
+    "collection": "scl",
+    "processing_date": "2024-01-24"
+  },
+  {
+    "code": "0102-8650",
+    "collection": "scl",
+    "processing_date": "2024-02-01"
+  },
+  {
+    "code": "0102-8529",
+    "collection": "scl",
+    "processing_date": "2024-02-01"
+  },
+  {
+    "code": "1980-993X",
+    "collection": "scl",
+    "processing_date": "2024-02-05"
+  },
+  {
+    "code": "1983-7151",
+    "collection": "scl",
+    "processing_date": "2024-02-05"
+  },
+  {
+    "code": "2179-8966",
+    "collection": "scl",
+    "processing_date": "2024-02-05"
+  },
+  {
+    "code": "0103-1104",
+    "collection": "scl",
+    "processing_date": "2024-02-05"
+  },
+  {
+    "code": "2238-0094",
+    "collection": "scl",
+    "processing_date": "2024-02-06"
+  },
+  {
+    "code": "0100-1574",
+    "collection": "scl",
+    "processing_date": "2024-02-29"
+  },
+  {
+    "code": "2676-0029",
+    "collection": "scl",
+    "processing_date": "2024-03-01"
+  },
+  {
+    "code": "2179-1074",
+    "collection": "scl",
+    "processing_date": "2024-03-01"
+  },
+  {
+    "code": "0100-7203",
+    "collection": "scl",
+    "processing_date": "2024-03-22"
+  },
+  {
+    "code": "1808-2432",
+    "collection": "scl",
+    "processing_date": "2024-03-27"
+  },
+  {
+    "code": "1806-4892",
+    "collection": "scl",
+    "processing_date": "2024-03-28"
+  },
+  {
+    "code": "0102-0935",
+    "collection": "scl",
+    "processing_date": "2024-04-08"
+  },
+  {
+    "code": "0102-3772",
+    "collection": "scl",
+    "processing_date": "2024-04-08"
+  },
+  {
+    "code": "1806-6755",
+    "collection": "scl",
+    "processing_date": "2024-04-09"
+  },
+  {
+    "code": "1414-753X",
+    "collection": "scl",
+    "processing_date": "2024-04-10"
+  },
+  {
+    "code": "1517-7599",
+    "collection": "scl",
+    "processing_date": "2024-04-18"
+  },
+  {
+    "code": "0103-6440",
+    "collection": "scl",
+    "processing_date": "2024-04-18"
+  },
+  {
+    "code": "2236-9996",
+    "collection": "scl",
+    "processing_date": "2024-04-18"
+  },
+  {
+    "code": "0104-4478",
+    "collection": "scl",
+    "processing_date": "2024-05-10"
+  },
+  {
+    "code": "0100-512X",
+    "collection": "scl",
+    "processing_date": "2024-05-14"
+  },
+  {
+    "code": "1516-4446",
+    "collection": "scl",
+    "processing_date": "2024-05-20"
+  },
+  {
+    "code": "1806-3713",
+    "collection": "scl",
+    "processing_date": "2024-05-20"
+  },
+  {
+    "code": "0101-3157",
+    "collection": "scl",
+    "processing_date": "2024-06-18"
+  },
+  {
+    "code": "1984-9230",
+    "collection": "scl",
+    "processing_date": "2024-06-19"
+  },
+  {
+    "code": "0102-6445",
+    "collection": "scl",
+    "processing_date": "2024-06-19"
+  },
+  {
+    "code": "0047-2085",
+    "collection": "scl",
+    "processing_date": "2024-06-28"
+  },
+  {
+    "code": "2764-1589",
+    "collection": "scl",
+    "processing_date": "2024-07-03"
+  },
+  {
+    "code": "0100-0683",
+    "collection": "scl",
+    "processing_date": "2024-07-04"
+  },
+  {
+    "code": "0104-8775",
+    "collection": "scl",
+    "processing_date": "2024-07-15"
+  },
+  {
+    "code": "0004-2803",
+    "collection": "scl",
+    "processing_date": "2024-07-16"
+  },
+  {
+    "code": "2965-1506",
+    "collection": "scl",
+    "processing_date": "2024-07-23"
+  },
+  {
+    "code": "1982-2553",
+    "collection": "scl",
+    "processing_date": "2024-08-01"
+  },
+  {
+    "code": "1807-7692",
+    "collection": "scl",
+    "processing_date": "2024-08-05"
+  },
+  {
+    "code": "1981-7746",
+    "collection": "scl",
+    "processing_date": "2024-08-12"
+  },
+  {
+    "code": "1983-1447",
+    "collection": "scl",
+    "processing_date": "2024-08-12"
+  },
+  {
+    "code": "1678-7757",
+    "collection": "scl",
+    "processing_date": "2024-08-12"
+  },
+  {
+    "code": "1519-9940",
+    "collection": "scl",
+    "processing_date": "2024-08-16"
+  },
+  {
+    "code": "2317-6431",
+    "collection": "scl",
+    "processing_date": "2024-08-19"
+  },
+  {
+    "code": "0102-6992",
+    "collection": "scl",
+    "processing_date": "2024-08-21"
+  },
+  {
+    "code": "2237-9622",
+    "collection": "scl",
+    "processing_date": "2024-08-22"
+  },
+  {
+    "code": "1414-4980",
+    "collection": "scl",
+    "processing_date": "2024-08-29"
+  },
+  {
+    "code": "0034-7590",
+    "collection": "scl",
+    "processing_date": "2024-08-30"
+  },
+  {
+    "code": "1981-8637",
+    "collection": "scl",
+    "processing_date": "2024-08-30"
+  },
+  {
+    "code": "1983-4659",
+    "collection": "scl",
+    "processing_date": "2024-08-30"
+  },
+  {
+    "code": "2179-975X",
+    "collection": "scl",
+    "processing_date": "2024-09-05"
+  },
+  {
+    "code": "2359-3997",
+    "collection": "scl",
+    "processing_date": "2024-09-05"
+  },
+  {
+    "code": "0103-636X",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "1981-6723",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "1809-5844",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "2176-4573",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "1413-6538",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "0034-8309",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "1415-4366",
+    "collection": "scl",
+    "processing_date": "2024-09-24"
+  },
+  {
+    "code": "0104-6276",
+    "collection": "scl",
+    "processing_date": "2024-09-25"
+  },
+  {
+    "code": "0100-6762",
+    "collection": "scl",
+    "processing_date": "2024-09-26"
+  },
+  {
+    "code": "0100-3984",
+    "collection": "scl",
+    "processing_date": "2024-10-03"
+  },
+  {
+    "code": "2352-2291",
+    "collection": "scl",
+    "processing_date": "2024-10-03"
+  },
+  {
+    "code": "0101-4161",
+    "collection": "scl",
+    "processing_date": "2024-10-03"
+  },
+  {
+    "code": "1678-5320",
+    "collection": "scl",
+    "processing_date": "2024-10-03"
+  },
+  {
+    "code": "0101-7438",
+    "collection": "scl",
+    "processing_date": "2024-10-10"
+  },
+  {
+    "code": "0103-166X",
+    "collection": "scl",
+    "processing_date": "2024-10-10"
+  },
+  {
+    "code": "0100-5502",
+    "collection": "scl",
+    "processing_date": "2024-10-10"
+  },
+  {
+    "code": "2175-7968",
+    "collection": "scl",
+    "processing_date": "2024-10-11"
+  },
+  {
+    "code": "2177-4382",
+    "collection": "scl",
+    "processing_date": "2024-10-14"
+  },
+  {
+    "code": "1982-8837",
+    "collection": "scl",
+    "processing_date": "2024-10-14"
+  },
+  {
+    "code": "0102-0536",
+    "collection": "scl",
+    "processing_date": "2024-10-22"
+  },
+  {
+    "code": "2179-0892",
+    "collection": "scl",
+    "processing_date": "2024-11-05"
+  },
+  {
+    "code": "0103-6513",
+    "collection": "scl",
+    "processing_date": "2024-11-05"
+  },
+  {
+    "code": "0104-8333",
+    "collection": "scl",
+    "processing_date": "2024-11-07"
+  },
+  {
+    "code": "0103-2003",
+    "collection": "scl",
+    "processing_date": "2024-11-13"
+  },
+  {
+    "code": "0100-879X",
+    "collection": "scl",
+    "processing_date": "2024-11-25"
+  },
+  {
+    "code": "0100-6916",
+    "collection": "scl",
+    "processing_date": "2024-11-26"
+  },
+  {
+    "code": "1415-9848",
+    "collection": "scl",
+    "processing_date": "2024-11-26"
+  },
+  {
+    "code": "0034-7701",
+    "collection": "scl",
+    "processing_date": "2024-11-26"
+  },
+  {
+    "code": "1517-8692",
+    "collection": "scl",
+    "processing_date": "2024-12-02"
+  },
+  {
+    "code": "1981-3821",
+    "collection": "scl",
+    "processing_date": "2024-12-02"
+  },
+  {
+    "code": "1516-8913",
+    "collection": "scl",
+    "processing_date": "2024-12-03"
+  },
+  {
+    "code": "2596-304X",
+    "collection": "scl",
+    "processing_date": "2024-12-09"
+  },
+  {
+    "code": "0103-6564",
+    "collection": "scl",
+    "processing_date": "2024-12-10"
+  },
+  {
+    "code": "2317-9937",
+    "collection": "scl",
+    "processing_date": "2024-12-13"
+  },
+  {
+    "code": "2176-9745",
+    "collection": "scl",
+    "processing_date": "2025-01-09"
+  },
+  {
+    "code": "1516-3180",
+    "collection": "scl",
+    "processing_date": "2025-01-13"
+  },
+  {
+    "code": "0103-1813",
+    "collection": "scl",
+    "processing_date": "2025-01-27"
+  },
+  {
+    "code": "2531-0488",
+    "collection": "scl",
+    "processing_date": "2025-01-27"
+  },
+  {
+    "code": "0101-3262",
+    "collection": "scl",
+    "processing_date": "2025-01-27"
+  },
+  {
+    "code": "0103-3352",
+    "collection": "scl",
+    "processing_date": "2025-01-27"
+  },
+  {
+    "code": "1677-5538",
+    "collection": "scl",
+    "processing_date": "2025-01-27"
+  },
+  {
+    "code": "0103-7331",
+    "collection": "scl",
+    "processing_date": "2025-01-27"
+  },
+  {
+    "code": "1414-8145",
+    "collection": "scl",
+    "processing_date": "2025-01-29"
+  },
+  {
+    "code": "0101-3289",
+    "collection": "scl",
+    "processing_date": "2025-02-03"
+  },
+  {
+    "code": "0073-4721",
+    "collection": "scl",
+    "processing_date": "2025-02-10"
+  },
+  {
+    "code": "1519-7077",
+    "collection": "scl",
+    "processing_date": "2025-02-11"
+  },
+  {
+    "code": "1415-5273",
+    "collection": "scl",
+    "processing_date": "2025-03-12"
+  },
+  {
+    "code": "1984-249X",
+    "collection": "scl",
+    "processing_date": "2025-03-19"
+  },
+  {
+    "code": "2531-1379",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "0103-4014",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "1980-5098",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "0365-0596",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "0102-3616",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "0366-6913",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "1413-2311",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "0102-6909",
+    "collection": "scl",
+    "processing_date": "2025-03-21"
+  },
+  {
+    "code": "2316-8242",
+    "collection": "scl",
+    "processing_date": "2025-03-24"
+  },
+  {
+    "code": "1679-6225",
+    "collection": "scl",
+    "processing_date": "2025-03-26"
+  },
+  {
+    "code": "1415-4714",
+    "collection": "scl",
+    "processing_date": "2025-04-02"
+  },
+  {
+    "code": "0104-7760",
+    "collection": "scl",
+    "processing_date": "2025-04-04"
+  },
+  {
+    "code": "1413-7704",
+    "collection": "scl",
+    "processing_date": "2025-04-04"
+  },
+  {
+    "code": "0101-3173",
+    "collection": "scl",
+    "processing_date": "2025-04-04"
+  },
+  {
+    "code": "1980-8585",
+    "collection": "scl",
+    "processing_date": "2025-04-04"
+  },
+  {
+    "code": "0020-3874",
+    "collection": "scl",
+    "processing_date": "2025-04-08"
+  },
+  {
+    "code": "1516-635X",
+    "collection": "scl",
+    "processing_date": "2025-04-10"
+  },
+  {
+    "code": "2675-5475",
+    "collection": "scl",
+    "processing_date": "2025-04-25"
+  },
+  {
+    "code": "1808-8694",
+    "collection": "scl",
+    "processing_date": "2025-05-09"
+  },
+  {
+    "code": "1809-4864",
+    "collection": "scl",
+    "processing_date": "2025-05-09"
+  },
+  {
+    "code": "0044-5967",
+    "collection": "scl",
+    "processing_date": "2025-05-09"
+  },
+  {
+    "code": "1413-8670",
+    "collection": "scl",
+    "processing_date": "2025-05-09"
+  },
+  {
+    "code": "0100-8587",
+    "collection": "scl",
+    "processing_date": "2025-05-09"
+  },
+  {
+    "code": "0104-026X",
+    "collection": "scl",
+    "processing_date": "2025-05-13"
+  },
+  {
+    "code": "2237-6089",
+    "collection": "scl",
+    "processing_date": "2025-05-19"
+  },
+  {
+    "code": "0101-3300",
+    "collection": "scl",
+    "processing_date": "2025-05-27"
+  },
+  {
+    "code": "0103-2070",
+    "collection": "scl",
+    "processing_date": "2025-05-27"
+  },
+  {
+    "code": "0102-3306",
+    "collection": "scl",
+    "processing_date": "2025-05-27"
+  },
+  {
+    "code": "1984-7033",
+    "collection": "scl",
+    "processing_date": "2025-05-27"
+  },
+  {
+    "code": "0100-2945",
+    "collection": "scl",
+    "processing_date": "2025-06-04"
+  },
+  {
+    "code": "0101-9074",
+    "collection": "scl",
+    "processing_date": "2025-06-18"
+  },
+  {
+    "code": "1414-9893",
+    "collection": "scl",
+    "processing_date": "2025-06-26"
+  },
+  {
+    "code": "1413-8557",
+    "collection": "scl",
+    "processing_date": "2025-06-26"
+  },
+  {
+    "code": "1516-1846",
+    "collection": "scl",
+    "processing_date": "2025-07-10"
+  },
+  {
+    "code": "1982-3908",
+    "collection": "scl",
+    "processing_date": "2025-07-15"
+  },
+  {
+    "code": "2448-167X",
+    "collection": "scl",
+    "processing_date": "2025-07-17"
+  },
+  {
+    "code": "2318-0498",
+    "collection": "scl",
+    "processing_date": "2025-07-25"
+  },
+  {
+    "code": "1676-0603",
+    "collection": "scl",
+    "processing_date": "2025-07-28"
+  },
+  {
+    "code": "1983-5175",
+    "collection": "scl",
+    "processing_date": "2025-08-01"
+  },
+  {
+    "code": "2237-9363",
+    "collection": "scl",
+    "processing_date": "2025-08-01"
+  },
+  {
+    "code": "1980-5764",
+    "collection": "scl",
+    "processing_date": "2025-08-04"
+  },
+  {
+    "code": "2236-1960",
+    "collection": "scl",
+    "processing_date": "2025-08-20"
+  },
+  {
+    "code": "1678-2305",
+    "collection": "scl",
+    "processing_date": "2025-08-22"
+  },
+  {
+    "code": "2357-738X",
+    "collection": "scl",
+    "processing_date": "2025-08-26"
+  },
+  {
+    "code": "1983-6821",
+    "collection": "scl",
+    "processing_date": "2025-08-27"
+  },
+  {
+    "code": "0104-1169",
+    "collection": "scl",
+    "processing_date": "2025-08-29"
+  },
+  {
+    "code": "2179-8087",
+    "collection": "scl",
+    "processing_date": "2025-09-12"
+  },
+  {
+    "code": "1808-5245",
+    "collection": "scl",
+    "processing_date": "2025-09-16"
+  },
+  {
+    "code": "2965-2774",
+    "collection": "scl",
+    "processing_date": "2025-09-16"
+  },
+  {
+    "code": "1517-7017",
+    "collection": "scl",
+    "processing_date": "2025-09-16"
+  },
+  {
+    "code": "2675-312X",
+    "collection": "scl",
+    "processing_date": "2025-09-16"
+  },
+  {
+    "code": "1981-5794",
+    "collection": "scl",
+    "processing_date": "2025-09-25"
+  },
+  {
+    "code": "2317-4889",
+    "collection": "scl",
+    "processing_date": "2025-09-30"
+  },
+  {
+    "code": "0103-863X",
+    "collection": "scl",
+    "processing_date": "2025-10-01"
+  },
+  {
+    "code": "0037-8682",
+    "collection": "scl",
+    "processing_date": "2025-10-03"
+  },
+  {
+    "code": "0101-6628",
+    "collection": "scl",
+    "processing_date": "2025-10-10"
+  },
+  {
+    "code": "1806-1117",
+    "collection": "scl",
+    "processing_date": "2025-10-13"
+  },
+  {
+    "code": "1983-8042",
+    "collection": "scl",
+    "processing_date": "2025-10-16"
+  },
+  {
+    "code": "1518-7012",
+    "collection": "scl",
+    "processing_date": "2025-10-17"
+  },
+  {
+    "code": "0104-9224",
+    "collection": "scl",
+    "processing_date": "2025-10-31"
+  },
+  {
+    "code": "3085-8909",
+    "collection": "scl",
+    "processing_date": "2025-10-31"
+  },
+  {
+    "code": "1984-557X",
+    "collection": "scl",
+    "processing_date": "2025-11-04"
+  },
+  {
+    "code": "1415-6555",
+    "collection": "scl",
+    "processing_date": "2025-11-28"
+  },
+  {
+    "code": "0001-3765",
+    "collection": "scl",
+    "processing_date": "2025-12-15"
+  },
+  {
+    "code": "0034-7140",
+    "collection": "scl",
+    "processing_date": "2025-12-16"
+  },
+  {
+    "code": "2448-3583",
+    "collection": "scl",
+    "processing_date": "2026-01-05"
+  },
+  {
+    "code": "2319-0612",
+    "collection": "scl",
+    "processing_date": "2026-01-05"
+  },
+  {
+    "code": "0103-4979",
+    "collection": "scl",
+    "processing_date": "2026-01-13"
+  },
+  {
+    "code": "0034-7167",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "2316-4018",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "0021-7557",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "0103-5053",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "0100-4042",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "2236-5710",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "0102-311X",
+    "collection": "scl",
+    "processing_date": "2026-01-26"
+  },
+  {
+    "code": "0103-2100",
+    "collection": "scl",
+    "processing_date": "2026-02-02"
+  },
+  {
+    "code": "2176-6665",
+    "collection": "scl",
+    "processing_date": "2026-02-09"
+  },
+  {
+    "code": "1983-9928",
+    "collection": "scl",
+    "processing_date": "2026-02-12"
+  },
+  {
+    "code": "2317-1634",
+    "collection": "scl",
+    "processing_date": "2026-02-12"
+  },
+  {
+    "code": "0104-0618",
+    "collection": "scl",
+    "processing_date": "2026-02-13"
+  },
+  {
+    "code": "0100-6991",
+    "collection": "scl",
+    "processing_date": "2026-02-26"
+  },
+  {
+    "code": "2176-8757",
+    "collection": "scl",
+    "processing_date": "2026-03-10"
+  },
+  {
+    "code": "2179-8699",
+    "collection": "scl",
+    "processing_date": "2026-03-11"
+  }
+]
