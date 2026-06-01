@@ -15,6 +15,7 @@ project_dir <- normalizePath(".", mustWork = TRUE)
 paths <- list(
   normalization_log = file.path(project_dir, "quality_reports", "classification_normalization_log.csv"),
   sample_sheet = file.path(project_dir, "data", "processed", "sample_validation_sheet.csv"),
+  sample_validation = file.path(project_dir, "data", "processed", "sample_validation.csv"),
   normalized_csv = file.path(project_dir, "data", "processed", "classifications_llm_normalized.csv"),
   queue = file.path(project_dir, "quality_reports", "manual_review_queue.csv"),
   queue_by_article = file.path(project_dir, "quality_reports", "manual_review_queue_by_article.csv"),
@@ -22,7 +23,7 @@ paths <- list(
   summary = file.path(project_dir, "quality_reports", "manual_review_queue_summary.md")
 )
 
-required_files <- c(paths$normalization_log, paths$sample_sheet, paths$normalized_csv)
+required_files <- c(paths$normalization_log, paths$sample_sheet, paths$sample_validation, paths$normalized_csv)
 missing_files <- required_files[!file.exists(required_files)]
 if (length(missing_files) > 0) {
   stop("Arquivos ausentes: ", paste(missing_files, collapse = "; "))
@@ -83,6 +84,7 @@ decision_hint <- function(field, old_value, reason) {
 
 log <- readr::read_csv(paths$normalization_log, show_col_types = FALSE, progress = FALSE)
 sample_sheet <- readr::read_csv(paths$sample_sheet, show_col_types = FALSE, progress = FALSE)
+sample_validation <- readr::read_csv(paths$sample_validation, show_col_types = FALSE, progress = FALSE)
 normalized <- readr::read_csv(paths$normalized_csv, show_col_types = FALSE, progress = FALSE)
 
 manual_log <- log |>
@@ -108,8 +110,12 @@ context_cols <- normalized |>
 metadata <- sample_sheet |>
   dplyr::select(pid, title, authors, year, journal_title, language, url_scielo)
 
+abstracts <- sample_validation |>
+  dplyr::select(pid, abstract_pt, abstract_en)
+
 queue <- manual_log |>
   dplyr::left_join(metadata, by = "pid") |>
+  dplyr::left_join(abstracts, by = "pid") |>
   dplyr::left_join(context_cols, by = "pid") |>
   dplyr::mutate(
     decision_status = "pending",
@@ -118,6 +124,8 @@ queue <- manual_log |>
     reviewer = "",
     review_date = "",
     title = stringr::str_squish(title),
+    abstract_pt = stringr::str_squish(abstract_pt),
+    abstract_en = stringr::str_squish(abstract_en),
     brief_justification = stringr::str_squish(brief_justification)
   ) |>
   dplyr::arrange(field_priority, field, pid) |>
@@ -141,6 +149,8 @@ queue <- manual_log |>
     journal_title,
     language,
     url_scielo,
+    abstract_pt,
+    abstract_en,
     subfield,
     evidence_type_current,
     method_status_current,
@@ -160,6 +170,8 @@ queue_by_article <- queue |>
     n_pending = dplyr::n(),
     fields = paste(field, collapse = "; "),
     first_fields = paste(utils::head(field, 5), collapse = "; "),
+    abstract_pt = dplyr::first(abstract_pt),
+    abstract_en = dplyr::first(abstract_en),
     brief_justification = dplyr::first(brief_justification),
     .groups = "drop"
   ) |>
@@ -221,10 +233,11 @@ summary_lines <- c(
   "## Como usar",
   "",
   "1. Abra `quality_reports/manual_review_queue.csv`.",
-  "2. Para cada linha, preencha `decision_value` com um valor permitido em `allowed_values`.",
-  "3. Marque `decision_status` como `done` quando decidir.",
-  "4. Use `decision_note` para registrar a justificativa quando houver ambiguidade.",
-  "5. Depois, rode um script de aplicação das decisões para atualizar os JSONs candidatos finais.",
+  "2. Leia `title`, `abstract_pt`, `abstract_en` e `brief_justification` para decidir.",
+  "3. Para cada linha, preencha `decision_value` com um valor permitido em `allowed_values`.",
+  "4. Marque `decision_status` como `done` quando decidir.",
+  "5. Use `decision_note` para registrar a justificativa quando houver ambiguidade.",
+  "6. Depois, rode um script de aplicação das decisões para atualizar os JSONs candidatos finais.",
   "",
   "## Pendências por Campo",
   "",

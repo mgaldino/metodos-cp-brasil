@@ -1,14 +1,15 @@
 # Fila de Revisão Manual
 
-Gerado em 2026-06-01 16:29:06 -03
+Gerado em 2026-06-01 16:39:38 -03
 
 ## Como usar
 
 1. Abra `quality_reports/manual_review_queue.csv`.
-2. Para cada linha, preencha `decision_value` com um valor permitido em `allowed_values`.
-3. Marque `decision_status` como `done` quando decidir.
-4. Use `decision_note` para registrar a justificativa quando houver ambiguidade.
-5. Depois, rode um script de aplicação das decisões para atualizar os JSONs candidatos finais.
+2. Leia `title`, `abstract_pt`, `abstract_en` e `brief_justification` para decidir.
+3. Para cada linha, preencha `decision_value` com um valor permitido em `allowed_values`.
+4. Marque `decision_status` como `done` quando decidir.
+5. Use `decision_note` para registrar a justificativa quando houver ambiguidade.
+6. Depois, rode um script de aplicação das decisões para atualizar os JSONs candidatos finais.
 
 ## Pendências por Campo
 
