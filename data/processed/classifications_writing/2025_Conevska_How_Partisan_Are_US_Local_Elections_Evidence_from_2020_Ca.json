@@ -1,0 +1,31 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_2_3",
+  "little_template_justification": "The introduction stages a debate between the nationalization of local politics and the view that local politics remains distinct, then argues that existing evidence is too limited and piecemeal to adjudicate that debate nationwide. The paper positions itself as resolving that debate by filling the empirical gap with comprehensive cast vote record data.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "The APG is 91 percentage points for the average state partisan office, 85 points for the average local partisan office, but only 22 points for local nonpartisan offices (e.g., school boards and city councils) and 18 points for local ballot measures. In an individual-level regression predicting vote choice in these subnational offices, a voter’s national party allegiance explains nearly 89% of the within-contest variation in vote choices for state partisan office, but less than 8% of the same variation in vote choices for local ballot measures.",
+  "inverted_pyramid": false,
+  "lit_review_location": "integrated_intro",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "Our findings show high levels of presidential party loyalty in state candidate elections with party labels (state partisan offices), slightly weaker levels in local candidate elections with party labels (local partisan offices), and much weaker levels in nonpartisan offices and ballot measures. The APG is 91 percentage points for the average state partisan office, 85 points for the average local partisan office, but only 22 points for local nonpartisan offices (e.g., school boards and city councils) and 18 points for local ballot measures.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": false,
+  "n_sections": 12,
+  "section_titles": [
+    "INTRODUCTION",
+    "DATA AND MEASURES",
+    "THE PARTISAN GAP IN STATE AND LOCAL ELECTIONS",
+    "VARIATION IN PARTISANSHIP ACROSS LOCAL OFFICES",
+    "VARIATION IN PARTISANSHIP ACROSS ISSUE AREAS",
+    "EVIDENCE FOR ISSUE VOTING ON LOCAL BALLOT MEASURES",
+    "DISCUSSION AND CONCLUSION",
+    "SUPPLEMENTARY MATERIAL",
+    "DATA AVAILABILTY STATEMENT",
+    "ACKNOWLEDGEMENTS",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS"
+  ],
+  "_file": "2025_Conevska_How_Partisan_Are_US_Local_Elections_Evidence_from_2020_Ca.pdf",
+  "_elapsed_s": 291.8
+}

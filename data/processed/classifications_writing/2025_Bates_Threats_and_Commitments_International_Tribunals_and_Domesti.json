@@ -1,0 +1,26 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction opens with a concrete Colombia vignette and an explicit puzzle about why elites would comply with international accountability demands during peace negotiations. It then pivots to a gap claim, arguing that scholars have paid little attention to the content of peace agreements negotiated under ICC involvement.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "I find that ICC involvement, via the concrete threat of intervention and intervention itself, is associated with an increase in the likelihood that a peace agreement contains a commitment to implement domestic trials.",
+  "inverted_pyramid": false,
+  "lit_review_location": "separate_section",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "I find that ICC involvement, via the concrete threat of intervention and intervention itself, is associated with an increase in the likelihood that a peace agreement contains a commitment to implement domestic trials.",
+  "uses_numbered_hypotheses": true,
+  "has_roadmap_paragraph": true,
+  "n_sections": 7,
+  "section_titles": [
+    "INTRODUCTION",
+    "JUSTICE AND PEACE",
+    "ARGUMENT",
+    "DATA AND RESEARCH DESIGN",
+    "RESULTS",
+    "CASE STUDIES",
+    "CONCLUSION"
+  ],
+  "_file": "2025_Bates_Threats_and_Commitments_International_Tribunals_and_Domesti.pdf",
+  "_elapsed_s": 223.2
+}

@@ -1,0 +1,48 @@
+{
+  "pid": "S0102-64452015000100006",
+  "error_in_raw_text": "Missing/Corrupt",
+  "subfield": "Comparative Politics",
+  "is_empirical_quant_paper": false,
+  "general_goal_of_analysis": "Explain",
+  "single_country_study": "single_country",
+  "single_region": "single_region",
+  "countries_of_focus": "Mexico",
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": null,
+  "seeks_determinants": true,
+  "main_causal_research_design": null,
+  "other_research_design": "Qualitative case study with process tracing",
+  "instrumental_variable_instrument": null,
+  "placebo_test": null,
+  "independent_variables": [
+    {
+      "variable_name": "domestic_factors",
+      "variable_description": "Role of NGOs and the Supreme Court in mediating international human rights norms domestically"
+    }
+  ],
+  "dependent_variables": [
+    {
+      "variable_name": "norm_impact",
+      "variable_description": "Impact of Inter-American human rights norms on military jurisdiction and conventionality control in Mexico"
+    }
+  ],
+  "main_variable_relationship": null,
+  "makes_explicit_causal_claim": true,
+  "makes_implicit_causal_claim": true,
+  "strong_non_causal_causal_qualification": null,
+  "sample_size": null,
+  "sample_size_quote": null,
+  "claims_any_statistically_significant_results": null,
+  "references_power_analysis": null,
+  "clearly_defined_explanatory_variable": true,
+  "clear_causal_quantity_of_interest": null,
+  "specifies_estimate_equations": null,
+  "discusses_threats_to_causality": null,
+  "statement_of_identification_assumptions_quote": null,
+  "statement_of_identification_assumptions": false,
+  "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "evidence_type": "qualitative",
+  "method_status": "explicit",
+  "brief_justification": "Qualitative case study analyzing how Inter-American human rights norms from the Rosendo Radilla ruling impacted Mexican domestic politics, focusing on military jurisdiction and conventionality control. Uses process tracing to examine the role of NGOs and the Supreme Court as mediating domestic factors. Single-country study of Mexico."
+}

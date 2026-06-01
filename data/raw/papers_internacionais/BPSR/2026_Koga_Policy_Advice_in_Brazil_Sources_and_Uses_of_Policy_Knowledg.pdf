@@ -1,0 +1,2448 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO  Brasil - Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System </title>
+
+    
+  
+<!-- social share tags -->
+<meta property="og:url" content="https://www.scielo.br/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?lang=en"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System"/>
+<meta property="og:description" content="Abstract In this paper, we analyze the dynamics of policy advisory systems and the use of policy..."/>
+<meta property="og:image" content="https://www.scielo.br/media/images/bpsr_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Koga, Natália Massaco">
+        
+            <meta name="citation_author_affiliation" content="Institute of Applied Economic Research">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0003-0143-8373">
+        <meta name="citation_author" content="Palotti, Pedro">
+        
+            <meta name="citation_author_affiliation" content="Institute of Applied Economic Research">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-9071-9726">
+        <meta name="citation_author" content="Loureiro, Miguel">
+        
+            <meta name="citation_author_affiliation" content="Institute of Development Studies">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-6793-0649">
+        <meta name="citation_author" content="Rocha, Virginia">
+        
+            <meta name="citation_author_affiliation" content="European University Institute">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-5267-4929">
+        <meta name="citation_journal_title" content="Brazilian Political Science Review"></meta>
+<meta name="citation_journal_abbrev" content="Bras. political sci. rev."></meta>
+<meta name="citation_journal_abbrev" content="Bras. political sci. rev"></meta>
+<meta name="citation_publisher" content="Associação Brasileira de Ciência Política"></meta>
+<meta name="citation_volume" content="20"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?format=xml&amp;lang=en"></meta>
+<meta name="citation_firstpage" content="e0005"></meta>
+<meta name="citation_doi" content="10.1590/1981-3821202600010005"></meta>
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+
+<meta name="citation_issn" content="1981-3821"></meta>
+
+    <meta name="citation_title" content="Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System"></meta>
+    <meta name="citation_language" content="en"></meta>
+
+<meta name="citation_abstract" content="Abstract In this paper, we analyze the dynamics of policy advisory systems and the use of policy knowledge in contexts characterized by weak institutionalization and limited influence from Anglo-American models of policy advice, such as Brazil. We synthesize findings from a large research project carried out between 2019 and 2024, which combined two large-N surveys of Brazilian federal bureaucrats (conducted in 2019 and 2021) with six case studies across diverse policy areas. We examined the selected cases – spanning health, environment, social welfare, public security, management, and infrastructure – through document analysis and 40 in-depth interviews with policy advisers conducted in 2022, aiming to understand how bureaucrats access and apply knowledge in their work. Three main findings stand out: 01. different sources of information are relevant in the development of policy knowledge; 02. in most cases, internal sources produced by the bureaucracy itself are the most visible, with bureaucrats acting as translators, stabilizers and legitimizer of knowledge within the state apparatus; and 03. oversight bodies, such as audit offices and the judiciary, have gained growing influence by providing analyses and issuing binding recommendations. Together, these findings challenge conventional paradigms of policy advice."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2026"></meta>
+<meta name="citation_keywords" content="Knowledge sources"></meta><meta name="citation_keywords" content="policy advice"></meta><meta name="citation_keywords" content="evidence-informed policy"></meta><meta name="citation_keywords" content="Brazil"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    
+    <link href="/static/css/bootstrap.css?v=1.1.23" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <!-- CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit -->
+<div class="widget widget-Lockss widget-instance-IssueBrowseByYear_Lockss">
+
+    <input class="at-locks-messaging" type="hidden"
+        value="LOCKSS system has permission to collect, preserve, and serve this Archival Unit" />
+
+    <input class="at-clockss-messaging" type="hidden"
+        value="CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" />
+
+</div>
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+    <script src="https://darkvisitors.com/tracker.js?project_key=c7366feb-7ba9-4f3d-a536-9bdca1bee170"></script>
+    
+
+     
+  <link rel="stylesheet" href="/static/css/article.css?v=1.1.20" type="text/css" async/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" async />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" async />
+
+
+  </head>
+  <body class="journal article" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
+    <a name="top"></a>
+
+    
+
+  
+
+
+<style>
+
+    body{  
+        padding-top: 74px;
+    }
+    
+    .articleTxt{
+        top: -16px;
+    }
+
+    @media (max-width: 575.98px) {
+      
+      .articleCtt > .container{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .articleCtt .articleTxt{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+    
+    }
+
+    @media (min-width: 768px){
+      
+      .scielo__truncate{
+        display: block;
+        max-width: 285px;
+      }
+
+    }
+ 
+</style>
+
+<header class="fixed-top scielo__shadow-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-sm-1 d-print-none">
+                
+
+<details class="scielo__accessibleMenu">
+  <summary>
+      <span class="menu-icon"></span>
+      <span>Menu</span>
+  </summary>
+  <nav style="max-height: 780px;">
+    <ul>
+      <li class="logo">
+        <div class="scielo__logo-scielo--small"></div>
+      </li>
+      <li>
+        <a href="/" alt="Acessar site coleção Brasil" aria-label="Acessar site coleção Brasil">
+          <strong>Brasil</strong>
+        </a>
+        <ul>
+            <li>
+              <a href="/journals/alpha?status=current" class="tab_link">
+                Lista alfabética de periódicos
+              </a>
+            </li>
+            <li>
+              <a href="/journals/thematic?status=current" class="tab_link">
+                Lista temática de periódicos
+              </a>
+            </li>
+            <li>
+              <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+                Busca
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+                Métricas
+              </a>
+            </li>
+            <li>
+              <a href="/about/">
+                Sobre o SciELO Brasil
+              </a>
+            </li>
+            <li>
+              <a href="/about/">
+                Contatos
+              </a>
+            </li>
+            <li>
+              <a href="#" id="floatingBtnErrorHamburguerMenu" class="floatingBtnErrorHamburguerMenu">
+                Reportar erro
+              </a>
+            </li>
+
+            
+
+        </ul>
+      </li>
+      <li>
+        <a target="_blank" href="//www.scielo.org">
+          <strong>SciELO.org - Rede SciELO</strong>
+        </a>
+        <ul>
+          <li>
+            <a target="_blank" href="//www.scielo.org">
+              Coleções nacionais e temáticas
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//search.scielo.org/">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+              Contatos
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        
+          <a target="_blank" href="//blog.scielo.org">
+        
+            <strong>Blog SciELO em Perspectiva</strong>
+          </a>
+      </li>
+    </ul>
+  </nav>
+</details>
+
+<script type="text/javascript">
+  document.addEventListener("click", function(event) {
+      const details = document.querySelector("details");
+      
+      if (!details.contains(event.target)) {
+          details.removeAttribute("open");
+      }
+  });
+
+</script>
+            </div>
+            <div class="col col-sm-3 --mainNav">
+                <a href="/" title="Ir para a homepage da coleção: Brasil">
+                    <div class="scielo__logo-scielo-collection mt-1 ms-5">
+                        <small>Brasil</small>
+                    </div>
+                </a>
+            </div>
+            <div class="d-none d-sm-block col">
+                <div class="dropdown mt-3">
+                    <button class="btn btn-link dropdown-toggle mb-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="text-truncate scielo__truncate">Brazilian Political Science Review </span>
+                    </button>
+                    <ul class="dropdown-menu scielo__shadow-2">
+                      <li>
+                        <a href="/j/bpsr/" class="dropdown-item">
+                          
+                            <img src="/media/images/bpsr_glogo.gif" class="image scielo__logo-periodico" alt="Logomarca do periódico: Brazilian Political Science Review" />
+                          
+                        </a>
+                      </li>
+                      
+                      
+                        <li>
+                          <a href="http://mc04.manuscriptcentral.com/bpsr-scielo" class="dropdown-item" target="_blank"><span class="material-icons-outlined">launch</span> Submissão de manuscritos</a>
+                        </li>
+                      
+                      <li>
+                        <a href="/journal/bpsr/about/#about" class="dropdown-item"><span class="material-icons-outlined">info</span> Sobre o periódico</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#item2" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Política editorial</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#editors" class="dropdown-item"><span class="material-icons-outlined">people</span> Corpo Editorial</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#instructions" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Instruções aos autores</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#contact" class="dropdown-item"><span class="material-icons-outlined">email</span> Contato</a>
+                      </li>
+                      <li>
+                        <a href="http://analytics.scielo.org/?journal=1981-3821&collection=scl" class="dropdown-item"><span class="material-icons-outlined">show_chart</span> Métricas</a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="language mt-3">
+                  
+<div class="scielo__language">
+  <div class="dropdown">
+    <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--left dropdown-toggle mb-0 float-end mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="material-icons-outlined">language</span>
+      
+
+        
+          <span class="d-lg-none">pt_BR</span>
+          <span class="d-none d-lg-block">Português</span>
+        
+
+      
+
+        
+
+      
+
+        
+
+      
+  
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+
+      
+    
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/en/" lang="en">English</a></li>
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/es/" lang="es">Español</a></li>
+        
+
+      
+    
+    </ul>
+  </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row d-block d-sm-none">
+            <div class="col">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle mb-2 w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="truncate">Brazilian Political Science Review </span>
+                </button>
+                <ul class="dropdown-menu w-100">
+                  <li>
+                    <a href="/j/bpsr/" class="dropdown-item">
+                      
+                        <img src="/media/images/bpsr_glogo.gif" class="image" alt="Logomarca do periódico: Brazilian Political Science Review" style="max-width:100%;" />
+                      
+                    </a>
+                  </li>
+                  
+                    <li>
+                      <a href="http://mc04.manuscriptcentral.com/bpsr-scielo" class="dropdown-item" target="_blank"><span class="material-icons-outlined">launch</span> Submissão de manuscritos</a>
+                    </li>
+                  
+                  <li>
+                    <a href="/journal/bpsr/about/#about" class="dropdown-item"><span class="material-icons-outlined">info</span> Sobre o periódico</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#item2" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Política editorial</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#editors" class="dropdown-item"><span class="material-icons-outlined">people</span> Corpo Editorial</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#instructions" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Instruções aos autores</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#contact" class="dropdown-item"><span class="material-icons-outlined">email</span> Contato</a>
+                  </li>
+                  <li>
+                    <a href="http://analytics.scielo.org/?journal=1981-3821&collection=scl" class="dropdown-item"><span class="material-icons-outlined">show_chart</span> Métricas</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+</header>
+
+  <!--- removido da interface --->
+  
+
+  <main id="content">
+
+    
+
+    
+<!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu d-none d-md-block">
+    <div class="container">
+        
+        <div class="row">
+          <div class="col">
+
+            <div class="btn-group mt-1">
+              <a href="/j/bpsr/" class="btn scielo__btn-with-icon--only mb-0"><span class="material-icons-outlined">home</span></a>
+              
+              
+              <a href="/j/bpsr/i/2026.v20n1/" class="btn mb-0">
+                  Sumário
+              </a> 
+  
+              
+                
+                  <a href="/j/bpsr/a/yc7gTwKKTSnyd9q7B6FpJ7S/?lang=en" class="btn scielo__btn-with-icon--left mb-0 pe-md-2">
+                  
+                  <span class="material-icons-outlined">navigate_before</span>
+                  <span class="d-none d-xl-block">Anterior</span>
+                </a>
+  
+              
+              <a href="#" class="btn group disabled mb-0">
+                  Atual
+              </a>
+  
+              
+              <a href="/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?lang=en" class="btn scielo__btn-with-icon--right mb-0 ps-md-2">
+
+                <span class="d-none d-xl-block">Seguinte</span>
+                <span class="material-icons-outlined">navigate_next</span>
+              </a>
+  
+            </div>
+          </div>
+  
+          <div class="col d-md-none d-lg-block">
+            <div class="btn-group mt-1">
+              
+
+              
+
+
+    <div class="btn-group">
+      <button id="btnGroupDropTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+        Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDropTextLanguage">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+  
+
+
+
+                        
+           
+          <div class="btn-group">
+            <button id="btnGroupDropPDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              PDF
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropPDF">
+              
+                <li>
+                  <a target='_blank' href="/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?format=pdf&amp;lang=en" class="dropdown-item">
+                    
+                      Download PDF (Inglês)
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          
+          
+          
+          
+          
+            </div>
+          </div>
+          <div class="col d-none d-md-block d-lg-none">
+            <div class="dropdown mt-1 float-end">
+              <button class="btn btn-secondary dropdown-toggle mb-0 scielo__btn-with-icon--left " data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons-outlined">article</span> <strong>Conteúdo:</strong> 
+                <!--resumo-->
+                
+
+                <!--texto-->
+                
+                
+                
+                        
+                
+                Texto (EN)
+                
+                
+                
+                
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
+                <!--resumo-->
+                
+
+                <!--texto-->
+                
+                
+                <li>
+                
+                <!-- página de texto -->
+                <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                (Inglês)
+                
+                </a>
+                
+                </li>
+                
+                
+
+                <!--PDF-->
+                
+                
+                <li>
+                <a target='_blank' href="/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?format=pdf&amp;lang=en" class="dropdown-item">
+                
+                Download PDF (Inglês)
+                
+                </a>
+                </li>
+                
+                
+
+
+                <!--PDF REDCUBE-->
+                
+
+
+                <!--ePDF-->
+                
+
+              </ul>
+            </div>
+          </div>
+
+          
+          <div class="col-1">
+
+            <!-- share --> 
+             <!-- share -->
+ <div class="dropdown">
+  <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0 float-end" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="material-icons-outlined">share</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_whatsapp">Whatsapp</a></div>
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_bluesky">BlueSky</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_mastodon">Mastodon</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_facebook">Facebook</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_dd" href="https://www.addtoany.com/share">Mais</a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- AddToAny -->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+          </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs d-block d-md-none d-lg-none mt-5" style="padding-bottom:110px;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="btn-group w-100 --btn-group-nav-mobile" role="group">
+            
+            <a href="/j/bpsr/" class="btn scielo__btn-with-icon--only mb-0"><span class="material-icons-outlined">home</span></a>
+            <a href="/j/bpsr/i/2026.v20n1/" class="btn mb-0">
+              Sumário
+            </a>
+            
+            <div class="btn-group" role="group">
+
+              <!-- share -->
+              <button type="button" class="btn btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                <span class="material-icons-outlined">share</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                <li><a class="dropdown-item" href="#">X</a></li>
+                <li><a class="dropdown-item" href="#">Google+</a></li>
+                <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+                <li><a class="dropdown-item" href="#">Reddit</a></li>
+                <li><a class="dropdown-item" href="#">StambleUpon</a></li>
+                <li><a class="dropdown-item" href="#">CiteULike</a></li>
+                <li><a class="dropdown-item" href="#">Mendeley</a></li>
+              </ul>
+            </div>
+          
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          
+
+
+        </div>
+        <div class="col-4">
+
+          
+          <div class="dropdown mt-1">
+          <button id="btnGroupDropArticleTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+          Texto
+          
+                  
+          
+          (EN)
+          
+          
+          
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDropArticleTextLanguage">
+          
+          <li>
+          
+          <!-- página de texto -->
+          <a href="#" class="current dropdown-item"> 
+          Texto
+          
+          (Inglês)
+          
+          </a>
+          
+          </li>
+          
+          </ul>
+          </div>
+
+          
+        </div>
+        <div class="col-4">
+          
+
+          <div class="dropdown float-end mt-1">
+          <button id="btnGroupDropArticlePDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+          PDF
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropArticlePDF">
+          
+          <li>
+          <a target='_blank' href="/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?format=pdf&amp;lang=en" class="dropdown-item">
+          
+          Download PDF (Inglês)
+          
+          </a>
+          </li>
+          
+          </ul>
+          </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1981-38212026000100205 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">ARTICLE</span><span class="_separator"> • </span><span class="_editionMeta">Braz. political sci. rev. 20 
+                (1)
+            <span class="_separator"> • </span>2026</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1981-3821202600010005" class="_doi" target="_blank">https://doi.org/10.1590/1981-3821202600010005</a> <a href="javascript:;" class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-text="https://doi.org/10.1590/1981-3821202600010005"><span class="material-icons-outlined">link</span>copy</a></span>
+</div>
+<h1 class="article-title">
+<img alt="Open-access" class="logo-open-access" data-bs-toggle="tooltip" src="https://ds.scielo.org/img/logo-open-access.svg" data-original-title="by 4.0 "> Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<div class="articleMeta"></div>
+<div class="scielo__contribGroup">
+<a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalTutors">Authorship</a><a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalScimago">SCIMAGO INSTITUTIONS RANKINGS</a>
+</div>
+<div class="row">
+<ul class="d-none d-lg-block col-lg-2 articleMenu"></ul>
+<article id="articleText" class="col-sm-12 col-lg-10 offset-lg-2"><div class="articleSection articleSection--abstract" data-anchor="Abstract">
+<h2 class="h5">Abstract</h2>
+<p>In this paper, we analyze the dynamics of policy advisory systems and the use of policy knowledge in contexts characterized by weak institutionalization and limited influence from Anglo-American models of policy advice, such as Brazil. We synthesize findings from a large research project carried out between 2019 and 2024, which combined two large-N surveys of Brazilian federal bureaucrats (conducted in 2019 and 2021) with six case studies across diverse policy areas. We examined the selected cases – spanning health, environment, social welfare, public security, management, and infrastructure – through document analysis and 40 in-depth interviews with policy advisers conducted in 2022, aiming to understand how bureaucrats access and apply knowledge in their work. Three main findings stand out: 01. different sources of information are relevant in the development of policy knowledge; 02. in most cases, internal sources produced by the bureaucracy itself are the most visible, with bureaucrats acting as translators, stabilizers and legitimizer of knowledge within the state apparatus; and 03. oversight bodies, such as audit offices and the judiciary, have gained growing influence by providing analyses and issuing binding recommendations. Together, these findings challenge conventional paradigms of policy advice.</p>
+<p><strong>Keywords</strong><br>Knowledge sources; policy advice; evidence-informed policy; Brazil</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h2 class="h5">Introduction</h2>
+      <p>Debates on the complex relationship between expertise and power in policymaking – as well as on the institutional arrangements that support decision-making through policy advice – have long been central to policy studies (<span class="ref"><span class="xref xrefblue"><a href="#B4_ref" data-ref="CAIRNEY, Paul (2017), The politics of evidence-based policy making. Oxford: Oxford University Press. 137 pp..">CAIRNEY, 2017</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B12_ref" data-ref="CRAFT, Jonathan and HOWLETT, Michael (2013), The dual dynamics of policy advisory systems: the impact of externalization and politicization on policy advice. Policy and Society. Vol. 32, N ° 03, pp. 187-197.">CRAFT and HOWLETT, 2013</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B14_ref" data-ref="DELEON, Peter (2008), The historical roots of the field. In: The Oxford Handbook of public policy. Edited by GOODIN, Robert; MORAN, Michael, and REIN, Martin. Oxford: Oxford University Press. pp. 39-57.">DELEON, 2008</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B16_ref" data-ref="FISCHER, Frank and GOTTWEIS, Herbert (2012), The argumentative turn revisited: public policy as communicative practice. Durham: Duke University Press. 400 pp..">FISCHER and GOTTWEIS, 2012</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B29_ref" data-ref="LEJANO, Raul P. (2006), Frameworks for policy analisis. Mergin text and context. Nova York: Routledge. 269 pp..">LEJANO, 2006</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B40_ref" data-ref="PARKHURST, Justin (2017), The politics of evidence: from evidence-based policy to the good governance of evidence. London: Routledge. 196 pp..">PARKHURST, 2017</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B47_ref" data-ref="SIMON, Herbert A. (1956), Rational choice and the structure of the environment. Psychological Review. Vol. 63, N° 02, pp. 129-138.">SIMON, 1956</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B49_ref" data-ref="SPINK, Peter Kevin (2019), Beyond public policy: a public action languages approach. Northampton: Edward Elgar Publishing. 238 pp..">SPINK, 2019</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B52_ref" data-ref="WEISS, Carol H. (1979), The many meanings of research utilization. Public Administration Review. Vol. 39, N° 05, pp. 426-431.">WEISS, 1979</a></span></span>). Yet, there has been relatively little exploration of the diversity of advisory sources and systems that inform government decisions outside OECD countries, beyond Westminster traditions, and on the ‘demand side’ of advice (<span class="ref"><span class="xref xrefblue"><a href="#B18_ref" data-ref="HOWLETT, Michael (2019), Comparing policy advisory systems beyond the OECD: models, dynamics and the second-generation research agenda. Policy Studies. Vol. 40, N° 03/04, p. 241-259.">HOWLETT, 2019</a></span></span>). This gap is even more pronounced in contexts where policy advice lacks institutionalization, a situation faced by most countries worldwide, including Brazil.</p>
+      <p>This paper seeks to address these gaps by synthesizing empirical findings from data collected between 2019 and 2024 on Brazil’s federal bureaucracy, using both quantitative and qualitative methods. Unlike countries with well-established advisory systems, such as the UK (<span class="ref"><span class="xref xrefblue"><a href="#B5_ref" data-ref="CAIRNEY, Paul and TOTH, Federico (2023), The politics of COVID-19 experts: comparing winners and losers in Italy and the UK. Policy and Society. Vol. 42, N° 03, pp. 392-405.">CAIRNEY and TOTH, 2023</a></span></span>) and Canada (<span class="ref"><span class="xref xrefblue"><a href="#B20_ref" data-ref="HOWLETT, Michael (2009), Policy analytical capacity and evidence-based policy-making: lessons from Canada. Canadian Public Administration. Vol. 52, N° 02, pp. 153-175.">HOWLETT, 2009</a></span></span>), Brazil has relatively few formal institutional mechanisms for generating, consolidating, and applying policy knowledge and expertise (<span class="ref"><span class="xref xrefblue"><a href="#B36_ref" data-ref="PALOTTI, Pedro Lucas de Moura; KOGA, Natália Massaco; GOELLNER, Isabella de Araujo, and SILVA, Noëlle (2020), A produção de políticas públicas mais bem informadas no Executivo Federal e o PDRAE: um olhar sobre estruturas organizacionais e suas competências. In: Reformas do Estado no Brasil: trajetórias, inovações e desafios. Edited by CAVALCANTE, Pedro Luiz Costa and SILVA, Mauro Santos. Brasília: Ipea. Pp. 337-364.">PALOTTI et al., 2020</a></span></span>). This does not mean that policy analysis and advice are absent in Brazil, but rather that more research is needed to identify and understand how these practices operate (<span class="ref"><span class="xref xrefblue"><a href="#B51_ref" data-ref="VAITSMAN, Jeni; RIBEIRO, José M., and LOBATO, Lenaura (eds) (2013), Policy analysis in Brazil: the state of the art. In: Policy analysis in Brazil. Chicago: Chicago University Press. pp. 01-10.">VAITSMAN et al., 2013</a></span></span>).</p>
+      <p>Since 2019, Brazil has experienced significant turbulence in the relationship between expertise and political power. Between 2019 and 2022, the Bolsonaro administration notably employed legal and infra-legal measures to undermine federal policy implementation across multiple public policy areas and, in some cases, to persecute public servants (<span class="ref"><span class="xref xrefblue"><a href="#B17_ref" data-ref="GOMIDE, Alexandre de Ávila; SILVA, Michelle Morais de Sá e, and LEOPOLDI, Maria Antonieta (eds)(2023), Políticas públicas em contexto de retrocesso democrático e populismo reacionário: desmontes e reconfigurações. In: Desmonte e reconfiguração de políticas públicas (2016-2022). Brasília: IPEA. pp. 13-44.">GOMIDE et al., 2023</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B30_ref" data-ref="LOTTA, Gabriela Spanghero; LIMA, Iana Alves de; SILVEIRA, Mariana Costa; FERNANDEZ, Michelle; PEDOTE, João Paschoal, and GUARANHA, Olívia Landi Corrales (2024), The procedural politicking tug of war: law-versus-management disputes in contexts of democratic backsliding. Perspectives on Public Management and Governance. Vol. 07, N° 01/02, pp. 13-26.">LOTTA et al., 2024</a></span></span>). Denialism and attacks on expertise and science were used to discredit research institutions, intimidate civil servants, discontinue information systems, and weaken advisory arrangements and the state’s analytical capacity (<span class="ref"><span class="xref xrefblue"><a href="#B44_ref" data-ref="ROQUE, Tatiana (2023), Denialism as government: trust and truth in a post-neoliberal era. In: The rise of the radical right in the Global South. Edited by PINHEIRO-MACHADO, Rosana and VARGAS-MAIA, Tatiana. London: Routledge. pp. 185-195">ROQUE, 2023</a></span></span>). In response, initiatives to institutionalize policy advice in Brazil have expanded in recent years. Key dimensions critical to establishing an evidence-informed advisory system include governance arrangements for using evidence, established capacities, mobilized partnerships and collaborations, and committed leadership (<span class="ref"><span class="xref xrefblue"><a href="#B53_ref" data-ref="WORLD HEALTH ORGANIZATION (2023), Supporting the routine use of evidence during the policy-making process: a WHO checklist. Geneva: World Health Organization. 53 pp..">WORLD HEALTH ORGANIZATION, 2023</a></span></span>).</p>
+      <p>In addition to representing a lesser-known case of a hybrid administrative tradition (<span class="ref"><span class="xref xrefblue"><a href="#B42_ref" data-ref="PETERS, B. Guy (2021), Administrative traditions: understanding the roots of contemporary administrative behavior. Oxford: Oxford University Press. 288 pp..">PETERS, 2021</a></span></span>), the recent challenges related to policy advice make the Brazilian case particularly relevant for study. This research therefore seeks to address two key questions: how the Brazilian policy advisory system (PAS) functions, and which sources of knowledge inform it. Our findings indicate that, while various sources of information contribute to the development of policy knowledge, internal sources produced by the bureaucracy itself are typically the most prominent, with bureaucrats serving as translators, stabilizers, and legitimizers of knowledge within the state apparatus. We also observe that oversight bodies, such as audit offices and the judiciary, have gradually increased their influence in the Brazilian policy advisory system by providing analyses and issuing binding recommendations.</p>
+      <p>Following this introduction, the paper is organized into five sections. The next section reviews the literature on policy advice and the specific features of Brazil’s administrative and organizational landscape. The third section presents the methodology and data sources, while the fourth and fifth sections describe our findings and analyze the conditioning factors shaping policy advisory systems. The final section offers concluding reflections on the contributions of the Brazilian case to the study of policy advisory systems in other non-OECD countries.</p>
+      
+        <h4>Policy knowledge and the study of policy advisory systems: the Brazilian case</h4>
+        <p>The field of policy analysis emerged with the goal of mobilizing knowledge to support decision-making, evolving from a technical-rational perspective to a more critical and constructivist approach that recognizes the influence of values, interests, and judgments in policymaking (<span class="ref"><span class="xref xrefblue"><a href="#B28_ref" data-ref="LASSWELL, Harold D. and LERNER, Daniel (eds) (1951), The policy sciences: recent developments in scope and method. Stanford: Stanford University Press. 344 pp..">LASSWELL and LERNER, 1951</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B49_ref" data-ref="SPINK, Peter Kevin (2019), Beyond public policy: a public action languages approach. Northampton: Edward Elgar Publishing. 238 pp..">SPINK, 2019</a></span></span>). Initially rooted in the Anglo-American context, the field began to challenge the separation between technical expertise and politics, increasingly framing public problems as social constructs (<span class="ref"><span class="xref xrefblue"><a href="#B16_ref" data-ref="FISCHER, Frank and GOTTWEIS, Herbert (2012), The argumentative turn revisited: public policy as communicative practice. Durham: Duke University Press. 400 pp..">FISCHER and GOTTWEIS, 2012</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B50_ref" data-ref="STONE, Deborah A. (2012), Policy paradox: the art of political decision making. New York: W.W. Norton &amp; Co. 408 pp..">STONE, 2012</a></span></span>). The evidence-based policymaking movement, which gained momentum in the United Kingdom during the 1990s, sought to rationalize decisions through scientifically rigorous methods but was later criticized for overlooking contextual complexity and the role of politics (<span class="ref"><span class="xref xrefblue"><a href="#B3_ref" data-ref="CAIRNEY, Paul (2019), The UK government's imaginative use of evidence to make policy. British Politics. Vol. 14, N° 01, pp. 01-22.">CAIRNEY, 2019</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B13_ref" data-ref="DAVIES, Huw T. O.; NUTLEY, Sandra M., and SMITH, Peter C. (2000), What works ? Evidence-based policy and practice in public services. Bristol: The Policy Press. 396 pp..">DAVIES et al., 2000</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B40_ref" data-ref="PARKHURST, Justin (2017), The politics of evidence: from evidence-based policy to the good governance of evidence. London: Routledge. 196 pp..">PARKHURST, 2017</a></span></span>). The definition of ‘evidence’ itself has been widely debated, with scholars advocating for more moderate and abductive approaches that integrate both the assumptions of instrumental rationalism and constructivist contributions, acknowledging multiple forms of knowledge – including tacit and lay knowledge – as relevant to the policy formulation process (<span class="ref"><span class="xref xrefblue"><a href="#B43_ref" data-ref="PINHEIRO, Maurício Mota Saboya (2020), Políticas públicas baseadas em evide^ncias (PPBEs): delimitando o problema conceitual. Texto para Discussão N° 2.554. Rio de Janeiro: Ipea. 53 pp..">PINHEIRO, 2020</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B45_ref" data-ref="SAGUIN, Kidjie (2022), Intuition, reasoning and capacity in policymaking: building a cognitive model of knowledge and evidence utilization. In: Políticas públicas e usos de evidências no Brasil: conceitos, métodos, contextos e práticas. Brasília: IPEA. pp. 85-106.">SAGUIN, 2022</a></span></span>).</p>
+        <p>With the emergence of studies on policy advisory systems in the 1980s, scholars began examining the roles of actors and the institutional arrangements through which information, knowledge, and recommendations reach decision-makers within specific sectors or jurisdictions (<span class="ref"><span class="xref xrefblue"><a href="#B11_ref" data-ref="CRAFT, Jonathan, and HALLIGAN, John (2017), Assessing 30 years of Westminster Policy Advisory System Experience. Policy Sciences. Vol. 50, N° 01, pp. 47-62.">CRAFT and HALLIGAN, 2017</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B18_ref" data-ref="HOWLETT, Michael (2019), Comparing policy advisory systems beyond the OECD: models, dynamics and the second-generation research agenda. Policy Studies. Vol. 40, N° 03/04, p. 241-259.">HOWLETT, 2019</a></span></span>). The first generation of studies focused on identifying and understanding the nature and location of policy advice sources – whether scientific, technical, or partisan political advisers, and whether internal to governmental organizations or external, such as lobbyists and think tanks. More recently, <span class="ref"><span class="xref xrefblue"><a href="#B18_ref" data-ref="HOWLETT, Michael (2019), Comparing policy advisory systems beyond the OECD: models, dynamics and the second-generation research agenda. Policy Studies. Vol. 40, N° 03/04, p. 241-259.">Howlett (2019)</a></span></span> has called attention to two key gaps in this debate. The first is the scarcity of studies conducted in non-Westminster and non-OECD countries. The second concerns the demand side of knowledge, more specifically the actors who seek policy advice, what types of sources they consult, and how they utilize them.</p>
+        <p>Our study seeks to contribute to both areas of inquiry. The limited scholarship on policy advisory systems in countries with non-Anglo-American traditions makes the Brazilian case particularly relevant. Often described as a hybrid case due to its strong Napoleonic influence alongside significant managerial reforms in the 1990s, Brazil’s administrative system is characterized by legalism and ‘ex-ante’ control, which impose prior prescriptions that define the locus and scope of bureaucratic action (<span class="ref"><span class="xref xrefblue"><a href="#B42_ref" data-ref="PETERS, B. Guy (2021), Administrative traditions: understanding the roots of contemporary administrative behavior. Oxford: Oxford University Press. 288 pp..">PETERS, 2021</a></span></span>). In general, there are few explicit guidelines regarding the functioning of policy advice within government organizations, allowing for diverse and heterogeneous arrangements and cultures of evidence across the state apparatus.</p>
+        <p>In Brazil, the development of the policy analysis field has not followed a systematic path toward the institutionalization of a distinct academic discipline. This does not mean, however, that the country has lacked analytical activity (VAITSMAN, RIBEIRO, and LOBATO, 2013). Between the 1930s and 1980s, policy analysis largely overlapped with the work of high-ranking bureaucrats engaged in commissions and institutions responsible for formulating proposals to advance the national-developmentalist project. The 1988 Federal Constitution marked a turning point by decentralizing the policymaking process, enabling more horizontal and bottom-up forms of deliberation and decision-making. New participatory and deliberative arenas were created, and actors beyond the boundaries of state organizations began to both produce and demand knowledge and analytical inputs to inform public policymaking (VAITSMAN, RIBEIRO, and LOBATO, 2013).</p>
+        <p>At present, the advisory system at the federal level accounts for a significant portion of the key policy decisions in the country. Brazil is a federation comprising three tiers of government: the Union, 26 states plus the Federal District of Brasília, and 5,570 municipalities. Each constitutes a federative entity with political, fiscal, and administrative autonomy, although policy formulation remains largely centralized within the Union. Federal legislation covers numerous public policies that are uniformly regulated across the national territory, while subnational governments are primarily responsible for implementing these policies and delivering essential public services. In this arrangement, policy formulation is largely the responsibility of the Union, whereas implementation falls to the states and municipalities (<span class="ref"><span class="xref xrefblue"><a href="#B2_ref" data-ref="ARRETCHE, Marta Teresa da Silva (2012), Democracia, federalismo e centralização no Brasil. Rio de Janeiro: Ed. Fiocruz/Ed. FGV. 232 pp..">ARRETCHE, 2012</a></span></span>).</p>
+        <p>The centralized nature of decision-making in Brazil underscores the importance of understanding how the Federal Executive is influenced by different sources of knowledge, which sources are most frequently consulted, why they are relied upon, and which elements of the advisory system carry the greatest weight in shaping public policy. With a legal system deeply rooted in civil law, Brazil relies extensively on written regulations to structure its public administration. The 1988 Constitution is among the most detailed and comprehensive in the world, encompassing fundamental rights and guarantees as well as the structure of the state. It also contains an extensive set of provisions related to specific policy areas, including the organization of the health system, social security, and education (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="COUTO, Bruno Gontyjo do (2024), Capacidades analíticas e autonomia da burocracia como condicionantes do uso de evidências na implementação do auxílio emergencial. Boletim de Análise Político-Institucional N° 37. Brasília: Ipea. pp. 23-32.">COUTO, 2024</a></span></span>).</p>
+        <p>Government bureaucracy is a key factor in understanding Brazil’s policy advisory system. Bureaucrats are responsible for implementing most public policies defined by the President and the National Congress. Over the last four decades, public administration has been restructured around a career-based system in which recruitment occurs through public examinations, particularly at the federal level, generally requiring at least a higher education degree. A small number of positions are reserved for leaders and advisers recruited from outside the public service, allowing for politically appointed posts with considerable discretion, similar to the U.S. model. Despite advances in professionalization since the 1988 Constitution, the Brazilian federal administration still displays substantial internal asymmetries, with ‘islands of excellence’ coexisting alongside agencies staffed by poorly qualified personnel, often with unstable employment ties and subject to political bargaining by the political parties that form the governing coalition. Thus, closely examining the context of policy implementation is particularly important for understanding how the advisory system functions.</p>
+        <p>Despite the managerial reform initiatives of the 1990s and various experiences with agencification, Brazilian public organizations still retain a strong legalistic character. This feature sets Brazil apart from the Westminster policy advisory system, where efficiency takes precedence over legalism, and aligns it more closely with the French administrative tradition, in which legal formalism plays a central role (<span class="ref"><span class="xref xrefblue"><a href="#B42_ref" data-ref="PETERS, B. Guy (2021), Administrative traditions: understanding the roots of contemporary administrative behavior. Oxford: Oxford University Press. 288 pp..">PETERS, 2021</a></span></span>). The law clearly defines the role of the public administrator, whose primary function is to apply general provisions to individual cases. In other words, the actions of decision-makers and the bureaucrats who advise them are constrained by normative frameworks.</p>
+        <p>The legalistic character of Brazil’s public administration permeates all levels of government, extending beyond the federal sphere to guide state and municipal authorities in their policy formulation responsibilities. Given this solid legalistic orientation, control tends to be exercised through ex-ante measures, as the actions of public entities require prior authorization to prevent illegal or extra-legal activities. Horizontal accountability focuses on individual public servants and organizations, fostering endogeneity and discouraging risk-taking or innovative behavior (<span class="ref"><span class="xref xrefblue"><a href="#B42_ref" data-ref="PETERS, B. Guy (2021), Administrative traditions: understanding the roots of contemporary administrative behavior. Oxford: Oxford University Press. 288 pp..">PETERS, 2021</a></span></span>). Although oversight bodies in Brazil have recently sought to adopt a more consultative and collaborative approach with managers, their activities remain largely driven by compliance and fiscal considerations. Judicialization has become a common practice, particularly in more complex and uncertain decision-making contexts (<span class="ref"><span class="xref xrefblue"><a href="#B15_ref" data-ref="FILGUEIRAS, Fernando de B. (2018), Burocracias do controle, controle da burocracia e accountability no Brasil. In: Burocracia e políticas públicas no Brasil. Edited by PIRES, Roberto; LOTTA, Gabriela, and OLIVEIRA, Vanessa Elias de. Brasília: Ipea/Enap. pp. 355-381.">FILGUEIRAS, 2018</a></span></span>).</p>
+      
+    
+      <h2 class="h5">Data and methodology<span class="ref footnote"><sup class="xref"><a href="#fn1_ref" name="xref_fn1" data-ref="
+        1 
+    
+        As this article synthesizes findings from several studies, certain limitations should be acknowledged, such as the limited detail provided on the methods employed and the cases analyzed. Moreover, the period during which data were collected coincided with a context of systemic turbulence, which affects the characterization of behavioral patterns and perceptions. Nonetheless, we hope this work offers valuable contributions, drawing on extensive empirical material, to the critical examination of policy advice in a context of weak institutionalization.
+      ">1</a></sup></span> </h2>
+      <p>Given the systemic context described above, in this article we synthesize the findings of a broad empirical research effort conducted between 2019 and 2024, comprising two large-N surveys of federal bureaucrats and six case studies designed to examine how knowledge is absorbed and how the policy advisory system operates in Brazil.</p>
+      <p>Two thousand one hundred and eighty (2.180) civil servants from all ministries of the Brazilian federal government answered the first survey conducted in 2019, representing approximately 11% of the target population. The survey included questions designed to map the various sources of information and the ways evidence is used across government sectors, as well as to capture respondents’ perceptions of the attributes of scientific evidence. The second survey, conducted in 2021, included 942 senior civil servants from ministries and agencies responsible for advising on and implementing federal policies, corresponding to about 15% of the target population. This second round replicated several questions from the 2019 survey, with a particular focus on the types of information most frequently used by respondents.</p>
+      <p>Between the second half of 2021 and the first half of 2022 we conducted the qualitative stage of the research, consisting of six within-case analyses across six different policy domains. The cases were selected based on the premise that varying contextual frameworks shape the use of evidence in distinct ways, influencing how public problems are framed, which policy options are considered for government intervention, and which epistemic communities engage with each policy area. In total, we conducted approximately 40 interviews with public policy analysts, including specialists, technical staff, and managers within the Brazilian federal government.</p>
+      
+        <h4>Diversity and variation of knowledge sources</h4>
+        <p>The survey results indicate that civil servants across different ministries, as well as senior officials throughout the entire Brazilian Federal Administration, draw on diverse sources of knowledge in the policymaking process. Descriptive analyses reveal a predominant reliance on internal and experiential sources of knowledge, with external sources playing a comparatively smaller role. These findings are summarized in <a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Chart 01</a>For the monarchical period, as there was no expected tenure for the head of government, values will be estimated using the average based on the time to the end of the term of the legislature and the head of state (emperor or regent). Again, the time since inauguration will be used to discount the expected tenure for the years following entry. The discount will be applied to the average of length of tenure of the legislature and the head of state.</p>
+        <div>
+          <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Chart 01</strong></strong><br>
+              Diversity and variation of knowledge sources
+            <br>
+</div>
+</div>
+        </div>
+        <p>In both studies, we applied factor analysis to the variable ‘type of information’ to identify potential correlations and typical profiles of knowledge sources. In the larger first survey, the resulting profiles cumulatively explained 63% of the variance, while in the second survey, which included only senior civil servants, they accounted for approximately 60% of the variance. The main takeaway from both surveys is that in general, Brazilian federal civil servants – including senior professionals – generally rely on four main types of information: 01. internal government information, 02. non-academic external information, 03. information derived from civil servants' own experiences (experiential), and 04. academic information.<a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Chart 02</a> presents the typical profiles of knowledge sources used by civil servants in the Brazilian federal government, along with the corresponding types of information for each profile, based on the factor analysis results.</p>
+        <div>
+          <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Chart 02</strong></strong><br>
+              Typical profiles of knowledge sources used in the Brazilian Federal Government
+            <br>
+</div>
+</div>
+        </div>
+      
+      
+        <h4>Explaining variation through contextual factors that influence Brazilian policy advisory systems</h4>
+        <p>As noted in the previous section, the sources of knowledge used in policymaking vary depending on who is using them and in what context. <span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="KOGA, Natália Massaco; LOUREIRO, Miguel; PALOTTI, Pedro Lucas de Moura; LINS, Rafael da Silva; COUTO, Bruno Gontyjo do, and LIMA, Shanna Nogueira (2022), Analysing the information sources Brazilian bureaucrats use as evidence in everyday policymaking. Policy &amp; Politics. Vol. 50, N° 04, pp. 483-506.">Koga et al. (2022)</a></span></span> examined the relationship between the types of knowledge sources and several factors, including the nature of policy work, individual analytical capacity, organizational analytical capacity, the policy domain, and other individual characteristics.<a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalTablet3"><span class="sci-ico-fileTable"></span>Chart 03</a> summarizes these findings, which are further discussed in the following three sub-sections, focusing on organizational-, relational-, and individual-level conditions shaping policy advice.</p>
+        <div>
+          <div class="row table" id="t3">
+<a name="t3"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Chart 03</strong></strong><br>
+              Variation in the use of sources of information
+            <br>
+</div>
+</div>
+        </div>
+      
+      
+        <h4>Organizational-level conditions</h4>
+        <p>One of our first key findings was that organizations with specialized units dedicated to mobilizing scientific knowledge tend to increase the demand for academic evidence while reducing reliance on internal government sources. We observed a strong positive association between working in governmental departments that provide resources and opportunities for civil servants to access academic information and their use of external academic, non-academic, and experiential sources. Moreover, the presence of a specialized unit that actively engages with academic research show a positive association with the use of academic information and a negative association with the use of internal government sources (<span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="KOGA, Natália Massaco; LOUREIRO, Miguel; PALOTTI, Pedro Lucas de Moura; LINS, Rafael da Silva; COUTO, Bruno Gontyjo do, and LIMA, Shanna Nogueira (2022), Analysing the information sources Brazilian bureaucrats use as evidence in everyday policymaking. Policy &amp; Politics. Vol. 50, N° 04, pp. 483-506.">KOGA et al., 2022</a></span></span>).</p>
+        <p>For instance, in the public health sector, within the urgent and complex context of the COVID-19 pandemic, the combination of strong state analytical capacity, the presence of an evidence-assessment unit, and the support of a robust epistemic community proved crucial for mobilizing scientific evidence. To inform recommendations on drugs and treatments for respiratory infections, despite government efforts to discredit the scientific expertise guiding the national pandemic response (KOGA et al., 2024b, 2023). The existence of a state body such as the National Commission for the Incorporation of Technologies in the Unified Health System (CONITEC) – with its operational dynamics, institutionalized arenas for action, and established credibility within the epistemic community of health technology assessment – was essential in resisting the denialist and anti-scientific attacks of the Jair Bolsonaro administration during the pandemic.</p>
+        <p>We also find a greater reliance on government sources of information within the economic, social policy, and oversight sectors, with the strongest association observed in the latter. The close relationship between analytical and oversight work and the use of internal government sources is particularly evident in the oversight sector. As <span class="ref"><span class="xref xrefblue"><a href="#B35_ref" data-ref="OLIVEIRA, Tiago Chaves and MENKE, Wagner Brignol (2020), Auditores internos da Controladoria-Geral da União: como atuam e que informações utilizam. Boletim de Análise Político-Institucional. Vol. 24, pp. 103-125.">Oliveira and Menke (2020)</a></span></span> demonstrate in their study on the preferences of internal auditors at the Federal Comptroller General (CGU), there is a clear predominance of government sources such as norms and assessments produced by the CGU itself. Nonetheless, auditing activities also exhibit a positive association with the use of external non-academic information sources. Similarly, the environmental policy sector also shows a strong positive association with external sources of information. As noted in previous studies (<span class="ref"><span class="xref xrefblue"><a href="#B1_ref" data-ref="ABERS, Rebecca Neaera (2016), Conflitos, mobilizac¸o~es, e participac¸a~o institucionalizada: a relac¸a~o entre a sociedade civil e a construc¸a~o de grandes obras de infraestrutura. Textos para Discussão N° 2231. Rio de Janeiro: Ipea. 52 pp..">ABERS, 2016</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B31_ref" data-ref="MACEDO, Alex Santos; VIANA, Rafael, and NASCIMENTO, Maricilene Isaia Baia (2019), Capacidades analíticas no processo de produção de políticas públicas: quais fontes de evidências utilizam o serviço civil da Administração Pública Federal? Administrac ¸ a~o Pública e Gestão Social. Vol. 04, N° 11, pp. 01-22.">MACEDO et al., 2019</a></span></span>), this pattern reflects the sector’s extensive engagement with international and non-governmental organizations, as well as its longstanding exposure to international regulations, external evaluation, and financing standards.</p>
+        <p>Previous studies (<span class="ref"><span class="xref xrefblue"><a href="#B7_ref" data-ref="CHERNEY, Adrian; HEAD, Brian; POVEY, Jenny; FERGUSON, Michelle, and BOREHAM, Paul Raymond (2015), Use of academic social research by public officials: exploring preferences and constraints that impact on research use. Evidence and Policy: a Journal of research, debate and practice. Vol. 11, N° 02, pp. 169-188.">CHERNEY et al., 2015</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B19_ref" data-ref="HOWLETT, Michael (2015), Policy analytical capacity: the supply and demand for policy analysis in government. Policy and Society. Vol. 34, N° 03-04, pp. 173-182.">HOWLETT, 2015</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B39_ref" data-ref="PATTYN, Valérie and BRANS, Marleen (2015), Organisational analytical capacity: policy evaluation in Belgium. Policy and Society. Vol. 34, N° 03/04, pp. 183-196.">PATTYN and BRANS, 2015</a></span></span>) have shown that the establishment of policy units, the availability of resources to access academic sources, and the presence of organizational incentives for their use all contribute to enabling bureaucracies to make more informed use of evidence in their practices. Our findings on organizational-level conditions corroborate these studies, aligning both with the literature on state capacities – which emphasizes the relationship between individual and organizational analytical capacities – and with research on the mechanisms and strategies that promote the use of academic evidence by bureaucrats.</p>
+      
+      
+        <h4>Relational-level conditions</h4>
+        <p>Our qualitative case studies show that the degree of interaction between a policy area’s political actors and its epistemic community is a key factor conditioning knowledge absorption, which in turn influences policymakers’ preferences for different sources of information in Brazil (KOGA et al., 2024a). Beyond the case of CONITEC, other qualitative studies point to the role of knowledge brokerage, performed not only by bureaucratic policy analysts but also by a range of actors, including oversight entities, schools of government, research institutes, and participatory bodies (COUTO et al., 2024b; KOGA et al., 2024a, 2024b; <span class="ref"><span class="xref xrefblue"><a href="#B48_ref" data-ref="SOARES FILHO, Marcos Luiz Vieira and GARCIA, Luciana Silva (2024), Knowledge brokering: análise da atuação da Enap na elaboração da Política Nacional de Segurança Hídrica - componente Infraestrutura Hídrica. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 73-81.">SOARES FILHO and GARCIA, 2024</a></span></span>). The prominence of this interactional phenomenon – which has been widely discussed in the specialized literature (KISLOV, WILSON, and BOADEN, 2017; MACKILLOP, QUARMBY, and DOWNE, 2020; <span class="ref"><span class="xref xrefblue"><a href="#B34_ref" data-ref="MEYER, Morgan (2010), The rise of the knowledge broker. Science Communication. Vol. 32, N° 01, pp. 118-127.">MEYER, 2010</a></span></span>) – underscores the importance of examining the relationships established between users, producers, and intermediaries of knowledge to understand why certain types of evidence are favored in some policy fields over others. In short, interactions facilitate access to knowledge sources, whereas the absence of exchanges can hinder their use. Having intermediaries focused on identifying gaps and fostering collaboration can therefore strengthen a policy area’s evidence ecosystem.</p>
+        <p>In the Ministry of Environment, where a plurality of actors, interests, and knowledge sources coexist and permanently vie for a larger role in decision-making processes, Couto, Palotti, and Soares Filho (2024b) emphasize the critical role of environmental analysts and participatory bodies as knowledge brokers. These actors have proven essential in enabling all stages of knowledge uptake, performing functions that extend beyond traditional policy analysis, such as surveying, synthesizing, mediating, translating, and articulating knowledge. Another illustrative case of knowledge brokerage in Brazilian policymaking is the support provided by the National School of Public Administration (ENAP) to the Ministry of Regional Development (MDR) in designing the water infrastructure component of the National Water Security Policy. ENAP’s extensive experience in collaborative government advisory processes was pivotal for jointly building analytical capacity among all stakeholders and fostering policy buy-in. Besides running collaborative workshops to map key stakeholders, outline contextual factors, and define water infrastructure challenges, ENAP facilitated a series of ‘reality immersions’ for MDR participants, including interviews with strategic actors in the Brazilian water security sector, helping participants gain a deeper understanding of the potential obstacles facing the national policy (<span class="ref"><span class="xref xrefblue"><a href="#B48_ref" data-ref="SOARES FILHO, Marcos Luiz Vieira and GARCIA, Luciana Silva (2024), Knowledge brokering: análise da atuação da Enap na elaboração da Política Nacional de Segurança Hídrica - componente Infraestrutura Hídrica. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 73-81.">SOARES FILHO and GARCIA, 2024</a></span></span>).</p>
+      
+      
+        <h4>Individual-level conditions</h4>
+        <p>Our results reveal significant associations between the types of knowledge sources used and individual-level variables, particularly the type of work performed, educational attainment, and hierarchical position of bureaucrats. Regarding individual analytical capacity, we find a positive correlation between educational level and the use of external sources (both academic and non-academic), as well as experiential sources of information. Across hierarchical levels, we find that both lower- and upper-mid-level bureaucrats rely primarily on internal governmental and experiential sources of knowledge, whereas upper mid-level bureaucrats show a stronger association with external non-academic sources. These data indicate greater permeability of external sources within the Brazilian PAS through these bureaucratic profiles.</p>
+        <p>Another key factor in understanding how the Brazilian PAS functions is the type of work performed by public servants. Following the programmatic approach proposed by <span class="ref"><span class="xref xrefblue"><a href="#B41_ref" data-ref="PARKHURST, Justin; GHILARDI, Ludovica; WEBSTER, Jane; HOYT, Jenna; HILL, Jenny; LYNCH, Caroline A. (2020), Understanding evidence use from a programmatic perspective: conceptual development and empirical insights from national malaria control programmes. Evidence &amp; Policy: A Journal of Research, Debate and Practice. Vol. XX, pp. 01-20.">Parkhurst et al. (2020)</a></span></span>, the use of evidence should be understood in relation to the specific tasks and activities effectively performed by public servants. In their study of National Malaria Control Programmes (NMCPs) in malaria-affected countries, <span class="ref"><span class="xref xrefblue"><a href="#B41_ref" data-ref="PARKHURST, Justin; GHILARDI, Ludovica; WEBSTER, Jane; HOYT, Jenna; HILL, Jenny; LYNCH, Caroline A. (2020), Understanding evidence use from a programmatic perspective: conceptual development and empirical insights from national malaria control programmes. Evidence &amp; Policy: A Journal of Research, Debate and Practice. Vol. XX, pp. 01-20.">Parkhurst et al. (2020)</a></span></span> found that the nature of bureaucratic tasks is central to understanding how evidence is effectively used. Evidence use, therefore, depends on activities such as requesting budgetary resources, developing regulations, national planning, and identifying information gaps. In line with this framework, the type of work performed by public servants in Brazil serves as a key indicator of which sources of evidence, are accessed and utilized within the policy advisory system.</p>
+        <p>We identify four main types of policy work – analytical, administrative, regulatory, and relational – each associated with distinct sources of evidence. Regarding analytical work, that is, policy advice in the strict sense, we find it is positively associated with internal, external academic, and experiential sources, but not with external non-academic sources. Among these, federal bureaucrats rely on internal governmental sources at least twice as often as academic and experiential ones, with analytical functions strongly linked to the use of government information such as regulations, technical notes, and legal opinions. The observed association between analytical work and activities related to responding to oversight demands – such as those from the Court of Accounts and the Office of the Comptroller General – echoes findings from previous studies on Brazilian federal bureaucrats (<span class="ref"><span class="xref xrefblue"><a href="#B31_ref" data-ref="MACEDO, Alex Santos; VIANA, Rafael, and NASCIMENTO, Maricilene Isaia Baia (2019), Capacidades analíticas no processo de produção de políticas públicas: quais fontes de evidências utilizam o serviço civil da Administração Pública Federal? Administrac ¸ a~o Pública e Gestão Social. Vol. 04, N° 11, pp. 01-22.">MACEDO et al., 2019</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B46_ref" data-ref="SAGUIN, Kidjie and PALOTTI, Pedro Lucas de Moura (2020), How do middle managers matter in policymaking? Examining managerial work and influence in Brazil. International Journal of Public Administration. Vol. 44, N° 16, pp. 1394-1403.">SAGUIN and PALOTTI, 2020</a></span></span>). And, raises important questions about the influence of oversight agents on policy advice in Brazil.</p>
+        <p>The case studies show that bureaucrats’ individual efforts play a fundamental role in raising awareness of the importance of using evidence and in establishing routines, instruments, and processes to support it. A consistent pattern of significant bureaucratic autonomy in developing the federal government’s analytical capacity emerges across most cases. However, these institutionalization efforts require sustained commitments and initiatives at both organizational and political levels. The alignment of bureaucratic analytical capacity with autonomy proved crucial in the rapid and successful implementation of the Emergency Aid Program, designed to identify and protect the most vulnerable Brazilian families during the COVID-19 pandemic (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="COUTO, Bruno Gontyjo do (2024), Capacidades analíticas e autonomia da burocracia como condicionantes do uso de evidências na implementação do auxílio emergencial. Boletim de Análise Político-Institucional N° 37. Brasília: Ipea. pp. 23-32.">COUTO, 2024</a></span></span>). The program’s success hinged on both individual and organizational analytical capacities: the high analytical competence of individual bureaucrats involved in the program was reinforced by the advanced development of routines and the technological and informational infrastructure of the then Ministry of Citizenship. Bureaucrats also benefited from the autonomy to exercise their technical expertise in operationalizing a complex program informed by earlier successful social assistance initiatives. This case demonstrates that the strong commitment of civil servants to mitigating the hardship of the most vulnerable was decisive in mobilizing existing institutional capacities within the ministry and ensuring the program’s successful implementation.</p>
+      
+      
+        <h4>Unpacking the distinctive features of Brazil’s policy advisory system</h4>
+        <p>Our findings across multiple studies reveal the diversity of knowledge sources within the Brazilian policy advisory system (PAS), although their use depends on a combination of contextual factors. A consistent feature across most policy areas examined is the incremental and interactional nature of knowledge uptake, which generally occurs through gradual processes rather than disruptive events or major initiatives. The development of databases, administrative records, and accumulation of analytical capacities occurs primarily at the technical level of bureaucrats.</p>
+        <p>Historically, bureaucrats have enjoyed relative autonomy in interacting with policy stakeholders and external knowledge producers, acting – intentionally or not – as intermediaries in the uptake of knowledge. Whether selecting, translating, or channeling knowledge into the state apparatus, or opening and closing channels of dialogue with knowledge producers, these bureaucrats are central agents in shaping the critical mass of knowledge around the policies they engage with. Despite the variety of sources identified, a striking pattern emerges: internal governmental sources of knowledge show a strong association with most contextual factors. Three main explanations may account for this pattern: the high visibility of internal sources, reflecting the incremental process of accessing knowledge that typically begins within the bureaucracy; Brazil’s civil law administrative tradition; and the ongoing hypertrophy of the role of oversight entities in policymaking. We expand each of these reasons in the following paragraphs.</p>
+        <p>First, the high visibility of internal sources may be related to the incremental process of knowledge access and use that begins within the bureaucracy. Since bureaucrats are typically the first knowledge seekers and brokers, it is reasonable to assume that they naturally produce internal sources to translate and internalize what they deem valuable from their searches. This underscores the importance of training and capacity-building initiatives, as well as structural reforms, to support a more systematic organizational use of knowledge.</p>
+        <p>Second, in a civil law system such as the Brazilian administration, internally generated sources of information are particularly important. This dominance of internal government sources is especially evident among bureaucrats performing analytical tasks and those in higher positions. Brazil’s civil law system may require that any information originating outside the government undergo a process of internalization before it is recognized as legitimate within the state’s policy advisory system. In other words, in countries with an administrative tradition emphasizing legalistic processes, like Brazil, a phase of knowledge accreditation through internalization may be necessary for policy advice to function effectively.</p>
+        <p>Palotti and Soares Filho (2024) examined how evidence was used to design a policy reorganizing functions and high-ranking positions within federal public management, highlighting the central role of internally generated knowledge maintained by the bureaucracy in producing inputs and improving solutions throughout the incremental transformation of the federal administration. They found not only that regulatory acts serve as central internal sources of knowledge, defining the boundaries of change processes in personnel management, but also that enhancing internally produced knowledge enabled the development of studies and research through interactions between bureaucrats and other actors in the scientific and international communities, of which the bureaucrats themselves became part. In the case of COVID-related emergency aid, internal sources proved reliable and more readily accessible given the urgency of information needs (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="COUTO, Bruno Gontyjo do (2024), Capacidades analíticas e autonomia da burocracia como condicionantes do uso de evidências na implementação do auxílio emergencial. Boletim de Análise Político-Institucional N° 37. Brasília: Ipea. pp. 23-32.">Couto, 2024</a></span></span>). Similarly, the case study on water infrastructure illustrates the absorption of various informational sources (experts, managers, and laypeople) to formulate an internal source (law) that effectively translates policy into practice in the field (<span class="ref"><span class="xref xrefblue"><a href="#B48_ref" data-ref="SOARES FILHO, Marcos Luiz Vieira and GARCIA, Luciana Silva (2024), Knowledge brokering: análise da atuação da Enap na elaboração da Política Nacional de Segurança Hídrica - componente Infraestrutura Hídrica. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 73-81.">SOARES FILHO and GARCIA, 2024</a></span></span>).</p>
+        <p>Third, the high visibility of internal sources may be linked to the ongoing hypertrophy of the role of oversight entities in policymaking (<span class="ref"><span class="xref xrefblue"><a href="#B6_ref" data-ref="CAVALCANTE, Pedro Luiz Costa and SILVA, Mauro Santos (eds) (2020), Reformas do Estado no Brasil: trajetórias, inovações e desafios. Rio de Janeiro: Ipea/CEPAL. 602 pp..">CAVALCANTE and SILVA, 2020</a></span></span>). This development is tied to a crisis of representativeness in Brazilian political institutions, which has positioned oversight entities as defenders of public interest, granting them authority to interpret norms and oversee decision-making processes with punitive powers (<span class="ref"><span class="xref xrefblue"><a href="#B15_ref" data-ref="FILGUEIRAS, Fernando de B. (2018), Burocracias do controle, controle da burocracia e accountability no Brasil. In: Burocracia e políticas públicas no Brasil. Edited by PIRES, Roberto; LOTTA, Gabriela, and OLIVEIRA, Vanessa Elias de. Brasília: Ipea/Enap. pp. 355-381.">FILGUEIRAS, 2018</a></span></span>). This phenomenon, combined with the growing asymmetry between the capacities of control bureaucrats and those of policy implementers and producers, has placed regulatory entities in influential positions not only within policy advice but, in some cases, in shaping policy itself (<span class="ref"><span class="xref xrefblue"><a href="#B6_ref" data-ref="CAVALCANTE, Pedro Luiz Costa and SILVA, Mauro Santos (eds) (2020), Reformas do Estado no Brasil: trajetórias, inovações e desafios. Rio de Janeiro: Ipea/CEPAL. 602 pp..">CAVALCANTE and SILVA, 2020</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B33_ref" data-ref="MEDEIROS, Bernardo Abreu de; GOELLNER, Isabella de Araujo, and KOGA, Natália Massaco (2023), Trajetória das capacidades dos órgãos de controle interno e externo no brasil: um debate sobre a estruturação do TCU e da AGU no pós-1988. In: Trajetórias da burocracia na Nova República: heterogeneidades, desigualdades e perspectivas (1985-2020). Edited by LOPEZ, Felix Garcia and CARDOSO JÚNIOR, José Celso. Brasília: IPEA. pp. 169-193.">MEDEIROS et al., 2023</a></span></span>). Drawing from in-depth interview data with bureaucrats, Koga, Goellner, and Medeiros (2024) sought to understand the role of oversight agencies in knowledge uptake across six different policy contexts. They identified significant knowledge-brokering activities by the Office of the Comptroller General (CGU) and the Federal Court of Accounts (TCU), while also documenting the difficulties reported by these agencies, such as excessive demands, rework, uncertainties, and informational instabilities. Conversely, interviewees also noted that auditing activities can facilitate access to data, lend legitimacy to bureaucrats’ proposals for change with policymakers, and support the enhancement of analytical capacities across agencies. This underscores the need to examine how the growing presence of oversight shapes the production of policy advice in Brazilian public policies.</p>
+        <p>The recent political attempts to dismantle and discredit the Brazilian policy advisory system pose substantial challenges for public policymaking. Recent studies identify three factors that condition the resilience of bureaucratic expertise in this context: the nature of the attack<span class="ref footnote"><sup class="xref"><a href="#fn3_ref" name="xref_fn3" data-ref="
+        3 
+    
+        These factors can vary in scope from localized to extensive, and influence how experts respond.
+      ">3</a></sup></span>; the cohesion of the knowledge base and epistemic community<span class="ref footnote"><sup class="xref"><a href="#fn4_ref" name="xref_fn4" data-ref="
+        4 
+    
+        Relying on scientific evidence from a well-defined disciplinary field, supported by a solid and cohesive epistemic community, better shields bureaucratic expertise from attacks.
+      ">4</a></sup></span>; and the level of institutionalization of experts’ autonomy and responsibility as policy advisers (<span class="ref"><span class="xref xrefblue"><a href="#B23_ref" data-ref="KOGA, Natália Massaco; KARRUZ, Ana Paula; PALOTTI, Pedro Lucas de Moura; SOARES FILHO, Marcos Luiz Vieira, and COUTO, Bruno Gontyjo do (2023), When bargaining is and is not possible: the politics of bureaucratic expertise in the context of democratic backsliding. Policy and Society. Vol. 42, N° 03, p. 378-391.">KOGA et al., 2023</a></span></span>). Efforts to improve conditions in these three contextual dimensions are crucial for restoring the pre-existing policy advisory system and ensuring that valid and reliable sources of knowledge are recognized as legitimate within the country’s decision-making process.</p>
+      
+    
+      <h2 class="h5">Concluding remarks</h2>
+      <p>In this article, we synthesized findings from a research agenda conducted from 2019 until 2024 to understand the functioning of the Brazilian federal advice system. The Brazilian case is particularly relevant insofar as it reflects a context of limited institutionalization of policy advice, which, while arguably the most widespread scenario globally, remains the least documented in international scholarship.</p>
+      <p>Brazilian federal organizations display varying levels of maturity in the institutionalization of policy advice. In some areas, specialized units possess well-established capacities and normative provisions for providing technical-scientific advice within the decision-making process. In other areas, however, advisory functions rely heavily on the willingness and demand of political actors, resulting in sporadic or loosely structured practices. This renders analytical activity fragile and highly dependent on policymakers. Institutionalizing the use of evidence through norms, routines, and formal instruments is crucial for creating the structural conditions necessary for these activities. Equally important are partnerships and collaborations among knowledge producers, users, and intermediaries, which help bridge the gap between policy stakeholders and epistemic communities, fostering legitimacy and support for evidence-informed policymaking.</p>
+      <p>Our work examines the possible contextual conditions shaping the Brazilian policy advisory system across three levels. At the individual level, we highlight the extensive engagement of bureaucrats in valuing, acquiring, and using diverse sources of knowledge, as well as the significant influence of their work type, educational background, and official function on their preferences for specific sources. We find that organizational capacity and the presence of units dedicated to knowledge absorption have acted as key catalysts and coordinators of the individual capacities developed by bureaucrats in several cases. At the relational level, the existence of cohesive epistemic communities and the presence of knowledge brokers emerged as important factors in determining which sources of knowledge gain influence in different policymaking contexts. Furthermore, both organizational and relational factors also serve as sources of resilience when accumulated analytical capacities are threatened by attempts to dismantle or discredit the policy advisory system.</p>
+      <p>From a broader perspective, we conclude that the weak institutionalization of policy advice, combined with Brazil’s legalistic political-institutional framework, poses significant challenges to understanding and improving how knowledge is accessed and used in the country’s policy advisory processes.</p>
+      <p>We find several particularities in the Brazilian case that both challenge prevailing debates on policy advice in the international literature but also suggest new avenues for research. These include the need for additional stages of translation and accreditation of external sources through internal channels. The implications of the growing involvement of oversight bodies in advisory processes, the incremental efforts of the bureaucracy to incorporate external knowledge – scientific or otherwise – into the policy advisory system, and the resilience of bureaucrats in preserving expertise within the PAS amid contexts of polarization and policy dismantling.</p>
+    </div>
+<div class="articleSection" data-anchor="References">
+<h2 class="h5">References</h2>
+<div class="row"><div class="col ref-list"><ul class="refList articleFootnotes">
+<li>
+<a class="" name="B1_ref"></a>ABERS, Rebecca Neaera (2016), Conflitos, mobilizac¸o~es, e participac¸a~o institucionalizada: a relac¸a~o entre a sociedade civil e a construc¸a~o de grandes obras de infraestrutura. Textos para Discussão N° 2231. Rio de Janeiro: Ipea. 52 pp..</li>
+<li>
+<a class="" name="B2_ref"></a>ARRETCHE, Marta Teresa da Silva (2012), <i>Democracia, federalismo e centralização no Brasil</i> Rio de Janeiro: Ed. Fiocruz/Ed. FGV. 232 pp..</li>
+<li>
+<a class="" name="B3_ref"></a>CAIRNEY, Paul (2019), The UK government's imaginative use of evidence to make policy. British Politics. Vol. 14, N° 01, pp. 01-22.</li>
+<li>
+<a class="" name="B4_ref"></a>CAIRNEY, Paul (2017), The politics of evidence-based policy making. Oxford: Oxford University Press. 137 pp..</li>
+<li>
+<a class="" name="B5_ref"></a>CAIRNEY, Paul and TOTH, Federico (2023), The politics of COVID-19 experts: comparing winners and losers in Italy and the UK. Policy and Society. Vol. 42, N° 03, pp. 392-405.</li>
+<li>
+<a class="" name="B6_ref"></a>CAVALCANTE, Pedro Luiz Costa and SILVA, Mauro Santos (eds) (2020), Reformas do Estado no Brasil: trajetórias, inovações e desafios. Rio de Janeiro: Ipea/CEPAL. 602 pp..</li>
+<li>
+<a class="" name="B7_ref"></a>CHERNEY, Adrian; HEAD, Brian; POVEY, Jenny; FERGUSON, Michelle, and BOREHAM, Paul Raymond (2015), Use of academic social research by public officials: exploring preferences and constraints that impact on research use. Evidence and Policy: a Journal of research, debate and practice. Vol. 11, N° 02, pp. 169-188.</li>
+<li>
+<a class="" name="B8_ref"></a>COUTO, Bruno Gontyjo do (2024), Capacidades analíticas e autonomia da burocracia como condicionantes do uso de evidências na implementação do auxílio emergencial. Boletim de Análise Político-Institucional N° 37. Brasília: Ipea. pp. 23-32.</li>
+<li>
+<a class="" name="B9_ref"></a>COUTO, Bruno Gontyjo do; SOARES FILHO, Marcos Luiz Vieira, and GARCIA, Luciana Silva (2024a), A perspectiva das evidências na política nacional de redução de homicídios: o caso do projeto- piloto em frente, Brasil. Boletim de Análise Político-Institucional N° 37. Brasília: Ipea. pp. 43-51.</li>
+<li>
+<a class="" name="B10_ref"></a>COUTO, Bruno Gontyjo do; PALOTTI, Pedro Lucas de Moura, and SOARES FILHO, Marcos Luiz Vieira (2024b), A importância dos analistas ambientais e dos órgãos colegiados na governança de evidências do Ministério do Meio Ambiente. Boletim de Análise Político-Institucional N° 37. Brasília: Ipea. pp. 63-72.</li>
+<li>
+<a class="" name="B11_ref"></a>CRAFT, Jonathan, and HALLIGAN, John (2017), Assessing 30 years of Westminster Policy Advisory System Experience. Policy Sciences. Vol. 50, N° 01, pp. 47-62.</li>
+<li>
+<a class="" name="B12_ref"></a>CRAFT, Jonathan and HOWLETT, Michael (2013), The dual dynamics of policy advisory systems: the impact of externalization and politicization on policy advice. <i>Policy and Society</i> Vol. 32, N ° 03, pp. 187-197.</li>
+<li>
+<a class="" name="B13_ref"></a>DAVIES, Huw T. O.; NUTLEY, Sandra M., and SMITH, Peter C. (2000), What works ? Evidence-based policy and practice in public services. Bristol: The Policy Press. 396 pp..</li>
+<li>
+<a class="" name="B14_ref"></a>DELEON, Peter (2008), The historical roots of the field. In: The Oxford Handbook of public policy. Edited by GOODIN, Robert; MORAN, Michael, and REIN, Martin. Oxford: Oxford University Press. pp. 39-57.</li>
+<li>
+<a class="" name="B15_ref"></a>FILGUEIRAS, Fernando de B. (2018), Burocracias do controle, controle da burocracia e accountability no Brasil. In: Burocracia e políticas públicas no Brasil. Edited by PIRES, Roberto; LOTTA, Gabriela, and OLIVEIRA, Vanessa Elias de. Brasília: Ipea/Enap. pp. 355-381.</li>
+<li>
+<a class="" name="B16_ref"></a>FISCHER, Frank and GOTTWEIS, Herbert (2012), The argumentative turn revisited: public policy as communicative practice. Durham: Duke University Press. 400 pp..</li>
+<li>
+<a class="" name="B17_ref"></a>GOMIDE, Alexandre de Ávila; SILVA, Michelle Morais de Sá e, and LEOPOLDI, Maria Antonieta (eds)(2023), Políticas públicas em contexto de retrocesso democrático e populismo reacionário: desmontes e reconfigurações. In: Desmonte e reconfiguração de políticas públicas (2016-2022). Brasília: IPEA. pp. 13-44.</li>
+<li>
+<a class="" name="B18_ref"></a>HOWLETT, Michael (2019), Comparing policy advisory systems beyond the OECD: models, dynamics and the second-generation research agenda. Policy Studies. Vol. 40, N° 03/04, p. 241-259.</li>
+<li>
+<a class="" name="B19_ref"></a>HOWLETT, Michael (2015), Policy analytical capacity: the supply and demand for policy analysis in government. <i>Policy and Society</i> Vol. 34, N° 03-04, pp. 173-182.</li>
+<li>
+<a class="" name="B20_ref"></a>HOWLETT, Michael (2009), Policy analytical capacity and evidence-based policy-making: lessons from Canada. Canadian Public Administration. Vol. 52, N° 02, pp. 153-175.</li>
+<li>
+<a class="" name="B21_ref"></a>KISLOV, Roman; WILSON, Paul, and BOADEN, Ruth (2017), The 'dark side' of knowledge brokering. <i>Journal of Health Services Research &amp; Policy</i> Vol. 22, N° 02, pp. 107-112.</li>
+<li>
+<a class="" name="B22_ref"></a>KOGA, Natália Massaco; GOELLNER, Isabella de Araújo, and MEDEIROS, Bernardo de Abreu (2024), A influência dos entes do controle no processo de absorção de conhecimento para políticas públicas. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 83-94.</li>
+<li>
+<a class="" name="B23_ref"></a>KOGA, Natália Massaco; KARRUZ, Ana Paula; PALOTTI, Pedro Lucas de Moura; SOARES FILHO, Marcos Luiz Vieira, and COUTO, Bruno Gontyjo do (2023), When bargaining is and is not possible: the politics of bureaucratic expertise in the context of democratic backsliding. Policy and Society. Vol. 42, N° 03, p. 378-391.</li>
+<li>
+<a class="" name="B24_ref"></a>KOGA, Natália Massaco; LOUREIRO, Miguel; PALOTTI, Pedro Lucas de Moura; LINS, Rafael da Silva; COUTO, Bruno Gontyjo do, and LIMA, Shanna Nogueira (2022), Analysing the information sources Brazilian bureaucrats use as evidence in everyday policymaking. Policy &amp; Politics. Vol. 50, N° 04, pp. 483-506.</li>
+<li>
+<a class="" name="B25_ref"></a>KOGA, Natália Massaco; PALOTTI, Pedro Lucas de Moura; COUTO, Bruno Gontyjo do; LINS, Rafael da Silva, and NASCIMENTO, Maricilene Isaira Baia (2021), O uso de múltiplas fontes de informação nas políticas públicas: um olhar sobre a burocracia federal brasileira. Revista de Administração Pública. Vol. 55, N° 05, pp. 1165-1190.</li>
+<li>
+<a class="" name="B26_ref"></a>KOGA, Natália Massaco; PALOTTI, Pedro Lucas de Moura; COUTO, Bruno Gontyjo do; CARNEIRO, Flavio Lyrio, and PINHEIRO, Maurício Mota Saboya (2024a), Apresentação. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 05-22.</li>
+<li>
+<a class="" name="B27_ref"></a>KOGA, Natália Massaco; PONTES, Pedro Arthur de Miranda Marques; PALOTTI, Pedro Lucas de Moura; SOARES FILHO, Marcus Luiz Vieira, and COUTO, Bruno Gontyjo do (2024b), A Comissão Nacional de incorporação de tecnologias no Sistema Único de Saúde ante os ataques governamentais à expertise científica para o enfrentamento da Covid-19. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília:Ipea. pp. 33-42.</li>
+<li>
+<a class="" name="B28_ref"></a>LASSWELL, Harold D. and LERNER, Daniel (eds) (1951), The policy sciences: recent developments in scope and method. Stanford: Stanford University Press. 344 pp..</li>
+<li>
+<a class="" name="B29_ref"></a>LEJANO, Raul P. (2006), Frameworks for policy analisis. Mergin text and context. Nova York: Routledge. 269 pp..</li>
+<li>
+<a class="" name="B30_ref"></a>LOTTA, Gabriela Spanghero; LIMA, Iana Alves de; SILVEIRA, Mariana Costa; FERNANDEZ, Michelle; PEDOTE, João Paschoal, and GUARANHA, Olívia Landi Corrales (2024), The procedural politicking tug of war: law-versus-management disputes in contexts of democratic backsliding. Perspectives on Public Management and Governance. Vol. 07, N° 01/02, pp. 13-26.</li>
+<li>
+<a class="" name="B31_ref"></a>MACEDO, Alex Santos; VIANA, Rafael, and NASCIMENTO, Maricilene Isaia Baia (2019), Capacidades analíticas no processo de produção de políticas públicas: quais fontes de evidências utilizam o serviço civil da Administração Pública Federal? Administrac ¸ a~o Pública e Gestão Social. Vol. 04, N° 11, pp. 01-22.</li>
+<li>
+<a class="" name="B32_ref"></a>MAcKILLOP, Eleanor; QUARMBY, Sarah, and DOWNE, James (2020), Does knowledge brokering facilitate evidence-based policy? A review of existing knowledge and an agenda for future research. <i>Policy &amp; Politics</i> Vol. 48, N° 02, pp. 335–353.</li>
+<li>
+<a class="" name="B33_ref"></a>MEDEIROS, Bernardo Abreu de; GOELLNER, Isabella de Araujo, and KOGA, Natália Massaco (2023), Trajetória das capacidades dos órgãos de controle interno e externo no brasil: um debate sobre a estruturação do TCU e da AGU no pós-1988. In: Trajetórias da burocracia na Nova República: heterogeneidades, desigualdades e perspectivas (1985-2020). Edited by LOPEZ, Felix Garcia and CARDOSO JÚNIOR, José Celso. Brasília: IPEA. pp. 169-193.</li>
+<li>
+<a class="" name="B34_ref"></a>MEYER, Morgan (2010), The rise of the knowledge broker. Science Communication. Vol. 32, N° 01, pp. 118-127.</li>
+<li>
+<a class="" name="B35_ref"></a>OLIVEIRA, Tiago Chaves and MENKE, Wagner Brignol (2020), Auditores internos da Controladoria-Geral da União: como atuam e que informações utilizam. Boletim de Análise Político-Institucional. Vol. 24, pp. 103-125.</li>
+<li>
+<a class="" name="B36_ref"></a>PALOTTI, Pedro Lucas de Moura; KOGA, Natália Massaco; GOELLNER, Isabella de Araujo, and SILVA, Noëlle (2020), A produção de políticas públicas mais bem informadas no Executivo Federal e o PDRAE: um olhar sobre estruturas organizacionais e suas competências. In: Reformas do Estado no Brasil: trajetórias, inovações e desafios. Edited by CAVALCANTE, Pedro Luiz Costa and SILVA, Mauro Santos. Brasília: Ipea. Pp. 337-364.</li>
+<li>
+<a class="" name="B37_ref"></a>PALOTTI Pedro Lucas de Moura; KOGA, Natália Massaco; COUTO, Bruno Gontyjo; NASCIMENTO, Maricilene Isaia Baia do, and LINS, Rafael da Silva (2022), Uso de evidências pela burocracia dirigente do nível federal. Texto Para Discussão N° 2750. Brasília: Ipea. 77 pp.</li>
+<li>
+<a class="" name="B38_ref"></a>PALOTTI, Pedro Lucas de Moura and SOARES FILHO, Marcos Luiz Vieira (2024), Evidências para a gestão: o caso da reorganização das funções de confiança e dos cargos comissionados no governo federal brasileiro. Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 53-61.</li>
+<li>
+<a class="" name="B39_ref"></a>PATTYN, Valérie and BRANS, Marleen (2015), Organisational analytical capacity: policy evaluation in Belgium. Policy and Society. Vol. 34, N° 03/04, pp. 183-196.</li>
+<li>
+<a class="" name="B40_ref"></a>PARKHURST, Justin (2017), The politics of evidence: from evidence-based policy to the good governance of evidence. London: Routledge. 196 pp..</li>
+<li>
+<a class="" name="B41_ref"></a>PARKHURST, Justin; GHILARDI, Ludovica; WEBSTER, Jane; HOYT, Jenna; HILL, Jenny; LYNCH, Caroline A. (2020), Understanding evidence use from a programmatic perspective: conceptual development and empirical insights from national malaria control programmes. Evidence &amp; Policy: A Journal of Research, Debate and Practice. Vol. XX, pp. 01-20.</li>
+<li>
+<a class="" name="B42_ref"></a>PETERS, B. Guy (2021), Administrative traditions: understanding the roots of contemporary administrative behavior. Oxford: Oxford University Press. 288 pp..</li>
+<li>
+<a class="" name="B43_ref"></a>PINHEIRO, Maurício Mota Saboya (2020), Políticas públicas baseadas em evide^ncias (PPBEs): delimitando o problema conceitual. Texto para Discussão N° 2.554. Rio de Janeiro: Ipea. 53 pp..</li>
+<li>
+<a class="" name="B44_ref"></a>ROQUE, Tatiana (2023), Denialism as government: trust and truth in a post-neoliberal era. In: The rise of the radical right in the Global South. Edited by PINHEIRO-MACHADO, Rosana and VARGAS-MAIA, Tatiana. London: Routledge. pp. 185-195</li>
+<li>
+<a class="" name="B45_ref"></a>SAGUIN, Kidjie (2022), Intuition, reasoning and capacity in policymaking: building a cognitive model of knowledge and evidence utilization. In: Políticas públicas e usos de evidências no Brasil: conceitos, métodos, contextos e práticas. Brasília: IPEA. pp. 85-106.</li>
+<li>
+<a class="" name="B46_ref"></a>SAGUIN, Kidjie and PALOTTI, Pedro Lucas de Moura (2020), How do middle managers matter in policymaking? Examining managerial work and influence in Brazil. International Journal of Public Administration. Vol. 44, N° 16, pp. 1394-1403.</li>
+<li>
+<a class="" name="B47_ref"></a>SIMON, Herbert A. (1956), Rational choice and the structure of the environment. Psychological Review. Vol. 63, N° 02, pp. 129-138.</li>
+<li>
+<a class="" name="B48_ref"></a>SOARES FILHO, Marcos Luiz Vieira and GARCIA, Luciana Silva (2024), Knowledge brokering: análise da atuação da Enap na elaboração da Política Nacional de Segurança Hídrica - componente Infraestrutura Hídrica. In: Boletim de Análise Político-Institucional: governança e cultura do uso de evidências no Brasil: experiências, desafios e temas emergentes. N° 37. Brasília: Ipea. pp. 73-81.</li>
+<li>
+<a class="" name="B49_ref"></a>SPINK, Peter Kevin (2019), Beyond public policy: a public action languages approach. Northampton: Edward Elgar Publishing. 238 pp..</li>
+<li>
+<a class="" name="B50_ref"></a>STONE, Deborah A. (2012), Policy paradox: the art of political decision making. New York: W.W. Norton &amp; Co. 408 pp..</li>
+<li>
+<a class="" name="B51_ref"></a>VAITSMAN, Jeni; RIBEIRO, José M., and LOBATO, Lenaura (eds) (2013), Policy analysis in Brazil: the state of the art. In: Policy analysis in Brazil. Chicago: Chicago University Press. pp. 01-10.</li>
+<li>
+<a class="" name="B52_ref"></a>WEISS, Carol H. (1979), The many meanings of research utilization. Public Administration Review. Vol. 39, N° 05, pp. 426-431.</li>
+<li>
+<a class="" name="B53_ref"></a>WORLD HEALTH ORGANIZATION (2023), Supporting the routine use of evidence during the policy-making process: a WHO checklist. Geneva: World Health Organization. 53 pp..</li>
+</ul></div></div>
+</div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes">
+<li>
+<a name="fn1_ref"></a>
+        <span class="xref big">1</span>
+        <div>As this article synthesizes findings from several studies, certain limitations should be acknowledged, such as the limited detail provided on the methods employed and the cases analyzed. Moreover, the period during which data were collected coincided with a context of systemic turbulence, which affects the characterization of behavioral patterns and perceptions. Nonetheless, we hope this work offers valuable contributions, drawing on extensive empirical material, to the critical examination of policy advice in a context of weak institutionalization.</div>
+      </li>
+<li>
+<a name="fn2_ref"></a>
+        <span class="xref big">2</span>
+        <div>As explained by <span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="KOGA, Natália Massaco; LOUREIRO, Miguel; PALOTTI, Pedro Lucas de Moura; LINS, Rafael da Silva; COUTO, Bruno Gontyjo do, and LIMA, Shanna Nogueira (2022), Analysing the information sources Brazilian bureaucrats use as evidence in everyday policymaking. Policy &amp; Politics. Vol. 50, N° 04, pp. 483-506.">Koga et al. (2022)</a></span></span>, the types of policy work included in the analysis are administrative, analytical, regulatory, and relational.</div>
+      </li>
+<li>
+<a name="fn3_ref"></a>
+        <span class="xref big">3</span>
+        <div>These factors can vary in scope from localized to extensive, and influence how experts respond.</div>
+      </li>
+<li>
+<a name="fn4_ref"></a>
+        <span class="xref big">4</span>
+        <div>Relying on scientific evidence from a well-defined disciplinary field, supported by a solid and cohesive epistemic community, better shields bureaucratic expertise from attacks.</div>
+      </li>
+<li>
+        <span class="xref big">Data replication:</span>
+        <div> Data usage not reported; no research data generated or used.</div>
+      </li>
+<li>
+        <span class="xref big">Notes:</span>
+        <div> This article was presented at the 14th Meeting of the Brazilian Political Science Association (ABCP) and was named as the best paper presented in the subfield of ‘State and Public Policies.</div>
+      </li>
+</ul></div></div></div>
+<div class="articleSection" data-anchor="Edited by">
+<h2 class="h5">Edited by</h2>
+<div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+          <span class="xref big">Associate editor:</span>
+          <div> Sandra Gomes</div>
+        </li></ul></div></div>
+</div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+          <span class="xref big">Revised by</span>
+          <div>Paulo Scarpa</div>
+        </li></ul></div></div></div>
+<div class="articleSection" data-anchor="Data availability"><h2 class="h5">Data availability</h2></div>
+<div class="row"><div class="col-md-12 col-sm-12"><p> Data usage not reported; no research data generated or used.</p></div></div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h2 class="h5">Publication Dates</h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>20 Mar 2026</li>
+<li>
+<strong>Date of issue</strong><br>2026</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History">
+<h2 class="h5">History</h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Received</strong><br>17 Oct 2024</li>
+<li>
+<strong>Accepted</strong><br>24 July 2025</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""> This is an Open Access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. </a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Authorship</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<style>
+            .author-card {
+                border-bottom: 1px solid #ccc;
+                padding: 1rem 0;
+            }
+            .author-card:last-child {
+                border-bottom: 0px;
+            }
+            .author-name {
+                font-weight: 600;
+            }
+            .material-icons-outlined {
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+            .orcid-button {
+                padding-left: 2.5rem;
+            }
+            .modal-body {
+                padding-bottom: 3rem;
+            }
+            .orcid-button::before {
+                content: "";
+                position: absolute;
+                background-image: url(https://ds.scielo.org/img/logo-orcid.svg);
+                background-repeat: no-repeat;
+                background-size: 1.5em auto;
+                background-position: .5em center;
+                display: block;
+                width: 60px;
+                height: 60px;
+                top: -10px;
+                left: 0;
+            }
+        </style>
+<div class="modal-body">
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Natália Massaco Koga </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff1">Institute of Applied Economic Research. Brasília/DF, Brazil.</span><span data-aff-orgname="aff1" hidden="">Institute of Applied Economic Research</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Brasília, DF, Brazil</span><span data-aff-full="aff1" hidden="">Institute of Applied Economic Research. Brasília/DF, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a><span class="material-icons-outlined">school</span><span data-aff-display="aff2">National School of Public Administration. Brasília/DF, Brazil.</span><span data-aff-orgname="aff2" hidden="">National School of Public Administration</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Brasília, DF, Brazil</span><span data-aff-full="aff2" hidden="">National School of Public Administration. Brasília/DF, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a><span class="material-icons-outlined">school</span><span data-aff-display="aff3">Brazilian Institute of Education, Development and Research. São Paulo/SP, Brazil.</span><span data-aff-orgname="aff3" hidden="">Brazilian Institute of Education, Development and Research</span><span data-aff-country="aff3" hidden="">Brazil</span><span data-aff-country-code="aff3" hidden="" country="BR"></span><span data-aff-location="aff3" hidden="">São Paulo, SP, Brazil</span><span data-aff-full="aff3" hidden="">Brazilian Institute of Education, Development and Research. São Paulo/SP, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff3"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0003-0143-8373">0000-0003-0143-8373</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Pedro Palotti </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff1">Institute of Applied Economic Research. Brasília/DF, Brazil.</span><span data-aff-orgname="aff1" hidden="">Institute of Applied Economic Research</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Brasília, DF, Brazil</span><span data-aff-full="aff1" hidden="">Institute of Applied Economic Research. Brasília/DF, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a><span class="material-icons-outlined">school</span><span data-aff-display="aff2">National School of Public Administration. Brasília/DF, Brazil.</span><span data-aff-orgname="aff2" hidden="">National School of Public Administration</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Brasília, DF, Brazil</span><span data-aff-full="aff2" hidden="">National School of Public Administration. Brasília/DF, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a><span class="material-icons-outlined">school</span><span data-aff-display="aff3">Brazilian Institute of Education, Development and Research. São Paulo/SP, Brazil.</span><span data-aff-orgname="aff3" hidden="">Brazilian Institute of Education, Development and Research</span><span data-aff-country="aff3" hidden="">Brazil</span><span data-aff-country-code="aff3" hidden="" country="BR"></span><span data-aff-location="aff3" hidden="">São Paulo, SP, Brazil</span><span data-aff-full="aff3" hidden="">Brazilian Institute of Education, Development and Research. São Paulo/SP, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff3"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0002-9071-9726">0000-0002-9071-9726</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Miguel Loureiro </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff4">Institute of Development Studies. Brighton, United Kingdom.</span><span data-aff-orgname="aff4" hidden="">Institute of Development Studies</span><span data-aff-country="aff4" hidden="">United Kingdom</span><span data-aff-country-code="aff4" hidden="" country="GB"></span><span data-aff-location="aff4" hidden="">Brighton, United Kingdom</span><span data-aff-full="aff4" hidden="">Institute of Development Studies. Brighton, United Kingdom.</span><a href="" class="scimago-link" data-scimago-link="aff4"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0001-6793-0649">0000-0001-6793-0649</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Virginia Rocha </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff5">European University Institute. Florence, Italy.</span><span data-aff-orgname="aff5" hidden="">European University Institute</span><span data-aff-country="aff5" hidden="">Italy</span><span data-aff-country-code="aff5" hidden="" country="IT"></span><span data-aff-location="aff5" hidden="">Florence, Italy</span><span data-aff-full="aff5" hidden="">European University Institute. Florence, Italy.</span><a href="" class="scimago-link" data-scimago-link="aff5"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0001-5267-4929">0000-0001-5267-4929</a></div>
+</div>
+<a class="" name="c01_ref"></a><div class="correspondence mt-3 mb-4">
+<strong><span class="material-icons-outlined">person</span>Correspondence:</strong><span class="scielo__text-color__subtle--light"> Natália Massaco Koga E-mail: </span><br><a href="mailto:natmkoga@gmail.com">natmkoga@gmail.com</a> </div>
+<div class="mb-3">
+<p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<strong>Associate editor:</strong><p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<p class="scielo__text-color__subtle--light mb-0"><div> Sandra Gomes</div></p>
+<p class="scielo__text-color__subtle--light mb-0">
+        </p>
+</div>
+<div class="mb-3">
+<p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<strong>Revised by</strong><p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<p class="scielo__text-color__subtle--light mb-0"><div>Paulo Scarpa</div></p>
+<p class="scielo__text-color__subtle--light mb-0">
+        </p>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalDefault ModalTutors" id="ModalScimago" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+                            SCIMAGO INSTITUTIONS RANKINGS
+                        </h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="info">
+<div>
+<span data-aff-display="aff1">Institute of Applied Economic Research. Brasília/DF, Brazil.</span><span data-aff-orgname="aff1" hidden="">Institute of Applied Economic Research</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Brasília, DF, Brazil</span><span data-aff-full="aff1" hidden="">Institute of Applied Economic Research. Brasília/DF, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a><br>
+</div>
+<div>
+<span data-aff-display="aff2">National School of Public Administration. Brasília/DF, Brazil.</span><span data-aff-orgname="aff2" hidden="">National School of Public Administration</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Brasília, DF, Brazil</span><span data-aff-full="aff2" hidden="">National School of Public Administration. Brasília/DF, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a><br>
+</div>
+<div>
+<span data-aff-display="aff3">Brazilian Institute of Education, Development and Research. São Paulo/SP, Brazil.</span><span data-aff-orgname="aff3" hidden="">Brazilian Institute of Education, Development and Research</span><span data-aff-country="aff3" hidden="">Brazil</span><span data-aff-country-code="aff3" hidden="" country="BR"></span><span data-aff-location="aff3" hidden="">São Paulo, SP, Brazil</span><span data-aff-full="aff3" hidden="">Brazilian Institute of Education, Development and Research. São Paulo/SP, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff3"></a><br>
+</div>
+<div>
+<span data-aff-display="aff4">Institute of Development Studies. Brighton, United Kingdom.</span><span data-aff-orgname="aff4" hidden="">Institute of Development Studies</span><span data-aff-country="aff4" hidden="">United Kingdom</span><span data-aff-country-code="aff4" hidden="" country="GB"></span><span data-aff-location="aff4" hidden="">Brighton, United Kingdom</span><span data-aff-full="aff4" hidden="">Institute of Development Studies. Brighton, United Kingdom.</span><a href="" class="scimago-link" data-scimago-link="aff4"></a><br>
+</div>
+<div>
+<span data-aff-display="aff5">European University Institute. Florence, Italy.</span><span data-aff-orgname="aff5" hidden="">European University Institute</span><span data-aff-country="aff5" hidden="">Italy</span><span data-aff-country-code="aff5" hidden="" country="IT"></span><span data-aff-location="aff5" hidden="">Florence, Italy</span><span data-aff-full="aff5" hidden="">European University Institute. Florence, Italy.</span><a href="" class="scimago-link" data-scimago-link="aff5"></a><br>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Tables</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs" role="tablist"><li role="presentation" class="nav-item"><a href="#tables" class="nav-link active" data-bs-toggle="tab">Tables
+                    (3)
+                </a></li></ul>
+<div class="clearfix"></div>
+<div class="tab-content"><div class="tab-pane fade show active" id="tables" role="tabpanel" aria-labelledby="tables">
+<div class="row table">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Chart 01</strong></strong>
+              Diversity and variation of knowledge sources
+            </caption></div>
+</div>
+<div class="row table">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Chart 02</strong></strong>
+              Typical profiles of knowledge sources used in the Brazilian Federal Government
+            </caption></div>
+</div>
+<div class="row table">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet3"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Chart 03</strong></strong>
+              Variation in the use of sources of information
+            </caption></div>
+</div>
+</div></div>
+</div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">table_chart</span><strong><strong>Chart 01</strong></strong>    
+              Diversity and variation of knowledge sources
+            <br>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th align="left" valign="top">Article</th>
+                  <th align="left" valign="top">Analysis</th>
+                  <th align="left" valign="top">Key Finding</th>
+                  <th align="left" valign="top">Main takeaway</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td valign="top">
+                    <span class="ref"><span class="xref xrefblue"><a href="#B25_ref" data-ref="KOGA, Natália Massaco; PALOTTI, Pedro Lucas de Moura; COUTO, Bruno Gontyjo do; LINS, Rafael da Silva, and NASCIMENTO, Maricilene Isaira Baia (2021), O uso de múltiplas fontes de informação nas políticas públicas: um olhar sobre a burocracia federal brasileira. Revista de Administração Pública. Vol. 55, N° 05, pp. 1165-1190.">Koga et al., 2021</a></span></span>
+                  </td>
+                  <td valign="top">Survey analysis from the research project ‘What Does Inform Policy in Brazil’, conducted with civil servants from all ministries of the Brazilian federal government.</td>
+                  <td valign="top">Laws and norms are the most commonly used sources of knowledge, followed by colleagues’ advice, and personal experience.</td>
+                  <td rowspan="2" valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Both survey results suggest that the main sources of knowledge in the federal public administration are laws and norms, coupled with accumulated experience (personal and from peers).</p>
+                      </li>
+<li>
+                        <p>Scientific sources ranked only 8<sup>th</sup> in frequency of use among sources of knowledge.</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">
+                    <span class="ref"><span class="xref xrefblue"><a href="#B37_ref" data-ref="PALOTTI Pedro Lucas de Moura; KOGA, Natália Massaco; COUTO, Bruno Gontyjo; NASCIMENTO, Maricilene Isaia Baia do, and LINS, Rafael da Silva (2022), Uso de evidências pela burocracia dirigente do nível federal. Texto Para Discussão N° 2750. Brasília: Ipea. 77 pp.">Palotti et al., 2022</a></span></span>
+                  </td>
+                  <td valign="top">Survey analysis from the research project ‘What Does Inform Policy in Brazil’, conducted with senior civil servants from ministries and agencies responsible for implementing federal policies.</td>
+                  <td valign="top">Similar results, except that the third most used source among senior civil servants was technical notes produced by federal government agencies, followed by personal experience.</td>
+                </tr>
+              </tbody>
+            </table></div></div>
+<div class="modal-footer">
+              <small class="d-block">Sources: Elaborated by the authors based on <span class="ref"><span class="xref xrefblue"><a href="#B25_ref" data-ref="KOGA, Natália Massaco; PALOTTI, Pedro Lucas de Moura; COUTO, Bruno Gontyjo do; LINS, Rafael da Silva, and NASCIMENTO, Maricilene Isaira Baia (2021), O uso de múltiplas fontes de informação nas políticas públicas: um olhar sobre a burocracia federal brasileira. Revista de Administração Pública. Vol. 55, N° 05, pp. 1165-1190.">Koga et al., 2021</a></span></span> and <span class="ref"><span class="xref xrefblue"><a href="#B37_ref" data-ref="PALOTTI Pedro Lucas de Moura; KOGA, Natália Massaco; COUTO, Bruno Gontyjo; NASCIMENTO, Maricilene Isaia Baia do, and LINS, Rafael da Silva (2022), Uso de evidências pela burocracia dirigente do nível federal. Texto Para Discussão N° 2750. Brasília: Ipea. 77 pp.">Palotti et al., 2022</a></span></span>.</small>
+            </div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">table_chart</span><strong><strong>Chart 02</strong></strong>    
+              Typical profiles of knowledge sources used in the Brazilian Federal Government
+            <br>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th align="left" valign="top">Government’s Internal Information</th>
+                  <th align="left" valign="top">External Information (non-academic)</th>
+                  <th align="left" valign="top">External Information (academic)</th>
+                  <th align="left" valign="top">Experiential</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td valign="top">Internal sources of information used by federal civil servants</td>
+                  <td valign="top">Diverse pool of sources stemming from stakeholders, states and municipalities, beneficiaries' opinions, and grey literature</td>
+                  <td valign="top">Information produced by academia</td>
+                  <td valign="top">Related to knowledge accumulated by civil servants and advice from peers</td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="4" valign="top">Types of information included in the profile</td>
+                </tr>
+                <tr>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Laws and regulations Technical notes produced by federal agencies</p>
+                      </li>
+<li>
+                        <p>Formal legal opinions and court decisions Recommendations from oversight bodies</p>
+                      </li>
+<li>
+                        <p>Information systems and government databases</p>
+                      </li>
+</ul>
+                  </td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Good practices and initiatives produced by states or municipalities</p>
+                      </li>
+<li>
+                        <p>Recommendations from participatory instances and citizens’ juries</p>
+                      </li>
+<li>
+                        <p>Beneficiaries’ opinions and experiences</p>
+                      </li>
+<li>
+                        <p>Information produced by stakeholders (e.g. NGOs)</p>
+                      </li>
+<li>
+                        <p>Recommendations from international organizations</p>
+                      </li>
+<li>
+                        <p>Media/News coverage</p>
+                      </li>
+</ul>
+                  </td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Research articles, chapters, and books</p>
+                      </li>
+<li>
+                        <p>Scientific reports</p>
+                      </li>
+</ul>
+                  </td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Personal experience</p>
+                      </li>
+<li>
+                        <p>Consultation with peers</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table></div></div>
+<div class="modal-footer">
+              <small class="d-block">Sources: Elaborated by the authors based on <span class="ref"><span class="xref xrefblue"><a href="#B25_ref" data-ref="KOGA, Natália Massaco; PALOTTI, Pedro Lucas de Moura; COUTO, Bruno Gontyjo do; LINS, Rafael da Silva, and NASCIMENTO, Maricilene Isaira Baia (2021), O uso de múltiplas fontes de informação nas políticas públicas: um olhar sobre a burocracia federal brasileira. Revista de Administração Pública. Vol. 55, N° 05, pp. 1165-1190.">Koga et al., 2021</a></span></span> and <span class="ref"><span class="xref xrefblue"><a href="#B37_ref" data-ref="PALOTTI Pedro Lucas de Moura; KOGA, Natália Massaco; COUTO, Bruno Gontyjo; NASCIMENTO, Maricilene Isaia Baia do, and LINS, Rafael da Silva (2022), Uso de evidências pela burocracia dirigente do nível federal. Texto Para Discussão N° 2750. Brasília: Ipea. 77 pp.">Palotti et al., 2022</a></span></span>.</small>
+            </div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet3" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">table_chart</span><strong><strong>Chart 03</strong></strong>    
+              Variation in the use of sources of information
+            <br>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+              <colgroup>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="2" scope="col" valign="top">Who is using the information?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" valign="top">Individual’s analytical capacity</td>
+                  <td align="left" valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Higher levels of education are associated with greater use of academic, grey external, and experiential information.</p>
+                      </li>
+<li>
+                        <p>Bureaucrats proficient in data processing tools and technologies make greater use of academic and grey external sources of information.</p>
+                      </li>
+<li>
+                        <p>Bureaucrats with more years of experience show only a weak association with greater use of experiential information.</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">Other individual characteristics</td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Mid-level bureaucrats show a weak but positive association with the use of internal and experiential information.</p>
+                      </li>
+<li>
+                        <p>Top-mid level and senior bureaucrats show a positive association with the use of internal, experiential, but also non-academic external information.</p>
+                      </li>
+<li>
+                        <p>Bureaucrats based in the Federal District show a positive association with the use of internal, non-academic external, and experiential information.</p>
+                      </li>
+<li>
+                        <p>Age shows significant, but mixed associations: negative for internal, academic, and experimental sources, and positive for external information.</p>
+                      </li>
+<li>
+                        <p>Male bureaucrats show a weak but significant negative association with the use of grey external sources.</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="2" valign="top">
+                    <b>How and where do they use the information?</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">Public Policy Work<sup><sup>2</sup></sup>
+</td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Analytical work shows a positive association with the use of internal, academic, and experiential information.</p>
+                      </li>
+<li>
+                        <p>Relational work shows a positive association with academic and non-academic external information, but a negative association with internal information.</p>
+                      </li>
+<li>
+                        <p>Regulatory work shows a positive association with internal information (e.g., internal regulations and guidelines) but a negative association with external information (both academic and non-academic).</p>
+                      </li>
+<li>
+                        <p>Administrative work shows a weak positive association with internal, non-academic external, and experiential information.</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">Public Policy Domain</td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>The social domain shows a positive association with internal and experiential information.</p>
+                      </li>
+<li>
+                        <p>The economic domain shows a positive association only with internal information.</p>
+                      </li>
+<li>
+                        <p>The infrastructure domain shows no significant association with any type of information.</p>
+                      </li>
+<li>
+                        <p>The environment domain shows a positive association with non-academic external information.</p>
+                      </li>
+<li>
+                        <p>The accountability domain shows a strong positive association with internal information and a moderate positive association with non-academic external information.</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">Agency’s Analytical Capacity</td>
+                  <td valign="top">
+                    <ul list-type="bullet">
+<li>
+                        <p>Having sufficient resources shows a slight positive association with experiential and both academic and non-academic external information.</p>
+                      </li>
+<li>
+                        <p>Being in a specialized unit shows a mild negative association with internal information and a weak positive association with academic information.</p>
+                      </li>
+</ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table></div></div>
+<div class="modal-footer">
+              <small class="d-block">Source: Elaborated by the authors based on <span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="KOGA, Natália Massaco; LOUREIRO, Miguel; PALOTTI, Pedro Lucas de Moura; LINS, Rafael da Silva; COUTO, Bruno Gontyjo do, and LIMA, Shanna Nogueira (2022), Analysing the information sources Brazilian bureaucrats use as evidence in everyday policymaking. Policy &amp; Politics. Vol. 50, N° 04, pp. 483-506.">Koga et al., 2022</a></span></span>.</small>
+            </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">How to cite</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-target="#citationCut"><span class="material-icons-outlined">link</span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Koga, Natália Massaco et al. Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System. Brazilian Political Science Review [online]. 2026, v. 20, n. 1 [Accessed CURRENTDATE], e0005. Available from: &lt;https://doi.org/10.1590/1981-3821202600010005&gt;. Epub 20 Mar 2026. ISSN 1981-3821. https://doi.org/10.1590/1981-3821202600010005.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      
+<div class="container">
+<div class="row">
+  <div class="col">
+
+    <div class="scielo__floatingMenuCttJs3">
+      <a class="scielo__floatingMenuItem fm-button-child item-goto d-none d-lg-inline-block" data-bs-toggle="tooltip" title="Ir para o topo" href="#top">
+        <span class="material-icons-outlined">
+          vertical_align_top
+        </span>
+      </a>
+      <!--
+      <a href="javascript:;" class="scielo__floatingMenuItem fm-button-child item-download d-none d-lg-inline-block" data-bs-toggle="tooltip" title="PDFs" data-bs-target="#ModalDownloads" tabindex="0">
+        <span class="material-icons-outlined">
+          file_download
+        </span>
+      </a>
+      -->
+      <a href="javascript:;" class="scielo__floatingMenuItem fm-button-child item-metrics d-none d-lg-inline-block" data-bs-toggle="tooltip" title="Métricas" target="_blank" data-bs-target="#metric_modal_id" tabindex="0">
+        <span class="material-icons-outlined">
+          show_chart
+        </span>
+      </a>
+      <ul class="scielo__floatingMenuJs3 fm-slidein" data-fm-toogle="hover">
+        <li class="fm-wrap">
+          <a href="javascript:;" class="fm-button-main" data-bs-toggle="tooltip" title="Abrir menu" tabindex="0"><span class="material-icons-outlined material-icons-outlined-menu-default">more_horiz</span></a>
+          <a href="javascript:;" class="fm-button-close" data-bs-toggle="tooltip" title="Fechar menu" tabindex="0"><span class="material-icons-outlined material-icons-outlined-menu-close">close</span></a>
+
+          <!-- exibe em tudo menos mobile-->
+          <ul class="fm-list-desktop d-none d-lg-block">
+            <li>
+              <a class="fm-button-child" id="lnkFigsTables" data-bs-toggle="tooltip" title="Figuras e tabelas" data-bs-target="#ModalTablesFigures" tabindex="0">
+                <span class="material-icons-outlined">
+                  image
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkVersTranslations" data-bs-toggle="tooltip" title="Versões e traduções" data-bs-target="#ModalVersionsTranslations" tabindex="0">
+                <span class="material-icons-outlined">
+                  translate
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkHowToCite" data-bs-toggle="tooltip" title="Como citar este artigo" data-bs-target="#ModalHowcite" tabindex="0">
+                <span class="material-icons-outlined">
+                  link
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkArticles" data-bs-toggle="tooltip" title="Artigos relacionados" data-bs-target="#ModalRelatedArticles" tabindex="0">
+                <span class="material-icons-outlined">
+                  article
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+
+          <!-- exibe apenas no mobile-->
+          <ul class="fm-list-mobile d-block d-xl-none">
+            <li class="">
+              <a class="fm-button-child item-goto" data-mobile-tooltip="Ir para o topo" href="#top">
+                <span class="material-icons-outlined">
+                  vertical_align_top
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="javascript:;" class="fm-button-child item-download" data-mobile-tooltip="PDFs" data-bs-toggle="modal" data-bs-target="#ModalDownloads">
+                <span class="material-icons-outlined">
+                  file_download
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="javascript:;" class="fm-button-child item-metrics" data-mobile-tooltip="Métricas" data-bs-toggle="modal" data-bs-target="#metric_modal_id">
+                <span class="material-icons-outlined">
+                  show_chart
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Figuras e tabelas" data-bs-toggle="modal" data-bs-target="#ModalTablesFigures">
+                <span class="material-icons-outlined">
+                  image
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Versões e traduções" data-bs-toggle="modal" data-bs-target="#ModalVersionsTranslations">
+                <span class="material-icons-outlined">
+                  translate
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Como citar este artigo" data-bs-toggle="modal" data-bs-target="#ModalHowcite">
+                <span class="material-icons-outlined">
+                  link
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Artigos relacionados" data-bs-toggle="modal" data-bs-target="#ModalRelatedArticles">
+                <span class="material-icons-outlined">
+                  article
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+      <section class="journalContacts pt-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-8 text-center text-sm-start">
+        <div class="row">
+          <div class="col-md-1 col-sm-2">
+            <span class="material-icons-outlined">location_on</span>
+          </div>
+          <div class="col-md-10 col-sm-9">
+            <strong class="d-block">Associação Brasileira de Ciência Política</strong>
+            
+              <span>Rua da Matriz, 82 - Botafogo, CEP 22260-100, Telefone: (55 21) 9320-4871</span> - 
+            
+            
+            <span>São Paulo</span> -
+            
+            
+            <span>SP</span> -
+            
+            
+            <span>Brazil</span> <br/>
+            
+            
+            
+              <strong>E-mail:</strong> bpsrabcp@gmail.com
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 text-center text-sm-start pt-4 pt-sm-0">
+        <a href="/journal/bpsr/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank"><span class="material-icons-outlined">rss_feed</span></a>
+        <span>
+          Acompanhe os números deste periódico no seu leitor de RSS
+        </span>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+
+
+    <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Versão para download de PDF
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-12">
+            <span class="sci-ico-filePDF"></span>
+            <br/>
+            <strong>PDF</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a target='_blank' href="/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?lang=en&amp;format=pdf">
+                    
+                      Inglês
+                    
+                  </a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Artigos relacionados
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System&#34; &#34;Koga, Natália Massaco&#34; &#34;Palotti, Pedro&#34; &#34;Loureiro, Miguel&#34; &#34;Rocha, Virginia&#34; &#34;2026&#34; &#34;Brazilian Political Science Review&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System&#34; &#34;Koga, Natália Massaco&#34; &#34;Palotti, Pedro&#34; &#34;Loureiro, Miguel&#34; &#34;Rocha, Virginia&#34; &#34;2026&#34; &#34;Brazilian Political Science Review&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Versões e tradução automática
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <style>
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 11px;
+    line-height: 1;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word; 
+}
+</style>
+
+<div class="modal fade ModalDefault" id="ModalHowcite" tabindex="-1" role="dialog" aria-hidden="true"
+  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Como citar
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3" style="text-align: center;">
+              <a href="/citation/export/jBDdB4ZQKnB3FmnQsfH83mc/?format=ris" class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> RIS
+              </a>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+              <a href="/citation/export/jBDdB4ZQKnB3FmnQsfH83mc/?format=bib" class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> BIBTEX
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        
+        <div id='initial_csl'></div>
+
+        <label id="select_label">Outros formatos de citação e exportação:</label>
+        <select id="select_csl" class="js-data-example-ajax" style="width: 100%">
+          <option value="" selected="selected">Enter references manager format or citation style (e.g., "APA", "AMA", "MLA", "Vancouver")</option>
+        </select>
+        
+        <br>
+        <br>
+      
+        <pre id="citation_text" style="display:none;"></pre>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+  </main>
+
+  <style>
+	.scielo__logo-partner{
+      max-height: 50px;
+      max-width: 170px;
+    }
+    .scielo__logo-partner--dark{
+      display:none;
+    }
+    .scielo__theme--dark .scielo__logo-partner--light{
+      display:none;
+    }
+	.scielo__theme--dark .scielo__logo-partner--dark{
+      display:inline-block;
+    }
+</style>
+
+<footer>
+	<section class="address-scielo pt-4 pb-4 mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12 col-sm-2 text-center">
+					<div class="scielo__logo-scielo--small" alt="Logo SciELO"></div>
+				</div>
+				<div class="col col-12 col-sm-8 text-center text-sm-start">
+					<p><small><strong> SciELO - Scientific Electronic Library Online</strong></small></p>
+					<p><small>Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+						E-mail: scielo@scielo.org </small></p>
+						<div>
+							<!-- 
+								Fix me:
+								
+								Criar configuração para verificar se deve ou não ser exibido 
+								o ícone da rede social e url correta de cada rede.
+								
+							-->
+							<ul class="list-unstyled justify-content-center justify-content-sm-start d-flex mt-3 mb-0 scielo__social-network-links">
+								<li class="me-2">
+									<a href="https://bsky.app/profile/scielo.org" target="_blank" aria-label="BlueSky">
+										<i class="icon-bluesky"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://openbiblio.social/@scielo" target="_blank" aria-label="Mastodon">
+										<i class="icon-mastodon"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.linkedin.com/company/scielo---scientific-electronic-library-online/?originalSubdomain=br" target="_blank" aria-label="LinkedIn">
+										<i class="icon-linkedin"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.facebook.com/SciELONetwork" target="_blank" aria-label="Facebook">
+										<i class="icon-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/c/SciELONetwork" target="_blank" aria-label="Youtube">
+										<i class="icon-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<div class="col col-12 col-sm-2 text-center">
+					
+					<div class="container-license">
+						<div class="row">
+							<div class="col-sm-3 col-md-2">
+								<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="" rel="license"><img
+										src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Common - by 4.0">
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col partners text-center my-4">
+					<a href="http://www.capes.gov.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-capes.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="CAPES"><img src="/static/img/logo-capes--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="CAPES"></a>
+					<a href="http://www.cnpq.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-cnpq.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="CNPq"><img src="/static/img/logo-cnpq--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="CNPq"></a>
+					<a href="http://www.fapesp.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-fapesp.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="FAPESP"><img src="/static/img/logo-fapesp--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark " alt="FAPESP"></a>
+					<a href="http://bvsalud.org/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-bvs.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="BVS"><img src="/static/img/logo-bvs.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="BVS" style="background: white;"></a>
+					<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-bireme.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="BIREME"><img src="/static/img/logo-bireme--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark " alt="BIREME"></a>
+					<a href="https://www.fapunifesp.edu.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-fap.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="FAP-UNIFESP"><img src="/static/img/logo-fap--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="FAP-UNIFESP"></a> 
+				</div>
+			</div>
+			<div class="row d-none">
+				<div class="col text-center mt-4 mb-4">
+				
+					
+						
+						<a href="http://www.capes.gov.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+							
+						</a>
+						
+					
+						
+						<a href="http://www.cnpq.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+							
+						</a>
+						
+					
+						
+						<a href="http://www.fapesp.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+							
+						</a>
+						
+					
+						
+						<a href="http://bvsalud.org/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+							
+						</a>
+						
+					
+						
+						<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+							
+						</a>
+						
+					
+						
+						<a href="https://www.fapunifesp.edu.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+							
+						</a>
+						
+					
+				
+				</div>
+			</div>
+		</div>
+	</section> 
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="text-center"><a href="/about/"><img src="https://www.scielo.br/static/img/logo-open-access.svg" alt="Open Access" class="me-1 logo-open-access">Leia</a> a Declaração de Acesso Aberto</p>
+				</div>
+			</div>
+		</div> 
+	</section>	
+</footer>
+
+  
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+            <h2 class="h4 modal-title">
+                Métricas
+            </h2>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1981-38212026000100205&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1981-3821202600010005" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1981-3821202600010005">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1981-3821202600010005" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1981-3821202600010005">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1981-3821202600010005"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1981-3821202600010005" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1981-3821202600010005">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="https://plu.mx/scielo/a/?doi=10.1590/1981-3821202600010005" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">Policy Advice in Brazil: Sources and Uses of Policy Knowledge in a Federal Presidential System</a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://plu.mx/scielo/a/?doi=10.1590/1981-3821202600010005">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Error modal -->
+    <a class="floatingBtnError btn btn-secondary" href="#" id="#floatingBtnError">Reportar erro</a>
+
+    <script>
+      // Variáveis para tradução da barra de acessibilidade      
+      window.accessibilityTranslations = {
+        darkMode: "Modo escuro",
+        increaseText: "Aumentar texto",
+        decreaseText: "Diminuir texto",
+        originalText: "Texto original",
+        markerLine: "Marcador",
+        readingLine: "Linha guia",
+        reset: "Redefinir",
+        accessibilityMenu: "Menu de acessibilidade",
+        skipLinkText: "Ir para o conteúdo principal"
+      };
+    </script>
+    
+    <!-- Scielo Bundle min -->
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    <script>
+
+      $(document).ready(function() {
+
+        // Add rows article search
+        let addRowBtn = $('.addRowBtn');
+        let placeRow = $('.scielo__dinamic-row');
+        let newFormRow = '<div class="row"><div class="col-12"><hr></div><div class="col-2 col-lg-1 text-end"><button type="button" class="btn btn-danger scielo__btn-with-icon--only"><i class="material-icons-outlined">clear</i></button></div><div class="col-10 col-lg-11"><div class="input-group"><div class="input-group-preppend"><select class="form-select" name="bool[]"><option selected>AND</option><option>OR</option><option>AND NOT</option></select></div><textarea name="q[]" class="form-control" aria-label="With textarea" placeholder="Entre uma ou mais palavras"></textarea><div class="input-group-append"><select class="form-select"><option selected value="todos">Todos os índices</option><option value="ano">Ano</option><option value="autor">Autor</option><option value="financiador">Financiador</option><option value="periodico">Periódico</option><option value="resumo">Resumo</option><option value="titulo">Título</option></select></div></div></div></div>';
+
+        let btnRemoveRow = $('.btn-danger');
+
+        addRowBtn.on( "click", function() {
+            placeRow.append( newFormRow );
+        })
+
+        // Remove as linhas inseridas dinamicamente e as que já estavam lá.
+        placeRow.on( "click", ".btn-danger", function() {
+            $(this).parent().parent().animate({'opacity':0},300).hide(1);
+        })
+
+      });
+    </script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+<script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+
+<script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async
+  defer></script>
+<script type="text/javascript" src="/static/js/scienceopen.js"></script>
+
+
+
+<script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+
+
+
+<script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+<!-- <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+    -->
+
+
+
+<script type="text/javascript" src="//badge.dimensions.ai/badge.js" charset="utf-8" async></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<!-- xxx Verifica se o artigo contém artigos relacionados -->
+
+
+<!-- Verifica se o artigo contém suplemento -->
+
+
+<script>
+
+  affiliations = {};
+
+  function add_scimago_image(selector, remove_br=true, add_br_after=true, find_div=false){
+    $(selector).each(
+
+    function () {
+
+      if (remove_br){
+        $(this).find("br").remove()
+      }
+      
+      internal_items = find_div ? $(this).find('div').not(".clearfix") : $(this).not(".clearfix")
+
+      internal_items.each(function () { 
+        self = $(this);
+
+        affiliation_name = $('span:first', self).text();
+        if (affiliation_name){
+            scimago_link = ' <a href="#" target="_blank" class="scimago_link" data-affiliation="' + affiliation_name + '" ><img src="/static/img/scimago.svg" alt=" SCImago image" height="12" data-toggle="tooltip" data-placement="top" title="Link to SCImago Institutions Rankings"></a>';
+            self.append(scimago_link);
+        }
+      });
+
+      if (add_br_after){
+        $(this).after("<br />")
+      }
+
+    });
+
+  }
+
+  add_scimago_image('#ModalScimago .info div')
+  add_scimago_image('.tutors', remove_br=false, add_br_after=false, find_div=true) 
+
+  $(".scimago_link").click(function(e){
+    e.preventDefault();
+
+    affiliation_name = $(this).data("affiliation");
+
+    if (affiliation_name){
+      if (affiliations[affiliation_name]) {
+        window.open(affiliations[affiliation_name], '_blank');
+      } else {
+        $.ajax({
+          type: "GET",
+          async: false,
+          url: "/scimago/query",
+          data: 'q=' + encodeURI(affiliation_name),
+          success: function (data) {
+            if (data) {
+              affiliations[affiliation_name] = 'https://www.scimagoir.com/' + data
+              window.open(affiliations[affiliation_name], '_blank');
+            }else{
+              toastr.options = {
+                positionClass: 'toast-top-center'
+              };
+              toastr.error('Link temporariamente indisponível');
+            }
+          }
+        });
+      }
+    }    
+  });
+
+
+  var howcite_initialized = false;
+
+  $('#ModalHowcite').on('shown.bs.modal', function () {
+
+    if (!howcite_initialized) {
+      initial = {
+        "American Psychological Association": "apa", "Vancouver": "vancouver"
+      }
+
+      $.each(initial, function (key, value) {
+        $.ajax({
+          url: "/citation/jBDdB4ZQKnB3FmnQsfH83mc/?style=" + value,
+          dataType: 'html',
+          delay: 250,
+          async: true
+        })
+          .done(function (html) {
+            $("<span><b>" + key + "</b></span>" + "<pre>" + html + "</pre>").insertBefore($("#select_label"));
+          })
+      });
+      howcite_initialized = true;
+    }
+
+    $(".js-data-example-ajax").select2({
+      ajax: {
+        url: "/citation/list",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term, // search term
+          };
+        },
+        processResults: function (data, params) {
+          return {
+            results: data.results
+          };
+        },
+        cache: true
+      },
+      escapeMarkup: function (markup) { return markup; },
+      minimumInputLength: 1,
+      dropdownParent: $('#ModalHowcite')
+    });
+
+    $(document).on('select2:open', () => {
+      document.querySelector('.select2-search__field').focus();
+    });
+
+    $(".js-data-example-ajax").on('select2:select', function (e) {
+      var data = e.params.data;
+
+      $.ajax({
+        url: "/citation/jBDdB4ZQKnB3FmnQsfH83mc/?style=" + data.id,
+        dataType: 'html',
+        delay: 250
+      })
+        .done(function (html) {
+
+          if ($('#citation_text').css('display') == 'none') {
+            $('#citation_text').show()
+          }
+
+          $("#citation_text").html(html);
+
+        })
+        .fail(function () {
+          alert("Erro ao tentar obter esse estilo de citação");
+        })
+
+    });
+  });
+
+</script>
+
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      //moment.locale('pt_BR');
+
+      //$("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+
+
+   
+
+  </body>
+</html>

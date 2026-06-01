@@ -1,0 +1,48 @@
+{
+  "pid": "S0104-62762006000200005",
+  "subfield": "Brazilian Politics",
+  "is_empirical_quant_paper": true,
+  "general_goal_of_analysis": "Explain",
+  "evidence_type": "quantitative",
+  "method_status": "explicit",
+  "single_country_study": "single_country",
+  "countries_of_focus": "Brazil",
+  "paper_uses_survey_data": "uses_public_available_survey",
+  "uses_original_dataset": "not_original",
+  "seeks_determinants": true,
+  "main_causal_research_design": "Kitchen Sink Linear Model",
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "claims_any_statistically_significant_results": true,
+  "clearly_defined_explanatory_variable": true,
+  "discusses_threats_to_causality": false,
+  "statement_of_identification_assumptions": false,
+  "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+  "dependent_variables": [
+    {
+      "variable_name": "political_information",
+      "variable_description": "Level of political information of citizens"
+    }
+  ],
+  "independent_variables": [
+    {
+      "variable_name": "civil_society_participation",
+      "variable_description": "Participation in civil society organizations including participatory budgeting"
+    }
+  ],
+  "brief_justification": "Examines whether civil society participation (especially participatory budgeting) increases political information levels beyond immediate organizational concerns, using 2002 election survey data from Brazil.",
+  "error_in_raw_text": "Missing/Corrupt",
+  "single_region": null,
+  "other_research_design": null,
+  "instrumental_variable_instrument": null,
+  "placebo_test": null,
+  "main_variable_relationship": null,
+  "strong_non_causal_causal_qualification": null,
+  "sample_size": null,
+  "sample_size_quote": null,
+  "references_power_analysis": null,
+  "clear_causal_quantity_of_interest": null,
+  "specifies_estimate_equations": null,
+  "statement_of_identification_assumptions_quote": null,
+  "mentions_pre_registered_design_and_analysis_plan": false
+}

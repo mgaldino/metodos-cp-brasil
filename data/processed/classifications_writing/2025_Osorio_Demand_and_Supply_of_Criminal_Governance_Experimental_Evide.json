@@ -1,0 +1,33 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction opens with a concrete empirical phenomenon from the COVID-19 period and then pivots to a literature gap: existing work treats criminal governance mainly as top-down and underplays civilian bottom-up demand. It is therefore framed as both a fact-driven puzzle and a gap-filling intervention.",
+  "intro_presents_main_result": false,
+  "intro_presents_main_result_quote": null,
+  "inverted_pyramid": false,
+  "lit_review_location": "integrated_intro",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "The central argument claims that the demand for criminal governance arises from the population’s drive to satisfy their basic needs, while the supply of criminal governance derives from criminals trying to prevent disruptions to their illicit activities. On the supply side, criminals typically neglect the population’s economic needs unless resistance capacity threatens their illicit operations.",
+  "uses_numbered_hypotheses": true,
+  "has_roadmap_paragraph": true,
+  "n_sections": 14,
+  "section_titles": [
+    "Abstract",
+    "INTRODUCTION",
+    "THEORY",
+    "EXPERIMENTAL DESIGN",
+    "SURVEY DATA",
+    "EXTENT OF THE DEMAND AND SUPPLY OF CRIMINAL GOVERNANCE",
+    "DETERMINANTS OF THE DEMAND AND SUPPLY OF CRIMINAL GOVERNANCE",
+    "MIXED PORTFOLIOS OF CRIMINAL GOVERNANCE",
+    "LIMITATIONS",
+    "CONCLUSIONS",
+    "DATA AVAILABILITY STATEMENT",
+    "FUNDING STATEMENT",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS"
+  ],
+  "_file": "2025_Osorio_Demand_and_Supply_of_Criminal_Governance_Experimental_Evide.pdf",
+  "_elapsed_s": 194.8
+}

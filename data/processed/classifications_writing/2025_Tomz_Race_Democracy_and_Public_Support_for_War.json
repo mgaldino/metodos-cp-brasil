@@ -1,0 +1,33 @@
+{
+  "has_introduction_section": true,
+  "little_template": "3_debate_resolution",
+  "little_template_justification": "The introduction is organized around a direct scholarly dispute: earlier work finds a democratic peace in public opinion, while Rathbun, Parker, and Pomeroy argue that the pattern is really driven by race. The paper presents itself as a reanalysis that adjudicates that disagreement by testing and rejecting RPP’s interpretation.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "Third, consistent with these null results, we find no evidence that racialized beliefs explain the democratic peace or that accounting for race “erases” the effect of democracy. Rather, voters shrink from attacking democracies even when race is explicitly taken into account.",
+  "inverted_pyramid": false,
+  "lit_review_location": "background_section",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "Although future surveys in the United States and other countries might suggest that democracy affects public support for war by changing perceptions of race, our reexamination of RPP’s data shows that accounting for race does little to change widely accepted conclusions about how regime type influences public attitudes toward war. Thus, RPP’s data strengthen, rather than undermine, existing insights about how the public thinks about international relations.",
+  "uses_numbered_hypotheses": true,
+  "has_roadmap_paragraph": false,
+  "n_sections": 14,
+  "section_titles": [
+    "INTRODUCTION",
+    "THE POTENTIAL ROLE OF RACE IN EXPERIMENTAL RESEARCH ABOUT THE DEMOCRATIC PEACE",
+    "DOES DEMOCRACY TRIGGER PERCEPTIONS OF WHITENESS?",
+    "DOES RACE AFFECT SUPPORT FOR WAR?",
+    "HOW MUCH DOES DEMOCRACY MATTER AFTER EXPERIMENTALLY CONTROLLING RACE?",
+    "ETHNOCENTRISM AND THE DEMOCRATIC PEACE",
+    "CONCLUSION",
+    "SUPPLEMENTARY MATERIAL",
+    "DATA AVAILABILITY STATEMENT",
+    "ACKNOWLEDGEMENTS",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS",
+    "REFERENCES",
+    "APPENDIX: FORMALIZATION OF RPP’S ARGUMENT"
+  ],
+  "_file": "2025_Tomz_Race_Democracy_and_Public_Support_for_War.pdf",
+  "_elapsed_s": 272.6
+}

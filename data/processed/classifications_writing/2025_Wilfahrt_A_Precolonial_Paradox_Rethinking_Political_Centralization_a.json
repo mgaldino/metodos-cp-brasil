@@ -1,0 +1,25 @@
+{
+  "has_introduction_section": true,
+  "little_template": "3_debate_resolution",
+  "little_template_justification": "The introduction opens by foregrounding a contradiction in the literature: precolonial centralization is associated with both better development and more civil conflict. The paper then resolves that debate by arguing that different forms of precolonial statehood generate different long-run legacies.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "Mapping this typology onto contemporary outcomes allows me to demonstrate that there is no uniform development bonus or propensity for conflict. Where political authority was highly concentrated—in what I call a despotic type—we see higher rates of civil conflict prevalence today relative to stateless areas, by which I mean regions that were either acephalous or ruled by petty chiefdoms in the precolonial period. In contrast, we see less civil conflict where monarchs were obliged to negotiate with the indigenous local elite via indirect rule. Development outcomes tell an altogether different story: what development bonus accrues to areas that were home to precolonial states is dampened—if not inexistent—in despotic polities, suggesting that the relative concentration of political power is harmful to economic development. In contrast, states where power was least concentrated fare better in the present.",
+  "inverted_pyramid": true,
+  "lit_review_location": "integrated_intro",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "Mapping this typology onto contemporary outcomes allows me to demonstrate that there is no uniform development bonus or propensity for conflict. Where political authority was highly concentrated—in what I call a despotic type—we see higher rates of civil conflict prevalence today relative to stateless areas, by which I mean regions that were either acephalous or ruled by petty chiefdoms in the precolonial period.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": true,
+  "n_sections": 6,
+  "section_titles": [
+    "INTRODUCTION",
+    "WHAT IS A PRECOLONIAL CENTRALIZATION?",
+    "THE CHALLENGE OF MEASURING THE HISTORICAL STATEHOOD",
+    "AN ATLAS OF 19TH C. AFRICAN STATES",
+    "MAKING PROGRESS ON THE PRECOLONIAL PARADOX",
+    "CONCLUSION"
+  ],
+  "_file": "2025_Wilfahrt_A_Precolonial_Paradox_Rethinking_Political_Centralization_a.pdf",
+  "_elapsed_s": 240.8
+}

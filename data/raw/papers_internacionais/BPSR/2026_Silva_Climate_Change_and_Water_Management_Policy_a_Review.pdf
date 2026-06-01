@@ -1,0 +1,2678 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO  Brasil - Climate Change and Water Management Policy: a Review Climate Change and Water Management Policy: a Review </title>
+
+    
+  
+<!-- social share tags -->
+<meta property="og:url" content="https://www.scielo.br/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?lang=en"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Climate Change and Water Management Policy: a Review"/>
+<meta property="og:description" content="Abstract This work reviews and discusses research approaches related to climate change and water..."/>
+<meta property="og:image" content="https://www.scielo.br/media/images/bpsr_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Silva, Jose Irivaldo Alves Oliveira">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-0022-3090">
+        <meta name="citation_author" content="Oliveira, Tiago Almeida de">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual da Paraíba">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0003-4147-7721">
+        <meta name="citation_author" content="Ramalho, Ângela Maria Cavalcante">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual da Paraíba">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-8567-4367">
+        <meta name="citation_author" content="Rocha, Mateus Silva">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual da Paraíba">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0001-5110-9063">
+        <meta name="citation_author" content="Gomes, Yuri Batista Oliveira">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual da Paraíba">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0009-0009-4267-3856">
+        <meta name="citation_author" content="Peixoto, Gabriel Messias Santana">
+        
+            <meta name="citation_author_affiliation" content="Universidade Estadual da Paraíba">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0009-0003-8948-6122">
+        <meta name="citation_author" content="Rosario, Gabriel Alves do">
+        
+            <meta name="citation_author_affiliation" content="Universidade Federal de Campina Grande">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0009-0001-1088-7915">
+        <meta name="citation_journal_title" content="Brazilian Political Science Review"></meta>
+<meta name="citation_journal_abbrev" content="Bras. political sci. rev."></meta>
+<meta name="citation_journal_abbrev" content="Bras. political sci. rev"></meta>
+<meta name="citation_publisher" content="Associação Brasileira de Ciência Política"></meta>
+<meta name="citation_volume" content="20"></meta>
+<meta name="citation_number" content="1"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?format=xml&amp;lang=en"></meta>
+<meta name="citation_firstpage" content="e0006"></meta>
+<meta name="citation_doi" content="10.1590/1981-3821202600010006"></meta>
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+
+<meta name="citation_issn" content="1981-3821"></meta>
+
+    <meta name="citation_title" content="Climate Change and Water Management Policy: a Review"></meta>
+    <meta name="citation_language" content="en"></meta>
+
+<meta name="citation_abstract" content="Abstract This work reviews and discusses research approaches related to climate change and water resources, an essential area for the conservation of life and the environment. According to the global state of the art, there is an urgent need to expand sectoral statistical analyses of the impacts of climate change on water resources, especially in Brazil. A bibliometric method was applied, adopting a quantitative analytical approach. Active Learning Methodologies were also used, combining Artificial Intelligence for filtering with researcher analysis to assess the impact of studies addressing the interface between climate change and water management on national and international scientific production. The systematic review of the articles reveals a global trend toward recognizing the interaction between climate change and water resources. The studies analyzed indicate that water resource management must evolve toward an adaptive, sustainable, and collaborative approach, integrating quantitative and qualitative data and promoting effective governance."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2026"></meta>
+<meta name="citation_keywords" content="Climate Change"></meta><meta name="citation_keywords" content="water"></meta><meta name="citation_keywords" content="environmental"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    
+    <link href="/static/css/bootstrap.css?v=1.1.23" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <!-- CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit -->
+<div class="widget widget-Lockss widget-instance-IssueBrowseByYear_Lockss">
+
+    <input class="at-locks-messaging" type="hidden"
+        value="LOCKSS system has permission to collect, preserve, and serve this Archival Unit" />
+
+    <input class="at-clockss-messaging" type="hidden"
+        value="CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" />
+
+</div>
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+    <script src="https://darkvisitors.com/tracker.js?project_key=c7366feb-7ba9-4f3d-a536-9bdca1bee170"></script>
+    
+
+     
+  <link rel="stylesheet" href="/static/css/article.css?v=1.1.20" type="text/css" async/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" async />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" async />
+
+
+  </head>
+  <body class="journal article" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
+    <a name="top"></a>
+
+    
+
+  
+
+
+<style>
+
+    body{  
+        padding-top: 74px;
+    }
+    
+    .articleTxt{
+        top: -16px;
+    }
+
+    @media (max-width: 575.98px) {
+      
+      .articleCtt > .container{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .articleCtt .articleTxt{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+    
+    }
+
+    @media (min-width: 768px){
+      
+      .scielo__truncate{
+        display: block;
+        max-width: 285px;
+      }
+
+    }
+ 
+</style>
+
+<header class="fixed-top scielo__shadow-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-sm-1 d-print-none">
+                
+
+<details class="scielo__accessibleMenu">
+  <summary>
+      <span class="menu-icon"></span>
+      <span>Menu</span>
+  </summary>
+  <nav style="max-height: 780px;">
+    <ul>
+      <li class="logo">
+        <div class="scielo__logo-scielo--small"></div>
+      </li>
+      <li>
+        <a href="/" alt="Acessar site coleção Brasil" aria-label="Acessar site coleção Brasil">
+          <strong>Brasil</strong>
+        </a>
+        <ul>
+            <li>
+              <a href="/journals/alpha?status=current" class="tab_link">
+                Lista alfabética de periódicos
+              </a>
+            </li>
+            <li>
+              <a href="/journals/thematic?status=current" class="tab_link">
+                Lista temática de periódicos
+              </a>
+            </li>
+            <li>
+              <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+                Busca
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+                Métricas
+              </a>
+            </li>
+            <li>
+              <a href="/about/">
+                Sobre o SciELO Brasil
+              </a>
+            </li>
+            <li>
+              <a href="/about/">
+                Contatos
+              </a>
+            </li>
+            <li>
+              <a href="#" id="floatingBtnErrorHamburguerMenu" class="floatingBtnErrorHamburguerMenu">
+                Reportar erro
+              </a>
+            </li>
+
+            
+
+        </ul>
+      </li>
+      <li>
+        <a target="_blank" href="//www.scielo.org">
+          <strong>SciELO.org - Rede SciELO</strong>
+        </a>
+        <ul>
+          <li>
+            <a target="_blank" href="//www.scielo.org">
+              Coleções nacionais e temáticas
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//search.scielo.org/">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+              Contatos
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        
+          <a target="_blank" href="//blog.scielo.org">
+        
+            <strong>Blog SciELO em Perspectiva</strong>
+          </a>
+      </li>
+    </ul>
+  </nav>
+</details>
+
+<script type="text/javascript">
+  document.addEventListener("click", function(event) {
+      const details = document.querySelector("details");
+      
+      if (!details.contains(event.target)) {
+          details.removeAttribute("open");
+      }
+  });
+
+</script>
+            </div>
+            <div class="col col-sm-3 --mainNav">
+                <a href="/" title="Ir para a homepage da coleção: Brasil">
+                    <div class="scielo__logo-scielo-collection mt-1 ms-5">
+                        <small>Brasil</small>
+                    </div>
+                </a>
+            </div>
+            <div class="d-none d-sm-block col">
+                <div class="dropdown mt-3">
+                    <button class="btn btn-link dropdown-toggle mb-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="text-truncate scielo__truncate">Brazilian Political Science Review </span>
+                    </button>
+                    <ul class="dropdown-menu scielo__shadow-2">
+                      <li>
+                        <a href="/j/bpsr/" class="dropdown-item">
+                          
+                            <img src="/media/images/bpsr_glogo.gif" class="image scielo__logo-periodico" alt="Logomarca do periódico: Brazilian Political Science Review" />
+                          
+                        </a>
+                      </li>
+                      
+                      
+                        <li>
+                          <a href="http://mc04.manuscriptcentral.com/bpsr-scielo" class="dropdown-item" target="_blank"><span class="material-icons-outlined">launch</span> Submissão de manuscritos</a>
+                        </li>
+                      
+                      <li>
+                        <a href="/journal/bpsr/about/#about" class="dropdown-item"><span class="material-icons-outlined">info</span> Sobre o periódico</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#item2" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Política editorial</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#editors" class="dropdown-item"><span class="material-icons-outlined">people</span> Corpo Editorial</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#instructions" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Instruções aos autores</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#contact" class="dropdown-item"><span class="material-icons-outlined">email</span> Contato</a>
+                      </li>
+                      <li>
+                        <a href="http://analytics.scielo.org/?journal=1981-3821&collection=scl" class="dropdown-item"><span class="material-icons-outlined">show_chart</span> Métricas</a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="language mt-3">
+                  
+<div class="scielo__language">
+  <div class="dropdown">
+    <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--left dropdown-toggle mb-0 float-end mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="material-icons-outlined">language</span>
+      
+
+        
+          <span class="d-lg-none">pt_BR</span>
+          <span class="d-none d-lg-block">Português</span>
+        
+
+      
+
+        
+
+      
+
+        
+
+      
+  
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+
+      
+    
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/en/" lang="en">English</a></li>
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/es/" lang="es">Español</a></li>
+        
+
+      
+    
+    </ul>
+  </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row d-block d-sm-none">
+            <div class="col">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle mb-2 w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="truncate">Brazilian Political Science Review </span>
+                </button>
+                <ul class="dropdown-menu w-100">
+                  <li>
+                    <a href="/j/bpsr/" class="dropdown-item">
+                      
+                        <img src="/media/images/bpsr_glogo.gif" class="image" alt="Logomarca do periódico: Brazilian Political Science Review" style="max-width:100%;" />
+                      
+                    </a>
+                  </li>
+                  
+                    <li>
+                      <a href="http://mc04.manuscriptcentral.com/bpsr-scielo" class="dropdown-item" target="_blank"><span class="material-icons-outlined">launch</span> Submissão de manuscritos</a>
+                    </li>
+                  
+                  <li>
+                    <a href="/journal/bpsr/about/#about" class="dropdown-item"><span class="material-icons-outlined">info</span> Sobre o periódico</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#item2" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Política editorial</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#editors" class="dropdown-item"><span class="material-icons-outlined">people</span> Corpo Editorial</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#instructions" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Instruções aos autores</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#contact" class="dropdown-item"><span class="material-icons-outlined">email</span> Contato</a>
+                  </li>
+                  <li>
+                    <a href="http://analytics.scielo.org/?journal=1981-3821&collection=scl" class="dropdown-item"><span class="material-icons-outlined">show_chart</span> Métricas</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+</header>
+
+  <!--- removido da interface --->
+  
+
+  <main id="content">
+
+    
+
+    
+<!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu d-none d-md-block">
+    <div class="container">
+        
+        <div class="row">
+          <div class="col">
+
+            <div class="btn-group mt-1">
+              <a href="/j/bpsr/" class="btn scielo__btn-with-icon--only mb-0"><span class="material-icons-outlined">home</span></a>
+              
+              
+              <a href="/j/bpsr/i/2026.v20n1/" class="btn mb-0">
+                  Sumário
+              </a> 
+  
+              
+                
+                  <a href="/j/bpsr/a/jBDdB4ZQKnB3FmnQsfH83mc/?lang=en" class="btn scielo__btn-with-icon--left mb-0 pe-md-2">
+                  
+                  <span class="material-icons-outlined">navigate_before</span>
+                  <span class="d-none d-xl-block">Anterior</span>
+                </a>
+  
+              
+              <a href="#" class="btn group disabled mb-0">
+                  Atual
+              </a>
+  
+              
+              
+                  <a href="#" class="btn disabled scielo__btn-with-icon--right mb-0 ps-md-2">
+              
+
+                <span class="d-none d-xl-block">Seguinte</span>
+                <span class="material-icons-outlined">navigate_next</span>
+              </a>
+  
+            </div>
+          </div>
+  
+          <div class="col d-md-none d-lg-block">
+            <div class="btn-group mt-1">
+              
+
+              
+
+
+    <div class="btn-group">
+      <button id="btnGroupDropTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+        Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDropTextLanguage">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+  
+
+
+
+                        
+           
+          <div class="btn-group">
+            <button id="btnGroupDropPDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              PDF
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropPDF">
+              
+                <li>
+                  <a target='_blank' href="/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?format=pdf&amp;lang=en" class="dropdown-item">
+                    
+                      Download PDF (Inglês)
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          
+          
+          
+          
+          
+            </div>
+          </div>
+          <div class="col d-none d-md-block d-lg-none">
+            <div class="dropdown mt-1 float-end">
+              <button class="btn btn-secondary dropdown-toggle mb-0 scielo__btn-with-icon--left " data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons-outlined">article</span> <strong>Conteúdo:</strong> 
+                <!--resumo-->
+                
+
+                <!--texto-->
+                
+                
+                
+                        
+                
+                Texto (EN)
+                
+                
+                
+                
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
+                <!--resumo-->
+                
+
+                <!--texto-->
+                
+                
+                <li>
+                
+                <!-- página de texto -->
+                <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                (Inglês)
+                
+                </a>
+                
+                </li>
+                
+                
+
+                <!--PDF-->
+                
+                
+                <li>
+                <a target='_blank' href="/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?format=pdf&amp;lang=en" class="dropdown-item">
+                
+                Download PDF (Inglês)
+                
+                </a>
+                </li>
+                
+                
+
+
+                <!--PDF REDCUBE-->
+                
+
+
+                <!--ePDF-->
+                
+
+              </ul>
+            </div>
+          </div>
+
+          
+          <div class="col-1">
+
+            <!-- share --> 
+             <!-- share -->
+ <div class="dropdown">
+  <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0 float-end" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="material-icons-outlined">share</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_whatsapp">Whatsapp</a></div>
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_bluesky">BlueSky</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_mastodon">Mastodon</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_facebook">Facebook</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_dd" href="https://www.addtoany.com/share">Mais</a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- AddToAny -->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+          </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs d-block d-md-none d-lg-none mt-5" style="padding-bottom:110px;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="btn-group w-100 --btn-group-nav-mobile" role="group">
+            
+            <a href="/j/bpsr/" class="btn scielo__btn-with-icon--only mb-0"><span class="material-icons-outlined">home</span></a>
+            <a href="/j/bpsr/i/2026.v20n1/" class="btn mb-0">
+              Sumário
+            </a>
+            
+            <div class="btn-group" role="group">
+
+              <!-- share -->
+              <button type="button" class="btn btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                <span class="material-icons-outlined">share</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                <li><a class="dropdown-item" href="#">X</a></li>
+                <li><a class="dropdown-item" href="#">Google+</a></li>
+                <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+                <li><a class="dropdown-item" href="#">Reddit</a></li>
+                <li><a class="dropdown-item" href="#">StambleUpon</a></li>
+                <li><a class="dropdown-item" href="#">CiteULike</a></li>
+                <li><a class="dropdown-item" href="#">Mendeley</a></li>
+              </ul>
+            </div>
+          
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          
+
+
+        </div>
+        <div class="col-4">
+
+          
+          <div class="dropdown mt-1">
+          <button id="btnGroupDropArticleTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+          Texto
+          
+                  
+          
+          (EN)
+          
+          
+          
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDropArticleTextLanguage">
+          
+          <li>
+          
+          <!-- página de texto -->
+          <a href="#" class="current dropdown-item"> 
+          Texto
+          
+          (Inglês)
+          
+          </a>
+          
+          </li>
+          
+          </ul>
+          </div>
+
+          
+        </div>
+        <div class="col-4">
+          
+
+          <div class="dropdown float-end mt-1">
+          <button id="btnGroupDropArticlePDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+          PDF
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropArticlePDF">
+          
+          <li>
+          <a target='_blank' href="/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?format=pdf&amp;lang=en" class="dropdown-item">
+          
+          Download PDF (Inglês)
+          
+          </a>
+          </li>
+          
+          </ul>
+          </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1981-38212026000101001 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">RESEARCH NOTE</span><span class="_separator"> • </span><span class="_editionMeta">Braz. political sci. rev. 20 
+                (1)
+            <span class="_separator"> • </span>2026</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1981-3821202600010006" class="_doi" target="_blank">https://doi.org/10.1590/1981-3821202600010006</a> <a href="javascript:;" class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-text="https://doi.org/10.1590/1981-3821202600010006"><span class="material-icons-outlined">link</span>copy</a></span>
+</div>
+<h1 class="article-title">
+<img alt="Open-access" class="logo-open-access" data-bs-toggle="tooltip" src="https://ds.scielo.org/img/logo-open-access.svg" data-original-title="by 4.0 "> Climate Change and Water Management Policy: a Review<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<div class="articleMeta"></div>
+<div class="scielo__contribGroup">
+<a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalTutors">Authorship</a><a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalScimago">SCIMAGO INSTITUTIONS RANKINGS</a>
+</div>
+<div class="row">
+<ul class="d-none d-lg-block col-lg-2 articleMenu"></ul>
+<article id="articleText" class="col-sm-12 col-lg-10 offset-lg-2"><div class="articleSection articleSection--abstract" data-anchor="Abstract">
+<h2 class="h5">Abstract</h2>
+<p>This work reviews and discusses research approaches related to climate change and water resources, an essential area for the conservation of life and the environment. According to the global state of the art, there is an urgent need to expand sectoral statistical analyses of the impacts of climate change on water resources, especially in Brazil. A bibliometric method was applied, adopting a quantitative analytical approach. Active Learning Methodologies were also used, combining Artificial Intelligence for filtering with researcher analysis to assess the impact of studies addressing the interface between climate change and water management on national and international scientific production. The systematic review of the articles reveals a global trend toward recognizing the interaction between climate change and water resources. The studies analyzed indicate that water resource management must evolve toward an adaptive, sustainable, and collaborative approach, integrating quantitative and qualitative data and promoting effective governance.</p>
+<p><strong>Keywords</strong><br>Climate Change; water; environmental</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h2 class="h5">Introduction</h2>
+      <p>In recent years, increasingly severe extreme climatic events have been observed, particularly changes in precipitation and temperature patterns and large-scale environmental disasters (especially those related to water). These phenomena have particularly affected river basins and their water sources, whose hydrological supply functions ¾ capturing, storing, and distributing water both quantitatively and qualitatively ¾ have become a concern in scientific and political circles worldwide. In some areas, such as Brazil’s semi-arid regions, the consequences are particularly severe, as these areas may become arid, undermining agriculture, industry, and human consumption. Recent studies have emphasized the need for integrated governance and adaptive responses to extreme events and shifts in rainfall and temperature regimes (<span class="ref"><span class="xref xrefblue"><a href="#B3_ref" data-ref="BUYTAERT, Wouter; VUILLE, Mathias; DEWULF Art; URRUTIA, Rocío; KARMALKAR, Ambarish V., and CÉLLERI, Rolando (2010), Uncertainties in climate change projections and regional downscaling in the tropical Andes: implications for water resources management. Hydrology and Earth System Sciences. Vol. 14, N° 07, pp. 1247-1258.">BUYTAERT et al., 2010</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B20_ref" data-ref="VELDKAMP, Ted I. E.; WADA, Yoshihide; MOEL, Hans de; KUMMU, Matti; EISNER, Stephanie; AERTS, Jeroen C. J. H., and WARD, Philip. J. (2015), Changing mechanism of global water scarcity events: impacts of socioeconomic changes and inter-annual hydro-climatic variability. Global Environmental Change. Vol. 32, pp. 18-29.">VELDKAMP et al., 2015</a></span></span>). These shifts pose a threat not only to water availability but also to the functionality of river basins as hydrological units responsible for water capture, storage, and distribution.</p>
+      <p>Climate change has thus emerged as one of the most complex contemporary problems, fueling debate across various fields of knowledge in the search for new explanations and solutions to the current socio-environmental issues. Research in this area seeks to identify epistemic-theoretical assumptions that can support the development of new methodological tools suited to the climate perspective. Despite the importance of the topic, systematic evaluations of scientific output related to climate change and water management remain limited, especially in the Brazilian context. In response to this gap, this study offers a bibliometric and systematic review approach supported by Active Learning methodologies, aiming to explore patterns in the existing literature. These methods, which integrate machine learning techniques such as ASReview, enhance the ability to filter, select, and analyze large volumes of scientific literature. The objective is to assess research trends and extract insights that inform adaptation strategies, planning, and sustainable water governance.</p>
+      <p>This study makes a methodological contribution by incorporating Active Learning methodologies into the systematic review process — an innovative approach in environmental sciences and climate-water research. Tools like ASReview have been successfully applied in health sciences to optimize literature screening, as demonstrated in recent Brazilian studies focusing on evidence-based public health and predictive modeling in healthcare (NASCIMENTO et al., 2023; <span class="ref"><span class="xref xrefblue"><a href="#B15_ref" data-ref="SILVA, Gabriel F. S.; FAGUNDES, Thales P.; TEIXEIRA, Bruno C.; CHIAVEGATTO FILHO, Alexandre D. P. (2022), Machine learning for hypertension prediction: a systematic review. Current Hypertension Reports. Vol. 11, pp. 523-533.">SILVA et al., 2022</a></span></span>). However, their application remains incipient in environmental policy, water management, and climate change adaptation research. This methodological innovation allows a more scalable and reproducible assessment of the literature, enhancing transparency and reducing the subjective burden of manual screening. By applying a machine learning-driven prioritization of articles, our review not only streamlines the synthesis process but also demonstrates the potential of artificial intelligence to support robust knowledge production in sustainability science.</p>
+      <p>Therefore, this paper aims to review and discuss the most relevant research approaches to climate change and water management, emphasizing the necessity of adaptive and participatory governance models. Special attention is paid to Brazil, particularly the Northeast region, which faces heightened vulnerability due to socio-environmental and climatic constraints. The ultimate goal is to support evidence-based policymaking by mapping the evolution of research and identifying key strategies for water management under climate stress.</p>
+    
+      <h2 class="h5">Materials and methods</h2>
+      <p>Following the guidelines of the Recommendations for Reporting Systematic Reviews and Meta-Analyses (PRISMA) (<span class="ref"><span class="xref xrefblue"><a href="#B12_ref" data-ref="PARUMS, Dinah V. (2021), Review articles, systematic reviews, meta-analysis, and the updated preferred reporting items for systematic reviews and meta-analyses (PRISMA) 2020 guidelines. Medical science monitor: international medical journal of experimental and clinical research. Vol. 27, pp. 01-03.">PARUMS, 2021</a></span></span>), we conducted a systematic review. A form search was carried out in the Web of Science and Scopus databases for studies published between January 1991 and January 2023. The search used specific terms such as 'Climatic change' and 'Water management' as primary keywords, along with related ethnological terms. The full list of search terms can be found in <a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalTablet1"><span class="sci-ico-fileTable"></span>Chart 01</a>. The results were exported to a spreadsheet and duplicates were removed. In addition, the lists of references for each study have been manually checked. Based on PRISMA guidelines, we defined strict inclusion and exclusion criteria to ensure the relevance, quality, and focus of the selected studies.</p>
+      <div>
+        <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Chart 01</strong></strong><br>
+            Search strings used for the literature review
+          <br>
+</div>
+</div>
+      </div>
+      <p>Subsequently, we used ASReview, a systematic review tool that applies machine learning and active learning techniques to optimize article selection. The training parameters were as follows: Feature Extraction technique: TF-IDF; Classifier: Naive Bayes; Query Strategy: Maximum; Balance Strategy: Dynamic Resampling (Double). After this stage, articles were ranked based on relevance scores generated by the model. A cut-off threshold was defined to balance comprehensiveness and focus. Five reviewers, ensuring reliability and minimizing selection bias, then independently assessed the resulting set of articles.</p>
+      
+        <h4>Inclusion, Criteria </h4>
+        <p>Articles were included in this review based on the following criteria: (01) articles addressing the theme of water management or climate change; (02) original articles presenting quantitative research based on data on the subject; (03) articles presenting qualitative research on the subject; (04) articles making predictions based on data.</p>
+      
+      
+        <h4>Exclusion, Criteria </h4>
+        <p>Conversely, studies were excluded if they did not meet specific methodological or thematic thresholds: (01) review articles; (02) articles that did not provide a detailed description of the methodology used; (03) articles focused on secondary outcomes related to water management or climate change, such as environmental and social impact studies analyzing the effects of these phenomena on ecosystems and communities. Policy analysis and adaptation strategies assessing the effectiveness of climate change responses; studies on risks and vulnerabilities; evaluations of water infrastructure, epidemiological studies related to public health; and economic analyses exploring the relationship between water quality and availability. As well as the economic and sustainable aspects of water management and climate change; and (04) articles that did not report any relevant outcome.</p>
+      
+      
+        <h4>Outcome</h4>
+        <p>The intersection between water management and climate change, as reflected in the results and summary conclusions of the reviewed studies, includes adaptation strategies, water sustainability, system resilience, mitigation of environmental impacts, equity in water access, and technological innovations. These findings contribute to a deeper understanding of this crucial interrelationship, supporting the development of evidence-based policies and adaptive practices ¾ particularly relevant for countries such as Brazil, where water management systems are increasingly strained by the impacts of climate change.</p>
+      
+      
+        <h4>Screening and selection strategy</h4>
+        <p>To screen the articles, we first applied the ASReview tool’s learning algorithm (BRUSS, 2019), which classified articles based on textual similarity to those previously selected, streamlining the initial screening process. Subsequently, five authors independently reviewed the articles to confirm that they met the established eligibility criteria. Articles selected by consensus among the five authors were included in the review. Additionally, to enrich our evaluation, we used the ‘biblioshiny’ tool in R, which enabled statistical analysis of key aspects such as leading authors, most cited articles, most cited authors, and the main countries contributing with publications, providing a comprehensive and informed view of the obtained data.</p>
+      
+    
+      <h2 class="h5">Results </h2>
+      <p>The bibliometric analysis was conducted both before and after the screening process. The initial analysis identified a total of 12,489 documents published between 1991 and 2023, involving 42,894 authors. The rate of international co-authorship was 37%, with an average of 25 citations per document. Additionally, the data revealed an average annual growth rate in publications of 11.50%.</p>
+      <p>In terms of manuscript typology, scientific articles predominated, totaling 10,727 publications, compared to other formats such as conference papers (148) and editorial materials (97).</p>
+      
+        <h4>Pre-systematic review results</h4>
+        <ul list-type="bullet">
+<li>
+            <p>Annual scientific production</p>
+          </li>
+<li>
+            <p>Most relevant publication sources</p>
+          </li>
+<li>
+            <p>Most relevant authors</p>
+          </li>
+<li>
+            <p>Publications by country of origin</p>
+          </li>
+</ul>
+        <p><a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalFigf01"><span class="sci-ico-fileFigure"></span>Figure 01</a> shows that the increase in scientific production began in 2003 and reached its peak in 2022. A noticeable decline appears in 2023, due to incomplete data for that year at the time of the analysis.</p>
+        <p>
+          <div class="row fig" id="f01">
+<a name="f01"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf01"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/23ff175487cad696f14007ae0db466c291108fcf.jpg" aria-describedby="descFigf01" alt="thumbnail of Figure 01"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Figure 01</strong></strong><br>
+              Annual scientific production
+            <br>
+</div>
+</div>
+        </p>
+        <p><a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalFigf02"><span class="sci-ico-fileFigure"></span>Figure 02</a>, which highlight the most relevant journals, shows that Water was the most prominent (1,509 publications), followed by ‘Sustainability’ (865 publications), and ‘Science of Total Environment’ (577 publications).</p>
+        <p>
+          <div class="row fig" id="f02">
+<a name="f02"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf02"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/5e3e17e758a4564969b230bc8f0234bd22b79f8e.jpg" aria-describedby="descFigf02" alt="thumbnail of Figure 02"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Figure 02</strong></strong><br>
+              Most relevant publication sources
+            <br>
+</div>
+</div>
+        </p>
+        <p><a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalFigf03"><span class="sci-ico-fileFigure"></span>Figure 03</a> presents the most relevant authors in the field, with Wang Y leading at 157 publications, followed by Wang X (116 publications) and Li Y (110 publications).</p>
+        <p>
+          <div class="row fig" id="f03">
+<a name="f03"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf03"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/ba9eff4342d4260e9b5a641b0fb948f9d3889cd6.jpg" aria-describedby="descFigf03" alt="thumbnail of Figure 03"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Figure 03</strong></strong><br>
+              Most relevant authors
+            <br>
+</div>
+</div>
+        </p>
+        <p><a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalFigf04"><span class="sci-ico-fileFigure"></span>Figure 04</a> shows the countries of origin of the authors of the analyzed scientific publications, as well as the type of publication involved ¾ SCP (Single Country Publications) and MCP (Multiple Country Publications). The United States leads in single-country publications, with over 2,000 such publications. In contrast, China stands out in international collaboration, surpassing the United States in multiple-country publications. However, China has fewer single-country publications, with just under 2,000 during the period analyzed.</p>
+        <p>
+          <div class="row fig" id="f04">
+<a name="f04"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf04"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/26c822af344eff015b885b9b1298366a82be5fd9.jpg" aria-describedby="descFigf04" alt="thumbnail of Figure 04"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Figure 04</strong></strong><br>
+              Most relevant authors
+            <br>
+</div>
+</div>
+        </p>
+      
+      
+        <h4>Post-asreview bibliometrics results</h4>
+        <p>After the initial bibliometric analysis, we applied an active learning-based approach to select the 100 most relevant articles, as identified by the machine learning model. A refined bibliometric analysis was then conducted on this subset to better understand the publication parameters.</p>
+        <p>The publication period in this subset spans from 2002 to 2022. A total of 579 authors were identified, with 20% of publications involving international co-authorship and an average of 28 citations per document. Regarding the typology of academic manuscripts, review articles were the most common (07), while scientific articles were not present in this selection, and only two book chapters were identified. The most relevant journals remain the same; however, ‘Science of Total Environment’ emerged as the most relevant in this subset, with 08 publications, followed by ‘Water’(07) and ‘Sustainability’(05). The leading countries in knowledge production in the field continue to be the United States, followed by China. The most cited authors were Deidda R, Hall J, Liz Z, Wang Z, with six authors accounting for 20% for the 100 selected articles.</p>
+      
+      
+        <h4>Selection of articles for in-depth analysis</h4>
+        <p>Of the 100 articles selected via active learning, 48 were initially identified as closely aligned with the research objectives — namely, the intersection of climate change and water management, with a focus on governance, planning, and adaptation strategies. These articles exhibited higher relevance scores and stronger thematic proximity based on the prioritization generated by the ASReview model.</p>
+        <p>A full-text reading of the 48 articles was independently conducted by the five co-authors. From this process, 20 articles were selected for in-depth qualitative and quantitative analysis based on three main criteria: 01.methodological robustness, 02.direct contribution to the research questions, and 03.representativeness across geographic and thematic contexts. The final selection was made by consensus among all reviewers to ensure thematic coherence and minimize bias.</p>
+        <p><a href="" class="open-asset-modal" data-bs-toggle="modal" data-bs-target="#ModalTablet2"><span class="sci-ico-fileTable"></span>Chart 02</a> summarizes the selected articles. Columns 01 and 02 report, respectively, the internal reference number assigned by the Active Learning ranking and the sequential order of manual evaluation.</p>
+        <p>
+          <div class="row table" id="t2">
+<a name="t2"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Chart 02</strong></strong><br>
+              Summary information of the selected articles
+            <br>
+</div>
+</div>
+        </p>
+      
+    
+      <h2 class="h5">Discussion</h2>
+      <p>The analyzed articles clearly highlight the link between climate change and water security, as more frequent and severe droughts are affecting regions around the globe ¾ including Brazil’s northeastern region. Climate change also affects agriculture and biodiversity, causing a reduction in agricultural production and increased species migration. Adaptation strategies in water management, such as water reuse and demand management, are essential for addressing these challenges. In this context, the first three selected articles focus on climate planning.</p>
+      <p>The first article by <span class="ref"><span class="xref xrefblue"><a href="#B10_ref" data-ref="NYAMWANZA, Admire Mutsa (2018), Local institutional adaptation for sustainable water management under increasing climatic variability and change: a case in the mid-Zambezi Valley, Zimbabwe. International Journal of Climate Change Strategies and Management. Vol. 10, N° 03, pp. 453-471.">Nyamwanza (2018)</a></span></span> focuses on climate planning as a strategy to improve water management, using climate information and tools to quantify uncertainties. It provides an example of an alert system based on climate data. The second article explores the use of climate information in different contexts, employing technical and scientific approaches to present case studies. It focuses on the impact of land and water use on water resources, rather than the direct climatic effects. This approach illustrates the strategic use of climate data and simulation models in environmental analysis, as demonstrated by the application of climate simulation models (KOUTSOURIS et al, 2010).</p>
+      <p>The third article adopts a quantitative methodology, drawing on hydrological and meteorological data, hydrological and climatic models, statistical analysis, and future scenario projections. It focuses on the implications of global warming and land use for water resource management (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="LOÁICIGA, Hugo A. (2009), Long-term climatic change and sustainable ground water resources management. Environmental Research Letters. Vol. 04, N° 03, pp. 01-11.">LOÁICIGA, 2009</a></span></span>). Among the remaining selected articles, <span class="ref"><span class="xref xrefblue"><a href="#B6_ref" data-ref="GROVES, David G.; YATES, David, and TEBALDI, Claudia (2008), Developing and applying uncertain global climate change projections for regional water management planning. Water Resources Research. Vol. 44, N° 12, pp. 01-16.">Groves et al. (2008)</a></span></span> examine water resource management in California, USA, in the context of climate change projections. These diverse methodologies enhance the understanding of climate change and water resources.</p>
+      <p>On the topic of management, the article by <span class="ref"><span class="xref xrefblue"><a href="#B20_ref" data-ref="VELDKAMP, Ted I. E.; WADA, Yoshihide; MOEL, Hans de; KUMMU, Matti; EISNER, Stephanie; AERTS, Jeroen C. J. H., and WARD, Philip. J. (2015), Changing mechanism of global water scarcity events: impacts of socioeconomic changes and inter-annual hydro-climatic variability. Global Environmental Change. Vol. 32, pp. 18-29.">Veldkamp et al. (2015)</a></span></span> underscores the direct impact of climate change on global water resources. It emphasizes the importance of considering both hydro-climatic variability and socioeconomic changes to understand the dynamics of water scarcity. Although not focused on specific regions such as the Northeastern Brazil, the methodologies and findings presented could be applicable for analyzing regional impacts, including potential changes in river flows and temperature variations. Sharma et al. (2010) present monitoring data on water resources in the region and identify significant trends, such as declining reservoir levels. This evidence contributes to a deeper understanding of the impacts of climate change in the region. It highlights the importance of long-term data for the effective management of water resources, discussing how climate variability and change influence water management strategies and the importance of integrating climate information into decision-making processes for water resource management. <span class="ref"><span class="xref xrefblue"><a href="#B1_ref" data-ref="BRUSS, Christopher Bayan; NATEGHI, Roshanak, and ZAITCHIK, Benjamin F. (2019), Explaining national trends in terrestrial water storage. Frontiers in Environmental Science. Vol. 07, N° 85, pp. 01-10.">Bruss et al. (2019)</a></span></span> identified global trends in terrestrial water storage by analyzing various factors ¾ climate variability, irrigation, and agricultural characteristics ¾ that influence changes in water storage, using data from the GRACE satellite mission. <span class="ref"><span class="xref xrefblue"><a href="#B4_ref" data-ref="CARVALHO-SANTOS, Claudia; MONTEIRO, António T.; AZEVEDO, João C.; HONRADO, João Pradinho, and NUNES, João Pedro (2017), Climate change impacts on water resources and reservoir management: uncertainty and adaptation for a mountain catchment in Northeast Portugal. Water Resources Management. Vol. 31, pp. 3355-3370.">Carvalho-Santos et al. (2017)</a></span></span> investigate water availability and reservoir management in Portugal, while <span class="ref"><span class="xref xrefblue"><a href="#B11_ref" data-ref="OLANREWAJU, Rashidah M.; ADEDOYIN, Funke, and AKPAN, Godwin P. (2019), Evaluation of climate variability impact on sources of water supply. Geografia. Vol. 15, N° 03, pp. 57-75.">Olanrewaju et al. (2019)</a></span></span> focus on assessing the impact of climate variability on water supply sources in Offa, Kwara State, Nigeria. Their study combines primary and secondary data to analyze how changes in rainfall, temperature, and evaporation affect water availability and access in the region, underscoring the importance of adaptive strategies and sustainable water resource management in the context of climatic variability.</p>
+      <p>The articles also highlight adaptation strategies. In this context, the role of groundwater in ensuring water security is crucial, especially in regions impacted by climate change, such as northeastern Brazil. About 10% of the analyzed articles emphasize the importance of sustainable groundwater management, highlighting its role as a crucial reserve during droughts and its potential to supplement surface water supplies during times of scarcity. Therefore, incorporating groundwater considerations into adaptation strategies and water planning is essential for effective management that anticipates and mitigates the adverse impacts of climate change, ensuring the resilience and sustainability of water resources. In this context, application of the methodologies discussed further underscores the critical role of groundwater (<span class="ref"><span class="xref xrefblue"><a href="#B18_ref" data-ref="TAYLOR, Richard G.; SCANLON, Bridget; Döll, Petra; RODELL, Matt; BEEK, Rens Van; WADA, Yoshihide; Longuevergne, Laurent; LEBLANC, Marc; Famiglietti, James S.; EDMUNDS, Mike; KONIKOW, Leonard; GREEN, Timothy; CHEN, Jianyao; TANIGUCHI, Makoto; BIERKENS, Marc F. P.; MACDONALD, Alan; FAN, Ying; MAXWELL, Reed M.; YECHIELI, Yossi; GURDAK, Jason J.; ALLEN, Diana M.; SHAMSUDDUHA, Mohammad; HISCOCK, Kevin; YEH, Pat J. F.; HOLMAN, Yan, and TREIDEL, Holger (2013), Ground water and climate change. Nature climate change. Vol. 03, N° 04, pp. 322-329.">TAYLOR et al., 2013</a></span></span>)</p>
+      <p>As the largest distributed reservoir of freshwater in the world, groundwater is essential for sustaining ecosystems and supporting human adaptation to climate variability and change. Its strategic importance for global water and food security is expected to grow under climate change, as more frequent and intense climate extremes ¾ such as droughts and floods ¾ increase variability in precipitation, soil moisture, and surface water availability. In this context, understanding the impacts of climate change on groundwater is essential. Recent research has examined these impacts by considering both natural processes and human-induced factors, as well as feedback loops involving groundwater within the climate system. However, the lack of groundwater observations limits our understanding of the dynamic relationship between groundwater and climate. Article Reference [08] presents concrete case studies that have applied successful adaptation strategies in the region, such as demand management and the efficient use of water resources, including the example of a pilot seawater desalination project.</p>
+      <p><span class="ref"><span class="xref xrefblue"><a href="#B1_ref" data-ref="BRUSS, Christopher Bayan; NATEGHI, Roshanak, and ZAITCHIK, Benjamin F. (2019), Explaining national trends in terrestrial water storage. Frontiers in Environmental Science. Vol. 07, N° 85, pp. 01-10.">Bruss et al. (2019)</a></span></span> identify two specific adaptation strategies based on future climate scenarios and the specific needs of the Wasatch Range Metropolitan Area in northern Utah, USA. These strategies are crucial for planning mitigation measures and sustainable actions for water resources management in this and similar regions. Although <span class="ref"><span class="xref xrefblue"><a href="#B3_ref" data-ref="BUYTAERT, Wouter; VUILLE, Mathias; DEWULF Art; URRUTIA, Rocío; KARMALKAR, Ambarish V., and CÉLLERI, Rolando (2010), Uncertainties in climate change projections and regional downscaling in the tropical Andes: implications for water resources management. Hydrology and Earth System Sciences. Vol. 14, N° 07, pp. 1247-1258.">Buytaert et al. (2010)</a></span></span> do not directly address adaptive governance, they develop methodologies to integrate uncertain climate change projections into regional water management planning. This exploration focuses on developing water management models that integrate a wide range of plausible future climate scenarios, thereby supporting informed decision-making in water management amidst climatic uncertainties.</p>
+      <p>Zeleňaková et al. (2022) analyze the impact of climate change on rainfall patterns in Syria, examining the spatial and temporal variability of rainfall trends. The study uses Mann–Kendall statistical tests to analyze rainfall data across the country, identifying mostly decreasing trends. It provides insights into how these trends could affect water resource management in Syria, especially in the context of climate change predictions for the region.</p>
+      <p><span class="ref"><span class="xref xrefblue"><a href="#B2_ref" data-ref="BURNHAM, Morey, MA, Zhao; ENDTER-WADA, Joanna, and BARDSLEY, Tim (2016), Water management decision making in the face of multiple forms of uncertainty and risk. JAWRA Journal of the American Water Resources Association. Vol. 52, N° 06, pp. 1366-1384.">Burnham et al. (2016)</a></span></span> address the complexity of decision-making in water resource management amid multiple uncertainties, underscoring the need for institutional and collaborative adaptations among various water management stakeholders. This approach highlights the essence of adaptive governance, interpreted here as a collaborative process that involves continuous adjustments and learning in response to social, economic, political, and biophysical dynamics. Such adaptability is crucial for navigating climatic and social uncertainties and achieving long-term water sustainability.</p>
+      <p><span class="ref"><span class="xref xrefblue"><a href="#B5_ref" data-ref="FOWLER, Hayley J.; Kilsby, Chris G., and O'CONNELL, Enda (2003), Modeling the impacts of climatic change and variability on the reliability, resilience, and vulnerability of a water resource system. Water Resources Research. Vol. 39, N° 08, pp. 01-11.">Fowler et al. (2003)</a></span></span> model the impacts of climate change and variability on the reliability, resilience, and vulnerability of a water resource system. The study uses a quantitative methodology integrating climatic, hydrological, and economic models to examine the linkage between climate change and water security, underscoring how climate projections influence water management strategies. When applying the findings of these studies, it is crucial to consider the specific conditions of Brazil’s Northeast region, including its geographical and climatic variability ¾ such as differences between coastal and inland areas. Equally important is the involvement of local communities in adaptation strategies in the region. One example is the implementation of environmental education programs aimed at riverside communities.</p>
+      <p>In this context, <span class="ref"><span class="xref xrefblue"><a href="#B17_ref" data-ref="TAUFIK, Muh; WIDYASTUTI, Marliana Tri; SULAIMAN, Albertus; MURDIYARSO, Daniel; SANTIKAYASA, I Putu, and MINASNY, Budiman (2022), An improved drought-fire assessment for managing fire risks in tropical peatlands. Agricultural and Forest Meteorology. Vol. 312, pp. 01-06.">Taufik et al. (2022)</a></span></span> underscores the importance of integrating quantitative models and climate change projections into water resource management. The study’s methodology and findings offer a valuable framework for implementing adaptation strategies in similar agricultural settings. Specifically, the study employs the SWAT hydrological model and the LINDO optimization model to project water allocation needs under future climatic scenarios in the Poncokusumo area of Indonesia. This approach demonstrates how theoretical models can inform practical water management strategies, including the development of systems like flood warnings, as mentioned in other contexts. The multifaceted impacts of climate change on water resources highlight the need for a comprehensive understanding and strategic approach to water management, as reflected in recent scholarly contributions.</p>
+      <p>Santikayasa et al. (2017) investigate the integrated management of surface and groundwater, proposing a holistic approach that recognizes groundwater as an essential ¾ yet often overlooked ¾ component of water resource strategies in the face of climate variability. Further expanding the geographical scope, <span class="ref"><span class="xref xrefblue"><a href="#B19_ref" data-ref="TRAMBEREND, Sylvia; BURTSCHER, Robert; BUREK, Peter; KAHIL, Taher; FISCHER, Günther; MOCHIZUKI, Junko; GREVE, Peter; KIMWAGA, Richard; NYENJE, Philip; ONDIEK, Risper; NAKAWUKA, Prossie; HYANDYE. Canute; SIBOMANA, Claver; LUODA, Hilda Pius; MATANO, Ali Said; LANGAN, Simon, and WADA, Yoshihide (2021), Co-development of East African regional water scenarios for 2050. One Earth. Vol. 04, N° 03, pp. 434-447.">Tramberend et al. (2021)</a></span></span> provide an insightful analysis of future water scenarios in the Lake Victoria Basin. Their study projects the impacts of climate change on water availability and emphasizes the need for robust planning to mitigate risks associated with climate-induced fluctuations in water supply. The regional focus aligns with <span class="ref"><span class="xref xrefblue"><a href="#B16_ref" data-ref="SUÁREZ-ALMIÑANA, Sara; PEDRO-MONZÓNIS, María; PAREDES-ARQUIOLA, Javier; ANDREU, Joaquim, and SOLERA, Abel (2017), Linking Pan-European data to the local scale for decision making for global change and water scarcity within water resources planning and management. Science of the Total Environment. Vol. 603, pp. 126-139.">Suárez-Almiñana et al. (2017)</a></span></span>, who explore the integration of pan-European climate data into local water management practices, highlighting the importance of adaptive strategies and drought risk assessments in ensuring water resilience.</p>
+      <p>Despite these valuable insights, this systematic review faced several limitations. First, the reliance on bibliometric data may have excluded relevant grey literature or unpublished case studies that offer important regional perspectives, particularly in the Brazilian semi-arid context. Additionally, while the use of machine learning and active learning (ASReview) improved the efficiency of article selection, it also introduced potential biases related to algorithmic ranking and feature extraction.</p>
+      <p>Furthermore, the heterogeneity of methodologies across the reviewed studies made direct comparisons challenging, underscoring the need for standardized frameworks to assess the impacts of climate change on water management. Finally, the limited availability of longitudinal and high-resolution data on groundwater dynamics remains a significant obstacle to advancing research in this area.</p>
+    
+      <h2 class="h5">Conclusion</h2>
+      <p>The systematic review of the articles reveals a global trend toward recognizing the interaction between climate change and water resources. The studies analyzed provide evidence that water resources management must evolve to adopt an adaptive, sustainable, and collaborative approach ¾ one that integrates quantitative and qualitative data while promoting effective governance. Climate change affects agriculture and biodiversity, leading to reduced agricultural production and increased species migration. Adaptation strategies in water management, such as water reuse and demand management, are crucial to addressing these challenges. The review emphasizes the critical importance of integrating climate data and projections into water management and planning to develop effective adaptation and mitigation strategies, thereby ensuring the sustainability and resilience of water systems in the face of climate change.</p>
+      <p>Quantitative and qualitative methods complement each other in shaping a more effective climate policy that influences public planning at both city and national levels. Adaptive governance offers a tangible pathway for promoting adaptation and balancing societal interests within institutional policymaking. The literature highlights a complex, multifaceted process that relies on the coordinated actions of institutions. In this context, this article contributes to the understanding and formulation of policies focused on climate adaptation, with water security as the central pillar.</p>
+    </div>
+<div class="articleSection" data-anchor="References">
+<h2 class="h5">References</h2>
+<div class="row"><div class="col ref-list"><ul class="refList articleFootnotes">
+<li>
+<a class="" name="B1_ref"></a>BRUSS, Christopher Bayan; NATEGHI, Roshanak, and ZAITCHIK, Benjamin F. (2019), Explaining national trends in terrestrial water storage. Frontiers in Environmental Science. Vol. 07, N° 85, pp. 01-10.</li>
+<li>
+<a class="" name="B2_ref"></a>BURNHAM, Morey, MA, Zhao; ENDTER-WADA, Joanna, and BARDSLEY, Tim (2016), Water management decision making in the face of multiple forms of uncertainty and risk. JAWRA Journal of the American Water Resources Association. Vol. 52, N° 06, pp. 1366-1384.</li>
+<li>
+<a class="" name="B3_ref"></a>BUYTAERT, Wouter; VUILLE, Mathias; DEWULF Art; URRUTIA, Rocío; KARMALKAR, Ambarish V., and CÉLLERI, Rolando (2010), Uncertainties in climate change projections and regional downscaling in the tropical Andes: implications for water resources management. Hydrology and Earth System Sciences. Vol. 14, N° 07, pp. 1247-1258.</li>
+<li>
+<a class="" name="B4_ref"></a>CARVALHO-SANTOS, Claudia; MONTEIRO, António T.; AZEVEDO, João C.; HONRADO, João Pradinho, and NUNES, João Pedro (2017), Climate change impacts on water resources and reservoir management: uncertainty and adaptation for a mountain catchment in Northeast Portugal. <i>Water Resources Management</i> Vol. 31, pp. 3355-3370.</li>
+<li>
+<a class="" name="B5_ref"></a>FOWLER, Hayley J.; Kilsby, Chris G., and O'CONNELL, Enda (2003), Modeling the impacts of climatic change and variability on the reliability, resilience, and vulnerability of a water resource system. Water Resources Research. Vol. 39, N° 08, pp. 01-11.</li>
+<li>
+<a class="" name="B6_ref"></a>GROVES, David G.; YATES, David, and TEBALDI, Claudia (2008), Developing and applying uncertain global climate change projections for regional water management planning. Water Resources Research. Vol. 44, N° 12, pp. 01-16.</li>
+<li>
+<a class="" name="B7_ref"></a>KOUTSOURIS, Alexander J.; DESTOUNI, Georgia; JARSJÖ, Jerker, and Lyon, Steve W. (2010), Hydro-climatic trends and water resource management implications based on multi-scale data for the Lake Victoria region, Kenya. Environmental Research Letters. Vol. 05, N° 03, pp. 01-07.</li>
+<li>
+<a class="" name="B8_ref"></a>LOÁICIGA, Hugo A. (2009), Long-term climatic change and sustainable ground water resources management. Environmental Research Letters. Vol. 04, N° 03, pp. 01-11.</li>
+<li>
+<a class="" name="B9_ref"></a>NASCIMENTO, Murilo César do; FRANCO, Anna Paula Mendes Marques de; MENDES, Karina Dal Sasso, and FREITAS, Patrícia Scotini (2025), Methodological advances in knowledge synthesis and the use of ASReview LAB: an experience report. <i>Texto &amp; Contexto - Enfermagem</i> Vol. 34, pp. 01-14.</li>
+<li>
+<a class="" name="B10_ref"></a>NYAMWANZA, Admire Mutsa (2018), Local institutional adaptation for sustainable water management under increasing climatic variability and change: a case in the mid-Zambezi Valley, Zimbabwe. International Journal of Climate Change Strategies and Management. Vol. 10, N° 03, pp. 453-471.</li>
+<li>
+<a class="" name="B11_ref"></a>OLANREWAJU, Rashidah M.; ADEDOYIN, Funke, and AKPAN, Godwin P. (2019), Evaluation of climate variability impact on sources of water supply. Geografia. Vol. 15, N° 03, pp. 57-75.</li>
+<li>
+<a class="" name="B12_ref"></a>PARUMS, Dinah V. (2021), Review articles, systematic reviews, meta-analysis, and the updated preferred reporting items for systematic reviews and meta-analyses (PRISMA) 2020 guidelines. Medical science monitor: international medical journal of experimental and clinical research. Vol. 27, pp. 01-03.</li>
+<li>
+<a class="" name="B13_ref"></a>SANTIKAYASA, Perdinan I Putu and BASIT, Rizki Abdul (2017), Water allocation for agriculture complex terrain under changing climate. IOP Conference Series: Earth and Environmental Science. Vol. 54, N° 01, pp. 01-07.</li>
+<li>
+<a class="" name="B14_ref"></a>SHARMA, Kumar D. and GOSAIN, Ashvani K. (2010), Application of climate information and predictions in water sector: capabilities. Procedia Environmental Sciences. Vol. 01, N° 01, pp. 120-129.</li>
+<li>
+<a class="" name="B15_ref"></a>SILVA, Gabriel F. S.; FAGUNDES, Thales P.; TEIXEIRA, Bruno C.; CHIAVEGATTO FILHO, Alexandre D. P. (2022), Machine learning for hypertension prediction: a systematic review. Current Hypertension Reports. Vol. 11, pp. 523-533.</li>
+<li>
+<a class="" name="B16_ref"></a>SUÁREZ-ALMIÑANA, Sara; PEDRO-MONZÓNIS, María; PAREDES-ARQUIOLA, Javier; ANDREU, Joaquim, and SOLERA, Abel (2017), Linking Pan-European data to the local scale for decision making for global change and water scarcity within water resources planning and management. <i>Science of the Total Environment</i> Vol. 603, pp. 126-139.</li>
+<li>
+<a class="" name="B17_ref"></a>TAUFIK, Muh; WIDYASTUTI, Marliana Tri; SULAIMAN, Albertus; MURDIYARSO, Daniel; SANTIKAYASA, I Putu, and MINASNY, Budiman (2022), An improved drought-fire assessment for managing fire risks in tropical peatlands. Agricultural and Forest Meteorology. Vol. 312, pp. 01-06.</li>
+<li>
+<a class="" name="B18_ref"></a>TAYLOR, Richard G.; SCANLON, Bridget; Döll, Petra; RODELL, Matt; BEEK, Rens Van; WADA, Yoshihide; Longuevergne, Laurent; LEBLANC, Marc; Famiglietti, James S.; EDMUNDS, Mike; KONIKOW, Leonard; GREEN, Timothy; CHEN, Jianyao; TANIGUCHI, Makoto; BIERKENS, Marc F. P.; MACDONALD, Alan; FAN, Ying; MAXWELL, Reed M.; YECHIELI, Yossi; GURDAK, Jason J.; ALLEN, Diana M.; SHAMSUDDUHA, Mohammad; HISCOCK, Kevin; YEH, Pat J. F.; HOLMAN, Yan, and TREIDEL, Holger (2013), Ground water and climate change. Nature climate change. Vol. 03, N° 04, pp. 322-329.</li>
+<li>
+<a class="" name="B19_ref"></a>TRAMBEREND, Sylvia; BURTSCHER, Robert; BUREK, Peter; KAHIL, Taher; FISCHER, Günther; MOCHIZUKI, Junko; GREVE, Peter; KIMWAGA, Richard; NYENJE, Philip; ONDIEK, Risper; NAKAWUKA, Prossie; HYANDYE. Canute; SIBOMANA, Claver; LUODA, Hilda Pius; MATANO, Ali Said; LANGAN, Simon, and WADA, Yoshihide (2021), Co-development of East African regional water scenarios for 2050. One Earth. Vol. 04, N° 03, pp. 434-447.</li>
+<li>
+<a class="" name="B20_ref"></a>VELDKAMP, Ted I. E.; WADA, Yoshihide; MOEL, Hans de; KUMMU, Matti; EISNER, Stephanie; AERTS, Jeroen C. J. H., and WARD, Philip. J. (2015), Changing mechanism of global water scarcity events: impacts of socioeconomic changes and inter-annual hydro-climatic variability. <i>Global Environmental Change</i> Vol. 32, pp. 18-29.</li>
+<li>
+<a class="" name="B21_ref"></a>ZELENAKOVÁ, Martina; ABD-ELHAMID, Hany F.; KRAJNÍKOVÁ, Katarina; SMETANKOVÁ, Jana; PURCZ, Pavol, and Alkhalaf, Ibrahim (2022), Spatial and temporal variability of rainfall trends in response to climate change - a case study: Syria. Water. Vol. 14, N° 01, pp. 01-27.</li>
+</ul></div></div>
+</div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes">
+<li>
+        <span class="xref big">Data replication:</span>
+        <div>
+          <a href="https://doi.org/10.7910/DVN/MI1MSA" target="_blank">https://doi.org/10.7910/DVN/MI1MSA</a>
+        </div>
+      </li>
+<li>
+        <span class="xref big">Funding information:</span>
+        <div> National Council for Scientific and Technological Development (CNPq) under Grant 311245/2020-0; Paraíba State Research Support Foundation (Fapesq) under Grant 55068.923.28597.23102022.</div>
+      </li>
+</ul></div></div></div>
+<div class="articleSection" data-anchor="Edited by">
+<h2 class="h5">Edited by</h2>
+<div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+          <span class="xref big">Associate editor:</span>
+          <div>Carlos Milani</div>
+        </li></ul></div></div>
+</div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+          <span class="xref big">Revised by</span>
+          <div>Karin Blikstad</div>
+        </li></ul></div></div></div>
+<div class="articleSection" data-anchor="Data availability"><h2 class="h5">Data availability</h2></div>
+<div class="row"><div class="col-md-12 col-sm-12"><p>
+          <a href="https://doi.org/10.7910/DVN/MI1MSA" target="_blank">https://doi.org/10.7910/DVN/MI1MSA</a>
+        </p></div></div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h2 class="h5">Publication Dates</h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>20 Mar 2026</li>
+<li>
+<strong>Date of issue</strong><br>2026</li>
+</ul></div></div>
+</div>
+<div class="articleSection" data-anchor="History">
+<h2 class="h5">History</h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Received</strong><br>05 Aug 2024</li>
+<li>
+<strong>Accepted</strong><br>08 July 2025</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""> This is an Open Access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. </a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Authorship</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<style>
+            .author-card {
+                border-bottom: 1px solid #ccc;
+                padding: 1rem 0;
+            }
+            .author-card:last-child {
+                border-bottom: 0px;
+            }
+            .author-name {
+                font-weight: 600;
+            }
+            .material-icons-outlined {
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+            .orcid-button {
+                padding-left: 2.5rem;
+            }
+            .modal-body {
+                padding-bottom: 3rem;
+            }
+            .orcid-button::before {
+                content: "";
+                position: absolute;
+                background-image: url(https://ds.scielo.org/img/logo-orcid.svg);
+                background-repeat: no-repeat;
+                background-size: 1.5em auto;
+                background-position: .5em center;
+                display: block;
+                width: 60px;
+                height: 60px;
+                top: -10px;
+                left: 0;
+            }
+        </style>
+<div class="modal-body">
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Jose Irivaldo Alves Oliveira Silva </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff1">Universidade Federal de Campina Grande (UFCG). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff1" hidden="">Universidade Federal de Campina Grande</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff1" hidden="">Universidade Federal de Campina Grande (UFCG). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0002-0022-3090">0000-0002-0022-3090</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Tiago Almeida de Oliveira </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff2">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff2" hidden="">Universidade Estadual da Paraíba</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff2" hidden="">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0003-4147-7721">0000-0003-4147-7721</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Ângela Maria Cavalcante Ramalho </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff2">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff2" hidden="">Universidade Estadual da Paraíba</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff2" hidden="">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0002-8567-4367">0000-0002-8567-4367</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Mateus Silva Rocha </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff2">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff2" hidden="">Universidade Estadual da Paraíba</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff2" hidden="">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0001-5110-9063">0000-0001-5110-9063</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Yuri Batista Oliveira Gomes </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff2">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff2" hidden="">Universidade Estadual da Paraíba</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff2" hidden="">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0009-0009-4267-3856">0009-0009-4267-3856</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Gabriel Messias Santana Peixoto </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff2">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff2" hidden="">Universidade Estadual da Paraíba</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff2" hidden="">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0009-0003-8948-6122">0009-0003-8948-6122</a></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Gabriel Alves do Rosario </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff1">Universidade Federal de Campina Grande (UFCG). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff1" hidden="">Universidade Federal de Campina Grande</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff1" hidden="">Universidade Federal de Campina Grande (UFCG). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0009-0001-1088-7915">0009-0001-1088-7915</a></div>
+</div>
+<a class="" name="c01_ref"></a><div class="correspondence mt-3 mb-4">
+<strong><span class="material-icons-outlined">person</span>Correspondence:</strong><span class="scielo__text-color__subtle--light"> Jose Irivaldo Alves Oliveira Silva E-mail: </span><br><a href="mailto:jose.irivaldo@professor.ufcg.edu.br">jose.irivaldo@professor.ufcg.edu.br</a> </div>
+<div class="mb-3">
+<p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<strong>Associate editor:</strong><p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<p class="scielo__text-color__subtle--light mb-0"><div>Carlos Milani</div></p>
+<p class="scielo__text-color__subtle--light mb-0">
+        </p>
+</div>
+<div class="mb-3">
+<p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<strong>Revised by</strong><p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<p class="scielo__text-color__subtle--light mb-0"><div>Karin Blikstad</div></p>
+<p class="scielo__text-color__subtle--light mb-0">
+        </p>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalDefault ModalTutors" id="ModalScimago" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+                            SCIMAGO INSTITUTIONS RANKINGS
+                        </h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="info">
+<div>
+<span data-aff-display="aff1">Universidade Federal de Campina Grande (UFCG). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff1" hidden="">Universidade Federal de Campina Grande</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff1" hidden="">Universidade Federal de Campina Grande (UFCG). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a><br>
+</div>
+<div>
+<span data-aff-display="aff2">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><span data-aff-orgname="aff2" hidden="">Universidade Estadual da Paraíba</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Campina Grande, PB, Brazil</span><span data-aff-full="aff2" hidden="">Universidade Estadual da Paraíba (UEPB). Campina Grande/PB, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a><br>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Figures | Tables</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="nav-item"><a href="#figures" class="nav-link active" data-bs-toggle="tab">Figures
+                    (4)
+                </a></li>
+<li role="presentation" class="nav-item"><a href="#tables" class="nav-link" data-bs-toggle="tab">Tables
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="figures" role="tabpanel" aria-labelledby="figures">
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf01"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/23ff175487cad696f14007ae0db466c291108fcf.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Figure 01</strong></strong>
+              Annual scientific production
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf02"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/5e3e17e758a4564969b230bc8f0234bd22b79f8e.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Figure 02</strong></strong>
+              Most relevant publication sources
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf03"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/ba9eff4342d4260e9b5a641b0fb948f9d3889cd6.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Figure 03</strong></strong>
+              Most relevant authors
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf04"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/26c822af344eff015b885b9b1298366a82be5fd9.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Figure 04</strong></strong>
+              Most relevant authors
+            </caption></div>
+</div>
+</div>
+<div class="tab-pane fade show" id="tables" role="tabpanel" aria-labelledby="tables">
+<div class="row table">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Chart 01</strong></strong>
+            Search strings used for the literature review
+          </caption></div>
+</div>
+<div class="row table">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet2"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Chart 02</strong></strong>
+              Summary information of the selected articles
+            </caption></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Figure 01</strong>   
+              Annual scientific production
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/f54f11c56a31ce05bb94978bc010b83a18785da2.tif"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/85e24e88335dded83a18135e1db7f607362d30b6.png"><small class="d-block">Elaborated by the authors.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Figure 02</strong>   
+              Most relevant publication sources
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/48709b3aa6112acb053e4d831ef64d7881e21281.tif"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/70a6235511385262ff08a99fce946eebcc157781.png"><small class="d-block">Elaborated by the authors.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Figure 03</strong>   
+              Most relevant authors
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/7bc0e7c539174005ddaa10192f2d4af39a41c367.tif"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/7ede526b582fe7fc422e0b6c1fb4dc93a46a9d06.png"><small class="d-block">Elaborated by the authors.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Figure 04</strong>   
+              Most relevant authors
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Open new window" href="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/492d39d844576eb52723c24ef6b73866691e9742.tif"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/1981-3821/nLgByLLM39L7VrwmchjFxrL/a9e5f4e05a175c69375a85a3ceac81e931c8bc77.png"><small class="d-block">Elaborated by the authors.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">table_chart</span><strong><strong>Chart 01</strong></strong>    
+            Search strings used for the literature review
+          <br>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th align="left" style="font-weight:normal" valign="top">Database</th>
+                <th align="left" style="font-weight:normal" valign="top">Climate Change</th>
+                <th align="left" style="font-weight:normal" valign="top">Water Management</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td valign="top">Web of Science</td>
+                <td valign="top">
+                  <ul list-type="bullet">
+<li>
+                      <p>‘Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Impact of Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Adaptation to Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Vulnerability to Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Mitigation of Climate Change’</p>
+                    </li>
+</ul>
+                </td>
+                <td valign="top">
+                  <ul list-type="bullet"><li>
+                      <p>‘Water Management’ OR ‘Management of Water Resources’OR ‘Water Management’ OR ‘Water Policy’ OR ‘Sustainable Water Use’ OR ‘Water Security’ OR ‘Water Conservation’</p>
+                    </li></ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">Scopus</td>
+                <td valign="top">
+                  <ul list-type="bullet">
+<li>
+                      <p>‘Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Impact of Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Adaptation to Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Vulnerability to Climate Change’ OR</p>
+                    </li>
+<li>
+                      <p>‘Mitigation of Climate Change’</p>
+                    </li>
+</ul>
+                </td>
+                <td valign="top">
+                  <ul list-type="bullet">
+<li>
+                      <p>‘Water Management’ OR ‘Management of</p>
+                    </li>
+<li>
+                      <p>Water Resources’ OR</p>
+                    </li>
+<li>
+                      <p>‘Water Management’ OR ‘Water Policy’ OR ‘Sustainable</p>
+                    </li>
+<li>
+                      <p>Water Use’ OR ‘Water Security’ OR ‘Water Conservation’</p>
+                    </li>
+</ul>
+                </td>
+              </tr>
+            </tbody>
+          </table></div></div>
+<div class="modal-footer">
+            <small class="d-block">Elaborated by the authors.</small>
+          </div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">table_chart</span><strong><strong>Chart 02</strong></strong>    
+              Summary information of the selected articles
+            <br>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="table table-hover"><table frame="hsides" rules="groups">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th align="left" scope="col" style="font-weight:normal" valign="top">Article reference</th>
+                  <th align="left" scope="col" style="font-weight:normal" valign="top">Active Learning number</th>
+                  <th align="left" scope="col" style="font-weight:normal" valign="top">Climate Planning</th>
+                  <th align="left" colspan="4" scope="col" style="font-weight:normal" valign="top">Bases</th>
+                  <th align="left" colspan="2" scope="col" style="font-weight:normal" valign="top">Mapping</th>
+                  <th align="left" colspan="1" scope="col" style="font-weight:normal" valign="top"> </th>
+                  <th align="left" scope="col" style="font-weight:normal" valign="top">Rel. Between Changes</th>
+                  <th align="left" scope="col" style="font-weight:normal" valign="top">Quant. Methodol</th>
+                  <th align="left" colspan="2" scope="col" style="font-weight:normal" valign="top">Qua methodol</th>
+                  <th align="left" colspan="2" scope="col" style="font-weight:normal" valign="top">Overview of method</th>
+                  <th align="left" scope="col" style="font-weight:normal" valign="top">Adaptive governance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="left" valign="top">[3]</td>
+                  <td align="left" valign="top">[1]</td>
+                  <td align="left" valign="top">The article covers climatic adaptation in the management of water resources in rural African communities affected by variability and climate change.</td>
+                  <td align="left" colspan="4" valign="top">Bases: critical institutionalism and "institutional bricolage".</td>
+                  <td align="left" colspan="2" valign="top">It does not cover climate mapping.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">It relates climate change to water security and water resources in arid and semi-arid areas.</td>
+                  <td align="left" valign="top">It does not use quantitative methodology.</td>
+                  <td align="left" colspan="2" valign="top">It uses qualitative methods, including interviews and thematic analysis.</td>
+                  <td align="left" colspan="2" valign="top">It is based on the critical institutionalism approach.</td>
+                  <td align="left" valign="top">It proposes adaptive governance to address climate challenges.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[4]</td>
+                  <td align="left" valign="top">[2]</td>
+                  <td align="left" valign="top">The article evaluates hydroclimatic trends in Kenya’s Lake Victoria region and their implications for water resource management.</td>
+                  <td align="left" colspan="4" valign="top">Bases: Precipitation, temperature, evapotranspiration, and flow data observed and modeled.</td>
+                  <td align="left" colspan="2" valign="top">It addresses climatic mapping by mapping hydroclimatic variables.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">It relates climate change to water security and water resources in the Lake Victoria Basin.</td>
+                  <td align="left" valign="top">It uses quantitative methodology, including statistical and numerical methods.</td>
+                  <td align="left" colspan="2" valign="top">It does not use qualitative methodology.</td>
+                  <td align="left" valign="top">It is based on the analysis of hydro-climatic data on different scales.</td>
+                  <td align="left" colspan="2" valign="top">It includes climate management, exploring options under a climate change scenario and their implications for water resource management.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[5]</td>
+                  <td align="left" valign="top">[3]</td>
+                  <td align="left" valign="top">The article reviews climate change and its relationship with groundwater management.</td>
+                  <td align="left" colspan="4" valign="top">Bases: Comparison of long-term global climate fluctuations and recent patterns.</td>
+                  <td align="left" colspan="2" valign="top">It does not cover climate mapping.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">It relates climate change to water security and water resources, emphasizing the increase in greenhouse gases.</td>
+                  <td align="left" valign="top">It does not use quantitative methodology in the traditional sense of data modeling or statistical forecasting, but it uses historical hydroclimatic data and modeling to assess the future under increasing CO2 concentrations</td>
+                  <td align="left" colspan="2" valign="top">It does not use quantitative methodology</td>
+                  <td align="left" valign="top">It is based on a literature review and a case study conducted in Southern California, USA.</td>
+                  <td align="left" colspan="2" valign="top">It addresses water management with a focus on sustainability, identifying challenges and opportunities.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[6]</td>
+                  <td align="left" valign="top">[5]</td>
+                  <td align="left" valign="top">The article proposes a conceptual model to evaluate the vulnerability and adaptive capacity of socio-ecological systems (SES) to climate change, considering interactions between human and natural components.</td>
+                  <td align="left" colspan="4" valign="top">The article focuses on water resources management under climate variability and change.</td>
+                  <td align="left" colspan="2" valign="top">The article uses quantitative methodology, including trend analysis and hydrological modeling.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">It does not use qualitative methodology; it is based on observed and projected data.</td>
+                  <td align="left" valign="top">The methodology includes the selection of the study area, secondary data collection, interviews, focal groups, and content analysis.</td>
+                  <td align="left" colspan="2" valign="top">The article suggests adaptation governance to address the complexity and uncertainty of SES.</td>
+                  <td align="left" colspan="2" valign="top">It does not address climate management but focuses on the management of water resources affected by climate change</td>
+                  <td align="left" valign="top">It addresses water management, with an emphasis on monitoring and adaptation to climate variability and change.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[7]</td>
+                  <td align="left" valign="top">[6]</td>
+                  <td align="left" valign="top">The article reviews the impacts of climate change on groundwater and highlights challenges in understanding the relationship between groundwater and climate.</td>
+                  <td align="left" colspan="3" valign="top">Climate planning is based on the comparison between long-term global climate fluctuations and recent climate patterns.</td>
+                  <td align="left" colspan="3" valign="top">It does not cover climate mapping.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">It relates climate change to water security and water resources, emphasizing the increase in greenhouse gas emissions.</td>
+                  <td align="left" valign="top">It does not use quantitative methodology; it is based on observed and projected data.</td>
+                  <td align="left" colspan="2" valign="top">It does not use qualitative methodology.</td>
+                  <td align="left" valign="top">The study provides an overview of metrics related to groundwater and its connection to climate.</td>
+                  <td align="left" colspan="2" valign="top">It does not address adaptive governance but rather focuses on adaptive water resources management under climate change by promoting climate information use.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[8]</td>
+                  <td align="left" valign="top">[7]</td>
+                  <td align="left" valign="top">The article discusses the importance of understanding the processes driving climate change and how they manifest across different spatial and temporal scales. It proposes strategies to improve water management in the context of climate variability and change.</td>
+                  <td align="left" colspan="3" valign="top">Effective water management relies on long-term hydrological and meteorological monitoring networks. These networks provide robust, accurate, and consistent data essential to developing tools that quantify uncertainties, predict changes, and create climate scenarios relevant for water resource management.</td>
+                  <td align="left" colspan="3" valign="top">While the article does not focus specifically on groundwater mapping, it acknowledges the importance of understanding the distribution of these resources in different regions.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">It explores the interaction between groundwater and climate, taking into account natural processes and human-induced impacts. It also examines how groundwater affects the climate system.</td>
+                  <td align="left" valign="top">Although it does not detail specific metrics, the study recognizes the need for measuring and monitoring groundwater to assess climate impacts</td>
+                  <td align="left" colspan="2" valign="top">It does not detail specific metrics.</td>
+                  <td align="left" valign="top">It provides an overview of metrics related to groundwater and their relationship with climate.</td>
+                  <td align="left" colspan="2" valign="top">It does not focus directly on adaptive governance but highlights the importance of incorporating climate information into water resource management decisions.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[9]</td>
+                  <td align="left" valign="top">[9]</td>
+                  <td align="left" valign="top">The article addresses climate planning, which is based in the analysis of future climate scenarios, the assessment of vulnerabilities and risks, the identification of adaptation measures, and the integration of sectoral policies.</td>
+                  <td align="left" colspan="3" valign="top">The article does not cover climate mapping. While it uses data from global and regional climate models, it does not present specific climate maps.</td>
+                  <td align="left" colspan="3" valign="top">The article relates climate change to water security and water resources. It discusses how climate change can affect the availability and demand for water across various sectors, including agriculture, hydropower, and ecosystem services.</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">The article uses a quantitative methodology.</td>
+                  <td align="left" valign="top">It applies models to estimate the impacts of climate change and adaptation policies in Brazil’s São Francisco River Basin.</td>
+                  <td align="left" colspan="2" valign="top">The article does not use a qualitative methodology.</td>
+                  <td align="left" colspan="2" valign="top">It is based on numerical data and statistical analysis to support its arguments and conclusions. It employs modeling to assess the impacts of climate change and analyzes the results to formulate recommendations for the integrated management of water resources in the São Francisco River Basin.</td>
+                  <td align="left" valign="top">The article addresses adaptive governance. It proposes an adaptive governance model based on the principles of participation, collaboration, learning, and flexibility to tackle the challenges of climate change in water management.</td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">[10]</td>
+                  <td align="left" valign="top">[10]</td>
+                  <td align="left" valign="top">The article does not focus on climate planning; it centers on the use of climate models to support water management, rather than addressing broader aspects of climate planning.</td>
+                  <td align="left" colspan="2" valign="top">The study links climate change projections to water resource management using scientific models.</td>
+                  <td align="left" colspan="4" valign="top">It employs quantitative methods to map and project water resource scenarios under different climate conditions</td>
+                  <td align="left" colspan="1" valign="top"> </td>
+                  <td align="left" valign="top">Not explicit - The study does not focus on the relationship between different planning or mapping methods.</td>
+                  <td align="left" colspan="2" valign="top">It uses quantitative methodologies like Regional Climate Models and hydrological simulations</td>
+                  <td align="left" valign="top">The study is centered on quantitative analysis and does not include a qualitative methodology component.</td>
+                  <td align="left" colspan="2" valign="top">The methodology involves selecting climate scenarios, applying hydrological models, evaluating model performance, and integrating findings into water management.</td>
+                  <td align="left" valign="top">Not explicit - While the study contributes to adaptive water resource management by integrating climate projections, it does not directly address governance structures.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[11]</td>
+                  <td valign="top">[11]</td>
+                  <td valign="top">The study explores the adaptive capacity of water resources in the Pacific Northwest (PNW) region in in response to the impacts of climate change. The PNW faces significant challenges due to projected changes in temperature and seasonal precipitation.</td>
+                  <td colspan="2" valign="top">The study is based on climate projections and observed data from the PNW region. Information about water resources, infrastructure, and management agencies was considered.</td>
+                  <td colspan="4" valign="top">The article does not specify detailed geographical mapping but focuses on analyzing climate impacts on water resources.</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">Climate change directly affects water availability, snow accumulation, and river flow. Adaptive capacity of water resources is related to existing infrastructure and governance.</td>
+                  <td colspan="2" valign="top">Observed data and modeling are used to assess adaptive capacity</td>
+                  <td valign="top">(1) Selection of climate projections (2) Application of hydrological and statistical models ; (3) Participatory interviews and workshops; (4) Analysis and recommendations for adaptive management.</td>
+                  <td colspan="2" valign="top">The adaptive governance model is used</td>
+                  <td valign="top">Integrated management of water resources in tropical Andean regions is addressed.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[12]</td>
+                  <td valign="top">[13]</td>
+                  <td valign="top">The article does not address climate planning</td>
+                  <td colspan="2" valign="top">Yes</td>
+                  <td colspan="4" valign="top">Quantitative (mathematical and statistical models</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">No</td>
+                  <td colspan="2" valign="top">It does not use quantitative methodology</td>
+                  <td valign="top">(1) Combination of projections of regional climate change; (2) Generation of local climate data sequences; (3) use in integrated water management models; (4) Comparison of results under different scenarios.</td>
+                  <td valign="top">No</td>
+                  <td colspan="2" valign="top">The EUA region in California. The current plan is analyzed in terms of the effects of different climate scenarios and variability.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[13]</td>
+                  <td valign="top">[18]</td>
+                  <td valign="top">Climate planning is not directly addressed; the study focuses on analyzing rainfall trends in Syria.</td>
+                  <td colspan="2" valign="top">The study bases its analysis on historical rainfall data and examines the implications for water resource management.</td>
+                  <td colspan="4" valign="top">Quant. (statistical tests spatial and temporal variability in rainfall is mapped and analyzed across Syria.</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">The study explores the relationship between climate change and rainfall patterns.</td>
+                  <td colspan="2" valign="top">(1) Collection of precipitation data from 71 stations; (2) Application of Mann-Kendall and Pettitt tests; (3) Use of a generalized linear model and F-test; (4) Principal component analysis to assess variability.</td>
+                  <td valign="top">No</td>
+                  <td valign="top">The methodology includes collecting and analyzing rainfall data using the Mann–Kendall test to identify trends and assess variability.</td>
+                  <td colspan="2" valign="top">Not directly discussed in relation to adaptive governance strategies for water resource management. (Syria, semi-arid). But includes analysis of rainfall trends and variability and suggestions for adaptation measures.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[14]</td>
+                  <td valign="top">[21]</td>
+                  <td valign="top">The study examines how climate change influences water management planning in the Wasatch Range Metropolitan Area, Utah, USA.</td>
+                  <td colspan="2" valign="top">It links climate change to water security and resources, focusing on adaptation and risk management in water planning</td>
+                  <td colspan="4" valign="top">Not directly - It does not focus on geographical mapping but rather on mapping strategies and decision-making processes in water management.</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">It explores the relationships between different uncertainties, risks, and water management strategies.</td>
+                  <td colspan="2" valign="top">Not directly - While the study is methodologically rigorous, it relies more on qualitative interviews and case study analysis rather than quantitative methods.</td>
+                  <td valign="top">It utilizes qualitative data from interviews to understand water management challenges and perspectives.</td>
+                  <td colspan="2" valign="top">The methodology involves semi-structured interviews with key water management stakeholders to understand decision-making processes in the context of uncertainties and climate change.</td>
+                  <td valign="top">It emphasizes the need for adaptive governance in water management, highlighting collaborative, flexible approaches to handle uncertainties and risks associated with climate change.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[15]</td>
+                  <td valign="top">[22]</td>
+                  <td valign="top">The article provides a detailed analysis of the impacts of climate change on the water resource system in Yorkshire, considering various climate scenarios and their effects on the system's reliability, resilience, and vulnerability. This involves modeling future climate scenarios and their potential impacts on water resources to support climate planning.</td>
+                  <td colspan="2" valign="top">the analysis is based on historical climate data and climate change projections, particularly focusing on the UKCIP98 and UKCIP02 scenarios, to model the impacts on the Yorkshire water resource system.</td>
+                  <td colspan="4" valign="top">While the document does not detail a geographic mapping process per se, it does incorporate spatial analysis by considering different subregions within Yorkshire and their specific climate and water resource data.</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">It explores the relationship between climatic variables (like the North Atlantic Oscillation) and their impact on rainfall and water resources, establishing a clear link between climate change and water resource system performance.</td>
+                  <td colspan="2" valign="top">Quantitative methodologies include stochastic modeling of rainfall, RRV (reliability, resilience, vulnerability) analysis, and the use of climate change scenarios to project future impacts on water resources.</td>
+                  <td valign="top">The qualitative aspect is not explicitly detailed in the methodological discussion.</td>
+                  <td colspan="2" valign="top">The methodology involves an integrated approach combining climate projections, hydrological modeling, and water resource system analysis to assess the impacts of climate change and variability on water resource reliability, resilience, and vulnerability.</td>
+                  <td valign="top">The implications of its findings suggest the need for adaptive management strategies in water resource planning to address the challenges posed by climate change and variability</td>
+                </tr>
+                <tr>
+                  <td valign="top">[16]</td>
+                  <td valign="top">[23]</td>
+                  <td valign="top">The study focuses on integrating Pan-European data into local-scale decision-making for water resources management. Climate change and its impacts are considered to guide planning and management. Specifically, the study assesses the predictability of extreme events like droughts and water scarcity.</td>
+                  <td colspan="2" valign="top">It relates climate change to water security and water resources</td>
+                  <td colspan="4" valign="top">It involves a model chain and correction processes. Key outcomes include impacts on future natural inflows, a drought risk indicator, and a simulation of future water storage in the system.</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">The study assesses the effect of climate change on water resources systems. Changes include shifts in climate patterns, water availability, and other relevant factors</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">It explores subjective aspects, opinions, and qualitative descriptions. It involves participatory interviews and workshops with stakeholders.</td>
+                  <td colspan="2" valign="top">The study focuses on integrating Pan-European data into local-scale decision-making for water resources management. It considers climate change impacts, such as droughts and water scarcity, to guide planning and management. The proposed methodology involves a model chain and correction processes.</td>
+                  <td valign="top">Decision-making related to climate change impact assessment depends on partial decisions made during the methodological processes. The developed tool can facilitate decision-making in future water planning and management.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[17]</td>
+                  <td valign="top">[32]</td>
+                  <td valign="top">No</td>
+                  <td colspan="2" valign="top">it relates climate change to water security and water resources</td>
+                  <td colspan="4" valign="top">It uses quantitative methodology</td>
+                  <td colspan="1" valign="top"> </td>
+                  <td valign="top">Yes</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">Four stages: 1. Selection of states in the Niger River Basin; 2. Application of questionnaires to 360 farmers; 3 interviews with 12 key informants; 4. Observations of participants during field visits.</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">It focuses on the Niger River Basin, Nigeria.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[18]</td>
+                  <td valign="top">[35]</td>
+                  <td valign="top">No</td>
+                  <td valign="top">It relates climate change to water security and water resources</td>
+                  <td colspan="4" valign="top">Quantitative</td>
+                  <td colspan="2" valign="top"> </td>
+                  <td colspan="1" valign="top">No</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">Three stages: 1. Calibration and validation of the SWAT hydrological model; 2. Generation of future climate data with global models and statistical methods; Application of the SWAT model under different climate scenarios.</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">It focuses on the the Alto Sabor River Basin in northeastern Portugal.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[19]</td>
+                  <td valign="top">[36]</td>
+                  <td valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td colspan="4" valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td colspan="2" valign="top"> </td>
+                  <td colspan="1" valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td colspan="2" valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td colspan="2" valign="top">Volume Removed - Publisher's Disclaimer</td>
+                  <td valign="top">Volume Removed - Publisher's Disclaimer</td>
+                </tr>
+                <tr>
+                  <td valign="top">[20]</td>
+                  <td valign="top">[39]</td>
+                  <td valign="top">It relates climate change to water security and water resources</td>
+                  <td valign="top">It uses quantitative methodology based on mathematical and computational models</td>
+                  <td colspan="4" valign="top">Climate change include rising temperatures, ice and snow melting, sea level rise, and altered precipitation patterns</td>
+                  <td colspan="2" valign="top"> </td>
+                  <td colspan="1" valign="top">It explores the connection between climate change and the conjunctive management of surface water and groundwater. It analyzes how climate change impacts the availability and interaction between these two water sources</td>
+                  <td colspan="2" valign="top">The study employs a quantitative methodology based on mathematical and computational model</td>
+                  <td valign="top">No</td>
+                  <td colspan="2" valign="top">Methodology: (1) Selection of GCMs; (2) Generation of future climate data; (3) Application of MODFLOW hydrological model; (4) Application of LINDO linear optimization model</td>
+                  <td valign="top">It focuses on the management of surface and underground waters.</td>
+                </tr>
+                <tr>
+                  <td valign="top">[21]</td>
+                  <td valign="top">[42]</td>
+                  <td valign="top">It emphasizes the importance of sustainable water resource management and the need for rational planning and decision-making to address the increasing water demand</td>
+                  <td valign="top">It describes an integrated water resource management tool, WEAP (Water Evaluation and Planning), which is used for water allocation and simulates water resources systems, considering various factors and human demands.</td>
+                  <td colspan="4" valign="top">It details the assessment using the HEC-HMS model to simulate hydrological processes, indicating an implicit mapping of water flows and usage</td>
+                  <td colspan="2" valign="top"> </td>
+                  <td colspan="1" valign="top">It explores different scenarios to understand how changes in demand and supply would affect water allocation, emphasizing the dynamic relationship between these factors​​</td>
+                  <td colspan="2" valign="top">It employs data and mathematical simulations to forecast water supply and demand under various scenarios.</td>
+                  <td valign="top">Methodology: (1) Co-development of a regional vision scenario; (2) Selection of GCMs and downscaling; (3) Application of CWatM hydrological model and ECHO hydroeconomic optimization model</td>
+                  <td colspan="2" valign="top">It describes the WEAP model, scenario development, and scenario analysis, providing a comprehensive overview of how quantitative and qualitative methods are integrated to assess and plan water allocation and future projections​​.</td>
+                  <td valign="top">Adaptive governance should include policy actions to effectively manage current climate variability and future climate change impacts on water allocation and resource management.​​</td>
+                </tr>
+                <tr>
+                  <td valign="top">[22]</td>
+                  <td valign="top">[48]</td>
+                  <td valign="top">No</td>
+                  <td valign="top">Yes, it relates climate change to water security and water resources</td>
+                  <td colspan="4" valign="top">Yes, it uses quantitative methodology based on the hydrological model (SWAT) and optimization model (LINDO)</td>
+                  <td colspan="2" valign="top"> </td>
+                  <td colspan="1" valign="top">No</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">Methodology: (1) Selection of GCMs; (2) Generation of accurate climate data with down-scaling; (3) Application of the SWAT hydrological model and the LINDO optimization model.</td>
+                  <td colspan="2" valign="top">No</td>
+                  <td valign="top">it focuses on an area of complex terrain in southwestern Indonesia.</td>
+                </tr>
+              </tbody>
+            </table></div></div>
+<div class="modal-footer">
+              <small class="d-block">Elaborated by the authors.</small>
+            </div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">How to cite</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-target="#citationCut"><span class="material-icons-outlined">link</span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Silva, Jose Irivaldo Alves Oliveira et al. Climate Change and Water Management Policy: a Review. Brazilian Political Science Review [online]. 2026, v. 20, n. 1 [Accessed CURRENTDATE], e0006. Available from: &lt;https://doi.org/10.1590/1981-3821202600010006&gt;. Epub 20 Mar 2026. ISSN 1981-3821. https://doi.org/10.1590/1981-3821202600010006.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      
+<div class="container">
+<div class="row">
+  <div class="col">
+
+    <div class="scielo__floatingMenuCttJs3">
+      <a class="scielo__floatingMenuItem fm-button-child item-goto d-none d-lg-inline-block" data-bs-toggle="tooltip" title="Ir para o topo" href="#top">
+        <span class="material-icons-outlined">
+          vertical_align_top
+        </span>
+      </a>
+      <!--
+      <a href="javascript:;" class="scielo__floatingMenuItem fm-button-child item-download d-none d-lg-inline-block" data-bs-toggle="tooltip" title="PDFs" data-bs-target="#ModalDownloads" tabindex="0">
+        <span class="material-icons-outlined">
+          file_download
+        </span>
+      </a>
+      -->
+      <a href="javascript:;" class="scielo__floatingMenuItem fm-button-child item-metrics d-none d-lg-inline-block" data-bs-toggle="tooltip" title="Métricas" target="_blank" data-bs-target="#metric_modal_id" tabindex="0">
+        <span class="material-icons-outlined">
+          show_chart
+        </span>
+      </a>
+      <ul class="scielo__floatingMenuJs3 fm-slidein" data-fm-toogle="hover">
+        <li class="fm-wrap">
+          <a href="javascript:;" class="fm-button-main" data-bs-toggle="tooltip" title="Abrir menu" tabindex="0"><span class="material-icons-outlined material-icons-outlined-menu-default">more_horiz</span></a>
+          <a href="javascript:;" class="fm-button-close" data-bs-toggle="tooltip" title="Fechar menu" tabindex="0"><span class="material-icons-outlined material-icons-outlined-menu-close">close</span></a>
+
+          <!-- exibe em tudo menos mobile-->
+          <ul class="fm-list-desktop d-none d-lg-block">
+            <li>
+              <a class="fm-button-child" id="lnkFigsTables" data-bs-toggle="tooltip" title="Figuras e tabelas" data-bs-target="#ModalTablesFigures" tabindex="0">
+                <span class="material-icons-outlined">
+                  image
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkVersTranslations" data-bs-toggle="tooltip" title="Versões e traduções" data-bs-target="#ModalVersionsTranslations" tabindex="0">
+                <span class="material-icons-outlined">
+                  translate
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkHowToCite" data-bs-toggle="tooltip" title="Como citar este artigo" data-bs-target="#ModalHowcite" tabindex="0">
+                <span class="material-icons-outlined">
+                  link
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkArticles" data-bs-toggle="tooltip" title="Artigos relacionados" data-bs-target="#ModalRelatedArticles" tabindex="0">
+                <span class="material-icons-outlined">
+                  article
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+
+          <!-- exibe apenas no mobile-->
+          <ul class="fm-list-mobile d-block d-xl-none">
+            <li class="">
+              <a class="fm-button-child item-goto" data-mobile-tooltip="Ir para o topo" href="#top">
+                <span class="material-icons-outlined">
+                  vertical_align_top
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="javascript:;" class="fm-button-child item-download" data-mobile-tooltip="PDFs" data-bs-toggle="modal" data-bs-target="#ModalDownloads">
+                <span class="material-icons-outlined">
+                  file_download
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="javascript:;" class="fm-button-child item-metrics" data-mobile-tooltip="Métricas" data-bs-toggle="modal" data-bs-target="#metric_modal_id">
+                <span class="material-icons-outlined">
+                  show_chart
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Figuras e tabelas" data-bs-toggle="modal" data-bs-target="#ModalTablesFigures">
+                <span class="material-icons-outlined">
+                  image
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Versões e traduções" data-bs-toggle="modal" data-bs-target="#ModalVersionsTranslations">
+                <span class="material-icons-outlined">
+                  translate
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Como citar este artigo" data-bs-toggle="modal" data-bs-target="#ModalHowcite">
+                <span class="material-icons-outlined">
+                  link
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Artigos relacionados" data-bs-toggle="modal" data-bs-target="#ModalRelatedArticles">
+                <span class="material-icons-outlined">
+                  article
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+      <section class="journalContacts pt-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-8 text-center text-sm-start">
+        <div class="row">
+          <div class="col-md-1 col-sm-2">
+            <span class="material-icons-outlined">location_on</span>
+          </div>
+          <div class="col-md-10 col-sm-9">
+            <strong class="d-block">Associação Brasileira de Ciência Política</strong>
+            
+              <span>Rua da Matriz, 82 - Botafogo, CEP 22260-100, Telefone: (55 21) 9320-4871</span> - 
+            
+            
+            <span>São Paulo</span> -
+            
+            
+            <span>SP</span> -
+            
+            
+            <span>Brazil</span> <br/>
+            
+            
+            
+              <strong>E-mail:</strong> bpsrabcp@gmail.com
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 text-center text-sm-start pt-4 pt-sm-0">
+        <a href="/journal/bpsr/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank"><span class="material-icons-outlined">rss_feed</span></a>
+        <span>
+          Acompanhe os números deste periódico no seu leitor de RSS
+        </span>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+
+
+    <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Versão para download de PDF
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-12">
+            <span class="sci-ico-filePDF"></span>
+            <br/>
+            <strong>PDF</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a target='_blank' href="/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?lang=en&amp;format=pdf">
+                    
+                      Inglês
+                    
+                  </a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Artigos relacionados
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Climate Change and Water Management Policy: a Review&#34; &#34;Silva, Jose Irivaldo Alves Oliveira&#34; &#34;Oliveira, Tiago Almeida de&#34; &#34;Ramalho, Ângela Maria Cavalcante&#34; &#34;Rocha, Mateus Silva&#34; &#34;Gomes, Yuri Batista Oliveira&#34; &#34;Peixoto, Gabriel Messias Santana&#34; &#34;Rosario, Gabriel Alves do&#34; &#34;2026&#34; &#34;Brazilian Political Science Review&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Climate Change and Water Management Policy: a Review&#34; &#34;Silva, Jose Irivaldo Alves Oliveira&#34; &#34;Oliveira, Tiago Almeida de&#34; &#34;Ramalho, Ângela Maria Cavalcante&#34; &#34;Rocha, Mateus Silva&#34; &#34;Gomes, Yuri Batista Oliveira&#34; &#34;Peixoto, Gabriel Messias Santana&#34; &#34;Rosario, Gabriel Alves do&#34; &#34;2026&#34; &#34;Brazilian Political Science Review&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Versões e tradução automática
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/bpsr/a/nLgByLLM39L7VrwmchjFxrL/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <style>
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 11px;
+    line-height: 1;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word; 
+}
+</style>
+
+<div class="modal fade ModalDefault" id="ModalHowcite" tabindex="-1" role="dialog" aria-hidden="true"
+  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Como citar
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3" style="text-align: center;">
+              <a href="/citation/export/nLgByLLM39L7VrwmchjFxrL/?format=ris" class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> RIS
+              </a>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+              <a href="/citation/export/nLgByLLM39L7VrwmchjFxrL/?format=bib" class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> BIBTEX
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        
+        <div id='initial_csl'></div>
+
+        <label id="select_label">Outros formatos de citação e exportação:</label>
+        <select id="select_csl" class="js-data-example-ajax" style="width: 100%">
+          <option value="" selected="selected">Enter references manager format or citation style (e.g., "APA", "AMA", "MLA", "Vancouver")</option>
+        </select>
+        
+        <br>
+        <br>
+      
+        <pre id="citation_text" style="display:none;"></pre>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+  </main>
+
+  <style>
+	.scielo__logo-partner{
+      max-height: 50px;
+      max-width: 170px;
+    }
+    .scielo__logo-partner--dark{
+      display:none;
+    }
+    .scielo__theme--dark .scielo__logo-partner--light{
+      display:none;
+    }
+	.scielo__theme--dark .scielo__logo-partner--dark{
+      display:inline-block;
+    }
+</style>
+
+<footer>
+	<section class="address-scielo pt-4 pb-4 mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12 col-sm-2 text-center">
+					<div class="scielo__logo-scielo--small" alt="Logo SciELO"></div>
+				</div>
+				<div class="col col-12 col-sm-8 text-center text-sm-start">
+					<p><small><strong> SciELO - Scientific Electronic Library Online</strong></small></p>
+					<p><small>Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+						E-mail: scielo@scielo.org </small></p>
+						<div>
+							<!-- 
+								Fix me:
+								
+								Criar configuração para verificar se deve ou não ser exibido 
+								o ícone da rede social e url correta de cada rede.
+								
+							-->
+							<ul class="list-unstyled justify-content-center justify-content-sm-start d-flex mt-3 mb-0 scielo__social-network-links">
+								<li class="me-2">
+									<a href="https://bsky.app/profile/scielo.org" target="_blank" aria-label="BlueSky">
+										<i class="icon-bluesky"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://openbiblio.social/@scielo" target="_blank" aria-label="Mastodon">
+										<i class="icon-mastodon"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.linkedin.com/company/scielo---scientific-electronic-library-online/?originalSubdomain=br" target="_blank" aria-label="LinkedIn">
+										<i class="icon-linkedin"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.facebook.com/SciELONetwork" target="_blank" aria-label="Facebook">
+										<i class="icon-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/c/SciELONetwork" target="_blank" aria-label="Youtube">
+										<i class="icon-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<div class="col col-12 col-sm-2 text-center">
+					
+					<div class="container-license">
+						<div class="row">
+							<div class="col-sm-3 col-md-2">
+								<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="" rel="license"><img
+										src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Common - by 4.0">
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col partners text-center my-4">
+					<a href="http://www.capes.gov.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-capes.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="CAPES"><img src="/static/img/logo-capes--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="CAPES"></a>
+					<a href="http://www.cnpq.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-cnpq.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="CNPq"><img src="/static/img/logo-cnpq--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="CNPq"></a>
+					<a href="http://www.fapesp.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-fapesp.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="FAPESP"><img src="/static/img/logo-fapesp--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark " alt="FAPESP"></a>
+					<a href="http://bvsalud.org/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-bvs.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="BVS"><img src="/static/img/logo-bvs.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="BVS" style="background: white;"></a>
+					<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-bireme.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="BIREME"><img src="/static/img/logo-bireme--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark " alt="BIREME"></a>
+					<a href="https://www.fapunifesp.edu.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-fap.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="FAP-UNIFESP"><img src="/static/img/logo-fap--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="FAP-UNIFESP"></a> 
+				</div>
+			</div>
+			<div class="row d-none">
+				<div class="col text-center mt-4 mb-4">
+				
+					
+						
+						<a href="http://www.capes.gov.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+							
+						</a>
+						
+					
+						
+						<a href="http://www.cnpq.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+							
+						</a>
+						
+					
+						
+						<a href="http://www.fapesp.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+							
+						</a>
+						
+					
+						
+						<a href="http://bvsalud.org/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+							
+						</a>
+						
+					
+						
+						<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+							
+						</a>
+						
+					
+						
+						<a href="https://www.fapunifesp.edu.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+							
+						</a>
+						
+					
+				
+				</div>
+			</div>
+		</div>
+	</section> 
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="text-center"><a href="/about/"><img src="https://www.scielo.br/static/img/logo-open-access.svg" alt="Open Access" class="me-1 logo-open-access">Leia</a> a Declaração de Acesso Aberto</p>
+				</div>
+			</div>
+		</div> 
+	</section>	
+</footer>
+
+  
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+            <h2 class="h4 modal-title">
+                Métricas
+            </h2>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1981-38212026000101001&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1981-3821202600010006" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1981-3821202600010006">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1981-3821202600010006" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1981-3821202600010006">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1981-3821202600010006"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1981-3821202600010006" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1981-3821202600010006">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="https://plu.mx/scielo/a/?doi=10.1590/1981-3821202600010006" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">Climate Change and Water Management Policy: a Review</a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://plu.mx/scielo/a/?doi=10.1590/1981-3821202600010006">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Error modal -->
+    <a class="floatingBtnError btn btn-secondary" href="#" id="#floatingBtnError">Reportar erro</a>
+
+    <script>
+      // Variáveis para tradução da barra de acessibilidade      
+      window.accessibilityTranslations = {
+        darkMode: "Modo escuro",
+        increaseText: "Aumentar texto",
+        decreaseText: "Diminuir texto",
+        originalText: "Texto original",
+        markerLine: "Marcador",
+        readingLine: "Linha guia",
+        reset: "Redefinir",
+        accessibilityMenu: "Menu de acessibilidade",
+        skipLinkText: "Ir para o conteúdo principal"
+      };
+    </script>
+    
+    <!-- Scielo Bundle min -->
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    <script>
+
+      $(document).ready(function() {
+
+        // Add rows article search
+        let addRowBtn = $('.addRowBtn');
+        let placeRow = $('.scielo__dinamic-row');
+        let newFormRow = '<div class="row"><div class="col-12"><hr></div><div class="col-2 col-lg-1 text-end"><button type="button" class="btn btn-danger scielo__btn-with-icon--only"><i class="material-icons-outlined">clear</i></button></div><div class="col-10 col-lg-11"><div class="input-group"><div class="input-group-preppend"><select class="form-select" name="bool[]"><option selected>AND</option><option>OR</option><option>AND NOT</option></select></div><textarea name="q[]" class="form-control" aria-label="With textarea" placeholder="Entre uma ou mais palavras"></textarea><div class="input-group-append"><select class="form-select"><option selected value="todos">Todos os índices</option><option value="ano">Ano</option><option value="autor">Autor</option><option value="financiador">Financiador</option><option value="periodico">Periódico</option><option value="resumo">Resumo</option><option value="titulo">Título</option></select></div></div></div></div>';
+
+        let btnRemoveRow = $('.btn-danger');
+
+        addRowBtn.on( "click", function() {
+            placeRow.append( newFormRow );
+        })
+
+        // Remove as linhas inseridas dinamicamente e as que já estavam lá.
+        placeRow.on( "click", ".btn-danger", function() {
+            $(this).parent().parent().animate({'opacity':0},300).hide(1);
+        })
+
+      });
+    </script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+<script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+
+<script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async
+  defer></script>
+<script type="text/javascript" src="/static/js/scienceopen.js"></script>
+
+
+
+<script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+
+
+
+<script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+<!-- <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+    -->
+
+
+
+<script type="text/javascript" src="//badge.dimensions.ai/badge.js" charset="utf-8" async></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<!-- xxx Verifica se o artigo contém artigos relacionados -->
+
+
+<!-- Verifica se o artigo contém suplemento -->
+
+
+<script>
+
+  affiliations = {};
+
+  function add_scimago_image(selector, remove_br=true, add_br_after=true, find_div=false){
+    $(selector).each(
+
+    function () {
+
+      if (remove_br){
+        $(this).find("br").remove()
+      }
+      
+      internal_items = find_div ? $(this).find('div').not(".clearfix") : $(this).not(".clearfix")
+
+      internal_items.each(function () { 
+        self = $(this);
+
+        affiliation_name = $('span:first', self).text();
+        if (affiliation_name){
+            scimago_link = ' <a href="#" target="_blank" class="scimago_link" data-affiliation="' + affiliation_name + '" ><img src="/static/img/scimago.svg" alt=" SCImago image" height="12" data-toggle="tooltip" data-placement="top" title="Link to SCImago Institutions Rankings"></a>';
+            self.append(scimago_link);
+        }
+      });
+
+      if (add_br_after){
+        $(this).after("<br />")
+      }
+
+    });
+
+  }
+
+  add_scimago_image('#ModalScimago .info div')
+  add_scimago_image('.tutors', remove_br=false, add_br_after=false, find_div=true) 
+
+  $(".scimago_link").click(function(e){
+    e.preventDefault();
+
+    affiliation_name = $(this).data("affiliation");
+
+    if (affiliation_name){
+      if (affiliations[affiliation_name]) {
+        window.open(affiliations[affiliation_name], '_blank');
+      } else {
+        $.ajax({
+          type: "GET",
+          async: false,
+          url: "/scimago/query",
+          data: 'q=' + encodeURI(affiliation_name),
+          success: function (data) {
+            if (data) {
+              affiliations[affiliation_name] = 'https://www.scimagoir.com/' + data
+              window.open(affiliations[affiliation_name], '_blank');
+            }else{
+              toastr.options = {
+                positionClass: 'toast-top-center'
+              };
+              toastr.error('Link temporariamente indisponível');
+            }
+          }
+        });
+      }
+    }    
+  });
+
+
+  var howcite_initialized = false;
+
+  $('#ModalHowcite').on('shown.bs.modal', function () {
+
+    if (!howcite_initialized) {
+      initial = {
+        "American Psychological Association": "apa", "Vancouver": "vancouver"
+      }
+
+      $.each(initial, function (key, value) {
+        $.ajax({
+          url: "/citation/nLgByLLM39L7VrwmchjFxrL/?style=" + value,
+          dataType: 'html',
+          delay: 250,
+          async: true
+        })
+          .done(function (html) {
+            $("<span><b>" + key + "</b></span>" + "<pre>" + html + "</pre>").insertBefore($("#select_label"));
+          })
+      });
+      howcite_initialized = true;
+    }
+
+    $(".js-data-example-ajax").select2({
+      ajax: {
+        url: "/citation/list",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term, // search term
+          };
+        },
+        processResults: function (data, params) {
+          return {
+            results: data.results
+          };
+        },
+        cache: true
+      },
+      escapeMarkup: function (markup) { return markup; },
+      minimumInputLength: 1,
+      dropdownParent: $('#ModalHowcite')
+    });
+
+    $(document).on('select2:open', () => {
+      document.querySelector('.select2-search__field').focus();
+    });
+
+    $(".js-data-example-ajax").on('select2:select', function (e) {
+      var data = e.params.data;
+
+      $.ajax({
+        url: "/citation/nLgByLLM39L7VrwmchjFxrL/?style=" + data.id,
+        dataType: 'html',
+        delay: 250
+      })
+        .done(function (html) {
+
+          if ($('#citation_text').css('display') == 'none') {
+            $('#citation_text').show()
+          }
+
+          $("#citation_text").html(html);
+
+        })
+        .fail(function () {
+          alert("Erro ao tentar obter esse estilo de citação");
+        })
+
+    });
+  });
+
+</script>
+
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      //moment.locale('pt_BR');
+
+      //$("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+
+
+   
+
+  </body>
+</html>

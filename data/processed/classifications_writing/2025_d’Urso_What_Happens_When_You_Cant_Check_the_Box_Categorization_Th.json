@@ -1,0 +1,31 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction is anchored by a fact puzzle: MENA Americans are politically visible yet institutionally invisible because forms usually force them into “White.” It then pivots to a gap-filling move, arguing that prior work on identity denial has not traced the political-opinion consequences of category exclusion.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "From these two experiments, I find that when MENA individuals are unable to self-categorize as “MENA,” they experience categorization threat, a form of social identity threat when individuals’ social identities are miscategorized (Barreto et al. 2010; Branscombe et al. 1999; Townsend, Markus, and Bergsieker 2009). In response to categorization threat, MENA individuals respond by asserting their MENA identity within the confines of the survey environment (Cheryan and Monin 2005).",
+  "inverted_pyramid": false,
+  "lit_review_location": "distributed",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "In response to categorization threat, MENA individuals respond by asserting their MENA identity within the confines of the survey environment (Cheryan and Monin 2005). They express stronger support when answering questions related to MENA identity (such as foreign affairs in the MENA region), and this assertion also seems to extend to issues concerning people of color more generally (Pérez 2021a).",
+  "uses_numbered_hypotheses": true,
+  "has_roadmap_paragraph": false,
+  "n_sections": 12,
+  "section_titles": [
+    "INTRODUCTION",
+    "MENA AMERICAN IDENTITY",
+    "SELF-CATEGORIZATION THEORY (SCT)",
+    "STUDIES",
+    "CONCLUSION",
+    "SUPPLEMENTARY MATERIAL",
+    "DATA AVAILABILITY STATEMENT",
+    "ACKNOWLEDGMENTS",
+    "FUNDING STATEMENT",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS",
+    "REFERENCES"
+  ],
+  "_file": "2025_d’Urso_What_Happens_When_You_Cant_Check_the_Box_Categorization_Th.pdf",
+  "_elapsed_s": 230.0
+}

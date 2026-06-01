@@ -1,0 +1,63 @@
+---
+title: "Revolução da Credibilidade na Ciência Política Brasileira"
+author: ""
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: false
+    includes:
+      in_header: preamble.tex
+bibliography: ../references.bib
+biblio-style: apalike
+link-citations: true
+abstract: |
+  [Resumo a completar.]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.path = "../output/figures/",
+  fig.width = 6,
+  fig.height = 4,
+  dpi = 150
+)
+```
+
+# Introdução
+
+[Texto a completar.]
+
+# Contexto e Expectativas
+
+[Texto a completar.]
+
+# Dados
+
+[Texto a completar.]
+
+```{r load-classifications, eval=FALSE}
+classificacoes <- read.csv("../data/processed/classifications_llm.csv")
+```
+
+# Estratégia Empírica
+
+[Texto a completar.]
+
+# Resultados
+
+[Texto a completar.]
+
+# Discussão
+
+[Texto a completar.]
+
+# Conclusão
+
+[Texto a completar.]
+
+# Referências
+

@@ -1,0 +1,31 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction is built around a substantive puzzle: why U.S. leaders chose an ultralethal atomic debut when several alternative use options were available. At the same time, it explicitly positions the paper as filling an overlooked gap in IR scholarship, rather than mainly adjudicating an existing debate.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "They believed that only a spectacularly lethal debut of atomic weaponry would favorably alter global perceptions of the bomb and the balance of world power. Concerns that went beyond the issue of Japanese surrender and the Soviet Union’s expected reactions thus critically shaped the way in which the atomic bomb made its first appearance to the world.",
+  "inverted_pyramid": false,
+  "lit_review_location": "separate_section",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "To an extent seldom recognized, then, a key element in the liberal international order’s foundation was a carefully crafted display of shockingly lethal violence. Only after clarifying the atomic bomb’s astounding power to the world could the United States confidently embrace restraint via postwar institutions.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": false,
+  "n_sections": 12,
+  "section_titles": [
+    "THE ATOMIC BOMBINGS OF 1945 IN IR AND HISTORICAL SCHOLARSHIP",
+    "THE LOGIC OF VIOLENT DISPLAY DURING WAR",
+    "LEADUP TO HIROSHIMA: THE AMERICAN GEOPOLITICAL OUTLOOK IN LATE WORLD WAR II",
+    "HOW TO USE THE BOMB: ALTERNATIVE NUCLEAR USE SCENARIOS",
+    "SUMMARY AND ALTERNATIVE EXPLANATIONS",
+    "CONCLUSION",
+    "SUPPLEMENTARY MATERIAL",
+    "ACKNOWLEDGEMENTS",
+    "AUTHOR CONTRIBUTION",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS",
+    "REFERENCES"
+  ],
+  "_file": "2025_Byun_Performative_Violence_and_the_Spectacular_Debut_of_the_Atomi.pdf",
+  "_elapsed_s": 328.8
+}

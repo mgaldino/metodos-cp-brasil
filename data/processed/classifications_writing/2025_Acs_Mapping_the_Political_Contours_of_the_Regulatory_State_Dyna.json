@@ -1,0 +1,25 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction opens with a substantive, real-world setup about partisan conflict over regulation, then pivots to the need for a new way to measure agency ideology. The core contribution is framed as filling a measurement gap, but it is motivated through a broad factual/political scene-setting move.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "The article then interprets the results, discussing both why some agencies have significantly changed in their estimated ideology over time and the substantial increase in regulatory productivity that occurs when agencies shift ideologically closer to the president.",
+  "inverted_pyramid": false,
+  "lit_review_location": "distributed",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "The article then interprets the results, discussing both why some agencies have significantly changed in their estimated ideology over time and the substantial increase in regulatory productivity that occurs when agencies shift ideologically closer to the president.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": true,
+  "n_sections": 6,
+  "section_titles": [
+    "INTRODUCTION",
+    "CONCEPTUALIZING AND MEASURING AGENCY IDEOLOGY",
+    "DATA",
+    "THEORETICAL FRAMEWORK AND STATISTICAL MODEL",
+    "EMPIRICAL ESTIMATES OF AGENCY IDEOLOGY",
+    "CONCLUSION"
+  ],
+  "_file": "2025_Acs_Mapping_the_Political_Contours_of_the_Regulatory_State_Dyna.pdf",
+  "_elapsed_s": 241.4
+}

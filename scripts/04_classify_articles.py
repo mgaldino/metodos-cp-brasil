@@ -41,7 +41,7 @@ SYSTEM_PROMPT = """You are a research methodology classifier for political scien
 For each article, return a JSON object with exactly these fields:
 
 1. error_in_raw_text: "No Error", "Missing/Corrupt", or "Title/Text Mismatch"
-2. subfield: "Comparative Politics", "International Relations", "Methodology and Formal Theory", "Political Theory and Philosophy", "Public Policy/Administration", "Other"
+2. subfield: "Brazilian Politics", "Comparative Politics", "International Relations", "Methodology and Formal Theory", "Political Theory and Philosophy", "Public Policy/Administration", "Other" — Use "Brazilian Politics" for articles focused on Brazil's domestic politics (elections, parties, legislature, federalism, public opinion, etc.). Use "Comparative Politics" for cross-country studies or single-country studies of countries other than Brazil.
 3. is_empirical_quant_paper: true if it conducts its own analysis of observational or experimental data; false otherwise
 4. general_goal_of_analysis: "Describe", "Predict", "Explain", or null (null if not empirical)
 5. single_country_study: "single_country", "multiple_countries", or null

@@ -79,12 +79,21 @@ A seed list usava ISSN 1678-9873 (eletrônico). No SciELO, o periódico aparece 
 ## Esquema de classificação (adaptado de Torreblanca et al.)
 
 Para cada artigo:
-- (a) Status do método: explícito vs. ensaístico/implícito
-- (b) Natureza das evidências: quantitativa, qualitativa, mista, teórico/normativo
-- (c) Objetivo: descritivo, explicativo, preditivo
-- (d) Técnica metodológica principal (ver lista abaixo)
-- (e) Pretensão de causalidade: explícita, implícita, ausente
-- (f) Declara suposições de identificação
+- (a) Subfield: Brazilian Politics, Comparative Politics, International Relations, Methodology and Formal Theory, Political Theory and Philosophy, Public Policy/Administration, Other
+- (b) Status do método: explícito vs. ensaístico/implícito
+- (c) Natureza das evidências: quantitativa, qualitativa, mista, teórico/normativo
+- (d) Objetivo: descritivo, explicativo, preditivo
+- (e) Técnica metodológica principal (ver lista abaixo)
+- (f) Pretensão de causalidade: explícita, implícita, ausente
+- (g) Declara suposições de identificação
+
+### Nota sobre subfield: Brazilian Politics vs. Comparative Politics
+
+O esquema original de Torreblanca et al. usa "Comparative Politics" como categoria única. Para periódicos brasileiros, subdividimos em:
+- **Brazilian Politics**: artigos focados na política doméstica do Brasil (eleições, partidos, legislativo, federalismo, opinião pública, etc.)
+- **Comparative Politics**: estudos cross-country ou estudos de caso de países que não o Brasil
+
+Artigos sobre o Brasil que se encaixam melhor em outro subfield (ex: Public Policy/Administration, Political Theory) devem permanecer lá.
 
 ### Técnicas metodológicas (expandido para o contexto brasileiro)
 

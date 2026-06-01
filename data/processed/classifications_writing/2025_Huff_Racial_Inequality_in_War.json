@@ -1,0 +1,32 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction opens with an empirical puzzle: Black soldiers are sometimes treated as expendable and sometimes kept away from the front. It then explicitly identifies a gap in prior scholarship on combat performance and offers a new theory, making it a fact-puzzle/gap-filling hybrid.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "Second, we show that during infantry operations, white units suffered nearly four times as many fatalities per period compared to Black units.",
+  "inverted_pyramid": false,
+  "lit_review_location": "integrated_intro",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "Second, we show that during infantry operations, white units suffered nearly four times as many fatalities per period compared to Black units. Third, several analyses indicate that Black units received worse support than white units when holding fixed combat exposure.",
+  "uses_numbered_hypotheses": true,
+  "has_roadmap_paragraph": false,
+  "n_sections": 13,
+  "section_titles": [
+    "INTRODUCTION",
+    "A THEORY OF RACIAL INEQUALITY AND WHO DIES IN WAR",
+    "ASSESSING THE ARGUMENT: THE CASE OF WWI",
+    "NEWLY COMPILED DATA ON WWI UNITS AND CASUALTIES",
+    "RESULTS: DIFFERENTIAL OCCUPATIONAL SPECIALTIES, WARTIME ASSIGNMENTS, AND SUPPORT",
+    "CONSIDERING ALTERNATIVE MECHANISMS",
+    "CONCLUSION",
+    "SUPPLEMENTARY MATERIAL",
+    "DATA AVAILABILITY STATEMENT",
+    "ACKNOWLEDGEMENTS",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS",
+    "REFERENCES"
+  ],
+  "_file": "2025_Huff_Racial_Inequality_in_War.pdf",
+  "_elapsed_s": 253.0
+}

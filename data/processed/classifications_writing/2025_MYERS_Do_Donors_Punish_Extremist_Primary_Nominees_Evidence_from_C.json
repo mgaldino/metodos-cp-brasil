@@ -1,0 +1,27 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_3",
+  "little_template_justification": "The introduction opens with a substantive puzzle about whether donors advantage moderates or extremists, but it quickly centers on conflicting findings in prior research. It positions the paper as resolving that debate with a better design and measurement strategy, so it is best read as a hybrid of puzzle and debate-resolution templates.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "Combining the RD design with my primary-specific ideology scaling, I find that the “coin-flip” primary nomination of an extremist over a more moderate opponent decreases their party’s share of general-election contributions by 7 percentage points in the median election in my sample.",
+  "inverted_pyramid": false,
+  "lit_review_location": "background_section",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "Combining the RD design with my primary-specific ideology scaling, I find that the “coin-flip” primary nomination of an extremist over a more moderate opponent decreases their party’s share of general-election contributions by 7 percentage points in the median election in my sample. This financial penalty increases to 18–19 percentage points when the contrast between candidates is most pronounced and is largest in highly-consequential open-seat elections.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": true,
+  "n_sections": 8,
+  "section_titles": [
+    "INTRODUCTION",
+    "THEORETICAL AND EMPIRICAL PERSPECTIVES ON DONOR SUPPORT FOR MORE MODERATE AND EXTREME CANDIDATES",
+    "EMPIRICAL STRATEGY",
+    "EFFECT OF EXTREMIST NOMINEES ON GENERAL-ELECTION CAMPAIGN CONTRIBUTIONS",
+    "WHICH DONORS PUNISH EXTREMIST PRIMARY NOMINEES?",
+    "RD ESTIMATES GENERALIZE TO UNIVERSE OF CONTESTED GENERAL ELECTIONS",
+    "STATE-LEVEL HETEROGENEITY IN THE FINANCIAL PENALTY TO EXTREMIST NOMINEES",
+    "DISCUSSION AND CONCLUSION"
+  ],
+  "_file": "2025_MYERS_Do_Donors_Punish_Extremist_Primary_Nominees_Evidence_from_C.pdf",
+  "_elapsed_s": 213.5
+}

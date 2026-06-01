@@ -1,0 +1,1855 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>SciELO  Brasil - Expropriation Backlashing and Tax Burden in Latin America Expropriation Backlashing and Tax Burden in Latin America </title>
+
+    
+  
+<!-- social share tags -->
+<meta property="og:url" content="https://www.scielo.br/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?lang=en"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Expropriation Backlashing and Tax Burden in Latin America"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.scielo.br/media/images/bpsr_glogo.gif"/>
+<!-- social share tags -->
+
+<meta name="citation_author" content="Cantarelli, Luiz Guilherme Roth">
+        
+            <meta name="citation_author_affiliation" content="Universidade de São Paulo">
+        
+        
+            <meta name="citation_author_orcid" content="http://orcid.org/0000-0002-7735-7775">
+        <meta name="citation_journal_title" content="Brazilian Political Science Review"></meta>
+<meta name="citation_journal_abbrev" content="Bras. political sci. rev."></meta>
+<meta name="citation_journal_abbrev" content="Bras. political sci. rev"></meta>
+<meta name="citation_publisher" content="Associação Brasileira de Ciência Política"></meta>
+<meta name="citation_volume" content="19"></meta>
+<meta name="citation_number" content="3"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?lang=en&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?format=xml&amp;lang=en"></meta>
+<meta name="citation_firstpage" content="e0008"></meta>
+<meta name="citation_doi" content="10.1590/1981-3821202500030008"></meta>
+<meta name="citation_fulltext_world_readable" content=""></meta>
+
+
+<meta name="citation_issn" content="1981-3821"></meta>
+
+    <meta name="citation_title" content="Expropriation Backlashing and Tax Burden in Latin America"></meta>
+    <meta name="citation_language" content="en"></meta>
+
+<meta name="citation_article_type" content="book-review"></meta>
+<meta name="citation_publication_date" content="2025"></meta>
+
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    
+    <link href="/static/css/bootstrap.css?v=1.1.23" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <!-- CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit -->
+<div class="widget widget-Lockss widget-instance-IssueBrowseByYear_Lockss">
+
+    <input class="at-locks-messaging" type="hidden"
+        value="LOCKSS system has permission to collect, preserve, and serve this Archival Unit" />
+
+    <input class="at-clockss-messaging" type="hidden"
+        value="CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" />
+
+</div>
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+    <script src="https://darkvisitors.com/tracker.js?project_key=c7366feb-7ba9-4f3d-a536-9bdca1bee170"></script>
+    
+
+     
+  <link rel="stylesheet" href="/static/css/article.css?v=1.1.20" type="text/css" async/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" async />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" async />
+
+
+  </head>
+  <body class="journal article" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
+    <a name="top"></a>
+
+    
+
+  
+
+
+<style>
+
+    body{  
+        padding-top: 74px;
+    }
+    
+    .articleTxt{
+        top: -16px;
+    }
+
+    @media (max-width: 575.98px) {
+      
+      .articleCtt > .container{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .articleCtt .articleTxt{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+    
+    }
+
+    @media (min-width: 768px){
+      
+      .scielo__truncate{
+        display: block;
+        max-width: 285px;
+      }
+
+    }
+ 
+</style>
+
+<header class="fixed-top scielo__shadow-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-sm-1 d-print-none">
+                
+
+<details class="scielo__accessibleMenu">
+  <summary>
+      <span class="menu-icon"></span>
+      <span>Menu</span>
+  </summary>
+  <nav style="max-height: 780px;">
+    <ul>
+      <li class="logo">
+        <div class="scielo__logo-scielo--small"></div>
+      </li>
+      <li>
+        <a href="/" alt="Acessar site coleção Brasil" aria-label="Acessar site coleção Brasil">
+          <strong>Brasil</strong>
+        </a>
+        <ul>
+            <li>
+              <a href="/journals/alpha?status=current" class="tab_link">
+                Lista alfabética de periódicos
+              </a>
+            </li>
+            <li>
+              <a href="/journals/thematic?status=current" class="tab_link">
+                Lista temática de periódicos
+              </a>
+            </li>
+            <li>
+              <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+                Busca
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="http://analytics.scielo.org/?collection=scl">
+                Métricas
+              </a>
+            </li>
+            <li>
+              <a href="/about/">
+                Sobre o SciELO Brasil
+              </a>
+            </li>
+            <li>
+              <a href="/about/">
+                Contatos
+              </a>
+            </li>
+            <li>
+              <a href="#" id="floatingBtnErrorHamburguerMenu" class="floatingBtnErrorHamburguerMenu">
+                Reportar erro
+              </a>
+            </li>
+
+            
+
+        </ul>
+      </li>
+      <li>
+        <a target="_blank" href="//www.scielo.org">
+          <strong>SciELO.org - Rede SciELO</strong>
+        </a>
+        <ul>
+          <li>
+            <a target="_blank" href="//www.scielo.org">
+              Coleções nacionais e temáticas
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//search.scielo.org/">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://analytics.scielo.org">
+              Métricas
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+              Contatos
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        
+          <a target="_blank" href="//blog.scielo.org">
+        
+            <strong>Blog SciELO em Perspectiva</strong>
+          </a>
+      </li>
+    </ul>
+  </nav>
+</details>
+
+<script type="text/javascript">
+  document.addEventListener("click", function(event) {
+      const details = document.querySelector("details");
+      
+      if (!details.contains(event.target)) {
+          details.removeAttribute("open");
+      }
+  });
+
+</script>
+            </div>
+            <div class="col col-sm-3 --mainNav">
+                <a href="/" title="Ir para a homepage da coleção: Brasil">
+                    <div class="scielo__logo-scielo-collection mt-1 ms-5">
+                        <small>Brasil</small>
+                    </div>
+                </a>
+            </div>
+            <div class="d-none d-sm-block col">
+                <div class="dropdown mt-3">
+                    <button class="btn btn-link dropdown-toggle mb-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="text-truncate scielo__truncate">Brazilian Political Science Review </span>
+                    </button>
+                    <ul class="dropdown-menu scielo__shadow-2">
+                      <li>
+                        <a href="/j/bpsr/" class="dropdown-item">
+                          
+                            <img src="/media/images/bpsr_glogo.gif" class="image scielo__logo-periodico" alt="Logomarca do periódico: Brazilian Political Science Review" />
+                          
+                        </a>
+                      </li>
+                      
+                      
+                        <li>
+                          <a href="http://mc04.manuscriptcentral.com/bpsr-scielo" class="dropdown-item" target="_blank"><span class="material-icons-outlined">launch</span> Submissão de manuscritos</a>
+                        </li>
+                      
+                      <li>
+                        <a href="/journal/bpsr/about/#about" class="dropdown-item"><span class="material-icons-outlined">info</span> Sobre o periódico</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#item2" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Política editorial</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#editors" class="dropdown-item"><span class="material-icons-outlined">people</span> Corpo Editorial</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#instructions" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Instruções aos autores</a>
+                      </li>
+                      <li>
+                        <a href="/journal/bpsr/about/#contact" class="dropdown-item"><span class="material-icons-outlined">email</span> Contato</a>
+                      </li>
+                      <li>
+                        <a href="http://analytics.scielo.org/?journal=1981-3821&collection=scl" class="dropdown-item"><span class="material-icons-outlined">show_chart</span> Métricas</a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="language mt-3">
+                  
+<div class="scielo__language">
+  <div class="dropdown">
+    <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--left dropdown-toggle mb-0 float-end mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="material-icons-outlined">language</span>
+      
+
+        
+          <span class="d-lg-none">pt_BR</span>
+          <span class="d-none d-lg-block">Português</span>
+        
+
+      
+
+        
+
+      
+
+        
+
+      
+  
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+
+      
+    
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/en/" lang="en">English</a></li>
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/es/" lang="es">Español</a></li>
+        
+
+      
+    
+    </ul>
+  </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row d-block d-sm-none">
+            <div class="col">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle mb-2 w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="truncate">Brazilian Political Science Review </span>
+                </button>
+                <ul class="dropdown-menu w-100">
+                  <li>
+                    <a href="/j/bpsr/" class="dropdown-item">
+                      
+                        <img src="/media/images/bpsr_glogo.gif" class="image" alt="Logomarca do periódico: Brazilian Political Science Review" style="max-width:100%;" />
+                      
+                    </a>
+                  </li>
+                  
+                    <li>
+                      <a href="http://mc04.manuscriptcentral.com/bpsr-scielo" class="dropdown-item" target="_blank"><span class="material-icons-outlined">launch</span> Submissão de manuscritos</a>
+                    </li>
+                  
+                  <li>
+                    <a href="/journal/bpsr/about/#about" class="dropdown-item"><span class="material-icons-outlined">info</span> Sobre o periódico</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#item2" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Política editorial</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#editors" class="dropdown-item"><span class="material-icons-outlined">people</span> Corpo Editorial</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#instructions" class="dropdown-item"><span class="material-icons-outlined">help_outline</span> Instruções aos autores</a>
+                  </li>
+                  <li>
+                    <a href="/journal/bpsr/about/#contact" class="dropdown-item"><span class="material-icons-outlined">email</span> Contato</a>
+                  </li>
+                  <li>
+                    <a href="http://analytics.scielo.org/?journal=1981-3821&collection=scl" class="dropdown-item"><span class="material-icons-outlined">show_chart</span> Métricas</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+</header>
+
+  <!--- removido da interface --->
+  
+
+  <main id="content">
+
+    
+
+    
+<!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu d-none d-md-block">
+    <div class="container">
+        
+        <div class="row">
+          <div class="col">
+
+            <div class="btn-group mt-1">
+              <a href="/j/bpsr/" class="btn scielo__btn-with-icon--only mb-0"><span class="material-icons-outlined">home</span></a>
+              
+              
+              <a href="/j/bpsr/i/2025.v19n3/" class="btn mb-0">
+                  Sumário
+              </a> 
+  
+              
+                
+                  <a href="/j/bpsr/a/QkWzfHBDg8Xy65gWLVWmgVP/?lang=en" class="btn scielo__btn-with-icon--left mb-0 pe-md-2">
+                  
+                  <span class="material-icons-outlined">navigate_before</span>
+                  <span class="d-none d-xl-block">Anterior</span>
+                </a>
+  
+              
+              <a href="#" class="btn group disabled mb-0">
+                  Atual
+              </a>
+  
+              
+              
+                  <a href="#" class="btn disabled scielo__btn-with-icon--right mb-0 ps-md-2">
+              
+
+                <span class="d-none d-xl-block">Seguinte</span>
+                <span class="material-icons-outlined">navigate_next</span>
+              </a>
+  
+            </div>
+          </div>
+  
+          <div class="col d-md-none d-lg-block">
+            <div class="btn-group mt-1">
+              
+
+              
+
+
+    <div class="btn-group">
+      <button id="btnGroupDropTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+        Texto
+        
+                  
+            
+              (EN)
+            
+          
+        
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDropTextLanguage">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                  (Inglês)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+  
+
+
+
+                        
+           
+          <div class="btn-group">
+            <button id="btnGroupDropPDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              PDF
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropPDF">
+              
+                <li>
+                  <a target='_blank' href="/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?format=pdf&amp;lang=en" class="dropdown-item">
+                    
+                      Download PDF (Inglês)
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          
+          
+          
+          
+          
+            </div>
+          </div>
+          <div class="col d-none d-md-block d-lg-none">
+            <div class="dropdown mt-1 float-end">
+              <button class="btn btn-secondary dropdown-toggle mb-0 scielo__btn-with-icon--left " data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons-outlined">article</span> <strong>Conteúdo:</strong> 
+                <!--resumo-->
+                
+
+                <!--texto-->
+                
+                
+                
+                        
+                
+                Texto (EN)
+                
+                
+                
+                
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDrop1">
+                <!--resumo-->
+                
+
+                <!--texto-->
+                
+                
+                <li>
+                
+                <!-- página de texto -->
+                <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                (Inglês)
+                
+                </a>
+                
+                </li>
+                
+                
+
+                <!--PDF-->
+                
+                
+                <li>
+                <a target='_blank' href="/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?format=pdf&amp;lang=en" class="dropdown-item">
+                
+                Download PDF (Inglês)
+                
+                </a>
+                </li>
+                
+                
+
+
+                <!--PDF REDCUBE-->
+                
+
+
+                <!--ePDF-->
+                
+
+              </ul>
+            </div>
+          </div>
+
+          
+          <div class="col-1">
+
+            <!-- share --> 
+             <!-- share -->
+ <div class="dropdown">
+  <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0 float-end" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="material-icons-outlined">share</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_whatsapp">Whatsapp</a></div>
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_bluesky">BlueSky</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_mastodon">Mastodon</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_facebook">Facebook</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_dd" href="https://www.addtoany.com/share">Mais</a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- AddToAny -->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+          </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs d-block d-md-none d-lg-none mt-5" style="padding-bottom:110px;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="btn-group w-100 --btn-group-nav-mobile" role="group">
+            
+            <a href="/j/bpsr/" class="btn scielo__btn-with-icon--only mb-0"><span class="material-icons-outlined">home</span></a>
+            <a href="/j/bpsr/i/2025.v19n3/" class="btn mb-0">
+              Sumário
+            </a>
+            
+            <div class="btn-group" role="group">
+
+              <!-- share -->
+              <button type="button" class="btn btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                <span class="material-icons-outlined">share</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Facebook</a></li>
+                <li><a class="dropdown-item" href="#">X</a></li>
+                <li><a class="dropdown-item" href="#">Google+</a></li>
+                <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+                <li><a class="dropdown-item" href="#">Reddit</a></li>
+                <li><a class="dropdown-item" href="#">StambleUpon</a></li>
+                <li><a class="dropdown-item" href="#">CiteULike</a></li>
+                <li><a class="dropdown-item" href="#">Mendeley</a></li>
+              </ul>
+            </div>
+          
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          
+
+
+        </div>
+        <div class="col-4">
+
+          
+          <div class="dropdown mt-1">
+          <button id="btnGroupDropArticleTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+          Texto
+          
+                  
+          
+          (EN)
+          
+          
+          
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDropArticleTextLanguage">
+          
+          <li>
+          
+          <!-- página de texto -->
+          <a href="#" class="current dropdown-item"> 
+          Texto
+          
+          (Inglês)
+          
+          </a>
+          
+          </li>
+          
+          </ul>
+          </div>
+
+          
+        </div>
+        <div class="col-4">
+          
+
+          <div class="dropdown float-end mt-1">
+          <button id="btnGroupDropArticlePDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+          PDF
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropArticlePDF">
+          
+          <li>
+          <a target='_blank' href="/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?format=pdf&amp;lang=en" class="dropdown-item">
+          
+          Download PDF (Inglês)
+          
+          </a>
+          </li>
+          
+          </ul>
+          </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- PID: S1981-38212025000300602 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">BOOK REVIEW</span><span class="_separator"> • </span><span class="_editionMeta">Braz. political sci. rev. 19 
+                (3)
+            <span class="_separator"> • </span>Aug 2025</span><span class="_separator"> • </span><span class="group-doi"><a href="https://doi.org/10.1590/1981-3821202500030008" class="_doi" target="_blank">https://doi.org/10.1590/1981-3821202500030008</a> <a href="javascript:;" class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-text="https://doi.org/10.1590/1981-3821202500030008"><span class="material-icons-outlined">link</span>copy</a></span>
+</div>
+<h1 class="article-title">
+<img alt="Open-access" class="logo-open-access" data-bs-toggle="tooltip" src="https://ds.scielo.org/img/logo-open-access.svg" data-original-title="by 4.0 "> Expropriation Backlashing and Tax Burden in Latin America<a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<div class="articleMeta"></div>
+<div class="scielo__contribGroup">
+<a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalTutors">Authorship</a><a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalScimago">SCIMAGO INSTITUTIONS RANKINGS</a>
+</div>
+<div class="row">
+<ul class="d-none d-lg-block col-lg-2 articleMenu"></ul>
+<article id="articleText" class="col-sm-12 col-lg-10 offset-lg-2"><div class="articleReferral noPicture"><div class="arText">ONDETTI,
+	Gabriel.
+		Property Threats and the Politics of Anti-Statism. : The Historical Roots of Contemporary Tax Systems in Latin America. New York: Cambridge University Press, 2021</div></div>
+<div class="articleSection" data-anchor="Text">
+<p></p>
+<p>In ‘Property Threats and the Politics of Anti-Statism’, Ondetti (2021) examines the variations in taxation across Latin America, especially regarding total tax burden and state size. Adopting an actor-based approach, the author emphasizes the role of threats to property rights as the leading cause for lower tax burdens. Ondetti (2021) argues that attempts at expropriation triggered backlash reactions, leading to path-dependent anti-state coalitions aimed at preventing further expropriation and higher taxation. The book contrasts the experiences of Chile and Mexico – where such threats gave rise to strong anti-statist movements – with Brazil and Argentina, where private property was never under real threat.</p>
+<p></p>
+<p>In Chapter 01, Ondetti (2021) engages with economic, institutional, and actor-centered explanations for state size, ultimately asserting that only an actor-centered approach can adequately account for the differences observed in the region. He further contends that the classic class struggle opposition, such as adopted by <span class="ref"><span class="xref xrefblue"><a href="#B6_ref" data-ref="KORPI, Walter (2006), Power resources and employer-centered approaches in explanations of welfare states and varieties of capitalism: protagonists, consenters, and antagonists. World Politics. Vol. 58, Nº 02, pp. 167-206.">Korpi (2006)</a></span></span>, is insufficient to explain the variations in outcomes in Latin America. Instead, he posits that the opposition between statist and anti-statist positions offers a more effective explanatory framework. This shift within more conventional actor-centric approaches, he argues, provides a better understanding of the variation in tax burdens among Latin American countries.</p>
+<p></p>
+<p>In Chapter 02, the book provides an overview of the debate and develops its core argument, asserting that significant threats to private property trigger a backlash that gives rise to fiercely anti-statist counter-movements. These strong and well-organized anti-statist groups lead to limited taxation and labor demobilization. Conversely, in contexts where private property faces no substantial threats, anti-statist blocs remain weaker, allowing for a closer relationship between the state and business.</p>
+<p></p>
+<p>Chapter 03 analyzes the case of Chile, where tax burdens began to rise significantly after World War II, reaching over 27% of GDP in the 1970s. This increase was driven by strong labor unions aligned with leftist parties, which pushed for expanded social policy spending. Despite the sharp expansion of the public sector, there was little opposition from the elites, largely because there were no significant threats to property rights, Ondetti (2021) argues. The reactive organization of strong anti-state movements only began with the electoral victory of Unidad Popular (UP) and the resulting presidency of Allende (1971-1973). Narrowly winning the election but bolstered by substantial popular pressure, Allende implemented radical policy changes and, with workers taking over industries, began to expropriate private factories. As a result, elites organized like never before, fighting for their survival as a class.</p>
+<p></p>
+<p>Business organizations united under a so-called ‘new right’, led mostly by the ‘Movimiento Gremial’, a student-based movement that originated at the Catholic University, and the ‘Chicago Boys’, a network of economists trained in the United States and committed to free-market ideology. The now cohesively organized elites began to plot a coup that took place in 1973, leading to a military government that would implement drastic reforms, significantly reducing taxation and spending. Here, Ondetti fails (2021) to explain the means through which Chilean elites secured the support of the military to carry out the coup. The Cold war, along with the United States’ concern over the influence of the Cuban, have been identified as crucial factors in this context (<span class="ref"><span class="xref xrefblue"><a href="#B2_ref" data-ref="BUITRAGO, Francisco Leal (2003), La doctrina de seguridad nacional: materialización de la guerra fría en América del Sur. Revista de Estudios Sociales. Nº 15, pp. 74-87.">BUITRAGO, 2003</a></span></span>).</p>
+<p></p>
+<p>Most notably by dismantling public pensions and cutting corporate taxes, the reforms reduced Chile’s total tax burden from over 30% of GDP before the coup to under 16% in 1990, when the country began its democratic transition. The return of democracy in the 1990s did not lead to an increase in Chile’s tax burden or state size anywhere near pre-coup levels. Even under predominantly left-wing governments, the country continues to have one of the lowest tax burdens in Latin America. Ondetti argues (2021) that this outcome can only be understood by looking back at the expropriation threats during Allende’s administration and the backlash that led to the strong organization of the elites.</p>
+<p></p>
+<p>Chapter 04 examines the case of Mexico, focusing on a key episode during the Cárdenas administration (1934-1940), when he expropriated and redistributed around 18 million hectares of land, marking the largest land reform in Latin America to date. There were also expropriations in the industrial sector, which, while mostly limited to the oil industry, were the largest the region had seen. This radicalism, Ondetti argues (2021), rapidly pushed the opposition to organize, securing business support with the potential to remove Cárdenas and his party, later known as the ‘Partido Revolucionario Institucional’ (PRI), from power. In response, Cárdenas shifted government policy towards anti-statism to appease the opposition. This trend continued in subsequent presidencies, with the demobilization of unions, the abandonment of land reform, and the expulsion of left-leaning advocates from the party. The attempt to regain business support through the so-called ‘alliance for profit’ succeeded, allowing the PRI to remain in power and establishing a lasting trend that would prevent Mexico from significantly increasing taxation for decades.</p>
+<p></p>
+<p>Anti-statist groups continued to mobilize public opinion against higher taxation. Despite pressures for increased spending and numerous technical reports from foreign institutions recommending more taxation, no reforms significantly raised revenues to levels closer to the regional average. The consolidation of business organizations with anti-statist positions, the alignment of key business sectors with the ruling party, and substantial oil revenues allowed Mexico to sustain relatively low taxation for a very long period. As in Chile, a threat to private property isolated the elites from the state and significantly shaped their attitudes toward it. The organizations that emerged struck back, consolidating an anti-statist movement that blocked any substantial expansion of the public sector. Not even the return to democracy in the 1990s could bring about change, as the long-standing power balance continued to favor anti-statism.</p>
+<p></p>
+<p>In contrast to Mexico and Chile, Chapter 05 presents Brazil as a counterfactual case, where threats to private property were never significant enough to prompt the solid organization of anti-statist actors. As a result, state-led development was the pattern in Brazil, even under a right-wing military government. The country’s tax burden steadily increased throughout the 20th century, with elites remaining weakly organized and more focused on seeking advantages from the state rather than opposing it directly.</p>
+<p></p>
+<p>Going beyond the populist label often associated with both Cárdenas and Brazilian president Vargas (1930-1945, 1951-1954), Ondetti argues (2021) that the statist/anti-statist divide shaped the paths of both countries. While the Mexican leader posed a threat to private property, Vargas did not. Despite expanding state intervention, Vargas was firmly anti-communist and actively suppressed worker mobilization. By fostering a strong alliance with the industrial sector and providing benefits through state-led initiatives, Vargas secured support from organized groups such as the Industrial Federation of the State of São Paulo (FIESP). The Vargas period solidified elite trust in the state, driving sustained and consistent growth in the tax burden for decades.</p>
+<p></p>
+<p>Similar to Chile in 1973, Brazil also underwent a military coup in 1964. After the resignation of recently elected President Jânio Quadros in 1961, Vice President João Goulart (1961–1964) assumed office, pushing for sweeping reforms, including an ambitious land redistribution plan. These proposals disrupted and threatened the ‘pact’ forged by Vargas between business and the state. Goulart sought to rally popular support for his reforms, but faced strong military opposition, which ultimately led to the coup. His ambitious reform agenda failed largely due to insufficient political backing. As a result, the elites did not perceive the situation as a significant threat to private property and thus did not organize strongly to oppose the state, quickly reverting to their fragmented pre-Goulart form. Unlike the Chilean military regime, which drastically reduced the size of the state, Brazil’s military government continued to expand it. By the 1980s, when democratization began, Brazil had become one of the most heavily taxed countries in the region.</p>
+<p></p>
+<p>The already heavy tax burden did not prevent even right-leaning democratic governments from continuing to raise taxes, increasing revenues by about 08 percent in the first two decades after redemocratization. In the 2000s, the Workers’ Party (PT) came to power, which could have posed unprecedented threats to private property. However, the more radical proposals historically associated with the party, such as land reform, were replaced by policies focused on social spending and minimum wage increases. Private property was no longer threatened, and businesses accepted a strong state role under the Workers’ Party without significant anti-statist mobilization. The example of Brazil shows a case where statist forces were able to dominate the political landscape decisively, maintaining the country as one of the most heavily taxed in Latin America.</p>
+<p></p>
+<p>Chapter 06 discusses the Argentinean path to a high tax burden. For much of the early 20th century, the country’s tax burden hovered around the regional mean, only rising significantly during Perón’s administrations (1946–1955, 1973–1975) (1946-1955, 1973-1975). By expanding social security, raising personal and corporate income taxation, and taxing capital gains, Perón doubled Argentina’s revenues relative to GDP. Unlike Vargas, but more akin to Cárdenas or even Allende, Perón mobilized a broad labor base to push for reforms. However, like in Brazil, Perón refrained from threatening private property, instead strongly promoting private business and advocating for a state-led development model. Unlike in Brazil, however, this model failed to establish lasting hegemony, and Argentina reverted to a highly volatile pattern of tax burden after Perón’s government.</p>
+<p></p>
+<p>With significant segments of domestic-focused elites and unionized workers united in a pro-state coalition, while rural elites and exporters aligned with parts of the military to support a free-trade agenda, the country became entrenched in a stalemate. Even though Peronistas enjoyed larger electoral support, anti-statist forces resorted to the military to prevent them from fully controlling the state. The various military regimes in Argentina failed to consolidate a coherent liberal economic strategy, but they successfully blocked Peronism from fully implementing a state-led model. Ondetti places (2021) an even greater emphasis on the military's role in Argentina than in the other cases he examines. This makes it all the more important to address the causes behind the military’s alignment, with anti-statist groups, a topic notably absent from his analysis.</p>
+<p></p>
+<p>With redemocratization, the stalemate between statist and anti-statist forces, came to an end. The violence of Argentina’s last military regime made further military interventions highly unpopular, and international pressure for democratization made new coups very unlikely. As a result, Peronism was finally able to consolidate its statist agenda. Most notably, under the governments of Kirchner (2003-2007) and Fernández (2007-2015), revenue surged from 19 to 32 percent of GDP, establishing a state-led system that is unlikely to be reversed without a significant shift in power away from its now entrenched statist path.</p>
+<p></p>
+<p>By restricting the analysis to tax burden sizes and ignoring tax progressivity, Ondetti (2021) leaves out an important dimension of analysis, since many studies have shown that elites are more prone to oppose progressive taxation (<span class="ref"><span class="xref xrefblue"><a href="#B4_ref" data-ref="FAIRFIELD, Tasha (2010), Business power and tax reform: taxing income and profits in Chile and Argentina. Latin American Politics and Society. Vol. 52, Nº 02, pp. 37-71.">FAIRFIELD 2010</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B7_ref" data-ref="LIEBERMAN, Evan S. (2003), Race and regionalism in the politics of taxation in Brazil and South Africa. New York: Cambridge University Press. 323 pp..">LIEBERMAN, 2003</a></span></span>). If the groups organized to prevent higher taxation are mostly composed of economic elites, the share of revenue affecting wealthier citizens becomes a relevant factor, as these elites may be less resistant to increases in consumption taxes than to those targeting income, property, or wealth. Tax progressivity, rather than just overall tax burdens, is central to understanding the dynamics of inequality (<span class="ref"><span class="xref xrefblue"><a href="#B9_ref" data-ref="PIKETTY, Thomas (2013), Capital in the Twenty-First Century. Cambridge: Harvard University Press. 695 pp..">PIKETTY, 2013</a></span></span>), especially in Latin America (<span class="ref"><span class="xref xrefblue"><a href="#B3_ref" data-ref="FAIRFIELD, Tasha (2015), Private wealth and public revenue: business power and tax politics in Latin America. New York: Cambridge University Press. 364 pp..">FAIRFIELD, 2015</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B5_ref" data-ref="FAIRFIELD, Tasha and GARAY, Candelaria (2017), Redistribution under the right in Latin America: electoral competition and organized actors in policymaking. Comparative Political Studies. Vol. 50, Nº 14, pp. 1871-1906.">FAIRFIELD and GARAY, 2017</a></span></span>), where regressive tax systems have been identified as one of the main drivers of inequality (<span class="ref"><span class="xref xrefblue"><a href="#B1_ref" data-ref="BIRD, Richard M. and ZOLT, Eric M. (2015), Fiscal contracting in Latin America. World Development. Vol. 67, pp. 323-335.">BIRD and ZOLT, 2015</a></span></span>).</p>
+<p></p>
+<p>Chapter 07 concludes by exploring the external validity of the argument beyond the four main examples, noting that smaller countries in Latin America follow similar patterns to the cases studied. In Guatemala, the revolutionary years pushed elites to organize against the state, remaining united to prevent future risks. In Ecuador, the lack of threats to property left elites weakly organized, enabling Correa (2007-2017) to significantly raise taxation without facing successful opposition. The combination of extreme inequality, substantial U.S. influence, left-wing governments with ties to radical movements, strong calls for expropriations, and the seizure of private property – without fully embracing socialism – is a rare occurrence outside of Latin America, making it challenging to apply Ondetti’s argument (2021) beyond the region.</p>
+<p></p>
+<p>Recent developments pose new challenges to Ondetti’s analysis (2021) of tax burden dynamics in Latin America. In Argentina, the election of Macri (2015-2019) initially set a moderate downward trend in the tax burden, but this was swiftly reversed with the return of Peronism under Fernández (2019-2023). The election of Milei (2023-present), with a platform centered on cutting spending and reducing taxation, could signal a shift in the balance of power towards anti-statism. In Brazil, after many years of expansion under the Workers’ Party, the Bolsonaro administration (2019-2022) promised to reduce the state's role, yet ended its term with the tax burden at 33.7% of GDP, the highest in Brazil’s history (<span class="ref"><span class="xref xrefblue"><a href="#B10_ref" data-ref="PIRES, Manoel (2023), Observatório de Política Fiscal: atualização dos dados da carga tributária no Brasil (CTB) de 2022. Rio de Janeiro: Fundação Getúlio Vargas /Instituto Brasileiro de Economia. Available at &lt;https://observatorio-politica-fiscal.fgv.br &gt;. Accessed on August 11, 2024.">PIRES, 2023</a></span></span>). Both cases align, at least partially, with Ondetti’s expectations (2021), where weakly organized elites are unable to successfully reduce taxation.</p>
+<p></p>
+<p>On the other hand, Mexico and Chile are examples where Ondetti expects (2021) elites to be sufficiently organized to effectively block increases in the tax burden. While Mexico has shown no clear shift in its historically low tax burden in recent years, Chile has reached its highest burden since redemocratization, at 24% of GDP (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="OECD (2023), Global revenue statistics: a comparative database of revenue statistics. Paris: Organisation for Economic Co-operation and Development. Available at &lt;https://www.oecd.org/tax/revenue-statistics.htm &gt;. Accessed on July 25, 2024.">OECD, 2023</a></span></span>). Though still relatively low compared to its neighbors, Chile has significantly increased its tax burden. Some of these effects, however, may be temporary outcomes of the COVID-19 pandemic and still require further investigation by scholars. In conclusion, Ondetti’s ‘Property Threats and the Politics of Anti-Statism’ (2021) presents a compelling argument for understanding the developments of taxation and state size in Latin America. With an actor centered approach, the author looks at the issue through the lens of the struggle between statist and anti-statist forces. The book’s emphasis on how backlashes to threats to property influence major, long-lasting political shifts is particularly insightful. The book is well-supported by historical evidence, although restricted to Latin America. It also underscores the need for further research into the role of the armed forces, as military coups are central to the argument, leaving room for an explanation of the process by which elites secured military support. Lastly, recent shifts in the political landscape of Latin America provide a rich field for future studies to build on the book’s contributions to analyze how these forces have continued to evolve. These additions could offer valuable insights into the recent and future political transformations in the region.</p>
+</div>
+<div class="articleSection" data-anchor="References">
+<h2 class="h5">References</h2>
+<div class="row"><div class="col ref-list"><ul class="refList articleFootnotes">
+<li>
+<a class="" name="B1_ref"></a>BIRD, Richard M. and ZOLT, Eric M. (2015), Fiscal contracting in Latin America. World Development. Vol. 67, pp. 323-335.</li>
+<li>
+<a class="" name="B2_ref"></a>BUITRAGO, Francisco Leal (2003), La doctrina de seguridad nacional: materialización de la guerra fría en América del Sur. <i>Revista de Estudios Sociales</i> Nº 15, pp. 74-87.</li>
+<li>
+<a class="" name="B3_ref"></a>FAIRFIELD, Tasha (2015), Private wealth and public revenue: business power and tax politics in Latin America. New York: Cambridge University Press. 364 pp..</li>
+<li>
+<a class="" name="B4_ref"></a>FAIRFIELD, Tasha (2010), Business power and tax reform: taxing income and profits in Chile and Argentina. <i>Latin American Politics and Society</i> Vol. 52, Nº 02, pp. 37-71.</li>
+<li>
+<a class="" name="B5_ref"></a>FAIRFIELD, Tasha and GARAY, Candelaria (2017), Redistribution under the right in Latin America: electoral competition and organized actors in policymaking. <i>Comparative Political Studies</i> Vol. 50, Nº 14, pp. 1871-1906.</li>
+<li>
+<a class="" name="B6_ref"></a>KORPI, Walter (2006), Power resources and employer-centered approaches in explanations of welfare states and varieties of capitalism: protagonists, consenters, and antagonists. <i>World Politics</i> Vol. 58, Nº 02, pp. 167-206.</li>
+<li>
+<a class="" name="B7_ref"></a>LIEBERMAN, Evan S. (2003), <i>Race and regionalism in the politics of taxation in Brazil and South Africa</i> New York: Cambridge University Press. 323 pp..</li>
+<li>
+<a class="" name="B8_ref"></a>OECD (2023), Global revenue statistics: a comparative database of revenue statistics. Paris: Organisation for Economic Co-operation and Development. Available at &lt;<i>https://www.oecd.org/tax/revenue-statistics.htm</i> &gt;. Accessed on July 25, 2024.<br><a href="https://www.oecd.org/tax/revenue-statistics.htm" target="_blank">» https://www.oecd.org/tax/revenue-statistics.htm</a>
+</li>
+<li>
+<a class="" name="B9_ref"></a>PIKETTY, Thomas (2013), Capital in the Twenty-First Century. Cambridge: Harvard University Press. 695 pp..</li>
+<li>
+<a class="" name="B10_ref"></a>PIRES, Manoel (2023), Observatório de Política Fiscal: atualização dos dados da carga tributária no Brasil (CTB) de 2022. Rio de Janeiro: Fundação Getúlio Vargas /Instituto Brasileiro de Economia. Available at &lt;<i>https://observatorio-politica-fiscal.fgv.br</i> &gt;. Accessed on August 11, 2024.<br><a href="https://observatorio-politica-fiscal.fgv.br" target="_blank">» https://observatorio-politica-fiscal.fgv.br</a>
+</li>
+</ul></div></div>
+</div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+        <span class="xref big">Funding:</span>
+        <div> São Paulo Research Foundation - 2022/06523-4.</div>
+      </li></ul></div></div></div>
+<div class="articleSection" data-anchor="Edited by">
+<h2 class="h5">Edited by</h2>
+<div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+          <span class="xref big">Revised by</span>
+          <div>Paulo Scarpa</div>
+        </li></ul></div></div>
+</div>
+<div class="articleSection" data-anchor="Publication Dates">
+<h2 class="h5">Publication Dates</h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Publication in this collection</strong><br>06 Oct 2025</li>
+<li>
+<strong>Date of issue</strong><br>Aug 2025</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title=""><img src="https://licensebuttons.net/l/by/4.0//88x31.png" alt="Creative Common - by 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="">This publication is registered under a CC-BY License.</a></div>
+</div></div></section></article>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Authorship</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<style>
+            .author-card {
+                border-bottom: 1px solid #ccc;
+                padding: 1rem 0;
+            }
+            .author-card:last-child {
+                border-bottom: 0px;
+            }
+            .author-name {
+                font-weight: 600;
+            }
+            .material-icons-outlined {
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+            .orcid-button {
+                padding-left: 2.5rem;
+            }
+            .modal-body {
+                padding-bottom: 3rem;
+            }
+            .orcid-button::before {
+                content: "";
+                position: absolute;
+                background-image: url(https://ds.scielo.org/img/logo-orcid.svg);
+                background-repeat: no-repeat;
+                background-size: 1.5em auto;
+                background-position: .5em center;
+                display: block;
+                width: 60px;
+                height: 60px;
+                top: -10px;
+                left: 0;
+            }
+        </style>
+<div class="modal-body">
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Luiz Guilherme Roth Cantarelli </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff1">Universidade de São Paulo. Department of Political Science. São Paulo/SP, Brazil.</span><span data-aff-orgname="aff1" hidden="">Universidade de São Paulo</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">São Paulo, SP, Brazil</span><span data-aff-full="aff1" hidden="">Universidade de São Paulo. Department of Political Science. São Paulo/SP, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a>
+</div>
+<div class="ms-4"><a target="_blank" class="btn btn-secondary  orcid-button" href="https://orcid.org/0000-0002-7735-7775">0000-0002-7735-7775</a></div>
+</div>
+<a class="" name="c01_ref"></a><div class="correspondence mt-3 mb-4">
+          <strong><span class="material-icons-outlined">person</span>Correspondence:</strong>
+          <strong><span class="material-icons-outlined">email</span></strong><a href="mailto:luiz.cantarelli@usp.br">luiz.cantarelli@usp.br</a>
+        </div>
+<div class="mb-3">
+<p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<strong>Revised by</strong><p class="scielo__text-color__subtle--light mb-0">
+          </p>
+<p class="scielo__text-color__subtle--light mb-0"><div>Paulo Scarpa</div></p>
+<p class="scielo__text-color__subtle--light mb-0">
+        </p>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalDefault ModalTutors" id="ModalScimago" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+                            SCIMAGO INSTITUTIONS RANKINGS
+                        </h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="info"><div>
+<span data-aff-display="aff1">Universidade de São Paulo. Department of Political Science. São Paulo/SP, Brazil.</span><span data-aff-orgname="aff1" hidden="">Universidade de São Paulo</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">São Paulo, SP, Brazil</span><span data-aff-full="aff1" hidden="">Universidade de São Paulo. Department of Political Science. São Paulo/SP, Brazil.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a><br>
+</div></div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">How to cite</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-target="#citationCut"><span class="material-icons-outlined">link</span>copy</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Cantarelli, Luiz Guilherme Roth. Expropriation Backlashing and Tax Burden in Latin America. Brazilian Political Science Review [online]. 2025, v. 19, n. 3 [Accessed CURRENTDATE], e0008. Available from: &lt;https://doi.org/10.1590/1981-3821202500030008&gt;. Epub 06 Oct 2025. ISSN 1981-3821. https://doi.org/10.1590/1981-3821202500030008.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+      
+<div class="container">
+<div class="row">
+  <div class="col">
+
+    <div class="scielo__floatingMenuCttJs3">
+      <a class="scielo__floatingMenuItem fm-button-child item-goto d-none d-lg-inline-block" data-bs-toggle="tooltip" title="Ir para o topo" href="#top">
+        <span class="material-icons-outlined">
+          vertical_align_top
+        </span>
+      </a>
+      <!--
+      <a href="javascript:;" class="scielo__floatingMenuItem fm-button-child item-download d-none d-lg-inline-block" data-bs-toggle="tooltip" title="PDFs" data-bs-target="#ModalDownloads" tabindex="0">
+        <span class="material-icons-outlined">
+          file_download
+        </span>
+      </a>
+      -->
+      <a href="javascript:;" class="scielo__floatingMenuItem fm-button-child item-metrics d-none d-lg-inline-block" data-bs-toggle="tooltip" title="Métricas" target="_blank" data-bs-target="#metric_modal_id" tabindex="0">
+        <span class="material-icons-outlined">
+          show_chart
+        </span>
+      </a>
+      <ul class="scielo__floatingMenuJs3 fm-slidein" data-fm-toogle="hover">
+        <li class="fm-wrap">
+          <a href="javascript:;" class="fm-button-main" data-bs-toggle="tooltip" title="Abrir menu" tabindex="0"><span class="material-icons-outlined material-icons-outlined-menu-default">more_horiz</span></a>
+          <a href="javascript:;" class="fm-button-close" data-bs-toggle="tooltip" title="Fechar menu" tabindex="0"><span class="material-icons-outlined material-icons-outlined-menu-close">close</span></a>
+
+          <!-- exibe em tudo menos mobile-->
+          <ul class="fm-list-desktop d-none d-lg-block">
+            <li>
+              <a class="fm-button-child" id="lnkFigsTables" data-bs-toggle="tooltip" title="Figuras e tabelas" data-bs-target="#ModalTablesFigures" tabindex="0">
+                <span class="material-icons-outlined">
+                  image
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkVersTranslations" data-bs-toggle="tooltip" title="Versões e traduções" data-bs-target="#ModalVersionsTranslations" tabindex="0">
+                <span class="material-icons-outlined">
+                  translate
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkHowToCite" data-bs-toggle="tooltip" title="Como citar este artigo" data-bs-target="#ModalHowcite" tabindex="0">
+                <span class="material-icons-outlined">
+                  link
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="fm-button-child" id="lnkArticles" data-bs-toggle="tooltip" title="Artigos relacionados" data-bs-target="#ModalRelatedArticles" tabindex="0">
+                <span class="material-icons-outlined">
+                  article
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+
+          <!-- exibe apenas no mobile-->
+          <ul class="fm-list-mobile d-block d-xl-none">
+            <li class="">
+              <a class="fm-button-child item-goto" data-mobile-tooltip="Ir para o topo" href="#top">
+                <span class="material-icons-outlined">
+                  vertical_align_top
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="javascript:;" class="fm-button-child item-download" data-mobile-tooltip="PDFs" data-bs-toggle="modal" data-bs-target="#ModalDownloads">
+                <span class="material-icons-outlined">
+                  file_download
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="javascript:;" class="fm-button-child item-metrics" data-mobile-tooltip="Métricas" data-bs-toggle="modal" data-bs-target="#metric_modal_id">
+                <span class="material-icons-outlined">
+                  show_chart
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Figuras e tabelas" data-bs-toggle="modal" data-bs-target="#ModalTablesFigures">
+                <span class="material-icons-outlined">
+                  image
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Versões e traduções" data-bs-toggle="modal" data-bs-target="#ModalVersionsTranslations">
+                <span class="material-icons-outlined">
+                  translate
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Como citar este artigo" data-bs-toggle="modal" data-bs-target="#ModalHowcite">
+                <span class="material-icons-outlined">
+                  link
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a class="fm-button-child" data-mobile-tooltip="Artigos relacionados" data-bs-toggle="modal" data-bs-target="#ModalRelatedArticles">
+                <span class="material-icons-outlined">
+                  article
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+      <section class="journalContacts pt-4 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-8 text-center text-sm-start">
+        <div class="row">
+          <div class="col-md-1 col-sm-2">
+            <span class="material-icons-outlined">location_on</span>
+          </div>
+          <div class="col-md-10 col-sm-9">
+            <strong class="d-block">Associação Brasileira de Ciência Política</strong>
+            
+              <span>Rua da Matriz, 82 - Botafogo, CEP 22260-100, Telefone: (55 21) 9320-4871</span> - 
+            
+            
+            <span>São Paulo</span> -
+            
+            
+            <span>SP</span> -
+            
+            
+            <span>Brazil</span> <br/>
+            
+            
+            
+              <strong>E-mail:</strong> bpsrabcp@gmail.com
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 text-center text-sm-start pt-4 pt-sm-0">
+        <a href="/journal/bpsr/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank"><span class="material-icons-outlined">rss_feed</span></a>
+        <span>
+          Acompanhe os números deste periódico no seu leitor de RSS
+        </span>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+
+
+    <div class="modal fade ModalDefault" id="ModalDownloads" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Versão para download de PDF
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-12">
+            <span class="sci-ico-filePDF"></span>
+            <br/>
+            <strong>PDF</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a target='_blank' href="/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?lang=en&amp;format=pdf">
+                    
+                      Inglês
+                    
+                  </a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade ModalDefault" id="ModalRelatedArticles" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Artigos relacionados
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-center">
+          <ul class="md-list inline">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;Expropriation Backlashing and Tax Burden in Latin America&#34; &#34;Cantarelli, Luiz Guilherme Roth&#34; &#34;2025&#34; &#34;Brazilian Political Science Review&#34;" target="_blank">
+                  Google
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;Expropriation Backlashing and Tax Burden in Latin America&#34; &#34;Cantarelli, Luiz Guilherme Roth&#34; &#34;2025&#34; &#34;Brazilian Political Science Review&#34;" target="_blank">
+                  Google Scholar
+                </a>
+              </li>
+            
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade ModalDefault" id="ModalVersionsTranslations" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Versões e tradução automática
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row modal-center">
+          <div class="col-md-4 col-md-offset-1">
+            <strong>Versão original do texto</strong>
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a href="/j/bpsr/a/QyH6YyDdvXh6bhchbcnN7YF/?lang=en">English</a>
+                </li>
+              
+            
+            </ul>
+          </div>
+          <div class="col-md-2 md-body-dashVertical"></div>
+          <div class="col-md-4">
+            <strong>Tradução automática</strong>
+            <ul class="md-list">
+              <li><a href="">Google Translator</a></li>
+              <li><a href="">Microsoft Translator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <style>
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 11px;
+    line-height: 1;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word; 
+}
+</style>
+
+<div class="modal fade ModalDefault" id="ModalHowcite" tabindex="-1" role="dialog" aria-hidden="true"
+  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h2 class="h4 modal-title">
+          Como citar
+        </h2>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3" style="text-align: center;">
+              <a href="/citation/export/QyH6YyDdvXh6bhchbcnN7YF/?format=ris" class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> RIS
+              </a>
+            </div>
+            <div class="col-sm-3" style="text-align: center;">
+              <a href="/citation/export/QyH6YyDdvXh6bhchbcnN7YF/?format=bib" class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> BIBTEX
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        
+        <div id='initial_csl'></div>
+
+        <label id="select_label">Outros formatos de citação e exportação:</label>
+        <select id="select_csl" class="js-data-example-ajax" style="width: 100%">
+          <option value="" selected="selected">Enter references manager format or citation style (e.g., "APA", "AMA", "MLA", "Vancouver")</option>
+        </select>
+        
+        <br>
+        <br>
+      
+        <pre id="citation_text" style="display:none;"></pre>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+  </main>
+
+  <style>
+	.scielo__logo-partner{
+      max-height: 50px;
+      max-width: 170px;
+    }
+    .scielo__logo-partner--dark{
+      display:none;
+    }
+    .scielo__theme--dark .scielo__logo-partner--light{
+      display:none;
+    }
+	.scielo__theme--dark .scielo__logo-partner--dark{
+      display:inline-block;
+    }
+</style>
+
+<footer>
+	<section class="address-scielo pt-4 pb-4 mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12 col-sm-2 text-center">
+					<div class="scielo__logo-scielo--small" alt="Logo SciELO"></div>
+				</div>
+				<div class="col col-12 col-sm-8 text-center text-sm-start">
+					<p><small><strong> SciELO - Scientific Electronic Library Online</strong></small></p>
+					<p><small>Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+						E-mail: scielo@scielo.org </small></p>
+						<div>
+							<!-- 
+								Fix me:
+								
+								Criar configuração para verificar se deve ou não ser exibido 
+								o ícone da rede social e url correta de cada rede.
+								
+							-->
+							<ul class="list-unstyled justify-content-center justify-content-sm-start d-flex mt-3 mb-0 scielo__social-network-links">
+								<li class="me-2">
+									<a href="https://bsky.app/profile/scielo.org" target="_blank" aria-label="BlueSky">
+										<i class="icon-bluesky"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://openbiblio.social/@scielo" target="_blank" aria-label="Mastodon">
+										<i class="icon-mastodon"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.linkedin.com/company/scielo---scientific-electronic-library-online/?originalSubdomain=br" target="_blank" aria-label="LinkedIn">
+										<i class="icon-linkedin"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.facebook.com/SciELONetwork" target="_blank" aria-label="Facebook">
+										<i class="icon-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/c/SciELONetwork" target="_blank" aria-label="Youtube">
+										<i class="icon-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<div class="col col-12 col-sm-2 text-center">
+					
+					<div class="container-license">
+						<div class="row">
+							<div class="col-sm-3 col-md-2">
+								<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="" rel="license"><img
+										src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Common - by 4.0">
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col partners text-center my-4">
+					<a href="http://www.capes.gov.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-capes.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="CAPES"><img src="/static/img/logo-capes--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="CAPES"></a>
+					<a href="http://www.cnpq.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-cnpq.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="CNPq"><img src="/static/img/logo-cnpq--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="CNPq"></a>
+					<a href="http://www.fapesp.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-fapesp.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="FAPESP"><img src="/static/img/logo-fapesp--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark " alt="FAPESP"></a>
+					<a href="http://bvsalud.org/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-bvs.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="BVS"><img src="/static/img/logo-bvs.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="BVS" style="background: white;"></a>
+					<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-bireme.svg" class="scielo__logo-partner scielo__logo-partner--light " alt="BIREME"><img src="/static/img/logo-bireme--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark " alt="BIREME"></a>
+					<a href="https://www.fapunifesp.edu.br/" class="mx-4 my-2" target="_blank"><img src="/static/img/logo-fap.svg" class="scielo__logo-partner scielo__logo-partner--light" alt="FAP-UNIFESP"><img src="/static/img/logo-fap--dark.svg" class="scielo__logo-partner scielo__logo-partner--dark" alt="FAP-UNIFESP"></a> 
+				</div>
+			</div>
+			<div class="row d-none">
+				<div class="col text-center mt-4 mb-4">
+				
+					
+						
+						<a href="http://www.capes.gov.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES">
+							
+						</a>
+						
+					
+						
+						<a href="http://www.cnpq.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq">
+							
+						</a>
+						
+					
+						
+						<a href="http://www.fapesp.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP">
+							
+						</a>
+						
+					
+						
+						<a href="http://bvsalud.org/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/BVS.png" alt="BVS">
+							
+						</a>
+						
+					
+						
+						<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME">
+							
+						</a>
+						
+					
+						
+						<a href="https://www.fapunifesp.edu.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+							
+								<img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP">
+							
+						</a>
+						
+					
+				
+				</div>
+			</div>
+		</div>
+	</section> 
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="text-center"><a href="/about/"><img src="https://www.scielo.br/static/img/logo-open-access.svg" alt="Open Access" class="me-1 logo-open-access">Leia</a> a Declaração de Acesso Aberto</p>
+				</div>
+			</div>
+		</div> 
+	</section>	
+</footer>
+
+  
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+            <h2 class="h4 modal-title">
+                Métricas
+            </h2>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S1981-38212025000300602&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                    
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-dimension">
+                                <div class="badge-logo">
+                                    <span class="__dimensions_badge_embed__" data-doi="10.1590/1981-3821202500030008" data-legend="never"
+                                        data-style="small_circle">
+                                    </span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://badge.dimensions.ai/details/doi/10.1590/1981-3821202500030008">
+                                <div>Dimensions</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1590/1981-3821202500030008" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=10.1590/1981-3821202500030008">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi="10.1590/1981-3821202500030008"></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="10.1590/1981-3821202500030008" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/10.1590/1981-3821202500030008">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="https://plu.mx/scielo/a/?doi=10.1590/1981-3821202500030008" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">Expropriation Backlashing and Tax Burden in Latin America</a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://plu.mx/scielo/a/?doi=10.1590/1981-3821202500030008">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Error modal -->
+    <a class="floatingBtnError btn btn-secondary" href="#" id="#floatingBtnError">Reportar erro</a>
+
+    <script>
+      // Variáveis para tradução da barra de acessibilidade      
+      window.accessibilityTranslations = {
+        darkMode: "Modo escuro",
+        increaseText: "Aumentar texto",
+        decreaseText: "Diminuir texto",
+        originalText: "Texto original",
+        markerLine: "Marcador",
+        readingLine: "Linha guia",
+        reset: "Redefinir",
+        accessibilityMenu: "Menu de acessibilidade",
+        skipLinkText: "Ir para o conteúdo principal"
+      };
+    </script>
+    
+    <!-- Scielo Bundle min -->
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    <script>
+
+      $(document).ready(function() {
+
+        // Add rows article search
+        let addRowBtn = $('.addRowBtn');
+        let placeRow = $('.scielo__dinamic-row');
+        let newFormRow = '<div class="row"><div class="col-12"><hr></div><div class="col-2 col-lg-1 text-end"><button type="button" class="btn btn-danger scielo__btn-with-icon--only"><i class="material-icons-outlined">clear</i></button></div><div class="col-10 col-lg-11"><div class="input-group"><div class="input-group-preppend"><select class="form-select" name="bool[]"><option selected>AND</option><option>OR</option><option>AND NOT</option></select></div><textarea name="q[]" class="form-control" aria-label="With textarea" placeholder="Entre uma ou mais palavras"></textarea><div class="input-group-append"><select class="form-select"><option selected value="todos">Todos os índices</option><option value="ano">Ano</option><option value="autor">Autor</option><option value="financiador">Financiador</option><option value="periodico">Periódico</option><option value="resumo">Resumo</option><option value="titulo">Título</option></select></div></div></div></div>';
+
+        let btnRemoveRow = $('.btn-danger');
+
+        addRowBtn.on( "click", function() {
+            placeRow.append( newFormRow );
+        })
+
+        // Remove as linhas inseridas dinamicamente e as que já estavam lá.
+        placeRow.on( "click", ".btn-danger", function() {
+            $(this).parent().parent().animate({'opacity':0},300).hide(1);
+        })
+
+      });
+    </script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+<script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+
+<script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async
+  defer></script>
+<script type="text/javascript" src="/static/js/scienceopen.js"></script>
+
+
+
+<script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+
+
+
+<script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+<!-- <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+    -->
+
+
+
+<script type="text/javascript" src="//badge.dimensions.ai/badge.js" charset="utf-8" async></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<!-- xxx Verifica se o artigo contém artigos relacionados -->
+
+
+<!-- Verifica se o artigo contém suplemento -->
+
+
+<script>
+
+  affiliations = {};
+
+  function add_scimago_image(selector, remove_br=true, add_br_after=true, find_div=false){
+    $(selector).each(
+
+    function () {
+
+      if (remove_br){
+        $(this).find("br").remove()
+      }
+      
+      internal_items = find_div ? $(this).find('div').not(".clearfix") : $(this).not(".clearfix")
+
+      internal_items.each(function () { 
+        self = $(this);
+
+        affiliation_name = $('span:first', self).text();
+        if (affiliation_name){
+            scimago_link = ' <a href="#" target="_blank" class="scimago_link" data-affiliation="' + affiliation_name + '" ><img src="/static/img/scimago.svg" alt=" SCImago image" height="12" data-toggle="tooltip" data-placement="top" title="Link to SCImago Institutions Rankings"></a>';
+            self.append(scimago_link);
+        }
+      });
+
+      if (add_br_after){
+        $(this).after("<br />")
+      }
+
+    });
+
+  }
+
+  add_scimago_image('#ModalScimago .info div')
+  add_scimago_image('.tutors', remove_br=false, add_br_after=false, find_div=true) 
+
+  $(".scimago_link").click(function(e){
+    e.preventDefault();
+
+    affiliation_name = $(this).data("affiliation");
+
+    if (affiliation_name){
+      if (affiliations[affiliation_name]) {
+        window.open(affiliations[affiliation_name], '_blank');
+      } else {
+        $.ajax({
+          type: "GET",
+          async: false,
+          url: "/scimago/query",
+          data: 'q=' + encodeURI(affiliation_name),
+          success: function (data) {
+            if (data) {
+              affiliations[affiliation_name] = 'https://www.scimagoir.com/' + data
+              window.open(affiliations[affiliation_name], '_blank');
+            }else{
+              toastr.options = {
+                positionClass: 'toast-top-center'
+              };
+              toastr.error('Link temporariamente indisponível');
+            }
+          }
+        });
+      }
+    }    
+  });
+
+
+  var howcite_initialized = false;
+
+  $('#ModalHowcite').on('shown.bs.modal', function () {
+
+    if (!howcite_initialized) {
+      initial = {
+        "American Psychological Association": "apa", "Vancouver": "vancouver"
+      }
+
+      $.each(initial, function (key, value) {
+        $.ajax({
+          url: "/citation/QyH6YyDdvXh6bhchbcnN7YF/?style=" + value,
+          dataType: 'html',
+          delay: 250,
+          async: true
+        })
+          .done(function (html) {
+            $("<span><b>" + key + "</b></span>" + "<pre>" + html + "</pre>").insertBefore($("#select_label"));
+          })
+      });
+      howcite_initialized = true;
+    }
+
+    $(".js-data-example-ajax").select2({
+      ajax: {
+        url: "/citation/list",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term, // search term
+          };
+        },
+        processResults: function (data, params) {
+          return {
+            results: data.results
+          };
+        },
+        cache: true
+      },
+      escapeMarkup: function (markup) { return markup; },
+      minimumInputLength: 1,
+      dropdownParent: $('#ModalHowcite')
+    });
+
+    $(document).on('select2:open', () => {
+      document.querySelector('.select2-search__field').focus();
+    });
+
+    $(".js-data-example-ajax").on('select2:select', function (e) {
+      var data = e.params.data;
+
+      $.ajax({
+        url: "/citation/QyH6YyDdvXh6bhchbcnN7YF/?style=" + data.id,
+        dataType: 'html',
+        delay: 250
+      })
+        .done(function (html) {
+
+          if ($('#citation_text').css('display') == 'none') {
+            $('#citation_text').show()
+          }
+
+          $("#citation_text").html(html);
+
+        })
+        .fail(function () {
+          alert("Erro ao tentar obter esse estilo de citação");
+        })
+
+    });
+  });
+
+</script>
+
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      //moment.locale('pt_BR');
+
+      //$("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+
+
+   
+
+  </body>
+</html>

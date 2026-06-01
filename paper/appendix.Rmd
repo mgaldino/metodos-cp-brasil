@@ -1,0 +1,31 @@
+---
+title: "Apêndice: Revolução da Credibilidade na Ciência Política Brasileira"
+author: ""
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: false
+    includes:
+      in_header: preamble.tex
+bibliography: ../references.bib
+biblio-style: apalike
+link-citations: true
+---
+
+# Critérios de Inclusão do Corpus
+
+[Documentar periódicos, anos, tipos documentais incluídos e exclusões.]
+
+# Schema de Classificação
+
+[Documentar campos, categorias e regras de codificação.]
+
+# Validações de Dados
+
+[Documentar checagens de datas, valores incompatíveis, categorias inválidas e duplicatas.]
+
+# Resultados Suplementares
+
+[Inserir tabelas e figuras suplementares.]
+

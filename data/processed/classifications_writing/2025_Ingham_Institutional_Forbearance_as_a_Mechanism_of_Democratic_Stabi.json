@@ -1,0 +1,28 @@
+{
+  "has_introduction_section": true,
+  "little_template": "2_gap_filling",
+  "little_template_justification": "The introduction is built around a conceptual and theoretical gap in the existing forbearance literature, especially the need for a more precise definition and a grounded mechanism linking forbearance to democratic stability. It is not primarily organized around a surprising empirical fact or the resolution of a live empirical debate.",
+  "intro_presents_main_result": null,
+  "intro_presents_main_result_quote": null,
+  "inverted_pyramid": false,
+  "lit_review_location": "background_section",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "The “seeds-of-doubt” mechanism is what gives actions of uncertain legitimacy their power to corrode democracy’s foundations. By sowing seeds of doubt about citizens’ motivations, the officeholder undermines their future capacity for coordinated responses to abuses of power.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": false,
+  "n_sections": 9,
+  "section_titles": [
+    "INTRODUCTION",
+    "PRELIMINARIES",
+    "DEMOCRACY’S SELF-ENFORCEMENT MECHANISM",
+    "FORBEARANCE RECONSIDERED",
+    "CONCLUSION",
+    "ACKNOWLEDGEMENTS",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS",
+    "REFERENCES"
+  ],
+  "_file": "2025_Ingham_Institutional_Forbearance_as_a_Mechanism_of_Democratic_Stabi.pdf",
+  "_elapsed_s": 242.9
+}

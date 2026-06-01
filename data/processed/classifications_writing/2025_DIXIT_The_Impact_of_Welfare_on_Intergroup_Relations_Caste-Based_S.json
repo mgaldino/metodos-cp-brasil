@@ -1,0 +1,27 @@
+{
+  "has_introduction_section": false,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction is anchored by a substantive puzzle: why caste-based social segregation persists and whether welfare can weaken coethnic dependence and improve intergroup ties. It also frames the paper as filling a gap by positioning welfare as an underexplored driver of caste change, rather than mainly adjudicating a live debate between competing camps.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "Consistent with my hypotheses, where welfare reduces in-group economic reliance, I find reduced social investment in co-ethnics and improved ties with non-coethnics. By contrast, where land ownership is more concentrated in the hands of a dominant caste, RBS benefits are less likely to reach a broad cross-section of castes. In these areas, I do not find significant effects on borrowing from caste members or intercaste ties.",
+  "inverted_pyramid": false,
+  "lit_review_location": "distributed",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "In these villages, welfare reduced borrowing from caste members by over 40%. It also increased meal sharing, lowered the likelihood that most or all of respondents’ friends were of the same caste by 33%, and raised the donation amount by 19%, indicating that respondents were more willing to allocate resources toward an outgroup.",
+  "uses_numbered_hypotheses": true,
+  "has_roadmap_paragraph": false,
+  "n_sections": 8,
+  "section_titles": [
+    "THEORY",
+    "CASTE AND SOCIAL INSURANCE",
+    "CONTEXT",
+    "RESEARCH DESIGN: OVERVIEW",
+    "THE IMPACT OF WELFARE ON CASTE-BASED SOCIAL INSURANCE",
+    "THE IMPACT OF WELFARE ON CASTE-BASED SOCIAL INTEGRATION",
+    "HOW CASTE-BASED SOCIAL INSURANCE SHAPES SOCIAL INTEGRATION",
+    "CONCLUSION"
+  ],
+  "_file": "2025_DIXIT_The_Impact_of_Welfare_on_Intergroup_Relations_Caste-Based_S.pdf",
+  "_elapsed_s": 259.4
+}

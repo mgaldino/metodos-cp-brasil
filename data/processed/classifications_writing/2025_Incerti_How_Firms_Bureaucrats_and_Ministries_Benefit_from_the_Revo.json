@@ -1,0 +1,27 @@
+{
+  "has_introduction_section": true,
+  "little_template": "2_gap_filling",
+  "little_template_justification": "The introduction is organized around an explicit gap in the political-connections literature: bureaucratic connections and nonprofit destinations are presented as under-studied, and the paper says it \"addresses these gaps\" with comprehensive data. It is not primarily framed as resolving a live scholarly debate or explaining a surprising empirical anomaly.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "A bifurcated market exists for former bureaucrats, in which the highest ranking officials are naturally in demand by large, publicly traded corporations. These officials then deliver benefits such as low-interest government loans to their new employers. However, for lower ranking bureaucrats who cannot offer these kinds of benefits to firms, alternate sources of employment exist at nonprofit organizations bolstered by government contracts.",
+  "inverted_pyramid": false,
+  "lit_review_location": "distributed",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "Though these connections are under-examined in the existing literature, I show that roughly half of Japanese bureaucrats are rehired by public corporations or nonprofits, and that these organizations leverage their bureaucratic connections to increase the size of government contracts they receive. In the context of a weak welfare state with relatively low pay for civil servants, the promise of such revolving door positions—regardless of private sector demand—is essential for successful bureaucratic retainment and recruitment.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": true,
+  "n_sections": 8,
+  "section_titles": [
+    "THEORY AND HYPOTHESES",
+    "CASE SELECTION: AMAKUDARI IN JAPAN",
+    "DATA",
+    "IS THERE A BIFURCATED JOB MARKET FOR FORMER CIVIL SERVANTS?",
+    "DO FIRMS THAT HIRE BUREAUCRATS SECURE MORE GOVERNMENT LOANS?",
+    "DO INVESTORS REWARD FIRMS FOR BUREAUCRATIC HIRES?",
+    "DO NONPROFITS WITH BUREAUCRATIC CONNECTIONS RECEIVE MORE LUCRATIVE CONTRACTS?",
+    "DISCUSSION AND CONCLUSION"
+  ],
+  "_file": "2025_Incerti_How_Firms_Bureaucrats_and_Ministries_Benefit_from_the_Revo.pdf",
+  "_elapsed_s": 238.9
+}

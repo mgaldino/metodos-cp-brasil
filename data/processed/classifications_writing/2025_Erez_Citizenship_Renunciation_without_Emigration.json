@@ -1,0 +1,30 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_3",
+  "little_template_justification": "The introduction opens with a clear puzzle or anomaly: citizenship renunciation is increasingly accepted, but only when paired with emigration. It then reframes that anomaly as a two-horned dilemma and resolves it by rejecting mandatory citizenship for long-term residents and defending renunciation without emigration.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "In this article, I argue that citizens should have the right to renounce their citizenship without the requirement of emigration.",
+  "inverted_pyramid": true,
+  "lit_review_location": "distributed",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_only",
+  "intro_prior_update_quote": "In this article, I argue that citizens should have the right to renounce their citizenship without the requirement of emigration.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": true,
+  "n_sections": 11,
+  "section_titles": [
+    "INTRODUCTION",
+    "SETTING THE STAGE: TERMS AND DEFINITIONS",
+    "THE DILEMMA",
+    "MANDATORY CITIZENSHIP FOR LONG-TERM RESIDENTS?",
+    "CITIZENSHIP RENUNCIATION AS A FORM OF EXPRESSIVE POLITICAL EXIT",
+    "THE OBJECTION FROM ANARCHY",
+    "RENOUNCING INTENTIONAL CITIZENSHIP",
+    "CONCLUDING REMARKS",
+    "FUNDING STATEMENT",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS"
+  ],
+  "_file": "2025_Erez_Citizenship_Renunciation_without_Emigration.pdf",
+  "_elapsed_s": 272.0
+}

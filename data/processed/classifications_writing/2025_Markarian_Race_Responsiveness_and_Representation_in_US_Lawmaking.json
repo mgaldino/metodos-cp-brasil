@@ -1,0 +1,32 @@
+{
+  "has_introduction_section": true,
+  "little_template": "hybrid_1_2",
+  "little_template_justification": "The introduction opens with a substantive puzzle about whether U.S. national policymaking is more responsive to white Americans than to people of color, then quickly pivots to a clear literature-and-data gap on national racial responsiveness. The contribution is framed as both answering that puzzle and filling a missing empirical slot in the literature with a new dataset.",
+  "intro_presents_main_result": true,
+  "intro_presents_main_result_quote": "When we divide our results by party control, however, we find that who wins and loses depends critically on which party governs. People of color are significantly disadvantaged compared to white Americans when Republicans control national political institutions.",
+  "inverted_pyramid": false,
+  "lit_review_location": "separate_section",
+  "lit_review_has_title_literature_review": false,
+  "intro_communicates_prior_update": "clear_what_and_magnitude",
+  "intro_prior_update_quote": "The differences are large: Black citizens lose on policy 7–9 percentage points more often than white citizens when Republicans control government, while Latinos and Asian Americans lose 4–7 points more often.",
+  "uses_numbered_hypotheses": false,
+  "has_roadmap_paragraph": false,
+  "n_sections": 13,
+  "section_titles": [
+    "INTRODUCTION",
+    "ARE THERE RACIAL DISPARITIES IN RESPONSIVENESS AND REPRESENTATION?",
+    "DATA AND METHODS",
+    "FINDINGS: ARE THERE RACIAL DISPARITIES?",
+    "LEVERAGING CROSS-SECTIONAL VARIATION IN DYADIC REPRESENTATION TO EXPLORE PLACE-BASED SOURCES OF VARIATION",
+    "CONCLUSION",
+    "SUPPLEMENTARY MATERIAL",
+    "DATA AVAILABILITY STATEMENT",
+    "ACKNOWLEDGMENTS",
+    "FUNDING STATEMENT",
+    "CONFLICT OF INTEREST",
+    "ETHICAL STANDARDS",
+    "REFERENCES"
+  ],
+  "_file": "2025_Markarian_Race_Responsiveness_and_Representation_in_US_Lawmaking.pdf",
+  "_elapsed_s": 307.5
+}
