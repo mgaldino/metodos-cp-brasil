@@ -12,6 +12,11 @@
 - `classify_batch.py`: classifica subconjuntos de PIDs definidos em arquivos `batch_*.txt`.
 - `classify_writing_codex.py`: classifica características de escrita via Codex CLI.
 
+## Validação e normalização
+
+- `05_validate_classifications.R`: valida corpus, amostra, JSONs de classificação e CSV consolidado.
+- `06_normalize_classifications.R`: gera uma versão candidata normalizada dos JSONs/CSV sem sobrescrever os originais, com log auditável e reconciliação das pendências manuais.
+
 ## Benchmark e auditoria
 
 - `build_benchmark.py`: processa PDFs internacionais e calcula benchmarks de readability/style.
@@ -24,4 +29,3 @@ python3 -m pytest scripts
 ```
 
 Estado em 2026-06-01: 59 testes passaram; houve apenas um aviso de compatibilidade entre `requests` e `urllib3`.
-

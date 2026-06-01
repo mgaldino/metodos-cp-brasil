@@ -1,11 +1,14 @@
-# Validação das Classificações
+# Validação das Classificacoes_Originais
 
-Gerado em 2026-06-01 14:47:20 -03
+Gerado em 2026-06-01 15:03:53 -03
 
 ## Snapshot
 
 | item | value |
 | --- | --- |
+| rótulo da validação | Classificacoes_Originais |
+| diretório de classificações | /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/classifications |
+| CSV de classificações | /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/classifications_llm.csv |
 | artigos no corpus | 8400 |
 | periódicos no corpus | 15 |
 | anos no corpus | 2005-2025 |

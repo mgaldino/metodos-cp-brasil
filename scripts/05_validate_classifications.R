@@ -20,16 +20,40 @@ project_dir <- normalizePath(".", mustWork = TRUE)
 quality_dir <- file.path(project_dir, "quality_reports")
 dir.create(quality_dir, showWarnings = FALSE, recursive = TRUE)
 
+path_from_env <- function(name, default) {
+  value <- Sys.getenv(name, unset = default)
+  if (startsWith(value, "/")) {
+    return(value)
+  }
+  file.path(project_dir, value)
+}
+
+validation_label <- Sys.getenv("VALIDATION_LABEL", unset = "Classificações")
+
 paths <- list(
   corpus = file.path(project_dir, "data", "raw", "articles_2005_2025.csv"),
   sample = file.path(project_dir, "data", "processed", "sample_validation.csv"),
   sample_sheet = file.path(project_dir, "data", "processed", "sample_validation_sheet.csv"),
-  classifications_csv = file.path(project_dir, "data", "processed", "classifications_llm.csv"),
-  classifications_dir = file.path(project_dir, "data", "processed", "classifications"),
+  classifications_csv = path_from_env(
+    "CLASSIFICATIONS_CSV",
+    file.path(project_dir, "data", "processed", "classifications_llm.csv")
+  ),
+  classifications_dir = path_from_env(
+    "CLASSIFICATIONS_DIR",
+    file.path(project_dir, "data", "processed", "classifications")
+  ),
   sample_xml_dir = file.path(project_dir, "data", "processed", "sample_xmls"),
-  issues = file.path(quality_dir, "classification_validation_issues.csv"),
-  summary = file.path(quality_dir, "classification_validation_summary.md")
+  issues = path_from_env(
+    "VALIDATION_ISSUES",
+    file.path(quality_dir, "classification_validation_issues.csv")
+  ),
+  summary = path_from_env(
+    "VALIDATION_SUMMARY",
+    file.path(quality_dir, "classification_validation_summary.md")
+  )
 )
+dir.create(dirname(paths$issues), showWarnings = FALSE, recursive = TRUE)
+dir.create(dirname(paths$summary), showWarnings = FALSE, recursive = TRUE)
 
 issue_rows <- list()
 
@@ -610,6 +634,9 @@ markdown_table <- function(df, max_rows = Inf) {
 
 snapshot <- tibble(
   item = c(
+    "rótulo da validação",
+    "diretório de classificações",
+    "CSV de classificações",
     "artigos no corpus",
     "periódicos no corpus",
     "anos no corpus",
@@ -622,6 +649,9 @@ snapshot <- tibble(
     "warnings"
   ),
   value = c(
+    validation_label,
+    paths$classifications_dir,
+    paths$classifications_csv,
     nrow(corpus),
     if (nrow(corpus) > 0) length(unique(corpus$journal_title)) else 0,
     if (nrow(corpus) > 0) paste(range(corpus$year, na.rm = TRUE), collapse = "-") else "NA",
@@ -643,7 +673,7 @@ next_steps <- c(
 )
 
 summary_lines <- c(
-  "# Validação das Classificações",
+  paste("# Validação das", validation_label),
   "",
   paste("Gerado em", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
   "",
