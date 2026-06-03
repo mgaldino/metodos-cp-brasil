@@ -18,3 +18,11 @@ O repositório já tem coleta substantiva, amostra de validação, classificaç�
 
 O CSV consolidado de classificações mistura saídas antigas e novas. Antes de qualquer inferência substantiva, é necessário validar categorias e tipos de campos. Em checagem rápida, `error_in_raw_text` tem valores fora do schema atual (`False` e vazio), o que indica necessidade de migração ou reclassificação parcial.
 
+## Atualização — 2026-06-03
+
+- A normalização candidata foi concluída em `data/processed/classifications_llm_normalized.csv`, com log auditável em `quality_reports/classification_normalization_log.csv`.
+- A fila `manual_review=TRUE` foi preparada em `quality_reports/manual_review_queue.csv`; pendências de `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` foram dispensadas por regra de exclusão de periódico, documentada em `data/processed/excluded_journals.csv`.
+- Obituário, editorial, comentário crítico, errata e nota fora de escopo foram documentados em `data/processed/excluded_articles.csv` e ficam fora da análise principal, preservados no corpus.
+- As decisões manuais da planilha Google Sheets foram preservadas em `data/processed/manual_review_decisions_google_sheet.csv` e validadas por `scripts/08_validate_manual_review_decisions.R`.
+- Resultado da validação: 135/135 itens da fila principal estão `done`; 18 itens `pending` pertencem apenas a periódicos excluídos; 10 itens estão dispensados por exclusão de artigo.
+- Antes de regerar o `classifications_llm.csv` final, ainda é preciso substituir 2 placeholders `structured_json_required` em `main_variable_relationship` por JSON substantivo ou `<NULL>`.

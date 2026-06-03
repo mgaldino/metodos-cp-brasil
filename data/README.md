@@ -22,6 +22,9 @@ Arquivos centrais:
 - `sample_validation_sheet.csv`: planilha ampliada para classificação.
 - `classifications/`: um JSON por artigo classificado.
 - `classifications_llm.csv`: CSV consolidado das classificações.
+- `excluded_journals.csv`: regras de exclusão da análise principal por periódico/ISSN. Em 2026-06-02, `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` foram marcados como fora do escopo principal, preservando os registros no corpus.
+- `excluded_articles.csv`: regras de exclusão da análise principal por artigo. Obituário, editorial, comentário crítico, errata e nota fora de escopo ficam preservados no corpus, mas não entram nas análises do paper.
+- `manual_review_decisions_google_sheet.csv`: snapshot CSV da planilha Google Sheets com as decisões manuais da fila `manual_review=TRUE`, acessado em 2026-06-02 -03.
 - `benchmark_cp.csv` e `benchmark_ir.csv`: métricas por paper para benchmarks internacionais.
 - `benchmark_cp_stats.json` e `benchmark_ir_stats.json`: estatísticas agregadas dos benchmarks.
 
@@ -30,4 +33,3 @@ Arquivos centrais:
 - Não sobrescrever dados brutos sem preservar versão anterior ou metadados de execução.
 - Toda coleta nova deve registrar fonte, data de acesso e parâmetros.
 - Validações de dados devem checar datas, valores incompatíveis e categorias fora do schema esperado.
-

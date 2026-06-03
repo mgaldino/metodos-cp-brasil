@@ -18,8 +18,10 @@ paths <- list(
   sample_validation = file.path(project_dir, "data", "processed", "sample_validation.csv"),
   normalized_csv = file.path(project_dir, "data", "processed", "classifications_llm_normalized.csv"),
   excluded_journals = file.path(project_dir, "data", "processed", "excluded_journals.csv"),
+  excluded_articles = file.path(project_dir, "data", "processed", "excluded_articles.csv"),
   queue = file.path(project_dir, "quality_reports", "manual_review_queue.csv"),
   excluded_queue = file.path(project_dir, "quality_reports", "manual_review_queue_excluded_journals.csv"),
+  excluded_article_queue = file.path(project_dir, "quality_reports", "manual_review_queue_excluded_articles.csv"),
   queue_by_article = file.path(project_dir, "quality_reports", "manual_review_queue_by_article.csv"),
   codebook = file.path(project_dir, "quality_reports", "manual_review_codebook.md"),
   summary = file.path(project_dir, "quality_reports", "manual_review_queue_summary.md")
@@ -111,6 +113,27 @@ excluded_journals <- if (file.exists(paths$excluded_journals)) {
     exclusion_notes = character()
   )
 }
+excluded_articles <- if (file.exists(paths$excluded_articles)) {
+  readr::read_csv(paths$excluded_articles, show_col_types = FALSE, progress = FALSE) |>
+    dplyr::filter(exclude_from_analysis) |>
+    dplyr::select(
+      pid,
+      excluded_by_article = exclude_from_analysis,
+      article_exclusion_reason = exclusion_reason,
+      article_exclusion_decision_by = decision_by,
+      article_exclusion_decision_date = decision_date,
+      article_exclusion_notes = notes
+    )
+} else {
+  tibble(
+    pid = character(),
+    excluded_by_article = logical(),
+    article_exclusion_reason = character(),
+    article_exclusion_decision_by = character(),
+    article_exclusion_decision_date = character(),
+    article_exclusion_notes = character()
+  )
+}
 
 manual_log <- log |>
   dplyr::filter(manual_review) |>
@@ -143,9 +166,19 @@ full_queue <- manual_log |>
   dplyr::left_join(sample_context, by = "pid") |>
   dplyr::left_join(context_cols, by = "pid") |>
   dplyr::left_join(excluded_journals, by = "issn") |>
+  dplyr::left_join(excluded_articles, by = "pid") |>
   dplyr::mutate(
     excluded_by_journal = dplyr::coalesce(excluded_by_journal, FALSE),
-    exclusion_reason = dplyr::if_else(excluded_by_journal, exclusion_reason, ""),
+    excluded_by_article = dplyr::coalesce(excluded_by_article, FALSE),
+    journal_exclusion_reason = dplyr::if_else(excluded_by_journal, exclusion_reason, ""),
+    article_exclusion_reason = dplyr::if_else(excluded_by_article, article_exclusion_reason, ""),
+    excluded_from_analysis = excluded_by_journal | excluded_by_article,
+    exclusion_reason = dplyr::case_when(
+      excluded_by_journal & excluded_by_article ~ paste(journal_exclusion_reason, article_exclusion_reason, sep = "; "),
+      excluded_by_journal ~ journal_exclusion_reason,
+      excluded_by_article ~ article_exclusion_reason,
+      TRUE ~ ""
+    ),
     decision_status = "pending",
     decision_value = "",
     decision_note = "",
@@ -192,6 +225,8 @@ full_queue <- manual_log |>
     issue_rule,
     action,
     excluded_by_journal,
+    excluded_by_article,
+    excluded_from_analysis,
     exclusion_reason
   )
 
@@ -203,8 +238,16 @@ excluded_queue <- full_queue |>
     decision_note = paste0("Excluído da análise principal por regra de periódico: ", exclusion_reason)
   )
 
+excluded_article_queue <- full_queue |>
+  dplyr::filter(!excluded_by_journal, excluded_by_article) |>
+  dplyr::mutate(
+    decision_status = "excluded_by_article",
+    decision_value = "<NULL>",
+    decision_note = paste0("Excluído da análise principal por regra de artigo: ", exclusion_reason)
+  )
+
 queue <- full_queue |>
-  dplyr::filter(!excluded_by_journal)
+  dplyr::filter(!excluded_by_journal, !excluded_by_article)
 
 queue_by_article <- queue |>
   dplyr::group_by(pid, title, year, journal_title, url_scielo) |>
@@ -221,6 +264,7 @@ queue_by_article <- queue |>
 
 readr::write_csv(queue, paths$queue, na = "")
 readr::write_csv(excluded_queue, paths$excluded_queue, na = "")
+readr::write_csv(excluded_article_queue, paths$excluded_article_queue, na = "")
 readr::write_csv(queue_by_article, paths$queue_by_article, na = "")
 
 field_counts <- queue |>
@@ -294,6 +338,14 @@ summary_lines <- c(
       dplyr::arrange(dplyr::desc(n))
   ),
   "",
+  "## Pendências dispensadas por exclusão de artigo",
+  "",
+  markdown_table(
+    excluded_article_queue |>
+      dplyr::count(pid, title, journal_title, exclusion_reason, name = "n") |>
+      dplyr::arrange(journal_title, title)
+  ),
+  "",
   "## Artigos por Número de Pendências",
   "",
   markdown_table(article_counts),
@@ -302,6 +354,7 @@ summary_lines <- c(
   "",
   paste0("- `", paths$queue, "`"),
   paste0("- `", paths$excluded_queue, "`"),
+  paste0("- `", paths$excluded_article_queue, "`"),
   paste0("- `", paths$queue_by_article, "`"),
   paste0("- `", paths$codebook, "`"),
   paste0("- `", paths$summary, "`")
@@ -311,5 +364,6 @@ writeLines(summary_lines, paths$summary, useBytes = TRUE)
 cat("Fila de revisão manual preparada.\n")
 cat("Linhas pendentes:", nrow(queue), "\n")
 cat("Linhas dispensadas por exclusão de periódico:", nrow(excluded_queue), "\n")
+cat("Linhas dispensadas por exclusão de artigo:", nrow(excluded_article_queue), "\n")
 cat("Artigos com pendências:", nrow(queue_by_article), "\n")
 cat("Arquivo:", paths$queue, "\n")

@@ -1,6 +1,6 @@
 # Fila de Revisão Manual
 
-Gerado em 2026-06-02 22:53:23 -03
+Gerado em 2026-06-02 23:59:57 -03
 
 ## Como usar
 
@@ -15,12 +15,12 @@ Gerado em 2026-06-02 22:53:23 -03
 
 | field | n |
 | --- | --- |
-| effort_to_explore_mechanisms | 41 |
-| general_goal_of_analysis | 26 |
-| method_status | 26 |
+| effort_to_explore_mechanisms | 38 |
+| general_goal_of_analysis | 24 |
+| method_status | 23 |
 | single_region | 16 |
-| single_country_study | 12 |
-| evidence_type |  8 |
+| single_country_study | 11 |
+| evidence_type |  7 |
 | main_variable_relationship |  5 |
 | paper_uses_survey_data |  5 |
 | uses_original_dataset |  4 |
@@ -36,6 +36,14 @@ Gerado em 2026-06-02 22:53:23 -03
 | Civitas - Revista de Ciências Sociais | 1519-6089 | out_of_scope_social_sciences |  6 |
 | Civitas - Revista de Ciências Sociais | 1984-7289 | out_of_scope_social_sciences |  2 |
 
+## Pendências dispensadas por exclusão de artigo
+
+| pid | title | journal_title | exclusion_reason | n |
+| --- | --- | --- | --- | --- |
+| S0102-85292023000200904 | 'Novas direções para a Análise de Política Externa': reconfigurando o campo | Contexto Internacional | non_research_editorial | 4 |
+| S0011-52582022000100401 | Por uma Abordagem Interdisciplinar, Estrutural e Interseccional de Usuárias(os) do Estado: Comentário Crítico ao Artigo &#8220;Categorizando Usuários &#8216;Fáceis&#8217; e &#8216;Difíceis&#8217;...&#8221; de Gabriela Spanghero Lotta e Roberto Rocha Coelho Pires | Dados | non_independent_article_commentary | 3 |
+| S0011-52582008000200002 | Ruth Corrêa Leite Cardoso | Dados | non_research_obituary | 3 |
+
 ## Artigos por Número de Pendências
 
 | n_pending | n_articles |
@@ -43,8 +51,8 @@ Gerado em 2026-06-02 22:53:23 -03
 | 8 | 1 |
 | 6 | 1 |
 | 5 | 6 |
-| 4 | 15 |
-| 3 | 9 |
+| 4 | 14 |
+| 3 | 7 |
 | 2 | 4 |
 | 1 | 6 |
 
@@ -52,6 +60,7 @@ Gerado em 2026-06-02 22:53:23 -03
 
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue.csv`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_excluded_journals.csv`
+- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_excluded_articles.csv`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_by_article.csv`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_codebook.md`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_summary.md`

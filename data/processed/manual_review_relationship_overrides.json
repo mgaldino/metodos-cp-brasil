@@ -1,0 +1,34 @@
+[
+  {
+    "pid": "S1981-38212007000100070",
+    "field": "main_variable_relationship",
+    "decision_by": "Manoel/Codex",
+    "decision_date": "2026-06-03",
+    "decision_note": "Regressões logísticas com múltiplos preditores para voto em quatro candidatos; direção varia por candidato/preditor, portanto a relação agregada fica como Unknown.",
+    "value": [
+      {
+        "iv_var_name": "religion; party sentiments; left-right self-placement; government performance evaluation; candidate attributes; political opinions",
+        "dv_var_name": "vote choice in the 2002 presidential election",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ]
+  },
+  {
+    "pid": "S1981-38212013000200003",
+    "field": "main_variable_relationship",
+    "decision_by": "Manoel/Codex",
+    "decision_date": "2026-06-03",
+    "decision_note": "Regressão logística com múltiplas relações IV/DV interpretadas substantivamente; direção varia por variável/modelo, portanto a relação agregada fica como Unknown.",
+    "value": [
+      {
+        "iv_var_name": "perceptions of justice; perceptions of inequality; trust in institutions",
+        "dv_var_name": "attitudes toward the judiciary; dissatisfaction with democracy",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ]
+  }
+]
