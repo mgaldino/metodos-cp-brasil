@@ -90,16 +90,25 @@ sample_validation <- readr::read_csv(paths$sample_validation, show_col_types = F
 normalized <- readr::read_csv(paths$normalized_csv, show_col_types = FALSE, progress = FALSE)
 excluded_journals <- if (file.exists(paths$excluded_journals)) {
   readr::read_csv(paths$excluded_journals, show_col_types = FALSE, progress = FALSE) |>
-    dplyr::filter(exclude_from_analysis)
+    dplyr::filter(exclude_from_analysis) |>
+    dplyr::select(
+      issn,
+      excluded_journal_title = journal_title,
+      excluded_by_journal = exclude_from_analysis,
+      exclusion_reason,
+      exclusion_decision_by = decision_by,
+      exclusion_decision_date = decision_date,
+      exclusion_notes = notes
+    )
 } else {
   tibble(
-    journal_title = character(),
     issn = character(),
-    exclude_from_analysis = logical(),
+    excluded_journal_title = character(),
+    excluded_by_journal = logical(),
     exclusion_reason = character(),
-    decision_by = character(),
-    decision_date = character(),
-    notes = character()
+    exclusion_decision_by = character(),
+    exclusion_decision_date = character(),
+    exclusion_notes = character()
   )
 }
 
@@ -133,14 +142,10 @@ full_queue <- manual_log |>
   dplyr::left_join(metadata, by = "pid") |>
   dplyr::left_join(sample_context, by = "pid") |>
   dplyr::left_join(context_cols, by = "pid") |>
+  dplyr::left_join(excluded_journals, by = "issn") |>
   dplyr::mutate(
-    excluded_by_journal = issn %in% excluded_journals$issn |
-      journal_title %in% excluded_journals$journal_title,
-    exclusion_reason = dplyr::if_else(
-      excluded_by_journal,
-      "out_of_scope_economics",
-      ""
-    ),
+    excluded_by_journal = dplyr::coalesce(excluded_by_journal, FALSE),
+    exclusion_reason = dplyr::if_else(excluded_by_journal, exclusion_reason, ""),
     decision_status = "pending",
     decision_value = "",
     decision_note = "",
