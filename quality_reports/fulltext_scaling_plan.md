@@ -1,6 +1,6 @@
 # Fulltext scaling plan
 
-Generated at: 2026-06-03 20:10:20 -03
+Generated at: 2026-06-03 20:38:39 -03
 
 ## Universe
 
@@ -69,6 +69,25 @@ Gold recovery method counts:
 - Text starting with `Referências`, `References`, `Bibliografia` or equivalent fails.
 - Reference-tail share above 45% fails; 25-45% is suspicious and should enter manual QA.
 - Abstract, metadata, keywords and references must never be promoted to `body_text` in silence.
+
+## Implementation checklist for corpus-wide run
+
+- Create a corpus-wide recovery script, preferably `scripts/16_recover_fulltext_corpus.py`, by generalizing `scripts/13_recover_fulltext_gold.py`; do not repurpose the gold output paths.
+- The corpus script must build its eligible PID manifest from `data/raw/articles_2005_2025.csv`, `data/processed/excluded_journals.csv`, and `data/processed/excluded_articles.csv`, applying journal/article exclusions and `document_type == "research-article"` before any HTTP request.
+- The corpus script must write raw cache only under `data/raw/fulltext_corpus/` and processed text only under `data/processed/fulltext_corpus/article_texts_corpus.csv`.
+- Preserve the same deterministic fallback order, provenance fields, hashes, resume behavior, and validation flags used by the gold recovery.
+- Add an offline/resume mode that reconstructs the processed CSV from preserved raw files without network access, analogous to `python3 scripts/13_recover_fulltext_gold.py --offline`.
+- Create a corpus-wide validation script, preferably `scripts/17_validate_fulltext_corpus.R`, by generalizing `scripts/14_validate_fulltext_gold.R`; it must fail when any eligible PID is missing, duplicated, too short, front-matter-only, references-only, or lacks provenance.
+- After recovery, regenerate inventory/report outputs and update `README.md`, `data/README.md`, and `scripts/README.md` if paths, counts, or source behavior changed.
+
+Recommended verification sequence after implementation:
+
+```bash
+python3 scripts/16_recover_fulltext_corpus.py --workers 4 --batch-size 250
+python3 scripts/16_recover_fulltext_corpus.py --offline
+Rscript --vanilla scripts/17_validate_fulltext_corpus.R
+python3 -m pytest scripts
+```
 
 ## Estimated runtime
 
