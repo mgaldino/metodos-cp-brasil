@@ -1,6 +1,6 @@
 # Fila de Revisão Manual
 
-Gerado em 2026-06-01 16:39:38 -03
+Gerado em 2026-06-02 22:10:14 -03
 
 ## Como usar
 
@@ -15,17 +15,24 @@ Gerado em 2026-06-01 16:39:38 -03
 
 | field | n |
 | --- | --- |
-| effort_to_explore_mechanisms | 50 |
-| general_goal_of_analysis | 32 |
+| effort_to_explore_mechanisms | 44 |
+| general_goal_of_analysis | 28 |
 | method_status | 26 |
-| single_region | 21 |
-| single_country_study | 14 |
+| single_region | 17 |
+| single_country_study | 13 |
 | evidence_type |  8 |
-| error_in_raw_text |  6 |
-| main_variable_relationship |  6 |
+| main_variable_relationship |  5 |
 | paper_uses_survey_data |  5 |
 | uses_original_dataset |  5 |
+| error_in_raw_text |  1 |
 | is_empirical_quant_paper |  1 |
+
+## Pendências dispensadas por exclusão de periódico
+
+| journal_title | issn | exclusion_reason | n |
+| --- | --- | --- | --- |
+| Brazilian Journal of Political Economy | 0101-3157 | out_of_scope_economics | 15 |
+| Brazilian Journal of Political Economy | 1809-4538 | out_of_scope_economics |  6 |
 
 ## Artigos por Número de Pendências
 
@@ -34,14 +41,15 @@ Gerado em 2026-06-01 16:39:38 -03
 | 8 | 1 |
 | 6 | 1 |
 | 5 | 6 |
-| 4 | 17 |
-| 3 | 11 |
-| 2 | 8 |
-| 1 | 13 |
+| 4 | 15 |
+| 3 | 10 |
+| 2 | 6 |
+| 1 | 7 |
 
 ## Arquivos Gerados
 
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue.csv`
+- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_excluded_journals.csv`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_by_article.csv`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_codebook.md`
 - `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_summary.md`
