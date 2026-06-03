@@ -6,8 +6,10 @@ Este repositório replica e expande Torreblanca et al. (2026), "The Credibility 
 
 - Corpus coletado: `data/raw/articles_2005_2025.csv`, com 8.400 artigos, 15 periódicos e anos de publicação entre 2005 e 2025.
 - Amostra de validação: `data/processed/sample_validation.csv`, com 208 artigos.
-- Classificações LLM: `data/processed/classifications_llm.csv`, com 208 artigos classificados.
+- Classificações LLM finais pós-revisão manual: `data/processed/classifications_llm.csv`, com 208 artigos classificados e schema validado; os JSONs finais estão em `data/processed/classifications_final/`.
+- Base operacional da análise principal: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão.
 - Benchmarks internacionais de readability: `data/processed/benchmark_cp.csv` e `data/processed/benchmark_ir.csv`.
+- Validação final das classificações: `Rscript --vanilla scripts/09_apply_manual_review_decisions.R` gerou zero erros de schema em 2026-06-03; o relatório está em `quality_reports/classification_validation_summary_final.md`.
 - Testes locais: `python3 -m pytest scripts` passou com 59 testes em 2026-06-01.
 
 ## Estrutura
@@ -60,17 +62,34 @@ Rscript --vanilla scripts/03_sample_articles.R
 ANTHROPIC_API_KEY=... python3 scripts/04_classify_articles.py
 ```
 
-5. Construir benchmarks internacionais:
+5. Validar, normalizar e fechar classificações:
+
+```bash
+Rscript --vanilla scripts/05_validate_classifications.R
+Rscript --vanilla scripts/06_normalize_classifications.R
+Rscript --vanilla scripts/07_prepare_manual_review_queue.R
+Rscript --vanilla scripts/08_validate_manual_review_decisions.R
+Rscript --vanilla scripts/09_apply_manual_review_decisions.R
+```
+
+6. Construir benchmarks internacionais:
 
 ```bash
 python3 scripts/build_benchmark.py --field both
 ```
 
-6. Rodar testes:
+7. Rodar testes:
 
 ```bash
 python3 -m pytest scripts
 ```
+
+## Inclusão e Exclusão
+
+- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` ficam fora da análise principal por decisão de escopo documentada em `data/processed/excluded_journals.csv`.
+- Os artigos listados em `data/processed/excluded_articles.csv` ficam fora da análise principal, mas permanecem preservados no corpus.
+- `data/processed/classifications_llm.csv` mantém os 208 registros da amostra para rastreabilidade. Para análises substantivas, use `data/processed/classifications_llm_main_analysis.csv` ou aplique explicitamente os ledgers de exclusão.
+- `data/processed/classifications_llm_pre_manual_review.csv` preserva o CSV consolidado antes da aplicação das decisões manuais.
 
 ## Convenções
 
@@ -84,9 +103,7 @@ python3 -m pytest scripts
 
 ## Pontos Pendentes
 
-- Normalizar o schema de `data/processed/classifications/*.json`: há classificações antigas com valores fora do schema atual, especialmente em `error_in_raw_text`, `single_country_study`, `single_region`, `paper_uses_survey_data`, `uses_original_dataset` e `effort_to_explore_mechanisms`.
-- Consolidar um script mestre em R para gerar tabelas e figuras finais a partir de `data/processed/classifications_llm.csv`.
+- Consolidar um script mestre em R para gerar tabelas e figuras finais a partir de `data/processed/classifications_llm_main_analysis.csv` ou de `data/processed/classifications_llm.csv` com os ledgers de exclusão aplicados explicitamente.
 - Escrever o manuscrito em `paper/paper.Rmd`.
 - Documentar a versão final do corpus e os critérios de inclusão/exclusão no apêndice.
 - Preparar um pacote de replicação em `replication/`.
-

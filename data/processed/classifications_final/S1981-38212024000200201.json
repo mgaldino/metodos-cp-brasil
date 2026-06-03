@@ -1,0 +1,42 @@
+{
+  "pid": "S1981-38212024000200201",
+  "error_in_raw_text": "No Error",
+  "subfield": "International Relations",
+  "is_empirical_quant_paper": false,
+  "general_goal_of_analysis": "Describe",
+  "single_country_study": "multiple_countries",
+  "single_region": "multiple_region",
+  "countries_of_focus": "Brazil; Angola",
+  "paper_uses_survey_data": "no_survey_data",
+  "uses_original_dataset": "not_original",
+  "seeks_determinants": false,
+  "main_causal_research_design": null,
+  "other_research_design": "Case study",
+  "instrumental_variable_instrument": null,
+  "placebo_test": false,
+  "independent_variables": [
+    "Evangelical groups' missionary activities and political influence"
+  ],
+  "dependent_variables": [
+    "Brazilian foreign policy toward Africa"
+  ],
+  "main_variable_relationship": null,
+  "makes_explicit_causal_claim": false,
+  "makes_implicit_causal_claim": true,
+  "strong_non_causal_causal_qualification": false,
+  "sample_size": null,
+  "sample_size_quote": null,
+  "claims_any_statistically_significant_results": false,
+  "references_power_analysis": false,
+  "clearly_defined_explanatory_variable": false,
+  "clear_causal_quantity_of_interest": "FALSE",
+  "specifies_estimate_equations": false,
+  "discusses_threats_to_causality": false,
+  "statement_of_identification_assumptions_quote": null,
+  "statement_of_identification_assumptions": false,
+  "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+  "mentions_pre_registered_design_and_analysis_plan": false,
+  "evidence_type": "qualitative",
+  "method_status": "explicit",
+  "brief_justification": "This is a qualitative case study analyzing how Evangelical Christian groups, particularly the Universal Church of the Kingdom of God (IURD), influenced Brazilian foreign policy toward Africa during the Bolsonaro government. The paper uses the 2019 IURD crisis in Angola as a single case study. It contains no quantitative data, no statistical analysis, no tables or figures, and relies on documentary sources including news reports and secondary literature. The paper implicitly argues that Evangelicals shaped foreign policy but does not employ any formal causal research design or quantitative methods."
+}

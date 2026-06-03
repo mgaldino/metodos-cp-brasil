@@ -18,6 +18,11 @@
 - `06_normalize_classifications.R`: gera uma versão candidata normalizada dos JSONs/CSV sem sobrescrever os originais, com log auditável e reconciliação das pendências manuais.
 - `07_prepare_manual_review_queue.R`: prepara a fila de revisão manual e separa pendências dispensadas por regras de exclusão de periódico ou artigo.
 - `08_validate_manual_review_decisions.R`: valida o snapshot da planilha Google Sheets com decisões manuais contra a fila local e checa overrides estruturados pendentes, produzindo relatório e CSVs auditáveis em `quality_reports/`.
+- `09_apply_manual_review_decisions.R`: aplica `quality_reports/manual_review_decisions_validated.csv` e `data/processed/manual_review_relationship_overrides.json` aos JSONs normalizados, gera `data/processed/classifications_final/`, atualiza o CSV canônico `data/processed/classifications_llm.csv`, preserva `data/processed/classifications_llm_pre_manual_review.csv`, cria `data/processed/classifications_llm_main_analysis.csv` e exige zero erros de schema via `05_validate_classifications.R`.
+
+Estado em 2026-06-03: a etapa pós-revisão manual está fechada. A validação final registrou 208 JSONs, 208 linhas no CSV canônico, 175 linhas na base da análise principal, 0 erros e 9 avisos não bloqueantes de `non_research_article_document_type`.
+
+Regra operacional de exclusões: `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais` e os artigos em `data/processed/excluded_articles.csv` ficam fora da análise principal, mas permanecem preservados no corpus e nos artefatos rastreáveis.
 
 ## Benchmark e auditoria
 

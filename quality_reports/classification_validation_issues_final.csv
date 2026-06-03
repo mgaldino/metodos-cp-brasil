@@ -1,0 +1,10 @@
+scope,file,pid,rule,severity,value,expected,detail
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,103,review inclusion/exclusion before final analysis,undefined
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,68,review inclusion/exclusion before final analysis,article-commentary
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,60,review inclusion/exclusion before final analysis,brief-report
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,44,review inclusion/exclusion before final analysis,rapid-communication
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,40,review inclusion/exclusion before final analysis,press-release
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,26,review inclusion/exclusion before final analysis,review-article
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,4,review inclusion/exclusion before final analysis,addendum
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,4,review inclusion/exclusion before final analysis,case-report
+corpus,articles_2005_2025.csv,,non_research_article_document_type,WARN,3,review inclusion/exclusion before final analysis,abstract

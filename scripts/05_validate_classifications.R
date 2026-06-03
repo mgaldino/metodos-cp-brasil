@@ -665,12 +665,20 @@ snapshot <- tibble(
   )
 )
 
-next_steps <- c(
-  "1. Corrigir primeiro os erros de schema em `error_in_raw_text`, `paper_uses_survey_data`, `uses_original_dataset`, `single_country_study`, `single_region`, `clear_causal_quantity_of_interest` e `effort_to_explore_mechanisms`.",
-  "2. Decidir se campos extras (`classified_by`, `qualitative_method`) serão incorporados ao schema oficial ou removidos antes da consolidação.",
-  "3. Regerar `data/processed/classifications_llm.csv` a partir dos JSONs corrigidos.",
-  "4. Só depois usar `classifications_llm.csv` para tabelas, figuras e inferências substantivas."
-)
+next_steps <- if (sum(issues$severity == "ERROR") == 0) {
+  c(
+    "1. Não há erros de schema nesta validação.",
+    "2. Revisar eventuais `WARN` documentados antes de análises substantivas, sem bloquear o uso do CSV validado.",
+    "3. Usar o CSV validado correspondente a esta execução para a próxima etapa documentada do pipeline."
+  )
+} else {
+  c(
+    "1. Corrigir primeiro os erros de schema em `error_in_raw_text`, `paper_uses_survey_data`, `uses_original_dataset`, `single_country_study`, `single_region`, `clear_causal_quantity_of_interest` e `effort_to_explore_mechanisms`.",
+    "2. Decidir se campos extras (`classified_by`, `qualitative_method`) serão incorporados ao schema oficial ou removidos antes da consolidação.",
+    "3. Regerar `data/processed/classifications_llm.csv` a partir dos JSONs corrigidos.",
+    "4. Só depois usar `classifications_llm.csv` para tabelas, figuras e inferências substantivas."
+  )
+}
 
 summary_lines <- c(
   paste("# Validação das", validation_label),
