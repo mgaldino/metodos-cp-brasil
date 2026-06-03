@@ -10,6 +10,16 @@ Replicação e expansão de Torreblanca et al. (2026) "The Credibility Revolutio
 - **R: análise de dados, visualização e gráficos** (usar R para toda análise, não Python)
 - Dados: `data/raw/`, `data/processed/`
 
+## Fluxo para agentes
+
+- Quem revisa não implementa; quem implementa não revisa o próprio trabalho.
+- Revisões devem produzir relatório, não editar arquivos.
+- Implementações que alterem dados, scripts ou relatórios devem ser revisadas por agente independente antes de commit/push quando houver risco metodológico ou reprodutível.
+- Não ampliar escopo sem pedido explícito: se a tarefa é validar, validar e relatar; não aplicar decisões, criar overrides ou refatorar pipeline.
+- Usar skills quando apropriado, especialmente `review-r`, `data-analysis-r`, `review-python` e `devils-advocate`.
+- Análises em R devem estar em scripts, não em comandos inline.
+- Todo output derivado precisa ter script de geração. Se não há script, não há auditoria; se não há auditoria, não é reprodutível.
+
 ## Corpus
 
 - **Fonte**: SciELO Brasil (coleção `scl`), API ArticleMeta
