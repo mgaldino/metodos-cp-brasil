@@ -8,6 +8,7 @@ Este repositório replica e expande Torreblanca et al. (2026), "The Credibility 
 - Amostra de validação: `data/processed/sample_validation.csv`, com 208 artigos.
 - Classificações LLM finais pós-revisão manual: `data/processed/classifications_llm.csv`, com 208 artigos classificados e schema validado; os JSONs finais estão em `data/processed/classifications_final/`.
 - Base operacional atual da amostra classificada: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão. Este arquivo é a amostra validada pós-exclusões, não a base final do paper.
+- Texto integral dos 175 artigos gold/piloto: `data/processed/fulltext_gold/article_texts_gold.csv`, validado em 2026-06-03 com 175/175 bodies recuperados. Esta é a fonte canônica de body para o piloto/gold; não use abstract, metadados, keywords, referências ou os XMLs antigos como substituto de body.
 - Piloto de classificação tripla independente: `data/processed/full_classification_pilot/`, usando subagentes Codex locais e os 175 artigos elegíveis apenas como gold/piloto.
 - Benchmarks internacionais de readability: `data/processed/benchmark_cp.csv` e `data/processed/benchmark_ir.csv`.
 - Validação final das classificações: `Rscript --vanilla scripts/09_apply_manual_review_decisions.R` gerou zero erros de schema em 2026-06-03; o relatório está em `quality_reports/classification_validation_summary_final.md`.
@@ -79,7 +80,15 @@ Rscript --vanilla scripts/12_compare_full_classification_pilot.R
 
 Este piloto não usa `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` nem runner de API. As classificações são produzidas por subagentes Codex independentes, e `classifications_llm_main_analysis.csv` é usado apenas como gold/piloto para seleção e avaliação.
 
-Limitação do piloto executado em 2026-06-03: os 175 XMLs locais usados como entrada não continham `<body>` e eram idênticos entre `data/processed/sample_xmls/` e `data/raw/articles_fulltext/`. Portanto, a rodada classifica o texto disponível nos XMLs, não corpo integral de artigo.
+Limitação documentada em 2026-06-03: os 175 XMLs locais usados como entrada não continham `<body>` e eram idênticos entre `data/processed/sample_xmls/` e `data/raw/articles_fulltext/`. O body integral dos 175 gold/piloto foi recuperado posteriormente e a fonte canônica passou a ser `data/processed/fulltext_gold/article_texts_gold.csv`.
+
+```bash
+python3 scripts/13_recover_fulltext_gold.py --offline
+Rscript --vanilla scripts/14_validate_fulltext_gold.R
+Rscript --vanilla scripts/15_write_fulltext_scaling_plan.R
+```
+
+Os brutos usados estão preservados em `data/raw/fulltext_gold/`; a validação e o plano de escala estão em `quality_reports/fulltext_gold_recovery_report.md`, `quality_reports/fulltext_gold_inventory.csv` e `quality_reports/fulltext_scaling_plan.md`.
 
 5. Classificar artigos via LLM/API, quando houver decisão posterior de escala:
 
@@ -125,13 +134,14 @@ python3 -m pytest scripts
 - Use R para análise estatística, validação de dados, tabelas e figuras.
 - Preserve arquivos brutos e extraídos em `data/raw/`.
 - Salve outputs derivados em `data/processed/` ou `output/`.
+- Para os 175 gold/piloto, use `data/processed/fulltext_gold/article_texts_gold.csv` como fonte canônica de body. `has_fulltext_xml=1` e arquivos em `data/raw/articles_fulltext/` não garantem texto integral utilizável.
 - Antes de análises substantivas novas, registre um plano em `quality_reports/plans/`.
 - Em R, use `dplyr::select()` explicitamente ao selecionar colunas.
 - Figuras e tabelas do paper devem ser numeradas e ter caption.
 
 ## Pontos Pendentes
 
-- Expandir a classificação para o corpus completo elegível, excluindo `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` da análise principal.
+- Expandir a recuperação de body e a classificação para o corpus completo elegível, excluindo `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` da análise principal antes da extração. O plano operacional está em `quality_reports/fulltext_scaling_plan.md`.
 - Consolidar um script mestre em R para gerar tabelas e figuras finais a partir da base completa classificada elegível, com os ledgers de exclusão aplicados explicitamente.
 - Escrever o manuscrito em `paper/paper.Rmd`.
 - Documentar a versão final do corpus e os critérios de inclusão/exclusão no apêndice.

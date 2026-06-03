@@ -21,6 +21,14 @@ paths <- list(
 
 dir.create(dirname(paths$report), showWarnings = FALSE, recursive = TRUE)
 
+expected_gold_n <- 175L
+
+normalize_label <- function(x) {
+  x |>
+    stringr::str_to_lower() |>
+    stringr::str_squish()
+}
+
 articles <- readr::read_csv(paths$articles, show_col_types = FALSE)
 
 excluded_journals <- readr::read_csv(paths$excluded_journals, show_col_types = FALSE)
@@ -50,6 +58,7 @@ excluded_journal_names <- unique(c(
   "Brazilian Journal of Political Economy",
   "Civitas - Revista de Ciências Sociais"
 ))
+excluded_journal_keys <- normalize_label(excluded_journal_names)
 
 excluded_article_pids <- if ("pid" %in% names(excluded_articles)) {
   excluded_articles_active |> dplyr::pull(pid)
@@ -58,27 +67,45 @@ excluded_article_pids <- if ("pid" %in% names(excluded_articles)) {
 }
 
 eligible <- articles |>
+  dplyr::mutate(journal_title_key = normalize_label(journal_title)) |>
   dplyr::filter(
-    !journal_title %in% excluded_journal_names,
+    !journal_title_key %in% excluded_journal_keys,
     !pid %in% excluded_article_pids,
     dplyr::coalesce(document_type, "") == "research-article"
-  )
+  ) |>
+  dplyr::select(-journal_title_key)
 
 journal_counts <- eligible |>
   dplyr::count(journal_title, name = "n") |>
   dplyr::arrange(dplyr::desc(n), journal_title)
 
-method_counts <- NULL
 median_seconds_per_article <- 1.0
-validated_gold <- 0L
-if (file.exists(paths$inventory)) {
-  inventory <- readr::read_csv(paths$inventory, show_col_types = FALSE)
-  validated_gold <- sum(inventory$validation_status == "PASS")
-  method_counts <- inventory |>
-    dplyr::filter(validation_status == "PASS") |>
-    dplyr::count(source_method, name = "n") |>
-    dplyr::arrange(dplyr::desc(n), source_method)
+if (!file.exists(paths$inventory)) {
+  stop("Inventário gold ausente; rode scripts/14_validate_fulltext_gold.R antes: ", paths$inventory)
 }
+
+inventory <- readr::read_csv(paths$inventory, show_col_types = FALSE)
+required_inventory_cols <- c("pid", "validation_status", "source_method")
+missing_inventory_cols <- setdiff(required_inventory_cols, names(inventory))
+if (length(missing_inventory_cols) > 0) {
+  stop("Colunas ausentes no inventário gold: ", paste(missing_inventory_cols, collapse = ", "))
+}
+
+validated_gold <- sum(inventory$validation_status == "PASS")
+if (nrow(inventory) != expected_gold_n ||
+    dplyr::n_distinct(inventory$pid) != expected_gold_n ||
+    validated_gold != expected_gold_n) {
+  stop(
+    "Inventário gold não está validado 175/175: rows=", nrow(inventory),
+    ", unique_pids=", dplyr::n_distinct(inventory$pid),
+    ", pass=", validated_gold
+  )
+}
+
+method_counts <- inventory |>
+  dplyr::filter(validation_status == "PASS") |>
+  dplyr::count(source_method, name = "n") |>
+  dplyr::arrange(dplyr::desc(n), source_method)
 
 eligible_n <- nrow(eligible)
 batch_size <- 250L
@@ -87,11 +114,7 @@ estimated_minutes_serial <- ceiling(eligible_n * median_seconds_per_article / 60
 estimated_minutes_parallel_4 <- ceiling(eligible_n * median_seconds_per_article / 4 / 60)
 
 journal_lines <- paste0("- ", journal_counts$journal_title, ": ", journal_counts$n)
-method_lines <- if (is.null(method_counts) || nrow(method_counts) == 0) {
-  "- Gold recovery method counts unavailable; run `scripts/14_validate_fulltext_gold.R` first."
-} else {
-  paste0("- ", method_counts$source_method, ": ", method_counts$n)
-}
+method_lines <- paste0("- ", method_counts$source_method, ": ", method_counts$n)
 
 lines <- c(
   "# Fulltext scaling plan",

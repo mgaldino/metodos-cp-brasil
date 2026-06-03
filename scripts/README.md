@@ -11,6 +11,7 @@ O pipeline deve avançar da amostra de validação para a classificação do cor
 - `01_discover_journals.py`: consulta a API ArticleMeta do SciELO, lista periódicos e aplica filtros de área.
 - `02_collect_articles.py`: coleta metadados e XMLs dos artigos, preservando respostas brutas e logs.
 - `03_sample_articles.R`: gera amostra estratificada para validação manual.
+- `13_recover_fulltext_gold.py`: recupera body integral dos 175 artigos gold/piloto, por PID, usando ArticleMeta HTML, seletores SciELO `Text`/`Texto`, XML real com `<body>` e PDF como fallback. Preserva brutos em `data/raw/fulltext_gold/` e só escreve `data/processed/fulltext_gold/article_texts_gold.csv` quando fecha 175/175.
 
 ## Classificação
 
@@ -33,9 +34,14 @@ O piloto triplo em `data/processed/full_classification_pilot/` não usa `ANTHROP
 
 Estado em 2026-06-03: a etapa pós-revisão manual da amostra está fechada. A validação final registrou 208 JSONs, 208 linhas no CSV canônico da amostra, 175 linhas elegíveis pós-exclusões, 0 erros e 9 avisos não bloqueantes de `non_research_article_document_type`.
 
+Fonte canônica de body para os 175 gold/piloto: `data/processed/fulltext_gold/article_texts_gold.csv`, gerado por `scripts/13_recover_fulltext_gold.py` e validado por `scripts/14_validate_fulltext_gold.R`. Os XMLs antigos em `data/raw/articles_fulltext/` e `data/processed/sample_xmls/` não continham `<body>` real e não devem ser usados como substituto de texto integral.
+
 Regra operacional de exclusões: `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais` e os artigos em `data/processed/excluded_articles.csv` ficam fora da análise principal, mas permanecem preservados no corpus e nos artefatos rastreáveis.
 
 Próximo passo documentado: adaptar/rodar a classificação em escala para o corpus completo elegível e gerar uma nova base analítica final, com exclusões aplicadas explicitamente.
+
+- `14_validate_fulltext_gold.R`: valida que os 175 PIDs gold/piloto têm body integral recuperado, PIDs únicos, proveniência obrigatória, texto maior que abstract, corpo não vazio e não composto por referências. Gera `quality_reports/fulltext_gold_recovery_report.md` e `quality_reports/fulltext_gold_inventory.csv`.
+- `15_write_fulltext_scaling_plan.R`: escreve `quality_reports/fulltext_scaling_plan.md` para escalar a extração ao corpus elegível completo. Exige antes inventário gold validado 175/175 `PASS`.
 
 ## Benchmark e auditoria
 

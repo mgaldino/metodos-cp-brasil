@@ -56,6 +56,7 @@ RAW_FULLTEXT_DIR = PROJECT_DIR / "data" / "raw" / "fulltext_gold"
 RAW_HTML_DIR = RAW_FULLTEXT_DIR / "html"
 RAW_XML_DIR = RAW_FULLTEXT_DIR / "xml"
 RAW_PDF_DIR = RAW_FULLTEXT_DIR / "pdf"
+RAW_META_DIR = RAW_FULLTEXT_DIR / "metadata"
 LOG_DIR = PROJECT_DIR / "data" / "raw" / "logs"
 PROCESSED_DIR = PROJECT_DIR / "data" / "processed" / "fulltext_gold"
 OUTPUT_CSV = PROCESSED_DIR / "article_texts_gold.csv"
@@ -75,9 +76,14 @@ REFERENCE_HEADINGS = {
     "referencias",
     "referencias bibliograficas",
     "referencias bibliográficas",
+    "referencias e notas",
+    "referências e notas",
     "references",
+    "references and notes",
+    "notes and references",
     "bibliografia",
     "bibliography",
+    "bibliographic references",
     "referencias bibliograficas",
     "referencias bibliograficas",
 }
@@ -203,6 +209,47 @@ def save_raw_if_missing(path: Path, data: bytes) -> bool:
     return True
 
 
+def url_digest(url: str) -> str:
+    """Return a short stable digest for a source URL."""
+
+    return hashlib.sha256(url.encode("utf-8")).hexdigest()[:12]
+
+
+def candidate_raw_path(directory: Path, pid: str, suffix: str, url: str) -> Path:
+    """Return a URL-specific cache path for one raw source candidate."""
+
+    return directory / f"{pid}_{url_digest(url)}.{suffix}"
+
+
+def canonical_raw_path(directory: Path, pid: str, suffix: str) -> Path:
+    """Return the canonical raw path requested for the accepted PID source."""
+
+    return directory / f"{pid}.{suffix}"
+
+
+def write_raw_sidecar(
+    raw_path: Path,
+    source_url: str,
+    final_url: str,
+    content_type: str,
+    retrieved_at: str,
+) -> None:
+    """Write sidecar metadata for a fetched raw file."""
+
+    sidecar = RAW_META_DIR / f"{raw_path.name}.json"
+    if sidecar.exists():
+        return
+    payload = {
+        "raw_path": str(raw_path.relative_to(PROJECT_DIR)),
+        "source_url": source_url,
+        "final_url": final_url,
+        "content_type": content_type,
+        "retrieved_at": retrieved_at,
+        "sha256": file_sha256(raw_path),
+    }
+    atomic_write_text(sidecar, json.dumps(payload, ensure_ascii=False, indent=2))
+
+
 def file_sha256(path: Path) -> str:
     """Return SHA-256 hash for a local file."""
 
@@ -274,6 +321,27 @@ def word_count(text: str) -> int:
     """Count words in Portuguese/English/Spanish/French text."""
 
     return len(re.findall(r"[A-Za-zÀ-ÖØ-öø-ÿ0-9]+", text))
+
+
+def metadata_title_candidates(metadata: dict[str, str]) -> list[str]:
+    """Return local title metadata useful for front-matter removal."""
+
+    return [
+        value
+        for value in [metadata.get("title", ""), metadata.get("title_en", "")]
+        if normalize_space(value)
+    ]
+
+
+def metadata_author_candidates(metadata: dict[str, str]) -> list[str]:
+    """Return local author metadata useful for front-matter removal."""
+
+    authors = normalize_space(metadata.get("authors", ""))
+    if not authors:
+        return []
+    pieces = [authors]
+    pieces.extend(re.split(r"\s*(?:\||;)\s*", authors))
+    return [piece for piece in pieces if normalize_space(piece)]
 
 
 def longest_text(values: list[str]) -> str:
@@ -497,10 +565,19 @@ def is_reference_heading(text: str) -> bool:
     key = normalize_key(text).strip()
     if key in {normalize_key(item) for item in REFERENCE_HEADINGS}:
         return True
-    if len(key) <= 45 and (
+    if (
         key.startswith("referencias bibliograficas")
-        or key.startswith("referencias bibliograficas")
+        or key.startswith("referencias e notas")
+        or key.startswith("references and notes")
+        or key.startswith("notes and references")
         or key.startswith("bibliographic references")
+    ):
+        return True
+    if (
+        key.startswith("referencias")
+        or key.startswith("references")
+        or key.startswith("bibliografia")
+        or key.startswith("bibliography")
     ):
         return True
     return False
@@ -681,6 +758,7 @@ def reference_tail_ratio(text: str) -> float:
         if is_reference_heading(block):
             tail = sum(len(item) for item in blocks[index:])
             return tail / total
+
     return 0.0
 
 
@@ -706,6 +784,8 @@ def validation_flags(body_text: str, abstract_text: str) -> list[str]:
         flags.append("starts_with_references")
     if ref_ratio > 0.45:
         flags.append("references_majority")
+    if ref_ratio > 0.05 and chars < 15000:
+        flags.append("references_in_short_text")
 
     abstract_key = normalize_key(abstract_text)
     body_key = normalize_key(body_text)
@@ -714,6 +794,8 @@ def validation_flags(body_text: str, abstract_text: str) -> list[str]:
             len(body_key) < len(abstract_key) * 1.8 and abstract_key in body_key
         ):
             flags.append("likely_abstract_only")
+    if len([block for block in body_text.split("\n\n") if normalize_space(block)]) < 4:
+        flags.append("too_few_body_blocks")
     return flags
 
 
@@ -757,8 +839,8 @@ def extract_from_html_bytes(
     doc = lxml_html.fromstring(html_bytes, parser=parser)
     meta = html_meta(doc)
     sections = html_sections(doc)
-    title_candidates = meta.get("citation_title", [])
-    author_candidates = meta.get("citation_author", [])
+    title_candidates = meta.get("citation_title", []) + metadata_title_candidates(metadata)
+    author_candidates = meta.get("citation_author", []) + metadata_author_candidates(metadata)
     abstract_text = article_abstract(metadata, meta.get("citation_abstract", []))
 
     best_result = None
@@ -796,7 +878,9 @@ def extract_from_xml_bytes(
         blocks, titles, authors, abstracts = blocks_from_xml_body(xml_bytes)
     except etree.XMLSyntaxError as exc:
         return None, f"xml_parse_error:{exc}"
-    body_text = clean_body_blocks(blocks, titles, authors)
+    title_candidates = titles + metadata_title_candidates(metadata)
+    author_candidates = authors + metadata_author_candidates(metadata)
+    body_text = clean_body_blocks(blocks, title_candidates, author_candidates)
     abstract_text = article_abstract(metadata, abstracts)
     result = build_result(
         body_text,
@@ -811,21 +895,25 @@ def extract_from_xml_bytes(
     return None, ";".join(result.flags)
 
 
-def extract_text_from_pdf(path: Path) -> str:
+def extract_text_from_pdf(path: Path, metadata: dict[str, str]) -> str:
     """Extract text from a PDF file using pdfplumber."""
 
     if pdfplumber is None:
         raise RuntimeError("pdfplumber não está instalado; fallback PDF indisponível.")
-    page_texts = []
+    blocks = []
     with pdfplumber.open(path) as pdf:
         for page in pdf.pages:
             text = page.extract_text(x_tolerance=1, y_tolerance=3) or ""
             if normalize_space(text):
-                page_texts.append(text)
-    raw_text = "\n\n".join(page_texts)
-    blocks = [normalize_space(block) for block in re.split(r"\n{2,}", raw_text)]
+                lines = [normalize_space(line) for line in text.splitlines()]
+                blocks.extend(line for line in lines if line)
+                blocks.append("")
     blocks = [block for block in blocks if block]
-    return clean_body_blocks(blocks, [], [])
+    return clean_body_blocks(
+        blocks,
+        metadata_title_candidates(metadata),
+        metadata_author_candidates(metadata),
+    )
 
 
 def extract_from_pdf_file(
@@ -837,7 +925,7 @@ def extract_from_pdf_file(
     """Extract and validate body text from a cached PDF."""
 
     try:
-        body_text = extract_text_from_pdf(path)
+        body_text = extract_text_from_pdf(path, metadata)
     except Exception as exc:  # pragma: no cover - depends on PDF internals.
         return None, f"pdf_extract_error:{exc}"
     result = build_result(
@@ -913,14 +1001,16 @@ def recover_one_pid(
     retrieved_at = datetime.now(timezone.utc).isoformat()
     html_metas: list[dict[str, list[str]]] = []
     final_html_urls: list[str] = []
+    html_urls = html_candidate_urls(pid, articlemeta, metadata)
 
-    cached_html = local_cached_html(pid)
-    if cached_html:
+    cached_html = canonical_raw_path(RAW_HTML_DIR, pid, "html")
+    if cached_html.exists():
+        source_hint = html_urls[0] if html_urls else "cached_html"
         html_bytes = cached_html.read_bytes()
         result, meta, reason = extract_from_html_bytes(
             html_bytes,
             "articlemeta_fulltexts_html",
-            "cached_html",
+            source_hint,
             cached_html,
             retrieved_at,
             metadata,
@@ -930,7 +1020,7 @@ def recover_one_pid(
             {
                 "pid": pid,
                 "source_method": "articlemeta_fulltexts_html",
-                "source_url": "cached_html",
+                "source_url": source_hint,
                 "status": "valid" if result else "invalid",
                 "reason": reason,
                 "raw_path": str(cached_html.relative_to(PROJECT_DIR)),
@@ -939,8 +1029,12 @@ def recover_one_pid(
         if result:
             return result, attempts
 
-    for url in html_candidate_urls(pid, articlemeta, metadata):
-        if offline:
+    for url in html_urls:
+        html_path = candidate_raw_path(RAW_HTML_DIR, pid, "html", url)
+        final_url = url
+        if html_path.exists():
+            html_bytes = html_path.read_bytes()
+        elif offline:
             attempts.append(
                 {
                     "pid": pid,
@@ -952,38 +1046,40 @@ def recover_one_pid(
                 }
             )
             continue
-        try:
-            content, final_url, content_type = fetch_url(session, url, rate_limit, logger)
-        except Exception as exc:
-            attempts.append(
-                {
-                    "pid": pid,
-                    "source_method": "articlemeta_fulltexts_html",
-                    "source_url": url,
-                    "status": "fetch_error",
-                    "reason": str(exc),
-                    "raw_path": "",
-                }
-            )
-            continue
-        if "html" not in content_type.lower() and b"<html" not in content[:1000].lower():
-            attempts.append(
-                {
-                    "pid": pid,
-                    "source_method": "articlemeta_fulltexts_html",
-                    "source_url": final_url,
-                    "status": "invalid",
-                    "reason": f"not_html:{content_type}",
-                    "raw_path": "",
-                }
-            )
-            continue
-
-        html_path = RAW_HTML_DIR / f"{pid}.html"
-        if not html_path.exists():
-            save_raw_if_missing(html_path, content)
-            html_bytes = html_path.read_bytes()
         else:
+            try:
+                content, final_url, content_type = fetch_url(
+                    session, url, rate_limit, logger
+                )
+            except Exception as exc:
+                attempts.append(
+                    {
+                        "pid": pid,
+                        "source_method": "articlemeta_fulltexts_html",
+                        "source_url": url,
+                        "status": "fetch_error",
+                        "reason": str(exc),
+                        "raw_path": "",
+                    }
+                )
+                continue
+            if (
+                "html" not in content_type.lower()
+                and b"<html" not in content[:1000].lower()
+            ):
+                attempts.append(
+                    {
+                        "pid": pid,
+                        "source_method": "articlemeta_fulltexts_html",
+                        "source_url": final_url,
+                        "status": "invalid",
+                        "reason": f"not_html:{content_type}",
+                        "raw_path": "",
+                    }
+                )
+                continue
+            save_raw_if_missing(html_path, content)
+            write_raw_sidecar(html_path, url, final_url, content_type, retrieved_at)
             html_bytes = html_path.read_bytes()
         final_html_urls.append(final_url)
         result, meta, reason = extract_from_html_bytes(
@@ -1006,23 +1102,49 @@ def recover_one_pid(
             }
         )
         if result:
+            canonical_html = canonical_raw_path(RAW_HTML_DIR, pid, "html")
+            if not canonical_html.exists():
+                save_raw_if_missing(canonical_html, html_bytes)
             return result, attempts
 
-    for url in xml_candidate_urls(html_metas):
-        xml_path = RAW_XML_DIR / f"{pid}.xml"
-        if not xml_path.exists():
-            if offline:
-                attempts.append(
-                    {
-                        "pid": pid,
-                        "source_method": "citation_xml_body",
-                        "source_url": url,
-                        "status": "skipped",
-                        "reason": "offline_no_cache",
-                        "raw_path": "",
-                    }
-                )
-                continue
+    xml_urls = xml_candidate_urls(html_metas)
+    cached_xml = canonical_raw_path(RAW_XML_DIR, pid, "xml")
+    if cached_xml.exists():
+        xml_url = xml_urls[0] if xml_urls else "cached_xml"
+        result, reason = extract_from_xml_bytes(
+            cached_xml.read_bytes(), xml_url, cached_xml, retrieved_at, metadata
+        )
+        attempts.append(
+            {
+                "pid": pid,
+                "source_method": "citation_xml_body",
+                "source_url": xml_url,
+                "status": "valid" if result else "invalid",
+                "reason": reason,
+                "raw_path": str(cached_xml.relative_to(PROJECT_DIR)),
+            }
+        )
+        if result:
+            return result, attempts
+
+    for url in xml_urls:
+        xml_path = candidate_raw_path(RAW_XML_DIR, pid, "xml", url)
+        xml_url = url
+        if xml_path.exists():
+            pass
+        elif offline:
+            attempts.append(
+                {
+                    "pid": pid,
+                    "source_method": "citation_xml_body",
+                    "source_url": url,
+                    "status": "skipped",
+                    "reason": "offline_no_cache",
+                    "raw_path": "",
+                }
+            )
+            continue
+        else:
             try:
                 content, final_url, content_type = fetch_url(
                     session, url, rate_limit, logger
@@ -1052,9 +1174,8 @@ def recover_one_pid(
                 )
                 continue
             save_raw_if_missing(xml_path, content)
+            write_raw_sidecar(xml_path, url, final_url, content_type, retrieved_at)
             xml_url = final_url
-        else:
-            xml_url = url
 
         result, reason = extract_from_xml_bytes(
             xml_path.read_bytes(), xml_url, xml_path, retrieved_at, metadata
@@ -1070,24 +1191,47 @@ def recover_one_pid(
             }
         )
         if result:
+            canonical_xml = canonical_raw_path(RAW_XML_DIR, pid, "xml")
+            if not canonical_xml.exists():
+                save_raw_if_missing(canonical_xml, xml_path.read_bytes())
             return result, attempts
 
-    for url in pdf_candidate_urls(articlemeta, metadata, html_metas, final_html_urls):
-        pdf_path = RAW_PDF_DIR / f"{pid}.pdf"
+    pdf_urls = pdf_candidate_urls(articlemeta, metadata, html_metas, final_html_urls)
+    cached_pdf = canonical_raw_path(RAW_PDF_DIR, pid, "pdf")
+    if cached_pdf.exists():
+        pdf_url = pdf_urls[0] if pdf_urls else "cached_pdf"
+        result, reason = extract_from_pdf_file(cached_pdf, pdf_url, retrieved_at, metadata)
+        attempts.append(
+            {
+                "pid": pid,
+                "source_method": "pdf_text_extraction",
+                "source_url": pdf_url,
+                "status": "valid" if result else "invalid",
+                "reason": reason,
+                "raw_path": str(cached_pdf.relative_to(PROJECT_DIR)),
+            }
+        )
+        if result:
+            return result, attempts
+
+    for url in pdf_urls:
+        pdf_path = candidate_raw_path(RAW_PDF_DIR, pid, "pdf", url)
         pdf_url = url
-        if not pdf_path.exists():
-            if offline:
-                attempts.append(
-                    {
-                        "pid": pid,
-                        "source_method": "pdf_text_extraction",
-                        "source_url": url,
-                        "status": "skipped",
-                        "reason": "offline_no_cache",
-                        "raw_path": "",
-                    }
-                )
-                continue
+        if pdf_path.exists():
+            pass
+        elif offline:
+            attempts.append(
+                {
+                    "pid": pid,
+                    "source_method": "pdf_text_extraction",
+                    "source_url": url,
+                    "status": "skipped",
+                    "reason": "offline_no_cache",
+                    "raw_path": "",
+                }
+            )
+            continue
+        else:
             try:
                 content, final_url, content_type = fetch_url(
                     session, url, rate_limit, logger
@@ -1117,6 +1261,7 @@ def recover_one_pid(
                 )
                 continue
             save_raw_if_missing(pdf_path, content)
+            write_raw_sidecar(pdf_path, url, final_url, content_type, retrieved_at)
             pdf_url = final_url
 
         result, reason = extract_from_pdf_file(pdf_path, pdf_url, retrieved_at, metadata)
@@ -1131,6 +1276,9 @@ def recover_one_pid(
             }
         )
         if result:
+            canonical_pdf = canonical_raw_path(RAW_PDF_DIR, pid, "pdf")
+            if not canonical_pdf.exists():
+                save_raw_if_missing(canonical_pdf, pdf_path.read_bytes())
             return result, attempts
 
     return None, attempts
@@ -1213,7 +1361,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--allow-partial",
         action="store_true",
-        help="Write recovered rows even if fewer than 175 PIDs validate.",
+        help=(
+            "Keep a timestamped partial/debug CSV and exit zero even if fewer "
+            "than 175 PIDs validate. The canonical CSV is never overwritten by "
+            "a partial run."
+        ),
     )
     parser.add_argument(
         "--pid",
@@ -1229,10 +1381,18 @@ def main() -> int:
     args = parse_args()
     run_timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     logger = setup_logging(run_timestamp)
-    for directory in [RAW_HTML_DIR, RAW_XML_DIR, RAW_PDF_DIR, PROCESSED_DIR, LOG_DIR]:
+    for directory in [
+        RAW_HTML_DIR,
+        RAW_XML_DIR,
+        RAW_PDF_DIR,
+        RAW_META_DIR,
+        PROCESSED_DIR,
+        LOG_DIR,
+    ]:
         directory.mkdir(parents=True, exist_ok=True)
 
     gold_pids = load_gold_pids()
+    is_debug_subset = bool(args.pid)
     if args.pid:
         requested = set(args.pid)
         gold_pids = [pid for pid in gold_pids if pid in requested]
@@ -1297,8 +1457,20 @@ def main() -> int:
         "reference_tail_ratio",
         "validation_flags",
     ]
-    write_csv(OUTPUT_CSV, processed_rows, fieldnames)
-    logger.info("CSV processado salvo em: %s", OUTPUT_CSV)
+    canonical_ready = (
+        not is_debug_subset
+        and len(gold_pids) == EXPECTED_GOLD_N
+        and len(processed_rows) == EXPECTED_GOLD_N
+    )
+
+    if canonical_ready:
+        output_path = OUTPUT_CSV
+    else:
+        kind = "debug" if is_debug_subset else "partial"
+        output_path = PROCESSED_DIR / f"article_texts_gold_{kind}_{run_timestamp}.csv"
+
+    write_csv(output_path, processed_rows, fieldnames)
+    logger.info("CSV processado salvo em: %s", output_path)
 
     if len(processed_rows) != len(gold_pids):
         missing = sorted(set(gold_pids) - {row["pid"] for row in processed_rows})
@@ -1310,6 +1482,9 @@ def main() -> int:
         )
         if not args.allow_partial:
             return 1
+
+    if not canonical_ready:
+        logger.info("CSV canônico preservado: %s", OUTPUT_CSV)
 
     logger.info("Recuperação completa: %d/%d", len(processed_rows), len(gold_pids))
     return 0

@@ -8,8 +8,6 @@ suppressPackageStartupMessages({
   library(readr)
   library(stringi)
   library(stringr)
-  library(tibble)
-  library(tidyr)
 })
 
 project_dir <- normalizePath(".", mustWork = TRUE)
@@ -42,12 +40,27 @@ word_count <- function(x) {
 
 reference_heading_pattern <- paste(
   c(
-    "^referencias$",
-    "^referencias bibliograficas$",
-    "^references$",
-    "^bibliografia$",
-    "^bibliography$",
-    "^bibliographic references$"
+    "^referencias( bibliograficas| e notas)?\\b",
+    "^references( and notes)?\\b",
+    "^notes and references\\b",
+    "^bibliografia\\b",
+    "^bibliography\\b",
+    "^bibliographic references\\b"
+  ),
+  collapse = "|"
+)
+
+front_matter_pattern <- paste(
+  c(
+    "^abstract\\b",
+    "^resumo\\b",
+    "^resumen\\b",
+    "^resume\\b",
+    "^palavras chave\\b",
+    "^keywords\\b",
+    "^key words\\b",
+    "^palabras clave\\b",
+    "^mots cles\\b"
   ),
   collapse = "|"
 )
@@ -55,6 +68,18 @@ reference_heading_pattern <- paste(
 starts_with_references <- function(x) {
   first_block <- stringr::str_split(dplyr::coalesce(x, ""), "\\n\\n", n = 2, simplify = TRUE)[, 1]
   stringr::str_detect(normalize_key(first_block), reference_heading_pattern)
+}
+
+starts_with_front_matter <- function(x) {
+  first_block <- stringr::str_split(dplyr::coalesce(x, ""), "\\n\\n", n = 2, simplify = TRUE)[, 1]
+  stringr::str_detect(normalize_key(first_block), front_matter_pattern)
+}
+
+body_block_count <- function(x) {
+  purrr::map_int(dplyr::coalesce(x, ""), function(text) {
+    blocks <- stringr::str_split(text, "\\n\\n", simplify = FALSE)[[1]]
+    sum(stringr::str_squish(blocks) != "")
+  })
 }
 
 reference_tail_ratio_calc <- function(x) {
@@ -134,6 +159,19 @@ fulltext <- readr::read_csv(paths$fulltext, show_col_types = FALSE) |>
     reference_tail_ratio = as.numeric(reference_tail_ratio)
   )
 
+gold_duplicate_pids <- gold |>
+  dplyr::count(pid, name = "n") |>
+  dplyr::filter(n > 1) |>
+  dplyr::pull(pid)
+
+processed_duplicate_pids <- fulltext |>
+  dplyr::count(pid, name = "n") |>
+  dplyr::filter(n > 1) |>
+  dplyr::pull(pid)
+
+processed_extra_pids <- setdiff(fulltext$pid, gold$pid)
+processed_missing_pids <- setdiff(gold$pid, fulltext$pid)
+
 inventory <- gold |>
   dplyr::left_join(metadata, by = "pid") |>
   dplyr::left_join(
@@ -159,10 +197,17 @@ inventory <- gold |>
     body_text_nonempty = present_in_processed & stringr::str_squish(body_text) != "",
     body_char_count_recomputed = nchar(dplyr::coalesce(body_text, "")),
     body_word_count_recomputed = word_count(body_text),
+    body_block_count = body_block_count(body_text),
     body_char_count_matches = body_char_count == body_char_count_recomputed,
     body_word_count_matches = body_word_count == body_word_count_recomputed,
+    source_provenance_ok = present_in_processed &
+      source_method %in% c("articlemeta_fulltexts_html", "citation_xml_body", "pdf_text_extraction") &
+      !is.na(source_url) & stringr::str_squish(source_url) != "" &
+      !is.na(input_hash) & stringr::str_detect(input_hash, "^[a-f0-9]{64}$") &
+      !is.na(retrieved_at) & stringr::str_squish(retrieved_at) != "",
     body_minimum_size_ok = body_char_count_recomputed >= min_body_chars &
       body_word_count_recomputed >= min_body_words,
+    body_has_min_blocks = body_block_count >= 4,
     abstract_chars_for_rule = pmax(
       abstract_char_count_expected,
       dplyr::coalesce(abstract_char_count, 0L),
@@ -174,18 +219,23 @@ inventory <- gold |>
       TRUE ~ body_char_count_recomputed >= min_body_chars
     ),
     starts_with_references = starts_with_references(body_text),
+    starts_with_front_matter = starts_with_front_matter(body_text),
     reference_tail_ratio_recomputed = reference_tail_ratio_calc(body_text),
     references_not_majority = !starts_with_references &
       reference_tail_ratio_recomputed <= 0.45,
+    body_not_frontmatter = !starts_with_front_matter,
     validation_status = dplyr::if_else(
       present_in_processed &
         pid_is_unique_in_processed &
         body_text_nonempty &
+        source_provenance_ok &
         body_char_count_matches &
         body_word_count_matches &
         body_minimum_size_ok &
+        body_has_min_blocks &
         body_substantially_larger_than_abstract &
-        references_not_majority,
+        references_not_majority &
+        body_not_frontmatter,
       "PASS",
       "FAIL"
     ),
@@ -196,21 +246,28 @@ inventory <- gold |>
         body_text_nonempty,
         body_char_count_matches,
         body_word_count_matches,
+        source_provenance_ok,
         body_minimum_size_ok,
+        body_has_min_blocks,
         body_substantially_larger_than_abstract,
         starts_with_references,
+        starts_with_front_matter,
         reference_tail_ratio_recomputed
       ),
       function(present, unique_pid, nonempty, chars_match, words_match,
-               minimum_size, larger_than_abstract, starts_refs, ref_ratio) {
+               provenance_ok, minimum_size, min_blocks, larger_than_abstract,
+               starts_refs, starts_front, ref_ratio) {
         collapse_flags(
           if (!present) "missing_pid",
           if (present && !unique_pid) "duplicate_pid",
           if (present && !nonempty) "empty_body",
           if (present && !chars_match) "body_char_count_mismatch",
           if (present && !words_match) "body_word_count_mismatch",
+          if (present && !provenance_ok) "missing_or_invalid_provenance",
           if (present && !minimum_size) "too_short_for_body",
+          if (present && !min_blocks) "too_few_body_blocks",
           if (present && !larger_than_abstract) "not_substantially_larger_than_abstract",
+          if (present && starts_front) "starts_with_front_matter",
           if (present && starts_refs) "starts_with_references",
           if (present && ref_ratio > 0.45) "references_majority"
         )
@@ -245,6 +302,30 @@ method_counts <- inventory |>
 failures <- inventory |>
   dplyr::filter(validation_status != "PASS") |>
   dplyr::select(pid, title, journal_title, year, suspect_flags, source_method, source_url)
+
+global_failures <- c(
+  if (nrow(gold) != expected_n) paste0("gold_row_count_not_", expected_n, ": ", nrow(gold)),
+  if (dplyr::n_distinct(gold$pid) != expected_n) {
+    paste0("gold_unique_pid_count_not_", expected_n, ": ", dplyr::n_distinct(gold$pid))
+  },
+  if (length(gold_duplicate_pids) > 0) {
+    paste0("gold_duplicate_pids: ", paste(gold_duplicate_pids, collapse = ", "))
+  },
+  if (nrow(fulltext) != expected_n) paste0("processed_row_count_not_", expected_n, ": ", nrow(fulltext)),
+  if (dplyr::n_distinct(fulltext$pid) != expected_n) {
+    paste0("processed_unique_pid_count_not_", expected_n, ": ", dplyr::n_distinct(fulltext$pid))
+  },
+  if (length(processed_duplicate_pids) > 0) {
+    paste0("processed_duplicate_pids: ", paste(processed_duplicate_pids, collapse = ", "))
+  },
+  if (length(processed_extra_pids) > 0) {
+    paste0("processed_extra_pids: ", paste(processed_extra_pids, collapse = ", "))
+  },
+  if (length(processed_missing_pids) > 0) {
+    paste0("processed_missing_pids: ", paste(processed_missing_pids, collapse = ", "))
+  }
+)
+global_failures <- global_failures[!is.na(global_failures) & global_failures != ""]
 
 suspects <- inventory |>
   dplyr::filter(
@@ -286,9 +367,13 @@ readr::write_csv(
       present_in_processed,
       pid_is_unique_in_processed,
       body_text_nonempty,
+      source_provenance_ok,
+      body_block_count,
       body_minimum_size_ok,
+      body_has_min_blocks,
       body_substantially_larger_than_abstract,
       references_not_majority,
+      body_not_frontmatter,
       validation_status,
       suspect_flags,
       nonblocking_flags
@@ -308,7 +393,8 @@ report_lines <- c(
   paste0("- Rows in processed fulltext CSV: ", nrow(fulltext)),
   paste0("- Unique processed PIDs: ", dplyr::n_distinct(fulltext$pid)),
   paste0("- Validated bodies: ", sum(inventory$validation_status == "PASS"), "/", expected_n),
-  paste0("- Failed or missing bodies: ", nrow(failures)),
+  paste0("- Row-level failed or missing bodies: ", nrow(failures)),
+  paste0("- Global validation failures: ", length(global_failures)),
   "",
   "## Recovery methods",
   "",
@@ -320,12 +406,17 @@ report_lines <- c(
   "",
   "## Blocking failures",
   "",
-  if (nrow(failures) == 0) {
+  if (length(global_failures) == 0 && nrow(failures) == 0) {
     "None. All 175 gold/pilot PIDs have validated body text."
   } else {
-    paste0(
-      "- `", failures$pid, "` (", failures$journal_title, ", ", failures$year,
-      "): ", failures$suspect_flags
+    c(
+      if (length(global_failures) > 0) paste0("- ", global_failures),
+      if (nrow(failures) > 0) {
+        paste0(
+          "- `", failures$pid, "` (", failures$journal_title, ", ", failures$year,
+          "): ", failures$suspect_flags
+        )
+      }
     )
   },
   "",
@@ -345,6 +436,8 @@ report_lines <- c(
   paste0("- All ", expected_n, " PIDs from the gold/pilot CSV must be present."),
   "- PIDs must be unique in the processed fulltext CSV.",
   "- `body_text` must be non-empty and at least 3,000 characters / 600 words.",
+  "- Provenance fields (`source_method`, `source_url`, `input_hash`, `retrieved_at`) are mandatory.",
+  "- `body_text` must contain at least four text blocks and cannot start with abstract/keyword front matter.",
   "- `body_text` must be substantially larger than the longest available abstract.",
   "- Text starting with references or composed mostly of a reference tail fails.",
   "- Abstract, metadata, keywords and references are not accepted as body substitutes.",
@@ -357,13 +450,9 @@ report_lines <- c(
 
 writeLines(report_lines, paths$report, useBytes = TRUE)
 
-if (nrow(gold) != expected_n) {
-  stop("Gold PID count is not ", expected_n, ": ", nrow(gold))
-}
-
-if (nrow(failures) > 0) {
-  missing_msg <- paste(failures$pid, collapse = ", ")
-  stop("Fulltext gold validation failed. Missing/failed PIDs: ", missing_msg)
+if (length(global_failures) > 0 || nrow(failures) > 0) {
+  failure_msg <- paste(c(global_failures, failures$pid), collapse = "; ")
+  stop("Fulltext gold validation failed: ", failure_msg)
 }
 
 message("Fulltext gold validation passed: ", expected_n, "/", expected_n, " bodies.")
