@@ -7,10 +7,18 @@ Este repositório replica e expande Torreblanca et al. (2026), "The Credibility 
 - Corpus coletado: `data/raw/articles_2005_2025.csv`, com 8.400 artigos, 15 periódicos e anos de publicação entre 2005 e 2025.
 - Amostra de validação: `data/processed/sample_validation.csv`, com 208 artigos.
 - Classificações LLM finais pós-revisão manual: `data/processed/classifications_llm.csv`, com 208 artigos classificados e schema validado; os JSONs finais estão em `data/processed/classifications_final/`.
-- Base operacional da análise principal: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão.
+- Base operacional atual da amostra classificada: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão. Este arquivo é a amostra validada pós-exclusões, não a base final do paper.
 - Benchmarks internacionais de readability: `data/processed/benchmark_cp.csv` e `data/processed/benchmark_ir.csv`.
 - Validação final das classificações: `Rscript --vanilla scripts/09_apply_manual_review_decisions.R` gerou zero erros de schema em 2026-06-03; o relatório está em `quality_reports/classification_validation_summary_final.md`.
 - Testes locais: `python3 -m pytest scripts` passou com 59 testes em 2026-06-01.
+
+## Direção Analítica Atual
+
+- O objetivo do paper é expandir a classificação para o corpus completo elegível, não analisar apenas a amostra de 175 artigos.
+- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` não entrarão na análise principal.
+- Os registros desses periódicos podem permanecer preservados nos dados brutos e artefatos rastreáveis, mas devem ser excluídos de qualquer base analítica substantiva.
+- A amostra de 208 artigos, reduzida a 175 após exclusões, deve ser tratada como etapa de validação/piloto para calibrar e auditar a classificação do corpus completo elegível.
+- A base final de análise substantiva ainda precisa ser gerada depois da classificação do corpus completo elegível.
 
 ## Estrutura
 
@@ -62,6 +70,8 @@ Rscript --vanilla scripts/03_sample_articles.R
 ANTHROPIC_API_KEY=... python3 scripts/04_classify_articles.py
 ```
 
+Estado atual: este script foi usado para a amostra de validação. O próximo desenvolvimento deve adaptar/operacionalizar a classificação em escala para o corpus completo elegível, mantendo fora da análise os periódicos excluídos.
+
 5. Validar, normalizar e fechar classificações:
 
 ```bash
@@ -88,7 +98,8 @@ python3 -m pytest scripts
 
 - `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` ficam fora da análise principal por decisão de escopo documentada em `data/processed/excluded_journals.csv`.
 - Os artigos listados em `data/processed/excluded_articles.csv` ficam fora da análise principal, mas permanecem preservados no corpus.
-- `data/processed/classifications_llm.csv` mantém os 208 registros da amostra para rastreabilidade. Para análises substantivas, use `data/processed/classifications_llm_main_analysis.csv` ou aplique explicitamente os ledgers de exclusão.
+- `data/processed/classifications_llm.csv` mantém os 208 registros da amostra para rastreabilidade.
+- `data/processed/classifications_llm_main_analysis.csv` contém os 175 registros elegíveis da amostra classificada. Use este arquivo para validação, auditoria, desenvolvimento de tabelas e testes do pipeline; não o trate como base final de inferência substantiva do paper.
 - `data/processed/classifications_llm_pre_manual_review.csv` preserva o CSV consolidado antes da aplicação das decisões manuais.
 
 ## Convenções
@@ -103,7 +114,8 @@ python3 -m pytest scripts
 
 ## Pontos Pendentes
 
-- Consolidar um script mestre em R para gerar tabelas e figuras finais a partir de `data/processed/classifications_llm_main_analysis.csv` ou de `data/processed/classifications_llm.csv` com os ledgers de exclusão aplicados explicitamente.
+- Expandir a classificação para o corpus completo elegível, excluindo `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` da análise principal.
+- Consolidar um script mestre em R para gerar tabelas e figuras finais a partir da base completa classificada elegível, com os ledgers de exclusão aplicados explicitamente.
 - Escrever o manuscrito em `paper/paper.Rmd`.
 - Documentar a versão final do corpus e os critérios de inclusão/exclusão no apêndice.
 - Preparar um pacote de replicação em `replication/`.

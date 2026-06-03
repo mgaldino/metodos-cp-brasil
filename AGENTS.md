@@ -1,5 +1,11 @@
 # Instruções para Agentes
 
+## Objetivo do Repositório
+
+- O objetivo substantivo do paper é classificar o corpus completo elegível de artigos SciELO 2005-2025 para analisar a revolução da credibilidade na Ciência Política brasileira.
+- Os 208 artigos classificados até aqui, reduzidos a 175 após exclusões, são apenas amostra de validação/piloto. Eles servem para calibrar, auditar e validar o schema de classificação; não são a base final de análise substantiva do paper.
+- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` não entram na análise principal. Seus registros podem permanecer preservados em dados brutos e artefatos rastreáveis, mas devem ser excluídos de qualquer base analítica substantiva.
+
 ## Fluxo de Trabalho
 
 - Quem revisa não implementa; quem implementa não revisa o próprio trabalho.

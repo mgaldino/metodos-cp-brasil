@@ -4,6 +4,8 @@
 
 Replicação e expansão de Torreblanca et al. (2026) "The Credibility Revolution in Political Science" para periódicos brasileiros. Paper original em `/Users/manoelgaldino/Documents/DCP/Cursos/Causalidade/Causalidade/2601.11542v1.pdf`.
 
+O objetivo operacional atual é classificar o corpus completo elegível de artigos SciELO 2005-2025. Os 208 artigos já classificados, reduzidos a 175 após exclusões, são apenas amostra de validação/piloto para calibrar e auditar o schema; não são a base final de análise substantiva.
+
 ## Stack
 
 - Python: coleta (API SciELO) e classificação (LLM)
@@ -25,8 +27,10 @@ Replicação e expansão de Torreblanca et al. (2026) "The Credibility Revolutio
 - **Fonte**: SciELO Brasil (coleção `scl`), API ArticleMeta
 - **Período**: 2005-2025
 - **Filtro**: subject areas "Political Science", "Public Administration", "International Relations" + seed list manual
-- **Resultado**: 15 periódicos, ~11.220 artigos estimados (Movimento removido)
+- **Resultado coletado documentado**: 15 periódicos, 8.400 artigos em `data/raw/articles_2005_2025.csv`
 - **Decisão**: escopo restrito (opção A) — só periódicos com subject area de CP/RI/Adm. Pública
+- **Direção analítica atual**: expandir a classificação para o corpus completo elegível. A amostra classificada e validada de 208 artigos, reduzida a 175 após exclusões, é uma etapa de validação/piloto; não é a base final do paper nem deve ser apresentada como análise substantiva final.
+- **Exclusões da análise principal**: `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` não entrarão na análise. Seus registros podem permanecer preservados no corpus bruto e em artefatos rastreáveis, mas devem ser excluídos de qualquer base analítica substantiva.
 
 ### Periódicos incluídos (15)
 
@@ -81,10 +85,11 @@ A seed list usava ISSN 1678-9873 (eletrônico). No SciELO, o periódico aparece 
 ## Etapas
 
 1. ~~Definir corpus~~ (concluído)
-2. Coletar artigos (próximo: testar com 1 ano)
-3. Classificar via LLM
-4. Validação manual (~50-100 artigos)
-5. Análise e visualização
+2. ~~Coletar artigos SciELO 2005-2025~~ (concluído)
+3. ~~Classificar e validar amostra piloto~~ (concluído: 208 classificados, 175 elegíveis pós-exclusões)
+4. Expandir classificação para o corpus completo elegível, excluindo `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` da análise principal
+5. Produzir scripts R de análise final, tabelas e figuras
+6. Escrever manuscrito, apêndice e pacote de replicação
 
 ## Esquema de classificação (adaptado de Torreblanca et al.)
 

@@ -765,7 +765,7 @@ snapshot <- tibble(
     "JSONs normalizados de entrada",
     "JSONs finais",
     "linhas no CSV final canônico",
-    "linhas no CSV da análise principal",
+    "linhas no CSV elegível da amostra",
     "decisões/pendências processadas",
     "decisões manuais aplicadas",
     "overrides estruturados aplicados",
@@ -812,7 +812,8 @@ summary_lines <- c(
   "",
   "- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` ficam fora da análise principal por regra documentada em `data/processed/excluded_journals.csv`.",
   "- Os artigos listados em `data/processed/excluded_articles.csv` ficam fora da análise principal por regra documentada no próprio ledger.",
-  "- Registros excluídos são preservados no corpus e nos JSONs/CSV finais para rastreabilidade; análises substantivas devem usar `data/processed/classifications_llm_main_analysis.csv` ou aplicar os ledgers de exclusão antes de estimar estatísticas.",
+  "- Registros excluídos são preservados no corpus e nos JSONs/CSV finais para rastreabilidade.",
+  "- `data/processed/classifications_llm_main_analysis.csv` contém apenas a amostra classificada elegível pós-exclusões; use esse arquivo para validação, auditoria e desenvolvimento do pipeline, não como base final de análise substantiva.",
   "- Quando a decisão manual de um registro excluído era `<NULL>` em campo obrigatório do schema rígido, o script aplicou `schema_padding_for_excluded_record`; esses valores existem apenas para manter o registro preservado e schema-válido, não para inclusão analítica.",
   "",
   "## Snapshot",
@@ -852,7 +853,7 @@ writeLines(summary_lines, paths$application_summary, useBytes = TRUE)
 cat("Aplicação das decisões manuais concluída.\n")
 cat("JSONs finais:", length(objects), "\n")
 cat("Linhas no CSV final:", nrow(all_rows), "\n")
-cat("Linhas na análise principal:", nrow(main_rows), "\n")
+cat("Linhas elegíveis na amostra:", nrow(main_rows), "\n")
 cat("Erros na validação final:", sum(final_issues$severity == "ERROR", na.rm = TRUE), "\n")
 cat("Avisos na validação final:", sum(final_issues$severity == "WARN", na.rm = TRUE), "\n")
 cat("Resumo:", relative_path(paths$application_summary), "\n")

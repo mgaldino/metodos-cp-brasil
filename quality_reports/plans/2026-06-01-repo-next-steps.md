@@ -6,11 +6,12 @@ O repositório já tem coleta substantiva, amostra de validação, classificaç�
 
 ## Próximos Passos
 
-1. Escrever scripts R de análise em arquivos separados e criar um script mestre para tabelas e figuras finais usando `data/processed/classifications_llm_main_analysis.csv` ou aplicando explicitamente os ledgers de exclusão.
-2. Produzir estatísticas descritivas do corpus: artigos por ano, periódico, subfield, tipo de evidência, status do método e desenho causal.
-3. Confrontar resultados brasileiros com benchmarks internacionais, mantendo separada a camada comparável a Torreblanca et al. e a camada expandida para o Brasil.
-4. Escrever `paper/paper.Rmd` e `paper/appendix.Rmd`, com tabelas e figuras numeradas e captions.
-5. Preparar `replication/` com dados processados, scripts necessários, metadados e instruções de execução.
+1. Expandir a classificação para o corpus completo elegível.
+2. Escrever scripts R de análise em arquivos separados e criar um script mestre para tabelas e figuras finais usando a base completa classificada elegível, com exclusões aplicadas explicitamente.
+3. Produzir estatísticas descritivas do corpus elegível classificado: artigos por ano, periódico, subfield, tipo de evidência, status do método e desenho causal.
+4. Confrontar resultados brasileiros com benchmarks internacionais, mantendo separada a camada comparável a Torreblanca et al. e a camada expandida para o Brasil.
+5. Escrever `paper/paper.Rmd` e `paper/appendix.Rmd`, com tabelas e figuras numeradas e captions.
+6. Preparar `replication/` com dados processados, scripts necessários, metadados e instruções de execução.
 
 ## Risco Imediato
 
@@ -26,10 +27,16 @@ O CSV consolidado de classificações mistura saídas antigas e novas. Antes de 
 - Os 2 placeholders `structured_json_required` em `main_variable_relationship` foram resolvidos por overrides estruturados em `data/processed/manual_review_relationship_overrides.json`.
 - `scripts/09_apply_manual_review_decisions.R` aplicou as decisões manuais aos JSONs normalizados, gerou `data/processed/classifications_final/`, atualizou `data/processed/classifications_llm.csv` e preservou `data/processed/classifications_llm_pre_manual_review.csv`.
 - A validação final em `quality_reports/classification_validation_summary_final.md` registrou 208 JSONs finais, 208 linhas no CSV canônico, 0 erros de schema e 9 avisos não bloqueantes de `non_research_article_document_type`.
-- A base de análise principal pós-exclusões está em `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos.
+- A amostra classificada pós-exclusões está em `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos elegíveis. Este arquivo não é a base final de análise substantiva do paper.
+
+## Correção de Escopo — 2026-06-03
+
+- `data/processed/classifications_llm_main_analysis.csv` contém apenas os 175 registros elegíveis da amostra classificada. Esse arquivo serve para validação, auditoria e desenvolvimento do pipeline; não é a base final de análise substantiva do paper.
+- O objetivo do repo é expandir a classificação para o corpus completo elegível de artigos SciELO 2005-2025.
+- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` não entrarão na análise principal. Seus registros permanecem preservados nos dados brutos e artefatos rastreáveis, mas devem ser excluídos de qualquer base analítica substantiva.
 
 ## Regra Operacional Atual de Exclusões
 
 - `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` ficam fora da análise principal por regra documentada em `data/processed/excluded_journals.csv`.
 - Os artigos listados em `data/processed/excluded_articles.csv` ficam fora da análise principal.
-- Todos esses registros permanecem preservados no corpus e nos artefatos rastreáveis; análises substantivas devem usar `data/processed/classifications_llm_main_analysis.csv` ou aplicar explicitamente os ledgers de exclusão.
+- Todos esses registros permanecem preservados no corpus e nos artefatos rastreáveis. A análise substantiva final deve usar uma base completa classificada elegível, com os ledgers de exclusão aplicados explicitamente.

@@ -14,7 +14,8 @@ O snapshot pré-aplicação foi preservado em `data/processed/classifications_ll
 
 - `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` ficam fora da análise principal por regra documentada em `data/processed/excluded_journals.csv`.
 - Os artigos listados em `data/processed/excluded_articles.csv` ficam fora da análise principal por regra documentada no próprio ledger.
-- Registros excluídos são preservados no corpus e nos JSONs/CSV finais para rastreabilidade; análises substantivas devem usar `data/processed/classifications_llm_main_analysis.csv` ou aplicar os ledgers de exclusão antes de estimar estatísticas.
+- Registros excluídos são preservados no corpus e nos JSONs/CSV finais para rastreabilidade.
+- `data/processed/classifications_llm_main_analysis.csv` contém apenas a amostra classificada elegível pós-exclusões; use esse arquivo para validação, auditoria e desenvolvimento do pipeline, não como base final de análise substantiva.
 - Quando a decisão manual de um registro excluído era `<NULL>` em campo obrigatório do schema rígido, o script aplicou `schema_padding_for_excluded_record`; esses valores existem apenas para manter o registro preservado e schema-válido, não para inclusão analítica.
 
 ## Snapshot
@@ -24,7 +25,7 @@ O snapshot pré-aplicação foi preservado em `data/processed/classifications_ll
 | JSONs normalizados de entrada | 208 |
 | JSONs finais | 208 |
 | linhas no CSV final canônico | 208 |
-| linhas no CSV da análise principal | 175 |
+| linhas no CSV elegível da amostra | 175 |
 | decisões/pendências processadas | 174 |
 | decisões manuais aplicadas | 150 |
 | overrides estruturados aplicados | 2 |
