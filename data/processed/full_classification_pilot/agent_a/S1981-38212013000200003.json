@@ -1,0 +1,57 @@
+{
+  "pid": "S1981-38212013000200003",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "81710f17f09cbbb6b28e82bdcfd98feb33c13a6ec903945e3bea121b4ec4018b",
+  "source_file": "data/processed/sample_xmls/S1981-38212013000200003.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "multiple_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "runs_original_survey",
+    "uses_original_dataset": "original_survey",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "perceptions of justice and judiciary",
+        "variable_description": "Percepções sobre justiça, desigualdade e instituições judiciais."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "dissatisfaction with democracy",
+        "variable_description": "Insatisfação com a democracia e relação com judicialização."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": null,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo baseia-se em survey nas regiões metropolitanas de Belo Horizonte, Goiânia, Porto Alegre e Recife. Classifiquei como quantitativo explicativo sobre percepções de justiça e democracia."
+  },
+  "raw_response_path": null
+}

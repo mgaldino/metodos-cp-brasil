@@ -1,0 +1,84 @@
+{
+  "pid": "S0034-76122017000500879",
+  "agent_id": "agent_b",
+  "prompt_version": "agent_b_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:54:35Z",
+  "input_text_hash": "3edc078b0df2c97038d501b3dc21e0b8b1e8ea57d5852d6131814d24ef19037c",
+  "source_file": "data/processed/sample_xmls/S0034-76122017000500879.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "procure_original_data",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "bidding modality",
+        "variable_description": "Public bidding and invitation procurement types."
+      },
+      {
+        "variable_name": "service type",
+        "variable_description": "Whether the project was a renovation."
+      },
+      {
+        "variable_name": "municipal and political characteristics",
+        "variable_description": "Population, reelection status and mayor-president party alignment."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "deadline compliance",
+        "variable_description": "Whether education public works met deadlines."
+      },
+      {
+        "variable_name": "price compliance",
+        "variable_description": "Whether education public works met expected prices."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "bidding modality",
+        "dv_var_name": "deadline compliance",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "municipal and political characteristics",
+        "dv_var_name": "price compliance",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo completo do artigo; a classificação usa apenas título, resumo, palavras-chave e metadados disponíveis. Pelo resumo, o artigo foi classificado em Public Policy/Administration, com evidência quantitative e método explicit; o objetivo analítico principal foi tratado como Explain. Há linguagem causal no resumo, mas não há quantidade causal clara nem suposições de identificação explicitadas no texto disponível."
+  },
+  "raw_response_path": null
+}

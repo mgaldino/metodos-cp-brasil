@@ -33,7 +33,10 @@ Arquivos centrais:
 - `excluded_articles.csv`: regras de exclusão da análise principal por artigo. Obituário, editorial, comentário crítico, errata e nota fora de escopo ficam preservados no corpus, mas não entram nas análises do paper.
 - `manual_review_decisions_google_sheet.csv`: snapshot CSV da planilha Google Sheets com as decisões manuais da fila `manual_review=TRUE`, acessado em 2026-06-02 -03.
 - `manual_review_relationship_overrides.json`: decisões estruturadas para pendências `main_variable_relationship` que exigiam JSON manual.
+- `full_classification_pilot/`: manifest, prompts versionados, diretórios de saída dos três subagentes Codex locais, bases paralelas, comparação contra gold, conflitos e fila de adjudicação do piloto triplo nos 175 artigos elegíveis.
 - `benchmark_cp.csv` e `benchmark_ir.csv`: métricas por paper para benchmarks internacionais.
+
+Nota sobre o piloto triplo de 2026-06-03: os XMLs dos 175 PIDs em `sample_xmls/` são idênticos aos correspondentes em `data/raw/articles_fulltext/` e não contêm `<body>`. As classificações dessa rodada estão rastreadas, mas devem ser interpretadas como classificações do texto local disponível, não de artigo integral.
 - `benchmark_cp_stats.json` e `benchmark_ir_stats.json`: estatísticas agregadas dos benchmarks.
 
 ## Regras

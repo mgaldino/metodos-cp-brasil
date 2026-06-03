@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-06-03T20:59:36Z",
+  "objective": "Piloto de classificacao tripla independente nos 175 artigos gold/elegiveis.",
+  "source_gold_pilot": "data/processed/classifications_llm_main_analysis.csv",
+  "n_articles": 175,
+  "excluded_journals_rule": "data/processed/excluded_journals.csv",
+  "excluded_articles_rule": "data/processed/excluded_articles.csv",
+  "manifest": "data/processed/full_classification_pilot/pilot_manifest.csv",
+  "prompt_versions": {
+    "common": "common_schema_v1",
+    "agent_a": "agent_a_v1+common_schema_v1",
+    "agent_b": "agent_b_v1+common_schema_v1",
+    "agent_c": "agent_c_v1+common_schema_v1"
+  },
+  "no_api_runner": true
+}

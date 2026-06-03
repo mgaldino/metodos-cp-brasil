@@ -1,0 +1,80 @@
+{
+  "pid": "S0104-44782020000100202",
+  "agent_id": "agent_b",
+  "prompt_version": "agent_b_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:54:35Z",
+  "input_text_hash": "4a546af9ab2b9c4eddb8b2f4f2f7ff074093cda72286dbdb7466921d916d5ff7",
+  "source_file": "data/processed/sample_xmls/S0104-44782020000100202.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Comparative Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": null,
+    "single_region": "single_region",
+    "countries_of_focus": null,
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "procure_original_data",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Qualitative Comparative Analysis (QCA)",
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "legislative control",
+        "variable_description": "Whether presidents control the legislature."
+      },
+      {
+        "variable_name": "civil society control",
+        "variable_description": "Whether presidents control civil society."
+      },
+      {
+        "variable_name": "radical-left alignment",
+        "variable_description": "Whether presidents are aligned with the radical left."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "electoral survival",
+        "variable_description": "Presidential capacity to survive electorally."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "legislative control",
+        "dv_var_name": "electoral survival",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "radical-left alignment",
+        "dv_var_name": "electoral survival",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo completo do artigo; a classificação usa apenas título, resumo, palavras-chave e metadados disponíveis. Pelo resumo, o artigo foi classificado em Comparative Politics, com evidência quantitative e método explicit; o objetivo analítico principal foi tratado como Explain. Há linguagem causal no resumo, mas não há quantidade causal clara nem suposições de identificação explicitadas no texto disponível."
+  },
+  "raw_response_path": null
+}

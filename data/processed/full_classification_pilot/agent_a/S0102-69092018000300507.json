@@ -1,0 +1,72 @@
+{
+  "pid": "S0102-69092018000300507",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "f6de4dbaa2b2f2ee76abb3b10a7e1d92b1a15fcf58fb4c38820969d3e5530ae6",
+  "source_file": "data/processed/sample_xmls/S0102-69092018000300507.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "media framing and media consumption",
+        "variable_description": "Enquadramento de economia/governo e consumo de Folha, Estadão, O Globo e Jornal Nacional."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "economic and government evaluations",
+        "variable_description": "Percepções dos leitores/eleitores sobre economia e desempenho do governo federal."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "watching Jornal Nacional or reading O Globo",
+        "dv_var_name": "positive economic evaluation",
+        "relationship_type": "Negative",
+        "statistically_significant": false,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "reading Folha de S. Paulo",
+        "dv_var_name": "positive economic evaluation",
+        "relationship_type": "Null",
+        "statistically_significant": false,
+        "substantively_significant": false
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo declara análise quantitativa de enquadramento, survey e modelos logísticos multinomiais. Classifiquei como quantitativo explicativo, mas sem identificação causal forte além de modelo observacional."
+  },
+  "raw_response_path": null
+}

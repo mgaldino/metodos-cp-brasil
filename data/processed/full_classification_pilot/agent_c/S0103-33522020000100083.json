@@ -1,0 +1,65 @@
+{
+  "pid": "S0103-33522020000100083",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:35Z",
+  "input_text_hash": "ead98f885fef48a156112b30df4cb0dd3b7833ade6ea034a42f7dcecdf81c818",
+  "source_file": "data/processed/sample_xmls/S0103-33522020000100083.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "International Relations",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Manifesto coding with numerical ideological scale",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "party",
+        "variable_description": "Party label: PSDB, PT or MDB."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "foreign policy ideology",
+        "variable_description": "Left-right coded position of electoral foreign policy proposals."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "party",
+        "dv_var_name": "foreign policy ideology",
+        "relationship_type": "Unknown",
+        "statistically_significant": false,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, apenas metadados/resumo/referências, então marquei Missing/Corrupt e usei somente o que aparece no resumo ou título. Para 'A diferenciação ideológica na política externa partidária eleitoral: PSDB, PT e MDB (1994-2018)', O resumo indica análise quantitativa própria ou uso de dados estruturados; variáveis e desenho foram preenchidos apenas quando explicitados."
+  },
+  "raw_response_path": null
+}

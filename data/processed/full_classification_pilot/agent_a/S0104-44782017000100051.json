@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-44782017000100051",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "e046e393b6ffb18333d4090fc30aaa4777f32169a26dfde44ff596a4c488c696",
+  "source_file": "data/processed/sample_xmls/S0104-44782017000100051.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "International Relations",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "multiple_countries",
+    "single_region": null,
+    "countries_of_focus": "Spain; Canada; Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Comparação focada e estruturada de estudos de caso",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "paradiplomacy determinants",
+        "variable_description": "Segmentação da cidade criativa, capacidade burocrática, harmonia intergovernamental, autonomia municipal e interdependência externa."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "creative-city paradiplomatic activity",
+        "variable_description": "Atividade paradiplomática de cidades criativas."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": 3,
+    "sample_size_quote": "três cidades criativas que realizaram atividades paradiplomáticas em suas iniciativas de internacionalização: Barcelona, Toronto e Rio de Janeiro",
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "qualitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo declara comparação focada e estruturada de três estudos de caso. Classifiquei como qualitativo explicativo em paradiplomacia, com desenho “Other”."
+  },
+  "raw_response_path": null
+}

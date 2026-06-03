@@ -1,0 +1,52 @@
+{
+  "pid": "S0034-76122014000100004",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:35Z",
+  "input_text_hash": "bf362a3bb3fadac61f7772f08818c31376251bff51f338c965adc5ebceb84054",
+  "source_file": "data/processed/sample_xmls/S0034-76122014000100004.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "field_study",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": null,
+    "dependent_variables": [
+      {
+        "variable_name": "organizational legitimacy",
+        "variable_description": "Legitimacy dimensions attributed to civil society organizations."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 46,
+    "sample_size_quote": "46 atores representativos do campo das OSC",
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, apenas metadados/resumo/referências, então marquei Missing/Corrupt e usei somente o que aparece no resumo ou título. Para 'Legitimidade das organizações da sociedade civil: análise de conteúdo à luz da teoria da capacidade crítica', O resumo combina dados estruturados ou testes com material qualitativo, como documentos, entrevistas, codificação ou análise de conteúdo."
+  },
+  "raw_response_path": null
+}

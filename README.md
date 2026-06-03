@@ -8,6 +8,7 @@ Este repositório replica e expande Torreblanca et al. (2026), "The Credibility 
 - Amostra de validação: `data/processed/sample_validation.csv`, com 208 artigos.
 - Classificações LLM finais pós-revisão manual: `data/processed/classifications_llm.csv`, com 208 artigos classificados e schema validado; os JSONs finais estão em `data/processed/classifications_final/`.
 - Base operacional atual da amostra classificada: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão. Este arquivo é a amostra validada pós-exclusões, não a base final do paper.
+- Piloto de classificação tripla independente: `data/processed/full_classification_pilot/`, usando subagentes Codex locais e os 175 artigos elegíveis apenas como gold/piloto.
 - Benchmarks internacionais de readability: `data/processed/benchmark_cp.csv` e `data/processed/benchmark_ir.csv`.
 - Validação final das classificações: `Rscript --vanilla scripts/09_apply_manual_review_decisions.R` gerou zero erros de schema em 2026-06-03; o relatório está em `quality_reports/classification_validation_summary_final.md`.
 - Testes locais: `python3 -m pytest scripts` passou com 59 testes em 2026-06-01.
@@ -64,15 +65,31 @@ PUB_YEAR_FROM=2005 PUB_YEAR_UNTIL=2025 python3 scripts/02_collect_articles.py
 Rscript --vanilla scripts/03_sample_articles.R
 ```
 
-4. Classificar artigos via LLM:
+4. Testar classificação tripla independente nos 175 artigos gold/piloto:
+
+```bash
+Rscript --vanilla scripts/10_prepare_full_classification_pilot.R
+# Em seguida, três subagentes Codex locais classificam os mesmos PIDs em:
+# data/processed/full_classification_pilot/agent_a/
+# data/processed/full_classification_pilot/agent_b/
+# data/processed/full_classification_pilot/agent_c/
+Rscript --vanilla scripts/11_validate_full_classification_pilot_outputs.R
+Rscript --vanilla scripts/12_compare_full_classification_pilot.R
+```
+
+Este piloto não usa `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` nem runner de API. As classificações são produzidas por subagentes Codex independentes, e `classifications_llm_main_analysis.csv` é usado apenas como gold/piloto para seleção e avaliação.
+
+Limitação do piloto executado em 2026-06-03: os 175 XMLs locais usados como entrada não continham `<body>` e eram idênticos entre `data/processed/sample_xmls/` e `data/raw/articles_fulltext/`. Portanto, a rodada classifica o texto disponível nos XMLs, não corpo integral de artigo.
+
+5. Classificar artigos via LLM/API, quando houver decisão posterior de escala:
 
 ```bash
 ANTHROPIC_API_KEY=... python3 scripts/04_classify_articles.py
 ```
 
-Estado atual: este script foi usado para a amostra de validação. O próximo desenvolvimento deve adaptar/operacionalizar a classificação em escala para o corpus completo elegível, mantendo fora da análise os periódicos excluídos.
+Estado atual: este script foi usado para a amostra de validação. A escala para o corpus completo elegível só deve ocorrer depois do relatório do piloto triplo, mantendo fora da análise os periódicos excluídos.
 
-5. Validar, normalizar e fechar classificações:
+6. Validar, normalizar e fechar classificações:
 
 ```bash
 Rscript --vanilla scripts/05_validate_classifications.R
@@ -82,13 +99,13 @@ Rscript --vanilla scripts/08_validate_manual_review_decisions.R
 Rscript --vanilla scripts/09_apply_manual_review_decisions.R
 ```
 
-6. Construir benchmarks internacionais:
+7. Construir benchmarks internacionais:
 
 ```bash
 python3 scripts/build_benchmark.py --field both
 ```
 
-7. Rodar testes:
+8. Rodar testes:
 
 ```bash
 python3 -m pytest scripts

@@ -1,0 +1,57 @@
+{
+  "pid": "S0103-33522020000100083",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "ead98f885fef48a156112b30df4cb0dd3b7833ade6ea034a42f7dcecdf81c818",
+  "source_file": "data/processed/sample_xmls/S0103-33522020000100083.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "electoral manifestos",
+        "variable_description": "Programas eleitorais de PSDB, PT e MDB entre 1994 e 2018."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "left-right foreign policy positions",
+        "variable_description": "Posições ideológicas atribuídas à política externa eleitoral."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": null,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo declara adaptação do método do Manifesto Research Group para codificar programas em escala esquerda-direita. Classifiquei como quantitativo descritivo de política brasileira."
+  },
+  "raw_response_path": null
+}

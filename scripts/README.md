@@ -17,6 +17,11 @@ O pipeline deve avançar da amostra de validação para a classificação do cor
 - `04_classify_articles.py`: classifica a amostra usando a API Claude e consolida JSONs individuais em CSV.
 - `classify_batch.py`: classifica subconjuntos de PIDs definidos em arquivos `batch_*.txt`.
 - `classify_writing_codex.py`: classifica características de escrita via Codex CLI.
+- `10_prepare_full_classification_pilot.R`: cria o manifest rastreável dos 175 artigos gold/piloto elegíveis, com XML fonte, hashes SHA-256 e versões dos prompts dos três subagentes.
+- `11_validate_full_classification_pilot_outputs.R`: valida os JSONs produzidos pelos três subagentes Codex locais e consolida uma base CSV por agente.
+- `12_compare_full_classification_pilot.R`: compara os três agentes campo a campo, gera consenso provisório, conflitos, fila de adjudicação e comparação contra o gold/piloto.
+
+O piloto triplo em `data/processed/full_classification_pilot/` não usa `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` nem chamadas de API. As classificações substantivas são produzidas por três subagentes Codex locais independentes.
 
 ## Validação e normalização
 

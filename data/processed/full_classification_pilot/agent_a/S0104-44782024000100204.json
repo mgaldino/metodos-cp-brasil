@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-44782024000100204",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "7d6d954af07f7a150b14192c78fe14c665bc60c2204883ded1c6e7d8f653e81c",
+  "source_file": "data/processed/sample_xmls/S0104-44782024000100204.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Comparative Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "multiple_countries",
+    "single_region": null,
+    "countries_of_focus": null,
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "political polarization and ideology",
+        "variable_description": "Polarização nacional, ideologia individual e ideologia dominante do governo."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "democratic legitimacy and commitment",
+        "variable_description": "Legitimidade democrática e compromisso com princípios democráticos."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo usa World Values Survey em 57 países e modelos multiníveis multivariados. Não registrei amostra exata porque o resumo diz apenas “over 77,000 respondents”."
+  },
+  "raw_response_path": null
+}

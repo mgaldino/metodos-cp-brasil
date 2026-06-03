@@ -1,0 +1,57 @@
+{
+  "pid": "S0102-69092024000100506",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "9702b0ea5bbf68758128edd8644bcc02ab4f9741ceff39b1b9353fd1544d89e7",
+  "source_file": "data/processed/sample_xmls/S0102-69092024000100506.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "implementation factors",
+        "variable_description": "Fatores explicativos derivados de estudos de caso e da literatura de implementação de políticas públicas."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "equity strategies in CRAS",
+        "variable_description": "Existência de estratégias específicas de atendimento a Povos e Comunidades Tradicionais nos CRAS."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": 2084,
+    "sample_size_quote": "A amostra utilizada foi de 2.084 casos, de uma população de 2.501 CRAS que atenderam PCTs situados em seus territórios de abrangência em 2019.",
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo declara regressões logísticas com 2.084 casos do Censo SUAS. Classifiquei como quantitativo explicativo sobre implementação de política pública, sem inferir identificação causal além de regressão observacional."
+  },
+  "raw_response_path": null
+}

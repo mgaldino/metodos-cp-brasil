@@ -1,0 +1,61 @@
+{
+  "pid": "S0011-52582024000400209",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "333a3480364f81c6499e4f4ec2323a76e45108e52fbe37f443e45065ef57c293",
+  "source_file": "data/processed/sample_xmls/S0011-52582024000400209.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Diagnóstico regulatório com base original e tipologia analítica",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "government policy preferences",
+        "variable_description": "Preferências do governo em relação aos conteúdos das políticas públicas."
+      },
+      {
+        "variable_name": "council resilience",
+        "variable_description": "Resiliência dos conselhos segundo desenho institucional e inserção em comunidades de políticas."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "council deinstitutionalization effects",
+        "variable_description": "Alcance das medidas do governo Bolsonaro sobre colegiados nacionais."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": 103,
+    "sample_size_quote": "diagnóstico empírico da situação regulatória de 103 colegiados nacionais, a partir de base de dados original",
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo declara diagnóstico empírico de 103 colegiados nacionais com base de dados original. Classifiquei como análise quantitativa explicativa de política pública, usando desenho “Other” porque a estratégia é tipológica/regulatória e não um desenho causal clássico."
+  },
+  "raw_response_path": null
+}

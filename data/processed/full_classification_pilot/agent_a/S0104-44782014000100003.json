@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-44782014000100003",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "c8e780d59ef43b2d325c95c7e2d116b7967ebf07752d2507a9701553f1882039",
+  "source_file": "data/processed/sample_xmls/S0104-44782014000100003.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Análise descritiva e teste qui-quadrado de aderência",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "characteristics of councilor indications",
+        "variable_description": "Ano, categoria e região de destino das indicações legislativas."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "electoral connection patterns",
+        "variable_description": "Padrões de intermediação de interesses e conexão eleitoral."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": null,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo descreve base de indicações da Câmara do Rio, tabelas no SPSS e teste qui-quadrado. Classifiquei como quantitativo observacional com desenho “Other”, sem causalidade explícita forte."
+  },
+  "raw_response_path": null
+}

@@ -1,0 +1,65 @@
+{
+  "pid": "S0104-62762020000100034",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:35Z",
+  "input_text_hash": "f5d73b3128cd260483e3f183b35b7e0d94007b22552f4a1208f57c1bac0dab13",
+  "source_file": "data/processed/sample_xmls/S0104-62762020000100034.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "runs_original_survey",
+    "uses_original_dataset": "original_survey",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "fear of violence",
+        "variable_description": "Fear of violence as possible driver of authoritarian tendencies."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "authoritarian attitudes",
+        "variable_description": "Support for authoritarian positions measured with items from Adorno's F scale."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "fear of violence",
+        "dv_var_name": "authoritarian attitudes",
+        "relationship_type": "Positive",
+        "statistically_significant": false,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 2087,
+    "sample_size_quote": "Foram entrevistadas 2.087 pessoas",
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, apenas metadados/resumo/referências, então marquei Missing/Corrupt e usei somente o que aparece no resumo ou título. Para 'Medo da violência e adesão ao autoritarismo no Brasil: proposta metodológica e resultados em 2017', O resumo indica análise quantitativa própria ou uso de dados estruturados; variáveis e desenho foram preenchidos apenas quando explicitados."
+  },
+  "raw_response_path": null
+}

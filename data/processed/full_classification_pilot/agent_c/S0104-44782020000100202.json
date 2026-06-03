@@ -1,0 +1,87 @@
+{
+  "pid": "S0104-44782020000100202",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:35Z",
+  "input_text_hash": "4a546af9ab2b9c4eddb8b2f4f2f7ff074093cda72286dbdb7466921d916d5ff7",
+  "source_file": "data/processed/sample_xmls/S0104-44782020000100202.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Comparative Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "multiple_countries",
+    "single_region": null,
+    "countries_of_focus": null,
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Qualitative Comparative Analysis (QCA) with binary variables",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "legislative control",
+        "variable_description": "Whether presidents control the legislature."
+      },
+      {
+        "variable_name": "civil society control",
+        "variable_description": "Whether presidents control civil society."
+      },
+      {
+        "variable_name": "radical left alignment",
+        "variable_description": "Whether presidents are aligned with the radical left."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "electoral survival",
+        "variable_description": "Capacity of Latin American presidents to survive electorally."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "legislative control",
+        "dv_var_name": "electoral survival",
+        "relationship_type": "Positive",
+        "statistically_significant": false,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "civil society control",
+        "dv_var_name": "electoral survival",
+        "relationship_type": "Positive",
+        "statistically_significant": false,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "radical left alignment",
+        "dv_var_name": "electoral survival",
+        "relationship_type": "Positive",
+        "statistically_significant": false,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, apenas metadados/resumo/referências, então marquei Missing/Corrupt e usei somente o que aparece no resumo ou título. Para 'Resiliência eleitoral dos presidentes latino-americanos após a crise de 2008 e o refluxo da onda rosa', O resumo indica análise quantitativa própria ou uso de dados estruturados; variáveis e desenho foram preenchidos apenas quando explicitados."
+  },
+  "raw_response_path": null
+}

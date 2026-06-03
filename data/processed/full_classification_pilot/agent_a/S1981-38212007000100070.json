@@ -1,0 +1,57 @@
+{
+  "pid": "S1981-38212007000100070",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "5e5cef8b47019200dd8e5950ea01f037e3a39382ebd3e0bca4e3c31d109d3e21",
+  "source_file": "data/processed/sample_xmls/S1981-38212007000100070.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "voter attributes and political attitudes",
+        "variable_description": "Religião, sentimentos partidários, posicionamento esquerda-direita, avaliação do governo e atributos dos candidatos."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "2002 presidential vote choice",
+        "variable_description": "Decisão de voto na eleição presidencial brasileira de 2002."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo declara regressões logísticas com dados do ESEB, survey nacional pós-eleitoral. Classifiquei como quantitativo explicativo de comportamento eleitoral, sem claim causal explícito de identificação."
+  },
+  "raw_response_path": null
+}

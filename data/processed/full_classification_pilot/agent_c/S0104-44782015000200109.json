@@ -1,0 +1,72 @@
+{
+  "pid": "S0104-44782015000200109",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:35Z",
+  "input_text_hash": "4729c7a819ce2af7c5c39f8040de2dd1b552dee64d3cc34bf64a5cda90140ecc",
+  "source_file": "data/processed/sample_xmls/S0104-44782015000200109.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "socioeconomic, political and spatial variables",
+        "variable_description": "Municipal socioeconomic variables, prior electoral base, Lula effect, and Bolsa Familia."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "PT vote in Bahia",
+        "variable_description": "Municipal election results for governor in Bahia in 2006."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "Lula effect",
+        "dv_var_name": "PT vote in Bahia",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "Bolsa Familia",
+        "dv_var_name": "PT vote in Bahia",
+        "relationship_type": "Unknown",
+        "statistically_significant": false,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, apenas metadados/resumo/referências, então marquei Missing/Corrupt e usei somente o que aparece no resumo ou título. Para 'Ciclos políticos, socioeconomia e a geografia eleitoral do estado da Bahia nas eleições de 2006', O resumo indica análise quantitativa própria ou uso de dados estruturados; variáveis e desenho foram preenchidos apenas quando explicitados."
+  },
+  "raw_response_path": null
+}

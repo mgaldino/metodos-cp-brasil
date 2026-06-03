@@ -1,0 +1,72 @@
+{
+  "pid": "S0011-52582006000100002",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "1963fb6e32a2faff757d4ccc94fea99b2df795bef8a70e33c8cf6e1e1c9d15d4",
+  "source_file": "data/processed/sample_xmls/S0011-52582006000100002.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "macroeconomic indicators and financial markets",
+        "variable_description": "Inflation, unemployment, exchange rate, C-Bond spread and São Paulo Stock Exchange Index."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "voting intentions",
+        "variable_description": "Aggregate self-reported preferences for presidential candidates in 1994, 1998 and 2002."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "macroeconomic indicators",
+        "dv_var_name": "voting intentions",
+        "relationship_type": "Unknown",
+        "statistically_significant": false,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "financial market indicators",
+        "dv_var_name": "voting intentions",
+        "relationship_type": "Null",
+        "statistically_significant": false,
+        "substantively_significant": false
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, mas o resumo descreve testes de hipóteses com dados agregados sobre intenção de voto e indicadores econômicos. Classifiquei como artigo quantitativo explicativo sobre política brasileira, sem atribuir desenho causal específico porque o resumo não declara identificação."
+  },
+  "raw_response_path": null
+}

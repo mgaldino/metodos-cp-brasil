@@ -1,0 +1,76 @@
+{
+  "pid": "S0102-85292021000100121",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:35Z",
+  "input_text_hash": "73dcdbc07ae7c3a8993b0b5284a603159f956557c8a7031deb91be6e20b3eed1",
+  "source_file": "data/processed/sample_xmls/S0102-85292021000100121.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "International Relations",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "multiple_countries",
+    "single_region": null,
+    "countries_of_focus": "United States",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "Descriptive trend analysis with document analysis",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "leftist governments and autonomy",
+        "variable_description": "Latin American assertiveness and quest for autonomy during the 2000s."
+      },
+      {
+        "variable_name": "Chinese and Russian involvement",
+        "variable_description": "External involvement in Latin America."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "Latin American assertiveness",
+        "variable_description": "Regional assertiveness vis-a-vis the United States after 9/11."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "leftist governments and autonomy",
+        "dv_var_name": "Latin American assertiveness",
+        "relationship_type": "Positive",
+        "statistically_significant": false,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "Chinese and Russian involvement",
+        "dv_var_name": "Latin American assertiveness",
+        "relationship_type": "Positive",
+        "statistically_significant": false,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral, apenas metadados/resumo/referências, então marquei Missing/Corrupt e usei somente o que aparece no resumo ou título. Para 'Política Externa dos EUA para a América do Sul desde o 11 de Setembro: Negligência ou Militarização?', O resumo combina dados estruturados ou testes com material qualitativo, como documentos, entrevistas, codificação ou análise de conteúdo."
+  },
+  "raw_response_path": null
+}

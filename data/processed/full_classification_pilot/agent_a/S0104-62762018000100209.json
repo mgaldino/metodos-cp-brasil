@@ -1,0 +1,61 @@
+{
+  "pid": "S0104-62762018000100209",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v1+common_schema_v1",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T20:55:47Z",
+  "input_text_hash": "4c3acbe9f9b408164a504e0599abfe8d09205fae103b51657757cccf79107bdc",
+  "source_file": "data/processed/sample_xmls/S0104-62762018000100209.xml",
+  "classification": {
+    "error_in_raw_text": "Missing/Corrupt",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": false,
+    "main_causal_research_design": "Multiple Designs",
+    "other_research_design": "Regressão linear, equações simultâneas, modelos não paramétricos e mediação causal observacional",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "criminological variables",
+        "variable_description": "Variáveis criminológicas e violência percebida/experimentada."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "satisfaction with democracy",
+        "variable_description": "Satisfação com a democracia no Brasil."
+      },
+      {
+        "variable_name": "interpersonal trust",
+        "variable_description": "Confiança interpessoal como possível mediadora."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": null,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O XML não contém corpo integral; o resumo usa Barômetro das Américas 2014 e vários modelos, incluindo mediação causal. Classifiquei como quantitativo explicativo com múltiplos desenhos/modelos observacionais."
+  },
+  "raw_response_path": null
+}
