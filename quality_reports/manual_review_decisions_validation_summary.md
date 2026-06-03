@@ -1,6 +1,6 @@
 # Validação das Decisões Manuais
 
-Gerado em 2026-06-03 00:01:13 -03
+Gerado por `scripts/08_validate_manual_review_decisions.R`.
 
 ## Fonte
 
@@ -8,12 +8,13 @@ Gerado em 2026-06-03 00:01:13 -03
 - Endpoint CSV usado para o snapshot: https://docs.google.com/spreadsheets/d/1DZgnyu9StUDLE0szvkWFutqA1hI-_QqOlqvRO5dBH4k/gviz/tq?tqx=out:csv&sheet=manual_review_queue
 - Snapshot salvo em `data/processed/manual_review_decisions_google_sheet.csv`.
 - A validação compara chaves `pid + field + file + issue_rule + action`, não posição de linha.
+- A janela esperada de revisão manual é de `2026-06-01` a `2026-06-03`; datas fora da janela são avisos de auditoria, não falhas substantivas.
 
 ## Status
 
 Fila principal operacionalmente completa: todas as chaves foram pareadas e todos os itens não excluídos estão `done`.
 
-Observação: a validação estrita ainda registra dois placeholders de `main_variable_relationship` e um mismatch não bloqueante em `allowed_values` editado na planilha.
+Observação: os placeholders de `main_variable_relationship` foram resolvidos por overrides estruturados. Há 28 aviso(s) não bloqueante(s) registrado(s) em `manual_review_decisions_issues.csv`.
 
 ## Snapshot
 
@@ -25,6 +26,9 @@ Observação: a validação estrita ainda registra dois placeholders de `main_va
 | linhas dispensadas por exclusão de periódico | 29 |
 | linhas dispensadas por exclusão de artigo | 10 |
 | chaves duplicadas no snapshot | 0 |
+| chaves duplicadas nas filas locais | 0 |
+| chaves duplicadas no log manual | 0 |
+| overrides estruturados duplicados | 0 |
 | linhas do snapshot sem par local | 0 |
 | linhas locais sem par no snapshot | 0 |
 | linhas do log manual sem par no snapshot | 0 |
@@ -32,7 +36,12 @@ Observação: a validação estrita ainda registra dois placeholders de `main_va
 | linhas principais ainda pending | 0 |
 | linhas pending dispensadas por exclusão | 18 |
 | valores done fora do codebook local na análise principal | 0 |
-| placeholders structured_json_required | 2 |
+| placeholders structured_json_required sem override | 0 |
+| overrides estruturados de main_variable_relationship | 2 |
+| overrides estruturados com valor inválido | 0 |
+| overrides estruturados com metadados inválidos | 0 |
+| overrides estruturados sem placeholder correspondente | 0 |
+| datas de revisão fora da janela esperada | 27 |
 | mismatches de allowed_values na planilha | 1 |
 
 ## Status por Escopo
@@ -62,20 +71,30 @@ Observação: a validação estrita ainda registra dois placeholders de `main_va
 
 ## Itens com Ressalva de Aplicação
 
-| pid | field | journal_title | decision_value | local_allowed_values | decision_note | validation_issue |
-| --- | --- | --- | --- | --- | --- | --- |
-| S1981-38212007000100070 | main_variable_relationship | Brazilian Political Science Review | structured_json_required | <NULL> \| structured_json_required | Regreessão | structured_json_required_placeholder |
-| S1981-38212013000200003 | main_variable_relationship | Brazilian Political Science Review | structured_json_required | <NULL> \| structured_json_required | Regressão logística com múltiplas relações IV/DV interpretadas substantivamente e com significância; requer codificação estruturada posterior. Importante, link leva para página e precisa clicar em pdf para abrir o paper. Caso diferente dos outros links. É um problema de textos mais antigos da Brazilian Political Sciencie Review especitifcamente | structured_json_required_placeholder |
+_Nenhum registro._
+
+## Overrides Estruturados
+
+| pid | field | structured_override_value_valid | structured_override_metadata_valid | structured_override_valid | structured_override_note | structured_override_by | structured_override_date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| S1981-38212007000100070 | main_variable_relationship | TRUE | TRUE | TRUE | Regressões logísticas com múltiplos preditores para voto em quatro candidatos; direção varia por candidato/preditor, portanto a relação agregada fica como Unknown. | Manoel/Codex | 2026-06-03 |
+| S1981-38212013000200003 | main_variable_relationship | TRUE | TRUE | TRUE | Regressão logística com múltiplas relações IV/DV interpretadas substantivamente; direção varia por variável/modelo, portanto a relação agregada fica como Unknown. | Manoel/Codex | 2026-06-03 |
+
+## Problemas de Overrides Estruturados
+
+_Nenhum registro._
 
 ## Interpretação
 
 - `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` estão documentados em `data/processed/excluded_journals.csv` e suas pendências restantes aparecem apenas como dispensadas por periódico.
 - Obituário, editorial, comentário crítico, errata e nota fora de escopo estão documentados em `data/processed/excluded_articles.csv` e ficam fora da análise principal.
 - As decisões da fila principal estão completas, mas nem todas são diretamente aplicáveis ao schema atual sem regra adicional.
-- Antes de regerar `classifications_llm.csv` final, substituir `structured_json_required` por JSON substantivo ou `<NULL>`.
+- Os placeholders `structured_json_required` foram resolvidos em `data/processed/manual_review_relationship_overrides.json`.
+- A próxima etapa pode aplicar as decisões manuais e os overrides para regerar `classifications_llm.csv` final.
+- Avisos não bloqueantes permanecem documentados em `quality_reports/manual_review_decisions_issues.csv`.
 
 ## Arquivos Gerados
 
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_decisions_validated.csv`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_decisions_issues.csv`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_decisions_validation_summary.md`
+- `quality_reports/manual_review_decisions_validated.csv`
+- `quality_reports/manual_review_decisions_issues.csv`
+- `quality_reports/manual_review_decisions_validation_summary.md`

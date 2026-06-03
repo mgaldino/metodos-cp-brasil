@@ -3,6 +3,13 @@
 
 options(scipen = 999)
 
+for (locale_name in c("pt_BR.UTF-8", "en_US.UTF-8", "C.UTF-8")) {
+  locale_result <- try(Sys.setlocale("LC_CTYPE", locale_name), silent = TRUE)
+  if (!inherits(locale_result, "try-error") && !is.na(locale_result)) {
+    break
+  }
+}
+
 suppressPackageStartupMessages({
   library(dplyr)
   library(readr)
@@ -10,7 +17,32 @@ suppressPackageStartupMessages({
   library(tibble)
 })
 
-project_dir <- normalizePath(".", mustWork = TRUE)
+find_project_dir <- function() {
+  file_arg <- grep("^--file=", commandArgs(FALSE), value = TRUE)
+  candidates <- c()
+  if (length(file_arg) > 0) {
+    script_path <- sub("^--file=", "", file_arg[1])
+    candidates <- c(candidates, dirname(normalizePath(script_path, mustWork = TRUE)))
+  }
+  candidates <- c(candidates, normalizePath(getwd(), mustWork = TRUE))
+
+  for (candidate in candidates) {
+    current <- candidate
+    repeat {
+      if (file.exists(file.path(current, "metodos_CP.Rproj"))) {
+        return(normalizePath(current, mustWork = TRUE))
+      }
+      parent <- dirname(current)
+      if (identical(parent, current)) {
+        break
+      }
+      current <- parent
+    }
+  }
+  stop("Não foi possível localizar a raiz do projeto.")
+}
+
+project_dir <- find_project_dir()
 
 paths <- list(
   normalization_log = file.path(project_dir, "quality_reports", "classification_normalization_log.csv"),
@@ -27,7 +59,14 @@ paths <- list(
   summary = file.path(project_dir, "quality_reports", "manual_review_queue_summary.md")
 )
 
-required_files <- c(paths$normalization_log, paths$sample_sheet, paths$sample_validation, paths$normalized_csv)
+required_files <- c(
+  paths$normalization_log,
+  paths$sample_sheet,
+  paths$sample_validation,
+  paths$normalized_csv,
+  paths$excluded_journals,
+  paths$excluded_articles
+)
 missing_files <- required_files[!file.exists(required_files)]
 if (length(missing_files) > 0) {
   stop("Arquivos ausentes: ", paste(missing_files, collapse = "; "))
@@ -90,50 +129,28 @@ log <- readr::read_csv(paths$normalization_log, show_col_types = FALSE, progress
 sample_sheet <- readr::read_csv(paths$sample_sheet, show_col_types = FALSE, progress = FALSE)
 sample_validation <- readr::read_csv(paths$sample_validation, show_col_types = FALSE, progress = FALSE)
 normalized <- readr::read_csv(paths$normalized_csv, show_col_types = FALSE, progress = FALSE)
-excluded_journals <- if (file.exists(paths$excluded_journals)) {
-  readr::read_csv(paths$excluded_journals, show_col_types = FALSE, progress = FALSE) |>
-    dplyr::filter(exclude_from_analysis) |>
-    dplyr::select(
-      issn,
-      excluded_journal_title = journal_title,
-      excluded_by_journal = exclude_from_analysis,
-      exclusion_reason,
-      exclusion_decision_by = decision_by,
-      exclusion_decision_date = decision_date,
-      exclusion_notes = notes
-    )
-} else {
-  tibble(
-    issn = character(),
-    excluded_journal_title = character(),
-    excluded_by_journal = logical(),
-    exclusion_reason = character(),
-    exclusion_decision_by = character(),
-    exclusion_decision_date = character(),
-    exclusion_notes = character()
+excluded_journals <- readr::read_csv(paths$excluded_journals, show_col_types = FALSE, progress = FALSE) |>
+  dplyr::filter(exclude_from_analysis) |>
+  dplyr::select(
+    issn,
+    excluded_journal_title = journal_title,
+    excluded_by_journal = exclude_from_analysis,
+    journal_exclusion_reason = exclusion_reason,
+    journal_exclusion_decision_by = decision_by,
+    journal_exclusion_decision_date = decision_date,
+    journal_exclusion_notes = notes
   )
-}
-excluded_articles <- if (file.exists(paths$excluded_articles)) {
-  readr::read_csv(paths$excluded_articles, show_col_types = FALSE, progress = FALSE) |>
-    dplyr::filter(exclude_from_analysis) |>
-    dplyr::select(
-      pid,
-      excluded_by_article = exclude_from_analysis,
-      article_exclusion_reason = exclusion_reason,
-      article_exclusion_decision_by = decision_by,
-      article_exclusion_decision_date = decision_date,
-      article_exclusion_notes = notes
-    )
-} else {
-  tibble(
-    pid = character(),
-    excluded_by_article = logical(),
-    article_exclusion_reason = character(),
-    article_exclusion_decision_by = character(),
-    article_exclusion_decision_date = character(),
-    article_exclusion_notes = character()
+
+excluded_articles <- readr::read_csv(paths$excluded_articles, show_col_types = FALSE, progress = FALSE) |>
+  dplyr::filter(exclude_from_analysis) |>
+  dplyr::select(
+    pid,
+    excluded_by_article = exclude_from_analysis,
+    article_exclusion_reason = exclusion_reason,
+    article_exclusion_decision_by = decision_by,
+    article_exclusion_decision_date = decision_date,
+    article_exclusion_notes = notes
   )
-}
 
 manual_log <- log |>
   dplyr::filter(manual_review) |>
@@ -170,8 +187,8 @@ full_queue <- manual_log |>
   dplyr::mutate(
     excluded_by_journal = dplyr::coalesce(excluded_by_journal, FALSE),
     excluded_by_article = dplyr::coalesce(excluded_by_article, FALSE),
-    journal_exclusion_reason = dplyr::if_else(excluded_by_journal, exclusion_reason, ""),
     article_exclusion_reason = dplyr::if_else(excluded_by_article, article_exclusion_reason, ""),
+    journal_exclusion_reason = dplyr::if_else(excluded_by_journal, journal_exclusion_reason, ""),
     excluded_from_analysis = excluded_by_journal | excluded_by_article,
     exclusion_reason = dplyr::case_when(
       excluded_by_journal & excluded_by_article ~ paste(journal_exclusion_reason, article_exclusion_reason, sep = "; "),
@@ -179,6 +196,12 @@ full_queue <- manual_log |>
       excluded_by_article ~ article_exclusion_reason,
       TRUE ~ ""
     ),
+    journal_exclusion_decision_by = dplyr::if_else(excluded_by_journal, journal_exclusion_decision_by, ""),
+    journal_exclusion_decision_date = dplyr::if_else(excluded_by_journal, as.character(journal_exclusion_decision_date), ""),
+    journal_exclusion_notes = dplyr::if_else(excluded_by_journal, journal_exclusion_notes, ""),
+    article_exclusion_decision_by = dplyr::if_else(excluded_by_article, article_exclusion_decision_by, ""),
+    article_exclusion_decision_date = dplyr::if_else(excluded_by_article, as.character(article_exclusion_decision_date), ""),
+    article_exclusion_notes = dplyr::if_else(excluded_by_article, article_exclusion_notes, ""),
     decision_status = "pending",
     decision_value = "",
     decision_note = "",
@@ -227,7 +250,13 @@ full_queue <- manual_log |>
     excluded_by_journal,
     excluded_by_article,
     excluded_from_analysis,
-    exclusion_reason
+    exclusion_reason,
+    journal_exclusion_decision_by,
+    journal_exclusion_decision_date,
+    journal_exclusion_notes,
+    article_exclusion_decision_by,
+    article_exclusion_decision_date,
+    article_exclusion_notes
   )
 
 excluded_queue <- full_queue |>
@@ -280,10 +309,24 @@ markdown_table <- function(df, max_rows = Inf) {
     return("_Nenhum registro._")
   }
   df <- utils::head(df, max_rows)
+  df <- df |>
+    dplyr::mutate(dplyr::across(
+      dplyr::everything(),
+      ~ stringr::str_replace_all(ifelse(is.na(.x), "", as.character(.x)), "\\|", "\\\\|")
+    ))
   header <- paste0("| ", paste(names(df), collapse = " | "), " |")
   sep <- paste0("| ", paste(rep("---", ncol(df)), collapse = " | "), " |")
   rows <- apply(df, 1, function(row) paste0("| ", paste(row, collapse = " | "), " |"))
   paste(c(header, sep, rows), collapse = "\n")
+}
+
+relative_path <- function(path) {
+  abs_path <- normalizePath(path, mustWork = FALSE)
+  prefix <- paste0(project_dir, .Platform$file.sep)
+  if (startsWith(abs_path, prefix)) {
+    return(substring(abs_path, nchar(prefix) + 1))
+  }
+  abs_path
 }
 
 codebook_rows <- tibble(
@@ -315,7 +358,7 @@ writeLines(codebook_lines, paths$codebook, useBytes = TRUE)
 summary_lines <- c(
   "# Fila de Revisão Manual",
   "",
-  paste("Gerado em", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
+  "Gerado por `scripts/07_prepare_manual_review_queue.R`.",
   "",
   "## Como usar",
   "",
@@ -340,6 +383,12 @@ summary_lines <- c(
   "",
   "## Pendências dispensadas por exclusão de artigo",
   "",
+  paste0(
+    "Nota: esta seção e `", relative_path(paths$excluded_article_queue),
+    "` mostram apenas pendências de revisão dispensadas por exclusão de artigo. ",
+    "O ledger completo de artigos excluídos é `", relative_path(paths$excluded_articles), "`."
+  ),
+  "",
   markdown_table(
     excluded_article_queue |>
       dplyr::count(pid, title, journal_title, exclusion_reason, name = "n") |>
@@ -352,12 +401,12 @@ summary_lines <- c(
   "",
   "## Arquivos Gerados",
   "",
-  paste0("- `", paths$queue, "`"),
-  paste0("- `", paths$excluded_queue, "`"),
-  paste0("- `", paths$excluded_article_queue, "`"),
-  paste0("- `", paths$queue_by_article, "`"),
-  paste0("- `", paths$codebook, "`"),
-  paste0("- `", paths$summary, "`")
+  paste0("- `", relative_path(paths$queue), "`"),
+  paste0("- `", relative_path(paths$excluded_queue), "`"),
+  paste0("- `", relative_path(paths$excluded_article_queue), "`"),
+  paste0("- `", relative_path(paths$queue_by_article), "`"),
+  paste0("- `", relative_path(paths$codebook), "`"),
+  paste0("- `", relative_path(paths$summary), "`")
 )
 writeLines(summary_lines, paths$summary, useBytes = TRUE)
 
@@ -366,4 +415,4 @@ cat("Linhas pendentes:", nrow(queue), "\n")
 cat("Linhas dispensadas por exclusão de periódico:", nrow(excluded_queue), "\n")
 cat("Linhas dispensadas por exclusão de artigo:", nrow(excluded_article_queue), "\n")
 cat("Artigos com pendências:", nrow(queue_by_article), "\n")
-cat("Arquivo:", paths$queue, "\n")
+cat("Arquivo:", relative_path(paths$queue), "\n")

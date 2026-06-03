@@ -1,6 +1,6 @@
 # Fila de Revisão Manual
 
-Gerado em 2026-06-02 23:59:57 -03
+Gerado por `scripts/07_prepare_manual_review_queue.R`.
 
 ## Como usar
 
@@ -20,23 +20,25 @@ Gerado em 2026-06-02 23:59:57 -03
 | method_status | 23 |
 | single_region | 16 |
 | single_country_study | 11 |
-| evidence_type |  7 |
-| main_variable_relationship |  5 |
-| paper_uses_survey_data |  5 |
-| uses_original_dataset |  4 |
-| error_in_raw_text |  1 |
-| is_empirical_quant_paper |  1 |
+| evidence_type | 7 |
+| main_variable_relationship | 5 |
+| paper_uses_survey_data | 5 |
+| uses_original_dataset | 4 |
+| error_in_raw_text | 1 |
+| is_empirical_quant_paper | 1 |
 
 ## Pendências dispensadas por exclusão de periódico
 
 | journal_title | issn | exclusion_reason | n |
 | --- | --- | --- | --- |
 | Brazilian Journal of Political Economy | 0101-3157 | out_of_scope_economics | 15 |
-| Brazilian Journal of Political Economy | 1809-4538 | out_of_scope_economics |  6 |
-| Civitas - Revista de Ciências Sociais | 1519-6089 | out_of_scope_social_sciences |  6 |
-| Civitas - Revista de Ciências Sociais | 1984-7289 | out_of_scope_social_sciences |  2 |
+| Brazilian Journal of Political Economy | 1809-4538 | out_of_scope_economics | 6 |
+| Civitas - Revista de Ciências Sociais | 1519-6089 | out_of_scope_social_sciences | 6 |
+| Civitas - Revista de Ciências Sociais | 1984-7289 | out_of_scope_social_sciences | 2 |
 
 ## Pendências dispensadas por exclusão de artigo
+
+Nota: esta seção e `quality_reports/manual_review_queue_excluded_articles.csv` mostram apenas pendências de revisão dispensadas por exclusão de artigo. O ledger completo de artigos excluídos é `data/processed/excluded_articles.csv`.
 
 | pid | title | journal_title | exclusion_reason | n |
 | --- | --- | --- | --- | --- |
@@ -58,9 +60,9 @@ Gerado em 2026-06-02 23:59:57 -03
 
 ## Arquivos Gerados
 
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue.csv`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_excluded_journals.csv`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_excluded_articles.csv`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_by_article.csv`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_codebook.md`
-- `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/quality_reports/manual_review_queue_summary.md`
+- `quality_reports/manual_review_queue.csv`
+- `quality_reports/manual_review_queue_excluded_journals.csv`
+- `quality_reports/manual_review_queue_excluded_articles.csv`
+- `quality_reports/manual_review_queue_by_article.csv`
+- `quality_reports/manual_review_codebook.md`
+- `quality_reports/manual_review_queue_summary.md`

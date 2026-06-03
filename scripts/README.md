@@ -16,8 +16,8 @@
 
 - `05_validate_classifications.R`: valida corpus, amostra, JSONs de classificação e CSV consolidado.
 - `06_normalize_classifications.R`: gera uma versão candidata normalizada dos JSONs/CSV sem sobrescrever os originais, com log auditável e reconciliação das pendências manuais.
-- `07_prepare_manual_review_queue.R`: prepara a fila de revisão manual e separa pendências dispensadas por regras de exclusão de periódico.
-- `08_validate_manual_review_decisions.R`: valida o snapshot da planilha Google Sheets com decisões manuais contra a fila local, produzindo relatório e CSVs auditáveis em `quality_reports/`.
+- `07_prepare_manual_review_queue.R`: prepara a fila de revisão manual e separa pendências dispensadas por regras de exclusão de periódico ou artigo.
+- `08_validate_manual_review_decisions.R`: valida o snapshot da planilha Google Sheets com decisões manuais contra a fila local e checa overrides estruturados pendentes, produzindo relatório e CSVs auditáveis em `quality_reports/`.
 
 ## Benchmark e auditoria
 

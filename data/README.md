@@ -25,6 +25,7 @@ Arquivos centrais:
 - `excluded_journals.csv`: regras de exclusão da análise principal por periódico/ISSN. Em 2026-06-02, `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` foram marcados como fora do escopo principal, preservando os registros no corpus.
 - `excluded_articles.csv`: regras de exclusão da análise principal por artigo. Obituário, editorial, comentário crítico, errata e nota fora de escopo ficam preservados no corpus, mas não entram nas análises do paper.
 - `manual_review_decisions_google_sheet.csv`: snapshot CSV da planilha Google Sheets com as decisões manuais da fila `manual_review=TRUE`, acessado em 2026-06-02 -03.
+- `manual_review_relationship_overrides.json`: decisões estruturadas para pendências `main_variable_relationship` que exigiam JSON manual.
 - `benchmark_cp.csv` e `benchmark_ir.csv`: métricas por paper para benchmarks internacionais.
 - `benchmark_cp_stats.json` e `benchmark_ir_stats.json`: estatísticas agregadas dos benchmarks.
 

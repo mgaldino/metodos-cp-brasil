@@ -1,7 +1,15 @@
 ## 08_validate_manual_review_decisions.R
-## Valida o snapshot da planilha de revisão manual contra as filas locais.
+## Valida o snapshot da planilha de revisão manual contra as filas locais
+## e checa overrides estruturados necessários para pendências JSON.
 
 options(scipen = 999)
+
+for (locale_name in c("pt_BR.UTF-8", "en_US.UTF-8", "C.UTF-8")) {
+  locale_result <- try(Sys.setlocale("LC_CTYPE", locale_name), silent = TRUE)
+  if (!inherits(locale_result, "try-error") && !is.na(locale_result)) {
+    break
+  }
+}
 
 suppressPackageStartupMessages({
   library(dplyr)
@@ -11,7 +19,32 @@ suppressPackageStartupMessages({
   library(tibble)
 })
 
-project_dir <- normalizePath(".", mustWork = TRUE)
+find_project_dir <- function() {
+  file_arg <- grep("^--file=", commandArgs(FALSE), value = TRUE)
+  candidates <- c()
+  if (length(file_arg) > 0) {
+    script_path <- sub("^--file=", "", file_arg[1])
+    candidates <- c(candidates, dirname(normalizePath(script_path, mustWork = TRUE)))
+  }
+  candidates <- c(candidates, normalizePath(getwd(), mustWork = TRUE))
+
+  for (candidate in candidates) {
+    current <- candidate
+    repeat {
+      if (file.exists(file.path(current, "metodos_CP.Rproj"))) {
+        return(normalizePath(current, mustWork = TRUE))
+      }
+      parent <- dirname(current)
+      if (identical(parent, current)) {
+        break
+      }
+      current <- parent
+    }
+  }
+  stop("Não foi possível localizar a raiz do projeto.")
+}
+
+project_dir <- find_project_dir()
 
 paths <- list(
   sheet_snapshot = file.path(project_dir, "data", "processed", "manual_review_decisions_google_sheet.csv"),
@@ -28,10 +61,42 @@ paths <- list(
 sheet_url <- "https://docs.google.com/spreadsheets/d/1DZgnyu9StUDLE0szvkWFutqA1hI-_QqOlqvRO5dBH4k/edit?usp=sharing"
 csv_export_url <- "https://docs.google.com/spreadsheets/d/1DZgnyu9StUDLE0szvkWFutqA1hI-_QqOlqvRO5dBH4k/gviz/tq?tqx=out:csv&sheet=manual_review_queue"
 
-required_files <- unlist(paths[c("sheet_snapshot", "normalization_log", "queue", "excluded_queue")])
+required_files <- unlist(paths[c(
+  "sheet_snapshot",
+  "normalization_log",
+  "queue",
+  "excluded_queue",
+  "excluded_article_queue",
+  "relationship_overrides"
+)])
 missing_files <- required_files[!file.exists(required_files)]
 if (length(missing_files) > 0) {
   stop("Arquivos ausentes: ", paste(missing_files, collapse = "; "))
+}
+
+decode_angle_hex_text <- function(value) {
+  if (!is.character(value)) {
+    return(value)
+  }
+  decode_one <- function(text) {
+    if (is.na(text)) {
+      return(NA_character_)
+    }
+    matches <- gregexpr("(<[0-9A-Fa-f]{2}>)+", text, perl = TRUE)
+    matched_text <- regmatches(text, matches)
+    if (length(matched_text[[1]]) == 0) {
+      return(text)
+    }
+    replacements <- lapply(matched_text, function(items) {
+      vapply(items, function(item) {
+        hex <- regmatches(item, gregexpr("[0-9A-Fa-f]{2}", item, perl = TRUE))[[1]]
+        rawToChar(as.raw(strtoi(hex, base = 16L)))
+      }, character(1))
+    })
+    regmatches(text, matches) <- replacements
+    text
+  }
+  vapply(value, decode_one, character(1), USE.NAMES = FALSE)
 }
 
 read_csv_utf8 <- function(path) {
@@ -40,7 +105,8 @@ read_csv_utf8 <- function(path) {
     show_col_types = FALSE,
     progress = FALSE,
     locale = readr::locale(encoding = "UTF-8")
-  )
+  ) |>
+    dplyr::mutate(dplyr::across(where(is.character), decode_angle_hex_text))
 }
 
 markdown_table <- function(df, max_rows = Inf) {
@@ -60,6 +126,9 @@ markdown_table <- function(df, max_rows = Inf) {
 }
 
 key_cols <- c("pid", "field", "file", "issue_rule", "action")
+# Janela da rodada manual documentada neste checkpoint de validação.
+review_date_min <- as.Date("2026-06-01")
+review_date_max <- as.Date("2026-06-03")
 relationship_required_fields <- c(
   "iv_var_name",
   "dv_var_name",
@@ -92,49 +161,56 @@ is_valid_relationship_value <- function(value) {
   }, logical(1)))
 }
 
+scalar_text <- function(value) {
+  if (is.null(value) || length(value) != 1 || is.na(value)) {
+    return("")
+  }
+  as.character(value)
+}
+
+valid_review_date <- function(value) {
+  parsed_value <- suppressWarnings(as.Date(value))
+  !is.na(parsed_value) &&
+    parsed_value >= review_date_min &&
+    parsed_value <= review_date_max
+}
+
 sheet <- read_csv_utf8(paths$sheet_snapshot)
 normalization_log <- read_csv_utf8(paths$normalization_log)
 queue <- read_csv_utf8(paths$queue) |>
   dplyr::mutate(queue_source = "main_queue")
 excluded_queue <- read_csv_utf8(paths$excluded_queue) |>
   dplyr::mutate(queue_source = "excluded_journal_queue")
-excluded_article_queue <- if (file.exists(paths$excluded_article_queue)) {
-  read_csv_utf8(paths$excluded_article_queue) |>
-    dplyr::mutate(queue_source = "excluded_article_queue")
-} else {
-  queue |>
-    utils::head(0) |>
-    dplyr::mutate(queue_source = character())
-}
-relationship_overrides <- if (file.exists(paths$relationship_overrides)) {
-  overrides_raw <- jsonlite::fromJSON(paths$relationship_overrides, simplifyVector = FALSE)
-  override_rows <- lapply(overrides_raw, function(item) {
-    tibble(
-      pid = item$pid,
-      field = item$field,
-      structured_override_json = as.character(jsonlite::toJSON(
-        item$value,
-        auto_unbox = TRUE,
-        null = "null"
-      )),
-      structured_override_note = item$decision_note,
-      structured_override_by = item$decision_by,
-      structured_override_date = item$decision_date,
-      structured_override_valid = is_valid_relationship_value(item$value)
-    )
-  })
-  dplyr::bind_rows(override_rows)
-} else {
+excluded_article_queue <- read_csv_utf8(paths$excluded_article_queue) |>
+  dplyr::mutate(queue_source = "excluded_article_queue")
+
+overrides_raw <- jsonlite::fromJSON(paths$relationship_overrides, simplifyVector = FALSE)
+override_rows <- lapply(overrides_raw, function(item) {
+  override_by <- scalar_text(item$decision_by)
+  override_note <- scalar_text(item$decision_note)
+  override_date <- scalar_text(item$decision_date)
   tibble(
-    pid = character(),
-    field = character(),
-    structured_override_json = character(),
-    structured_override_note = character(),
-    structured_override_by = character(),
-    structured_override_date = character(),
-    structured_override_valid = logical()
+    pid = scalar_text(item$pid),
+    field = scalar_text(item$field),
+    structured_override_json = as.character(jsonlite::toJSON(
+      item$value,
+      auto_unbox = TRUE,
+      null = "null"
+    )),
+    structured_override_note = override_note,
+    structured_override_by = override_by,
+    structured_override_date = override_date,
+    structured_override_value_valid = is_valid_relationship_value(item$value),
+    structured_override_metadata_valid = nzchar(stringr::str_trim(override_by)) &&
+      nzchar(stringr::str_trim(override_note)) &&
+      valid_review_date(override_date)
   )
-}
+})
+relationship_overrides <- dplyr::bind_rows(override_rows) |>
+  dplyr::mutate(
+    structured_override_valid = structured_override_value_valid &
+      structured_override_metadata_valid
+  )
 
 full_queue <- dplyr::bind_rows(queue, excluded_queue, excluded_article_queue) |>
   dplyr::mutate(
@@ -163,6 +239,18 @@ manual_log$review_key <- key_string(manual_log)
 
 sheet_duplicate_keys <- sheet |>
   dplyr::count(review_key, name = "n") |>
+  dplyr::filter(n > 1)
+
+full_queue_duplicate_keys <- full_queue |>
+  dplyr::count(review_key, name = "n") |>
+  dplyr::filter(n > 1)
+
+manual_log_duplicate_keys <- manual_log |>
+  dplyr::count(review_key, name = "n") |>
+  dplyr::filter(n > 1)
+
+relationship_override_duplicates <- relationship_overrides |>
+  dplyr::count(pid, field, name = "n") |>
   dplyr::filter(n > 1)
 
 sheet_missing_from_queue <- sheet |>
@@ -203,7 +291,18 @@ validated <- sheet |>
     exclusion_reason = dplyr::coalesce(exclusion_reason, ""),
     decision_status = stringr::str_trim(decision_status),
     decision_value = dplyr::if_else(is.na(decision_value), "", stringr::str_trim(decision_value)),
+    review_date = dplyr::if_else(is.na(review_date), "", stringr::str_trim(as.character(review_date))),
+    parsed_review_date = suppressWarnings(as.Date(review_date)),
+    review_date_required = decision_status == "done",
+    review_date_invalid_format = review_date_required &
+      (review_date == "" | is.na(parsed_review_date)),
+    review_date_outside_window = review_date_required &
+      !is.na(parsed_review_date) &
+      (parsed_review_date < review_date_min | parsed_review_date > review_date_max),
+    review_date_issue = review_date_invalid_format | review_date_outside_window,
     local_allowed_values = dplyr::if_else(is.na(local_allowed_values), "", local_allowed_values),
+    structured_override_value_valid = dplyr::coalesce(structured_override_value_valid, FALSE),
+    structured_override_metadata_valid = dplyr::coalesce(structured_override_metadata_valid, FALSE),
     structured_override_valid = dplyr::coalesce(structured_override_valid, FALSE),
     has_structured_override = decision_value == "structured_json_required" &
       structured_override_valid,
@@ -229,6 +328,8 @@ validated <- sheet |>
       pending_blocks_main_analysis ~ "pending_nonexcluded",
       strict_codebook_issue ~ "decision_value_outside_local_codebook",
       requires_substantive_json ~ "structured_json_required_placeholder",
+      review_date_invalid_format ~ "review_date_missing_or_invalid",
+      review_date_outside_window ~ "review_date_outside_expected_window",
       sheet_allowed_values_mismatch ~ "sheet_allowed_values_mismatch",
       TRUE ~ ""
     )
@@ -256,7 +357,12 @@ validated <- sheet |>
     pending_dispensed_by_exclusion,
     strict_codebook_issue,
     requires_substantive_json,
+    review_date_issue,
+    review_date_invalid_format,
+    review_date_outside_window,
     has_structured_override,
+    structured_override_value_valid,
+    structured_override_metadata_valid,
     structured_override_valid,
     structured_override_json,
     structured_override_note,
@@ -292,6 +398,44 @@ issues <- validated |>
   dplyr::filter(validation_issue != "") |>
   dplyr::arrange(excluded_by_journal, validation_issue, field, pid)
 
+required_structured_overrides <- validated |>
+  dplyr::filter(
+    decision_status == "done",
+    decision_value == "structured_json_required",
+    !excluded_from_analysis
+  ) |>
+  dplyr::select(pid, field) |>
+  dplyr::distinct()
+
+relationship_override_usage <- relationship_overrides |>
+  dplyr::left_join(
+    required_structured_overrides |>
+      dplyr::mutate(override_required = TRUE),
+    by = c("pid", "field")
+  ) |>
+  dplyr::mutate(
+    override_required = dplyr::coalesce(override_required, FALSE),
+    unused_override = !override_required
+  )
+
+relationship_override_issues <- relationship_override_usage |>
+  dplyr::filter(
+    !structured_override_value_valid |
+      !structured_override_metadata_valid |
+      unused_override
+  ) |>
+  dplyr::select(
+    pid,
+    field,
+    structured_override_value_valid,
+    structured_override_metadata_valid,
+    override_required,
+    unused_override,
+    structured_override_by,
+    structured_override_date,
+    structured_override_note
+  )
+
 readr::write_csv(validated, paths$validated, na = "")
 readr::write_csv(issues, paths$issues, na = "")
 
@@ -303,6 +447,9 @@ snapshot <- tibble(
     "linhas dispensadas por exclusão de periódico",
     "linhas dispensadas por exclusão de artigo",
     "chaves duplicadas no snapshot",
+    "chaves duplicadas nas filas locais",
+    "chaves duplicadas no log manual",
+    "overrides estruturados duplicados",
     "linhas do snapshot sem par local",
     "linhas locais sem par no snapshot",
     "linhas do log manual sem par no snapshot",
@@ -312,7 +459,10 @@ snapshot <- tibble(
     "valores done fora do codebook local na análise principal",
     "placeholders structured_json_required sem override",
     "overrides estruturados de main_variable_relationship",
-    "overrides estruturados inválidos",
+    "overrides estruturados com valor inválido",
+    "overrides estruturados com metadados inválidos",
+    "overrides estruturados sem placeholder correspondente",
+    "datas de revisão fora da janela esperada",
     "mismatches de allowed_values na planilha"
   ),
   value = c(
@@ -322,6 +472,9 @@ snapshot <- tibble(
     sum(validated$queue_source == "excluded_journal_queue", na.rm = TRUE),
     sum(validated$queue_source == "excluded_article_queue", na.rm = TRUE),
     nrow(sheet_duplicate_keys),
+    nrow(full_queue_duplicate_keys),
+    nrow(manual_log_duplicate_keys),
+    nrow(relationship_override_duplicates),
     nrow(sheet_missing_from_queue),
     nrow(queue_missing_from_sheet),
     nrow(log_missing_from_sheet),
@@ -331,7 +484,10 @@ snapshot <- tibble(
     sum(validated$strict_codebook_issue, na.rm = TRUE),
     sum(validated$requires_substantive_json, na.rm = TRUE),
     nrow(relationship_overrides),
-    sum(!relationship_overrides$structured_override_valid, na.rm = TRUE),
+    sum(!relationship_overrides$structured_override_value_valid, na.rm = TRUE),
+    sum(!relationship_overrides$structured_override_metadata_valid, na.rm = TRUE),
+    sum(relationship_override_usage$unused_override, na.rm = TRUE),
+    sum(validated$review_date_issue, na.rm = TRUE),
     sum(validated$sheet_allowed_values_mismatch, na.rm = TRUE)
   )
 )
@@ -361,6 +517,8 @@ relationship_override_table <- relationship_overrides |>
   dplyr::select(
     pid,
     field,
+    structured_override_value_valid,
+    structured_override_metadata_valid,
     structured_override_valid,
     structured_override_note,
     structured_override_by,
@@ -384,15 +542,34 @@ strict_issues <- issues |>
   )
 
 hard_fail <- nrow(sheet_duplicate_keys) > 0 ||
+  nrow(full_queue_duplicate_keys) > 0 ||
+  nrow(manual_log_duplicate_keys) > 0 ||
+  nrow(relationship_override_duplicates) > 0 ||
   nrow(sheet_missing_from_queue) > 0 ||
   nrow(queue_missing_from_sheet) > 0 ||
   nrow(log_missing_from_sheet) > 0 ||
-  sum(validated$pending_blocks_main_analysis, na.rm = TRUE) > 0
+  sum(validated$pending_blocks_main_analysis, na.rm = TRUE) > 0 ||
+  sum(validated$strict_codebook_issue, na.rm = TRUE) > 0 ||
+  sum(validated$requires_substantive_json, na.rm = TRUE) > 0 ||
+  sum(!relationship_overrides$structured_override_valid, na.rm = TRUE) > 0 ||
+  sum(relationship_override_usage$unused_override, na.rm = TRUE) > 0
+
+relative_path <- function(path) {
+  abs_path <- normalizePath(path, mustWork = FALSE)
+  prefix <- paste0(project_dir, .Platform$file.sep)
+  if (startsWith(abs_path, prefix)) {
+    return(substring(abs_path, nchar(prefix) + 1))
+  }
+  abs_path
+}
+
+non_blocking_warnings <- sum(validated$review_date_issue, na.rm = TRUE) +
+  sum(validated$sheet_allowed_values_mismatch, na.rm = TRUE)
 
 summary_lines <- c(
   "# Validação das Decisões Manuais",
   "",
-  paste("Gerado em", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")),
+  "Gerado por `scripts/08_validate_manual_review_decisions.R`.",
   "",
   "## Fonte",
   "",
@@ -400,6 +577,10 @@ summary_lines <- c(
   paste0("- Endpoint CSV usado para o snapshot: ", csv_export_url),
   "- Snapshot salvo em `data/processed/manual_review_decisions_google_sheet.csv`.",
   "- A validação compara chaves `pid + field + file + issue_rule + action`, não posição de linha.",
+  paste0(
+    "- A janela esperada de revisão manual é de `", review_date_min,
+    "` a `", review_date_max, "`; datas fora da janela são avisos de auditoria, não falhas substantivas."
+  ),
   "",
   "## Status",
   "",
@@ -409,7 +590,10 @@ summary_lines <- c(
     "Fila principal operacionalmente completa: todas as chaves foram pareadas e todos os itens não excluídos estão `done`."
   },
   "",
-  "Observação: os placeholders de `main_variable_relationship` foram resolvidos por overrides estruturados; resta apenas um mismatch não bloqueante em `allowed_values` editado na planilha.",
+  paste0(
+    "Observação: os placeholders de `main_variable_relationship` foram resolvidos por overrides estruturados. ",
+    "Há ", non_blocking_warnings, " aviso(s) não bloqueante(s) registrado(s) em `manual_review_decisions_issues.csv`."
+  ),
   "",
   "## Snapshot",
   "",
@@ -435,6 +619,10 @@ summary_lines <- c(
   "",
   markdown_table(relationship_override_table),
   "",
+  "## Problemas de Overrides Estruturados",
+  "",
+  markdown_table(relationship_override_issues),
+  "",
   "## Interpretação",
   "",
   "- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` estão documentados em `data/processed/excluded_journals.csv` e suas pendências restantes aparecem apenas como dispensadas por periódico.",
@@ -442,12 +630,13 @@ summary_lines <- c(
   "- As decisões da fila principal estão completas, mas nem todas são diretamente aplicáveis ao schema atual sem regra adicional.",
   "- Os placeholders `structured_json_required` foram resolvidos em `data/processed/manual_review_relationship_overrides.json`.",
   "- A próxima etapa pode aplicar as decisões manuais e os overrides para regerar `classifications_llm.csv` final.",
+  "- Avisos não bloqueantes permanecem documentados em `quality_reports/manual_review_decisions_issues.csv`.",
   "",
   "## Arquivos Gerados",
   "",
-  paste0("- `", paths$validated, "`"),
-  paste0("- `", paths$issues, "`"),
-  paste0("- `", paths$summary, "`")
+  paste0("- `", relative_path(paths$validated), "`"),
+  paste0("- `", relative_path(paths$issues), "`"),
+  paste0("- `", relative_path(paths$summary), "`")
 )
 
 writeLines(summary_lines, paths$summary, useBytes = TRUE)
@@ -459,7 +648,7 @@ cat("Fila principal pending:", sum(validated$pending_blocks_main_analysis, na.rm
 cat("Pendências dispensadas por exclusão:", sum(validated$pending_dispensed_by_exclusion, na.rm = TRUE), "\n")
 cat("Ressalvas de codebook/aplicação:", nrow(strict_issues), "\n")
 cat("Overrides estruturados:", nrow(relationship_overrides), "\n")
-cat("Resumo:", paths$summary, "\n")
+cat("Resumo:", relative_path(paths$summary), "\n")
 
 if (hard_fail) {
   stop("Validação com falhas bloqueantes para a fila principal.")
