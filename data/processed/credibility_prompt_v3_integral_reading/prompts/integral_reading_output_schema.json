@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pid",
+    "title",
+    "journal_title",
+    "input_text_hash",
+    "status",
+    "full_body_read",
+    "incomplete_reason",
+    "section_reading_log",
+    "general_summary",
+    "decision_audit",
+    "classification"
+  ],
+  "properties": {
+    "pid": { "type": "string" },
+    "title": { "type": "string" },
+    "journal_title": { "type": "string" },
+    "input_text_hash": { "type": "string" },
+    "status": { "type": "string", "enum": ["complete", "incomplete"] },
+    "full_body_read": { "type": "boolean" },
+    "incomplete_reason": { "type": ["string", "null"] },
+    "section_reading_log": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_title",
+          "section_position",
+          "section_summary",
+          "methods_or_data_mentions",
+          "classification_relevance"
+        ],
+        "properties": {
+          "section_title": { "type": "string" },
+          "section_position": { "type": "integer", "minimum": 1 },
+          "section_summary": { "type": "string" },
+          "methods_or_data_mentions": { "type": "string" },
+          "classification_relevance": { "type": "string" }
+        }
+      }
+    },
+    "general_summary": { "type": "string" },
+    "decision_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "own_empirical_evidence",
+        "own_quantitative_analysis",
+        "qualitative_evidence",
+        "statistical_inference",
+        "causal_or_credibility_design",
+        "contradictory_sections"
+      ],
+      "properties": {
+        "own_empirical_evidence": { "type": "string" },
+        "own_quantitative_analysis": { "type": "string" },
+        "qualitative_evidence": { "type": "string" },
+        "statistical_inference": { "type": "string" },
+        "causal_or_credibility_design": { "type": "string" },
+        "contradictory_sections": { "type": "string" }
+      }
+    },
+    "classification": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "pid",
+            "title",
+            "journal_title",
+            "input_text_hash",
+            "is_empirical_paper",
+            "empirical_evidence_type",
+            "is_empirical_quant_paper_torreblanca",
+            "is_empirical_qual_paper",
+            "quantitative_analysis_type",
+            "quantitative_analysis_evidence_quote",
+            "has_statistical_inference",
+            "statistical_inference_quote",
+            "qualitative_analysis_goal",
+            "qualitative_goal_clarity",
+            "qualitative_goal_quote",
+            "causal_or_explanatory_claim_present",
+            "causal_or_explanatory_claim_quote",
+            "credibility_revolution_screen_applicable",
+            "credibility_revolution_screen_reason",
+            "credibility_revolution_method_present",
+            "credibility_revolution_method_type",
+            "causal_design_quote",
+            "main_variables_or_relationship",
+            "sample_or_data_source",
+            "tough_call",
+            "tough_call_reason",
+            "brief_justification"
+          ],
+          "properties": {
+            "pid": { "type": "string" },
+            "title": { "type": "string" },
+            "journal_title": { "type": "string" },
+            "input_text_hash": { "type": "string" },
+            "is_empirical_paper": { "type": "boolean" },
+            "empirical_evidence_type": {
+              "type": "string",
+              "enum": ["none", "quantitative_only", "qualitative_only", "mixed_empirical", "unclear"]
+            },
+            "is_empirical_quant_paper_torreblanca": { "type": "boolean" },
+            "is_empirical_qual_paper": { "type": "boolean" },
+            "quantitative_analysis_type": {
+              "type": "string",
+              "enum": [
+                "none",
+                "descriptive_statistics_only",
+                "bivariate_tests_or_correlations_only",
+                "statistical_modeling",
+                "unclear"
+              ]
+            },
+            "quantitative_analysis_evidence_quote": { "type": ["string", "null"] },
+            "has_statistical_inference": { "type": ["boolean", "null"] },
+            "statistical_inference_quote": { "type": ["string", "null"] },
+            "qualitative_analysis_goal": {
+              "type": ["string", "null"],
+              "enum": [
+                null,
+                "descriptive_reconstruction",
+                "explanatory_why",
+                "interpretive_meaning",
+                "mixed_descriptive_explanatory",
+                "unclear"
+              ]
+            },
+            "qualitative_goal_clarity": {
+              "type": ["string", "null"],
+              "enum": [null, "clear", "ambiguous_tough_call", "internally_inconsistent"]
+            },
+            "qualitative_goal_quote": { "type": ["string", "null"] },
+            "causal_or_explanatory_claim_present": { "type": "boolean" },
+            "causal_or_explanatory_claim_quote": { "type": ["string", "null"] },
+            "credibility_revolution_screen_applicable": { "type": "boolean" },
+            "credibility_revolution_screen_reason": {
+              "type": "string",
+              "enum": [
+                "not_empirical",
+                "qualitative_only",
+                "descriptive_quantitative_only",
+                "bivariate_or_correlation_screen",
+                "statistical_modeling_screen",
+                "explicit_causal_design_screen",
+                "causal_claim_with_quantitative_analysis_screen",
+                "unclear"
+              ]
+            },
+            "credibility_revolution_method_present": { "type": ["boolean", "null"] },
+            "credibility_revolution_method_type": {
+              "anyOf": [
+                { "type": "null" },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "experiment_field",
+                      "experiment_survey",
+                      "experiment_lab",
+                      "experiment_list",
+                      "difference_in_differences",
+                      "event_study",
+                      "instrumental_variables",
+                      "regression_discontinuity",
+                      "regression_kink",
+                      "synthetic_control",
+                      "synthetic_difference_in_differences",
+                      "matching_or_weighting",
+                      "dag_or_formal_causal_graph",
+                      "doubly_robust",
+                      "causal_trees_or_forests",
+                      "causal_discovery",
+                      "other_modern_causal_method",
+                      "fixed_effects_causal_panel_claim",
+                      "observational_regression_with_causal_claim_no_design",
+                      "none_detected"
+                    ]
+                  }
+                }
+              ]
+            },
+            "causal_design_quote": { "type": ["string", "null"] },
+            "main_variables_or_relationship": { "type": ["string", "null"] },
+            "sample_or_data_source": { "type": ["string", "null"] },
+            "tough_call": { "type": "boolean" },
+            "tough_call_reason": { "type": ["string", "null"] },
+            "brief_justification": { "type": "string" }
+          }
+        }
+      ]
+    }
+  }
+}
