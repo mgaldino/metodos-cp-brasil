@@ -1,2 +1,556 @@
-WARNING: proceeding, even though we could not update PATH: Operation not permitted (os error 1)
-Error: failed to initialize in-process app-server client: Operation not permitted (os error 1)
+OpenAI Codex v0.136.0
+--------
+workdir: /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 019e93d9-dc23-7dd2-a34d-513361fc0942
+--------
+user
+# Credibility Prompt v3 - Integral Reading Batch Prompt
+
+You are classifying exactly one article in this run.
+
+## Absolute Rule: Integral Reading Before Classification
+
+You must read the full article body from beginning to end before classifying it.
+
+It is prohibited to classify by:
+
+- regexes, scripts, keyword matching, heuristics, or automated rules;
+- previous consensus labels, gold labels, auxiliary classifications, or journal priors;
+- title, abstract, metadata, isolated tables, or selected excerpts alone;
+- guessing from the journal, year, topic, or style.
+
+The purpose of this task is interpretive article-by-article classification, not scale automation. If the article is long, keep reading until the end. Do not substitute a shortcut for full reading.
+
+If you cannot read the full body text, return `status: "incomplete"`, set `full_body_read: false`, explain why in `incomplete_reason`, and set `classification: null`. Do not produce a final classification for an article you did not read fully.
+
+## Mandatory Reading Log Before Classification
+
+Before producing the classification, build a `section_reading_log`. This log is part of the required JSON output.
+
+For each section explicitly present in the paper, include:
+
+- `section_title`: the section heading as it appears in the article;
+- `section_position`: 1-based section order;
+- `section_summary`: one or two substantive paragraphs summarizing what the section argues or does;
+- `methods_or_data_mentions`: one paragraph identifying data, methods, tables, figures, interviews, documents, models, tests, or stating that none appear in the section;
+- `classification_relevance`: one paragraph explaining how this section matters, or does not matter, for empirical/quantitative/qualitative/causal/statistical classification.
+
+If the article has no clear section headings, divide the body into sequential chunks and use `chunk_1`, `chunk_2`, etc. as section titles. Still summarize every chunk.
+
+After the section log, write:
+
+- `general_summary`: one or two paragraphs summarizing the paper as a whole;
+- `decision_audit`: answers to the final audit questions listed below.
+
+Only after completing these steps may you fill the `classification` object.
+
+## Final Audit Questions
+
+Answer these in `decision_audit` before classification:
+
+1. Where does the article present its own empirical evidence, if anywhere?
+2. Where does the article present original or reanalyzed quantitative analysis, if anywhere?
+3. Where does the article present substantive qualitative evidence, if anywhere?
+4. Where does the article report statistical inference, if anywhere?
+5. Where does the article present a causal or credibility-revolution design, if anywhere?
+6. Is there any section that contradicts the likely classification?
+
+## Output Shape
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Top-level required fields:
+
+- `pid`
+- `title`
+- `journal_title`
+- `input_text_hash`
+- `status`: `"complete"` or `"incomplete"`
+- `full_body_read`: boolean
+- `incomplete_reason`: string or null
+- `section_reading_log`: array
+- `general_summary`: string
+- `decision_audit`: object
+- `classification`: object if `status == "complete"`, otherwise null
+
+The nested `classification` object must follow the original credibility prompt v3 schema exactly.
+
+## Original Classifier Prompt v3
+
+The following classifier instructions define the classification schema and field meanings. They are binding, but they do not override the integral-reading rule above.
+
+# Credibility Revolution Brazil Classifier Prompt v3
+
+You are a methodological classifier for political science, international relations, and public administration articles published in Brazilian SciELO journals.
+
+Read the full article body and classify the article using only textual evidence from the article itself. The title, year, journal, DOI, and language may be used as context, but they are never sufficient evidence for methods, data, causality, or statistical analysis.
+
+This project replicates and adapts Torreblanca et al., "The Credibility Revolution in Political Science", for Brazil. The Torreblanca-style quantitative variable is broad: any original quantitative data analysis counts, including descriptive, predictive, explanatory, causal, or other quantitative analysis. However, for the Brazilian replication, we also need to distinguish purely descriptive quantitative articles from articles that go beyond descriptive statistics.
+
+## Anti-False-Positive Rule
+
+Do not classify an article as quantitative merely because it mentions a number, percentage, statistic, election result, survey result, or empirical finding from another study. To count as original quantitative analysis, the article must use its own data analysis or a reanalysis of data in its empirical analysis, usually in a table, figure, graph, appendix, methods section, data section, or results section.
+
+Descriptive counts, percentages, means, distributions, and cross-tabulations are descriptive statistics. If these are the only quantitative analyses in the article, classify the quantitative analysis type as `descriptive_statistics_only`.
+
+Use `null` when the text does not support a field. Do not invent sample sizes, variables, methods, causal designs, identification assumptions, mechanisms, statistical inference, or results.
+
+## Journal Context
+
+The main analysis includes these journals:
+
+- Brazilian Political Science Review
+- Cadernos Gestao Publica e Cidadania
+- Contexto Internacional
+- Dados
+- Lua Nova: Revista de Cultura e Politica
+- Novos estudos CEBRAP
+- Opiniao Publica
+- Revista Brasileira de Ciencia Politica
+- Revista Brasileira de Ciencias Sociais
+- Revista Brasileira de Politica Internacional
+- Revista de Administracao Publica
+- Revista de Sociologia e Politica
+- Sur. Revista Internacional de Direitos Humanos
+
+`Brazilian Journal of Political Economy` and `Civitas - Revista de Ciencias Sociais` are outside the main analysis.
+
+Some journals have higher prior probability of quantitative or causal work than others, but this is only a weak prior. Always classify based on the body text.
+
+Very low prior for credibility-revolution methods:
+
+- Novos estudos CEBRAP
+- Lua Nova: Revista de Cultura e Politica
+- Cadernos Gestao Publica e Cidadania
+- Sur. Revista Internacional de Direitos Humanos
+
+Articles in these journals are unlikely to use credibility-revolution methods such as experiments, DiD, IV, RDD, synthetic control, matching, or modern causal estimators. Use this only as a caution against over-classification. If the body clearly shows one of these designs, classify it normally.
+
+## Output
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Required fields:
+
+### Metadata
+
+- `pid`: string
+- `title`: string
+- `journal_title`: string
+- `input_text_hash`: string
+
+### Broad Empirical Classification
+
+- `is_empirical_paper`: boolean
+
+`true` if the article analyzes substantive empirical evidence, including quantitative data, qualitative evidence, documents, interviews, surveys, administrative data, content analysis, case studies, process tracing, archival materials, or other empirical material.
+
+`false` for normative theory, pure formal theory, conceptual essays, literature reviews without original empirical analysis, methodological articles without empirical application, and purely theoretical articles.
+
+- `empirical_evidence_type`: one of:
+  - `none`
+  - `quantitative_only`
+  - `qualitative_only`
+  - `mixed_empirical`
+  - `unclear`
+
+`mixed_empirical` requires both substantive qualitative evidence and substantive quantitative evidence. Do not classify as mixed merely because a quantitative article has a theory section, or because a qualitative article mentions contextual numbers.
+
+- `is_empirical_quant_paper_torreblanca`: boolean
+
+`true` if the article contains any original or reanalyzed quantitative data analysis, whether descriptive, bivariate, modeled, predictive, explanatory, causal, or other.
+
+`false` if the article is purely qualitative, theoretical, normative, formal, methodological without empirical quantitative application, or lacks original quantitative analysis.
+
+- `is_empirical_qual_paper`: boolean
+
+`true` if the article uses substantive qualitative evidence, such as case studies, historical comparison, interviews, documents, archival material, process tracing, interpretive analysis, discourse analysis, or qualitative content analysis.
+
+### Quantitative Module
+
+- `quantitative_analysis_type`: one of:
+  - `none`
+  - `descriptive_statistics_only`
+  - `bivariate_tests_or_correlations_only`
+  - `statistical_modeling`
+  - `unclear`
+
+Definitions:
+
+`none`: no original quantitative analysis.
+
+`descriptive_statistics_only`: the article presents only descriptive statistics from its own analysis or reanalysis, such as counts, percentages, means, distributions, descriptive cross-tabs, descriptive figures, or descriptive tables. It does not use statistical tests, correlations, regression, models, uncertainty estimates, or inferential claims from statistical tests.
+
+`bivariate_tests_or_correlations_only`: the article includes descriptive statistics and goes beyond them using t-tests, chi-square tests, Fisher tests, simple ANOVA, mean comparisons with p-values, Pearson/Spearman correlations, or equivalent bivariate tests, but does not use multivariable statistical modeling.
+
+`statistical_modeling`: the article uses regression, logit/probit, panel models, fixed effects, multilevel models, survival/event-history models, choice models, estimated matching or weighting, PCA/factor analysis, clustering used analytically, modeled text-as-data, network models, or equivalent statistical models.
+
+`unclear`: there are signals of quantitative analysis, but the body text does not allow confident classification.
+
+- `quantitative_analysis_evidence_quote`: string or null
+
+Short excerpt supporting `quantitative_analysis_type`, preferably from methods, data, results, table, figure, or appendix discussion.
+
+- `has_statistical_inference`: boolean or null
+
+`true` if the article reports p-values, standard errors, confidence intervals, Bayesian intervals, statistical tests, bootstrap intervals, randomization inference, or another uncertainty quantification.
+
+`false` if the article reports only descriptive analysis without statistical inference.
+
+`null` if not applicable or unsupported.
+
+- `statistical_inference_quote`: string or null
+
+Short excerpt supporting statistical inference. Use `null` if absent.
+
+### Qualitative Module
+
+- `qualitative_analysis_goal`: one of:
+  - `null`
+  - `descriptive_reconstruction`
+  - `explanatory_why`
+  - `interpretive_meaning`
+  - `mixed_descriptive_explanatory`
+  - `unclear`
+
+Use `null` if there is no qualitative component.
+
+`descriptive_reconstruction`: the article mainly describes how something happened, reconstructs a trajectory, maps actors/events/processes, or systematizes an empirical phenomenon.
+
+`explanatory_why`: the article seeks to explain why something happened, identifying causes, conditions, mechanisms, determinants, consequences, or explanatory processes.
+
+`interpretive_meaning`: the article mainly interprets meanings, concepts, discourses, intellectual traditions, norms, or texts without making a clear empirical explanatory claim.
+
+`mixed_descriptive_explanatory`: the article combines descriptive reconstruction with substantive causal or explanatory arguments.
+
+`unclear`: the qualitative goal is ambiguous.
+
+- `qualitative_goal_clarity`: one of:
+  - `null`
+  - `clear`
+  - `ambiguous_tough_call`
+  - `internally_inconsistent`
+
+If the article says it will describe how something happened but later explains why it happened, classify the qualitative goal as `explanatory_why` or `mixed_descriptive_explanatory` and set this field to `ambiguous_tough_call` or `internally_inconsistent`.
+
+- `qualitative_goal_quote`: string or null
+
+Short excerpt supporting the qualitative classification. Use `null` if not applicable.
+
+### Causal and Credibility-Revolution Screening
+
+- `causal_or_explanatory_claim_present`: boolean
+
+`true` if the article seeks to explain causes, effects, consequences, determinants, impacts, influence, mechanisms, or why something happened.
+
+`false` if it merely describes, interprets, reviews literature, or reports association without an explanatory or causal claim.
+
+Do not confuse vague association language with a causal claim.
+
+- `causal_or_explanatory_claim_quote`: string or null
+
+Short excerpt supporting the claim. Use `null` if absent.
+
+- `credibility_revolution_screen_applicable`: boolean
+
+`true` if the article should be screened for credibility-revolution methods.
+
+Classify as `true` if at least one condition holds:
+
+1. `quantitative_analysis_type` is `bivariate_tests_or_correlations_only` or `statistical_modeling`;
+2. the article uses an experiment, DiD, IV, RDD, RKD, synthetic control, synthetic DiD, matching, weighting, DAG used for identification, causal forest/tree, doubly robust estimator, causal discovery, or similar causal method;
+3. the article makes a causal or explanatory claim associated with quantitative analysis.
+
+Classify as `false` if:
+
+1. `quantitative_analysis_type` is `none`;
+2. `quantitative_analysis_type` is `descriptive_statistics_only` and there is no causal design;
+3. the article is purely qualitative;
+4. the article is theoretical, normative, formal, or conceptual without quantitative empirical analysis.
+
+- `credibility_revolution_screen_reason`: one of:
+  - `not_empirical`
+  - `qualitative_only`
+  - `descriptive_quantitative_only`
+  - `bivariate_or_correlation_screen`
+  - `statistical_modeling_screen`
+  - `explicit_causal_design_screen`
+  - `causal_claim_with_quantitative_analysis_screen`
+  - `unclear`
+
+- `credibility_revolution_method_present`: boolean or null
+
+Use `null` if `credibility_revolution_screen_applicable` is `false`.
+
+`true` if the article uses at least one credibility-revolution method.
+
+`false` if the article passes the screen but does not use such a method.
+
+- `credibility_revolution_method_type`: array or null
+
+Allowed values:
+
+- `experiment_field`
+- `experiment_survey`
+- `experiment_lab`
+- `experiment_list`
+- `difference_in_differences`
+- `event_study`
+- `instrumental_variables`
+- `regression_discontinuity`
+- `regression_kink`
+- `synthetic_control`
+- `synthetic_difference_in_differences`
+- `matching_or_weighting`
+- `dag_or_formal_causal_graph`
+- `doubly_robust`
+- `causal_trees_or_forests`
+- `causal_discovery`
+- `other_modern_causal_method`
+- `fixed_effects_causal_panel_claim`
+- `observational_regression_with_causal_claim_no_design`
+- `none_detected`
+
+Fixed effects rule:
+
+Do not classify every fixed-effects model as DiD. Classify as DiD or event study only if the article has treatment, time variation, treated/control comparison, intervention/event timing, or parallel-trends logic. If an article uses fixed effects and causal language but no clear causal design, classify as `fixed_effects_causal_panel_claim` or `observational_regression_with_causal_claim_no_design`.
+
+- `causal_design_quote`: string or null
+
+Short excerpt supporting the causal method classification. Use `null` if absent.
+
+### Substantive Extraction
+
+- `main_variables_or_relationship`: string or null
+
+Short summary of the main empirical relationship analyzed. Use `null` if unsupported.
+
+- `sample_or_data_source`: string or null
+
+Short summary of the main data source or sample. Use `null` if unsupported.
+
+### Uncertainty and Justification
+
+- `tough_call`: boolean
+
+`true` if a central decision required difficult judgment.
+
+- `tough_call_reason`: string or null
+
+Briefly explain the ambiguity. Use `null` if `tough_call` is `false`.
+
+- `brief_justification`: string
+
+Brief text-based justification for the overall classification.
+
+
+## Output Reconciliation
+
+The original prompt v3 above describes the fields of the nested `classification` object.
+When it says to return one JSON object, that object must be placed inside the top-level
+object required by this integral-reading prompt. Your final response must always have
+the top-level fields `section_reading_log`, `general_summary`, `decision_audit`, and
+`classification`.
+
+## Article Task Packet
+
+The task packet below contains the article metadata and full body text. Use only this packet for substantive classification.
+
+---
+test_order: 8
+pid: S1981-38212015000100003
+title: Non-domination and Political Institutions: The Contested Concept of Republican Democracy
+title_en: Non-domination and Political Institutions: The Contested Concept of Republican Democracy
+authors: Ricardo Silva
+year: 2015
+journal_title: Brazilian Political Science Review
+doi: 10.1590/1981-38212014000200001
+language: en
+input_text_hash: f78af628b80cf62a7fa7f39b1a5c2d632680c3384b651d61d342b97b907de7e9
+selection_source: codex_selected_pilot
+selection_note: manual gold: theoretical-normative
+manual_gold_evidence_type: theoretical-normative
+manual_gold_method_status: essayistic
+---
+
+# Article Body
+
+Over the past two decades, the concept of freedom as non-domination has become the main normative principle of neo-republicanism. Furthermore, as recently noted by Nadia Urbinati, a critic of this approach, "the neo-Roman republican theory of freedom as non-domination has acquired a leading status in political science and redesigned the geography of political studies" (URBINATI, 2012, p. 607). This study seeks to answer the following question: what kind of institutional arrangement is most suitable for the realization of such an ideal of liberty? Therefore, in this study, I will examine the most recent developments in the field of democratic theory related to "neo-Roman republicanism"1.
+
+I will focus on three different models of democracy. Following the designations prescribed by their main formulators, I will refer to the "electoral-contestatory" model, the "political constitutionalism" model, and the "Machiavellian democracy" model developed in the works of Philip Pettit, Richard Bellamy, and John McCormick, respectively2. I intend to demonstrate that these three institutional models can be understood as competing definitions of the concept of republican democracy, as they represent different institutional solutions to the same normative problem, namely the problem of how to realize non-domination. Also, I wish to suggest that the internal tensions in the concept of republican democracy should not be interpreted as contradictions to be overcome for the sake of stabilizing its semantic meaning. I neither defend the claim of superiority of one definition over the others nor produce a synthesis of them. Rather, I argue that the concept of republican democracy should be understood as an "essentially contested concept".
+
+The notion of "essentially contested concept" was introduced in the mid-1950s by the Scottish philosopher, Walter Gallie. He coined the phrase to label those concepts which are resistant to consensual definitions. According to Gallie, "Recognition of a given concept as essentially contested implies recognition of rival uses of it (such as oneself repudiates) as not only logically possible and humanly 'likely', but as of permanent potential critical value to one's own use or interpretation of the concept in question" (GALLIE, 1956, p. 193). However, this does not sufficiently recognize that different users understand certain concepts differently. A theorist can only adequately argue for her application criteria of a concept if she also argues against the criteria of her opponents. "More simply, to use an essentially contested concept means to use it against other uses and to recognize that one's own use of it has to be maintained against these other uses. Still more simply, to use an essentially contested concept means to use it both aggressively and defensively" (GALLIE, 1956, p, p. 172).
+
+Gallie specified several criteria that allow us to recognize the essentially contested character of a concept3. Two of these criteria are more relevant to the concept of republican democracy. Firstly, every essentially contested concept possesses an appraisive nature, insofar as its use allows not only a description of certain states of the world but also, inevitably, a judgment of–and a value assignment to–the states of the world so described. Secondly, the essential contestability of a concept usually reflects the accretion of different layers of semantic meaning throughout the course of the concept's life. Perhaps the most famous defense of the historical roots of conceptual contestability is Nietzsche's statement that "all concepts in which an entire process is semiotically concentrated defy definition; only something which has no history can be deﬁned" (NIETZSCHE, 2006, p. 53).
+
+In the discussion of the concept of republican democracy, this study will first present a brief outline of the notion of freedom as non-domination as formulated by Quentin Skinner and Pettit. Subsequently, I not only describe the main characteristics of each of the three models of republican democracy under scrutiny but also emphasize the diversity of institutional forms proposed to achieve non-domination. I employ Pettit's model as the point of departure for my analysis; thereafter, I address Bellamy and McCormick's objections against his "electoral-contestatory" model, as well as the main aspects of their own alternative models of democracy. Finally, I compare the specific ways the three models respond to certain dilemmas of contemporary liberal democracies.
+
+Non-domination as a political ideal: from Skinner to Pettit
+
+In his studies on the resumption of republicanism in the context of the Italian Renaissance, Skinner has argued that the concept of freedom peculiar to the republican tradition does not fit into the concept of positive freedom understood as self-government, whose typical political expression would be the active participation of citizens in the public sphere. In this respect, Skinner's narrative opposes that of John Pocock, his colleague from the "Cambridge school", who believes that the republican tradition conceives the human being in such a way that "his nature was completed only in a vita activa practiced in a vivere civile" (POCOCK, 1985, p, pp. 40-41). Skinner not only rejected this positive definition of republican liberty, but also stated that republicanism is organized around a typical negative conception of freedom, understood as the absence of external impediments to the pursuit of ends chosen by individuals. Focusing on the writings of Machiavelli, Skinner came to believe that the Florentine had no quarrels with the Hobbesian assumption "that the capacity to pursue such ends without obstruction is what the term 'liberty' properly signifieth" (SKINNER, 1984, p. 217).
+
+Nonetheless, civic humanists and communitarians were only one of the targets of Skinner's critique. The other was liberalism, both in its utilitarian and contractarian forms. Consequently, he promptly stated that, although being negative, republican liberty could not dispense with the involvement of citizens in public affairs. The desire of maintaining freedom without political participation would represent a serious "failure of rationality" (SKINNER, 1986, p. 243). It would be like wanting the ends without mobilizing the means. If political participation should not be understood as an intrinsic value of freedom, this does not deny its importance as an instrumental value for the achievement of freedom4. Referring to Machiavelli, Skinner highlights that "he merely argues that the performance of public services, and the cultivation of virtues needed to perform them, both prove upon examination to be instrumentally necessary to the avoidance of coercion and servitude, and thus to be necessary conditions of assuring any degree of personal liberty in the ordinary Hobbesian sense of the term" (SKINNER, 1986, p. 217).
+
+The difference then pointed out by Skinner had the virtue of emphasizing the importance of participation for the maintenance of liberty; however, it was not adequately cogent to reveal any significant conceptual distinction between the republican "negative" liberty, inspired by Machiavelli, and the liberal negative liberty, heir of Hobbes' original formulation5. Skinner's approach made republican liberty seem like a juxtaposition of both concepts. However, the mere addition of these two conceptions did not result in a third one. Is it possible that republicanism is only a type of liberalism dressed in participatory costumes?
+
+The search for a negative answer to that question led Skinner to reformulate his vision, and he made this move by means of a gradual incorporation of Pettit's conceptual innovations (SILVA, 2008). If, in Liberty Before Liberalism (1997), Skinner takes an important step toward the conception of republican liberty articulated by Pettit, in his most recent studies he consolidates his allegiance to Pettit's "third concept of freedom", a concept defined by the single criterion of "absence of arbitrary power" (SKINNER, 2001; 2008b)6.
+
+The point of departure of Pettit's conception of freedom is a critique of Isaiah Berlin's dichotomy between positive and negative liberty. For Pettit,
+
+Berlin's taxonomy of positive and negative liberty forecloses a more or less salient third possibility. He thinks of positive liberty as mastery over the self and of negative liberty as the absence of interference by others. Yet mastery and interference do not amount to the same thing. So what of the intermediate possibility that freedom consists in an absence, as the negative conception has it, but in an absence of mastery by others, not in an absence of interference? (PETTIT, 1997, p. 21)
+
+Going beyond Skinner, Pettit develops a new argument for the distinction between the negative conceptions of freedom of republicanism and liberalism. While liberals such as Berlin argue that any kind of intentional interference decreases the amount of individual freedom, Pettit argues that only arbitrary forms of interference, which constitute domination, are detrimental to freedom. Freedom is ideally defined as the absence of domination. Both from the sociological and constitutional points of view, the ideal of non-domination is richer than that of non-interference. To illustrate this argument, he invites us to contemplate two situations: in the first, the ideal of non-domination allows us to detect forms of negation of freedom ignored by the ideal of non-interference, and the second is a situation in which the ideal of non-domination makes us see the occurrence of freedom where the ideal of noninterference sees a lack of freedom.
+
+To illustrate the first situation, Pettit often uses the example of a hypothetical relationship between a benevolent master and his slave. In this situation, the master can prevent himself from interfering with the choices of his slave; he can allow the slave to do whatever he wants and can even provide the means to broaden the range of choices available to the slave. From the point of view of the ideal of non-interference, in this situation, the negative freedom of the slave would be preserved, since the slave would not be suffering any actual interference from his master. For Pettit, however, the republican conception of negative liberty does not possess, as its essential requirement, the absence of actual interference. The crucial requirement is that no agent in any given social relation holds a status that makes it possible for him to arbitrarily interfere with the choices and actions of others. The paradox of the "free slave" vanishes with the conception of liberty as non-domination. It does not matter how benevolent the master is; the slave is still bound to his social status as a mere subject under the dominium of an "alien power" (PETTIT, 2008).
+
+With regard to the second situation, Pettit has in mind the inevitable constraints of laws on the range of choices of all citizens, even in the most democratic regimes. Even though any law is an obvious case of interference, if it is attuned to the "common avowable interests" of the individuals over whom it is exercised, it should be considered a non-arbitrary interference. In short, unlike the negative freedom defined by Berlin, Pettit's negative liberty admits, first, domination without interference, and second, interference without domination (PETTIT, 1997, p. 23).
+
+Since the ideal of non-domination is related to the ascription of a certain status to individuals, the problem of how to ensure the resilience of said status becomes the central issue of the republican institutional imagination. Indeed, to Berlin, nothing prevents a "liberal-minded despot" from adequately fulfilling the role of the guardian of liberty since this role "is not incompatible with some kinds of autocracy, or at any rate with the absence of self-government" (BERLIN, 1969, p. 129). This view is similar to Hobbes' famous discussion on the "liberty of subjects" in Leviathan, where he says that "whether a Commonwealth be monarchical or popular, the freedom is still the same" (HOBBES, 1996, p, p. 143). Hobbes and Berlin believe that freedom, properly understood, has no necessary connection with the political and institutional arrangement of society, a belief completely at odds with the republican tradition. According to Skinner, the role of the form of government in the ascription of the status of freemen and women to individuals "remains a defining distinction between the proponents of a 'republican' view of politics in contrast with a 'liberal' one. Liberals are democrats, as it were, in a secondary sense: what they care about is the extent of freedom, whoever provides it. Republicans are democrats first and foremost: they believe that freedom depends on self-government" (SKINNER, 2007, p. 110).
+
+Nevertheless, even if we assume that Skinner is right to point out this specific difference between republicans and liberals, we must recognize that the institutional design conceived as the most suitable to allow liberty to flourish is far from being consensual among the different advocates of the republican tradition. The meanings attributed to the notions of self-government and democracy continue to divide republicans among themselves, even when we consider only those influenced by the neo-Roman tradition. I will now address this issue.
+
+The electoral-contestatory model and people's negative powers
+
+Since the publication of Republicanism: A Theory of Freedom and Government (1997), Pettit has been arguing for a model of democracy allegedly designed to realize the ideal of freedom as non-domination (SILVA, 2007; 2011). It consists of an institutional set that the author has named the "electoral-contestatory" model (PETTIT, 1999; 2000; 2004). His most recent and complete formulation of it can be found in his work titled: On the People's Terms: A Republican Theory and Model of Democracy (2012), where he argues that the recovery of legitimacy is the central issue of democratic theory. Pettit regrets the fact that the theory of legitimacy has received less and less attention since the end of the 18th century, arguing that over the last decades, it has almost dissolved into the field of broader and more pervasive theories of social justice7. He argues for the distinction between legitimacy and justice: "It is one thing to argue that social order imposed by a state is just, it is quite another to argue that the political imposition of that order is legitimate" (PETTIT, 2012, p, p. 130). Arguing against the "end of the state" utopias, Pettit concludes that "the cause of social justice requires the corporate agency of a coercive state and that no apolitical order could serve in that role" (PETTIT, 2012, p. 136). Given the inevitability of a coercive state, the best we can do is to provide mechanisms to check the actions of governmental elites and to control the discretionary use of state coercion. Only with the implementation of such mechanisms would we have a legitimate state, in addition to a just society.
+
+However, is it really possible to avoid a state's arbitrary interference with the lives of its citizens? According to Pettit, it is, providing state interference is under popular control. "The idea of controlled interference provides us with the core element for a republican theory of political legitimacy" (PETTIT, 2012, p. 153). With that in mind, Pettit offers a set of norms and institutions designed to allow a robust control by the people over the government. In abstract terms, the republican state is democratic if it is legitimate, and it is legitimate if the people properly control its policies.
+
+The notion of control involves two elements. First, we only have control over certain processes or events if we are able to influence them. Influence is a necessary condition for control; there is no control in the absence of some sort of influence. However, influence alone is not enough, since we can imagine many circumstances in which we may have influence over something without having control of it. Among other vivid illustrations of his theory, Pettit uses the example of an average citizen trying to direct the traffic at some busy intersection. The citizen can offer traffic directions with the expectation that the drivers follow his instructions. As he is not granted the same recognition as traffic authorities, including the power of police, the more likely outcome is that some drivers may follow his instructions while many will ignore them. We cannot say that the citizen who tries to direct traffic has no influence in the situation in which he is interfering. It is even likely that his actions contribute to increasing the chaos, causing a situation that was already bad to become even worse. Although the situation changes because of his inputs, that change does not abide by his intended designs. In order for him to achieve any control in that situation, it is essential that his influence imposes a "relevant direction on the process, helping to ensure that a suitable result transpires" (PETTIT, 2012, p. 153).
+
+As maintained by Pettit, controlling a process can be achieved by means of three different forms of influence: active influence, virtual influence, and reserve influence. Here too, Pettit resorts to an illustration to explain his concepts. He asks us to imagine ourselves horseback riding. You could exert an active influence on the direction you are riding in every time you pull the reins, directing the horse to where you wish it to go. Virtual influence can be obtained when you refrain from pulling the reins, allowing the horse to independently follow your direction. In this case, you need to be ready to intervene and pull the reins if the horse begins to follow a different direction. In the case of reserve influence, you would allow the horse to freely move wherever it wanted to go. In the absence of a riding plan, you reserve the privilege of pulling the reins if you change your mind, guiding the horse in a direction that it would not have followed on its own. A legitimate state, one under the control of the demos, should rely on institutions able to channel these different forms of popular influence. On this matter, Pettit discusses the role of the assemblies, the most relevant institution for the embodiment and promotion of the people's influence on legislation and government policies. He distinguishes three types of assemblies, each of them connected with specific strands in the broad tradition of the theory and practice of democracy: plenary assembly, indicative assembly, and responsive assembly. Pettit advocates the advantages of the latter over the first two.
+
+Pettit rejects the plenary assembly, among other reasons, because of its "infeasibility". According to Pettit (2012, p. 189), it has often mistakenly been associated with Athenian democracy even though its modern history has its conceptual genesis in the thought of absolutist theorists, such as Bodin and Hobbes. These two opponents of the republican principle of the "mixed constitution" considered the proposition of ​​a sovereign power composed of heterogeneous parts an absurd idea, as it is likely to stimulate civil war rather than social harmony. Afterwards, this appeal to the indivisibility of sovereignty migrated from absolutism to republican and democratic thinking at the hands of Rousseau8. Following the steps of the absolutist theorists, Rousseau rejected the idea of a mixed constitution. However, given his endorsement of the ideal of non-domination, he diverged from Bodin and Hobbes, claiming that democracy was the only form of government compatible with freedom. By forming assemblies and rejecting the institution of intermediaries or representatives, citizens should directly create laws, exerting an active influence. Rousseau "held that the people should gather periodically in a sovereign assembly to deliberate and decide upon laws and that they should then give the job of implementing and adjudicating those laws to appointed magistrates" (PETTIT, 2012, p, p. 190).
+
+Apart from its practical and operational limitations–such as the inability to convene all the members of a political community composed of a large number of citizens under the same roof–, the model of plenary assembly is also undermined by its incapacity to present a solution to the "discursive dilemma" that results from the contradiction between individual decisions and the aggregate vote of a majority decision. Therefore, "the problem with the plenary assembly is that while the participants might be individually consistent in their final judgments and votes on a range of connected issues, they would be liable to generate an inconsistent body of judgments if they relied on majority voting for the aggregation of their individual sets of judgments into a common, shared set" (PETTIT, 2012, p. 191).
+
+After rejecting the plenary assembly as a suitable mechanism to ensure the effectiveness of the people's influence over the government, Pettit insists that the only viable alternative is the representative assembly. Also, there are two types of representative assemblies: the indicative representative assembly and the responsive representative assembly. They are distinguished from each other according to the principle of representation that animates them. The indicative assembly is organized as a kind of "microcosm of society", both in its structure and operation. It is composed by a randomly and statistically representative sample of the relevant groups of a community, and the representatives are designated as proxies of their constituents. Its proper functioning requires that the limited number of representatives is immune to the pressures to behave "on the basis anything other than the dispositions that make then typical of their category" (PETTIT, 2012, p. 196). The method of appointment by lot and the intense rotation of magistrates, due to the short period of their tenures, contribute to the neutralization of these pressures.
+
+Pettit recognizes the "good historical credentials" of the indicative assembly, referring to the councils of Athenian democracy and Italian city-states as examples where "appointments to law-making and related bodies were often made by lot" (PETTIT, 2012, p. 196). He also highlights contemporary experiences, such as the British Columbia Citizens' Assembly. Nevertheless, he definitely prefers the responsive representative assemblies. The responsive representation presupposes a "causal" connection between the representative and his constituents, different from the "evidential" connection presupposed in the indicative representation. In the indicative assembly, the votes of the representatives demonstrate how the community would vote if it were able to gather all of its members into a huge plenary assembly. On the other hand, the votes of the representatives in the responsive assembly are consequences of what the representatives themselves believe to be the dispositions of their constituents. Such dispositions are a causal force that contributes to model the behavior of the representatives, given the irrepressible tendency of politicians to pursue votes for their elections and reelections.
+
+Pettit mentions three advantages of the responsive assembly over the indicative one. First, the responsive assembly is more likely to enhance basic freedoms inherent in a system comprised of competitive, open, and periodic elections. This includes the freedoms of press, association and travel, which are indispensable "if people are to be able to stand for office, combine in parties, promote their polices, and expose other parties, including the governing party, to criticism between and at the time of elections" (PETTIT, 2012, p. 201). Second, it presents a greater capacity to generate alternative policies and to test policies as a whole, being better able to avoid "false negatives" (the failure to give expression to the variety of policies compatible with the common interest) and "false positives" (the failure to avoid policies against the common interest). Thirdly, the responsive assembly is less likely to violate the principle of non-domination as it lacks the concentration of powers of the indicative assembly when it is given the "full range of legislative issues". In such circumstances, an indicative body has the power to raise legislative questions and determine the answers to those questions. By concentrating on these two prerogatives without facing electoral challenges, the will of the indicative assembly "may be difficult for the people to control and render undominating" (PETTIT, 2012, p, p. 205).
+
+Although the responsive assembly is the most suitable means to ensure people have the ability to influence the government, it is insufficient to translate influence into control. In order for the control over government to be in the hands of the people, influence must be individualized, unconditional, and effective. However, electoral institutions present shortcomings for the full realization of these three requirements. Pettit restates that while elections are a necessary condition for democracy, they are insufficient. Accordingly, he proposes institutional reforms aimed at correcting the deviations of the electoral dimension of democracy. The spirit of these reforms consists in superposing a contestatory dimension upon the electoral dimension of democracy.
+
+The individualized system of popular influence requires that every citizen have equal access to the full range of one's political rights. Undoubtedly, representative democracy based on universal suffrage, with its motto "one person, one vote", is superior to anti-egalitarian alternatives, such as that outlined by John Stuart Mill in the mid-19th century, which attributed extra votes to more educated citizens. The equal right to vote and its uniform value among citizens is an unavoidable prerequisite for a system of individualized influence. Nonetheless, Pettit argues that we also need something else. Although the unitary and universal vote has represented major progress for the constitution of an individualized system of popular influence, it lacks the means to generate safeguards against the so-called "tyranny of the majority", a recurrent concern for Pettit and many theorists of republican democracy. How can we repair the deficiencies of the electoral system in order to protect individuals from the uncontrolled will of the majority? How can we prevent an individualized system of equal votes from being a source of persistent division between the majority and the minority, causing the latter to be a perpetual loser in the competitive play for political influence? According to Pettit, there is "only one realistic possibility, which is to introduce a system of individualized contestation that parallels the collective challenge that elections make possible" (PETTIT, 2012, p. 213). There are several institutional mechanisms for this purpose. Such mechanisms include "executive authorities like electoral commissions or central banks, contestatory authorities like ombudsman or auditor bodies, and, of course, the judicial authorities represented in various courts and tribunals" (PETTIT, 2012, p. 306). In addition to these regular institutional mechanisms, the author points out that the contestatory practices may take place by way of social movements and even take forms that are more radical. "At the limit, it may also involve civil disobedience: that is, openly violating the law, inviting arrest, and accepting punishment in expression of your opposition to something done or proposed by government" (PETTIT, 2014, p, p. 115).
+
+Pettit refers to the contestatory mechanisms as the "editorial" dimension of democracy, designed to supplement and correct its "authorial" dimension. Electoral processes make possible the positive expression of the people as a collective "author" of public decisions. However, republican democracy should also be open to the people's participation in their individual and negative expressions. The people are not only a collective entity formed in the electoral process; rather the people is constituted by individuals who must have their rights of participation in public affairs ensured between elections. Even if this kind of participation is less potent because it is conducted by individuals or minority groups, it is more accurate, as it expresses the will of individuals or groups directly affected by government decisions. As suggested above, this type of participation has a negative nature, since it does not create or institute a new law or policy. Citizens participate to say "no" or to restrain or fix on behalf of the common interests of the community, something already essentially created by the collective people, the author of democracy.
+
+By inhibiting the "tyranny of the majority", the contestatory mechanisms create the conditions for the maintenance of an individualized system of popular influence. However, Pettit argues that any popular influence must also be unconditional and efficacious in order to ensure the government remains under the control of the people. The popular influence proves to be unconditional to the extent that it does not depend on the consent or willingness of government officials, or on any other external power, to exist. In addition, it will be efficacious to the extent that its results are legitimate in the eyes of all citizens, even for those who disapprove of particular policies or government decisions. In this case, citizens understand government decisions that are detrimental to their interests as random events, as setbacks resulting from bad luck, and not from domination imposed by an arbitrary power. A legitimate state action must pass through what Pettit defines as the "tough luck test" (PETTIT, 2012, p. 177; 2014, pp. 142-144).
+
+In short, the institutional configuration of republican democracy entails the combination of a mixed constitution, and electoral and contestatory institutions. Pettit also stresses that this structure would not work properly in the context of widespread political apathy. Therefore, the last requirement, and final guarantee, of a government conducted on the people's terms is the presence of an active citizenry willing to exercise the powers required to challenge laws and policies potentially detrimental to liberty as non-domination9.
+
+Political constitutionalism as a pluralist model of republican democracy
+
+The model of republican democracy developed by Bellamy has strong affinities with Pettit's model. As he himself explains, "the general republican orientation of my argument incurs a deep indebtedness to Quentin Skinner and Philip Pettit" (BELLAMY, 2007, p. ix). Much like Pettit, Bellamy believes that the justification for democracy is its indispensability for the realization of ideal of liberty as non-domination. Nevertheless, Bellamy radically critiques legal constitutionalism, one of the pillars of Pettit's institutional model, while mounting a defense of political constitutionalism. Furthermore, Bellamy does not share Pettit's concern regarding the need for a set of contestatory mechanisms to protect liberty from the will of the majority. Before we examine the institutional arrangement (model of democracy) articulated by Bellamy, let us see how he understands his own connection with neo-republicanism and which are his main criticisms of Pettit's institutional design.
+
+Bellamy's alignment with neo-Roman republicanism is made clear by his endorsement of the concept of freedom as non-domination. For him, when the issue at stake is the link between freedom and democracy, freedom as non-domination does a better job than positive freedom, a concept which informs the interpretation of the republican tradition shared by civic humanism, communitarianism, and theories of participatory democracy. The main weakness of these strands of republicanism lies in their excessive (and unrealistic) demands for ordinary citizens to participate in the decision-making process of self-government. This perspective is vulnerable to criticism from liberals for not explaining why "individuals should regard the public liberty of participation worth the sacrifice of numerous private liberties". At this point, Bellamy embodies the liberal perception that, with rare exceptions, "most people tend to find more fulfillment in private spheres. They would rather cultivate their gardens than the public good" (BELLAMY, 2008, p. 162).
+
+Similarly to Skinner and Pettit, Bellamy challenges the identity between republican liberty (self mastery) and political participation (autonomy). There is no doubt that the republic is the regime of self-government required if equal freedom is the goal. However, that does not prompt the adoption of the model of the plenary assembly, which encourages the active and direct participation of all citizens in public decisions. Such a model is unnecessary as "the negative desire to avoid domination is sufficient to motivate a concern with self-rule" (BELLAMY, 2007, p. 155). The role of participation is arguably relevant for the fulfillment of the ideal of non-domination, however, it is more instrumental than anything else. What really matters is political equality among citizens, since "the notion of non-domination explicitly sees freedom as the achievement of certain sorts of egalitarian political relations" (BELLAMY, 2007, p, p. 146).
+
+Moreover, Bellamy also joins Skinner and Pettit in denouncing the indifference connected with the liberal ideal of noninterference regarding the form of the state. From the liberal point of view, the central issue is not who controls the government (and how), but the amount of power that is available to the government and the extensiveness of the state apparatus. The amount of freedom available to citizens is inversely proportional to the interference of the government with their choices. In sharp contrast with freedom as non-domination, freedom defined as non-interference "has no necessary connection with democracy" (BELLAMY, 2007, pp. 154-155).
+
+However, this point of distinction between republicans and liberals does not prevent agreement from being reached on other topics. According to Bellamy, the republican justification of democracy as the achievement of equality among citizens stems from the liberal premise that each individual deserves equal concern and respect. Moreover, republicans agree with liberals on the need to impose some limits regarding the power of the government and the importance of individual rights. These liberal ends receive more overt political and institutional treatment in republicanism, which prioritizes "democratic self-rule as the legitimate means to realize these ends" (BELLAMY, 2007, p. 156). That is why Bellamy characterizes republicanism as a form of "democratic liberalism" (BELLAMY, 2007, p. 156) 10.
+
+Although Bellamy advocates the superiority of the neo-Roman conception of freedom over the liberal conception of freedom as noninterference, his greatest antagonist is not liberalism as such, but the legal constitutionalism espoused by most contemporary liberal thinkers. This explains his proximity to liberals such as Jeremy Waldron, a critic of judicial review and an antagonist of the increasing power of the courts in contemporary democracies (WALDRON, 1999; 2006). Furthermore, the adoption of legal constitutionalism is not exclusive to liberalism. The belief in the non-dominating powers of the written constitution and the faith in the interpretative impartiality of judges also weaken the democratic potential of republicanism. According to Bellamy, this explains what happens in Pettit's model.
+
+Pettit subscribes to a substantive conception of legal constitutionalism. He assumes the existence of common interests that would give us a frame of reference for distinguishing domination from non-domination in government actions. Bellamy defies the "objectivism" implicit in the notion of "common recognizable interests" and inveighs against the thesis that such interests find their last line of defense in institutions immune from the hazards of political struggle—institutions that would congregate the best guardians of liberty. The problem with this thesis is that it is based on myths related to legal constitutionalism. It presupposes the rationalization and depoliticization of the deliberative process in order for laws and policies attuned to the common good to be generated. However, rationalization and depoliticization are two tendencies opposed to democracy11.
+
+Pettit assumes that the participants of a deliberative process in the context of public debate have a willingness to overcome their self-interests when they are exposed to rational arguments. This alleged willingness would allow for the convergence of different points of view toward a substantive notion of "common recognizable interests". However, Bellamy noticed a problem in this "idealized political process". In the realm of real politics, we cannot count on the assumption of a "hypothetically possible convergence on substance". For Bellamy, the "dilemma confronting real politics is that no such convergence is likely". Furthermore, Pettit seems not to fully recognize that in actual circumstances of disagreement, the political process not only has the function of informing the decision-making process, but also of "authorizing the decision-maker to take decisions that at least some will disagree with" (BELLAMY, 2007, p. 164). In other words, Pettit loses sight of the fact that the exercise of public reason is more important for legitimizing decision-making than for reaching an allegedly objective informed decision based on the consensus among the many participants about their supposedly common recognizable interests.
+
+Pettit does not ignore the fact that governmental decisions may lack consensus because of their possible divorce from the common interest, nor the propensity of governments to impose domination. As we have seen, Pettit proposes the neutralization of this perceptible threat by means of a set of contestatory institutions situated outside and above the partisan political process, characterized by the unavoidable disagreement between its participants and the supremacy of majority rule. However, Bellamy interprets this solution as a strategy of depoliticizing the deliberative process consistent with Pettit's adherence to legal constitutionalism. In practical terms, this solution consists in transferring the final word about conflict resolution from the political context to "apolitical" authorities, such as courts and specialists councils, supposedly guided by the ideal of impartiality12. The problem here, according to Bellamy, is that this prospect of an aseptic democratic politics is far from delivering what it promises.
+
+The difficulties that lurk in Pettit's model are the same that weaken legal constitutionalism. Firstly, there is no guarantee that people can reach consensus on the substantive meanings and practical consequences of a particular right or law. Bellamy uses the Rawlsian notion of "reasonable disagreement" to make the point that "people may reasonably hold differing views of not only the sources and substance of rights, but also their subject and scope, and how they might best be secured" (BELLAMY, 2013, p. 256). Secondly, most strictures that affect the behavior of common people also apply to the behavior of the experts who monopolize the decision-making process of contestatory institutions. Thus, for example, judges in courts and economists in central banks are always involved in intra-institutional debates. These so-called apolitical agents cannot avoid taking sides in disputes over values ​​and interests that also divide common citizens and their representatives in electoral and partisan politics. Although those disputes are settled in specialized and technical discourses, most decisions are still taken through majoritarian voting by the members of the apolitical bodies. That recourse to voting suggests the essentially contested nature of the terms of the debate. There is no room for impartiality. In any area of expertise, there are irresolvable controversies about the proper approach for solving a particular problem. "Far from being the product of a more deliberative and objective approach to a question, an expert consensus may merely result from the hegemony within a given profession of a certain theory or approach" (BELLAMY, 2009, p, p. 117).
+
+Bellamy notes a sort of "Platonism" in Pettit's belief that some individuals possess certain abilities that make them more capable than ordinary citizens to make proper governmental decisions. The objectivist view of the notion of common interest, namely the call for rationalization of public debates and the suggestion of the depoliticization of important arenas of decision-making, are examples of Pettit's proximity to the "platonic argument for guardianship: the doctrine that those who possess knowledge of 'royal science' of government should rule" (BELLAMY, 2007, p. 168). However, appeals to this "guardianship theory" are not consistent with democracy and political equality.
+
+Does Bellamy envisage an alternative to overcome the flaws of Pettit's model? How can democratic institutions be redesigned in order to ensure the republican ideal of non-domination is achieved? If political equality and freedom as non-domination are the norms of political constitutionalism, how will it transpire? Bellamy argues that a freedom-oriented polity will appear in the mechanisms of "public reason" and in the "balance of power".
+
+Trying to maintain a distance from substantive and epistemic conceptions of public reason, Bellamy defends a radical procedural and political account of it, which avoids the appeal to principles such as the Rawlsian "veil of ignorance" and the Habermasian "ideal speech situation". Instead, he appeals to the republican principle, inherited from the ars rhetorica, according to which we must "hear the other side" (audi alteram partem). Substantive and epistemic views of public reason have tended to neglect "considerations of power and disagreement" (BELLAMY, 2007, p, p.177), presenting constitutional courts and specialized deliberative bodies, like the Citizens' Juries, as privileged loci for the exercise of public reason. In contrast, the political procedural vision recognizes the complete and irremediable immersion of public reason in the "circumstance of political disagreement". From this point of view, "public reasoning serves less as a mode of justification and more as a means for legitimating decisions by offering a due process that acknowledges the equal moral right of all citizens to be regarded as autonomous reasoners" (BELLAMY, 2007, p, p. 178).
+
+Together with public reason, institutions aimed at reaching the balance of power complete the formal dimension of political constitutionalism. Bellamy distinguishes his notion of balance of power from the concept of separation of powers typical of legal constitutionalism. Institutions, which serve as the functional division among executive, legislative, and judiciary powers, on the one side, and federalism, on the other, are usually interpreted as negative constraints on governmental power. There is no doubt that republicans recognize the importance of negative strategies for checking power; they are crucial for minimizing domination. Nevertheless, Bellamy intends to pursue a strategy in which the balance of power is not reduced to a negative function. He argues that even more important than that is "the positive role of dividing power in ensuring decision-makers 'hear the other side' " (BELLAMY, 2007, p. 195).
+
+In the republican tradition, the balance of power is traditionally associated with the model of the mixed constitution. Ancient and early-modern republicanism conceived the mixed constitution as the distribution of differentiated and exclusive privileges to each specific class of citizen. Driven by an organicist and corporatist view of the polity, such an interpretation understands the classes to be "parts" or "organs" (different but complementary) of the corporate system. The aim of the institutional mixture between monarchic, aristocratic, and democratic principles, i.e., between the power of one, the power of the few, and the power of the many, was to ensure that "each element performed its respective function and to render them harmonious" (BELLAMY, 2007, p. 197). However, this organicist vision of the mixed constitution lost its predominance from the 17th century onwards. Two major intellectual innovations contributed to that loss: the rise of the mechanical metaphor, inspired by Newtonian physics, and the expansion of the belief in the natural equality of all individuals, disseminated by the theories of natural law. Those developments engendered a new vision of the mixed constitution. The concept of political body came to be seen as an artificial mechanism instead of a natural body, and the parts of this mechanism came to be viewed as single individuals than as whole classes of people with complementary functions. Of course, the pieces of the mechanism, the individuals, can gather perform group actions; however, the choices by each one of them to do so are at least as relevant as their "innate" differences of status. After these ideological innovations, the balance of power "was no longer a matter of securing the complementary roles of each part of the system"; rather, it was "the product of mutual checks between competing groups" (BELLAMY, 2007, p, p. 198).
+
+Bellamy points out the superiority of the mechanical metaphor, which is endowed with a "more attractive conception of pluralism" (BELLAMY, 2007, p. 199) and is less susceptible to the shortcomings of the organic one. His presupposition is that it is more efficacious than the organic metaphor to deal with the proliferation of sources of conflict between multiple interest groups in society. The mechanical metaphor is also more conducive to stimulating the involvement of different groups in coalitions that would sound counterproductive to the interests of classes under the organic and corporatist view. Moreover, "it offers the link between principal and agent" (BELLAMY, 2007, p, p. 200), something which was not adequately taken into account in the ancient model of the mixed constitution.
+
+The mechanical metaphor favors a model of "mixed constitution" based on the functional separation between executive, legislative, and judiciary powers. But for Bellamy, the approach of political constitutionalism views the doctrine of separation of powers incurring in similar difficulties to those that bedevil the organicist approach. Firstly, it is not that simple to differentiate between legislative, judicial, and executive functions of the state since "each branch of government engages in all three functions in some degree or another" (BELLAMY, 2007, p. 202). Secondly, the model of functional separation does not give enough attention to the role of social groups. It has no mechanisms to avoid the arbitrary power that may arise from a situation in which the same social group exerts disproportionate influence over more than one function of the state. Finally, the model of separation of powers "fails to provide incentives" for the agents entrusted with functional powers to serve the interests of the citizens, as it assumes a vertical structure in which those agents are virtually autonomous in relation to their principals. This lack of accountability is particularly serious in the judicial branch, "which has no mechanism for rendering it accountable for its decisions" (BELLAMY, 2007, p, p. 202).
+
+In face of the shortcomings of both the organicist and the separation of powers models, Bellamy argues that the most efficient form of balance of power is the one produced by the regular workings of the "actually existing democracies" (BELLAMY, 2007, p. 209). His aim is to promote a full defense of the normative dimension of contemporary democracies. The "actually existing democracies" are composed of sets of institutional choices extracted from within a broad range of options available throughout the history of ideas, and from the practices of actual democratic regimes. In his book, Bellamy justifies each one of his preferred choices in detail. In this study, I do not intend to reconstruct such justifications; rather I will point out the general lines of his preferred institutional model. Besides attributing the role of protagonists in the democratic scene to professional politicians and political parties, his model of "actually existing democracies" presupposes the following specific choices: representative democracy rather than direct democracy; voting instead of lottery for the appointment of representatives and magistrates; a proportional representative system over a pluralistic electoral system; a parliamentary system over a presidential system; a unicameral parliament over a bicameral parliament; and a unitary system rather than a federalist one.
+
+Machiavellian democracy as a plebeian republic
+
+McCormick's model (2011) of Machiavellian democracy completes our overview of the three different institutional arrangements linked to the republican ideal of freedom as non-domination. Unlike Bellamy, who engages exclusively with contemporary political and constitutional theory, and Pettit, who resorts to the history of political thought only in a supplementary way, McCormick uses the history of ideas as the main source of materials for the construction of his model of republican democracy. In doing so he reveals a preference for a sort of historical perspective in which the study of the past is clearly applied to thinking about contemporary issues. As he says, "political history and old texts, when examined with sensitivity and care, can very often prove quite illuminating for contemporary political reflection" (McCORMICK, 2012, p. 95). Through an exhaustive reconstruction of Machiavelli's political and constitutional thought, McCormick suggests remedies for one of the main shortcomings of contemporary liberal democracies: the lack of accountability of political and economic elites.
+
+Before presenting the main features of McCormick's institutional model of Machiavellian democracy, let us see, as we did for Bellamy, how he understands his own connection to the neo-republican movement and his main criticisms of Pettit's democratic model.
+
+At first glance, McCormick's opinions on the republican revival may seem to point to an incompatibility between his model of Machiavellian democracy and almost any other aspect of the republican tradition. Commenting on the endeavors to revitalize republicanism promoted by authors such as Pocock, Skinner, Viroli, and Pettit, among others, McCormick invites "these scholars to desist in such endeavors". The reason for this plea is his belief that "republicanism, unless reconstructed almost beyond the point of recognition, can only reinforce what is worst about contemporary liberal democracy" (McCORMICK, 2003, p. 616). However, on closer inspection, it seems more accurate to understand McCormick's effort as a move to redefine the direction of neo-republicanism other than as thorough rejection of that tradition.
+
+Perhaps we can say that in McCormick's interpretation, the most remarkable contribution from Machiavelli arises from within the republican tradition, rather than outside it. The starting point for properly understanding Machiavelli's pro-plebeian republicanism is his criticism of the "writers", the term he often used to refer to the classic thinkers of ancient and early-modern republicanism. From Cicero to Bruni, the republican institutional imagination remained tied to the values ​​and interests of the aristocracy, reinforcing the ends of senatorial politics against the desire of the people for being free from domination. By challenging this aristocratic perspective, Machiavelli re-elaborated the principles of the republican tradition from a plebeian perspective. As McCormick recognizes, “Machiavelli advocates an unambiguously popularly dominated republic” (McCormick, 2001, p. 311 – emphasis is mine)”, at least in the context of the standards of his time.
+
+Seeing that Machiavelli disapproved of the aristocratic republicanism of his era, McCormick relies on the Florentine thinker to deplore the elitist propensities of neo-republicanism. To be sure, his criticism occurs at the level of institutional design. It presupposes a considerable degree of agreement at the more abstract level of principles. McCormick does not have any quarrel with the adoption of the ideal of non-domination as the central aspiration of republican democracy. That becomes clear when he states "Machiavelli's thinking fully coincides with Pettit's indisputably imposing intellectual endeavors on the goal of liberty as non-domination" (McCORMICK, 2013, p. 122). Nonetheless, one must keep in mind that when Pettit, following Skinner, resorts to Machiavelli's thought, he focuses on the Florentine's more abstract statements, largely ignoring the institutional dimensions of his musings.
+
+Despite McCormick's agreement with Pettit about the crucial role played by the ideal of non-domination to the prospect of a republican democracy, he points out a contradiction in Pettit's model that makes the realization of that ideal difficult, if not impossible. The point is that "Pettit's committed adherence to republicanism compels him to endorse some of the aspects of contemporary 'democratic' politics that are least friendly to liberty, conceived in Pettit's own terms" (McCORMICK, 2013, p. 94).
+
+In line with thinkers such as Cicero, Bruni, Guicciardini, and Madison—aristocratic interpreters of republicanism—Pettit advocates a predominantly negative form of popular participation. The positive expression of the will of the people is restricted to the episodic actions by ordinary citizens during electoral processes. Afterwards, the elected representatives assume the monopoly of positive and creative action. The emergence of a collective will based on the direct participation of the people would not only be practically unworkable in the context of mass democracies, but also normatively undesirable. McCormick insists that Pettit "considers the idea that majority rule accurately approximates popular will to be a threat, perhaps even the greatest threat, to liberty within democracies" (McCORMICK, 2011, p. 148).
+
+Parallel to the defense of elections as the most appropriate method of popular participation in politics, Pettit emphatically rejects non-electoral methods–such as lottery–for the appointment of public office holders. He suggests that the electoral mechanism is superior for ensuring accountability on the part of representatives, because they are driven by their interest to be re-elected; consequently, unlike an officer chosen by lot, they are compelled to keep themselves accountable to their electors. However, according to McCormick, this sort of comparison between lotteries and elections is historically inaccurate. Pettit does not take into account that almost all popular governments that resorted to lottery also relied on mechanisms for the trial of magistrates appointed subsequent to the government leaving office. In the case of their proved misconducts, they were subjected to punishment. Contrary to Pettit, McCormick concludes that "there is certainly no reliable evidence available that demonstrates the superiority of election/reelection schemes in securing greater elite accountability for citizens to those characterized by lottery/scrutiny; in fact there are serious grounds to conclude just the opposite" (McCORMICK, 2011, p. 149).
+
+However, as we have seen, Pettit does not exclusively rely on electoral democracy as the sole guarantor of freedom as non-domination. He lists several ways in which it can be distorted, such as the failure of elected officers to keep campaign promises, the exaggerated or undue influence of lobbies on the behavior of such officers, and of course the threat of the "tyranny of the majority". Pettit's solution to avoid distortions generated within the electoral mechanism is the institution of contestatory democracy, through which ordinary citizens and minority groups can challenge laws, policies, and actions they deem detrimental to freedom. McCormick remarks that Pettit "understands contestatory procedures to operate in just as indirect and reactive a manner as he does electoral politics" (McCORMICK, 2011, p.149); ordinary citizens only react to government initiatives, or lack thereof. Furthermore, their contestations will be carried out if–and only if–they are accepted by the specialized agents that occupy posts within the contestatory institutions. Like Bellamy, McCormick doubts the ability of such specialized agents, such as judges, to assess the contestations initiated by citizens with independence and impartiality.
+
+It is precisely Pettit's confidence in the independence and impartiality of allegedly apolitical agents that is behind his controversial call for the "depoliticization of democracy"13. In fact, for Pettit, in certain areas of lawmaking, the application of the law and public policy or any other constraints under the influence of popular will would be harmful, even if it were limited to the second order influence that people exercise by voting for their representatives. Public actions such as the imposition of criminal sentences, central banking policy, the regulation of prostitution, among others, are examples of actions that should be removed from the sphere of influence of elected politicians. Agents with substantive knowledge of the matters involved in those public actions–and whose motivations to be balanced and impartial in their behaviors stem from their desire to be well recognized and well esteemed–would be better equipped to make decisions in those arenas. McCormick considers this call for depoliticization as a "markedly senatorial move". He holds that "Pettit's justifications for such institutions, which assume that the populace is too fickle, uninformed, or influenced by emotion and prejudice to make sound decisions, are strikingly reminiscent of those put forward in favor of senatorial independence by Cicero, Guicciardini, and some of the American founders" (McCORMICK, 2011, p. 156). Even the institution of the "ombudsman", which "at first glance" (McCORMICK, 2013, p, p. 98) is reminiscent of the tribunes of the ancient Roman republic, is granted very limited powers in Pettit's model. Besides not having the veto power available to the tribunes of the Roman plebs, Pettit's ombudsman does not represent, like the tribunes, a specific class of the society. He may interchangeably put forward contestations both from the people's perspective as well as from the elites.
+
+The figure of the ombudsman is an example of an institution by class-anonymity, a constitutive feature of Pettit's model. For McCormick, this feature definitely removes the electoral-contestatory democracy away from Machiavelli's democratic republicanism. It is true that Pettit is committed to the Roman tradition of a mixed constitution, a notion also praised by Machiavelli. However, by rejecting the idea of class-specific institutions, Pettit's interpretation of a mixed constitution leaves behind what is indeed essential for the achievement of a balance of power as understood by the Florentine thinker. Devoid of exclusively popular institutions and mechanisms that permit popular collective and direct participation in public affairs, Pettit's model is unable to attach any significant weight to the democratic element of a mixed government.
+
+Following a different path, the model of republican democracy proposed by McCormick suggests a balance of power directly inspired by Machiavelli's interpretation of the ancient mixed constitution, with its peculiar pro-plebeian disposition. Given the current supremacy of a political system characterized by social anonymity and the "aristocratic effect" of elections, two salient features of contemporary republics, the recovery of the balance between the power of the many and the power of the few depends on institutional reforms that provide exclusive instruments for effective popular participation in the government. McCormick's Machiavellian democracy is a normative model for those institutional reforms.
+
+Let us highlight three main elements of McCormick's model of republican democracy: 1) the institution of exclusively popular magistracies and assemblies endowed with veto power and legislative initiative; 2) the introduction of the lottery for the appointment of magistrates in order to inhibit the "aristocratic effect" of the electoral system; and 3) the establishment of "political trials", whereby a large number of ordinary citizens can participate in the adjudication of representatives and magistrates accused of political crimes.
+
+McCormick gives prominence to Machiavelli's positive account of the functioning of those institutions in the ancient Roman republic, as well as to the consequences of their absence in Florence. The use of that model contributed to the preservation of liberty in Rome for a long period of time. In Florence, on the other hand, where the people could not find institutional means to vent their anger against the insolent behavior of the elites, conflicts often resulted in bloody fights, involved the use of "extraordinary" means, such as violent popular revolts ending in public executions without judgment, and increased popular support of prospective tyrants.
+
+For McCormick, the Roman tribunate is the most successful institution to have exclusively represented the plebs, and he considers it the "centerpiece of Machiavelli's prescriptions for popular government" (McCORMICK, 2011, p. 07). The importance attributed to the tribunes by Machiavelli can be easily determined by the fact that the Florentine proposed something similar to that magistracy in his own time, when he was urged by Cardinal Giulio de Medici to write a proposal reform of the political institutions of Florence. In his analysis of Machiavelli's A Discourse on Remodeling the Government of Florence, McCormick gives special attention to the proposal of a tribune-like office, the provosts (proposti), "a magistracy that wields veto and appellate powers and excludes the republic’s most prominent citizens" (McCORMICK, 2011, p, p. 08). By emphasizing the role of institutions similar to the Roman tribunate, Machiavelli reveals his preference for a political system based on class representation, at the expense of the more universalist models in which the domination exercised by holders of material wealth and social power tends to remain unnoticed within public debate.
+
+Alongside the creation of distinctively popular magistracies, the Machiavellian democracy model has a preference for the lottery method for choosing representatives and magistrates. As we have seen, both Pettit and Bellamy emphatically dismiss this method, as they believe that electoral systems are better equipped to express the popular will. McCormick understands that Machiavelli's thought on the appointment of magistrates has more affinities with Athenian democracy than with the Roman republic, even though the practice of lottery was still very common in Rome as well as medieval and Renaissance Italian cities; this is in contrast to what is now the case in modern republics.
+
+Besides giving an exclusive office to the plebeians and instituting lottery for the appointment of public officers, Machiavellian democracy grants all ordinary citizens the prerogative of participating in the public trials of representatives and magistrates accused of political crimes. For Machiavelli this was one of the most effective tools for promoting the accountability of public office holders as this method was practiced in the ancient Roman republic 14. By defending the inclusion of the common citizens in the process of accusation and trial of political defendants, Machiavelli aimed to avoid the control and manipulation of that process by the holders of political and social power, since "the few always behave in the mode of the few" (MACHIAVELLI, 1996, p. 25). Moreover, the participation of the people in political trials represents an effective channel through which they can vent their resentment against the insolence of the elites. The Florentine republic also reveals its deficits in comparison to the Roman republic in this regard. Regarding Machiavelli's diagnosis, McCormick argues "the lack of legally established and broadly popular accusation, trial, and appellate procedures in Florence was one of the chief causes of the republic's instability" (McCORMICK, 2011, p. 138).
+
+McCormick concludes the presentation of his model of republican democracy with a "thought experiment" in the field of contemporary constitutionalism. He invites us to imagine a reform of the United States constitution in which a magistracy reminiscent of the Roman tribunate is established. McCormick warns, "This is a heuristics proposal intended for critical but not necessarily directly practical purposes" (McCORMICK, 2011, p. 183). Such an institution would be composed of 51 members (aged 21 and over) appointed for a non-renewable one-year term. The members would be chosen by lot from the portion of the population earning an annual household income of less than $345,000, a limit that excludes the richest 10% of the country's population. This magistracy would be a popular power that complements, by checking, the three traditional and functional powers of contemporary republics.
+
+The main constitutional prerogative of this new magistracy would be the possible veto of the "one piece of congressional legislation, one executive order and Supreme Court decision" during a one-year term (McCORMICK, 2011, p. 184). In addition, the "tribunes" would be able to convene a national referendum on any subject once a year; with a minimum of a three-fourths vote, they would also be able to initiate a process of impeachment of any officer belonging to the three other branches of government. Based on Machiavelli's disbelief on the notion of the natural goodness of people, McCormick does not disregard the possibility of corruption among magistrates endowed with such provisional powers. It would therefore be necessary to provide mechanisms for the prosecution and punishment of those tribunes who behaved in a corrupt manner during their term in office. They would be liable to being accused of corrupt practices by two-thirds vote of the tribunes appointed the following year. Once indicted, they should be tried before a jury of 500 citizens chosen at random among those qualified to serve as tribunes.
+
+Leaving aside the other features of McCormick's "thought experiment", we conclude this section by emphasizing what he considers to be the overall purpose of his proposal: "In the spirit of Machiavelli's praise of Roman tribunes and his aspirations for the Florentine provosts, the American tribunes would serve as the popularly based 'guard of liberty' within the American republic" (McCORMICK, 2011, p. 187).
+
+Final considerations
+
+I would like to conclude this discussion by offering a brief comparison between the three models in reference to the following three questions: First, how does each model incorporate the republican tradition of mixed constitution? Second, what are their standings concerning the forms of appointment of representatives and magistrates, especially regarding the choices between election or lottery? Third, what can be said about the nature and feasibility of the institutional reforms proposed by each model in the context of contemporary liberal democracies?
+
+Concerning the first question, one can safely say that the three models of republican democracy emphasize their appreciation for the mechanisms regarding the division and distribution of power. The three authors converge on the refutation of the modern tradition of indivisible sovereign power, no matter the locus of concentration of such power. They do not support, for instance, Rousseau's influential conception of democracy as the regime of indivisible and nontransferable popular sovereignty. That said, we find a clear dividing line between the models by Pettit and Bellamy on the one hand, and McCormick on the other. Pettit and Bellamy opt for typically modern mechanisms for achieving a distribution of power, despite doing so in slightly different ways. While Pettit is satisfied with the functional separation between legislative, executive, and judiciary powers as refined by Montesquieu, Bellamy considers this type of division insufficient, even undesirable, for the balance of power. According to Bellamy's theory, the distribution of power is conceived within the framework of a pluralist view in which the interests of social groups are expressed through electoral competition between political parties and professional politicians, who interact with each other in the parliamentary arena. Pettit and Bellamy distance themselves from both the ancient and early-modern models of a mixed constitution, founded under the notion of a society "naturally" divided into social classes.
+
+It is precisely that conception of a mixed constitution that McCormick recovers from Machiavelli. To him, the body politic should not be an assembly of atomized individuals, as in modern constitutionalism. The division of society between the great and the people, the rich and the poor, the few and the many ought to be considered prior to devising any political institutional arrangements. Regarding the views of many ancient and early-modern thinkers, such differentiation of classes gave rise to markedly corporatist theories of the constitution, which comprehend conflict as a symptom of the corruption of the body politic that compromises the cardinal virtue of concord. However, this is not applicable to Machiavelli's view, as he actually emphasizes the importance of conflict between the people and the great for the proper functioning of a mixed constitution.
+
+With respect to the methods for choosing magistrates and representatives, there is also a clear distinction between the three models of democracy under examination here. Pettit and Bellamy refuse to confer any relevant role to lottery in their models of republican democracy. They both prefer the electoral method for the appointment of officers. Pettit, however, accepts electoral institutions although he has some reservations, since he considers electoral democracy necessary but insufficient to ensure that the people have effective control over governments. In order to overcome this insufficiency, Pettit superimposes contestatory institutions on electoral democracy. Bellamy, for his part, rejects such a move, considering the partisan competition for the votes of the population not only necessary but also sufficient to ensuring the achievement of the ideal of freedom as non-domination.
+
+Alternatively, McCormick's model, informed by evidence from sociological and political research on the workings of the electoral party system in contemporary liberal societies, follows a very different path; in addition, McCormick's model refers more to ancient and early-modern examples than to modern constitutions. One of the main starting points of McCormick's theorization is precisely his belief in the "aristocratic effect" of the electoral mechanism. In practical terms, that effect is the disproportionate control over resources–especially economic resources–available to the elites, which facilitates the triumph of their preferred representatives in increasingly expensive electoral campaigns. Nevertheless, despite his defense of lottery, McCormick does not completely suppress the presence of elections in his model of republican democracy. The combination of lottery and election would be able to perform an efficient role in assuring the democratic character of the process of appointing officers. Building upon the works of both Machiavelli and Guicciardini (the aristocratic republican critic of the Florentine secretary), McCormick admits that elections are necessary in a democratic (popular) republic, as much "depends on how lot is used to mitigate election's aristocratic bias" (McCORMICK, 2011, p. 175).
+
+Finally, what about the reformist potential and feasibility of the institutional designs advanced by each of the three models? Pettit rightly points out the dual function that any normative model of democracy must fulfill. On the one hand it must have "a critical, reformist edge" and not merely "vindicate democracy as we know it"; on the other, it must be "institutionally feasible" and be the outcome of "a realistic proposal" rather than an "other-worldly" model or a self-satisfied "utopian pipedream" (PETTIT, 2012, pp. 23, 180 and 181). However, achieving the proper balance between these two functions is not trivial. As far as institutional reform is concerned, we indeed face a trade-off between realism and a desire for reform. An excess of "realism" leaves no room for invention, making the desire for significant reforms a frustrating reality of cosmetic changes at best. Conversely, excessively radical reform, regardless of the value of its critical function, tends to result in political and institutional dead ends.
+
+That said, it is important to keep in mind that the degree of reform or realism of a normative model of democracy can only be measured in relation to the political and institutional context in which it is proposed. Considering the contexts of "actually existing democracies", we conclude this essay by suggesting that, on the one hand, both the electoral-contestatory model as well as the model of political constitutionalism run the risk of atrophying their reformist dimensions for the sake of the feasibility of their institutional designs. That would render them unable to face the challenges posed by the dysfunctional aspects of contemporary liberal democracies, as they would lack the required innovations. On the other hand, regardless of his remarkable critique regarding the limits of existing democracies, McCormick's model seems to rely upon ideas and corporate agents that have been inactive for a considerable period of time (to be more specific, since the advent of modern societies). That said, history is replete with examples of the death and resurrection of ideologies. Beliefs abandoned at one time can resurface at another time, and when they do, they can be even stronger than before. However, the resurrection of ideologies as hypothesized by McCormick may take a long time to transpire. The problem, it seems, is that "actually existing democracies" reached such a critical point that the recovery of people's control over the republic requires both non-cosmetic and urgent reforms.
+
+
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+{"pid":"S1981-38212015000100003","title":"Non-domination and Political Institutions: The Contested Concept of Republican Democracy","journal_title":"Brazilian Political Science Review","input_text_hash":"f78af628b80cf62a7fa7f39b1a5c2d632680c3384b651d61d342b97b907de7e9","status":"complete","full_body_read":true,"incomplete_reason":null,"section_reading_log":[{"section_title":"opening_unheaded_section","section_position":1,"section_summary":"The opening section frames the article as a contribution to democratic theory and neo-Roman republicanism. It asks which institutional arrangement is most suitable for realizing freedom as non-domination and identifies three competing models of republican democracy: Pettit's electoral-contestatory model, Bellamy's political constitutionalism, and McCormick's Machiavellian democracy. The author states that these models should be understood as competing definitions of republican democracy rather than as alternatives to be synthesized or ranked.\n\nThe section introduces Walter Gallie's notion of an essentially contested concept and applies it to republican democracy. It emphasizes the appraisive and historically layered character of the concept, then previews the article's structure: first reconstructing freedom as non-domination in Skinner and Pettit, then comparing the three democratic models and their responses to dilemmas of liberal democracy.","methods_or_data_mentions":"This section contains no original dataset, statistical analysis, interviews, archival evidence, or empirical research design. It uses conceptual exposition and references to political theorists such as Urbinati, Gallie, Nietzsche, Skinner, Pettit, Bellamy, and McCormick. The method is interpretive and normative-theoretical comparison of concepts and institutional models.","classification_relevance":"This section strongly indicates a theoretical-normative article rather than an empirical paper. It presents a research question about institutional arrangements for a normative ideal and announces conceptual comparison, not empirical analysis. It gives no evidence of original quantitative or qualitative empirical analysis and no statistical or causal identification design."},{"section_title":"Non-domination as a political ideal: from Skinner to Pettit","section_position":2,"section_summary":"This section reconstructs the development of freedom as non-domination from Skinner's account of republican liberty to Pettit's more explicit formulation. It explains Skinner's rejection of a purely positive, civic-humanist definition of republican liberty and his effort to distinguish republican negative liberty from liberal negative liberty. The section argues that Skinner eventually moved closer to Pettit's third concept of freedom, centered on the absence of arbitrary power.\n\nThe section then explains Pettit's critique of Berlin's positive/negative liberty dichotomy. It presents Pettit's contrast between non-interference and non-domination through examples such as the benevolent master and the slave, and lawful interference that is non-arbitrary. The author uses this theoretical reconstruction to argue that republican liberty necessarily raises questions of institutional design because freedom depends on avoiding domination, not merely avoiding interference.","methods_or_data_mentions":"The section uses close reading and conceptual reconstruction of political theory texts by Skinner, Pocock, Machiavelli, Hobbes, Berlin, and Pettit. It includes illustrative examples taken from Pettit's theory, such as the benevolent master and slave, but no empirical data, no tables or figures, no field evidence, and no statistical analysis.","classification_relevance":"The section confirms that the article is engaged in political theory rather than empirical research. Its evidence consists of arguments and interpretations from canonical and contemporary theorists. Although it discusses institutions and domination, it does not test empirical claims or analyze original qualitative cases; it is conceptual and normative."},{"section_title":"The electoral-contestatory model and people's negative powers","section_position":3,"section_summary":"This section presents Pettit's model of republican democracy. It explains Pettit's distinction between legitimacy and justice, his claim that state coercion can be legitimate only when subject to popular control, and his account of control through active, virtual, and reserve influence. The section then reconstructs Pettit's preference for responsive representative assemblies over plenary or indicative assemblies, emphasizing elections, representative accountability, and the limits of direct democracy.\n\nThe section also explains Pettit's argument that electoral democracy is necessary but insufficient. To prevent majority domination and secure individualized, unconditional, and effective popular influence, Pettit adds contestatory institutions such as courts, ombudsmen, audit bodies, central banks, and other mechanisms through which citizens or minorities can challenge government action. The author characterizes these as the editorial dimension of democracy, supplementing the authorial dimension of elections.","methods_or_data_mentions":"This section contains no original empirical evidence. It analyzes Pettit's theoretical works and institutional proposals, with examples and analogies such as traffic direction and horseback riding drawn from Pettit's conceptual exposition. It mentions contemporary institutional examples such as the British Columbia Citizens' Assembly, ombudsmen, courts, and central banks, but does not study them empirically.","classification_relevance":"The section is relevant because it might superficially look institutional or empirical, but it is not an empirical institutional analysis. It is a normative reconstruction of Pettit's democratic model. There is no original quantitative analysis, no qualitative case-study evidence, no statistical inference, and no credibility-revolution method."},{"section_title":"Political constitutionalism as a pluralist model of republican democracy","section_position":4,"section_summary":"This section reconstructs Bellamy's model of republican democracy and contrasts it with Pettit's. It explains Bellamy's endorsement of freedom as non-domination and his view that democracy is justified because it secures political equality. Bellamy shares Pettit's rejection of liberal non-interference as institutionally indifferent, but criticizes Pettit's reliance on legal constitutionalism and contestatory institutions.\n\nThe section develops Bellamy's critique that Pettit's model assumes objectivist common interests and overestimates the impartiality of courts, expert bodies, and other depoliticized institutions. Bellamy instead defends political constitutionalism, procedural public reason, partisan contestation, and balance of power through actually existing democratic institutions, especially representative democracy, proportional representation, parliamentary government, unicameralism, and unitary institutions.","methods_or_data_mentions":"The section relies on theoretical exposition of Bellamy's writings and related arguments by Waldron, Rawls, and others. It mentions institutional forms such as courts, central banks, citizens' juries, parties, parliaments, and electoral systems, but does not collect or analyze empirical data about them. There are no interviews, documents used as empirical sources, datasets, models, tables, or statistical tests.","classification_relevance":"This section reinforces the non-empirical classification. It is a conceptual and normative comparison of constitutional theories. It contains explanatory language about why legal constitutionalism is problematic, but those are theoretical arguments, not empirically tested causal claims tied to data analysis."},{"section_title":"Machiavellian democracy as a plebeian republic","section_position":5,"section_summary":"This section presents McCormick's model of Machiavellian democracy as a plebeian alternative to Pettit's and Bellamy's models. It explains McCormick's use of Machiavelli and the history of political thought to criticize aristocratic tendencies in republicanism and to argue for institutional mechanisms that empower ordinary citizens against elites. The section emphasizes McCormick's agreement with non-domination as a normative goal but disagreement with Pettit's institutional design.\n\nThe section details McCormick's criticisms of elections, contestatory institutions, depoliticized expertise, class-anonymity, and weak ombudsman-like mechanisms. It then reconstructs McCormick's preferred institutions: popular magistracies and assemblies with veto and legislative initiative, lottery for appointing some magistrates, and political trials by ordinary citizens. It concludes by presenting McCormick's thought experiment of American tribunes chosen by lot from below the top income decile, with veto, referendum, and impeachment powers.","methods_or_data_mentions":"The section uses historical and theoretical materials from Machiavelli, McCormick, Pettit, and republican thought. It mentions sociological and political research on electoral systems and refers to income thresholds in McCormick's thought experiment, but it does not present original or reanalyzed quantitative analysis. Historical examples such as Rome and Florence are invoked through secondary theoretical reconstruction, not as a systematic empirical case study.","classification_relevance":"This is the closest section to qualitative or historical material, but it remains a normative-theoretical reconstruction rather than substantive empirical research. The references to Rome, Florence, elections, and income thresholds support institutional argumentation, not original empirical analysis. It therefore does not warrant classification as empirical qualitative or quantitative."},{"section_title":"Final considerations","section_position":6,"section_summary":"The final section compares the three models across three questions: their treatment of the mixed constitution, their preferred methods for appointing representatives and magistrates, and the feasibility and reformist potential of their institutional proposals. It argues that Pettit and Bellamy use modern mechanisms of power distribution, while McCormick recovers a Machiavellian class-based mixed constitution centered on conflict between the many and the few.\n\nThe section contrasts Pettit's and Bellamy's preference for elections with McCormick's defense of lottery as a corrective to the aristocratic bias of elections. It closes by assessing the trade-off between reformist ambition and institutional feasibility: Pettit and Bellamy may be too close to existing democracies, while McCormick may be too radical or historically distant, even though contemporary democracies may require urgent non-cosmetic reform.","methods_or_data_mentions":"This section contains no empirical data or method. It synthesizes the preceding theoretical comparison and evaluates the normative and institutional implications of the three models. It includes no tables, figures, statistical analysis, interviews, archival research, or systematic case comparison.","classification_relevance":"The conclusion confirms the article's theoretical-normative character. It makes evaluative claims about institutional feasibility and reform, but these are normative judgments based on conceptual comparison, not empirical causal or statistical analysis."}],"general_summary":"The article is a normative and conceptual essay in democratic theory. It examines freedom as non-domination in neo-Roman republicanism and compares three competing institutional models of republican democracy: Pettit's electoral-contestatory democracy, Bellamy's political constitutionalism, and McCormick's Machiavellian democracy. The author's main claim is that republican democracy is best understood as an essentially contested concept because these models offer rival institutional answers to the same normative problem.\n\nThe article does not present original empirical evidence, quantitative analysis, qualitative fieldwork, or statistical inference. Its evidence consists of close reading, conceptual reconstruction, and normative comparison of political theory texts and institutional proposals.","decision_audit":{"own_empirical_evidence":"The article does not present its own empirical evidence. It discusses historical and contemporary institutions only as examples within normative political theory and as elements of other authors' arguments.","own_quantitative_analysis":"The article presents no original or reanalyzed quantitative analysis. There are no datasets, descriptive statistics, cross-tabulations, statistical tests, regressions, models, or quantitative figures/tables produced by the author.","qualitative_evidence":"The article does not present substantive qualitative empirical evidence such as interviews, archives, documents analyzed as data, case-study evidence, or process tracing. It uses interpretive readings of political theory texts, which support a conceptual argument rather than an empirical qualitative analysis.","statistical_inference":"The article reports no statistical inference. There are no p-values, standard errors, confidence intervals, statistical tests, Bayesian intervals, bootstrap results, or uncertainty estimates.","causal_or_credibility_design":"The article presents no causal or credibility-revolution design. It does not use experiments, difference-in-differences, instrumental variables, regression discontinuity, synthetic control, matching, weighting, fixed-effects causal panels, or observational regression with causal claims.","contradictory_sections":"No section contradicts the non-empirical classification. The McCormick section mentions sociological and political research and discusses ancient and early-modern examples, but it does not analyze them as original empirical evidence."},"classification":{"pid":"S1981-38212015000100003","title":"Non-domination and Political Institutions: The Contested Concept of Republican Democracy","journal_title":"Brazilian Political Science Review","input_text_hash":"f78af628b80cf62a7fa7f39b1a5c2d632680c3384b651d61d342b97b907de7e9","is_empirical_paper":false,"empirical_evidence_type":"none","is_empirical_quant_paper_torreblanca":false,"is_empirical_qual_paper":false,"quantitative_analysis_type":"none","quantitative_analysis_evidence_quote":null,"has_statistical_inference":null,"statistical_inference_quote":null,"qualitative_analysis_goal":null,"qualitative_goal_clarity":null,"qualitative_goal_quote":null,"causal_or_explanatory_claim_present":false,"causal_or_explanatory_claim_quote":null,"credibility_revolution_screen_applicable":false,"credibility_revolution_screen_reason":"not_empirical","credibility_revolution_method_present":null,"credibility_revolution_method_type":null,"causal_design_quote":null,"main_variables_or_relationship":null,"sample_or_data_source":null,"tough_call":false,"tough_call_reason":null,"brief_justification":"The article is a normative political theory essay based on conceptual reconstruction and comparison of Pettit, Bellamy, and McCormick's models of republican democracy. It contains no original empirical evidence, no quantitative analysis, no substantive qualitative empirical analysis, no statistical inference, and no credibility-revolution causal design."}}
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Completed
+tokens used
+37.563
