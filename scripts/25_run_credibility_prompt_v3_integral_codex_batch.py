@@ -146,6 +146,20 @@ METHOD_TYPES = {
     "none_detected",
 }
 
+BOOLEAN_CLASSIFICATION_FIELDS = {
+    "is_empirical_paper",
+    "is_empirical_quant_paper_torreblanca",
+    "is_empirical_qual_paper",
+    "causal_or_explanatory_claim_present",
+    "credibility_revolution_screen_applicable",
+    "tough_call",
+}
+
+NULLABLE_BOOLEAN_CLASSIFICATION_FIELDS = {
+    "has_statistical_inference",
+    "credibility_revolution_method_present",
+}
+
 
 def read_csv_dict(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8", newline="") as f:
@@ -228,6 +242,8 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
             errors.append("complete record must have full_body_read == true")
         if record.get("classification") is None:
             errors.append("complete record must have classification object")
+    elif not isinstance(record.get("full_body_read"), bool):
+        errors.append("full_body_read must be boolean")
 
     if record.get("status") == "incomplete":
         if not record.get("incomplete_reason"):
@@ -252,6 +268,8 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
             ]:
                 if not section.get(field):
                     errors.append(f"section_reading_log[{i}] missing {field}")
+            if not isinstance(section.get("section_position"), int):
+                errors.append(f"section_reading_log[{i}] section_position must be integer")
 
     if not record.get("general_summary"):
         errors.append("general_summary is empty")
@@ -295,6 +313,15 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
     for field, allowed in ENUMS.items():
         if classification.get(field) not in allowed:
             errors.append(f"invalid {field}: {classification.get(field)!r}")
+
+    for field in BOOLEAN_CLASSIFICATION_FIELDS:
+        if not isinstance(classification.get(field), bool):
+            errors.append(f"{field} must be boolean")
+
+    for field in NULLABLE_BOOLEAN_CLASSIFICATION_FIELDS:
+        value = classification.get(field)
+        if value is not None and not isinstance(value, bool):
+            errors.append(f"{field} must be boolean or null")
 
     method_type = classification.get("credibility_revolution_method_type")
     if method_type is not None:
