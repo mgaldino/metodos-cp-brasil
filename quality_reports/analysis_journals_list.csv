@@ -1,0 +1,30 @@
+journal_title,issn,raw_articles_2005_2025,eligible_manifest_articles,recovered_body_articles,excluded_from_main_analysis,exclusion_reason
+Brazilian Political Science Review,1981-3821,310,283,283,FALSE,
+Cadernos Gestão Pública e Cidadania,1806-2261,50,47,47,FALSE,
+Cadernos Gestão Pública e Cidadania,2236-5710,83,77,77,FALSE,
+Contexto Internacional,0102-8529,246,235,235,FALSE,
+Contexto Internacional,1982-0240,245,237,237,FALSE,
+Dados,0011-5258,337,316,314,FALSE,
+Dados,1678-4588,340,326,326,FALSE,
+Lua Nova: Revista de Cultura e Política,0102-6445,173,168,165,FALSE,
+Lua Nova: Revista de Cultura e Política,1807-0175,377,368,362,FALSE,
+Novos estudos CEBRAP,0101-3300,441,399,397,FALSE,
+Novos estudos CEBRAP,1980-5403,222,201,199,FALSE,
+Opinião Pública,0104-6276,307,303,303,FALSE,
+Opinião Pública,1807-0191,180,177,177,FALSE,
+Revista Brasileira de Ciência Política,0103-3352,309,306,306,FALSE,
+Revista Brasileira de Ciência Política,2178-4884,97,97,97,FALSE,
+Revista Brasileira de Ciências Sociais,0102-6909,271,262,259,FALSE,
+Revista Brasileira de Ciências Sociais,1806-9053,484,465,465,FALSE,
+Revista Brasileira de Política Internacional,0034-7329,186,175,174,FALSE,
+Revista Brasileira de Política Internacional,1983-3121,345,332,332,FALSE,
+Revista de Administração Pública,0034-7612,584,561,553,FALSE,
+Revista de Administração Pública,1982-3134,614,600,597,FALSE,
+Revista de Sociologia e Política,0104-4478,437,424,424,FALSE,
+Revista de Sociologia e Política,1678-9873,240,230,230,FALSE,
+Sur. Revista Internacional de Direitos Humanos,1806-6445,39,36,36,FALSE,
+Sur. Revista Internacional de Direitos Humanos,1983-3342,51,47,47,FALSE,
+Brazilian Journal of Political Economy,0101-3157,751,0,0,TRUE,out_of_scope_economics
+Brazilian Journal of Political Economy,1809-4538,149,0,0,TRUE,out_of_scope_economics
+Civitas - Revista de Ciências Sociais,1519-6089,311,0,0,TRUE,out_of_scope_social_sciences
+Civitas - Revista de Ciências Sociais,1984-7289,221,0,0,TRUE,out_of_scope_social_sciences
