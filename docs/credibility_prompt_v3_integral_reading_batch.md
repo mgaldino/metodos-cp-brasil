@@ -141,6 +141,17 @@ python3 scripts/25_run_credibility_prompt_v3_integral_codex_batch.py \
 
 O runner tem checkpoint por PID. Se a execução parar no meio, basta repetir o comando; PIDs com reading log e classificação válidos serão pulados. Para reprocessar tudo, use `--force`.
 
+## Checkpoint da execução dos 175
+
+Em 2026-06-04, a execução do piloto de 175 artigos foi iniciada e interrompida manualmente antes do fim. O checkpoint documentado está em `docs/credibility_prompt_v3_integral_175_checkpoint_2026-06-04.md` e registra:
+
+- o prompt operacional integral usado para a execução;
+- os comandos efetivamente executados;
+- as contagens parciais de classificações, reading logs, raw responses e falhas;
+- os PIDs falhos por normalização de entidades HTML no título;
+- a estimativa operacional de tempo médio/mediano por artigo;
+- o comando exato para retomar o batch.
+
 ## Lições aprendidas
 
 1. **Classificação por regras não serve como gold.**
