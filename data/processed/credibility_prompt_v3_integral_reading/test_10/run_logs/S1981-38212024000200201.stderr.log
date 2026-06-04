@@ -1,2 +1,488 @@
-WARNING: proceeding, even though we could not update PATH: Operation not permitted (os error 1)
-Error: failed to initialize in-process app-server client: Operation not permitted (os error 1)
+OpenAI Codex v0.136.0
+--------
+workdir: /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 019e93da-e2d3-7203-9120-35e9c4186f71
+--------
+user
+# Credibility Prompt v3 - Integral Reading Batch Prompt
+
+You are classifying exactly one article in this run.
+
+## Absolute Rule: Integral Reading Before Classification
+
+You must read the full article body from beginning to end before classifying it.
+
+It is prohibited to classify by:
+
+- regexes, scripts, keyword matching, heuristics, or automated rules;
+- previous consensus labels, gold labels, auxiliary classifications, or journal priors;
+- title, abstract, metadata, isolated tables, or selected excerpts alone;
+- guessing from the journal, year, topic, or style.
+
+The purpose of this task is interpretive article-by-article classification, not scale automation. If the article is long, keep reading until the end. Do not substitute a shortcut for full reading.
+
+If you cannot read the full body text, return `status: "incomplete"`, set `full_body_read: false`, explain why in `incomplete_reason`, and set `classification: null`. Do not produce a final classification for an article you did not read fully.
+
+## Mandatory Reading Log Before Classification
+
+Before producing the classification, build a `section_reading_log`. This log is part of the required JSON output.
+
+For each section explicitly present in the paper, include:
+
+- `section_title`: the section heading as it appears in the article;
+- `section_position`: 1-based section order;
+- `section_summary`: one or two substantive paragraphs summarizing what the section argues or does;
+- `methods_or_data_mentions`: one paragraph identifying data, methods, tables, figures, interviews, documents, models, tests, or stating that none appear in the section;
+- `classification_relevance`: one paragraph explaining how this section matters, or does not matter, for empirical/quantitative/qualitative/causal/statistical classification.
+
+If the article has no clear section headings, divide the body into sequential chunks and use `chunk_1`, `chunk_2`, etc. as section titles. Still summarize every chunk.
+
+After the section log, write:
+
+- `general_summary`: one or two paragraphs summarizing the paper as a whole;
+- `decision_audit`: answers to the final audit questions listed below.
+
+Only after completing these steps may you fill the `classification` object.
+
+## Final Audit Questions
+
+Answer these in `decision_audit` before classification:
+
+1. Where does the article present its own empirical evidence, if anywhere?
+2. Where does the article present original or reanalyzed quantitative analysis, if anywhere?
+3. Where does the article present substantive qualitative evidence, if anywhere?
+4. Where does the article report statistical inference, if anywhere?
+5. Where does the article present a causal or credibility-revolution design, if anywhere?
+6. Is there any section that contradicts the likely classification?
+
+## Output Shape
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Top-level required fields:
+
+- `pid`
+- `title`
+- `journal_title`
+- `input_text_hash`
+- `status`: `"complete"` or `"incomplete"`
+- `full_body_read`: boolean
+- `incomplete_reason`: string or null
+- `section_reading_log`: array
+- `general_summary`: string
+- `decision_audit`: object
+- `classification`: object if `status == "complete"`, otherwise null
+
+The nested `classification` object must follow the original credibility prompt v3 schema exactly.
+
+## Original Classifier Prompt v3
+
+The following classifier instructions define the classification schema and field meanings. They are binding, but they do not override the integral-reading rule above.
+
+# Credibility Revolution Brazil Classifier Prompt v3
+
+You are a methodological classifier for political science, international relations, and public administration articles published in Brazilian SciELO journals.
+
+Read the full article body and classify the article using only textual evidence from the article itself. The title, year, journal, DOI, and language may be used as context, but they are never sufficient evidence for methods, data, causality, or statistical analysis.
+
+This project replicates and adapts Torreblanca et al., "The Credibility Revolution in Political Science", for Brazil. The Torreblanca-style quantitative variable is broad: any original quantitative data analysis counts, including descriptive, predictive, explanatory, causal, or other quantitative analysis. However, for the Brazilian replication, we also need to distinguish purely descriptive quantitative articles from articles that go beyond descriptive statistics.
+
+## Anti-False-Positive Rule
+
+Do not classify an article as quantitative merely because it mentions a number, percentage, statistic, election result, survey result, or empirical finding from another study. To count as original quantitative analysis, the article must use its own data analysis or a reanalysis of data in its empirical analysis, usually in a table, figure, graph, appendix, methods section, data section, or results section.
+
+Descriptive counts, percentages, means, distributions, and cross-tabulations are descriptive statistics. If these are the only quantitative analyses in the article, classify the quantitative analysis type as `descriptive_statistics_only`.
+
+Use `null` when the text does not support a field. Do not invent sample sizes, variables, methods, causal designs, identification assumptions, mechanisms, statistical inference, or results.
+
+## Journal Context
+
+The main analysis includes these journals:
+
+- Brazilian Political Science Review
+- Cadernos Gestao Publica e Cidadania
+- Contexto Internacional
+- Dados
+- Lua Nova: Revista de Cultura e Politica
+- Novos estudos CEBRAP
+- Opiniao Publica
+- Revista Brasileira de Ciencia Politica
+- Revista Brasileira de Ciencias Sociais
+- Revista Brasileira de Politica Internacional
+- Revista de Administracao Publica
+- Revista de Sociologia e Politica
+- Sur. Revista Internacional de Direitos Humanos
+
+`Brazilian Journal of Political Economy` and `Civitas - Revista de Ciencias Sociais` are outside the main analysis.
+
+Some journals have higher prior probability of quantitative or causal work than others, but this is only a weak prior. Always classify based on the body text.
+
+Very low prior for credibility-revolution methods:
+
+- Novos estudos CEBRAP
+- Lua Nova: Revista de Cultura e Politica
+- Cadernos Gestao Publica e Cidadania
+- Sur. Revista Internacional de Direitos Humanos
+
+Articles in these journals are unlikely to use credibility-revolution methods such as experiments, DiD, IV, RDD, synthetic control, matching, or modern causal estimators. Use this only as a caution against over-classification. If the body clearly shows one of these designs, classify it normally.
+
+## Output
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Required fields:
+
+### Metadata
+
+- `pid`: string
+- `title`: string
+- `journal_title`: string
+- `input_text_hash`: string
+
+### Broad Empirical Classification
+
+- `is_empirical_paper`: boolean
+
+`true` if the article analyzes substantive empirical evidence, including quantitative data, qualitative evidence, documents, interviews, surveys, administrative data, content analysis, case studies, process tracing, archival materials, or other empirical material.
+
+`false` for normative theory, pure formal theory, conceptual essays, literature reviews without original empirical analysis, methodological articles without empirical application, and purely theoretical articles.
+
+- `empirical_evidence_type`: one of:
+  - `none`
+  - `quantitative_only`
+  - `qualitative_only`
+  - `mixed_empirical`
+  - `unclear`
+
+`mixed_empirical` requires both substantive qualitative evidence and substantive quantitative evidence. Do not classify as mixed merely because a quantitative article has a theory section, or because a qualitative article mentions contextual numbers.
+
+- `is_empirical_quant_paper_torreblanca`: boolean
+
+`true` if the article contains any original or reanalyzed quantitative data analysis, whether descriptive, bivariate, modeled, predictive, explanatory, causal, or other.
+
+`false` if the article is purely qualitative, theoretical, normative, formal, methodological without empirical quantitative application, or lacks original quantitative analysis.
+
+- `is_empirical_qual_paper`: boolean
+
+`true` if the article uses substantive qualitative evidence, such as case studies, historical comparison, interviews, documents, archival material, process tracing, interpretive analysis, discourse analysis, or qualitative content analysis.
+
+### Quantitative Module
+
+- `quantitative_analysis_type`: one of:
+  - `none`
+  - `descriptive_statistics_only`
+  - `bivariate_tests_or_correlations_only`
+  - `statistical_modeling`
+  - `unclear`
+
+Definitions:
+
+`none`: no original quantitative analysis.
+
+`descriptive_statistics_only`: the article presents only descriptive statistics from its own analysis or reanalysis, such as counts, percentages, means, distributions, descriptive cross-tabs, descriptive figures, or descriptive tables. It does not use statistical tests, correlations, regression, models, uncertainty estimates, or inferential claims from statistical tests.
+
+`bivariate_tests_or_correlations_only`: the article includes descriptive statistics and goes beyond them using t-tests, chi-square tests, Fisher tests, simple ANOVA, mean comparisons with p-values, Pearson/Spearman correlations, or equivalent bivariate tests, but does not use multivariable statistical modeling.
+
+`statistical_modeling`: the article uses regression, logit/probit, panel models, fixed effects, multilevel models, survival/event-history models, choice models, estimated matching or weighting, PCA/factor analysis, clustering used analytically, modeled text-as-data, network models, or equivalent statistical models.
+
+`unclear`: there are signals of quantitative analysis, but the body text does not allow confident classification.
+
+- `quantitative_analysis_evidence_quote`: string or null
+
+Short excerpt supporting `quantitative_analysis_type`, preferably from methods, data, results, table, figure, or appendix discussion.
+
+- `has_statistical_inference`: boolean or null
+
+`true` if the article reports p-values, standard errors, confidence intervals, Bayesian intervals, statistical tests, bootstrap intervals, randomization inference, or another uncertainty quantification.
+
+`false` if the article reports only descriptive analysis without statistical inference.
+
+`null` if not applicable or unsupported.
+
+- `statistical_inference_quote`: string or null
+
+Short excerpt supporting statistical inference. Use `null` if absent.
+
+### Qualitative Module
+
+- `qualitative_analysis_goal`: one of:
+  - `null`
+  - `descriptive_reconstruction`
+  - `explanatory_why`
+  - `interpretive_meaning`
+  - `mixed_descriptive_explanatory`
+  - `unclear`
+
+Use `null` if there is no qualitative component.
+
+`descriptive_reconstruction`: the article mainly describes how something happened, reconstructs a trajectory, maps actors/events/processes, or systematizes an empirical phenomenon.
+
+`explanatory_why`: the article seeks to explain why something happened, identifying causes, conditions, mechanisms, determinants, consequences, or explanatory processes.
+
+`interpretive_meaning`: the article mainly interprets meanings, concepts, discourses, intellectual traditions, norms, or texts without making a clear empirical explanatory claim.
+
+`mixed_descriptive_explanatory`: the article combines descriptive reconstruction with substantive causal or explanatory arguments.
+
+`unclear`: the qualitative goal is ambiguous.
+
+- `qualitative_goal_clarity`: one of:
+  - `null`
+  - `clear`
+  - `ambiguous_tough_call`
+  - `internally_inconsistent`
+
+If the article says it will describe how something happened but later explains why it happened, classify the qualitative goal as `explanatory_why` or `mixed_descriptive_explanatory` and set this field to `ambiguous_tough_call` or `internally_inconsistent`.
+
+- `qualitative_goal_quote`: string or null
+
+Short excerpt supporting the qualitative classification. Use `null` if not applicable.
+
+### Causal and Credibility-Revolution Screening
+
+- `causal_or_explanatory_claim_present`: boolean
+
+`true` if the article seeks to explain causes, effects, consequences, determinants, impacts, influence, mechanisms, or why something happened.
+
+`false` if it merely describes, interprets, reviews literature, or reports association without an explanatory or causal claim.
+
+Do not confuse vague association language with a causal claim.
+
+- `causal_or_explanatory_claim_quote`: string or null
+
+Short excerpt supporting the claim. Use `null` if absent.
+
+- `credibility_revolution_screen_applicable`: boolean
+
+`true` if the article should be screened for credibility-revolution methods.
+
+Classify as `true` if at least one condition holds:
+
+1. `quantitative_analysis_type` is `bivariate_tests_or_correlations_only` or `statistical_modeling`;
+2. the article uses an experiment, DiD, IV, RDD, RKD, synthetic control, synthetic DiD, matching, weighting, DAG used for identification, causal forest/tree, doubly robust estimator, causal discovery, or similar causal method;
+3. the article makes a causal or explanatory claim associated with quantitative analysis.
+
+Classify as `false` if:
+
+1. `quantitative_analysis_type` is `none`;
+2. `quantitative_analysis_type` is `descriptive_statistics_only` and there is no causal design;
+3. the article is purely qualitative;
+4. the article is theoretical, normative, formal, or conceptual without quantitative empirical analysis.
+
+- `credibility_revolution_screen_reason`: one of:
+  - `not_empirical`
+  - `qualitative_only`
+  - `descriptive_quantitative_only`
+  - `bivariate_or_correlation_screen`
+  - `statistical_modeling_screen`
+  - `explicit_causal_design_screen`
+  - `causal_claim_with_quantitative_analysis_screen`
+  - `unclear`
+
+- `credibility_revolution_method_present`: boolean or null
+
+Use `null` if `credibility_revolution_screen_applicable` is `false`.
+
+`true` if the article uses at least one credibility-revolution method.
+
+`false` if the article passes the screen but does not use such a method.
+
+- `credibility_revolution_method_type`: array or null
+
+Allowed values:
+
+- `experiment_field`
+- `experiment_survey`
+- `experiment_lab`
+- `experiment_list`
+- `difference_in_differences`
+- `event_study`
+- `instrumental_variables`
+- `regression_discontinuity`
+- `regression_kink`
+- `synthetic_control`
+- `synthetic_difference_in_differences`
+- `matching_or_weighting`
+- `dag_or_formal_causal_graph`
+- `doubly_robust`
+- `causal_trees_or_forests`
+- `causal_discovery`
+- `other_modern_causal_method`
+- `fixed_effects_causal_panel_claim`
+- `observational_regression_with_causal_claim_no_design`
+- `none_detected`
+
+Fixed effects rule:
+
+Do not classify every fixed-effects model as DiD. Classify as DiD or event study only if the article has treatment, time variation, treated/control comparison, intervention/event timing, or parallel-trends logic. If an article uses fixed effects and causal language but no clear causal design, classify as `fixed_effects_causal_panel_claim` or `observational_regression_with_causal_claim_no_design`.
+
+- `causal_design_quote`: string or null
+
+Short excerpt supporting the causal method classification. Use `null` if absent.
+
+### Substantive Extraction
+
+- `main_variables_or_relationship`: string or null
+
+Short summary of the main empirical relationship analyzed. Use `null` if unsupported.
+
+- `sample_or_data_source`: string or null
+
+Short summary of the main data source or sample. Use `null` if unsupported.
+
+### Uncertainty and Justification
+
+- `tough_call`: boolean
+
+`true` if a central decision required difficult judgment.
+
+- `tough_call_reason`: string or null
+
+Briefly explain the ambiguity. Use `null` if `tough_call` is `false`.
+
+- `brief_justification`: string
+
+Brief text-based justification for the overall classification.
+
+
+## Output Reconciliation
+
+The original prompt v3 above describes the fields of the nested `classification` object.
+When it says to return one JSON object, that object must be placed inside the top-level
+object required by this integral-reading prompt. Your final response must always have
+the top-level fields `section_reading_log`, `general_summary`, `decision_audit`, and
+`classification`.
+
+## Article Task Packet
+
+The task packet below contains the article metadata and full body text. Use only this packet for substantive classification.
+
+---
+test_order: 9
+pid: S1981-38212024000200201
+title: The African Agenda of Evangelical Christians in Brazilian Foreign Policy: The Crisis of the Universal Church of the Kingdom of God in Angola
+title_en: The African Agenda of Evangelical Christians in Brazilian Foreign Policy: The Crisis of the Universal Church of the Kingdom of God in Angola
+authors: Magno Klein; Henrique Rabello de Carvalho
+year: 2024
+journal_title: Brazilian Political Science Review
+doi: 10.1590/1981-3821202400020001
+language: en
+input_text_hash: 9e45a63ec9d39a59892676fc43b7da740f0131672f83963c4f9121dbd2da916d
+selection_source: codex_selected_pilot
+selection_note: manual gold: qualitative
+manual_gold_evidence_type: qualitative
+manual_gold_method_status: explicit
+---
+
+# Article Body
+
+the election of Jair Bolsonaro as leader of the Brazilian federal government (2019-2022) has represented a major challenge for academic studies on foreign policy. During the election campaign, he was critical of Brazil's international relations profile on issues including the rapprochement with left-wing governments in Latin America and the growing Chinese presence (to reinforce this rhetoric, Bolsonaro visited Taiwan, considered a renegade province by the Chinese government). He also expressed distrust of international multilateralism and preached rapprochement with the conservative governments of the United States and Israel (SARAIVA and SILVA, 2019).
+
+The intentions expressed during the campaign materialized early in his administration. At first, Ernesto Araújo, the new Minister of Foreign Affairs, set the tone in his public declarations by suggesting an unconditional alliance with the Donald Trump administration in the United States, arguing he was a leader for the entire West—of which Brazil was part as a Christian nation (ARAÚJO, 2017). The first years of Brazil's foreign policy under Bolsonaro were marked by a disruption in the Brazilian tradition of pragmatism in international relations, commitment to multilateralism, and peaceful settlement of disputes (CASARÕES and FLEMES, 2019). In Araújo's public speeches (2017, the foreign affairs minister voiced criticism of what he understood as supranational and universalizing inclinations that endangered the sovereignty of states, arguing that this set of harmful values, defined as “cultural Marxism”, “dilutes gender while also diluting the national sentiment” (ARAÚJO, 2017, p, p. 339). Therefore, he advocated for the understanding that foreign policy is also a ‘cultural, civilizational struggle’.
+
+Early research on the Bolsonaro administration’s foreign policy has shown a unique combination of pragmatic and ideological interests. According to Míriam Saraiva and Álvaro Costa Silva (2019), the ideological bias of this administration was more apparent during the electoral campaign and referred to the rapprochement with the United States and Israel, the distancing from countries considered ‘leftist’, including China and some South American nations, and the contempt for multilateralism. In contrast, other groups supporting the government with a more pragmatic bias mobilized to control the actions—and impacts—of the ideological sector, curbing some of its measures, such as the aggressive rhetoric towards China during the fight against the Covid-19 pandemic, and vetoing the relocation of the Brazilian embassy in Israel from Tel Aviv to Jerusalem. The most influential foreign policy actors in favor of a pragmatic bias were armed forces leaders and farmers. On the other hand, the actors of the ideological sector were ‘Olavists’, individuals influenced by Olavo de Carvalho's ideas, including the Minister of Foreign Affairs, Ernesto Araújo, and the congressman Eduardo Bolsonaro, as well as, to a lesser extent, Neo-Pentecostal religious groups.
+
+The mobilization of conservative Evangelical groups was important during the 2018 presidential elections, as well as for the political support of the government. Still, political science scholars are struggling to understand this relationship. While the presence of influential religious sectors in Brazilian politics is not new, Evangelical sectors have been specifically growing their political work in recent decades (MACHADO, 2015). While Evangelical leaders did support the Workers’ Party (PT) administrations (2003-2016), in recent years important sectors of the Neo-Pentecostal movement have become closer to Jair Bolsonaro, as they mobilized in favor of a ‘customs agenda’ (traditional views on the family; restricted right to abortion; fighting the alleged sexualization of childhood; controlling the so-called ‘gender ideology’, etc), protection of religious activities (tax exemption, debt forgiveness, etc), and defense of a vague notion of meritocracy. Objectively, the proposal to move the Brazilian embassy in Israel from Tel Aviv to Jerusalem indicated their interest in having the Brazilian state explicitly take a side in the Arab-Israeli conflict, a convergence between Jewish and Evangelical sectors that has also been observed in the United States1.
+
+Evangelical groups were an important part of the Jair Bolsonaro administration's political base, wielding visible influence on several domestic public policies, including government support for therapeutic communities2. In foreign policy agendas, however, it is harder to notice the influence of Evangelical sectors, which may also be a result of the lack of transparency around policies at the international level. Moreover, the group’s most visible topic on the international agenda—the location of the Brazilian embassy in Israel—was prematurely barred by the agricultural sector.
+
+In this article, we propose that the incidence of Evangelical groups in Brazilian foreign policy can also be identified in an agenda that researchers have not really observed yet: their agenda for Africa. The South-South Cooperation agenda, which had enjoyed great importance since the early 2000s under the PT administrations, has effectively lost steam, at least since Dilma Rousseff’s second term, a phenomenon that became stronger under the Bolsonaro administration. As the official discourse was making promises about a ‘Western’ identity for the country, rapprochement with developing countries was condemned as a political project of the left. Regarding this aspect, there has been a significant decrease in foreign policy initiatives toward a bilateral rapprochement with African nations, at a time when other political actors traditionally interested in the African continent had also lost interest in the region. Particularly, Brazilian private capital reduced its interest in the context of an international economic crisis, Brazilian public banks reduced their stimulus, the COVID-19 pandemic hit, and serious corruption scandals broke. Companies including Vale, Petrobras, and large construction companies reduced their projects or discontinued initiatives altogether.
+
+Throughout his term, Jair Bolsonaro did not visit the African continent once; conversely, between 2003 and 2010, Lula visited 29 countries in the region. This could lead us to consider that Africa was a victim of indifference on the part of the Brazilian government, but we believe that this is not an adequate conclusion. In this article, on the contrary, we propose the hypothesis that there has actually been a change in the profile of Brazil’s African policy during the Jair Bolsonaro administration, as traditional actors. Like Brazilian multinational mining and construction companies, reduced their operations and Evangelical actors started to monopolize it as they pursued political support for their missionary agendas, especially in Sub-Saharan Africa. We will initially address in this article how Evangelical sectors were an important part of the social base that supported the Jair Bolsonaro administration. We will then show how the history of the relationship between Brazil and African countries has ultimately led to its current phase, in which religious actors now have more clout in Brazilian diplomacy. Finally, we will present the crisis experienced by the Universal Church of the Kingdom of God in Angola after 2019 as a case study, also looking into the repeated appeals it has made to the Brazilian government to support it in maintaining control of its temples in Angola.
+
+Evangelical actors and foreign policy under Bolsonaro
+
+Brazil’s Ministry of Foreign Affairs was headed by Ernesto Araújo until March 2021. His public statements advocated for an isolationist bias for Brazil, as he was suspicious of international multilateralism, which he defined as globalism (ARAÚJO, 2017; CASARÕES and FLEMES, 2019). The minister drew his political ideologies from the work of thinker Olavo de Carvalho and, in his speeches, he criticized what he conceived as supranational and universalizing trends that threatened the sovereignty of states. After his resignation, Carlos França took office, which, according to some analysts, led Brazilian diplomacy to go back to normal and increased the influence of pragmatic sectors on foreign policy again—a point that we will call into question later (LIMA and ALBUQUERQUE, 2022; SARAIVA and SILVA, 2019). França remained in office until the end of the Bolsonaro administration.
+
+While both ministers were in office, diplomacy under the Jair Bolsonaro administration significantly disrupted the traditional premises of Brazilian foreign policy, conducting the country’s international agenda with a strongly ideologized discourse, in line with its conservative support bases, particularly conservative Evangelical groups. Brazilian foreign policy was marked by a messianic bias, particularly in its first two years, by the rapprochement with non-liberal right-wing governments, including Donald Trump’s United States and Benjamin Netanyahu’s Israel. Components of the decades-long Brazilian diplomatic tradition, like South-South Cooperation, came to be understood as ‘leftist’ agendas of the Workers’ Party and started to be attacked.
+
+Preliminary research has highlighted the influence of Evangelical sectors both on the domestic agenda and on the foreign policy agenda of the Bolsonaro administration. Evangelicals became an important part of the government’s support base. One of the most striking promises made to religious groups during the election campaign was the proposal to move the Brazilian embassy in Israel from Tel Aviv to Jerusalem. The measure, however, upset Arab countries, like Egypt, which argued that it could have negative repercussions for the Brazilian agricultural exports. Saraiva and Silva (2019, p. 124) argue that, the initiative lost relevance in diplomatic discourse in the first year into the Bolsonaro administration.
+
+The proposal to move the embassy in Israel did not last long in the public debate when compared to topics on the human rights agenda, which had a long-lasting influence on the building of the religious-conservative identity of Brazilian foreign policy in the period. Early into his administration, Jair Bolsonaro decided to give a higher status to the former special secretariat dedicated to the issue, calling it the Ministry of Women, Family, and Human Rights. The cabinet was headed by Damares Alves until March 2022. Alves is an Evangelical educator, lawyer, and pastor with a long experience advising members of parliament on issues related to the religious agenda. In lectures, she identifies as a jurist, and she is a member of ANAJURE, the National Association of Evangelical Jurists, a lobbying organization working with several sectors of the government. Her public work as head of cabinet stood out for her affinity with the interests of conservative religious sectors—which she openly expressed in public statements—and for her anti-left rhetoric, which led her to become one of the most popular members of the government (CAVALCANTI, 2019). When Alves stepped down from the ministry in early 2022, political analysts speculated that it was a strategy so that she could run for elective office. She was actually supposedly considered to run as vice president on Bolsonaro's ticket. Around the same time when Alves resigned as minister, she became a member of the Republicans, a right-wing party with ties to the Universal Church. That year, Damares Alves was elected as senator for the Federal District and was recognized as one of the most influential representatives of Bolsonarism after the end of the administration.
+
+Under Alves, the Ministry of Human Rights supported ultraconservative policies, strongly identified with Evangelical groups’ discourse, including government support for therapeutic communities tending to drug users and actions taken to restrict the right to abortion. Regarding the latter, a prominent international interest was also observed, which led Damares Alves to become some kind of ‘second foreign minister’ for the country, competing with the Ministry of Foreign Affairs for the leadership on topics including human rights and transnational alliances with ultraconservative countries and organizations. Under her leadership, the Ministry of Women, Family, and Human Rights was engaged in meetings with multilateral human rights organizations for the protection of human rights, particularly advocating for ultraconservative agendas on social issues, including the protection of traditional family views (allegedly consisting of man, woman, and children) and the restriction of women’s sexual and reproductive rights.
+
+For its authoritarian profile, it could be assumed that the Jair Bolsonaro administration’s foreign policy would adopt a withdrawn and defensive stance toward the international human rights system, as embarrassment and criticism could come from it. Nonetheless, the Brazilian government chose to adopt active stances at the multilateral level, seeking to counter criticism and promote agendas that were more in tune with the conservative social groups of its political base. There were changes in traditional Brazilian stances regarding this agenda, particularly in terms of sexual and reproductive rights (against abortion, sex education, protection for sex workers, and recognition of LGBTI rights). One of the spaces where this topic was discussed was the United Nations Human Rights Council, the most important international forum for the debate on and promotion of human rights at the global level. Its meetings are conducted by specifically appointed diplomats, but before the Council starts its work there is a space for authorities to deliver speeches. In 2019, 2020, and 2021, the Brazilian delegation was led by Minister Damares Alves. In her declarations, she addressed a wide spectrum of topics on the human rights agenda, especially the civil rights situation in Cuba and Venezuela.
+
+During this time, most Western countries treated Brazil as a pariah, which encouraged the Bolsonaro administration to establish alliances with governments whose leaders shared the same conservative values as his administration, including Viktor Orbán’s (Hungary), Andrzej Duda’s (Poland), and Narendra Modi’s (India). In recent years, there was also rapprochement with Alejandro Giammattei, president of Guatemala, who was elected with a rhetoric advocating for the use of force to fight crime and the promotion of Christian values. These alliances were generally forged around the ultraconservative agenda on topics such as sexual and reproductive rights, LGBTI rights, promotion of freedom of expression, etc.
+
+A significant example of the alliances Brazil formed with Damares Alves’s participation regarding sexual and reproductive rights and LGBTI rights was the 3rd Demographic Summit in 2019, organized by political and religious leaders to promote traditional family views and other conservative values. At the event, Alves stated that Brazil was ‘back to being a country for families’ and that countries should unite around an alliance to promote these values. The following year, the Brazilian government co-sponsored the Geneva Consensus Declaration along with the United States, Egypt, Hungary, Indonesia, and Uganda. Which human rights activists denounced as “an attempt to erode the global human rights framework” by reaffirming a conservative view of women’s role in the family and preaching the protection of the right to life from its conception (ASANO et al., 2020).
+
+Minister Damares Alves was often an official spokesperson for the Brazilian government at ultraconservative international events, promoting conservative Christian values and taking on a primary position in the Brazilian international agenda after the resignation of the Minister of Foreign Affairs Ernesto Araújo, including at the Ibero-American Congress for Life and Family held in March 20223. In her speech at the event, Damares Alves introduced herself as a minister, Pentecostal pastor, educator, and adoptive mother, as well as a former legal adviser to members of parliament, and currently a representative of ‘a Christian and conservative government’ committed to speaking with everyone, ‘leaving no one behind’, including people with visual impairment, for whom she made a point to make the event accessible through audio description. Bolsonaro, according to her, was a ‘pro-life’ and ‘pro-family’ president leading a government that was ‘persecuted and sometimes misunderstood’ by the media, the National Congress, and the left, someone who represents ‘a God’s project for the [Brazilian] nation’.
+
+As we have mentioned, the rapprochement with the conservative government of Israel and the international human rights agenda were areas that were markedly influenced by Evangelical groups in Brazilian foreign policy (GUIMARÃES et al., 2023). In this article, we propose that it is relevant to consider yet another aspect: the rapprochement with Sub-Saharan Africa. The South-South Cooperation agenda and the greater proximity between Brazil and the African continent were traditionally associated with reformist stances of the international order and a consequently critical positioning toward developed Western nations (LIMA, 2005). In recent decades, Brazil’s rapprochement with African countries has been marked by advances and setbacks, with a qualitative leap during the Lula da Silva administration (2003-2010), followed by another decline (VISENTINI, 2016).
+
+In recent years, the context of the international economic and health crisis and the decrease in international investments made by large Brazilian companies (like Petrobras, Vale, and Odebrecht) meant that traditional non-state actors reduced their operations related to what we defined as Brazil’s African policy. Diplomatic action was also timid, as clearly seen in Bolsonaro’s lack of official visits to the region. Nevertheless, other Brazilian non-state actors have maintained their interest in the region: Brazilian Evangelical groups have great capillarity in Sub-Saharan Africa (particularly Angola, South Africa, and Mozambique) through missionary projects. In fact, Brazil is a relevant source of missionary groups sent abroad and it has been established for several decades as the world's second-largest missionary exporter, only behind the United States (LOVERING, 2012). These groups carry out religious and charity-related work on the ground, but they are not excluded from political interactions with state entities, as we will see in the case study, both at the local level and with Brazilian authorities.
+
+Evangelical interest in African countries is also seen in the work of the parliament in Brazil. An investigation conducted by the BBC news network at the end of 2019 showed that seven out of nine parliamentary friendship groups between Brazil and African nations were chaired by Evangelical politicians (FELLET, 2019a). MPs linked to the UCKG (Universal Church of the Kingdom of God) led the parliamentary groups responsible for Angola, Cape Verde, Mozambique, Cameroon, and Namibia. In 2019, MP Manuel Marcos, a UCKG pastor, spearheaded the establishment of a new group for Malawi. The group for Morocco was chaired by an MP who is a member of the Assembly of God, and an MP from the International Grace of God Church is in charge of the Kenya group. The group that did not have a religious leader at that time was dedicated to South Africa, managed by Daniel Silveira (PSL/RJ), who has no ties to religious organizations.
+
+In the context of the growing influence of Evangelical groups on the federal government during Jair Bolsonaro’s term, we identified that these groups expanded their pursuit to influence Brazilian diplomacy to protect their interests abroad, especially on the African continent, in a decades-long movement that has reached high levels in recent years. Not always has this influence on the government been made public, so the investigation into a period of crisis is useful to expose these groups’ contradictions and challenges for maintaining their presence on the African continent.
+
+Crisis of the Universal Church in Angola
+
+Data from the latest census shows that 79.2% of Angola’s population in 2014 identified as Christians, including Catholics (41.1%) and Protestants (38.1%) (INSTITUTO NACIONAL DE ESTATÍSTICA, 2016 apud SAMPAIO, 2020). Moreover, there are also followers of animism, Islamism, and Judaism in the country and a significant number of people without religion (12%). The hegemony of Christianity in Angola may be explained as a result of the former Portuguese colonialism. The Catholic Church ensured its predominance in Angola until the 1990s, when Pentecostal and Neo-Pentecostal Protestant churches began to extend their influence (SAMPAIO, 2020). As Silva and Rosa (2017) point out, there has been a progressive growth in Protestant churches and groups in Angola since the 1990s, especially Neo-Pentecostal Christian churches.
+
+The Angolan state has since started to regulate religious activities. Although the country’s Constitution declares (Article 41) that freedom of conscience, religious belief, and worship is ‘inviolable’, religious institutions are required since 1987 to be recognized by the state to obtain legal personality. The work these groups carry out was regulated by Law Nº 02/2004, on Freedom of Religion, Belief, and Worship, which was revised in 2019. The need for legal protection for religious activities leads to a situation in which a few dozen organizations work legally and many more work illegitimately.
+
+The Universal Church of the Kingdom of God (UCKG) is Brazil’s most influential Neo-Pentecostal Protestant religious institution, with headquarters in the city of São Paulo and temples in more than one hundred countries around the world. The UCKG’s internationalization process first began in 1985, when it opened a temple in Paraguay, soon followed by new temples in the United States (1986) and Argentina, Uruguay, and Portugal (1989). By 1995, the UCKG already had 221 temples abroad and, by 2004, it had presence in all Latin American countries except Haiti, as well as in African countries including Ivory Coast, Mozambique, and South Africa (ORO, 2004, p. 140).
+
+The UCKG first arrived in Angola in 1991 and was legally recognized by the state the following year, from where it was able to expand its activities across the African continent. Its activities in Angola follow practices it had already consolidated in Brazil, strongly adopting media strategies through a network of television channels and radio shows and, more recently, establishing a good relationship with the political sector and preaching sermons that link faith to material prosperity (LIMA, 2007). By 2017, the UCKG had 217 temples spread across all Angolan provinces (SAMPAIO, 2020).
+
+As of 2019, a major crisis hit the UCKG management in the country, initiated by leaders against the local Brazilian leadership. In November that year, a manifesto written by 330 Angolan bishops and pastors launched accusations against Brazilian UCKG representatives in Angola4. They reported illegal practices, including misappropriation of money that was moved abroad, racism, pressure for pastors to undergo vasectomy or hysterectomy—allegedly so that children did not divert their focus away from their work—, and persecution against pastors who had children.
+
+The Universal Church in Angola is a victim of a plot hatched by a group of former officers who were expelled from the Church as a result of serious misconduct. In addition to promoting attacks, raids, and loots, they spread fake news in a spurious partnership with some media outlets and with the consent of local authorities, to try to force the Church out of the country (MAGENTA, 2021).
+
+Investigative reporting by the journalist Matheus Magenta suggests that the movement may have emerged at that time, while recycling old complaints, because ties between the Brazilian UCKG leaders and the local government had weakened after the presidential transition. At a time of economic crisis and declining international oil prices, there was a growing internal battle between factions of the MPLA, the powerful ruling party, which eventually put an end to José Eduardo dos Santos’s almost 40-year term in office (1979-2017) and led to the election of José Lourenço as president in August 2017 (ALENCASTRO, 2018). Local UCKG groups apparently took advantage of a window of opportunity arising from the new wind blowing in Angolan politics to get rid of the Brazilian management of the UCKG, an institution that, with its group of churchgoers, had influence on the country’s domestic politics.
+
+As a result of the Reform, the control of the UCKG was taken by Angolans with the consent of the government, several Brazilians were deported, and the UCKG’s TV channel, Record, went off the air in April 2021 (NASCIMENTO, 2020b). The new leadership sworn in has stated that it would change old practices, including no longer adopting Prosperity Theology (MAGENTA, 2021).
+
+Even before that, the UCKG’s presence on the African continent was already facing social tensions. The institution was banned from operating in Madagascar, for example, from where its pastors were deported in 2005 amid allegations that bibles and other religious artifacts were burned during a service (SALEK, 2005). In 2013, overcrowding in a UCKG service held in a Luanda stadium led to a serious accident with a death toll reaching 16 people, which led the government to temporarily cease the operations of the UCKG and other Evangelical churches in the country (FELLET, 2013). Recently, dissatisfaction has also been publicly expressed in other African nations, albeit on a smaller scale, including São Tomé and Príncipe, Mozambique, and South Africa5, and there is fear that the Angolan case will inspire uprisings elsewhere.
+
+The crisis in Angola sparked strong backlash in Brazil, where the UCKG has relevant political influence and was one of the supporting pillars of the Bolsonaro administration. Initially, the Brazilian government preferred not to interfere. The lack of support for the deported Brazilians was harshly criticized by UCKG representatives, including through reports on Record TV in Brazil. Denise Rothenburg (2021) reported on behind-the-scenes information that, at the end of May 2021, members of the Evangelical Parliamentary Front met with the Minister of Foreign Affairs Carlos França to ask for help. The minister decided to summon the Angolan ambassador in Brasilia to ask for explanations, which in diplomatic language indicates dissatisfaction. President Jair Bolsonaro sent a letter to his counterpart in Angola in July 2021, intervening in favor of the deported UCKG Brazilian leaders. The contents of the letter were disclosed on Twitter by Congressman Eduardo Bolsonaro (UOL ONLINE, 2020). During an official visit to Luanda, the Brazilian vice president, General Hamilton Mourão, also publicly called for easing of tensions within the UCKG in Angola:
+
+This issue of the Universal Church here is an issue that affects the Brazilian government and society due to the penetration that this church has and the political participation that it has [in Brazil], with a party that is the Republican Party, which represents the people of the Church [...] The Brazilian government would like a consensus to be reached between these two sides and for the Angolan state to welcome the Brazilian parliamentary delegation that wants to come here to try to reach an agreement and a point where the differences that have occurred can be de-escalated (DIAS, 2021).
+
+In a statement to the newspaper ‘O Estado de S. Paulo’, Vice President Mourão also stated that he specifically talked to the president of Angola about the UCKG’s case (POMPEU, 2021). At the time, Mourão asked the government to welcome a delegation of members of parliament advocating for the interests of the UCKG, to no avail (DELLA COLETTA, 2021b). The Brazilian government also considered appointing the UCKG bishop and former mayor of Rio de Janeiro Marcelo Crivella as ambassador to South Africa to help handle the crisis in Angola. The initiative would remove one of the most experienced diplomats from the Brazilian staff, Ambassador Sergio Danese. Crivella had lived in South Africa and speaks English, which would count in his favor6. His presence was also considered to prevent another similar crisis from occurring in South Africa.
+
+The international and business profile of the UCKG’s activities, as well as its proximity to political actors from several countries, makes it a complex and relevant religious actor in the international relations scenario. In Brazil, the UCKG has a long history of involvement with politics. Its internationalization process, which has been going on for decades, favors the interaction with the Brazilian government and the pursuit to have official diplomatic bodies assist its missionary work abroad. Since 2006, for example, the leader of the organization, Bishop Edir Macedo, has a diplomatic passport granted by the Brazilian government (BORGES, 2019). Under the Bolsonaro administration, this interaction took on an unprecedented level, making the religious sphere an important part of Brazil’s African policy.
+
+Detailed information on how the UCKG crisis in Angola was handled at the governmental level is still scarce, as the government has classified diplomatic communications on the matter exchanged between the Brazilian embassy in Luanda and the Ministry of Foreign Affairs between January 2018 and September 2020 (DW ONLINE, 2020). However, it can be argued that the UCKG behaved like a typical foreign policy actor. As we can observe that its transnational work is not limited to religious practices, but also expands to other realms, including media businesses, it can be inferred that such activities produce tensions for certain actors in the domestic and international scenario. In this sense, as Milani et al. (2014) argue:
+
+(...) it should be considered that some religious actors develops evangelization strategies through transnational networks, aiming at growing their communities, but, at the same time, this process complicates the religious landscape of the host countries. (...) Portuguese-speaking African countries are experiencing a recent religious conversion phenomenon in which part of their population is converted from Catholic to Evangelical practices. In May 2013, the Angolan government banned most Brazilian Evangelical churches from operating in the country. They were accused of being a ‘business’ and having ‘misleading advertising’ practices. The only church recognized by the state was the UCKG, which operates under the supervision of several ministries (MILANI et al., 2014, p. 74).
+
+While during the Lula administration (2003-2010) there was a strong rapprochement between Brazil and African countries, the following administrations did not prioritize Brazil’s African policy, reducing the diversity of mobilized actors amid a scenario that has seen the growing hegemony of Neo-Pentecostal religious groups, for whom the diplomatic structure supports the sending of Brazilian missionaries and facilitates the relationship with local political actors.
+
+Final remarks
+
+This article aimed to analyze aspects of the new Brazilian foreign policy for the African continent by looking into prominent actors in the Jair Bolsonaro administration, as is the case of the Neo-Pentecostal Evangelical sector. This research aimed to contribute to the study of Brazilian foreign policy for Africa through the specific analysis of the international agenda of Brazilian Evangelical groups. In this sense, this exploratory work aimed to map the discourse and incidence of Evangelical actors in Brazilian foreign policy during the Jair Bolsonaro administration, based on the case study of the most influential Brazilian Neo-Pentecostal institution, the UCKG. Using a case study was an important methodological tool to analyze the presence of these religious actors and understand their agendas and the ways they have influenced the federal government, especially abroad.
+
+We highlight the influence of Evangelical religious actors such as the UCKG in Angola as a new facet of Brazil’s African policy, amid a context of increasing influence of religious groups on the federal government. The federal government’s interaction with Evangelical religious groups in Brazilian diplomacy is part of a set of foreign relations initiatives adopted by the country to bring the government closer to the interests of religious groups. Which is also clear in the appeals to transfer the Brazilian embassy in Israel and in the noteworthy performance of Damares Alves ahead of the Ministry of Family and Human Rights (GUIMARÃES et al., 2023). Evangelicals worked on the foreign policy agenda, especially on LGBTI rights and sexual and reproductive rights, affecting the performance of Brazilian diplomacy in multilateral human rights forums, for example. Religious groups also remained interested in using the state apparatus to support their missionary initiatives on the African continent, which explains why nearly all bilateral cooperation committees in the Brazilian Congress were chaired by members of the Evangelical caucus.
+
+The presence of Evangelical actors in Brazilian politics is not a recent phenomenon. Their influence has been growing since the beginning of democratic times, ultimately leading to this sector’s intense participation in the Jair Bolsonaro administration. These groups’ political work is not new: diplomatic passports were already granted to religious leaders during the PT administrations. These groups have become more relevant in the Legislative branch, and the Evangelical Parliamentary Front is one of the largest and most influential caucuses in the Brazilian Congress.
+
+Africa became an important agenda for the Evangelical caucus, which started to work on different agendas besides advocating for ultraconservative social values, in areas including defense, education, technical cooperation, and airline services. Fellet (2019a) reports that meetings were held between the Minister of Foreign Affairs Ernesto Araújo and leaders of the Evangelical caucus and religious members of parliament took part in his trips to Africa, including in December 2019. Since after World War II, Brazilian foreign policy for the African continent has been characterized by advances and setbacks, having expanded and become more diversified in the 21st century, more particularly during the Lula administrations (2003-2010). Meanwhile, after 2019, the lack of geopolitical interest in establishing deeper partnerships in the South-South axis and the decline of Brazilian capital were counter balanced by an increasing presence of Evangelical groups. Nevertheless, we argue that Brazil’s African policy has not been abandoned, but rather changed in favor of the only government support group with stronger interests on the African continent: transnational Evangelical missionary groups.
+
+While our research looked into the UCKG’s work as a case study, it is not the only Brazilian Evangelical church on the continent. A 2004 survey already showed more than 70 Brazilian religious groups operating abroad, many of them on the African continent. We assume this number is likely much higher now (NASCIMENTO, 2004). Academic analysts looking into Brazilian foreign policy have defined the resignation of the former Minister of Foreign Affairs Ernesto Araújo (in March, 2021) as a milestone of the Bolsonaro government, insofar as it brought about pragmatism and reduced the government's ‘ideological sector’ amid an international context in which they no longer had support from Donald Trump as president of the United States. This case study, however, provides a different perspective on the primacy of pragmatism in Brazilian foreign policy, by observing Minister Damares Alves’s leadership driving the Brazilian international agenda with an ultraconservative bias toward social issues including LGBTI rights and sexual and reproductive rights, and maintaining the influence of Evangelical missionary groups on the country’s diplomacy.
+
+The Jair Bolsonaro administration was unusual, as it rejected the Brazilian diplomatic tradition by promoting an authoritarian and conservative discourse associated with its religious bases. The way this government acted on the international agenda for the African continent was a reflection of the new configurations of the decision-making process in Brazilian foreign policy. In this case, the influence of Evangelical groups expanded in a period when other actors saw their work decline, including Brazilian multinational companies.
+
+While Evangelicals are a diverse sector and their work spreads across some issues, when it comes to the so-called ‘customs’/moral agenda, there is convergence and the building of a minimum consensus. However, unlike what some preliminary approaches have indicated, the influence of Evangelical groups on Brazilian politics is not restricted to the promotion of conservative social values, but it also involves pragmatic interests to secure government support for the maintenance of their religious/charity practices, as we have seen in the case study analyzed. The UCKG behaves as a political actor with its own agenda, seeking to focus on the domestic and foreign policy agenda. The UCKG’s influence in domestic policy is a fact well known by scholars, but further analysis on its operations on the foreign policy agenda is still lacking.
+
+
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+{"pid":"S1981-38212024000200201","title":"The African Agenda of Evangelical Christians in Brazilian Foreign Policy: The Crisis of the Universal Church of the Kingdom of God in Angola","journal_title":"Brazilian Political Science Review","input_text_hash":"9e45a63ec9d39a59892676fc43b7da740f0131672f83963c4f9121dbd2da916d","status":"complete","full_body_read":true,"incomplete_reason":null,"section_reading_log":[{"section_title":"unheaded introductory section","section_position":1,"section_summary":"The opening section frames Jair Bolsonaro's foreign policy as a challenge to established accounts of Brazilian diplomatic pragmatism, emphasizing ideological alignment with conservative governments, distrust of multilateralism, and the influence of actors connected to Olavo de Carvalho and Neo-Pentecostal religious groups. It reviews early interpretations of Bolsonaro-era foreign policy as a mix of ideological and pragmatic pressures, with the embassy-in-Jerusalem proposal illustrating evangelical interest in international affairs.","methods_or_data_mentions":"This section does not present a formal methods section, dataset, model, table, or statistical test. It uses secondary literature, political chronology, examples of public rhetoric, and contextual factual claims, such as Bolsonaro's lack of visits to Africa and Lula's visits to 29 African countries, to motivate the paper's argument. It states the article's plan: examine evangelical support for Bolsonaro, reconstruct Brazil-Africa relations, and use the Universal Church of the Kingdom of God crisis in Angola as a case study.","classification_relevance":"The section establishes the article as empirical and qualitative because it sets up a historical and case-based argument about actors, agendas, and foreign policy behavior. The numerical references are contextual and not original quantitative analysis. The stated hypothesis about a change in Brazil's African policy is explanatory, but the evidence is qualitative rather than statistical or credibility-revolution causal design evidence."},{"section_title":"Evangelical actors and foreign policy under Bolsonaro","section_position":2,"section_summary":"This section examines how evangelical and ultraconservative actors influenced Brazilian foreign policy during the Bolsonaro administration. It describes Ernesto Araújo's ideological diplomacy, Damares Alves's role in international human rights debates, Brazil's alliances with conservative governments, and evangelical influence on issues such as Israel, sexual and reproductive rights, LGBTI rights, and multilateral human rights forums.","methods_or_data_mentions":"The section relies on secondary literature, public speeches, institutional descriptions, news reporting, and examples of diplomatic behavior. It mentions an investigation reporting that seven out of nine parliamentary friendship groups between Brazil and African nations were chaired by evangelical politicians, and lists several groups chaired by politicians tied to churches. These figures are drawn from journalistic reporting and are used descriptively, not as an original quantitative analysis by the authors.","classification_relevance":"This section is highly relevant for the qualitative classification because it reconstructs actors, institutional channels, and policy agendas through documentary and secondary-source evidence. It supports an explanatory qualitative claim that evangelical actors expanded their influence over Brazilian diplomacy. It does not contain statistical inference, regression, bivariate tests, or an original quantitative research design."},{"section_title":"Crisis of the Universal Church in Angola","section_position":3,"section_summary":"This section presents the case study of the Universal Church of the Kingdom of God in Angola. It reconstructs the church's expansion, legal recognition, media strategy, relationship with Angolan politics, and the crisis beginning in 2019, when Angolan pastors and bishops accused Brazilian leaders of financial, racial, and coercive abuses. The section then describes the Angolan takeover of church control, deportations of Brazilians, Record TV going off air, previous tensions involving the church in African countries, and Brazilian government reactions on behalf of the UCKG.","methods_or_data_mentions":"The section uses census figures on religious identification in Angola, historical accounts, secondary academic references, investigative journalism, public statements, diplomatic episodes, and quoted statements by political actors. It cites claims such as the UCKG having 217 temples in Angola by 2017, a manifesto by 330 Angolan bishops and pastors, and Brazilian diplomatic interventions. These are qualitative case-study materials and contextual descriptive figures; the section does not present a dataset, statistical model, test, p-value, confidence interval, or quantitative table produced by the authors.","classification_relevance":"This is the central empirical section. It supports the article's classification as qualitative because the analysis proceeds through a case study, process reconstruction, documentary evidence, public statements, and journalistic/academic sources. It also supports a causal or explanatory claim about how evangelical groups influenced Brazil's African policy, but the causal reasoning is qualitative and interpretive, not based on experimental, quasi-experimental, or statistical credibility-revolution methods."},{"section_title":"Final remarks","section_position":4,"section_summary":"The conclusion restates that the article analyzes the new Brazilian foreign policy for Africa through the role of Neo-Pentecostal evangelical actors, especially the UCKG. It argues that Brazil's African policy under Bolsonaro was not abandoned but reconfigured around the interests of transnational evangelical missionary groups as other actors, such as Brazilian multinational companies, declined in importance.","methods_or_data_mentions":"The final section explicitly characterizes the research as exploratory and as based on a case study of the UCKG. It references evidence discussed earlier, including evangelical participation in congressional cooperation committees, Damares Alves's international role, the UCKG's diplomatic appeals, and prior survey evidence that many Brazilian religious groups operated abroad. It does not introduce statistical inference, formal quantitative analysis, or a causal identification design.","classification_relevance":"The conclusion confirms the qualitative empirical nature of the paper and clarifies the goal as mapping and explaining evangelical incidence in foreign policy. It reinforces that the case study is a methodological tool, but there is no quantitative analysis beyond contextual numbers and no credibility-revolution design."}],"general_summary":"The article argues that evangelical actors, especially Neo-Pentecostal groups linked to the UCKG, became important participants in Brazilian foreign policy during the Bolsonaro administration. It situates this claim within Bolsonaro-era ideological diplomacy, Damares Alves's ultraconservative international agenda, and the decline of older Brazil-Africa foreign policy actors such as state-backed companies and South-South cooperation initiatives.\n\nEmpirically, the paper uses a qualitative case study of the UCKG crisis in Angola to show how a religious actor with domestic political influence sought Brazilian diplomatic support abroad. The article reconstructs the church's expansion, the 2019 Angolan crisis, Brazilian government responses, and the broader argument that Brazil's Africa policy changed rather than disappeared under Bolsonaro.","decision_audit":{"own_empirical_evidence":"The article presents its own empirical evidence mainly in the qualitative reconstruction of Bolsonaro-era foreign policy and in the case study section, \"Crisis of the Universal Church in Angola,\" where it analyzes the UCKG's activities, the Angolan crisis, and Brazilian diplomatic reactions.","own_quantitative_analysis":"The article does not present original or reanalyzed quantitative analysis. It includes contextual figures from other sources, such as census percentages, counts of visits, temples, pastors, and parliamentary groups, but these are not analyzed as a dataset by the authors.","qualitative_evidence":"Substantive qualitative evidence appears throughout the body, especially in the sections on evangelical actors and the UCKG crisis. The evidence includes secondary literature, public speeches, news investigations, diplomatic episodes, institutional histories, and quoted statements by political actors.","statistical_inference":"The article reports no statistical inference. There are no p-values, standard errors, confidence intervals, statistical tests, regression models, or uncertainty estimates.","causal_or_credibility_design":"The article makes explanatory claims about evangelical influence on Brazil's African policy, but it does not use an experiment, difference-in-differences, instrumental variables, regression discontinuity, matching, synthetic control, fixed-effects causal panel design, or any other credibility-revolution method.","contradictory_sections":"No section contradicts the qualitative-only classification. Some contextual numbers appear in the introduction and case study, but they do not amount to original quantitative analysis."},"classification":{"pid":"S1981-38212024000200201","title":"The African Agenda of Evangelical Christians in Brazilian Foreign Policy: The Crisis of the Universal Church of the Kingdom of God in Angola","journal_title":"Brazilian Political Science Review","input_text_hash":"9e45a63ec9d39a59892676fc43b7da740f0131672f83963c4f9121dbd2da916d","is_empirical_paper":true,"empirical_evidence_type":"qualitative_only","is_empirical_quant_paper_torreblanca":false,"is_empirical_qual_paper":true,"quantitative_analysis_type":"none","quantitative_analysis_evidence_quote":null,"has_statistical_inference":null,"statistical_inference_quote":null,"qualitative_analysis_goal":"mixed_descriptive_explanatory","qualitative_goal_clarity":"clear","qualitative_goal_quote":"this exploratory work aimed to map the discourse and incidence of Evangelical actors in Brazilian foreign policy during the Jair Bolsonaro administration, based on the case study of the most influential Brazilian Neo-Pentecostal institution, the UCKG","causal_or_explanatory_claim_present":true,"causal_or_explanatory_claim_quote":"Brazil’s African policy has not been abandoned, but rather changed in favor of the only government support group with stronger interests on the African continent: transnational Evangelical missionary groups","credibility_revolution_screen_applicable":false,"credibility_revolution_screen_reason":"qualitative_only","credibility_revolution_method_present":null,"credibility_revolution_method_type":null,"causal_design_quote":null,"main_variables_or_relationship":"The article analyzes how evangelical and Neo-Pentecostal actors, especially the UCKG, influenced Brazilian foreign policy toward Africa during the Bolsonaro administration, with the UCKG crisis in Angola as the main case.","sample_or_data_source":"Qualitative case study using secondary academic literature, public speeches, news reporting, diplomatic episodes, institutional histories, and public statements concerning Bolsonaro-era foreign policy and the UCKG in Angola.","tough_call":false,"tough_call_reason":null,"brief_justification":"The article is an empirical qualitative case study. It reconstructs evangelical influence on Bolsonaro-era foreign policy and the UCKG crisis in Angola using documentary, journalistic, historical, and secondary-source evidence. Contextual numbers appear, but there is no original quantitative analysis, statistical inference, or credibility-revolution causal design."}}
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Completed
+tokens used
+29.495
