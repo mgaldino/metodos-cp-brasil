@@ -1,0 +1,147 @@
+{
+  "pid": "S0104-62762011000200010",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "701b1760fde8c6d8f8a927d2c39eba352f8a0462872e02cec3cfcb5bcf3e16d8",
+  "classification_hash": "3d82fec070a51a7711c6a0646f6e68e85a2f0386445bfe7c709a25aab27e1cd7",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "pelo CESOP com o apoio do CNPq e sua base de d ados está disponível no Banco de Dados de Pesquisa do CESOP/Unicamp. Os dados do ESEB 2010 sug erem que a preferência pela democracia é uma tendência crescente no país, e",
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "o que a democracia significa ou têm uma compreensão razoável sobre ela. Em 2010, mais de 70% dos entrevistad os sabiam men cionar aspectos que a caracterizam. Clique para ampliar O ESEB 2010 procurou avaliar a percepção da democracia no país nos",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "premissa geral a tese de que contextos sócio-políticos e, em específico, os arranjos institucionais que regem as dinâmicas eleitorais, af etam a natureza e a qualidade da escolha democrática. Assim, seus objetivos principais são: identificar como variáveis contextuais, especialmente as instituições eleitorais,",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No direct mechanism/channel language was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 2 contradicted and 0 not found in text; overall status pass_with_warnings."
+}

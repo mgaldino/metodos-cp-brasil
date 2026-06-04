@@ -1,0 +1,982 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="pt" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">ln</journal-id>
+      <journal-title-group>
+        <journal-title>Lua Nova: Revista de Cultura e Política</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Lua Nova</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0102-6445</issn>
+      <issn pub-type="epub">1807-0175</issn>
+      <publisher>
+        <publisher-name>CEDEC</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">yfcvLMGX47KFpRpwG9bnGgL</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S0102-64452014000100002</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S0102-6445(14)00009100002</article-id>
+      <article-id pub-id-type="doi">10.1590/S0102-64452014000100002</article-id>
+      <title-group>
+        <article-title>Revisitando as eleições do Segundo Reinado: manipulação, fraude e violência</article-title>
+        <trans-title-group xml:lang="en">
+          <trans-title>Revisiting the brazilian 2nd reign elections: manipulation, fraud and violence</trans-title>
+        </trans-title-group>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Limongi</surname>
+            <given-names>Fernando</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+          <xref ref-type="aff" rid="aff02"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <addr-line>
+          <named-content content-type="state">São Paulo</named-content>
+        </addr-line>
+        <institution content-type="orgname">Universidade de São Paulo</institution>
+        <institution content-type="orgdiv1">Departamento de Ciência Política Núcleo de Estudos Comparados e Internacionais </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff02">
+        <addr-line>
+          <named-content content-type="state"/>
+        </addr-line>
+        <institution content-type="orgname">Centro de Estudos de Análise e Planejamento</institution>
+        <institution content-type="orgdiv1">Centro de Estudos da Metrópole </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <month>04</month>
+        <year>2014</year>
+      </pub-date>
+      <issue>91</issue>
+      <fpage>13</fpage>
+      <lpage>51</lpage>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by-nc/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/ln/n91/n91a02.pdf" xml:lang="pt">Texto completo somente em PDF (PT)</self-uri>
+      <abstract>
+        <p>As eleições ao longo do Império tendem a ser desqualificadas pelos cientistas sociais. A presença indiscriminada e constante de altas doses de manipulação, violência e fraude comprovariam a impossibilidade da implantação do governo representativo no Brasil oitocentista. O texto procura redefinir os termos desse debate discutindo os efeitos da legislação eleitoral sobre as práticas eleitorais no Brasil imperial. Mais especificamente, trato das Instruções de 1824, do Decreto de 1842 e da Lei de 1846 e suas implicações para o recurso à manipulação, à fraude e à violência nessas eleições. Mostro como a combinação entre esses elementos varia diretamente em função da alteração institucional. O principal problema enfrentado, a manipulação partidária da composição do corpo eleitoral, não comporta solução simples. A Lei de 1846 adota um modelo sofisticado e avançado para processar o problema. O insucesso do modelo, porém, aponta os limites de tais soluções institucionais.</p>
+      </abstract>
+      <trans-abstract xml:lang="en">
+        <p>Social scientists are prone to disqualify the elections held during the Brazilian Empire. Elections would be marked by the indiscriminate and constant presence of manipulation, fraud and violence. This characterization is offered as proving that the representative government could not work on Brazil. This paper is an attempt to question this view. The paper deals with the effect of electoral laws over the electoral practices during the Brazilian Empire. More specifically, I discuss the effects of the 1824 Instructions, the 1842 Decree, and the 1846 Law over the use of manipulation, fraud and violence on elections. I show how the combination among these three resources varies as a function of the legislation. The main problem, the partisan manipulation of the composition of the constituency, has no easy institutional solution. The model tried by the 1846 Law is sophisticated and advanced. Its failure shows the limits of institutional solutions to deal with party competition.</p>
+      </trans-abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>Elections</kwd>
+        <kwd>Representative Government</kwd>
+        <kwd>Electoral Laws</kwd>
+        <kwd>Manipulation</kwd>
+        <kwd>Fraud</kwd>
+        <kwd>Violence</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="pt" kwd-group-type="author-generated">
+        <kwd>Eleições</kwd>
+        <kwd>Governo Representativo</kwd>
+        <kwd>Leis Eleitorais</kwd>
+        <kwd>Manipulação</kwd>
+        <kwd>Fraude</kwd>
+        <kwd>Violência</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>25</day>
+        <month>06</month>
+        <year>2014</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <body>
+    <p>Revisitando as eleições do Segundo Reinado: manipulação, fraude e violência<xref ref-type="fn" rid="nt"><sup><bold>*</bold></sup></xref></p>
+    <p>
+      <bold>Revisiting the brazilian 2nd reign elections: manipulation, fraud and violence</bold>
+    </p>
+    <p>
+      <bold>Fernando Limongi</bold>
+    </p>
+    <p>Professor do Departamento de Ciência Política da USP, coordenador do Núcleo de Estudos Comparados e Internacionais (Neci), pesquisador do Centro de Estudos de Análise e Planejamento (Cebrap) e do Centro de Estudos da Metrópole (CEM), e bolsista do CNPq</p>
+    <p>
+      <bold>RESUMO</bold>
+    </p>
+    <p> As eleições ao longo do Império tendem a ser desqualificadas pelos cientistas sociais. A presença indiscriminada e constante de altas doses de manipulação, violência e fraude comprovariam a impossibilidade da implantação do governo representativo no Brasil oitocentista. O texto procura redefinir os termos desse debate discutindo os efeitos da legislação eleitoral sobre as práticas eleitorais no Brasil imperial. Mais especificamente, trato das Instruções de 1824, do Decreto de 1842 e da Lei de 1846 e suas implicações para o recurso à manipulação, à fraude e à violência nessas eleições. Mostro como a combinação entre esses elementos varia diretamente em função da alteração institucional. O principal problema enfrentado, a manipulação partidária da composição do corpo eleitoral, não comporta solução simples. A Lei de 1846 adota um modelo sofisticado e avançado para processar o problema. O insucesso do modelo, porém, aponta os limites de tais soluções institucionais.</p>
+    <p><bold>Palavras-chave:</bold> Eleições; Governo Representativo; Leis Eleitorais; Manipulação; Fraude; Violência.</p>
+    <p>
+      <bold>ABSTRACT</bold>
+    </p>
+    <p>Social scientists are prone to disqualify the elections held during the Brazilian Empire. Elections would be marked by the indiscriminate and constant presence of manipulation, fraud and violence. This characterization is offered as proving that the representative government could not work on Brazil. This paper is an attempt to question this view. The paper deals with the effect of electoral laws over the electoral practices during the Brazilian Empire. More specifically, I discuss the effects of the 1824 Instructions, the 1842 Decree, and the 1846 Law over the use of manipulation, fraud and violence on elections. I show how the combination among these three resources varies as a function of the legislation. The main problem, the partisan manipulation of the composition of the constituency, has no easy institutional solution. The model tried by the 1846 Law is sophisticated and advanced. Its failure shows the limits of institutional solutions to deal with party competition.</p>
+    <p><bold>Keywords:</bold> Elections; Representative Government; Electoral Laws; Manipulation; Fraud; Violence.</p>
+    <p>Eleições no Brasil imperial careceriam de sentido. As inúmeras reformas eleitorais empreendidas no período não teriam tido efeito prático algum. No máximo, arranhariam a superfície. Raimundo Faoro (1976, p. 367) sintetiza juízos largamente aceitos quando proclama:</p>
+    <disp-quote>
+      <p> As instruções de 26 de março de 1824, estatuto eleitoral outorgado pelo governo e que vige até 1842, fixam as bases do sistema que domina com modificações secundárias quase todo o império. A mesa eleitoral e paroquial foi o fundamento de toda a vida partidária, o eixo maior da máquina de compressão. Aperfeiçoado mais tarde, esse núcleo determinará o reduto da manipulação, da fraude e violência eleitoreiras.</p>
+    </disp-quote>
+    <p>No máximo, as reformas teriam mexido no acessório, não teriam maiores consequências. Mesmo quando mencionados, os aperfeiçoamentos são imediatamente desqualificados. Manipulação, fraude e violência dominariam as eleições do período, tornando-as falsas. Assim, se carentes de significado, as eleições não justificariam estudo aprofundado; mera farsa sem sentido algum. </p>
+    <p>Meu objetivo neste trabalho é distinguir os três elementos dessa caracterização. Eleições mudaram ao longo do período. O grau de violência envolvido e o emprego da manipulação e da fraude não foram constantes ou estiveram igualmente presentes durante todo o período. </p>
+    <p>A desqualificação das eleições com base nesse tripé, característico em boa parte dos tratamentos do assunto, leva a explicações inteiramente inconsistentes, como nesta passagem do mesmo Faoro (1976, p. 380): </p>
+    <disp-quote>
+      <p>Feita a mesa, está feita a eleição, dizia-se há um século - fazer a mesa significava compô-la, fabricá-la e ocupá-la. Terminada a obra da violência, começava a fraude, com o voto manipulado, com as incompatibilidades de ocasião, com a contagem arbitrária. [...] A eleição, na verdade, está feita - a apuração, escoimadas as duplicatas, recursos do partido vencido, proclama os eleitos, escolhendo entre as atas falsas as mais consentâneas com a tendência dos escrutinadores. O órgão apurador, no ciclo final, faz a própria eleição, remotamente ligada à vontade do eleitorado. </p>
+    </disp-quote>
+    <p>Faoro afirma que as eleições são feitas em, pelo menos, dois momentos distintos: pela Mesa e pela Câmara. Pior, afirma que não há relação entre uma e outra das eleições fabricadas. A violência que tem lugar no início do processo onde se fazem as eleições cujos resultados, passando pela manipulação do voto, são revertidos pela fraude no momento final. </p>
+    <p>Análises desse tipo acabam por desqualificar inteiramente o processo eleitoral<xref ref-type="fn" rid="fn1a"><sup>1</sup></xref>. Em boa medida, tais juízos decorrem de uma leitura acrítica das fontes. Os contemporâneos, sem dúvida alguma, desqualificam as suas próprias práticas eleitorais. Contudo, o fazem como parte da luta política em que estão imersos. </p>
+    <p>Se lidas com menos preconceitos, as fontes clássicas, como Francisco Belisário Soares de Souza e Francisco Ferreira de Rezende, entre outros, as mesmas usadas por Faoro e tantos outros, revelam mudanças no emprego da manipulação, fraude e violência<xref ref-type="fn" rid="fn2a"><sup>2</sup></xref>, que seguem de perto as alterações da legislação.</p>
+    <p>Neste texto, discuto um momento chave, as primeiras eleições do Segundo Reinado, começando pela famigerada Eleição do Cacete. Busco mostrar como as modificações legais têm efeito sobre as práticas e afetam o peso relativo de cada um dos elementos do tripé que, diga-se, é essencial para a caracterização de qualquer eleição. </p>
+    <p>Analiso as eleições regidas pelas Instruções de 1824, pelo Decreto de 1842 e as primeiras regidas pela Lei de 1846. Argumento que a qualificação dos eleitores é o momento chave do processo eleitoral. Em outras palavras, em todo o período, a competição eleitoral toma a forma de uma luta pelo controle da definição do corpo de eleitores. Em última análise, é a variação no corpo de eleitores que determina o resultado da eleição. Essa é a forma peculiar que a competição partidária toma no período.</p>
+    <p>Não estamos diante da "superposição de formas desenvolvidas do regime representativo a uma estrutura social inadequada", como afirma Nunes Leal (1993, p. 20). O problema é de outra ordem e deve-se pouco à realidade inóspita dos trópicos e da estrutura social aqui vigente. O problema é intrínseco ao governo representativo quando este convive com partidos políticos. Não há cópia ou ideias fora de lugar porque o modelo original é omisso nesse ponto. Partidos políticos e a competição por votos não fazem parte dos princípios do governo representativo (cf. Manin, 1997 e Hofstadter, 1979). A desqualificação da luta eleitoral por aqueles que participam das mesmas é consequência direta desse desdobramento inesperado. Denuncia-se como corrompida a eleição vencida por adversários.</p>
+    <p>O texto alia reconstituição histórica e analítica das questões postas. A reconstituição é parcial e seletiva, visando destacar a relação entre as normas adotadas e o tripé violência-manipulação-fraude. O objetivo central é mostrar como o peso relativo de cada um desses elementos variou com o tempo e como essa variação é notada pelos contemporâneos. </p>
+    <p>Cada seção do texto discute as práticas eleitorais sob a vigência de cada uma das legislações citadas anteriormente. O objetivo é mostrar que as regras afetam o comportamento dos atores políticos, que a máxima "feita a mesa, está feita a eleição", por exemplo, só vigora no primeiro momento. Da mesma forma, a nomeação de delegados e subdelegados é suficiente para garantir a vitória eleitoral somente sob a vigência do Decreto de 1842. Para completar o quadro, vale observar que não é tão claro quanto usualmente se assume qual seria o mecanismo que garantiria ao governo a vitória nas eleições regidas pela Lei de 1846. </p>
+    <p>A cada modificação legal, as eleições se tornaram mais complexas. O embate se estende no tempo e passa a envolver o controle de outros recursos além da violência pura e simples. Mesmo a interferência do governo não é imediata. O dia da eleição passa a ser o ponto de chegada de uma série de atividades. Não se ganha eleição no dia conquistando a Mesa ou, dito de outra forma, conquista a Mesa quem controla os recursos para tanto. A luta eleitoral envolve várias etapas. A partir de 1846, a definição de qual das listas de eleitores qualificados disponíveis é a legítima se torna crucial. Como afirma Ferreira de Rezende (1988, p. 109), paradoxalmente, quanto mais se aperfeiçoava a legislação, menos verdadeiras tais listas se tornavam. </p>
+    <p>Ainda que assim seja, a sofisticação institucional do modelo contido na Lei de 1846 merece ênfase: o Juiz de Paz foi dotado de autonomia e independência para gerir o processo eleitoral, procurando-se garantir que ficasse a salvo das ingerências diretas do governo central. Além disso, as minoras ganharam representação na Junta Qualificadora e na Mesa. O modelo não funcionou, mas isso nos diz mais sobre a natureza das eleições que da realidade vigente no Brasil oitocentista.</p>
+    <p>
+      <bold>As Instruções de 1824</bold>
+    </p>
+    <p>Referências elogiosas às primeiras eleições realizadas no Brasil são frequentes entre os políticos imperiais e preservadas por memorialistas<xref ref-type="fn" rid="fn3a"><sup>3</sup></xref>. Em cada uma das reformas eleitorais do período - que não foram poucas -, políticos recorrem sistematicamente ao contraste entre a pureza e a simplicidade das primeiras eleições e a corrupção e a falsidade que teria prevalecido com o tempo. Parte dessas avaliações positivas pode ser creditada à idealização do passado, uma manifestação da tendência usual de romantizar a experiência pregressa, contrastando-a com a decadência vivida no presente.</p>
+    <p>Por exemplo, Ferreira Pena, discursando na Câmara dos Deputados em 1845 (Anais, 14/2/1845, p. 627), afirma que:</p>
+    <disp-quote>
+      <p>As instruções de 26 de Março [de 1824], defeituosas como eram em alguma de suas partes, foram suficientes para que se fizessem pacificamente as eleições, e se exprimisse a livre vontade dos cidadãos; nessa época podia-se dizer, segundo a bela expressão de V. Ex., de que peço permissão para usar: - As urnas eleitorais eram as verdadeiras vestais do sistema representativo. (Apoiado) Nessa época eu não tomava parte alguma nos negócios públicos; mas ainda recordo-me de como as eleições eram dirigidas pela boa-fé, pela pureza das intenções, pelo desejo de acertar; sendo em geral lembrados e desapaixonadamente escolhidos os cidadãos que eram então os mais conhecidos por seus serviços ou por sua capacidade.</p>
+    </disp-quote>
+    <p>Obviamente, essa e outras reconstituições devem ser relativizadas e interpretadas com cuidado. O contraste tem fins políticos claros. A pureza e a liberdade do passado são associadas ao vigor das oposições, à capacidade destas em bater o governo que ou bem não interferiria no processo eleitoral ou seria fraco para tanto. Na realidade, quando lidas com atenção, essas caracterizações e contrastes tendem a combinar e associar diferentes critérios, como a pureza dos costumes, simplicidade das leis e a atitude do governo em relação às eleições<xref ref-type="fn" rid="fn4a"><sup>4</sup></xref>.</p>
+    <p>Esses elementos não necessariamente precisam estar associados e podem ter perdido força em diferentes momentos. Obviamente, a mudança dos costumes não pode ser datada com precisão; a do governo, de acordo com a maioria dos analistas, teria se dado em 1840, na Eleição do Cacete. A mudança da lei pode ser datada com precisão: ela ocorre somente em 1842. Se for assim, portanto, se considerarmos a imprecisão inerente aos costumes, podemos concluir que as eleições mudaram de caráter sob a vigência da mesma legislação. De acordo com a maioria das memórias políticas disponíveis, referendadas pela historiografia, o governo teria sido batido nas primeiras quatro eleições (1824, 1828, 1832 e 1836), mas teria vencido a de 1840. Não apenas a de 1840, mas todas as demais. Por quê? O que teria mudado?</p>
+    <p>Ferreira de Rezende (1988, p. 110) privilegia o marco legal. Para esse memorialista, a corrupção dos costumes acompanha a mudança na legislação, classificando a eleição de 1840 como a última das eleições puras. A própria simplicidade das Instruções de 1824 tende a ser associada à maior pureza das eleições que regeu. Como afirma o autor, "não só era péssima a legislação eleitoral que tivemos nos primeiros tempos de nossa vida política; mas quase que pode-se dizer que sobre esta matéria não tínhamos legislação alguma". O arremate do raciocínio é um paradoxo: quando as leis eram péssimas, as eleições seriam verdadeiras, enquanto que com o "aperfeiçoamento da legislação eleitoral", "as eleições foram se tornando cada vez menos livres; menos desinteressadas, e por consequência muito menos nobres"(p. 111).</p>
+    <p>A simplicidade das normas se devia ao fato de as Instruções de 1824 conferirem grande poder à Mesa Eleitoral, presidida pelo Juiz de Paz eleito localmente. Concentravam-se na Mesa todas as fases do processo eleitoral, da qualificação dos eleitores à apuração dos votos.</p>
+    <p>Tal concentração de funções seria responsável pelo juízo generalizado e amplamente acatado de que feita a Mesa, estaria feita a eleição. Vale transcrever a descrição de Belisário Soares de Souza (1979, p. 53)<xref ref-type="fn" rid="fn5a"><sup>5</sup></xref>, uma das fontes mais utilizadas para reconstituir as eleições do período imperial: "O resultado da eleição paroquial dependia absolutamente da mesa eleitoral: seu poder e arbítrio não conheciam limites; sua formação era a mais irregular e filha sempre das inauditas desordens e demasias.".</p>
+    <p>De acordo com o texto legal, a presidência dos trabalhos eleitorais caberia ao Juiz de Fora ou Ordinário, assistido pelo pároco, cabendo ao presidente da Mesa propor "à assembleia eleitoral dois cidadãos para Secretários, e dois para Escrutinadores, que sejam pessoas de confiança pública, as quais sendo aprovadas, ou rejeitadas por aclamação do povo, tomarão lugar de um e outro lado". </p>
+    <p>A simplicidade do regulamento se assenta na presunção de que o reconhecimento das pessoas que mereceriam a confiança pública fosse "natural", isto é, de que os superiores e notáveis, porque mais capacitados, fossem automaticamente escolhidos para o desempenho dessas funções. </p>
+    <p>Essa premissa está em perfeita sintonia com os princípios do governo representativo conforme mostram os trabalhos de Manin (1997), Morgan (1988), Rosanvallon (1999 e 2010) e tantos outros. Esperava-se que aqui, como alhures, imperasse o "princípio da distinção" e que as relações entre inferiores e superiores fossem ditadas pelo que Bagehot (2001) nomeou como o princípio da deferência. </p>
+    <p>A elite política brasileira se movimenta dentro dos quadros postos pela teoria vigente à época. A referência à liberdade do voto é marcada por ambiguidades que não podem deixar de ser notadas. Conforme afirma Peixoto Brito (Anais, 18/2/1845, p. 705) em debate parlamentar:</p>
+    <disp-quote>
+      <p> Quando falo em liberdade e independência dos votantes, não é da liberdade e independência absoluta, segundo entendem alguns; mas aceitando as dependências sociais, porque não é possível prescindir delas, não é possível privar que os cidadãos confiram seus votos a pessoas que lhe são mais afeiçoadas, nos seus amigos, etc.; portanto a liberdade e independência do votante devem consistir em não ser privado de votar aquele cidadão a quem a constituição confere este direito político e em conferir seu voto a quem quiser: é nisto que está a liberdade e independência do voto.</p>
+    </disp-quote>
+    <p>O raciocínio é claro: liberdade absoluta, à margem das influências sociais legítimas, é o mesmo que irresponsabilidade. O eleitor deve votar em quem bem lhe aprouver, mas desde que suas escolhas expressem as dependências sociais, a influência legítima. Como salienta Manin (1997, p. 125), os eleitores devem livremente escolher ser governados por seus superiores. Conforme afirma Ferreira Pena na passagem citada anteriormente, quando as eleições eram puras, os representantes eram "desapaixonadamente escolhidos" dentre "os mais conhecidos por seus serviços ou por sua capacidade". </p>
+    <p>A expressão da influência legítima que os mais capacitados deveriam exercer sobre os demais se assentava na informalidade do poder conferido à Mesa Eleitoral para dirigir os trabalhos da Assembleia Eleitoral. As observações de Belisário Soares de Souza (1979, p. 53) vão ao ponto: </p>
+    <disp-quote>
+      <p> Além da maior amplitude e arbítrio na faculdade de conhecer e da idoneidade dos votantes para aceitar-lhes os votos, ainda a lei (&amp; 3º do capítulo 2º) ordenava ao presidente que perguntasse aos "circunstantes (palavras textuais) se algum sabia ou tinha que denunciar suborno ou conluio para que a eleição recaísse em pessoa ou pessoas determinadas". "Verificando-se por exame público e verbal (continua a lei) a existência do fato, se houver arguição, perderá o incurso o direito ativo e passivo de voto, por esta vez somente. A mesma pena sofrerá o caluniador. </p>
+      <p>
+        <italic>A ingenuidade desta disposição é digna dos tempos patriarcais</italic>
+      </p>
+      <p>" (</p>
+      <p>
+        <italic>grifo no original</italic>
+      </p>
+      <p>).</p>
+    </disp-quote>
+    <p>A expectativa ingênua, como nota o mesmo autor (p. 54), não implicava supor que as eleições se dessem de forma pacífica e ordeira. </p>
+    <disp-quote>
+      <p> Ainda se conservam, e é provável que se conservem para sempre, na lembrança de todos os que assistiram às eleições anteriores a 1841, as cenas de que eram teatro as nossas igrejas na formação das mesas eleitorais. Cada partido tinha seus candidatos, cuja aceitação, ou antes imposição, era questão de vida ou morte. Quais, porém, os meios de chegarem as parcialidades a um acordo? Nenhum. A turbulência, o alarido, a violência, a pancadaria decidiam o conflito. Findo ele, o partido expelido da conquista da mesa nada mais tinha que fazer ali, estava irremessivelmente perdido. Era praxe constante: declarava-se coato e retirava-se da igreja, onde com as formalidades legais, fazia-se a eleição conforme queria a mesa.</p>
+    </disp-quote>
+    <p>A passagem merece leitura atenta. Em primeiro lugar, não se deve deixar de notar a limitação temporal do comentário. Tais cenas limitam-se às eleições anteriores a 1841, isto é, àquelas reguladas pelas Instruções de 1824, incluindo a eleição de 1840. O quadro muda com a alteração da legislação. </p>
+    <p>Um segundo ponto merece destaque: a clareza com que as razões para a violência eleitoral são identificadas. O formato adotado não oferecia oportunidade para qualquer tipo de acordo entre as "parcialidades". Conquistar a Mesa era "questão de vida ou morte". Não havia outra forma para resolver os conflitos. Ganhar a Mesa era alijar a outra parte, impedir que ela votasse, garantindo a vitória. E a forma de fazê-lo era o recurso à força.</p>
+    <p>A violência denunciada não diz respeito ao controle sobre os eleitores. O conflito não é vertical, mas sim horizontal. A hierarquia social se reproduz no momento eleitoral. Facções entram em confronto e a violência é empregada para resolver o conflito. No interior de cada parcialidade, a deferência estrutura as relações verticais entre chefes e votantes. </p>
+    <p>Não segue que eleições sempre fossem decididas pelo emprego da violência, que as partes sempre chegassem às vias de fato. O conflito aberto e direto entre as parcialidades é a exceção e não a regra. Se a minoria reconhece sua inferioridade, como afirma o autor, "declara-se coata e retira-se da igreja". O ponto merece ênfase por relacionar a alegação de violência e de fraude à derrota presumida de umas das partes. </p>
+    <p>Dito de forma inversa: a condição para que o conflito aberto tenha lugar é o equilíbrio de forças. Uma vez mais, vale recorrer às agudas observações feitas por Belisário Soares de Souza (1979, p. 37): </p>
+    <disp-quote>
+      <p>Quando duas parcialidades pleiteiam a eleição em qualquer paróquia é que suas forças mais ou menos de equilibram: desde que uma prepondera sem contraste, a luta é impossível [...] Desde que existe luta, cada parcialidade procura aliciar prosélitos e criar elementos de força e preponderância.</p>
+    </disp-quote>
+    <p>A leitura acrítica de Belisário e outros contemporâneos generaliza o que era visto como exceção. Violência não era a norma. O partido mais fraco pode até marcar presença, comparecer ao local de votação, mas, se consciente de sua inferioridade, recusa o conflito, declara-se "coato e retira-se da igreja". A incerteza quanto ao resultado é a condição para a ocorrência da disputa violenta. </p>
+    <p>Ferreira de Rezende (1988, p. 111) observa que "as eleições naquele tempo tinham alguma coisa que muito parecia a uma verdadeira guerra". Sua descrição da eleição de 1840 merece transcrição detalhada. A analogia entre eleições e guerra é completa, passando pelos preparativos para receber ou "aquartelar" os contingentes de votantes que "cada um dos contendores esperava", o que incluía preparar acomodação, alimentação, vestimentas adequadas e entretenimento. </p>
+    <p>Cada um dos diversos contingentes, à proporção que vinha chegando, ia imediatamente para o seu respectivo quartel. E desde que ali entravam, ficavam todos como se tivessem entrado para um verdadeiro quartel militar ou antes para uma verdadeira praça de guerra; pois desde que ali penetrava, já ninguém, a não ser os chefes ou oficiais podia em regra dali sair sem licença ou convenientemente acompanhado, para que não fosse sujeito a alguma tentação de desertar; entretanto, que de dia e de noite, nunca deixava de haver sentinelas mais ou menos vigilantes, para que não entrassem inimigos ou espiões na praça, que pudessem avariar as munições ou subornar soldados (Ferreira de Rezende, 1988, p. 112).</p>
+    <p>Cada um dos grupos políticos reunia e controlava seus votantes, impondo-lhes uma disciplina verdadeiramente militar que se estendia ao dia da eleição. Neste dia, segue a descrição do memorialista:</p>
+    <disp-quote>
+      <p> [...] cada um dos quartéis começou a despejar o povo que até então tinha encerrado, e todos em forma e bem vigiados, dirigiram-se para a igreja. Como, porém, nem mesmo na igreja os partidos se confundiam, e cada um já sabia o lado da igreja que lhes pertencia, os conservadores foram ocupar o lado direito e os liberais se puseram do lado esquerdo. E só foi então que estando todas as forças ali reunidas, puderam os adversários se mirar e medir; ou só foi então que se pôde calcular e saber qual o número real de votantes de que cada um dos partidos podia dispor. O número total, porém, dos votantes era muito grande; os dois grupos formavam duas grandes massas compactas e ao mesmo tempo movediças; e essas duas massas pareciam iguais. Como, pois, se poderia saber quem seria o vencedor? (Ferreira de Rezende, 1988, p. 113). </p>
+    </disp-quote>
+    <p>Eleições se assemelhavam a uma guerra porque serviam para medir as forças das parcialidades. O confronto poderia ser resolvido de forma pacífica se uma das partes fosse muito superior numericamente à outra. Contudo, nem todas as disputas eram resolvidas contando-se as forças locais, uma vez que a intervenção do governo, seu posicionamento em favor de umas das parcialidades, enviesava a medição de forças. As observações de Belisário Soares de Souza (1979, p. 37), mais uma vez, são claras: "Entre duas forças que mais ou menos se equilibram, penderá a concha da balança em que se coloca o prestígio e o peso da autoridade pública."</p>
+    <p>Segundo a posição quase unânime da literatura, essa teria sido a marca distintiva da eleição de 1840. Violência e fraude não seriam novidades. A novidade residiria no fato de, pela primeira vez, "a autoridade pública" ter intervido de forma deliberada para vencer as eleições. Custa crer, no entanto, que governos anteriores fossem indiferentes aos resultados eleitorais. Talvez tenham intervido, mas sem o sucesso obtido pelo Gabinete da Maioridade. Ferreira de Rezende (1988, p. 110), por exemplo, credita os insucessos eleitorais dos governos anteriores à tolice de D. Pedro I e à fragilidade dos regentes, enquanto Belisário Soares de Souza (1979, p. 52), de sua parte, afirma que as oposições, por sua força, se mostraram capazes de derrotar os governantes. </p>
+    <p>Há razões para seguir a interpretação cautelosa de Pereira de Castro (1972a, p. 66) e desconfiar da "lenda negra" criada em torno dessa eleição. Como nota este autor, os resultados eleitorais sequer são conhecidos com certeza, dado que a Câmara foi dissolvida pelo Poder Moderador antes de completar seus trabalhos preparatórios, isto é, enquanto se encontrava em curso o processo de verificação dos diplomas dos eleitos. </p>
+    <p>A justificativa apresentada pelo Gabinete Conservador, assim como as denúncias que partem da imprensa ligada a esse partido, foi aceita pela historiografia. Foram os conservadores que a denominaram e a caracterizaram como a Eleição do Cacete e foram forçados a fazê-lo por razões políticas. Atacar a legitimidade da eleição era a única forma de justificar a dissolução da Câmara que sequer dera início formal às suas atividades. </p>
+    <p>O documento em que os ministros solicitam a intervenção do Poder Moderador para dissolver a Câmara merece ser lido com atenção. O ponto de partida é a acusação de que a eleição teria sido marcada pelo "embate de facções". A intervenção do Poder Moderador seria necessária para "prevenir a tempo a marcha incalculável que as facções costumam acarretar consigo", para impedir os "irreparáveis estragos" que produz. Por isso, por ser o resultado da ação de uma facção, os signatários do documento afirmam que </p>
+    <disp-quote>
+      <p>[...] a atual Câmara dos Deputados, Senhor, não tem a força moral indispensável para acreditar, e fortalecer entre nós, o sistema representativo. Não pode representar a opinião do País porque a expressão da vontade nacional e das necessidades públicas somente pode produzir a liberdade dos votos (transcrito por Javari, 1962, p. 84).</p>
+    </disp-quote>
+    <p>Como se vê, a ilegitimidade das eleições é deduzida, não demonstrada. Se não fosse por meio da violência e da fraude, como uma facção teria vencido as eleições? A conotação partidária do documento é clara. Rotulando seus adversários de facciosos e subversivos, os conservadores se colocam na posição de representantes legítimos da vontade nacional. </p>
+    <p>Lido ao revés, o documento afirma: se tivesse havido liberdade de voto, a Câmara representaria a legítima vontade nacional, isto é, a Câmara não abrigaria "homens que, pondo de parte os meios constitucionais, não recuam diante de outras que subvertem todas as ideias de organização social". Os adversários são rotulados de facciosos, subversivos. Os conservadores não se representam como um partido, mas sim como o representante da verdade, do interesse da nação. Dentro desse modelo, só poderiam ter sido derrotados nas eleições se seus adversários recorressem a meios escusos, à corrupção, à fraude e à violência (Javari, 1962, p. 84). </p>
+    <p>Não que os liberais vissem os conservadores de forma diversa. Este é precisamente o ponto. Eles o viam da mesma forma. Para eles, os conservadores é que seriam facciosos. Os liberais justificaram sua intervenção na eleição recorrendo aos argumentos de que seriam vítimas. Para eles, os defensores das leis do regresso, mais especificamente, da Lei de Interpretação do Ato Adicional (aprovada em 12/5/1840), eram os verdadeiros inimigos do sistema "monárquico-constitucional-representativo". </p>
+    <p>Para os liberais, a intervenção do governo na eleição de 1840 era mais do que legítima, uma medida necessária à salvação da monarquia de seus verdadeiros inimigos. Não por outra razão, mesmo tendo sido apeados do governo, continuam a defender suas posições, tentando recuperar o controle sobre as decisões legais. Como haviam feito os conservadores logo após a maioridade, queriam obstar as ações do governo controlando a maioria da Câmara. Por isso mesmo, buscam controlar a verificação dos diplomas dos eleitos. Dissolvida a Câmara, retomam o controle das Câmaras das Províncias de São Paulo e Minas, de onde mandam petições e representações ao Imperador, visando alertá-lo dos riscos que a lei da reforma do Código do Processo Criminal e as demais reformas aprovadas pelos conservadores representavam para a monarquia<xref ref-type="fn" rid="fn6a"><sup>6</sup></xref>. Baldados esses esforços, recorrem às armas.</p>
+    <p>O Poder Moderador não pode errar. Como define a Constituição, o monarca é irresponsável. Seus conselheiros, contudo, podiam errar. Nesse contexto institucional, a luta político-partidária é uma constante troca de acusação entre os que ganham e perdem as graças do monarca. Quando os meios legais falham, não é difícil justificar o recurso às armas. Foi o que fizeram os liberais em 1842. Seria preciso salvar a monarquia daqueles que haviam indevidamente conquistado a confiança do jovem imperador. Nas palavras dos revoltosos de Barbacena, o objetivo da revolução seria "livrar o nosso adorado monarca da coação em que o tem posto a oligarquia hoje dominante" (citado por Iglésias, 1972, p. 407).</p>
+    <p>A novidade da eleição de 1840, portanto, foi menos a intervenção deliberada do governo para obter a vitória do que seu caráter marcadamente partidário. Partidos se enfrentam e um deles está à testa do governo. Dada a legislação vigente, dado que a Mesa tudo decide, onde um partido não prevalecer de forma evidente, somente o confronto pode definir o resultado da eleição. A simplicidade das normas exacerba o peso da violência, ao mesmo tempo que diminui o recurso à manipulação. Isso significa que o emprego da força é a forma que o governo pode fazer a balança pender para o seu lado. As modificações legais introduzidas a partir de então conferem maior peso à manipulação. A qualificação prévia permite enviesar partidariamente a composição do eleitorado.</p>
+    <p>
+      <bold>O Decreto de 1842</bold>
+    </p>
+    <p>O Gabinete Conservador de 23 de março de 1841, tendo obtido a dissolução da Câmara, convoca novas eleições. Para assegurar sua vitória, a legislação é alterada. Como observa Belisário Soares de Souza (1979, p. 57):</p>
+    <disp-quote>
+      <p>A conjuntura em que o governo se achava era difícil. O ministério de 23 de Março havia dissolvido a Câmara de 1842, que ele declarara ilegítima e não representante da opinião nacional pelos vícios da eleição, oriundos não só das fraudes e efervescência das paixões partidárias, como da incapacidade da lei em contê-las. Não podia mandar proceder às eleições pela lei que condenava.</p>
+    </disp-quote>
+    <p>O governo, portanto, se via forçado a "aperfeiçoar" a legislação para evitar que a violência e a fraude pudessem determinar os resultados eleitorais. O modo pelo qual a legislação é "aperfeiçoada" garante ao governo os meios para intervir no processo eleitoral de forma a assegurar resultados favoráveis. </p>
+    <p>A nova legislação altera a composição da Mesa Eleitoral, que perde uma de suas funções chaves, a de qualificar os eleitores. Esse processo passa a ser feito previamente à eleição por uma junta composta pelo Juiz de Paz, o pároco e o delegado de polícia<xref ref-type="fn" rid="fn7a"><sup>7</sup></xref>. A composição tripartite não esconde o predomínio deste último, um agente do governo nomeado pelo próprio Gabinete. </p>
+    <p>Até mesmo Belisário (p. 59), simpático aos conservadores, não deixa dúvidas ao avaliar os resultados pretendidos pelo modelo instaurado:</p>
+    <disp-quote>
+      <p>A intervenção das autoridades policiais criadas pela Lei de 3 de Dezembro [Código do Processo Criminal] prejudicou incalculavelmente esta lei, fazendo crer à nação que seu verdadeiro fim era montar uma máquina de eleição. A lei acabava de ser promulgada, e transformaram-se logo as autoridades, que ela criou, em agentes eleitorais, justamente na ocasião em que se ia travar uma luta eleitoral em extremo apaixonada, depois da dissolução da Câmara temporária em 1º de maio de 1842. Se não fora esta circunstância, se as Instruções de 4 de Maio não tivessem enlaçado a Lei de 3 de Dezembro no seu sistema e na odiosidade que excitaram, aquela lei não se teria desvirtuado na opinião pública e outros teriam sido os seus resultados e o modo de considerá-la.</p>
+    </disp-quote>
+    <p>Impossível construir o contrafactual sugerido. O Código Criminal antecede o Decreto de 1842. O "enlaçamento" não foi fortuito. Como nota o mesmo autor, "com o exaltamento partidário e faccioso daquela quadra revolucionária, era impossível, segundo entendia [o Gabinete], responder pela ordem pública se as novas eleições fossem regidas pelas instruções em vigor" (Belisário Soares de Souza, 1979, p. 57).</p>
+    <p>A conclusão é imediata: se mantida a legislação, a conquista da Mesa, uma "disputa de vida ou morte" entre as diferentes parcialidades, decidiria o resultado do pleito em cada uma das paróquias. Nessas condições, o Gabinete não teria garantias de que venceria as eleições a não ser pelo emprego de alta dose de violência. O custo da vitória seria excessivo. </p>
+    <p>A nova regulamentação dota o governo de meios, mais precisamente de um agente para controlar o processo eleitoral. A "concha da balança" se inclina em favor do lado identificado com a autoridade pública. Os conservadores, portanto, deram motivos de sobra para que seus adversários acreditassem que haviam montado uma "verdadeira máquina eleitoral". A máquina, contudo, não fora testada de forma efetiva. Derrotados nas armas, os liberais, antecipando sua derrota, não disputam as eleições de 1842. </p>
+    <p>Em 1844, uma vez mais, o Poder Moderador intervém no processo político. Os conservadores são forçados a deixar o poder e os liberais convocados para compor o novo Gabinete. Seguindo a tradição inaugurada em 1842, a Câmara é dissolvida e novas eleições são convocadas. Dado o controle que o Gabinete passara a ter sobre as eleições, os liberais vencem-nas. A nova legislatura não será unânime apenas em função das reviravoltas das alianças políticas em províncias específicas, como a Bahia. </p>
+    <p>O Decreto de 1842 conferira ao Gabinete, independente de sua coloração política, os meios para intervir e controlar as eleições em todas as paróquias. Um agente nomeado diretamente pelo Ministro da Justiça, o delegado, controla os trabalhos da Junta Qualificadora e da Mesa. A vitória do governo era assegurada pela composição do corpo eleitoral. Os conflitos antes resolvidos pela força, pela conquista da Mesa, passam a ser solucionados quando da qualificação. São qualificados apenas os grupos de eleitores alinhados com o partido no poder. Ou seja, a capacidade do governo de manipular as eleições torna o emprego da violência menos presente. Conflitos são resolvidos antes mesmo da eleição. </p>
+    <p>A influência crescente da manipulação, das tricas eleitorais, para usar a linguagem da época, explica porque o "aprimoramento da legislação" as torna menos puras e verdadeiras. O resultado das eleições perde a relação direta com a medição de forças tão bem descrita por Ferreira de Rezende. Se a minoria contar com o apoio das autoridades, é possível que a balança penda a seu favor. Vitórias podem ser asseguradas pela manipulação da qualificação dos eleitores, pela decisão prévia de quem seriam os votantes e os eleitores da paróquia. A violência, ou a ameaça de seu emprego, não está totalmente ausente, uma vez que o delegado passa a ser o personagem central para a definição dos resultados.</p>
+    <p>Esse modelo, contudo, rege apenas duas eleições. A Lei de 1846, a primeira aprovada pelo Poder Legislativo, altera radicalmente esse quadro. O objetivo central da nova lei, como se verá em detalhe a seguir, é neutralizar a ação do governo, retirando-lhe os meios de intervir e controlar o processo eleitoral. Por isso mesmo, a lei altera a composição da Junta Qualificadora e da Mesa. O delegado é sacado de ambas e o Juiz de Paz, eleito localmente, volta a dirigir os trabalhos nos dois momentos.</p>
+    <p>
+      <bold>A Lei de 1846</bold>
+    </p>
+    <p>Ao retornarem ao poder, os liberais adotam a mesma estratégia de seus opositores. Solicitam e obtêm a dissolução da Câmara pelo Poder Moderador. Os liberais se valem dos dispositivos do Decreto de 1842 para obter ampla maioria na Câmara. </p>
+    <p>A minoria conservadora não tarda em apontar a contradição em que os liberais se encontram: obtiveram controle da legislatura recorrendo aos métodos que condenavam. Angelo Muniz da Silva Ferraz (depois Barão de Uruguaiana) coloca o dedo na ferida ao relembrar o discurso do senador Paula Souza, um dos líderes liberais, em que este afirmara haver o Decreto de 1842 deixado "unicamente aos agentes do governo o direito de fazer deputados". Feita a lembrança, o restante da provocação é apenas um arremate: "- Vós, senhores, por que lei vos elegestes? (Risadas) Pelas instruções de Maio, não? Logo, não sois a expressão do país, e em nome dele não podeis falar" (Anais, 10/1/1845, p. 121).</p>
+    <p>Ainda que pretenda colocar os liberais contra as cordas e distinguir os dois partidos, o futuro Barão de Uruguaiana não deixa de concordar com o juízo de Paula Souza:</p>
+    <disp-quote>
+      <p>Estas instruções, segundo o nobre senador [Paula Souza], mudam inteiramente a natureza do nosso sistema eleitoral, e deixam unicamente aos agentes do governo o direito de fazer deputados. Ora isto é comum a ambas as eleições: a esta última, que nos trouxe a esta casa, acresce demais a fraude, a violência e a coação do voto (Anais, 10/1/1845, p. 121).</p>
+    </disp-quote>
+    <p>Ambos os partidos, portanto, tendem a reconhecer, implícita ou explicitamente, que normas vigentes, o Decreto de 1842, permitem ao governo manipular as eleições a seu favor. O rodízio no poder entre os dois partidos, promovido pelo Poder Moderador, seguido de resultados eleitorais tão díspares, questiona a legitimidade de qualquer Câmara. A conclusão que se impõe é verdadeiramente corrosiva. O deputado liberal José Antonio Marinho leva a provocação (de Ferraz, o futuro barão) às últimas consequências:</p>
+    <disp-quote>
+      <p>Mas o nobre deputado diz: - Vós não representais a opinião do país. Mas quem é que então a representa? Quem há de representá-la? Dissolva-se agora a Câmara, chame-se outra administração, façam-se com as mesmas leis, com os mesmos meios, outra eleição; qual o resultado? Suponhamos seja inteiramente diverso, então será a verdadeira expressão do país? Como nô-lo provareis? Convenhamos portanto que quando eu e os meus amigos estivermos aqui, somos os verdadeiros representantes do país; que quando o nobre deputado e os seus se acharem aqui, são os verdadeiros representantes (Anais, 11/1/1845, p. 143). </p>
+    </disp-quote>
+    <p>A hilaridade geral, provocada pela troca de acusações, não esconde as dificuldades enfrentadas pela elite política brasileira. O rodízio no poder promovido pelo Poder Moderador punha em cheque as pretensões de ambos os partidos a se apresentarem como os verdadeiros e legítimos representantes da vontade nacional. A capacidade que os gabinetes chamados ao poder pelo imperador tinham para influir nos resultados da consulta ao povo questiona as credenciais de ambas as partes. </p>
+    <p>Denunciar as práticas e recursos usados pelos adversários não faz um dos partidos mais democrático, popular ou legítimo que o outro. Liberais e conservadores se mantêm fiéis ao princípio da distinção identificado por Bernard Manin, aludido anteriormente. Os notáveis ou superiores devem governar. Marinho, dando sequência ao debate com Ferraz (o Barão de Uruguaiana), afirma de maneira meridiana sua fidelidade a este princípio: "A influência de família, a da riqueza, a dos talentos, e até das maneiras, é uma influência legítima que não está nas mãos de ninguém o destruir" (Anais, 11/1/1845, p. 143)<xref ref-type="fn" rid="fn8a"><sup>8</sup></xref>.</p>
+    <p>Nesse ponto, liberais e conservadores concordam. O resultado de eleições legítimas deveria espelhar a hierarquia social, a "influência legítima". O que deveria ser eliminado era a influência ilegítima. Conforme prossegue o deputado Marinho: </p>
+    <disp-quote>
+      <p> O que não se pode tolerar é o sistema que foi organizado em virtude da lei que reformou o código para substituir influências legítimas pelas fictícias [...] Eu não quero entrar em individualidades; senão tinha exemplos muito frisantes. Grandes proprietários se viram sujeitos à obediência a subdelegados que dias antes, com uma veste a tiracolo, uma taca na mão, traziam diante de si os escravos, como feitor que eram desses que eram postos debaixo da jurisdição de seus ex-feitores. Isso é horrível; esta influência é maléfica, deve ser destruída (Anais, 11/1/1845, p. 143). </p>
+    </disp-quote>
+    <p>Ainda que contenha acusações aos conservadores, o trecho deixa claro o que realmente estava em jogo e o que deveria nortear a legislação a ser discutida. Liberais e conservadores procuravam uma fórmula que lhes permitisse processar os seus conflitos recorrendo apenas às "influências legítimas". Contudo, como "as influências ilegítimas" eram aquelas obtidas pelo fato de controlarem o governo, o modelo buscado teria de ser capaz de neutralizar a ação do governo, sua influência sobre os resultados eleitorais. Mas não seria um contrassenso supor que o governo não devesse intervir no processo eleitoral?<xref ref-type="fn" rid="fn9a"><sup>9</sup></xref> </p>
+    <p>Os debates na abertura da seção legislativa de 1845 indicam as premissas sobre as quais o documento legal deveria se assentar se pretendesse ser efetivo. A principal delas é a de que eleições eram disputadas por facções ou partidos ou como quer que se queira chamar os grupos em conflito. Implicitamente, ainda que a questão não seja aprofundada, os partidos são tomados como atores legítimos do processo eleitoral. </p>
+    <p>O segundo ponto estabelecido é o de que a qualificação era o momento central da disputa eleitoral. Por meio do controle da qualificação, a facção no poder era capaz de influir e definir a composição do corpo eleitoral com olhos voltados para o resultado da própria eleição. Portanto, o centro da reforma deveria ser uma revisão do modo como a qualificação era feita. Mais especificamente, o problema a ser resolvido era o de impedir que o governo controlasse o processo de qualificação. </p>
+    <p>A lei aprovada buscou assegurar a independência e a representatividade da Junta Qualificadora e da Mesa. Por independência, entenda-se autonomia para dirigir os trabalhos eleitorais a salvo da intervenção do governo central. Por representatividade, entenda-se a garantia de que as partes em conflito, a maioria e a minoria, tivessem assento na Junta e na Mesa. A fórmula empregada para obter ambos os objetivos é tão engenhosa quanto complexa<xref ref-type="fn" rid="fn10a"><sup>10</sup></xref>. </p>
+    <p>O presidente da Junta e da Mesa passa a ser o Juiz de Paz mais votado na eleição local do ano anterior, assistido por quatro eleitores escolhidos naquela mesma eleição, sendo dois entre os titulares (representando então a maioria) e dois entre os suplentes (representantes da minoria)<xref ref-type="fn" rid="fn11a"><sup>11</sup></xref>.</p>
+    <p>Como reconhece em plenário um dos críticos do projeto, Tavares de Miranda, tais medidas teriam sido ditadas pelo "princípio de imparcialidade", posto que assegurasse à Mesa Qualificadora ser composta por "representantes de todas as opiniões, de todos os partidos" (Anais, 13/2/1845, p. 607). </p>
+    <p>Ainda que maioria e minoria tenham representação na Junta e na Mesa, como a presidência fica a cargo do Juiz de Paz, este passa a ser a figura mais importante para a definição dos trabalhos eleitorais e, consequentemente, para seus resultados. Em outras palavras, como comenta Belisário Soares de Souza (1979, p. 38), é este, pois, "o personagem que determina o partido em maioria em qualquer das importantes funções daquelas comissões".</p>
+    <p>Para garantir a independência desse personagem central, a Lei estipula de forma clara que a função deve ser desempenhada pelo Juiz de Paz mais votado na última eleição local e não o que estiver em exercício. Vale reproduzir o artigo segundo a lei que regula a questão: </p>
+    <disp-quote>
+      <p> Art. 2º. O Presidente da Junta será o Juiz de Paz mais votado do distrito da Matriz, esteja ou não em exercício, esteja embora suspenso por ato do Governo ou por pronúncia em crime de responsabilidade. Na sua ausência, falta ou impossibilidade física ou moral, fará as suas vezes o imediato em votos.</p>
+    </disp-quote>
+    <p>A Lei, portanto, busca definir de maneira precisa a quem cabe a direção dos trabalhos eleitorais. O exercício da função fica a salvo das injunções do governo por duas razões. Primeiro porque a obtenção do cargo era decidida por uma eleição local. Segundo porque se retirava do governo a possibilidade de removê-lo do cargo por razões políticas. Como nota um dos autores do projeto, Manuel Odorico Mendes, essas garantias tinham por objetivo "obstar que o governo, ou as autoridades, quando não lhes faça conta a presença de um juiz de paz no ato das eleições, busquem afastá-lo, suspendendo-o por causas bem pequenas, ou por fúteis pretextos (Anais, 13/2/1845, p. 608).</p>
+    <p>A tentativa de limitar a interferência do governo nas disputas políticas locais vai a ponto de se impedir que os recursos contra as decisões das Juntas de Qualificação escapem do âmbito local e que viessem a ser da alçada dos magistrados de carreira. Assim, de acordo com o artigo 33 da Lei, recursos contra as decisões da Junta seriam apreciados pelo Conselho Municipal de Recursos, presidido pelo presidente da Câmara Municipal e pelo eleitor mais votado da paróquia. </p>
+    <p>Ao longo dos debates, Ferraz (Barão de Uruguaiana) notara a inconsistência interna da fórmula adotada. O recurso seria julgado pela mesma parte contra a qual se impetrava o recurso. Se a Junta seria "eivada por espírito partidário", o Conselho de Recursos também o seria, com o que "cidadãos conscienciosos" poderiam ter seu direito a votar obstado. Ferraz ataca a raiz da suposição sobre a qual se assenta o projeto, uma vez que a Junta ou qualquer poder independente a quem caiba dirigir os trabalhos eleitorais só será efetivamente independente "se composta de santos, de homens despidos de espírito de partido, infalíveis, e infalível no mundo só é talvez o papa" (Anais, 16/2/1845, p. 641)<xref ref-type="fn" rid="fn12a"><sup>12</sup></xref>.</p>
+    <p>Os debates revelam, portanto, a consciência das dificuldades inerentes à questão. Reconhece-se que a autoridade a quem cabe a direção dos trabalhos eleitorais reúne grandes poderes em suas mãos e que não está imune ao espírito partidário. A independência e autonomia diante do poder central não são o mesmo que isenção partidária. Entre as opções disponíveis, os liberais optam, em consonância com seu ideário, em depositar esse poder no "elemento popular" ou, como afirma Antonio Carlos ao longo dos debates: "Nós não quisemos as autoridades do governo, fomos às autoridades populares. Eles vêm do povo, merecem e devem merecer mais confiança do povo." (Anais, 18/2/1845, p. 692).</p>
+    <p>Uma facção, ou partido, portanto, prevalece sobre a outra. O grupo que contar com o apoio popular na paróquia controla o processo eleitoral. A minoria, contudo, de acordo com a Lei, teria assento tanto na Junta como na Mesa. A facção dominante no âmbito local não teria, assim, como ignorar a minoria. Além disso, a maioria em uma paróquia não necessariamente seria a maioria nas demais paróquias. Desse modo, o governo não teria como determinar o resultado geral das eleições. </p>
+    <p>Isso, obviamente, se a Lei funcionasse como esperavam os seus autores, o que, como se sabe, não ocorreu. A nova legislação não trouxe os resultados esperados. Pelo que se deduz da crônica política, o governo manteve a capacidade de intervir e ditar os resultados do processo eleitoral, ainda que os meios pelos quais o fizesse não sejam claramente especificados pela literatura especializada<xref ref-type="fn" rid="fn13a"><sup>13</sup></xref>. Contudo, reconhecer que as Câmaras eleitas continuaram a ser unânimes não é o mesmo que afirmar que a Lei foi inócua ou sem consequências. </p>
+    <p>As modificações alteraram, como de resto é apenas razoável supor, a lógica da luta política. Os atores políticos tiveram de se adaptar às novas regras. O efeito mais imediato e direto é a valorização da política local. Eleições locais se tornaram o estágio inicial da luta eleitoral, o ponto de partida de uma cadeia de disputas. A consequência, portanto, é que isso acarretasse a partidarização e o interesse geral pelas lutas locais. Conforme comenta Belisário Soares de Souza (1979, p. 39), os "patronos nos centros (quase sempre os deputados gerais e provinciais)" passaram a converter as "autoridades locais em cabos de eleição". De acordo com o autor, a autoridade local teria se transformado em um "agente de eleições, trêfego, astuto e vexatório", "tolerante e desleixado para os seus deveres reais", transformado em "perseguidor e inimigo do adversário político".</p>
+    <p>O tom crítico trai a convicção política do analista. Conservadores condenam o modelo descentralizado instaurado pelos liberais. O juízo é menos importante que o aspecto descritivo: o reconhecimento das mudanças ocorridas em função da aprovação da Lei. Belisário, ainda que de forma concisa e a contragosto, conclui que a "lei de 19 de agosto foi um melhoramento no método prático de eleições sobre as instruções de 1824 e 1842, principalmente no que dizia respeito à formação das mesas eleitorais e às qualificações" (p. 68)<xref ref-type="fn" rid="fn14a"><sup>14</sup></xref>. O autor chega a afirmar que "não se poderiam descobrir meios mais eficazes e perfeitos de darem bons resultados. As duas parcialidades políticas intervêm e são ouvidas; há todos os recursos, decididos afinal pela magistratura mais elevada do Império" (p. 25).</p>
+    <p>Como nota Nunes Leal (1993, p. 221, nota 11), estribando-se no juízo de Tavares de Lira, "o principal mérito da lei de 1846 foi dar relativa estabilidade ao alistamento eleitoral, pois era bem satisfatório o funcionamento das juntas qualificadoras, quando bem constituídas". Tais observações são suficientes para afastar a visão estereotipada segundo a qual a prática e a substância das disputas eleitorais do período permaneceriam as mesmas. Eleições já não são ganhas pela conquista da Mesa ou nomeação de delegados ou subdelegados. Eleições perdem sua simplicidade inicial, desdobrando-se em outras tantas atividades e momentos. Vencer eleições requer um investimento constante. </p>
+    <p>No interior desse modelo, vale uma nova máxima: feita uma boa qualificação, a eleição está ganha. E a qualificação é um processo que antecede a eleição. Uma vez mais, vale recorrer a uma longa transcrição de Belisário Soares de Souza (1979, p. 27): </p>
+    <disp-quote>
+      <p>Feita uma boa qualificação, está quase decidida a eleição. Todos nós temos ouvido constantemente esta linguagem: "Não podemos dar a campanha eleitoral; a qualificação não é nossa." Outras vezes a seguinte: "Estamos seguros; a menos que os nossos amigos não mudem de partido e passem com seus votantes, temos a eleição ganha. Contamos na qualificação uma diferença de 200 ou 300 votos; temos, pois, sobra para todas as eventualidades."</p>
+      <p>
+        <xref ref-type="fn" rid="fn15a">
+          <sup>15</sup>
+        </xref>
+      </p>
+    </disp-quote>
+    <p>A qualificação - e não o censo definido pelo texto constitucional - define a composição do eleitorado e, dessa forma, o resultado da eleição. A Mesa mantém sua importância uma vez que lhe cabe identificar os votantes qualificados - não há títulos eleitorais e as provas são testemunhais -, como também lhe compete fazer a apuração. A Mesa, contudo, é controlada pela maioria. A medição das forças em confronto pode ser feita de antemão, dispensando a presença e confronto físico no dia da eleição. Feita uma boa qualificação, cabe à Mesa apenas referendar os resultados produzidos anteriormente.</p>
+    <p>Qualificar eleitores passa a ser uma atividade em si mesma, dando lugar ao aparecimento de um novo ator político, o "cabalista", cuja importância é ressaltada por Belisário (p. 27): </p>
+    <disp-quote>
+      <p>Nem sempre o processo de qualificação é assim fiscalizado. Muitas vezes falta a um dos partidos a espécie de cabalistas necessários e capazes deste serviço enfadonho e inglório, embora tão útil. Então acontece que partidos fortes, numerosos, esses [se] acham excluídos </p>
+      <p>
+        <italic>a priori</italic>
+      </p>
+      <p> de disputar a eleição primária (</p>
+      <p>
+        <italic>grifo no original</italic>
+      </p>
+      <p>).</p>
+    </disp-quote>
+    <p>Em outra passagem, o autor descreve melhor a atividade dos cabalistas. A clareza do raciocínio e suas implicações pedem sua transcrição:</p>
+    <disp-quote>
+      <p> A junta reúne-se cada ano e pode alterar toda a lista das qualificações anteriores. Nem sempre os partidos acompanham e fiscalizam com solicitude o trabalho da qualificação. É um processo tedioso para o qual poucos têm disposição e sobra de tempo. O votante absolutamente ignora o que se faz, nem lhe dá o menor cuidado, sua sorte e seu direito em questão no consistório da igreja matriz. São os cabalistas que excluem a este, que incluem aquele e têm todo o trabalho e gastos do fastidioso e infame processo (Belisário Soares de Souza, 1979, p. 26).</p>
+    </disp-quote>
+    <p>Feita e refeita constantemente, a qualificação é uma tarefa "enfadonha e inglória", isto é, a luta eleitoral dá ensejo a uma especialização de funções. Eleições ganham vida própria: o "cabalista" dedica-se a fazer o que os "grandes partidos", por vezes, não fazem.</p>
+    <p>Além dos "cabalistas", Belisário (p. 31) registra a atuação de outro personagem, o capanga, definido como </p>
+    <disp-quote>
+      <p>[...] um indivíduo que se lança nas lutas eleitorais em busca de salário, e muito mais ainda por gosto, por deleite próprio. Uma facção que traz arregimentados e assoldadados os principais capangas do lugar tem ganho imenso terreno. Se ela é comedida, o esquadrão tem ordem restrita de se apresentar desarmado, de não ofender gravemente aos adversários (salvo caso extremo que não se pode prever) sob pena de lhe ser recusada a paga. Os capangas são o ponto de apoio dos cabos de eleições; sustentam suas opiniões, atordoam os adversários, intimidam-nos, dão coragem, força e energia aos partidários.</p>
+    </disp-quote>
+    <p>A disputa eleitoral, portanto, pede atividades contínuas e passa a depender da intervenção de agentes especializados. Manter capangas e dependentes para as lutas eleitorais custa dinheiro. Belisário (p. 40) chega a afirmar que "um dos meios mais poderosos de angariar votos é comprá-los", notando a seguir que o "mal que isso derrama na sociedade é considerável, não só pela imoralidade do fato, como pelas fortunas que se arruínam e se dilapidam nesse pleito impróprio em que o amor próprio está em jogo".</p>
+    <p>Obviamente a ação dos "cabalistas" e dos capangas, assim como a compra de votos não podem ser tomados como norma. Muito provavelmente, tinham importância suplementar ou marginal na maioria das paróquias. Na realidade, a leitura atenta do texto de Belisário revela antes a heterogeneidade que a homogeneidade nas condições da disputa. Considere-se, por exemplo, o contraste entre a eleição ordeira e circunspecta da freguesia da Candelária e o pandemônio que a arraia-miúda cria na Freguesia de Sant'Ana (Belisário Soares de Souza, 1979, p. 32). Outro exemplo: o contraste entre o votante urbano e o rural, "venal e corrompido" no primeiro caso e "dependente e lastimável" no segundo. Entre estes últimos, vale notar, há inúmeras distinções, a mais importante delas entre os que "inspiram confiança" e os "suspeitos de traficar votos", enquanto o primeiro grupo "vota, come, bebe e embriaga-se livremente", os segundos "vem aos magotes vigiados, aquartelam-se em lugar seguro e já de antemão preparado" e os seus superiores "não o deixam só enquanto não tem votado". </p>
+    <p>As eleições, portanto, são disputadas sob as mais variadas condições. A variável central, como já notado, é a presença e a força relativa das diferentes facções. Agentes como o cabalista, o capanga e eleitores venais só podem agir onde há disputa por votantes, posto que, para recorrer uma vez mais a Belisário (1979, p. 33), </p>
+    <disp-quote>
+      <p>[...] se por qualquer motivo a eleição primária não é disputada, a mercadoria voto fica sem valor. A igreja acha-se deserta e nenhum votante aparece para exercer seu direito. A fim de salvarem-se as aparências, correm-se aos arredores da matriz, convocam-se os mais desocupados; algum cidadão de melhor vontade vota pelos ausentes.</p>
+    </disp-quote>
+    <p>Quando não há disputa, a eleição é mera formalidade, a "ata é arranjada" e, paradoxalmente, regular. Belisário (1979, p. 33 - <italic>grifo no original</italic>) assim explica o paradoxo: "Em regra geral, as eleições assim feitas<italic>, a bico de pena</italic>, como se diz, são as mais regulares, segundo as atas: não há nelas uma só formalidade preterida, tudo se fez há horas e com os preceitos das leis, regulamentos e avisos do governo; é difícil que ofereçam brechas para as nulidades."</p>
+    <p>A observação remete à distinção entre vício formal e fraude. A identificação de um erro formal não necessariamente comprova que os resultados tenham sido obtidos de forma fraudulenta. A relação, como observa Belisário, bem pode ser inversa. O mesmo autor nota, em mais de uma passagem, o uso estratégico dos erros formais para a manipulação da qualificação e, em casos extremos, para se impedir a derrota. Conforme afirma esse autor, não era incomum que os "mais frívolos pretextos" fossem usados para anular qualificações adversas. Outras estratégias comuns eram as "alterações nos livros de qualificação", "troca de nomes" e "o remédio heroico do desparecimento do livro na ocasião da eleição" (Belisário Soares de Souza, 1979, pp. 27 e 28). </p>
+    <p>A despeito de todas essas distinções, Belisário afirma que mesmo com os avanços feitos com a aprovação da Lei de 1846, o governo não perdeu a capacidade de influir diretamente na composição da lista de votantes e de eleitores. A qualificação deixou de estar sobre seu controle direto, mas não o resultado das disputas sobre a legalidade formal das mesmas. A Lei de 1846 deixou uma válvula aberta por meio da qual o ministério continuou a influir na composição do eleitorado. O artigo 118 da referida Lei determinava que o presidente da Província era "competente para conhecer das irregularidades cometidas nas eleições nas Câmaras Municipais e Juízes de Paz, e mandar reformar as que contiverem nulidade". Do ponto de vista prático, tal prerrogativa significa conferir a um agente do governo - o presidente da Província - a capacidade de escolher entre diferentes listas de votantes e de eleitores as que mais lhe conviessem. </p>
+    <p>A capacidade de o governo influir no resultado das eleições não nega a complexidade da empreitada. A partir de 1846, as eleições passaram a envolver uma gama razoável de atividades, assumindo um caráter bem mais variado do que usualmente se supõe. Tornou-se uma luta constante, uma vez que as eleições municipais em um ano se tornaram fundamentais para garantir o controle sobre o processo de qualificação. Obviamente, as eleições municipais eram precedidas de uma qualificação. As lutas eleitorais formam uma cadeia que retroage ao passado.</p>
+    <p>A qualificação é o centro da atividade eleitoral, envolvendo a revisão, contestação e anulação de listas adversas. Eleições eram ganhas pela manipulação da qualificação, daí porque Belisário, praticamente, abra seu livro com a afirmação "A base da eleição primária é a qualificação dos votantes" (p. 25), uma atividade fundamentalmente partidária.</p>
+    <disp-quote>
+      <p>A primeira recusa de um votante legítimo, ou a aceitação de um ilegítimo, provoca represálias do partido oposto, e a exigência do mal é a consequência infalível. De mais, os partidos são sempre inclinados a escusarem seus próprios vícios e a exagerarem os dos contrários; por maiores que tenham sido as traficâncias que tenham cometido, reputam ainda mais graves as alheias; e bem depressa se acomodam com a ideia de que ficariam em condições de inferioridade se pretendessem combater somente com armas leais os adversários para os quais todas as armas são boas (Belisário Soares de Souza, 1979, p. 30).</p>
+    </disp-quote>
+    <p>Partidos, portanto, disputam eleições. A competição entre eles se dá em torno do controle sobre a qualificação dos votantes e dos eleitores. Qualificar apenas aqueles que legalmente teriam direito a votar só se justificaria se houvesse garantias de que a oposição faria o mesmo. O raciocínio de Belisário pode ser traduzido para a linguagem da teoria dos jogos. "Escusa seus próprios vícios" é a estratégia dominante para ambos os partidos; combater "somente com armas leais" seria, sempre, uma estratégia dominada, a que recorreriam somente os "trouxas", os destituídos da razão partidária. </p>
+    <p>O recurso à manipulação alimenta o discurso que denuncia a corrupção eleitoral<xref ref-type="fn" rid="fn16a"><sup>16</sup></xref>. Adversários vencem eleições porque recorrem a meios escusos. Somente quando distantes da luta imediata pelo poder, os atores reconhecem que lançam mão dos mesmos recursos para vencer. A confissão é acompanhada da ressalva: agem assim apenas porque levados a tanto pelos adversários.</p>
+    <p>A natureza partidária do conflito eleitoral é a raiz do problema institucional a resolver. Conforme observa Ferreira de Rezende (1988, p. 143), a clivagem partidária estrutura a vida social do período.</p>
+    <disp-quote>
+      <p>Só quem viveu naquele tempo é que pode fazer uma verdadeira ideia dos ódios e da exaltação que dividia os partidos. Nem para mostrar é preciso dizer mais do que dizer que um liberal, em regra, não comprava na loja de um conservador, e vice-versa; que cada um dos partidos tinha seu médico, a sua botica e tudo o mais por esta forma; e que até na própria igreja era muito raro se confundissem. </p>
+    </disp-quote>
+    <p>Belisário (p. 45), um membro da ala "emperrada" do partido conservador, afirma que: "Embora muito longe de funcionar regularmente, não negaremos que entre nós existam partidos políticos, e que apenas haja facções, parcialidades sem nexo de interesses ou ideias, como pretendem alguns políticos pessimistas."</p>
+    <p>O peso da manipulação partidária das qualificações, em última análise, levou as eleições a perderem sua capacidade de funcionar como uma forma de medir forças. Como nota Belisário (p. 30), a manipulação sistemática das qualificações faz com que "um partido numeroso, vencido pelas artimanhas e traças do adversário inferior em número, é reputado incapaz e tende por este mesmo fato a enfraquecer-se". Paradoxalmente, o aperfeiçoamento da legislação, como afirma Ferreira de Rezende, torna as eleições menos verdadeiras. Pois se perde a relação com as forças em disputa, com o número.</p>
+    <p>***</p>
+    <p>O governo nunca foi derrotado eleitoralmente ao longo de todo o Segundo Reinado. A alternância partidária no poder foi sempre ditada pela intervenção do Poder Moderador. A elite política imperial empreendeu bom número de modificações na legislação eleitoral, visando assegurar a "verdade eleitoral". Nenhuma dessas reformas foi bem-sucedida. As denúncias de violência, manipulação e fraude são frequentes e dominam os debates políticos. Para os contemporâneos, eleições se caracterizariam pela reiterada falsificação dos princípios do governo representativo. </p>
+    <p>Eleições, contudo, não eram encenações ou eventos destituídos de significado. Tampouco se deve inferir do insucesso das reformas institucionais que o modo como as eleições foram travadas e ganhas pelo governo não tenha sido afetado pelo arranjo institucional. </p>
+    <p>As Instruções de 1824, por sua própria simplicidade, foram as mais desfavoráveis ao governo. Para vencer eleições, era preciso demonstrar ter mais força, reunir mais votantes que o adversário. Eleições eram, portanto, muito próximas à guerra. Ainda assim, não eram necessariamente resolvidas empregando-se violência. Se as forças em disputa tivessem como avaliar seu "poder de fogo", o confronto não ocorria. O mais fraco se retirava da disputa, não sem alegar que o fazia porque coagido a tanto. No mais das vezes, a identificação de uma das partes com o governo era suficiente para definir o lado mais forte. Em tese, diante de uma oposição forte e decidida a lutar, o governo não teria outro meio senão o emprego da violência para vencer as eleições. </p>
+    <p>A cristalização da clivagem partidária acompanha o início do Segundo Reinado. A divergência entre liberais e conservadores é profunda e divide as elites do país entre os favoráveis e contrários a medidas específicas. A própria legislação eleitoral se torna matéria partidária e as leis propostas por cada um dos partidos segue seu ideário (Dolnikoff, 2009 e 2011). Em 1842, os conservadores alteram a legislação dotando o Gabinete dos meios para controlar as eleições em todas as paróquias, pois, como nota José Murilo de Carvalho (2007, p. 180), com a aprovação desse decreto, "bastava o ministério trocar os presidentes da província e os chefes de polícia que a eleição estava ganha". </p>
+    <p>Do ponto de vista prático, o mecanismo de controle tinha caráter "suprapartidário", isto é, favorecia o governo a despeito de quem o controlasse. Assim, os liberais recorrem aos meios que haviam condenado para vencer as eleições de 1844. Em seu favor, registre-se que os liberais reformularam a legislação eleitoral tão logo tenham chegado ao poder.</p>
+    <p>A literatura especializada falha em notar as alterações contidas na Lei de 1846. O delegado é sacado da Junta de Qualificação e da Mesa. O governo perde o instrumento com que contara até então para determinar de forma líquida e certa o resultado das eleições. As alterações feitas não foram de fachada ou sem consequências. As elites políticas, ou pelo menos parte delas, reconhecem a necessidade de que as eleições permitem avaliar forças efetivas de cada uma das partes. A solução institucional buscada é sofisticada e elaborada. Reconhece-se a legitimidade da minoria, cuja participação na constituição da Junta Qualificadora e na Mesa é assegurada. Além disso, busca-se dotar o Juiz de Paz da independência necessária para dirigir os trabalhos eleitorais a salvo das injunções e vontades do governo.</p>
+    <p>A fórmula adotada não é uma cópia ou uma adesão a contragosto dos ideais do governo representativo. O problema enfrentado, organizar eleições disputadas por partidos ou facções, não é tarefa simples ou para a qual se possa encontrar resposta no interior dos princípios do governo representativo. </p>
+    <p>O ponto pede ênfase: o modelo proposto é sofisticado e original. Implicitamente, a legitimidade da minoria é reconhecida e assegurada. Pode-se afirmar que a legislação contém um princípio consociativo, uma garantia de representação e participação da minoria. Que a inovação institucional tenha soçobrado não decorre de uma incompatibilidade de fundo entre a realidade social do país e as ideias liberais. Do ponto de vista institucional, estamos diante de uma inovação notável. No que se refere à regulação das práticas eleitorais, as elites brasileiras se mostraram avançadas. </p>
+    <p>As reformas eleitorais empreendidas ao longo do período imperial - e não apenas as analisadas neste trabalho - têm efeitos paradoxais. O paradoxo é enunciado com clareza por Ferreira de Rezende (1988, p. 109): as eleições eram boas quando a legislação era péssima e pioraram à medida que a legislação foi sendo aperfeiçoada. </p>
+    <p>Na reconstituição das primeiras eleições, as reputadas de boas e puras, duas variáveis contribuem para o juízo positivo: as derrotas do governo e a própria simplicidade da legislação. Por isso, Ferreira de Rezende (p. 109) conclui que "quem vencia era sempre a maioria: isto é, quem tinha mais gente e por consequência mais força". </p>
+    <p>Nessas condições, eleições e violência não se distinguem. Contam-se eleitores como um substituto para o confronto aberto. Se as forças das partes são conhecidas e há uma que predomine de forma clara, a minoria se retira, não sem antes provocar algumas escaramuças para que possa arguir ter sido derrotada porque coagida. A alegação de fraude se insere na mesma lógica. </p>
+    <p>Eleições desvirtuam-se quando o governo passa a intervir deliberadamente no processo. Liberais e conservadores reconhecem que o governo tem o direito de influenciar a opinião pública e, dessa forma, vencer a eleição. A distinção sutil e difícil de ser feita é aquela que demarca e distingue a influência legítima da ilegítima. Essa distinção, em última análise, deve ser feita pelas autoridades legítimas que, no caso de um governo partidário, são as partes da disputa.</p>
+    <p>A questão de fundo, portanto, tem menos a ver com a qualidade da legislação ou seu grau de simplicidade. A contestação da legitimidade dos resultados eleitorais decorre da disputa partidária por votantes. Cada partido tem razões para reclamar para si o título de verdadeiro intérprete da vontade destes. Se derrotados, é porque os adversários se valeram de recursos espúrios. </p>
+    <p>
+      <bold>Bibliografia</bold>
+    </p>
+    <p>ANAIS [da Câmara dos Deputados. Brasil]. Vários anos. Disponíveis em: &lt;<ext-link ext-link-type="uri" xlink:href="http://imagem.camara.gov.br/dc_20b.asp?selCodColecaoCsv=A&amp;Datain">http://imagem.camara.gov.br/dc_20b.asp?selCodColecaoCsv=A&amp;Datain</ext-link>&gt;. Acesso em: 13 fev. 2014.</p>
+    <p content-type="ref-to-delete">BAGEHOT, W. 2001. <italic>The English Constitution</italic>. New York: Cambridge University Press.  </p>
+    <p content-type="ref-to-delete">BARMAN, R. J. 1988. <italic>Brazil: the forging of Nation 1798-1852</italic>. Stanford: Stanford University Press.  </p>
+    <p content-type="ref-to-delete">BELISÁRIO SOARES DE SOUZA, F. 1979. <italic>O sistema eleitoral no Império</italic>. Brasília: Senado Federal. </p>
+    <p content-type="ref-to-delete">BUARQUE DE HOLANDA, S. 1972. "São Paulo". In: <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel. </p>
+    <p content-type="ref-to-delete">CARVALHO, J. M. 1988. <italic>Teatro de sombras</italic>: a política imperial. São Paulo: Vértice.  </p>
+    <p content-type="ref-to-delete">______. 2007. <italic>Dom Pedro II</italic>. São Paulo: Cia das Letras.  </p>
+    <p content-type="ref-to-delete">COSTA PORTO, W. 2002. <italic>O voto no Brasil</italic>. 2. ed. Rio de Janeiro: Topbooks. </p>
+    <p content-type="ref-to-delete">DOLNIKOFF, M. 2008. "Império e governo representativo: uma releitura". <italic>Cadernos CRH</italic>, v. 21, n. 52, pp. 13-23. </p>
+    <p content-type="ref-to-delete">______. 2009. "Representação na monarquia brasileira". <italic>Almanack Brasiliense</italic>, n. 9, pp. 41-53. </p>
+    <p content-type="ref-to-delete">DOLNIKOFF, M. et al. 2011. "Representação política no Império: crítica à ideia do falseamento institucional". In: LAVALLE, A. G. (org.). <italic>O horizonte da política</italic>. São Paulo: Ed. Unesp. pp. 97-142. </p>
+    <p content-type="ref-to-delete">FAORO, R. 1976. <italic>Os donos do poder</italic>. 3. ed. revisada. Porto Alegre: Globo. </p>
+    <p content-type="ref-to-delete">FERRAZ, S. E. 2012. <italic>O Império revisitado</italic>: instabilidade ministerial, Câmara dos Deputados e Poder Moderador (1840-1889). Tese de doutorado. Departamento de Ciência Política da Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo. </p>
+    <p content-type="ref-to-delete">FERREIRA DE REZENDE, F. P. 1988. <italic>Minhas recordações</italic>. São Paulo: Edusp. </p>
+    <p content-type="ref-to-delete">GRAHAM, R. 1990. <italic>Patronage and politics in nineteenth-century Brazil</italic>. Stanford: Stanford University Press.  </p>
+    <p content-type="ref-to-delete">HANHAM, H. 1978. <italic>Elections and party management</italic>. Politics in the time of Disraeli and Gladstone. 2. ed. Sussex: The Harvester Press.  </p>
+    <p content-type="ref-to-delete">HOFSTADTER, R. 1979.<italic> The idea of party system</italic>. Berkeley: University of California Press.  </p>
+    <p content-type="ref-to-delete">IGLÉSIAS, F. 1972. "Minas Gerais". In: BUARQUE DE HOLANDA, S. <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel. </p>
+    <p content-type="ref-to-delete">JAVARI, [Barão de]. 1962. <italic>Organizações e programas ministeriais. Regime parlamentar no Império</italic>. 2. ed. Rio de Janeiro. Ministério da Justiça e Negócios Interiores, Arquivo Nacional. </p>
+    <p content-type="ref-to-delete">KINZO, M. D. G. 1979. <italic>Representação política e sistema eleitoral no Brasil</italic>. São Paulo: Símbolo.  </p>
+    <p content-type="ref-to-delete">MANIN, B. 1997. <italic>The principles of representative government</italic>. New York: Cambridge University Press.  </p>
+    <p content-type="ref-to-delete">MASCARENHAS, N. L. 1961. <italic>Um jornalista do império (Firmino Rodrigues Silva</italic>). São Paulo: Companhia Editora Nacional.  </p>
+    <p content-type="ref-to-delete">MOORE, D. C. 1976. <italic>The politics of deference</italic>. New York: The Harvester Press.  </p>
+    <p content-type="ref-to-delete">MORGAN, E. S. 1988<italic>. Inventing the people</italic>. New York: Norton &amp; Company.  </p>
+    <p content-type="ref-to-delete">NABUCO, J. 1997. <italic>Um estadista do Império</italic>. Rio de Janeiro: Topbooks. </p>
+    <p content-type="ref-to-delete">NUNES LEAL, V. 1993. <italic>Coronelismo, enxada e voto</italic>. 6. ed. São Paulo: Alfa-Omega. </p>
+    <p content-type="ref-to-delete">PEREIRA DE CASTRO, P. 1972a. "A experiência republicana". In: BUARQUE DE HOLANDA, S. <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel. </p>
+    <p content-type="ref-to-delete">______. 1972b. "Política e administração, de 1840 a 1848". In: BUARQUE DE HOLANDA, S. <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel. </p>
+    <p content-type="ref-to-delete">POSADA-CARBO, E. 2000. "Electoral juggling: a comparative history of the corruption of suffrage in Latin America, 1830-1930". <italic>Journal of Latin American Studies</italic>, n. 32, pp. 611-44.  </p>
+    <p content-type="ref-to-delete">PRZEWORSKI, A. 2010. <italic>Democracy and the limits of self-government</italic>. New York: Cambridge University Press.  </p>
+    <p content-type="ref-to-delete">ROSANVALLON, P. 1999. <italic>La consagración del ciudadano</italic>. Historia del sufrágio universal em Francia. San Juan: Instituto Mora.  </p>
+    <p content-type="ref-to-delete">______. 2010. <italic>El pueblo inalcanzable</italic>. Historia de le representación democrática en Francia. San Juan: Instituto Mora. </p>
+    <p content-type="ref-to-delete">SABA, R. N. P. 2011. "As 'eleições do cacete' e o problema da manipulação eleitoral no Brasil monárquico". <italic>Almanack</italic>, Guarulhos, n. 2, pp. 126-45.  </p>
+    <p content-type="ref-to-delete">TARQUÍNIO DE SOUZA, O. 1988. <italic>História dos fundadores do Império</italic>: Diogo Antonio Feijó. São Paulo: Edusp.  </p>
+    <p>
+      <fn id="nt">
+        <label>*</label>
+        <p> Devo agradecer a Angela Alonso, Mirian Dolnikoff e Sergio Ferraz pelas intermináveis conversas sobre a política imperial. Agradeço também aos alunos do curso Eleições e Governo Representativo (versão 2013) pela leitura crítica de versão anterior deste texto. A pesquisa para este trabalho foi parcialmente financiada pela Fapesp (Projeto nº 2011/08536-1). </p>
+      </fn>
+      <fn id="fn1a">
+        <label>1</label>
+        <p> As dificuldades para compreender as eleições do Império e seu contexto são evidentes. Kinzo (1979, p. 71), por exemplo, chega a afirmar que "a própria lei liberava as práticas de falsear as eleições" e que um dos problemas da época era a "institucionalização da fraude". </p>
+      </fn>
+      <fn id="fn2a">
+        <label>2</label>
+        <p> O tripé violência, manipulação e fraude é ressaltado por Przeworski (2010). </p>
+      </fn>
+      <fn id="fn3a">
+        <label>3</label>
+        <p> Sob a égide desse decreto, foram disputadas cinco eleições para a Câmara dos Deputados; duas no Primeiro Reinado, duas na Regência e uma no Segundo Reinado (1840). De acordo com as Instruções, eleições deveriam ter lugar no terceiro ano da legislatura. O Decreto de 1842 mantém o mesmo preceito. Somente com a aprovação da Lei nº 387, de 1846, é que as eleições passam a correr no último ano da legislatura. </p>
+      </fn>
+      <fn id="fn4a">
+        <label>4</label>
+        <p> Como dito, esses contrastes são frequentes e se fazem presentes tanto na discussão da aprovação do Lei do Terço (de 1875) como nos debates que cercam a aprovação da Lei Saraiva (de 1881). </p>
+      </fn>
+      <fn id="fn5a">
+        <label>5</label>
+        <p> Muitos comentadores tendem a perder de vista a datação dos comentários de Belisário que segue de perto as mudanças na legislação e seus efeitos sobre as práticas. </p>
+      </fn>
+      <fn id="fn6a">
+        <label>6</label>
+        <p> A esse respeito, consultar Tarquínio de Souza (1988, pp. 33 e ss.). Ver também Buarque de Holanda (1972, pp. 469 e ss.) e Iglésias (1972, pp. 407 e ss.). </p>
+      </fn>
+      <fn id="fn7a">
+        <label>7</label>
+        <p> A inspiração partidária do decreto de 1842 é notada por diversos autores, como Costa Porto (2002, p. 67) e Nunes Leal (1993, p. 220), para quem a principal inovação do decreto foi "a qualificação prévia dos votantes e dos elegíveis por uma junta composta do juiz de paz, do pároco e da autoridade policial. A mesa eleitoral passou a ser composta por dezesseis cidadãos escolhidos por sorte entre os elegíveis". </p>
+      </fn>
+      <fn id="fn8a">
+        <label>8</label>
+        <p> Agradeço a Roberta S. Nicolete por ter chamado a minha atenção para esta passagem. </p>
+      </fn>
+      <fn id="fn9a">
+        <label>9</label>
+        <p> Vale recuperar a defesa de Nabuco de Araújo, então presidente da Província de São Paulo, contra a acusação de ter favorecido a eleição de Pimenta Bueno ao Senado: "Fora absurdo que o governo deixasse os seus amigos extraviados, à mercê, à disposição dos seus inimigos declarados; fora absurdo ainda que o governo não interviesse para neutralizar as ambições que podem dar ganho de causa à oposição por causa de divergências. Isto importaria em suicídio, ou imporia o princípio que o governo deve viver independente das opiniões políticas" (transcrito por Nabuco, 1997, p. 138). </p>
+      </fn>
+      <fn id="fn10a">
+        <label>10</label>
+        <p> Victor Nunes Leal (1993, p. 221) emprega esses termos e defere a explicação do modo de composição da Junta e da Mesa para uma longa nota (nº 10, p. 221). </p>
+      </fn>
+      <fn id="fn11a">
+        <label>11</label>
+        <p> Para entender a norma, é importante ter em mente a distinção entre votantes e eleitores. O número de eleitores por local de votação tendia a ser pequeno, inferior, em muitos casos, aos quatro previstos na proposta. </p>
+      </fn>
+      <fn id="fn12a">
+        <label>12</label>
+        <p> Difícil não reproduzir o diálogo que se segue: "Sr. F. Leite: 'Nem o papa.' Sr. Ferraz: 'Os concílios.' Sr. Andrada Machado: 'Infalível só Deus.' O Sr. Barros Pimentel: 'Isto é heresia, Sr. D. Manoel.' O Sr. Ferraz: 'E ficarei também excomungado.'" </p>
+      </fn>
+      <fn id="fn13a">
+        <label>13</label>
+        <p> Digo isso porque a tendência é atribuir essa capacidade a mecanismos disponíveis na vigência dos decretos de 1824 ou 1842, revogados em 1846. </p>
+      </fn>
+      <fn id="fn14a">
+        <label>14</label>
+        <p> O autor arremata contrastando as expectativas à realidade: "Entretanto, na prática, nada mais defeituoso" (Belisário Soares de Souza, 1979, pp. 25 e 26). </p>
+      </fn>
+      <fn id="fn15a">
+        <label>15</label>
+        <p> "A base da eleição primária é a qualificação dos votantes" (Belisário Soares de Souza (1979, p. 25). </p>
+      </fn>
+      <fn id="fn16a">
+        <label>16</label>
+        <p> Ver o trabalho seminal de Posada-Carbo (2000) sobre o tema. Note-se, no entanto, que Posada-Carbo percebe, mas deixa de explorar, o fato de que a denúncia da corrupção eleitoral é sempre feita pelos derrotados e que, muitos deles, se beneficiaram no passado das práticas que denunciam.</p>
+      </fn>
+    </p>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <element-citation publication-type="book">
+          <source>ANAIS [da Câmara dos Deputados. Brasil]: Vários anos</source>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>BAGEHOT, W. 2001. <italic>The English Constitution</italic>. New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The English Constitution</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BAGEHOT</surname>
+              <given-names>W.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>BARMAN, R. J. 1988. <italic>Brazil: the forging of Nation 1798-1852</italic>. Stanford: Stanford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Brazil: the forging of Nation 1798-1852</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BARMAN</surname>
+              <given-names>R. J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>BELISÁRIO SOARES DE SOUZA, F. 1979. <italic>O sistema eleitoral no Império</italic>. Brasília: Senado Federal.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O sistema eleitoral no Império</source>
+          <date>
+            <year>1979</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BELISÁRIO SOARES DE SOUZA</surname>
+              <given-names>F.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>BUARQUE DE HOLANDA, S. 1972. "São Paulo". In: <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>História geral da civilização brasileira</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BUARQUE DE HOLANDA</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <comment>Tomo II</comment>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>CARVALHO, J. M. 1988. <italic>Teatro de sombras</italic>: a política imperial. São Paulo: Vértice.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Teatro de sombras: a política imperial</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARVALHO</surname>
+              <given-names>J. M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>______. 2007. <italic>Dom Pedro II</italic>. São Paulo: Cia das Letras.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Dom Pedro II</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARVALHO</surname>
+              <given-names>J. M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>COSTA PORTO, W. 2002. <italic>O voto no Brasil</italic>. 2. ed. Rio de Janeiro: Topbooks.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O voto no Brasil</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COSTA PORTO</surname>
+              <given-names>W.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>DOLNIKOFF, M. 2008. "Império e governo representativo: uma releitura". <italic>Cadernos CRH</italic>, v. 21, n. 52, pp. 13-23.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Império e governo representativo: uma releitura</article-title>
+          <source>Cadernos CRH</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>13</fpage>
+          <lpage>23</lpage>
+          <issue>52</issue>
+          <volume>21</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DOLNIKOFF</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>______. 2009. "Representação na monarquia brasileira". <italic>Almanack Brasiliense</italic>, n. 9, pp. 41-53.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Representação na monarquia brasileira</article-title>
+          <source>Almanack Brasiliense</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>41</fpage>
+          <lpage>53</lpage>
+          <issue>9</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DOLNIKOFF</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>DOLNIKOFF, M. et al. 2011. "Representação política no Império: crítica à ideia do falseamento institucional". In: LAVALLE, A. G. (org.). <italic>O horizonte da política</italic>. São Paulo: Ed. Unesp. pp. 97-142.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O horizonte da política</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <fpage>97</fpage>
+          <lpage>142</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DOLNIKOFF</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>LAVALLE</surname>
+              <given-names>A. G.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>FAORO, R. 1976. <italic>Os donos do poder</italic>. 3. ed. revisada. Porto Alegre: Globo.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Os donos do poder</source>
+          <date>
+            <year>1976</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FAORO</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>FERRAZ, S. E. 2012. <italic>O Império revisitado</italic>: instabilidade ministerial, Câmara dos Deputados e Poder Moderador (1840-1889). Tese de doutorado. Departamento de Ciência Política da Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>O Império revisitado: instabilidade ministerial, Câmara dos Deputados e Poder Moderador (1840-1889)</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FERRAZ</surname>
+              <given-names>S. E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>FERREIRA DE REZENDE, F. P. 1988. <italic>Minhas recordações</italic>. São Paulo: Edusp.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Minhas recordações</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FERREIRA DE REZENDE</surname>
+              <given-names>F. P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>GRAHAM, R. 1990. <italic>Patronage and politics in nineteenth-century Brazil</italic>. Stanford: Stanford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Patronage and politics in nineteenth-century Brazil</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GRAHAM</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>HANHAM, H. 1978. <italic>Elections and party management</italic>. Politics in the time of Disraeli and Gladstone. 2. ed. Sussex: The Harvester Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Elections and party management: Politics in the time of Disraeli and Gladstone</source>
+          <date>
+            <year>1978</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HANHAM</surname>
+              <given-names>H.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>HOFSTADTER, R. 1979.<italic> The idea of party system</italic>. Berkeley: University of California Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The idea of party system</source>
+          <date>
+            <year>1979</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HOFSTADTER</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>IGLÉSIAS, F. 1972. "Minas Gerais". In: BUARQUE DE HOLANDA, S. <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>História geral da civilização brasileira</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>IGLÉSIAS</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>BUARQUE DE HOLANDA</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <comment>Tomo II</comment>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>JAVARI, [Barão de]. 1962. <italic>Organizações e programas ministeriais. Regime parlamentar no Império</italic>. 2. ed. Rio de Janeiro. Ministério da Justiça e Negócios Interiores, Arquivo Nacional.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Organizações e programas ministeriais: Regime parlamentar no Império</source>
+          <date>
+            <year>1962</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JAVARI</surname>
+              <given-names>Barão de</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>KINZO, M. D. G. 1979. <italic>Representação política e sistema eleitoral no Brasil</italic>. São Paulo: Símbolo.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Representação política e sistema eleitoral no Brasil</source>
+          <date>
+            <year>1979</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KINZO</surname>
+              <given-names>M. D. G.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>MANIN, B. 1997. <italic>The principles of representative government</italic>. New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The principles of representative government</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MANIN</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>MASCARENHAS, N. L. 1961. <italic>Um jornalista do império (Firmino Rodrigues Silva</italic>). São Paulo: Companhia Editora Nacional.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Um jornalista do império (Firmino Rodrigues Silva)</source>
+          <date>
+            <year>1961</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MASCARENHAS</surname>
+              <given-names>N. L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>MOORE, D. C. 1976. <italic>The politics of deference</italic>. New York: The Harvester Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The politics of deference</source>
+          <date>
+            <year>1976</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MOORE</surname>
+              <given-names>D. C.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>MORGAN, E. S. 1988<italic>. Inventing the people</italic>. New York: Norton &amp; Company.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Inventing the people</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MORGAN</surname>
+              <given-names>E. S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>NABUCO, J. 1997. <italic>Um estadista do Império</italic>. Rio de Janeiro: Topbooks.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Um estadista do Império</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NABUCO</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>NUNES LEAL, V. 1993. <italic>Coronelismo, enxada e voto</italic>. 6. ed. São Paulo: Alfa-Omega.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Coronelismo, enxada e voto</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NUNES LEAL</surname>
+              <given-names>V.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>PEREIRA DE CASTRO, P. 1972a. "A experiência republicana". In: BUARQUE DE HOLANDA, S. <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>História geral da civilização brasileira</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEREIRA DE CASTRO</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>BUARQUE DE HOLANDA</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <comment>Tomo II</comment>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>______. 1972b. "Política e administração, de 1840 a 1848". In: BUARQUE DE HOLANDA, S. <italic>História geral da civilização brasileira</italic>. Tomo II, Vol. 2. 3. ed. São Paulo: Difel.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>História geral da civilização brasileira</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEREIRA DE CASTRO</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>BUARQUE DE HOLANDA</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <comment>Tomo II</comment>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>POSADA-CARBO, E. 2000. "Electoral juggling: a comparative history of the corruption of suffrage in Latin America, 1830-1930". <italic>Journal of Latin American Studies</italic>, n. 32, pp. 611-44.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Electoral juggling: a comparative history of the corruption of suffrage in Latin America, 1830-1930</article-title>
+          <source>Journal of Latin American Studies</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>611</fpage>
+          <lpage>44</lpage>
+          <issue>32</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>POSADA-CARBO</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>PRZEWORSKI, A. 2010. <italic>Democracy and the limits of self-government</italic>. New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Democracy and the limits of self-government</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PRZEWORSKI</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>ROSANVALLON, P. 1999. <italic>La consagración del ciudadano</italic>. Historia del sufrágio universal em Francia. San Juan: Instituto Mora.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>La consagración del ciudadano: Historia del sufrágio universal em Francia</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ROSANVALLON</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <mixed-citation>______. 2010. <italic>El pueblo inalcanzable</italic>. Historia de le representación democrática en Francia. San Juan: Instituto Mora.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>El pueblo inalcanzable: Historia de le representación democrática en Francia</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ROSANVALLON</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <mixed-citation>SABA, R. N. P. 2011. "As 'eleições do cacete' e o problema da manipulação eleitoral no Brasil monárquico". <italic>Almanack</italic>, Guarulhos, n. 2, pp. 126-45.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>As 'eleições do cacete' e o problema da manipulação eleitoral no Brasil monárquico</article-title>
+          <source>Almanack</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <fpage>126</fpage>
+          <lpage>45</lpage>
+          <issue>2</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SABA</surname>
+              <given-names>R. N. P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B34">
+        <mixed-citation>TARQUÍNIO DE SOUZA, O. 1988. <italic>História dos fundadores do Império</italic>: Diogo Antonio Feijó. São Paulo: Edusp.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>História dos fundadores do Império: Diogo Antonio Feijó</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>TARQUÍNIO DE SOUZA</surname>
+              <given-names>O.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

@@ -1,0 +1,57 @@
+{
+  "pid": "S0101-33002024000300409",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "b553d80e09502c9697b055a0545ab25bca0650f990353620f73746b598c1fa00",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Comparative Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Mexico",
+    "paper_uses_survey_data": "runs_original_survey",
+    "uses_original_dataset": "original_survey",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "sex_income_age_work_status",
+        "variable_description": "Sexo, renda, idade e situação de trabalho dos respondentes"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "paid_work_and_care_changes",
+        "variable_description": "Mudanças em trabalho remunerado, renda e cuidado durante a pandemia"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 2562,
+    "sample_size_quote": "The sample included 2,562 men and women over 18 residing in households of different socioeconomic levels.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O artigo combina survey telefônico original na área metropolitana do Vale do México com grupos focais para descrever efeitos da pandemia sobre trabalho e cuidado. Há análise quantitativa descritiva e evidência qualitativa, mas sem desenho causal ou testes de significância claros."
+  },
+  "raw_response_path": null
+}

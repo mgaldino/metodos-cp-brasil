@@ -1,0 +1,157 @@
+{
+  "pid": "S0034-73292025000200604",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "378d5174a5c6c76cf625e5e79f1e7b4870f1f1eeaef76ec1631fc8410a316f98",
+  "classification_hash": "0c4672c050e753c9f17191fcee2ce092970dc03b653edbdc4729a78439754cad",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "development. In the past two decades, as economic globalization has progressed, China’s economic activities in Southeast Asia, Africa, and Latin America have expanded, leading to increased infrastructure investment and construction cooperation across several countries. The cooperation model has evolved from traditional engineering",
+      "classification_value": [
+        {
+          "variable_name": "china_transport_infrastructure_projects",
+          "variable_description": "Projetos chineses de infraestrutura de transporte na América Latina"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "2021). Transportation infrastructure is a vital cornerstone of socio-economic development, playing a significant role in driving economic progress at national, regional , and global levels. Efficient transportation infrastructure can reduce transportation and logistics costs while increasing the flow of resource factors—human, material,",
+      "classification_value": [
+        {
+          "variable_name": "latin_american_economic_development",
+          "variable_description": "Desenvolvimento econômico e conectividade regional na América Latina"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The original-dataset category is specific, but supporting data-construction evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "procure_original_data"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "build roads first,” reflecting the government’s emphasis on infrastructure. In the early 1950s, China initiated large-scale infrastructure construction, with landmark projec ts including the Wanshou Mountain Reservoir, South China University Town, and Dalian Port. The launch of the first Five-Year Plan in",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "low",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "costs and increasing economic competitiveness. Many infrastructure projects simultaneously promote connectivity within and between regions. Examples include the Panama Ca nal p orts, Chancay Port in Peru, and international airports. The Road Expansion Project No. 32 in Costa Rica, currently under construction",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 3 priority fidelity issue(s): 0 contradicted and 3 not found in text; overall status pass_with_warnings."
+}

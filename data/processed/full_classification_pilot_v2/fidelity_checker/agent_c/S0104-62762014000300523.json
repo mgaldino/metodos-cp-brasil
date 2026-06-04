@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-62762014000300523",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "b77d579656b4d0685346ceeaee95dfd747446fbd3066d70a17b64a38f39a95c7",
+  "classification_hash": "9b479f401e4757777d1e50c230b53bc5f0d73cb28a8d0b2bfb9b800c02659abf",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "a favor ou contra: Pena de morte/ Sexo/ Grau de instrução/ Faixa etária/ Religião/ Natureza do município/ Região. Observações: *Apenas na pesqu isa de 2008 há a categoria de resposta \"nem a favor nem contra\"/ **Nos gráficos de opinião por sexo, grau",
+      "classification_value": [
+        {
+          "variable_name": "survey_source_year",
+          "variable_description": "Fontes Datafolha, CNI/Ibope, FPA e CESOP/FGV em diferentes anos"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Este Encarte Tendências apresenta as opiniões dos brasileiros sobre questões de segurança pública e comportamento social entre meados dos anos 1990 e 2012 e está organizado em três seções. A primeira delas aborda dimensões relacionadas à violência urbana - as percepções dos",
+      "classification_value": [
+        {
+          "variable_name": "public_security_and_behavior_opinions",
+          "variable_description": "Opiniões sobre segurança pública, punição, drogas, aborto, cotas e comportamento social"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "2012 e está organizado em três seções. A primeira delas aborda dimensões relacionadas à violência urbana - as percepções dos entrevistado s sobre as causas da criminalidade e suas medidas punitivas, como a redução da maioridade penal e a pena de morte.",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status fail."
+}

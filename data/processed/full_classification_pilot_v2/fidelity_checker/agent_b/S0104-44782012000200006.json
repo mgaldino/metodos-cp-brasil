@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-44782012000200006",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "256f8894d93dda2e76c292d4c09db365d007ee7e383f16e5fe29e6074f457db6",
+  "classification_hash": "5921e34265415f7379e963593b2b39dd958f753b112138fc8bdfb8665d10647b",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "Nineteenth-century wars",
+          "variable_description": "Military conflicts and mobilization after independence."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "DO SÉCULO XIX\" Les guerres oubliées du Pérou: la formation de l'État et de l'imaginaire national IDoutora em História pel a Sta te University of New York (Estados Unidos) e Professora da Universidade da Califórnia, campus de Santa Bárbara (Estados Unidos) (mendez@history.ucsb.edu)",
+      "classification_value": [
+        {
+          "variable_name": "State formation and national imaginary",
+          "variable_description": "Formation of the Peruvian state and national imagination."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "desaparece como fuente de legitimación del Estado\" (CENTENO, 2002, p. 191). Contrariamente, sin embargo, la guerra no fue sól o el m étodo más común para tomar el control del Estado después de la independencia, sino una forma legítima de hacer política11.",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "caudillos y \"tiranías\" en la literatura anglosajona, una imagen que estos países han hecho suya. Probablemente debido a la i nfluencia de Domingo Faustino Sarmiento y a sus epígonos, Argentina ha sido considerada (equivocadamente) el paradigma del \"caudillismo latinoamericano\"30. Como una reacción",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "tomar el control del Estado después de la independencia, sino una forma legítima de hacer política11. Más aún, la guerra como meca nismo de acceso al Estado fue lo que diferenció las nociones decimonónicas post-independientes de Estado y política con respecto a",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 1 priority fidelity issue(s): 0 contradicted and 1 not found in text; overall status pass_with_warnings."
+}

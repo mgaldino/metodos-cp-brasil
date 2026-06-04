@@ -1,0 +1,61 @@
+{
+  "pid": "S0102-69092013000300008",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "a3bdd79e00654fc01de667f994026b36b89912bbbb8db6537e7b5e685cc79cf0",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Other",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "professional_group",
+        "variable_description": "Advocacia e magistratura paulistas"
+      },
+      {
+        "variable_name": "gender_and_difference_markers",
+        "variable_description": "Marcadores de gênero, diferença e diversidade"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "professional_stratification",
+        "variable_description": "Estratificação e trajetórias profissionais no direito paulista"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 200,
+    "sample_size_quote": "O terceiro tópico focaliza a nova forma de organização da advocacia e a estratificação da prática privada a partir de dados quantitativos coletados nos sites de duzentas sociedades de advogados em São Paulo.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O artigo combina dados quantitativos coletados em sites de 200 sociedades de advogados com entrevistas qualitativas. A evidência é mista e descritiva, sem modelo estatístico causal."
+  },
+  "raw_response_path": null
+}

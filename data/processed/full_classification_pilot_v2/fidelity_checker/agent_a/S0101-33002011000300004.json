@@ -1,0 +1,147 @@
+{
+  "pid": "S0101-33002011000300004",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "3c1b553c56941f4e31eac838e98b1a9ead828fec7d08adb8b6b11bc237d02f57",
+  "classification_hash": "7e0028644b64d24283c38c5a0ec6a00b8fd2a44fd61c049e7ac4b5c63a7e76b9",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "quais grupos sociais terão maiores chances de aproveitar essas oportunidades e quais deverão ser apoiados por políticas específicas. Assim, os efeito s das mudanças recentes no arcabouço institucional e nos níveis de investimento sobre a qualificação da força de trabalho, a distribuição",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status fail."
+}

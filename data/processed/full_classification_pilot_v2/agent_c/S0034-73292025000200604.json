@@ -1,0 +1,57 @@
+{
+  "pid": "S0034-73292025000200604",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "378d5174a5c6c76cf625e5e79f1e7b4870f1f1eeaef76ec1631fc8410a316f98",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "International Relations",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "multiple_countries",
+    "single_region": "single_region",
+    "countries_of_focus": null,
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "procure_original_data",
+    "seeks_determinants": false,
+    "main_causal_research_design": "Other",
+    "other_research_design": "project data study with qualitative case studies",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "china_transport_infrastructure_projects",
+        "variable_description": "Projetos chineses de infraestrutura de transporte na América Latina"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "latin_american_economic_development",
+        "variable_description": "Desenvolvimento econômico e conectividade regional na América Latina"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O texto declara combinação de métodos quantitativos e qualitativos, usa base de projetos China-América Latina e estudos de caso. A inferência sobre impacto econômico é descritiva/interpretativa, sem regressão, significância estatística ou identificação causal."
+  },
+  "raw_response_path": null
+}

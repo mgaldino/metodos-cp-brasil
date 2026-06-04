@@ -1,0 +1,169 @@
+{
+  "pid": "S1981-38212019000100200",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "84481a7bb70abc563f86d60a984980eb1dcc8db2927effbaeee5e114892f9358",
+  "classification_hash": "79bbc008745ebcddde5bc4f0975667346f80e366c4f7783c93c56792b60455ce",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "Brasília and the remaining 338,096 entering municipal legislatures (Câmaras de Vereadores). Our units of analysis are municipality-years, of which we have 74,040 observations over the course of 13 electoral cycles. Our analysis also includes the votes received by the 85% of candidates",
+      "classification_value": 74040
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "Brasília and the remaining 338,096 entering municipal legislatures (Câmaras de Vereadores). Our units of analysis are municipality-years, of which we have 74,040 observations over the course of 13 electoral cycles. Our analysis also includes the votes received by the 85% of candidates",
+      "classification_value": "Our units of analysis are municipality-years, of which we have 74,040 observations over the course of 13 electoral cycles."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "if left parties perform best in fragmented and polarized political systems ( GROSS and SIGELMAN, 1984 ). Finally, the ‘s ocial inclusion’ model sees redistributive policies originating in the Lula years as a source of electoral support for the left ( BORGES,",
+      "classification_value": [
+        {
+          "variable_name": "municipal_social_inclusion_governismo_nationalization",
+          "variable_description": "Medidas municipais de inclusão social, governismo e nacionalização do debate"
+        },
+        {
+          "variable_name": "party_ideology_scores",
+          "variable_description": "Posições ideológicas partidárias derivadas do Brazilian Legislative Survey"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "the potential sources of recent transformations. We document the electorally expressed ideology of Brazilian voters via ecological analysis at the municipal level. We leverage the variance provided by Brazil’s 5,570 municipalities over the course of 13 electoral cycles between 1994 and 2018.",
+      "classification_value": [
+        {
+          "variable_name": "municipal_ideological_score",
+          "variable_description": "Municipal Ideological Score (MIS)"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "municipal_social_inclusion_governismo_nationalization",
+          "dv_var_name": "municipal_ideological_score",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The original-dataset category is specific, but supporting data-construction evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "low",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 8 priority fidelity issue(s): 0 contradicted and 8 not found in text; overall status fail."
+}

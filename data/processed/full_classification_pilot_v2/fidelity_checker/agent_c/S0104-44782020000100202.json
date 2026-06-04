@@ -1,0 +1,180 @@
+{
+  "pid": "S0104-44782020000100202",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "3b37591bad76e1607336b6d002f243cafc35c8f4bcd400aff728296c74db0785",
+  "classification_hash": "57384ed7480f020901d9206769ce1196db15ab9a7dc1ddbe3738471db9fdb199",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "a outras orientações ideológicas também são componentes importantes. Na República Dominicana, por exemplo, é um partido de centro-direita que mantém o contro le do governo desde 2004 e os mecanismos que explicam a sua resiliência são similares aos utilizados pela esquerda radical",
+      "classification_value": [
+        {
+          "variable_name": "legislative_control",
+          "variable_description": "Controle do Legislativo pelo presidente"
+        },
+        {
+          "variable_name": "civil_society_control",
+          "variable_description": "Controle/coaptação da sociedade civil"
+        },
+        {
+          "variable_name": "economic_performance",
+          "variable_description": "Condições econômicas após a crise de 2008"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "se estendem desde 2013 e que já deixaram centenas de mortos na Nicarágua? Para entender esta diferença na capacidade d e sobrevivênc ia política de líderes e partidos de esquerda, devemos começar reconhecendo que, embora todos tenham sido copartícipes da “onda rosa”",
+      "classification_value": [
+        {
+          "variable_name": "presidential_electoral_survival",
+          "variable_description": "Sobrevivência eleitoral do presidente ou candidato apoiado"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "legislative_control",
+          "dv_var_name": "presidential_electoral_survival",
+          "relationship_type": "Positive",
+          "statistically_significant": false,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "civil_society_control",
+          "dv_var_name": "presidential_electoral_survival",
+          "relationship_type": "Positive",
+          "statistically_significant": false,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "há casos correspondentes a outras combinações de valores, tornando possível a aplicação da ACQ. IV. Resultados Com base nos d ados coletados, é possível construir uma tabela-verdade para avaliar a relação entre as diferentes combinações de valores das variáveis independentes e o",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "discussão teórica que justifica o foco da pesquisa nestes dois fatores. Em seguida, descrevo e justifico minha abordagem metodológica, a anális e comparada qualitativa (ACQ), e apresento os dados que utilizo. Na seção subsequente, discuto os resultados da análise, os quais corroboram",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "Teoria: Ideologia, controle e sobrevivência política A década de 2010 foi muito difícil economicamente para os países latino-americanos, devido a os efei tos da crise financeira global de 2008. Após uma retração de quase dois pontos percentuais do PIB em 2009, o",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "eleitores punam o governo nas urnas e que coalizões governistas no Legislativo se desintegrem em situações de crise econômica. Como explica r então a vitória do situacionista Lenín Moreno no Equador em 2017, após um ano de queda do PIB, ou a",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "Na República Dominicana, por exemplo, é um partido de centro-direita que mantém o controle do governo desde 2004 e o s mecanism os que explicam a sua resiliência são similares aos utilizados pela esquerda radical nos países andinos. Em outros casos, foi",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 1 priority fidelity issue(s): 0 contradicted and 1 not found in text; overall status fail."
+}

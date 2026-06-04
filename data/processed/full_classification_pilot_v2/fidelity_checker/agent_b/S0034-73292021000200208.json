@@ -1,0 +1,157 @@
+{
+  "pid": "S0034-73292021000200208",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "dd273b926e701100fb20ce5001082fc62daaac78f6c22e1cf2942a940ae9146e",
+  "classification_hash": "8b28a50046f76757fb8a62c9fb6267e4754f055c0e5513562b7acf6c34e68da7",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "of action” (Brazil 2009; 2011b). As Stuenkel (2016) argues this mirrors the traditional skepticism towards military force adopted by t he Brazil ian foreign policy establishment, which has historically shown suspicion toward the use of coercive measures, which it claims to more",
+      "classification_value": [
+        {
+          "variable_name": "Brazilian contestation of R2P",
+          "variable_description": "Frames and claims used by Brazil in relation to Responsibility to Protect."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "rights catastrophes that had, in the past decades, been met with international inaction, the responsibility to protect became an important nor m of the international peace and security regime, and its adoption at the UN’s 2005 World Summit is still considered a",
+      "classification_value": [
+        {
+          "variable_name": "R2P norm strength",
+          "variable_description": "Interpretation of whether contestation weakens or strengthens the norm."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The original-dataset category is specific, but supporting data-construction evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "to capture the contestation of the responsibility to protect by Brazil and its possible outcomes. The third section outlines the qualitative method and data used in the article, as well as the codebook guiding the analysis. This is followed by the presentation",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification claims mechanism/channel discussion, but supporting text was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 3 priority fidelity issue(s): 0 contradicted and 3 not found in text; overall status pass_with_warnings."
+}

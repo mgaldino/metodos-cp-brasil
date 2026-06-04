@@ -1,0 +1,157 @@
+{
+  "pid": "S1981-38212008000100127",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "9d20ba2be8c79987c9b4e7ce7dcbc3812b548eccf7c96eaadc8c685c4b1a269d",
+  "classification_hash": "887882e2aade8afda906d7d0a4f0558e79784c4b693959149558abd199c682a0",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "well as on the literature on transnational actors and the creation of global norms, our hypothesis points at the “m ixed actor” (partially sovereignty-bound, partially sovereignty-free) character of subnational governments (by themselves or constituting transnational networks) as the main source of explanation.",
+      "classification_value": [
+        {
+          "variable_name": "Mixed-actor status of local governments",
+          "variable_description": "Combination of sovereignty-bound and sovereignty-free resources."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "1. Introduction In May 2004, the Founding Congress of United Cities and Loca l Governments (UCLG) was held in Paris, giving rise to a new international organization of global scope.2 Product of the merger of two previously existing world associations of local",
+      "classification_value": [
+        {
+          "variable_name": "Local-authority articulation in the UN system",
+          "variable_description": "Institutional and normative advances by local authorities as global actors."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "the UN system. Seemingly, their results have been better than those achieved by other, non-governmental transnational actors, notably regarding the institutional presence of the local authorities’ association at intergovernmental conferences on social themes. One probable reason for this is the fact that,",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification claims mechanism/channel discussion, but supporting text was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 0 contradicted and 2 not found in text; overall status pass_with_warnings."
+}

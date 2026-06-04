@@ -1,0 +1,147 @@
+{
+  "pid": "S0104-62762014000300377",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "44fe73642c0a75d57e91cf8a1249663635d62e6f70cac0ea37639c53581d30da",
+  "classification_hash": "6f2f5a7d1316e1d99caaf52c36c8a3a925e28b6e6debfbe79d94293e77ac6431",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classified sample size appears near sample/count language in the canonical body text.",
+      "supporting_excerpt": "outros nichos temáticos e iv) obterem a maior parte de seus lucros da publicidade em suas pági nas. No total, o corpus compilou 1.83 1 textos de diferentes tipos, sendo publicados 944 em O Globo e 887 na Folha de S. Paulo.",
+      "classification_value": 1831
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The sample-size quote was not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": "No total, o corpus compilou 1.831 textos de diferentes tipos, sendo 1.241 matérias jornalísticas, 182 artigos, 76 boxes ou notas e 332 cartas de leitores."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The original-dataset category is specific, but supporting data-construction evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "realidade percebida e torná-los salientes em um texto comunicativo, de modo a promover uma definição particular de um problema, interpretação causal , avaliação moral ou recomendação de tratamento para o item descrito (ENTMAN, 1993, p. 52). O conceito de enquadramento também chama",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 3 priority fidelity issue(s): 1 contradicted and 2 not found in text; overall status fail."
+}

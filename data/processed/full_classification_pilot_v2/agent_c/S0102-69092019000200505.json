@@ -1,0 +1,61 @@
+{
+  "pid": "S0102-69092019000200505",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "f9570a8d115db3eaf9cac0deca47b006cf4e2e57287e23cd0655890a5a40d7c3",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Other",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "class_markers",
+        "variable_description": "Indicadores de capital econômico e cultural"
+      },
+      {
+        "variable_name": "food_consumption_items",
+        "variable_description": "Tipos de alimento e formas de preparo"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "food_consumption_patterns",
+        "variable_description": "Padrões de consumo alimentar no Brasil"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 34003,
+    "sample_size_quote": "Os dados que aqui nos interessam fazem parte predominantemente do registro de consumo alimentar, coletados a partir de uma subamostra composta por 13.569 domicílios e 34.003 indivíduos.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo usa microdados da POF e análise de correspondências para descrever padrões de consumo alimentar por classe. A análise é quantitativa descritiva/relacional, sem desenho causal ou resultados de significância."
+  },
+  "raw_response_path": null
+}

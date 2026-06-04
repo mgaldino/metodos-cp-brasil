@@ -18,6 +18,7 @@ Arquivos centrais:
 - `run_metadata*.json`: parâmetros e timestamps das coletas.
 - `papers_internacionais/`: PDFs usados para benchmarks externos.
 - `fulltext_gold/`: HTML/XML/PDF brutos usados para recuperar o body dos 175 artigos gold/piloto. O HTML fica em `html/{pid}.html`; XML real com `<body>`, quando usado, fica em `xml/{pid}.xml`; PDFs usados como fallback ficam em `pdf/{pid}.pdf`.
+- `fulltext_corpus/`: HTML/XML/PDF brutos usados para recuperar o body do corpus completo elegível. O script `scripts/16_recover_fulltext_corpus.py` escreve somente aqui para a escala, com subdiretórios `html/`, `xml/`, `pdf/` e `metadata/`. Estes arquivos não devem ser misturados com `fulltext_gold/`.
 
 Observação importante: os XMLs antigos em `data/raw/articles_fulltext/` não continham `<body>` real para os 175 PIDs gold/piloto. A variável `has_fulltext_xml` indica presença de XML JATS parcial, não garantia de texto integral utilizável.
 
@@ -38,6 +39,9 @@ Arquivos centrais:
 - `manual_review_relationship_overrides.json`: decisões estruturadas para pendências `main_variable_relationship` que exigiam JSON manual.
 - `full_classification_pilot/`: manifest, prompts versionados, diretórios de saída dos três subagentes Codex locais, bases paralelas, comparação contra gold, conflitos e fila de adjudicação do piloto triplo nos 175 artigos elegíveis.
 - `fulltext_gold/article_texts_gold.csv`: fonte canônica do body integral validado dos 175 artigos gold/piloto. Contém `pid`, metadados, `body_text`, contagens, método/fonte de recuperação, `input_hash` e `retrieved_at`.
+- `fulltext_corpus/article_texts_corpus.csv`: fonte canônica prevista para o body integral do corpus elegível completo, após validação por `scripts/17_validate_fulltext_corpus.R`. Contém `pid`, metadados, `body_text`, contagens, método/fonte de recuperação, `input_path`, `input_hash`, `retrieved_at` e timestamp da execução. Em 2026-06-03, contém 6.642 bodies recuperados de 6.672 PIDs elegíveis reconstruídos dos ledgers; o inventário de validação marcou 6.638 PIDs como `PASS`, 30 PIDs pendentes e 2 pares com `input_hash`/`body_hash` duplicado para checagem manual.
+- `fulltext_corpus/fulltext_corpus_manifest.csv`: manifest elegível gerado a partir de `articles_2005_2025.csv`, `excluded_journals.csv` e `excluded_articles.csv`, aplicando exclusões e `document_type == "research-article"` antes da extração.
+- `fulltext_corpus/fulltext_corpus_failure_queue.csv`: fila de PIDs ainda não recuperados, com causas por método e status de retry. Em 2026-06-03, contém 30 PIDs, majoritariamente apresentações, erratas, notas editoriais, obituários ou críticas curtas marcadas como `research-article` pelo metadado bruto. O inventário também sinaliza 4 PIDs em 2 pares duplicados para inspeção manual, sem misturá-los à fila operacional atual.
 - `benchmark_cp.csv` e `benchmark_ir.csv`: métricas por paper para benchmarks internacionais.
 
 Nota sobre o piloto triplo de 2026-06-03: os XMLs dos 175 PIDs em `sample_xmls/` eram idênticos aos correspondentes em `data/raw/articles_fulltext/` e não continham `<body>`. Essa limitação foi resolvida para o gold/piloto por `scripts/13_recover_fulltext_gold.py` e validada por `scripts/14_validate_fulltext_gold.R`; a fonte canônica passou a ser `data/processed/fulltext_gold/article_texts_gold.csv`.
@@ -48,3 +52,4 @@ Nota sobre o piloto triplo de 2026-06-03: os XMLs dos 175 PIDs em `sample_xmls/`
 - Não sobrescrever dados brutos sem preservar versão anterior ou metadados de execução.
 - Toda coleta nova deve registrar fonte, data de acesso e parâmetros.
 - Validações de dados devem checar datas, valores incompatíveis e categorias fora do schema esperado.
+- A recuperação em escala deve preservar a separação entre `data/raw/fulltext_gold/` e `data/raw/fulltext_corpus/`; a validação do corpus falha se qualquer linha processada apontar para `fulltext_gold`.

@@ -1,0 +1,172 @@
+{
+  "pid": "S1981-38212007000100070",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "44d8aabc6bc03c7a9eb773cd9307bd2b97c911c980616d260c0c88f4aff96d83",
+  "classification_hash": "fbed6abae72b4e7efd107144ca7ab6dad622ef894a5ac866a04c45fbfe720450",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "for the 2002 presidential election will be discussed. The empirical base that grounds the analysis is the ESEB (Brazilian Electoral Study), a survey conducted on a sample – probabilistic without substitution, with 3 selection stages (municipality, census sector and domicile), with a sampling error of 2% – of 2,513 voters throughout the country between October 31 and December 28, 2002.",
+      "classification_value": 2513
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "for the 2002 presidential election will be discussed. The empirical base that grounds the analysis is the ESEB (Brazilian Electoral Study), a survey conducted on a sample – probabilistic without substitution, with 3 selection stages (municipality, census sector and domicile), with a sampling error of 2% – of 2,513 voters throughout the country between October 31 and December 28, 2002.",
+      "classification_value": "The empirical base that grounds the analysis is the ESEB (Brazilian Electoral Study), a survey conducted on a sample – probabilistic without substitution, with 3 selection stages (municipality, census sector and domicile), with a sampling error of 2% – of 2,513 voters throughout the country between October 31 and December 28, 2002."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "were included in the model for each candidate: demographic and socio-economic variables: sex, age, income, schooling, religion, occupational situation.5 politico- ideologi cal variables: “ideological identity”;6 “party sentiments” (see Methodological Appendix 2); “cronyism index”; “‘robber-but-doer’ index”; “authoritarianism index” (protest against the government); “regulation",
+      "classification_value": [
+        {
+          "variable_name": "socioeconomic_political_attitudinal_candidate_attributes",
+          "variable_description": "Variáveis socioeconômicas, político-ideológicas e atributos dos candidatos"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Foreword The article seeks to analyse some of the most relevant factors for the voting decision in the 200 2 Brazilian presidential election. This is done by means of logistic regression analyses based on data from the ESEB (Brazilian Electoral Study).1 In",
+      "classification_value": [
+        {
+          "variable_name": "vote_choice_2002_presidential_candidates",
+          "variable_description": "Voto nos principais candidatos presidenciais de 2002"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "candidate_attributes",
+          "dv_var_name": "vote_choice_2002_presidential_candidates",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "party_sentiments",
+          "dv_var_name": "vote_choice_2002_presidential_candidates",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "the voting decision in the 2002 Brazilian presidential election. This is done by means of logistic regression analyses based on data from the ESE B (Brazilian Electoral Study).1 In the first section, the presidential election is put in context. Then, the empirical",
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body points to secondary/public data sources rather than original collection.",
+      "supporting_excerpt": "was not enough to recover the ground lost at the turn of the first to the second term. The last Datafolh a poll before the first round of the 2002 election showed that 23% of voters evaluated the government as excellent or",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "low",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 6 priority fidelity issue(s): 0 contradicted and 6 not found in text; overall status fail."
+}

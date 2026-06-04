@@ -1,0 +1,180 @@
+{
+  "pid": "S0102-69092018000300507",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "d06db8a6e911c0c2c7a0c7ca4a10b6f06dfab66712abbc099170b5f547c8fbbb",
+  "classification_hash": "5db1f82e3c3ce18b5ef98d8874cbd163071c47aa67d6b679a803aaef989067e5",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "5 e 22 de novembro de 2014, mediante entrevistas domiciliares pessoais. O questionário com 85 perguntas foi respondido por 18.312 pessoas maiores de 16 anos distribuídas em 848 municípios brasileiros. O desenho amostral da pesquisa permite não apenas representatividade nacional, mas também",
+      "classification_value": 18312
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "5 e 22 de novembro de 2014, mediante entrevistas domiciliares pessoais. O questionário com 85 perguntas foi respondido por 18.312 pessoas maiores de 16 anos distribuídas em 848 municípios brasileiros. O desenho amostral da pesquisa permite não apenas representatividade nacional, mas também",
+      "classification_value": "O questionário com 85 perguntas foi respondido por 18.312 pessoas maiores de 16 anos distribuídas em 848 municípios brasileiros."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "de uma discussão com a literatura sobre o voto econômico, advinda da ciência política, testamos a hipótese de que a exposiçã o a determinados meios de comunicação está correlacionada à avaliação da economia e à aprovação do governo federal. Para tal, aplicamos",
+      "classification_value": [
+        {
+          "variable_name": "media_exposure",
+          "variable_description": "Exposição ao Jornal Nacional, O Globo e Folha de S. Paulo"
+        },
+        {
+          "variable_name": "sociodemographic_controls",
+          "variable_description": "Sexo, idade, escolaridade, classe social e região"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "econômico, advinda da ciência política, testamos a hipótese de que a exposição a determinados meios de comunicação está correlacionada à avaliaçã o da economia e à aprovação do governo federal. Para tal, aplicamos modelos logísticos multinomiais, usando como variáveis dependentes a “satisfação",
+      "classification_value": [
+        {
+          "variable_name": "government_evaluation",
+          "variable_description": "Avaliação do governo federal"
+        },
+        {
+          "variable_name": "economic_evaluation",
+          "variable_description": "Avaliação retrospectiva sociotrópica da economia"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "media_exposure",
+          "dv_var_name": "government_evaluation",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "media_exposure",
+          "dv_var_name": "economic_evaluation",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "das variáveis, mas a intensidades de associações e relacionamentos controlados pela presença de medidas sociodemográficas relevantes. O ba nco de dados utilizado n esta fase do artigo advém da “Pesquisa Brasileira de Mídia, de 2015”, um survey quantitativo nacional encomendado pela Secretaria",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "pela Secretaria de Comunicação da Presidência da República, também em 2014. A ferramenta de análise estatística utilizada é a re gressão m ultinominal, na qual as variáveis dependentes serão a “satisfação com o governo” e a “avaliação retrospectiva sociotrópica da economia”. As",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "da economia e da popularidade do presidente. Utilizando a autoregressão vetorial e o teste de Granger para estabelecer anterioridade ca usal, os autores concluem que manchetes relatando recessão econômica influenciam o sentimento dos consumidores em relação à economia. Também encontram uma tendência",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "ou mesmo ao longo da história do mesmo país (Duch e Stevenson, 2008). A maneira pela qual os autores e xplicam as variações significativas no voto econômico é atribuí-las a outros fatores contextuais pertinentes a cada caso nacional (Duch, 2007). Entre os",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "objetiva da economia (Veiga e Ross, 2016). No presente trabalho, propomos avançar um passo no sentido de deslindar os me canismos f ormadores de tais percepções, ao incluir a questão da mediação da informação na hipótese explicativa. Utilizamos dois bancos de dados.",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "representativos da população em geral devido à própria natureza dessa metodologia. Já os surveys são capazes de gerar dados estatisticamente significativo s, mas não são apropriados para o acompanhamento – passo a passo – da recepção da mensagem e do processo de",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 2 contradicted and 2 not found in text; overall status fail."
+}

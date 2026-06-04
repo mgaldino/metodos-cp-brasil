@@ -1,0 +1,187 @@
+{
+  "pid": "S0104-62762025000100220",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "68e0fb77b5496b51ad1ec9b203650f62e3858e5c99830bcada20c10bf866eb10",
+  "classification_hash": "09c6c871fc16ce0796339a9b3a5aed07f1adc86ef8271f0a5e4c3a573ac2128f",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "Some classified variables have body-text evidence, but 1 item(s) were not found: insecurity_and_victimization.",
+      "supporting_excerpt": "de institución y de su rol en ámbitos democráticos. La literatura distingue entre confianza en instituciones del lado representativo de l siste ma político y la confianza en instituciones encargadas de la implementación del régimen político (Rothstein; Stolle, 2008; Newton, 2007). La",
+      "classification_value": [
+        {
+          "variable_name": "judicial_system_trust",
+          "variable_description": "Confiança no sistema judicial"
+        },
+        {
+          "variable_name": "police_corruption_perception",
+          "variable_description": "Percepção de corrupção policial"
+        },
+        {
+          "variable_name": "insecurity_and_victimization",
+          "variable_description": "Percepção de insegurança e vitimização"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "fuerzas del orden, destacando la calidad de las interacciones entre la policía y el público. En las últimas dos décadas, Carabinero s de Chile, la principal institución de seguridad pública del país, fue una de las fuerzas policiales que gozaba de mayores",
+      "classification_value": [
+        {
+          "variable_name": "trust_in_carabineros",
+          "variable_description": "Confiança nos Carabineros chilenos"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "judicial_system_trust",
+          "dv_var_name": "trust_in_carabineros",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "police_corruption_perception",
+          "dv_var_name": "trust_in_carabineros",
+          "relationship_type": "Negative",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "insecurity_and_victimization",
+          "dv_var_name": "trust_in_carabineros",
+          "relationship_type": "Unknown",
+          "statistically_significant": false,
+          "substantively_significant": false
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "decían no tener nada de confianza en Carabineros aumentaron de un 10.6% a 39.1% en igual periodo. Utilizamos datos de las encuestas de Latinobarómetr o entre 2015 y 2020 para evaluar el impacto de la confianza en el poder judicial, la percepción",
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "las comparaciones en el tiempo, pero también entre países. El tamaño de la muestra para cada año corresponde a 1.2 00 entrevista dos/as de distintas edades y regiones del país. Los datos están públicamente disponibles en la página web de Latinobarómetro5. Ahora",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "mayor confianza en la policía nacional. Percepción de inseguridad y confianza en la policía Hay amplia evidencia de una relaci ón cau sal entre victimización y percepción de inseguridad con la confianza institucional (Visconti, 2020). La inseguridad puede ser definida como una",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "y la confianza en instituciones encargadas de la implementación del régimen político (Rothstein; Stolle, 2008; Newton, 2007). La primera s e expli ca en parte por el partidismo o la inclinación ideológica de las personas. En cambio, la segunda se basa en",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "en la policía nacional. Presentación del caso: La policía nacional de Chile En América Latina, las fuerzas policiales enfrentan de safíos signifi cativos relacionados con la desconfianza institucional, las crecientes demandas de seguridad y un continuo desprestigio. Diversas investigaciones enfatizan que la",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 5 priority fidelity issue(s): 2 contradicted and 3 not found in text; overall status fail."
+}

@@ -1,0 +1,597 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">QP8GTD36fwP6PZV334wKhBb</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212014000100005</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(14)00800100005</article-id>
+      <article-id pub-id-type="doi">10.1590/1981-38212014000100005</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Note</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Critical theory and social justice</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Vita</surname>
+            <given-names>Álvaro de</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">Universidade de São Paulo</institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2014</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>1</issue>
+      <fpage>109</fpage>
+      <lpage>126</lpage>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v8n1/05.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>24</day>
+        <month>06</month>
+        <year>2014</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>BARRY, Brian (1989), <italic>Theories of Justice. </italic>Berkeley and Los Angeles: University of California Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Theories of Justice</source>
+          <date>
+            <year>1989</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BARRY</surname>
+              <given-names>Brian</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <element-citation publication-type="book">
+          <source>Culture and Equality. An Egalitarian Critique of Multiculturalism</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BARRY</surname>
+              <given-names>Brian</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>COHEN, Gerald A. (2001), <italic>If You're an Egalitarian, How Come You're So Rich</italic>? Cambridge-Mass: Harvard University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>If You're an Egalitarian, How Come You're So Rich?</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COHEN</surname>
+              <given-names>Gerald A</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>COHEN, Joshua (1989), Democratic Equality. <italic>Ethics, </italic>vol. 99, Nº. 04, pp.727-751.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Democratic Equality</article-title>
+          <source>Ethics</source>
+          <date>
+            <year>1989</year>
+          </date>
+          <fpage>727</fpage>
+          <lpage>751</lpage>
+          <issue>04</issue>
+          <volume>99</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COHEN</surname>
+              <given-names>Joshua</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>COHEN, Joshua (2002), Taking People as They Are? <italic>Philosophy and Public Affairs </italic>vol. 30, N º 04, pp. 363-386.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Taking People as They Are?</article-title>
+          <source>Philosophy and Public Affairs</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>363</fpage>
+          <lpage>386</lpage>
+          <issue>04</issue>
+          <volume>30</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COHEN</surname>
+              <given-names>Joshua</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <element-citation publication-type="book">
+          <source>The Philosophy of John Stuart Mill. Ethical, Political and Religious</source>
+          <date>
+            <year>1961</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COHEN</surname>
+              <given-names>Marshall</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>DANIELS, Norman (2003), Rawls's Complex Egalitarianism. In: S. Freeman (ed.). <italic>The Cambridge Companion to Rawls. </italic>Cambridge: Cambridge University Press, pp. 241-276.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Cambridge Companion to Rawls</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>241</fpage>
+          <lpage>276</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DANIELS</surname>
+              <given-names>Norman</given-names>
+            </name>
+            <name>
+              <surname>Freeman</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>DANIELS, Norman (2010), Capabilities, Opportunity, and Health. In: H. Brighouse, and I. Robeyns, (eds.). <italic>Measuring Justice. Primary Goods and Capabilities</italic>. Cambridge: Cambridge University Press, pp. 131-149.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Measuring Justice. Primary Goods and Capabilities</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>131</fpage>
+          <lpage>149</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DANIELS</surname>
+              <given-names>Norman</given-names>
+            </name>
+            <name>
+              <surname>Brighouse</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Robeyns</surname>
+              <given-names>I.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>ELSTER, Jon (1987), <italic>Sour Grapes. Studies in the Subversion of Rationality. </italic>Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Sour Grapes. Studies in the Subversion of Rationality</source>
+          <date>
+            <year>1987</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ELSTER</surname>
+              <given-names>Jon</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>FRASER, Nancy (1995), From Redistribution to Recognition? Dilemmas of Justice in a 'Post- Socialist' Age. <italic>New Left Review </italic>212 (July/August), pp. 68-93.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>From Redistribution to Recognition? Dilemmas of Justice in a 'Post- Socialist' Age</article-title>
+          <source>New Left Review</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <fpage>68</fpage>
+          <lpage>93</lpage>
+          <volume>212</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FRASER</surname>
+              <given-names>Nancy</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <element-citation publication-type="book">
+          <source>Justice Interruptus: Critical Reflections on the 'Post-socialist' Condition</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FRASER</surname>
+              <given-names>Nancy</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>HABERMAS, Jürgen (1990), <italic>Moral Consciousness and Communicative Action. </italic>Translated by Christian Lenhardt and Shierry Weber Nicholsen. Cambridge-Mass: The MIT Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Moral Consciousness and Communicative Action</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HABERMAS</surname>
+              <given-names>Jürgen</given-names>
+            </name>
+          </person-group>
+          <comment>Translated by Christian Lenhardt and Shierry Weber Nicholsen</comment>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <element-citation publication-type="book">
+          <source>Luta pelo reconhecimento: a gramática moral dos conflitos sociais</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HONNETH</surname>
+              <given-names>Axel</given-names>
+            </name>
+          </person-group>
+          <comment>Translation by Luiz Repa</comment>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <element-citation publication-type="book">
+          <source>Women and Human Development. The Capability Approach</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NUSSBAUM</surname>
+              <given-names>Martha</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <element-citation publication-type="book">
+          <source>Frontiers of Justice: Disability, Nationality, Species Membership</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NUSSBAUM</surname>
+              <given-names>Martha</given-names>
+            </name>
+          </person-group>
+          <comment>Kindle Edition</comment>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>PEREIRA, Gustavo (2013a), <italic>Elements of a Critical Theory of Justice. </italic>New York: Palgrave Macmillan.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Elements of a Critical Theory of Justice</source>
+          <date>
+            <year>2013</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEREIRA</surname>
+              <given-names>Gustavo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>PEREIRA, Gustavo (2013b), <italic>Elementos de una teoria crítica de la justicia</italic>. Montevideo, Universidad de la República, mimeo.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Elementos de una teoria crítica de la justicia</source>
+          <date>
+            <year>2013</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEREIRA</surname>
+              <given-names>Gustavo</given-names>
+            </name>
+          </person-group>
+          <comment>mimeo</comment>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>POGGE, Thomas (2010), A critique of the Capability Approach. In: H. Brighouse, and I. Robeyns, (eds.). <italic>Measuring Justice. Primary Goods and Capabilities</italic>. Cambridge: Cambridge University Press, pp. 131-149.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Measuring Justice. Primary Goods and Capabilities</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>131</fpage>
+          <lpage>149</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>POGGE</surname>
+              <given-names>Thomas</given-names>
+            </name>
+            <name>
+              <surname>Brighouse</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Robeyns</surname>
+              <given-names>I.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>RAWLS, John (1971), <italic>A Theory of Justice</italic>. Cambridge-Mass.: Harvard University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>A Theory of Justice</source>
+          <date>
+            <year>1971</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>RAWLS</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>RAWLS, John (2005), <italic>Political Liberalism. Expanded Edition. </italic>New York: Columbia University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Political Liberalism</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>RAWLS</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>ROTHSTEIN, Bo (1998), <italic>Just Institutions Matter. The Moral and Political Logic of the Universal Welfare State</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Just Institutions Matter. The Moral and Political Logic of the Universal Welfare State</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ROTHSTEIN</surname>
+              <given-names>Bo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>SEN, Amartya (1977), Rational Fools: A Critique of the Behavioral Foundations of Economic Theory. <italic>Philosophy and Public Affairs</italic>, vol. 6, N º4, pp. 317-344.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Rational Fools: A Critique of the Behavioral Foundations of Economic Theory</article-title>
+          <source>Philosophy and Public Affairs</source>
+          <date>
+            <year>1977</year>
+          </date>
+          <fpage>317</fpage>
+          <lpage>344</lpage>
+          <issue>º4</issue>
+          <volume>6</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SEN</surname>
+              <given-names>Amartya</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>SEN, Amartya (1985a), <italic>Commodities and Capabilities. </italic>Amsterdam: North-Holland.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Commodities and Capabilities</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SEN</surname>
+              <given-names>Amartya</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>SEN, Amartya (1985b), A Sociological Approach to the Measurement of Poverty: A Reply to Professor Peter Townsend. <italic>Oxford Economic Papers, </italic>Nº 37, 669-676.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A Sociological Approach to the Measurement of Poverty: A Reply to Professor Peter Townsend</article-title>
+          <source>Oxford Economic Papers</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <fpage>669</fpage>
+          <lpage>676</lpage>
+          <issue>37</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SEN</surname>
+              <given-names>Amartya</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>SEN, Amartya (1992), <italic>Inequality Reexamined. </italic>Cambridge-Mass.: Harvard University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Inequality Reexamined</source>
+          <date>
+            <year>1992</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SEN</surname>
+              <given-names>Amartya</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>SEN, Amartya (2000), <italic>Development as Freedom. </italic>New York: Alfred A. Knopf.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Development as Freedom</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SEN</surname>
+              <given-names>Amartya</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>SEN, Amartya (2009), <italic>The Idea of Justice</italic>. Cambridge-Mass: The Belknap Press of Harvard University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Idea of Justice</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SEN</surname>
+              <given-names>Amartya</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>SUDGEN, Robert (1993), Welfare, Resources, and Capabilities: A Review of Inequality Reexamined by Amartya Sen. <italic>Journal of Economic Literature, </italic>vol. XXXI (December 1993), pp. 1947- 1962.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Welfare, Resources, and Capabilities: A Review of Inequality Reexamined by Amartya Sen</article-title>
+          <source>Journal of Economic Literature</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <fpage>1947</fpage>
+          <lpage> 1962</lpage>
+          <volume>XXXI</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SUDGEN</surname>
+              <given-names>Robert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>TAYLOR, Charles (1994), The Politics of Recognition. In: A. Gutmann (ed.). <italic>Multiculturalism and the "Politics of Recognition". </italic>Princeton: Princeton University Press, pp. 25-73.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Multiculturalism and the "Politics of Recognition"</source>
+          <date>
+            <year>1994</year>
+          </date>
+          <fpage>25</fpage>
+          <lpage>73</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>TAYLOR</surname>
+              <given-names>Charles</given-names>
+            </name>
+            <name>
+              <surname>Gutmann</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>TOWNSEND, Peter (1985), A Sociological Approach to the Measurement of Poverty. A Rejoinder to Professor Sen. <italic>Oxford Economic Papers, </italic>Nº 37, pp. 659-668.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A Sociological Approach to the Measurement of Poverty. A Rejoinder to Professor Sen</article-title>
+          <source>Oxford Economic Papers</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <fpage>659</fpage>
+          <lpage>668</lpage>
+          <issue>37</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>TOWNSEND</surname>
+              <given-names>Peter</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>VITA, Álvaro (2012), Liberalism, Social Justice, and Individual Responsibility. <italic>World Political Science Review</italic>, vol. 8, Nº 01, pp. 297-329.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Liberalism, Social Justice, and Individual Responsibility</article-title>
+          <source>World Political Science Review</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <fpage>297</fpage>
+          <lpage>329</lpage>
+          <issue>01</issue>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>VITA</surname>
+              <given-names>Álvaro</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

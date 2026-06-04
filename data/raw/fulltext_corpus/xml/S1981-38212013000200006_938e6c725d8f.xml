@@ -1,0 +1,297 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">xmLcsgG4hX5HFNHJwHr9BZp</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212013000200006</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(13)00700200006</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Note</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Identification of areas of vote concentration: evidences from Brazil</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Silva</surname>
+            <given-names>Glauco Peres da</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+          <xref ref-type="aff" rid="aff02"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Davidian</surname>
+            <given-names>Andreza</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff02"/>
+          <xref ref-type="aff" rid="aff03"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">School of Commerce Foundation Alvares Penteado</institution>
+      </aff>
+      <aff id="aff03">
+        <institution content-type="orgname">Center for Metropolitan Studies</institution>
+      </aff>
+      <aff id="aff02">
+        <institution content-type="orgname">Center for Comparative and International Studies</institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2013</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>2</issue>
+      <fpage>141</fpage>
+      <lpage>155</lpage>
+      <history>
+        <date date-type="received">
+          <month>10</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <month>05</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v7n2/06.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>In spite of the recent progress in the discussion on vote regional concentration brought by Avelino et al. (2011), there is still a lack of determination of the districts' internal areas where candidates obtained their votes. Synthetic concentration indices, as the G index, do not allow for evaluation in disaggregated levels, as municipalities, which would be relevant for the verification of the areas of a candidate's political influence. This paper aims at bridging this gap through the joint utilization of two other indicators, the Location Quotient (LQ) and the Horizontal Cluster (HC), that use different measurement units. These indices were applied to the elections of federal representatives in Brazil from 1994 to 2010, and the results were compared to those obtained by Avelino et al. (2011). The application reaches its aimed result, clearly showing the places where the candidates' votes are located in the electoral districts.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>Vote Concentration</kwd>
+        <kwd>proportional elections</kwd>
+        <kwd>G Index</kwd>
+        <kwd>LQ Index</kwd>
+        <kwd>HC Index</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>08</day>
+        <month>10</month>
+        <year>2013</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>AMES, Barry. (1995a), Electoral Strategy under Open-List Proportional Representation. <italic>American Journal of Political Science,</italic> vol. 39, n° 2, pp. 406-433.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Electoral Strategy under Open-List Proportional Representation</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <fpage>406</fpage>
+          <lpage>433</lpage>
+          <issue>2</issue>
+          <volume>39</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>AMES</surname>
+              <given-names>Barry</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>AMES, Barry. (1995b), Electoral Rules, Constituency Pressures, and Pork Barrel: Bases of Voting in Brazilian Congress. <italic>The Journal of Politics,</italic> vol. 57, n° 2, pp. 324-343.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Electoral Rules, Constituency Pressures, and Pork Barrel: Bases of Voting in Brazilian Congress</article-title>
+          <source>The Journal of Politics</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <fpage>324</fpage>
+          <lpage>343</lpage>
+          <issue>2</issue>
+          <volume>57</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>AMES</surname>
+              <given-names>Barry</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>AVELINO, George; BIDERMAN, Ciro; SILVA, Glauco Peres da. (2011), A Concentração Eleitoral nas Eleições Paulistas: Medidas e Aplicações. <italic>Dados,</italic> vol. 54, n° 2, pp. 319-347.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A Concentração Eleitoral nas Eleições Paulistas: Medidas e Aplicações</article-title>
+          <source>Dados</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <fpage>319</fpage>
+          <lpage>347</lpage>
+          <issue>2</issue>
+          <volume>54</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>AVELINO</surname>
+              <given-names>George</given-names>
+            </name>
+            <name>
+              <surname>BIDERMAN</surname>
+              <given-names>Ciro</given-names>
+            </name>
+            <name>
+              <surname>SILVA</surname>
+              <given-names>Glauco Peres da</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>BENDAVID-VAL, Avrom. (1991), Economy Composition Analysis. In: <italic>Regional and Local Economic Analysis for Practioners.</italic> NY: Praeger, pp. 67-76.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Regional and Local Economic Analysis for Practioners</source>
+          <date>
+            <year>1991</year>
+          </date>
+          <fpage>67</fpage>
+          <lpage>76</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BENDAVID-VAL</surname>
+              <given-names>Avrom</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>ELLISON, Glenn and GLAESER, Edward L. (1994), Geographic Concentration in U.S. Manufacturing Industries: A Dartboard Approach. <italic>NBER Working Paper</italic> n° 4.840, &lt;<ext-link ext-link-type="uri" xlink:href="http://www.nber.org/papers/w4840.pdf?new_window=1">http://www.nber.org/papers/w4840.pdf?new_window=1</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Geographic Concentration in U.S. Manufacturing Industries: A Dartboard Approach</article-title>
+          <source>NBER Working Paper</source>
+          <date>
+            <year>1994</year>
+          </date>
+          <issue>4.840</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ELLISON</surname>
+              <given-names>Glenn</given-names>
+            </name>
+            <name>
+              <surname>GLAESER</surname>
+              <given-names>Edward L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>FINGLETON, Bernard; IGLIORI, Danilo Camargo; MOORE, Barry C. (2005), Cluster Dynamics: New Evidence and Projections for Computing Services in Great Britain. <italic>Journal of Regional Science,</italic> vol. 45, n° 2, pp. 283-311.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Cluster Dynamics: New Evidence and Projections for Computing Services in Great Britain</article-title>
+          <source>Journal of Regional Science</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>283</fpage>
+          <lpage>311</lpage>
+          <issue>2</issue>
+          <volume>45</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FINGLETON</surname>
+              <given-names>Bernard</given-names>
+            </name>
+            <name>
+              <surname>IGLIORI</surname>
+              <given-names>Danilo Camargo</given-names>
+            </name>
+            <name>
+              <surname>MOORE</surname>
+              <given-names>Barry C.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>HUNTER, W. and TIMOTHY, J. P. (2007), Rewarding Lula: Executive Power, Social Policy, and the Brazilian Elections of 2006. <italic>Latin American Politics &amp; Society,</italic> vol. 49, n° 1, pp.1-30.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Rewarding Lula: Executive Power, Social Policy, and the Brazilian Elections of 2006</article-title>
+          <source>Latin American Politics &amp; Society</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>30</lpage>
+          <issue>1</issue>
+          <volume>49</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HUNTER</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>TIMOTHY</surname>
+              <given-names>J. P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>MAINWARING, Scott. (1991), Politicians, Parties, and Electoral Systems: Brazil in Comparative Perspective. <italic>Comparative Politics,</italic> vol. 24, n° 1, pp. 21-43.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Politicians, Parties, and Electoral Systems: Brazil in Comparative Perspective</article-title>
+          <source>Comparative Politics</source>
+          <date>
+            <year>1991</year>
+          </date>
+          <fpage>21</fpage>
+          <lpage>43</lpage>
+          <issue>1</issue>
+          <volume>24</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MAINWARING</surname>
+              <given-names>Scott</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>ZUCCO, Cesar. (2008), The President's New Constituency: Lula and the Pragmatic Vote in Brazil's 2006 Presidential Elections. <italic>Journal of Latin American Studies,</italic> n° 40, pp. 29-49.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The President's New Constituency: Lula and the Pragmatic Vote in Brazil's 2006 Presidential Elections</article-title>
+          <source>Journal of Latin American Studies</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>29</fpage>
+          <lpage>49</lpage>
+          <issue>40</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ZUCCO</surname>
+              <given-names>Cesar</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

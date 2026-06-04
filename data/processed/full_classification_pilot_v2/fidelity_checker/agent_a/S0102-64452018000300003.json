@@ -1,0 +1,147 @@
+{
+  "pid": "S0102-64452018000300003",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "e4708924472d929842ee85c8818e5b6cb9ebb125a4ce0abe3d7dc1c3bf6f95e8",
+  "classification_hash": "9ebfbd6985901a3dbfd79167d86732b1c153896393a32d8a8814bef48c183797",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "foi construída a partir de ferramentas do método qualitativo, como pesquisa documental no acervo de organizações do movimento e e ntrevista semiestruturada com ativistas em cada campanha. Em termos analíticos, o estudo enfatiza o processo de ação coletiva ao longo de um",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "do Espírito Santo; e movimento sanitarista nacional. Os movimentos sociais são descritos através de conceitos tradicionais das abordagens de e feitos políticos de movimentos, tais como campanhas de mobilização, oportunidades políticas e repertório de interação. Grosso modo, a campanha é um momento",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "as origens movimentistas de políticas públicas? A sequência analítica de inovação social, alternativa e instrumento de política pública Esta seção explic a como os conceitos de inovação social, alternativa e instrumento ajudam a iluminar a atuação de movimentos sociais que buscam transformar",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "contradicted_by_text",
+      "severity": "low",
+      "reason": "The classification says no mechanisms/channels, but mechanism/channel language appears in the body.",
+      "supporting_excerpt": "de atendimento em meio aberto aos adolescentes que cumprem medidas socioeducativas. Enquanto inovação social, é composta por diversas metodologia s e mecani smos de monitoramento, entre os quais se destacam, conforme Santos (2009, p. 31-54): (a) metodologia de acompanhamento do adolescente através",
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 2 contradicted and 0 not found in text; overall status pass_with_warnings."
+}

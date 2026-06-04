@@ -1,0 +1,51 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="pt" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">ln</journal-id>
+      <journal-title-group>
+        <journal-title>Lua Nova: Revista de Cultura e Política</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Lua Nova</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0102-6445</issn>
+      <issn pub-type="epub">1807-0175</issn>
+      <publisher>
+        <publisher-name>CEDEC</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">xKtrdFbv96P3QrnwfsCZmJm</article-id>
+      <article-id pub-id-type="other">00008</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S0102-64452009000100008</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S0102-6445(09)00007608</article-id>
+      <article-id pub-id-type="doi">10.1590/S0102-64452009000100008</article-id>
+      <title-group>
+        <article-title>Errata</article-title>
+      </title-group>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2009</year>
+      </pub-date>
+      <issue>76</issue>
+      <fpage>231</fpage>
+      <lpage>231</lpage>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by-nc/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/ln/n76/n76a08.pdf" xml:lang="pt">Texto completo somente em PDF (PT)</self-uri>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>02</day>
+        <month>10</month>
+        <year>2009</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <body>
+    <p>
+      <bold>Errata</bold>
+    </p>
+    <p> No artigo do número anterior da revista, na página 149, nota 4, onde está escrito "estoicismo", leia-se "historicismo".</p>
+  </body>
+</article>

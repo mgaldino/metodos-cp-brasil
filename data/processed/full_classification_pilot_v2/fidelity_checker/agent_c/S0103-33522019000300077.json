@@ -1,0 +1,165 @@
+{
+  "pid": "S0103-33522019000300077",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "4582d7f98f0d8a3fe879a10da817f5f5fde73206cf1deb9acd05a52937c08f53",
+  "classification_hash": "698f482bdadb08d0c8391e5e9bbae6473ffd580ff7a8ebf6e403839b55d0ec1e",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "últimos anos. Método, análise dos dados e resultados De acordo com os dados do Sincre OBmigra entre os anos de 2010 e 2014, o Brasil regularizou 211.688 imigrantes oriundos de países latino-americanos e caribenhos, com destaque para os bolivianos que no ano de 2011 representaram cerca de 41% do total de imigrantes latino-americanos e caribenhos para o Brasil.",
+      "classification_value": 211688
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "últimos anos. Método, análise dos dados e resultados De acordo com os dados do Sincre OBmigra entre os anos de 2010 e 2014, o Brasil regularizou 211.688 imigrantes oriundos de países latino-americanos e caribenhos, com destaque para os bolivianos que no ano de 2011 representaram cerca de 41% do total de imigrantes latino-americanos e caribenhos para o Brasil.",
+      "classification_value": "De acordo com os dados do Sincre OBmigra entre os anos de 2010 e 2014, o Brasil regularizou 211.688 imigrantes oriundos de países latino-americanos e caribenhos, com destaque para os bolivianos que no ano de 2011 representaram cerca de 41% do total de imigrantes latino-americanos e caribenhos para o Brasil."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "que medida - influenciam a inserção do imigrante na força de trabalho brasileira? A hipótese é que a nacionalidade, o gênero , a raça e a educação dos imigrantes influenciam o salário e o tipo de ocupação. Consequentemente, a cidadania pós-nacional depende",
+      "classification_value": [
+        {
+          "variable_name": "migrant_gender_schooling_race_nationality",
+          "variable_description": "Gênero, escolaridade, cor/raça e nacionalidade dos imigrantes latino-americanos"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "3), Cor/Raça versus Salário (Tabela 4). Ao fazê-lo tem-se as seguintes observações: De maneira geral, os homens têm melhores salários . Curios o notar que, ainda que o padrão permaneça, no Haiti, a faixa de mais de 20 salários minimos (SM) possui",
+      "classification_value": [
+        {
+          "variable_name": "migrant_wages_and_labor_insertion",
+          "variable_description": "Salários e inserção laboral de trabalhadores imigrantes"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "migrant_gender_schooling_race_nationality",
+          "dv_var_name": "migrant_wages_and_labor_insertion",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "demonstra estar receptivo aos estrangeiros de determinada origem e possuindo determinadas características. Com base na análise descritiva e preliminar dos dados obtido s a partir do Obmigra (Sincre e Rais) constata-se que a argentinos parecem estar melhor colocados entre os imigrantes latino-americanos",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "baseada em estatística descritiva multivariada e técnicas georreferenciadas; e (ii) uma análise quantitativa baseada em estatística inferencial, utilizando-se de r egressões. Ambas serão usadas para entender os fluxos de imigração e a situação dos estrangeiros na força de trabalho brasileira. Esta pesquisa",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "internacionalmente” (AVRITZER, 2002, p.51). Para esse autor, cada uma dessas modalidades de cidadania pós-nacional seria capaz de minimizar os efe itos de letérios do intenso processo de expansão do mercado financeiro e das restrições impostas pelos Estados Nacionais. No caso dos direitos",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "conceito, não havendo evidências empíricas relevantes que apontem a sua prática. O fato da nacionalidade ser uma variável relevante para explicar os resultados tanto no modelo para renda, quanto no modelo para ocupação revela uma tendência de rechaço à cidadania pós-nacional ao",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "a consistência de tais assertivas, foram utilizados dois exemplos de regressão linear multivariada. Este modelo estatístico consiste em uma equa ção que estima o valor esperado de uma variável tida como dependente quando as demais variáveis, independentes, variam. Matematicamente temos a equação:",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "visualizar a cidadania, nos remete ao último conceito sugerido: migração. Esta, por sua vez, se disseminou de forma signi ficativa nos ú ltimos 50 anos. O fenômeno migratório é bastante antigo na história da humanidade. Perseguições políticas, ideológicas, religiosas ou étnicas, epidemias,",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 3 priority fidelity issue(s): 2 contradicted and 1 not found in text; overall status fail."
+}

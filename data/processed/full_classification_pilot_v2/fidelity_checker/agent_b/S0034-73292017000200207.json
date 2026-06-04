@@ -1,0 +1,157 @@
+{
+  "pid": "S0034-73292017000200207",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "47befe0e532905f602eb35dd05d354df8970fe415b74e67bc313d0b59f19ca2c",
+  "classification_hash": "23a24eab0aba6f0f306242656a79b0ccfc95c7478531d62099ad48df35804eb1",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "to understand the complex question of what caused the decision, we aim to use process-tracing to provide causal explanations regarding Brazilian defense cooperation. The analysis with the use of process-tracing has gained a new impetus in recent years. The use of this",
+      "classification_value": [
+        {
+          "variable_name": "Brazilian foreign-policy motivations",
+          "variable_description": "Competing realist, institutional and identity-based explanations for the South American Defense Council proposal."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "maintenance or changing of patterns of defense cooperation in the region. In this paper, Brazil and its proposal for the creation of the South American Defense Council (CDS) is the case study. Brazil participates in a broad range of institutions, organizations, and",
+      "classification_value": [
+        {
+          "variable_name": "Creation proposal for the CDS",
+          "variable_description": "Brazilian proposal to create the UNASUR South American Defense Council."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "creation of the CDS. In order to understand the complex question of what caused the decision, we aim to use process -tracing to provide causal explanations regarding Brazilian defense cooperation. The analysis with the use of process-tracing has gained a new impetus",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "CDS. In order to understand the complex question of what caused the decision, we aim to use process-tracing to provide causal explanations regarding Brazilian defense cooperation. The analysis with the use of process-tracing has gained a new impetus in recent years. The",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains causal-process language that can support a mechanism/channel classification.",
+      "supporting_excerpt": "CDS. In order to understand the complex question of what caused the decision, we aim to use process-tracing to provide causal explanations regarding Brazilian defense cooperation. The analysis with the use of process-tracing has gained a new impetus in recent years. The",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

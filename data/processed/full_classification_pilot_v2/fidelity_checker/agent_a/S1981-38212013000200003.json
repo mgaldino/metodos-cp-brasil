@@ -1,0 +1,157 @@
+{
+  "pid": "S1981-38212013000200003",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "ac722e76dbe5d1542c48810d4bde9febdd659b02b45a9995ae0a500bd66bc554",
+  "classification_hash": "82639b1ddbe2eb81a3cd0f1abdf035450641a44a6dbde6cbd0d5c7f18747dc00",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classified sample size appears near sample/count language in the canonical body text.",
+      "supporting_excerpt": "for each of the metropolitan regions, for a total of 1201 interviews. The sample was weighed – in its totality – by quotas conce rning income range, gender, education level, age range and whether the respondent was part of the economically active",
+      "classification_value": 1201
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The sample-size quote was not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": "A public opinion survey was carried out in the metropolitan regions of Belo Horizonte, Goiânia, Porto Alegre and Recife from a sample made up of 300 household interviews for each of the metropolitan regions, for a total of 1201 interviews."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "On the other hand, * The data necessary to reproduce numerical results can be found in http://bpsr.org.br/files/ arquivos/Banco_Dados_Filgueiras.sav 62 bps r Perceptio ns on Justice, the Judiciary and Democracy Western democracies have provided institutional changes derived from a displacement of democratic legitimacy,",
+      "classification_value": [
+        {
+          "variable_name": "perceptions of judiciary, trust, procedural equality factors",
+          "variable_description": "Explanatory variable identified from the article body."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Brazil as well as the strengthening of judicial institutions (Moisés and Carneiro, 2008; Werneck Vianna et al., 2007). The dissat isfaction with the performance of institutions, conveyed by the presence of distrust, stems from a combination of aspirations for unaccomplished justice. The",
+      "classification_value": [
+        {
+          "variable_name": "dissatisfaction with democracy",
+          "variable_description": "Outcome variable identified from the article body."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims an original survey, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification claims an original survey, but the body evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "low",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No direct mechanism/channel language was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 7 priority fidelity issue(s): 0 contradicted and 7 not found in text; overall status fail."
+}

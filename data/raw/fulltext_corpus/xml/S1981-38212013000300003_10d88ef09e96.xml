@@ -1,0 +1,1295 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">rmJHvn3kfknCQbGLCr49GXR</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212013000300003</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(13)00700300003</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Mapping and explaining the use of the left-right divide</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Freire</surname>
+            <given-names>André</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Kivistik</surname>
+            <given-names>Kats</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff02"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">Lisbon University Institute</institution>
+        <institution content-type="orgdiv1">Centre for Sociological Studies and Research </institution>
+        <institution content-type="orgdiv2">Department of Political Science and Public Policies</institution>
+        <country country="PT">Portugal</country>
+      </aff>
+      <aff id="aff02">
+        <institution content-type="orgname">University of Tartu</institution>
+        <institution content-type="orgdiv1">Institute of Government and Politics </institution>
+        <country country="EE">Estonia</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2013</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>3</issue>
+      <fpage>61</fpage>
+      <lpage>89</lpage>
+      <history>
+        <date date-type="received">
+          <month>05</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <month>08</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v7n3/v7n3a03.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>This study is about mapping and explaining the use of the Left-Right divide across 14 countries from 5 Continents and relies on the richness of the post electoral mass surveys from the Comparative National Election Project: 14 countries and 18 elections spread over 5 continents. The paper shows not only how extensively the LR divide is used in these 14 countries, but also explains variation across both individuals and countries in terms of the factors determining LR recognition and use. Overall, it is shown that, although seen world-wide, the LR divide (both for self-placement and party placement) is more present in long consolidated and middle-aged democracies and countries with freer media systems than in new democracies and societies with less free media systems. In the case of parties LR placement, party size also counts: larger parties are more easily placed. Additionally, we also show that LR recognition is more socially and politically determined in long consolidated and middle-aged democracies and in countries with more freedom of the press than in new democracies and in systems with less free media system. These findings add to the existing knowledge about these topics because previous studies were either country/Continent specific, or, if global in nature, never invested in explaining individual and system variation across 14 from 5 Continents. Besides, these findings mean that in the long term probably the new democracies will converge with the long consolidated or middle-aged ones, but this is an empirical question to be researched in future studies.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>Left-right</kwd>
+        <kwd>America</kwd>
+        <kwd>Europe</kwd>
+        <kwd>Africa</kwd>
+        <kwd>Asia</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>21</day>
+        <month>02</month>
+        <year>2014</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>ACHEN, Christopher. (2005), "Two-Step Hierarchical Estimation: Beyond Regression Analysis". <italic>Political Analysis</italic>, vol. 13, nº 4, pp. 447-456.</mixed-citation>
+        <element-citation publication-type="journal">
+          <source>Political Analysis</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>447</fpage>
+          <lpage>456</lpage>
+          <issue>4</issue>
+          <volume>13</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ACHEN</surname>
+              <given-names>Christopher</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>ARON, Raymond. (2002), <italic>L'Opium des Intellectueles</italic>, Paris: Hachette.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>L'Opium des Intellectueles</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ARON</surname>
+              <given-names>Raymond</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>BARNES, Samuel H. (2002), "Left and Right in Old and New Democracies". C<italic>entral European Political Science Review</italic>, vol. 3, nº7, pp. 6-15.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Left and Right in Old and New Democracies</article-title>
+          <source>Central European Political Science Review</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>6</fpage>
+          <lpage>15</lpage>
+          <issue>7</issue>
+          <volume>3</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BARNES</surname>
+              <given-names>Samuel H.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>BARNES, Samuel H.; McDONOUGH, Peter; PINA, António L. (1985), "The development of partisanship in new democracies: the case of Spain". <italic>American Journal of Political Science</italic>, nº 29, pp. 695-720.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The development of partisanship in new democracies: the case of Spain</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <fpage>695</fpage>
+          <lpage>720</lpage>
+          <issue>29</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BARNES</surname>
+              <given-names>Samuel H.</given-names>
+            </name>
+            <name>
+              <surname>McDONOUGH</surname>
+              <given-names>Peter</given-names>
+            </name>
+            <name>
+              <surname>PINA</surname>
+              <given-names>António L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>BECK, Paul A.; DALTON, Russell J.; GREENE, Steven; HUCKFELDT, Robert. (2002), "The Social Calculus of Voting: Interpersonal, Media, and Organizational Influences on Presidential Choices". <italic>The American Political Science Review</italic>, vol.96, nº1, pp. 57-73.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Social Calculus of Voting: Interpersonal, Media, and Organizational Influences on Presidential Choices</article-title>
+          <source>The American Political Science Review</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>57</fpage>
+          <lpage>73</lpage>
+          <issue>1</issue>
+          <volume>96</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BECK</surname>
+              <given-names>Paul A.</given-names>
+            </name>
+            <name>
+              <surname>DALTON</surname>
+              <given-names>Russell J.</given-names>
+            </name>
+            <name>
+              <surname>GREENE</surname>
+              <given-names>Steven</given-names>
+            </name>
+            <name>
+              <surname>HUCKFELDT</surname>
+              <given-names>Robert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>BELL, Daniel. (2000), <italic>The End of Ideology. On the Exhaustion of Political Ideas in the Fifties</italic>. Harvard: Harvard University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The End of Ideology: On the Exhaustion of Political Ideas in the Fifties</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BELL</surname>
+              <given-names>Daniel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>BOBBIO, Norberto. (1994), <italic>Direita e Esquerda.</italic> Lisbon: Presença.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Direita e Esquerda</source>
+          <date>
+            <year>1994</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BOBBIO</surname>
+              <given-names>Norberto</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>CAMPBELL, Angus; CONVERSE, Philip E.; MILLER, Warren E.; STOKES, Donald E. (1980), <italic>The American Voter</italic>. Chicago: Chicago University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The American Voter</source>
+          <date>
+            <year>1980</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CAMPBELL</surname>
+              <given-names>Angus</given-names>
+            </name>
+            <name>
+              <surname>CONVERSE</surname>
+              <given-names>Philip E.</given-names>
+            </name>
+            <name>
+              <surname>MILLER</surname>
+              <given-names>Warren E.</given-names>
+            </name>
+            <name>
+              <surname>STOKES</surname>
+              <given-names>Donald E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>CARAMANI, Daniele (2004), <italic>The Nationalization of Politics. The Formation of National Electorates and Party Systems in Western Europe.</italic> Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Nationalization of Politics: The Formation of National Electorates and Party Systems in Western Europe</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARAMANI</surname>
+              <given-names>Daniele</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>CONVERSE, Philip E. (1964), The nature of belief systems in mass publics, In: Apter, David. <italic>Ideology and Discontent</italic>. New York: The Free Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Ideology and Discontent</source>
+          <date>
+            <year>1964</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CONVERSE</surname>
+              <given-names>Philip E.</given-names>
+            </name>
+            <name>
+              <surname>Apter</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>CONVERSE, Philip E. (1969), "Of time and partisan stability". <italic>Comparative Political Studies</italic>, vol. 2, pp. 139-171.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Of time and partisan stability</article-title>
+          <source>Comparative Political Studies</source>
+          <date>
+            <year>1969</year>
+          </date>
+          <fpage>139</fpage>
+          <lpage>171</lpage>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CONVERSE</surname>
+              <given-names>Philip E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>COLOMER, Josep M. and ESCATEL, Luis E. (2005), <italic>The Left-Right Dimension in Latin America. UPF Economics and Business Working Paper</italic>, nº 813.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Left-Right Dimension in Latin America</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COLOMER</surname>
+              <given-names>Josep M.</given-names>
+            </name>
+            <name>
+              <surname>ESCATEL</surname>
+              <given-names>Luis E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>DALTON, Russell J. (2006). Social Modernization and the End of Ideology Debate: Patterns of Ideological Polarization. <italic>Japanese Journal of Political Science</italic>. vol.7, nº1, pp. 1-22.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Social Modernization and the End of Ideology Debate: Patterns of Ideological Polarization</article-title>
+          <source>Japanese Journal of Political Science</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>22</lpage>
+          <issue>1</issue>
+          <volume>7</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DALTON</surname>
+              <given-names>Russell J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>DALTON, Russell J.; FARREL, David M.; MCALLISTER, Ian. (2011), Political Parties and <italic>Democratic Linkage: How Parties Organize Democracy</italic>. Oxford: Oxford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Political Parties and Democratic Linkage: How Parties Organize Democracy</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DALTON</surname>
+              <given-names>Russell J.</given-names>
+            </name>
+            <name>
+              <surname>FARREL</surname>
+              <given-names>David M.</given-names>
+            </name>
+            <name>
+              <surname>MCALLISTER</surname>
+              <given-names>Ian</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>DIX, Robert H. (1992), "Democratization and the institutionalization of Latin American Political Parties", <italic>Comparative Political Studies</italic>, vol. 24, nº4, pp. 488-511.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Democratization and the institutionalization of Latin American Political Parties</article-title>
+          <source>Comparative Political Studies</source>
+          <date>
+            <year>1992</year>
+          </date>
+          <fpage>488</fpage>
+          <lpage>511</lpage>
+          <issue>4</issue>
+          <volume>24</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DIX</surname>
+              <given-names>Robert H.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>EVANS, Geoffrey and WHITEFIELD, Stephen. (1998), The evolution of left and right in post-Soviet Russia. <italic>Europe-Asia Studies</italic>, vol. 50, nº6, pp. 1023-1042.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The evolution of left and right in post-Soviet Russia</article-title>
+          <source>Europe-Asia Studies</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <fpage>1023</fpage>
+          <lpage>1042</lpage>
+          <issue>6</issue>
+          <volume>50</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>EVANS</surname>
+              <given-names>Geoffrey</given-names>
+            </name>
+            <name>
+              <surname>WHITEFIELD</surname>
+              <given-names>Stephen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>FRANKLIN, Mark.; MACKIE, Thomas.; VALEN, Henry (eds.). (1992), Electoral Change. Responses to Evolving Social and Attitudinal Structures in Western Countries, Cambridge, Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Electoral Change. Responses to Evolving Social and Attitudinal Structures in Western Countries</source>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FRANKLIN</surname>
+              <given-names>Mark</given-names>
+            </name>
+            <name>
+              <surname>MACKIE</surname>
+              <given-names>Thomas</given-names>
+            </name>
+            <name>
+              <surname>VALEN</surname>
+              <given-names>Henry</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>FREIRE, André. (2006a), Left-Right Ideological Identities in New Democracies: Greece, Portugal and Spain in the Western European Context", <italic>Pôle Sud - Revue de Science Politique de l'Europe Méridionale</italic>, nº 25, vol. II, pp. 153-173.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Left-Right Ideological Identities in New Democracies: Greece, Portugal and Spain in the Western European Context</article-title>
+          <source>Pôle Sud - Revue de Science Politique de l'Europe Méridionale</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>153</fpage>
+          <lpage>173</lpage>
+          <issue>25</issue>
+          <volume>II</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FREIRE</surname>
+              <given-names>André</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>FREIRE, André. (2006b), Bringing Social Identities Back In: The Social Anchors of Left-Right Orientation in Western Europe. <italic>International Political Science Review</italic>, vol. 27, nº4, pp. 359-378.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Bringing Social Identities Back In: The Social Anchors of Left-Right Orientation in Western Europe</article-title>
+          <source>International Political Science Review</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>359</fpage>
+          <lpage>378</lpage>
+          <issue>4</issue>
+          <volume>27</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FREIRE</surname>
+              <given-names>André</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>FREIRE, André (2008). Party Polarization and Citizens' Left-Right Orientations. Party Politics, 14(2), pp.189-209.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Party Polarization and Citizens' Left-Right Orientations</article-title>
+          <source>Party Politics</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>189</fpage>
+          <lpage>209</lpage>
+          <issue>2</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FREIRE</surname>
+              <given-names>André</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>FREIRE, André and BELCHIOR, Ana M. (2011), What left and right means to Portuguese citizens. <italic>Comparative European Politics</italic>, vol. 9, nº2, pp. 145-167.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>What left and right means to Portuguese citizens</article-title>
+          <source>Comparative European Politics</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <fpage>145</fpage>
+          <lpage>167</lpage>
+          <issue>2</issue>
+          <volume>9</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FREIRE</surname>
+              <given-names>André</given-names>
+            </name>
+            <name>
+              <surname>BELCHIOR</surname>
+              <given-names>Ana M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>FREIRE, André and KIVISTIK, Kats (2013), «Western and Non-Western Meaning of the left-right divide across four continents», <italic>Journal of Political Ideologies</italic>, vol.18, nº 2, pp. 171-199.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Western and Non-Western Meaning of the left-right divide across four continents</article-title>
+          <source>Journal of Political Ideologies</source>
+          <date>
+            <year>2013</year>
+          </date>
+          <fpage>171</fpage>
+          <lpage>199</lpage>
+          <issue>2</issue>
+          <volume>18</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FREIRE</surname>
+              <given-names>André</given-names>
+            </name>
+            <name>
+              <surname>KIVISTIK</surname>
+              <given-names>Kats</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>FUCHS, Dieter and KLINGEMANN, Hans-Dieter (1990), "The Left-Right Schema". In: JENNINGS, M. Kent et al, <italic>Continuities in Political Action</italic>, Berlin de Gruyter, pp. 203-234.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Continuities in Political Action</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <fpage>203</fpage>
+          <lpage>234</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FUCHS</surname>
+              <given-names>Dieter</given-names>
+            </name>
+            <name>
+              <surname>KLINGEMANN</surname>
+              <given-names>Hans-Dieter</given-names>
+            </name>
+            <name>
+              <surname>JENNINGS</surname>
+              <given-names>M. Kent</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>FUKUYAMA, Francis (1989), "The end of history". <italic>The National Interest</italic>, 16.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The end of history</article-title>
+          <source>The National Interest</source>
+          <date>
+            <year>1989</year>
+          </date>
+          <volume>16</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FUKUYAMA</surname>
+              <given-names>Francis</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>GIDDENS, Anthony (1996), <italic>Más Allá de la Izquierda y la Derecha</italic>. Madrid: Ediciones Cátedra.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Más Allá de la Izquierda y la Derecha</source>
+          <date>
+            <year>1996</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GIDDENS</surname>
+              <given-names>Anthony</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>GUNTHER, Richard and KUAN, Hsin-chi (2007), "Value Cleavages and Partisan Conflict". In: GUNTHER, Richard, MONTERO, José Ramon and PUHLE, Hans-Jürgen. <italic>Democracy, Intermediation, and Voting on Four Continents</italic>. Oxford: Oxford University Press, pp. 255-320.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Democracy, Intermediation, and Voting on Four Continents</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>255</fpage>
+          <lpage>320</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GUNTHER</surname>
+              <given-names>Richard</given-names>
+            </name>
+            <name>
+              <surname>KUAN</surname>
+              <given-names>Hsin-chi</given-names>
+            </name>
+            <name>
+              <surname>GUNTHER</surname>
+              <given-names>Richard</given-names>
+            </name>
+            <name>
+              <surname>MONTERO</surname>
+              <given-names>José Ramon</given-names>
+            </name>
+            <name>
+              <surname>PUHLE</surname>
+              <given-names>Hans-Jürgen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>GUNTHER, Richard and MONTERO, José R. (2001), «The Anchors of Partisanship: A Comparative Analysis of Voting Behaviour in Four Southern European Countries". In: DIAMANDOUROS, Nikiforos and GUNTHER, Richard (orgs.) (2001), <italic>Parties, Politics, and Democracy in New Southern Europe.</italic> Baltimore: The John Hopkins University Press, pp. 83-152.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Parties, Politics, and Democracy in New Southern Europe</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>83</fpage>
+          <lpage>152</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GUNTHER</surname>
+              <given-names>Richard</given-names>
+            </name>
+            <name>
+              <surname>MONTERO</surname>
+              <given-names>José R</given-names>
+            </name>
+            <name>
+              <surname>DIAMANDOUROS</surname>
+              <given-names>Nikiforos</given-names>
+            </name>
+            <name>
+              <surname>GUNTHER</surname>
+              <given-names>Richard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>HEYWOOD, Andrew (2003), <italic>Political Ideologies. An Introduction.</italic> Basingstoke: Palgrave Macmillan.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Political Ideologies: An Introduction</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HEYWOOD</surname>
+              <given-names>Andrew</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>HUBER, John and INGLEHART, Ronald. (1995), "Expert interpretations of party space and party locations in 42 societies", <italic>Party Politics</italic>, vol. 1, nº 73, p. 111.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Expert interpretations of party space and party locations in 42 societies</article-title>
+          <source>Party Politics</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <issue>73</issue>
+          <volume>1</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HUBER</surname>
+              <given-names>John</given-names>
+            </name>
+            <name>
+              <surname>INGLEHART</surname>
+              <given-names>Ronald</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>INGLEHART, Ronald and KLINGEMANN, Hans D. (1976), Party identification, ideological preference and the left-right dimension among Western mass publics. In: BUDGE, Ian ed. Party identification and Beyond, London and New York, Wiley.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Party identification and Beyond</source>
+          <date>
+            <year>1976</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>INGLEHART</surname>
+              <given-names>Ronald</given-names>
+            </name>
+            <name>
+              <surname>KLINGEMANN</surname>
+              <given-names>Hans D</given-names>
+            </name>
+            <name>
+              <surname>BUDGE</surname>
+              <given-names>Ian</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>JOU, Willy (2010), "The heuristic value of the left-right schema in East Asia", <italic>International Political Science Review</italic>, vol. 31, nº3, pp. 366-394.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The heuristic value of the left-right schema in East Asia</article-title>
+          <source>International Political Science Review</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>366</fpage>
+          <lpage>394</lpage>
+          <issue>3</issue>
+          <volume>31</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JOU</surname>
+              <given-names>Willy</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <mixed-citation>JOVELL, Albert J. (1995), <italic>Análisis de Regresión Logística</italic>. Madrid: CIS.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Análisis de Regresión Logística</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JOVELL</surname>
+              <given-names>Albert J</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <mixed-citation>JUSKO, Karen L. and SHIVELY, W. Philips. (2005), "Applying a Two-Step Strategy to the Analysis of Cross-National Public Opinion Data". <italic>Political Analysis</italic>, vol.13, nº4, pp. 327-344.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Applying a Two-Step Strategy to the Analysis of Cross-National Public Opinion Data</article-title>
+          <source>Political Analysis</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>327</fpage>
+          <lpage>344</lpage>
+          <issue>4</issue>
+          <volume>13</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JUSKO</surname>
+              <given-names>Karen L</given-names>
+            </name>
+            <name>
+              <surname>SHIVELY</surname>
+              <given-names>W. Philips</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B34">
+        <mixed-citation>KIECOLT, K. Jill and NATHAN, Laura E. (1985), <italic>Secondary Analysis of Survey Data</italic>. London: Sage.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Secondary Analysis of Survey Data</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KIECOLT</surname>
+              <given-names>K. Jill</given-names>
+            </name>
+            <name>
+              <surname>NATHAN</surname>
+              <given-names>Laura E</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B35">
+        <mixed-citation>KITSCHELT, Herbert and HELLEMANS, Staf. (1990), The left-right semantics and the new politics cleavage. <italic>Comparative Political Studies.</italic> vol.23, nº2: pp. 210-238.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The left-right semantics and the new politics cleavage</article-title>
+          <source>Comparative Political Studies</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <fpage>210</fpage>
+          <lpage>238</lpage>
+          <issue>2</issue>
+          <volume>23</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KITSCHELT</surname>
+              <given-names>Herbert</given-names>
+            </name>
+            <name>
+              <surname>HELLEMANS</surname>
+              <given-names>Staf</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B36">
+        <mixed-citation>KITSCHELT, Herbert; MANSFELDOVA, Zdenka; MARKOWSKI, Radoslaw; TOKA, Gabor (eds.). (1999), <italic>Post-Communist Party Systems. Competition, Representation, and Inter-Party Cooperation</italic>. NY: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Post-Communist Party Systems: Competition, Representation, and Inter-Party Cooperation</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KITSCHELT</surname>
+              <given-names>Herbert</given-names>
+            </name>
+            <name>
+              <surname>MANSFELDOVA</surname>
+              <given-names>Zdenka</given-names>
+            </name>
+            <name>
+              <surname>MARKOWSKI</surname>
+              <given-names>Radoslaw</given-names>
+            </name>
+            <name>
+              <surname>TOKA</surname>
+              <given-names>Gabor</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B37">
+        <mixed-citation>KLINGEMANN, Hans-Dieter (1979), "Measuring ideological conceptualizations", "The background of ideological conceptualization". In: BARNES, Samuel et al, <italic>Political Action</italic>. Beverly Hills: Sage, pp. 215-253, 255-277.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Political Action</source>
+          <date>
+            <year>1979</year>
+          </date>
+          <fpage>215</fpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KLINGEMANN</surname>
+              <given-names>Hans-Dieter</given-names>
+            </name>
+            <name>
+              <surname>BARNES</surname>
+              <given-names>Samuel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B38">
+        <mixed-citation>KNUTSEN, Oddbjørn (1997), "The Partisan and the Value-Based Components of Left-right Self-placement: A Comparative Study". <italic>International Political Science Review</italic>, vol. 18, pp.191-225.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Partisan and the Value-Based Components of Left-right Self-placement: A Comparative Study</article-title>
+          <source>International Political Science Review</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <fpage>191</fpage>
+          <lpage>225</lpage>
+          <volume>18</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KNUTSEN</surname>
+              <given-names>Oddbjørn</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B39">
+        <mixed-citation>KNUTSEN, Oddbjørn (1998). The strength of the partisan component of left-right Identity. A comparative longitudinal study of left-right party polarization in eight West European countries. Party Politics, 4, pp. 5-31.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The strength of the partisan component of left-right Identity: A comparative longitudinal study of left-right party polarization in eight West</article-title>
+          <source>European countries. Party Politics</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <fpage>5</fpage>
+          <lpage>31</lpage>
+          <volume>4</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KNUTSEN</surname>
+              <given-names>Oddbjørn</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B40">
+        <mixed-citation>KNUTSEN, Oddbjørn and SCARBROUGH, Elinor. (1995), "Cleavage politics". In: DETH, J. W. Van and SCARBROUGH, E. <italic>The Impact of Values</italic>. Oxford: Oxford University Press, pp. 492-524.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Impact of Values</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <fpage>492</fpage>
+          <lpage>524</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KNUTSEN</surname>
+              <given-names>Oddbjørn</given-names>
+            </name>
+            <name>
+              <surname>SCARBROUGH</surname>
+              <given-names>Elinor</given-names>
+            </name>
+            <name>
+              <surname>DETH</surname>
+              <given-names>J. W. Van</given-names>
+            </name>
+            <name>
+              <surname>SCARBROUGH</surname>
+              <given-names>E</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B41">
+        <mixed-citation>LACHAT, Romain (2008), "The impact of party polarization on ideological voting". <italic>Electoral Studies</italic>, vol. 27, pp. 687-698.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The impact of party polarization on ideological voting</article-title>
+          <source>Electoral Studies</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>687</fpage>
+          <lpage>698</lpage>
+          <volume>27</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LACHAT</surname>
+              <given-names>Romain</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B42">
+        <mixed-citation>LAPONCE, Jean A. (1981), <italic>Left and Right. The Topography of Political Perceptions</italic>. Toronto: University of Toronto Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Left and Right: The Topography of Political Perceptions</source>
+          <date>
+            <year>1981</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LAPONCE</surname>
+              <given-names>Jean A</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B43">
+        <mixed-citation>LEE, Aie-Rie. (2007), "Value Cleavages, Issues, and Partisanship in East Asia", <italic>Journal of East Asian Studies</italic>. vol.7, nº2, pp. 251-274.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Value Cleavages, Issues, and Partisanship in East Asia</article-title>
+          <source>Journal of East Asian Studies</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>251</fpage>
+          <lpage>274</lpage>
+          <issue>2</issue>
+          <volume>7</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LEE</surname>
+              <given-names>Aie-Rie</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B44">
+        <mixed-citation>LIPSET, Seymour M. (1987), "¿El fin de toda ideología?" and "Un concepto y su historia: el fin de la ideología". In LIPSET, Seymour M. <italic>El Hombre Político. Las Bases Sociales de la Política.</italic> Madrid: Editorial Tecnos, pp. 357-372 e 420-448.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>El Hombre Político: Las Bases Sociales de la Política</source>
+          <date>
+            <year>1987</year>
+          </date>
+          <fpage>357</fpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LIPSET</surname>
+              <given-names>Seymour M</given-names>
+            </name>
+            <name>
+              <surname>LIPSET</surname>
+              <given-names>Seymour M</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B45">
+        <mixed-citation>LUNA, Juan P. and ZECHMEISTER, Elizabeth J. (2010), "Political representation in Latin American". In: KITSCHELT, Herbert et al (2010) (eds.) <italic>Latin American Party Systems</italic>. NY: Cambridge University Press, pp. 119-144.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Latin American Party Systems</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>119</fpage>
+          <lpage>144</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LUNA</surname>
+              <given-names>Juan P</given-names>
+            </name>
+            <name>
+              <surname>ZECHMEISTER</surname>
+              <given-names>Elizabeth J</given-names>
+            </name>
+            <name>
+              <surname>KITSCHELT</surname>
+              <given-names>Herbert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B46">
+        <mixed-citation>MAAS, Cora J.M. and HOX, Joop J. (2005), "Sufficient Sample Sizes for Multilevel Modelling". <italic>Methodology</italic>, vol.1, nº3, pp. 86-92.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Sufficient Sample Sizes for Multilevel Modelling</article-title>
+          <source>Methodology</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>86</fpage>
+          <lpage>92</lpage>
+          <issue>3</issue>
+          <volume>1</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MAAS</surname>
+              <given-names>Cora J.M.</given-names>
+            </name>
+            <name>
+              <surname>HOX</surname>
+              <given-names>Joop J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B47">
+        <mixed-citation>MCALLISTER, Ian and WHITE, Stephen. (2007), Political Parties and Democratic Consolidation in Post-Communist Societies. <italic>Party Politics</italic>. vol.13, nº2, pp.197-216.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Political Parties and Democratic Consolidation in Post-Communist Societies</article-title>
+          <source>Party Politics</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>197</fpage>
+          <lpage>216</lpage>
+          <issue>2</issue>
+          <volume>13</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MCALLISTER</surname>
+              <given-names>Ian</given-names>
+            </name>
+            <name>
+              <surname>WHITE</surname>
+              <given-names>Stephen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B48">
+        <mixed-citation>MAINWARING, Scott P. and TORCAL, Mariano. (2005), "Party System Theory and Party System Institutionalization after the Third Wave of Democratization." Paper presented at the Political Science Seminar of the Social Sciences Institute of the University of Lisbon, Portugal.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Party System Theory and Party System Institutionalization after the Third Wave of Democratization</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MAINWARING</surname>
+              <given-names>Scott P</given-names>
+            </name>
+            <name>
+              <surname>TORCAL</surname>
+              <given-names>Mariano</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B49">
+        <mixed-citation>MARKOWSKI, Radoslaw. (1997), Political Parties and Ideological Spaces in east Central Europe. <italic>Communist and Post-Communist Studies</italic> vol. 30, nº3, pp. 221-254.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Political Parties and Ideological Spaces in east Central Europe</article-title>
+          <source>Communist and Post-Communist Studies</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <fpage>221</fpage>
+          <lpage>254</lpage>
+          <issue>3</issue>
+          <volume>30</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MARKOWSKI</surname>
+              <given-names>Radoslaw</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B50">
+        <mixed-citation>NIEMI, Richard G.; POWELL JR, G. Bingham; STANLEY, Harold W.; EVANS, C. Lawrence. (1985), "Testing the converse partisanship model with new electorates", <italic>Comparative Political Studies</italic>, vol. 18, pp. 300-322.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Testing the converse partisanship model with new electorates</article-title>
+          <source>Comparative Political Studies</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <fpage>300</fpage>
+          <lpage>322</lpage>
+          <volume>18</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NIEMI</surname>
+              <given-names>Richard G.</given-names>
+            </name>
+            <name>
+              <surname>POWELL JR</surname>
+              <given-names>G. Bingham</given-names>
+            </name>
+            <name>
+              <surname>STANLEY</surname>
+              <given-names>Harold W.</given-names>
+            </name>
+            <name>
+              <surname>EVANS</surname>
+              <given-names>C. Lawrence</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B51">
+        <mixed-citation>NOËL, Alain and THÉRIEN, Jean-Philippe (2008), <italic>Left and Right in Global Politics</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Left and Right in Global Politics</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NOËL</surname>
+              <given-names>Alain</given-names>
+            </name>
+            <name>
+              <surname>THÉRIEN</surname>
+              <given-names>Jean-Philippe</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B52">
+        <mixed-citation>ROSE, Richard and MUNRO, Neil (2003), <italic>Elections and Parties in New European Democracies</italic>. Washington: CQ Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Elections and Parties in New European Democracies</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ROSE</surname>
+              <given-names>Richard</given-names>
+            </name>
+            <name>
+              <surname>MUNRO</surname>
+              <given-names>Neil</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B53">
+        <mixed-citation>WELDON, Steven A. (2006), "The Institutional Context of Tolerance for Ethnic Minorities: A Comparative Multilevel Analysis of Western Europe". <italic>American Journal of Political Science</italic>, vol. 50, nº2, pp. 331-349.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Institutional Context of Tolerance for Ethnic Minorities: A Comparative Multilevel Analysis of Western Europe</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>331</fpage>
+          <lpage>349</lpage>
+          <issue>2</issue>
+          <volume>50</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>WELDON</surname>
+              <given-names>Steven A</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B54">
+        <mixed-citation>VAN DER EIJK, Cees; SCHMITT, Hermann; BINDER, Tanja. (2005), "Left-right Orientations and Party Choice". In: THOMASSEN, Jacques (ed.), <italic>The European Voter. A Comparative Study of Modern Democracies.</italic> Oxford: Oxford University Press, pp. 167-191.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The European Voter: A Comparative Study of Modern Democracies</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>167</fpage>
+          <lpage>191</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>VAN DER EIJK</surname>
+              <given-names>Cees</given-names>
+            </name>
+            <name>
+              <surname>SCHMITT</surname>
+              <given-names>Hermann</given-names>
+            </name>
+            <name>
+              <surname>BINDER</surname>
+              <given-names>Tanja</given-names>
+            </name>
+            <name>
+              <surname>THOMASSEN</surname>
+              <given-names>Jacques</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B55">
+        <mixed-citation>ZECHMEISTER, Elizabeth. (2006). What's Left and Who's Right? A Q-method Study of Individual and Contextual Influences on the Meaning of Ideological Labels. <italic>Political Behavior</italic>. vol. 28: pp.151-173.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>What's Left and Who's Right?: A Q-method Study of Individual and Contextual Influences on the Meaning of Ideological Labels</article-title>
+          <source>Political Behavior</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>151</fpage>
+          <lpage>173</lpage>
+          <volume>28</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ZECHMEISTER</surname>
+              <given-names>Elizabeth</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B56">
+        <mixed-citation>ZECHMEISTER, Elizabeth. (2010), "Left-right semantics as a facilitator of Programmatic Structuration". In: KITSCHELT, Herbert et al (2010) (eds.) <italic>Latin American Party Systems</italic>. NY: Cambridge University Press, pp. 76-118.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Latin American Party Systems</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>76</fpage>
+          <lpage>118</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ZECHMEISTER</surname>
+              <given-names>Elizabeth</given-names>
+            </name>
+            <name>
+              <surname>KITSCHELT</surname>
+              <given-names>Herbert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

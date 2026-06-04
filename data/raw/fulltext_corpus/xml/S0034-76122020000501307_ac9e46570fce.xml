@@ -1,0 +1,248 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "http://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">rap</journal-id>
+      <journal-title-group>
+        <journal-title>Revista de Administração Pública</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Rev. Adm. Pública</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0034-7612</issn>
+      <issn pub-type="epub">1982-3134</issn>
+      <publisher>
+        <publisher-name>Fundação Getulio Vargas</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id specific-use="scielo-v3" pub-id-type="publisher-id">smzh96CygdXb6kLcL3cwkRz</article-id>
+      <article-id specific-use="scielo-v2" pub-id-type="publisher-id">S0034-76122020000501307</article-id>
+      <article-id pub-id-type="doi">10.1590/0034-761220190329x</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Paper</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>[RETRACTED ARTICLE] Relational capability: a study of the Brazilian Agricultural Research Corporation</article-title>
+        <trans-title-group xml:lang="es">
+          <trans-title>[ARTÍCULO RETRACTADO] Capacidad relacional: un estudio de la Empresa Brasileña de Investigación Agrícola</trans-title>
+        </trans-title-group>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-0136-9040</contrib-id>
+          <name>
+            <surname>Preusler</surname>
+            <given-names>Taísa Scariot</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-7012-0679</contrib-id>
+          <name>
+            <surname>Costa</surname>
+            <given-names>Priscila Rezende da</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0001-9740-8069</contrib-id>
+          <name>
+            <surname>Crespi</surname>
+            <given-names>Tatiane Baseggio</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-7245-3178</contrib-id>
+          <name>
+            <surname>Cirani</surname>
+            <given-names>Claudia Brito Silva</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">1</xref>
+        </contrib>
+        <aff id="aff1">
+          <label>1</label>
+          <institution content-type="original"> Universidade Nove de Julho / Graduate Program of Business Administration, São Paulo / SP /Brazil</institution>
+          <institution content-type="orgname">Universidade Nove de Julho</institution>
+          <institution content-type="orgdiv1">Graduate Program of Business Administration</institution>
+          <addr-line>
+            <city>São Paulo</city>
+            <state>SP</state>
+          </addr-line>
+          <country country="BR">Brazil</country>
+        </aff>
+      </contrib-group>
+      <author-notes>
+        <fn fn-type="other" id="fn1">
+          <p>Taísa Scariot Preusler - Master in Business Administration at Universidade Nove de Julho (UNINOVE). E-mail: taisa.s@hotmail.com</p>
+        </fn>
+        <fn fn-type="other" id="fn2">
+          <p>Priscila Rezende da Costa - Ph.D. in Business Administration; Full Professor in Graduate Program of Business Administration at Universidade Nove de Julho (UNINOVE). E-mail: priscilarezende@yahoo.com.br</p>
+        </fn>
+        <fn fn-type="other" id="fn3">
+          <p>Tatiane Baseggio Crespi Master in Business Administration at Universidade Nove de Julho (UNINOVE). E-mail: tatianebaseggiocrespi@gmail.com</p>
+        </fn>
+        <fn fn-type="other" id="fn4">
+          <p>Claudia Brito Silva Cirani - Ph.D. in Economic; Full Professor in Graduate Program of Business Administration at Universidade Nove de Julho (UNINOVE). E-mail: claudiabscirani@gmail.com</p>
+        </fn>
+      </author-notes>
+      <pub-date date-type="pub" publication-format="electronic">
+        <day>02</day>
+        <month>11</month>
+        <year>2020</year>
+      </pub-date>
+      <pub-date date-type="collection" publication-format="electronic">
+        <season>Sep-Oct</season>
+        <year>2020</year>
+      </pub-date>
+      <volume>54</volume>
+      <issue>5</issue>
+      <fpage>1307</fpage>
+      <lpage>1333</lpage>
+      <history>
+        <date date-type="received">
+          <day>16</day>
+          <month>09</month>
+          <year>2019</year>
+        </date>
+        <date date-type="accepted">
+          <day>29</day>
+          <month>04</month>
+          <year>2020</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This is an open-access article distributed under the terms of the Creative Commons Attribution License</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <title>Abstract</title>
+        <p>The Brazilian Agricultural Research Corporation (EMBRAPA) plays an important role in Research and Development (R&amp;D) for generating innovations. Most innovations are generated through R&amp;D alliances with external partners, stimulating relational capability (RC), that is, a construct of strategic management of alliances with propositions for procedures that have not yet been empirically verified. In this context, we investigated how relational capability processes contribute to generating innovations. We conducted qualitative research using a case study based on interviews, document analysis, and observation. Three strategic R&amp;D alliances involving EMBRAPA and external partners constituted the analysis corpus. The main contribution to knowledge advancement is a multidimensional fraProgmework for generating innovations from strategic R&amp;D alliances, based on the empirical evidence of processes of EMBRAPA relational capability and its external partners. This new framework sheds light on how a public research enterprise absorbs knowledge and uncovers the processes of institutionalization and relational capability spillover.</p>
+      </abstract>
+      <trans-abstract xml:lang="es">
+        <title>Resumen</title>
+        <p>La EMBRAPA desempeña un papel importante en Investigación y Desarrollo (I+D) para generar innovaciones. La mayoría de las innovaciones se genera a través de alianzas de I+D con socios externos, estimulando la capacidad relacional (CR), es decir, un constructo de gestión estratégica de alianzas con propuestas de procedimientos que aún no se han verificado empíricamente. En este contexto, investigamos cómo los procesos de CR contribuyen a generar innovaciones. Para ello, realizamos una investigación cualitativa utilizando un estudio de caso basado en entrevistas, análisis de documentos y observación. Tres alianzas estratégicas de I+D en las que participaron EMBRAPA y socios externos constituyeron el corpus de análisis. La principal contribución al avance del conocimiento es un framework multidimensional para generar innovaciones a partir de alianzas estratégicas de I+D, con base en la evidencia empírica de los procesos de CR de EMBRAPA y sus socios externos. Este nuevo framework arroja luz sobre cómo una empresa pública de investigación absorbe el conocimiento y descubre los procesos de institucionalización y repercusión de la CR.</p>
+      </trans-abstract>
+      <kwd-group xml:lang="en">
+        <title>Keywords:</title>
+        <kwd>agricultural innovation</kwd>
+        <kwd>R&amp;D alliances</kwd>
+        <kwd>relational capability</kwd>
+        <kwd>EMBRAPA</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="es">
+        <title>Palavras clave:</title>
+        <kwd>innovación agrícola</kwd>
+        <kwd>alianzas de I+D</kwd>
+        <kwd>capacidad relacional</kwd>
+        <kwd>EMBRAPA</kwd>
+      </kwd-group>
+      <counts>
+        <fig-count count="16"/>
+        <table-count count="0"/>
+        <equation-count count="0"/>
+        <ref-count count="45"/>
+        <page-count count="27"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <p>The editors of the Brazilian Journal of Public Administration (RAP) inform that the following article failed to meet the journal’s editorial guidelines and has therefore been retracted.</p>
+    <p>Preusler, T. S., Costa, P. R., Crespi, T. B., &amp; Cirani, C. B. S. (2020). Capacidade relacional: um estudo da Empresa Brasileira de Pesquisa Agropecuária. <italic>Revista de Administração Pública</italic>, <italic>54</italic>(5), 1307-1333. Recuperado em <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1590/0034-761220190329">https://doi.org/10.1590/0034-761220190329</ext-link> </p>
+    <p>Preusler, T. S., Costa, P. R., Crespi, T. B., &amp; Cirani, C. B. S. (2020). Relational capability: a study of the Brazilian Agricultural Research Corporation. <italic>Revista de Administração Pública</italic>, <italic>54</italic>(5), 1307-1333. Retrieved from <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1590/0034-761220190329x">https://doi.org/10.1590/0034-761220190329x</ext-link> </p>
+    <p>Professor Alketa Peci, Ph.D.</p>
+    <p>Editor-in-chief</p>
+  </body>
+  <sub-article article-type="translation" id="s1" xml:lang="pt">
+    <front-stub>
+      <article-id pub-id-type="doi">10.1590/0034-761220190329</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Artigo</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>[ARTIGO RETRATADO] Capacidade relacional: um estudo da Empresa Brasileira de Pesquisa Agropecuária</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-0136-9040</contrib-id>
+          <name>
+            <surname>Preusler</surname>
+            <given-names>Taísa Scariot</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-7012-0679</contrib-id>
+          <name>
+            <surname>Costa</surname>
+            <given-names>Priscila Rezende da</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0001-9740-8069</contrib-id>
+          <name>
+            <surname>Crespi</surname>
+            <given-names>Tatiane Baseggio</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">1</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-7245-3178</contrib-id>
+          <name>
+            <surname>Cirani</surname>
+            <given-names>Claudia Brito Silva</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">1</xref>
+        </contrib>
+        <aff id="aff2">
+          <label>1</label>
+          <institution content-type="original"> Universidade Nove de Julho / Graduate Program of Business Administration, São Paulo / SP - Brasil</institution>
+          <institution content-type="orgname">Universidade Nove de Julho</institution>
+          <institution content-type="orgdiv1">Graduate Program of Business Administration</institution>
+          <addr-line>
+            <city>São Paulo</city>
+            <state>SP</state>
+          </addr-line>
+          <country country="BR">Brazil</country>
+        </aff>
+      </contrib-group>
+      <author-notes>
+        <fn fn-type="other" id="fn6">
+          <p>Taísa Scariot Preusler - Mestre em Administração de Empresas pela Universidade Nove de Julho (UNINOVE). E-mail: taisa.s@hotmail.com</p>
+        </fn>
+        <fn fn-type="other" id="fn7">
+          <p>Priscila Rezende da Costa - Ph.D. em Administração de Empresas; Professor Titular do Programa de Pós-Graduação em Administração de Empresas da Universidade Nove de Julho (UNINOVE). E-mail: priscilarezende@yahoo.com.br</p>
+        </fn>
+        <fn fn-type="other" id="fn8">
+          <p>Tatiane Baseggio Crespi - Mestre em Administração de Empresas pela Universidade Nove de Julho (UNINOVE). E-mail: tatianebaseggiocrespi@gmail.com</p>
+        </fn>
+        <fn fn-type="other" id="fn9">
+          <p>Claudia Brito Silva Cirani - Ph.D. em Economia; Professor Titular do Programa de Pós-Graduação em Administração de Empresas da Universidade Nove de Julho (UNINOVE). E-mail: claudiabscirani@gmail.com</p>
+        </fn>
+      </author-notes>
+      <abstract>
+        <title>Resumo</title>
+        <p>A EMBRAPA desempenha papel importante em P&amp;D na geração de inovações. A maioria das inovações é gerada por meio de alianças de P&amp;D com parceiros externos, estimulando a capacidade relacional (CR), ou seja, um construto de gerenciamento estratégico de alianças com proposições de procedimentos que ainda não foram empiricamente verificados. Nesse contexto, investigamos como os processos de capacidade relacional contribuem para gerar inovações. Para tanto, realizamos pesquisa qualitativa utilizando um estudo de caso, baseado em entrevistas, análise de documentos e observação. Três alianças estratégicas de P&amp;D envolvendo a EMBRAPA e parceiros externos foram analisados. A principal contribuição para o avanço do conhecimento é um framework multidimensional para gerar inovações a partir de alianças estratégicas de P&amp;D, com base na evidência empírica dos processos da CR da EMBRAPA e de seus parceiros externos. Este novo framework lança luz sobre como uma empresa pública de pesquisa absorve conhecimento e descobre os processos de institucionalização e repercussão da CR.</p>
+      </abstract>
+      <kwd-group xml:lang="pt">
+        <title>Palavras-chave:</title>
+        <kwd>inovação agrícola</kwd>
+        <kwd>alianças de P&amp;D</kwd>
+        <kwd>capacidade relacional</kwd>
+        <kwd>EMBRAPA</kwd>
+      </kwd-group>
+    </front-stub>
+    <body>
+      <p>A equipe editorial da Revista de Administração Pública (RAP) comunica a formal retratação para extração do artigo por não seguir as diretrizes editoriais do periódico.</p>
+      <p>Preusler, T. S., Costa, P. R., Crespi, T. B., &amp; Cirani, C. B. S. (2020). Capacidade relacional: um estudo da Empresa Brasileira de Pesquisa Agropecuária. <italic>Revista de Administração Pública</italic>, <italic>54</italic>(5), 1307-1333. Recuperado em <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1590/0034-761220190329">https://doi.org/10.1590/0034-761220190329</ext-link> </p>
+      <p>Preusler, T. S., Costa, P. R., Crespi, T. B., &amp; Cirani, C. B. S. (2020). Relational capability: a study of the Brazilian Agricultural Research Corporation. <italic>Revista de Administração Pública</italic>, <italic>54</italic>(5), 1307-1333. Retrieved from <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1590/0034-761220190329x">https://doi.org/10.1590/0034-761220190329x</ext-link> </p>
+      <p>Profa. Dra. Alketa Peci</p>
+      <p>Editora-chefe</p>
+    </body>
+  </sub-article>
+</article>

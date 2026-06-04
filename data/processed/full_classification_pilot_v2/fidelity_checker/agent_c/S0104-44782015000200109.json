@@ -1,0 +1,180 @@
+{
+  "pid": "S0104-44782015000200109",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "7d2406f6321aa341dfbde9538dc062f6d1a12c0dbf8e0c031274979068ce95e9",
+  "classification_hash": "80c1257f68db54b5470be676ecf7b577dc7f056cb05b3279a18e7c7f4c003251",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "índice, presente no portal da Federação das Indústrias do Estado do Rio de Janeiro (FIRJAN). Quanto à variável da c obertura de famílias atendidas pelo PBF (por município), a mesma foi obtida através da divisão do número de famílias beneficiadas pelo programa",
+      "classification_value": [
+        {
+          "variable_name": "bolsa_familia_coverage",
+          "variable_description": "Cobertura municipal do Bolsa Família"
+        },
+        {
+          "variable_name": "neighboring_vote_results",
+          "variable_description": "Defasagem espacial dos resultados eleitorais"
+        },
+        {
+          "variable_name": "presidential_vote_and_socioeconomic_controls",
+          "variable_description": "Voto presidencial e controles socioeconômicos municipais"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "metodologias de análise exploratória de dados espaciais e modelagem de econométrica espacial. Essas metodologias possibilitarão a melhor interpretação da vo tação m unicipal do PT, partido de oposição, ao cargo de governador do Estado da Bahia em 2006. Isso porque a metodologia",
+      "classification_value": [
+        {
+          "variable_name": "pt_vote_share_bahia_governor_2006",
+          "variable_description": "Votação municipal do PT para governador da Bahia em 2006"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "bolsa_familia_coverage",
+          "dv_var_name": "pt_vote_share_bahia_governor_2006",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "neighboring_vote_results",
+          "dv_var_name": "pt_vote_share_bahia_governor_2006",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "do referencial teórico e da metodologia, são apresentadas as variáveis municipais no item posterior. IV.3. Banco de dados O banco de dados construído permite contemplar diferentes aspectos sobre os municípios do estado da Bahia. As variáveis que constituem esse banco de dados",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "multiplicador de Lagrange para defasagem espacial (MLρ) e Multiplicador de Lagrange para o erro espacial (MLλ); Se ambos os tes tes nã o forem estatisticamente significantes, a utilização do modelo clássico é mais apropriada. Caso contrário será necessário seguir o próximo passo;",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "que o parâmetro ρ se situe no intervalo aberto entre −1 e 1. A hipótese de validação da relação causal no mo delo SAR indica que nenhuma variável explicativa contida na matriz X pode estar correlacionada o termo de erro aleatório. Entretanto,",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "Essa literatura tem crescido recentemente e tem motivado a incorporação explícita dos efeitos espaciais em equações econométricas utilizadas para e xplicar os determinantes dos resultados eleitorais em países ou regiões Na análise do contexto político recente do estado da Bahia, o amplo",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "entre os eleitores vizinhos. Essa literatura tem crescido recentemente e tem motivado a incorporação explícita dos efeitos espaciais em e quações econométricas utilizadas para explicar os determinantes dos resultados eleitorais em países ou regiões Na análise do contexto político recente do estado",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains causal-process language that can support a mechanism/channel classification.",
+      "supporting_excerpt": "que o parâmetro ρ se situe no intervalo aberto entre −1 e 1. A hipótese de validação da relação causal no mo delo SAR indica que nenhuma variável explicativa contida na matriz X pode estar correlacionada o termo de erro aleatório. Entretanto,",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "garantir recompensas futuras na forma do acesso a cargos e verbas (Borges 2010). Esse cenário político contribuiu de forma sig nificativa pa ra a modificação na geografia eleitoral no estado da Bahia, como pode ser visualizado na Figura 1. A Figura 1",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status fail."
+}

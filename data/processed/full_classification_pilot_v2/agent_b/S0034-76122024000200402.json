@@ -1,0 +1,57 @@
+{
+  "pid": "S0034-76122024000200402",
+  "agent_id": "agent_b",
+  "prompt_version": "agent_b_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "7d487e0b5cef8e6f8cff64044709fafcb858afc6031652327deba7d37c7ab212",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "field_study",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "interview-based qualitative factor analysis",
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "Procedural and institutional factors",
+        "variable_description": "Factors identified by legal professionals as increasing judicial-process duration."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "Judicial process duration",
+        "variable_description": "Time required for civil judicial proceedings in Brazil."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": 15,
+    "sample_size_quote": "Foram realizadas 15 reuniões entre 2019 e 2020.",
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "qualitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo \"Fatores que aumentam o tempo do processo judicial no Brasil\" apresenta argumento qualitativo explicativo com linguagem causal ou processual. Como não define estimando nem suposições de identificação, classifiquei o desenho como Other e a quantidade causal como FALSE."
+  },
+  "raw_response_path": null
+}

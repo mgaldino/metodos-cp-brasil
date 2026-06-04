@@ -1,0 +1,76 @@
+{
+  "pid": "S0104-62762018000100209",
+  "agent_id": "agent_b",
+  "prompt_version": "agent_b_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "bf4101f5f850fa23ed8197e2651b11fb5df6d4a8157cee7b089ff7b035cc5ac5",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "Victimization and violence-related perceptions",
+        "variable_description": "Criminological variables associated with violence and fear."
+      },
+      {
+        "variable_name": "Interpersonal trust",
+        "variable_description": "Mediator connecting violence variables to democratic satisfaction."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "Satisfaction with democracy",
+        "variable_description": "Survey response on satisfaction with the functioning of democracy in Brazil."
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "Victimization and violence-related perceptions",
+        "dv_var_name": "Satisfaction with democracy",
+        "relationship_type": "Negative",
+        "statistically_significant": true,
+        "substantively_significant": false
+      },
+      {
+        "iv_var_name": "Interpersonal trust",
+        "dv_var_name": "Satisfaction with democracy",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": false
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo \"Violência e satisfação com a democracia no Brasil\" usa dados quantitativos para explicar um outcome por variáveis observacionais. A linguagem de efeito/determinantes foi classificada conservadoramente: não há estimando causal claro nem suposições substantivas de identificação, portanto a quantidade causal é FALSE."
+  },
+  "raw_response_path": null
+}

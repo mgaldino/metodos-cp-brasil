@@ -1,0 +1,161 @@
+{
+  "pid": "S0034-76122014000100004",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "e60134432242192a0ecb661800b36754cb1b1674b0e55a9fc304ffd946fb3c70",
+  "classification_hash": "f5668a8f93c432c9be95dad6599e09b3805eac12c46547020c4694195d123dc5",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "papel de formação no campo (consultores, professores, pesquisadores). Ao total, foram entrevistados 46 atores, sendo 16 no Paraná (Curitiba), 15 no Rio Grande do Sul (Porto Alegre) e 15 em Santa Catarina (Florianópolis), entre setembro e novembro de 2010. Foram utilizados roteiros",
+      "classification_value": 46
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "papel de formação no campo (consultores, professores, pesquisadores). Ao total, foram entrevistados 46 atores, sendo 16 no Paraná (Curitiba), 15 no Rio Grande do Sul (Porto Alegre) e 15 em Santa Catarina (Florianópolis), entre setembro e novembro de 2010. Foram utilizados roteiros",
+      "classification_value": "Ao total, foram entrevistados 46 atores, sendo 16 no Paraná (Curitiba), 15 no Rio Grande do Sul (Porto Alegre) e 15 em Santa Catarina (Florianópolis), entre setembro e novembro de 2010."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "a legitimidade das OSC é colocada em xeque. Legitimidade é aqui compreendida como a percepção generalizada de que uma or ganização t em o direito de ser e fazer algo na sociedade, tendo suas ações julgadas como apropriadas, de acordo com um",
+      "classification_value": [
+        {
+          "variable_name": "osc_group",
+          "variable_description": "Tipo de organização da sociedade civil pesquisada"
+        },
+        {
+          "variable_name": "worlds_common_categories",
+          "variable_description": "Categorias/mundos comuns da teoria da capacidade crítica"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Brasil. O Quadro de Análise orientou a pesquisa de campo que foi conduzida utilizando-se da técnica de análise de co nteúdo o rganizada em torno de três fases: \"a pré-análise; a exploração do material; e o tratamento dos resultados, a inferência e",
+      "classification_value": [
+        {
+          "variable_name": "legitimacy_discourse",
+          "variable_description": "Frequência e conteúdo dos discursos de legitimidade nas entrevistas"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "contradicted_by_text",
+      "severity": "high",
+      "reason": "The classification says no survey data, but the body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "quadro analítico e do levantamento das hipóteses, foi feita a delimitação da amostra da pesquisa e elaborados os qu estionários. Foram pesquisadas 37 OSC da região Sul do Brasil escolhidas por meio de amostra intencional representativa definida: (i) segundo critérios de relevância:",
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "presentes nas justificações do campo das OSC no Sul do Brasil, influenciando sua legitimidade. Essa hipótese se verifica nos d ados levantados pela pesquisa. Apesar do predomínio dos mundos industrial e cívico nas justificações, a relevância dos demais mundos não pode ser",
+      "classification_value": "field_study"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "diferentes autores, está ligado a alguns fatores que lhes conferem legitimidade: (i) O desempenho e os resultados e/ou impact o de su a atuação (Atack, 1999; Edwards, 2000); (ii) A aceitação dos procedimentos e métodos utilizados e a aderência às regras e",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 2 contradicted and 2 not found in text; overall status fail."
+}

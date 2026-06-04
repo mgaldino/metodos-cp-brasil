@@ -1,0 +1,157 @@
+{
+  "pid": "S1981-38212020000100204",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "b7fb1c29b597fddf4bda6d5b418ed1058bab5ead2763d7e6b61305872504d48a",
+  "classification_hash": "776263862e620212fa84873a749d7bef424d83ae15dd1e0016a175f15c50ef33",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "military to democratic regimes in the 1980s were influenced by a twofold process. On the one hand, there were the international movements that took part in the resistance to the military and in the reconstruction of the juridical-political order. Among them were",
+      "classification_value": [
+        {
+          "variable_name": "International anti-corruption agenda and legal-elite strategies",
+          "variable_description": "Connections between prosecutors, judicial elites and international anti-corruption bodies."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "of the Executive and the international space of anti-corruption agencies and bodies. This is not to say that the in ternationalization o f the anti-corruption agenda is a causal determinant of the reorientation of the agenda of Brazilian judicial institutions. But rather",
+      "classification_value": [
+        {
+          "variable_name": "Internationalization of the Public Prosecutor Office",
+          "variable_description": "Expansion and reorientation of Brazilian prosecutorial anti-corruption activism."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "the concept of transparency into both the media and state power. Lascoumes and Nagels (2015) draw attention to a hi storical p attern of weak penalization of political and financial elites linked to French corruption cases. They emphasize the small number of",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "of anti-corruption agencies and bodies. This is not to say that the internationalization of the anti-corruption agenda is a ca usal d eterminant of the reorientation of the agenda of Brazilian judicial institutions. But rather that due to structural similarities between national",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains causal-process language that can support a mechanism/channel classification.",
+      "supporting_excerpt": "of anti-corruption agencies and bodies. This is not to say that the internationalization of the anti-corruption agenda is a ca usal d eterminant of the reorientation of the agenda of Brazilian judicial institutions. But rather that due to structural similarities between national",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

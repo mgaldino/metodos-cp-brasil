@@ -1,0 +1,72 @@
+{
+  "pid": "S1981-38212007000100070",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "44d8aabc6bc03c7a9eb773cd9307bd2b97c911c980616d260c0c88f4aff96d83",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "socioeconomic_political_attitudinal_candidate_attributes",
+        "variable_description": "Variáveis socioeconômicas, político-ideológicas e atributos dos candidatos"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "vote_choice_2002_presidential_candidates",
+        "variable_description": "Voto nos principais candidatos presidenciais de 2002"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "candidate_attributes",
+        "dv_var_name": "vote_choice_2002_presidential_candidates",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "party_sentiments",
+        "dv_var_name": "vote_choice_2002_presidential_candidates",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 2513,
+    "sample_size_quote": "The empirical base that grounds the analysis is the ESEB (Brazilian Electoral Study), a survey conducted on a sample – probabilistic without substitution, with 3 selection stages (municipality, census sector and domicile), with a sampling error of 2% – of 2,513 voters throughout the country between October 31 and December 28, 2002.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo usa ESEB 2002 e regressões logísticas para explicar escolha de voto presidencial. Há survey, variáveis independentes claras e resultados estatísticos; o desenho é observacional."
+  },
+  "raw_response_path": null
+}

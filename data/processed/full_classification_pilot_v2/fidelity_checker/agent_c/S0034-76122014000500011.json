@@ -1,0 +1,161 @@
+{
+  "pid": "S0034-76122014000500011",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "88743debfb8c4236e02d76ae3a76bff64ffc8aa7ecfdc6d1abc27449b4edeb7c",
+  "classification_hash": "fe97d57a5a69e4b5367d663ce55063b4ab5b54a6ba212fb6c8619b609de5e2cd",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "somente empresas com faturamento bruto anual inferior a R$ 1,5 milhão. Foram aplicados 99 questionários4 constituídos por perguntas abertas e fechadas, aplicados aos responsáveis pelas microempresas do município de Chapecó. Por meio dos questionários aplicados, verificamos se as linhas eram conhecidas e",
+      "classification_value": 99
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "somente empresas com faturamento bruto anual inferior a R$ 1,5 milhão. Foram aplicados 99 questionários4 constituídos por perguntas abertas e fechadas, aplicados aos responsáveis pelas microempresas do município de Chapecó. Por meio dos questionários aplicados, verificamos se as linhas eram conhecidas e",
+      "classification_value": "Foram aplicados 99 questionários4 constituídos por perguntas abertas e fechadas, aplicados aos responsáveis pelas microempresas do município de Chapecó."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "microempresas do município de Chapecó. Por meio dos questionários aplicados, verificamos se as linhas eram conhecidas e acessadas, mapeam os o p erfil socioeconômico das microempresas e identificamos as dificuldades enfrentadas pelas mesmas. Após a análise dos questionários foram realizadas quatro entrevistas",
+      "classification_value": [
+        {
+          "variable_name": "firm_profile",
+          "variable_description": "Perfil socioeconômico das microempresas de Chapecó"
+        },
+        {
+          "variable_name": "credit_line_knowledge",
+          "variable_description": "Conhecimento de linhas de crédito públicas"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "milhões de empregos (Sebrae, 2008). Entretanto, as políticas públicas voltadas às microempresas (ME) no país apresentam dificuldades que limitam o acess o ao crédito justamente por conta das exigências impostas, o que se constitui em uma contradição em relação aos princípios propostos",
+      "classification_value": [
+        {
+          "variable_name": "credit_access",
+          "variable_description": "Acesso ou dificuldade de acesso a linhas de crédito públicas"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports survey data, but not clearly an original survey run by the article authors.",
+      "supporting_excerpt": "significação dos textos produzidos dos mais diferentes campos. Após a análise de conteúdo dos questionários e a análise de discurso das entrevistas, foi utilizada a técnica da aná lise hermenêutica-dialética que, segundo Minayo (2008), é uma proposta de triangulação de métodos quantitativos",
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports qualitative interview data, but that is not compatible with original_survey.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "e do capitalismo de menor escala. A redução das atividades para um pequeno empresário, ou empresário por conta própria, pro duz efe itos imediatos como a redução da qualidade de vida, não acesso ao crédito, sofrimento psíquico, ampliação da vulnerabilidade e intensificação",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 5 priority fidelity issue(s): 1 contradicted and 4 not found in text; overall status fail."
+}

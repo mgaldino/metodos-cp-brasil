@@ -1,0 +1,56 @@
+{
+  "pid": "S0034-76122009000300003",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "e682e7d9e9f38da7a0fe70735177a6c7b5637a6adc92faab6a761e2ceb854642",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": null,
+    "dependent_variables": [
+      {
+        "variable_name": "mammography_coverage",
+        "variable_description": "Cobertura de exames de mamografia na rede pública"
+      },
+      {
+        "variable_name": "equity_in_access",
+        "variable_description": "Equidade regional no acesso aos serviços"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 77,
+    "sample_size_quote": "Foram analisados os 77 municípios do estado de Mato Grosso do Sul.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo analisa dados secundários de mamografias nos 77 municípios de Mato Grosso do Sul para descrever cobertura e equidade de acesso. A análise é quantitativa descritiva, sem modelo de determinantes, equações ou significância estatística."
+  },
+  "raw_response_path": null
+}

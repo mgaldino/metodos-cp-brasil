@@ -1,0 +1,169 @@
+{
+  "pid": "S1981-38212013000200003",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "ac722e76dbe5d1542c48810d4bde9febdd659b02b45a9995ae0a500bd66bc554",
+  "classification_hash": "020f4a72c48797606d7ad9a3648343ca61fddefad57e2b1c2f0e9d50421a9d5d",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "and Recife from a sample made up of 300 household inter- views for each of the metropolitan regions, for a total of 1201 interviews. The sample was weighed – in its totality – by quotas concerning income range, gender, education level, age",
+      "classification_value": 1201
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "and Recife from a sample made up of 300 household inter- views for each of the metropolitan regions, for a total of 1201 interviews. The sample was weighed – in its totality – by quotas concerning income range, gender, education level, age",
+      "classification_value": "for a total of 1201 interviews."
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "judiciary_perceptions_and_institutional_trust",
+          "variable_description": "Percepções sobre Judiciário, justiça e confiança institucional"
+        },
+        {
+          "variable_name": "socioeconomic_controls",
+          "variable_description": "Gênero, PEA, escolaridade e renda"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "dissatisfaction_with_democracy",
+          "variable_description": "Insatisfação com a democracia"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "judiciary_perceptions_and_institutional_trust",
+          "dv_var_name": "dissatisfaction_with_democracy",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims an original survey, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification claims an original survey, but the body evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "low",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 10 priority fidelity issue(s): 0 contradicted and 10 not found in text; overall status fail."
+}

@@ -1,0 +1,69 @@
+{
+  "pid": "S1981-38212019000100200",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "84481a7bb70abc563f86d60a984980eb1dcc8db2927effbaeee5e114892f9358",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "municipal_social_inclusion_governismo_nationalization",
+        "variable_description": "Medidas municipais de inclusão social, governismo e nacionalização do debate"
+      },
+      {
+        "variable_name": "party_ideology_scores",
+        "variable_description": "Posições ideológicas partidárias derivadas do Brazilian Legislative Survey"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "municipal_ideological_score",
+        "variable_description": "Municipal Ideological Score (MIS)"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "municipal_social_inclusion_governismo_nationalization",
+        "dv_var_name": "municipal_ideological_score",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 74040,
+    "sample_size_quote": "Our units of analysis are municipality-years, of which we have 74,040 observations over the course of 13 electoral cycles.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo constrói um escore ideológico municipal para 74.040 município-anos e estima modelos GLS para explicar variação ideológica. É quantitativo, com dados eleitorais e surveys de elites, mas observacional."
+  },
+  "raw_response_path": null
+}

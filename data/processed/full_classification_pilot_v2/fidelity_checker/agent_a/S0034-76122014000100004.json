@@ -1,0 +1,147 @@
+{
+  "pid": "S0034-76122014000100004",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "e60134432242192a0ecb661800b36754cb1b1674b0e55a9fc304ffd946fb3c70",
+  "classification_hash": "24bba356260b4b605a9e790464d2c12ad54984c4384313437941ca5c8f5c17f9",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "papel de formação no campo (consultores, professores, pesquisadores). Ao total, foram entrevistados 46 atores, sendo 16 no Paraná (Curitiba), 15 no Rio Grande do Sul (Porto Alegre) e 15 em Santa Catarina (Florianópolis), entre setembro e novembro de 2010. Foram utilizados roteiros",
+      "classification_value": 46
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "papel de formação no campo (consultores, professores, pesquisadores). Ao total, foram entrevistados 46 atores, sendo 16 no Paraná (Curitiba), 15 no Rio Grande do Sul (Porto Alegre) e 15 em Santa Catarina (Florianópolis), entre setembro e novembro de 2010. Foram utilizados roteiros",
+      "classification_value": "Ao total, foram entrevistados 46 atores, sendo 16 no Paraná (Curitiba), 15 no Rio Grande do Sul (Porto Alegre) e 15 em Santa Catarina (Florianópolis), entre setembro e novembro de 2010."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific variable-list claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports survey data, but not clearly an original survey run by the article authors.",
+      "supporting_excerpt": "quadro analítico e do levantamento das hipóteses, foi feita a delimitação da amostra da pesquisa e elaborados os qu estionários. Foram pesquisadas 37 OSC da região Sul do Brasil escolhidas por meio de amostra intencional representativa definida: (i) segundo critérios de relevância:",
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports qualitative interview data, but that is not compatible with original_survey.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "diferentes autores, está ligado a alguns fatores que lhes conferem legitimidade: (i) O desempenho e os resultados e/ou impact o de su a atuação (Atack, 1999; Edwards, 2000); (ii) A aceitação dos procedimentos e métodos utilizados e a aderência às regras e",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 5 priority fidelity issue(s): 1 contradicted and 4 not found in text; overall status fail."
+}

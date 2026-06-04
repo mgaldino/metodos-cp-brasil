@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-44782017000100051",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "5d9a85cfdce7d51c35f66e8877190bb4f6bcbcf013e00833bd64e4c0576866bf",
+  "classification_hash": "5146f6717587cedf00b1d1677b6408791c8c5b316c005fcf48722c2673d7a3f7",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "e Paralímpicos de 2016. Esses últimos foram concebidos como uma forma de promoção global do Rio de Janeiro, reforçando seu status de economia em pleno crescimento e destino turístico. Na realização de eventos culturais que contribuem para a economia criativa como os",
+      "classification_value": [
+        {
+          "variable_name": "External status of creative cities",
+          "variable_description": "Degree to which creative-city status is recognized internationally."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "2000, a cidade investiu na produção de documentos de trabalho para posicionar-se como cidade criativa, como o documento The Creativ e Ci ty: A Workprint (Toronto Culture 2001). Na segunda metade da década de 2000, uma joint venture com Londres conduziu a",
+      "classification_value": [
+        {
+          "variable_name": "Paradiplomatic activity",
+          "variable_description": "Assertiveness of city paradiplomacy and internationalization strategies."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "2014, pp.12-19). O planejamento urbano – feito com base em indicadores e estudos, cruciais para o diagnóstico, o monitoramento e a análi se do efeito das ações – aproveitou o desenho das atividades de Barcelona para os Jogos Olímpicos de 1992 para",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "planejamento urbano – feito com base em indicadores e estudos, cruciais para o diagnóstico, o monitoramento e a análise d o efei to das ações – aproveitou o desenho das atividades de Barcelona para os Jogos Olímpicos de 1992 para situá-las em",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "pelas três ordens de governo e horizontalmente integradas por parcerias público-privadas e parcerias com o terceiro setor para estratégias e mecanismo s de construção urbana. A criatividade contribuía para os temas estratégicos da agenda. Quanto à internacionalização, os objetivos eram captar benefícios",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

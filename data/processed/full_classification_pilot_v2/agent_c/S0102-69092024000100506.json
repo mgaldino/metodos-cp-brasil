@@ -1,0 +1,65 @@
+{
+  "pid": "S0102-69092024000100506",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "25933eee5bfdc0905344dca6c3a3293ce3eedea4aff7e084f8a10ee90499d770",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "suas_arrangement_and_local_capacity",
+        "variable_description": "Variáveis do arranjo do SUAS, capacidade local, recursos e contexto dos CRAS"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "specific_pct_service_strategy",
+        "variable_description": "Existência de estratégias específicas de atendimento de Povos e Comunidades Tradicionais nos CRAS"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "suas_arrangement_and_local_capacity",
+        "dv_var_name": "specific_pct_service_strategy",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": true,
+    "sample_size": 2084,
+    "sample_size_quote": "Devido ao número de missing cases em variáveis independentes, a inferência se baseou em 2.084 casos.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo usa desenho quantitativo com regressões logísticas para estudar determinantes da equidade na implementação da assistência social. O texto explicita que, dadas as exigências fortes de inferência causal, estima correlações."
+  },
+  "raw_response_path": null
+}

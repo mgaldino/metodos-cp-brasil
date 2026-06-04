@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-06-03T23:54:01Z",
+  "objective": "Piloto v2 de classificacao tripla independente nos 175 artigos elegiveis usando body integral canonico.",
+  "canonical_body_source": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "canonical_body_column": "body_text",
+  "n_articles": 175,
+  "excluded_journals_rule": "data/processed/excluded_journals.csv",
+  "excluded_articles_rule": "data/processed/excluded_articles.csv",
+  "manifest": "data/processed/full_classification_pilot_v2/pilot_manifest.csv",
+  "task_packets": "data/processed/full_classification_pilot_v2/task_packets",
+  "prompt_versions": {
+    "common": "common_schema_v2",
+    "agent_a": "agent_a_v2+common_schema_v2",
+    "agent_b": "agent_b_v2+common_schema_v2",
+    "agent_c": "agent_c_v2+common_schema_v2",
+    "agent_d": "agent_d_v1+fidelity_schema_v1"
+  },
+  "no_api_runner": true,
+  "forbidden_substantive_inputs": ["data/processed/sample_xmls/", "data/raw/articles_fulltext/", "data/processed/classifications_llm_main_analysis.csv", "data/processed/classifications_final/", "data/processed/classifications/", "data/processed/classifications_normalized/"]
+}

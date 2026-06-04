@@ -1,0 +1,165 @@
+{
+  "pid": "S0102-69092024000100506",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "25933eee5bfdc0905344dca6c3a3293ce3eedea4aff7e084f8a10ee90499d770",
+  "classification_hash": "eb38f759e029c60239cbca066d84018a0df08b4e5c7f6bc2a01cd8563f4d1276",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "situados em seus territórios de abrangência em 2019. Devido ao número de missing cases em variáveis independentes, a inferência se baseou em 2.084 casos. Os dados utilizados na pesquisa foram de caráter primário, colhidos em bases de dados abertas, com destaque ao",
+      "classification_value": 2084
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "situados em seus territórios de abrangência em 2019. Devido ao número de missing cases em variáveis independentes, a inferência se baseou em 2.084 casos. Os dados utilizados na pesquisa foram de caráter primário, colhidos em bases de dados abertas, com destaque ao",
+      "classification_value": "a inferência se baseou em 2.084 casos."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "proteção. Os de nível básico, mais amplamente acessados pela população, são implementados pelos Centros de Referência de Assistência Social ( CRAS ). Os CRAS são considerados a “porta de entrada” do sistema (Brasil, 2009). A equidade ganhou atenção especial na PNAS a",
+      "classification_value": [
+        {
+          "variable_name": "CRAS visibility and management factors",
+          "variable_description": "Local implementation factors associated with identifying and serving Povos e Comunidades Tradicionais."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "(Lavalle, 2003). Ambas as concepções, de igualdade e de equidade, se intercambiam no desenho da Política Nacional de Assistência Social (PNA S). No entanto, é na necessidade de tratamento equânime de determinados grupos que reside um dos desafios de implementação da política.",
+      "classification_value": [
+        {
+          "variable_name": "Equitable PNAS implementation",
+          "variable_description": "Existence of specific strategies for serving Povos e Comunidades Tradicionais in CRAS."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classified relationship items have variable and result-language support in the body.",
+      "supporting_excerpt": "proteção. Os de nível básico, mais amplamente acessados pela população, são implementados pelos Centros de Referência de Assistência Social ( CRAS ). Os CRAS são considerados a “porta de entrada” do sistema (Brasil, 2009). A equidade ganhou atenção especial na PNAS a",
+      "classification_value": [
+        {
+          "iv_var_name": "CRAS visibility and management factors",
+          "dv_var_name": "Equitable PNAS implementation",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "Único de Assistência Social (Censo SUAS) de 2018 e 2019 e o Censo do Instituto Brasileiro de Geografia e Estatística (IB GE) de 2010. Ademais, utilizamos dados da Secretaria do Tesouro Nacional. O Censo do SUAS de 2019 foi a principal base",
+      "classification_value": "procure_original_data"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "de Povos e Comunidades Tradicionais pelos CRAS. Para responder a este objetivo, utilizamos um desenho de pesquisa quantitativo operacionalizado por regressões logísticas. A equidade foi avaliada a partir da existência de estratégias específicas de atendimento de PCTs nos CRAS. A população do",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "esteve presente entre as perspectivas do II Plano Decenal de Assistência Social. A fim de alcançar coerência com uma estrutu ra cau sal, ainda que os dados observacionais e o modelo adotado tenham exigências fortes para inferência causal que sabemos que são",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "de Povos e Comunidades Tradicionais pelos CRAS. Para responder a este objetivo, utilizamos um desenho de pesquisa quantitativo operacionalizado por regressões logísticas. A equidade foi avaliada a partir da existência de estratégias específicas de atendimento de PCTs nos CRAS. A população do",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No direct mechanism/channel language was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "as chances de o atendimento ser equânime, conforme esperávamos. Contudo, poucas são as variáveis que se relacionam de forma estatisticame nte significa tiva com a existência de estratégias específicas de atendimento de PCTs nos CRAS. No Modelo 1, “fatores individuais”, a pertença",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

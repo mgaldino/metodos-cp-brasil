@@ -1,0 +1,165 @@
+{
+  "pid": "S0104-62762006000200005",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "18189fc45383b7f3e80b166c92395c18b267eb08dfeab92a2eb32326965d9e2d",
+  "classification_hash": "cbfb916cbd6ea6bb8aa995f60bb58f464ec0f374ba44ce791b44112d6cfbff44",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "papel do programa de Orçamento Participativo (OP) do Partido dos Trabalhadores na distribuição de informações sobre política nas eleições de 200 2 no Brasil. O OP é um instrumento de democracia direta através do qual os cidadãos influenciam a formulação dos orçamentos",
+      "classification_value": [
+        {
+          "variable_name": "Participatory-budgeting and civic-organization participation",
+          "variable_description": "Participation in OP assemblies and other organizations during the 2002 election."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "Political information",
+          "variable_description": "Levels of information about candidates, parties and political issues."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "Participatory-budgeting and civic-organization participation",
+          "dv_var_name": "Political information",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims an original survey, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports qualitative interview data, but that is not compatible with original_survey.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "e análises As três hipóteses foram testadas com base em dados das três ondas de entrevistas. Contudo, os resultados das regressões apresentadas centram-se na última onda de entrevistas, depois de os eleitores terem sido expostos a toda a campanha eleitoral. A militância,",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "reuniões, as prioridades de investimento na cidade são definidas mediante o voto direto dos participantes. Assim, o OP tem um efeito pedagógico, ao criar um espaço público e uma estrutura de oportunidade para a deliberação sobre várias questões políticas, não apenas relacionadas",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "e análises As três hipóteses foram testadas com base em dados das três ondas de entrevistas. Contudo, os resultados das regressões apresentadas centram-se na última onda de entrevistas, depois de os eleitores terem sido expostos a toda a campanha eleitoral. A militância,",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "ABERS, 1998; AVRITZER, 2002). A hipótese central testada neste artigo é, portanto, que as assembléias do OP podem ser m ecanismos de difusão de informações sobre política em geral. Para testar esta hipótese foi formado um estudo de painel de opinião pública",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "e de associações de bairro, as expectativas são um pouco diferentes. Embora esses dois movimentos de base tenham desempenhado papéis significativos na democratização do Brasil nas décadas de 1970 e 1980, ambos reduziram sua atividade política após a democratização (DELLA CAVA, 1988;",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 0 contradicted and 4 not found in text; overall status fail."
+}

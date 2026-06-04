@@ -1,0 +1,157 @@
+{
+  "pid": "S0102-64452018000300005",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "c22d8db22860429c9eb819dd42293b882bbe579cebcb22be0001facf9f22face",
+  "classification_hash": "a1ec995ee2fd885bea8c08d6da9e820105d6cfce8a9bc765bb6002192cf8cf03",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "que implica uma parceria entre movimentos de luta pela reforma agrária e o Instituto Nacional de Colonização e Reforma Agrária (Incr a). Nessa parceria os movimentos têm o papel de organizar e apresentar a demanda (de beneficiários e de terras), e o",
+      "classification_value": [
+        {
+          "variable_name": "Incra-movement agency and controversies",
+          "variable_description": "Changes in agency, disputes and creative solutions inside Incra and social movements."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "que implica uma parceria entre movimentos de luta pela reforma agrária e o Instituto Nacional de Colonização e Reforma Agrária (Incr a). Nessa parceria os movimentos têm o papel de organizar e apresentar a demanda (de beneficiários e de terras), e o",
+      "classification_value": [
+        {
+          "variable_name": "Partnership implementation model",
+          "variable_description": "Genesis of the partnership relation between Incra and land-reform movements."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "movimentos de luta pela reforma agrária. A investigação envolveu observação participante de diferentes situações do cotidiano de trabalho da regional, entrevistas semiestruturadas e informais com servidores do órgão e consulta ao arquivo local. O Incra é a autarquia federal responsável por implementar",
+      "classification_value": "field_study"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "de agenciamento, cabe apontar que elas têm em comum a preocupação em mapear o processo de construção desses arranjos. A anális e e a explicação do fenômeno que se deseja estudar se dão por meio desse mapeamento. Com efeito, para os autores",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "os agenciamentos2 conformados em momentos-chave de mudança política: o retorno à democracia, o Massacre de Eldorado dos Carajás3 e seus efeito s para a organização dos movimentos sociais, e a transição do governo de Fernando Henrique Cardoso (FHC) para o de Lula.",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "fenômeno curioso: se a presença de representantes dos proprietários não assustava, a visita de grupos de trabalhadores rurais, alheios aos mecanismo s de conivência que associavam proprietários e burocratas e às regras “diplomáticas” da casa, causava medo. Com medo, os próprios funcionários",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

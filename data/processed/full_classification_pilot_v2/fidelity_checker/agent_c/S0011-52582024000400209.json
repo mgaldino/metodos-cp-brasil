@@ -1,0 +1,165 @@
+{
+  "pid": "S0011-52582024000400209",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "fd2b45b84af03759cdc0cf1967ed4815da8b35702939f45f2fd6bf4c5e951ae9",
+  "classification_hash": "85a760a29076ced919220235df31b743df048cd6c43f94db0139216dc8c4e415",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "atores externos ao governo, excluindo aqueles meramente governamentais. Foi criado um banco com informações padronizadas para 103 colegiados nacionais, registrando todas as alterações legais e infralegais ocorridas durante a gestão Bolsonaro, entre 2019 e 2022. Além desta introdução, o artigo está organizado",
+      "classification_value": 103
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "atores externos ao governo, excluindo aqueles meramente governamentais. Foi criado um banco com informações padronizadas para 103 colegiados nacionais, registrando todas as alterações legais e infralegais ocorridas durante a gestão Bolsonaro, entre 2019 e 2022. Além desta introdução, o artigo está organizado",
+      "classification_value": "Foi criado um banco com informações padronizadas para 103 colegiados nacionais, registrando todas as alterações legais e infralegais ocorridas durante a gestão Bolsonaro, entre 2019 e 2022."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "PT (Abers, Almeida, 2019) e menor divergência com as apostas políticas do governo Bolsonaro, espera-se que essa seja a ár ea m enos afetada pelas medidas de desinstitucionalização. As orientações históricas das políticas guardam maior ou menor afinidade com diferentes governos e",
+      "classification_value": [
+        {
+          "variable_name": "policy_area",
+          "variable_description": "Área de política pública do colegiado"
+        },
+        {
+          "variable_name": "institutional_robustness",
+          "variable_description": "Robustez/desenho institucional do colegiado"
+        },
+        {
+          "variable_name": "legal_changes",
+          "variable_description": "Alterações legais e revogações após o Decreto 9.759/2019"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "da análise dos efeitos das medidas de desinstitucionalização dos 103 colegiados. Aqui, observamos os efeitos em termos de ativi dade e in atividade, alterações legais e revogações, levando em consideração as áreas de políticas. Depois, exploramos as quatro possibilidades da proposta analítica",
+      "classification_value": [
+        {
+          "variable_name": "resilience_status",
+          "variable_description": "Atividade, inatividade, alteração substantiva ou resiliência dos colegiados"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "correlatas, quanto a resiliência dos colegiados nacionais – variação nos efeitos de tal desinstitucionalização. Com base em u m banco de dados origin al, oferecemos um diagnóstico empírico, a um só tempo abrangente e nuançado, a partir da análise da situação de",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "corresponde, em boa medida, com a distribuição dos efeitos da desinstitucionalização sobre os colegiados nacionais examinados. Em síntese, a anál ise nos permite afirmar que os colegiados mais fortemente afetados em seu funcionamento conjugam áreas de políticas em que as agendas neles",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "mudanças negativas, portanto, da sua desinstitucionalização. Tais medidas incluem, aqui, o conjunto de atos normativos de diversa hierarquia que visaram efeitos restritivos ou de anulação do papel dos colegiados nas respectivas políticas. No plano analítico empírico, dialogamos com a literatura nacional e",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "teóricas consolidadas sobre a mudança de políticas no sentido de sua retração. No primeiro caso, a literatura é incapaz de explicar a variação dos resultados das decisões de “desconstrução” das IPs, pois oferece diagnósticos demasiado gerais de fracasso do modelo da participação",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "políticas que, na tradição do neoinstitucionalismo histórico, tem pensado mudanças de sentido negativo, e prestamos atenção ao papel dos mecan ismos que inibem ou enfraquecem o desmantelamento. Na quarta seção, articulamos tais mecanismos com literatura de IPs e apresentamos nossa proposta analítica",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 3 priority fidelity issue(s): 1 contradicted and 2 not found in text; overall status fail."
+}

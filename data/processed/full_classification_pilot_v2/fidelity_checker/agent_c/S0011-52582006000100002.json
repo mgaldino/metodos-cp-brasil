@@ -1,0 +1,207 @@
+{
+  "pid": "S0011-52582006000100002",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "7586b09d248ac24dc595d18d488ea5072c6f3e9eee255135eba0499b5a871141",
+  "classification_hash": "9531a056260cabbfad693531f0d68f053d3f8123700103317b3edc6d413f50ec",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "Vox Populi continham informações sobre porcentagem de indecisos e eleitores que pretendiam votar em branco ou nulo. Foram aproveitados os resultados de 67 pesquisas. É fundamental incluir como variável dependente no teste multivariado não apenas as porcentagens de votos em Lula e",
+      "classification_value": 67
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "Vox Populi continham informações sobre porcentagem de indecisos e eleitores que pretendiam votar em branco ou nulo. Foram aproveitados os resultados de 67 pesquisas. É fundamental incluir como variável dependente no teste multivariado não apenas as porcentagens de votos em Lula e",
+      "classification_value": "Foram aproveitados os resultados de 67 pesquisas."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "questão diz respeito especificamente aos indicadores dos fundamentos da economia. O desemprego parece ter ganhado mais destaque do que a inflação no debate eleitoral de 20022. Conforme previsto pela Curva de Phillips, uma vez controlada a inflação (e como conseqüência direta de",
+      "classification_value": [
+        {
+          "variable_name": "inflation",
+          "variable_description": "Inflação como fundamento econômico defasado"
+        },
+        {
+          "variable_name": "unemployment",
+          "variable_description": "Desemprego como fundamento econômico defasado"
+        },
+        {
+          "variable_name": "exchange_rate",
+          "variable_description": "Taxa de câmbio"
+        },
+        {
+          "variable_name": "ibovespa",
+          "variable_description": "Índice da Bolsa de Valores de São Paulo"
+        },
+        {
+          "variable_name": "c_bond_spread",
+          "variable_description": "Spread do C-bond/risco-país"
+        },
+        {
+          "variable_name": "political_campaign_controls",
+          "variable_description": "HGPE, debates, reeleição, instituto de pesquisa e popularidade presidencial residual"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "sobre eleições no Brasil. Um segundo fator interessante desse período é o crescente destaque dado pela mídia à relação entre intenção de voto e indicadores do mercado financeiro nacional e internacional. Temas como risco-país (spread do C-Bond), índices de bolsas de valores",
+      "classification_value": [
+        {
+          "variable_name": "vote_intention_lula",
+          "variable_description": "Intenção agregada de voto em Lula"
+        },
+        {
+          "variable_name": "vote_intention_government_candidates",
+          "variable_description": "Intenção agregada de voto em Fernando Henrique Cardoso/José Serra"
+        },
+        {
+          "variable_name": "blank_null_undecided_other",
+          "variable_description": "Votos brancos/nulos, indecisos e demais candidatos"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "Only 2 of 3 classified relationship item(s) had enough body-text support.",
+      "supporting_excerpt": "operacionalizado pela intenção de votar em branco ou nulo. As variáveis independentes econômicas (inflação, desemprego, taxa de câmbio e Iboves pa), for am defasadas em uma unidade de observação (data da divulgação da pesquisa eleitoral) para melhor aproveitar a natureza dinâmica das",
+      "classification_value": [
+        {
+          "iv_var_name": "inflation",
+          "dv_var_name": "vote_intention_lula",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "ibovespa",
+          "dv_var_name": "vote_intention_lula",
+          "relationship_type": "Negative",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "HGPE",
+          "dv_var_name": "vote_intention_government_candidates",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "contradicted_by_text",
+      "severity": "high",
+      "reason": "The classification says no survey data, but the body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "99 pesquisas realizadas em 1994, 1998 e 2002 e para multivariada, foram u tilizadas apenas as pesquisas cujos dados disponíveis nos websites do Datafolha, Ibope e Vox Populi contin ham informações sobre porcentagem de indecisos e eleitores que pretendiam votar em branco",
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "em cada eleição. Portanto, as variáveis políticas enfocam os fatores conjunturais nas intenções de voto11. DADOS O banco de dados usado é com posto por séries temporais da aferição de intenção de voto para candidatos a presidente tendo como unidade de observação",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "direção causal entre economia e política parece ter se tornado ainda mais complexa. Todas essas questões estão abertas a testes empír icos no Brasil, principalmente quando dados agregados em série temporal são usados. HIPÓTESES Conforme foi dito acima, há diversos vetores causais",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "no Brasil recente. De forma mais específica, este artigo pretende oferecer respostas para as seguintes perguntas: qual é a relação causal entre indicadores do mercado financeiro e fundamentos da economia, por um lado, e intenções de voto, por outro? O que determina",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "2001; 2001a; 2001b). O caso brasileiro em 2002 não se distancia dessa lógica. Portanto, um modelo que vise a e xplicar intenções de voto baseado em variáveis econômicas não pode ignorar o papel central que o combate à inflação e ao desemprego",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The identification-assumption claim is backed by the accompanying body-text quote.",
+      "supporting_excerpt": "pela intenção de votar em branco ou nulo. As variáveis independentes econômicas (inflação, desemprego, taxa de câmbio e Ibovespa), foram defasadas em uma unidade de observação (data da divulgação da pesquisa eleitoral) para melhor aproveitar a natureza dinâmica das séries temporais. Ou",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quoted text is present in the canonical body text.",
+      "supporting_excerpt": "pela intenção de votar em branco ou nulo. As variáveis independentes econômicas (inflação, desemprego, taxa de câmbio e Ibovespa), foram defasadas em uma unidade de observação (data da divulgação da pesquisa eleitoral) para melhor aproveitar a natureza dinâmica das séries temporais. Ou",
+      "classification_value": "As variáveis independentes econômicas (inflação, desemprego, taxa de câmbio e Ibovespa), foram defasadas em uma unidade de observação (data da divulgação da pesquisa eleitoral) para melhor aproveitar a natureza dinâmica das séries temporais."
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "intenções de voto nas eleições presidenciais de 1994, 1998 e 200216. As variáveis dependentes utilizadas estão divididas em cinco equaç ões: a) intenção de voto em Lula; b) intenção de voto em candidatos do governo, que combina Fernando Henrique e Serra; c)",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "e Leblang (2001), o impacto dos indicadores financeiros provavelmente é mais visível quando estes oscilam negativamente. Ou seja, o me canismo c ausal da relação entre intenção de voto e indicadores financeiros tem diversos momentos. Primeiro, pioras nas avaliações de risco-país ou",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "do governo e negativamente nos candidatos englobados na categoria Outros. Em ambos os casos, esses coeficientes são estatisticamente signif icativos. O HG PE também reduziu a tendência de se votar em branco e nulo, favoreceu os candidatos do governo, prejudicou os candidatos",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status fail."
+}

@@ -1,0 +1,773 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">RRQfvjw8DgkdP5kSSNPKCKK</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212014000100002</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(14)00800100002</article-id>
+      <article-id pub-id-type="doi">10.1590/1981-38212014000100002</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A study on the impact of campaign finance, political capital and gender on electoral performance</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Speck</surname>
+            <given-names>Bruno Wilhelm</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Mancuso</surname>
+            <given-names>Wagner Pralon</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">Universidade de São Paulo</institution>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2014</year>
+      </pub-date>
+      <volume>8</volume>
+      <issue>1</issue>
+      <fpage>34</fpage>
+      <lpage>57</lpage>
+      <history>
+        <date date-type="accepted">
+          <month>01</month>
+          <year>2014</year>
+        </date>
+        <date date-type="received">
+          <month>07</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v8n1/02.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>This article analyzes the association between political finance and electoral performance in the 2010 Brazilian elections for state and federal deputies. It also investigates the interaction effect of incumbency and gender on this association. We conclude: (i) there is a positive and statistically significant association between political finance and electoral performance, yet the intensity of this association varies according to the type of candidate; (ii) the association is stronger for challengers than for incumbents - thus extending the "Jacobson effect" to the Brazilian case; and (iii) the association is stronger for women than for men - which suggests an extension of the idea underlying the "Jacobson effect". The association between finance and electoral performance tends to be stronger for candidates facing electoral disadvantages, whether these stem from limited political capital, gender discrimination, or any other factor not studied here resulting in a similar effect. Political finance works as a tool that, to some extent, may counteract the negative effect of such factors on electoral performance.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>Campaign finance</kwd>
+        <kwd>political capital</kwd>
+        <kwd>incumbency</kwd>
+        <kwd>gender</kwd>
+        <kwd>electoral performance</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>24</day>
+        <month>06</month>
+        <year>2014</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <element-citation publication-type="journal">
+          <article-title>Impactos de Indicadores Sociais e do Sistema Eleitoral sobre as Chances das Mulheres nas Eleições e suas Interações com as Cotas</article-title>
+          <source>DADOS - Revista de Ciências Sociais</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>535</fpage>
+          <lpage>577</lpage>
+          <issue>3</issue>
+          <volume>50</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ARAÚJO</surname>
+              <given-names>Clara</given-names>
+            </name>
+            <name>
+              <surname>ALVES</surname>
+              <given-names>José Eustáquio D</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <element-citation publication-type="journal">
+          <article-title>Mulheres brasileiras em tempo de competição eleitoral: seleção de candidaturas e degraus de acesso aos cargos parlamentares</article-title>
+          <source>DADOS - Revista de Ciências Sociais</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>895</fpage>
+          <lpage>939</lpage>
+          <issue>Nº04</issue>
+          <volume>51</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ALVARES</surname>
+              <given-names>Maria Luzia M</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>BOHN, Simone (2009), Mulheres brasileiras na disputa do legislativo municipal. <italic>Perspectivas: Revista de Ciências Sociais</italic>, vol. 35, pp. 63-89.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Mulheres brasileiras na disputa do legislativo municipal</article-title>
+          <source>Perspectivas: Revista de Ciências Sociais</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>63</fpage>
+          <lpage>89</lpage>
+          <volume>35</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BOHN</surname>
+              <given-names>Simone</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>BRAMBOR, Thomas; CLARK, William R. and GOLDER, Matt (2006), Understanding interaction models: improving empirical analyses. <italic>Political Analysis</italic>, Nº 14, pp. 63-82.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Understanding interaction models: improving empirical analyses</article-title>
+          <source>Political Analysis</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>63</fpage>
+          <lpage>82</lpage>
+          <issue>14</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BRAMBOR</surname>
+              <given-names>Thomas</given-names>
+            </name>
+            <name>
+              <surname>CLARK</surname>
+              <given-names>William R</given-names>
+            </name>
+            <name>
+              <surname>GOLDER</surname>
+              <given-names>Matt</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <element-citation publication-type="journal">
+          <article-title>Political competition with campaign contributions and informative advertising</article-title>
+          <source>Journal of the European Economic Association</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>772</fpage>
+          <lpage>804</lpage>
+          <issue>05</issue>
+          <volume>02</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COATE</surname>
+              <given-names>Stephen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <element-citation publication-type="journal">
+          <article-title>Same Game, Different Rules? Gender Differences in Political Participation</article-title>
+          <source>Sex Roles</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>318</fpage>
+          <lpage>333</lpage>
+          <volume>62</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COFFÉ</surname>
+              <given-names>Hilde</given-names>
+            </name>
+            <name>
+              <surname>BOLZENDAHL</surname>
+              <given-names>Catherine</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>FIGUEIREDO FILHO, Dalson B. (2009), <italic>O elo corporativo? Grupos de interesse, financiamento de campanha e regulação eleitoral</italic>. Master's thesis in Political Science, UFPE.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>O elo corporativo? Grupos de interesse, financiamento de campanha e regulação eleitoral</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FIGUEIREDO FILHO</surname>
+              <given-names>Dalson B</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>HTUN, Mala N. (2005), Women, Political Parties and Electoral Systems in Latin America. In: BALLINGTON, Julie and KARAM, Azza (eds): <italic>Women in Parliament: Beyond Numbers</italic>. A Revised Edition, IDEA, pp.112-121.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Women in Parliament: Beyond Numbers</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>112</fpage>
+          <lpage>121</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HTUN</surname>
+              <given-names>Mala N</given-names>
+            </name>
+            <name>
+              <surname>BALLINGTON</surname>
+              <given-names>Julie</given-names>
+            </name>
+            <name>
+              <surname>KARAM</surname>
+              <given-names>Azza</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>HTUN, Mala and POWER, Timothy (2006), Gender, Parties, and Support for Equal Rights in the Brazilian Congress. <italic>Latin American Politics and Society</italic>, vol. 48, Nº 04, pp. 83-104.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Gender, Parties, and Support for Equal Rights in the Brazilian Congress</article-title>
+          <source>Latin American Politics and Society</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>83</fpage>
+          <lpage>104</lpage>
+          <issue>04</issue>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HTUN</surname>
+              <given-names>Mala</given-names>
+            </name>
+            <name>
+              <surname>POWER</surname>
+              <given-names>Timothy</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>INGLEHART, Ronald and NORRIS, Pippa (2000), The Developmental Theory of the Gender Gap: Women's and Men's Voting Behavior in Global Perspective. <italic>International Political Science Review</italic>, vol. 21, Nº 04, pp. 441-463.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Developmental Theory of the Gender Gap: Women's and Men's Voting Behavior in Global Perspective</article-title>
+          <source>International Political Science Review</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>441</fpage>
+          <lpage>463</lpage>
+          <issue>04</issue>
+          <volume>21</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>INGLEHART</surname>
+              <given-names>Ronald</given-names>
+            </name>
+            <name>
+              <surname>NORRIS</surname>
+              <given-names>Pippa</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>JACCARD, James (2001), Interaction effects in logistic regression. <italic>Sage University Papers Series on Quantitative Applications in the Social Sciences</italic>, Nº 07, p. 135. Thousand Oaks: Sage.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Interaction effects in logistic regression</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>135</fpage>
+          <volume>07</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JACCARD</surname>
+              <given-names>James</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>JACOBSON, Gary C. (1978), The Effects of Campaign Spending in Congressional Elections. <italic>American Political Science Review</italic>, Vol.72, No. 2, pp. 469-491.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Effects of Campaign Spending in Congressional Elections</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1978</year>
+          </date>
+          <fpage>469</fpage>
+          <lpage>491</lpage>
+          <issue>2</issue>
+          <volume>72</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JACOBSON</surname>
+              <given-names>Gary C</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>LEMOS, Leany B.; MARCELINO, Daniel and PEDERIVA, João Henrique (2010), Porque dinheiro importa: a dinâmica das contribuições eleitorais para o Congresso Nacional em 2002 e 2006. <italic>Opinião Pública</italic>, vol. 16, N<italic>º</italic> 02.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Porque dinheiro importa: a dinâmica das contribuições eleitorais para o Congresso Nacional em 2002 e 2006</article-title>
+          <source>Opinião Pública</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <issue>02</issue>
+          <volume>16</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LEMOS</surname>
+              <given-names>Leany B</given-names>
+            </name>
+            <name>
+              <surname>MARCELINO</surname>
+              <given-names>Daniel</given-names>
+            </name>
+            <name>
+              <surname>PEDERIVA</surname>
+              <given-names>João Henrique</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>LEONI, Eduardo; PEREIRA, Carlos and RENNÓ, Lúcio (2003), Estratégias para sobreviver politicamente: Escolhas de carreiras na Câmara de Deputados do Brasil. <italic>Opinião Pública</italic>, Vol. IX, Nº 01, pp. 44-67.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Estratégias para sobreviver politicamente: Escolhas de carreiras na Câmara de Deputados do Brasil</article-title>
+          <source>Opinião Pública</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>44</fpage>
+          <lpage>67</lpage>
+          <issue>01</issue>
+          <volume>IX</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LEONI</surname>
+              <given-names>Eduardo</given-names>
+            </name>
+            <name>
+              <surname>PEREIRA</surname>
+              <given-names>Carlos</given-names>
+            </name>
+            <name>
+              <surname>RENNÓ</surname>
+              <given-names>Lúcio</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>MANCUSO, Wagner Pralon (2012), <italic>Investimento eleitoral no Brasil: balanço da literatura e agenda de pesquisa</italic>. Article presented at the 8th Meeting of the Brazilian Political Science Association. Gramado/RS.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Investimento eleitoral no Brasil: balanço da literatura e agenda de pesquisa</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MANCUSO</surname>
+              <given-names>Wagner Pralon</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>MANCUSO, Wagner P. and SPECK, Bruno W. (2012), <italic>Financiamento empresarial e eleitoral performance no Brasil: um estudo das eleições para deputado federal em 2010</italic>. Paper presented at the 8th Workshop Empresa, Empresários e Sociedade, Curitiba/PR.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Financiamento empresarial e eleitoral performance no Brasil: um estudo das eleições para deputado federal em 2010</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MANCUSO</surname>
+              <given-names>Wagner P</given-names>
+            </name>
+            <name>
+              <surname>SPECK</surname>
+              <given-names>Bruno W</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>MARCELINO, Daniel (2010), <italic>Sobre dinheiro e eleições: um estudo dos gastos de campanha para o Congresso Nacional em 2002 e 2006</italic>. Master's thesis in Social Sciences, UnB.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>Sobre dinheiro e eleições: um estudo dos gastos de campanha para o Congresso Nacional em 2002 e 2006</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MARCELINO</surname>
+              <given-names>Daniel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>MENEGUELLO, Rachel; SPECK, Bruno Wilhelm; SACCHET, Teresa; MANO, Maíra Kubik; SANTOS, Fernando Henrique dos and GORSKI, Caroline (2012), Mulheres e negros na política: Estudo exploratório sobre desempenho eleitoral em 4 estados brasileiros. <italic>Centro de Estudos de Opinião Pública</italic>, Unicamp, Campinas.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Mulheres e negros na política: Estudo exploratório sobre desempenho eleitoral em 4 estados brasileiros</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MENEGUELLO</surname>
+              <given-names>Rachel</given-names>
+            </name>
+            <name>
+              <surname>SPECK</surname>
+              <given-names>Bruno Wilhelm</given-names>
+            </name>
+            <name>
+              <surname>SACCHET</surname>
+              <given-names>Teresa</given-names>
+            </name>
+            <name>
+              <surname>MANO</surname>
+              <given-names>Maíra Kubik</given-names>
+            </name>
+            <name>
+              <surname>SANTOS</surname>
+              <given-names>Fernando Henrique dos</given-names>
+            </name>
+            <name>
+              <surname>GORSKI</surname>
+              <given-names>Caroline</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>MIGUEL, Luís Felipe. 2003. Capital político e carreira eleitoral: algumas variáveis na eleição para o Congresso brasileiro. <italic>Revista de Sociologia e Política</italic>, Vol. 20, p. 115-134.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Capital político e carreira eleitoral: algumas variáveis na eleição para o Congresso brasileiro</article-title>
+          <source>Revista de Sociologia e Política</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>115</fpage>
+          <lpage>134</lpage>
+          <volume>20</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MIGUEL</surname>
+              <given-names>Luís Felipe</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>MIGUEL, Luís Felipe and QUEIROZ, Cristina Monteiro de (2006), Diferenças regionais e o êxito relativo de mulheres em eleições municipais no Brasil. <italic>Estudos Feministas</italic>, vol. 14, Nº 02.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Diferenças regionais e o êxito relativo de mulheres em eleições municipais no Brasil</article-title>
+          <source>Estudos Feministas</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <issue>02</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MIGUEL</surname>
+              <given-names>Luís Felipe</given-names>
+            </name>
+            <name>
+              <surname>QUEIROZ</surname>
+              <given-names>Cristina Monteiro de</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>INGLEHART, Ronald and NORRIS, Pippa (2003), <italic>Rising Tide: Gender Equality and Cultural Change Around the World</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Rising Tide: Gender Equality and Cultural Change Around the World</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>INGLEHART</surname>
+              <given-names>Ronald</given-names>
+            </name>
+            <name>
+              <surname>NORRIS</surname>
+              <given-names>Pippa</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>OHMAN, Magnus (2011), <italic>Global trends in the regulation of political finance</italic>. Paper presented at IPSA-ECPR conference "Whatever Happened to North-South?", promoted by the Brazilian Political Science Association. São Paulo/SP.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Global trends in the regulation of political finance</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>OHMAN</surname>
+              <given-names>Magnus</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>PEIXOTO, Vitor de M. (2004), <italic>Votos: Valem quanto pesam?</italic> O Impacto do Financiamento de Campanhas Eleitorais no Brasil. Master's thesis in Political Science, IUPERJ.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>Votos: Valem quanto pesam? O Impacto do Financiamento de Campanhas Eleitorais no Brasil</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEIXOTO</surname>
+              <given-names>Vitor de M</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>PEIXOTO, Vitor de M. (2010), <italic>Eleições e financiamento de campanhas no Brasil</italic>. PhD dissertation in Political Science, IUPERJ.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>Eleições e financiamento de campanhas no Brasil</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEIXOTO</surname>
+              <given-names>Vitor de M</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>PEREIRA, Carlos and RENNÓ, Lúcio (2007), O que é que o reeleito tem? O retorno: o esboço de uma teoria da reeleição no Brasil. <italic>Revista de Economia Política</italic>, vol. 27, Nº 04, pp. 664-683.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>O que é que o reeleito tem? O retorno: o esboço de uma teoria da reeleição no Brasil</article-title>
+          <source>Revista de Economia Política</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>664</fpage>
+          <lpage>683</lpage>
+          <issue>04</issue>
+          <volume>27</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PEREIRA</surname>
+              <given-names>Carlos</given-names>
+            </name>
+            <name>
+              <surname>RENNÓ</surname>
+              <given-names>Lúcio</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <element-citation publication-type="journal">
+          <article-title>Caminhos para o Parlamento: Candidatos e Eleitos nas Eleições para Deputado Federal em 2006</article-title>
+          <source>DADOS - Revista de Ciências Sociais</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>301</fpage>
+          <lpage>333</lpage>
+          <issue>02</issue>
+          <volume>52</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PERISSINOTTO</surname>
+              <given-names>Renato Monseff</given-names>
+            </name>
+            <name>
+              <surname>MIRIADE</surname>
+              <given-names>Angel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>SACCHET, Teresa (2005), <italic>Political Parties: When do they work for Women?</italic> Paper prepared for Expert Group Meeting on Equal participation of Women and Men in decision-making processes, with particular emphasis on political participation and leadership, United Nations.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Political Parties: When do they work for Women?</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SACCHET</surname>
+              <given-names>Teresa</given-names>
+            </name>
+          </person-group>
+          <comment>Paper prepared for Expert Group Meeting on Equal participation of Women and Men in decision-making processes, with particular emphasis on political participation and leadership, United Nations</comment>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>SACCHET, Teresa (2012), Partidos políticos e (sub) representação feminina: um estudo sobre recrutamento legislativo e financiamento de campanhas. In: Denise Paiva (org.): <italic>Mulheres, poder e política.</italic>Goiânia, Editora Cânone. pp.159-186.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Mulheres, poder e política</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <fpage>159</fpage>
+          <lpage>186</lpage>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SACCHET</surname>
+              <given-names>Teresa</given-names>
+            </name>
+            <name>
+              <surname>Paiva</surname>
+              <given-names>Denise</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>SACCHET, Teresa and SPECK, Bruno (2011), <italic>Partidos políticos e (sub)representação feminina nas esferas legislativas</italic>: um estudo sobre recrutamento eleitoral e financiamento de campanhas. Paper presented at IPSA-ECPR conference "Whatever Happened to North-South?", promoted by the Brazilian Political Science Association, São Paulo/SP.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Partidos políticos e (sub)representação feminina nas esferas legislativas: um estudo sobre recrutamento eleitoral e financiamento de campanhas</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SACCHET</surname>
+              <given-names>Teresa</given-names>
+            </name>
+            <name>
+              <surname>SPECK</surname>
+              <given-names>Bruno</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>SACCHET, Teresa and SPECK, Bruno (2012a) , <italic>Dinheiro e Sexo na Política Brasileira</italic>: financiamento de campanha e Desempenho eleitoral das mulheres em cargos legislativos, <italic>mimeo.</italic></mixed-citation>
+        <element-citation publication-type="book">
+          <source>Dinheiro e Sexo na Política Brasileira: financiamento de campanha e Desempenho eleitoral das mulheres em cargos legislativos</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SACCHET</surname>
+              <given-names>Teresa</given-names>
+            </name>
+            <name>
+              <surname>SPECK</surname>
+              <given-names>Bruno</given-names>
+            </name>
+          </person-group>
+          <comment>mimeo</comment>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>SACCHET, Teresa and SPECK, Bruno (2012b), Financiamento eleitoral, representação política e gênero: uma análise das eleições de 2006. <italic>Opinião Pública</italic>, vol. 18, Nº 01, pp. 177-197<italic>.</italic></mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Financiamento eleitoral, representação política e gênero: uma análise das eleições de 2006</article-title>
+          <source>Opinião Pública</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <fpage>177</fpage>
+          <lpage>197</lpage>
+          <issue>01</issue>
+          <volume>18</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SACCHET</surname>
+              <given-names>Teresa</given-names>
+            </name>
+            <name>
+              <surname>SPECK</surname>
+              <given-names>Bruno</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <element-citation publication-type="journal">
+          <article-title>Incumbents and Challengers on a Level Playing Field: Assessing the Impact of Campaign Finance in Brazil</article-title>
+          <source>The Journal of Politics</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>569</fpage>
+          <lpage>584</lpage>
+          <issue>02</issue>
+          <volume>63</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SAMUELS</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <element-citation publication-type="journal">
+          <article-title>Some talk: Money in politics. A (partial) review of the literature</article-title>
+          <source>Public Choice</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>135</fpage>
+          <lpage>156</lpage>
+          <issue>124</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>STRATMAN</surname>
+              <given-names>Thomas</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

@@ -1,0 +1,65 @@
+{
+  "pid": "S0104-44782013000300008",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "f788222b93a32fdfe1e25955e93a5d19a452b4a62c4833a96d026f35ea4c49e1",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "multiple_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "governor_ideology_party_dynamics_institutional_assets",
+        "variable_description": "Ideologia do governador, dinâmica partidária e ativos institucionais"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "positive_sum_legislative_outcomes",
+        "variable_description": "Resultados de soma positiva nas assembleias estaduais"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "governor_ideology_party_dynamics_institutional_assets",
+        "dv_var_name": "positive_sum_legislative_outcomes",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O artigo compara assembleias de Minas Gerais e Rio Grande do Sul e usa modelos multivariados para explicar resultados de soma positiva. A análise é empírica mista/quantitativa, mas observacional e sem identificação causal forte."
+  },
+  "raw_response_path": null
+}

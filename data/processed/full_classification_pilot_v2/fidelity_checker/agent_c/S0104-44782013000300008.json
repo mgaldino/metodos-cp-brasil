@@ -1,0 +1,165 @@
+{
+  "pid": "S0104-44782013000300008",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "f788222b93a32fdfe1e25955e93a5d19a452b4a62c4833a96d026f35ea4c49e1",
+  "classification_hash": "b82dd9692b413c1c717476b9b25b5f5fa85b416cd406f67ada463ab2f9e25a68",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "tem sido definidora a partir da observação da operação efetiva de coalizões governativas em presidencialismos. Embora a força da ideologia no proces so de formação de governos não tenha sido o foco da discussão de Figueiredo e Limongi (1999), ao analisar o",
+      "classification_value": [
+        {
+          "variable_name": "governor_ideology_party_dynamics_institutional_assets",
+          "variable_description": "Ideologia do governador, dinâmica partidária e ativos institucionais"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "I. INTRODUÇÃO1 Por que os governos são bem sucedidos na produção de resultado s legislativos não-conflitivos? Ou, ainda, de que maneiras as estratégias de formação de coalizões utilizadas pelos governadores afetam o apoio dos deputados estaduais aos projetos de autoria do governo,",
+      "classification_value": [
+        {
+          "variable_name": "positive_sum_legislative_outcomes",
+          "variable_description": "Resultados de soma positiva nas assembleias estaduais"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "governor_ideology_party_dynamics_institutional_assets",
+          "dv_var_name": "positive_sum_legislative_outcomes",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The original-dataset category is specific, but supporting data-construction evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "nominais nesses dois estados, para o período analisado17. Com os dados organizados, passou-se à utilização de um modelo de regre ssão logí stica binária para a variável dummy: resultados de soma zero (= 0) e resultados de soma positiva (= 1). A",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "estatisticamente significativo quando contrastada com as três variáveis explicativas mais importantes deste trabalho. Ou seja, é possível observar a conex ão cau sal hipotetizada anteriormente, independentemente do estado que se esteja analisando. Ademais, a direção do coeficiente mostra que o estado de",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "resultados de soma positiva: resultados que não impõem custos concentrados para nenhum dos atores em competição. Mas por que interessa explicar os resultados de soma positiva? Porque a maioria dos analistas acredita que o motor das ações dos governantes é a aprovação",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "matérias aprovadas, a maioria é de soma positiva, enquanto entre as matérias rejeitadas a diferença não é estatisticamente significat iva. Esses re sultados podem fornecer algumas pistas para se explicar o elevado grau de aprovação das decisões. As questões que chegam ao",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 0 contradicted and 2 not found in text; overall status fail."
+}

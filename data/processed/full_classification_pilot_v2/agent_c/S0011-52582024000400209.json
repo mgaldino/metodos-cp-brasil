@@ -1,0 +1,65 @@
+{
+  "pid": "S0011-52582024000400209",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "fd2b45b84af03759cdc0cf1967ed4815da8b35702939f45f2fd6bf4c5e951ae9",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "descriptive institutional typology of collegiate bodies",
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "policy_area",
+        "variable_description": "Área de política pública do colegiado"
+      },
+      {
+        "variable_name": "institutional_robustness",
+        "variable_description": "Robustez/desenho institucional do colegiado"
+      },
+      {
+        "variable_name": "legal_changes",
+        "variable_description": "Alterações legais e revogações após o Decreto 9.759/2019"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "resilience_status",
+        "variable_description": "Atividade, inatividade, alteração substantiva ou resiliência dos colegiados"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": true,
+    "sample_size": 103,
+    "sample_size_quote": "Foi criado um banco com informações padronizadas para 103 colegiados nacionais, registrando todas as alterações legais e infralegais ocorridas durante a gestão Bolsonaro, entre 2019 e 2022.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O artigo sistematiza 103 colegiados nacionais para avaliar desinstitucionalização e resiliência no governo Bolsonaro. A análise é empírica, tabular e tipológica, com mecanismos institucionais discutidos, mas sem regressão, significância estatística ou desenho causal identificado."
+  },
+  "raw_response_path": null
+}

@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-44782014000100003",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "9ce261e65ec4e36c65e7715b65b4002eeec70de17d20fe02739ae840ec10b9bf",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "legislative_indications",
+        "variable_description": "Indicações dos vereadores cariocas"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "electoral_connection_patterns",
+        "variable_description": "Padrões de intermediação territorial e conexão eleitoral"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O artigo analisa indicações legislativas municipais e usa teste qui-quadrado de aderência para padrões de emissão. A evidência combina interpretação qualitativa e estatística descritiva/inferencial simples."
+  },
+  "raw_response_path": null
+}

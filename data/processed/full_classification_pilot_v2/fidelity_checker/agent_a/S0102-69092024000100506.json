@@ -1,0 +1,165 @@
+{
+  "pid": "S0102-69092024000100506",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "25933eee5bfdc0905344dca6c3a3293ce3eedea4aff7e084f8a10ee90499d770",
+  "classification_hash": "1053f7779e7b293b6eb2af3591f474328bca01bda5cb9119a154d427e548f026",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "que afirmaram ter atendido PCTs situados em seus territórios de abrangência em 2019. Devido ao número de missing cases em variáveis independentes, a inferência se baseou em 2.084 casos. Os dados utilizados na pesquisa foram de caráter primário, colhidos em bases de",
+      "classification_value": 2084
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "que afirmaram ter atendido PCTs situados em seus territórios de abrangência em 2019. Devido ao número de missing cases em variáveis independentes, a inferência se baseou em 2.084 casos. Os dados utilizados na pesquisa foram de caráter primário, colhidos em bases de",
+      "classification_value": "Devido ao número de missing cases em variáveis independentes, a inferência se baseou em 2.084 casos."
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "management instruments",
+          "variable_description": "Explanatory variable identified from the article body."
+        },
+        {
+          "variable_name": "resources",
+          "variable_description": "Explanatory variable identified from the article body."
+        },
+        {
+          "variable_name": "state capacity and implementation covariates",
+          "variable_description": "Explanatory variable identified from the article body."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "existence of specific service strategies for traditional peoples and communities",
+          "variable_description": "Outcome variable identified from the article body."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body points to secondary/public data sources rather than original collection.",
+      "supporting_excerpt": "Único de Assistência Social (Censo SUAS) de 2018 e 2019 e o Censo do Instituto Brasileiro de Geografia e Estatística (IB GE) de 2010. Ademais, utilizamos dados da Secretaria do Tesouro Nacional. O Censo do SUAS de 2019 foi a principal base",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "de Povos e Comunidades Tradicionais pelos CRAS. Para responder a este objetivo, utilizamos um desenho de pesquisa quantitativo operacionalizado por regressões logísticas. A equidade foi avaliada a partir da existência de estratégias específicas de atendimento de PCTs nos CRAS. A população do",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "esteve presente entre as perspectivas do II Plano Decenal de Assistência Social. A fim de alcançar coerência com uma estrutu ra cau sal, ainda que os dados observacionais e o modelo adotado tenham exigências fortes para inferência causal que sabemos que são",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "e estabelecendo compromissos, se torna um tipo de capacidade estatal (Aguiar e Lima, 2019). Fatores individuais dos profissionais: Chavez (2020) explic a que quanto mais características os burocratas compartilharem com os usuários das políticas, melhor será a implementação no que diz respeito",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "de Povos e Comunidades Tradicionais pelos CRAS. Para responder a este objetivo, utilizamos um desenho de pesquisa quantitativo operacionalizado por regressões logísticas. A equidade foi avaliada a partir da existência de estratégias específicas de atendimento de PCTs nos CRAS. A população do",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No direct mechanism/channel language was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "as chances de o atendimento ser equânime, conforme esperávamos. Contudo, poucas são as variáveis que se relacionam de forma estatisticame nte significa tiva com a existência de estratégias específicas de atendimento de PCTs nos CRAS. No Modelo 1, “fatores individuais”, a pertença",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 3 priority fidelity issue(s): 1 contradicted and 2 not found in text; overall status pass_with_warnings."
+}

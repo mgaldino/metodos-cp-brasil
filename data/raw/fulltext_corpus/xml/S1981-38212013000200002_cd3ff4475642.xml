@@ -1,0 +1,920 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">szLF9f6cBBn8bfcKNqWgQcR</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212013000200002</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(13)00700200002</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>New policies for science and technology and the impacts on public research institutes: a case study in Brazil</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Andrade</surname>
+            <given-names>Thales Haddad Novaes de</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Silva</surname>
+            <given-names>Lucas Rodrigo da</given-names>
+          </name>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Gitahy</surname>
+            <given-names>Leda</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff02"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">Federal University of São Carlos</institution>
+        <institution content-type="orgdiv1">Social Sciences Department </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff02">
+        <institution content-type="orgname">State University of Campinas</institution>
+        <institution content-type="orgdiv1">Science and Technology Policy Department </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2013</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>2</issue>
+      <fpage>37</fpage>
+      <lpage>61</lpage>
+      <history>
+        <date date-type="received">
+          <month>04</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <month>07</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v7n2/02.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>This article aims to discuss how technological production has been affected by new organizational patterns of funding and evaluation, international transformations in terms of the reorganization of research centers, and changes in innovation practices. Researchers and scientists have had their activities redefined through new organizational formats that today are well-established. The purpose here is to verify the impacts that these tendencies have had on the scientific and technological production of Public Research Institutes. We analyzed the case of the Technological Research Institute (Instituto de Pesquisas Tecnológicas - IPT) and found that from the 1990s onwards, research institutions in Brazil internalized organizational forms that enabled them to place themselves in the international agenda as reputational agents, and that the IPT internalized an international agenda, hiring new services and with new budgets. The institutions of scientific research tended to align their interests with hegemonic devices and to withdraw the participation of agents not able to make explicit the new formulas for recognition in the scientific field.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>Science and technology policies</kwd>
+        <kwd>public research institutes</kwd>
+        <kwd>Brazil</kwd>
+        <kwd>IPT</kwd>
+        <kwd>researchers</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>08</day>
+        <month>10</month>
+        <year>2013</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>AGÊNCIA BRASILEIRA DE DESENVOLVIMENTO INDUSTRIAL. (2004), Política Industrial, Tecnológica e de Comércio Exterior - PITCE. &lt;<underline><ext-link ext-link-type="uri" xlink:href="http://www.abdi.com.br/Paginas/politica_industrial.aspx">http://www.abdi.com.br/Paginas/politica_industrial.aspx</ext-link></underline>&gt;</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Política Industrial, Tecnológica e de Comércio Exterior - PITCE</source>
+          <date>
+            <year>2004</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>ALBERT, Mauthieu and LABERGE, Suzanne. (2007), The Legitimation and Dissemination Processes of the Innovation System Approach - The Case of the Canadian and Québec Science and Technology Policy. <italic>Science, Technology, &amp; Human Values</italic><bold>,</bold> vo. 32, nº 2, pp. 221-249.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Legitimation and Dissemination Processes of the Innovation System Approach: The Case of the Canadian and Québec Science and Technology Policy</article-title>
+          <source>Science, Technology, &amp; Human Values</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>221</fpage>
+          <lpage>249</lpage>
+          <issue>2</issue>
+          <volume>32</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ALBERT</surname>
+              <given-names>Mauthieu</given-names>
+            </name>
+            <name>
+              <surname>LABERGE</surname>
+              <given-names>Suzanne</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>ANDRADE, Thales Novaes de. (2005), Inovação e Ciências Sociais: em busca de novos referenciais. <italic>Revista Brasileira de Ciências Sociais</italic>, vol. 20, nº 58, pp. 65-76.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Inovação e Ciências Sociais: busca de novos referenciais</article-title>
+          <source>Revista Brasileira de Ciências Sociais</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>65</fpage>
+          <lpage>76</lpage>
+          <issue>58</issue>
+          <volume>20</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ANDRADE</surname>
+              <given-names>Thales Novaes de</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>ANDRADE, Thales Novaes de and MOREIRA Jr., Airton. (2009), Aperfeiçoamento gerencial e inovação tecnológica. <italic>Sociologias</italic>, ano 11, nº 22, pp. 198-230.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Aperfeiçoamento gerencial e inovação tecnológica</article-title>
+          <source>Sociologias</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>198</fpage>
+          <lpage>230</lpage>
+          <issue>22</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ANDRADE</surname>
+              <given-names>Thales Novaes de</given-names>
+            </name>
+            <name>
+              <surname>MOREIRA Jr.</surname>
+              <given-names>Airton</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>ARBIX, Glauco. (2007), <italic>Inovar ou inovar</italic><bold>:</bold> <italic>a indústria brasileira entre o passado e o futuro,</italic> São Paulo: Editora Papagaio.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Inovar ou inovar: a indústria brasileira entre o passado e o futuro</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ARBIX</surname>
+              <given-names>Glauco</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>BAUMGARTEN, Maira. (2008), <italic>Conhecimento e sustentabilidade: políticas da ciência, tecnologia e inovação no Brasil contemporâneo.</italic> Porto Alegre: Editora da UFRGS/ Editora Sulina.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Conhecimento e sustentabilidade: políticas da ciência, tecnologia e inovação no Brasil contemporâneo</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BAUMGARTEN</surname>
+              <given-names>Maira</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>BRESSER PEREIRA, Luis Carlos. (1998), <italic>Reforma do Estado para a cidadania: a reforma gerencial brasileira na perspectiva internacional</italic>, São Paulo: Editora 34.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Reforma do Estado para a cidadania: a reforma gerencial brasileira na perspectiva internacional</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BRESSER PEREIRA</surname>
+              <given-names>Luis Carlos</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>CASSIOLATO, José Eduardo and LASTRES, Helena Maria M. (2000), Sistemas de Inovação: Políticas e Perspectivas. <italic>Parcerias estratégicas</italic>, nº 8, pp. 237-255.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Sistemas de Inovação: Políticas e Perspectivas</article-title>
+          <source>Parcerias estratégicas</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>237</fpage>
+          <lpage>255</lpage>
+          <issue>8</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CASSIOLATO</surname>
+              <given-names>José Eduardo</given-names>
+            </name>
+            <name>
+              <surname>LASTRES</surname>
+              <given-names>Helena Maria M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>CASTRO, Antonio. (2009), <italic>Sobre a história do IPT</italic>. <ext-link ext-link-type="uri" xlink:href="http://www.ipt.br/institucional/organizacao/historico/100/">http://www.ipt.br/institucional/organizacao/historico/100/</ext-link>, accessed on 24/04/2009.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Sobre a história do IPT</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CASTRO</surname>
+              <given-names>Antonio</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>CAVALHEIRO, Esper. (2007), A nova convergência da ciência e da tecnologia. <italic>Novos</italic> Estudos - Cebrap, nº 78, pp. 23-30.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A nova convergência da ciência e da tecnologia</article-title>
+          <source>Novos Estudos - Cebrap</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>23</fpage>
+          <lpage>30</lpage>
+          <issue>78</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CAVALHEIRO</surname>
+              <given-names>Esper</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>CHÉRCOLES, Diego M.; ESCOLAR, Belém M.; MENDIZÁBAL, Guillermo A.; GONZÁLEZ, Francisco J. (2005), Condicionantes políticos y problemas metodológicos en la evaluación de impacto social de las políticas de I+D e innovación. <italic>Revista iberoamericana de ciencia, tecnología y sociedad</italic>, vol. 2, nº 4, pp. 173-200.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Condicionantes políticos y problemas metodológicos en la evaluación de impacto social de las políticas de I+D e innovación</article-title>
+          <source>Revista iberoamericana de ciencia, tecnología y sociedad</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>173</fpage>
+          <lpage>200</lpage>
+          <issue>4</issue>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CHÉRCOLES</surname>
+              <given-names>Diego M.</given-names>
+            </name>
+            <name>
+              <surname>ESCOLAR</surname>
+              <given-names>Belém M.</given-names>
+            </name>
+            <name>
+              <surname>MENDIZÁBAL</surname>
+              <given-names>Guillermo A.</given-names>
+            </name>
+            <name>
+              <surname>GONZÁLEZ</surname>
+              <given-names>Francisco J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>DAGNINO, Renato. (2007), <italic>Ciência e tecnologia no Brasil: o processo decisório e a comunidade de pesquisa.</italic> Campinas: Editora UNICAMP.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Ciência e tecnologia no Brasil: o processo decisório e a comunidade de pesquisa</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DAGNINO</surname>
+              <given-names>Renato</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>DAGNINO, Renato and NOVAES, Henrique. (2004), A adequação sócio-técnica como insumo para a recuperação dos Institutos de Pesquisa. <italic>Revista Brasileira de Gestão e Desenvolvimento Regional</italic>, vol. 1, nº 3, pp. 30-43.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A adequação sócio-técnica como insumo para a recuperação dos Institutos de Pesquisa</article-title>
+          <source>Revista Brasileira de Gestão e Desenvolvimento Regional</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>30</fpage>
+          <lpage>43</lpage>
+          <issue>3</issue>
+          <volume>1</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DAGNINO</surname>
+              <given-names>Renato</given-names>
+            </name>
+            <name>
+              <surname>NOVAES</surname>
+              <given-names>Henrique</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>DAVYT, Amilcar and VELHO, Lea. (2000), A avaliação da ciência e a revisão por pares: passado e presente. Como será o futuro? <italic>História, Ciências, Saúde - Manguinhos</italic>, vol. 7, nº 1, pp. 93-116.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A avaliação da ciência e a revisão por pares: passado e presente. Como será o futuro?</article-title>
+          <source>História, Ciências, Saúde - Manguinhos</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>93</fpage>
+          <lpage>116</lpage>
+          <issue>1</issue>
+          <volume>7</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DAVYT</surname>
+              <given-names>Amilcar</given-names>
+            </name>
+            <name>
+              <surname>VELHO</surname>
+              <given-names>Lea</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>FARIA, Lina. (2007), <italic>Saúde e política - a Fundação Rockfeller e seus parceiros em São Paulo</italic>. Rio de Janeiro: Fiocruz.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Saúde e política: a Fundação Rockfeller e seus parceiros em São Paulo</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FARIA</surname>
+              <given-names>Lina</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>FREEMAN, Christopher. (1975), <italic>La teoría económica de la innovación industrial</italic>. Madrid: Penguin Alianza.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>La teoría económica de la innovación industrial</source>
+          <date>
+            <year>1975</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FREEMAN</surname>
+              <given-names>Christopher</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>GINGRAS, Yves. (2002), Les formes spécifiques de l'internationalité du champ scientifique. <italic>Actes de la recherche en sciences sociales</italic>, vol. 141, pp. 31-45.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Les formes spécifiques de l'internationalité du champ scientifique</article-title>
+          <source>Actes de la recherche en sciences sociales</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>31</fpage>
+          <lpage>45</lpage>
+          <volume>141</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GINGRAS</surname>
+              <given-names>Yves</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>GITAHY, Maria Lucia. (2001), Adaptando e inovando: o Laboratório de Ensaios de Materiais da Escola Politécnica e a tecnologia do concreto em São Paulo. <italic>História, Ciências, Saúde - Manguinhos</italic>, vol. 7, nº 3, pp. 675-690.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Adaptando e inovando: o Laboratório de Ensaios de Materiais da Escola Politécnica e a tecnologia do concreto em São Paulo</article-title>
+          <source>História, Ciências, Saúde - Manguinhos</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>675</fpage>
+          <lpage>690</lpage>
+          <issue>3</issue>
+          <volume>7</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GITAHY</surname>
+              <given-names>Maria Lucia</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>GOMES, Rogério. (2003), O papel das subsidiárias e a internacionalização das atividades tecnológicas pelas empresas transnacionais (ETNs). <italic>Gestão e Produção</italic>, v.10, nº 3, pp.267-281.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>O papel das subsidiárias e a internacionalização das atividades tecnológicas pelas empresas transnacionais (ETNs)</article-title>
+          <source>Gestão e Produção</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>267</fpage>
+          <lpage>281</lpage>
+          <issue>3</issue>
+          <volume>10</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GOMES</surname>
+              <given-names>Rogério</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>GUSMÃO, Maria Regina P. (1991), Modelo institucional, estrutura de financiamento e demanda tecnológica: a experiência do IPT nos anos 80. (Master Dissertation, UNICAMP.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>Modelo institucional, estrutura de financiamento e demanda tecnológica: a experiência do IPT nos anos 80</source>
+          <date>
+            <year>1991</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GUSMÃO</surname>
+              <given-names>Maria Regina P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>HUMBERT, Marc. (2005), Globalização e glocalização:<italic> </italic>problemas para países em desenvolvimento e implicações para políticas supranacionais, nacionais e subnacionais. In: <italic>Conhecimento, sistemas de inovação e desenvolvimento,</italic> edited by Helena M. M. Lastres, José E. Cassiolato and Ana Arroio. Rio de Janeiro: Editora UFRJ.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Conhecimento, sistemas de inovação e desenvolvimento</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HUMBERT</surname>
+              <given-names>Marc</given-names>
+            </name>
+            <name>
+              <surname>Lastres</surname>
+              <given-names>Helena M. M.</given-names>
+            </name>
+            <name>
+              <surname>Cassiolato</surname>
+              <given-names>José E.</given-names>
+            </name>
+            <name>
+              <surname>Arroio</surname>
+              <given-names>Ana</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>INSTITUTO DE PESQUISA TECNOLÓGICO. (2009), <italic>Estatuto</italic><bold>,</bold> São Paulo: IPT.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Estatuto</source>
+          <date>
+            <year>2009</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>INSTITUTO DE PESQUISA TECNOLÓGICO DO ESTADO DE SÃO PAULO. (1979), <italic>Na era da tecnologia, 80 anos de IPT</italic>. São Paulo: Editora IPT.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Na era da tecnologia, 80 anos de IPT</source>
+          <date>
+            <year>1979</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>INSTITUTO DE PESQUISA TECNOLÓGICO DO ESTADO DE SÃO PAULO. (1999), <italic>IPT 100 anos de tecnologia</italic>. São Paulo: Editora IPT.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>IPT 100 anos de tecnologia</source>
+          <date>
+            <year>1999</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>INSTITUTO DE PESQUISA TECNOLÓGICO DO ESTADO DE SÃO PAULO. (2002), <italic>Plano diretor</italic>, São Paulo: IPT.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Plano diretor</source>
+          <date>
+            <year>2002</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>INSTITUTO DE PESQUISA TECNOLÓGICO DO ESTADO DE SÃO PAULO. (2009), IPT - 110 anos: Os desafios e as vitórias em mais de um século dedicado à inovação. <italic>Revista do IPT - Pesquisa &amp; Desenvolvimento</italic>, vol. 1, pp. 4-96.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>IPT - 110 anos: Os desafios e as vitórias em mais de um século dedicado à inovação</article-title>
+          <source>Revista do IPT - Pesquisa &amp; Desenvolvimento</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>4</fpage>
+          <lpage>96</lpage>
+          <volume>1</volume>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>KAWAMURA, Lilia. (1981), <italic>Engenheiro: trabalho e ideologia</italic>, São Paulo: Ática.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Engenheiro: trabalho e ideologia</source>
+          <date>
+            <year>1981</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KAWAMURA</surname>
+              <given-names>Lilia</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>LAMY, Ewan and SHINN, Terry. <bold>(</bold>2006), L'autonomie scientifique face à la mercantilisation - Formes d'engagement entrepreneurial des chercheurs en France. <italic>Actes de la Recherche en Sciences Sociales</italic>, vol. 4, nº 164, pp. 23-50.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>L'autonomie scientifique face à la mercantilisation: Formes d'engagement entrepreneurial des chercheurs en France</article-title>
+          <source>Actes de la Recherche en Sciences Sociales</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>23</fpage>
+          <lpage>50</lpage>
+          <issue>164</issue>
+          <volume>4</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LAMY</surname>
+              <given-names>Ewan</given-names>
+            </name>
+            <name>
+              <surname>SHINN</surname>
+              <given-names>Terry</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>LEMOS, Cristina. (2000), Inovação na era do conhecimento. <italic>Parcerias Estratégicas</italic>, vol. 5, nº 8, p.157-179.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Inovação na era do conhecimento</article-title>
+          <source>Parcerias Estratégicas</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>157</fpage>
+          <lpage>179</lpage>
+          <issue>8</issue>
+          <volume>5</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LEMOS</surname>
+              <given-names>Cristina</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>MATIAS-PEREIRA, José and KRUGLIANSKAS<bold>,</bold> Isak. (2005), Gestão tecnológica: a Lei de Inovação Tecnológica como ferramenta de apoio às políticas industrial e tecnológica do Brasil. <italic>RAE eletrônica</italic>, São Paulo, vol. 4, nº 2.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Gestão tecnológica: a Lei de Inovação Tecnológica como ferramenta de apoio às políticas industrial e tecnológica do Brasil</article-title>
+          <source>RAE eletrônica</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <issue>2</issue>
+          <volume>4</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MATIAS-PEREIRA</surname>
+              <given-names>José</given-names>
+            </name>
+            <name>
+              <surname>KRUGLIANSKAS</surname>
+              <given-names>Isak</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>MELLO, Debora. (2000), <italic>Um estudo sobre a reorganização institucional no IPT.</italic> XXI Paper presented at XXI Simposium on Management of Technology Innovation, , november, São Paulo, SP.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MELLO</surname>
+              <given-names>Debora</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <mixed-citation>MINISTÉRIO DA CIÊNCIA E TECNOLOGIA. (2002), <italic>Livro Branco - Ciência, Tecnologia e Inovação</italic>, &lt; <underline><ext-link ext-link-type="uri" xlink:href="http://www.cgee.org.br/arquivos/livro_branco_cti.pdf">http://www.cgee.org.br/arquivos/livro_branco_cti.pdf</ext-link></underline>&gt;</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Livro Branco: Ciência, Tecnologia e Inovação</source>
+          <date>
+            <year>2002</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <mixed-citation>MOREIRA, Natali Valani; ALMEIDA, Francisco Alberto; COTA, Marcelo Foresti; SBRAGIA, Roberto. (2007), A inovação tecnológica no Brasil: os avanços no marco regulatório e a gestão dos fundos setoriais. <italic>Revista de Gestão USP</italic>, São Paulo, vol. 14, nº especial, pp. 31-44 .</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A inovação tecnológica no Brasil: os avanços no marco regulatório e a gestão dos fundos setoriais</article-title>
+          <source>Revista de Gestão USP</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>31</fpage>
+          <lpage>44</lpage>
+          <issue>especial</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MOREIRA</surname>
+              <given-names>Natali Valani</given-names>
+            </name>
+            <name>
+              <surname>ALMEIDA</surname>
+              <given-names>Francisco Alberto</given-names>
+            </name>
+            <name>
+              <surname>COTA</surname>
+              <given-names>Marcelo Foresti</given-names>
+            </name>
+            <name>
+              <surname>SBRAGIA</surname>
+              <given-names>Roberto</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B34">
+        <mixed-citation>NOBLE, David. (1988), <italic>El diseño de Estados Unidos: La ciencia, la tecnologia y la aparición del capitalismo monopolístico</italic>, Madrid, Ministerio del Trabajo y Seguridad Social.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>El diseño de Estados Unidos: La ciencia, la tecnologia y la aparición del capitalismo monopolístico</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NOBLE</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B35">
+        <mixed-citation>PACHECO, Carlos. (2007), Estratégia para fundos setoriais. <italic>Revista Brasileira de Inovação</italic>, vol. 6, nº 1, pp. 191-223.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Estratégia para fundos setoriais</article-title>
+          <source>Revista Brasileira de Inovação</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>191</fpage>
+          <lpage>223</lpage>
+          <issue>1</issue>
+          <volume>6</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PACHECO</surname>
+              <given-names>Carlos</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B36">
+        <mixed-citation>PLONSKY, Guilherme Ary. (2005), Bases para um Movimento pela inovação tecnológica no Brasil<bold>.</bold> <italic>São Paulo em Perspectiva</italic>, vol. 19, nº 1, pp. 25-33.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Bases para um Movimento pela inovação tecnológica no Brasil</article-title>
+          <source>São Paulo em Perspectiva</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>25</fpage>
+          <lpage>33</lpage>
+          <issue>1</issue>
+          <volume>19</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>PLONSKY</surname>
+              <given-names>Guilherme Ary</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B37">
+        <mixed-citation>SALLES-FILHO, Sergio et al. (ed.). (2000), <italic>Ciência, Tecnologia e Inovação: a reorganização da pesquisa pública no Brasil,</italic> Campinas: Komedi.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Ciência, Tecnologia e Inovação: a reorganização da pesquisa pública no Brasil</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SALLES-FILHO</surname>
+              <given-names>Sergio</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B38">
+        <mixed-citation>SHINN, Terry and RAGOUET, Pascal. (2008), <italic>Por uma sociología transversalista da ciencia</italic>, São Paulo, Editora 34.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Por uma sociología transversalista da ciencia</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SHINN</surname>
+              <given-names>Terry</given-names>
+            </name>
+            <name>
+              <surname>RAGOUET</surname>
+              <given-names>Pascal</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B39">
+        <mixed-citation>SILVA, Lucas Rodrigo. (2009), <italic>A perspectiva dos pesquisadores de Instituições Públicas de Pesquisa frente às novas tendências organizacionais</italic>: o caso do IPT. (Paper, Federal University of São Carlos.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>A perspectiva dos pesquisadores de Instituições Públicas de Pesquisa frente às novas tendências organizacionais: o caso do IPT</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SILVA</surname>
+              <given-names>Lucas Rodrigo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B40">
+        <mixed-citation>THOMAS, Hernan. (2007), <italic>Dinámicas de innovación y cambio tecnológico en El MERCOSUR. Procesos socio-técnicos de construcción de condición periférica</italic>. Paper presented at XXV ALAS Congress, Guadalajara, Mexico.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>THOMAS</surname>
+              <given-names>Hernan</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B41">
+        <mixed-citation>VELHO, Lea. (2011), Conceitos de Ciência e a Política Científica, Tecnológica e de Inovação. <italic>Sociologias</italic>, vol. 13, nº 26, pp. 128-153.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Conceitos de Ciência e a Política Científica, Tecnológica e de Inovação</article-title>
+          <source>Sociologias</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <fpage>128</fpage>
+          <lpage>153</lpage>
+          <issue>26</issue>
+          <volume>13</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>VELHO</surname>
+              <given-names>Lea</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B42">
+        <mixed-citation>VERONESE, Alexandre. (2006), A busca de um novo modelo de gestão para a ciência, tecnologia e inovação na política do MCT (1995-2002). <italic>Revista de Administração Pública</italic>, vol. 40, nº 1, pp. 107-125.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A busca de um novo modelo de gestão para a ciência, tecnologia e inovação na política do MCT (1995-2002)</article-title>
+          <source>Revista de Administração Pública</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>107</fpage>
+          <lpage>125</lpage>
+          <issue>1</issue>
+          <volume>40</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>VERONESE</surname>
+              <given-names>Alexandre</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B43">
+        <mixed-citation>VESSURI, Hebe. (2008), <italic>O inventamos o erramos: La ciência como idea-fuerza em América Latina</italic>, Bernal: Universidad Nacional de Quilmes.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O inventamos o erramos: La ciência como idea-fuerza em América Latina</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>VESSURI</surname>
+              <given-names>Hebe</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B44">
+        <mixed-citation>WALKER, Richard. (1993), The hidden dimension of industrialization: an expanding division of labor. <italic>Futures</italic>, vol. 25, nº 6, pp.673 - 93.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The hidden dimension of industrialization: an expanding division of labor</article-title>
+          <source>Futures</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <fpage>673 </fpage>
+          <lpage> 93</lpage>
+          <issue>6</issue>
+          <volume>25</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>WALKER</surname>
+              <given-names>Richard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B45">
+        <mixed-citation>WHITLEY, Richard. (2000), <italic>The intellectual and social organization of the sciences</italic>, New York, Oxford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The intellectual and social organization of the sciences</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>WHITLEY</surname>
+              <given-names>Richard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B46">
+        <mixed-citation>WIENER, Jonathan B. (2004), The regulation of technology, and the technology of regulation. <italic>Technology in Society</italic>, vol. 26, pp. 483-500.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The regulation of technology, and the technology of regulation</article-title>
+          <source>Technology in Society</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>483</fpage>
+          <lpage>500</lpage>
+          <volume>26</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>WIENER</surname>
+              <given-names>Jonathan B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

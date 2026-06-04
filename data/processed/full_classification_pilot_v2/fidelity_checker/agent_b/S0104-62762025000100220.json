@@ -1,0 +1,172 @@
+{
+  "pid": "S0104-62762025000100220",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "68e0fb77b5496b51ad1ec9b203650f62e3858e5c99830bcada20c10bf866eb10",
+  "classification_hash": "7b1cc2c6c4a2c1169c910194fed3e47ed761ee39b83c5564421627df790f2835",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "las personas (Norris, 2011). La confianza en las policías La literatura en inglés a menudo distingue entre las dimensiones d e tru st y confidence (Ribeiro; Vilarouca, 2020) — que en español se pueden asociar a la confianza en las dimensiones de",
+      "classification_value": [
+        {
+          "variable_name": "Justice trust, insecurity, corruption and police performance",
+          "variable_description": "Latinobarómetro measures used as predictors of trust in Carabineros."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "las personas (Norris, 2011). La confianza en las policías La literatura en inglés a menudo distingue entre las dimensiones d e tru st y confidence (Ribeiro; Vilarouca, 2020) — que en español se pueden asociar a la confianza en las dimensiones de",
+      "classification_value": [
+        {
+          "variable_name": "Trust in the national police",
+          "variable_description": "Confidence in Chilean Carabineros from Latinobarómetro surveys, 2015-2020."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classified relationship items have variable and result-language support in the body.",
+      "supporting_excerpt": "las personas (Norris, 2011). La confianza en las policías La literatura en inglés a menudo distingue entre las dimensiones d e tru st y confidence (Ribeiro; Vilarouca, 2020) — que en español se pueden asociar a la confianza en las dimensiones de",
+      "classification_value": [
+        {
+          "iv_var_name": "Justice trust and police performance",
+          "dv_var_name": "Trust in the national police",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": false
+        },
+        {
+          "iv_var_name": "Insecurity and perceived corruption",
+          "dv_var_name": "Trust in the national police",
+          "relationship_type": "Negative",
+          "statistically_significant": true,
+          "substantively_significant": false
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "decían no tener nada de confianza en Carabineros aumentaron de un 10.6% a 39.1% en igual periodo. Utilizamos datos de las encuestas de Latinobarómetr o entre 2015 y 2020 para evaluar el impacto de la confianza en el poder judicial, la percepción",
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "las comparaciones en el tiempo, pero también entre países. El tamaño de la muestra para cada año corresponde a 1.2 00 entrevista dos/as de distintas edades y regiones del país. Los datos están públicamente disponibles en la página web de Latinobarómetro5. Ahora",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "mayor confianza en la policía nacional. Percepción de inseguridad y confianza en la policía Hay amplia evidencia de una relaci ón cau sal entre victimización y percepción de inseguridad con la confianza institucional (Visconti, 2020). La inseguridad puede ser definida como una",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "contradicted_by_text",
+      "severity": "low",
+      "reason": "The classification says no mechanisms/channels, but mechanism/channel language appears in the body.",
+      "supporting_excerpt": "las que opera la institución, el conocimiento de las motivaciones de quién ejerce un cargo público, y la existencia de mecanismo s de sanción a través de órganos de supervisión autónomos especialmente creados para esta labor (Warren, 2018). La confianza institucional varía",
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "en la policía nacional. Presentación del caso: La policía nacional de Chile En América Latina, las fuerzas policiales enfrentan de safíos signifi cativos relacionados con la desconfianza institucional, las crecientes demandas de seguridad y un continuo desprestigio. Diversas investigaciones enfatizan que la",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 2 contradicted and 2 not found in text; overall status pass_with_warnings."
+}

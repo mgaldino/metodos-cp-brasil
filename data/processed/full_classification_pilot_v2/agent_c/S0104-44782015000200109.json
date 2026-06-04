@@ -1,0 +1,80 @@
+{
+  "pid": "S0104-44782015000200109",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "7d2406f6321aa341dfbde9538dc062f6d1a12c0dbf8e0c031274979068ce95e9",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "spatial econometric regression",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "bolsa_familia_coverage",
+        "variable_description": "Cobertura municipal do Bolsa Família"
+      },
+      {
+        "variable_name": "neighboring_vote_results",
+        "variable_description": "Defasagem espacial dos resultados eleitorais"
+      },
+      {
+        "variable_name": "presidential_vote_and_socioeconomic_controls",
+        "variable_description": "Voto presidencial e controles socioeconômicos municipais"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "pt_vote_share_bahia_governor_2006",
+        "variable_description": "Votação municipal do PT para governador da Bahia em 2006"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "bolsa_familia_coverage",
+        "dv_var_name": "pt_vote_share_bahia_governor_2006",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "neighboring_vote_results",
+        "dv_var_name": "pt_vote_share_bahia_governor_2006",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo usa análise exploratória de dados espaciais e modelos econométricos espaciais para explicar a votação municipal do PT na Bahia em 2006. É quantitativo e inferencial, mas o desenho é observacional e não identifica um efeito causal com estratégia quase experimental."
+  },
+  "raw_response_path": null
+}

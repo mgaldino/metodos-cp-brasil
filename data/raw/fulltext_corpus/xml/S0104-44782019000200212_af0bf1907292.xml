@@ -1,0 +1,1782 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" specific-use="sps-1.8" xml:lang="pt">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">rsocp</journal-id>
+      <journal-title-group>
+        <journal-title>Revista de Sociologia e Política</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Rev. Sociol. Polit.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0104-4478</issn>
+      <issn pub-type="epub">1678-9873</issn>
+      <publisher>
+        <publisher-name>Universidade Federal do Paraná</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">FYkrhym6TpRzRf78q7F7Mmq</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S0104-44782019000200212</article-id>
+      <article-id pub-id-type="publisher-id">1678-987319277003</article-id>
+      <article-id pub-id-type="doi">10.1590/1678-987319277003</article-id>
+      <article-id pub-id-type="other">00212</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Artigos Originais</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Sufrágio universal, mas... só para homens. O voto feminino no Brasil</article-title>
+        <trans-title-group xml:lang="en">
+          <trans-title>Universal suffrage, but... only for men. Women’s vote in Brazil</trans-title>
+        </trans-title-group>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0003-3692-8882</contrib-id>
+          <name>
+            <surname>Limongi</surname>
+            <given-names>Fernando</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>I</sup>
+          </xref>
+          <xref ref-type="corresp" rid="c1"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-7947-9725</contrib-id>
+          <name>
+            <surname>Oliveira</surname>
+            <given-names>Juliana de Souza</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>II</sup>
+          </xref>
+          <xref ref-type="corresp" rid="c2"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-2177-1467</contrib-id>
+          <name>
+            <surname>Schmitt</surname>
+            <given-names>Stefanie Tomé</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>III</sup>
+          </xref>
+          <xref ref-type="corresp" rid="c3"/>
+        </contrib>
+        <aff id="aff1">
+          <label>I</label>
+          <institution content-type="normalized">Escola de Economia de São Paulo da Fundação Getúlio Vargas</institution>
+          <institution content-type="orgname">Escola de Economia de São Paulo da Fundação Getúlio Vargas</institution>
+          <institution content-type="orgdiv1">FGV-SP</institution>
+          <addr-line>
+            <named-content content-type="city">São Paulo</named-content>
+            <named-content content-type="state">SP</named-content>
+          </addr-line>
+          <country country="BR">Brasil</country>
+          <institution content-type="original">Escola de Economia de São Paulo da Fundação Getúlio Vargas, FGV-SP, São Paulo, SP, Brasil.</institution>
+        </aff>
+        <aff id="aff2">
+          <label>II</label>
+          <institution content-type="normalized">Universidade de São Paulo</institution>
+          <institution content-type="orgname">Universidade de São Paulo</institution>
+          <institution content-type="orgdiv1">Departamento de Ciência Política</institution>
+          <addr-line>
+            <named-content content-type="city">São Paulo</named-content>
+            <named-content content-type="state">SP</named-content>
+          </addr-line>
+          <country country="BR">Brasil</country>
+          <institution content-type="original">Departamento de Ciência Política e Núcleo de Estudos Comparados e Internacionais da Universidade de São Paulo, USP, São Paulo, SP, Brasil.</institution>
+        </aff>
+        <aff id="aff3">
+          <label>III</label>
+          <institution content-type="normalized">Universidade de São Paulo</institution>
+          <institution content-type="orgname">Universidade de São Paulo</institution>
+          <institution content-type="orgdiv1">Departamento de Ciência Política</institution>
+          <addr-line>
+            <named-content content-type="city">São Paulo</named-content>
+            <named-content content-type="state">SP</named-content>
+          </addr-line>
+          <country country="BR">Brasil</country>
+          <institution content-type="original">Departamento de Ciência Política da Universidade de São Paulo, USP, São Paulo, SP, Brasil.</institution>
+        </aff>
+      </contrib-group>
+      <author-notes>
+        <corresp id="c1">Fernando Limongi (<email>fernando.limongi@fgv.br</email>) é Doutor em Ciência Política pela Universidade de Chicago, professor da Escola de Economia da FGV-SP e professor titular aposentado do Departamento de Ciência Política da USP.</corresp>
+        <corresp id="c2">Juliana de Souza Oliveira (<email>desouzaoliveira.ju@gmail.com</email>) é Mestra em Ciência Política pela USP e pesquisadora no Núcleo de Estudos Comparados e Internacionais da mesma universidade.</corresp>
+        <corresp id="c3">Stefanie Tomé Schmitt (<email>stefanietschmitt@gmail.com</email>) é doutoranda em Ciência Política pela USP.</corresp>
+      </author-notes>
+      <pub-date pub-type="epub">
+        <day>20</day>
+        <month>01</month>
+        <year>2020</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <year>2019</year>
+      </pub-date>
+      <volume>27</volume>
+      <issue>70</issue>
+      <elocation-id>e003</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>19</day>
+          <month>03</month>
+          <year>2018</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>16</day>
+          <month>08</month>
+          <year>2018</year>
+        </date>
+        <date date-type="accepted">
+          <day>22</day>
+          <month>10</month>
+          <year>2018</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-year>2019</copyright-year>
+        <license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by-nc/4.0" xml:lang="en">
+          <license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License which permits unrestricted non-commercial use, distribution, and reproduction in any medium provided the original work is properly cited.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <title>RESUMO</title>
+        <sec>
+          <title>Introdução:</title>
+          <p>O artigo reconstitui a trajetória da concessão e expansão dos direitos políticos às mulheres no Brasil. O foco recai sobre as regras eleitorais e argumentos mobilizados em contextos deliberativos que trataram do exercício dos direitos políticos pelas mulheres. Argumentamos que, apesar do direito ao sufrágio ter sido concedido em 1932, a participação política das mulheres casadas não foi garantida, ficando ainda na dependência das decisões de seus maridos nas três décadas subsequentes. O direito pleno à participação só foi obtido em 1965.</p>
+        </sec>
+        <sec>
+          <title>Materiais e Métodos:</title>
+          <p>O trabalho mapeou os termos do debate relativo ao voto feminino nas Assembleias Constituintes de 1824, 1891, 1934 e 1946 e nos projetos de lei que abordaram o direito político das mulheres. Analisamos, também, as consequências práticas da legislação, compilando dados oficiais sobre a participação eleitoral das mulheres a partir de informações fornecidas pelos Boletins Eleitorais estaduais e arquivos do TSE.</p>
+        </sec>
+        <sec>
+          <title>Resultados:</title>
+          <p>Entre 1932 e 1964, a média de alistamento feminino sobre o total girou em torno de 34%. Ou seja, em geral, para dois homens alistados, havia uma mulher em condição de exercer seu direito de voto. A voluntariedade para as mulheres sem renda própria garantiu aos homens o poder de decidir se suas esposas exerceriam seu direito político. Trata-se de regra que foi deliberadamente construída para preservar a autoridade masculina, gerando desigualdade política de gênero.</p>
+        </sec>
+        <sec>
+          <title>Discussão:</title>
+          <p>Tradicionalmente, análises sobre a expansão do direito à cidadania privilegiam a dimensão de classe e assumiram que a expansão do sufrágio se deu pela incorporação dos mais pobres. O artigo contribui para esse debate, chamando atenção para a clivagem de gênero. Esta foi tão ou mais importante que a classe no processo brasileiro de expansão do sufrágio.</p>
+        </sec>
+      </abstract>
+      <trans-abstract xml:lang="en">
+        <title>ABSTRACT</title>
+        <sec>
+          <title>Introduction:</title>
+          <p>The article aims at reconstructing the path towards the concession and expansion of political rights to women in Brazil. The focus relies on electoral rules and arguments used in deliberative contexts, which addressed women’s exercise of political rights. We sustain that, despite suffrage concession in 1932, political participation of married women was not guaranteed, because it remained dependent on husbands’ decisions for the following three decades. Full right to participate was only attained in 1965.</p>
+        </sec>
+        <sec>
+          <title>Materials and Methods:</title>
+          <p>Research depicted the terms used in the debates about women’s suffrage held during the Constitutional Assemblies of 1824, 1891, 1934 and 1946, and used in bills that approached women’s political rights. In addition to that, practical outcomes of legislation were evaluated, based on the compilation of official data about women’s electoral participation that stemmed from state electoral bulletins and TSE files.</p>
+        </sec>
+        <sec>
+          <title>Results:</title>
+          <p>Between 1932 and 1964, women were, in the mean, 34% of all registered voters. This means that, in general, for every two registered men, there was one woman in condition to exercise her right to vote. The fact that women without income were excused to vote secured to men the power to decide if their wives would exercise women’s political right. The rule was intentionally established to uphold male authority, engendering gender political inequality.</p>
+        </sec>
+        <sec>
+          <title>Discussion:</title>
+          <p>Traditionally, analysis about the extension of citizenship in Brazil favored social cleavages and assumed that suffrage expansion resulted from the inclusion of the poorest. This article adds to debate, drawing attention to gender cleavage. This was as much or more important than class in the process of expanding suffrage in Brazil.</p>
+        </sec>
+      </trans-abstract>
+      <kwd-group xml:lang="pt">
+        <title>Palavras-chave:</title>
+        <kwd>gênero</kwd>
+        <kwd>extensão do sufrágio</kwd>
+        <kwd>cidadania</kwd>
+        <kwd>mulheres</kwd>
+        <kwd>voto feminino</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="en">
+        <title>Keywords:</title>
+        <kwd>gender</kwd>
+        <kwd>extension of suffrage</kwd>
+        <kwd>citizenship</kwd>
+        <kwd>women</kwd>
+        <kwd>right to vote</kwd>
+      </kwd-group>
+      <counts>
+        <fig-count count="2"/>
+        <table-count count="1"/>
+        <equation-count count="0"/>
+        <ref-count count="70"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="intro">
+      <title>I. Introdução<xref ref-type="fn" rid="fn1"><sup>1</sup></xref>
+			</title>
+      <p>Os direitos políticos da mulher brasileira só foram equiparados ao dos homens em 1965. O direito de votar, obtido em 1932, não implicou igualdade política entre os gêneros. O Código Eleitoral promulgado por Getúlio Vargas, na esteira da Revolução de 1930, retirava com uma mão o que concedia com a outra. Na abertura do Código, logo em seu Artigo 2º, a distinção de gênero desaparece. À primeira vista, o Artigo estabelece que o direito de voto seria estendido às mulheres, sem qualquer restrição ou tratamento diverso daquele dado aos homens<xref ref-type="fn" rid="fn2"><sup>2</sup></xref>. O avanço é frisado pela historiografia (<xref ref-type="bibr" rid="B7">Fausto 1994</xref>; Carvalho 2002; <xref ref-type="bibr" rid="B5">Bueno 2010</xref>) e celebrado até os dias de hoje. No entanto, nos artigos finais do mesmo Código, em suas Disposições Gerais, o Artigo 121, estabelece que “os homens maiores de sessenta anos e as mulheres em qualquer idade podem isentar-se de qualquer obrigação ou serviço de natureza eleitoral.” Trocando em miúdos, para os homens entre 21 e 60 anos, o voto era obrigatório, para os idosos e mulheres, voluntário.<xref ref-type="bibr" rid="B6"/>
+			</p>
+      <p>O Estado compeliu os homens a votar, mas não se achou no direito de fazer o mesmo com as mulheres. A razão para o tratamento diverso não é difícil de ser explicada: a autoridade no interior da família estava concentrada nas mãos dos maridos e o Estado não iria antepor limites a essa ordem. Em linha com as previsões do Código Civil de 1916, o Código de 1932 assegurou que os maridos mantivessem a prerrogativa de decidir se suas esposas sairiam de casa para votar. Toda a legislação subsequente – incluindo a Constituição de 1934, o Código Eleitoral de 1935, a Lei Agamenon de 1945, a Constituição de 1946 e o Código Eleitoral de 1950 – reafirma essa discriminação, que só deixa de vigorar com o Código Eleitoral de 1965. No período, há apenas uma mudança: a partir de 1934, o voto feminino voluntário fica restrito às mulheres sem renda própria, isto é, às donas de casa.</p>
+      <p>A discriminação foi mantida de forma velada, para não dizer especiosa. Por exemplo, a Constituição de 1946 estabelece em seu Artigo 135, “o alistamento e o voto são obrigatórios para os brasileiros de ambos os sexos, salvo as exceções previstas em lei”. A ressalva final é crucial, pois ali se abria a brecha para que a lei ordinária negasse a igualdade proclamada com pompa pela Carta Maior. De fato, a lei que regulou a eleição para a Constituinte (Lei Agamenon), como também o Código de 1950, estabeleceram que “as mulheres que não exerçam profissão lucrativa” não precisariam se alistar<xref ref-type="fn" rid="fn3"><sup>3</sup></xref>.</p>
+      <p>Não somos as(os) primeiras(os) a apontar a permanência dessa ressalva até 1965. <xref ref-type="bibr" rid="B15">Nicolau (2012)</xref>, <xref ref-type="bibr" rid="B1">Alvares (2008)</xref>, <xref ref-type="bibr" rid="B24">Vogel (2012)</xref> já o fizeram, mas deixaram de tratá-la como uma restrição ao direito ao voto feminino, isto é, como a preservação da discriminação. Embora as mulheres passassem a ter o direito ao voto em 1932, elas só poderiam votar se autorizadas por seus maridos, pois, conforme o ex-presidente do Tribunal Superior Eleitoral, Edgard Costa, explica em livro editado em 1964:<xref ref-type="bibr" rid="B2"/>
+				<xref ref-type="bibr" rid="B3"/>
+			</p>
+      <disp-quote>
+        <p>Mantida a capacidade eleitoral da mulher, deveria, entretanto, sofrer certas restrições, como aquelas constantes do anteprojeto do Código de 1932, atendendo a que, — como acentuou na Constituinte de 1891 o deputado Pedro Américo – ‘a missão da mulher é mais doméstica que pública, mais moral do que política’ (Costa 1964).</p>
+      </disp-quote>
+      <p>O objetivo deste texto é documentar a discriminação política às mulheres, chamando a atenção para sua resiliência e consequências sócio-políticas. Para além desta introdução, o texto contém quatro partes. A seção seguinte apresenta uma reconstituição histórica do tratamento legal dispensado à restrição dos direitos políticos da mulher. Mostramos que, desde o Império, a exclusão política das mulheres se deu sem que fosse explicitada nos textos legais. Em 1932, à primeira vista, mulheres teriam sido equiparadas aos homens. Entretanto, a combinação entre o voto voluntário e o Código Civil vigente implicava que o direito só seria exercido se autorizado pelo chefe da família, o marido. Interpretada dessa maneira, a inovação do Código de 1932 acaba atenuada, podendo-se dizer que há mais continuidade do que ruptura na forma como a questão foi tratada, pois a exclusão foi preservada sem que fosse explicitada. Em outras palavras, entre 1824 e 1965, houve uma naturalização da exclusão.</p>
+      <p>A terceira seção volta-se para o plano empírico. Analisamos as taxas de alistamento feminino, para mostrar como o voto voluntário teve efeitos práticos. Os dados disponíveis indicam que as taxas de alistamento de mulheres e homens só se equiparam muito depois da eliminação da distinção legal. Para sermos exatos, até o recadastramento de 1985, a proporção de mulheres alistadas foi inferior à dos homens. Nosso objetivo, nessa seção, é demonstrar a face mais palpável e direta do cerceamento à participação feminina por meio da voluntariedade do voto.</p>
+      <p>Na quarta seção, voltamos nossas atenções para as justificativas apresentadas pelos homens, reunidos no Parlamento, para negar o direito do voto às mulheres. Mostramos que, nas poucas vezes em que o tema foi discutido, a preocupação maior girou em torno da preservação da unidade familiar. Em outras palavras, a politização feminina era vista como uma fonte potencial de contestação à autoridade masculina no interior da família. Breves conclusões fecham o texto.</p>
+      <p>Como já dito, nosso principal objetivo é resgatar e dar ênfase a essa história que, acreditamos, pede maior atenção e aguarda pesquisas mais aprofundadas. Neste artigo, mostramos que mulheres foram deliberadamente mantidas à margem do sistema politico mesmo após terem obtido o direito de voto. Nas Constituintes de 1934 e 1946, os homens, sem maior alarde, reafirmaram a noção de que o lugar das mulheres era o lar, que sua participação no mundo público dependia do assentimento do chefe da família.</p>
+    </sec>
+    <sec>
+      <title>II. A naturalização da exclusão</title>
+      <p>O objetivo desta seção é recuperar a evolução da legislação que regulou a exclusão política da mulher, conforme resumido no <xref ref-type="table" rid="t1">Quadro 1</xref>.</p>
+      <table-wrap id="t1">
+        <label>Quadro 1</label>
+        <caption>
+          <title>Principais alterações legais relativas à extensão do voto para as mulheres (1824-1965)</title>
+        </caption>
+        <table frame="hsides" rules="groups">
+          <colgroup width="25%">
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+          </colgroup>
+          <thead style="border-top: thin solid; border-bottom: thin solid; border-color: #000000">
+            <tr>
+              <th align="left">Data</th>
+              <th align="left">Lei</th>
+              <th align="left">Efeitos</th>
+              <th align="left">Fonte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left" valign="top">1824</td>
+              <td align="left" valign="top">Constituição Política do Império do Brazil</td>
+              <td align="left" valign="top">Proibição do voto feminino. O termo cidadão não abrangia as mulheres, embora o texto não as listasse nas exceções do Art. 94.</td>
+              <td align="left" valign="top">Constituição Política do Império do Brazil (de 25 de Março de 1824)</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1891</td>
+              <td align="left" valign="top">Constituição da República dos Estados Unidos do Brasil</td>
+              <td align="left" valign="top">Proibição do voto feminino. O texto constitucional não afirma explicitamente que as mulheres seriam impedidas de votar no Art. 70.</td>
+              <td align="left" valign="top">Constituição da República dos Estados Unidos do Brasil (de 24 de Fevereiro de 1891)</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1932</td>
+              <td align="left" valign="top">Código Eleitoral, Decreto No 21.076, de 24 de fevereiro de 1932, Art. 2º e Art. 121</td>
+              <td align="left" valign="top">São eleitores os cidadãos maiores de 21 anos, sem distinção de sexo, segundo o Art. 2, mas o voto feminino é definido como voluntário, por meio do Art. 121.</td>
+              <td align="left" valign="top">Decreto nº 21.076, de 24 de Fevereiro de 1932</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1934</td>
+              <td align="left" valign="top">Constituição da República dos Estados Unidos do Brasil</td>
+              <td align="left" valign="top">O voto feminino é mantido como voluntário, por meio da obrigação do alistamento somente para os homens, prevista no Art. 109.</td>
+              <td align="left" valign="top">Constituição da República dos Estados Unidos do Brasil (de 16 de Julho de 1934)</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1945</td>
+              <td align="left" valign="top">Lei Agamenon, Decreto-Lei No 7.586 de 28 de maio de 1945</td>
+              <td align="left" valign="top">O voto feminino é voluntário para as mulheres que não exerçam profissão lucrativa, conforme Art. 3º.</td>
+              <td align="left" valign="top">Decreto-Lei 7.586, de 28 de Maio de 1945</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1946</td>
+              <td align="left" valign="top">Constituição dos Estados Unidos do Brasil</td>
+              <td align="left" valign="top">O voto feminino é mantido como voluntário para a mulher casada, aquela que não exerce profissão lucrativa, por meio de legislação ordinária, como autorizado pelo Art. 133.</td>
+              <td align="left" valign="top">Constituição dos Estados Unidos do Brasil (de 18 de Setembro de 1946)</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1950</td>
+              <td align="left" valign="top">Código Eleitoral, Lei No 1.164, de 24 de julho de 1950</td>
+              <td align="left" valign="top">O voto feminino é voluntário para as mulheres que não exerçam profissão lucrativa, conforme Art. 4º</td>
+              <td align="left" valign="top">Lei nº 1.164, de 24 de Julho de 1950</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top">1965</td>
+              <td align="left" valign="top">Código Eleitoral, Lei No 4.737, de 15 de julho de 1965</td>
+              <td align="left" valign="top">Universalização do voto, por meio do Art. 6º, exigindo que o alistamento e o voto sejam obrigatórios para um e outro sexo.</td>
+              <td align="left" valign="top">Lei nº 4.737, de 15 de Julho de 1965</td>
+            </tr>
+          </tbody>
+        </table>
+        <attrib>Fonte: os autores.</attrib>
+      </table-wrap>
+      <p>Mais especificamente, nosso objetivo é mostrar que a ruptura ocorrida em 1932 é menor do que usualmente se afirma. Na verdade, há mais continuidade do que ruptura, pois o cerceamento à participação plena da mulher permanece sem que seja explicitamente afirmado.</p>
+      <p>Não há dúvidas de que há uma mudança com a promulgação do Código Eleitoral; mulheres passaram a ter o direito de votar a partir de 1932. Contudo, a inovação é menor do que normalmente apregoada, uma vez que, de fato, o exercício do direito à participação política feminina permaneceu nas mãos dos maridos. Para entender essa continuidade é preciso ler mais do que a proclamação contida no Artigo 2 do Código Eleitoral e, sobretudo, levar em conta as prescrições contidas no Código Civil de 1916, acerca da sociedade conjugal.</p>
+      <p>Para frisar as continuidades, o primeiro ponto a ressaltar é o fato de que, até a promulgação do Código Eleitoral, a negação do direito de voto das mulheres não havia sido explicitada nos diplomas legais. Como não era autorizado, assumia-se que era negado. Por exemplo, a Constituição de 1824, em seu Artigo 94, nega explicitamente o direito de voto aos que não possuem renda anual acima de duzentos mil reis, os libertos e os criminosos pronunciados. As mulheres, que também não podiam votar, não aparecem elencadas entre as exclusões. Esse silêncio perdurou por todo o período imperial.</p>
+      <p>Menção rara e precoce sobre eventual participação feminina é encontrada em Projeto de Lei Eleitoral, assinado por Manoel Alves Branco, em 1831. O Artigo 3 do Projeto previa que:</p>
+      <disp-quote>
+        <p>As mães de família viúvas, ou separadas de seus maridos, que reunirem as condições necessárias para o exercício do direito de eleger nas assembleias primárias, poderão dar seu voto por intermédio de um de seus filhos, genros, netos ou qualquer parente, em falta deles. (apud <xref ref-type="bibr" rid="B18">Pinto 1983</xref>, p.19)</p>
+      </disp-quote>
+      <p>O Projeto Alves Branco, por adiantado que possa ter sido para sua época, não ousava propor que as mulheres participassem da Assembleia Eleitoral. A concessão seria indireta, as viúvas expressariam sua preferência por meio de procuração a um parente, mesmo que remoto. Bem considerado, o Projeto não fazia mais do que estender às mulheres a lógica aplicada aos menores casados ou emancipados. Se chefiassem famílias, mulheres obteriam o direito de votar. Vista nesses termos, a proposta apenas seguia a norma de conferir o direito de voto ao chefe da família, sem ousar propor que as mulheres deixassem o lar para participar da arena pública.</p>
+      <p>A proposição foi arquivada sem merecer debate. Teria sido inteiramente esquecida se, em 1848, o Conservador Bernardo Vasconcelos não a recuperasse para achincalhar o inimigo político. O velho Saquarema lembrou-se da proposta para dar provas das ‘loucuras’ políticas que habitavam a mente do líder Luzia. Acuado, Alves Branco procurou se justificar:</p>
+      <disp-quote>
+        <p>Não tratei da eleição de senhoras [...] O nobre senador podia apresentar a ideia sem o ridículo: eu ao menos estou persuadido de que essas mães de família, e principalmente as que têm filhos e bens interessam mais na causa pública, e por isto têm mais direito de concorrer na eleição de eleitores, do que qualquer cidadão que apenas tenha cem mil reis de renda líquida. Não insisti nunca nessa ideia, que declaro não ter sido minha só, mas sim também dos ilustres brasileiros o Sr. José Bonifácio de Andrada, e general Cunha Matos, que não a acham ridícula, e assinaram comigo o projeto. (Anais do Senado do Império 1848, p.522)</p>
+      </disp-quote>
+      <p>O episódio é significativo. Propor a concessão do direito de voto à mulher, mesmo que em condições excepcionais, era atentar contra a ordem natural das coisas, uma prova de perda da razão. Daí porque fosse motivo para chacota e vergonha.</p>
+      <p>Referências ao voto feminino aparecem aqui e ali nos anos finais do Império. Não há, entretanto, propostas e debates legislativos consequentes sobre o tema. Seja como for, ainda que relegado aos esforços e sonhos de uns poucos e, eventualmente, de poucas, o voto feminino passara a ser debatido. A importância desse debate público incipiente, contudo, aguarda melhor avaliação<xref ref-type="fn" rid="fn4"><sup>4</sup></xref>.</p>
+      <p>O certo é que a Constituinte Republicana de 1891 não pode ignorar completamente a questão. Significativamente, nessa oportunidade ocorrem os mais intensos debates sobre o tema na história parlamentar do país, ainda que, como sempre, travados exclusivamente por homens.</p>
+      <p>O Anteprojeto Constitucional estipulava que “são eleitores os cidadãos maiores de 21 anos que se alistarem na forma da lei” (Anais da Constituinte [1890] 1926, p.438). A definição ampla era complementada com o tradicional elenco de vedações que, no caso particular, compreendia os mendigos, os analfabetos, os <italic>praças de pret</italic> e os religiosos de ordens monásticas. Não havia menções às mulheres, ainda que todos os Constituintes tomassem como certo que a redação oferecida implicava sua exclusão.</p>
+      <p>Todos não. Um pequeno grupo de defensores do voto feminino considerou que o melhor era não emendar o texto. Defendiam que o termo cidadãos incluía as mulheres, como de resto o fazia nos artigos relativos aos direitos civis.</p>
+      <p>Os mais realistas, no entanto, ofereceram emendas ao Anteprojeto, visando garantir a incorporação explícita do voto feminino à Constituição. As emendas foram de dois tipos: (i) as que visavam garantir a igualdade absoluta; e (ii) as que almejavam estender o direito de voto apenas às mulheres que desempenhassem atividades profissionais, excluindo as casadas. Essa última opção foi a que contou com maior apoio e a única considerada seriamente pelos Constituintes.</p>
+      <p>Uma das Emendas consideradas, talvez a mais elaborada entre todas as apresentadas, propunha conferir direito de voto aos “cidadãos solteiros ou viúvos, que são diplomados em direito, medicina ou farmácia e que dirigem estabelecimentos docentes, industriais ou comerciais” (<xref ref-type="bibr" rid="B25">Anais da Constituinte da República [1890] 1924</xref>, p.178). Porém, reconhecendo a oposição da maioria, um dos artigos da Emenda acrescentava que não gozariam “de direito político para as eleições federais, ou para a dos Estados 1º. os mendigos; 2º. os analfabetos; e 3º. as mulheres casadas” (<xref ref-type="bibr" rid="B26">Anais da Constituinte da República [1890] 1924</xref>, p.178).</p>
+      <p>Vê-se que os defensores do voto feminino não ousaram propor a igualdade completa entre os gêneros. As casadas, mesmo entre os homens que cogitavam conceder o voto às mulheres, eram equiparadas aos mendigos e analfabetos. Para dizer o mesmo de forma invertida: o direito de voto seria estendido apenas às mulheres que participassem do mercado de trabalho, mulheres, portanto, que já haviam recebido a autorização do chefe da família para exercer uma atividade profissional fora do lar.</p>
+      <p>A maioria dos Constituintes não se mostrou disposta a ceder ou fazer concessões. Mesmo as emendas mais moderadas, as que estabeleciam condições, foram rejeitadas. E, a despeito dos debates e emendas votadas, os constituintes não acharam necessário afirmar que as mulheres seriam impedidas de votar. No caso do voto feminino, o preceito liberal clássico acaba invertido: o que não era permitido, proibido estava.</p>
+      <p>O teor das emendas é suficiente para indicar que a questão, como no Império, continuou a ser referida às relações familiares. Registra-se, no entanto, uma mudança sutil. A ‘ousadia’ passou a ser considerar a possibilidade do voto da mulher que exercesse atividade remunerada, daquela cuja existência já deixara de estar confinada à unidade familiar, eixo sobre o qual a questão será discutida no futuro. O debate aponta para a linha que não poderia ser ultrapassada, a saber, a da autoridade masculina no interior da família. Para sermos mais diretos, para os homens, a prerrogativa de decidir se suas esposas poderiam deixar o lar, quer para ir ao mercado de trabalho, quer para participar da arena pública, era inegociável.</p>
+      <p>Ao longo da Primeira República registram-se algumas poucas tentativas de reverter o quadro de proibição implícita contida no texto constitucional. Exemplo disso foram os Projetos de Lei apresentados pelo Deputado Maurício Lacerda, em 1917 (PL 47-1917), e pelo Senador Justo Chermont (PL 102-1919), em 1919. A contestação e o desafio à ordem legal vigente foram outras rotas trilhadas. Algumas feministas exploraram a ausência de vedação explícita para votar e, mesmo, serem votadas. O caso mais conhecido foi registrado no Rio Grande do Norte, onde, em 1928, contando com o beneplácito do Governador Juvenal Lamartine, algumas poucas mulheres se alistaram e votaram na eleição para o Senado, cuja Comissão de Poderes anulou os votos, tomando-os como “inapuráveis” (<xref ref-type="bibr" rid="B20">Porto 2002</xref>, p.236)<xref ref-type="fn" rid="fn5"><sup>5</sup></xref>.<xref ref-type="bibr" rid="B21"/>
+				<xref ref-type="bibr" rid="B22"/>
+			</p>
+      <p>Em 1932, como é fartamente sabido e realçado pela historiografia, o Código Eleitoral estendeu o direito de voto às mulheres e pareceu fazê-lo de forma incondicional. O aposto “sem distinção de sexo”, do Artigo 2, parece deixar meridianamente claro que as cidadãs, pela primeira vez, passavam a ser incluídas entre os cidadãos.</p>
+      <p>Sabe-se que os redatores do anteprojeto do Código Eleitoral se opunham à extensão incondicional do direito de voto às mulheres. Para João da Rocha Cabral, apenas as mulheres que exercessem atividades remuneradas obteriam o direito de votar. O texto original, contudo, foi modificado após passar às mãos do chefe do Governo Provisório.</p>
+      <p>Há diferentes versões para dar conta da inserção de última hora introduzida no Artigo 2. <xref ref-type="bibr" rid="B20">Porto (2002</xref>, p.237), sem aduzir evidências, o atribui à intervenção de Assis Brasil; Rodrigues (1962, p.87) e <xref ref-type="bibr" rid="B12">Marques (2016)</xref> à pressão das sufragistas Bertha Lutz e Carmen Portinho junto a Vargas; <xref ref-type="bibr" rid="B8">Nunes Leal (1993</xref>, p.230), amparado em Alceu Amoroso Lima (1936), credita a alteração à pressão da Liga Eleitoral Católica. Ainda que essas diferentes interpretações tenham importância e consequências, elas perdem o essencial: o Código de 1932 não equipara as mulheres aos homens.<xref ref-type="bibr" rid="B13"/>
+				<xref ref-type="bibr" rid="B14"/>
+			</p>
+      <p>O Artigo 121, escondido ao final do Código, reintroduz a discriminação que o Artigo 2 apagara. O Artigo prevê que as mulheres, assim como os idosos acima de 60 anos, seriam eximidas “de qualquer obrigação ou serviço de natureza eleitoral”.</p>
+      <p>Entre os trabalhos que consultamos, apenas <xref ref-type="bibr" rid="B24">Vogel (2012)</xref> chama atenção para a presença do Artigo 121. Em geral, as reconstituições históricas da evolução da legislação eleitoral acreditam na promessa contida na abertura do Código. O ‘cochilo’, a falta de atenção ao fato da extensão ter sido limitada, é difícil de ser justificado, já que explicitamente frisado pelos responsáveis diretos da elaboração do Código. Octavio Kelly (1932, p.14), por exemplo, comentando o Artigo 2º, afirma textualmente que <italic>“</italic>O legislador de 1932 foi, porém, cauto e prudente não tornando obrigatório o voto feminino<italic>”.</italic> Já ao comentar o Artigo 121, o mesmo Kelly complementa:</p>
+      <disp-quote>
+        <p>Foi uma avisada providência dispensar da obrigatoriedade do alistamento e dos demais encargos eleitorais, os homens com mais de 60 anos e as mulheres em qualquer idade. O declínio da atividade física daqueles e a falta de uniformidade de vistas, no próprio sexo, quanto a capacidade politica das mulheres, aconselharam a conveniência de deixar a habilitação ao exercício do voto no campo da mais absoluta voluntariedade. (1932, p.113)</p>
+      </disp-quote>
+      <p>João da Rocha Cabral, comentando o mesmo Artigo 121, não é menos taxativo:</p>
+      <disp-quote>
+        <p>Alistar-se é um dever cívico. Mas, acima de certa idade, ao ancião, e geralmente à mulher, que apenas agora é admitida plenamente ao cumprimento desse dever, numa sociedade que a deixa, de preferência, afeita e adstrita aos deveres do lar, o legislador quis deixar facultativo o alistamento. Para o belo-sexo, temos aí uma espécie de consulta ao seu próprio querer, cujos resultados mostrarão, em breve, a extensão do que as feministas chamaram as aspirações políticas irrefreáveis da metade mais formosa da sociedade. (<xref ref-type="bibr" rid="B63">Cabral 2002</xref>, p.200, grifos das autoras e do autor)</p>
+      </disp-quote>
+      <p>Está claro que a consulta “ao próprio querer das mesmas” não passava de uma concessão retórica, pois, como notara o próprio João da Rocha Cabral, “se mantêm certas regras no Direito Civil, limitativas da sua [mulher] liberdade e posição econômica” (<xref ref-type="bibr" rid="B63">Cabral 2002</xref>, p.20).</p>
+      <p>Basta consultar o Código Civil para entender a remissão feita pelo jurista. Por exemplo, o Artigo 6<sup>o</sup> elenca a mulher casada, junto com os pródigos e os silvícolas, entre os ‘incapazes relativamente a certos atos ou à maneira de os exercer’. Já o Artigo 233 estabelece que o ‘marido é o chefe da sociedade conjugal’, enquanto o 242, inciso V, afirma textualmente que a mulher necessita da autorização do marido para ‘aceitar tutela, curatela ou outros munus públicos’. Entre estes últimos, era possível incluir votar, atuar como mesário eleitoral, depor como testemunha, prestar serviço militar ou executar cargo que atingisse os interesses da pátria ou da ordem social.Todas essas atividades demandariam a autorização do marido.</p>
+      <p>Assim, ao definir como voluntário o voto feminino, o legislador sabia que a decisão não cabia às mulheres, ao ‘seu querer’. Antes o contrário. Na verdade, o Estado estava se dobrando à autoridade masculina, parando à porta do lar. Se não o fizesse, se mulheres fossem obrigadas a votar, isto significaria que o poder público estaria limitando a autoridade do chefe da família, como reconhecida pelo Código Civil de 1916. Essa ‘ousadia’, portanto, não poderia constar no Código Eleitoral de 1932.</p>
+      <p>Durante a vigência do mesmo, foram significativas as consultas dos Tribunais Regionais de Sergipe e de Minas Gerais ao Tribunal Superior Eleitoral (TSE), indagando “se a mulher casada pode alistar-se sem consentimento do marido” (Boletim Eleitoral 1933, p.6 e p.853). Ainda que o TSE dispensasse a necessidade da autorização, o simples fato de a questão ter sido suscitada é suficiente para esclarecer os padrões em vigor à época. A autoridade do marido não encontrava rival, nem mesmo frente ao Estado. A extensão do direito de voto às mulheres esteve longe de ser absoluta ou incondicional. O poder do homem para determinar o ‘próprio querer’ das mulheres não foi contestado. Na prática, poderiam votar as mulheres autorizadas pelos seus maridos.</p>
+      <p>Em 1934, a Constituinte ofereceu uma nova oportunidade para que a matéria fosse debatida e regulada. O Projeto Itamarati, elaborado pelo Governo Provisório, aperfeiçoou a fórmula usada pelo Código Eleitoral de 1932. O Artigo 98 afirmou que poderiam votar os eleitores de “qualquer sexo”, enquanto o Artigo seguinte estabeleceu que “o alistamento eleitoral e o voto são obrigatórios para os homens” (Anais 1934, p.156). A Comissão encarregada para escrever o Anteprojeto Constitucional parece não ter se dado conta da solução engenhosa encontrada e, considerando que o Artigo 99 era redundante, eliminou-o<xref ref-type="fn" rid="fn6"><sup>6</sup></xref>. A consequência dessa omissão foi prontamente notada pelos Constituintes, que apresentaram inúmeras emendas visando a restauração do artigo suprimido.</p>
+      <p>Em favor dos Constituintes, vale notar que somente o Integralista Aarão Ribeiro propôs suprimir integralmente o voto feminino<xref ref-type="fn" rid="fn7"><sup>7</sup></xref>. A Emenda valeu o seguinte comentário dos Relatores: “Não convém retroceder; não há motivo para arrependimento” (Anais 1934, p.399). Entretanto, não se deixou de retroceder, não a 1891, mas a 1932, visto que os Relatores acataram o teor das emendas que visavam restaurar o voto feminino voluntário.</p>
+      <p>Na última fase do processo, quando se abriu possibilidade para a apresentação de emendas ao Substitutivo, a fórmula encontrada não foi objeto de uma única Emenda, isto é, ninguém contestou a distinção. Para os homens, voto obrigatório. Para as mulheres, sem que fossem mencionadas, voluntário. Interessante é que outros temas relativos ao direito de voto, como a idade mínima, voto dos estudantes, o dos religiosos e dos militares foram objetos de acaloradas discussões e um bom número de emendas. Em todos estes casos, as controvérsias foram resolvidas por fórmulas conciliatórias e negociadas. A solução encontrada para o voto feminino, contudo, foi consensual.</p>
+      <p>A omissão registrada no primeiro Anteprojeto Legislativo e o subsequente recuo comprova que mulheres foram discriminadas consciente e deliberadamente<xref ref-type="fn" rid="fn8"><sup>8</sup></xref>. Frisamos: o retorno à fórmula de 1932 se deu de forma consensual, sem contestações, protestos ou tentativas de preservar a igualdade inadvertidamente consagrada pelos relatores no primeiro Anteprojeto. As duas Constituintes presentes, nem mesmo elas, protestaram<xref ref-type="fn" rid="fn9"><sup>9</sup></xref>.</p>
+      <p>Na Assembleia Constituinte de 1946, desta feita sem a presença de uma única mulher, repetiu-se a mesma fórmula. Talvez, no entanto, o mais correto seja dizer que a fórmula foi aperfeiçoada, posto que, a distinção foi retirada do texto constitucional que, ademais, aparenta não deixar brechas para a discriminação. O Artigo 133 prevê que “o alistamento e o voto são obrigatórios para os brasileiros de ambos os sexos, salvo as exceções previstas em lei”. Somente um rábula atilado poderia se dar conta de que a restrição ao voto feminino estaria entre as ‘exceções’ que a lei poderia prever. Os constituintes, contudo, sabiam (ou deveriam saber) que as mulheres sem renda própria constavam das exceções previstas na Lei Agamenon, editada em 1945, para regular a eleição que os elegera. A fórmula foi preservada no Código Eleitoral de 1950 que, em seu Artigo 4º, eximiu da obrigatoriedade de se alistar os inválidos, os maiores de 70 anos e as mulheres que não exercessem funções remuneradas<xref ref-type="fn" rid="fn10"><sup>10</sup></xref>.</p>
+      <p>Durante o processo constituinte e da longa e tortuosa tramitação do Código Eleitoral de 1950, não houve um pronunciamento sequer em favor da extensão incondicional do direito de voto às mulheres. Talvez, novamente, mais significativo foi que tanto a hipótese de que a lei poderia prever exceções, quanto o texto que exime as donas de casa de exercer seus direitos políticos não foram objetos de justificativas ou debates. O poder do chefe da família era inquestionável e ninguém o pôs em questão.</p>
+      <p>Não faltaram, durante a Quarta República, propostas de reforma da legislação eleitoral. Boa parte do conflito político do período se expressou em batalhas sobre detalhes da legislação, incluindo a regulamentação do alistamento. Contudo, a possibilidade da equiparação política das mulheres aos homens não entrou na agenda legislativa.</p>
+      <p>Não que os direitos da mulher tivessem sido ignorados. A alteração crucial veio em 1962 com a promulgação da Lei 4.121 que ‘altera a situação jurídica da mulher casada’. Com a nova lei, a mulher casada é retirada do rol dos incapazes mencionados pelo Artigo 6<sup>o</sup>, do Código Civil. O Artigo 233 também é alterado, passando a ter a seguinte redação: “O marido é o chefe da sociedade conjugal, função que exerce com a colaboração da mulher, no interesse comum do casal e dos filhos”. Essas alterações retiram a razão de ser da manutenção do voto feminino voluntário. Assim, o Código Eleitoral de 1965, ao derrubar a distinção entre homens e mulheres, apenas colocou a legislação eleitoral em sintonia com a civil.</p>
+    </sec>
+    <sec>
+      <title>III. A Participação política feminina na Quarta República</title>
+      <p>Entre 1932 e 1965, os direitos políticos das mulheres não foram equiparados ao dos homens. De diferentes maneiras, as Constituições e leis vigentes encontraram formas para deixar as mulheres sem renda própria em uma espécie de limbo. Em todo esse período, o alistamento e o voto eram obrigatórios para os homens, mas voluntários para as mulheres que não trabalhavam<xref ref-type="fn" rid="fn11"><sup>11</sup></xref>. Em face das estipulações do Código Civil vigente, a voluntariedade era uma forma disfarçada de deixar a decisão nas mãos do chefe da família, isto é, de não garantir às mulheres o direito de votar, caso seus maridos não autorizassem sua participação na vida política.</p>
+      <p>O fato de o voto da mulher sem renda não ter sido equiparado ao dos homens já foi notado em outros trabalhos, como os de <xref ref-type="bibr" rid="B1">Álvares (2008)</xref>, <xref ref-type="bibr" rid="B15">Nicolau (2012)</xref> e <xref ref-type="bibr" rid="B24">Vogel (2012)</xref>. Entretanto, esses autores não exploraram as consequências do tratamento diverso, deixando de perceber a ironia contida na fórmula legal encontrada: o voto voluntário foi o meio encontrado para negar a igualdade de gênero, preservando a autoridade inconteste do marido.</p>
+      <p>Do ponto de vista empírico, o exame das taxas de alistamento feminino oferece uma forma de documentar a resiliência da discriminação baseada no gênero. O fato é que mulheres não se alistavam de forma equivalente aos homens, indicando que a voluntariedade representou uma limitação efetiva à participação feminina.</p>
+      <p>Sabe-se que a Quarta República (1945-1964), quando comparada à Primeira (1889-1930), caracteriza-se pela ampliação da participação política. Na eleição de 1930, apenas 7,5% da população estava apta a participar do processo eleitoral. A proporção dos que efetivamente participaram foi ainda menor, apenas 2,2% da população votou nessa eleição, que foi a última presidencial do primeiro período republicano. Em 1945, as proporções foram de 16,1% e 13,4% respectivamente.</p>
+      <p>A extensão do direito de voto às mulheres e o fato de a idade para votar ter sido reduzida de 21 para 18 anos contribuíram para o crescimento do contingente de eleitores. No entanto, a despeito do avanço registrado, a literatura especializada frisa que a Constituição de 1946 manteve os analfabetos à margem do processo eleitoral, o que significaria a continuidade da regra de exclusão inaugurada com a Lei Saraiva (1891), aprovada nos anos finais do Império.</p>
+      <p>Dado o conhecido atraso educacional do país, atrelar o direito ao voto à alfabetização, de acordo com a visão generalizada entre os analistas, seria o mesmo que manter o voto como censitário. Em outras palavras, o Brasil continuaria longe da adoção do sufrágio universal, tratando-se de uma democracia limitada.</p>
+      <p>Olavo Brasil Lima Jr., por exemplo, afirma que:</p>
+      <disp-quote>
+        <p>A Constituição de 46 permitiu o registro eleitoral de todas as pessoas maiores de dezoito anos, com exceção dos analfabetos, dos cidadãos que temporária ou permanentemente perderam seus direitos políticos e dos praças, devendo ser considerada de extrema severidade a restrição imposta aos analfabetos, pois na época era muito baixo o índice de alfabetização. (1983, p.38)</p>
+      </disp-quote>
+      <p>Adiante, o autor complementa seu juízo e conclui de maneira taxativa:</p>
+      <disp-quote>
+        <p>O sistema era marcadamente elitista e, acima de tudo, representativo apenas em uma visão limitada e parcial da vida política, já que a legislação excluiu da participação eleitoral grandes segmentos sociais. (1983, p.60)</p>
+      </disp-quote>
+      <p>Os segmentos sociais excluídos a que o autor se refere, estão claros, seriam os analfabetos, justamente a parcela mais pobre da população. Essa interpretação está presente mesmo nos trabalhos voltados a analisar a extensão dos direitos políticos às mulheres. Vogel, após excelente revisão sobre a evolução da legislação pertinente, notando inclusive a discriminação legal ao voto das mulheres casadas, conclui:</p>
+      <disp-quote>
+        <p>O contingente de analfabetos, de ambos os sexos, sempre foi muito elevado no país. Segundo os censos de 1872 e 1890, o percentual de analfabetos em relação à população total (não apenas a população adulta) chegava a 84,2% e 85,2%, respectivamente. A exclusão do direito de voto ao analfabeto perdurará até a promulgação da Emenda Constitucional nº 25, de maio de 1985, podendo ser considerada como o principal fator responsável pela reduzida participação eleitoral da população brasileira em boa parte do século XX. (2012, p.11)</p>
+      </disp-quote>
+      <p>De fato, a despeito do contraste com a Primeira República e do crescimento do eleitorado nos primeiros dez anos de vigência da Quarta República, período em que o número absoluto de eleitores alistados mais do que dobra e passa de 7,4 para 15,2 milhões de eleitores, a participação política permanece reduzia a um estrato pequeno da população. <xref ref-type="bibr" rid="B10">Limongi, Cheibub e Figueiredo (2015)</xref> calculam que em 1950, 40% da população em idade de votar estaria alistada. Para dizer o mesmo de forma inversa: 60% dos adultos estaria alijada do processo político-eleitoral.</p>
+      <p>Não há dúvidas, portanto, de que a participação era reduzida e permaneceu reduzida pela maior parte da primeira experiência democrática do país. Mais da metade da população adulta esteve excluída durante toda a sua vigência. Até recentemente, tinha-se como certo que o segmento excluído, para usar a terminologia de Lima Jr, seriam os pobres, os analfabetos. A possibilidade de a exclusão se dar a partir do gênero, isto é, de o segmento dos excluídos ser composto por mulheres, sequer foi cogitado pela literatura.</p>
+      <p>Assim, antes mesmo de apresentar os dados que coligimos, cabe discutir porque essa possibilidade não foi considerada. A explicação passa pela orientação teórica dominante nos estudos sobre democratização, à ideia de que expansão do sufrágio seguiria linhas classistas. Neste modelo, a passagem do voto limitado ao universal tende a ser vista como um processo de inclusão política das classes trabalhadoras.</p>
+      <p>O modelo clássico é dado pela Inglaterra, onde o voto censitário foi abolido por meio de reformas graduais e sucessivas até se atingir o voto universal. No Brasil, a educação funcionaria como o equivalente funcional da restrição baseada na renda. Como só a elite teria acesso à educação, a negação do direto de voto aos analfabetos implicaria restringir a participação política ao topo da pirâmide social.</p>
+      <p>A suposição de que os analfabetos seriam os excluídos do processo eleitoral atribui enorme poder ao texto constitucional. Na verdade, desconsidera questões próprias à prática eleitoral. Ocorre que o essencial pode não ser o mandamento constitucional, mas sim as normas que regulam o processo de qualificação dos eleitores, isto é, as exigências práticas a serem enfrentadas para passar de cidadão a eleitor é que devem ser levadas em conta.</p>
+      <p>Consulta à legislação eleitoral do período, ao Código Eleitoral de 1950, revela a ausência de qualquer tentativa ou esforço de operacionalizar a exclusão constitucional dos analfabetos. Para se alistar, o eleitor não tinha que apresentar documentos comprobatórios, como o atestado de frequência escolar ou diplomas; tampouco, era submetido a testes, como o preenchimento de questionário diante do juiz eleitoral. Tudo o que se exigia era a assinatura por próprio punho de alguns poucos documentos. Bastava, portanto, que o cidadão fosse capaz de assinar – desenhar, se dizia à época, seu nome para obter o direito de votar. Adicionalmente, essa exigência mínima, mesmo ela, era facilmente contornada por meio do alistamento coletivo feito por cabos eleitorais. Era alfabetizado o eleitor que declarasse que sabia ler e escrever.<xref ref-type="fn" rid="fn12"><sup>12</sup></xref>
+			</p>
+      <p>Assim, o preceito constitucional não pode ser lido como autoaplicável, como se implicasse uma delimitação clara das fronteiras da cidadania. Deliberadamente, essas fronteiras eram porosas e ambíguas. Note-se que na ausência de regras claras, sequer era possível falar em fraude eleitoral. O ponto é: não havia uma definição legal, quer na legislação eleitoral, quer na civil, que pudesse ser invocada para barrar o alistamento de eleitores com base no critério educacional.</p>
+      <p>Como revelam os debates parlamentares da época, analfabetos eram mobilizados em grande número por agentes políticos (<xref ref-type="bibr" rid="B10">Limongi 2015</xref>). O próprio TSE, sob a liderança de seu presidente, Edgard Costa, produziu documentos sem conta para denunciar que boa parte dos eleitores não tinha a qualificação mínima para fazer escolhas eleitorais de forma consciente ou independente. As páginas dos Boletins Eleitorais estão repletas de estatísticas mostrando que, considerando dados disponibilizados pelo Instituto Brasileiro de Geografia e Estatística (IBGE), o eleitorado de diversos estados excedia em muito o eleitorado potencial, isto é, o de adultos alfabetizados<xref ref-type="fn" rid="fn13"><sup>13</sup></xref>. De acordo com os dados compilados por <xref ref-type="bibr" rid="B10">Limongi, Cheibub e Figueiredo (2015)</xref>, em 1950, o contingente de alistados superava o eleitorado potencial (adultos alfabetizados) em 10 das 25 unidades da federação. Em 1960, são 15 as unidades nessa condição.</p>
+      <p>No entanto, Edgard Costa e o TSE não estavam atentos apenas ao alistamento de eleitores sem educação formal. As taxas de alistamento entre as mulheres também estavam no radar das autoridades eleitorais e, por alguma razão, o TSE produziu e deu publicidade ao que reproduzimos na <xref ref-type="fig" rid="f1">Figura 1</xref>
+				<xref ref-type="fn" rid="fn14"><sup>14</sup></xref>. Os dados produzidos pelo TSE, no período, indicam, portanto, de forma clara e incontroversa que analfabetos se alistavam em grande número, enquanto mulheres deixavam de fazê-lo também em números significativos. Inspeção visual das nove figuras encontradas nas páginas dos Boletins Eleitorais indica que as mulheres representavam algo como um terço do eleitorado alistado, com exceção de Sergipe em 1953.</p>
+      <fig id="f1">
+        <label>Figura 1</label>
+        <caption>
+          <title>Eleitorado por Sexo</title>
+        </caption>
+        <attrib>Fonte: Boletim Eleitoral, Ano 3, No 26, 27, 28, 29, 30.</attrib>
+        <alternatives>
+          <graphic xlink:href=""/>
+          <graphic xlink:href="https://minio.scielo.br/documentstore/1678-9873/FYkrhym6TpRzRf78q7F7Mmq/0bb7691a5a245976fd109c5f454253f401b8d57d.jpg"/>
+        </alternatives>
+      </fig>
+      <p>O fato de as pesquisas acadêmicas não atentarem para a discriminação política assentada na distinção de gênero, ao tempo em que insiste na baseada em classe, serve como um alerta para o peso das distorções, para não dizer cegueira, causada pelas lentes teóricas. O analista enxerga o que é ensinado a procurar.</p>
+      <p>Levantamentos nos arquivos do TRE de São Paulo<xref ref-type="fn" rid="fn15"><sup>15</sup></xref> e nos arquivos do TSE em Brasília<xref ref-type="fn" rid="fn16"><sup>16</sup></xref> confirmaram que as taxas de alistamento entre as mulheres eram muito inferiores às verificadas entre os homens. A despeito desse esforço de pesquisa, não dispomos de informações para a totalidade dos estados. No período inicial, a cobertura dos dados se resumia a três estados, Piauí, Pará e São Paulo, uma amostra realmente pequena. Com o tempo, o número de estados para os quais dispomos de informação cresceu, mas continuou, para a maior parte da série, aquém da totalidade do país.</p>
+      <p>Para o estado de São Paulo, o mais populoso e rico do país, entretanto, contamos com uma série contínua e detalhada, que se estende por toda a Quarta República. Assim, para atestar a representatividade dos dados que coligimos, optamos por traçar duas curvas no <xref ref-type="fig" rid="f2">Gráfico 1</xref>, uma baseada nos dados de São Paulo e outra para o restante dos estados observados. A terceira curva no Gráfico 1 indica a proporção de eleitores observados sobre o total nacional. Dessa forma, o leitor disporá dos elementos necessários para fazer suas próprias inferências.</p>
+      <fig id="f2">
+        <label>Gráfico 1</label>
+        <caption>
+          <title>Evolução da Participação Política das Mulheres em Relação ao Total do Eleitorado Inscrito (1946-1979)</title>
+        </caption>
+        <attrib>Fonte: TSE, Cadastro Eleitoral, 1947, 1950, 1955, 1957, 1960, 1961, 1962, 1965 e 1979.</attrib>
+        <alternatives>
+          <graphic xlink:href=""/>
+          <graphic xlink:href="https://minio.scielo.br/documentstore/1678-9873/FYkrhym6TpRzRf78q7F7Mmq/4214b74a4a6603c8cd238b25a266dd3c854ed806.jpg"/>
+        </alternatives>
+      </fig>
+      <p>A conclusão a que chegamos é a de que a restrição à participação política das mulheres é incontroversa. Enquanto prevaleceu o voto feminino voluntário (1932-1965), mulheres se alistavam em menor número do que os homens. A relação fica por volta de uma mulher para cada dois homens alistados. Assim, se há um ‘segmento social’ barrado, este segmento é o feminino.</p>
+      <p>A despeito da restrição educacional, se as mulheres fossem equiparadas aos homens, se as taxas de alistamento se aproximassem, a taxa total de participação se aproximaria significativamente da universalidade. Em 1965, as mulheres alistadas eram 37,31% do eleitorado. Em 1962, quando dispomos de dados por estado, que representam 87,72% do total nacional de eleitores, elas eram 36,92%. Note-se que, em 1946-48, elas eram 31,23%, o que demonstra estabilidade nas taxas de alistamento feminino.</p>
+      <p>Além disso, temos que na maior parte do período, a proporção de mulheres inscritas em São Paulo, o estado mais rico e urbanizado da federação, acompanha as médias dos outros estados. O único estado em que dispomos de dados (1950, 1960 e 1979) e em que as taxas de alistamento das mulheres se equiparam a dos homens é o Rio Grande do Norte. Como notado anteriormente, é nesse estado em que se registram os esforços pioneiros para a obtenção do voto feminino.</p>
+      <p>Em 1979, mais de 10 anos após a alteração da legislação eleitoral que torna obrigatório o voto para ambos os sexos, primeiro ano em que dispomos de dados nacionais, as mulheres representavam 44,78% do eleitorado. Conclui-se daí que a discriminação não cai por terra nem com a promulgação do Código Eleitoral de 1965, uma indicação clara de que as limitações impostas à participação política feminina se assentavam e eram garantidas pelas práticas sociais. Em 1985, depois do recadastramento promovido após a extensão do voto aos analfabetos, as taxas de alistamento por gênero, finalmente, se equilibram.</p>
+      <p>A equalização completa, vale notar, não deixou de gerar resistência. Em 1965, chega-se a discutir a pertinência de isentar as mulheres ‘que não exerçam profissão lucrativa’ do pagamento da multa referente ao não comparecimento nos dois primeiros anos de vigência do Código Eleitoral de 1965. A voluntariedade e, possivelmente, o conhecimento dos homens do não comparecimento de grande número de mulheres nos pleitos precedentes, motivaram a avaliação da proposta de Emenda do Deputado Clodomir Millet, que a justifica da seguinte forma:</p>
+      <disp-quote>
+        <p>É justo que se dê as mulheres, antes excluídas da obrigatoriedade do alistamento, a possibilidade de se fazerem eleitores sem incorrerem nas multas que o projeto prevê para todos os que vierem a fazê-lo depois de completados os 19 anos.<xref ref-type="fn" rid="fn17"><sup>17</sup></xref>
+				</p>
+      </disp-quote>
+      <p>Não há dúvidas de que as mulheres eram discriminadas e que participavam menos da vida política do que os homens. Mais do que isso, os dados apresentados são suficientes para sustentar que a principal forma de exclusão política era ditada pelo gênero e não pela renda ou educação. No entanto, as informações disponíveis não permitem ir além do exposto. Não há como saber se as mulheres marginalizadas eram ou não as mais pobres, se casadas ou não e, tampouco, se exerciam ou não atividades remuneradas. Sabemos, contudo, que, a despeito do fato de a taxa de analfabetismo ser maior entre as mulheres, essa diferença é insuficiente para explicar a distância observada nas taxas de alistamento. De acordo com os dados dos censos, entre 1940 e 1960, as mulheres eram, em média, 45,44% daqueles que sabiam ler e escrever em idade de votar<xref ref-type="fn" rid="fn18"><sup>18</sup></xref>. Para as coortes mais jovens, a diferença educacional por gênero praticamente desaparece, sem que essa aproximação se expresse no mesmo ritmo nos dados eleitorais. Obviamente, dados mais desagregados e de melhor qualidade permitiriam um tratamento mais detalhado da questão.</p>
+      <p>Finalmente, do ponto de vista das candidaturas e exercício de mandatos eletivos, a distância entre os homens e as mulheres foi ainda mais gritante. Poucas são as candidatas. Quanto às eleitas, estas podem ser contadas com os dedos de uma mão. Ao longo de toda Quarta República, apenas três mulheres ocuparam cadeiras na Câmara dos Deputados<xref ref-type="fn" rid="fn19"><sup>19</sup></xref>. Não encontramos registros de candidaturas femininas ao Senado ou a Governo Estadual.</p>
+      <p>Em resumo: as mulheres não foram equiparadas aos homens em 1932 quer do ponto de vista legal, quer do ponto de vista prático. O voto feminino voluntário encobre a omissão estatal, o reconhecimento legal de que não competia ao Estado se imiscuir na vida doméstica. A mulher, pelo menos se assim quisesse seu marido, teria sua vida adstrita ao lar. As estatísticas apresentadas comprovam que a integração das mulheres ao mundo político foi lenta e incompleta. Mostramos a seguir que a incorporação parcial é produto deliberado da resistência masculina.</p>
+    </sec>
+    <sec>
+      <title>IV. Argumentos e justificativas</title>
+      <p>Os debates parlamentares mais extensos sobre o direito de voto das mulheres ocorreram na primeira Constituinte Republicana. Somente nessa ocasião, os homens enfrentaram a questão e procuraram encontrar justificativas para a exclusão.</p>
+      <p>Para além da limitação em razão do gênero, que permaneceu não explicitada, os Constituintes negaram o voto aos mendigos, aos analfabetos, aos menores de 21 anos e aos membros de ordens religiosas e os <italic>praças de pret</italic>. Para cada uma destas exclusões, recorreu-se às explicações usuais, como a dependência, a incapacidade e a renúncia à autonomia individual. Nenhum desses argumentos, contudo, foi estendido às mulheres.</p>
+      <p>O rechaço às Emendas apresentadas com o fim de conceder direto de voto às mulheres foi peremptório e absoluto. Para a quase totalidade dos Constituintes, a ideia foi tratada como absurda. Moniz Freire, o primeiro a rechaçar a proposta, não poupou os proponentes da Emenda:</p>
+      <disp-quote>
+        <p>Com o maior respeito que devo aos autores de semelhante ideia e àqueles que a adotam, devo declarar que essa aspiração se me afigura imoral e anárquica (não apoiados), porque no dia em que a convertêssemos em lei pelo voto do Congresso, teríamos decretado a dissolução da família brasileira. (apud Rouré 1979, p.280) <xref ref-type="fn" rid="fn20"><sup>20</sup></xref>
+				</p>
+      </disp-quote>
+      <p>Vários outros recorreram a termos análogos. Mesmo Lauro Sodré, fiel ao ideário positivista e que por isso havia se oposto à limitação do direito de voto dos analfabetos e mendigos, atacou a Emenda, reputando-a de “filha de uma democracia anárquica, revolucionária, metafísica e irrefletida.” (<italic>apud</italic> Rouré 1979, p.280). Coube a Serzedello Correia apresentar o argumento mais acabado contrário a Emenda feminista:</p>
+      <disp-quote>
+        <p>Já se disse aqui que a sociedade é um organismo, e um organismo superior, caracterizado por este fato – que quanto mais perfeito é ele, quanto mais especializada são as funções. Nos organismos superiores, quer da vida animal, quer da vida vegetal, os agregados de células, constituindo órgãos, são destinados a certas funções específicas. [...] Ora, no organismo social, ao passo que o homem consagra-se a atividade externa; ao passo que ele pelo trabalho é obrigado a prover a família de todos os meios materiais para que, na tranquilidade, ela possa cumprir a sua missão, a mulher, pela delicadeza dos afetos, pela sublimidade dos sentimentos, pela superioridade do amor, é destinada a ser o anjo tutelar da família, a educadora do coração, a inspiradora do aperfeiçoamento humano. (<italic>apud</italic> Rouré 1979, p.286)</p>
+      </disp-quote>
+      <p>Descontados os arroubos retóricos do final, o argumento aponta para a conclusão de que “Para mim, a questão, é de conservação da família e, por conseguinte, da sociedade; para mim a questão é de estabilidade social” (<italic>apud</italic> Rouré 1979, p.286). Os demais oradores apresentaram variações sobre o mesmo tema. A participação política da mulher foi associada à dissolução da unidade familiar, como um desvio da função que lhes era prescrita no interior da ordem social. Moniz Feire, por exemplo, afirmou que:</p>
+      <disp-quote>
+        <p>[...] querer desviar o espírito feminil desse dever, dessa função que é a base de todo a organização social, cujo primeiro grau é a família, para levá-la ao atrito das emulações práticas, no exercício de funções públicas, é decretar a concorrência entre os sexos nas relações da vida ativa, nulificar esses laços sagrados da família, que se formam em torno da vida puramente doméstica e corromper a fonte preciosa da moralidade e sociabilidade que ela mais diretamente representa, demandando como condição de pureza a sua abstenção completa da vida prática. (<italic>apud</italic> Rouré 1979, p.280)</p>
+      </disp-quote>
+      <p>O papel social reservado às mulheres – procriar e cuidar da prole — requereria seu isolamento. Para um bom número de Constituintes, se fossem desviadas dessas funções essenciais, o conflito e, mesmo, a dissolução da família seriam inevitáveis, pois, como argumentou Lacerda Coutinho:</p>
+      <disp-quote>
+        <p>Dai a mulher as funções políticas; e quando o homem, procurando refazer-se das lutas da vida externa, buscar o remanso do lar, já não encontrará aí o conselho nos momentos de hesitação, o aplauso e a congratulação nos dias de triunfo, mas sim uma nova luta, muito mais penosa, muito mais cruel, pois será então a metade de si mesmo que se voltará contra a outra metade. (<italic>apud</italic><xref ref-type="bibr" rid="B23">Rouré 1978</xref>, p.284)</p>
+      </disp-quote>
+      <p>A proposta, portanto, foi tratada como uma ameaça à hierarquia de gênero no interior da família, como um convite para ‘a concorrência entre os sexos nas relações da vida ativa’. Ainda que não tenham faltado argumentos que apontassem para a incapacidade da mulher, a justificativa padrão se voltou para os efeitos que a participação política teria sobre a família.</p>
+      <p>Cesar Zama, defensor do voto feminino, desafiou os adversários da medida, notando que estes haviam se limitado:</p>
+      <disp-quote>
+        <p>a asseverar que a concessão de direitos políticos às mulheres trará, infalivelmente, a desorganização do lar e da família; nenhum deles, porém, deu-se ao trabalho de explicar-nos o modo e os motivos dessa desorganização. Em assuntos desta ordem não basta afirmar, é preciso provar. (<italic>apud</italic> Rouré 1979, p.287)</p>
+      </disp-quote>
+      <p>Nesse tipo de questão, Zama deveria saber, prevalecem opiniões dogmáticas. Os Constituintes não conseguiam conceber que suas esposas poderiam deixar o lar sem maiores consequências para a paz doméstica. Para eles, era incontroverso que essa possibilidade traria contestação à autoridade masculina. Coelho Campos, por exemplo, não se fez de rogado e dispensou argumentos e justificativas: “assunto de que não cogito; o que afirmo é que minha mulher não vai votar”. (<italic>apud</italic> Rouré 1979, p. 284).</p>
+      <p>Assim, ao final da Constituinte, o desafio lançado por Zama ficou sem resposta. Os homens presentes não se sentiram forçados a explicar como e porque o voto de suas esposas levaria à dissolução da família. Escrevendo poucos anos depois, em 1893 para sermos exatos, Assis Brasil minimiza a questão, considerando-a sem grande importância ou consequência, pois tinha como:</p>
+      <disp-quote>
+        <p>seguro que, dada a nossa atual educação, as damas se distribuiriam com exata proporcionalidade pelos partidos existentes, ou pelos que fossem formando, acompanhando os maridos e pais, ou outras pessoas a quem pelo sentimento estivessem ligadas. (<xref ref-type="bibr" rid="B4">Brasil 1895</xref>, p. 48)</p>
+      </disp-quote>
+      <p>A despeito da posição de Assis Brasil, o fato é que o debate sobre a questão continuou a ser pautado pelas consequências que a medida teria para a família. Rocha Cabral, um dos autores do Código Eleitoral de 1932, criticou “a perfeita igualdade política dos sexos”, pois esta significaria:</p>
+      <disp-quote>
+        <p>destroçar num só momento, sem uma preparação prévia, uma tradição secular e um sistema de direito privado, em que a mulher casada ainda está colocada em situação desigual à do homem no que diz respeito à chefia do casal, administração dos bens, escolha do domicílio e da profissão daquela fora do lar. Parece mais acertado principiar por conceder à mulher “sui juris”, os direitos políticos; e como à casada não se pode “sui juris”, por aqueles motivos, por que, em relação a ela, se mantêm certas regras no Direito Civil, limitativas da sua liberdade e posição econômica. (<xref ref-type="bibr" rid="B63">Cabral 2002</xref>, p.20)</p>
+      </disp-quote>
+      <p>Na Constituinte de 1934, Lino de Moraes atacou a concessão do voto às mulheres com as seguintes considerações:</p>
+      <disp-quote>
+        <p>Sou contrário a essa ideia feminista: o voto dado pelo representante legal da sociedade conjugal deve corresponder ao voto da família. O lugar da mulher é principalmente no lar e, sobretudo, ela não deve participar pessoalmente de lutas que põem em perigo a paz doméstica. Como há, porém, algumas que não pensam dessa forma, dê-se-lhes capacidade política, mas não se obriguem ao voto. (Anais da Constituinte de 1934, Vol XVIII, p.406)</p>
+      </disp-quote>
+      <p>O fato é que, a despeito de Lino de Moraes considerar que “o lugar da mulher é principalmente o lar”, um bom número delas já participava do mercado de trabalho. E, como explicou Nero Macedo, a concessão do voto voluntário às mulheres foi a forma encontrada para se adaptar a essa nova realidade:</p>
+      <disp-quote>
+        <p>Não é justo como obrigar-se ao alistamento e ao voto uma brasileira, que não o queira e prefira entregar-se exclusivamente, aos serviços do lar. A emenda proposta procurou conseguir uma fórmula conciliatória. As mulheres em qualquer idade continuarão isentas da obrigação eleitoral, desde que não sejam pensionistas ou exerçam funções públicas. Se é remunerada pela Nação, não deve furtar-se ao cumprimento do dever cívico do voto. Isto é o que me parece razoável. (Anais da Constituinte de 1934, Vol 18, p.406)</p>
+      </disp-quote>
+      <p>O voto voluntário, portanto, foi a ‘fórmula conciliatória’ encontrada para dar cabo da realidade social em transformação. O tratamento não igualitário entre mulheres e homens continuou a ser justificado em nome das alegadas consequências da participação política das casadas sobre a unidade familiar.</p>
+      <p>O fato é que, no que se refere aos debates parlamentares, a oposição dos homens à extensão incondicional do direito de voto às mulheres casadas se manifestou pela última vez em 1934. Durante a Quarta República o <italic>status quo</italic> foi mantido sem manifestações ou debate público, quer na Constituinte de 1946, quer na elaboração da legislação eleitoral. Os chefes de família mantiveram a prerrogativa de decidir se suas esposas votariam ou não, mas não justificaram porque acreditavam que, se não detivessem esse poder, a unidade da família estaria ameaçada.</p>
+      <p>Do ponto de vista legal, a saída “conciliatória” da manutenção da voluntariedade do voto para as mulheres casadas encontrada em 1934 se estendeu até 1965. O lugar da mulher casada continuou a ser o lar, pelo menos, se assim quisesse seu marido.</p>
+      <p>Nos debates recuperados, os temores evocados para sustentar a vedação que persistiu até 1965 foram claramente enunciados. A participação política das mulheres representaria uma ameaça à unidade da família. O ponto, como mostramos, foi ressaltado por um sem número de parlamentares, mas nenhum deles foi capaz de identificar o mecanismo que ligaria uma coisa à outra, como o voto à dissolução da família. O desafio lançado por Cesar Zama em 1891, permaneceu sem resposta.</p>
+      <p>Antonio Pennafort, representante classista na Constituinte de 1934, parece-nos ter sido o único a colocar o dedo sobre a ferida, oferecendo uma resposta ao desafio posto por Zama mais de 40 anos antes:</p>
+      <disp-quote>
+        <p>Não sou contrário ao voto feminino. Apenas entendo que há um perigo. Assim, quero fazer uma advertência, porque embora atacado, gosto de dizer o que sinto. Nestas condições, é um grande erro conceder o direito de voto às mulheres, porque futuramente, surgirá uma grande rivalidade nos lares. As mulheres sugestionadas pelos padres, quando tiverem de votar, certamente obrigarão seus maridos a sufragar o candidato do clero. Daí poderá resultar a dissolução de muitas famílias, ocasionado como consequência o acréscimo da prostituição. A mulher é mais suscetível de ser sugestionada pelo padre do que o homem. A propósito ocorre-me citar a grande carnificina ocorrida no nordeste, provocada pelo padre Cícero. (Anais da Constituinte de 1934, Vol 18, p.398)</p>
+      </disp-quote>
+      <p>Pennafort descreve o mecanismo que contribuiria para desencadear o fim da paz doméstica, qual seja, o da competição entre dois princípios distintos de autoridade, a masculina e a religiosa. Se os padres procurassem influenciar a mulher, a autoridade masculina no interior da família seria alvo de contestação. E, no caso, por uma autoridade com legitimidade superior. Pior, mulheres poderiam querer que seus pares aceitassem a orientação recebida na Igreja. O fato é que Deus, ao contrário do Estado, não poderia ser impedido de adentrar as relações familiares.</p>
+      <p>A possibilidade não era remota e não deve ser tratada como jocosa, ou hipotética. Nas eleições estaduais de Sergipe, em 1947, a União Democrática Nacional (UDN) entrou com ação junto ao Tribunal Regional Eleitoral para anular o pleito, sob o argumento de que associações religiosas e de sacerdotes teriam pregado que “os eleitores católicos não poderiam sufragar os candidatos da UDN às penas de pecado mortal” (<xref ref-type="bibr" rid="B8">Leal 1993</xref>, p.239, nota 71).</p>
+      <p>Argumentos análogos ao de Pennafort são encontrados nas justificativas apresentadas para barrar a participação política dos membros de ordens religiosas e militares. A vedação do direito de voto serviria para cercear tanto a possibilidade de que superiores hierárquicos determinassem o voto de subordinados, violando o princípio geral de um-homem-um-voto, quanto à possibilidade de que subordinados não seguissem a orientação de seus superiores hierárquicos, o que poderia minar as bases da obediência irrestrita sobre a qual a hierarquia dessas instituições se assenta.</p>
+      <p>Assim, concretamente, se o clero buscasse mobilizar o voto feminino, a premissa de Assis Brasil acabaria violada. Pelo menos, os maridos não poderiam dar como certo que contariam com o voto de suas esposas. Elas teriam que ser convencidas e as relações marido-esposa poderiam ser minadas pelo engajamento político das mulheres. Como nas ordens monásticas e no exército, a preservação da hierarquia familiar dependia, na visão dos homens da época, da interdição do debate político em seu interior. Como afirma <xref ref-type="bibr" rid="B63">Rocha Cabral (2002</xref>, p.24), a condição para a preservação de organizações assentadas sobre “disciplina rigorosa” é seu completo isolamento das “influências eleitorais”.</p>
+      <p>Autoridade, como se sabe, importa em uma relação de subordinação que é a um só tempo voluntária e inquestionável.<xref ref-type="fn" rid="fn21"><sup>21</sup></xref> Nesses termos, o comando masculino no interior da família pode ser equiparado ao do chefe militar ou ao do superior religioso. Para que se mantenha voluntária e incondicional, a ordem vigente não deve encontrar ou ser contraposta à princípio diverso de obediência.</p>
+      <p>Assim, o argumento apresentado por Pennafort aponta para o âmago da questão. Embora sua preocupação específica fosse com a competição resultante da mobilização política feita pela Liga Eleitoral Católica, o que estava em jogo ia além da competição específica com a Igreja e seus esforços políticos naquele momento. A ação de qualquer partido político seguiria a mesma lógica e teria as mesmas consequências.</p>
+    </sec>
+    <sec sec-type="conclusions">
+      <title>V. Conclusões</title>
+      <p>Assis Brasil, escrevendo em 1893, minimiza as consequências de uma possível extensão do direito de voto às mulheres. Para o líder Maragato, a medida não teria maiores consequências políticas. Mas, mesmo sem encontrar justificativas para alijar as mulheres do processo eleitoral, conclui que “no Brasil, onde a mulher ainda não tem competência para imiscuir-se em eleições, o sufrágio deve ser realmente universal, mas... só para os homens.” (<xref ref-type="bibr" rid="B4">Brasil, 1895</xref>, p.50).</p>
+      <p>Por um bom tempo, a exclusão feminina – de ‘metade do gênero humano’, como nota o mesmo Assis Brasil – sequer foi explicitada no texto constitucional. As Constituições de 1824 e 1891 não elencaram as mulheres entre os excluídos. A partir de 1932, o direito ao sufrágio é estendido às mulheres, mas, até 1965, o alistamento e o voto foram mantidos como voluntários para as casadas ou sem profissão lucrativa.</p>
+      <p>Como mostramos, essa foi a forma encontrada pelos homens para manter a autoridade masculina no interior da família. O Estado se absteve de questionar essa autoridade. Se o voto fosse obrigatório, a ordem pública estaria, implicitamente, colocando um limite à prerrogativa masculina de ditar o direito de ir e vir das mulheres. Esposas só poderiam deixar o lar e se dedicar a atividades práticas se e quando autorizadas por seus maridos.</p>
+      <p>Foram raras as oportunidades em que os homens deliberaram publicamente sobre a exclusão que impuseram às mulheres. Nessas poucas ocasiões, os homens manifestaram o temor de que a participação política da mulher atentaria contra a família, que, em última análise, a política seria incompatível com o papel reservado à mulher na estrutura familiar vigente. Obviamente, a política era apenas uma das atividades negadas à mulher.</p>
+      <p>Ainda assim, permanece o paradoxo identificado no argumento de Assis Brasil. Se estivesse dado e assegurado que esposas e filhas votariam de acordo com as determinações de seus maridos e pais, os homens não teriam motivos para se opor a extensão do voto às mulheres. Mas o fato é que Assis Brasil é um dos poucos a minimizar as consequências de tal medida. A maioria se opôs e se opôs de forma categórica e radical em todas as oportunidades em que a questão foi ventilada.</p>
+      <p>O voto e, de forma mais geral, a participação política, parece-nos apontar para um aspecto específico da questão, qual seja, o da possibilidade de que a autoridade masculina fosse contestada por princípio alternativo. No caso da competição com a Igreja, não apenas alternativo, como superior. A influência da Igreja poderia atuar como um elemento corrosivo da ordem familiar, na medida em que ao invocar preceitos religiosos, as mulheres poderiam se equiparar a seus maridos nas decisões políticas. Enquanto as mulheres puderam ser impedidas de participar do mundo político, os homens mantiveram a certeza de que sua autoridade não seria disputada e, nessas condições, a indiferença demonstrada por Assis Brasil e outros se manteve.</p>
+      <p>Seja como for, o fato incontestável é que do ponto de vista legal, no Brasil, até 1965, o sufrágio foi mantido universal, mas só para os homens. Do ponto de vista prático, basta olhar a composição da Câmara dos Deputados por gênero para concluir que ainda há muito a percorrer para que a equiparação seja completa.<xref ref-type="bibr" rid="B27"/>
+				<xref ref-type="bibr" rid="B28"/>
+				<xref ref-type="bibr" rid="B29"/>
+				<xref ref-type="bibr" rid="B30"/>
+				<xref ref-type="bibr" rid="B31"/>
+				<xref ref-type="bibr" rid="B32"/>
+				<xref ref-type="bibr" rid="B33"/>
+				<xref ref-type="bibr" rid="B34"/>
+				<xref ref-type="bibr" rid="B35"/>
+				<xref ref-type="bibr" rid="B36"/>
+				<xref ref-type="bibr" rid="B37"/>
+				<xref ref-type="bibr" rid="B38"/>
+				<xref ref-type="bibr" rid="B39"/>
+				<xref ref-type="bibr" rid="B40"/>
+				<xref ref-type="bibr" rid="B41"/>
+				<xref ref-type="bibr" rid="B42"/>
+				<xref ref-type="bibr" rid="B43"/>
+				<xref ref-type="bibr" rid="B44"/>
+				<xref ref-type="bibr" rid="B45"/>
+				<xref ref-type="bibr" rid="B46"/>
+				<xref ref-type="bibr" rid="B47"/>
+				<xref ref-type="bibr" rid="B48"/>
+				<xref ref-type="bibr" rid="B49"/>
+				<xref ref-type="bibr" rid="B50"/>
+				<xref ref-type="bibr" rid="B51"/>
+				<xref ref-type="bibr" rid="B52"/>
+				<xref ref-type="bibr" rid="B53"/>
+				<xref ref-type="bibr" rid="B54"/>
+				<xref ref-type="bibr" rid="B55"/>
+				<xref ref-type="bibr" rid="B56"/>
+				<xref ref-type="bibr" rid="B57"/>
+				<xref ref-type="bibr" rid="B58"/>
+				<xref ref-type="bibr" rid="B59"/>
+				<xref ref-type="bibr" rid="B60"/>
+				<xref ref-type="bibr" rid="B61"/>
+				<xref ref-type="bibr" rid="B62"/>
+				<xref ref-type="bibr" rid="B64"/>
+				<xref ref-type="bibr" rid="B65"/>
+				<xref ref-type="bibr" rid="B66"/>
+				<xref ref-type="bibr" rid="B67"/>
+				<xref ref-type="bibr" rid="B69"/>
+				<xref ref-type="bibr" rid="B70"/>
+			</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>Referências</title>
+      <ref id="B1">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Álvares,</surname>
+              <given-names>Maria</given-names>
+            </name>
+            <name>
+              <surname>Luiza</surname>
+              <given-names>Miranda</given-names>
+            </name>
+          </person-group>
+          <year>2008</year>
+          <chapter-title>A atuação dos movimentos de mulheres e feministas no avanço das carreiras femininas nos espaços de poder político</chapter-title>
+          <source>Anais do VI Encontro da RedeFem</source>
+          <publisher-name>Belo Horizonte</publisher-name>
+          <publisher-loc>junho</publisher-loc>
+        </element-citation>
+        <mixed-citation>Álvares, Maria Luiza Miranda, 2008. A atuação dos movimentos de mulheres e feministas no avanço das carreiras femininas nos espaços de poder político. <italic>Anais do VI Encontro da RedeFem</italic>. Belo Horizonte, junho.</mixed-citation>
+      </ref>
+      <ref id="B2">
+        <element-citation publication-type="book">
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Azevedo</surname>
+              <given-names>Débora Bithiah de</given-names>
+            </name>
+            <name>
+              <surname>Rabat</surname>
+              <given-names>Márcio Nuno</given-names>
+            </name>
+          </person-group>
+          <year>2012</year>
+          <source>Palavra de mulher: oito décadas do direito de voto</source>
+          <publisher-loc>Brasília</publisher-loc>
+          <publisher-name>Edições Câmara</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/7367">http://bd.camara.gov.br/bd/handle/bdcamara/7367</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 14 de mar. de 2018</date-in-citation>
+        </element-citation>
+        <mixed-citation>Azevedo, Débora Bithiah de, &amp; Rabat, Márcio Nuno (orgs), 2012. <italic>Palavra de mulher: oito décadas do direito de voto.</italic> Brasília: Edições Câmara. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/7367">http://bd.camara.gov.br/bd/handle/bdcamara/7367</ext-link>. Acesso em 14 de mar. de 2018.</mixed-citation>
+      </ref>
+      <ref id="B3">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Araújo</surname>
+              <given-names>Rita de Cássia Barbosa de</given-names>
+            </name>
+          </person-group>
+          <year>2003</year>
+          <article-title>O voto de saias: a Constituinte de 1934 e a participação das mulheres na política</article-title>
+          <source>Estudos Avançados</source>
+          <volume>17</volume>
+          <issue>4</issue>
+          <fpage>13</fpage>
+          <lpage>150</lpage>
+          <pub-id pub-id-type="doi">10.1590/S0103-40142003000300009</pub-id>
+        </element-citation>
+        <mixed-citation>Araújo, Rita de Cássia Barbosa de, 2003. O voto de saias: a Constituinte de 1934 e a participação das mulheres na política. <italic>Estudos Avançados,</italic> 17(04), pp.13-150. DOI: 10.1590/S0103-40142003000300009.</mixed-citation>
+      </ref>
+      <ref id="B4">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+              <given-names>Joaquim Francisco de Assis</given-names>
+            </name>
+          </person-group>
+          <year>1895</year>
+          <source>Democracia representativa: do voto e do modo de votar</source>
+          <publisher-name>Guillard, Aillaud</publisher-name>
+          <publisher-loc>Paris</publisher-loc>
+        </element-citation>
+        <mixed-citation>Brasil, Joaquim Francisco de Assis, 1895. <italic>Democracia representativa: do voto e do modo de votar</italic>. Paris: Guillard, Aillaud.</mixed-citation>
+      </ref>
+      <ref id="B5">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bueno</surname>
+              <given-names>Eduardo</given-names>
+            </name>
+          </person-group>
+          <year>2010</year>
+          <source>Brasil: uma história: cinco séculos de um país em construção</source>
+          <publisher-loc>São Paulo</publisher-loc>
+          <publisher-name>Leya</publisher-name>
+        </element-citation>
+        <mixed-citation>Bueno, Eduardo, 2010. <italic>Brasil: uma história: cinco séculos de um país em construção.</italic> São Paulo: Leya.</mixed-citation>
+      </ref>
+      <ref id="B6">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Carvalho</surname>
+              <given-names>José Murilo</given-names>
+            </name>
+          </person-group>
+          <year>2001</year>
+          <source>Cidadania no Brasil: o longo caminho</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Civilização Brasileira</publisher-name>
+        </element-citation>
+        <mixed-citation>Carvalho, José Murilo, 2001. <italic>Cidadania no Brasil: o longo caminho</italic>. Rio de Janeiro: Civilização Brasileira.</mixed-citation>
+      </ref>
+      <ref id="B7">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fausto</surname>
+              <given-names>Boris</given-names>
+            </name>
+          </person-group>
+          <year>1994</year>
+          <source>História do Brasil</source>
+          <publisher-loc>São Paulo</publisher-loc>
+          <publisher-name>Edusp</publisher-name>
+        </element-citation>
+        <mixed-citation>Fausto, Boris, 1994. <italic>História do Brasil.</italic> São Paulo: Edusp.</mixed-citation>
+      </ref>
+      <ref id="B8">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Leal</surname>
+              <given-names>Victor Nunes</given-names>
+            </name>
+          </person-group>
+          <year>1993</year>
+          <chapter-title>6ª edição</chapter-title>
+          <source>Coronelismo, enxada e voto</source>
+          <publisher-loc>São Paulo</publisher-loc>
+          <publisher-name>Alfa-Ômega</publisher-name>
+        </element-citation>
+        <mixed-citation>Leal, Victor Nunes, 1993. 6ª edição. <italic>Coronelismo, enxada e voto.</italic> São Paulo: Alfa-Ômega.</mixed-citation>
+      </ref>
+      <ref id="B9">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Limongi</surname>
+              <given-names>Fernando</given-names>
+            </name>
+          </person-group>
+          <year>2015</year>
+          <article-title>Fazendo Eleitores e Eleições: Mobilização Política e Democracia no Brasil Pós-Estado Novo</article-title>
+          <source>Dados-Revista de Ciências Sociais</source>
+          <volume>58</volume>
+          <issue>2</issue>
+          <fpage>371</fpage>
+          <lpage>400</lpage>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1590/00115258201547">http://dx.doi.org/10.1590/00115258201547</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 30 out. 2019</date-in-citation>
+          <pub-id pub-id-type="doi">10.1590/00115258201547</pub-id>
+        </element-citation>
+        <mixed-citation>Limongi, Fernando, 2015. Fazendo Eleitores e Eleições: Mobilização Política e Democracia no Brasil Pós-Estado Novo. <italic>Dados-Revista de Ciências Sociais</italic>, 58(2), pp. 371-400. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.1590/00115258201547">http://dx.doi.org/10.1590/00115258201547</ext-link>. Acesso em: 30 out. 2019. DOI: 10.1590/00115258201547.</mixed-citation>
+      </ref>
+      <ref id="B10">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Limongi</surname>
+              <given-names>Fernando</given-names>
+            </name>
+            <name>
+              <surname>Cheibub</surname>
+              <given-names>José Antonio</given-names>
+            </name>
+            <name>
+              <surname>Figueiredo</surname>
+              <given-names>Argelina Cheibub</given-names>
+            </name>
+          </person-group>
+          <year>2015</year>
+          <chapter-title xml:lang="en">Participação Política no Brasil</chapter-title>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Arretche</surname>
+              <given-names>Marta</given-names>
+            </name>
+          </person-group>
+          <comment>2015</comment>
+          <source>Trajetórias da Desigualdade: Como o Brasil Mudou nos Últimos Cinquenta Anos</source>
+          <publisher-loc>São Paulo</publisher-loc>
+          <publisher-name>Editora UNESP</publisher-name>
+          <fpage>23</fpage>
+          <lpage>50</lpage>
+        </element-citation>
+        <mixed-citation>Limongi, Fernando, Cheibub, José Antonio &amp; Figueiredo, Argelina Cheibub, 2015. <italic>Participação Política no Brasil</italic>. In Arretche, Marta (org), 2015. <italic>Trajetórias da Desigualdade: Como o Brasil Mudou nos Últimos Cinquenta Anos.</italic> São Paulo: Editora UNESP<italic>,</italic> pp. 23-50</mixed-citation>
+      </ref>
+      <ref id="B11">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kojève</surname>
+              <given-names>Alexandre</given-names>
+            </name>
+          </person-group>
+          <year>2014</year>
+          <source>The notion of authority</source>
+          <publisher-loc>London; New York</publisher-loc>
+          <publisher-name>Verso Books</publisher-name>
+          <comment>2014</comment>
+        </element-citation>
+        <mixed-citation>Kojève, Alexandre, 2014. <italic>The notion of authority</italic>. London; New York: Verso Books, 2014.</mixed-citation>
+      </ref>
+      <ref id="B12">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Marques</surname>
+              <given-names>Tereza Cristina de Novaes</given-names>
+            </name>
+          </person-group>
+          <year>2016</year>
+          <source>Bertha Lutz. Brasília: Edições Câmara</source>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/30679/bertha_lutz_marques.pdf?sequence=1">http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/30679/bertha_lutz_marques.pdf?sequence=1</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 06 de jun. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Marques, Tereza Cristina de Novaes, 2016. <italic>Bertha Lutz</italic>. Brasília: Edições Câmara. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/30679/bertha_lutz_marques.pdf?sequence=1">http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/30679/bertha_lutz_marques.pdf?sequence=1</ext-link>. Acesso em: 06 de jun. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B13">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Miranda Álvares</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <year>2008</year>
+          <article-title>Mulheres brasileiras em tempo de competição eleitoral: seleção de candidaturas e degraus de acesso aos cargos parlamentares</article-title>
+          <source>Dados - Revista de Ciências Sociais</source>
+          <volume>51</volume>
+          <issue>4</issue>
+          <fpage>895</fpage>
+          <lpage>939</lpage>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www.redalyc.org/articulo.oa?id=21817687004">http://www.redalyc.org/articulo.oa?id=21817687004</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 21 jan. 2018. DOI: 10.1590/S0011-52582008000400004</date-in-citation>
+        </element-citation>
+        <mixed-citation>Miranda Álvares, M., 2008. Mulheres brasileiras em tempo de competição eleitoral: seleção de candidaturas e degraus de acesso aos cargos parlamentares. <italic>Dados - Revista de Ciências Sociais,</italic> 51(4), pp.895-939. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www.redalyc.org/articulo.oa?id=21817687004">http://www.redalyc.org/articulo.oa?id=21817687004</ext-link>. Acesso em: 21 jan. 2018. DOI: 10.1590/S0011-52582008000400004.</mixed-citation>
+      </ref>
+      <ref id="B14">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moore</surname>
+              <given-names>D.C.</given-names>
+            </name>
+          </person-group>
+          <year>1976</year>
+          <source>The politics of deference: a study of the mid-nineteenth century English political system</source>
+          <publisher-loc>New York</publisher-loc>
+          <publisher-name>Edward Everett Root Publishers</publisher-name>
+        </element-citation>
+        <mixed-citation>Moore, D.C., 1976.<italic>The politics of deference: a study of the mid-nineteenth century English political system</italic>. New York: Edward Everett Root Publishers.</mixed-citation>
+      </ref>
+      <ref id="B15">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Nicolau</surname>
+              <given-names>Jairo</given-names>
+            </name>
+          </person-group>
+          <year>2012</year>
+          <source>Eleições no Brasil: do Império aos dias atuais</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Zahar</publisher-name>
+        </element-citation>
+        <mixed-citation>Nicolau, Jairo, 2012. <italic>Eleições no Brasil: do Império aos dias atuais.</italic> Rio de Janeiro: Zahar.</mixed-citation>
+      </ref>
+      <ref id="B16">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oriá</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <year>2009</year>
+          <chapter-title xml:lang="en">Mulher e cidadania: a conquista do voto feminino no Brasil</chapter-title>
+          <source>Cadernos Aslegis</source>
+          <volume>38</volume>
+          <fpage>30</fpage>
+          <lpage>38</lpage>
+          <comment>set/dez. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/11300/mulher_cidadania_oria.pdf?sequence=1">http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/11300/mulher_cidadania_oria.pdf?sequence=1</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 15 mar. 2018</date-in-citation>
+        </element-citation>
+        <mixed-citation>Oriá, R., 2009. Mulher e cidadania: a conquista do voto feminino no Brasil. In <italic>Cadernos Aslegis</italic>, 38, pp.30-38, set/dez. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/11300/mulher_cidadania_oria.pdf?sequence=1">http://bd.camara.leg.br/bd/bitstream/handle/bdcamara/11300/mulher_cidadania_oria.pdf?sequence=1</ext-link>. Acesso em: 15 mar. 2018.</mixed-citation>
+      </ref>
+      <ref id="B17">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pietá Janete</surname>
+            </name>
+          </person-group>
+          <year>2012</year>
+          <chapter-title xml:lang="en">Prefácio</chapter-title>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Azevedo</surname>
+              <given-names>D. B. D.</given-names>
+            </name>
+            <name>
+              <surname>Rabat</surname>
+              <given-names>M. N.</given-names>
+            </name>
+          </person-group>
+          <source>2012. Palavra de mulher: oito décadas do direito de voto</source>
+          <publisher-loc>Brasília</publisher-loc>
+          <publisher-name>Câmara dos Deputados, Edições Câmara</publisher-name>
+        </element-citation>
+        <mixed-citation>Pietá Janete, 2012. Prefácio. In D. B. D. Azevedo &amp; M. N. Rabat (orgs), 2012. <italic>Palavra de mulher: oito décadas do direito de voto</italic>. Brasília: Câmara dos Deputados, Edições Câmara.</mixed-citation>
+      </ref>
+      <ref id="B18">
+        <element-citation publication-type="book">
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Pinto</surname>
+              <given-names>Antonio Pereira</given-names>
+            </name>
+          </person-group>
+          <year>1983</year>
+          <source>Reforma eleitoral</source>
+          <publisher-loc>Brasília</publisher-loc>
+          <publisher-name>Editora Universidade de Brasília</publisher-name>
+        </element-citation>
+        <mixed-citation>Pinto, Antonio Pereira (org), 1983. <italic>Reforma eleitoral</italic>. Brasília: Editora Universidade de Brasília.</mixed-citation>
+      </ref>
+      <ref id="B19">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pinto</surname>
+              <given-names>Céli Regina</given-names>
+            </name>
+          </person-group>
+          <year>2003</year>
+          <source>Uma história do feminismo no Brasil</source>
+          <publisher-loc>São Paulo</publisher-loc>
+          <publisher-name>Editora Fundação Perseu Abramo</publisher-name>
+        </element-citation>
+        <mixed-citation>Pinto, Céli Regina, 2003. <italic>Uma história do feminismo no Brasil.</italic> São Paulo: Editora Fundação Perseu Abramo.</mixed-citation>
+      </ref>
+      <ref id="B20">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Porto</surname>
+              <given-names>Walter Costa</given-names>
+            </name>
+          </person-group>
+          <year>2002</year>
+          <source>O voto no Brasil: da colônia à 6<sup>a</sup> República</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Topbooks</publisher-name>
+        </element-citation>
+        <mixed-citation>Porto, Walter Costa, 2002. <italic>O voto no Brasil: da colônia à 6</italic><sup><italic>a</italic></sup>
+					<italic>República</italic>. Rio de Janeiro: Topbooks.</mixed-citation>
+      </ref>
+      <ref id="B21">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rodrigues</surname>
+              <given-names>José Honório</given-names>
+            </name>
+          </person-group>
+          <year>1966</year>
+          <source>Vida e historia: civilização brasileira</source>
+          <volume>109</volume>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Civilização Brasileira</publisher-name>
+        </element-citation>
+        <mixed-citation>Rodrigues, José Honório, 1966. <italic>Vida e historia: civilização brasileira</italic>. Vol. 109. Rio de Janeiro: Civilização Brasileira.</mixed-citation>
+      </ref>
+      <ref id="B22">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rodrigues</surname>
+              <given-names>José Honório</given-names>
+            </name>
+          </person-group>
+          <year>1982</year>
+          <source>Conciliação e reforma no Brasil: um desafio histórico-cultural</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Editora Nova Fronteira</publisher-name>
+        </element-citation>
+        <mixed-citation>Rodrigues, José Honório, 1982. <italic>Conciliação e reforma no Brasil: um desafio histórico-cultural</italic>. Rio de Janeiro: Editora Nova Fronteira.</mixed-citation>
+      </ref>
+      <ref id="B23">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rouré</surname>
+              <given-names>Agenor</given-names>
+            </name>
+          </person-group>
+          <year>1978</year>
+          <source>ConstituinteRepublicana(1918-1920)</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+        </element-citation>
+        <mixed-citation>Rouré, Agenor, 1978.<italic>ConstituinteRepublicana(1918-1920).</italic> Rio de Janeiro: Imprensa Nacional.</mixed-citation>
+      </ref>
+      <ref id="B24">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vogel</surname>
+              <given-names>Luiz Henrique</given-names>
+            </name>
+          </person-group>
+          <year>2012</year>
+          <source>A difícil inserção: voto feminino e as condições sociais de acesso ao campo político no Brasil (1932-2012)</source>
+          <publisher-loc>Brasília</publisher-loc>
+          <publisher-name>Câmara dos Deputados, Consultoria Legislativa</publisher-name>
+        </element-citation>
+        <mixed-citation>Vogel, Luiz Henrique, 2012. <italic>A difícil inserção: voto feminino e as condições sociais de acesso ao campo político no Brasil (1932-2012)</italic>.Brasília: Câmara dos Deputados, Consultoria Legislativa.</mixed-citation>
+      </ref>
+    </ref-list>
+    <ref-list>
+      <title>Outras Fontes</title>
+      <ref id="B25">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1924</year>
+          <source>Annaes do Congresso Constituinte da República [1890]</source>
+          <volume>1</volume>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13616">http://bd.camara.gov.br/bd/handle/bdcamara/13616</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1924. <italic>Annaes do Congresso Constituinte da República [1890]</italic>. Vol 1. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13616">http://bd.camara.gov.br/bd/handle/bdcamara/13616</ext-link>. Acesso em: 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B26">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1926</year>
+          <source>Annaes do Congresso Constituinte da República [1890]</source>
+          <volume>2</volume>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13596">http://bd.camara.gov.br/bd/handle/bdcamara/13596</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1926. <italic>Annaes do Congresso Constituinte da República [1890]</italic>. Vol 2. Rio de Janeiro, Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13596">http://bd.camara.gov.br/bd/handle/bdcamara/13596</ext-link>. Acesso em: 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B27">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1926</year>
+          <source>Annaes do Congresso Constituinte da República [1890]</source>
+          <volume>3</volume>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13596">http://bd.camara.gov.br/bd/handle/bdcamara/13596</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1926. <italic>Annaes do Congresso Constituinte da República [1890]</italic>. Vol 3. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13596">http://bd.camara.gov.br/bd/handle/bdcamara/13596</ext-link>. Acesso em: 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B28">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1934</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume I [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8266">http://bd.camara.gov.br/bd/handle/bdcamara/8266</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1934. <italic>Annaes da Assembléa Nacional Constituinte. Volume I [1933]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8266">http://bd.camara.gov.br/bd/handle/bdcamara/8266</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B29">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume II [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8186">http://bd.camara.gov.br/bd/handle/bdcamara/8186</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume II [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8186">http://bd.camara.gov.br/bd/handle/bdcamara/8186</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B30">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume III [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8008">http://bd.camara.gov.br/bd/handle/bdcamara/8008</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume III [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8008">http://bd.camara.gov.br/bd/handle/bdcamara/8008</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B31">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume IV [1935]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8227">http://bd.camara.gov.br/bd/handle/bdcamara/8227</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume IV [1935</italic>]. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8227">http://bd.camara.gov.br/bd/handle/bdcamara/8227</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B32">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume V [1935]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8228">http://bd.camara.gov.br/bd/handle/bdcamara/8228</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume V [1935].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8228">http://bd.camara.gov.br/bd/handle/bdcamara/8228</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B33">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume VI [1934]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8128">http://bd.camara.gov.br/bd/handle/bdcamara/8128</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume VI [1934]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8128">http://bd.camara.gov.br/bd/handle/bdcamara/8128</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B34">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume VII [1934]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8226">http://bd.camara.gov.br/bd/handle/bdcamara/8226</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume VII [1934].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8226">http://bd.camara.gov.br/bd/handle/bdcamara/8226</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B35">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume VIII [1934]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8169">http://bd.camara.gov.br/bd/handle/bdcamara/8169</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume VIII [1934]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8169">http://bd.camara.gov.br/bd/handle/bdcamara/8169</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B36">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1935</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume IX [1934]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8246">http://bd.camara.gov.br/bd/handle/bdcamara/8246</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1935. <italic>Annaes da Assembléa Nacional Constituinte. Volume IX [1934</italic>]. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8246">http://bd.camara.gov.br/bd/handle/bdcamara/8246</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B37">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume X [1934]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8026">http://bd.camara.gov.br/bd/handle/bdcamara/8026</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume X [1934]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8026">http://bd.camara.gov.br/bd/handle/bdcamara/8026</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B38">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XI [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8167">http://bd.camara.gov.br/bd/handle/bdcamara/8167</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XI [1933]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8167">http://bd.camara.gov.br/bd/handle/bdcamara/8167</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B39">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XII [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13216">http://bd.camara.gov.br/bd/handle/bdcamara/13216</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XII [1933]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/13216">http://bd.camara.gov.br/bd/handle/bdcamara/13216</ext-link>. Acesso em 10 de dez. de 2017</mixed-citation>
+      </ref>
+      <ref id="B40">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XIII [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8113">http://bd.camara.gov.br/bd/handle/bdcamara/8113</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XIII [1933]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8113">http://bd.camara.gov.br/bd/handle/bdcamara/8113</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B41">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XIV [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8113">http://bd.camara.gov.br/bd/handle/bdcamara/8113</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XIV [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8113">http://bd.camara.gov.br/bd/handle/bdcamara/8113</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B42">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XV [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8172">http://bd.camara.gov.br/bd/handle/bdcamara/8172</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XV [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8172">http://bd.camara.gov.br/bd/handle/bdcamara/8172</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B43">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XVI [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8187">http://bd.camara.gov.br/bd/handle/bdcamara/8187</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XVI [1933]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8187">http://bd.camara.gov.br/bd/handle/bdcamara/8187</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B44">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XVII [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8171">http://bd.camara.gov.br/bd/handle/bdcamara/8171</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XVII [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8171">http://bd.camara.gov.br/bd/handle/bdcamara/8171</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B45">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1937</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XVIII [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8170">http://bd.camara.gov.br/bd/handle/bdcamara/8170</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1937. <italic>Annaes da Assembléa Nacional Constituinte. Volume XVIII [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8170">http://bd.camara.gov.br/bd/handle/bdcamara/8170</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B46">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1937</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XIX [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8170">http://bd.camara.gov.br/bd/handle/bdcamara/8170</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1937. <italic>Annaes da Assembléa Nacional Constituinte. Volume XIX [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8170">http://bd.camara.gov.br/bd/handle/bdcamara/8170</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B47">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1936</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XX [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8147">http://bd.camara.gov.br/bd/handle/bdcamara/8147</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1936. <italic>Annaes da Assembléa Nacional Constituinte. Volume XX [1933]</italic>. Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8147">http://bd.camara.gov.br/bd/handle/bdcamara/8147</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B48">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1937</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XXI [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8071">http://bd.camara.gov.br/bd/handle/bdcamara/8071</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1937. <italic>Annaes da Assembléa Nacional Constituinte. Volume XXI [1933].</italic> Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8071">http://bd.camara.gov.br/bd/handle/bdcamara/8071</ext-link>. Acesso em 10 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B49">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1937</year>
+          <source>Annaes da Assembléa Nacional Constituinte. Volume XXII [1933]</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Nacional</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8112">http://bd.camara.gov.br/bd/handle/bdcamara/8112</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1937. <italic>Annaes da Assembléa Nacional Constituinte. Volume XXII [1933]</italic> . Rio de Janeiro: Imprensa Nacional. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bd.camara.gov.br/bd/handle/bdcamara/8112">http://bd.camara.gov.br/bd/handle/bdcamara/8112</ext-link>. Acesso em 10 de dez. de 2017</mixed-citation>
+      </ref>
+      <ref id="B50">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1848</year>
+          <source>Annaes do Senado do Império do Brazil. Livro 4 – 1848</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Imprensa Oficial</publisher-name>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www.senado.leg.br/publicacoes/anais/pdf/Anais_Imperio/1848/1848%20Livro%204.pdf">http://www.senado.leg.br/publicacoes/anais/pdf/Anais_Imperio/1848/1848%20Livro%204.pdf</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 20 dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1848. <italic>Annaes do Senado do Império do Brazil. Livro 4 – 1848</italic>. Rio de Janeiro: Imprensa Oficial. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www.senado.leg.br/publicacoes/anais/pdf/Anais_Imperio/1848/1848%20Livro%204.pdf">http://www.senado.leg.br/publicacoes/anais/pdf/Anais_Imperio/1848/1848%20Livro%204.pdf</ext-link>. Acesso em: 20 dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B51">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1823</year>
+          <source>Anteprojeto Constitucional elaborado pela Comissão de Constituição e Justiça</source>
+          <comment>Rio de Janeiro, 30 de agosto de 1823. Disponível em: <ext-link ext-link-type="uri" xlink:href="https://arquivohistorico.camara.leg.br/atom/AC1823/A/AC1823-A-3-2012.pdf">https://arquivohistorico.camara.leg.br/atom/AC1823/A/AC1823-A-3-2012.pdf</ext-link>.</comment>
+          <date-in-citation content-type="access-date">Acesso em: 08 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1823. <italic>Anteprojeto Constitucional elaborado pela Comissão de Constituição e Justiça.</italic> Rio de Janeiro, 30 de agosto de 1823. Disponível em: <ext-link ext-link-type="uri" xlink:href="https://arquivohistorico.camara.leg.br/atom/AC1823/A/AC1823-A-3-2012.pdf">https://arquivohistorico.camara.leg.br/atom/AC1823/A/AC1823-A-3-2012.pdf</ext-link>. Acesso em: 08 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B52">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1933</year>
+          <source>Boletim Eleitoral</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Tribunal Superior de Justiça Eleitoral</publisher-name>
+          <comment>ano 2, n.1, 2 jan., 40 p. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/x">http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/x</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 20 dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1933. <italic>Boletim Eleitoral.</italic> Rio de Janeiro: Tribunal Superior de Justiça Eleitoral, ano 2, n.1, 2 jan., 40 p. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/x">http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/x</ext-link>. Acesso em 20 dez de 2017</mixed-citation>
+      </ref>
+      <ref id="B53">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1933</year>
+          <source>Boletim Eleitoral</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Tribunal Superior de Justiça Eleitoral</publisher-name>
+          <comment>ano 2, n. 45, 3 mar., 28 p. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/930">http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/930</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 20 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1933. <italic>Boletim Eleitoral</italic>. Rio de Janeiro: Tribunal Superior de Justiça Eleitoral, ano 2, n. 45, 3 mar., 28 p. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/930">http://bibliotecadigital.tse.jus.br/xmlui/handle/bdtse/930</ext-link>. Acesso em: 20 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B54">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1824</year>
+          <source>Carta Lei de 25 de março de 1824. Constituição Política do Império do Brazil (de 25 de Março 1824). Rio de Janeiro, 11 de Dezembro de 1823</source>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www.planalto.gov.br/ccivil_03/constituicao/constituicao24.htm">http://www.planalto.gov.br/ccivil_03/constituicao/constituicao24.htm</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 07 de dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1824. <italic>Carta Lei de 25 de março de 1824. Constituição Política do Império do Brazil (de 25 de Março 1824).</italic> Rio de Janeiro, 11 de Dezembro de 1823. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www.planalto.gov.br/ccivil_03/constituicao/constituicao24.htm">http://www.planalto.gov.br/ccivil_03/constituicao/constituicao24.htm</ext-link>. Acesso em: 07 de dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B55">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1934</year>
+          <source>Constituição da República dos Estados Unidos do Brasil de 1934. Rio de Janeiro, 16 de julho de 1934</source>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/consti/1930-1939/constituicao-1934-16-julho-1934-365196-publicacaooriginal-1-pl.html">http://www2.camara.leg.br/legin/fed/consti/1930-1939/constituicao-1934-16-julho-1934-365196-publicacaooriginal-1-pl.html</ext-link>.</comment>
+          <date-in-citation content-type="access-date">Acesso em: 15 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1934. <italic>Constituição da República dos Estados Unidos do Brasil de 1934.</italic> Rio de Janeiro, 16 de julho de 1934. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/consti/1930-1939/constituicao-1934-16-julho-1934-365196-publicacaooriginal-1-pl.html">http://www2.camara.leg.br/legin/fed/consti/1930-1939/constituicao-1934-16-julho-1934-365196-publicacaooriginal-1-pl.html</ext-link>. Acesso em: 15 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B56">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1932</year>
+          <source>Decreto Nº 21.076, de 24 de fevereiro de 1932. Decreta o Código Eleitoral</source>
+          <comment>Rio de Janeiro, 24 de fevereiro de 1932. <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html">http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 10 dez. 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1932. <italic>Decreto Nº 21.076, de 24 de fevereiro de 1932. Decreta o Código Eleitoral.</italic> Rio de Janeiro, 24 de fevereiro de 1932. <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html">http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html</ext-link>. Acesso em: 10 dez. 2017.</mixed-citation>
+      </ref>
+      <ref id="B57">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1945</year>
+          <source>Decreto-Lei Nº 7.586, de 28 de maio de 1945. Regula, em todo país, o alistamento eleitoral e a eleições. Rio de Janeiro, 28 de maio de 1945</source>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-7586-28-maio-1945-417387-publicacaooriginal-1-pe.html">http://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-7586-28-maio-1945-417387-publicacaooriginal-1-pe.html</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 de janeiro de 2018</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1945. <italic>Decreto-Lei Nº 7.586, de 28 de maio de 1945. Regula, em todo país, o alistamento eleitoral e a eleições. Rio de Janeiro, 28 de maio de 1945.</italic> Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-7586-28-maio-1945-417387-publicacaooriginal-1-pe.html">http://www2.camara.leg.br/legin/fed/declei/1940-1949/decreto-lei-7586-28-maio-1945-417387-publicacaooriginal-1-pe.html</ext-link>. Acesso em 10 de janeiro de 2018.</mixed-citation>
+      </ref>
+      <ref id="B58">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1917</year>
+          <source>Diário da Câmara dos Deputados</source>
+          <comment>Rio de Janeiro, 13 de junho de 1917, p.477 Disponível em: <ext-link ext-link-type="uri" xlink:href="http://imagem.camara.gov.br/Imagem/d/pdf/DCD13JUN1917.pdf#page=">http://imagem.camara.gov.br/Imagem/d/pdf/DCD13JUN1917.pdf#page=</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 14 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1917. <italic>Diário da Câmara dos Deputados</italic>. Rio de Janeiro, 13 de junho de 1917, p.477. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://imagem.camara.gov.br/Imagem/d/pdf/DCD13JUN1917.pdf#page=">http://imagem.camara.gov.br/Imagem/d/pdf/DCD13JUN1917.pdf#page=</ext-link>. Acesso em 14 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B59">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1934</year>
+          <source>Diário da Assembleia Nacional Constituinte</source>
+          <comment>Rio de Janeiro, 7 de março de 1934, p.1219 Disponível em: <ext-link ext-link-type="uri" xlink:href="http://imagem.camara.gov.br/dc_20a.asp?opcao=10&amp;selCodColecaoCsv=R&amp;selDataIni=10%2F11%2F1933&amp;selDataFim=20%2F07%2F1934&amp;xDataIn=07%2F03%2F1934&amp;xCbEvento=&amp;xCbComissao=&amp;xCbDoc=&amp;xCbSubTipoDoc=&amp;Datain=07%2F03%2F1934&amp;txPagina=&amp;txSuplemento=&amp;BtData=Pesquisa#/">http://imagem.camara.gov.br/dc_20a.asp?opcao=10&amp;selCodColecaoCsv=R&amp;selDataIni=10%2F11%2F1933&amp;selDataFim=20%2F07%2F1934&amp;xDataIn=07%2F03%2F1934&amp;xCbEvento=&amp;xCbComissao=&amp;xCbDoc=&amp;xCbSubTipoDoc=&amp;Datain=07%2F03%2F1934&amp;txPagina=&amp;txSuplemento=&amp;BtData=Pesquisa#/</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 15 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1934. <italic>Diário da Assembleia Nacional Constituinte</italic>. Rio de Janeiro, 7 de março de 1934, p.1219. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://imagem.camara.gov.br/dc_20a.asp?opcao=10&amp;selCodColecaoCsv=R&amp;selDataIni=10%2F11%2F1933&amp;selDataFim=20%2F07%2F1934&amp;xDataIn=07%2F03%2F1934&amp;xCbEvento=&amp;xCbComissao=&amp;xCbDoc=&amp;xCbSubTipoDoc=&amp;Datain=07%2F03%2F1934&amp;txPagina=&amp;txSuplemento=&amp;BtData=Pesquisa#/">http://imagem.camara.gov.br/dc_20a.asp?opcao=10&amp;selCodColecaoCsv=R&amp;selDataIni=10%2F11%2F1933&amp;selDataFim=20%2F07%2F1934&amp;xDataIn=07%2F03%2F1934&amp;xCbEvento=&amp;xCbComissao=&amp;xCbDoc=&amp;xCbSubTipoDoc=&amp;Datain=07%2F03%2F1934&amp;txPagina=&amp;txSuplemento=&amp;BtData=Pesquisa#/</ext-link>. Acesso em 15 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B60">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1932</year>
+          <source>Diário Oficial da União. Seção 1</source>
+          <comment>Rio de Janeiro, 24 de fevereiro de 1932, p.3385 Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html">http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 13 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1932. <italic>Diário Oficial da União. Seção 1</italic>. Rio de Janeiro, 24 de fevereiro de 1932, p.3385. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html">http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-21076-24-fevereiro-1932-507583-publicacaooriginal-1-pe.html</ext-link>. Acesso em 13 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B61">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1950</year>
+          <source>Diário Oficial da União. Seção 1</source>
+          <comment>Rio de Janeiro, 26 de julho de 1950, p.10987. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1164-24-julho-1950-361738-norma-pl.html">http://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1164-24-julho-1950-361738-norma-pl.html</ext-link>.</comment>
+          <date-in-citation content-type="access-date">Acesso em: 13 de dez de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1950. <italic>Diário Oficial da União. Seção 1</italic>. Rio de Janeiro, 26 de julho de 1950, p.10987. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1164-24-julho-1950-361738-norma-pl.html">http://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1164-24-julho-1950-361738-norma-pl.html</ext-link>. Acesso em: 13 de dez de 2017.</mixed-citation>
+      </ref>
+      <ref id="B62">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1950</year>
+          <source>Lei No 1.164, de 24 de julho de 1950. Institui o Código Eleitoral</source>
+          <comment>Rio de Janeiro, 26 de Julho de 1950. <ext-link ext-link-type="uri" xlink:href="http://www.planalto.gov.br/ccivil_03/leis/1950-1969/L1164.htm">http://www.planalto.gov.br/ccivil_03/leis/1950-1969/L1164.htm</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em: 05 de out. 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1950. <italic>Lei No 1.164, de 24 de julho de 1950. Institui o Código Eleitoral.</italic> Rio de Janeiro, 26 de Julho de 1950. <ext-link ext-link-type="uri" xlink:href="http://www.planalto.gov.br/ccivil_03/leis/1950-1969/L1164.htm">http://www.planalto.gov.br/ccivil_03/leis/1950-1969/L1164.htm</ext-link>. Acesso em: 05 de out. 2017.</mixed-citation>
+      </ref>
+      <ref id="B63">
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Brasil</surname>
+            </name>
+          </person-group>
+          <year>1965</year>
+          <source>Lei Nº 4.737, de 15 de julho de 1965. Código Eleitoral. Brasília, 15 de julho de 1965</source>
+          <comment>Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-4737-15-julho-1965-356297-norma-pl.html">http://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-4737-15-julho-1965-356297-norma-pl.html</ext-link>
+					</comment>
+          <date-in-citation content-type="access-date">Acesso em 10 dez. de 2017</date-in-citation>
+        </element-citation>
+        <mixed-citation>Brasil, 1965. <italic>Lei Nº 4.737, de 15 de julho de 1965. Código Eleitoral.</italic> Brasília, 15 de julho de 1965. Disponível em: <ext-link ext-link-type="uri" xlink:href="http://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-4737-15-julho-1965-356297-norma-pl.html">http://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-4737-15-julho-1965-356297-norma-pl.html</ext-link>. Acesso em 10 dez. de 2017.</mixed-citation>
+      </ref>
+      <ref id="B64">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cabral</surname>
+              <given-names>João da Rocha</given-names>
+            </name>
+          </person-group>
+          <year>2002</year>
+          <source>Código Eleitoral da República dos Estados Unidos do Brasil: decreto 21.076, de 24 de fevereiro de</source>
+          <comment>1932</comment>
+        </element-citation>
+        <mixed-citation>Cabral, João da Rocha, 2002. <italic>Código Eleitoral da República dos Estados Unidos do Brasil: decreto 21.076, de 24 de fevereiro de 1932</italic>.</mixed-citation>
+      </ref>
+      <ref id="B65">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>IBGE</surname>
+            </name>
+          </person-group>
+          <year>1940</year>
+          <source>Censo demográfico</source>
+        </element-citation>
+        <mixed-citation>IBGE, 1940. Censo demográfico.</mixed-citation>
+      </ref>
+      <ref id="B66">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>IBGE</surname>
+            </name>
+          </person-group>
+          <year>1950</year>
+          <source>Censo Demográfico</source>
+        </element-citation>
+        <mixed-citation>IBGE, 1950. Censo Demográfico.</mixed-citation>
+      </ref>
+      <ref id="B67">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>IBGE</surname>
+            </name>
+          </person-group>
+          <year>1960</year>
+          <source>Censo Demográfico</source>
+        </element-citation>
+        <mixed-citation>IBGE, 1960. Censo Demográfico.</mixed-citation>
+      </ref>
+      <ref id="B68">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>IBGE</surname>
+            </name>
+          </person-group>
+          <year>1970</year>
+          <source>Censo Demográfico</source>
+        </element-citation>
+        <mixed-citation>IBGE, 1970. Censo Demográfico.</mixed-citation>
+      </ref>
+      <ref id="B69">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>IBGE</surname>
+            </name>
+          </person-group>
+          <year>1961</year>
+          <article-title>Contribuição para o Estudo da Demografia do Brasil</article-title>
+          <source>Estudos de Estatística Teórica e Aplicada. Conselho Nacional de Estatística. Laboratório de Estatística</source>
+        </element-citation>
+        <mixed-citation>IBGE, 1961. Contribuição para o Estudo da Demografia do Brasil. Estudos de Estatística Teórica e Aplicada. Conselho Nacional de Estatística. Laboratório de Estatística.</mixed-citation>
+      </ref>
+      <ref id="B70">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>TSE</surname>
+            </name>
+          </person-group>
+          <year>2017</year>
+          <source>Seção de Arquivos</source>
+          <publisher-loc>Brasília</publisher-loc>
+        </element-citation>
+        <mixed-citation>TSE, 2017. Seção de Arquivos. Brasília.</mixed-citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn fn-type="other" id="fn1">
+        <label>1</label>
+        <p>Agradecemos aos comentários e sugestões dos pareceristas anônimos da <italic>Revista de Sociologia e Política</italic>.</p>
+      </fn>
+      <fn fn-type="other" id="fn2">
+        <label>2</label>
+        <p>Reza o Artigo 2º do Código de 1932: “É eleitor o cidadão maior de 21 anos, sem distinção de sexo, alistado na forma deste Código.”</p>
+      </fn>
+      <fn fn-type="other" id="fn3">
+        <label>3</label>
+        <p>Código Eleitoral de 1950, Artigo 4, Inciso 1D. Como fizera o Código de 1932, os idosos são equiparados às mulheres, ainda que a idade para obtenção da ‘liberalidade’ tenha sido elevada para 70 anos.</p>
+      </fn>
+      <fn fn-type="other" id="fn4">
+        <label>4</label>
+        <p>Para um tratamento mais circunstanciado do tema, consultar <xref ref-type="bibr" rid="B17">Pietá 2012</xref>.</p>
+      </fn>
+      <fn fn-type="other" id="fn5">
+        <label>5</label>
+        <p>Pesquisas recentes vêm revelando novos casos e exceções exemplares ao longo do período (<xref ref-type="bibr" rid="B19">Pinto 2003</xref>; <xref ref-type="bibr" rid="B17">Pietá 2012</xref>; <xref ref-type="bibr" rid="B16">Oriá 2009</xref>; <xref ref-type="bibr" rid="B17">Azevedo &amp; Rabat 2012</xref>).</p>
+      </fn>
+      <fn fn-type="other" id="fn6">
+        <label>6</label>
+        <p>Ver artigo 131 do primeiro Anteprojeto.</p>
+      </fn>
+      <fn fn-type="other" id="fn7">
+        <label>7</label>
+        <p>A Emenda e a justificativa se encontram em Anais, vol. 18, pág. 398. Seu discurso enfático está em Anais, Livro 13I, pág. 177. Entre as ‘pérolas’ pronunciadas destacamos: “A vontade da mulher vive sem rumo, volúvel, instável; quando age, age sem reflexão, instada por moveis ocasionais, inspirada pela sua sensibilidade, pela sua emotividade.”</p>
+      </fn>
+      <fn fn-type="other" id="fn8">
+        <label>8</label>
+        <p>O artigo 99 é claro “O alistamento eleitoral e o voto são obrigatórios para os homens, sob as sanções que a lei determinar.” Disponível em: https://goo.gl/irMPRT. Acesso em: 06 de jun. de 2017.</p>
+      </fn>
+      <fn fn-type="other" id="fn9">
+        <label>9</label>
+        <p><xref ref-type="bibr" rid="B12">Marques (2016</xref>, p.31) nota que o movimento feminista deu maior atenção à igualdade do direito ao trabalho. A mesma autora registra o conflito entre Bertha Lutz, líder feminista, porém não eleita, e a representante paulista, a médica, Carlota Pereira de Queirós, acerca de matérias que afetavam as mulheres. Ver a respeito <xref ref-type="bibr" rid="B12">Marques (2016</xref>, p.18).</p>
+      </fn>
+      <fn fn-type="other" id="fn10">
+        <label>10</label>
+        <p>Não deixa de ser irônico que os textos legais tenham dado conta do aumento da expectativa de vida, ajustando o limiar para considerar idosos de 60 para 70 anos, sem que o tratamento dispensado às mulheres tenha sido alterado.</p>
+      </fn>
+      <fn fn-type="other" id="fn11">
+        <label>11</label>
+        <p>Na verdade, entre 1932 e 1934, a exceção se aplicava a todas as mulheres.</p>
+      </fn>
+      <fn fn-type="other" id="fn12">
+        <label>12</label>
+        <p>Consultar a respeito <xref ref-type="bibr" rid="B9">Limongi 2015</xref>; <xref ref-type="bibr" rid="B10">Limongi, Cheibub &amp; Figueiredo, 2015</xref>.</p>
+      </fn>
+      <fn fn-type="other" id="fn13">
+        <label>13</label>
+        <p>Vale notar que o IBGE também não dispunha de um critério objetivo para discriminar alfabetização nos censos. Os critérios mudam entre um recenseamento geral e outro. Consultar a este respeito, <xref ref-type="bibr" rid="B68">IBGE 1961</xref>, p.387.</p>
+      </fn>
+      <fn fn-type="other" id="fn14">
+        <label>14</label>
+        <p>Segundo esclarecimentos de funcionários do arquivo do TSE, esses dados foram produzidos por ordem expressa do Presidente Edgard Costa, um crítico do voto feminino.</p>
+      </fn>
+      <fn fn-type="other" id="fn15">
+        <label>15</label>
+        <p>Agradecemos a Alex Ricardo Brasil que nos guiou no acesso aos volumes dos Boletins Eleitorais de São Paulo, fonte usada para construir as séries de dados para esse estado apresentadas no <xref ref-type="fig" rid="f2">Gráfico 1</xref>.</p>
+      </fn>
+      <fn fn-type="other" id="fn16">
+        <label>16</label>
+        <p>Agradecemos a Paolo Ricci por nos ceder os dados por ele coletado nos arquivos do TSE em Brasília. A versão original desse texto carecia dessa fonte e era baseada exclusivamente em ‘cálculos heroicos’ feitos a partir dos gráficos encontrados nos Boletins Eleitorais.</p>
+      </fn>
+      <fn fn-type="other" id="fn17">
+        <label>17</label>
+        <p>Emenda N<sup>o</sup> 20 ao Projeto N<sup>o</sup> 2.745, de 1965.</p>
+      </fn>
+      <fn fn-type="other" id="fn18">
+        <label>18</label>
+        <p>Conforme idade e faixas etárias disponíveis nos Censos de 1940, 1950 e 1960.</p>
+      </fn>
+      <fn fn-type="other" id="fn19">
+        <label>19</label>
+        <p>São elas: Ivette Vargas PTB-SP; Nita Costa PTB-BA e Necy Novaes PTB-BA.</p>
+      </fn>
+      <fn fn-type="other" id="fn20">
+        <label>20</label>
+        <p>Para facilitar a consulta, optamos por usar esta fonte em lugar dos DANC. Todas as citações usadas foram confrontadas com o original.</p>
+      </fn>
+      <fn fn-type="other" id="fn21">
+        <label>21</label>
+        <p>Ver, por exemplo, <xref ref-type="bibr" rid="B11">Kojève (2014)</xref>.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>

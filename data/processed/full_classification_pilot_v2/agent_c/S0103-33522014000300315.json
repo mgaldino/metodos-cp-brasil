@@ -1,0 +1,57 @@
+{
+  "pid": "S0103-33522014000300315",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "3615a20582a50c6f0db4abb1da050cf24a8fecf8ace0f8564c0dba1895c33941",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "law_origin_and_proponent",
+        "variable_description": "Origem, partido, estado e região dos proponentes das leis"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "criminal_policy_outputs",
+        "variable_description": "Leis de segurança pública e justiça criminal aprovadas"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 84,
+    "sample_size_quote": "A seguir, apresento os dados coletados nesta pesquisa de acordo com algumas variáveis que serão apresentadas em relação às 84 leis aprovadas e transformadas em leis ordinárias.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo constrói banco de leis aprovadas entre 1989 e 2006 e apresenta análise descritiva por variáveis legislativas. É quantitativo descritivo, sem regressão ou teste estatístico."
+  },
+  "raw_response_path": null
+}

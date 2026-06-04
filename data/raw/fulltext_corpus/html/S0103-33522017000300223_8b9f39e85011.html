@@ -1,0 +1,2810 @@
+
+<!DOCTYPE html>
+
+
+  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML" > <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="pt-BR"        xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang="pt-BR"               xmlns:mml="http://www.w3.org/1998/Math/MathML"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" xmlns:mml="http://www.w3.org/1998/Math/MathML"> <!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title> Brasil - 
+Simulações de Monte Carlo no ensino de Ciência Política
+ 
+          &lt;b&gt;Simulações de Monte Carlo no ensino de Ciência Política&lt;/b&gt;
+           </title>
+
+    
+  
+<!-- social share tags -->
+<meta property="og:url" content="https://www.scielo.br/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?lang=pt"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="
+          &lt;b&gt;Simulações de Monte Carlo no ensino de Ciência Política&lt;/b&gt;
+          "/>
+<meta property="og:description" content="Resumo Ensinar como mecanismos causais ou modelos estatísticos funcionam nem sempre é algo..."/>
+<meta property="og:image" content="https://www.scielo.br/media/images/rbcpol_glogo.gif"/>
+<!-- social share tags -->
+
+
+
+    <meta name="citation_author" content="Meireles, Fernando"></meta>
+    <meta name="citation_author" content="Silva, Denisson"></meta>
+    <meta name="citation_author" content="Correa, Filipe"></meta>
+    <meta name="citation_journal_title" content="Revista Brasileira de Ciência Política"></meta>
+<meta name="citation_journal_abbrev" content="Rev. Bras. Ciênc. Polít."></meta>
+<meta name="citation_journal_abbrev" content="Rev. bras. ciênc. polít."></meta>
+<meta name="citation_publisher" content="Universidade de Brasília. Instituto de Ciência Política"></meta>
+<meta name="citation_number" content="24"></meta>
+<meta name="citation_pdf_url" content="https://www.scielo.br/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?lang=pt&amp;format=pdf"></meta>
+<meta name="citation_xml_url" content="https://www.scielo.br/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?format=xml&amp;lang=pt"></meta>
+<meta name="citation_firstpage" content="223"></meta>
+    <meta name="citation_lastpage" content="254"></meta>
+    <meta name="citation_fulltext_world_readable" content=""></meta>
+
+
+<meta name="citation_issn" content="0103-3352"></meta>
+<meta name="citation_issn" content="2178-4884"></meta>
+
+    <meta name="citation_title" content="
+          &lt;b&gt;Simulações de Monte Carlo no ensino de Ciência Política&lt;/b&gt;
+          "></meta>
+    <meta name="citation_language" content="pt"></meta>
+
+<meta name="citation_abstract" content="Resumo Ensinar como mecanismos causais ou modelos estatísticos funcionam nem sempre é algo simples, especialmente quando estes não podem ser facilmente exemplificados. O objetivo deste artigo é mostrar como Simulações de Monte Carlo (SMC) podem ser usadas para superar dificuldades como estas. Após fazermos uma breve introdução ao método, mostramos como utilizá-lo, a fim de ilustrar fenômenos de difícil mensuração ou conceitos abstratos; além disso, também mostramos como ele pode ser empregado para explicar intuitivamente a influência das violações de pressupostos sobre os resultados de alguns modelos estatísticos frequentemente utilizados na Ciência Política. Por fim, oferecemos um passo a passo para reproduzir nossos exemplos utilizando o software R, além de um simples aplicativo virtual (Shiny app) com estes exemplos, de modo a ser adaptado para uso em sala de aula."></meta>
+<meta name="citation_article_type" content="research-article"></meta>
+<meta name="citation_publication_date" content="2017"></meta>
+<meta name="citation_keywords" content="método de Monte Carlo"></meta><meta name="citation_keywords" content="Ciência Política"></meta><meta name="citation_keywords" content="metodologia política"></meta>
+
+
+    <link rel="icon" href="/static/img/favicon.ico" />
+    
+    <link href="/static/css/bootstrap.css?v=1.1.30" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <!-- CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit -->
+<div class="widget widget-Lockss widget-instance-IssueBrowseByYear_Lockss">
+
+    <input class="at-locks-messaging" type="hidden"
+        value="LOCKSS system has permission to collect, preserve, and serve this Archival Unit" />
+
+    <input class="at-clockss-messaging" type="hidden"
+        value="CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit" />
+
+</div>
+
+    
+    <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKLVK7B5B6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKLVK7B5B6');
+      </script>
+      <!-- End Google Analytics -->
+    
+
+    
+    <script src="https://darkvisitors.com/tracker.js?project_key=c7366feb-7ba9-4f3d-a536-9bdca1bee170"></script>
+    
+
+     
+  <link rel="stylesheet" href="/static/css/article.css?v=1.1.30" type="text/css" async/>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" async />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" async />
+
+
+  </head>
+  <body class="journal article" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
+    <a name="top"></a>
+
+    
+
+  
+
+
+<style>
+
+    .articleTxt{
+        top: -16px;
+    }
+
+    .scielo__border-top{
+      border-top: 1px solid #ccc !important;
+    }
+
+    @media (max-width: 575.98px) {
+      
+      .articleCtt > .container{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .articleCtt .articleTxt{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+    
+    }
+
+    @media (min-width: 768px){
+      
+      .scielo__truncate{
+        display: block;
+        max-width: 285px;
+      }
+
+    }
+
+</style>
+
+<header class="scielo__shadow-2 position-relative top-0 start-0 end-0 z-3 scielo__shadow-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-sm-1 col-md-2 d-print-none">
+                
+
+
+<details class="scielo__accessibleMenu" id="scieloMainMenu">
+  <summary
+    id="scieloMainMenuSummary"
+    aria-controls="scieloMainMenuNav">
+    <span class="menu-icon" aria-hidden="true"></span>
+    <span>Menu</span>
+  </summary>
+
+  <nav
+    id="scieloMainMenuNav"
+    aria-labelledby="scieloMainMenuSummary">
+    <ul>
+      <li class="logo"><a href="/" title="Ir para a página inicial da coleção: Brasil" aria-label="Página inicial da coleção Brasil"
+          ><div class="scielo__logo-scielo--small" aria-hidden="true"></div></a></li>
+      <li>
+        <a
+          href="/"
+          aria-label="Acessar site da coleção Brasil">
+          <strong>Brasil</strong>
+        </a>
+        <ul>
+          <li>
+            <a href="/journals/alpha?status=current" class="tab_link">
+              Lista alfabética de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="/journals/thematic?status=current" class="tab_link">
+              Lista temática de periódicos
+            </a>
+          </li>
+          <li>
+            <a href="//search.scielo.org/?q=*&lang=pt&filter[in][]=scl">
+              Busca
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://analytics.scielo.org/?collection=scl">
+              Métricas
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about/">
+              Sobre o SciELO Brasil
+            </a>
+          </li>
+          <li>
+            <a href="/about/#contact">
+              Contatos
+            </a>
+          </li>
+          <li>
+            <a href="#" id="floatingBtnErrorHamburguerMenu" class="floatingBtnErrorHamburguerMenu">
+              Reportar erro
+            </a>
+          </li>
+
+          
+        </ul>
+      </li>
+
+      <li>
+        <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org">
+          <strong>SciELO.org - Rede SciELO</strong>
+          <span class="visually-hidden"> (abre em nova aba)</span>
+        </a>
+        <ul>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org">
+              Coleções nacionais e temáticas
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org/pt/periodicos/listar-por-ordem-alfabetica/">
+              Lista alfabética de periódicos
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org/pt/periodicos/listar-por-assunto/">
+              Lista de periódicos por assunto
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//search.scielo.org/">
+              Busca
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="http://analytics.scielo.org">
+              Métricas
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org/pt/sobre-o-scielo/acesso-via-oai-e-rss/">
+              Acesso OAI e RSS
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org/pt/sobre-o-scielo/">
+              Sobre a Rede SciELO
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="//www.scielo.org/pt/sobre-o-scielo/contato/">
+              Contatos
+              <span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        
+          <a target="_blank" rel="noopener noreferrer" href="//blog.scielo.org">
+        
+            <strong>Blog SciELO em Perspectiva</strong>
+            <span class="visually-hidden"> (abre em nova aba)</span>
+          </a>
+      </li>
+    </ul>
+  </nav>
+</details>
+
+<script>
+  (function () {
+    const details = document.getElementById('scieloMainMenu');
+    if (!details) return;
+
+    const summary = document.getElementById('scieloMainMenuSummary');
+    if (!summary) return;
+
+    document.addEventListener('click', function (event) {
+      if (!details.contains(event.target) && details.open) {
+        details.open = false;
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && details.open) {
+        details.open = false;
+        summary.focus();
+      }
+    });
+  })();
+</script>
+            </div>
+
+            <div class="col-6"><a
+                        href="/"
+                        title="Ir para a homepage da coleção: Brasil"
+                        aria-label="Ir para a homepage da coleção: Brasil"
+                    >
+                        <div class="scielo__logo-scielo-collection my-1 ms-4">
+                            <small id="collectionNameInternal">Brasil</small>
+                        </div>
+                    </a></div>
+
+            <div class="col">
+                <div class="language mt-3">
+                  
+<div class="scielo__language">
+  <div class="dropdown">
+    <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--left dropdown-toggle mb-0 float-end mt-1" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="material-icons-outlined">language</span>
+      
+
+        
+          <span class="d-lg-none">pt_BR</span>
+          <span class="d-none d-lg-block">Português</span>
+        
+
+      
+
+        
+
+      
+
+        
+
+      
+  
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+
+      
+    
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/en/" lang="en">English</a></li>
+        
+
+      
+    
+        
+        <li><a class="dropdown-item" href="/set_locale/es/" lang="es">Español</a></li>
+        
+
+      
+    
+    </ul>
+  </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center scielo__border-top">
+
+              <div class="btn-group align-items-stretch my-3 w-auto">
+                <span
+                  id="journalTitleHeader"
+                  class="d-flex align-items-center justify-content-start rounded-start px-3 bg-white text-start user-select-auto"
+                >
+                  Revista Brasileira de Ciência Política
+                </span>
+
+                <button
+                  type="button"
+                  class="btn btn-secondary dropdown-toggle dropdown-toggle-split rounded mb-0"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  aria-label="Mostrar opções do periódico: Revista Brasileira de Ciência Política"
+                  aria-describedby="journalTitleHeader">
+                  <span class="visually-hidden">Mostrar opções</span>
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a
+                      href="/j/rbcpol/"
+                      class="dropdown-item"
+                      aria-label="Acessar página do periódico: Revista Brasileira de Ciência Política"
+                    >
+                      
+                        <img
+                          src="/media/images/rbcpol_glogo.gif"
+                          class="image"
+                          alt=""
+                          style="max-width:100%;" />
+                      
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+
+                  
+                    <li>
+                      <a
+                        href="http://submission.scielo.br/index.php/rbcpol/login"
+                        class="dropdown-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span class="material-icons-outlined" aria-hidden="true">launch</span>
+                        Submissão de manuscritos
+                      </a>
+                    </li>
+                  
+
+                  <li>
+                    <a href="/journal/rbcpol/about/#about" class="dropdown-item">
+                      <span class="material-icons-outlined" aria-hidden="true">info</span>
+                      Sobre o periódico
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/journal/rbcpol/about/#item2" class="dropdown-item">
+                      <span class="material-icons-outlined" aria-hidden="true">help_outline</span>
+                      Política editorial
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/journal/rbcpol/about/#editors" class="dropdown-item">
+                      <span class="material-icons-outlined" aria-hidden="true">people</span>
+                      Corpo Editorial
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/journal/rbcpol/about/#instructions" class="dropdown-item">
+                      <span class="material-icons-outlined" aria-hidden="true">help_outline</span>
+                      Instruções aos autores
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/journal/rbcpol/about/#contact" class="dropdown-item">
+                      <span class="material-icons-outlined" aria-hidden="true">email</span>
+                      Contato
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="http://analytics.scielo.org/?journal=0103-3352&collection=scl" class="dropdown-item">
+                      <span class="material-icons-outlined" aria-hidden="true">show_chart</span>
+                      Métricas
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+</header>
+
+  <!--- removido da interface --->
+  
+
+  <main id="content">
+
+    
+
+    <!-- Exibe para todos dispositivos menos mobile -->
+<section class="levelMenu d-none d-md-block">
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+
+        <div class="btn-group mt-1" role="group" aria-label="Navegação do artigo">
+          <!-- Home (ícone only) -->
+          <a
+            href="/j/rbcpol/"
+            class="btn scielo__btn-with-icon--only mb-0"
+            aria-label="Página inicial do periódico"
+          >
+            <span class="material-icons-outlined" aria-hidden="true">home</span>
+          </a>
+
+          
+          <a
+            href="/j/rbcpol/i/2017.n24/"
+            class="btn mb-0"
+          >
+            Sumário
+          </a>
+
+          
+          
+            <a
+                href="/j/rbcpol/a/zVpCh9nNv8Nphd6bHqqtj9j/?lang=pt"
+                class="btn scielo__btn-with-icon--left mb-0 pe-md-2"
+                aria-label="Artigo anterior"
+              >
+            
+                <span class="material-icons-outlined" aria-hidden="true">navigate_before</span>
+                <span class="d-none d-xl-block">Anterior</span>
+              </a>
+
+          
+          <a
+            href="#"
+            class="btn group disabled mb-0"
+            aria-current="page"
+            aria-disabled="true"
+            tabindex="-1"
+          >
+            Atual
+          </a>
+
+          
+          <a
+                href="/j/rbcpol/a/4nKzNyVCxVVMYVTLVkWqh7d/?lang=pt"
+                class="btn scielo__btn-with-icon--right mb-0 ps-md-2"
+                aria-label="Próximo artigo"
+              >
+                <span class="d-none d-xl-block">Seguinte</span>
+                <span class="material-icons-outlined" aria-hidden="true">navigate_next</span>
+              </a>
+
+        </div>
+      </div>
+
+      <div class="col d-md-none d-lg-block">
+        <div class="btn-group mt-1" role="group" aria-label="Ações do artigo">
+          
+
+<div class="btn-group">
+  <button id="btnGroupDropLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+    Resumo
+    
+      
+    
+      
+    
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropLanguage">
+    
+      <li>
+          
+              <a href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/abstract/?lang=pt" class="dropdown-item">
+                Resumo 
+                
+                  (Português)
+                
+              </a>
+          
+      <li>
+    
+      <li>
+          
+              <a href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/abstract/?lang=en" class="dropdown-item">
+                Resumo 
+                
+                  (Inglês)
+                
+              </a>
+          
+      <li>
+    
+  </ul>
+</div>
+
+
+          
+
+
+    <div class="btn-group">
+      <button id="btnGroupDropTextLanguage" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false">
+        Texto
+        
+                  
+            
+              (PT)
+            
+          
+        
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="btnGroupDropTextLanguage">
+        
+        <li>
+          
+            <!-- página de texto -->
+            <a href="#" class="current dropdown-item"> 
+                Texto
+                
+                  (Português)
+                
+            </a>
+        
+        </li>
+        
+      </ul>
+    </div>
+
+  
+
+
+
+                    
+           
+          <div class="btn-group">
+            <button id="btnGroupDropPDF" type="button" class="btn btn-secondary dropdown-toggle mb-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              PDF
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropPDF">
+              
+                <li>
+                  <a target='_blank' href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?format=pdf&amp;lang=pt" class="dropdown-item">
+                    
+                      Download PDF (Português)
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+          
+          
+          
+          
+          
+        </div>
+      </div>
+
+      <div class="col d-none d-md-block d-lg-none">
+        <div class="dropdown mt-1 float-end">
+          <button
+            id="btnGroupDropContentDesktop"
+            class="btn btn-secondary dropdown-toggle mb-0 scielo__btn-with-icon--left"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            type="button"
+          >
+            <span class="material-icons-outlined" aria-hidden="true">article</span>
+            <strong>Conteúdo:</strong>
+
+            <!--resumo-->
+            
+              
+                
+              
+                
+              
+            
+
+            <!--texto-->
+            
+              
+                
+                  
+                    Texto (PT)
+                  
+                
+              
+            
+          </button>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropContentDesktop">
+            <!--resumo-->
+            
+              
+                <li>
+                  
+                    <a
+                      href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/abstract/?lang=pt"
+                      class="dropdown-item"
+                    >
+                      Resumo 
+                      
+                        (Português)
+                      
+                    </a>
+                  
+                </li>
+              
+                <li>
+                  
+                    <a
+                      href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/abstract/?lang=en"
+                      class="dropdown-item"
+                    >
+                      Resumo 
+                      
+                        (Inglês)
+                      
+                    </a>
+                  
+                </li>
+              
+            
+
+            <!--texto-->
+            
+              
+                <li>
+                  
+                    <!-- página de texto -->
+                    <a href="#" class="current dropdown-item" aria-current="page">
+                      Texto
+                      
+                        (Português)
+                      
+                    </a>
+                  
+                </li>
+              
+            
+
+            <!--PDF-->
+            
+              
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?format=pdf&amp;lang=pt"
+                    class="dropdown-item"
+                  >
+                    
+                      Download PDF (Português)
+                    
+                    <span class="visually-hidden"> (abre em nova aba)</span>
+                  </a>
+                </li>
+              
+            
+
+            <!--PDF REDCUBE-->
+            
+
+            <!--ePDF-->
+            
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-1">
+        <!-- share -->
+         <!-- share -->
+ <div class="dropdown">
+  <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0 float-end" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="material-icons-outlined">share</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_whatsapp">Whatsapp</a></div>
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_bluesky">BlueSky</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_mastodon">Mastodon</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_facebook">Facebook</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_dd" href="https://www.addtoany.com/share">Mais</a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- AddToAny -->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Exibe somente no mobile -->
+<section class="levelMenu levelMenu-xs d-block d-md-none d-lg-none" style="padding-bottom:110px;">
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <div class="btn-group w-100 --btn-group-nav-mobile" role="group" aria-label="Navegação do artigo">
+
+          <a
+            href="/j/rbcpol/"
+            class="btn scielo__btn-with-icon--only mb-0"
+            aria-label="Página inicial do periódico"
+          >
+            <span class="material-icons-outlined" aria-hidden="true">home</span>
+          </a>
+
+          <a
+            href="/j/rbcpol/i/2017.n24/"
+            class="btn mb-0"
+          >
+            Sumário
+          </a>
+
+          <div class="btn-group" role="group">
+              <!-- share -->
+               <!-- share -->
+ <div class="dropdown">
+  <button type="button" class="btn btn-sm btn-secondary scielo__btn-with-icon--only dropdown-toggle mb-0 float-end" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="material-icons-outlined">share</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_whatsapp">Whatsapp</a></div>
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_bluesky">BlueSky</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_mastodon">Mastodon</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_button_facebook">Facebook</a></div> 
+    </li>
+    <li>
+      <div class="a2a_kit a2a_kit_size_24"><a class="d-flex gap-2 dropdown-item a2a_dd" href="https://www.addtoany.com/share">Mais</a></div>
+    </li>
+  </ul>
+</div>
+
+<!-- AddToAny -->
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        
+
+          <div class="dropdown mt-1">
+            <button
+              id="btnGroupDropAbstractLanguage"
+              type="button"
+              class="btn btn-secondary dropdown-toggle mb-0"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-haspopup="menu"
+            >
+              Resumo
+              
+                
+              
+                
+              
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropAbstractLanguage">
+              
+                <li>
+                  
+                    <a
+                      href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/abstract/?lang=pt"
+                      class="dropdown-item"
+                    >
+                      Resumo 
+                      
+                        (Português)
+                      
+                    </a>
+                  
+                </li>
+              
+                <li>
+                  
+                    <a
+                      href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/abstract/?lang=en"
+                      class="dropdown-item"
+                    >
+                      Resumo 
+                      
+                        (Inglês)
+                      
+                    </a>
+                  
+                </li>
+              
+            </ul>
+          </div>
+
+        
+      </div>
+
+      <div class="col-4">
+        
+          <div class="dropdown mt-1">
+            <button
+              id="btnGroupDropArticleTextLanguage"
+              type="button"
+              class="btn btn-secondary dropdown-toggle mb-0"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-haspopup="menu"
+            >
+              Texto
+              
+                
+                  
+                    (PT)
+                  
+                
+              
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDropArticleTextLanguage">
+              
+                <li>
+                  
+                    <a href="#" class="current dropdown-item" aria-current="page">
+                      Texto
+                      
+                        (Português)
+                      
+                    </a>
+                  
+                </li>
+              
+            </ul>
+          </div>
+        
+      </div>
+
+      <div class="col-4">
+
+        
+
+          <div class="dropdown float-end mt-1">
+            <button
+              id="btnGroupDropArticlePDF"
+              type="button"
+              class="btn btn-secondary dropdown-toggle mb-0"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              data-bs-display="static"
+            >
+              PDF
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="btnGroupDropArticlePDF">
+              
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?format=pdf&amp;lang=pt"
+                    class="dropdown-item"
+                  >
+                    
+                      Download PDF (Português)
+                    
+                    <span class="visually-hidden"> (abre em nova aba)</span>
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+
+        
+
+        
+
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- PID: S0103-33522017000300223 -->
+      <!-- Verificando se é versão HTML ou XML -->
+      
+        
+          <div id="standalonearticle">
+<section class="articleCtt"><div class="container"><div class="articleTxt">
+<div class="articleBadge-editionMeta-doi-copyLink">
+<span class="_articleBadge">Artigos</span><span class="_separator"> • </span><span class="_editionMeta">Rev. Bras. Ciênc. Polít.  
+                (24)
+            <span class="_separator"> • </span>Dez 2017</span><span class="_separator"> • </span><span class="group-doi"></span>
+</div>
+<h1 class="article-title">
+<img alt="Open-access" class="logo-open-access" data-bs-toggle="tooltip" src="https://ds.scielo.org/img/logo-open-access.svg" data-original-title="by-nc 4.0 "> 
+          <b>Simulações de Monte Carlo no ensino de Ciência Política</b>
+          <span class="ref footnote"><sup class="xref"><a href="#fn1_ref" name="xref_fn1" data-ref="
+        1 
+    
+        Uma versão preliminar deste artigo beneficiou-se de valiosas sugestões de Dawisson Belém Lopes e demais participantes do Grupo de Trabalho (GT) de Ensino e Pesquisa do X Encontro da Associação Brasileira de Ciência Política (ABCP), em Belo Horizonte. Agradecemos também aos pareceristas anônimos da Revista Brasileira de Ciência Política pelas críticas e sugestões, que contribuíram para melhorar substantivamente esta versão final. O código para replicação dos resultados reportados pode ser encontrado em: &lt;https://github.com/meirelesff/monte_carlo_rbcp&gt;. Versões interativas virtuais com os exemplos usados também pode ser encontrada em: &lt;http://denissonsilva.com/simulacao&gt;.
+      ">
+            1
+          </a></sup></span>
+        <a id="shorten" href="#" class="short-link"><span class="sci-ico-link"></span></a>
+</h1>
+<h2 class="article-title">Monte Carlo simulations in the teaching of Political Science</h2>
+<div class="articleMeta"></div>
+<div class="scielo__contribGroup">
+<a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalTutors">Autoria</a><a href="" class="btn btn-secondary btn-sm outlineFadeLink" data-bs-toggle="modal" data-bs-target="#ModalScimago">SCIMAGO INSTITUTIONS RANKINGS</a>
+</div>
+<div class="row">
+<nav class="col-12 col-md-4 col-lg-3"><ul class="articleMenu list-group mt-4"></ul></nav><div class="col-sm-12 col-md-8 col-lg-9"><article id="articleText"><div class="articleSection articleSection--resumo" data-anchor="Resumo">
+<a name="articleSection0"></a><h2 class="h5">Resumo</h2>
+<p>Ensinar como mecanismos causais ou modelos estatísticos funcionam nem sempre é algo simples, especialmente quando estes não podem ser facilmente exemplificados. O objetivo deste artigo é mostrar como Simulações de Monte Carlo (SMC) podem ser usadas para superar dificuldades como estas. Após fazermos uma breve introdução ao método, mostramos como utilizá-lo, a fim de ilustrar fenômenos de difícil mensuração ou conceitos abstratos; além disso, também mostramos como ele pode ser empregado para explicar intuitivamente a influência das violações de pressupostos sobre os resultados de alguns modelos estatísticos frequentemente utilizados na Ciência Política. Por fim, oferecemos um passo a passo para reproduzir nossos exemplos utilizando o <i>software R</i>, além de um simples aplicativo virtual (Shiny app) com estes exemplos, de modo a ser adaptado para uso em sala de aula.</p>
+<p><strong>Palavras-chave:</strong><br>método de Monte Carlo; Ciência Política; metodologia política</p>
+</div>
+<div class="articleSection articleSection--abstract" data-anchor="Abstract">
+<a name="articleSection0"></a><h2 class="h5">Abstract</h2>
+<p>Teaching how causal mechanisms or statistical models work is often a difficult endeavor, even more so when there are no obvious ways to exemplify what is being taught. In this article, we show how Monte Carlo Simulations (SMC) can be employed in Political Science classes to overcome these problems. After a brief introduction to the method, we discuss practical application of simulations that can be used to shed light on abstract concepts and phenomena that are hard to measure. Additionally, we give examples of how simulations help to explain intuitively what consequences the misuse of statistical models might entail. Finally, we also provide step-by-step instructions to reproduce our examples using <i>R</i> and a web application (Shiny app) that can be easily adapted for teaching purposes.</p>
+<p><strong>Keywords:</strong><br>Monte Carlo methods; Political Science; political methodology</p>
+</div>
+<div class="articleSection" data-anchor="Text">
+      <h2 class="h5">Introdução</h2>
+      <p>Ensinar como certas teorias ou modelos estatísticos funcionam nem sempre é algo simples, especialmente quando estes não podem ser facilmente exemplificados. Este é o caso de várias aulas de metodologia, em que o professor vê-se na difícil tarefa de explicar de forma clara por que certas ferramentas são adequadas em algumas situações, e não em outras, ou por que o uso inadequado de uma técnica produz resultados inválidos. Também é o caso de discussões em que fenômenos abstratos e variáveis de difícil mensuração, como ideologia e preferências, são objetos de análise. Embora pareçam bastante específicas, situações como estas são recorrentes em aulas de Ciências Sociais e cursos afins, ainda que não exista consenso, ou sequer literatura específica, sobre estes problemas na perspectiva do ensino de Ciência Política no Brasil - o que apenas ajuda a reforçar o diagnóstico traçado há mais de dez anos por <span class="ref"><span class="xref xrefblue"><a href="#B30_ref" data-ref="SOARES, G. A. D. O calcanhar metodológico da Ciência Política no Brasil.Sociologia, Problemas e Práticas, n. 48, p. 27-52, 2005.">Soares (2005</a></span></span>) sobre o calcanhar metodológico da Ciência Política brasileira.<span class="ref footnote"><sup class="xref"><a href="#fn2_ref" name="xref_fn2" data-ref="
+        2 
+    
+        Exceções, que tratam do ensino de métodos para a Ciência Política, podem ser encontrados em Barberia, Godoy e Barboza (2014b), Figueiredo Filho e Silva Jr. (2010), Figueiredo Filho, Silva Jr. e Rocha (2012), Figueiredo Filho et al. (2013) e Silva e Guarnieri (2014). Para um panorama recente sobre o ensino de métodos, ver Barberia, Godoy e Barboza (2014a).
+      ">2</a></sup></span>
+			</p>
+      <p>Neste artigo, procuramos contribuir para esta ainda incipiente literatura, oferecendo um método simples para lidar com problemas como os relatados anteriormente. Nosso objetivo é mostrar como Simulações de Monte Carlo (SMC, daqui para frente) podem ser adaptadas como recurso didático para ilustrar conteúdos complexos e/ou abstratos. O principal aspecto desta abordagem, conforme argumentamos na próxima seção, é a possibilidade que ela nos oferece de simular amostras de acordo com um Processo Gerador de Dados (PGD) controlado, ou seja, de criar mundos artificiais totalmente manipuláveis pelos usuários. Em vez de nos levar a pensar principalmente no modelo estatístico que deve ser aplicado para cada tipo de dado, as SMC invertem essa perspectiva, colocando em primeiro lugar o exame dos mecanismos que produzem determinado fenômeno de acordo com alguma expectativa teórica. Essa inversão de perspectiva é o que torna intuitivo o aprendizado metodológico por meio de SMC (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. Journal of Political Science Education, v. 11, n. 1, p. 94-107, 2015.">Carsey e Harden, 2015</a></span></span>).</p>
+      <p>Após oferecermos um breve passo a passo de como planejar uma simulação e apresentar alguns critérios para julgar sua adequação e qualidade, ilustramos o potencial da abordagem com dois exemplos adaptados para uso em sala de aula. Primeiro, apresentamos uma simulação de um processo legislativo básico, em que os votos dos legisladores em cada votação são gerados aleatoriamente e as regras de maioria necessária para aprovação e as preferências dos legisladores podem ser modificadas previamente. Por meio deste simples exemplo, os alunos aprendem de uma maneira visual como pequenas modificações nas regras do processo legislativo, ou na polarização ideológica de um congresso, podem provocar problemas de paralisia decisória. De modo geral, discutimos também como este exemplo permite ilustrar uma vantagem na aplicação didática das SMC: possibilitar uma compreensão mais concreta de aspectos normalmente difíceis de serem isolados ou observados no mundo real (<span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="MOONEY, C. Z. Monte Carlo simulation. Thousand Oaks: Sage Publications, 1997.">Mooney, 1997</a></span></span>).</p>
+      <p>No segundo exemplo, mostramos como empregar o método para explicar intuitivamente a influência das violações de pressupostos sobre os resultados de um dos modelos estatísticos mais empregados na Ciência Política: a regressão linear por Mínimos Quadrados Ordinários (MQO). Como alguns alunos frequentemente sentem dificuldade ao estudar estatística, ou sentem-se intimidados pela matemática envolvida na formalização dos modelos, argumentamos que uma forma de superar estas dificuldades é oferecer uma intuição de como funciona o modelo em questão em situações hipotéticas. Para isso, a título de exemplo, simulamos duas variáveis estabelecendo vários graus de correlação entre si, e criamos outra variável dependente a partir destas; em seguida, mostramos como a omissão de uma daquelas variáveis constitutivas enviesa as estimativas de modelos lineares de acordo com a correlação entre o termo omitido e o incluído (ou seja, quanto maior a correlação, maior o viés na estimativa), algo central nos debates metodológicos nas Ciências Sociais (<span class="ref"><span class="xref xrefblue"><a href="#B1_ref" data-ref="ANGRIST, J. D.; PISCHKE, J. Mostly harmless econometrics: an empiricist's companion. Princeton: Princeton University Press, 2008.">Angrist e Pischke, 2008</a></span></span>). Seguindo estas ilustrações, discutimos essas aplicações e oferecemos algumas ilustrações mais aplicadas de SMC para a pesquisa, o que amplia o potencial de aplicação da ferramenta. Por fim, apresentamos onde e como encontrar o código usado aqui com comentários, a fim de que seja possível reproduzir nossos exemplos utilizando um <i>software</i> livre para computação estatística, o R,<span class="ref footnote"><sup class="xref"><a href="#fn3_ref" name="xref_fn3" data-ref="
+        3 
+    
+        O R é um ambiente de programação estatístico, e pode ser baixado de forma gratuita pela internet.
+      ">3</a></sup></span> além de um aplicativo virtual de simples manuseio - Shiny app -, que pode ser adaptado para uso em sala de aula.</p>
+      <p>Dessa forma, nossa expectativa com este artigo é auxiliar principalmente docentes na apresentação em sala de aula de conteúdos complexos e/ou abstratos de forma mais intuitiva. Adicionalmente, esperamos realçar duas das principais vantagens do uso de SMC como ferramenta didática, que discutimos na conclusão deste artigo: de um lado, o uso de simulações permite reduzir o tempo gasto pelo professor com a discussão conceitual; de outro, os alunos conseguem assimilar melhor o conhecimento requerido na área, além de aprenderem como desenhar suas próprias simulações, sejam elas didáticas, sejam aplicadas à pesquisa (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. Journal of Political Science Education, v. 11, n. 1, p. 94-107, 2015.">Carsey e Harden, 2015</a></span></span>). Dito de outro modo, nosso objetivo central é oferecer uma ferramenta simples para auxiliar na formação de estudantes e pesquisadores em Ciência Política. Também na conclusão, retomamos este ponto para discutir a ainda pouca disponibilidade de técnicas de ensino na disciplina, o que ressalta a importância da nossa contribuição e a dificuldade de testar comparativamente a eficácia de cada uma.<span class="ref footnote"><sup class="xref"><a href="#fn4_ref" name="xref_fn4" data-ref="
+        4 
+    
+        Agradecemos a um dos pareceristas anônimos pela sugestão de melhor elaborar esses pontos.
+      ">4</a></sup></span>
+			</p>
+      <p>Antes de adentrar propriamente na apresentação dos aspectos técnicos da SMC e na sua aplicação à Ciência Política, é importante destacar que o seu uso com o objetivo de facilitar o processo de ensino-aprendizagem já é explorado por outras áreas do conhecimento técnico-científico: na Química, para ensino de luminescência, cinética (<span class="ref"><span class="xref xrefblue"><a href="#B33_ref" data-ref="WINNISCHOFER, H. et al. Simulação Monte Carlo no ensino de luminescência e cinética de decaimento de estados excitados. Química Nova, v. 33, n. 1, p. 225-228, 2010.">Winnischofer <i>et al.</i>, 2010</a></span></span>); na Metrologia, para avaliação de incerteza na medição (<span class="ref"><span class="xref xrefblue"><a href="#B10_ref" data-ref="DONATELLI, G. D.; KONRATH, A. C. Simulação de Monte Carlo na avaliação de incertezas de medição. Revista de Ciência &amp;Tecnologia, v. 13, n. 25/26, p. 5-15, 2005.">Donatelli e Konrath, 2005</a></span></span>); simulação de eventos discretos para o ensino de Engenharia de Produção (<span class="ref"><span class="xref xrefblue"><a href="#B23_ref" data-ref="MOLINA, C. E. C.; MARINS, F. A. S.; MONTEVECHI, J. A. B. Proposta de utilização da simulação a eventos discretos no ensino da engenharia de produção. Revista P&amp;D em Engenharia de Produção, v. 8, n. 1, p. 11-15, 2010.">Molina, Marins e Montevechi, 2010</a></span></span>); na Física, para o ensino de mecanismo de transferência de calor (<span class="ref"><span class="xref xrefblue"><a href="#B11_ref" data-ref="DIONISIO, G.; SPALDING, L. E. S. Método computacional de Monte Carlo adaptado como recurso didático para o estudo dos mecanismos de transferência de calor. In: SIMPÓSIO NACIONAL DE ENSINO DE CIÊNCIA E TECNOLOGIA, 4., 2014, Ponta Grossa. Disponível em: &lt;Disponível em: http://sinect.com.br/anais2014/anais2014/artigos/ensino-de-fisica/01408122365.pdf
+					&gt;. Acesso em: 14 jun. 2016.">Dionisio e Spalding, 2014</a></span></span>). Esses são alguns exemplos da variedade de usos da SMC para o ensino de teoria e conceitos abstratos, que mostram que a técnica já é usada de forma consistente há algum tempo no ensino de várias ciências. Nas próximas seções vamos explorar essa ferramenta para o ensino de Ciência Política e para o ensino de técnicas quantitativas de análise de dados como MQO.</p>
+    
+      <h2 class="h5">Monte Carlo: uma breve introdução</h2>
+      <p>Segundo uma definição de manual, SMC é um processo em que são criadas <i>N</i> variáveis aleatórias com o objetivo de examinar suas propriedades de forma agregada (<span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="MOONEY, C. Z. Monte Carlo simulation. Thousand Oaks: Sage Publications, 1997.">Mooney, 1997</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B25_ref" data-ref="PRADO, D. Teoria das filas e da simulação. 2. ed. Belo Horizonte: Editora de Desenvolvimento Gerencial, 1999.">Prado, 1999</a></span></span>). Em termos mais claros, o método consiste em simular repetidas amostras aleatórias segundo algum tipo de distribuição pré-especificada (isto é, um PGD), para que, em seguida, seja possível analisar conjuntamente o resultado obtido a partir de cada uma destas amostras. </p>
+      <p>Um simples jogo de cara ou coroa exemplifica esse tipo de simulação: a distribuição teórica da variável de interesse - resultado do lançamento de uma moeda - é binomial, isto é, só podemos obter um resultado discreto de um universo de dois resultados possíveis após o lançamento de uma moeda não viciada - cara ou coroa. Neste caso, poderíamos lançar a mesma moeda 100 vezes (100 simulações) e registrar o resultado do lançamento. Depois, poderíamos calcular algum resultado de interesse; por exemplo, a probabilidade de o resultado de um lançamento qualquer ter sido cara. Embora simples, este exercício ajuda-nos a entender a principal característica de uma SMC: a geração de amostras aleatórias (em nosso caso, do lançamento de moedas) repetidas várias vezes segundo algum modelo de probabilidade e a análise posterior dos resultados dos eventos de interesse.</p>
+      <p>Em vez de coletar dados, formular uma hipótese e testá-la, portanto, as simulações permitem-nos gerar dados estipulando como eles devem se comportar. Podemos, por exemplo, simular um determinado fenômeno, como os votos de um partido, ou como os resultados agregados variam conforme alteramos o PGD (como o partido concentra seus votos, qual a probabilidade de uma moeda retornar cara, ou qual o grau de associação entre duas ou mais variáveis).</p>
+      <p>Por conta da possibilidade de controlar o número de simulações e as características das variáveis simuladas, uma das potencialidades do método é justamente emular um experimento em seu formato tradicional. Ao repetir o processo de geração de dados e utilizar aleatoriedade para investigar como pequenas variações alteram ou não um resultado, é possível examinar como pequenas mudanças na implementação de uma simulação afetam seus resultados (<span class="ref"><span class="xref xrefblue"><a href="#B3_ref" data-ref="AXELROD, R. Advancing the art of simulation in the social sciences. In: CONTE, R.; HEGSELMANN, R.; TERNA, P. (Eds.). Simulating social phenomena. Heidelberg: Springer, 1997.">Axelrod, 1997</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="MOONEY, C. Z. Monte Carlo simulation. Thousand Oaks: Sage Publications, 1997.">Mooney, 1997</a></span></span>). Estes experimentos ideais servem justamente para investigar questões que, de outro modo, seriam difíceis de serem respondidas empiricamente devido à necessidade de uma massiva coleta de dados que correspondam às situações possíveis de ocorrência de determinado fenômeno, além de permitirem uma ampla gama de aplicações, como testes de modelos estatísticos, testes de hipóteses, entre outros. Como diz Axelrod (1997, p. 24) em seu artigo seminal sobre simulações nas Ciências Sociais, “<i>simulation is a way of doing thought experiments. While the assumptions may be simple, the consequences may not be at all obvious</i>”. Ao utilizarmos SMC, portanto, podemos examinar uma série de questões que, de outro modo, seriam difíceis de serem examinadas somente a partir da investigação empírica.</p>
+      <p>Substantivamente, a ideia de fazer várias simulações e analisar seus resultados baseia-se em um teorema bastante conhecido no campo da inferência estatística clássica: o teorema do limite central (<span class="ref"><span class="xref xrefblue"><a href="#B17_ref" data-ref="GRINSTEAD, C.; SNELL, J. Introduction to probability. Rhode Island: American Mathematical Society, 2012.">Grinstead e Snell, 2012</a></span></span>). Dito de forma condensada, este teorema propõe que, se gerarmos um número suficientemente grande de amostras aleatórias e calcularmos alguma estatística a partir delas (média, mediana etc.), o valor médio destas estatísticas indicará o valor real desse parâmetro na população. Um exemplo muito simples ajuda a clarificar esse ponto: podemos sortear dez pessoas dentro da população total do Brasil e mensurar a altura média da população a partir desta amostra. Basicamente, o teorema do limite central nos diz que, se repetirmos esse procedimento várias vezes, a média dos resultados de todas as médias amostrais convergirá para o valor real da média de altura no Brasil - mesmo que dez indivíduos seja, de modo geral, um número muito pequeno. </p>
+      <p>O gráfico 1 ilustra o exemplo anterior, em que estipulamos que a distribuição da altura da população brasileira segue uma distribuição normal, com média de 170 cm e desvio-padrão de 15 cm; a partir destes valores, simulamos 1.000 amostras contendo dez pessoas e calculamos a média de altura destas amostras; por fim, criamos um histograma desta distribuição para verificar os resultados, que, como pode ser visto, estão todos ao redor da média estipulada. Como ficará claro na próxima seção, este método pode ser generalizado para inúmeras outras situações, inclusive muito mais complexas.</p>
+      <p>
+        <div class="row fig" id="f01">
+<a name="f01"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf01"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/7ad5a2f25d3a41a00d9d00156ef5e36111e25937.jpg" aria-describedby="descFigf01" alt="miniatura da Gráfico 1"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Gráfico 1</strong></strong><br>
+            Simulação da média de altura da população brasileira (1.000 amostras de dez indivíduos)
+          <br>
+</div>
+</div>
+      </p>
+    
+      <h2 class="h5">Ingredientes para construir uma SMC</h2>
+      <p>Antes de nos determos nas aplicações de SMC para o ensino de Ciência Política, é preciso compreender como uma simulação é construída. De acordo com <span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. Journal of Political Science Education, v. 11, n. 1, p. 94-107, 2015.">Carsey e Harden (2015</a></span></span>) e <span class="ref"><span class="xref xrefblue"><a href="#B24_ref" data-ref="MOONEY, C. Z. Monte Carlo simulation. Thousand Oaks: Sage Publications, 1997.">Mooney (1997</a></span></span>), toda simulação tem três componentes,<span class="ref footnote"><sup class="xref"><a href="#fn5_ref" name="xref_fn5" data-ref="
+        5 
+    
+        Na verdade, tanto Carsey e Harden (2015) quanto Mooney (1997) reportam cinco itens, mas dois deles podem ser condensados sem perda de generalidade. 
+      ">5</a></sup></span> ou ingredientes, básicos: 1) um processo gerador de dados (PGD); 2) a simulação de <i>N</i> amostras a partir deste processo; e 3) a análise dos resultados agregados - e, sendo o caso, a redefinição do PGD e consequente repetição do processo. Discutimos esses aspectos em ordem, mostrando, etapa por etapa, como o exemplo anterior foi construído sobre a altura média da população brasileira.</p>
+      
+        <h3 class="h5">Passo 1 - Definindo um PGD</h3>
+        <p>Um PGD nada mais é do que a forma como definimos como um fenômeno será gerado. Em estudos eleitorais, por exemplo, poderíamos dizer que a votação de um candidato pode ser expressa da seguinte forma:</p>
+        <p>
+          <div class="row formula" id="ee01">
+<a name="e01"></a><div class="col-md-12"><div class="formula-container">
+            <img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/a2a214d3903fe8b470bcb496e151c7011bf65cca.png">
+          </div></div>
+</div>
+        </p>
+        <p>Simplificadamente, esse modelo pode ser pensado como uma regressão linear por mínimos quadrados, em que as variáveis à direita são os fatores que acreditamos influir na votação de um candidato <i>i</i>. Em uma SMC, precisamos definir previamente esse processo, e, a partir dele, simular as amostras. Um candidato pode ter qualidades pessoais igual a 9, em um indicador sintético hipotético que varie segundo uma escala de 0 a 10, e gastar R$ 10 mil em sua campanha. Essas informações, consideradas de acordo com os parâmetros do modelo que definirmos, lhe renderá <i>Y</i>
+ <sub><i>i</i></sub> votos. Dependendo de como construirmos o PGD, podemos estabelecer que cada ponto a mais no indicador de qualidades pessoais gera, em média, 1.000 votos (<i>β</i>
+ <sub><i>1</i></sub> = 1.000), e que cada real a mais gasto na campanha gera dez votos (<i>β</i>
+ <sub><i>2</i></sub> = 10). Assim, nosso candidato hipotético teria (1.000 * 9) + (10 * 10.000) = 109.000 votos. A partir disso, podemos simular diversos outros candidatos, com qualidades pessoais e gastos de campanhas gerados aleatoriamente a partir de alguma distribuição teórica de probabilidades - como a normal, por exemplo.</p>
+        <p>No caso do exemplo oferecido na seção anterior, sobre a altura média dos brasileiros, nosso PGD é bastante simples: especificamos uma média de altura fictícia da população brasileira (170 cm) e seu desvio-padrão (15 cm). Nossos dois parâmetros de simulação, neste caso, são essas duas estatísticas, que, em conjunto, indicam que estipulamos a distribuição de altura dos brasileiros como seguindo uma distribuição normal (variável contínua), em que as alturas das pessoas variam de forma simetricamente decrescente em torno da média de 170 cm - que é exatamente o que o gráfico 1 reporta. De qualquer modo, cabe reforçar que este PGD que estipulamos é completamente modificável, significando que podemos estipular quaisquer valores de altura média e desvio-padrão na população. Parte da força de SMC reside justamente nessa possibilidade de poder alterar completamente o PGD de acordo com as necessidades da investigação.</p>
+        <p>Uma das principais vantagens desse método, portanto, é forçar o pesquisador a pensar de modo detido em como um fenômeno é gerado, isto é, deixar de pensar no modelo estatístico usado para testar uma hipótese, e, em vez de procurar entender como a natureza produz determinado fenômeno, procurar a melhor ferramenta para analisá-lo (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. Journal of Political Science Education, v. 11, n. 1, p. 94-107, 2015.">Carsey e Harden, 2015</a></span></span>). De forma semelhante, esse modo de analisar um fenômeno simplifica o entendimento dos modelos de hipóteses, já que permite entender como mínimas alterações no PGD alteram os resultados obtidos.</p>
+      
+      
+        <h3 class="h5">Passo 2 - Simulando amostras aleatórias</h3>
+        <p>O segundo passo em uma SMC é a geração de um número suficientemente grande de amostras a partir do PGD definido no passo 1. Aqui, o objetivo é extrair um número de amostras aleatórias que nos permitam analisar os resultados agregados com precisão. Neste sentido, o número de amostras simuladas é o componente central dessa etapa: por um lado, se forem simuladas poucas amostras, teremos maiores dificuldades de distinguir o que é acerto do que é erro aleatório (poder estatístico); por outro lado, simular muitas amostras normalmente consome bastante tempo e recursos de processamento. Com os processadores que temos hoje e as facilidades de alguns <i>softwares</i> e linguagens de programação, este último aspecto normalmente não é um problema em simulações mais simples, que envolvem calcular alguma estatística básica, como a média; porém, quando se trata da estimação de modelos mais complexos, este é um aspecto que deve ser levado em consideração. Contudo, como regra geral, considera-se normalmente que algo entre 1.000 e 10.000 simulações seja suficiente para a maioria dos problemas - no exemplo utilizado na seção anterior, geramos 1.000 amostras de dez pessoas.</p>
+      
+      
+        <h3 class="h5">Passo 3 - Analisando os resultados</h3>
+        <p>Nesta etapa, o objetivo é analisar as amostras geradas anteriormente de forma agregada. Enquanto examinamos o resultado de uma regressão multivariada por meio de uma série de estatísticas (coeficientes, <i>p</i>-valores, ajuste, resíduos) em uma simulação, normalmente estamos interessados em uma única estatística: ou a distribuição dos coeficientes de uma das variáveis em um modelo, ou a distribuição dos <i>p</i>-valores, ou a distribuição dos ajustes etc. Isto significa que, em geral, o foco das simulações está em saber como determinada estatística comporta-se quando é aplicada a uma amostra aleatória gerada a partir de um dado PGD. De todo modo, nada impede que seja analisada mais de uma estatística dos dados gerados, embora isto dependa, essencialmente, do objetivo a ser alcançado com a simulação.</p>
+        <p>No exemplo sobre a altura da população brasileira, estávamos interessados em saber se, na média, 1.000 amostras de dez pessoas seriam capazes de nos indicar a média real da altura da população como um todo. Conforme é possível verificar, algumas amostras apresentaram valores menores ou maiores do que o esperado - algo normal, dado que uma amostra com dez indivíduos é pequena em relação ao tamanho da população, e qualquer ocorrência de um valor extremo em relação ao parâmetro esperado afeta o resultado da estatística; ao ampliar o número de amostras, contudo, o valor médio obtido de todas elas se aproxima daquele estipulado de antemão, 170 cm.</p>
+        <p>O quadro 1 resume as etapas à formulação de uma SMC discutidas até aqui. </p>
+        <div>
+          <div class="row table" id="t1">
+<a name="t1"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Quadro 1</strong></strong><br>
+              Etapas na construção de uma simulação
+            <br>
+</div>
+</div>
+        </div>
+      
+      
+        <h3 class="h5">Programando SMC</h3>
+        <p>Com todas essas etapas concluídas - definição do PGD, estipulação do número e da estatística examinada nas amostras -, é necessário programar a simulação. Até o início dos anos 1990, utilizar computadores nem sempre era a opção principal neste aspecto. Para fazer um dos estudos mais citados com uso de simulação nas Ciências Sociais até hoje, <span class="ref"><span class="xref xrefblue"><a href="#B28_ref" data-ref="SCHELLING, T. C. Models of segregation. The American Economic Review, v. 59, n. 2, p. 488-493, 1969.">Schelling (1969</a></span></span>) utilizou apenas moedas para gerar suas amostras aleatórias. Hoje, a principal opção recomendada pelos livros-texto sobre simulações - incluídas as simulações baseadas em agentes - é a solução computacional por meio de linguagens de programação. Como o foco deste artigo está em mostrar o potencial didático de SMC, não nos deteremos na discussão sobre o melhor <i>software</i> ou linguagem de programação para este objetivo. Nossa opção neste artigo é pelo ambiente de programação <i>R</i>, que tem cada vez mais usuários na Ciência Política e é uma linguagem que apresenta uma série de vantagens para aplicação em análises estatísticas.</p>
+        <p>Assim como outras linguagens de programação, o <i>R</i> dispõe de funções de controle de fluxo e algumas funções nativas para gerar variáveis aleatórias que são indispensáveis em uma simulação. Entre as mais utilizadas, <i>rnorm</i> e <i>rbinom</i> podem ser empregadas para criar variáveis aleatórias contínuas com distribuição normal e binomial, respectivamente, e permitem ao usuário especificar algumas de suas propriedades, como média, desvio-padrão e probabilidade de ocorrência de um evento. Outra característica que torna vantajoso o uso do <i>R</i> para simulações é a vetorização, que permite realizar uma série de operações de forma mais rápida do que em outras linguagens de programação. Estas e outras características do <i>R</i>, bem como uma introdução à linguagem e ao ambiente de programação (em português), são apresentadas detalhadamente em <span class="ref"><span class="xref xrefblue"><a href="#B2_ref" data-ref="AQUINO, J. A. R para cientistas sociais. Ilhéus: Editus, 2014.">Aquino (2014</a></span></span>).</p>
+      
+      
+        <h3 class="h5">Como avaliar se uma simulação é bem-sucedida?</h3>
+        <p>Tratando do método de modo mais amplo, <span class="ref"><span class="xref xrefblue"><a href="#B3_ref" data-ref="AXELROD, R. Advancing the art of simulation in the social sciences. In: CONTE, R.; HEGSELMANN, R.; TERNA, P. (Eds.). Simulating social phenomena. Heidelberg: Springer, 1997.">Axelrod (1997</a></span></span>) sugere três critérios para avaliarmos uma simulação: 1) validade; 2) usabilidade; e 3) extensibilidade. O primeiro aspecto diz respeito ao que podemos entender como validade interna da simulação: ela realmente dá conta de simular o fenômeno ou amostras de interesse? Ou, de outro modo, algum erro não detectado na construção do modelo (ou erro de implementação) influíram nos resultados obtidos? Caso algum procedimento técnico na programação de uma simulação contenha erros, estes possivelmente gerarão problemas de validade.</p>
+        <p>O segundo aspecto é a usabilidade da simulação. Quando construímos um modelo, ele deve ser compreensível, fácil de ser reproduzido e adaptado por outros usuários. Inclusive, parte do uso de simulações como recurso didático passa pela replicação de alguns modelos mais simples, para que, posteriormente, sejam adaptados ou reformulados pelos usuários. Portanto, na medida em que não é clara a implementação de uma simulação, ela traz prejuízos à usabilidade. Por fim, o terceiro item a ser avaliado é a extensibilidade, que diz respeito à capacidade de generalização e adaptação da simulação para aplicações em outras questões ou atividades.</p>
+      
+    
+      <h2 class="h5">Exemplos de SMC</h2>
+      <p>Nesta seção, ilustramos o potencial das SMC como recurso didático no ensino de Ciência Política, por meio de dois exemplos. O primeiro é mais substantivo, tratando de como alterações em procedimentos legislativos e nas preferências dos legisladores podem afetar drasticamente a quantidade de proposições que um congresso é capaz de aprovar. O segundo exemplo, de caráter metodológico, ilustra como violações dos pressupostos de uma regressão linear por mínimos quadrados podem enviesar as estimativas obtidas por meio dele. A ideia geral é mostrar que simulações podem ser usadas para ensinar conteúdos abstratos e complexos de forma fácil e intuitiva. Ou seja, em vez de passar aos alunos um guia de ferramentas estatísticas com recomendações sobre seus usos, ou um livro-texto repleto de definições conceituais, por meio de simulações, é possível perceber como pequenas mudanças institucionais podem produzir enormes efeitos agregados (primeiro exemplo), bem como visualizar as consequências práticas do uso inadequado de determinada técnica (segundo exemplo).</p>
+      
+        <h3 class="h5">Simulando um processo legislativo simples</h3>
+        <p>Embora pareça algo não problemático à primeira vista, aprovar uma lei em um congresso moderno, como os existentes em países democráticos, é um processo complexo (<span class="ref"><span class="xref xrefblue"><a href="#B9_ref" data-ref="COX, G. W. On the effects of legislative rules. Legislative Studies Quarterly, v. 25, n. 2, p. 169-192, 2000.">Cox, 2000</a></span></span>). Em primeiro lugar, porque normalmente existem diversas proposições aguardando para serem apreciadas - o que, já de saída, implica decidir coletivamente quando cada uma delas será votada. Em segundo lugar, porque os temas de cada votação devem ser discutidos pelos legisladores (ao menos em congressos minimamente democráticos), momento reservado para que se produza informação sobre suas consequências e discussões sobre seus potenciais benefícios, o que toma tempo. Por último, estas proposições são finalmente votadas; e, aqui também, a questão da maioria utilizada para aprová-la necessariamente pode influenciar o resultado final de cada votação.</p>
+        <p>Todos esses problemas coordenativos fazem parte do conhecimento comum na Ciência Política sobre como congressos funcionam e sobre como determinadas regras e instituições ajudam na superação deles. Em aulas de introdução ao tema, contudo, a discussão sobre esses pontos pode acabar não sendo tão clara, já que questões como preferências, funções de utilidade e efeitos das regras normalmente são abstratas o suficiente para produzir dúvidas em alguns alunos. Uma forma de contornar isto é utilizar o SMC para simular um processo legislativo, com um determinado número de legisladores e de proposições que são votadas por meio de diferentes regras. No caso, o exemplo que se segue trata apenas deste último aspecto, mas é fácil generalizá-lo para abarcar outros.</p>
+        <p>O primeiro passo aqui é criar nosso PGD a fim de simular um plenário. Conforme dito anteriormente, o que é necessário para isto é estipular quais variáveis entrarão na simulação e como elas serão distribuídas. Para esse exemplo, nossa unidade natural é o legislador, que, de forma simplificada, tem duas opções: votar <i>sim</i> ou <i>não</i>. Podemos definir um conjunto de legisladores (unidades) indexados por <i>i</i> que votam <i>j</i> proposições de forma binária (1 para <i>sim</i>, 0 para <i>não</i>). Deste modo, nossa variável de interesse assume uma distribuição binomial, e estabelecemos que a probabilidade de um legislador qualquer votar sim é 0.5.<span class="ref footnote"><sup class="xref"><a href="#fn6_ref" name="xref_fn6" data-ref="
+        6 
+    
+        Para um exemplo de simulação de processo legislativo em que os legisladores votam como se fosse um lançamento de moeda (probabilidade de votar sim igual a 0.5), ver Saiegh (2009).
+      ">6</a></sup></span>
+				</p>
+        <p>Para exemplificar como as maiorias requeridas para aprovação afetam a probabilidade de que uma proposição legislativa qualquer seja aceita, realizamos duas simulações: na primeira, empregamos o critério de unanimidade, segundo o qual só são aprovadas proposições endossadas por todos os legisladores no plenário; na segunda, utilizamos o critério de maioria simples, isto é, pelo qual 50% + 1 dos legisladores são suficientes para aprovar uma proposição. Em cada caso, 1.000 proposições são votadas por cinco legisladores. Abaixo, segue um resumo da simulação, de acordo com os passos discutidos anteriormente:</p>
+        <div>
+          <ol type="1">
+<li>
+              <p>PGD: cinco legisladores votam proposições de forma binária (sim ou não) com probabilidade de votar sim igual a 0.5;</p>
+            </li>
+<li>
+              <p>Número de simulações: 1.000 (para cada regra de maioria);</p>
+            </li>
+<li>
+              <p>Estatística de interesse: proporção de proposições aprovadas em cada regra de maioria (unanimidade ou maioria simples).</p>
+            </li>
+</ol>
+        </div>
+        <p>Os resultados desse exercício seguem no gráfico 2. De forma resumida, o efeito da regra de aprovação utilizada em um plenário em que os deputados decidem seus votos de forma aleatória é enorme: enquanto com regra majoritária quase metade das proposições votadas são aprovadas, em um legislativo que adota regra de unanimidade apenas uma ínfima parcela das proposições o são. Intuitivamente este resultado faz sentido, já que todos os legisladores individualmente possuem poder de veto, o que reduz drasticamente o espaço possível de mudanças no <i>status quo</i> (<span class="ref"><span class="xref xrefblue"><a href="#B32_ref" data-ref="TSEBELIS, G. Veto players: how political institutions work. Princeton: Princeton University Press , 2002.">Tsebelis, 2002</a></span></span>). </p>
+        <p>
+          <div class="row fig" id="f02">
+<a name="f02"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf02"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/bc999ca0bb8dab5abd1f679e517b8f1c8a719043.jpg" aria-describedby="descFigf02" alt="miniatura da Gráfico 2"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Gráfico 2</strong></strong><br>
+              Simulação de um processo legislativo com diferentes regras de maioria (1.000 votações com cinco legisladores)
+            <br>
+</div>
+</div>
+        </p>
+        <p>Embora esses resultados sejam extremos, como parte da aplicação é possível utilizar outras regras de maioria, proposições, legisladores e, inclusive, alterar as preferências destes legisladores, o que definiria de antemão a probabilidade de votarem de um modo ou de outro. Com as mesmas ferramentas, portanto, diversos aspectos de um processo legislativo podem ser explorados. Na sequência, ilustramos uma dessas variações do exemplo anterior: alterar a forma com que os legisladores votam, isto é, suas preferências.</p>
+        <p>Para essa simulação, adaptamos o modelo anterior em alguns pontos. Em primeiro lugar, mantendo a regra de maioria simples, incorporamos mais cinco legisladores à simulação, totalizando dez deles; além disso, distribuímos estes legisladores em dois grupos (isto é, partidos), cinco para cada. Em segundo lugar, alteramos a forma com que os legisladores de um mesmo partido votam: legisladores de um partido (o partido A, digamos) geralmente votam favoravelmente às proposições; legisladores do outro partido (o partido B, digamos), ao contrário, têm preferências geralmente contrárias às do partido A. Para complementar a simulação, também incorporamos variações na polarização destas preferências: em um caso, membros do partido A têm probabilidade 0.6 de votar favoravelmente qualquer matéria, enquanto os membros do partido B têm 0.4, o que dá uma diferença de preferências de 0.2; assim, variaremos essas distâncias de 0 (os dois partidos tendem a votar de igual maneira) até 1 (os dois partidos votam de forma diametralmente oposta). </p>
+        <p>O resumo dessa simulação consta a seguir. Note, também, que, com um número par de legisladores, uma proposição só é aprovada se ao menos metade mais um formar uma maioria - no caso de dois partidos com o mesmo número de legisladores, isto pode significar que ao menos um deles precisa desertar, ou seja, votar de forma contrária à preferência da maioria do seu partido.</p>
+        <div>
+          <ol type="1">
+<li>
+              <p>PGD: dez legisladores, cinco em cada partido, votam proposições de forma binária (sim ou não), e a probabilidade de que qualquer um destes vote sim é diferente em cada partido (a distância desta probabilidade entre partidos será manipulada de 0, quando os partidos têm a mesma preferência, até 1); </p>
+            </li>
+<li>
+              <p>Número de simulações: 10.000 (para cada intervalo na distância de preferências entre os partidos);</p>
+            </li>
+<li>
+              <p>Estatística de interesse: proporção de proposições aprovadas.</p>
+            </li>
+</ol>
+        </div>
+        <p>
+          <div class="row fig" id="f03">
+<a name="f03"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf03"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/09b19f944379280d8c7830fe96885ba2a6b80eec.jpg" aria-describedby="descFigf03" alt="miniatura da Gráfico 3"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Gráfico 3</strong></strong><br>
+              Simulação de um processo legislativo com regra de maioria simples e diferentes graus de polarização entre dois partidos
+            <br>
+</div>
+</div>
+        </p>
+        <p>Como dá para perceber a partir da visualização do gráfico 3, na maioria dos casos o grau de polarização entre dois partidos não chega a afetar a probabilidade de uma dada proposição ser aprovada em uma votação por maioria. Mas, a partir do ponto em que esta polarização atinge patamares extremos (quando ela é maior que 0.8 em uma escala de 0 a 1), a produtividade do legislativo cai subitamente. Ao menos para fins ilustrativos, isto mostra que nem sempre polarização ideológica é um problema em um processo legislativo: frequentemente, existe algum grau de manobra para que se aprove uma matéria. No caso do exemplo, em um congresso exatamente dividido entre dois partidos, inteiramente autônomo e ditado apenas pela ideologia dos seus membros, só um caso extremo de polarização provocaria uma paralisia decisória total. Nos demais cenários, ao menos algumas proposições sempre seriam aprovadas.</p>
+      
+      
+        <h3 class="h5">Simulando regressões lineares com variáveis omitidas</h3>
+        <p>Em nosso segundo exemplo, ilustramos como uma violação bastante comum no uso de modelos de regressão pode enviesar as estimativas obtidas por meio dele: o problema da variável omitida. Conforme alertam os manuais de metodologia (<span class="ref"><span class="xref xrefblue"><a href="#B1_ref" data-ref="ANGRIST, J. D.; PISCHKE, J. Mostly harmless econometrics: an empiricist's companion. Princeton: Princeton University Press, 2008.">Angrist e Pischke, 2008</a></span></span>), omitir uma variável correlacionada com o termo de erro gera diferentes graus de viés nos coeficientes de uma ou mais variáveis incluídas, embora a magnitude e o sentido deste viés normalmente não possam ser detectados de antemão. O problema com essa definição é a dificuldade de explicar a razão disto aos alunos. Variações da explicação, como dizer que outras variáveis absorvem o impacto da variável omitida ou derivar a prova formal de que a omissão tem potencial de enviesamento, nem sempre são particularmente úteis e facilmente assimiláveis. Como o foco de curso de Ciências Sociais e afins normalmente não está no treinamento formal requerido para compreender métodos quantitativos, SMC permitem-nos ilustrar, na prática e de forma gráfica, o que acontece quando um ou mais pressupostos da regressão são violados, contornado dificuldades de compreensão.</p>
+        <p>Para esse exemplo, aproveitamo-nos de um tipo muito simples de omissão de variável de um modelo linear, a fim de mostrar claramente esse efeito. Basicamente, o procedimento consiste em simular duas variáveis com algum grau de correlação entre elas, com o objetivo de gerar uma terceira variável, que servirá como variável dependente do modelo a ser estimado. Como as duas variáveis foram usadas para criar a dependente, necessariamente (de acordo com os pressupostos do modelo) servirão para explicar a variação desta. Contudo, ao omitirmos uma delas, as estimativas que obtivermos serão enviesadas.</p>
+        <p>O PGD nesse exemplo consiste no seguinte. Primeiro, criamos duas variáveis contínuas, <i>X</i> e <i>Z</i>, com distribuição normal e <i>N</i> = 100. Por definição, criamos estas duas variáveis com correlação de Pearson de 0.5. A partir destas duas variáveis, criamos uma variável dependente (<i>Y</i>) também contínua, segundo o modelo:</p>
+        <p>
+          <div class="row formula" id="ee2">
+<a name="e2"></a><div class="col-md-12"><div class="formula-container">
+            <img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/1987ede27e8f86aebc6a2ec38bf456550233c5ea.png">
+          </div></div>
+</div>
+        </p>
+        <p>onde <i>β</i>
+ <sub><i>0</i></sub> representa o intercepto do modelo (o valor que <i>Y</i>
+ <sub><i>i</i></sub> deve ter quando <i>X</i>
+ <sub><i>i</i></sub> e <i>Z</i>
+ <sub><i>i</i></sub> são iguais a 0), que definimos como igual a 1; <i>β</i>
+ <sub><i>1</i></sub> e <i>β</i>
+ <sub><i>2</i></sub> também foram estabelecidos como 1; e <i>ε</i>
+ <sub><i>i</i></sub> é um termo de erro com distribuição normal, média 0 e desvio-padrão de 1. Cada uma das simulações neste exercício, portanto, criará aleatoriamente três variáveis que, em conjunto, serão utilizadas para determinar o valor de <i>Y</i>
+ <sub><i>i</i></sub> . Nosso objetivo aqui, deste modo, é estimar um modelo linear para cada uma destas simulações apenas com a variável <i>X</i> como variável independente, isto é, omitindo <i>Z</i>. Neste exemplo, rodamos 1.000 simulações. O desenho desta simulação segue abaixo:</p>
+        <div>
+          <ol type="1">
+<li>
+              <p>PGD: três variáveis contínuas com distribuição normal, média 0 e desvio-padrão de 1; <i>X</i>
+ <sub><i>i</i></sub> e <i>Z</i>
+ <sub><i>i</i></sub> têm correlação de 0.5 entre elas; uma quarta variável é criada a partir das outras <i>Y</i>
+ <sub><i>i</i></sub> , e é igual a 1 + 1 * <i>X</i>
+ <sub><i>i</i></sub> + 1 * <i>Z</i>
+ <sub><i>i</i></sub> + <i>ε</i>
+ <sub><i>i</i></sub> ;</p>
+            </li>
+<li>
+              <p>Simulações: 1.000;</p>
+            </li>
+<li>
+              <p>Estatística de interesse: o coeficiente estimado da variável <i>X</i> quando <i>Z</i> é omitida.</p>
+            </li>
+</ol>
+        </div>
+        <p>Os resultados desse segundo exercício seguem no gráfico 4. Como é possível observar, nas regressões estimadas que não incluíram a variável <i>Z</i>, a estimativa média do coeficiente de <i>X</i> obtida ficou longe do valor estipulado para <i>β</i>
+ <sub><i>1</i></sub> de 1. Ao contrário, incluindo <i>Z</i> na especificação do modelo, o coeficiente aproxima-se, na média, do valor definido. Além disso, este exemplo fornece outra pista aos alunos sobre a direção e a magnitude do viés de variável omitida: tendo definido a correlação entre <i>X</i> e <i>Z</i> de 0,5, a estimativa média do efeito de <i>X</i> sobre <i>Y</i> quando omitimos <i>Z</i> foi 0.5 maior do que o esperado. A repetição da simulação com correlação entre <i>X</i> e <i>Z</i> de -0.5 e 0.3, como fizemos no gráfico 5, mostra que, também nestes casos, a correlação entre o termo omitido e o incluído tem impacto direto nas estimativas que obtemos ao estimar modelos lineares. Em resumo, o viés será de magnitude igual à correlação entre a variável omitida e a incluída.</p>
+        <p>
+          <div class="row fig" id="f04">
+<a name="f04"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf04"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/f8a940b7ee401424a685a70c22e00d350a56df34.jpg" aria-describedby="descFigf04" alt="miniatura da Gráfico 4"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Gráfico 4</strong></strong><br>
+              Simulação de viés de variável omitida (1.000 regressões)
+            <br>
+</div>
+</div>
+        </p>
+        <p>
+          <div class="row fig" id="f05">
+<a name="f05"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf05"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/e93cd0efd36065f2aefe4270e5fe79019837cef3.jpg" aria-describedby="descFigf05" alt="miniatura da Gráfico 5"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Gráfico 5</strong></strong><br>
+              Simulação de viés de variável omitida com diferentes níveis de correlação (1.000 regressões)
+            <br>
+</div>
+</div>
+        </p>
+        <p>Para ilustrar melhor esse ponto, podemos ir além e simular todos os graus possíveis de correção entre <i>X</i> e <i>Z</i>, o que vai de -1 a 1. O gráfico 6 realiza este exercício. Nele, cada ponto com linhas representa uma simulação de 1.000 regressões lineares com o termo <i>Z</i>, que é endógeno a <i>X</i>, omitido do modelo; a linha horizontal tracejada, por sua vez, representa o valor real de <i>X</i>, que é enviesado de acordo com o grau de correlação entre <i>X</i> e <i>Z</i>, conforme indicado no eixo X do gráfico. Novamente, fica claro que o grau de viés do estimador de <i>X</i> depende da correlação entre ele e <i>Z</i>: quando a correlação entre eles é negativa (lado esquerdo do gráfico), o modelo subestima o efeito de <i>X</i>; entretanto, quando a correlação entre o termo omitido e o incluído é positiva, o efeito é superestimado. Apenas no caso em que não existe correlação entre <i>X</i> e <i>Z</i>, no meio do eixo X, é que o efeito retornado não sofre de viés.</p>
+        <p>
+          <div class="row fig" id="f06">
+<a name="f06"></a><div class="col-md-4 col-sm-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf06"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/9bb42d98b8f442b2018bb9432851c88b03a1eb61.jpg" aria-describedby="descFigf06" alt="miniatura da Gráfico 6"><div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-md-8 col-sm-8">
+<strong><strong>Gráfico 6</strong></strong><br>
+              Simulação de viés de variável omitida com diferentes níveis de correlação (1.000 regressões para cada)
+            <br>
+</div>
+</div>
+        </p>
+        <p>De forma geral, esse exercício de simulação exemplifica, de forma gráfica, sem muitos detalhes, o efeito prático que a violação de um pressuposto de um modelo linear pode ter. Assim como no exemplo anterior, esta simulação também pode ser facilmente adaptada para examinar outras questões, como a inclusão de outras variáveis, uso de outros modelos e teste de outros pressupostos.</p>
+      
+      
+        <h3 class="h5">Outros exemplos da pesquisa em Ciência Política</h3>
+        <p>Embora nosso foco aqui recaia sobre o ensino de Ciência Política, aplicações derivadas de SMC vêm crescendo na pesquisa em Ciência Política (<span class="ref"><span class="xref xrefblue"><a href="#B6_ref" data-ref="CARROLL, R. et al. Measuring bias and uncertainty in DW-NOMINATE ideal point estimates via the parametric bootstrap.Political Analysis, v. 17, n. 3, p. 261-275, 2009.">Carroll <i>et al.</i>, 2009</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B7_ref" data-ref="CARTER, D. B.; SIGNORINO, C. S. Back to the future: modeling time dependence in binary data.Political Analysis , v. 18, n. 3, p. 271-292, 2010.">Carter e Signorino, 2010</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B21_ref" data-ref="KING, G. et al. Analyzing incomplete political science data: an alternative algorithm for multiple imputation. American Political Science Review, v. 95, n. 1, p. 49-69, 2001.">King <i>et al.</i>, 2001</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B20_ref" data-ref="KEELE, L.; KELLY, N. J. Dynamic models for dynamic theories: the ins and outs of lagged dependent variables.Political Analysis , v. 14, n. 2, p. 186-205, 2006.">Keele e Kelly, 2006</a></span></span>; Martin e Quinn, 2002; <span class="ref"><span class="xref xrefblue"><a href="#B19_ref" data-ref="JACKMAN, S. Estimation and inference via Bayesian simulation: an introduction to Markov chain Monte Carlo.American Journal of Political Science, v. 44, n. 2, p. 375-404, 2000.">Jackman, 2000</a></span></span>). Diferentemente dos exemplos que mostramos anteriormente, nestes casos geralmente utiliza-se simulação com objetivos mais concretos, tais como: testar a sensibilidade da especificação de um modelo (Carter e Signorino, 2010; Martin e Quinn, 2002; Quinn, 2004), estimar intervalos de confiança (Carroll <i>et al</i>., 2009), lidar com observações extremas, <i>missings</i> e <i>outliers</i> (King <i>et al.,</i> 2001), realizar testes não paramétricos (<span class="ref"><span class="xref xrefblue"><a href="#B18_ref" data-ref="GROSECLOSE, T. Testing committee composition hypotheses for the US Congress.The Journal of Politics, v. 56, n. 2, p. 440-458, 1994.">Groseclose, 1994</a></span></span>), entre outros. Por serem fáceis de serem operacionalizadas, estas aplicações podem ser empregadas complementarmente com finalidades didáticas, incentivando os alunos a replicarem, ou a desenvolverem, simulações para situações concretas de pesquisa. </p>
+        <p>O uso mais frequente do método envolve utilizar SMC para obter noção da incerteza de uma estimativa. Alguns testes ou modelos quantitativos frequentemente impossibilitam o cálculo paramétrico de intervalos de confiança, tipicamente em desenhos de pesquisa multiníveis ou hierárquicos, em que existem observações aninhadas em diferentes estratos ou grupos - seja pelo tamanho reduzido do <i>N</i> dentro dos grupos, seja pela relação hierarquizada das observações, ou, ainda, por causa de inadequação dos pressupostos necessários para estimar um dado modelo. Nestes casos, uma adaptação da lógica de SMC ajuda a corrigir esse problema. Basicamente, a solução para isto consiste em criar diversas subamostras da amostra original, de acordo com alguns parâmetros pré-especificados - geralmente, número e tamanho das amostras -, o que denominamos de <i>bootstrap</i> (<span class="ref"><span class="xref xrefblue"><a href="#B6_ref" data-ref="CARROLL, R. et al. Measuring bias and uncertainty in DW-NOMINATE ideal point estimates via the parametric bootstrap.Political Analysis, v. 17, n. 3, p. 261-275, 2009.">Carroll <i>et al.,</i> 2009</a></span></span>; <span class="ref"><span class="xref xrefblue"><a href="#B16_ref" data-ref="FREEDMAN, D. A. Statistical models: theory and practice. Cambridge: Cambridge University Press, 2009.">Freedman, 2009</a></span></span>).</p>
+        <p>Para mencionar um exemplo mais conhecido, <span class="ref"><span class="xref xrefblue"><a href="#B31_ref" data-ref="STOKES, S. C. et al. Brokers, voters, and clientelism: the puzzle of distributive politics. Cambridge: Cambridge University Press , 2013.">Stokes <i>et al.</i> (2013</a></span></span>) utilizam essa estratégia para estudar o clientelismo na Argentina a partir de dados de <i>survey</i>. Especificamente, os autores aplicaram um questionário em uma amostra representativa de políticos locais, estratificados em algumas regiões, para saber deles suas estratégias distributivas de campanha - entre outros, se eles distribuíam ou não incentivos seletivos aos seus eleitores, quais eleitores eles visavam, como monitoravam o voto deles. Em um segundo momento, foi criada uma amostra adicional de cabos eleitorais (<i>punteros</i>) indicados pelos próprios entrevistados. Como as respostas dadas por estes últimos tendem a ser correlacionadas com as dos políticos locais, simplesmente calcular intervalos de confiança como se esta fosse uma amostra simples ou estratificada poderia subestimar a incerteza das estimativas (Stokes <i>et al.,</i> 2013, p. 261-278). </p>
+        <p>Para contornar isto, <span class="ref"><span class="xref xrefblue"><a href="#B31_ref" data-ref="STOKES, S. C. et al. Brokers, voters, and clientelism: the puzzle of distributive politics. Cambridge: Cambridge University Press , 2013.">Stokes <i>et al.</i> (2013</a></span></span>) implementam um método não paramétrico de cálculo do intervalo de confiança que guarda semelhança com um SMC - o <i>bootstrap</i> (<span class="ref"><span class="xref xrefblue"><a href="#B16_ref" data-ref="FREEDMAN, D. A. Statistical models: theory and practice. Cambridge: Cambridge University Press, 2009.">Freedman, 2009</a></span></span>). Primeiro, foram sorteados <i>N</i> municípios (metade de todos os presentes na base) entre as regiões para compor um primeiro nível amostral; segundo, partindo desta amostra de municípios, alguns políticos locais foram sorteados dentro de cada município incluído na amostra; por fim, alguns cabos eleitorais dentro de cada <i>cluster</i> de políticos foram sorteados. No geral, portanto, cada amostra utilizada no <i>bootstrap</i> possui três estratos, ou <i>clusters</i>, e os elementos nos níveis menores só são incluídos na amostra se o estrato ao qual eles pertencem for sorteado em uma etapa prévia da composição da amostra. Repetindo este procedimento 1.000 vezes, as estimativas de incerteza de cada estatística de interesse foram calculadas - livres de qualquer pressuposto.</p>
+        <p>Exemplos como esse não se encaixam em um tipo clássico de SMC, já que não existe um PGD - afinal, os dados empregados, em todos os casos, são observacionais. Ainda assim, por fazer uso de repetidos sorteios de uma amostra, com número de observações e de simulações estipulados previamente, e da análise agregada dos resultados (no caso, a distribuição das estimativas em cada amostra sorteada), o processo não paramétrico de cálculo de intervalo de confiança, bem como o uso de simulações para testar a sensibilidade de um modelo ou método, partilham alguns princípios em comum com uma SMC. E, uma vez mais, técnicas como estas podem ser mais facilmente ensinadas e aplicadas quando partimos de uma simulação em um formato mais tradicional como base.</p>
+      
+      
+        <h3 class="h5">Código usado nos exemplos</h3>
+        <p>Os exemplos que oferecemos neste artigo são apenas algumas das possíveis aplicações de SMC no ensino de Ciência Política. De qualquer forma, eles podem servir como modelos mais gerais para a criação de outras aplicações. No exemplo do processo legislativo, por exemplo, outros tipos de regra de maioria podem ser utilizados para analisar seus efeitos sobre a produção legislativa, e, de forma semelhante, não é difícil adaptar esse exemplo para o funcionamento de comissões legislativas, em que um grupo menor de legisladores vota uma proposição antes de ela ir à votação no plenário. Já no exemplo sobre variável omitida, nada impede que se testem outros pressupostos de uma regressão linear, bem como de outros tipos de modelos. </p>
+        <p>Para facilitar a adoção de simulações como essas, o código para replicar nossos exemplos está disponível na internet, e pode ser adaptado para abarcar outras aplicações.<span class="ref footnote"><sup class="xref"><a href="#fn7_ref" name="xref_fn7" data-ref="
+        7 
+    
+        O website da aplicação virtual (Shiny app) contém os exemplos usados neste artigo, todos implementados de forma dinâmica, e estão disponíveis em: &lt;http://denissonsilva.com/simulacao&gt;.
+      ">7</a></sup></span> Além disso, também disponibilizamos um aplicativo virtual que já implementa todos os exemplos discutidos de forma simples e intuitiva: para usá-los, basta um navegador e conexão com a internet.</p>
+      
+    
+      <h2 class="h5">Conclusão</h2>
+      <p>Neste artigo, procuramos mostrar como a SMC pode ser usada em aulas de Ciência Política. Conforme os exemplos oferecidos procuraram mostrar, simulações tornam palpáveis conteúdos abstratos, permitindo aos alunos visualizar graficamente fenômenos complexos, a exemplo do funcionamento de um processo legislativo. Além disso, os alunos conseguem adquirir intuição sobre como funcionam modelos estatísticos e melhor compreensão sobre processos geradores de dados, conforme o exemplo sobre variáveis omitidas procurou mostrar. Nesse espaço final, também cabe discutir, além de algumas vantagens das simulações não abordadas anteriormente, dificuldades inerentes ao uso da técnica e do teste de técnicas didáticas na área de ensino de Ciência Política, de forma mais ampla.</p>
+      <p>Algo que merece destaque aqui é que não procuramos testar empiricamente os efeitos sobre o aprendizado do uso de simulações no ensino de Ciência Política. Na verdade, nosso esforço principal foi introduzir o uso de simulações como recurso didático para, então, discutir os detalhes técnicos de como implementá-las em salas de aula. Neste sentido, procuramos aumentar o repertório de técnicas de ensino na disciplina, chamando a atenção para algumas vantagens inerentes ao método: conforme discutimos, ele é visual, intuitivo, permite a participação ativa dos alunos e é totalmente adaptável. De qualquer forma, reconhecemos que este é apenas um primeiro passo em uma agenda de pesquisa sobre a eficácia de métodos e técnicas de ensino em Ciência Política no país - mas, para ela avançar, também é preciso lidar com diversas questões ainda pouco abordadas na literatura.</p>
+      <p>Uma delas é a carência de estudos na área. Diferentemente da tradição de outras disciplinas, como exemplificado na introdução, possuímos raríssimos trabalhos de sistematização de diferentes técnicas de ensino, bem como trabalhos que as testem empiricamente;<span class="ref footnote"><sup class="xref"><a href="#fn8_ref" name="xref_fn8" data-ref="
+        8 
+    
+        O trabalho de Barberia, Godoy e Barboza (2014a), já mencionado, constitui exceção.
+      ">8</a></sup></span> isto, claro, reflete em parte a pouca atenção que a área, como um todo, dedicava até pouco tempo ao ensino de métodos. Neste sentido, carecemos de um corpo suficientemente robusto de técnicas e modelos de ensino que nos permitam estudá-los comparativamente.</p>
+      <p>Contudo, apenas importar resultados empíricos dos efeitos de técnicas de ensino da literatura internacional pode não ser a solução para esse problema. Alunos de Ciência Política no Brasil possuem formações na graduação diferentes daquelas obtidas no exterior, geralmente com menor ênfase em matemática, estatística e programação; e com maior ênfase em filosofia e epistemologia. Isto implica que ferramentas que funcionam em outros contextos podem não funcionar aqui. Tanto pela nossa experiência usando simulações em sala de aula quanto pela experiência de outros pesquisadores (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. Journal of Political Science Education, v. 11, n. 1, p. 94-107, 2015.">Carsey e Harden, 2015</a></span></span>), consideramos que as SMC têm potencial de contornar o geralmente baixo grau de familiaridade de alunos das Ciências Sociais com formulações matemáticas e métodos quantitativos.</p>
+      <p>Realizar experimentos em sala de aula, em formatos semelhantes ao de experimentos de laboratório comuns na Ciência Política internacional (<span class="ref"><span class="xref xrefblue"><a href="#B8_ref" data-ref="CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. Journal of Political Science Education, v. 11, n. 1, p. 94-107, 2015.">Carsey e Harden, 2015</a></span></span>), também não é algo tão simples, tanto logística quanto eticamente, no Brasil. Os efeitos do tratamento (isto é, aplicar ou não uma determinada técnica de ensino em um grupo de alunos e não em outros) podem ter efeitos duradouros sobre suas trajetórias - efeitos frequentemente não antecipáveis. Turmas de graduação e pós-graduação, por sua vez, possuem poucos indivíduos, grades curriculares e composição diferentes umas das outras: é fácil perceber que alunos egressos de cursos de graduação em Ciência Política ou Políticas Públicas possuem treinamento diferente daquele recebido por alunos de Ciências Sociais ou Relações Internacionais, para ficar apenas com um exemplo. Tudo isto, em suma, dificulta o teste empírico de técnicas de ensino e a generalização dos seus resultados, e não podemos ignorar esses problemas se quisermos avançar nessa discussão.</p>
+      <p>Não queremos sugerir com isso simplesmente um abandono da avaliação de técnicas de ensino na Ciência Política, nem da área de ensino, apenas chamar a atenção para a existência de diversas questões não discutidas suficientemente sobre o tema. Deste ponto de vista, acreditamos serem válidos os esforços de desenvolvimento e adaptação de técnicas, de discussão sobre o funcionamento delas, e, por fim, o estudo comparado dos resultados de cada um, em um esforço para avaliar seus desempenhos. No nosso caso, retomando o que expusemos ao longo do texto, SMC enquadram-se nesse cenário como uma ferramenta de ensino adicional, com características potencialmente positivas para complementar, ou mesmo substituir, aulas expositivas tradicionais.</p>
+      <p>O uso de SMC em sala de aula pode ser entendido como um esforço para tornar o aprendizado mais dinâmico. Neste sentido, essas simulações guardam semelhanças com outros tipos de simulações, como jogos em sala de aula, que vêm sendo cada vez mais adotadas na Ciência Política (<span class="ref"><span class="xref xrefblue"><a href="#B15_ref" data-ref="FREDERKING, B. Simulations and student learning. Journal of Political Science Education , v. 1, n. 3, p. 385-393, 2005.">Frederking, 2005</a></span></span>). Exemplos destas vão desde jogos para simular transições democráticas, em que são atribuídos papéis aos alunos em uma negociação hipotética, até simulações de processos eleitorais. Porém, enquanto que, de forma geral, estas simulações ativas têm o potencial de engajar alunos ativamente no aprendizado, normalmente ocupam muito tempo e demandam um planejamento de aula bastante detalhado. Neste ponto, SMC representam um meio-termo entre uma aula tradicional expositiva e estas com simulações ativas, ou seja, ao mesmo tempo em que utilizam a ideia de criar um mundo fictício totalmente manipulável, SMC podem ser visualizadas graficamente, reproduzidas e adaptadas facilmente (especialmente quando programadas em linguagens como <i>R</i> ou <i>Python</i>). </p>
+      <p>Outra vantagem de SMC é que elas podem ser usadas em aulas de metodologia, em que a simples exposição do conteúdo, desprovida de exemplos, normalmente é pouco eficaz e extremamente exaustiva. Em vez de fazer um inventário de situações nas quais cada técnica estatística discutida deve ser aplicada, o uso de SMC põe o foco em desenvolver uma percepção visual sobre como cada uma destas técnicas funciona e sob quais pressupostos. Exercícios complementares, também baseados em simulações, podem então ser desenvolvidos e aplicados em sala de aula, permitindo aos alunos explorar outros exemplos e refazer cada simulação inúmeras vezes.</p>
+      <p>Como esperamos ter ficado claro a partir do que foi exposto, nosso objetivo principal foi incentivar o uso de novos métodos didáticos, e também sua aplicação na pesquisa. No mínimo, acreditamos que docentes podem complementar suas aulas com simulações; no limite, a depender de seus resultados, decidir dar maior ou menor espaço a ela. Chegando a este ponto, em que tenhamos experiências semelhantes em mais lugares e em diferentes momentos, será possível empreender uma avaliação mais detida da técnica - tanto do ponto de vista docente quanto dos discentes. Esperamos, enfim, que esse esforço ganhe terreno na Ciência Política e nas Ciências Sociais, de forma geral, para que, no futuro, seja possível analisar o impacto desta - e o de outras técnicas de aprendizagem de forma comparada.</p>
+    </div>
+<div class="articleSection articleSection--referências" data-anchor="Referências">
+<a name="articleSection0"></a><h2 class="h5">Referências</h2>
+<div class="row"><div class="col ref-list"><ul class="refList articleFootnotes">
+<li>
+<a class="" name="B1_ref"></a>ANGRIST, J. D.; PISCHKE, J. <i>Mostly harmless econometrics: an empiricist's companion</i> Princeton: Princeton University Press, 2008.</li>
+<li>
+<a class="" name="B2_ref"></a>AQUINO, J. A. <i>R para cientistas sociais</i> Ilhéus: Editus, 2014.</li>
+<li>
+<a class="" name="B3_ref"></a>AXELROD, R. Advancing the art of simulation in the social sciences. <i>In:</i> CONTE, R.; HEGSELMANN, R.; TERNA, P. (Eds.). <i>Simulating social phenomena</i> Heidelberg: Springer, 1997.</li>
+<li>
+<a class="" name="B4_ref"></a>BARBERIA, L. G.; GODOY, S. R.; BARBOZA, D. P. Novas perspectivas sobre o ‘calcanhar metodológico’: o ensino de métodos de pesquisa em Ciência Política no Brasil.<i>Revista Teoria &amp; Sociedade</i>, v. 22, n. 2, p. 156-184, 2014a.</li>
+<li>
+<a class="" name="B5_ref"></a>______; ______; ______. Inovação no ensino de métodos quantitativos em Ciência Política: aplicação de modelo baseado em atividades.<i>Agenda Política</i>, v. 2, n. 2, p. 152-179, 2014b.</li>
+<li>
+<a class="" name="B6_ref"></a>CARROLL, R. <i>et al</i> Measuring bias and uncertainty in DW-NOMINATE ideal point estimates via the parametric bootstrap.<i>Political Analysis</i>, v. 17, n. 3, p. 261-275, 2009.</li>
+<li>
+<a class="" name="B7_ref"></a>CARTER, D. B.; SIGNORINO, C. S. Back to the future: modeling time dependence in binary data.<i>Political Analysis</i> , v. 18, n. 3, p. 271-292, 2010.</li>
+<li>
+<a class="" name="B8_ref"></a>CARSEY, T. M.; HARDEN, J. J. Can you repeat that please? Using Monte Carlo simulation in graduate quantitative research methods classes. <i>Journal of Political Science Education</i>, v. 11, n. 1, p. 94-107, 2015.</li>
+<li>
+<a class="" name="B9_ref"></a>COX, G. W. On the effects of legislative rules. <i>Legislative Studies Quarterly</i>, v. 25, n. 2, p. 169-192, 2000.</li>
+<li>
+<a class="" name="B10_ref"></a>DONATELLI, G. D.; KONRATH, A. C. Simulação de Monte Carlo na avaliação de incertezas de medição. <i>Revista de Ciência &amp;Tecnologia</i>, v. 13, n. 25/26, p. 5-15, 2005.</li>
+<li>
+<a class="" name="B11_ref"></a>DIONISIO, G.; SPALDING, L. E. S. Método computacional de Monte Carlo adaptado como recurso didático para o estudo dos mecanismos de transferência de calor<i>. In:</i> SIMPÓSIO NACIONAL DE ENSINO DE CIÊNCIA E TECNOLOGIA, 4., 2014, Ponta Grossa. Disponível em: &lt;Disponível em: http://sinect.com.br/anais2014/anais2014/artigos/ensino-de-fisica/01408122365.pdf
+					&gt;. Acesso em: 14 jun. 2016.<br><a href="http://sinect.com.br/anais2014/anais2014/artigos/ensino-de-fisica/01408122365.pdf" target="_blank" aria-label="Acessar http://sinect.com.br/anais2014/anais2014/artigos/ensino-de-fisica/01408122365.pdf. Abre em nova aba. Recurso externo.">» http://sinect.com.br/anais2014/anais2014/artigos/ensino-de-fisica/01408122365.pdf</a>
+</li>
+<li>
+<a class="" name="B12_ref"></a>FIGUEIREDO FILHO, D. B. <i>et al</i> When is statistical significance not significant?<i>Brazilian Political Science Review</i>, v. 7, n. 1, p. 31-55, 2013.</li>
+<li>
+<a class="" name="B13_ref"></a>FIGUEIREDO FILHO, D. B.; SILVA JR., J. A. Visão além do alcance: uma introdução à análise fatorial.<i>Opinião Pública</i>, v. 16, n. 1, p. 160-185, 2010.</li>
+<li>
+<a class="" name="B14_ref"></a>FIGUEIREDO FILHO, D. B.; SILVA JR., J. A.; ROCHA, E. C. Classificando regimes políticos utilizando análise de conglomerados.<i>Opinião Pública</i> , v. 18, n. 1, p. 109-128, 2012.</li>
+<li>
+<a class="" name="B15_ref"></a>FREDERKING, B. Simulations and student learning. <i>Journal of Political Science Education</i> , v. 1, n. 3, p. 385-393, 2005.</li>
+<li>
+<a class="" name="B16_ref"></a>FREEDMAN, D. A. <i>Statistical models: theory and practice</i> Cambridge: Cambridge University Press, 2009.</li>
+<li>
+<a class="" name="B17_ref"></a>GRINSTEAD, C.; SNELL, J. <i>Introduction to probability</i> Rhode Island: American Mathematical Society, 2012.</li>
+<li>
+<a class="" name="B18_ref"></a>GROSECLOSE, T. Testing committee composition hypotheses for the US Congress.<i>The Journal of Politics</i>, v. 56, n. 2, p. 440-458, 1994.</li>
+<li>
+<a class="" name="B19_ref"></a>JACKMAN, S. Estimation and inference via Bayesian simulation: an introduction to Markov chain Monte Carlo.<i>American Journal of Political Science</i>, v. 44, n. 2, p. 375-404, 2000.</li>
+<li>
+<a class="" name="B20_ref"></a>KEELE, L.; KELLY, N. J. Dynamic models for dynamic theories: the ins and outs of lagged dependent variables.<i>Political Analysis</i> , v. 14, n. 2, p. 186-205, 2006.</li>
+<li>
+<a class="" name="B21_ref"></a>KING, G. <i>et al</i> Analyzing incomplete political science data: an alternative algorithm for multiple imputation. <i>American Political Science Review</i>, v. 95, n. 1, p. 49-69, 2001.</li>
+<li>
+<a class="" name="B22_ref"></a>MARTIN, A. D.; QUINN, K. M. Dynamic ideal point estimation via Markov chain Monte Carlo for the US Supreme Court, 1953-1999.<i>Political Analysis</i> , v. 10, n. 2, p. 134-153, 2000.</li>
+<li>
+<a class="" name="B23_ref"></a>MOLINA, C. E. C.; MARINS, F. A. S.; MONTEVECHI, J. A. B. Proposta de utilização da simulação a eventos discretos no ensino da engenharia de produção. <i>Revista P&amp;D em Engenharia de Produção</i>, v. 8, n. 1, p. 11-15, 2010.</li>
+<li>
+<a class="" name="B24_ref"></a>MOONEY, C. Z. <i>Monte Carlo simulation</i> Thousand Oaks: Sage Publications, 1997.</li>
+<li>
+<a class="" name="B25_ref"></a>PRADO, D. <i>Teoria das filas e da simulação</i> 2. ed. Belo Horizonte: Editora de Desenvolvimento Gerencial, 1999.</li>
+<li>
+<a class="" name="B26_ref"></a>QUINN, K. M. Bayesian factor analysis for mixed ordinal and continuous responses. <i>Political Analysis</i> , v. 12, n. 4, p. 338-353, 2004.</li>
+<li>
+<a class="" name="B27_ref"></a>SAIEGH, S. M. Political prowess or “Lady Luck”? Evaluating chief executives’ legislative success rates. <i>The Journal of Politics</i> , v. 71, n. 4, p. 1342-1356, 2009.</li>
+<li>
+<a class="" name="B28_ref"></a>SCHELLING, T. C. Models of segregation. <i>The American Economic Review</i>, v. 59, n. 2, p. 488-493, 1969.</li>
+<li>
+<a class="" name="B29_ref"></a>SILVA, G. P.; GUARNIERI, F. H. Comments on when is statistical significance not significant?<i>Brazilian Political Science Review</i> , v. 8, n. 2, p. 133-136, 2014.</li>
+<li>
+<a class="" name="B30_ref"></a>SOARES, G. A. D. O calcanhar metodológico da Ciência Política no Brasil.<i>Sociologia, Problemas e Práticas</i>, n. 48, p. 27-52, 2005.</li>
+<li>
+<a class="" name="B31_ref"></a>STOKES, S. C. <i>et al</i> <i>Brokers, voters, and clientelism: the puzzle of distributive politics</i> Cambridge: Cambridge University Press , 2013.</li>
+<li>
+<a class="" name="B32_ref"></a>TSEBELIS, G. <i>Veto players: how political institutions work</i> Princeton: Princeton University Press , 2002.</li>
+<li>
+<a class="" name="B33_ref"></a>WINNISCHOFER, H. <i>et al</i> Simulação Monte Carlo no ensino de luminescência e cinética de decaimento de estados excitados. <i>Química Nova</i>, v. 33, n. 1, p. 225-228, 2010.</li>
+</ul></div></div>
+</div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn1_ref"></a>
+        <span class="xref big">1</span>
+        <div>Uma versão preliminar deste artigo beneficiou-se de valiosas sugestões de Dawisson Belém Lopes e demais participantes do Grupo de Trabalho (GT) de Ensino e Pesquisa do X Encontro da Associação Brasileira de Ciência Política (ABCP), em Belo Horizonte. Agradecemos também aos pareceristas anônimos da Revista Brasileira de Ciência Política pelas críticas e sugestões, que contribuíram para melhorar substantivamente esta versão final. O código para replicação dos resultados reportados pode ser encontrado em: &lt;https://github.com/meirelesff/monte_carlo_rbcp&gt;. Versões interativas virtuais com os exemplos usados também pode ser encontrada em: &lt;http://denissonsilva.com/simulacao&gt;.</div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn2_ref"></a>
+        <span class="xref big">2</span>
+        <div>Exceções, que tratam do ensino de métodos para a Ciência Política, podem ser encontrados em Barberia, Godoy e Barboza (2014b), Figueiredo Filho e Silva Jr. (2010), Figueiredo Filho, Silva Jr. e Rocha (2012), Figueiredo Filho <i>et al.</i> (2013) e Silva e Guarnieri (2014). Para um panorama recente sobre o ensino de métodos, ver Barberia, Godoy e Barboza (2014a).</div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn3_ref"></a>
+        <span class="xref big">3</span>
+        <div>O <i>R</i> é um ambiente de programação estatístico, e pode ser baixado de forma gratuita pela internet.</div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn4_ref"></a>
+        <span class="xref big">4</span>
+        <div>Agradecemos a um dos pareceristas anônimos pela sugestão de melhor elaborar esses pontos.</div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn5_ref"></a>
+        <span class="xref big">5</span>
+        <div>Na verdade, tanto Carsey e Harden (2015) quanto Mooney (1997) reportam cinco itens, mas dois deles podem ser condensados sem perda de generalidade. </div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn6_ref"></a>
+        <span class="xref big">6</span>
+        <div>Para um exemplo de simulação de processo legislativo em que os legisladores votam como se fosse um lançamento de moeda (probabilidade de votar sim igual a 0.5), ver Saiegh (2009).</div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn7_ref"></a>
+        <span class="xref big">7</span>
+        <div>O <i>website</i> da aplicação virtual (Shiny app) contém os exemplos usados neste artigo, todos implementados de forma dinâmica, e estão disponíveis em: &lt;http://denissonsilva.com/simulacao&gt;.</div>
+      </li></ul></div></div></div>
+<div><div class="row"><div class="col"><ul class="refList articleFootnotes"><li>
+<a name="fn8_ref"></a>
+        <span class="xref big">8</span>
+        <div>O trabalho de Barberia, Godoy e Barboza (2014a), já mencionado, constitui exceção.</div>
+      </li></ul></div></div></div>
+<div class="articleSection articleSection--datas-de-publicação-" data-anchor="Datas de Publicação ">
+<a name="articleSection0"></a><h2 class="h5">Datas de Publicação </h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline"><li>
+<strong>Publicação nesta coleção</strong><br>Dez 2017</li></ul></div></div>
+</div>
+<div class="articleSection articleSection--histórico" data-anchor="Histórico">
+<a name="articleSection0"></a><h2 class="h5">Histórico</h2>
+<div class="row"><div class="col-md-12 col-sm-12"><ul class="articleTimeline">
+<li>
+<strong>Recebido</strong><br>13 Abr 2017</li>
+<li>
+<strong>Aceito</strong><br>30 Maio 2017</li>
+</ul></div></div>
+</div>
+<section class="documentLicense"><div class="container-license"><div class="row">
+<div class="col-sm-3 col-md-2"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" aria-label="Acessar informações da licença Creative Common - by-nc 4.0 . Abre em nova aba. Recurso externo."><img src="https://licensebuttons.net/l/by-nc/4.0//88x31.png" alt="Creative Common - by-nc 4.0 "></a></div>
+<div class="col-sm-9 col-md-10"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" aria-label="Acessar informações da licença Creative Common - by-nc 4.0 . Abre em nova aba. Recurso externo.">Este é um artigo publicado em acesso aberto sob uma licença Creative Commons</a></div>
+</div></div></section></article></div>
+</div>
+</div></div></section><div class="modal fade ModalDefault ModalTutors" id="ModalTutors" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Autoria</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<style>
+            .author-card {
+                border-bottom: 1px solid #ccc;
+                padding: 1rem 0;
+            }
+            .author-card:last-child {
+                border-bottom: 0px;
+            }
+            .author-name {
+                font-weight: 600;
+            }
+            
+            .orcid-button {
+                padding-left: 2.5rem;
+            }
+            .modal-body {
+                padding-bottom: 3rem;
+            }
+            .orcid-button::before {
+                content: "";
+                position: absolute;
+                background-image: url(https://ds.scielo.org/img/logo-orcid.svg);
+                background-repeat: no-repeat;
+                background-size: 1.5em auto;
+                background-position: .5em center;
+                display: block;
+                width: 60px;
+                height: 60px;
+                top: -10px;
+                left: 0;
+            }
+        </style>
+<div class="modal-body">
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Fernando Meireles </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff1">Doutorando em Ciência Política na Universidade Federal de Minas Gerais (UMFG). E-mail: &lt;fmeireles@ufmg.br&gt;.</span><span data-aff-orgname="aff1" hidden="">Universidade Federal de Minas Gerais (UMFG)</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Brazil</span><span data-aff-full="aff1" hidden="">Doutorando em Ciência Política na Universidade Federal de Minas Gerais (UMFG). E-mail: &lt;fmeireles@ufmg.br&gt;.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a>
+</div>
+<div class="ms-4"></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Denisson Silva </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff2">Doutorando em Ciência Política na UFMG. E-mail: &lt;denissonsilva@ufmg.br&gt;.</span><span data-aff-orgname="aff2" hidden="">UFMG</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Brazil</span><span data-aff-full="aff2" hidden="">Doutorando em Ciência Política na UFMG. E-mail: &lt;denissonsilva@ufmg.br&gt;.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a>
+</div>
+<div class="ms-4"></div>
+</div>
+<div class="author-card">
+<div class="author-name">
+<span class="material-icons-outlined">person</span> Filipe Correa </div>
+<div class="author-roles ms-4 mb-2 scielo__text-color__subtle--light"></div>
+<div class="author-institution ms-4 mb-2 scielo__text-color__subtle--light">
+<span class="material-icons-outlined">school</span><span data-aff-display="aff3">Doutor em Ciência Política pela UMFG. E-mail: &lt;filipescorrea@gmail.com&gt;.</span><span data-aff-orgname="aff3" hidden="">UMFG</span><span data-aff-country="aff3" hidden="">Brazil</span><span data-aff-country-code="aff3" hidden="" country="BR"></span><span data-aff-location="aff3" hidden="">Brazil</span><span data-aff-full="aff3" hidden="">Doutor em Ciência Política pela UMFG. E-mail: &lt;filipescorrea@gmail.com&gt;.</span><a href="" class="scimago-link" data-scimago-link="aff3"></a>
+</div>
+<div class="ms-4"></div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalDefault ModalTutors" id="ModalScimago" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+                            SCIMAGO INSTITUTIONS RANKINGS
+                        </h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><div class="info">
+<div>
+<span data-aff-display="aff1">Doutorando em Ciência Política na Universidade Federal de Minas Gerais (UMFG). E-mail: &lt;fmeireles@ufmg.br&gt;.</span><span data-aff-orgname="aff1" hidden="">Universidade Federal de Minas Gerais (UMFG)</span><span data-aff-country="aff1" hidden="">Brazil</span><span data-aff-country-code="aff1" hidden="" country="BR"></span><span data-aff-location="aff1" hidden="">Brazil</span><span data-aff-full="aff1" hidden="">Doutorando em Ciência Política na Universidade Federal de Minas Gerais (UMFG). E-mail: &lt;fmeireles@ufmg.br&gt;.</span><a href="" class="scimago-link" data-scimago-link="aff1"></a><br>
+</div>
+<div>
+<span data-aff-display="aff2">Doutorando em Ciência Política na UFMG. E-mail: &lt;denissonsilva@ufmg.br&gt;.</span><span data-aff-orgname="aff2" hidden="">UFMG</span><span data-aff-country="aff2" hidden="">Brazil</span><span data-aff-country-code="aff2" hidden="" country="BR"></span><span data-aff-location="aff2" hidden="">Brazil</span><span data-aff-full="aff2" hidden="">Doutorando em Ciência Política na UFMG. E-mail: &lt;denissonsilva@ufmg.br&gt;.</span><a href="" class="scimago-link" data-scimago-link="aff2"></a><br>
+</div>
+<div>
+<span data-aff-display="aff3">Doutor em Ciência Política pela UMFG. E-mail: &lt;filipescorrea@gmail.com&gt;.</span><span data-aff-orgname="aff3" hidden="">UMFG</span><span data-aff-country="aff3" hidden="">Brazil</span><span data-aff-country-code="aff3" hidden="" country="BR"></span><span data-aff-location="aff3" hidden="">Brazil</span><span data-aff-full="aff3" hidden="">Doutor em Ciência Política pela UMFG. E-mail: &lt;filipescorrea@gmail.com&gt;.</span><a href="" class="scimago-link" data-scimago-link="aff3"></a><br>
+</div>
+</div></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalTablesFigures" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Figuras | Tabelas | Fórmulas</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="nav-item"><a href="#figures" class="nav-link active" data-bs-toggle="tab">Figuras
+                    (6)
+                </a></li>
+<li role="presentation" class="nav-item"><a href="#tables" class="nav-link" data-bs-toggle="tab">Tabelas
+                    (1)
+                </a></li>
+<li role="presentation" class="nav-item"><a href="#schemes" class="nav-link" data-bs-toggle="tab">Fórmulas
+                    (2)
+                </a></li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="figures" role="tabpanel" aria-labelledby="figures">
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf01"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/7ad5a2f25d3a41a00d9d00156ef5e36111e25937.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Gráfico 1</strong></strong>
+            Simulação da média de altura da população brasileira (1.000 amostras de dez indivíduos)
+          </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf02"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/bc999ca0bb8dab5abd1f679e517b8f1c8a719043.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Gráfico 2</strong></strong>
+              Simulação de um processo legislativo com diferentes regras de maioria (1.000 votações com cinco legisladores)
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf03"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/09b19f944379280d8c7830fe96885ba2a6b80eec.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Gráfico 3</strong></strong>
+              Simulação de um processo legislativo com regra de maioria simples e diferentes graus de polarização entre dois partidos
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf04"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/f8a940b7ee401424a685a70c22e00d350a56df34.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Gráfico 4</strong></strong>
+              Simulação de viés de variável omitida (1.000 regressões)
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf05"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/e93cd0efd36065f2aefe4270e5fe79019837cef3.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Gráfico 5</strong></strong>
+              Simulação de viés de variável omitida com diferentes níveis de correlação (1.000 regressões)
+            </caption></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalFigf06"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/9bb42d98b8f442b2018bb9432851c88b03a1eb61.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Gráfico 6</strong></strong>
+              Simulação de viés de variável omitida com diferentes níveis de correlação (1.000 regressões para cada)
+            </caption></div>
+</div>
+</div>
+<div class="tab-pane fade show" id="tables" role="tabpanel" aria-labelledby="tables"><div class="row table">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalTablet1"><div class="thumbOff">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-12"><caption class="sr-only">
+<strong><strong>Quadro 1</strong></strong>
+              Etapas na construção de uma simulação
+            </caption></div>
+</div></div>
+<div class="tab-pane fade show" id="schemes" role="tabpanel" aria-labelledby="schemes">
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalSchemee01"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/08230009b5007f2c1d2813b0e25dc4f495967976.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-8"><div class="row"></div></div>
+</div>
+<div class="row fig">
+<div class="col-4"><a data-bs-toggle="modal" data-bs-target="#ModalSchemee2"><div class="thumbImg">
+<img src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/7f7dd4b8ba851064e9a8bf22fb7083f3fa38987c.jpg">
+                        Thumbnail
+                        <div class="zoom"><span class="sci-ico-zoom"></span></div>
+</div></a></div>
+<div class="col-8"><div class="row"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Gráfico 1</strong>   
+            Simulação da média de altura da população brasileira (1.000 amostras de dez indivíduos)
+          <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/2aee1e9cea3a646453da7ef309ba5d23b13770e3.jpg"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/2aee1e9cea3a646453da7ef309ba5d23b13770e3.jpg"><small class="d-block">Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf02" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Gráfico 2</strong>   
+              Simulação de um processo legislativo com diferentes regras de maioria (1.000 votações com cinco legisladores)
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/ea717e6be91c913da92587050a816d22b62f5500.jpg"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/ea717e6be91c913da92587050a816d22b62f5500.jpg"><small class="d-block">Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf03" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Gráfico 3</strong>   
+              Simulação de um processo legislativo com regra de maioria simples e diferentes graus de polarização entre dois partidos
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/5b1d2b681fddd7e82d0033e9e6fc22719b5d7f9b.jpg"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/5b1d2b681fddd7e82d0033e9e6fc22719b5d7f9b.jpg"><small class="d-block">Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf04" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Gráfico 4</strong>   
+              Simulação de viés de variável omitida (1.000 regressões)
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/23ff05f067a89fca31f1af84bf0d65e4ebc963b5.jpg"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/23ff05f067a89fca31f1af84bf0d65e4ebc963b5.jpg"><small class="d-block">Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf05" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Gráfico 5</strong>   
+              Simulação de viés de variável omitida com diferentes níveis de correlação (1.000 regressões)
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/4a4a7d739f757bb7e0c7908694994aa9ec5db2ca.jpg"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/4a4a7d739f757bb7e0c7908694994aa9ec5db2ca.jpg"><small class="d-block">Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalFigf06" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">image</span><strong>Gráfico 6</strong>   
+              Simulação de viés de variável omitida com diferentes níveis de correlação (1.000 regressões para cada)
+            <a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/5f432743203d05ac90cea2a1949668c79d619a61.jpg"><span class="material-icons-outlined">open_in_new</span></a>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/5f432743203d05ac90cea2a1949668c79d619a61.jpg"><small class="d-block">Elaboração própria.</small>
+</div>
+</div></div></div>
+<div class="modal fade ModalTables" id="ModalTablet1" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">
+<span class="material-icons-outlined">table_chart</span><strong><strong>Quadro 1</strong></strong>    
+              Etapas na construção de uma simulação
+            <br>
+</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><a class="link-newWindow showTooltip" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/c00aefaf6ebf93169c47508f3ca48b6bf452e386.png" target="_blank" data-placement="left" title="Abrir em nova janela"><span class="sci-ico-newWindow"></span></a>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/c00aefaf6ebf93169c47508f3ca48b6bf452e386.png"></div>
+<div class="modal-footer"><div class="ref-list"><ul class="refList footnote"><li id="TFN1">
+                <div>Elaboração própria.</div>
+              </li></ul></div></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee01" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title"><span class="sci-ico-fileFormula"></span></h5>
+<a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/a2a214d3903fe8b470bcb496e151c7011bf65cca.png"><span class="sci-ico-newWindow"></span></a><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/a2a214d3903fe8b470bcb496e151c7011bf65cca.png"></div>
+</div></div></div>
+<div class="modal fade ModalFigs" id="ModalSchemee2" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title"><span class="sci-ico-fileFormula"></span></h5>
+<a class="link-newWindow showTooltip" target="_blank" data-placement="left" title="Abrir em nova janela" href="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/1987ede27e8f86aebc6a2ec38bf456550233c5ea.png"><span class="sci-ico-newWindow"></span></a><button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body"><img style="max-width:100%" src="https://minio.scielo.br/documentstore/2178-4884/r3PjrtzB455fWPYHNQgbjbF/1987ede27e8f86aebc6a2ec38bf456550233c5ea.png"></div>
+</div></div></div>
+<div class="modal fade ModalDefault" id="ModalArticles" tabindex="-1" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Como citar</h5>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<p id="citation"></p>
+<input id="citationCut" type="text" value=""><a class="btn btn-secondary btn-sm scielo__btn-with-icon--left copyLink" data-clipboard-target="#citationCut"><span class="material-icons-outlined">link</span>copiar</a>
+</div>
+</div></div></div>
+<script type="text/javascript">
+            function currentDate() {
+            var today = new Date();
+            var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            today.setTime(today.getTime());
+            return today.getDate() + " " + months[today.getMonth()] + " " + today.getFullYear();
+            }
+            var citation = 'Meireles, Fernando, Silva, Denisson e Correa, Filipe. |Simulações de Monte Carlo no ensino de Ciência Política. Revista Brasileira de Ciência Política. 2017, n. 24, pp. 223-254. Disponível em: &lt;&gt;. Epub Sep-Dec 2017. ISSN 2178-4884.'.replace('CURRENTDATE', currentDate());
+            document.getElementById('citation').innerHTML = citation;
+            document.getElementById('citationCut').value = citation.replace('&lt;', '<').replace('&gt;', ">");
+        </script>
+</div>
+
+        
+      
+
+      
+
+<div class="container scielo--floatBar">
+  <div class="row">
+    <div class="col">
+
+      <!-- Botão fixo para abrir o modal -->
+      <button
+        type="button"
+        class="btn btn-primary btn-float-menu"
+        data-bs-toggle="modal"
+        data-bs-target="#menuModal"
+        aria-controls="menuModal"
+        aria-label="Abrir menu de ferramentas do artigo">
+        <span class="material-icons-outlined mt-1" aria-hidden="true">more_horiz</span>
+      </button>
+
+
+      <!-- Modal estreito -->
+      <div class="modal fade" id="menuModal" tabindex="-1"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="menuModalLabel">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 280px;margin: 0 auto;">
+          <div class="modal-content" role="document">
+
+            <h2 id="menuModalLabel" class="visually-hidden">Ferramentas do artigo</h2>
+
+            <div class="modal-body p-0">
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item p-0">
+                  <a href="#" class="px-3 py-2 text-decoration-none d-block"
+                     data-mobile-tooltip="PDFs"
+                     data-bs-toggle="modal"
+                     data-bs-target="#ModalDownloads"
+                     data-bs-dismiss="modal">
+                    <span class="material-icons-outlined" aria-hidden="true">file_download</span>
+                    PDFs
+                  </a>
+                </li>
+
+                <li class="list-group-item p-0">
+                  <a href="#" class="px-3 py-2 text-decoration-none d-block"
+                     data-mobile-tooltip="Métricas"
+                     data-bs-toggle="modal"
+                     data-bs-target="#metric_modal_id"
+                     data-bs-dismiss="modal">
+                    <span class="material-icons-outlined" aria-hidden="true">show_chart</span>
+                    Métricas
+                  </a>
+                </li>
+
+                <li class="list-group-item p-0">
+                  <a href="#" class="px-3 py-2 text-decoration-none d-block"
+                     data-mobile-tooltip="Figuras e tabelas"
+                     data-bs-toggle="modal"
+                     data-bs-target="#ModalTablesFigures"
+                     data-bs-dismiss="modal">
+                    <span class="material-icons-outlined" aria-hidden="true">image</span>
+                    Figuras e tabelas
+                  </a>
+                </li>
+
+                <li class="list-group-item p-0">
+                  <a href="#" class="px-3 py-2 text-decoration-none d-block"
+                     data-mobile-tooltip="Versões e traduções"
+                     data-bs-toggle="modal"
+                     data-bs-target="#ModalVersionsTranslations"
+                     data-bs-dismiss="modal">
+                    <span class="material-icons-outlined" aria-hidden="true">translate</span>
+                    Versões e traduções
+                  </a>
+                </li>
+
+                <li class="list-group-item p-0">
+                  <a href="#" class="px-3 py-2 text-decoration-none d-block"
+                     data-mobile-tooltip="Como citar este artigo"
+                     data-bs-toggle="modal"
+                     data-bs-target="#ModalHowcite"
+                     data-bs-dismiss="modal">
+                    <span class="material-icons-outlined" aria-hidden="true">link</span>
+                    Como citar este artigo
+                  </a>
+                </li>
+
+                <li class="list-group-item p-0">
+                  <a href="#" class="px-3 py-2 text-decoration-none d-block"
+                     data-mobile-tooltip="Artigos relacionados"
+                     data-bs-toggle="modal"
+                     data-bs-target="#ModalRelatedArticles"
+                     data-bs-dismiss="modal">
+                    <span class="material-icons-outlined" aria-hidden="true">article</span>
+                    Artigos relacionados
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+      <section class="journalContacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-8 text-center text-sm-start">
+        <div class="row">
+          <div class="col-md-1 col-sm-2">
+            <span class="material-icons-outlined">location_on</span>
+          </div>
+          <div class="col-md-10 col-sm-9">
+            <strong class="d-block">Universidade de Brasília. Instituto de Ciência Política</strong>
+            
+              <span>Instituto de Ciência Política, Universidade de Brasília, Campus Universitário Darcy Ribeiro - Gleba A Asa Norte, 70904-970   Brasília  - DF   Brasil, Tel.:  (55 61) 3107-0777 , Cel.:  (55 61) 3107 0780</span> - 
+            
+            
+            <span>Brasília</span> -
+            
+            
+            <span>DF</span> -
+            
+            
+            <span>Brazil</span> <br/>
+            
+            
+            
+              <strong>E-mail:</strong> rbcp@unb.br
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 text-center text-sm-start pt-4 pt-sm-0">
+        <a href="/journal/rbcpol/feed/" data-toggle="tooltip" title="RSS do número mais recente do periódico" target="_blank"><span class="material-icons-outlined">rss_feed</span></a>
+        <span>
+          Acompanhe os números deste periódico no seu leitor de RSS
+        </span>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+
+
+    <div class="modal fade ModalDefault"
+     id="ModalDownloads"
+     tabindex="-1"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="ModalDownloadsLabel"
+     aria-hidden="true">
+
+  <div class="modal-dialog">
+    <div class="modal-content"> 
+
+      <div class="modal-header">
+        <h2 class="h4 modal-title" id="ModalDownloadsLabel">
+          Versão para download de PDF
+        </h2>
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Fechar">
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row modal-center">
+
+          <div class="col-md-12">
+            <span class="sci-ico-filePDF mb-3" aria-hidden="true"></span>
+            <br/>
+            <h3 class="h6 fw-bold">PDF</h3>
+
+            <ul class="md-list">
+            
+              
+                <li>
+                  <a target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Baixar PDF em Português (abre em nova janela)"
+                     href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?lang=pt&amp;format=pdf">
+
+                    
+                      Português
+                    
+
+                  </a>
+                </li>
+              
+            
+            </ul>
+          </div>
+
+          
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div
+  class="modal fade ModalDefault"
+  id="ModalRelatedArticles"
+  tabindex="-1"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="ModalRelatedArticlesTitle"
+  aria-describedby="ModalRelatedArticlesDesc">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="h4 modal-title" id="ModalRelatedArticlesTitle">
+          Artigos relacionados
+        </h2>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fechar">
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p id="ModalRelatedArticlesDesc" class="visually-hidden">
+          Lista de links para artigos relacionados. Os links abrem em nova aba.
+        </p>
+
+        <div class="modal-center">
+          <ul class="md-list inline mt-4">
+            
+              <li>
+                <a href="https://www.google.com/search?q=&#34;
+          &lt;b&gt;Simulações de Monte Carlo no ensino de Ciência Política&lt;/b&gt;
+          &#34; &#34;Meireles, Fernando&#34; &#34;Silva, Denisson&#34; &#34;Correa, Filipe&#34; &#34;2017&#34; &#34;Revista Brasileira de Ciência Política&#34;" target="_blank" rel="noopener noreferrer">
+                  Google
+                  <span class="visually-hidden">
+                    (abre em nova aba)
+                  </span>
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://scholar.google.com/scholar?q=&#34;
+          &lt;b&gt;Simulações de Monte Carlo no ensino de Ciência Política&lt;/b&gt;
+          &#34; &#34;Meireles, Fernando&#34; &#34;Silva, Denisson&#34; &#34;Correa, Filipe&#34; &#34;2017&#34; &#34;Revista Brasileira de Ciência Política&#34;" target="_blank" rel="noopener noreferrer">
+                  Google Scholar
+                  <span class="visually-hidden">
+                    (abre em nova aba)
+                  </span>
+                </a>
+              </li>
+            
+          </ul>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div
+  class="modal fade ModalDefault"
+  id="ModalVersionsTranslations"
+  tabindex="-1"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="ModalVersionsTranslationsTitle"
+  aria-describedby="ModalVersionsTranslationsDesc">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="h4 modal-title" id="ModalVersionsTranslationsTitle">
+          Versões e tradução automática
+        </h2>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fechar">
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+        <p id="ModalVersionsTranslationsDesc" class="visually-hidden">
+          Escolha a versão original do texto ou utilize um serviço de tradução automática.
+        </p>
+
+        <div class="row modal-center">
+
+          <!-- Versão original -->
+          <div class="col-md-4 col-md-offset-1">
+            <h3 class="h6 fw-bold">
+              Versão original do texto
+            </h3>
+
+            
+              <ul class="md-list">
+                
+                  <li>
+                    <a href="/j/rbcpol/a/r3PjrtzB455fWPYHNQgbjbF/?lang=pt">Português</a>
+                  </li>
+                
+              </ul>
+            
+          </div>
+
+          <div class="col-md-2 md-body-dashVertical" aria-hidden="true"></div>
+
+          <!-- Tradução automática -->
+          <div class="col-md-4">
+            <h3 class="h6 fw-bold">
+              Tradução automática
+            </h3>
+
+            <ul class="md-list">
+              <li>
+                <a href="#">
+                  Google Translator
+                  <span class="visually-hidden">
+                    (abre serviço externo de tradução)
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Microsoft Translator
+                  <span class="visually-hidden">
+                    (abre serviço externo de tradução)
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <style>
+  pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 11px;
+    line-height: 1;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word; 
+}
+</style>
+<div
+  class="modal fade ModalDefault"
+  id="ModalHowcite"
+  tabindex="-1"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="ModalHowciteTitle"
+  aria-describedby="ModalHowciteDesc">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="h4 modal-title" id="ModalHowciteTitle">
+          Como citar
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fechar">
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Descrição curta para leitores de tela -->
+        <p id="ModalHowciteDesc" class="visually-hidden">
+          Escolha um formato para exportar ou selecione um estilo de citação. O conteúdo abaixo pode ser atualizado após a seleção.
+        </p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3" style="text-align: center;">
+              <a
+                href="/citation/export/r3PjrtzB455fWPYHNQgbjbF/?format=ris"
+                class="btn hidden-sm">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                <span class="visually-hidden">Baixar em</span> RIS
+              </a>
+            </div>
+
+            <div class="col-sm-3" style="text-align: center;">
+              <a
+                href="/citation/export/r3PjrtzB455fWPYHNQgbjbF/?format=bib">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                <span class="visually-hidden">Baixar em</span> BIBTEX
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div id="initial_csl"></div>
+
+        <label id="select_label" for="select_csl">
+          Outros formatos de citação e exportação:
+        </label>
+
+        <select
+          id="select_csl"
+          class="js-data-example-ajax"
+          style="width: 100%">
+          <option value="" selected="selected">
+            Enter references manager format or citation style (e.g., "APA", "AMA", "MLA", "Vancouver")
+          </option>
+        </select>
+
+        <br>
+        <br>
+
+        <pre
+          id="citation_text"
+          style="display:none;"
+          tabindex="0"
+          aria-live="polite"
+          aria-atomic="true">
+        </pre>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+  </main>
+
+  <a id="btnTop"
+   class="btn btn-primary btn-float-gotop"
+   href="#top"
+   aria-label="Ir para o topo"
+   style="opacity: 1;">
+    <span class="material-icons-outlined mt-2" aria-hidden="true">
+        vertical_align_top
+    </span>
+    <span class="visually-hidden">Ir para o topo</span>
+</a>
+
+<script>
+    
+    // Mostrar o botão ao rolar
+    const btnTop = document.getElementById("btnTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        btnTop.style.display = "block";
+      } else {
+        btnTop.style.display = "none";
+      }
+    });
+
+    // Rolar suavemente até o topo ao clicar
+    btnTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  
+
+<style>
+	.scielo__logo-partner{
+      max-height: 50px;
+      max-width: 170px;
+    }
+    .scielo__logo-partner--dark{
+      display:none;
+    }
+    .scielo__theme--dark .scielo__logo-partner--light{
+      display:none;
+    }
+	.scielo__theme--dark .scielo__logo-partner--dark{
+      display:inline-block;
+    }
+</style>
+
+<footer>
+	<section class="address-scielo pt-4 pb-4">
+		<div class="container">
+			<div class="row">
+				<div class="col col-12 col-sm-2 text-center"><a href="/" aria-label="Página inicial da coleção Brasil"><div class="scielo__logo-scielo--small" aria-hidden="true"></div></a></div>
+				<div class="col col-12 col-sm-8 text-center text-sm-start">
+					<p><small><strong>Brasil</strong></small></p>
+					<p><small>Rua Dr. Diogo de Faria, 1087 – 9º andar – Vila Clementino 04037-003 São Paulo/SP - Brasil<br/>
+						E-mail: scielo@scielo.org </small></p>
+						<div>
+							<!-- 
+								Fix me:
+								
+								Criar configuração para verificar se deve ou não ser exibido 
+								o ícone da rede social e url correta de cada rede.
+								
+							-->
+							<ul class="list-unstyled justify-content-center justify-content-sm-start d-flex mt-3 mb-0 scielo__social-network-links">
+								<li class="me-2">
+									<a href="https://bsky.app/profile/scielo.org" target="_blank" aria-label="BlueSky">
+										<i class="icon-bluesky"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://openbiblio.social/@scielo" target="_blank" aria-label="Mastodon">
+										<i class="icon-mastodon"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.linkedin.com/company/scielo---scientific-electronic-library-online/?originalSubdomain=br" target="_blank" aria-label="LinkedIn">
+										<i class="icon-linkedin"></i>
+									</a>
+								</li>
+								<li class="me-2">
+									<a href="https://www.facebook.com/SciELONetwork" target="_blank" aria-label="Facebook">
+										<i class="icon-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/c/SciELONetwork" target="_blank" aria-label="Youtube">
+										<i class="icon-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<div class="col col-12 col-sm-2 text-center">
+					
+					<div class="container-license">
+						<div class="row">
+							<div class="col-sm-3 col-md-2">
+								<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" title="" rel="license"><img
+										src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Creative Common - by 4.0">
+								</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="article-bg-white">
+		<div class="container">
+			<div class="row">
+				
+					<div class="col text-center mt-4 mb-4">
+						
+							
+								<a href="http://www.capes.gov.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+									<img src="https://www.scielo.br/media/images/CAPES.png" alt="CAPES" class="scielo__logo-partner">
+								</a>
+							
+						
+							
+								<a href="http://www.cnpq.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+									<img src="https://www.scielo.br/media/images/CNPq.png" alt="CNPq" class="scielo__logo-partner">
+								</a>
+							
+						
+							
+								<a href="http://www.fapesp.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+									<img src="https://www.scielo.br/media/images/FAPESP.png" alt="FAPESP" class="scielo__logo-partner">
+								</a>
+							
+						
+							
+								<a href="http://bvsalud.org/" target="_blank" class="mx-4 my-2 d-inline-block">
+									<img src="https://www.scielo.br/media/images/BVS.png" alt="BVS" class="scielo__logo-partner">
+								</a>
+							
+						
+							
+								<a href="http://regional.bvsalud.org/bvs/bireme/homepage.htm" target="_blank" class="mx-4 my-2 d-inline-block">
+									<img src="https://www.scielo.br/media/images/BIREME.png" alt="BIREME" class="scielo__logo-partner">
+								</a>
+							
+						
+							
+								<a href="https://www.fapunifesp.edu.br/" target="_blank" class="mx-4 my-2 d-inline-block">
+									<img src="https://www.scielo.br/media/images/FAP-UNIFESP.png" alt="FAP-UNIFESP" class="scielo__logo-partner">
+								</a>
+							
+						
+					</div>
+				
+			</div>
+			</div>
+		</div>
+	</section> 
+	<section class="article-bg-white">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="text-center"><a href="/about/"><img src="https://www.scielo.br/static/img/logo-open-access.svg" alt="Open Access" class="me-1 logo-open-access">Leia</a> a Declaração de Acesso Aberto</p>
+				</div>
+			</div>
+		</div> 
+	</section>	
+</footer>
+
+  
+  <div class="modal fade ModalDefault" id="metric_modal_id" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 673px;">
+        <div class="modal-header">
+            <h2 class="h4 modal-title">
+                Métricas
+            </h2>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+        <div class="modal-body row" style="margin-left: 30px;">
+            
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <a target="_blank"
+                                href="http://analytics.scielo.org/w/accesses?document=S0103-33522017000300223&amp;collection=scl">
+                                <div class="logo-statistc logo-statistc-scielo"></div>
+                                <div>SciELO Analytics</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+
+                
+                    <div class="col-md-4">
+                        <div class="badge-link col-center">
+                            <div class="logo-statistc logo-statistc-altmetric">
+                                <div class="badge-logo">
+                                    <div class='altmetric-embed' data-badge-type='donut' data-doi="" data-link-target='_blank'>
+                                    </div>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://www.altmetric.com/details.php?&doi=">
+                                <div>Altmetric</div>
+                            </a>
+                        </div>
+                    </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div id="scienceopen" data-doi=""></div>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 18px;">
+                    <div class="badge-link col-center">
+                        <div class="scite-badge" data-doi="" data-layout="vertical" data-tooltip-placement="right"
+                            data-show-zero="false" data-show-labels="false">
+                        </div>
+                        <a target="_blank" href="https://scite.ai/reports/">
+                            <div>Scite_</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+                
+                <div class="col-md-4" style="margin-top: 50px;">
+                    <div class="badge-link col-center">
+                        <div class="logo-statistc logo-statistc-plumx">
+                            <div class="badge-logo">
+                                <a href="https://plu.mx/scielo/a/?doi=" data-popup="right" data-size="large"
+                                    class="plumx-plum-print-popup plum-liberty-theme" data-site="plum" data-hide-when-empty="true"
+                                    data-no-link="true" target="_blank">
+          &lt;b&gt;Simulações de Monte Carlo no ensino de Ciência Política&lt;/b&gt;
+          </a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://plu.mx/scielo/a/?doi=">
+                            <div>PlumX</div>
+                        </a>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- share modal -->
+    <div class="modal fade" id="share_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="share_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+
+                      <br><br>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- share modal -->
+
+    <!-- error modal -->
+    <div class="modal fade" id="error_modal_id" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+    <div class="modal fade in" id="error_modal_confirm_id" tabindex="-1" role="dialog" aria-hidden="false">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="visually-hidden">Close</span></button>
+                  <h2 class="h4 modal-title">Mensagem</h2>
+              </div>
+              <div class="modal-body">
+                  <div class="midGlyph">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Error modal -->
+    <a class="floatingBtnError btn btn-secondary" href="#" id="#floatingBtnError">Reportar erro</a>
+
+    <script>
+      // Variáveis para tradução da barra de acessibilidade      
+      window.accessibilityTranslations = {
+        darkMode: "Modo escuro",
+        increaseText: "Aumentar texto",
+        decreaseText: "Diminuir texto",
+        originalText: "Texto original",
+        markerLine: "Marcador",
+        readingLine: "Linha guia",
+        reset: "Redefinir",
+        accessibilityMenu: "Menu de acessibilidade",
+        skipLinkText: "Ir para o conteúdo principal"
+      };
+    </script>
+    
+    <!-- Scielo Bundle min -->
+    <script src="/static/js/scielo-bundle-min.js"></script>
+
+    <script>
+
+      $(document).ready(function() {
+
+        // Add rows article search
+        let addRowBtn = $('.addRowBtn');
+        let placeRow = $('.scielo__dinamic-row');
+        let newFormRow = '<div class="row"><div class="col-12"><hr></div><div class="col-2 col-lg-1 text-end"><button type="button" class="btn btn-danger scielo__btn-with-icon--only"><i class="material-icons-outlined">clear</i></button></div><div class="col-10 col-lg-11"><div class="input-group"><div class="input-group-preppend"><select class="form-select" name="bool[]"><option selected>AND</option><option>OR</option><option>AND NOT</option></select></div><textarea name="q[]" class="form-control" aria-label="With textarea" placeholder="Entre uma ou mais palavras"></textarea><div class="input-group-append"><select class="form-select"><option selected value="todos">Todos os índices</option><option value="ano">Ano</option><option value="autor">Autor</option><option value="financiador">Financiador</option><option value="periodico">Periódico</option><option value="resumo">Resumo</option><option value="titulo">Título</option></select></div></div></div></div>';
+
+        let btnRemoveRow = $('.btn-danger');
+
+        addRowBtn.on( "click", function() {
+            placeRow.append( newFormRow );
+        })
+
+        // Remove as linhas inseridas dinamicamente e as que já estavam lá.
+        placeRow.on( "click", ".btn-danger", function() {
+            $(this).parent().parent().animate({'opacity':0},300).hide(1);
+        })
+
+      });
+    </script>
+
+    
+      <script src="https://static.scielo.org/js/cookiePolicy.min.js"></script>
+    
+
+    <script src="//www.google.com/recaptcha/api.js"></script>
+
+    
+<script type="text/javascript" src="/static/js/scielo-article-min.js"></script>
+
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+
+<script id="9cf9cf8f-3a99-fe86-4013-f630edbf80ac" src="https://www.scienceopen.com/script/badge2.js" async
+  defer></script>
+<script type="text/javascript" src="/static/js/scienceopen.js"></script>
+
+
+
+<script async type="application/javascript" src="//cdn.scite.ai/badge/scite-badge-latest.min.js"></script>
+
+
+
+<script sync src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_SVG" charset="utf-8"></script>
+
+<!-- <script>
+      var insertScript = function(url, callback, parentNode) {
+        var scriptNode = document.createElement("script");
+        scriptNode.src = url;
+        scriptNode.onload = callback;
+        parentNode.appendChild(scriptNode)
+      }
+      var headNode = document.getElementsByTagName("head")[0];
+      setTimeout(MathJax.Callback([insertScript, "//badge.dimensions.ai/badge.js", console.log, headNode]), 1500);
+    </script>
+    -->
+
+
+
+<script type="text/javascript" src="//badge.dimensions.ai/badge.js" charset="utf-8" async></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<!-- xxx Verifica se o artigo contém artigos relacionados -->
+
+
+<!-- Verifica se o artigo contém suplemento -->
+
+
+<script>
+
+  affiliations = {};
+
+  function add_scimago_image(selector, remove_br=true, add_br_after=true, find_div=false){
+    $(selector).each(
+
+    function () {
+
+      if (remove_br){
+        $(this).find("br").remove()
+      }
+      
+      internal_items = find_div ? $(this).find('div').not(".clearfix") : $(this).not(".clearfix")
+
+      internal_items.each(function () { 
+        self = $(this);
+
+        affiliation_name = $('span:first', self).text();
+        if (affiliation_name){
+            scimago_link = ' <a href="#" target="_blank" class="scimago_link" data-affiliation="' + affiliation_name + '" ><img src="/static/img/scimago.svg" alt=" SCImago image" height="12" data-toggle="tooltip" data-placement="top" title="Link to SCImago Institutions Rankings"></a>';
+            self.append(scimago_link);
+        }
+      });
+
+      if (add_br_after){
+        $(this).after("<br />")
+      }
+
+    });
+
+  }
+
+  add_scimago_image('#ModalScimago .info div')
+  add_scimago_image('.tutors', remove_br=false, add_br_after=false, find_div=true) 
+
+  $(".scimago_link").click(function(e){
+    e.preventDefault();
+
+    affiliation_name = $(this).data("affiliation");
+
+    if (affiliation_name){
+      if (affiliations[affiliation_name]) {
+        window.open(affiliations[affiliation_name], '_blank');
+      } else {
+        $.ajax({
+          type: "GET",
+          async: false,
+          url: "/scimago/query",
+          data: 'q=' + encodeURI(affiliation_name),
+          success: function (data) {
+            if (data) {
+              affiliations[affiliation_name] = 'https://www.scimagoir.com/' + data
+              window.open(affiliations[affiliation_name], '_blank');
+            }else{
+              toastr.options = {
+                positionClass: 'toast-top-center'
+              };
+              toastr.error('Link temporariamente indisponível');
+            }
+          }
+        });
+      }
+    }    
+  });
+
+
+  var howcite_initialized = false;
+
+  $('#ModalHowcite').on('shown.bs.modal', function () {
+
+    if (!howcite_initialized) {
+      initial = {
+        "American Psychological Association": "apa", "Vancouver": "vancouver"
+      }
+
+      $.each(initial, function (key, value) {
+        $.ajax({
+          url: "/citation/r3PjrtzB455fWPYHNQgbjbF/?style=" + value,
+          dataType: 'html',
+          delay: 250,
+          async: true
+        })
+          .done(function (html) {
+            $("<span><b>" + key + "</b></span>" + "<pre>" + html + "</pre>").insertBefore($("#select_label"));
+          })
+      });
+      howcite_initialized = true;
+    }
+
+    $(".js-data-example-ajax").select2({
+      ajax: {
+        url: "/citation/list",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term, // search term
+          };
+        },
+        processResults: function (data, params) {
+          return {
+            results: data.results
+          };
+        },
+        cache: true
+      },
+      escapeMarkup: function (markup) { return markup; },
+      minimumInputLength: 1,
+      dropdownParent: $('#ModalHowcite')
+    });
+
+    $(document).on('select2:open', () => {
+      document.querySelector('.select2-search__field').focus();
+    });
+
+    $(".js-data-example-ajax").on('select2:select', function (e) {
+      var data = e.params.data;
+
+      $.ajax({
+        url: "/citation/r3PjrtzB455fWPYHNQgbjbF/?style=" + data.id,
+        dataType: 'html',
+        delay: 250
+      })
+        .done(function (html) {
+
+          if ($('#citation_text').css('display') == 'none') {
+            $('#citation_text').show()
+          }
+
+          $("#citation_text").html(html);
+
+        })
+        .fail(function () {
+          alert("Erro ao tentar obter esse estilo de citação");
+        })
+
+    });
+  });
+
+</script>
+
+
+
+
+    <script>
+
+      // Garante que o valor do campo share_url é a URL corrente.
+      $('#share_url').val(window.location.href);
+
+      //moment.locale('pt_BR');
+
+      //$("#date").text(moment().format("L HH:mm:ss ZZ"));
+
+    </script>
+
+    
+    
+
+
+   
+
+  </body>
+</html>

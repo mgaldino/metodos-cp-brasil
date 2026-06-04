@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-62762015000100132",
+  "audited_agent_id": "agent_a",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "f936016854727526d1dac146fb72c66642722e82327df6d896aa81408526d328",
+  "classification_hash": "e3d545182d3a186c266c48d758a9efb1734c6d095d37271bd1919d03b218b9a4",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "Brasil e inserção internacional; e iv) Forças Armadas e sociedade. Ao todo, foram ouvidas 3.796 pessoas, em todas as unidades da federação, entre os dias 8 e 29 de agosto de 20112. A partir dos dados coletados, obteve-se um retrato da percepção",
+      "classification_value": 3796
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "Brasil e inserção internacional; e iv) Forças Armadas e sociedade. Ao todo, foram ouvidas 3.796 pessoas, em todas as unidades da federação, entre os dias 8 e 29 de agosto de 20112. A partir dos dados coletados, obteve-se um retrato da percepção",
+      "classification_value": "Ao todo, foram ouvidas 3.796 pessoas, em todas as unidades da federação, entre os dias 8 e 29 de agosto de 20112."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "acerca da percepção da sociedade sobre o tema, no âmbito do projeto do Sistema de Indicadores de Percepção Social ( SIPS )1. Foram aplicadas 30 questões aos entrevistados, divididas em quatro eixos temáticos: i) percepção sobre a defesa nacional e as Forças",
+      "classification_value": [
+        {
+          "variable_name": "socioeconomic attributes and attitudes measured in SIPS",
+          "variable_description": "Explanatory variable identified from the article body."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "trust in the Brazilian Armed Forces",
+          "variable_description": "Outcome variable identified from the article body."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "em todas as unidades da federação, entre os dias 8 e 29 de agosto de 20112. A partir dos d ados coletados, obteve-se um retrato da percepção da população brasileira em relação ao tema da defesa nacional e ao papel desempenhado pelas",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "cinco seções, incluindo esta Introdução. A segunda seção apresenta a metodologia adotada neste estudo, que consiste no método de re gressão o rdinal. A terceira seção apresenta os resultados obtidos pela regressão e os testes para validação do modelo proposto. A quarta",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "robustez e a capacidade explanatória do modelo por meio da incorporação ou exclusão de variáveis para, posteriormente, inferir relações d e causalida de a partir dos resultados obtidos e de teorias consolidadas sobre o tema. Futuras investigações são necessárias para abordar as",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "para o sentido da correlação e a intensidade dos efeitos produzidos pelas variáveis independentes é apresentado no Quadro 2: Cumpre explicar em detalhe as hipóteses que sustentam alguns dos resultados previstos no Quadro 2. No caso da variável sexo, a literatura aponta",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "modo, o modelo logit cumulativo para Y i (variável resposta para a observação i) pode ser descrito conforme a eq uação ( 1) ( VENABLES; RIPLEY, 2002): em que: ζ c é o intercepto da categoria c; x i ⊤ é o",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No direct mechanism/channel language was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "- notadamente europeus e asiáticos - possuem, em suas histórias contemporâneas, experiências de participação (ou de expectativa de participação) si gnificativa e m conflitos armados de grande magnitude, de modo que a confiança nas Forças Armadas está intimamente relacionada à necessidade de",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 2 contradicted and 2 not found in text; overall status fail."
+}

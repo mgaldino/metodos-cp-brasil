@@ -12,6 +12,7 @@ O pipeline deve avançar da amostra de validação para a classificação do cor
 - `02_collect_articles.py`: coleta metadados e XMLs dos artigos, preservando respostas brutas e logs.
 - `03_sample_articles.R`: gera amostra estratificada para validação manual.
 - `13_recover_fulltext_gold.py`: recupera body integral dos 175 artigos gold/piloto, por PID, usando ArticleMeta HTML, seletores SciELO `Text`/`Texto`, XML real com `<body>` e PDF como fallback. Preserva brutos em `data/raw/fulltext_gold/` e só escreve `data/processed/fulltext_gold/article_texts_gold.csv` quando fecha 175/175.
+- `16_recover_fulltext_corpus.py`: recupera body integral do corpus completo elegível, construindo o manifest a partir de `data/raw/articles_2005_2025.csv`, `data/processed/excluded_journals.csv` e `data/processed/excluded_articles.csv`. Exclui `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais`, artigos excluídos e registros que não sejam `document_type == "research-article"` antes de qualquer extração. Preserva brutos somente em `data/raw/fulltext_corpus/`, escreve `data/processed/fulltext_corpus/article_texts_corpus.csv`, mantém manifest, logs, hashes, resume online, modo offline, rate limit/backoff e fila de falhas. Se o PID legado do ArticleMeta estiver stale, adiciona o DOI resolver como candidato HTML depois dos URLs SciELO do PID.
 
 ## Classificação
 
@@ -38,10 +39,13 @@ Fonte canônica de body para os 175 gold/piloto: `data/processed/fulltext_gold/a
 
 Regra operacional de exclusões: `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais` e os artigos em `data/processed/excluded_articles.csv` ficam fora da análise principal, mas permanecem preservados no corpus e nos artefatos rastreáveis.
 
-Próximo passo documentado: adaptar/rodar a classificação em escala para o corpus completo elegível e gerar uma nova base analítica final, com exclusões aplicadas explicitamente.
+Fonte canônica prevista de body para o corpus completo elegível: `data/processed/fulltext_corpus/article_texts_corpus.csv`, gerado por `scripts/16_recover_fulltext_corpus.py` e validado por `scripts/17_validate_fulltext_corpus.R`. Este arquivo não substitui nem mistura o gold; ele é a base de texto integral para a etapa posterior de classificação em escala. Estado em 2026-06-03: 6.642/6.672 bodies recuperados; o inventário de validação marcou 6.638 PIDs como `PASS`, 30 PIDs pendentes na fila por ausência de body que passe os thresholds atuais e 2 pares duplicados para checagem manual.
+
+Próximo passo documentado: após validação 6672/6672 do corpus fulltext, adaptar/rodar a classificação em escala para o corpus completo elegível e gerar uma nova base analítica final, com exclusões aplicadas explicitamente.
 
 - `14_validate_fulltext_gold.R`: valida que os 175 PIDs gold/piloto têm body integral recuperado, PIDs únicos, proveniência obrigatória, texto maior que abstract, corpo não vazio e não composto por referências. Gera `quality_reports/fulltext_gold_recovery_report.md` e `quality_reports/fulltext_gold_inventory.csv`.
 - `15_write_fulltext_scaling_plan.R`: escreve `quality_reports/fulltext_scaling_plan.md` para escalar a extração ao corpus elegível completo. Exige antes inventário gold validado 175/175 `PASS`.
+- `17_validate_fulltext_corpus.R`: valida que todos os PIDs elegíveis reconstruídos dos ledgers têm exatamente uma linha processada, body mínimo, texto maior que abstract, ausência de front matter/referências como substituto, proveniência completa, hash do bruto preservado e regras lógicas de ano/document type/exclusões. Gera `quality_reports/fulltext_corpus_recovery_report.md` e `quality_reports/fulltext_corpus_inventory.csv`.
 
 ## Benchmark e auditoria
 

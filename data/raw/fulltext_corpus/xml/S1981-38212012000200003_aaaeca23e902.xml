@@ -1,0 +1,1316 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">CpZxGxHTpSryqYgLpfMQ5hz</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212012000200003</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(12)00600200003</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Political Competition and the Diffusion of Conditional Cash Transfers in Brazil</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Coêlho</surname>
+            <given-names>Denilson Bandeira</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">University of Brasília</institution>
+        <institution content-type="orgdiv1">Political Science Institute </institution>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2012</year>
+      </pub-date>
+      <volume>6</volume>
+      <issue>2</issue>
+      <fpage>56</fpage>
+      <lpage>87</lpage>
+      <history>
+        <date date-type="received">
+          <month>04</month>
+          <year>2011</year>
+        </date>
+        <date date-type="accepted">
+          <month>12</month>
+          <year>2012</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v6n2/a03v6n2.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>What factors determine the diffusion of social policies? This article examines the launching of conditional cash transfer programs by Brazilian municipalities to explore this problem. The literature of political science asserts that such programs have been widely implemented because they correspond to an alternative policy strategy adopted by governments facing opposition to implement universal public policies. So, political competition would be at the root of CCT launching. This article presents an alternative explanation. From 1995 to 2001, local governments created or emulated the Bolsa Escola Program (BEP) in all regions of the country. Sucha a path continued after the lauching of the national Bolsa Escola by the federal government. Why did some local governments decide to adopt the national BEP and others did not? To answer these questions, the research tests the influence of structural, internal and external variables on the dissemination of CCT programs. Two main hypotheses are tested. The first asserts that local political competition is positive for policy diffusion. The second hypothesis claims that party alignment between the municipal and federal levels increases the likelihood of municipalities adopting the federal BEP. The research uses Event History Analysis to test statistically the impact of political incentives on policy diffusion among São Paulo State's municipalities. Two types of policy diffusion are examined: horizontal and vertical. The findings confirm that political competition influences the horizontal diffusion among municipalities. Unexpectedly, vertical diffusion does not occur because of party alignment or political competition. Rather, levels of socioeconomic development drive policy emulation.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>policy diffusion</kwd>
+        <kwd>political competition</kwd>
+        <kwd>local government</kwd>
+        <kwd>conditional cash transfer programs</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>20</day>
+        <month>08</month>
+        <year>2013</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>Abrucio, Fernando Luiz. 2002. "Descentralização e Coordenação Federativa no Brasil: lições dos anos FHC". In: <italic>O Estado numa era de reformas: Os anos FHC - Parte 2</italic>, editado por Fernando Luiz Abrucio e Maria Rita Garcia Loureiro. Brasília: MP/SEGES.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O Estado numa era de reformas: Os anos FHC - Parte 2</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abrucio</surname>
+              <given-names>Fernando Luiz</given-names>
+            </name>
+            <name>
+              <surname>Abrucio</surname>
+              <given-names>Fernando Luiz</given-names>
+            </name>
+            <name>
+              <surname>Loureiro</surname>
+              <given-names>Maria Rita Garcia</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>Abrucio, Fernando Luiz. 2005. "A coordenação federativa no Brasil: a experiência do período FHC e os desafios do governo Lula". <italic>Revista de Sociologia Política</italic>, n.24, pp.41-67.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A coordenação federativa no Brasil: a experiência do período FHC e os desafios do governo Lula</article-title>
+          <source>Revista de Sociologia Política</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>41</fpage>
+          <lpage>67</lpage>
+          <issue>24</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abrucio</surname>
+              <given-names>Fernando Luiz</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>Abrahamson, E. 1991. "Managerial fads and fashions: the diffusion and rejection of innovations".<italic> Academy of Management Review, </italic>vol. 16, nº 3, pp. 586-612.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Managerial fads and fashions: the diffusion and rejection of innovations</article-title>
+          <source>Academy of Management Review</source>
+          <date>
+            <year>1991</year>
+          </date>
+          <fpage>586</fpage>
+          <lpage>612</lpage>
+          <issue>3</issue>
+          <volume>16</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abrahamson</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>Abrahamson, E. 1996. "Management fashion". <italic>Academy of Management Review</italic>, vol. 21, nº 1, pp. 254-285.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Management fashion</article-title>
+          <source>Academy of Management Review</source>
+          <date>
+            <year>1996</year>
+          </date>
+          <fpage>254</fpage>
+          <lpage>285</lpage>
+          <issue>1</issue>
+          <volume>21</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abrahamson</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>Aguiar, Marcelo and Araújo, Carlos Henrique. 2002. <italic>Bolsa Escola: educação para enfrentar a pobreza</italic>. Brasilia: UNESCO.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bolsa Escola: educação para enfrentar a pobreza</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Aguiar</surname>
+              <given-names>Marcelo</given-names>
+            </name>
+            <name>
+              <surname>Araújo</surname>
+              <given-names>Carlos Henrique</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>Amaral, Carlos et al. 1998. "Programas de Renda Mínima e Bolsa Escola <italic>- </italic>Concepção, Gestão e Financiamento"<italic>. Planejamento e Políticas Públicas</italic>, Brasília: IPEA, v. 2, p. 4-58.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Programas de Renda Mínima e Bolsa Escola: Concepção, Gestão e Financiamento</article-title>
+          <source>Planejamento e Políticas Públicas</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <fpage>4</fpage>
+          <lpage>58</lpage>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amaral</surname>
+              <given-names>Carlos</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>Andrade, T., Serra, R. 2001. <italic>Cidades Médias Brasileiras</italic>. Rio de Janeiro: Instituto de Pesquisa Econômica Aplicada - IPEA.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Cidades Médias Brasileiras</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Andrade</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Serra</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>Arretche, Marta 2000. <italic>Estado Federativo e Políticas Sociais: Determinantes da Descentralização</italic>. Rio de Janeiro: Editora Revan.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Estado Federativo e Políticas Sociais: Determinantes da Descentralização</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arretche</surname>
+              <given-names>Marta</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>Arretche, Marta. 2004. "<italic>Toward </italic>a Unified e More Equitable System: Health Reform in Brazil". In: <italic>Crucial Needs Weak Incentives: Social Sector Reform, Democratization, and Globalization in Latin America</italic>, edited by Robert R. Kaufman and Joan M. Nelson. Baltimore: Johns Hopkins University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Crucial Needs Weak Incentives: Social Sector Reform, Democratization, and Globalization in Latin America</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arretche</surname>
+              <given-names>Marta</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>Robert R.</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>Joan M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>Berry, Frances Stokes and Berry, William D. State Lottery. 1990. "Adoptions as Policy Innovations: An Event History Analysis". <italic>American Political Science Review</italic>, vol. 84, nº 2, pp. 395-415.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Adoptions as Policy Innovations: An Event History Analysis</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <fpage>395</fpage>
+          <lpage>415</lpage>
+          <issue>2</issue>
+          <volume>84</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berry</surname>
+              <given-names>Frances Stokes</given-names>
+            </name>
+            <name>
+              <surname>Berry</surname>
+              <given-names>William D</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>Berry, Frances Stokes and Berry, William D. 1992, "Tax Innovation in the States: Capitalizing on Political Opportunity". <italic>American Journal of Political Science</italic>, vol. 36, nº 3, pp. 715-742.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Tax Innovation in the States: Capitalizing on Political Opportunity</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>1992</year>
+          </date>
+          <fpage>715</fpage>
+          <lpage>742</lpage>
+          <issue>3</issue>
+          <volume>36</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berry</surname>
+              <given-names>Frances Stokes</given-names>
+            </name>
+            <name>
+              <surname>Berry</surname>
+              <given-names>William D.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>Berry, Frances Stokes and Berry, William D. 1999, "Innovation and Diffusion Models in Policy Research". In: <italic>Theories of the Policy Process</italic>, edited by Paul. A. Sabatier. Boulder: Westview.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Theories of the Policy Process</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Berry</surname>
+              <given-names>Frances Stokes</given-names>
+            </name>
+            <name>
+              <surname>Berry</surname>
+              <given-names>William D.</given-names>
+            </name>
+            <name>
+              <surname>Sabatier</surname>
+              <given-names>Paul. A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>Boushey, Graeme. 2010. <italic>Policy Diffusion Dynamics in America</italic>. New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Policy Diffusion Dynamics in America</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Boushey</surname>
+              <given-names>Graeme</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>Box-Steffensmeir, Janet M. and Jones, Bradford S. 1997. "Time is of the Essence: Event History Models in Political Science". <italic>American Journal of Political Science</italic>, vol. 41, nº 4, pp. 1414-1461.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Time is of the Essence: Event History Models in Political Science</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <fpage>1414</fpage>
+          <lpage>1461</lpage>
+          <issue>4</issue>
+          <volume>41</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Box-Steffensmeir</surname>
+              <given-names>Janet M.</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>Bradford S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>Box-Steffensmeir, Janet M. and Jones, Bradford S. 2004a. <italic>Event History Modeling: a Guide for Social Scientists. </italic>New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Event History Modeling: a Guide for Social Scientists</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Box-Steffensmeir</surname>
+              <given-names>Janet M.</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>Bradford S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>Box-Steffensmeir, Janet M. and Jones, Bradford S. 2004b. <italic>Timing and Political Change: Event History Modeling in Political Science. </italic>Ann Arbor: University of Michigan Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Timing and Political Change: Event History Modeling in Political Science</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Box-Steffensmeir</surname>
+              <given-names>Janet M.</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>Bradford S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>Collier, David and Messick, Richard E. 1975. "Prerequisites versus Diffusion: Testing Alternative Explanations of Social Security Adoption". <italic>The American Political Science Review</italic>, vol. 69, Nº 4. pp. 1299-1315.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Prerequisites versus Diffusion: Testing Alternative Explanations of Social Security Adoption</article-title>
+          <source>The American Political Science Review</source>
+          <date>
+            <year>1975</year>
+          </date>
+          <fpage>1299</fpage>
+          <lpage>1315</lpage>
+          <issue>4</issue>
+          <volume>69</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Collier</surname>
+              <given-names>David</given-names>
+            </name>
+            <name>
+              <surname>Messick</surname>
+              <given-names>Richard E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>Cox, Gary W. and Mathew, D. 1993. <italic>Legislative leviathan: party government in the House</italic>. Berkeley: University of California Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Legislative leviathan: party government in the House</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cox</surname>
+              <given-names>Gary W.</given-names>
+            </name>
+            <name>
+              <surname>Mathew</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>Draibe, Sônia 1998a. "A construção institucional da política brasileira de combate à pobreza: perfis, processos e agenda". <italic>Cadernos de Pesquisa</italic>, n.34. Campinas: UNICAMP / Núcleo de Estudos de Políticas Públicas.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A construção institucional da política brasileira de combate à pobreza: perfis, processos e agenda</article-title>
+          <source>Cadernos de Pesquisa</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <issue>34</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Draibe</surname>
+              <given-names>Sônia</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>Draibe, Sônia et al. 1998b. "Programas de Renda Mínima para Famílias Carentes: levantamento das experiências e metodologia de avaliação". In: <italic>Garantia de Renda Mínima: ensaios e propostas</italic>. Brasília: IPEA.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Garantia de Renda Mínima: ensaios e propostas</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Draibe</surname>
+              <given-names>Sônia</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>Draibe, Sônia. 2004. "Federal Leverage in a Decentralized System: Education Reform in Brazil". In: <italic>Crucial Needs Weak Incentives: Social Sector Reform, Democratization, and Globalization in Latin America</italic>, edited by Robert R. Kaufman and Joan M. Nelson. Baltimore: Johns Hopkins University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Crucial Needs Weak Incentives: Social Sector Reform, Democratization, and Globalization in Latin America</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Draibe</surname>
+              <given-names>Sônia</given-names>
+            </name>
+            <name>
+              <surname>Kaufman</surname>
+              <given-names>Robert R.</given-names>
+            </name>
+            <name>
+              <surname>Nelson</surname>
+              <given-names>Joan M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>Dolowitz, Davi and Marsch, David. 1996. "Who Learns what from Whom: a Review of the Policy Transfer Literature". <italic>Political Studies</italic>, XLIV, pp. 343-357.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Who Learns what from Whom: a Review of the Policy Transfer Literature</article-title>
+          <source>Political Studies</source>
+          <date>
+            <year>1996</year>
+          </date>
+          <fpage>343</fpage>
+          <lpage>357</lpage>
+          <volume>XLIV</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dolowitz</surname>
+              <given-names>Davi</given-names>
+            </name>
+            <name>
+              <surname>Marsch</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>Dolowitz, Davi and Marsch, David 2000. "Learning from Abroad: The Role of Policy Transfer in Contemporary Policy-Making". <italic>Journal of Policy and Administration,</italic> vol.13, n.1, pp. 5-24.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Learning from Abroad: The Role of Policy Transfer in Contemporary Policy-Making</article-title>
+          <source>Journal of Policy and Administration</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>5</fpage>
+          <lpage>24</lpage>
+          <issue>1</issue>
+          <volume>13</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dolowitz</surname>
+              <given-names>Davi</given-names>
+            </name>
+            <name>
+              <surname>Marsch</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>Downs, A. 1999. <italic>Uma Teoria Econômica da Democracia</italic>. São Paulo: Edusp.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Uma Teoria Econômica da Democracia</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Downs</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>Elazar, Daniel 1972. <italic>American Federalism</italic>. New York: Thomas Crowell.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>American Federalism</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Elazar</surname>
+              <given-names>Daniel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>Elkins, Zachary and Simmons, Beth. 2005. "On Waves, Clusters, and Diffusion: A Conceptual Framework". <italic>Annals of the American Academy of Political and Social Science</italic>, 598(1), pp.33-51.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>On Waves, Clusters, and Diffusion: A Conceptual Framework</article-title>
+          <source>Annals of the American Academy of Political and Social Science</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>33</fpage>
+          <lpage>51</lpage>
+          <issue>1</issue>
+          <volume>598</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Elkins</surname>
+              <given-names>Zachary</given-names>
+            </name>
+            <name>
+              <surname>Simmons</surname>
+              <given-names>Beth</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>Faria, Carlos Aurélio Pimenta. 2003. "Idéias, Conhecimento e Políticas Públicas: Um Inventário Sucinto das Principais Vertentes Analíticas Recentes". <italic>Revista Brasileira de Ciências Sociais</italic>, vol. 18, nº 51,pp. 21-30.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Idéias, Conhecimento e Políticas Públicas: Um Inventário Sucinto das Principais Vertentes Analíticas Recentes</article-title>
+          <source>Revista Brasileira de Ciências Sociais</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>21</fpage>
+          <lpage>30</lpage>
+          <issue>51</issue>
+          <volume>18</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Faria</surname>
+              <given-names>Carlos Aurélio Pimenta</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>Foster, John. 1978. "Regionalism and Innovation in the American States". <italic>Journal of Politics</italic>, vol. 40, pp. 179-187.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Regionalism and Innovation in the American States</article-title>
+          <source>Journal of Politics</source>
+          <date>
+            <year>1978</year>
+          </date>
+          <fpage>179</fpage>
+          <lpage>187</lpage>
+          <volume>40</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Foster</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>Levi-Faur, David. 2005. "The Global Diffusion of Regulatory Capitalism". <italic>Annals of the American Academy of Political and Social Science</italic>, vol. 598, pp. 12-32.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Global Diffusion of Regulatory Capitalism</article-title>
+          <source>Annals of the American Academy of Political and Social Science</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>12</fpage>
+          <lpage>32</lpage>
+          <volume>598</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levi-Faur</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>Ferejohn, John and Pasquino, Pasquale. 2001. "A teoria da escolha racional na ciência política: conceitos de racionalidade em teoria política". <italic>Revista Brasileira de Ciências Sociais</italic>, v. 16, nº 45. pp. 5-24.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A teoria da escolha racional na ciência política: conceitos de racionalidade em teoria política</article-title>
+          <source>Revista Brasileira de Ciências Sociais</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>5</fpage>
+          <lpage>24</lpage>
+          <issue>45</issue>
+          <volume>16</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ferejohn</surname>
+              <given-names>John</given-names>
+            </name>
+            <name>
+              <surname>Pasquino</surname>
+              <given-names>Pasquale</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>Gerring, John. 1997. "Ideology: A Definitional Analysis". <italic>Political Research Quarterly</italic>, vol. 50, nº 4, pp. 957-994.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Ideology: A Definitional Analysis</article-title>
+          <source>Political Research Quarterly</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <fpage>957</fpage>
+          <lpage>994</lpage>
+          <issue>4</issue>
+          <volume>50</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gerring</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <mixed-citation>Keefer, Philip and Khemani, Stuti. 2003a. "Democracy, Public Expenditures, and the Poor".<italic> World Bank Policy Working Paper</italic>, nº 3164.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Democracy, Public Expenditures, and the Poor</article-title>
+          <source>World Bank Policy Working Paper</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <issue>3164</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Keefer</surname>
+              <given-names>Philip</given-names>
+            </name>
+            <name>
+              <surname>Khemani</surname>
+              <given-names>Stuti</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <mixed-citation>Keefer, Philip and Khemani, Stuti. 2003b. "Why do the poor receive poor services?". <italic>Economic and Political Weekly, </italic>v.39, nº 9, pp. 935-943.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Why do the poor receive poor services?</article-title>
+          <source>Economic and Political Weekly</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>935</fpage>
+          <lpage>943</lpage>
+          <issue>9</issue>
+          <volume>39</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Keefer</surname>
+              <given-names>Philip</given-names>
+            </name>
+            <name>
+              <surname>Khemani</surname>
+              <given-names>Stuti</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B34">
+        <mixed-citation>Keefer, Philip. 2005. "Programmatic parties: Where do they come from and do they matter?" Mimeo, <italic>The World Bank Development Research Group.</italic></mixed-citation>
+        <element-citation publication-type="book">
+          <source>Programmatic parties: Where do they come from and do they matter?</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Keefer</surname>
+              <given-names>Philip</given-names>
+            </name>
+          </person-group>
+          <comment>Mimeo</comment>
+        </element-citation>
+      </ref>
+      <ref id="B35">
+        <mixed-citation>King, Gary, Keohane, Robert, and Verba, Sidney. 1994. <italic>Designing Social Inquiry</italic>. Princeton: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Designing Social Inquiry</source>
+          <date>
+            <year>1994</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>King</surname>
+              <given-names>Gary</given-names>
+            </name>
+            <name>
+              <surname>Keohane</surname>
+              <given-names>Robert</given-names>
+            </name>
+            <name>
+              <surname>Verba</surname>
+              <given-names>Sidney</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B36">
+        <mixed-citation>Lowi, Theodore. 1963. "Toward Functionalism in Political Science: The Case of Innovation in Party Systems". <italic>American Political Science Review</italic>, v. 57, nº 3, pp. 570-583.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Toward Functionalism in Political Science: The Case of Innovation in Party Systems</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1963</year>
+          </date>
+          <fpage>570</fpage>
+          <lpage>583</lpage>
+          <issue>3</issue>
+          <volume>57</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lowi</surname>
+              <given-names>Theodore</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B37">
+        <mixed-citation>Mainwaring, Scott. 1999. <italic>Rethinking Party Systems in the Third Wave of Democratization</italic>. Stanford, CA: Stanford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Rethinking Party Systems in the Third Wave of Democratization</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mainwaring</surname>
+              <given-names>Scott</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B38">
+        <mixed-citation>Melo, Marcus André. 1996. "Crise Federativa, Guerra Fiscal e Hobbesianismo Municipal: Efeitos Perversos da Descentralização?". <italic>São Paulo em Perspectiva Revista da Fundação SEADE</italic>, v.10, nº 3, pp. 11-20.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Crise Federativa, Guerra Fiscal e Hobbesianismo Municipal: Efeitos Perversos da Descentralização?</article-title>
+          <source>São Paulo em Perspectiva Revista da Fundação SEADE</source>
+          <date>
+            <year>1996</year>
+          </date>
+          <fpage>11</fpage>
+          <lpage>20</lpage>
+          <issue>3</issue>
+          <volume>10</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Melo</surname>
+              <given-names>Marcus André</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B39">
+        <mixed-citation>Melo, Marcus André. 2004. "Escolha Institucional e a Difusão dos Paradigmas de Políticas: O Brasil e a Segunda Onda de Reformas Previdenciárias". <italic>Dados - Revista de Ciências Sociais</italic>, v. 47, nº. 1, pp. 169-206.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Escolha Institucional e a Difusão dos Paradigmas de Políticas: O Brasil e a Segunda Onda de Reformas Previdenciárias</article-title>
+          <source>Dados - Revista de Ciências Sociais</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>169</fpage>
+          <lpage>206</lpage>
+          <issue>1</issue>
+          <volume>47</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Melo</surname>
+              <given-names>Marcus André</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B40">
+        <mixed-citation>Melo, Marcus André. 2007. "Political Competition can be positive: embedding cash transfer programs in Brazil", In: <italic>Statecraft in the South</italic>, edited by Bebbington, A; W McCourt. London: Palgrave.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Statecraft in the South</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Melo</surname>
+              <given-names>Marcus André</given-names>
+            </name>
+            <name>
+              <surname>Bebbington</surname>
+              <given-names>A</given-names>
+            </name>
+            <name>
+              <surname>McCourt</surname>
+              <given-names>W</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B41">
+        <mixed-citation>Mohr, Lawrence B. 1987. "Innovation Theory". In: <italic>New Technology as Organization Innovation</italic>, edited by Pennings JM and Buitendam A. Cambridge: Ballinger.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>New Technology as Organization Innovation</source>
+          <date>
+            <year>1987</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mohr</surname>
+              <given-names>Lawrence B.</given-names>
+            </name>
+            <name>
+              <surname>Pennings</surname>
+              <given-names>JM</given-names>
+            </name>
+            <name>
+              <surname>Buitendam</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B42">
+        <mixed-citation>Mooney, Christopher Z. 2001. "Modeling Regional Effects on State Policy Diffusion". <italic>Political Research Quarterly</italic>, 54(1), 103-124. 2001.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Modeling Regional Effects on State Policy Diffusion</article-title>
+          <source>Political Research Quarterly</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>103</fpage>
+          <lpage>124</lpage>
+          <issue>1</issue>
+          <volume>54</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mooney</surname>
+              <given-names>Christopher Z.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B43">
+        <mixed-citation>Mossberger, Karen. 1999. "State-federal diffusion and policy learning". <italic>Publius</italic>, vol. 29, nº3, pp. 31-50.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>State-federal diffusion and policy learning</article-title>
+          <source>Publius</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <fpage>31</fpage>
+          <lpage>50</lpage>
+          <issue>3</issue>
+          <volume>29</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mossberger</surname>
+              <given-names>Karen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B44">
+        <mixed-citation>Mullins, Willard A. 1972. "On the Concept of Ideology in Political Science". <italic>American Political Science Review</italic>, vol. 66, nº 2, pp. 498-510.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>On the Concept of Ideology in Political Science</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <fpage>498</fpage>
+          <lpage>510</lpage>
+          <issue>2</issue>
+          <volume>66</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mullins</surname>
+              <given-names>Willard A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B45">
+        <mixed-citation>O'Donnell, Guillermo. 1991. "Democracia Delegativa?". <italic>Novos estudos</italic>, nº 31, pp. 25-40.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Democracia Delegativa?</article-title>
+          <source>Novos estudos</source>
+          <date>
+            <year>1991</year>
+          </date>
+          <fpage>25</fpage>
+          <lpage>40</lpage>
+          <issue>31</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>O'Donnell</surname>
+              <given-names>Guillermo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B46">
+        <mixed-citation>Palloni, Alberto. 2001. "<italic>Diffusion in Sociological Analysis</italic>." In: <italic>Diffusion Processes and Fertility Transition</italic>, edited by John B. Casterline. National Research Council, Washington, D.C.: National Research Council Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Diffusion Processes and Fertility Transition</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Palloni</surname>
+              <given-names>Alberto</given-names>
+            </name>
+            <name>
+              <surname>Casterline</surname>
+              <given-names>John B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B47">
+        <mixed-citation>Power, Timothy and Zucco, Cesar. 2009. "Estimating Ideology of Brazilian Legislative Parties, 1990-2005: A Research Communication". <italic>Latin American Research Review</italic>, vol.44, nº 1, pp. 218-246.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Estimating Ideology of Brazilian Legislative Parties, 1990-2005: A Research Communication</article-title>
+          <source>Latin American Research Review</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>218</fpage>
+          <lpage>246</lpage>
+          <issue>1</issue>
+          <volume>44</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Power</surname>
+              <given-names>Timothy</given-names>
+            </name>
+            <name>
+              <surname>Zucco</surname>
+              <given-names>Cesar</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B48">
+        <mixed-citation>Rocha, S. and Garcia, E. 2001. O Programa de Bolsa-Escola Federal: uma avaliação do desenho e da operacionalização no período 1998-2000<italic>.</italic> Relatório para a OIT. Genebra: OIT.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O Programa de Bolsa-Escola Federal: uma avaliação do desenho e da operacionalização no período 1998-2000. Relatório para a OIT</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rocha</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Garcia</surname>
+              <given-names>E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B49">
+        <mixed-citation>Rogers, E. M. 1995. <italic>Diffusion of Innovations</italic>. New York: Free Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Diffusion of Innovations</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rogers</surname>
+              <given-names>E. M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B50">
+        <mixed-citation>Samuels, David. 2004. "The Political Logic of Decentralization in Brazil". In: <italic>Decentralization and Democracy in Latin America</italic>, edited by Alfred P. Montero and David Samuels. Notre Dame: University of Notre Dame Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Decentralization and Democracy in Latin America</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Samuels</surname>
+              <given-names>David</given-names>
+            </name>
+            <name>
+              <surname>Montero</surname>
+              <given-names>Alfred P.</given-names>
+            </name>
+            <name>
+              <surname>Samuels</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B51">
+        <mixed-citation>Souza, Celina. 1997. <italic>Constitutional Engineering in Brazil: the politics of federalism and decentralization</italic>. London: Macmillan; New York: St. Martin's Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Constitutional Engineering in Brazil: the politics of federalism and decentralization</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Souza</surname>
+              <given-names>Celina</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B52">
+        <mixed-citation>Souza, Celina. 1998. "Intermediação de Interesses Regionais no Brasil: O impacto do federalismo e da descentralização". <italic>Dados</italic>, v.41, nº 3, pp. 569-592.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Intermediação de Interesses Regionais no Brasil: O impacto do federalismo e da descentralização</article-title>
+          <source>Dados</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <fpage>569</fpage>
+          <lpage>592</lpage>
+          <issue>3</issue>
+          <volume>41</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Souza</surname>
+              <given-names>Celina</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B53">
+        <mixed-citation>Stocking, B. 1985. <italic>Initiative and Inertia: Case Studies in the NHS</italic>. London: Nuffield Provincial Hospitals Trust.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Initiative and Inertia: Case Studies in the NHS</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stocking</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B54">
+        <mixed-citation>Sugiyama, Natasha Borges, 2007. "Theories of Policy Diffusion: Social Sector Reform in Brazil". <italic>Comparative Political Studies,</italic> v.20, nº 10, pp. 1-24.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Theories of Policy Diffusion: Social Sector Reform in Brazil</article-title>
+          <source>Comparative Political Studies</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>24</lpage>
+          <issue>10</issue>
+          <volume>20</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sugiyama</surname>
+              <given-names>Natasha Borges</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B55">
+        <mixed-citation>Villatoro, Pablo. 2005. "Conditional Cash Transfers Programs: experiences from Latin American". <italic>CEPAL Review, </italic>nº 86, pp. 8396.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Conditional Cash Transfers Programs: experiences from Latin American</article-title>
+          <source>CEPAL Review</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>8396</fpage>
+          <issue>86</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Villatoro</surname>
+              <given-names>Pablo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B56">
+        <mixed-citation>Walker, Jack L. 1969. "The Diffusion of Innovations among the American States". <italic>American Political Science Review</italic>, v. 63, nº 3, pp. 880-899.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Diffusion of Innovations among the American States</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1969</year>
+          </date>
+          <fpage>880</fpage>
+          <lpage>899</lpage>
+          <issue>3</issue>
+          <volume>63</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Walker</surname>
+              <given-names>Jack L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B57">
+        <mixed-citation>Walker, Jack. L. 1973. "Comment: Problems in Research on the diffusion of policy innovations". <italic>The American Political Science Review</italic>, v.67, nº4, pp. 1186-1191.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Comment: Problems in Research on the diffusion of policy innovations</article-title>
+          <source>The American Political Science Review</source>
+          <date>
+            <year>1973</year>
+          </date>
+          <fpage>1186</fpage>
+          <lpage>1191</lpage>
+          <issue>4</issue>
+          <volume>67</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Walker</surname>
+              <given-names>Jack. L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B58">
+        <mixed-citation>Wampler, Brian. 2005. "A difusão do Orçamento Participativo brasileiro: 'boas práticas' devem ser promovidas?". <italic>Opinião Pública</italic>, v. 14, nº 1, pp. 65-95.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A difusão do Orçamento Participativo brasileiro: 'boas práticas' devem ser promovidas?</article-title>
+          <source>Opinião Pública</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>65</fpage>
+          <lpage>95</lpage>
+          <issue>1</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wampler</surname>
+              <given-names>Brian</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B59">
+        <mixed-citation>Welch, Susan and Thompson, Kay. 1980. "The impact of federal incentives on state policy Innovation". <italic>American Journal of Political Science</italic>, v. 24, nº 4, pp. 715-729.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The impact of federal incentives on state policy Innovation</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>1980</year>
+          </date>
+          <fpage>715</fpage>
+          <lpage>729</lpage>
+          <issue>4</issue>
+          <volume>24</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Welch</surname>
+              <given-names>Susan</given-names>
+            </name>
+            <name>
+              <surname>Thompson</surname>
+              <given-names>Kay</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B60">
+        <mixed-citation>Weyland, Kurt. 2004. <italic>Learning from Foreign Models in Latin American Policy Reform. </italic>Washington, D.C: Woodrow Wilson Center Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Learning from Foreign Models in Latin American Policy Reform</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weyland</surname>
+              <given-names>Kurt</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B61">
+        <mixed-citation>Weyland, Kurt. 2005. "Theories of Policy Diffusion: Lessons from Latin American Pension Reform".<italic> World Politics</italic>, v. 57, nº 2, pp. 262-295.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Theories of Policy Diffusion: Lessons from Latin American Pension Reform</article-title>
+          <source>World Politics</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>262</fpage>
+          <lpage>295</lpage>
+          <issue>2</issue>
+          <volume>57</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weyland</surname>
+              <given-names>Kurt</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B62">
+        <mixed-citation>Weyland, Kurt. 2007. <italic>Bounded Rationality and Policy Diffusion: Social Sector Reform in Latin America</italic>. Princeton: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bounded Rationality and Policy Diffusion: Social Sector Reform in Latin America</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Weyland</surname>
+              <given-names>Kurt</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

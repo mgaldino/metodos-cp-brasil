@@ -9,6 +9,7 @@ Este repositório replica e expande Torreblanca et al. (2026), "The Credibility 
 - Classificações LLM finais pós-revisão manual: `data/processed/classifications_llm.csv`, com 208 artigos classificados e schema validado; os JSONs finais estão em `data/processed/classifications_final/`.
 - Base operacional atual da amostra classificada: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão. Este arquivo é a amostra validada pós-exclusões, não a base final do paper.
 - Texto integral dos 175 artigos gold/piloto: `data/processed/fulltext_gold/article_texts_gold.csv`, validado em 2026-06-03 com 175/175 bodies recuperados. Esta é a fonte canônica de body para o piloto/gold; não use abstract, metadados, keywords, referências ou os XMLs antigos como substituto de body.
+- Recuperação de texto integral do corpus elegível completo: `scripts/16_recover_fulltext_corpus.py` constrói o manifest a partir de `data/raw/articles_2005_2025.csv`, `data/processed/excluded_journals.csv` e `data/processed/excluded_articles.csv`, exclui periódicos/artigos fora do escopo e registros não `research-article` antes da extração, preserva brutos em `data/raw/fulltext_corpus/` e escreve `data/processed/fulltext_corpus/article_texts_corpus.csv`. A validação correspondente é `scripts/17_validate_fulltext_corpus.R`. Execução em 2026-06-03 recuperou 6.642/6.672 bodies; 30 PIDs permanecem em `data/processed/fulltext_corpus/fulltext_corpus_failure_queue.csv`, majoritariamente apresentações, erratas, notas editoriais, obituários ou críticas curtas marcadas como `research-article` pelo metadado bruto. A validação também sinalizou 2 pares com body/hash duplicado para checagem manual: `S0011-52582014000200007`/`S0011-52582014000200008` e `S0011-52582025000400225`/`S0011-52582025000400230`.
 - Piloto de classificação tripla independente: `data/processed/full_classification_pilot/`, usando subagentes Codex locais e os 175 artigos elegíveis apenas como gold/piloto.
 - Benchmarks internacionais de readability: `data/processed/benchmark_cp.csv` e `data/processed/benchmark_ir.csv`.
 - Validação final das classificações: `Rscript --vanilla scripts/09_apply_manual_review_decisions.R` gerou zero erros de schema em 2026-06-03; o relatório está em `quality_reports/classification_validation_summary_final.md`.
@@ -90,6 +91,16 @@ Rscript --vanilla scripts/15_write_fulltext_scaling_plan.R
 
 Os brutos usados estão preservados em `data/raw/fulltext_gold/`; a validação e o plano de escala estão em `quality_reports/fulltext_gold_recovery_report.md`, `quality_reports/fulltext_gold_inventory.csv` e `quality_reports/fulltext_scaling_plan.md`.
 
+Para recuperar e validar o corpus elegível completo, use:
+
+```bash
+python3 scripts/16_recover_fulltext_corpus.py --workers 4 --batch-size 250
+python3 scripts/16_recover_fulltext_corpus.py --offline
+Rscript --vanilla scripts/17_validate_fulltext_corpus.R
+```
+
+O corpus completo usa caminhos separados do gold: brutos em `data/raw/fulltext_corpus/`, manifest e fila de falhas em `data/processed/fulltext_corpus/`, inventário em `quality_reports/fulltext_corpus_inventory.csv` e relatório em `quality_reports/fulltext_corpus_recovery_report.md`. O script preserva a ordem de fontes validada no gold: ArticleMeta `fulltexts.html`, HTML SciELO com `Text`/`Texto`, XML real com `<body>` e PDF fallback. Quando o PID legado do ArticleMeta está stale, o script adiciona o DOI resolver como candidato HTML depois dos URLs SciELO do PID; isso recuperou `S0011-52582025000400225` via DOI sem alterar o gold.
+
 5. Classificar artigos via LLM/API, quando houver decisão posterior de escala:
 
 ```bash
@@ -135,13 +146,14 @@ python3 -m pytest scripts
 - Preserve arquivos brutos e extraídos em `data/raw/`.
 - Salve outputs derivados em `data/processed/` ou `output/`.
 - Para os 175 gold/piloto, use `data/processed/fulltext_gold/article_texts_gold.csv` como fonte canônica de body. `has_fulltext_xml=1` e arquivos em `data/raw/articles_fulltext/` não garantem texto integral utilizável.
+- Para o corpus completo elegível, use somente `data/processed/fulltext_corpus/article_texts_corpus.csv` depois de validar com `scripts/17_validate_fulltext_corpus.R`; não misture com `data/processed/fulltext_gold/article_texts_gold.csv`.
 - Antes de análises substantivas novas, registre um plano em `quality_reports/plans/`.
 - Em R, use `dplyr::select()` explicitamente ao selecionar colunas.
 - Figuras e tabelas do paper devem ser numeradas e ter caption.
 
 ## Pontos Pendentes
 
-- Expandir a recuperação de body e a classificação para o corpus completo elegível, excluindo `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` da análise principal antes da extração. O plano operacional está em `quality_reports/fulltext_scaling_plan.md`.
+- Validar a recuperação de body do corpus completo elegível com `scripts/17_validate_fulltext_corpus.R` antes de iniciar a classificação em escala. O plano operacional está em `quality_reports/fulltext_scaling_plan.md`.
 - Consolidar um script mestre em R para gerar tabelas e figuras finais a partir da base completa classificada elegível, com os ledgers de exclusão aplicados explicitamente.
 - Escrever o manuscrito em `paper/paper.Rmd`.
 - Documentar a versão final do corpus e os critérios de inclusão/exclusão no apêndice.

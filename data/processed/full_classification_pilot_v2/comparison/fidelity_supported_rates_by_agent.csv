@@ -1,0 +1,4 @@
+audited_agent_id,audited_fields,factual_fields,supported_factual_fields,factual_support_rate,contradicted_n,not_found_n,high_severity_n,medium_severity_n
+agent_b,2975,2975,2714,0.9122689075630253,150,111,52,195
+agent_a,2975,2975,2746,0.9230252100840336,105,124,39,162
+agent_c,2975,2975,2819,0.9475630252100841,26,130,77,70

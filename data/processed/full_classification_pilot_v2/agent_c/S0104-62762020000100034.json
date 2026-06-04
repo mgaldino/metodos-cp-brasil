@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-62762020000100034",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "16e3c574de22acc7177f10fd39aa58d5ec53a0602a227ae7d543455137886fe1",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "runs_original_survey",
+    "uses_original_dataset": "original_survey",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "fear_of_violence_and_demographics",
+        "variable_description": "Medo de violência, idade, cor, classe, região, porte do município e escolaridade"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "authoritarianism_index",
+        "variable_description": "Índice de propensão ao apoio a posições autoritárias"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 2087,
+    "sample_size_quote": "Com essas 17 assertivas em mãos7 , o Datafolha aplicou 2.087 entrevistas, em uma amostra estatisticamente representativa da população brasileira com 16 anos ou mais e em 130 municípios de pequeno, médio e grande porte, entre os dias 7 e 11 de março de 2017.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo aplica survey nacional e constrói/valida uma escala de autoritarismo com análise fatorial e confiabilidade. A análise é quantitativa e metodológica, mas descritiva/associativa, sem desenho causal."
+  },
+  "raw_response_path": null
+}

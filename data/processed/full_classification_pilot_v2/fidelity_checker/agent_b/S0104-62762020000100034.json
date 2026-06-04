@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-62762020000100034",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "16e3c574de22acc7177f10fd39aa58d5ec53a0602a227ae7d543455137886fe1",
+  "classification_hash": "98ad2f9886479226067ab2aeaca128156a3cd38a0d692927fcee9cc0b8f3e187",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "resultados para os 17 itens da versão da escala F aplicada. No terceiro tópico, \"Propensão ao autoritarismo segundo diferentes recort es analí ticos\", são apresentados e discutidos os resultados acerca da propensão ao autoritarismo no Brasil para distintos recortes, como: faixa etária,",
+      "classification_value": [
+        {
+          "variable_name": "Sociodemographic recortes and fear of violence",
+          "variable_description": "Age, race, class, region, municipality size, schooling and violence-related attitudes."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "cultura escravocrata autoritária legitimava diferentes formas de tratar – e matar – negros e pobres no país ( Mbembe, 2 017 ). O Brasil republicano vivenciou diversos momentos autoritários, cada qual com diferentes mecanismos de vigiar a sociedade e punir os então",
+      "classification_value": [
+        {
+          "variable_name": "Propensity to authoritarianism",
+          "variable_description": "Index based on a version of the F scale applied in 2017."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims an original survey, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports qualitative interview data, but that is not compatible with original_survey.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "público a partir do agravamento do cenário de crise fiscal e econômica, mas, também, como efeito/subproduto da crise ética e da c orrupção do Estado; 3) os integrantes das classes D/E são, por fim, aqueles mais suscetíveis de serem vítimas e sofrerem",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "contradicted_by_text",
+      "severity": "low",
+      "reason": "The classification says no mechanisms/channels, but mechanism/channel language appears in the body.",
+      "supporting_excerpt": "e pobres no país ( Mbembe, 2017 ). O Brasil republicano vivenciou diversos momentos autoritários, cada qual com diferentes m ecanismos de vigiar a sociedade e punir os então considerados subversivos, comunistas e agitadores ( Schwartzman, 2007 ). No limite, a violência",
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 2 contradicted and 2 not found in text; overall status fail."
+}

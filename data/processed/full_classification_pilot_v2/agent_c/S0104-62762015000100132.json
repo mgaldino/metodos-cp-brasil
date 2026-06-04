@@ -1,0 +1,65 @@
+{
+  "pid": "S0104-62762015000100132",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "f936016854727526d1dac146fb72c66642722e82327df6d896aa81408526d328",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "socioeconomic_and_attitudinal_items",
+        "variable_description": "Sexo, idade, escolaridade, renda, região, patriotismo e respostas do SIPS Defesa Nacional"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "trust_in_armed_forces",
+        "variable_description": "Confiança nas Forças Armadas brasileiras"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "socioeconomic_and_attitudinal_items",
+        "dv_var_name": "trust_in_armed_forces",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 3796,
+    "sample_size_quote": "Ao todo, foram ouvidas 3.796 pessoas, em todas as unidades da federação, entre os dias 8 e 29 de agosto de 20112.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo estima regressão ordinal com dados SIPS Defesa Nacional para analisar fatores associados à confiança nas Forças Armadas. É quantitativo inferencial, sem desenho causal de identificação."
+  },
+  "raw_response_path": null
+}

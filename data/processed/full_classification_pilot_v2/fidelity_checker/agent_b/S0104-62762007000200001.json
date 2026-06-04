@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-62762007000200001",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "05edc45ef327cfb505b46d39d2f6633591859fdfe2a2a213006b299f9d092ac4",
+  "classification_hash": "015daae9bc811b031e0295308718fc6203a2f8d5a3edc4ca959a1e0a08289a21",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "como as pessoas são impactadas nos seus sistemas de crenças por experiências eleitorais prévias torna-se oportuno. As eleições presidenciais de 2002 e 2006 propiciam um campo de análise no qual podem ser observadas oscilações atitudinais em relação à democracia e ao sistema",
+      "classification_value": [
+        {
+          "variable_name": "Electoral habituation between 2002 and 2006",
+          "variable_description": "Repeated electoral experience across two presidential elections."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "de mediação convencional entre Estado e sociedade, bem como outras organizações sociais, ou seja, se influenciou na promoção de capital social . Não é, portanto, um estudo que enfoca o resultado eleitoral ou de movimentos sociais e organizações populares, mas sim, um",
+      "classification_value": [
+        {
+          "variable_name": "Social capital and democratic attitudes",
+          "variable_description": "Formal and informal dimensions of social capital and democratic support."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "para a questão da influência do voto para o que acontece no Brasil: os dados mostram que o número de entrevistados com opinião negativa aumentou de 13% em 2002 para 22% em 2006. Esses dados sinalizam de forma contundente que a hipótese",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "sistemas de crenças por experiências eleitorais prévias torna-se oportuno. As eleições presidenciais de 2002 e 2006 propiciam um campo de análise no qual podem ser observadas oscilações atitudinais em relação à democracia e ao sistema político e suas instituições. O processo eleitoral",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "conduzida para o desenvolvimento e manutenção de atitudes democráticas de apoio ao governo. No entanto, embora artigos recentes indiquem uma causalidad e entre participação e capital social público, o estudo em dois pontos no tempo proposto aqui não confirmou esta associação. Os",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "populista. Nessas circunstâncias, o personalismo se fortalece. Os benefícios das eleições podem ser indiretos. Embora eleições ofereçam aos cidadãos um mecanismo institucional para expressar sua aprovação para o exercício continuado da liderança, elas também proporcionam aos cidadãos os meios de afirmar sua",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "do eleitorado. Mas, o que ficou evidente foi que, em raras ocasiões, a figura do candidato teve uma influência t ão significat iva no resultado eleitoral como em 2006. De fato, pode se afirmar que a personalização da política, ou seja, a",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status fail."
+}

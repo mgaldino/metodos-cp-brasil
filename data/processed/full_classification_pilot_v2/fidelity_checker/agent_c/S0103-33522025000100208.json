@@ -1,0 +1,157 @@
+{
+  "pid": "S0103-33522025000100208",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "92057b331c022180a6b8073198798aa2313257c357a4fbc6d31ddce04bcab8be",
+  "classification_hash": "5bf31cf0923c7179166ffaba03d448db38e04c4bd0001008ae5a76510dde1bdd",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "análise, foram aglutinados a uma mesma unidade de análise os discursos proferidos nas casas legislativas. Totalizaram-se 99 oradores, ou seja, 99 unidades de análise de conteúdo. Ressalta-se que a maioria dos oradores corresponde aos parlamentares, porém, no âmbito das comissões, houve audiências",
+      "classification_value": 99
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "análise, foram aglutinados a uma mesma unidade de análise os discursos proferidos nas casas legislativas. Totalizaram-se 99 oradores, ou seja, 99 unidades de análise de conteúdo. Ressalta-se que a maioria dos oradores corresponde aos parlamentares, porém, no âmbito das comissões, houve audiências",
+      "classification_value": "Totalizaram-se 99 oradores, ou seja, 99 unidades de análise de conteúdo."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Thelen (2010). Essa pesquisa diferencia-se em razão de ter observado os atores e suas dinâmicas a partir dos seus respectivos discurso s, haja vista que as demais pesquisas detiveram-se apenas nas mudanças de regras institucionais e suas respectivas tipologias (Benveniste; Mizrahi, 2023;",
+      "classification_value": [
+        {
+          "variable_name": "legislative_discourses",
+          "variable_description": "Discursos parlamentares sobre a Lei Aldir Blanc"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Mudança Institucional (Mahoney; Thelen, 2010). Este estudo contribui para o campo das Políticas Públicas por trazer um olhar acerca das representaçõe s sobre mudanças institucionais em contexto de crise, demonstrando processos internos no âmbito institucional, a partir do discurso dos agentes, os",
+      "classification_value": [
+        {
+          "variable_name": "institutional_change_representations",
+          "variable_description": "Representações de mudança institucional na política cultural"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "2021). Assim, a categoria atribuída foi de “orador(a)”, enquanto agentes expoentes de discursos no âmbito do processo legislativo. O s dados foram obtid os diretamente nas casas legislativas, por meio de pesquisa no Banco de Discursos (Câmara dos Deputados) e Pronunciamentos (Senado",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "Introdução Eventos de crise, como o causado pela pandemia de Covid-19, podem funcionar como gatilhos de ativação de mecanismo s de mudança institucional (Capano; Howlett, 2021). O período de emergência sanitária provocado pela pandemia contribuiu para que atores políticos movimentassem-se para implementar",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

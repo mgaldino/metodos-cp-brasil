@@ -1,0 +1,165 @@
+{
+  "pid": "S0103-33522019000300077",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "4582d7f98f0d8a3fe879a10da817f5f5fde73206cf1deb9acd05a52937c08f53",
+  "classification_hash": "075372885c8606aed3fc39a377bb0c15a670ee8914115b754e129e960db44f5b",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "coletivo para com o Estado e vice-versa. Noutras palavras, tanto os direitos como os deveres são adquiridos pela participação, in dividual o u coletiva, bem como concedidos pela regulação do Estado. No entanto, é importante ter em mente que mais do que",
+      "classification_value": [
+        {
+          "variable_name": "Migrant nationality, gender, race and education",
+          "variable_description": "Individual characteristics of Latin American immigrants in Brazilian administrative data."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "Labor-market insertion",
+          "variable_description": "Salary and type of occupation of immigrants in Brazil."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "Migrant nationality, gender, race and education",
+          "dv_var_name": "Labor-market insertion",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": false
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "demonstra estar receptivo aos estrangeiros de determinada origem e possuindo determinadas características. Com base na análise descritiva e preliminar dos dados obtido s a partir do Obmigra (Sincre e Rais) constata-se que a argentinos parecem estar melhor colocados entre os imigrantes latino-americanos",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "baseada em estatística descritiva multivariada e técnicas georreferenciadas; e (ii) uma análise quantitativa baseada em estatística inferencial, utilizando-se de r egressões. Ambas serão usadas para entender os fluxos de imigração e a situação dos estrangeiros na força de trabalho brasileira. Esta pesquisa",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "internacionalmente” (AVRITZER, 2002, p.51). Para esse autor, cada uma dessas modalidades de cidadania pós-nacional seria capaz de minimizar os efe itos de letérios do intenso processo de expansão do mercado financeiro e das restrições impostas pelos Estados Nacionais. No caso dos direitos",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "a consistência de tais assertivas, foram utilizados dois exemplos de regressão linear multivariada. Este modelo estatístico consiste em uma equa ção que estima o valor esperado de uma variável tida como dependente quando as demais variáveis, independentes, variam. Matematicamente temos a equação:",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "contradicted_by_text",
+      "severity": "low",
+      "reason": "The classification says no mechanisms/channels, but mechanism/channel language appears in the body.",
+      "supporting_excerpt": "Anderson (2008)10, o entendimento sobre o nacionalismo varia entre a identidade de um coletivo (língua, religião, cultura etc.) a me canismos p olíticos de consolidação de um território, não necessariamente homogêneo. Para este trabalho, partimos da compreensão de Giddens (2001), segundo o",
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "visualizar a cidadania, nos remete ao último conceito sugerido: migração. Esta, por sua vez, se disseminou de forma signi ficativa nos ú ltimos 50 anos. O fenômeno migratório é bastante antigo na história da humanidade. Perseguições políticas, ideológicas, religiosas ou étnicas, epidemias,",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 2 contradicted and 2 not found in text; overall status fail."
+}

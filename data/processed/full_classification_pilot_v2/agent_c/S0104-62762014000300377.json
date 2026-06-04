@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-62762014000300377",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "44fe73642c0a75d57e91cf8a1249663635d62e6f70cac0ea37639c53581d30da",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Methodology and Formal Theory",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "signature_elements",
+        "variable_description": "Elementos de assinatura codificados em textos jornalísticos"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "media_frames",
+        "variable_description": "Enquadramentos sobre ações afirmativas raciais na imprensa"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 1831,
+    "sample_size_quote": "No total, o corpus compilou 1.831 textos de diferentes tipos, sendo publicados 944 em O Globo e 887 na Folha de S. Paulo.",
+    "claims_any_statistically_significant_results": false,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo propõe rotina metodológica e aplica análise de correspondências a 1.831 textos jornalísticos. É análise quantitativa de conteúdo, sem regressão causal ou significância estatística."
+  },
+  "raw_response_path": null
+}

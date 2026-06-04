@@ -1,0 +1,997 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">DhwrWkLLkhHVbdgTZGtMqyD</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212013000100002</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(13)00700100002</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>When is statistical significance not significant?</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Figueiredo Filho</surname>
+            <given-names>Dalson Britto</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Paranhos</surname>
+            <given-names>Ranulfo</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff02"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Rocha</surname>
+            <given-names>Enivaldo C. da</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff03"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Batista</surname>
+            <given-names>Mariana</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff04"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Silva Jr.</surname>
+            <given-names>José Alexandre da</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff05"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Santos</surname>
+            <given-names>Manoel L. Wanderley D.</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff06"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Marino</surname>
+            <given-names>Jacira Guiro</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff07"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff06">
+        <institution content-type="orgname">Federal University of Minas Gerais</institution>
+        <institution content-type="orgdiv1">Department of Political Science </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff05">
+        <institution content-type="orgname">Federal University of Goiás</institution>
+        <institution content-type="orgdiv1">Social Science School </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff02">
+        <institution content-type="orgname">Federal University of Alagoas</institution>
+        <institution content-type="orgdiv1">Social Science Institute </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff01">
+        <institution content-type="orgname">Federal University of Pernambuco</institution>
+        <institution content-type="orgdiv1">Political Science Department </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff04">
+        <institution content-type="orgname">Federal University of Pernambuco</institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff03">
+        <institution content-type="orgname">Federal University of Pernambuco</institution>
+        <institution content-type="orgdiv1">Political Science Department </institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <aff id="aff07">
+        <institution content-type="orgname">Carlos Drummond de Andrade School</institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2013</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>1</issue>
+      <fpage>31</fpage>
+      <lpage>55</lpage>
+      <history>
+        <date date-type="received">
+          <month>08</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <month>04</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v7n1/02.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>The article provides a non-technical introduction to the p value statistics. Its main purpose is to help researchers make sense of the appropriate role of the p value statistics in empirical political science research. On methodological grounds, we use replication, simulations and observational data to show when statistical significance is not significant. We argue that: (1) scholars must always graphically analyze their data before interpreting the p value; (2) it is pointless to estimate the p value for non-random samples; (3) the p value is highly affected by the sample size, and (4) it is pointless to estimate the p value when dealing with data on population.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>p value statistics</kwd>
+        <kwd>statistical significance</kwd>
+        <kwd>significance tests</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>20</day>
+        <month>08</month>
+        <year>2013</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>ANSCOMBE, F. J. (1973), Graphs in Statistical Analysis, <italic>The American Statistician</italic>, vol. 27, nº 1, pp. 17-21.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Graphs in Statistical Analysis</article-title>
+          <source>The American Statistician</source>
+          <date>
+            <year>1973</year>
+          </date>
+          <fpage>17</fpage>
+          <lpage>21</lpage>
+          <issue>1</issue>
+          <volume>27</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ANSCOMBE</surname>
+              <given-names>F. J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>BARRO, Robert J., and LEE, Jong-Wha. (2000<italic>), International Data on Educational Attainment: Updates and Implications,</italic> Center for International Development (CID) -Working Paper nº 42, Harvard University, &lt;<ext-link ext-link-type="uri" xlink:href="http://www.hks.harvard.edu/centers/cid/publications/faculty-working-papers/cid-working-paper-no.-42">http://www.hks.harvard.edu/centers/cid/publications/faculty-working-papers/cid-working-paper-no.-42</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>International Data on Educational Attainment: Updates and Implications</article-title>
+          <source>Working Paper</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <issue>42</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BARRO</surname>
+              <given-names>Robert J.</given-names>
+            </name>
+            <name>
+              <surname>LEE</surname>
+              <given-names>Jong-Wha</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>BEGG, Collin B. and BERLIN, Jesse A. (1988), Publication Bias: A Problem in Interpreting Medical Data, <italic>Journal of the Royal Statistical Society – Series A</italic>, vol. 151, nº 3, pp. 419-463.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Publication Bias: A Problem in Interpreting Medical Data</article-title>
+          <source>Journal of the Royal Statistical Society</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <fpage>419</fpage>
+          <lpage>463</lpage>
+          <issue>3</issue>
+          <volume>151</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BEGG</surname>
+              <given-names>Collin B.</given-names>
+            </name>
+            <name>
+              <surname>BERLIN</surname>
+              <given-names>Jesse A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>CARVER, Ronald P. (1978), The case against statistical significance testing, <italic>Harvard Educational Review</italic>, vol. 48, nº 3, pp. 378-399.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The case against statistical significance testing</article-title>
+          <source>Harvard Educational Review</source>
+          <date>
+            <year>1978</year>
+          </date>
+          <fpage>378</fpage>
+          <lpage>399</lpage>
+          <issue>3</issue>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARVER</surname>
+              <given-names>Ronald P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>CARVER, Ronald P. (1993), The Case Against Statistical Significance Testing, Revisited, <italic>The Journal of Experimental Education</italic>, vol. 61, nº4, pp. 287-292.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Case Against Statistical Significance Testing, Revisited</article-title>
+          <source>The Journal of Experimental Education</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <fpage>287</fpage>
+          <lpage>292</lpage>
+          <issue>4</issue>
+          <volume>61</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARVER</surname>
+              <given-names>Ronald P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>COHEN, Jacob. (1988), <italic>Statistical Power Analysis for the Behavioral Sciences </italic>– 2<sup>nd</sup> Edition. Mahwah, NJ: Lawrence Erlbaum Associates.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Statistical Power Analysis for the Behavioral Sciences</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COHEN</surname>
+              <given-names>Jacob</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>COURSOUL, Allan and WAGNER, Edwin E. (1986), Effect of Positive Findings on Submission and Acceptance Rates: A Note on Meta-Analysis Bias, <italic>Professional Psychology</italic>, vol. 17, nº 2, pp. 136-137.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Effect of Positive Findings on Submission and Acceptance Rates: A Note on Meta-Analysis Bias</article-title>
+          <source>Professional Psychology</source>
+          <date>
+            <year>1986</year>
+          </date>
+          <fpage>136</fpage>
+          <lpage>137</lpage>
+          <issue>2</issue>
+          <volume>17</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COURSOUL</surname>
+              <given-names>Allan</given-names>
+            </name>
+            <name>
+              <surname>WAGNER</surname>
+              <given-names>Edwin E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>CRAMER, Duncan and HOWITT, Dennis L. (2004), <italic>The SAGE Dictionary of Statistics: A Practical Resource for Students in the Social Sciences</italic>. SAGE Publications Ltd., London.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The SAGE Dictionary of Statistics: A Practical Resource for Students in the Social Sciences</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CRAMER</surname>
+              <given-names>Duncan</given-names>
+            </name>
+            <name>
+              <surname>HOWITT</surname>
+              <given-names>Dennis L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>DANIEL, Larry G. (1998), Statistical significance testing: A historical overview of misuse and misinterpretation with implications for the editorial policies of educational journals, <italic>Research in the Schools</italic>, vol. 5, nº 2, pp. 23-32.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Statistical significance testing: A historical overview of misuse and misinterpretation with implications for the editorial policies of educational journals</article-title>
+          <source>Research in the Schools</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <fpage>23</fpage>
+          <lpage>32</lpage>
+          <issue>2</issue>
+          <volume>5</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DANIEL</surname>
+              <given-names>Larry G.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>DAVIDSON, Julia. (2006), Non-probability (non-random) sampling. The Sage Dictonary of Social Research Methods, &lt;<ext-link ext-link-type="uri" xlink:href="http://srmo.sagepub.com/view/the-sage-dictionary-of-social-research-methods/n130.xml">http://srmo.sagepub.com/view/the-sage-dictionary-of-social-research-methods/n130.xml</ext-link><underline>&gt;</underline></mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Sage Dictonary of Social Research Methods</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DAVIDSON</surname>
+              <given-names>Julia</given-names>
+            </name>
+          </person-group>
+          <comment>Non-probability (non-random) sampling</comment>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>DE LONG, J. Bradford and LANG, Kevin. (1992), Are All Economic Hypotheses False? <italic>Journal of Political Economy</italic>, vol. 100, nº 6, pp. 1257-1272.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Are All Economic Hypotheses False?</article-title>
+          <source>Journal of Political Economy</source>
+          <date>
+            <year>1992</year>
+          </date>
+          <fpage>1257</fpage>
+          <lpage>1272</lpage>
+          <issue>6</issue>
+          <volume>100</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DE LONG</surname>
+              <given-names>J. Bradford</given-names>
+            </name>
+            <name>
+              <surname>LANG</surname>
+              <given-names>Kevin</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>EVERITT, Brian S. (2006), <italic>The Cambridge Dictionary of Statistics </italic>– 3<sup>rd</sup> edition<italic>.</italic> New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Cambridge Dictionary of Statistics</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>EVERITT</surname>
+              <given-names>Brian S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>EVERITT, Brian S. and SKRONDAL, Anders (2010), <italic>The Cambridge Dictionary of Statistics.</italic> New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Cambridge Dictionary of Statistics</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>EVERITT</surname>
+              <given-names>Brian S.</given-names>
+            </name>
+            <name>
+              <surname>SKRONDAL</surname>
+              <given-names>Anders</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>FISHER, Ronald A. (1923), Statistical Tests of Agreement Between Observation and Hipothesys, <italic>Economica</italic>, nº 8, pp. 139-147.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Statistical Tests of Agreement Between Observation and Hipothesys</article-title>
+          <source>Economica</source>
+          <date>
+            <year>1923</year>
+          </date>
+          <fpage>139</fpage>
+          <lpage>147</lpage>
+          <issue>8</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FISHER</surname>
+              <given-names>Ronald A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>_____ (1925), Theory of Statistical Estimation, <italic>Mathematical Proceedings of the Cambridge Philosophical Society</italic>, vol. 22, 700-725.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Theory of Statistical Estimation</article-title>
+          <source>Mathematical Proceedings of the Cambridge Philosophical Society</source>
+          <date>
+            <year>1925</year>
+          </date>
+          <fpage>700</fpage>
+          <lpage>725</lpage>
+          <volume>22</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FISHER</surname>
+              <given-names>Ronald A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>GELMAN, Andrew, CARLIN, John B., STERN, Hal S. and RUBIN, Donald B. (2003), <italic>Bayesian Data Analysis</italic> – 2<sup>nd</sup> edition. New York: Chapman and Hall/CRC Texts in Statistical Science.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian Data Analysis</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GELMAN</surname>
+              <given-names>Andrew</given-names>
+            </name>
+            <name>
+              <surname>CARLIN</surname>
+              <given-names>John B.</given-names>
+            </name>
+            <name>
+              <surname>STERN</surname>
+              <given-names>Hal S.</given-names>
+            </name>
+            <name>
+              <surname>RUBIN</surname>
+              <given-names>Donald B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>GELMAN, Andrew and STERN, Hal. (2006), The Difference Between "Significant" and "Not Significant" is not Itself Statistically Significant, <italic>The American Statistician</italic>, vol. 60, nº 4, pp. 328-331.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Difference Between "Significant" and "Not Significant" is not Itself Statistically Significant</article-title>
+          <source>The American Statistician</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>328</fpage>
+          <lpage>331</lpage>
+          <issue>4</issue>
+          <volume>60</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GELMAN</surname>
+              <given-names>Andrew</given-names>
+            </name>
+            <name>
+              <surname>STERN</surname>
+              <given-names>Hal.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>GELMAN, Andrew (2007), <italic>Bayesian statistics</italic>. Basel Statistical Society, Switzerland.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian statistics</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GELMAN</surname>
+              <given-names>Andrew</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>GELMAN, Andrew and WEAKLIEM, David. (2009), Of Beauty, Sex and Power, <italic>American Scientist</italic>, vol. 97, pp. 310-317.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Of Beauty, Sex and Power</article-title>
+          <source>American Scientist</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>310</fpage>
+          <lpage>317</lpage>
+          <volume>97</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GELMAN</surname>
+              <given-names>Andrew</given-names>
+            </name>
+            <name>
+              <surname>WEAKLIEM</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>GELMAN, Andrew. (2012a), The inevitable problems with statistical significance and 95% intervals<italic>, Statistical Modeling, Causal Inference, and Social Science</italic>, &lt; <ext-link ext-link-type="uri" xlink:href="http://andrewgelman.com/2012/02/02/the-inevitable-problems-with-statistical-significance-and-95-intervals/">http://andrewgelman.com/2012/02/02/the-inevitable-problems-with-statistical-significance-and-95-intervals/</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The inevitable problems with statistical significance and 95% intervals</article-title>
+          <source>Statistical Modeling, Causal Inference, and Social Science</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GELMAN</surname>
+              <given-names>Andrew</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>GELMAN, Andrew. (2012b), What do statistical p-values mean when the sample = the population<italic>?, Statistical Modeling, Causal Inference, and Social Science</italic>,<italic> &lt;</italic><ext-link ext-link-type="uri" xlink:href="http://andrewgelman.com/2012/09/what-do-statistical-p-values-mean-when-the-sample-the-population/">http://andrewgelman.com/2012/09/what-do-statistical-p-values-mean-when-the-sample-the-population/</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>What do statistical p-values mean when the sample = the population?</article-title>
+          <source>Statistical Modeling, Causal Inference, and Social Science</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GELMAN</surname>
+              <given-names>Andrew</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>GERBER, Alan, GREEN, Donald P. and NICKERSON, David. (2001), Testing for Publication Bias in Political Science, <italic>Political Analysis</italic>, vol. 9, nº 4, pp. 385-392.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Testing for Publication Bias in Political Science</article-title>
+          <source>Political Analysis</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>385</fpage>
+          <lpage>392</lpage>
+          <issue>4</issue>
+          <volume>9</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GERBER</surname>
+              <given-names>Alan</given-names>
+            </name>
+            <name>
+              <surname>GREEN</surname>
+              <given-names>Donald P.</given-names>
+            </name>
+            <name>
+              <surname>NICKERSON</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>GILL, Jeff. (1999), The Insignificance of Null Hypothesis Significance Testing, <italic>Political Research Quarterly</italic>, vol. 52, nº 3, pp. 647-674.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Insignificance of Null Hypothesis Significance Testing</article-title>
+          <source>Political Research Quarterly</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <fpage>647</fpage>
+          <lpage>674</lpage>
+          <issue>3</issue>
+          <volume>52</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GILL</surname>
+              <given-names>Jeff</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>______ (2007), <italic>Bayesian Methods: A Social and Behavioral Sciences Approach</italic> – 2<sup>nd</sup> edition. New York: Chapman and Hall/CRC Statistics in the Social and Behavioral Sciences.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian Methods: A Social and Behavioral Sciences Approach</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GILL</surname>
+              <given-names>Jeff</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>GREENWALD, Anthony G. (1975), Consequences of Prejudice Against the Null Hypothesis, <italic>Psychological Bulletin</italic>, vol. 82, nº 1, pp. 1-12.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Consequences of Prejudice Against the Null Hypothesis</article-title>
+          <source>Psychological Bulletin</source>
+          <date>
+            <year>1975</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>12</lpage>
+          <issue>1</issue>
+          <volume>82</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GREENWALD</surname>
+              <given-names>Anthony G.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>HAIR, Joseph F., BLACK, William C., BABIN, Barry J., ANDERSON, Rohph E. and TATHAM, Ronald L. (2006), <italic>Multivariate Data Analysis</italic> – 6ª edition. Upper Saddle River, NJ: Pearson Prentice Hall.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Multivariate Data Analysis</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HAIR</surname>
+              <given-names>Joseph F.</given-names>
+            </name>
+            <name>
+              <surname>BLACK</surname>
+              <given-names>William C.</given-names>
+            </name>
+            <name>
+              <surname>BABIN</surname>
+              <given-names>Barry J.</given-names>
+            </name>
+            <name>
+              <surname>ANDERSON</surname>
+              <given-names>Rohph E.</given-names>
+            </name>
+            <name>
+              <surname>TATHAM</surname>
+              <given-names>Ronald L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>HENKEL, Ramon E. (1976), <italic>Tests of significance.</italic> Newbury Park, CA: Sage.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Tests of significance</source>
+          <date>
+            <year>1976</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HENKEL</surname>
+              <given-names>Ramon E.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>HUBERTY, Carl J. (1993), Historical origins of statistical testing practices: The treatment of Fisher versus Neyman-Pearson views in textbooks, <italic>The Journal of Experimental Education</italic>, vol. 61, nº 4, pp. 317-333.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Historical origins of statistical testing practices: The treatment of Fisher versus Neyman-Pearson views in textbooks</article-title>
+          <source>The Journal of Experimental Education</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <fpage>317</fpage>
+          <lpage>333</lpage>
+          <issue>4</issue>
+          <volume>61</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HUBERTY</surname>
+              <given-names>Carl J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>JORDAN, Michael I. (2009), Bayesian or Frequentist, Which are You?, Department of Electrical Engineering and Computer Sciences, University of California - Berkeley, Videolectures.net, &lt;<ext-link ext-link-type="uri" xlink:href="http://videolectures.net/mlss09uk_jordan_bfway/">http://videolectures.net/mlss09uk_jordan_bfway/</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian or Frequentist, Which are You?</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>JORDAN</surname>
+              <given-names>Michael I.</given-names>
+            </name>
+          </person-group>
+          <comment>Videolectures.net</comment>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>KING, Gary, KEOHANE, Robert and VERBA, Sidney. (1994), <italic>Designing Social Inquiry: Scientific Inference in Qualitative Research. </italic>Princeton. N.J.: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Designing Social Inquiry: Scientific Inference in Qualitative Research</source>
+          <date>
+            <year>1994</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KING</surname>
+              <given-names>Gary</given-names>
+            </name>
+            <name>
+              <surname>KEOHANE</surname>
+              <given-names>Robert</given-names>
+            </name>
+            <name>
+              <surname>VERBA</surname>
+              <given-names>Sidney</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>LUSKIN, Robert C. (1991), Abusus Non Tollit Usum: Standardized Coefficients, Correlations, and R<sup>2</sup>s, <italic>American Journal of Political Science, </italic>vol. 35, nº 4, pp. 1032-1046.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Abusus Non Tollit Usum: Standardized Coefficients, Correlations, and R²s</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>1991</year>
+          </date>
+          <fpage>1032</fpage>
+          <lpage>1046</lpage>
+          <issue>4</issue>
+          <volume>35</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LUSKIN</surname>
+              <given-names>Robert C.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <mixed-citation>MAHONEY, Michael J. (1977), Publication Prejudices: An Experimental Study of Confirmatory Bias in the Peer Review System, <italic>Cognitive Therapy Research</italic>, vol. 1, nº 2, pp. 161–175.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Publication Prejudices: An Experimental Study of Confirmatory Bias in the Peer Review System</article-title>
+          <source>Cognitive Therapy Research</source>
+          <date>
+            <year>1977</year>
+          </date>
+          <fpage>161</fpage>
+          <lpage>175</lpage>
+          <issue>2</issue>
+          <volume>1</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MAHONEY</surname>
+              <given-names>Michael J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <mixed-citation>McLEAN, James E., and ERNEST, James M. (1998), The Role of Statistical Significance Testing in Educational Research, <italic>Research in the Schools, v</italic>ol. 5, nº 2, pp. 15-22.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Role of Statistical Significance Testing in Educational Research</article-title>
+          <source>Research in the Schools</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <fpage>15</fpage>
+          <lpage>22</lpage>
+          <issue>2</issue>
+          <volume>5</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>McLEAN</surname>
+              <given-names>James E.</given-names>
+            </name>
+            <name>
+              <surname>ERNEST</surname>
+              <given-names>James M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B34">
+        <mixed-citation>MOORE, David S. and McCABE, George P. (2006), <italic>Introduction to the Practice of Statistics </italic>– 5<sup>th</sup> edition. New York: Freeman.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Introduction to the Practice of Statistics</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MOORE</surname>
+              <given-names>David S.</given-names>
+            </name>
+            <name>
+              <surname>McCABE</surname>
+              <given-names>George P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B35">
+        <mixed-citation>ROGERS, Tom (n.d), Type I and Type II Errors – Making Mistakes in the Justice System, <italic>Amazing Applications of Probability and Statistics,</italic> &lt;<ext-link ext-link-type="uri" xlink:href="http://www.intuitor.com/statistics/T1T2Errors.html">http://www.intuitor.com/statistics/T1T2Errors.html</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Type I and Type II Errors: Making Mistakes in the Justice System</article-title>
+          <source>Amazing Applications of Probability and Statistics</source>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ROGERS</surname>
+              <given-names>Tom</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B36">
+        <mixed-citation>SAWILOWSKY, Shlomo. (2003), Deconstructing Arguments From The Case Against Hypothesis Testing, <italic>Journal of Modern Applied Statistical Methods</italic>, vol. 2, nº 2, pp. 467-474.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Deconstructing Arguments From The Case Against Hypothesis Testing</article-title>
+          <source>Journal of Modern Applied Statistical Methods</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>467</fpage>
+          <lpage>474</lpage>
+          <issue>2</issue>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SAWILOWSKY</surname>
+              <given-names>Shlomo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B37">
+        <mixed-citation>SCARGLE, Jeffrey D. (2000), Publication Bias: The "File-Drawer Problem" in Scientific Inference, <italic>The Journal of Scientific Exploration</italic>, vol. 14, nº 1, pp. 91-106.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Publication Bias: The "File-Drawer Problem" in Scientific Inference</article-title>
+          <source>The Journal of Scientific Exploration,</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>91</fpage>
+          <lpage>106</lpage>
+          <issue>1</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SCARGLE</surname>
+              <given-names>Jeffrey D.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B38">
+        <mixed-citation>SIGELMAN, Lee. (1999), Publication Bias Reconsidered, <italic>Political Analysis</italic>, vol. 8, nº 2, pp. 201-210.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Publication Bias Reconsidered</article-title>
+          <source>Political Analysis</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <fpage>201</fpage>
+          <lpage>210</lpage>
+          <issue>2</issue>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SIGELMAN</surname>
+              <given-names>Lee</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B39">
+        <mixed-citation>SIMES, John R. (1986), Publication Bias: The Case for an International Registry of Clinical Trials, <italic>Journal of Clinical Oncology</italic>, vol. 4, nº 10, pp. 1529-1541.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Publication Bias: The Case for an International Registry of Clinical Trials</article-title>
+          <source>Journal of Clinical Oncology</source>
+          <date>
+            <year>1986</year>
+          </date>
+          <fpage>1529</fpage>
+          <lpage>1541</lpage>
+          <issue>10</issue>
+          <volume>4</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SIMES</surname>
+              <given-names>John R.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B40">
+        <mixed-citation>SHAVER, J. (1992), <italic>What significance testing is, and what it isn't</italic>. Paper presented at the Annual Meeting of the American Educational Research Association, San Francisco, CA.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>What significance testing is, and what it isn't.</source>
+          <date>
+            <year>1992</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SHAVER</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B41">
+        <mixed-citation>SMITH, T. M. F. (1983), On the validity of inferences from Non-random Samples,<italic> Journal of the Royal Statistical Society</italic> – Series A (General), vol. 146, nº 4, pp. 394–403.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>On the validity of inferences from Non-random Samples</article-title>
+          <source>Journal of the Royal Statistical Society</source>
+          <date>
+            <year>1983</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SMITH</surname>
+              <given-names>T. M. F.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B42">
+        <mixed-citation>THE COCHRANE COLLABORATION. (n.d), What is publication bias? The Cochrane Collaboration open learning material, &lt;<ext-link ext-link-type="uri" xlink:href="http://www.cochrane-net.org/openlearning/html/mod15-2.htm">http://www.cochrane-net.org/openlearning/html/mod15-2.htm</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>What is publication bias?</article-title>
+          <source>The Cochrane Collaboration open learning material</source>
+        </element-citation>
+      </ref>
+      <ref id="B43">
+        <mixed-citation>VAN EVERA, Stephen. (1997), <italic>Guide to Methods for Students of Political Science</italic>. Ithaca, NY: Cornell University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Guide to Methods for Students of Political Science</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>VAN EVERA</surname>
+              <given-names>Stephen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B44">
+        <mixed-citation>YOUTUBE. (2010), What the p-value?, &lt;<ext-link ext-link-type="uri" xlink:href="http://www.youtube.com/watch?v=ax0tDcFkPic&amp;feature=related">http://www.youtube.com/watch?v=ax0tDcFkPic&amp;feature=related</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="book">
+          <source>What the p-value?</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <comment>YOUTUBE</comment>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

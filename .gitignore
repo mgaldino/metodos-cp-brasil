@@ -2,6 +2,9 @@
 data/raw/articles_fulltext/
 data/raw/api_responses/
 
+# Artefatos processados grandes gerados localmente
+data/processed/fulltext_corpus/article_texts_corpus.csv
+
 # Logs
 data/raw/logs/
 

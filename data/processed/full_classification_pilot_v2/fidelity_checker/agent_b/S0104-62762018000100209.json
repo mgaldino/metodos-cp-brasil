@@ -1,0 +1,176 @@
+{
+  "pid": "S0104-62762018000100209",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "bf4101f5f850fa23ed8197e2651b11fb5df6d4a8157cee7b089ff7b035cc5ac5",
+  "classification_hash": "51cd3746aa335bbdbfb8ce0e0ee0006478a99341faa3956385ddb3537bb76861",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The specific classified variables or relationships were not found in the canonical body text.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "variable_name": "Victimization and violence-related perceptions",
+          "variable_description": "Criminological variables associated with violence and fear."
+        },
+        {
+          "variable_name": "Interpersonal trust",
+          "variable_description": "Mediator connecting violence variables to democratic satisfaction."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "punir dissidentes em relação ao seu domínio, alocando de maneira pessoal recursos de toda a sociedade. No livro Making demo cracy wor k , Putnam (1994) argumenta que atitudes políticas tendem a ser replicadas nas próximas gerações, criando, assim, uma persistência da",
+      "classification_value": [
+        {
+          "variable_name": "Satisfaction with democracy",
+          "variable_description": "Survey response on satisfaction with the functioning of democracy in Brazil."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classified relationship items have variable and result-language support in the body.",
+      "supporting_excerpt": "punir dissidentes em relação ao seu domínio, alocando de maneira pessoal recursos de toda a sociedade. No livro Making demo cracy wor k , Putnam (1994) argumenta que atitudes políticas tendem a ser replicadas nas próximas gerações, criando, assim, uma persistência da",
+      "classification_value": [
+        {
+          "iv_var_name": "Victimization and violence-related perceptions",
+          "dv_var_name": "Satisfaction with democracy",
+          "relationship_type": "Negative",
+          "statistically_significant": true,
+          "substantively_significant": false
+        },
+        {
+          "iv_var_name": "Interpersonal trust",
+          "dv_var_name": "Satisfaction with democracy",
+          "relationship_type": "Positive",
+          "statistically_significant": true,
+          "substantively_significant": false
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "com sistemas penais de porte semelhante ( Adorno, 1994 ). Observando a série temporal entre 2007 e 2014 dos dados do Barômetro das Américas 3 para o Brasil, encontramos uma nova evidência da magnitude da violência enquanto fenômeno social. A violência é",
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "3 para o Brasil, encontramos uma nova evidência da magnitude da violência enquanto fenômeno social. A violência é apontada pelos entrevistados como o problema mais grave pelo qual o país está passando. Na Figura 1 , observamos que, durante esse período, essa",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "não possui unidade e tem média 0, sendo diretamente comparável com outras variáveis padronizadas 7 . Um modelo de regressão linear co m coeficientes padronizados propicia o teste da hipótese quanto a efeitos diretos de um conjunto de variáveis sobre uma variável",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "países que possuíam uma das características também tendiam a possuir a outra. O estudo, que não traz inferências sobre causalid ade, contud o, faz parte da literatura que assume como referência teórica a influência positiva de (1) sobre (2), denominada teoria da",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "consequentemente, de adesão à democracia. Para mensurar os efeitos indiretos das variáveis criminológicas, faremos uso de modelos de equações s imultâne as (SEM), uma forma de integrar duas ou mais equações calculando os parâmetros a partir de uma minimização conjunta dos resíduos",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "um modelo de democracia delegativa, caracterizada por uma relação vertical entre presidente e eleitores, tendo como praticamente único mecani smo de co ntrole popular do governo a eleição presidencial, e redes de dominação populista, nas quais a oferta de benesses alimenta um",
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "maior civismo, portanto, mais favorável à adoção de instituições burocráticas que o Sul, o que gerou, segundo Putnam, diferenças signi ficativas nos resultados do projeto de autonomização das províncias por parte do governo federal, que consistia na implementação de um mesmo modelo",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass_with_warnings",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status pass_with_warnings."
+}

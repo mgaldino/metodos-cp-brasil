@@ -1,0 +1,69 @@
+{
+  "pid": "S0104-62762006000200005",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "18189fc45383b7f3e80b166c92395c18b267eb08dfeab92a2eb32326965d9e2d",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "multiple_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "runs_original_survey",
+    "uses_original_dataset": "original_survey",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "panel survey with comparison/control group",
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "participatory_budgeting_participation",
+        "variable_description": "Participação em assembleias do Orçamento Participativo"
+      },
+      {
+        "variable_name": "sociodemographic_controls",
+        "variable_description": "Renda, raça, escolaridade e outros controles"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "political_information",
+        "variable_description": "Informação sobre candidatos, partidos e questões políticas"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "participatory_budgeting_participation",
+        "dv_var_name": "political_information",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo usa dados em painel de duas cidades nas eleições de 2002 para testar se participação no Orçamento Participativo aumenta informação política. Há amostras probabilísticas, grupo de controle e testes estatísticos, mas não há desenho experimental."
+  },
+  "raw_response_path": null
+}

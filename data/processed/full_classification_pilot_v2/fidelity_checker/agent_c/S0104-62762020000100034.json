@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-62762020000100034",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "16e3c574de22acc7177f10fd39aa58d5ec53a0602a227ae7d543455137886fe1",
+  "classification_hash": "706baee00f8adc086467a5c39de1a547b3e2ebd1e1e2a9507d2691b7332e0340",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "consequência da falta de vontade de querer trabalhar”). Com essas 17 assertivas em mãos7 , o Datafolha aplicou 2.087 entrevistas, em uma amostra estatisticamente representativa da população brasileira com 16 anos ou mais e em 130 municípios de pequeno, médio e grande porte, entre os dias 7 e 11 de março de 2017.",
+      "classification_value": 2087
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "consequência da falta de vontade de querer trabalhar”). Com essas 17 assertivas em mãos7 , o Datafolha aplicou 2.087 entrevistas, em uma amostra estatisticamente representativa da população brasileira com 16 anos ou mais e em 130 municípios de pequeno, médio e grande porte, entre os dias 7 e 11 de março de 2017.",
+      "classification_value": "Com essas 17 assertivas em mãos7 , o Datafolha aplicou 2.087 entrevistas, em uma amostra estatisticamente representativa da população brasileira com 16 anos ou mais e em 130 municípios de pequeno, médio e grande porte, entre os dias 7 e 11 de março de 2017."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "e classificação de cidadãos como integrantes de um e/ou de outro grupo para defender a ideia de que violência, med o e crime ocupam papéis-chave na construção de representações sociais sobre como as respostas públicas frente aos desafios da segurança e da",
+      "classification_value": [
+        {
+          "variable_name": "fear_of_violence_and_demographics",
+          "variable_description": "Medo de violência, idade, cor, classe, região, porte do município e escolaridade"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "psicométricas6 . Como a pesquisa desenvolvida tinha que ser de rápida aplicação, foi construído um índice de apoio a po sições autoritárias com a redução do número de enunciados da escala F, distribuindo as assertivas selecionadas pelas suas cargas fatoriais de forma",
+      "classification_value": [
+        {
+          "variable_name": "authoritarianism_index",
+          "variable_description": "Índice de propensão ao apoio a posições autoritárias"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims an original survey, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The body supports qualitative interview data, but that is not compatible with original_survey.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "O teste de esfericidade de Bartlett apontou p < 0,001 [X2 (136) = 6483,678], indicando valor significativo e rejeiçã o da hipótese nula de matriz de correlação de identidade. Para a extração de fatores, foi feita a análise dos componentes principais, foram",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 0 contradicted and 2 not found in text; overall status fail."
+}

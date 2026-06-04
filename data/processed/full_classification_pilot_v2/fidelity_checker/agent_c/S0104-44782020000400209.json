@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-44782020000400209",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "6bfdd4b87eb0a6de5404dbb90d3e2ff74f825b35694d9859185a9088b6df5819",
+  "classification_hash": "0fdc3ddd613bd7d6fa53cd999486b32a236a34d2d66564fb60f6965fec073545",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "ou de atos administrativos. Iniciamos a organização dos dados da seguinte forma: Fizemos uma leitura preliminar dos programas de governo, identificando 2.315 quasi sentence consideradas como promessas de campanha. Em seguida, com o auxílio do software MAXQDA, realizamos uma segunda leitura dos",
+      "classification_value": 2315
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "ou de atos administrativos. Iniciamos a organização dos dados da seguinte forma: Fizemos uma leitura preliminar dos programas de governo, identificando 2.315 quasi sentence consideradas como promessas de campanha. Em seguida, com o auxílio do software MAXQDA, realizamos uma segunda leitura dos",
+      "classification_value": "Fizemos uma leitura preliminar dos programas de governo, identificando 2.315 quasi sentence consideradas como promessas de campanha."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "I. Introdução1 Pesquisas sobre programa s de governo ainda são pouco difundidas na ciência política brasileira, apesar desses documentos serem importantes para a identificação do posicionamento e do comportamento de um partido político2. No plano internacional, por outro lado, encontramos um volume",
+      "classification_value": [
+        {
+          "variable_name": "party_candidate_manifesto",
+          "variable_description": "Programas de governo de PSDB e PT em 1994, 1998, 2002 e 2006"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "volume significativo de análises sobre esse tema - muitas delas vinculadas à teoria do mandato (Downs 2013 [1957]) - incluindo promessa s de campanha3. Nessa tradição, assume-se que os programas de governo podem ser vistos como uma espécie de compromisso centrado em",
+      "classification_value": [
+        {
+          "variable_name": "verifiable_campaign_pledges",
+          "variable_description": "Promessas verificáveis e retóricas por área de política"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "a encontrar possíveis fatores explicativos da saliência dada a certos temas em detrimento de outros pelos partidos. Além disso, os dados levantado s são uma contribuição importante para pesquisas que se dedicam a explorar pontos específicos dos programas de governo em que",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 0 contradicted and 2 not found in text; overall status fail."
+}

@@ -1,0 +1,173 @@
+{
+  "pid": "S0104-44782024000100204",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "a6552c81a72f72f80996bc2a81e7860bee7c47135e21050b7fb7130527e58cbd",
+  "classification_hash": "9a351a8867d8488f3dfdb3661cb90798b20eceadd691f33fc216fe9f41751803",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "national level data to conduct multivariate multilevel models. The latest wave of the World Values Survey, conducted from 2017 to 2020, provided information at the micro level, totalizing 77,370 cases useful for the analyses, distributed across 57 national units (see the complete list in the Appendix, Box A)2.",
+      "classification_value": 77370
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "national level data to conduct multivariate multilevel models. The latest wave of the World Values Survey, conducted from 2017 to 2020, provided information at the micro level, totalizing 77,370 cases useful for the analyses, distributed across 57 national units (see the complete list in the Appendix, Box A)2.",
+      "classification_value": "The latest wave of the World Values Survey, conducted from 2017 to 2020, provided information at the micro level, totalizing 77,370 cases useful for the analyses, distributed across 57 national units (see the complete list in the Appendix, Box A)2."
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "Some classified variables have body-text evidence, but 1 item(s) were not found: government_ideology.",
+      "supporting_excerpt": "I. Introduction1 Political polarizatio n has been identified as one of the causes of the democracy erosion processes (McCoy et al., 2018; Levitsky & Ziblatt, 2018; Przeworski, 2021; Haggard & Kaufmann, 2021). One strand of this debate is the literature on the",
+      "classification_value": [
+        {
+          "variable_name": "polarization",
+          "variable_description": "Polarização contextual dos países"
+        },
+        {
+          "variable_name": "government_ideology",
+          "variable_description": "Ideologia do governo"
+        },
+        {
+          "variable_name": "individual_ideology",
+          "variable_description": "Ideologia individual do respondente"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "Also, according to the authors, a certain level of polarization is healthy and even necessary for the quality of the regim e; however, its excess renders “politicians increasingly tempted to abandon the institutional reservation and try to win at any cost”. At",
+      "classification_value": [
+        {
+          "variable_name": "democratic_commitment",
+          "variable_description": "Compromisso democrático construído a partir da rejeição a líder forte e regime militar"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "polarization_government_individual_ideology_interaction",
+          "dv_var_name": "democratic_commitment",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body shows survey/questionnaire/opinion-poll data used as evidence in the article's own analysis.",
+      "supporting_excerpt": "democratic legitimacy is a more prominent phenomenon in polarized societies. By comparing more or less polarized countries based on data from the World Values Surve y (2017-2020), we seek to contribute to overcoming this limitation by testing, in a broader and more",
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The broad design label is not supported by recognizable method/model language in the body.",
+      "supporting_excerpt": null,
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "We intend to present a first effort in this direction, but it is necessary to advance in the identification of causal mechanisms based on case studies, process tracing of a set of exemplary cases, and experimental approaches. The results presented here may",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "low",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains causal-process language that can support a mechanism/channel classification.",
+      "supporting_excerpt": "We intend to present a first effort in this direction, but it is necessary to advance in the identification of causal mechanisms based on case studies, process tracing of a set of exemplary cases, and experimental approaches. The results presented here may",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 8 priority fidelity issue(s): 1 contradicted and 7 not found in text; overall status fail."
+}

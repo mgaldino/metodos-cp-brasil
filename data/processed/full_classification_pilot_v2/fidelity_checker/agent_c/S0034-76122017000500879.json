@@ -1,0 +1,188 @@
+{
+  "pid": "S0034-76122017000500879",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "449e3c37351931c33632f2f8bb552dfb03763098b383fb2108c75789847cf754",
+  "classification_hash": "320b7e348def7701111a983baa6cb56fb0e13084f1dfb7293c0ac59015bbe2e9",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "- Modalidades de licitação e características das obras: retiradas do portal Geo-Obras, reunidas entre 3 de junho e 12 de agosto de 2015, totalizando 333 obras em 50 municípios, com contratos assinados e concluídos entre os anos de 2006 e 2015. As",
+      "classification_value": 333
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "- Modalidades de licitação e características das obras: retiradas do portal Geo-Obras, reunidas entre 3 de junho e 12 de agosto de 2015, totalizando 333 obras em 50 municípios, com contratos assinados e concluídos entre os anos de 2006 e 2015. As",
+      "classification_value": "retiradas do portal Geo-Obras, reunidas entre 3 de junho e 12 de agosto de 2015, totalizando 333 obras em 50 municípios, com contratos assinados e concluídos entre os anos de 2006 e 2015."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "o governante reeleito e o partido do prefeito igual ao do presidente. E quanto ao cumprimento de preço: a moda lidade de licitação convite, o número de habitantes e o partido do prefeito igual ao do presidente (para obras com preços abaixo",
+      "classification_value": [
+        {
+          "variable_name": "procurement_modality",
+          "variable_description": "Modalidade de licitação da obra"
+        },
+        {
+          "variable_name": "service_type",
+          "variable_description": "Tipo de serviço/obra"
+        },
+        {
+          "variable_name": "municipal_characteristics",
+          "variable_description": "População, renda per capita, anos de estudo, IDHM e IFGF"
+        },
+        {
+          "variable_name": "mayor_profile",
+          "variable_description": "Escolaridade, sexo, reeleição e alinhamento político do prefeito"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "escolas públicas de ensino fundamental apresentam o efeito de maior participação positiva sobre o escore de eficiência. Já o percentual de médico s em estabelecimentos de saúde não teve efeito sobre o escore de eficiência. Por fim, o nível de escolaridade do",
+      "classification_value": [
+        {
+          "variable_name": "delta_deadline",
+          "variable_description": "Percentual de dias em atraso da obra"
+        },
+        {
+          "variable_name": "delta_price",
+          "variable_description": "Percentual pago acima do valor orçado"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "procurement_modality",
+          "dv_var_name": "delta_deadline",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        },
+        {
+          "iv_var_name": "municipal_characteristics",
+          "dv_var_name": "delta_price",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "dezembro de 2015, conforme exposto: - Características socioeconômicas: coletadas via website do Instituto Brasileiro de Geografia e Estatística (IBGE),1 por mei o das opções censos 2000 e 2010. Para os contratos anteriores ao ano de 2010, os dados são do censo de",
+      "classification_value": "procure_original_data"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "da média da região quanto aos serviços ofertados. Na segunda etapa do estudo de Ribeiro (2008), por meio de regress ão, todas as estimativas obtidas no procedimento foram encontradas; além da influência do PIB per capita e do tamanho da população, foram",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "densidade populacional contribui para o escore de eficiência, na educação e na saúde. O PIB per capita tem efeitos p ositivo s sobre o escore de eficiência. A representatividade da agropecuária na economia do município apresentou efeitos negativos sobre os escores estimados.",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "1. Introdução A presente pesquisa tem como objetivo analisar os determinantes que contribuem para explica r o cumprimento dos prazos e preços em obras do setor de educação nos municípios capixabas. O debate sobre o uso eficiente dos recursos públicos, ou seja,",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "2006). Com a finalidade de examinar a relação das variáveis dependentes Delta_prazoit ou Delta_precoit, com as explicativas, apresenta-se a equ ação: Em que: Delta_prazoit: a partir do cálculo percentual (prazo total - prazo inicial) / prazo inicial. Delta_precoit: a partir do cálculo",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "disponível com a finalidade de alcançar o resultado requerido, podendo ser considerada uma medida da capacidade que agentes ou meca nismos têm para melhor atingir seus propósitos. Entende-se que o conceito de eficiência não alcança apenas a alocação dos recursos públicos de",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "Schuknecht e Tanzi (2010), Sousa, Cribari-Neto e Stosic (2005) e Ribeiro (2008). O perfil político do gestor tem, como vari áveis significa tivas, a escolaridade (Escola_prefit) e a posição político-partidária (PEsquerdait), onde o percentual do montante pago acima inicial tende a ser",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 1 priority fidelity issue(s): 0 contradicted and 1 not found in text; overall status fail."
+}

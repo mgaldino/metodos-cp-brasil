@@ -1,0 +1,4 @@
+agent_id,audited_signal_slots,permissive_signal_n,permissive_signal_rate
+agent_a,2975,378,0.12705882352941175
+agent_b,2975,371,0.12470588235294118
+agent_c,2975,311,0.10453781512605043

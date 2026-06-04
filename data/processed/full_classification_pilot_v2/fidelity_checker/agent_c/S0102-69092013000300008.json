@@ -1,0 +1,161 @@
+{
+  "pid": "S0102-69092013000300008",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "a3bdd79e00654fc01de667f994026b36b89912bbbb8db6537e7b5e685cc79cf0",
+  "classification_hash": "dd516b054d7c63ea282b09acf051b8cca94dd9757fd80ed1a82072f7a394bff5",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "identidade e relações sociais de gênero na profissão. O terceiro tópico focaliza a nova forma de organização da advocacia e a estratificação da prática privada a partir de dados quantitativos coletados nos sites de duzentas sociedades de advogados em São Paulo. O",
+      "classification_value": 200
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "identidade e relações sociais de gênero na profissão. O terceiro tópico focaliza a nova forma de organização da advocacia e a estratificação da prática privada a partir de dados quantitativos coletados nos sites de duzentas sociedades de advogados em São Paulo. O",
+      "classification_value": "O terceiro tópico focaliza a nova forma de organização da advocacia e a estratificação da prática privada a partir de dados quantitativos coletados nos sites de duzentas sociedades de advogados em São Paulo."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "advogados e na magistratura, dando atenção às hierarquias internas e às estratificações. Na introdução são apresentadas as mudanças ocorridas na advocaci a e na magistratura paulistas nas últimas décadas, a participação feminina nessas carreiras e a hipótese da pesquisa. O segundo tópico",
+      "classification_value": [
+        {
+          "variable_name": "professional_group",
+          "variable_description": "Advocacia e magistratura paulistas"
+        },
+        {
+          "variable_name": "gender_and_difference_markers",
+          "variable_description": "Marcadores de gênero, diferença e diversidade"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "e relações sociais de gênero na profissão. O terceiro tópico focaliza a nova forma de organização da advocacia e a estratificação da prática privada a partir de dados quantitativos coletados nos sites de duzentas sociedades de advogados em São Paulo. O quarto",
+      "classification_value": [
+        {
+          "variable_name": "professional_stratification",
+          "variable_description": "Estratificação e trajetórias profissionais no direito paulista"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "treze desembargadoras ocupavam o tribunal. O total de vagas de desembargadores no TJSP é de 360. Quando os da dos foram coletados,3 354 cargos estavam preenchidos, e a participação feminina correspondia a menos de 4%. No Poder Judiciário brasileiro, o TJSP foi",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 0 contradicted and 2 not found in text; overall status fail."
+}

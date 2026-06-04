@@ -1,0 +1,184 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">VVD4zM3G4bSBZgP6bwCqL8s</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212013000300007</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(13)00700300007</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Book Reviews</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Diffusion of good government: social sector reforms in Brazil</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Coêlho</surname>
+            <given-names>Denilson Bandeira</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">University of Brasília</institution>
+        <institution content-type="orgdiv1">Political Science Institute </institution>
+        <country country="">Brazi</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2013</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>3</issue>
+      <fpage>161</fpage>
+      <lpage>166</lpage>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v7n3/v7n3a07.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>21</day>
+        <month>02</month>
+        <year>2014</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>BALLA, Steven J. (2001), Interstate professional associations and the diffusion of policy innovations. <italic>American Politics Research</italic>, vol.29, nº3, pp. 221-245.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Interstate professional associations and the diffusion of policy innovations</article-title>
+          <source>American Politics Research</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>221</fpage>
+          <lpage>245</lpage>
+          <issue>3</issue>
+          <volume>29</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>BALLA</surname>
+              <given-names>Steven J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>COHEN, Michael D.; MARCH, James G. and JOHAN, Olsen P. (1972), A Garbage Can Model of Organizational Choice. <italic>Administrative Science Quarterly</italic>, vol. 17, nº 1, pp. 1-25.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A Garbage Can Model of Organizational Choice</article-title>
+          <source>Administrative Science Quarterly</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>25</lpage>
+          <issue>1</issue>
+          <volume>17</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COHEN</surname>
+              <given-names>Michael D.</given-names>
+            </name>
+            <name>
+              <surname>MARCH</surname>
+              <given-names>James G.</given-names>
+            </name>
+            <name>
+              <surname>JOHAN</surname>
+              <given-names>Olsen P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>HECLO, Hugh (1974), <italic>Modern Social Politics in Britain and Sweden: From Relief to Income Maintenance</italic>. New Haven, Yale University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Modern Social Politics in Britain and Sweden: From Relief to Income Maintenance</source>
+          <date>
+            <year>1974</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>HECLO</surname>
+              <given-names>Hugh</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>KINGDON, John W. (2011), <italic>Agendas, Alternatives and Public Policies</italic>. Boston: Longman.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Agendas, Alternatives and Public Policies</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>KINGDON</surname>
+              <given-names>John W.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>MULLINS, Willard (1972), On the concept of ideology in political science. <italic>American Political Science Review</italic>, vol. 66, nº2, pp. 498-510.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>On the concept of ideology in political science</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1972</year>
+          </date>
+          <fpage>498</fpage>
+          <lpage>510</lpage>
+          <issue>2</issue>
+          <volume>66</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MULLINS</surname>
+              <given-names>Willard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>WALKER, Jack (1969), The Diffusion of Innovations Among the American States. <italic>American Political Science Review</italic>, vol. 63, nº3, pp. 880-899.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Diffusion of Innovations Among the American States</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1969</year>
+          </date>
+          <fpage>880</fpage>
+          <lpage>899</lpage>
+          <issue>3</issue>
+          <volume>63</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>WALKER</surname>
+              <given-names>Jack</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

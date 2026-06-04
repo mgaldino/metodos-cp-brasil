@@ -1,0 +1,69 @@
+{
+  "pid": "S0104-62762018000100209",
+  "agent_id": "agent_a",
+  "prompt_version": "agent_a_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-04T00:07:40Z",
+  "input_text_hash": "bf4101f5f850fa23ed8197e2651b11fb5df6d4a8157cee7b089ff7b035cc5ac5",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "uses_public_available_survey",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "violence perception",
+        "variable_description": "Explanatory variable identified from the article body."
+      },
+      {
+        "variable_name": "punishment confidence",
+        "variable_description": "Explanatory variable identified from the article body."
+      },
+      {
+        "variable_name": "victimization",
+        "variable_description": "Explanatory variable identified from the article body."
+      },
+      {
+        "variable_name": "interpersonal trust",
+        "variable_description": "Explanatory variable identified from the article body."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "satisfaction with democracy",
+        "variable_description": "Outcome variable identified from the article body."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": false,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "No Mention of Mechanisms/Channels",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O corpo de \"Violência e satisfação com a democracia no Brasil\" analisa dados quantitativos, administrativos ou de survey com procedimento empírico próprio ou secundário claramente descrito. A classificação é conservadora: detalhes causais, variáveis e identificação só foram preenchidos quando o texto os declarou de forma explícita."
+  },
+  "raw_response_path": null
+}

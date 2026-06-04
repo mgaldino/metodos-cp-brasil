@@ -1,0 +1,157 @@
+{
+  "pid": "S0101-33002024000300409",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "b553d80e09502c9697b055a0545ab25bca0650f990353620f73746b598c1fa00",
+  "classification_hash": "375b965a7354b82545d32ed38f0f0b9d150d5cfe55f7391aec69cf0d7dcd2673",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "and Inequalities in the Metropolitan Area of the Valley of Mexico” by telephone. The sample included 2,562 men and women over 18 residing in households of different socioeconomic levels. Of the total number of respondents, 42.5% lived in Mexico City and 57.5%",
+      "classification_value": 2562
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "and Inequalities in the Metropolitan Area of the Valley of Mexico” by telephone. The sample included 2,562 men and women over 18 residing in households of different socioeconomic levels. Of the total number of respondents, 42.5% lived in Mexico City and 57.5%",
+      "classification_value": "The sample included 2,562 men and women over 18 residing in households of different socioeconomic levels."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "including material, power-related, access to natural resources, opportunities and rights, access to knowledge, and protection against risks such as the Covid -19 pandemic. This study examines the dynamics of negotiations within families regarding the division of paid and care work during the",
+      "classification_value": [
+        {
+          "variable_name": "Covid-19 pandemic period",
+          "variable_description": "Pandemic-related employment, household income and care conditions."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "against risks such as the Covid-19 pandemic. This study examines the dynamics of negotiations within families regarding the division of pai d and care work during the pandemic in Mexico City. Of particular interest are the characteristics of women who, in the",
+      "classification_value": [
+        {
+          "variable_name": "Paid and care work inequalities",
+          "variable_description": "Distribution of paid work, care tasks and household-income conditions."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims an original survey, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "runs_original_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification claims an original survey, but the body evidence was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "original_survey"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "external and internal household decisions and negotiations on the distribution of tasks during the period of confinement. We used a mixed quantitative and qualitative approach. Between July and August 2022, we conducted the “Survey on the Effects of the Covid-19 Pandemic on",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification claims mechanism/channel discussion, but supporting text was not found.",
+      "supporting_excerpt": null,
+      "classification_value": "Mechanisms/Channels Mentioned With Substantial Exploration"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 6 priority fidelity issue(s): 0 contradicted and 6 not found in text; overall status fail."
+}

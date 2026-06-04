@@ -1,0 +1,169 @@
+{
+  "pid": "S0034-76122017000500879",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "449e3c37351931c33632f2f8bb552dfb03763098b383fb2108c75789847cf754",
+  "classification_hash": "105678d1fa347a3248bac9d6ac14f2dd6230b1b69cd11b067593b63d055b9a7d",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The sample-size value is supported by the accompanying quote, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "modalidades previstas na Lei no 8.666/1993 para obras (concorrência pública, tomada de preços e convite); portanto, o tamanho da amostra deste estudo contou com 325 observações. Para determinar as características das obras são aplicadas duas proxies: serviço executado (Reformait) e obra executada",
+      "classification_value": 325
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The quote is in the body text and supports the sample-size value, allowing numeric formatting equivalence.",
+      "supporting_excerpt": "modalidades previstas na Lei no 8.666/1993 para obras (concorrência pública, tomada de preços e convite); portanto, o tamanho da amostra deste estudo contou com 325 observações. Para determinar as características das obras são aplicadas duas proxies: serviço executado (Reformait) e obra executada",
+      "classification_value": "portanto, o tamanho da amostra deste estudo contou com 325 observações."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "de obra, a renda per capita, os anos de estudo da população, a população, o Índice de Desenvolvimento Humano Mun icipal (I DHM), a escolaridade do prefeito, o sexo do prefeito, a reeleição, o partido do governador e do presidente igual ao",
+      "classification_value": [
+        {
+          "variable_name": "Procurement and municipal characteristics",
+          "variable_description": "Procurement modality, service type, population, mayoral reelection, partisan alignment and fiscal-management indicators."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "estipulados, vem adquirindo importância quanto às boas práticas de gestão (Diniz, Macedo e Corrar, 2011). Tal iniciativa advém do New Publi c Management, sendo intensificada por volta da década de 1980 com a ideia de ajustar conceitos observados e presentes na iniciativa",
+      "classification_value": [
+        {
+          "variable_name": "Deadline compliance",
+          "variable_description": "Percentage of days delayed in education-sector public works."
+        },
+        {
+          "variable_name": "Price compliance",
+          "variable_description": "Amount paid above the budgeted value in education-sector public works."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The specific IV-DV relationship claims were not found with result-language support in the body.",
+      "supporting_excerpt": null,
+      "classification_value": [
+        {
+          "iv_var_name": "Procurement and municipal characteristics",
+          "dv_var_name": "Deadline and price compliance",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": true
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "dezembro de 2015, conforme exposto: - Características socioeconômicas: coletadas via website do Instituto Brasileiro de Geografia e Estatística (IBGE),1 por mei o das opções censos 2000 e 2010. Para os contratos anteriores ao ano de 2010, os dados são do censo de",
+      "classification_value": "procure_original_data"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "da média da região quanto aos serviços ofertados. Na segunda etapa do estudo de Ribeiro (2008), por meio de regress ão, todas as estimativas obtidas no procedimento foram encontradas; além da influência do PIB per capita e do tamanho da população, foram",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "densidade populacional contribui para o escore de eficiência, na educação e na saúde. O PIB per capita tem efeitos p ositivo s sobre o escore de eficiência. A representatividade da agropecuária na economia do município apresentou efeitos negativos sobre os escores estimados.",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "2006). Com a finalidade de examinar a relação das variáveis dependentes Delta_prazoit ou Delta_precoit, com as explicativas, apresenta-se a equ ação: Em que: Delta_prazoit: a partir do cálculo percentual (prazo total - prazo inicial) / prazo inicial. Delta_precoit: a partir do cálculo",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "contradicted_by_text",
+      "severity": "low",
+      "reason": "The classification says no mechanisms/channels, but mechanism/channel language appears in the body.",
+      "supporting_excerpt": "disponível com a finalidade de alcançar o resultado requerido, podendo ser considerada uma medida da capacidade que agentes ou meca nismos têm para melhor atingir seus propósitos. Entende-se que o conceito de eficiência não alcança apenas a alocação dos recursos públicos de",
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "Schuknecht e Tanzi (2010), Sousa, Cribari-Neto e Stosic (2005) e Ribeiro (2008). O perfil político do gestor tem, como vari áveis significa tivas, a escolaridade (Escola_prefit) e a posição político-partidária (PEsquerdait), onde o percentual do montante pago acima inicial tende a ser",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 1 contradicted and 1 not found in text; overall status fail."
+}

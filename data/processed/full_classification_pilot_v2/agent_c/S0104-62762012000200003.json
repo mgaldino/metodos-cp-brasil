@@ -1,0 +1,57 @@
+{
+  "pid": "S0104-62762012000200003",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "e81072d4187a9496eee311d76b17e21700508407d7279f06aeb03c6adebdfb89",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Describe",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "field_study",
+    "seeks_determinants": false,
+    "main_causal_research_design": null,
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": null,
+    "independent_variables": [
+      {
+        "variable_name": "party_ideology_and_councilor_profile",
+        "variable_description": "Perfil partidário, ideológico e social dos vereadores"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "social_rights_values",
+        "variable_description": "Valores políticos sobre direitos sociais e solidariedade"
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": null,
+    "makes_implicit_causal_claim": null,
+    "strong_non_causal_causal_qualification": null,
+    "sample_size": 35,
+    "sample_size_quote": "A pesquisa foi realizada em Curitiba, onde foram entrevistados 35 dos 38 vereadores da gestão 2009-201211 .",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": false,
+    "clear_causal_quantity_of_interest": null,
+    "specifies_estimate_equations": false,
+    "discusses_threats_to_causality": null,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": null,
+    "effort_to_explore_mechanisms": null,
+    "mentions_pre_registered_design_and_analysis_plan": null,
+    "evidence_type": "mixed",
+    "method_status": "explicit",
+    "brief_justification": "O artigo entrevista 35 vereadores e aplica testes Q de Yule a dados categóricos. A evidência é mista, com entrevistas e estatística simples, sem desenho causal."
+  },
+  "raw_response_path": null
+}

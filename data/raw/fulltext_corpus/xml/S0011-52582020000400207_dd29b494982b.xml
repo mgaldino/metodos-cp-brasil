@@ -1,0 +1,1040 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "http://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="es">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">dados</journal-id>
+      <journal-title-group>
+        <journal-title>Dados</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Dados rev. ciênc. sociais</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0011-5258</issn>
+      <issn pub-type="epub">1678-4588</issn>
+      <publisher>
+        <publisher-name>Instituto de Estudos Sociais e Políticos (IESP) da Universidade do Estado do Rio de Janeiro (UERJ)</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id specific-use="scielo-v3" pub-id-type="publisher-id">CQWk4LK9DJKwYL7q433QXBz</article-id>
+      <article-id specific-use="scielo-v2" pub-id-type="publisher-id">S0011-52582020000400207</article-id>
+      <article-id pub-id-type="other">00207</article-id>
+      <article-id pub-id-type="doi">10.1590/dados.2020.63.4.224</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>ARTIGOS ORIGINAIS</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Cuidados Infantiles y Trabajo Remunerado en Tres Generaciones de Mujeres Madres de Montevideo: Los Recorridos de las Desigualdades de Género</article-title>
+        <trans-title-group xml:lang="pt">
+          <trans-title>Cuidados Infantis e Trabalho Remunerado em Três Gerações de Mulheres Mães de Montevidéu: Os Percursos das Desigualdades de Gênero</trans-title>
+        </trans-title-group>
+        <trans-title-group xml:lang="en">
+          <trans-title>Child Care and Paid Work Regarding Three Generations of Mothers of Montevideo: The Paths of Gender Inequalities</trans-title>
+        </trans-title-group>
+        <trans-title-group xml:lang="fr">
+          <trans-title>Garde d’enfants et travail rémunéré dans trois générations de femmes-mères de Montevideo: Les Chemins des Inégalités Entre les Sexes</trans-title>
+        </trans-title-group>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0001-6836-9806</contrib-id>
+          <name>
+            <surname>Batthyány</surname>
+            <given-names>Karina</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-6675-7765</contrib-id>
+          <name>
+            <surname>Scavino</surname>
+            <given-names>Sol</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0003-1111-7055</contrib-id>
+          <name>
+            <surname>Perrotta</surname>
+            <given-names>Valentina</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff3">
+            <sup>3</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1">
+        <label>1</label>
+        <institution content-type="orgdiv2">Departamento de Sociologia</institution>
+        <institution content-type="orgdiv1">Faculdade de Ciências Sociais</institution>
+        <institution content-type="orgname">Universidade da República</institution>
+        <addr-line>
+          <named-content content-type="city">Montevidéu</named-content>
+        </addr-line>
+        <country country="UY">Uruguai</country>
+        <email>karina.batthyany@cienciassociales.edu.uy</email>
+        <institution content-type="original">Coordenadora do do Grupo de Pesquisa em Sociologia de Gênero e Professora do Departamento de Sociologia, Faculdade de Ciências Sociais, Universidade da República (UDELAR), Montevidéu, Uruguai. E-mail: karina.batthyany@cienciassociales.edu.uy; ORCID: http://orcid.org/0000-0001-6836-9806</institution>
+      </aff>
+      <aff id="aff2">
+        <label>2</label>
+        <institution content-type="orgdiv2">Departamento de Sociologia</institution>
+        <institution content-type="orgdiv1">Faculdade de Ciências Sociais</institution>
+        <institution content-type="orgname">Universidade da República</institution>
+        <addr-line>
+          <named-content content-type="city">Montevidéu</named-content>
+        </addr-line>
+        <country country="UY">Uruguai</country>
+        <email>solscavino@gmail.com</email>
+        <institution content-type="original">Pesquisadora assistente do Grupo de Pesquisa em Sociologia de Gênero do Departamento de Sociologia, Faculdade de Ciências Sociais, Universidade da República (UDELAR), Montevidéu, Uruguai. E-mail: solscavino@gmail.com; ORCID: http://orcid.org/0000-0002-6675-7765</institution>
+      </aff>
+      <aff id="aff3">
+        <label>3</label>
+        <institution content-type="orgdiv2">Departamento de Sociologia</institution>
+        <institution content-type="orgdiv1">Faculdade de Ciências Sociais</institution>
+        <institution content-type="orgname">Universidade da República</institution>
+        <addr-line>
+          <named-content content-type="city">Montevidéu</named-content>
+        </addr-line>
+        <country country="UY">Uruguai</country>
+        <email>vperrottag@gmail.com</email>
+        <institution content-type="original">Pesquisadora assistente do Grupo de Pesquisa em Sociologia de Gênero do Departamento de Sociologia, Faculdade de Ciências Sociais, Universidade da República (UDELAR), Montevidéu, Uruguai. E-mail vperrottag@gmail.com; ORCID: http://orcid.org/0000-0003-1111-7055</institution>
+      </aff>
+      <pub-date date-type="pub" publication-format="electronic">
+        <day>27</day>
+        <month>11</month>
+        <year>2020</year>
+      </pub-date>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2020</year>
+      </pub-date>
+      <volume>63</volume>
+      <issue>4</issue>
+      <elocation-id>e20170162</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>9</day>
+          <month>08</month>
+          <year>2017</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>15</day>
+          <month>03</month>
+          <year>2018</year>
+        </date>
+        <date date-type="accepted">
+          <day>30</day>
+          <month>07</month>
+          <year>2018</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p> This is an Open Access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. </license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <title>RESUMEN</title>
+        <p>Frecuentemente se expresa la percepción de que existen cambios en las relaciones de género en dónde actualmente los varones estarían más involucrados en el cuidado de niños y niñas de lo que estaban antes. Estas afirmaciones conducen a la pregunta sobre cómo eran y son las prácticas de cuidado infantil y su vínculo con el trabajo remunerado de las mujeres en tres generaciones de familias pertenecientes a distintos niveles. Así, el Grupo de Investigación de Sociología de Género llevó a cabo una investigación cualitativa en la ciudad de Montevideo que indagó en las prácticas y representaciones sobre el cuidado en tres generaciones de mujeres y varones a través de entrevistas en profundidad (36 mujeres y 13 varones de distintos niveles socioeconómicos). En base al análisis de la información recogida, el artículo contribuye a comprender las percepciones sobre la participación de las mujeres-madres de niños/as menores de 6 años pertenecientes a distintas generaciones, las diversas formas de articulación trabajo-cuidados experimentadas, el significado otorgado a la participación en el mercado laboral y del cuidado. El artículo muestra fuertes diferencias de clase y marcas generacionales que desaparecen, que se heredan y que se reconvierten en los mandatos de género en el cuidado. Finalmente, se problematiza sobre la incorporación al mercado laboral por parte de las mujeres como un factor de cambio en pos de una distribución más equitativa del trabajo de cuidado en las parejas heterosexuales actuales.</p>
+      </abstract>
+      <trans-abstract xml:lang="pt">
+        <title>RESUMO</title>
+        <p>Frequentemente se expressa a percepção de que existem mudanças nas relações de gênero onde, atualmente, os homens estariam mais envolvidos no cuidado de crianças do que antes. Estas afirmações conduzem à questão sobre como eram e são as práticas de cuidado infantil, e seu vínculo com o trabalho remunerado das mulheres em três gerações de famílias que pertencem a distintos níveis. Desse modo, o Grupo de Pesquisa de Sociologia de Gênero desenvolveu uma pesquisa qualitativa na cidade de Montevidéu que indagou sobre as práticas e representações sobre o cuidado em três gerações de mulheres e homens por meio de entrevistas em profundidade (36 mulheres e 13 homens de distintos níveis socioeconômicos). A partir da análise da informação obtida, o artigo contribui a compreender as percepções sobre a participação das mulheres-mães de crianças menores de 6 anos de idade, e que pertencem a distintas gerações, as diversas formas de articulação trabalho-cuidados experimentadas, o significado dado à participação no mercado laboral e do cuidado. O artigo apresenta fortes distinções de classe e marcas geracionais que desaparecem, que são herdadas e que se reconvertem nos mandatos de gênero no cuidado. Finalmente, problematiza-se sobre a incorporação ao mercado laboral por parte das mulheres como um fator de mudança em busca de uma distribuição mais equitativa do trabalho de cuidado nos casais heterossexuais atuais.</p>
+      </trans-abstract>
+      <trans-abstract xml:lang="en">
+        <title>ABSTRACT</title>
+        <p>It is a common notion that there were changes in gender relations that have made men today more involved in child care than they were before. These statements lead to the question about how child care practices were then and how they are now, linked to the issues about paid work for women of three generations of families who belong to different social levels. That being said, the Gender Sociology Research Group developed a qualitative research in the city of Montevideo inquiring about practices and representations of child care in the context of three generations of women and men through in-depth interviews (with 36 women and 13 men from different socioeconomic backgrounds). Based on the analysis of the information obtained, the article contributes to the understanding of the perceptions about the participation of mothers of children under 6 years of age, and who belong to different generations, the various forms of articulation work/child care experienced, as well as the meaning attributed to the participation in the labor market and also in child care. This article presents strong class distinctions and generational marks that can disappear, be inherited, or even converted into gender mandates in care. Finally, we problematize the incorporation of women into the labor market as a factor of change in search of a more equitable distribution of care work among current heterosexual couples.</p>
+      </trans-abstract>
+      <trans-abstract xml:lang="fr">
+        <title>RÉSUMÉ</title>
+        <p>Souvent, la perception est exprimée qu’il y a des changements dans les relations entre les sexes où les garçons sont actuellement plus impliqués à la garde des garçons et des filles qu’auparavant. Ces déclarations soulèvent la question de savoir comment étaient et sont les pratiques de garde d’enfants et leur lien avec le travail rémunéré des femmes dans trois générations de familles appartenant à différents niveaux. Ainsi, le Groupe de Investigación en Sociologie du Genre a effectué une recherche qualitative dans la ville de Montevideo qui a enquêté sur les pratiques et les représentations des soins dans trois générations de femmes et d’hommes à travers des entretiens approfondis (36 femmes et 13 hommes de différents niveaux socio-économiques). Sur la base de l’analyse des informations recueillies, l’article contribue à comprendre les perceptions sur la participation des femmes-mères d’enfants de moins de 6 ans appartenant à différentes générations, les différentes formes d’articulation travail-soins vécues, le sens donné à la participation au marché du travail et des soins. L’article montre de fortes différences de classe et des marques générationnelles qui disparaissent, sont héritées et sont reconverties en mandats de genre dans les soins. Enfin, l’incorporation au marché du travail des femmes comme facteur de changement dans la recherche d’une répartition plus équitable des soins dans les couples hétérosexuels actuels est remise en question.</p>
+      </trans-abstract>
+      <kwd-group xml:lang="es">
+        <kwd>cuidados infantiles</kwd>
+        <kwd>Género</kwd>
+        <kwd>generaciones</kwd>
+        <kwd>maternidad</kwd>
+        <kwd>trabajo remunerado</kwd>
+        <kwd>representaciones sociales de los cuidados</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="pt">
+        <kwd>cuidados infantis</kwd>
+        <kwd>gênero</kwd>
+        <kwd>gerações</kwd>
+        <kwd>maternidade</kwd>
+        <kwd>trabalho remunerado</kwd>
+        <kwd>representações sociais dos cuidados</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="en">
+        <kwd>child care</kwd>
+        <kwd>gender</kwd>
+        <kwd>generations</kwd>
+        <kwd>maternity</kwd>
+        <kwd>paid work</kwd>
+        <kwd>social representations of care</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="fr">
+        <kwd>garde d’enfants</kwd>
+        <kwd>genre</kwd>
+        <kwd>générations</kwd>
+        <kwd>maternité</kwd>
+        <kwd>travail rémunéré</kwd>
+        <kwd>représentations sociales des soins</kwd>
+      </kwd-group>
+      <counts>
+        <fig-count count="0"/>
+        <table-count count="3"/>
+        <equation-count count="0"/>
+        <ref-count count="24"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="intro">
+      <title>INTRODUCCIÓN</title>
+      <p>Las necesidades de cuidado asociadas a la reproducción y sostenibilidad de la vida han sido históricamente atendidas por las mujeres de manera no remunerada e invisibilizada en el marco de las familias. En Uruguay, desde comienzos de 1900 el lugar social asignado a las mujeres fue la esfera doméstica en donde se esperaba de ellas la realización de las tareas domésticas, la educación de los y las niñas y del cuidado de personas dependientes o enfermas, aunque con diferencias en la participación y tareas realizadas en los distintos estratos socioeconómicos. Sin embargo, aproximadamente a partir de la década de los 50, el aumento de la incorporación de las mujeres al mercado laboral introdujo cambios en las posibilidades de muchas mujeres de continuar desempeñando estas tareas como hasta entonces<sup><xref ref-type="fn" rid="fn1">1</xref></sup>.</p>
+      <p>En los años 60, el 80% de los varones eran activos en el mercado laboral mientras que solo lo era un 25% de las mujeres, aproximadamente. Desde entonces la brecha en la participación de varones y mujeres fue disminuyendo progresivamente a causa de un leve descenso en la participación de los varones y un aumento significativo de la participación por parte de las mujeres (Espino, Machado y Alvez, 2011: 8). En 2018, la tasa de actividad de las mujeres en Uruguay se ubicaba en 54,9% y la de los varones en 70,7%, según los datos del Instituto Nacional de Estadística (INE)<sup><xref ref-type="fn" rid="fn2">2</xref></sup>.</p>
+      <p>No obstante, el aumento de la participación de las mujeres en el mercado laboral no implicó una modificación de los mandatos de género en cuanto al trabajo doméstico y de cuidados. Esto ha generado tensiones particulares en la vida de las mujeres, quienes tienen una sobrecarga de trabajo diferencial según los posicionamientos socioculturales y económicos (Batthyány, <xref ref-type="bibr" rid="B13">Genta y Perrotta, 2015</xref>: 79-80). Esto se refleja en que las mujeres de hogares de menores ingresos participan más del cuidado que las mujeres de mayores ingresos (60% vs. 12%). Asimismo, las mujeres de sectores más pobres tienen brechas de género en el trabajo no remunerado de cuidado más acentuadas que las mujeres de sectores más ricos (20% vs. 2.5%) (Batthyány, 2015: 100).</p>
+      <p>La intensidad de tiempo, tensiones y energía que las personas dedican a los cuidados varía según las necesidades de las personas dependientes. En el caso de los niños, cuando son más pequeños la demanda de cuidados es mayor, así como también las desigualdades de género en el uso del tiempo entre varones y mujeres (Batthyány, 2015:119).Por ejemplo, la brecha de la tasa de actividad entre varones y mujeres según la convivencia con hijos menores de 12 años indica que, cuando no conviven con hijos, la brecha es de 10,4%, cuando conviven con un hijo pasa a ser de 18,2%, y cuando lo hacen con dos es de 25,8%, y con tres hijos o más es de 34% (<xref ref-type="bibr" rid="B17">INMUJERES, 2014</xref>).</p>
+      <p>Por otra parte, la brecha salarial entre varones y mujeres (20%) muestra que las mujeres tienen posiciones desventajosas una vez insertas en el mercado laboral, están sobrerrepresentadas en empleos informales y además suelen ocuparse en el sector doméstico, de cuidados y educativo (<xref ref-type="bibr" rid="B18">Inmujeres, 2016</xref>: 34). A su vez, acceden a menos puestos de jerarquía que los varones (Inmujeres, 2016b: 9-30).</p>
+      <p>Estos aspectos se acompañan de la presencia de escasos mecanismos colectivos para corresponsabilizar los cuidados. Estos pueden ser servicios de cuidado disponibles para la población que lo requiera y de horario completo, los permisos parentales, licencias por paternidad o maternidad más amplias, horarios flexibles, entre otros. En Uruguay se desarrolló desde 2015 una política pública de cuidados que buscó corresponsabilizar el trabajo de cuidados entre Estado, mercado, familias y comunidad, así como entre varones y mujeres. Esto se vio reflejado en el status jurídico de los cuidados como un derecho ciudadano (<xref ref-type="bibr" rid="B22">Pautassi, 2007</xref>: 40). Sin embargo, la persistencia de los mandatos de género tradicionales y las preferencias “familistas” del cuidado aún hoy orientan las prácticas de ciudados desarrolladas.</p>
+      <p>Uruguay es un país de matriz cultural judeocristiana, con un estado laico desde principios del 900, que presenta una fuerte moral “familista” sobre los cuidados. Dicho “familismo”<sup><xref ref-type="fn" rid="fn3">3</xref></sup> se evidencia en la distribución del tiempo de cuidados entre Estado, familias, mercado y comunidad, así como en las representaciones del cuidado (Batthyány, Genta, Perrotta, 2013: 97). A su vez, ese “familismo” es feminizado debido a que el trabajo de cuidado es realizado por una abrumadora mayoría de mujeres en el marco de las familias, de manera no paga. Como ha sido mencionado anteriormente, los niveles de “familismo” aumentan en los sectores socioeconómicos más bajos y disminuyen en los altos en donde hay una cultura de servicio y de cuidados institucionales más instalada, que es acompañada con la posibilidad de comprar dichos servicios en el mercado.</p>
+      <p>De esta manera, las necesidades de cuidados para niños/as en una cultura “familista”, con escasos servicios estatales de calidad y de jornada completa en las edades tempranas de los y las niñas, tiene como consecuencias la asunción de los costos y los riesgos sociales del cuidado por parte de las mujeres, de manera individual y sin soportes colectivos (Batthány, Genta y Scavino, 2017: 27).</p>
+      <p>En este contexto, el presente trabajo busca conocer las prácticas de cuidado y su vínculo con el trabajo remunerado de las madres y las representaciones sociales del cuidado y del trabajo remunerado en tres generaciones, con la intención de avanzar hacia una perspectiva que permita integrar al análisis del fenómeno elementos generacionales y epocales que abonen nuevas hipótesis y categorías de conocimiento en torno al desarrollo de las relaciones sociales de género.</p>
+    </sec>
+    <sec>
+      <title>REFERENCIAS CONCEPTUALES: LAS RELACIONES DE GÉNERO Y EL ANÁLISIS GENERACIONAL</title>
+      <p>El concepto de género, que refiere a la construcción sociocultural de las diferencias sexuales, permite analizar las relaciones sociales mostrando las desigualdades de poder entre varones y mujeres como producto de dicha construcción cultural. Teresa de Lauretis (1984) presentaba al sistema de género como “la construcción social de la mujer y del hombre y la producción semiótica de la subjetividad<italic>”</italic> (De Lauretis, 1984 <italic>apud</italic> Gil Rodríguez, 2002: 34). Por su parte, Joan <xref ref-type="bibr" rid="B24">Scott (2003</xref>: 289) lo definió como:</p>
+      <disp-quote>
+        <p>Un elemento constitutivo de las relaciones sociales basadas en las diferencias que distinguen los sexos y el género es una forma primaria de relaciones significantes de poder (y) son los conceptos normativos que manifiestan las interpretaciones de los símbolos (que) se expresan en doctrinas religiosas, educativas, científicas, legales y políticas que afirman categóricamente y unívocamente el significado de varón y mujer, de masculino y femenino. (<xref ref-type="bibr" rid="B24">Scott, 2003</xref>: 289)</p>
+      </disp-quote>
+      <p>En este sentido, el sistema de sexo-género varía según el contexto histórico y cultural. Varios estudios de tipo transversal y de corte cuantitativo han permitido caracterizar y visibilizar algunos de los aspectos sobre los cuales se erige el sistema sexo-género actual, sin embargo las diferencias intergeneracionales en el trabajo de cuidados implican diseños metodológicos longitudinales. El análisis generacional permite capturar las relaciones entre tiempos históricos, familiares y biográficos a la vez que permite documentar respuestas de personas y grupos vinculados a los sucesos históricos que vivieron (McLeod y Thomson, 2009 <italic>apud</italic> Cais, Folguera y Formoso, 2014: 47).</p>
+      <p>Los cambios generacionales a veces atraviesan todas las clases sociales constituyendo “cambios sociales de género” y otras veces obedecen, principalmente, a las características de la clase social en la generación (Mannheim, 1993 <italic>apud</italic> Cais, Folguera y Formoso, 2014) sostiene que pueden convivir reacciones opuestas en una misma generación (con relación a una anterior) a las que llama “unidades de generación”, que pueden responder en parte a la condición de clase.</p>
+      <p>Dentro del sistema de género, las representaciones sociales sobre maternidad y paternidad han sido centrales en producir y reproducir prácticas de cuidados. Gran parte del trabajo de las historiadoras de género fue mostrar como la maternidad no es algo natural sino que se construye como producción histórica. En este sentido, Carrasco y Torns (2011: 18) apuntan que: “deconstruir el proceso de identificación histórica entre las nuevas identidades femeninas y la maternidad sigue siendo hoy uno de los temas clave de la historiografía de género”.</p>
+      <p>El cuidado y su vínculo con la participación en el mercado laboral de las mujeres es central en la comprensión del tipo de modelo de división sexual del trabajo al que se asiste socialmente. A su vez, el cuidado obedece a los mandatos de género imperantes en los modelos culturales (<xref ref-type="bibr" rid="B15">Haas, 2005</xref>: 505).</p>
+      <p>Un estudio anterior (<xref ref-type="bibr" rid="B20">Martín Palombo, 2010</xref>: 48 y 49) sobre los cuidados y el vínculo de las mujeres con el mercado laboral en tres generaciones en Andalucía plantea la existencia de tres modelos:</p>
+      <list list-type="order">
+        <list-item>
+          <p><bold>Modelo tradicional: actividad no remunerada dominante</bold>. En este modelo las mujeres pueden haber trabajado o no, pero luego de constituir parejas, dejan definitivamente su actividad en el mercado de trabajo. Este grupo de mujeres tienen que elegir si trabajan o no en función de la nueva demanda de cuidados familiares.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Modelo de transición: actividad discontinua</bold>. Es un modelo en el que las mujeres dejan de trabajar cuando tienen a sus hijos pequeños y regresan al mercado laboral cuando los mismos dejan de ser dependientes. Se opta por una forma de entrada-salida-entrada al mercado de trabajo.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Modelo nuevo: actividad continua</bold>. En este modelo las mujeres conviven con el trabajo de cuidados, doméstico y voluntario además del trabajo remunerado. En el mismo, se acumulan los malestares y las demandas por la imposibilidad de gozar de tiempo para otras actividades. Refiere al modelo en que los problemas de articulación trabajo-familia son centrales en la vida de las mujeres (<xref ref-type="bibr" rid="B20">Martín Palombo, 2010</xref>: 48 y 49).</p>
+        </list-item>
+      </list>
+      <p>En cierto punto, los tres modelos se expresan en términos de las diferencias generacionales, en tanto cada uno de ellos es dominante en una generación distinta. Esta tipología resulta un antecedente muy valioso para la investigación que se presenta en este artículo, ya que es posible observar categorías similares o adaptadas de estos modelos al caso uruguayo, que se mencionarán más adelante.</p>
+    </sec>
+    <sec sec-type="methods">
+      <title>METODOLOGÍA</title>
+      <p>El presente artículo se basa en la investigación <italic>Las bases invisibles del bienestar social: género, trabajo no remunerado y cuidados en los hogares</italic> desarrollada por el Grupo de Sociología de Género del Departamento de Sociología de la Facultad de Ciencias Sociales, Universidad de la República (Proyecto CSIC I+D). La misma es de carácter cualitativa longitudinal, realizada durante junio y octubre de 2016 en Montevideo, y se enfoca en analizar los cambios y reproducciones de fenómenos sociales a través de distintas generaciones. En este tipo de investigaciones el tiempo y el cambio son elementos centrales, pues tienen como objetivo captar elementos históricos, familiares, de contexto social, biográficos o personales (Caïs, Folguera y Formoso, 2014).</p>
+      <p>Particularmente, en esta investigación se buscó conocer el vínculo entre las políticas públicas de cuidado, la situación respecto al mercado laboral de las mujeres madres y las estrategias de cuidado en cada momento histórico estudiado.</p>
+      <p>El análisis generacional realizado fue de carácter horizontal, el cual tiene como objetivo identificar las similitudes y permanencias entre distintas generaciones y se centra en comparar la generación e identificar qué características distinguen una generación de la otra (Caïs, Folguera y Formoso, 2014).</p>
+      <p>La generación es entendida en este estudio como un colectivo de personas que comparten una misma experiencia social, diferenciándola del concepto de cohorte. En este caso lo común entre los distintos integrantes de una generación es haber tenido hijos de entre cero y seis años en determinado período histórico.</p>
+      <p>La muestra estuvo conformada por familias donde estuvieran presentes tres generaciones de mujeres y en las que la mujer de la generación actual tuviera un hijo/a menor de seis años (generación de madres). Por lo tanto, la generación de madres actuales se conformó por madres y padres de niños pequeños/as. La experiencia de cuidado de estas parejas se ubica desde 2010 hasta la fecha del estudio (2016), etapa marcada por la instalación del tema de los cuidados en la agenda pública, con el inicio de la discusión sobre el Sistema Nacional Integrado de Cuidados (SNIC). Si bien la temática de los cuidados y la promoción de la responsabilidad compartida de los cuidados entre Estado, familias y mercado, así como entre varones y mujeres, se instala en el discurso público a raíz de la instalación de este sistema, la oferta de servicios públicos de cuidado infantil de jornada extendida no se encuentra universalizada en el período donde estas familias cuidaron a sus hijos pequeños (2010 -2016).</p>
+      <p>La generación de abuelas está integrada por las actuales abuelas y abuelos de los niños/as pequeños. Dichas parejas transitaron la etapa de cuidados de sus niños/as pequeños en el período 1975-1990. Finalmente, la generación más vieja se conforma por las actuales bisabuelas maternas de los niños/as pequeños/as. Estas parejas transitaron la etapa de crianza de sus niños/as pequeños entre 1955 y 1965.</p>
+      <p>Respecto a la muestra, se utilizó un muestreo teórico. Siguiendo a Mejías-Navarrete (2000) la muestra cualitativa se define como una parte de un colectivo o población elegida mediante criterios de representación socio-estructural que se somete una investigación científico social con el propósito de obtener resultados válidos para el universo. Siguiendo a este autor, en la muestra cualitativa deben estar representadas las relaciones que configuran socialmente el objeto de estudio. Cada unidad de muestra expresa la posición diferencial que ocupa en la estructura social del objeto de estudio y todas juntas reproducen la composición y dinámica de las situaciones sociales del objeto. En este sentido, es importante considerar que la dinámica tiempo espacio ha sido tenida en cuenta en el análisis de los datos, no solo porque la recordación puede ser un problema en las generaciones de bisabuelos, introduciéndose factores de recordación selectiva, sino porque la resignificación de experiencias pasadas también aparece en los discursos de abuelas o bisabuelas de manera más o menos explícita.</p>
+      <p>En cuanto a la selección de la muestra, los antecedentes de investigación indicaban la necesidad de incluir el nivel socioeconómico como una variable relevante a la hora de configurar representaciones y prácticas asociadas al cuidado y a los roles de género. El Nivel Socio Económico (NSE) se definió a partir de la generación actual y con un criterio teórico. Se definieron tres estratos de relevancia: familias de NSE alto, medio y bajo. Para caracterizar el estrato de pertenencia se definieron las siguientes variables: para el caso de la clase alta se tomó como criterio la pertenencia a reconocidas familias de altos ingresos y prestigio en la sociedad uruguaya; en los siguientes estratos la variable que primó fue el trabajo remunerado de la mujer y sus características (ocupación, profesión, dedicación horaria, rama de actividad). Para categorizar las ocupaciones de las mujeres y asociarlas a un nivel socioeconómico, se utilizó como referencia el Índice de Nivel Socioeconómico (INSE) para Uruguay (actualizado en 2016).</p>
+      <p>Respecto a los tipos de muestra seleccionada, de las distintas opciones del muestreo en estudios cualitativos puede clasificar al muestreo elegido en esta investigación como muestreo por juicio. Este tipo de muestreo se caracteriza porque se definen teórica y previamente los parámetros estructurales del universo de estudio mediante una definición clara de las características más importantes que delimitan sus niveles estructurales. Posteriormente se eligen a todos los entrevistados.</p>
+    </sec>
+    <sec sec-type="results">
+      <title>PRINCIPALES RESULTADOS</title>
+      <sec>
+        <title>La división sexual del trabajo en la generación de las bisabuelas: el modelo tradicional</title>
+        <p>El análisis de los discursos de las mujeres actualmente bisabuelas permite entrever una organización del trabajo entre varones y mujeres que se presenta como aproblemática. Las mujeres no declaran que fuera un conflicto en sus vidas o en la pareja la realización de las tareas domésticas y de cuidados por parte de ellas exclusivamente, aunque existían diferencias leves según niveles socioeconómicos de los hogares. En el caso de las bisabuelas de niveles socioeconómicos altos, la ausencia del trabajo remunerado era lo más frecuente, mientras que las de niveles bajos trabajaban además de responsabilizarse de los cuidados y la realización de tareas domésticas sin apoyo por parte de sus pares varones.</p>
+        <p>En los niveles altos, la ausencia de las mujeres del mercado laboral no era un tema sobre el cual se reflexionara o se cuestionara, simplemente era una realidad naturalizada: los varones producen dinero y las mujeres se encargaban de la gestión de la economía del hogar. Debe señalarse que estas mujeres no realizaban el trabajo doméstico sino que existía personal doméstico que residía junto a las familias para estas tareas lo cual también incluía gran parte del trabajo de cuidados. Por tanto, el rol de estas mujeres se concentraba en la gestión del servicio doméstico y en realizar algunas tareas de cuidado de niños pequeños. La justificación de la división sexual del trabajo pasaba por un orden en el cual hay un trabajo “que le toca a cada uno”, expresando así de manera muy patente la naturalización de roles de género tradicionales. En la visión de las mujeres bisabuelas de NSE Altos, era justo que, si los varones trabajaban de manera remunerada, ellas se encargaran de gestionar el trabajo del hogar, pero no se planteaba como una posibilidad que las mujeres o los varones tuvieran otros proyectos de vida diferentes a los presentados por el esquema de familia varón ganador de pan- mujer responsable de la esfera doméstica.</p>
+        <p>En el caso de las mujeres de niveles medios, se relata la gran dedicación horaria de los maridos al trabajo remunerado y las consecuencias que eso tenía para ellas: ser las encargadas “por definición” del hogar. Incluso cuando se pregunta por el deseo de trabajar, algunas de las respuestas apuntan a plantear que era impensable una vez que “comenzaba el matrimonio”, aunque luego de que los hijos crecían existía la opción de realizar trabajos puntuales y adaptados a la esfera doméstica. Esto evidencia que podría existir un nodo crítico de ausencia total del mercado de trabajo cuando se daba una alta demanda de cuidados. En el contexto de la generación de bisabuelas, trabajar era una actividad casi inadmisible para las mujeres, mandato transmitido por sus padres y madres:</p>
+        <disp-quote>
+          <p><italic>Yo una vez le dije a mi papá que quería ir a trabajar y casi me mata (risas). (...) “Como si te faltara de comer” me decía, “¿qué te falta, te falta de comer?”, no...no me dejaron ir a trabajar. (¿Y tu mamá no te apoyó?) Menos, mi mamá menos quería que fuera. Ah no, mi mamá era peor que mi papá en ese sentido, porque para ella el honor de la familia...</italic> (Mujer 1, Bisabuela, NSE Medio).</p>
+        </disp-quote>
+        <p>Algunas mujeres que trabajaban de manera remunerada, lo hicieron hasta la llegada de su primer hijo y en pocos casos eran retomados una vez que los niños pasaban a ser adolescentes. Entre los distintos trabajos que permitían la compatibilización con lo doméstico aparecen: los almacenes en el hogar, trabajos de corte y confección, trabajo de encuadernación, venta de ropa (como emprendimiento familiar). Se trata de trabajos que toman poco tiempo, que se desarrollan en los hogares y que permiten flexibilidad para la atención de las tareas domésticas y de cuidado. Las condiciones para poder trabajar, incluso cuando el trabajo se realizaba durante la pre adolescencia y adolescencia de los hijos, tenían que ver con cumplir con las tareas de la casa.</p>
+        <p>En los discursos de las mujeres de clases medias de la generación de bisabuelas, se suele encontrar referencias al trabajo como “apoyo” o “colaboración” con sus propios padres o maridos, dado que trabajaban, pero no percibían una remuneración individual asociada a eso. La división sexual del trabajo es clásica, hay una menor presencia de servicio doméstico con relación a los sectores altos, que se refleja en una mayor carga de trabajo para las mujeres. En cuanto a la participación de los varones se distingue un discurso que se orienta por la imagen de varón colaborador en los “restos del día” y otra, de varón que está “para ser servido”.</p>
+        <disp-quote>
+          <p><italic>Y era todo por la casa, por mis hijos, por mi marido, por...qué se yo, en aquella época era así, la mayoría, algunas trabajaban, había mujeres que trabajaban.</italic> (Mujer1, Bisabuela, NSE Medio).</p>
+        </disp-quote>
+        <p>El tipo de legislación permitía que las mujeres se fuesen integrando al mercado laboral, por ejemplo, a partir de la licencia maternal, pero contribuía a perpetuar una clásica división sexual del trabajo presente en la generación. No existía la posibilidad de pensar que integrar a los varones en el cuidado era un derecho a promover.</p>
+        <p>La primera Ley de Salarios de Maternidad (N°12.572) fue creada en 1958, después de que algunas de las entrevistadas dieran a luz (recordemos que tuvieron a sus hijos entre 1955 y 1965). Estaba dirigida a todas las mujeres asalariadas públicas y privadas y contemplaba un plazo de 12 semanas (6 previas al parto y 6 posteriores al mismo) en la que se remuneraba el 100% del salario mensual durante las 6 semanas posteriores al parto. En relación a la lactancia, se contemplaban dos períodos de media hora en la jornada laboral hasta el tiempo que los médicos consideraran suficiente (Ferrari y Batthyány, 2017). Cabe de todas formas recordar que no todas las mujeres que se integraban al mercado laboral lo hacían de modo formal, de manera que un contingente de mujeres trabajadoras no accedía a este tipo de derechos (en 1991, por ejemplo, la tasa de informalidad en el empleo ascendía 32,8%, siendo de 29% para los varones y de 38,5% para las mujeres (Instituto Nacional de las Mujeres, 2008).</p>
+        <p>Este tipo de legislación si bien permitía que las mujeres se fuesen integrando al mercado laboral, era profundamente maternalista, en el sentido de que el modelo de pareja y de tareas que varones y mujeres tenían que hacer se adecua a la clásica división sexual del trabajo presente en la generación. No existía la posibilidad de pensar que integrar a los varones en el cuidado era algo lógico, útil o que contribuyera al bienestar social.</p>
+        <p>La escasa o nula participación de los varones en el ámbito doméstico es justificada por las mujeres de niveles medios, con al menos tres mecanismos argumentativos. El primero, está relacionado con la asunción naturalizada de roles y el sentimiento de injusticia al pensar en sumarle a los varones más trabajo además del que realizan fuera del hogar. En este sentido, juega también la defensa del rol reproductivo que les compete a las mujeres. El segundo, se vincula con la descalificación de los varones para realizar dichas tareas por falta de aptitud, información o práctica para llevarlas a cabo. La herencia generacional es el tercer mecanismo, que implica que la división de roles repite lo vivido en su hogar de origen. Finalmente, las mujeres de niveles socioeconómicos bajos de la generación de bisabuelas se diferencian del resto de las mujeres de su generación por presentar una doble carga de trabajo (remunerado y no remunerado).</p>
+        <disp-quote>
+          <p><italic>Después de que me casé, vine a vivir con mi marido...y, bueno ahí trabajábamos en una estancia...nosotros vivíamos en un puesto, de, de la estancia, y bueno ahí empecé a...a criar mis hijos.</italic> (Mujer 2, Bisabuela, NSE Bajo).</p>
+        </disp-quote>
+        <p>La permanencia de estas mujeres en el mercado laboral estaba más ligada a la necesidad económica que al hecho de que desearan trabajar para tener autonomía económica. Esto se evidencia en el siguiente fragmento de entrevista que muestra que una vez que los varones conseguían mejorar sus ingresos, las mujeres se retiraban del mercado laboral.</p>
+        <disp-quote>
+          <p><italic>Desde los diez años. Bueno siempre fui empleada doméstica (…) Sí, dejaba de trabajar cuando mi marido estaba con un trabajo firme, seguro ¿viste? Yo ahí aflojaba un poco y me quedaba más bien a cuidarlos a ellos. (…).</italic> (Mujer 1, Bisabuela, NSE Bajo).</p>
+        </disp-quote>
+        <p>En las mujeres de niveles económicos bajos había, en algunos casos, una evaluación de la posibilidad de externalizar el cuidado, pero el alto costo de oportunidad prevalecía sobre la posibilidad de hacerlo.</p>
+        <p>En síntesis, tal como muestra la <xref ref-type="table" rid="t1">Tabla 1</xref>, en el contexto de la generación de bisabuelas, trabajar era una actividad casi inadmisible para las mujeres. Estaba vedado el hecho de que pudieran planteárselo, excepto entre las mujeres de niveles socioeconómicos más bajos, quienes trabajaban por necesidad, con lo cual, lo único que justificaba la actividad laboral femenina era la necesidad económica. En la idea de que la mujer no puede trabajar, se expresa un orden de género en el cual los varones han de proveer económicamente, en este sentido, para este tipo de masculinidad construida sería una vergüenza que las mujeres trabajen. Por su parte las mujeres tienen que ser buenas madres y esposas, aspecto vigilado particularmente por sus madres.</p>
+        <p>
+          <table-wrap id="t1">
+            <label>Tabla 1</label>
+            <caption>
+              <title>Resumen de la expresión de tres dimensiones con relación al trabajo remunerado en la generación de bisabuelas por nivel socioeconómico.</title>
+            </caption>
+            <table frame="hsides" rules="groups">
+              <colgroup width="25%">
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2">Dimensión</th>
+                  <th colspan="3">Nivel Socioeconómico</th>
+                </tr>
+                <tr>
+                  <th>Alto</th>
+                  <th>Medio</th>
+                  <th>Bajo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">Vínculo con el Trabajo Remunerado</td>
+                  <td align="center">La vida familiar es mutuamente excluyente con la vida laboral</td>
+                  <td align="center">La vida familiar es mutuamente excluyente con la vida laboral</td>
+                  <td align="center">El vínculo con el trabajo por parte de las mujeres, es obligatorio por necesidades económicas.</td>
+                </tr>
+                <tr>
+                  <td align="center">Razones por las cuales se daba ese vínculo</td>
+                  <td align="center">Se observa una naturalización de que los varones se responsabilizaran por el trabajo remunerado y las mujeres por las tareas domésticas y de cuidados (aspecto considerado obvio, ya que los varones no estaban en todo el día).</td>
+                  <td align="center">Se plantea que era natural sentir que las mujeres debían hacer todo por su casa y por sus hijos y maridos.</td>
+                  <td align="center">No existía la posibilidad de no trabajar, pero el cuidado estaba en manos de las mujeres. Convive el espacio de cuidados con el espacio de trabajo remunerado. Doble carga laboral en las mujeres.</td>
+                </tr>
+                <tr>
+                  <td align="center">Acuerdos o conflictos en torno al reparto de tareas.</td>
+                  <td align="center">Ausencia de conflictos</td>
+                  <td align="center">Ausencia de conflictos</td>
+                  <td align="center">Ausencia de conflictos</td>
+                </tr>
+              </tbody>
+            </table>
+            <table-wrap-foot>
+              <fn id="TFN1">
+                <p>Fuente: Elaboración propia con base en las entrevistas en profundidad.</p>
+              </fn>
+            </table-wrap-foot>
+          </table-wrap>
+        </p>
+        <p>En cuanto a los acuerdos de pareja o conflictos en torno a la división sexual del trabajo en la generación de bisabuelas, sean mujeres de niveles altos, medios o bajos, no hay una elaboración reflexiva sobre dichos acuerdos. La naturalización del modelo tradicional en el que las mujeres tenían que responsabilizarse por las tareas domésticas y el cuidado y los varones por la provisión económica generó que no hubiese conflictos u acuerdos explícitos en torno al reparto del trabajo, lo cual aparece de manera más clara en los sectores medios de la generación de abuelas y como tema central en las parejas de la generación de madres y padres actuales.</p>
+      </sec>
+      <sec>
+        <title>Generación bisagra: la incorporación masiva de las mujeres como trabajadoras remuneradas. impactos y relecturas desde el presente</title>
+        <p>En el caso de las mujeres de la generación de abuelas, que nacieron entre el 1951 y 1964, se evidencia un salto importante en el vínculo con el trabajo remunerado, que atraviesa de diferentes formas y significaciones a todos los niveles socioeconómicos. La generación de abuelas no tiene una homogeneidad en cuanto a la división sexual del trabajo, las representaciones de género y estereotipos que se observaban en la generación de bisabuelas. Es debido a esto que plantearemos que se trata de una “generación bisagra” en la cual se reproducen patrones de la generación anterior o se abren nuevos patrones que son incluso contrarios a los modos de ser presentados por sus madres (las bisabuelas). En este sentido, se podría considerar que se trata de una generación con unidades generacionales distintas, que responde de manera diferente a los estímulos de las anteriores, así como a las demandas de su propia época.</p>
+        <p>En el grupo de las mujeres de NSE Alto, si bien en todos los casos el trabajo doméstico y de cuidados era realizado por personal de servicio en las casas, el vínculo de las madres con el mercado laboral se presenta como antagónico en los casos estudiados. Por un lado existe una tendencia que reproduce el modelo desarrollado por sus madres, una clásica división sexual del trabajo sin cuestionamientos. Por otro lado, se presenta un modelo rupturista de mujer trabajadora e independiente, que tutela y se hace cargo del hogar, pero que gran parte de su vida pasa por la esfera pública: participación política, estudios universitarios y ejercicio de su carrera profesional. Además, se divorcia del marido, con lo cual rompe completamente con los mandatos de la generación anterior.</p>
+        <p>A continuación presentamos un breve fragmento de una abuela que no se dedicó totalmente a los cuidados y que hace una lectura actual sobre esa distribución del trabajo.</p>
+        <disp-quote>
+          <p><italic>A ver hay un tipo que se llama Youg, que dice que cuando las mujeres vuelven al hogar todo el mundo aplaude, porque eso es biológico, ¿no? (...) yo tengo una sensación, a ver, hogar, juego, hay algo que trae lo femenino después no quiere decir que vos no puedas trabajar afuera, que tenés que estar, yo creo que hay algo...yo creo que esta buena la vuelta al hogar, tenés que priorizar...solo que la mujer no puede perderse en esto, ¿entendés?.</italic> (Mujer 2, Abuela, NSE Alto).</p>
+        </disp-quote>
+        <p>Esta diferencia de situaciones y de percepciones respecto al trabajo remunerado se amplía en las mujeres de clases medias quienes han vivido situaciones muy diferentes respecto al empleo remunerado. Por un lado mujeres que no participaron del mercado laboral, argumentando que un modelo de división sexual del trabajo clásica era visto como lo normal, así como lo deseado por ellas. Por otro lado, mujeres que se insertaron a tiempo completo en el mercado, e incluso realizaron horas extras, lo cual pudo también estar motivado por necesidades económicas producto de sus divorcios.</p>
+        <p>Los elementos vocacionales e identitarios aparecen como argumentos en los casos en que las mujeres deseaban y procuraban mantener su empleo a pesar de la demanda de cuidados y de la demanda por parte de los varones para que ocuparan un papel central en la esfera doméstica.</p>
+        <disp-quote>
+          <p><italic>Trabajaba poco, porque no había una necesidad económica de trabajar, pero defendí el deseo de trabajar en mi profesión, porque si hubiera sido por el papá de “Hija” no hubiera trabajado. Me hubiera tenido que quedar en mi casa.</italic> (Mujer 2, Abuela, NSE Medio).</p>
+        </disp-quote>
+        <p>Los argumentos vinculados a las razones por las cuales trabajaban se encuentran asociados al potencial de la independencia económica, es decir a la capacidad de tomar sus propias decisiones con el dinero, también a la sociabilidad (por ende el aumento de las redes de capital social), así como a la necesidad de complementar los ingresos de su pareja para sustentar el hogar.</p>
+        <p>Si bien el desarrollo de derechos laborales dirigidos a las mujeres, permitieron una mejor inserción laboral por parte de las mismas, fueron diseñados de tal manera que se reafirmaba la idea de que eran ellas las responsables del cuidado infantil. Además de la Ley 12.572 de 1958 ya mencionada, se aprueba la Ley 15.084 de Asignaciones Familiares para las asalariadas privadas, que flexibiliza la forma en la que se toman las 12 semanas de licencia de maternidad y se agrega la cuota parte de dicha licencia y el salario vacacional a la remuneración. Los tres días de licencia para los padres recién aparecen en 1990.</p>
+        <p>Las mujeres que asumieron todo el trabajo, lo hicieron tanto de manera acrítica con los varones, como de manera crítica, sembrando la posibilidad de demanda de acuerdos y negociación de tiempos entre los miembros de la pareja que se observa en la generación actual.</p>
+        <disp-quote>
+          <p><italic>Conflictos, conflictos no. Él era muy tranquilo, muy pasivo, para él todo estaba bien. Tuvimos más problemas ahora de grandes que cuando eran chicos. (….) porque él no resolvía nada, era un padre presente porque estaba en la casa, cuando estaba, pero era ausente porque no tomaba ninguna decisión. Nunca les cambió los pañales, nunca nada. Algún día capaz que les dio una mamadera pero nada.</italic> (Mujer 1, Abuela, NSE Medio).</p>
+        </disp-quote>
+        <p>En Uruguay, la Ley de divorcio por sola voluntad de la mujer está vigente desde 1913, siendo uno de los primeros países en Latinoamérica en legalizar la disolución del matrimonio. En este sentido, los divorcios reales comenzaron a aumentar en proporción más adelante, cerca al año 1970 (<xref ref-type="bibr" rid="B7">Cabella, 1999</xref>).</p>
+        <p>En la generación de abuelas, la participación de las mujeres en el mercado de empleo implicó una reorganización de los cuidados, lo cual condujo a la planificación de elaboradas estrategias para poder sostener dicha participación. Este fenómeno no estuvo desligado de un señalamiento social que indica que el lugar correcto de las mujeres es el de cuidadoras, y que se refleja en la dificultad para corresponsabilizar los cuidados así como en los sentimientos de culpa por no cuidar introyectados en las mujeres. La culpa por la no presencia y la tensión por la contradicción de los proyectos maternidad-trabajo son elementos fundamentales a la hora de comprender las maternidades, incluso cuando se instala un modelo de maternidad intensiva en el marco de una masiva incorporación de las mujeres al mercado laboral (<xref ref-type="bibr" rid="B23">Puyana y Mosquera, 2005</xref>: 19).</p>
+        <p>La culpa no se vincula solo a la ausencia sino también a la capacidad de desapego (leída como “desamor”) que es la que permite las críticas que juzgan a las “madres ausentes”. Dichas criticas tienen como parte de su argumento, que las mujeres-madres aman necesariamente a sus hijos y que ese amor es tan grandilocuente que ese es el único proyecto posible en sus vidas, o al menos, al que deberían dedicar mayor tiempo y energía cuando se presenta. En este sentido, Nancy Scheper-Hughes en Hrdy (2001) citada por Sbaraini <xref ref-type="bibr" rid="B10">Cordeiro (2013</xref>: 10) expresa que “el amor de madre es todo lo que quisiéramos, menos natural, y tiene más bien una serie de imágenes, significados, sentimientos y prácticas que son todos parte de lo social y lo culturalmente producido”. Argumento que ya sostenía <xref ref-type="bibr" rid="B9">Chodorow (1978)</xref> en sus estudios sobre psicoanálisis y maternidad.</p>
+        <p>En esta generación, la de las actuales abuelas, aparece con más claridad la culpa por la ausencia de las madres en el cuidado debido a su participación en el mercado laboral. Es interesante recordar que esta generación de mujeres se inserta en un mercado que se presenta como un ámbito ajeno a los cuidados y la vida familiar, experimentando con gran tensión una rígida separación de esferas. En la actualidad, se observa que el mercado laboral en ciertos rubros y sectores se muestra más receptivo a las necesidades de cuidado de sus trabajadores/as, pero en la década del 70 y 80 el mercado no mostraba dicha apertura.</p>
+        <disp-quote>
+          <p><italic>No, era terrible, eso para mí era terrible, cuando los tenía que dejar, eso era dramático para mí. Cuando tenía que dejarlos en el maternalito, cuando tenía que empezar a trabajar, eso me podía mucho.</italic> (Mujer 7, Abuela, NSE Medio).</p>
+        </disp-quote>
+        <p>Por otra parte, para las mujeres abuelas de niveles socioeconómicos bajos, el trabajo remunerado no implicaba rentabilidad debido a la necesidad de contratar cuidadoras para poder trabajar, con lo cual, se sostenían en su clásico rol de cuidadoras. Frente a, como dicen ellas: “cambiar plata”, preferían el cuidado materno. Es decir que el proyecto laboral no vale como fuente identitaria en estos casos, ni hay un deseo construido en torno a trabajar por sobre la maternidad. A su vez, en su discurso se evidencia el impacto negativo sobre la economía de estos hogares por la ausencia de servicios universales y gratuitos de cuidado infantil, así como la evidente ausencia de participación de los varones en el cuidado de sus hijos/as.</p>
+        <p>En la generación de abuelas, en los niveles socioeconómicos altos la ausencia de conflictos en torno a la distribución de las tareas se explica en parte por la presencia del trabajo doméstico remunerado y porque se consideraba inapropiado pedir que los varones que trabajaban largas jornadas fuera de la casa, realizaran tareas de cuidado.</p>
+        <disp-quote>
+          <p><italic>No nada porque viste, yo como siempre tuve una persona que me apoyaba no precisaba lo otro ta…y no, no. Yo sentía que las cosas las tenía que hacer yo, tampoco estaba rabiando ni nada, él trabajaba, no no, no había conflictos, para nada.</italic> (Mujer 2, Abuela, NSE Alto).</p>
+        </disp-quote>
+        <p>La naturalización de la ausencia de conflicto en torno a la distribución se expresa en los discursos que establecen que la ausencia de conflicto tiene que ver con características personales, formas de ser de las personas.</p>
+        <disp-quote>
+          <p><italic>No no, yo tengo una personalidad muy de… viste que soy resuelta, si tengo que arreglar una cosa en casa, en seguida llamo a alguien no no, al contrario más bien me gusta que me dejen a mí resolver.</italic> (Mujer 1, Abuela, NSE Alto).</p>
+        </disp-quote>
+        <p>En el caso de las mujeres de niveles socioeconómicos medios, algunas habían trabajado antes de tener hijos pero dejaron el trabajo para poder acompañar a sus maridos en las exigencias de sus trabajos remunerados, de manera similar a las mujeres de clases altas de esta generación y la anterior. Esta experiencia no es vivida como un conflicto, sino como una “preferencia” personal. Cuando se consulta explícitamente por la existencia de conflictos en torno al trabajo de cuidados o doméstico con sus parejas, las respuestas señalan la no existencia de conflictos por ser el ámbito doméstico y de cuidados, un ámbito de dominio de ellas y también por las características personales del marido.</p>
+        <p>No obstante, mientras que para las mujeres la división “se daba” naturalmente, los varones declaran que siempre fue pactado y acordado de manera explícita en la pareja, partiendo del convencimiento de que el cuidado materno es el mejor cuidado que se puede brindar a los hijos. Esto se vincula con las ideas del amor materno que se imputan socialmente a las mujeres, quienes tienen la capacidad biológica de parir, pero que, como se ha mencionado más arriba, son representaciones sociales que igualan mujeres a madres y madres a mujeres cuidadoras, es decir, que conminan a las mujeres a responsabilizarse por el cuidado de las personas dependientes.</p>
+        <disp-quote>
+          <p><italic>¿Y estaban conformes con esa forma de resolver el cuidado o hubiesen deseado otra forma? Sí, sí, siempre fue de común acuerdo, todas las decisiones hasta el día de hoy las tomamos de común acuerdo. (...) No, los dos consideramos siempre, hasta el día de hoy, que el mejor cuidado lo tienen de la madre. ¿Y por qué? Porque la madre es...la función de la madre es esa, cuidar de los niños. La madre es irremplazable, no hay ninguna institución, a mi criterio, que pueda reemplazar a la madre. (¿Porque la madre qué ofrece que las instituciones no?) Amor de madre no se compara con el amor de ninguna institución.</italic> (Varón 1, Abuelo, NSE Medio).</p>
+        </disp-quote>
+        <p>En otros casos, el trabajo para las mujeres tenía una dimensión de realización personal y, a pesar de que los varones las alentaban a dejarlo, ellas sostenían el trabajo remunerado. Sin embargo, la perspectiva crítica respecto a la distribución es realizada luego de separarse de sus maridos. En el momento que estaban juntos se plantea la no existencia de conflictos pero una vez disuelto el vínculo conyugal, la mujer se permite realizar algunos planteos sobre el vínculo entre padre e hija, pero la no respuesta a los reclamos se naturalizan en las características del padre <italic>(cada uno es como es...)</italic>.</p>
+        <disp-quote>
+          <p><italic>“La dinámica era muy parecido a la de acá, xx venia y me decía papá se acostó a dormir la siesta, no interactuaba con ella mucho, iba mi abuela como para sostener y acompañar y bueno, yo muchas veces le plantee, dormí menos, trata de estar con xx, trata de hacer un vínculo, conversar, pero no estaba en su naturaleza, (...) estaba en su naturaleza, no le nace, no sé, viste cada uno es como es”.</italic> (Mujer 2, Abuela, NSE Medio).</p>
+        </disp-quote>
+        <p>En el caso del trabajo doméstico y trabajo material de cuidados se establecían demandas claras, que al no ser escuchadas o reflejadas en un cambio por parte de los varones sí eran motivo de conflicto.</p>
+        <disp-quote>
+          <p><italic>Ah sí, había sí, un poco de pelea había sí, (…) un sábado que yo estaba muy saturada de limpieza y de niños y tenía 23 años, 24…me enojé con él y le dije…entonces él me dijo “bueno entonces yo me pongo a planchar”, le armé la mesa y que se pusiera a planchar pañales para que me diera una mano…y cuando el padre que era el que manejaba el taxímetro de mañana le viene a dejar el taxi y toca el portero eléctrico, mientras yo atiendo el portero eléctrico y le digo “sí, XXX, pase” me asomo al living y él había desenchufado la plancha y estaba sentado con un diario…Entonces cuando el padre abrió la puerta, le digo “¿por qué no estabas planchando los pañales?” y el padre le dijo “ah, estabas planchando pañales, qué sos una mujercita…” o sea para que veas hasta donde llegaba el machismo, no?.</italic> (Mujer 4, Abuela, NSE Medio).</p>
+        </disp-quote>
+        <p>Este perfil de mujeres de nivel medio que estaban insertas en el mercado laboral, manifiestan un mayor nivel de conflicto que otras de su generación, como aquellas que no trabajaban para el mercado o que podían contar con servicio doméstico y de cuidados. El conflicto refiere a su sobrecarga de trabajo. Quienes están insertas laboralmente, relatan jornadas extenuantes de trabajo remunerado y no remunerado, observándose en sus discursos que, de alguna manera, tenían “permitido” trabajar mientras todas las otras tareas de la casa se siguieran desarrollando, es decir, sin que se notara su ausencia durante la jornada laboral.</p>
+        <disp-quote>
+          <p><italic>Yo creo que pasaba por mí, como que yo sentía que estaba hundida en un pozo hasta la nariz, porque digo, lo único que hacía era limpiar, lavar, planchar, y ahí está mi superación personal, era…porque me arreglaba para venir a trabajar. Porque yo sabía que ahí era yo, yo trabajando, en casa me sentía como que vivía corriendo atrás de todo, mandados, casa, ropa, chiquilines…no tenía un momento para mí…si me quería pintar las uñas me las pintaba a la 1 de la mañana o 2…después que había hecho todo, arreglado todo, ahí me podía dedicar a mí, con 24 o 25 años.</italic> (Mujer 4, Abuela, NSE Medio).</p>
+        </disp-quote>
+        <p>En las mujeres de niveles socioeconómicos bajos, la doble carga de trabajo de las mujeres es asumida, en parte de manera natural, quienes asumen el trabajo doméstico y de cuidados sin el planteo de una demanda a los varones.</p>
+        <disp-quote>
+          <p><italic>Porque no tenía tiempo en el día, o sea no tuve...como te explico...por no discutir, por no pelear como quien dice prefería hacerlo yo, que estar discutiendo por un plato.</italic> (Mujer 6, Abuela, Nivel NSE Bajo).</p>
+        </disp-quote>
+        <p>La imposición/asunción sobre las tareas que las mujeres tienen que hacer, también se expresa en el juicio negativo que tienen los varones respecto a la participación de las mismas en el trabajo remunerado. Incluso, para evidenciar la ausencia de las mujeres en la casa y el cuidado, los varones emplean estrategias que aumentan el sentimiento de culpa de éstas.</p>
+        <disp-quote>
+          <p><italic>¿Y tu marido en algún momento hubo algún conflicto porque vos trabajaras tanto?: Si, sí. Entonces, yo llegaba y ya a él como no le gustaba que yo trabajara tanto, y se dejaba estar un poco con la niña. Un día llegue y estaba sucia y decidí cortar.</italic> (Mujer 2, Abuela, NSE Bajo).</p>
+        </disp-quote>
+        <p>En resumen, como muestra la <xref ref-type="table" rid="t2">Tabla 2</xref>, en la generación de abuelas aparece el vínculo con el mercado laboral de manera contundente y, en general, las mujeres se hacen cargo del trabajo remunerado y del cuidado y las tareas domésticas sin embargo, no hay una instalación de conflicto o demanda de participación de los varones en el ámbito privado. Las abuelas de niveles económicos altos, en los casos que no reproducen los mandatos de la generación anterior y se incorporan al trabajo remunerado y a la vida política, tienen una relectura de esta decisión negativa, valorando positivamente el maternalismo mandatado por la generación de bisabuelas y presente en la generación de madres actuales de estos niveles, como se mostrará a continuación.</p>
+        <p>
+          <table-wrap id="t2">
+            <label>Tabla 2</label>
+            <caption>
+              <title>Resumen de la expresión de tres dimensiones con relación al trabajo remunerado en la generación de abuelas por nivel socioeconómico.</title>
+            </caption>
+            <table frame="hsides" rules="groups">
+              <colgroup width="25%">
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2">Dimensión</th>
+                  <th colspan="3">Nivel Socioeconómico</th>
+                </tr>
+                <tr>
+                  <th>Alto</th>
+                  <th>Medio</th>
+                  <th>Bajo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">Vínculo con el Trabajo Remunerado</td>
+                  <td align="center">Contradicción entre “Susanitas” (reproductoras de la generación anterior) y “Mujeres Hombre” (salen al mercado laboral, estudian y tienen participación política.)</td>
+                  <td align="center">Contradicción entre quienes reproducen el modelo de sus madres y quienes comienzan a valorar sus proyectos laborales y profesionales como logros personales.</td>
+                  <td align="center">Contradicción entre mujeres pobres con altas cargas de trabajo remunerado que contratan cuidadoras y mujeres que no participación del mercado laboral.</td>
+                </tr>
+                <tr>
+                  <td align="center">Razones por las cuales se daba ese vínculo</td>
+                  <td align="center">Susanitas: era lo que había que hacer y se disfrutaba, y Mujeres Hombre: creía que estaban en lo correcto, pero desde la perspectiva actual, creen que deberían haber estado más presentes en los cuidados.</td>
+                  <td align="center">Valoración de la independencia económica y los proyectos laborales y profesionales. En otros casos, salida al mercado laboral por que “no había opción o no quedaba otra”.</td>
+                  <td align="center">No hay desarrollo del discurso.</td>
+                </tr>
+                <tr>
+                  <td align="center">Acuerdos o conflictos en torno al reparto de tareas.</td>
+                  <td align="center">Ausencia de conflictos.</td>
+                  <td align="center">Ausencia de conflictos en esta generación, no se instala una demanda explicita de participación de los varones o un conflicto por su no colaboración en la esfera doméstica. Sin embargo, muchas mujeres divorciadas en retrospectiva consideran que deberían haber demandado una mayor participación.</td>
+                  <td align="center">En las mujeres con altas cargas de trabajo, el argumento es “no tenía tiempo para discutir”. En otros casos se expresa que el descuido de los hijos tiene que ver con el hecho de que no les gustaba que las mujeres trabajaran.</td>
+                </tr>
+              </tbody>
+            </table>
+            <table-wrap-foot>
+              <fn id="TFN2">
+                <p>Fuente: Elaboración propia con base en las entrevistas en profundidad.</p>
+              </fn>
+            </table-wrap-foot>
+          </table-wrap>
+        </p>
+        <p>Las abuelas de niveles económicos medios se incorporan al mercado laboral, en algunos casos se divorcian de sus maridos y en sus discursos presentes sostienen la idea de que trabajar y tener la autonomía económica que implique independencia es una conquista de derechos. Las abuelas de niveles medios admiran la distribución de las tareas que observan entre sus hijas y yernos. De alguna manera, ellas lograron instalar su proyecto laboral propio, pero no pudieron con el reparto equitativo de las tareas del hogar, lo cual ven que sí está más presente en la generación de madres actuales.</p>
+        <p>Las abuelas de niveles económicos bajos, también presentan un discurso en donde trabajar aparece como algo importante, aunque persisten representaciones maternalistas donde el cuidado familiar y materno es el mejor por definición.</p>
+      </sec>
+      <sec>
+        <title>Trabajo remunerado en la generación actual: tensiones entre la independencia y autonomía y la culpa por la no presencia</title>
+        <p>La participación de las mujeres en el mercado laboral se encuentra claramente diferenciada por nivel socioeconómico en la generación de madres actuales, aunque, a diferencia de las mujeres de generaciones anteriores, ellas presentan un proyecto laboral personal, más allá de la maternidad. De esta manera, parece estar instalado otro modelo diferente al de la generación de las bisabuelas, donde el lugar de las mujeres estaba en su casa y su rol era el cuidado infantil y no se observa un discurso que abogue por la dedicación de las mujeres exclusivamente a las tareas no remuneradas y de cuidado.</p>
+        <p>Entre las mujeres actuales madres de NSE Altos el vínculo con el trabajo obedece primero a sus deseos profesionales y una vez que se enfrentan con la maternidad, modifican sus trabajos adaptándose a los tiempos de cuidado y replegándose a la esfera doméstica como principal escenario. En este marco, crean emprendimientos propios que no están asociados a su formación profesional, pero que los pueden articular con las tareas de cuidados y realizarlo desde sus casas. Uno de los elementos para decidir el cambio de trabajo es la culpa por la ausencia en el cuidado.</p>
+        <disp-quote>
+          <p><italic>...me daba un grado de culpa saber que llegaban</italic> (del colegio) <italic>y... (...). Ya sabes que ya habían llegado, ya habían tomado la leche, yo llegaba, ta, me emboló (…) Ahí me puse a trabajar por mí, ahí me asocié enseguida con esta amiga que estamos hace mil años, este, arrancamos con eso de relaciones públicas que después se fue transformando en esto.</italic> (Mujer 1, Madre, NSE Alto).</p>
+        </disp-quote>
+        <p>Los cambios en cuanto al trabajo hacen que tengan empleos con ingresos que no son significativos en relación a los de sus pares varones. Su condición económica permite que un solo proveedor económico sea suficiente para hacer frente a los gastos de los hogares, pero esto redunda en una reproducción de los roles clásicos de género.</p>
+        <p>Los sentidos para modificar su empleo no se asocian a necesidades económicas, sino a la importancia que es atribuida a que las mujeres-madres estén en el hogar y en contacto directo con niños/as durante sus primeros años, siendo caracterizados como sentidos “familistas” y “maternalistas”. Es decir, de preferencia por el cuidado realizado por parte de las mujeres, en el marco de los hogares. Así, el vínculo entre el trabajo remunerado y los cuidados resulta de tipo asimétrico, pues el trabajo remunerado es menos valorado en relación al trabajo de cuidados. Hay un restablecimiento de las “prioridades” y un reordenamiento de las lógicas cotidianas y de proyectos en función de hacer frente al cuidado.</p>
+        <disp-quote>
+          <p>
+            <italic>Uno cree que va hacer un montón de cosas y cuando tenés un hijo… para mí fue como cambiar las prioridades”, “yo cambie las prioridades, no ejercí y bueno más allá de que antes yo había hecho un curso donde me había dado cuenta un montón de cosas de mi vida, con el embarazo y con el parto me di cuenta que lo importante es, …, yo tenía que estar con el hijo, fue un cambio grande en mi mirada. (Mujer 2, Madre, NSE Alto).</italic>
+          </p>
+        </disp-quote>
+        <p>Si bien su privilegiada posición no establece restricciones a su autonomía económica, aparecen como argumentos justificaciones sobre por qué las madres se permiten flexibilizar la participación en el mercado laboral, la diferencia salarial con sus parejas y el tipo de puestos que ocupan. Para estas mujeres, la prioridad del cuidado materno frente al proyecto laboral se presenta como una elección, como un proyecto de vida asumido y fundado bajo la creencia de que existe un vínculo particular entre la madre y el hijo, que se diferencia de la presencia del padre. Este vínculo particular se expresa en un “instinto” materno, en la idea de que hay una esencia femenina (genética, biológica) que determina la diferencia en el vínculo y, por ende, en los roles.</p>
+        <disp-quote>
+          <p><italic>Instinto materno. Es el instinto materno, no es el paterno. El paterno es otro que se va creando: el vínculo se va creando. Nosotras el vínculo ya lo tenemos. Pero yo creo que sí, hay mucha más participación que antes sí. En la generación que nació mi abuelo los hombres ni entraban al parto, ta, pero a veces las mujeres nos perdemos porque yo, a la cría la conoce mucho más que el padre, lo que siente, la sutilidad del interior. No es lo mismo el papá, el papá no lo tuvo adentro.</italic> (Mujer 2, Madre, NSE Alto).</p>
+        </disp-quote>
+        <p>En este caso se observa un modelo de trabajo y cuidados que no es el de “actividad continua” en sentido estricto, dado que modifican sus trabajos, abandonando el ejercicio profesional que venían desarrollando. Pero tampoco se observa un modelo de “actividad discontinua” con el mercado laboral para hacer frente a los cuidados, como indicaría el modelo de salida-entrada-salida. Se trata de una combinación de ambos, en la que las madres de clases altas no abandonan el empleo frente a la maternidad, pero lo adaptan a ella, rebajando sus ingresos laborales y su estatus, para realizar emprendimientos no vinculados a sus profesiones.</p>
+        <p>En los sectores medios se presenta una mayor heterogeneidad respecto al trabajo remunerado de las mujeres, y es donde hay más casos en que ambos miembros de las parejas proveen ingresos. En este escenario se plantean parejas corresponsables y equitativas, con dedicación e involucramiento de ambos miembros en el ámbito productivo y reproductivo, aunque también se aprecian modelos donde se mantiene una clásica división sexual del trabajo en el ámbito reproductivo.</p>
+        <p>Se destaca la presencia de un proyecto personal más allá de la maternidad al igual que en las mujeres de NSE Alto, pero el nivel económico de sus hogares depende de la doble provisión de ingresos. En las profesionales, se observan modificaciones vinculadas al ámbito laboral al momento de la maternidad que en algunos casos se relacionan a cambios asociados a mayores exigencias laborales, producto de asunción de más grande responsabilidades o de nuevas propuestas laborales más atractivas.</p>
+        <disp-quote>
+          <p><italic>En realidad, cuando yo me reintegré cambié no de trabajo, seguía trabajando ahí, hace nueve años que trabajo ahí, pasé de coordinar una parte a coordinar otra parte justo cuando me estaba reintegrando ahí me llamó mi jefe y me preguntó si quería cambiar a otra cosa y yo dije que sí y ahí cambié y después al año ponele de eso que fue sí, bueno, hace un año ahí fue que me quedé con la gerencia del sector y ahí sí me cambió más todo. O sea sigo haciendo la misma extensión horaria capaz, pero con otro estrés.</italic> (Mujer 1, Madre, NSE Medio).</p>
+        </disp-quote>
+        <p>Hay modificaciones como el tipo de sector (del privado al público) del trabajo, que obedecen a la necesidad de articular mejor los cuidados, particularmente en el ámbito académico en la búsqueda de mayor flexibilidad.</p>
+        <disp-quote>
+          <p><italic>Cuando quede embarazada dejé el trabajo privado, y a partir de ese entonces, me dediqué solamente a la Universidad con un cargo en oficinas centrales, y con un cargo en la Facultad.</italic> (Mujer 2, Madre, NSE Medio).</p>
+        </disp-quote>
+        <p>La flexibilidad y la reducción horaria son motivos que se mencionan para modificar el trabajo a partir de la crianza, aun cuando esto implique un retroceso en la carrera profesional. Sin embargo, la flexibilidad laboral no siempre es vista como algo positivo. Las entrevistadas de sectores medios mencionan desventajas asociadas a la superposición de tareas, invisibilidad y falta de reconocimiento que el trabajo flexible (en la casa) contrae.</p>
+        <p>Más allá de estos cambios, es posible afirmar que en estas madres actuales de sectores medios se observa un modelo de “actividad continua” en el mercado laboral dado que estas mujeres no abandonan su empleo ni su ejercicio profesional. El proyecto profesional y vocacional de los miembros de la pareja es importante e igualmente valorado por ambos. En el caso de los profesionales, la alta valoración del proyecto laboral de los dos miembros de la pareja hace que sea más factible la distribución más equitativa de las tareas de cuidado y llegar a acuerdos sobre los tiempos de trabajo o de estudio de cada uno para que los proyectos individuales sean viables.</p>
+        <disp-quote>
+          <p><italic>Nosotros tenemos todo como bastante repartido en realidad, incluso antes de tener a nuestras hijas, las tareas de la casa ya estaban siempre como bastante repartidas.</italic> (Mujer 3, Madre, NSE Medio).</p>
+        </disp-quote>
+        <p>Si bien entre las mujeres de NSE Medio hay una importante valoración de su desarrollo e inserción laboral, se menciona, la culpa por no tener mayor presencia en los cuidados en los primeros años de los niños. Esto da cuenta de las dificultades que enfrentan para articular armoniosamente el desarrollo profesional y los cuidados infantiles. En algunos casos las preferencias de cuidado son “familistas” y feminizadas: es preferible el cuidado materno al trabajo de cuidadoras remuneradas en el hogar, o servicios educativos. Sin embargo, esta asignación del trabajo de cuidados a las mujeres no se acompaña con una demanda de corresponsabilidad, basada al menos en que ambos miembros de la pareja trabajan de manera remunerada. Respecto al hecho de que ellas trabajen, las madres de NSE Medios mencionan como ventajas que eso permite que haya dos fuentes de ingresos en el hogar, y como desventaja no poder cuidar de mano propia y de manera exclusiva.</p>
+        <disp-quote>
+          <p><italic>Yo pienso que él estaría mejor si yo lo cuido todo el día. Que no lo cuidara la niñera. No las abuelas. A mí me parece bueno que pase tiempo con las abuelas porque están hoy y mañana no sabes y está bueno que se disfruten. Eso me parece que está bueno.</italic> (Mujer 1, Madre, NSE Medio).</p>
+        </disp-quote>
+        <p>Dentro de las mujeres de NSE Bajos, algunas no están insertas en el mercado laboral y se dedican exclusivamente al cuidado, y otras sí participan del mismo de manera total o parcial.</p>
+        <p>En los casos de inserción laboral, es más marcada la culpa o el conflicto vivido con los cuidados que en los NSE Medios o Altos. El tiempo que las mujeres dedican al mercado laboral es considerado una carga de trabajo de cuidados para otros miembros de la familia, principalmente las abuelas, lo cual también parece presentarse como un elemento angustiante o conflictivo. Este conflicto es propio de los niveles medios en donde se cuenta con menos recursos económicos para comprar servicios de cuidados en el mercado y a la vez, no hacer uso de los servicios estatales por sus poca carga horaria o preferencias en torno a la crianza. Respecto a las abuelas una mujer de NSE Bajo señala:</p>
+        <disp-quote>
+          <p><italic>…mucha responsabilidad sobre mi madre, que es la que en realidad mayormente está con ella, más allá de que ya van todo el día al colegio y todo, la responsabilidad más grande la tiene ella, porque la mayoría de los días ella les da de comer, ella las baña, ella las lleva a la escuela y ella las trae...</italic> (Mujer 1, Madre, NSE Bajo).</p>
+        </disp-quote>
+        <p>A la vez de que se argumenta que el vínculo materno es fundamental para el desarrollo de los/as niños/as, también se enuncian ventajas respecto al trabajo remunerado y los cuidados. Se menciona irse del ámbito doméstico es liberador de las exigencias de la esfera doméstica, los cuidados, la administración y gestión del hogar y el trabajo de gestión mental y emocional que el cuidado conlleva, siendo este último de carácter más intangible.</p>
+        <disp-quote>
+          <p><italic>…en el trabajo te liberas: no pensás en las cuentas en que tenés que tener esto, tenés que hacer lo otro y todo como que en ese momento te preocupas por el trabajo por sacar lo que tenés que hacer y después cuando llegas a tu casa te encontrás con la realidad de nuevo.</italic> (Mujer 1, Madre, NSE Bajo).</p>
+        </disp-quote>
+        <p>Una limitante para la inserción laboral de las mujeres de NSE Bajo es el costo de oportunidad de emplearse para invertir lo que ganarían en pagar cuidados para sus hijos y también la escasez de servicios de cuidado gratuitos de jornada completa, incluso cuando las mujeres manifiestan querer trabajar. En estos sectores, no se presentan conflictos con la no participación de las mujeres en el trabajo remunerado, ya que la división sexual del trabajo clásica opera sobre el sostenimiento de mandatos tradicionales de género. Según el discurso de varones y mujeres, se naturalizan los roles tradicionales de género, a pesar de que algunas enuncian que de trabajar serían apoyadas por sus parejas.</p>
+        <p>En resumen, el vínculo con el trabajo remunerado en relación a los cuidados varía significativamente en el discurso de las mujeres madres actuales según su nivel socioeconómico. Esto está acompañado por las razones esgrimidas por las mujeres para justificar el tipo de vínculo que sostienen con el mercado laboral. Finalmente, el panorama de negociación de las parejas actuales también es absolutamente diferente por nivel socioeconómico. Mientras en los niveles medios existe una posibilidad de acuerdo, o reparto equitativo entre varones y mujeres, en los niveles económicos más bajos el reparto es similar a las generaciones de bisabuelas en las cuales no hay un conflicto o pregunta instalada en torno al reparto de trabajo de cuidados. En los NSE Altos, se observa la naturalización del rol de las madres como las principales responsables del cuidado (aunque no sean ellas quienes dediquen trabajo directo de cuidados para todas las tareas).</p>
+        <p>
+          <table-wrap>
+            <label>Tabla 3</label>
+            <caption>
+              <title>Resumen de la expresión de tres dimensiones con relación al trabajo remunerado en la generación de madres actuales por nivel socioeconómico.</title>
+            </caption>
+            <table frame="hsides" rules="groups">
+              <colgroup width="25%">
+                <col/>
+                <col/>
+                <col/>
+                <col/>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2">Dimensión</th>
+                  <th colspan="3">Nivel Socioeconómico</th>
+                </tr>
+                <tr>
+                  <th>Alto</th>
+                  <th>Medio</th>
+                  <th>Bajo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">Vínculo con el Trabajo Remunerado</td>
+                  <td align="center">Ajuste de las dinámicas laborales a la vida doméstica y la supervisión de los cuidados sin restricciones o costos en la autonomía económica de las mujeres. Obediencia a mandatos de género de la división sexual del trabajo clásica.</td>
+                  <td align="center">Ponderación del proyecto laboral, carreras universitarias y aumento de horas de jornada laboral, valoración de los ascensos en el trabajo. Tensiones de cuidado vinculadas a la falta de servicios compatibles con sus jornadas.</td>
+                  <td align="center">Cuidados maternalistas, si bien el trabajo remunerado es algo deseado por algunas de estas mujeres, el costo de reemplazo (pagar una cuidadora en relación al salario que ganarían) hace que queden por fuera del mercado laboral.</td>
+                </tr>
+                <tr>
+                  <td align="center">Acuerdos o conflictos en torno al reparto de tareas.</td>
+                  <td align="center">No hay tensión, ellas “eligen” y los varones se complacen en el hecho de que de ellas no “tengan” que salir a trabajar. Naturalización del rol de cuidadora</td>
+                  <td align="center">Acuerdos, reparto más o menos equitativo entre varones y mujeres de las tareas (sobre todo en niveles medios altos).</td>
+                  <td align="center">En los casos en que se trabajaba o hay voluntad de hacerlo, existen consensos basados en que las mujeres trabajen. Pero los argumentos manejados para la legitimación del trabajo de las mujeres no pasan por su realización personal sino por el hecho de que si no salen a trabajar, “se ponen histéricas”(sic).</td>
+                </tr>
+              </tbody>
+            </table>
+            <table-wrap-foot>
+              <fn id="TFN3">
+                <p>Fuente: Elaboración propia con base en las entrevistas en profundidad.</p>
+              </fn>
+            </table-wrap-foot>
+          </table-wrap>
+        </p>
+      </sec>
+    </sec>
+    <sec sec-type="conclusions">
+      <title>CONSIDERACIONES FINALES</title>
+      <p>El presente artículo abordó los cambios experimentados en las opiniones y las valoraciones que varones y mujeres pertenecientes a tres generaciones tienen sobre la participación femenina en el mercado laboral cuando éstas son madres de niños pequeños.</p>
+      <p>La participación de las mujeres en el trabajo remunerado y no remunerado es distinta según las generaciones y los niveles socioeconómicos. En el caso de las bisabuelas, exceptuando las de NSE Bajos, la división sexual del trabajo las mandataba a ser las responsables de la esfera doméstica, mientras que el trabajo remunerado era una responsabilidad de los varones. El hecho de que las mujeres trabajaran era visto como deshonroso, un símbolo de falta de status y de ausencia de poderío del varón páter-familia. Así, la vida familiar era excluyente de la vida laboral. Ambos ámbitos se representaban como separados, delimitándose tareas y trabajos claros en uno y otro y creando sujetos responsables por cada uno de ellos: las mujeres como responsables del hogar y los cuidados y los varones de la provisión económica. Esta naturalización de roles y funciones se vincula con la ausencia de negociaciones o conflictos en las parejas a partir de una lucha por lo que cada uno puede hacer o no, teniendo las mujeres un papel de dependencia económica de los varones que repercutía en su desarrollo y se expresaba en la duración de los matrimonios y la familia nuclear como el ideal de proyecto de vida.</p>
+      <p>En cambio, las actuales abuelas, se insertaron en el mercado laboral, asumiendo una “doble jornada” ya que no hubo redistribución, negociaciones y acuerdos sobre las responsabilidades de cuidados y trabajo doméstico con los varones. De esta manera, la inserción laboral femenina sucedió sin grandes cambios en la división sexual del trabajo al interior de los hogares. Las abuelas de NSE Medios, relatan extenuantes jornadas de trabajo remunerado y no remunerado observándose que la condición para sostener su participación en el mercado laboral pasaba por no desatender el hogar, aquello que les había sido asignado como principal responsabilidad. Las actuales bisabuelas fueron de gran ayuda para que las actuales abuelas pudieran incorporarse al mercado laboral, así como lo fue la expansión de centros de cuidados privados. Sin embargo, institucionalizar el cuidado infantil era experimentado con angustia y culpa, asociada a formatos de subjetivación propios de roles de género tradicionales y la idea de que casa y trabajo son dos espacios diferentes y distanciados.</p>
+      <p>Desde una mirada actual, las abuelas que trabajaban hacen una auto-crítica a su actitud “pasiva” frente a la sobrecarga de trabajo a la que se vieron expuestas, principalmente por parte de las mujeres que se divorciaron, quienes indican una ausencia de los varones en las responsabilidades de cuidados. Sus reflexiones sobre la ausencia de una demanda de redistribución del trabajo con los varones, surgen a partir de la apreciación de la distribución del trabajo de cuidados, doméstico y remunerado de sus hijas con sus parejas actuales. Declaran admiración por los nuevos modelos de reparto de tareas que ellas ven como equitativos y corresponsables.</p>
+      <p>Por último, las abuelas de NSE Bajos presentan tres modelos de reparto del trabajo remunerado y no remunerado: el tradicional (cuando la evaluación costo beneficio entre contratar una cuidadora o trabajar no era favorable para la persona o el hogar), el de actividad discontinua (cuando trabajaban de manera informal e intermitente cuidando otros niños o realizando tareas domésticas) y de actividad continua (cuando trabajaban muchas horas y costeaban una cuidadora).</p>
+      <p>Las abuelas de niveles medios y bajos, siguen cuidando niños/as, ya que se involucran activamente en el cuidado de sus nietos/as, aunque deseándolo, pero a la vez obligadas por los mandatos de género al ejercicio de abuelazgos en donde el amor se expresa cuidando de mano propia.</p>
+      <p>La convivencia de distintos modelos de trabajo-cuidados en la generación de abuelas, así como la diversidad de representaciones y proyectos de vida en el caso de las mujeres hace pensar en la idea de generación bisagra, un momento de pasaje entre un modelo tradicional de división sexual del trabajo a uno de diferentes opciones, como es el de las madres actuales.</p>
+      <p>En la generación de madres actuales, tener un proyecto personal y laboral de las mujeres más allá de la maternidad es algo que está naturalizado, aunque presenta matices según los NSE de las mujeres. En ninguno de los discursos de las mujeres madres de la generación actual aparecía la idea de que las mujeres tienen un rol específico en torno al trabajo doméstico y de cuidados. Respecto a las diferencias por NSE, las mujeres de NSE Altos tienden a modificar el tipo de empleo y adaptarlo para lograr una mayor presencia de ellas mismas en los cuidados tempranos, basadas en argumentos biologicistas que promueven el maternalismo en los cuidados. Se trata de un “maternalismo elegido”, ya que sus recursos económicos y educativos les permiten elegir insertarse de manera parcial en el mercado laboral para dedicar mayor tiempo al cuidado de sus hijos. Dentro de las tareas de cuidados que realizan, la mayoría son de gestión de las cuidadoras y trabajadoras domésticas, así como juegos y educación. El trabajo rutinario de cuidados y el trabajo doméstico asociado al cuidado es realizado por mujeres más pobres contratadas para ello.</p>
+      <p>Las mujeres de NSE Medios están insertas en jornada completa en el mercado laboral y los primeros años de vida de los/as niños/as suelen coincidir con mayores exigencias a nivel profesional. Si bien se observan modificaciones para una articulación laboral más armoniosa con los cuidados, su permanencia y desarrollo en el mercado laboral no está en discusión, aunque expresan sentimiento de culpa y tensiones por la ausencia de ellas en el cuidado. Esto último es acompañado por relatos que señalan una participación equitativa de los varones-padres en los cuidados y el trabajo doméstico.</p>
+      <p>Entre las mujeres de NSE Bajos la inserción en el mercado laboral es restringida, así como las opciones de contar con servicios o personas que cuiden de manera gratuita, para poder sostener su involucramiento en el mercado laboral. Es posible considerar que, más allá de las representaciones sociales de género que están en la base de la distribución de los cuidados entre varones y mujeres de niveles económicos bajos, ellas están expuestas a un “maternalismo forzado” que obedece a que sus niveles educativos bajos, la maternidad temprana y la ausencia de servicios públicos de cuidados a jornada completa, las conminan a ser encargadas del trabajo doméstico y no remunerado.</p>
+      <p>En la organización del cuidado actual, se pone de manifiesto que la liberación de tiempo de las mujeres de niveles socioeconómicos altos es posible debido al trabajo remunerado de mujeres más pobres, lo cual no implica una redistribución del trabajo de cuidados con los varones, sino la perpetuación de desigualdades entre las mujeres.</p>
+      <p>Finalmente, en base al análisis de las entrevistas en profundidad y a los datos de uso del tiempo, no es posible afirmar que la participación femenina en el mercado laboral garantice una distribución más equitativa del trabajo no remunerado entre varones y mujeres al interior de los hogares. Este aspecto también se muestra a partir de datos cuantitativos que permiten concluir que cuando las mujeres participan de la misma manera que los varones en el mercado laboral, su carga de trabajo no remunerado sigue siendo más alta que la de los segundos (<xref ref-type="bibr" rid="B13">Genta y Perrotta, 2015</xref>).</p>
+      <p>Al igual que la generación de abuelas, las mujeres madres actuales de NSE Altos trabajan pero manteniéndose como principales responsables de las tareas domésticas y de cuidados. Lo hacen cambiando sus fuentes laborales, pasando de estar empleadas en empresas a tener emprendimientos propios más asociados a lo doméstico con menores niveles de rentabilidad que sus empleos anteriores. Al no ser el trabajo asalariado su principal fuente de ingresos, priorizan bajas cargas horarias de trabajo, poder trabajar desde sus casas y contar con flexibilidad en formatos y horarios de empleo. En el caso de las mujeres sectores socioeconómicos bajos, las mismas también trabajan de manera remunerada asumiendo la mayor parte del trabajo doméstico y de cuidados.</p>
+      <p>No obstante, las mujeres de niveles socioeconómicos medios, profesionales, con una inserción en el mercado de empleo a tiempo completo y remuneración y jerarquía en los cargos similares a las de sus parejas presentan prácticas y representaciones más equitativas de los cuidados y las tareas domésticas. De esta manera es posible pensar que la valoración del trabajo en el caso de las mujeres como fuente identitaria y de realización personal en varones y mujeres, el tipo de inserción en el mercado laboral por parte de las mismas, el porcentaje de ingresos que las mismas aportan al hogar y la similitud de rangos jerárquicos en los empleos de la pareja parecen impactar positivamente a la hora de transformar las relaciones sociales de género y distribución de responsabilidades y tiempo de cuidados y tareas domésticas no remuneradas entre varones y mujeres.</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>BIBLIOGRAFÍA</title>
+      <ref id="B1">
+        <mixed-citation>AGUIRRE, Rosario. (2003), “Ciudadanía social, género y trabajo en Uruguay”. Revista Mexicana de Sociología, v. 65, n. 4, pp. 815-838.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>AGUIRRE</surname>
+              <given-names>Rosario</given-names>
+            </name>
+          </person-group>
+          <year>2003</year>
+          <article-title>“Ciudadanía social, género y trabajo en Uruguay”</article-title>
+          <source>Revista Mexicana de Sociología</source>
+          <volume>65</volume>
+          <issue>4</issue>
+          <fpage>815</fpage>
+          <lpage>838</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>BATTHYÁNY, Karina; GENTA, Natalia y PERROTTA, Valentina. (2013), “La población Uruguaya y el cuidado. Análisis de representaciones sociales y propuestas para un sistema de cuidados en Uruguay”. Montevideo, Serie Sistema Nacional de Cuidados, pp. 1-116.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BATTHYÁNY</surname>
+              <given-names>Karina</given-names>
+            </name>
+            <name>
+              <surname>GENTA</surname>
+              <given-names>Natalia</given-names>
+            </name>
+            <name>
+              <surname>PERROTTA</surname>
+              <given-names>Valentina</given-names>
+            </name>
+          </person-group>
+          <year>2013</year>
+          <source>La población Uruguaya y el cuidado. Análisis de representaciones sociales y propuestas para un sistema de cuidados en Uruguay”</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>Serie Sistema Nacional de Cuidados</publisher-name>
+          <fpage>1</fpage>
+          <lpage>116</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>BATTHYÁNY, Karina; GENTA, Natalia y PERROTTA, Valentina. (2015), “Uso del tiempo y desigualdades de género en el trabajo no remuenerado”, in K. Batthyány (Coord), Los tiempos del bienestar social. Montevideo, Doble Clic Editoras, pp. 45-83.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BATTHYÁNY</surname>
+              <given-names>Karina</given-names>
+            </name>
+            <name>
+              <surname>GENTA</surname>
+              <given-names>Natalia</given-names>
+            </name>
+            <name>
+              <surname>PERROTTA</surname>
+              <given-names>Valentina</given-names>
+            </name>
+          </person-group>
+          <year>2015</year>
+          <chapter-title>“Uso del tiempo y desigualdades de género en el trabajo no remuenerado”</chapter-title>
+          <person-group person-group-type="compiler">
+            <name>
+              <surname>Batthyány</surname>
+              <given-names>K.</given-names>
+            </name>
+            <role>Coord</role>
+          </person-group>
+          <source>Los tiempos del bienestar social</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>Doble Clic Editoras</publisher-name>
+          <fpage>45</fpage>
+          <lpage>83</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>BATTHYÁNY, Karina; GENTA, Natalia y SCAVINO, Sol. (2017), “Análisis de género de las estrategias de cuidado infantil”. Cadernos de Pesquisa, v. 47, n. 163, pp.292-319.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BATTHYÁNY</surname>
+              <given-names>Karina</given-names>
+            </name>
+            <name>
+              <surname>GENTA</surname>
+              <given-names>Natalia</given-names>
+            </name>
+            <name>
+              <surname>SCAVINO</surname>
+              <given-names>Sol.</given-names>
+            </name>
+          </person-group>
+          <year>2017</year>
+          <article-title>“Análisis de género de las estrategias de cuidado infantil”</article-title>
+          <source>Cadernos de Pesquisa</source>
+          <volume>47</volume>
+          <issue>163</issue>
+          <fpage>292</fpage>
+          <lpage>319</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>BATTHYÁNY, Karina y FERRARI, Fernanda. (2017), ¿Desfamiliarización de los cuidados? Evolución de las políticas de cuidado infantiles en Uruguay (1955-2016). En prensa. Montevideo: DS-FCS-UDELAR.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BATTHYÁNY</surname>
+              <given-names>Karina</given-names>
+            </name>
+            <name>
+              <surname>FERRARI</surname>
+              <given-names>Fernanda</given-names>
+            </name>
+          </person-group>
+          <year>2017</year>
+          <source>¿Desfamiliarización de los cuidados? Evolución de las políticas de cuidado infantiles en Uruguay (1955-2016)</source>
+          <comment>En prensa</comment>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>DS-FCS-UDELAR</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>BPS. (2012), Trabajo doméstico. Evolución y desafíos del sector a nivel nacional. 2da parte. Montevideo: BPS.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <collab>BPS</collab>
+          </person-group>
+          <year>2012</year>
+          <source>Trabajo doméstico. Evolución y desafíos del sector a nivel nacional</source>
+          <comment>2da parte</comment>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>BPS</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>CABELLA, Wanda. (1999), La evolución del divorcio en Uruguay (1950-1995). Unidad multidisciplinaria. Facultad de Ciencias Sociales. Uruguay, UDELAR.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CABELLA</surname>
+              <given-names>Wanda</given-names>
+            </name>
+          </person-group>
+          <year>1999</year>
+          <source>La evolución del divorcio en Uruguay (1950-1995). Unidad multidisciplinaria. Facultad de Ciencias Sociales</source>
+          <publisher-loc>Uruguay</publisher-loc>
+          <publisher-name>UDELAR</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>CAIS, Jordi; FOLGUERA, Laia y FORMOSO, Clement. (2014), “La Investigación Cualitativa Longitudinal”. Cuadernos Metodológicos 52. Madrid, CIS, pp. 1-141</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CAIS</surname>
+              <given-names>Jordi</given-names>
+            </name>
+            <name>
+              <surname>FOLGUERA</surname>
+              <given-names>Laia</given-names>
+            </name>
+            <name>
+              <surname>FORMOSO</surname>
+              <given-names>Clement</given-names>
+            </name>
+          </person-group>
+          <year>2014</year>
+          <article-title>“La Investigación Cualitativa Longitudinal”</article-title>
+          <source>Cuadernos Metodológicos</source>
+          <volume>52</volume>
+          <publisher-loc>Madrid</publisher-loc>
+          <publisher-name>CIS</publisher-name>
+          <fpage>1</fpage>
+          <lpage>141</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>CHODOROW, Nancy. (1978), The reproduction of mothering. Berkeley, University of California Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CHODOROW</surname>
+              <given-names>Nancy</given-names>
+            </name>
+          </person-group>
+          <year>1978</year>
+          <source>The reproduction of mothering</source>
+          <publisher-loc>Berkeley</publisher-loc>
+          <publisher-name>University of California Press</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>CORDEIRO, Mariana Sbaraini. (2013), “Mãe – A Invenção da História”. Seminário Internacional Fazendo Gênero 10 (Anais Eletrônicos), Florianópolis, 201 ISSN 2179- 510X, pp. 1-12.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CORDEIRO</surname>
+              <given-names>Mariana Sbaraini</given-names>
+            </name>
+          </person-group>
+          <year>2013</year>
+          <source>“Mãe – A Invenção da História”</source>
+          <conf-name>Seminário Internacional Fazendo Gênero 10 (Anais Eletrônicos)</conf-name>
+          <publisher-loc>Florianópolis</publisher-loc>
+          <comment>201 ISSN 2179- 510X</comment>
+          <fpage>1</fpage>
+          <lpage>12</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>ESPINO, Alma; MACHADO, Alina y ALVES, Guillermo. (2011), Estudios sobre el mercado laboral en Uruguay. Estudio de las tendencias cuantitativas y cualitativas de la oferta y la demanda de trabajo en Uruguay: ¿hay un ajuste de la oferta de trabajo a la demanda? Documento Nº1: Estudio de las tendencias cuantitativas y cualitativas de la oferta laboral. Montevideo: BCU.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>ESPINO</surname>
+              <given-names>Alma</given-names>
+            </name>
+            <name>
+              <surname>MACHADO</surname>
+              <given-names>Alina</given-names>
+            </name>
+            <name>
+              <surname>ALVES</surname>
+              <given-names>Guillermo</given-names>
+            </name>
+          </person-group>
+          <year>2011</year>
+          <source>Estudios sobre el mercado laboral en Uruguay. Estudio de las tendencias cuantitativas y cualitativas de la oferta y la demanda de trabajo en Uruguay: ¿hay un ajuste de la oferta de trabajo a la demanda? Documento Nº1: Estudio de las tendencias cuantitativas y cualitativas de la oferta laboral</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>BCU</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>FRASER, Nancy y GORDON, Linda. (1994), A genealogy of dependency: tracing a Keyword of thr U.S Walfare State. Estados Unidos, The University of Chicago Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>FRASER</surname>
+              <given-names>Nancy</given-names>
+            </name>
+            <name>
+              <surname>GORDON</surname>
+              <given-names>Linda</given-names>
+            </name>
+          </person-group>
+          <year>1994</year>
+          <source>A genealogy of dependency: tracing a Keyword of thr U.S Walfare State</source>
+          <publisher-loc>Estados Unidos</publisher-loc>
+          <publisher-name>The University of Chicago Press</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>GENTA, Natalia y PERROTTA, Valentina. (2015), “Cuando las mujeres son breadwinners, ¿Quién asume el trabajo no remunerado?”, in K. Batthyány. (Ed.), Los tiempos del bienestar social. Género, trabajo no remunerado y cuidados en Uruguay. (pp. 135-168). Montevideo: Doble Clic.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>GENTA</surname>
+              <given-names>Natalia</given-names>
+            </name>
+            <name>
+              <surname>PERROTTA</surname>
+              <given-names>Valentina</given-names>
+            </name>
+          </person-group>
+          <year>2015</year>
+          <chapter-title>“Cuando las mujeres son breadwinners, ¿Quién asume el trabajo no remunerado?</chapter-title>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Batthyány</surname>
+              <given-names>K.</given-names>
+            </name>
+            <role>Ed</role>
+          </person-group>
+          <source>Los tiempos del bienestar social. Género, trabajo no remunerado y cuidados en Uruguay</source>
+          <fpage>135</fpage>
+          <lpage>168</lpage>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>Doble Clic</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>GIL RODRIGUEZ, Eva. (2002), “¿Por qué llaman género cuando quieren decir sexo?: Una aproximación a la teoría de la performatividad de Judith Butler. Athenea Digital. Revista de pensamiento e investigación social, n. 2, otoño, pp. 30-41.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>GIL RODRIGUEZ</surname>
+              <given-names>Eva</given-names>
+            </name>
+          </person-group>
+          <year>2002</year>
+          <article-title>“¿Por qué llaman género cuando quieren decir sexo?: Una aproximación a la teoría de la performatividad de Judith Butler</article-title>
+          <source>Athenea Digital. Revista de pensamiento e investigación social</source>
+          <issue>2</issue>
+          <season>otoño</season>
+          <fpage>30</fpage>
+          <lpage>41</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>HAAS, Barbara. “The Work-Care Balance: is it posible to identify typologies for cross-national comparisons?”. Current Sociology (2005), v. 53, n. 3, pp. 487-508.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>HAAS</surname>
+              <given-names>Barbara</given-names>
+            </name>
+          </person-group>
+          <article-title>“The Work-Care Balance: is it posible to identify typologies for cross-national comparisons?</article-title>
+          <source>Current Sociology</source>
+          <year>2005</year>
+          <volume>53</volume>
+          <issue>3</issue>
+          <fpage>487</fpage>
+          <lpage>508</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>INAMU. (2008), Uruguay: ampliando las oportunidades laborales para las mujeres. Montevideo: INAMU. Disponible On line: <ext-link ext-link-type="uri" xlink:href="http://www.inmujeres.gub.uy/innovaportal/file/19653/1/2_oport_lab_mujeres.pdf">http://www.inmujeres.gub.uy/innovaportal/file/19653/1/2_oport_lab_mujeres.pdf</ext-link> </mixed-citation>
+        <element-citation publication-type="webpage">
+          <person-group person-group-type="author">
+            <collab>INAMU</collab>
+          </person-group>
+          <year>2008</year>
+          <source>Uruguay: ampliando las oportunidades laborales para las mujeres</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>INAMU</publisher-name>
+          <ext-link ext-link-type="uri" xlink:href="http://www.inmujeres.gub.uy/innovaportal/file/19653/1/2_oport_lab_mujeres.pdf">http://www.inmujeres.gub.uy/innovaportal/file/19653/1/2_oport_lab_mujeres.pdf</ext-link>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>INMUJERES. (2014), Estadísticas de género 2013. Evolución de los indicadores de género en el período 2009-2013. Montevideo, Inmujeres.</mixed-citation>
+        <element-citation publication-type="report">
+          <person-group person-group-type="author">
+            <collab>INMUJERES</collab>
+          </person-group>
+          <year>2014</year>
+          <source>Estadísticas de género 2013. Evolución de los indicadores de género en el período 2009-2013</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>Inmujeres</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>INMUJERES. (2016), Estadísticas de género 2015 La persistencia de las desigualdades de género en Uruguay. Sistema de Información de Género. Montevideo, Inmujeres.</mixed-citation>
+        <element-citation publication-type="report">
+          <person-group person-group-type="author">
+            <collab>INMUJERES</collab>
+          </person-group>
+          <year>2016</year>
+          <source>Estadísticas de género 2015 La persistencia de las desigualdades de género en Uruguay. Sistema de Información de Género</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>Inmujeres</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>INMUJERES. (2016b), El lugar de las mujeres en la toma de decisiones. Cuadernos del Sistema de Información de Género Nº 5. Montevideo, Inmujeres.</mixed-citation>
+        <element-citation publication-type="report">
+          <person-group person-group-type="author">
+            <collab>INMUJERES</collab>
+          </person-group>
+          <year>2016b</year>
+          <source>El lugar de las mujeres en la toma de decisiones. Cuadernos del Sistema de Información de Género Nº 5</source>
+          <publisher-loc>Montevideo</publisher-loc>
+          <publisher-name>Inmujeres</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>MARTÍN PALOMBO, María Teresa. (2010), Los cuidados en las familias. Estudio a partir de tres generaciones de mujeres en Andalucía. Sevilla, Instituto Nacional de Estadística.</mixed-citation>
+        <element-citation publication-type="report">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MARTÍN PALOMBO</surname>
+              <given-names>María Teresa</given-names>
+            </name>
+          </person-group>
+          <year>2010</year>
+          <source>Los cuidados en las familias. Estudio a partir de tres generaciones de mujeres en Andalucía</source>
+          <publisher-loc>Sevilla</publisher-loc>
+          <publisher-name>Instituto Nacional de Estadística</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>MARTÍNEZ SALGADO, Carolina. (2012), “El muestreo en investigación cualitativa. Principios básicos y algunas controversias”. Ciência &amp; Saúde Coletiva, v. 17, n. 3, pp. 613-619.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MARTÍNEZ SALGADO</surname>
+              <given-names>Carolina</given-names>
+            </name>
+          </person-group>
+          <year>2012</year>
+          <article-title>“El muestreo en investigación cualitativa. Principios básicos y algunas controversias”</article-title>
+          <source>Ciência &amp; Saúde Coletiva</source>
+          <volume>17</volume>
+          <issue>3</issue>
+          <fpage>613</fpage>
+          <lpage>619</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>PAUTASSI, Laura. (2007), El cuidado como cuestión social desde un enfoque de derechos. Serie Mujer y Desarrollo n° 87. Santiago de Chile, CEPAL.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>PAUTASSI</surname>
+              <given-names>Laura</given-names>
+            </name>
+          </person-group>
+          <year>2007</year>
+          <article-title>El cuidado como cuestión social desde un enfoque de derechos</article-title>
+          <source>Serie Mujer y Desarrollo</source>
+          <issue>87</issue>
+          <publisher-loc>Santiago de Chile</publisher-loc>
+          <publisher-name>CEPAL</publisher-name>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>PUYANA, Yolanda y MOSQUERA, Claudia. (2005), “Traer hijos o hijas al mundo: significados culturales de la paternidad y la maternidad”. Revista Latinoamericana de Ciencias Sociales, Niñez y Juventud, v. 3, n. 2, pp. 1-21.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>PUYANA</surname>
+              <given-names>Yolanda</given-names>
+            </name>
+            <name>
+              <surname>MOSQUERA</surname>
+              <given-names>Claudia</given-names>
+            </name>
+          </person-group>
+          <year>2005</year>
+          <article-title>“Traer hijos o hijas al mundo: significados culturales de la paternidad y la maternidad”</article-title>
+          <source>Revista Latinoamericana de Ciencias Sociales, Niñez y Juventud</source>
+          <volume>3</volume>
+          <issue>2</issue>
+          <fpage>1</fpage>
+          <lpage>21</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>SCOTT, Joan. (2003), “El género: una categoría útil para el análisis histórico”,in M. Lamas. (Comp.) El Género. La construcción cultural de la diferencia sexual. México, Universidad Autónoma de México UNAM. PUEG. 3ra edición, pp. 265-302.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>SCOTT</surname>
+              <given-names>Joan</given-names>
+            </name>
+          </person-group>
+          <year>2003</year>
+          <chapter-title>“El género: una categoría útil para el análisis histórico”</chapter-title>
+          <person-group person-group-type="compiler">
+            <name>
+              <surname>Lamas</surname>
+              <given-names>M.</given-names>
+            </name>
+            <role>Comp</role>
+          </person-group>
+          <source>El Género. La construcción cultural de la diferencia sexual</source>
+          <publisher-loc>México</publisher-loc>
+          <publisher-name>Universidad Autónoma de México UNAM. PUEG</publisher-name>
+          <edition>3ra</edition>
+          <fpage>265</fpage>
+          <lpage>302</lpage>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <title>NOTAS</title>
+      <fn fn-type="other" id="fn1">
+        <label>1</label>
+        <p>. La separación entre ámbito público y privado ha sido criticada por dicotómica y esquemática. Es importante señalar, que de existir, ha de analizarse en profundidad en cada contexto qué se entiende por público y por privado y cuáles son los aspectos borrosos de su delimitación categórica.</p>
+      </fn>
+      <fn fn-type="other" id="fn2">
+        <label>2</label>
+        <p>. Es posible acceder a ellos en el siguiente link: <ext-link ext-link-type="uri" xlink:href="http://www.ine.gub.uy/actividad-empleo-y-desempleo">http://www.ine.gub.uy/actividad-empleo-y-desempleo</ext-link> </p>
+      </fn>
+      <fn fn-type="other" id="fn3">
+        <label>3</label>
+        <p>. Con esta expresión nos referimos a los ideales culturales relativos a los cuidados que señalan a la familia como responsable principal y como la opción más deseable para brindar cuidado a niños y niñas. En contraposición a otras posturas que consideran que es deseable que las familias compartan el cuidado otros proveedores donde el Estado, el mercado y la comunidad también asuman parte de esta responsabilidad.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>

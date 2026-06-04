@@ -1,0 +1,2150 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">B9VQpYkNtm9brpCp75ZcH5g</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212012000200002</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(12)00600200002</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>The Bigger, the Better: Coalitions in the GATT/WTO</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Cepaluni</surname>
+            <given-names>Gabriel</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Galdino</surname>
+            <given-names>Manoel</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Oliveira</surname>
+            <given-names>Amâncio Jorge de</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">University of São Paulo</institution>
+        <institution content-type="orgdiv1">Center for International Negotiations Studies </institution>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2012</year>
+      </pub-date>
+      <volume>6</volume>
+      <issue>2</issue>
+      <fpage>28</fpage>
+      <lpage>55</lpage>
+      <history>
+        <date date-type="received">
+          <month>12</month>
+          <year>2011</year>
+        </date>
+        <date date-type="accepted">
+          <month>08</month>
+          <year>2012</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v6n2/a02v6n2.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>What does it take to make a coalition successful? Bigger coalitions are more likely to be successful because the GATT/WTO is a consensus-based institution and countries are informally penalized if they isolate themselves. Through a Bayesian statistical analysis, the article corroborates the above hypothesis. To further investigate the research question, qualitative case studies of the G-10 in the Uruguay Round and the Public Health Coalition in the Doha Round are conducted. These cases show that the more convincing the framing of a position, the better are the chances of coalitions keeping a large number of followers and supporters, thereby affecting their odds of success. By building a unique database and applying a new research design to the topic, the study rigorously tests theories about coalitions that had previously only been proposed but not empirically analyzed.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>international coalitions</kwd>
+        <kwd>bayesian analysis</kwd>
+        <kwd>multilateralism</kwd>
+        <kwd>economic openness</kwd>
+        <kwd>international negotiations</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>20</day>
+        <month>08</month>
+        <year>2013</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>Abbott, Frederick M. 2005. "The WTO Medicines Decision: World Pharmaceutical Trade and the Protection of Public Health". <italic>The American Journal of International Law</italic>, vol. 99, No. 2, pp. 317-358.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The WTO Medicines Decision: World Pharmaceutical Trade and the Protection of Public Health</article-title>
+          <source>The American Journal of International Law</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>317</fpage>
+          <lpage>358</lpage>
+          <issue>2</issue>
+          <volume>99</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abbott</surname>
+              <given-names>Frederick M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>Abbott, Frederick M. 2002. "The Doha Declaration on the TRIPS Agreement and Public Health: Lighting a Dark Corner at the WTO". <italic>Journal of International Economic Law</italic>, vol. 5, nº 2, pp. 469-505.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Doha Declaration on the TRIPS Agreement and Public Health: Lighting a Dark Corner at the WTO</article-title>
+          <source>Journal of International Economic Law</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>469</fpage>
+          <lpage>505</lpage>
+          <issue>2</issue>
+          <volume>5</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abbott</surname>
+              <given-names>Frederick M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>Abizadeh, Arash. 2005. "Does Collective Identity Presuppose an Other? On the Alleged Incoherence of Global Solidarity". <italic>American Political Science Review</italic>, vol. 99, n. 1, pp. 45-60.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Does Collective Identity Presuppose an Other?: On the Alleged Incoherence of Global Solidarity</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>45</fpage>
+          <lpage>60</lpage>
+          <issue>1</issue>
+          <volume>99</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abizadeh</surname>
+              <given-names>Arash</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>Abreu, Marcelo de Paiva. 2001. "O Brasil, o GATT e a OMC: história e perspectivas". <italic>Política Externa</italic>, vol. 9, nº 4, pp. 89-119.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>O Brasil, o GATT e a OMC: história e perspectivas</article-title>
+          <source>Política Externa</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>89</fpage>
+          <lpage>119</lpage>
+          <issue>4</issue>
+          <volume>9</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abreu</surname>
+              <given-names>Marcelo de Paiva</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>Amorim, Celso. 2000a. "A OMC e o Ano 2000". <italic>Carta Internacional</italic>, ano 8, nº 85.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A OMC e o Ano 2000</article-title>
+          <source>Carta Internacional</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <issue>85</issue>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amorim</surname>
+              <given-names>Celso</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>Amorim, Celso. 2000b. "A OMC pós-Seattle". <italic>Política Externa</italic>, vol. 8, nº 4, pp. 100-115.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A OMC pós-Seattle</article-title>
+          <source>Política Externa</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>100</fpage>
+          <lpage>115</lpage>
+          <issue>4</issue>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amorim</surname>
+              <given-names>Celso</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>Arslanian, Regis Percy and Lyrio, Maurício Carvalho. 1995. "A reforma da lei de patentes no Brasil e as pressões norte-americanas na área de propriedade intelectual". <italic>Política Externa</italic>, vol. 4, nº 2, pp. 3-12.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>A reforma da lei de patentes no Brasil e as pressões norte-americanas na área de propriedade intelectual</article-title>
+          <source>Política Externa</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <fpage>3</fpage>
+          <lpage>12</lpage>
+          <issue>2</issue>
+          <volume>4</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Arslanian</surname>
+              <given-names>Regis Percy</given-names>
+            </name>
+            <name>
+              <surname>Lyrio</surname>
+              <given-names>Maurício Carvalho</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>Baldwin, David A. 1985. <italic>Economic Statecraft</italic>. Princeton, New Jersey: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Economic Statecraft</source>
+          <date>
+            <year>1985</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Baldwin</surname>
+              <given-names>David A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>Basso, Maristela. 2000. <italic>O Direito Internacional da Propriedade Intelectual</italic>. Porto Alegre: Livraria do Advogado Editora.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>O Direito Internacional da Propriedade Intelectual</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Basso</surname>
+              <given-names>Maristela</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>Bown, Chad P. 2004. "Trade Policy under the GATT/WTO: Empirical Evidence of the Equal Treatment Rule". <italic>The Canadian Journal of Economics / Revue canadienne d'Economique</italic>, vol. 37, No. 3, pp. 678-720.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Trade Policy under the GATT/WTO: Empirical Evidence of the Equal Treatment Rule</article-title>
+          <source>The Canadian Journal of Economics / Revue canadienne d'Economique</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>678</fpage>
+          <lpage>720</lpage>
+          <issue>3</issue>
+          <volume>37</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bown</surname>
+              <given-names>Chad P.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>Braithwaite, John. 2004. "Methods of Power for Development: Weapons of the Weak, Weapons of the Strong". <italic>Michigan Journal of International Law</italic>, vol. 26, No. 1, pp. 297-330.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Methods of Power for Development: Weapons of the Weak, Weapons of the Strong</article-title>
+          <source>Michigan Journal of International Law</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>297</fpage>
+          <lpage>330</lpage>
+          <issue>1</issue>
+          <volume>26</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Braithwaite</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>Buchanan, James M. 1965. "An Economic Theory of Clubs". <italic>Economica, New Series, </italic>vol. 32, n<underline><sup>o</sup></underline> 125, pp. 1-14.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>An Economic Theory of Clubs</article-title>
+          <source>Economica, New Series</source>
+          <date>
+            <year>1965</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>14</lpage>
+          <issue>125</issue>
+          <volume>32</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Buchanan</surname>
+              <given-names>James M</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>Busch, Marc L. 2000. "Democracy, Consultation, and the Paneling of Disputes under GATT". <italic>Journal of Conflict Resolution</italic>, vol. 44, n. 4, pp. 425-446.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Democracy, Consultation, and the Paneling of Disputes under GATT</article-title>
+          <source>Journal of Conflict Resolution</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>425</fpage>
+          <lpage>446</lpage>
+          <issue>4</issue>
+          <volume>44</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busch</surname>
+              <given-names>Marc L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>Busch, Marc L. 2007. "Overlapping Institutions, Forum Shopping, and Dispute Settlement in International Trade". <italic>International Organization</italic>, vol. 61, pp. 735-61.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Overlapping Institutions, Forum Shopping, and Dispute Settlement in International Trade</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>735</fpage>
+          <lpage>61</lpage>
+          <volume>61</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busch</surname>
+              <given-names>Marc L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>Busch, Marc L. and Reinhardt, Eric. 2001. "Bargaining in the Shadow of the Law: Early Settlement in GATT/WTO Disputes". <italic>Fordham International Law Journal</italic>, vol. 24, n. 1, pp. 158-172.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Bargaining in the Shadow of the Law: Early Settlement in GATT/WTO Disputes</article-title>
+          <source>Fordham International Law Journal</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>158</fpage>
+          <lpage>172</lpage>
+          <issue>1</issue>
+          <volume>24</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busch</surname>
+              <given-names>Marc L.</given-names>
+            </name>
+            <name>
+              <surname>Reinhardt</surname>
+              <given-names>Eric</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>Busch, Marc L. and Reinhardt, Eric. 2006. "Three's a Crowd: Third Parties and WTO Dispute Settlement".<italic> World Politics</italic>, vol. 58, pp. 446-77.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Three's a Crowd: Third Parties and WTO Dispute Settlement</article-title>
+          <source>World Politics</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>446</fpage>
+          <lpage>77</lpage>
+          <volume>58</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busch</surname>
+              <given-names>Marc L.</given-names>
+            </name>
+            <name>
+              <surname>Reinhardt</surname>
+              <given-names>Eric</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>Busch, Marc L. and Pelc, Krzysztof J. 2009. "Does the WTO Need a Permanent Body of Panelists?". <italic>Journal of International Economic Law</italic>, vol. 12, n. 3, 579-594.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Does the WTO Need a Permanent Body of Panelists?</article-title>
+          <source>Journal of International Economic Law</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>579</fpage>
+          <lpage>594</lpage>
+          <issue>3</issue>
+          <volume>12</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busch</surname>
+              <given-names>Marc L.</given-names>
+            </name>
+            <name>
+              <surname>Pelc</surname>
+              <given-names>Krzysztof J</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>Busch, Marc L., Reinhardt, Eric and Shaffer, Gregory. 2009. "Does legal capacity matter? A survey of WTO Members". <italic>World Trade Review</italic>, vol. 8, n. 4, pp: 559-577.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Does legal capacity matter?: A survey of WTO Members</article-title>
+          <source>World Trade Review</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>559</fpage>
+          <lpage>577</lpage>
+          <issue>4</issue>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busch</surname>
+              <given-names>Marc L.</given-names>
+            </name>
+            <name>
+              <surname>Reinhardt</surname>
+              <given-names>Eric</given-names>
+            </name>
+            <name>
+              <surname>Shaffer</surname>
+              <given-names>Gregory</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>Cepaluni, Gabriel. 2006. <italic>Regime de Patentes: Brasil X Estados Unidos no Tabuleiro Internacional.</italic> São Paulo: Editora Aduaneiras/Lex Editora.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Regime de Patentes: Brasil X Estados Unidos no Tabuleiro Internacional</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cepaluni</surname>
+              <given-names>Gabriel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>Cepaluni, Gabriel. 2005. "Regimes Internacionais e o Contencioso das Patentes para Medicamentos: Estratégias para Países em Desenvolvimento". <italic>Contexto Internacional</italic>, vol. 27, n<underline><sup>o</sup></underline> 1, pp. 51-99.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Regimes Internacionais e o Contencioso das Patentes para Medicamentos: Estratégias para Países em Desenvolvimento</article-title>
+          <source>Contexto Internacional</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>51</fpage>
+          <lpage>99</lpage>
+          <issue>1</issue>
+          <volume>27</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cepaluni</surname>
+              <given-names>Gabriel</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>Cerny, Philip G. 1995. "Globalization and the Changing Logic of Collective Action". <italic>International Organization</italic>, vol. 49, n. 4, pp. 595-625.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Globalization and the Changing Logic of Collective Action</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>1995</year>
+          </date>
+          <fpage>595</fpage>
+          <lpage>625</lpage>
+          <issue>4</issue>
+          <volume>49</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cerny</surname>
+              <given-names>Philip G.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>Chamberlin, John. 1974. "Provision of Collective Goods as a Function of Group Size". <italic>The American Political Science Review</italic>, vol. 68, n. 2, pp. 707-716.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Provision of Collective Goods as a Function of Group Size</article-title>
+          <source>The American Political Science Review</source>
+          <date>
+            <year>1974</year>
+          </date>
+          <fpage>707</fpage>
+          <lpage>716</lpage>
+          <issue>2</issue>
+          <volume>68</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chamberlin</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>Charnovitz, Steve. 2001. "Rethinking WTO Trade Sanctions". <italic>The American Journal of International Law</italic>, vol. 95, n. 4, pp. 792-832.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Rethinking WTO Trade Sanctions</article-title>
+          <source>The American Journal of International Law</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>792</fpage>
+          <lpage>832</lpage>
+          <issue>4</issue>
+          <volume>95</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Charnovitz</surname>
+              <given-names>Steve</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>Collier, David and Mahon, Jr., James. 1993. "Conceptual 'Stretching' Revisited: Adapting Categories in Comparative Analysis". <italic>The American Political Science Review,</italic> vol. 87, no. 4, pp. 845-855.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Conceptual 'Stretching' Revisited: Adapting Categories in Comparative Analysis</article-title>
+          <source>The American Political Science Review</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <fpage>845</fpage>
+          <lpage>855</lpage>
+          <issue>4</issue>
+          <volume>87</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Collier</surname>
+              <given-names>David</given-names>
+            </name>
+            <name>
+              <surname>Mahon, Jr.</surname>
+              <given-names>James</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>Cooper, Andrew F., Higgot, Richard A., and Nossal, Kim Richard. 1993. <italic>Relocating Middle Powers: Australia e Canada in a Changing World Order</italic>. Vancouver: UBCPress.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Relocating Middle Powers: Australia e Canada in a Changing World Order</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cooper</surname>
+              <given-names>Andrew F.</given-names>
+            </name>
+            <name>
+              <surname>Higgot</surname>
+              <given-names>Richard A.</given-names>
+            </name>
+            <name>
+              <surname>Nossal</surname>
+              <given-names>Kim Richard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>Davis, Christina L. and Shirato, Yuki. 2007. "Firms, Governments, and WTO Adjudication: Japan's Selection of WTO Disputes". <italic>World Politics</italic>, vol. 59, pp. 274-313.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Firms, Governments, and WTO Adjudication: Japan's Selection of WTO Disputes</article-title>
+          <source>World Politics</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>274</fpage>
+          <lpage>313</lpage>
+          <volume>59</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davis</surname>
+              <given-names>Christina L.</given-names>
+            </name>
+            <name>
+              <surname>Shirato</surname>
+              <given-names>Yuki</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>Davis, Christina L. and Bermeo, Sarah Blodgett. 2009. "Who Files? Developing Country Participation in GATT/WTO Adjudication".<italic> The Journal of Politics</italic>, vol. 71, n. 3, pp. 1033-1049.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Who Files?: Developing Country Participation in GATT/WTO Adjudication</article-title>
+          <source>The Journal of Politics</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>1033</fpage>
+          <lpage>1049</lpage>
+          <issue>3</issue>
+          <volume>71</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Davis</surname>
+              <given-names>Christina L.</given-names>
+            </name>
+            <name>
+              <surname>Bermeo</surname>
+              <given-names>Sarah Blodgett</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>Drahos, Peter. 2003. "When the Weak Bargain with the Strong: Negotiations in the World Trade Organization". <italic>International Negotiation</italic>, vol. 8, pp. 79-109.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>When the Weak Bargain with the Strong: Negotiations in the World Trade Organization</article-title>
+          <source>International Negotiation</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>79</fpage>
+          <lpage>109</lpage>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Drahos</surname>
+              <given-names>Peter</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>Drezner, Daniel W. 2007. <italic>All Politics is Global</italic>. Princeton: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>All Politics is Global</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Drezner</surname>
+              <given-names>Daniel W.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>Edelstein, David M. 2004. "Occupational Hazards: Why Military Occupations Succeed or Fail". <italic>International Security, </italic>vol. 29, n. 1, pp. 49-91.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Occupational Hazards: Why Military Occupations Succeed or Fail</article-title>
+          <source>International Security</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>49</fpage>
+          <lpage>91</lpage>
+          <issue>1</issue>
+          <volume>29</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edelstein</surname>
+              <given-names>David M.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B31">
+        <mixed-citation>Elbe, Stefan. 2006. "Should HIV/AIDS be Securitized? The Ethical Dilemmas of Liking HIV/AIDS and Security". <italic>International Studies Quarterly</italic>, 50, n<underline><sup>o</sup></underline> pp. 119-144.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Should HIV/AIDS be Securitized?: The Ethical Dilemmas of Liking HIV/AIDS and Security</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>119</fpage>
+          <lpage>144</lpage>
+          <volume>50</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Elbe</surname>
+              <given-names>Stefan</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B32">
+        <mixed-citation>Esteban, Joan and Ray, Debraj. 2001. "Collective Action and the Group Size Paradox". <italic>American Political Science Review</italic>, vol. 95, n. 3, pp. 663-672.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Collective Action and the Group Size Paradox</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>663</fpage>
+          <lpage>672</lpage>
+          <issue>3</issue>
+          <volume>95</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Esteban</surname>
+              <given-names>Joan</given-names>
+            </name>
+            <name>
+              <surname>Ray</surname>
+              <given-names>Debraj</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B33">
+        <mixed-citation>Evans, Peter. 1989. "Declining Hegemony and Assertive Industrialization: U.S.-Brazil Conflicts in the Computer Industry". <italic>International Organization</italic>, vol. 43, No. 2, pp. 207-238.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Declining Hegemony and Assertive Industrialization: U.S.-Brazil Conflicts in the Computer Industry</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>1989</year>
+          </date>
+          <fpage>207</fpage>
+          <lpage>238</lpage>
+          <issue>2</issue>
+          <volume>43</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Evans</surname>
+              <given-names>Peter</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B34">
+        <mixed-citation>Frohlich, Norman and Oppenheimer, Joe A. 1970. "I Get by with a Little Help from my Friends".<italic> World Politics</italic>, vol. 23, n. 1, pp. 104-120.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>I Get by with a Little Help from my Friends</article-title>
+          <source>World Politics</source>
+          <date>
+            <year>1970</year>
+          </date>
+          <fpage>104</fpage>
+          <lpage>120</lpage>
+          <issue>1</issue>
+          <volume>23</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Frohlich</surname>
+              <given-names>Norman</given-names>
+            </name>
+            <name>
+              <surname>Oppenheimer</surname>
+              <given-names>Joe A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B35">
+        <mixed-citation>Gaddis, John Lewis. 2002. <italic>The Landscape of History: How Historians Map the Pas.</italic> Oxford: Oxford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Landscape of History: How Historians Map the Pas</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gaddis</surname>
+              <given-names>John Lewis</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B36">
+        <mixed-citation>Gelman, Andrew and Hill, Jennifer. 2007. <italic>Data Analysis Using Regression and Multilevel/Hierarchical Model</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Data Analysis Using Regression and Multilevel/Hierarchical Model</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelman</surname>
+              <given-names>Andrew</given-names>
+            </name>
+            <name>
+              <surname>Hill</surname>
+              <given-names>Jennifer</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B37">
+        <mixed-citation>Gelman, Andrew, Carlin, John B., Stern, Hal S., and Rubin, Donald B. 2009. <italic>Bayesian Data Analysis</italic>, 2<sup>nd</sup> Edition. Chapman &amp; Hall/CRC.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian Data Analysis</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelman</surname>
+              <given-names>Andrew</given-names>
+            </name>
+            <name>
+              <surname>Carlin</surname>
+              <given-names>John B.</given-names>
+            </name>
+            <name>
+              <surname>Stern</surname>
+              <given-names>Hal S.</given-names>
+            </name>
+            <name>
+              <surname>Rubin</surname>
+              <given-names>Donald B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B38">
+        <mixed-citation>Gelman, Andrew and Shalizi, Cosma. 2011. "Philosophy and the practice of Bayesian statistics in the social sciences". In: Harold Kincaid (ed.), <italic>Oxford Handbook of the Philosophy of the Social Sciences</italic>. Oxford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Oxford Handbook of the Philosophy of the Social Sciences</source>
+          <date>
+            <year>2011</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gelman</surname>
+              <given-names>Andrew</given-names>
+            </name>
+            <name>
+              <surname>Shalizi</surname>
+              <given-names>Cosma</given-names>
+            </name>
+            <name>
+              <surname>Kincaid</surname>
+              <given-names>Harold</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B39">
+        <mixed-citation>George, Alexander L. and Bennett, Andrew. 2004. "Case Studies and Theory Development in the Social Science". Cambridge, Massachusetts: MIT Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Case Studies and Theory Development in the Social Science</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>George</surname>
+              <given-names>Alexander L.</given-names>
+            </name>
+            <name>
+              <surname>Bennett</surname>
+              <given-names>Andrew</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B40">
+        <mixed-citation>Gerring, John. 2007. <italic>Case Study Research: Principles and Practices</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Case Study Research: Principles and Practices</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gerring</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B41">
+        <mixed-citation>Gill, Jeff. 2007. <italic>Bayesian Methods: A Social and Behavioral Sciences Approach</italic>, 2<sup>nd</sup> Edition. Chapman and Hall/CRC.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian Methods: A Social and Behavioral Sciences Approach</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gill</surname>
+              <given-names>Jeff</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B42">
+        <mixed-citation>Gilpin, Robert. 1987. <italic>The Political Economy of International Relations</italic>. Princeton: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Political Economy of International Relations</source>
+          <date>
+            <year>1987</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gilpin</surname>
+              <given-names>Robert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B43">
+        <mixed-citation>Goldstein, Judith L., Rivers, Douglas, and Tomz, Michael. 2007. "Institutions in International Relations: Understanding the Effects of the GATT and the WTO on World Trade". <italic>International Organization,</italic> vol. 61, pp. 37-67.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Institutions in International Relations: Understanding the Effects of the GATT and the WTO on World Trade</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>37</fpage>
+          <lpage>67</lpage>
+          <volume>61</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goldstein</surname>
+              <given-names>Judith L.</given-names>
+            </name>
+            <name>
+              <surname>Rivers</surname>
+              <given-names>Douglas</given-names>
+            </name>
+            <name>
+              <surname>Tomz</surname>
+              <given-names>Michael</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B44">
+        <mixed-citation>Goertz, Gary. 2006. <italic>Social Science Concepts: A User's Guide. </italic>Princeton, New Jersey: Princeton University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Social Science Concepts: A User's Guide</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goertz</surname>
+              <given-names>Gary</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B45">
+        <mixed-citation>Greenhill, Brian. 2008. "Recognition and Collective Identity Formation in International Politics". <italic>European Journal of International Relations,</italic> vol. 14, pp. 343.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Recognition and Collective Identity Formation in International Politics</article-title>
+          <source>European Journal of International Relations</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>343</fpage>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Greenhill</surname>
+              <given-names>Brian</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B46">
+        <mixed-citation>Haftel, Yoram Z. 2004. "From the Outside Looking In: The Effect of Trading Blocs on Trade Disputes in the GATT/WTO". <italic>International Studies Quarterly</italic>, vol. 48, 121-142.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>From the Outside Looking In: The Effect of Trading Blocs on Trade Disputes in the GATT/WTO</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>121</fpage>
+          <lpage>142</lpage>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Haftel</surname>
+              <given-names>Yoram Z.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B47">
+        <mixed-citation>Hamilton, Colleen and Whalley, John. 1989. "Coalitions in the Uruguay Round". <italic>Review of World Economics</italic>, vol. 125, n. 3, pp. 547-562.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Coalitions in the Uruguay Round</article-title>
+          <source>Review of World Economics</source>
+          <date>
+            <year>1989</year>
+          </date>
+          <fpage>547</fpage>
+          <lpage>562</lpage>
+          <issue>3</issue>
+          <volume>125</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hamilton</surname>
+              <given-names>Colleen</given-names>
+            </name>
+            <name>
+              <surname>Whalley</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B48">
+        <mixed-citation>Hamilton, Colleen and Whalley, John. 1988. "Coalitions in the Uruguay Round: The Extend, Pros and Cons of Developing Country Participation". NBER Working Paper Series, Working paper n. 2.751. Cambridge, National Bureau of Economic Research.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Coalitions in the Uruguay Round: The Extend, Pros and Cons of Developing Country Participation</article-title>
+          <source>NBER Working Paper Series</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <issue>2.751</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hamilton</surname>
+              <given-names>Colleen</given-names>
+            </name>
+            <name>
+              <surname>Whalley</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+          <comment>Working paper</comment>
+        </element-citation>
+      </ref>
+      <ref id="B49">
+        <mixed-citation>Hardin, Garrett. 1968. "The Tragedy of the Commons". <italic>Science</italic>, vol. 162, pp. 1243-1248.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Tragedy of the Commons</article-title>
+          <source>Science</source>
+          <date>
+            <year>1968</year>
+          </date>
+          <fpage>1243</fpage>
+          <lpage>1248</lpage>
+          <volume>162</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hardin</surname>
+              <given-names>Garrett</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B50">
+        <mixed-citation>Hardin, Russell. 1982. <italic>Collective Action</italic>. Baltimore: John Hopkins University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Collective Action</source>
+          <date>
+            <year>1982</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hardin</surname>
+              <given-names>Russell</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B51">
+        <mixed-citation>Haufler, Virginia. 1993. "Crossing the Boundary Between Public and Private: International Regimes and Non-State Actors". In: RITTBERGER, Volker (ed.), <italic>Regime Theory and International Relations</italic>, Oxford: Clarendon Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Regime Theory and International Relations</source>
+          <date>
+            <year>1993</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Haufler</surname>
+              <given-names>Virginia</given-names>
+            </name>
+            <name>
+              <surname>RITTBERGER</surname>
+              <given-names>Volker</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B52">
+        <mixed-citation>Higgott, Richard A. and Cooper, Andrew Fenton. 1990. "Middle Power Leadership and Coalition Building: Australia, the Cairns Group, and the Uruguay Round of Trade Negotiations". <italic>International Organization</italic>, vol. 44, nº 4, pp. 589-632.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Middle Power Leadership and Coalition Building: Australia, the Cairns Group, and the Uruguay Round of Trade Negotiations</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <fpage>589</fpage>
+          <lpage>632</lpage>
+          <issue>4</issue>
+          <volume>44</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Higgott</surname>
+              <given-names>Richard A.</given-names>
+            </name>
+            <name>
+              <surname>Cooper</surname>
+              <given-names>Andrew Fenton</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B53">
+        <mixed-citation>Jackman, Simon. 2009. <italic>Bayesian Analysis for the Social Sciences. </italic>New York: Wiley.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Bayesian Analysis for the Social Sciences</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jackman</surname>
+              <given-names>Simon</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B54">
+        <mixed-citation>Kennedy, Paul. 1987. <italic>The Rise and Fall of Great Powers</italic>. New York: Vintage Books, 1987.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Rise and Fall of Great Powers</source>
+          <date>
+            <year>1987</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kennedy</surname>
+              <given-names>Paul</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B55">
+        <mixed-citation>Kim, Moonhawk. 2008. "Costly Procedures: Divergent Effects of Legalization in the GATT/WTO Dispute Settlement Procedures". <italic>International Studies Quarterly</italic>, vol. 52, 657-686.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Costly Procedures: Divergent Effects of Legalization in the GATT/WTO Dispute Settlement Procedures</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>657</fpage>
+          <lpage>686</lpage>
+          <volume>52</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kim</surname>
+              <given-names>Moonhawk</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B56">
+        <mixed-citation>Lafer, Celso. 1998b. <italic>A OMC e a Regulamentação do Comércio Internacional: Uma Visão Brasileira</italic>. Porto Alegre: Livraria do Advogado Editora.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>A OMC e a Regulamentação do Comércio Internacional: Uma Visão Brasileira</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lafer</surname>
+              <given-names>Celso</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B57">
+        <mixed-citation>Lamy, Pascal. 2000. "Pos-Seattle: A Vision of Globalization and of the Challenges Ahead". <italic>Carta Internacional</italic>, nº 85.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Pos-Seattle: A Vision of Globalization and of the Challenges Ahead</article-title>
+          <source>Carta Internacional</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <issue>85</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lamy</surname>
+              <given-names>Pascal</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B58">
+        <mixed-citation>Lanoszka, Anna. 2003. "The Global Politics of Intellectual Property Rights and Pharmaceutical Drug Policies in Developing Countries". <italic>International Political Science Review</italic>, vol. 24, n. 2, pp. 181-197.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Global Politics of Intellectual Property Rights and Pharmaceutical Drug Policies in Developing Countries</article-title>
+          <source>International Political Science Review</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>181</fpage>
+          <lpage>197</lpage>
+          <issue>2</issue>
+          <volume>24</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lanoszka</surname>
+              <given-names>Anna</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B59">
+        <mixed-citation>Lima, Maria Regina Soares de and Hirst, Mônica. 1997. "O Brasil e os Estados Unidos: Dilemas e Desafios de uma Relação Complexa". In: Gélson Fonseca Júnior and Sérgio H. N. de Castro. (eds.), <italic>Temas de Política Externa Brasileira II</italic>, vol. 2, 2ª edição. São Paulo: Paz e Terra.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Temas de Política Externa Brasileira II</source>
+          <date>
+            <year>1997</year>
+          </date>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lima</surname>
+              <given-names>Maria Regina Soares de</given-names>
+            </name>
+            <name>
+              <surname>Hirst</surname>
+              <given-names>Mônica</given-names>
+            </name>
+            <name>
+              <surname>Fonseca Júnior</surname>
+              <given-names>Gélson</given-names>
+            </name>
+            <name>
+              <surname>Castro</surname>
+              <given-names>Sérgio H. N. de</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B60">
+        <mixed-citation>Mansfield, Edward D. and Reinhardt, Eric. 2003. "Multilateral Determinants of Regionalism: The Effects of GATT/WTO on the Formation of Preferential Trading Arrangements". <italic>International Organization</italic>, vol. 57, pp. 829-862.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Multilateral Determinants of Regionalism: The Effects of GATT/WTO on the Formation of Preferential Trading Arrangements</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>829</fpage>
+          <lpage>862</lpage>
+          <volume>57</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mansfield</surname>
+              <given-names>Edward D.</given-names>
+            </name>
+            <name>
+              <surname>Reinhardt</surname>
+              <given-names>Eric</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B61">
+        <mixed-citation>Mansfield, Edward D. and Reinhardt, Eric. 2008. "International Institutions and the Volatility of International Trade".<italic> International Organization</italic>, vol. 62, pp. 621-52.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>International Institutions and the Volatility of International Trade</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>621</fpage>
+          <lpage>52</lpage>
+          <volume>62</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mansfield</surname>
+              <given-names>Edward D.</given-names>
+            </name>
+            <name>
+              <surname>Reinhardt</surname>
+              <given-names>Eric</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B62">
+        <mixed-citation>Mcguire, Martin. 1974. "Group Size, Group Homogeneity, and the Agreement Provision of a Pure Public Good under Cournot Behavior". <italic>Public Choice</italic>, vol. 18, pp. 107-126.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Group Size, Group Homogeneity, and the Agreement Provision of a Pure Public Good under Cournot Behavior</article-title>
+          <source>Public Choice</source>
+          <date>
+            <year>1974</year>
+          </date>
+          <fpage>107</fpage>
+          <lpage>126</lpage>
+          <volume>18</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Mcguire</surname>
+              <given-names>Martin</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B63">
+        <mixed-citation>Moon, Don. 2006. "Equality and Inequality in the WTO Dispute Settlement (DS) System: Analysis of the GATT/WTO Dispute Data". <italic>International Interactions</italic>, vol. 32, pp. 201-228.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Equality and Inequality in the WTO Dispute Settlement (DS) System: Analysis of the GATT/WTO Dispute Data</article-title>
+          <source>International Interactions</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>201</fpage>
+          <lpage>228</lpage>
+          <volume>32</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moon</surname>
+              <given-names>Don</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B64">
+        <mixed-citation>Narlikar, Amrita. 2003. <italic>International Trade and Developing Countries: Bargaining Coalitions in the GATT and WTO</italic>. London: Routledge.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>International Trade and Developing Countries: Bargaining Coalitions in the GATT and WTO</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Narlikar</surname>
+              <given-names>Amrita</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B65">
+        <mixed-citation>Narlikar, Amrita and Tussie, Diana. 2004. "The G20 at the Cancun Ministerial: Developing Countries and Their Evolving Coalitions in the WTO". <italic>World Economy</italic>, vol. 27, n. 7, pp. 947-966.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The G20 at the Cancun Ministerial: Developing Countries and Their Evolving Coalitions in the WTO</article-title>
+          <source>World Economy</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>947</fpage>
+          <lpage>966</lpage>
+          <issue>7</issue>
+          <volume>27</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Narlikar</surname>
+              <given-names>Amrita</given-names>
+            </name>
+            <name>
+              <surname>Tussie</surname>
+              <given-names>Diana</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B66">
+        <mixed-citation>Odell, John S. 2009. "Breaking Deadlocks in International Institutional Negotiations: The WTO, Seattle, and Doha". <italic>International Studies Quarterly</italic>, vol. 53, n. 2, pp. 273-299.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Breaking Deadlocks in International Institutional Negotiations: The WTO, Seattle, and Doha</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>273</fpage>
+          <lpage>299</lpage>
+          <issue>2</issue>
+          <volume>53</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Odell</surname>
+              <given-names>John S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B67">
+        <mixed-citation>Odell, John S. and Sell, Susan K. 2006. "Reframing the issue: the WTO coalition on intellectual property and public health, 2001". In: Odell, John S. (ed.), <italic>Negotiating Trade: Developing Countries in the WTO and NAFTA</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Negotiating Trade: Developing Countries in the WTO and NAFTA</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Odell</surname>
+              <given-names>John S.</given-names>
+            </name>
+            <name>
+              <surname>Sell</surname>
+              <given-names>Susan K.</given-names>
+            </name>
+            <name>
+              <surname>Odell</surname>
+              <given-names>John S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B68">
+        <mixed-citation>Oliver, Pamela E. and Marwell, Gerald. 1988. "The Paradox of Group Size in Collective Action: A Theory of the Critical Mass II". <italic>American Sociological Review</italic>, vol. 53, n. 1, pp. 1-8.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Paradox of Group Size in Collective Action: A Theory of the Critical Mass II</article-title>
+          <source>American Sociological Review</source>
+          <date>
+            <year>1988</year>
+          </date>
+          <fpage>1</fpage>
+          <lpage>8</lpage>
+          <issue>1</issue>
+          <volume>53</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Oliver</surname>
+              <given-names>Pamela E.</given-names>
+            </name>
+            <name>
+              <surname>Marwell</surname>
+              <given-names>Gerald</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B69">
+        <mixed-citation>Olson, Jr., Mancur. 1965. <italic>The Logic of Collective Action: Public Goods and the Theory of Groups</italic>, 1. ed. Harvard University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Logic of Collective Action: Public Goods and the Theory of Groups</source>
+          <date>
+            <year>1965</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olson, Jr.</surname>
+              <given-names>Mancur</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B70">
+        <mixed-citation>Olson, Jr., Mancur. 1971. "Increasing the Incentives for International Cooperation". <italic>International Organization</italic>, vol. 25, n<underline><sup>o</sup></underline> 4, pp. 866-874.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Increasing the Incentives for International Cooperation</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>1971</year>
+          </date>
+          <fpage>866</fpage>
+          <lpage>874</lpage>
+          <issue>4</issue>
+          <volume>25</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olson, Jr.</surname>
+              <given-names>Mancur</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B71">
+        <mixed-citation>Olson, Jr., Mancur. 1982. <italic>The Rise and Decline of Nations: Economic Growth, Stagflation, and Social Rigidities</italic>. New Haven and London: Yale University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Rise and Decline of Nations: Economic Growth, Stagflation, and Social Rigidities</source>
+          <date>
+            <year>1982</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olson, Jr.</surname>
+              <given-names>Mancur</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B72">
+        <mixed-citation>Olson, Jr., Mancur and Zeckhauser, Richard. 1966. "An Economic Theory of Alliances". <italic>The Review of Economics and Statistics</italic>, vol. 48, n<underline><sup>o</sup></underline> 3, pp. 266-279.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>An Economic Theory of Alliances</article-title>
+          <source>The Review of Economics and Statistics</source>
+          <date>
+            <year>1966</year>
+          </date>
+          <fpage>266</fpage>
+          <lpage>279</lpage>
+          <issue>3</issue>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Olson, Jr.</surname>
+              <given-names>Mancur</given-names>
+            </name>
+            <name>
+              <surname>Zeckhauser</surname>
+              <given-names>Richard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B73">
+        <mixed-citation>Ostrom, Elinor. 2000. "Collective Action and the Evolution of Social Norms". <italic>The Journal of Economic Perspectives</italic>, vol. 14, n. 3, pp. 137-158.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Collective Action and the Evolution of Social Norms</article-title>
+          <source>The Journal of Economic Perspectives</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>137</fpage>
+          <lpage>158</lpage>
+          <issue>3</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ostrom</surname>
+              <given-names>Elinor</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B74">
+        <mixed-citation>Ostrom, Elinor. 1990. <italic>Governing the Commons: The Evolution of Institutions for Collective Action</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Governing the Commons: The Evolution of Institutions for Collective Action</source>
+          <date>
+            <year>1990</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ostrom</surname>
+              <given-names>Elinor</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B75">
+        <mixed-citation>Pecorino, Paul and Temimi, Akram. 2008. "The Group Size Paradox Revisited". <italic>Journal of Public Economic Theory</italic>, vol. 10, n. 5, pp. 785-799.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Group Size Paradox Revisited</article-title>
+          <source>Journal of Public Economic Theory</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>785</fpage>
+          <lpage>799</lpage>
+          <issue>5</issue>
+          <volume>10</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pecorino</surname>
+              <given-names>Paul</given-names>
+            </name>
+            <name>
+              <surname>Temimi</surname>
+              <given-names>Akram</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B76">
+        <mixed-citation>Pecorino, Paul. 2009. "Public Goods, Group Size, and the Degree of Rivalry". <italic>Public Choice</italic>, vol. 138, pp. 161-169.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Public Goods, Group Size, and the Degree of Rivalry</article-title>
+          <source>Public Choice</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>161</fpage>
+          <lpage>169</lpage>
+          <volume>138</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pecorino</surname>
+              <given-names>Paul</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B77">
+        <mixed-citation>Pelc, Krzysztof J. 2010. "Eluding efficiency: why do we not see more efficient breach at the WTO?" <italic>World Trade Review</italic>, 9, pp. 629-642.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Eluding efficiency: why do we not see more efficient breach at the WTO?</article-title>
+          <source>World Trade Review</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>629</fpage>
+          <lpage>642</lpage>
+          <volume>9</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pelc</surname>
+              <given-names>Krzysztof J.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B78">
+        <mixed-citation>Poteete, Amy R. and Ostrom, Elinor. 2008. "Fifteen Years of Empirical Research on Collective Action in Natural Resource Management: Struggling to Built Large-N Databases Based on Qualitative Research". <italic>World Development</italic>, vol. 36, n<underline><sup>o</sup></underline> 1, pp. 176-195.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Fifteen Years of Empirical Research on Collective Action in Natural Resource Management: Struggling to Built Large-N Databases Based on Qualitative Research</article-title>
+          <source>World Development</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>176</fpage>
+          <lpage>195</lpage>
+          <issue>1</issue>
+          <volume>36</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Poteete</surname>
+              <given-names>Amy R.</given-names>
+            </name>
+            <name>
+              <surname>Ostrom</surname>
+              <given-names>Elinor</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B79">
+        <mixed-citation>Ragin, Charles C. 2007. <italic>Fuzzy-Set Social Science</italic>. Chicago and London: University of Chicago Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Fuzzy-Set Social Science</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ragin</surname>
+              <given-names>Charles C.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B80">
+        <mixed-citation>Ragin, Charles C. 2008. <italic>Redesigning Social Inquiry: Fuzzy Sets and Beyond</italic>. Chicago and London: University of Chicago Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Redesigning Social Inquiry: Fuzzy Sets and Beyond</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ragin</surname>
+              <given-names>Charles C.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B81">
+        <mixed-citation>Reinhardt, Eric. 2001. "Adjudication without Enforcement in GATT Disputes".<italic> Journal of Conflict Resolution</italic>, vol. 45 n. 2, pp. 174-195.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Adjudication without Enforcement in GATT Disputes</article-title>
+          <source>Journal of Conflict Resolution</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>174</fpage>
+          <lpage>195</lpage>
+          <issue>2</issue>
+          <volume>45</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Reinhardt</surname>
+              <given-names>Eric</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B82">
+        <mixed-citation>Riker, William H. 1970. "Reflections on Empires". In: Francis A. Beer. (ed.), <italic>Alliances: Latent War Communities in the Contemporary World</italic>. New York: Holt, Rinehart and Winston.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Alliances: Latent War Communities in the Contemporary World</source>
+          <date>
+            <year>1970</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riker</surname>
+              <given-names>William H.</given-names>
+            </name>
+            <name>
+              <surname>Beer</surname>
+              <given-names>Francis A.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B83">
+        <mixed-citation>Riker, William H. 1962. <italic>The Theory of Political Coalitions</italic>. New Haven: Yale University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Theory of Political Coalitions</source>
+          <date>
+            <year>1962</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Riker</surname>
+              <given-names>William H.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B84">
+        <mixed-citation>Rose, Andrew K. 2004. "Do We Really Know That the WTO Increases Trade?"<italic> The American Economic Review</italic>, vol. 94, n. 1, pp. 98-114.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Do We Really Know That the WTO Increases Trade?</article-title>
+          <source>The American Economic Review</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>98</fpage>
+          <lpage>114</lpage>
+          <issue>1</issue>
+          <volume>94</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rose</surname>
+              <given-names>Andrew K.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B85">
+        <mixed-citation>Rosendorff, Peter B. 2005. "Stability and Rigidity: Politics and Design of the WTO's Dispute Settlement Procedure". <italic>American Political Science Review</italic>, vol. 99, n. 3, pp. 389-400.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Stability and Rigidity: Politics and Design of the WTO's Dispute Settlement Procedure</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>389</fpage>
+          <lpage>400</lpage>
+          <issue>3</issue>
+          <volume>99</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rosendorff</surname>
+              <given-names>Peter B.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B86">
+        <mixed-citation>Rothstein, Robert L. 1984. "Regime Creation by a Coalition of the Weak: Lessons from the NIEO and the Integrated Program for Commodities". <italic>International Studies Quarterly</italic>, vol. 28, n. 3, pp. 307-328.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Regime Creation by a Coalition of the Weak: Lessons from the NIEO and the Integrated Program for Commodities</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>1984</year>
+          </date>
+          <fpage>307</fpage>
+          <lpage>328</lpage>
+          <issue>3</issue>
+          <volume>28</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rothstein</surname>
+              <given-names>Robert L.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B87">
+        <mixed-citation>Sartori, Giovanni. 1970. "Concept Misformation in Comparative Politics". <italic>American Political Science Review, </italic>vol. 64, n. 4, pp. 1033-1053.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Concept Misformation in Comparative Politics</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1970</year>
+          </date>
+          <fpage>1033</fpage>
+          <lpage>1053</lpage>
+          <issue>4</issue>
+          <volume>64</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sartori</surname>
+              <given-names>Giovanni</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B88">
+        <mixed-citation>Sekhon, Jasjeet S. 2005. "Making Inferences from 2 × 2 Tables: The Inadequacy of the Fisher Exact Test for Observational Data and a Principled Bayesian Alternative". Working Paper.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Making Inferences from 2 × 2 Tables: The Inadequacy of the Fisher Exact Test for Observational Data and a Principled Bayesian Alternative</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sekhon</surname>
+              <given-names>Jasjeet S.</given-names>
+            </name>
+          </person-group>
+          <comment>Working Paper</comment>
+        </element-citation>
+      </ref>
+      <ref id="B89">
+        <mixed-citation>Sell, Susan K. and Prakash, Aseem. 2004. "Using Ideas Strategically: The Contest between Business and NGO Networks in Intellectual Property Rights". <italic>International Studies Quarterly</italic>, vol. 48, n. 1, pp. 143-175.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Using Ideas Strategically: The Contest between Business and NGO Networks in Intellectual Property Rights</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>143</fpage>
+          <lpage>175</lpage>
+          <issue>1</issue>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sell</surname>
+              <given-names>Susan K.</given-names>
+            </name>
+            <name>
+              <surname>Prakash</surname>
+              <given-names>Aseem</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B90">
+        <mixed-citation>Shukla, S. P. 2002. "From the GATT to the WTO and Beyond". In: Nayyar, Deepak (ed.), <italic>Governing Globalization: Issues and Institutions</italic>. Oxford: Oxford University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Governing Globalization: Issues and Institutions</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shukla</surname>
+              <given-names>S. P.</given-names>
+            </name>
+            <name>
+              <surname>Nayyar</surname>
+              <given-names>Deepak</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B91">
+        <mixed-citation>Smith, James. 2004. "Inequality in International Trade? Developing Countries and Institutional Change in WTO Dispute Settlement". <italic>Review of International Political Economy</italic>, vol. 11, n. 3, pp. 542-573.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Inequality in International Trade?: Developing Countries and Institutional Change in WTO Dispute Settlement</article-title>
+          <source>Review of International Political Economy</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>542</fpage>
+          <lpage>573</lpage>
+          <issue>3</issue>
+          <volume>11</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>James</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B92">
+        <mixed-citation>Stanley, T. D. 2001. "Wheat from Chaff: Meta-Analysis as Quantitative Literature Review". <italic>Journal of Economic Perspectives</italic>, vol. 15, n<underline><sup>o</sup></underline> 3, pp. 131-150.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Wheat from Chaff: Meta-Analysis as Quantitative Literature Review</article-title>
+          <source>Journal of Economic Perspectives</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>131</fpage>
+          <lpage>150</lpage>
+          <issue>3</issue>
+          <volume>15</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Stanley</surname>
+              <given-names>T. D.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B93">
+        <mixed-citation>Steinberg, Richard H. 2002. "In the Shadow of Law or Power? Consensus-Based Bargaining and Outcomes in the GATT/WTO". <italic>International Organization</italic>, vol. 56, n. 2, pp. 339-374.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>In the Shadow of Law or Power?: Consensus-Based Bargaining and Outcomes in the GATT/WTO</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>339</fpage>
+          <lpage>374</lpage>
+          <issue>2</issue>
+          <volume>56</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Steinberg</surname>
+              <given-names>Richard H.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B94">
+        <mixed-citation>Subramanian, Arvind and Wei, Shang-Jin. 2007. "The WTO promotes trade, strongly but unevenly". <italic>Journal of International Economics</italic>, vol. 72, pp. 151-175.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The WTO promotes trade, strongly but unevenly</article-title>
+          <source>Journal of International Economics</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>151</fpage>
+          <lpage>175</lpage>
+          <volume>72</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Subramanian</surname>
+              <given-names>Arvind</given-names>
+            </name>
+            <name>
+              <surname>Wei</surname>
+              <given-names>Shang-Jin</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B95">
+        <mixed-citation>Thorstensen, Vera. 2000/2001. "OMC: A Retomada dos Trabalhos após o Impasse de Seattle". <italic>Política Externa</italic>, vol. 9, nº 3.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>OMC: A Retomada dos Trabalhos após o Impasse de Seattle</article-title>
+          <source>Política Externa</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <issue>3</issue>
+          <volume>9</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Thorstensen</surname>
+              <given-names>Vera</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B96">
+        <mixed-citation>Tijmes-Lhl, Jaime. 2009. "Consensus and majority voting in the WTO".<italic> World Trade Review</italic>, vol. 8, n. 3, pp. 417-437.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Consensus and majority voting in the WTO</article-title>
+          <source>World Trade Review</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <fpage>417</fpage>
+          <lpage>437</lpage>
+          <issue>3</issue>
+          <volume>8</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tijmes-Lhl</surname>
+              <given-names>Jaime</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B97">
+        <mixed-citation>Vaitsos, Constantine V. 1989. "Radical Technological Changes and the New 'Order' in the World-Economy". <italic>The European Journal of Development Research</italic>, vol. 1, n. 1, pp. 60-84.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Radical Technological Changes and the New 'Order' in the World-Economy</article-title>
+          <source>The European Journal of Development Research</source>
+          <date>
+            <year>1989</year>
+          </date>
+          <fpage>60</fpage>
+          <lpage>84</lpage>
+          <issue>1</issue>
+          <volume>1</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vaitsos</surname>
+              <given-names>Constantine V.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B98">
+        <mixed-citation>Wendt, Alexander. 2001. "Driving with the Rearview Mirror: On the Rational Science of Institutional Design". <italic>International Organization</italic>, vol. 55, n. 4, pp. 1019-1049.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Driving with the Rearview Mirror: On the Rational Science of Institutional Design</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>1019</fpage>
+          <lpage>1049</lpage>
+          <issue>4</issue>
+          <volume>55</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wendt</surname>
+              <given-names>Alexander</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B99">
+        <mixed-citation>Wendt, Alexander. 1999. <italic>Social Theory of International Politics</italic>. Cambridge: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Social Theory of International Politics</source>
+          <date>
+            <year>1999</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wendt</surname>
+              <given-names>Alexander</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B100">
+        <mixed-citation>Wendt, Alexander. 1994. "Collective Identity Formation and the International State". <italic>American Political Science Review</italic>, vol. 88, nº 2, pp. 384-396.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Collective Identity Formation and the International State</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>1994</year>
+          </date>
+          <fpage>384</fpage>
+          <lpage>396</lpage>
+          <issue>2</issue>
+          <volume>88</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wendt</surname>
+              <given-names>Alexander</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B101">
+        <mixed-citation>Wendt, Alexander. 1992. "Anarchy is What States Make of It: The Social Construction of Power Politics". <italic>International Organization</italic>, vol. 46, n. 2, pp. 391-425.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Anarchy is What States Make of It: The Social Construction of Power Politics</article-title>
+          <source>International Organization</source>
+          <date>
+            <year>1992</year>
+          </date>
+          <fpage>391</fpage>
+          <lpage>425</lpage>
+          <issue>2</issue>
+          <volume>46</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wendt</surname>
+              <given-names>Alexander</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B102">
+        <mixed-citation>WTO. 2001. Doha Declarations. Available at: <ext-link ext-link-type="uri" xlink:href="http://www.wto.org/english/res_e/booksp_e/ddec_e.pdf">http://www.wto.org/english/res_e/booksp_e/ddec_e.pdf</ext-link>.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Doha Declarations</source>
+          <date>
+            <year>2001</year>
+          </date>
+        </element-citation>
+      </ref>
+      <ref id="B103">
+        <mixed-citation>Wolfe, Robert. 2005. "See You in Geneva? Legal (Mis)Representations of the Trading System". <italic>European Journal of International Relations</italic>, vol. 11, n. 3, pp. 339-365.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>See You in Geneva?: Legal (Mis)Representations of the Trading System</article-title>
+          <source>European Journal of International Relations</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>339</fpage>
+          <lpage>365</lpage>
+          <issue>3</issue>
+          <volume>11</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wolfe</surname>
+              <given-names>Robert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B104">
+        <mixed-citation>Zangl, Bernhard. 2008. "Judicialization Matters! A Comparison of Dispute Settlement Under GATT and the WTO".<italic> International Studies Quarterly</italic>, vol. 52, pp. 825-854.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Judicialization Matters!: A Comparison of Dispute Settlement Under GATT and the WTO</article-title>
+          <source>International Studies Quarterly</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>825</fpage>
+          <lpage>854</lpage>
+          <volume>52</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Zangl</surname>
+              <given-names>Bernhard</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

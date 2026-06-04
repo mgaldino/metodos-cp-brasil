@@ -1,0 +1,165 @@
+{
+  "pid": "S1981-38212013000100002",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "f5f812d8f98c862f34f0b4e0d47b636f0002be206c231b272e49fe063bc6f30d",
+  "classification_hash": "a47839e553e830a8bfc7009b09b2a545e89edcc74ef79ee80eca0e182ece5fe7",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "Some classified variables have body-text evidence, but 1 item(s) were not found: sample_size.",
+      "supporting_excerpt": "decisions about the validity of the generalization. For example, one can find a negative relationship in a sample between edu cation and corruption, but additional in- formation is necessary to show that the result is not simply due to chance, but that",
+      "classification_value": [
+        {
+          "variable_name": "education",
+          "variable_description": "Educação em exemplo observacional/metodológico"
+        },
+        {
+          "variable_name": "sample_size",
+          "variable_description": "Tamanho amostral em simulações"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "Some classified variables have body-text evidence, but 1 item(s) were not found: p_value_behavior.",
+      "supporting_excerpt": "the validity of the generalization. For example, one can find a negative relationship in a sample between education and corr uption, bu t additional in- formation is necessary to show that the result is not simply due to chance, but that it",
+      "classification_value": [
+        {
+          "variable_name": "corruption",
+          "variable_description": "Corrupção em exemplo observacional/metodológico"
+        },
+        {
+          "variable_name": "p_value_behavior",
+          "variable_description": "Comportamento do valor-p e significância estatística"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No clear original-dataset evidence was found for the negative classification.",
+      "supporting_excerpt": null,
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "not_found_in_text",
+      "severity": "medium",
+      "reason": "The classification is true, but supporting evidence was not found in the body text.",
+      "supporting_excerpt": null,
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "approximately into highly significant, marginally significant, and not statistically significant at conventional levels, with cutoffs at p≤0.01, p≤0.05 and p> 0.10 ( Gelman, 2012: 2). According to Cramer and Howitt (2004), The level at which the null hypothesis is rejected is usually",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "contradicted_by_text",
+      "severity": "high",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "the probability that statistical significance will be indicated if it is present”. They suggest five rules of thumb regarding sta tistical power analysis: 43 (2013) 7 (1) 31 - 55 bpsr When is statistical significance not significant? (1) Researchers should always design",
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 1 contradicted and 3 not found in text; overall status fail."
+}

@@ -1,0 +1,107 @@
+{
+  "pid": "S0011-52582006000100002",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "7586b09d248ac24dc595d18d488ea5072c6f3e9eee255135eba0499b5a871141",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Brazilian Politics",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": null,
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "structure_systematize",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "time-series Granger tests and SUR regressions",
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "inflation",
+        "variable_description": "Inflação como fundamento econômico defasado"
+      },
+      {
+        "variable_name": "unemployment",
+        "variable_description": "Desemprego como fundamento econômico defasado"
+      },
+      {
+        "variable_name": "exchange_rate",
+        "variable_description": "Taxa de câmbio"
+      },
+      {
+        "variable_name": "ibovespa",
+        "variable_description": "Índice da Bolsa de Valores de São Paulo"
+      },
+      {
+        "variable_name": "c_bond_spread",
+        "variable_description": "Spread do C-bond/risco-país"
+      },
+      {
+        "variable_name": "political_campaign_controls",
+        "variable_description": "HGPE, debates, reeleição, instituto de pesquisa e popularidade presidencial residual"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "vote_intention_lula",
+        "variable_description": "Intenção agregada de voto em Lula"
+      },
+      {
+        "variable_name": "vote_intention_government_candidates",
+        "variable_description": "Intenção agregada de voto em Fernando Henrique Cardoso/José Serra"
+      },
+      {
+        "variable_name": "blank_null_undecided_other",
+        "variable_description": "Votos brancos/nulos, indecisos e demais candidatos"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "inflation",
+        "dv_var_name": "vote_intention_lula",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "ibovespa",
+        "dv_var_name": "vote_intention_lula",
+        "relationship_type": "Negative",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "HGPE",
+        "dv_var_name": "vote_intention_government_candidates",
+        "relationship_type": "Positive",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": 67,
+    "sample_size_quote": "Foram aproveitados os resultados de 67 pesquisas.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": true,
+    "statement_of_identification_assumptions_quote": "As variáveis independentes econômicas (inflação, desemprego, taxa de câmbio e Ibovespa), foram defasadas em uma unidade de observação (data da divulgação da pesquisa eleitoral) para melhor aproveitar a natureza dinâmica das séries temporais.",
+    "statement_of_identification_assumptions": true,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo constrói banco de séries temporais de pesquisas eleitorais e indicadores econômicos para testar relações entre economia, mercado financeiro e voto. Há hipóteses, variáveis, defasagens, testes de Granger, SUR e resultados estatisticamente significativos, mas não há desenho causal de identificação forte como experimento, IV ou DiD."
+  },
+  "raw_response_path": null
+}

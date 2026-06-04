@@ -1,0 +1,731 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" specific-use="sps-1.9" dtd-version="1.1" xml:lang="en" article-type="research-article">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">bpsr</journal-id>
+      <journal-title-group>
+        <journal-title>Brazilian Political Science Review</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Bras. Political Sci. Rev.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">1981-3821</issn>
+      <publisher>
+        <publisher-name>Associação Brasileira de Ciência Política</publisher-name>
+        <publisher-loc>São Paulo, SP, Brazil</publisher-loc>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">QcPbLP344FVsnLjRwYVz3Xd</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S1981-38212013000100003</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v1">S1981-3821(13)00700100003</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Articles</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Investigating elite behavior through field experiment in Brazil: do candidates answer more to core or swing voters?</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Spada</surname>
+            <given-names>Paolo</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff01"/>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Guimarães</surname>
+            <given-names>Feliciano de Sá</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff02"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff01">
+        <institution content-type="orgname">Harvard Kennedy School</institution>
+        <institution content-type="orgdiv1">Ash Center for Democratic Governance and Innovation </institution>
+        <country country="US">USA</country>
+      </aff>
+      <aff id="aff02">
+        <institution content-type="orgname">Escola Superior de Propaganda e Marketing</institution>
+        <country country="BR">Brazil</country>
+      </aff>
+      <pub-date date-type="collection" publication-format="electronic">
+        <year>2013</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>1</issue>
+      <fpage>56</fpage>
+      <lpage>73</lpage>
+      <history>
+        <date date-type="received">
+          <month>05</month>
+          <year>2012</year>
+        </date>
+        <date date-type="accepted">
+          <month>03</month>
+          <year>2013</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by/4.0/" xml:lang="en">
+          <license-p>This work is licensed under a Creative Commons Attribution 4.0 International License.</license-p>
+        </license>
+      </permissions>
+      <self-uri xlink:href="http://www.scielo.br/pdf/bpsr/v7n1/03.pdf" xml:lang="en">Full text available only in PDF format (EN)</self-uri>
+      <abstract>
+        <p>This paper explores recent advances in experimental methodology to analyze elite behavior. Using an email experiment conducted in the context of the Brazilian 2008 municipal elections, we studied whether candidates target "swing" or "core" voters during campaigns. Candidates from all parties - 1,000 candidates in all - were contacted by randomly generated citizens who identified themselves as either core or swing voters. Additionally, we randomized senders' past voting behavior and their gender. To identify the baseline answer rate, we employed a placebo treatment with no reference to the elections. Our results show that Brazilian candidates target any sender as long as she identifies herself as a potential voter. Within this general finding, models with city-specific fixed effects indicate that Brazilian politicians tend to target core voters. The paper contributes to the general experimental literature by providing an easily replicable design that can test the behavior of elite interaction with the public. At the same time, the paper extends the literature on core versus swing voters by providing an empirical test that can shed light on the effects of a specific political environment (type of election, voting rule, and party structure), and how it affects the relationship between candidates and voters during elections.</p>
+      </abstract>
+      <kwd-group xml:lang="en" kwd-group-type="author-generated">
+        <kwd>Experimental analysis</kwd>
+        <kwd>Electoral Studies</kwd>
+        <kwd>Urban Politics</kwd>
+        <kwd>Methodology</kwd>
+      </kwd-group>
+      <pub-date publication-format="electronic" date-type="pub">
+        <day>20</day>
+        <month>08</month>
+        <year>2013</year>
+      </pub-date>
+    </article-meta>
+  </front>
+  <back>
+    <ref-list>
+      <ref id="B1">
+        <mixed-citation>AMES, Barry and SMITH, Amy E. (2010), Knowing Left from Right: Left-Right Self-Identification and Ideology in Brazil, 2002-2006, <italic>Journal of Politics in Latin America</italic>, vol. 2, nº 3, pp. 3-38.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Knowing Left from Right: Left-Right Self-Identification and Ideology in Brazil, 2002-2006</article-title>
+          <source>Journal of Politics in Latin America</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <fpage>3</fpage>
+          <lpage>38</lpage>
+          <issue>3</issue>
+          <volume>2</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>AMES</surname>
+              <given-names>Barry</given-names>
+            </name>
+            <name>
+              <surname>SMITH</surname>
+              <given-names>Amy E</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>AMORIM NETO, Octavio. (1998), <italic>Of Presidents, Parties, and Ministers: Cabinet Formation and Legislative Decision-Making under Separation of Powers</italic>, Unpublished PhD dissertation, University of California, San Diego.</mixed-citation>
+        <element-citation publication-type="thesis">
+          <source>Of Presidents, Parties, and Ministers: Cabinet Formation and Legislative Decision-Making under Separation of Powers</source>
+          <date>
+            <year>1998</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>AMORIM NETO</surname>
+              <given-names>Octavio</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>ANSOLABEHERE, Stephen, and SNYDER Jr., James. (2006), Party Control of State Government and the Distribution of Public Expenditures, <italic>Scandinavian Journal of Economics,</italic> vol. 108, nº 4, pp. 547-569.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Party Control of State Government and the Distribution of Public Expenditures</article-title>
+          <source>Scandinavian Journal of Economics</source>
+          <date>
+            <year>2006</year>
+          </date>
+          <fpage>547</fpage>
+          <lpage>569</lpage>
+          <issue>4</issue>
+          <volume>108</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>ANSOLABEHERE</surname>
+              <given-names>Stephen</given-names>
+            </name>
+            <name>
+              <surname>SNYDER Jr.</surname>
+              <given-names>James</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>CALVO, Ernesto, and MURILLO, Maria V. (2004), Who Delivers? Partisan Clients in the Argentine electoral market, <italic>American Journal of Political Science</italic>, vol. 48, nº 4, pp. 742-757.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Who Delivers?: Partisan Clients in the Argentine electoral market</article-title>
+          <source>American Journal of Political Science</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>742</fpage>
+          <lpage>757</lpage>
+          <issue>4</issue>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CALVO</surname>
+              <given-names>Ernesto</given-names>
+            </name>
+            <name>
+              <surname>MURILLO</surname>
+              <given-names>Maria V.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>CALVO, Ernesto, and MURILLO, Maria V. (2009), <italic>Selecting Clients: Partisan Networks and the Electoral Benefits of Targeted Distribution</italic>, Paper prepared for presentation at the Comparative Politics Workshop, Yale University, November.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Selecting Clients: Partisan Networks and the Electoral Benefits of Targeted Distribution</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CALVO</surname>
+              <given-names>Ernesto</given-names>
+            </name>
+            <name>
+              <surname>MURILLO</surname>
+              <given-names>Maria V.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>CAREY, John, and SHUGART, Mathew S. (1995), Incentives to cultivate a personal vote: a rank ordering of electoral formulas, <italic>Electoral Studies</italic>, vol. 14, nº 4, pp. 417-439.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Incentives to cultivate a personal vote: a rank ordering of electoral formulas</article-title>
+          <source>Electoral Studies</source>
+          <fpage>417</fpage>
+          <lpage>439</lpage>
+          <issue>4</issue>
+          <volume>14</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CAREY</surname>
+              <given-names>John</given-names>
+            </name>
+            <name>
+              <surname>SHUGART</surname>
+              <given-names>Mathew S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>CARREIRÃO, Yan, and KINZO, Maria Dalva. (2004), Partidos Políticos, Preferência Partidária e Decisão Eleitoral no Brasil (1989/2000), <italic>Revista Dados</italic>, vol. 47, nº 1, pp. 131-167.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Partidos Políticos, Preferência Partidária e Decisão Eleitoral no Brasil (1989/2000)</article-title>
+          <source>Revista Dados</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <fpage>131</fpage>
+          <lpage>167</lpage>
+          <issue>1</issue>
+          <volume>47</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARREIRÃO</surname>
+              <given-names>Yan</given-names>
+            </name>
+            <name>
+              <surname>KINZO</surname>
+              <given-names>Maria Dalva</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>CARREIRÃO, Yan. (2007), Relevant factors for the voting decision in the 2002 presidential election: an analysis of the ESEB (Brazilian Electoral Study) Data, <italic>Brazilian Political Science Review</italic>, vol. 1, nº 1, pp. 70-101.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Relevant factors for the voting decision in the 2002 presidential election: an analysis of the ESEB (Brazilian Electoral Study) Data</article-title>
+          <source>Brazilian Political Science Review</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <fpage>70</fpage>
+          <lpage>101</lpage>
+          <issue>1</issue>
+          <volume>1</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARREIRÃO</surname>
+              <given-names>Yan</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>CASE, Anne. (2001), Election Goal and Income Redistribution: recent evidence from Albania, <italic>European Economic Review</italic>, vol. 45, nº 3, pp. 405-423.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Election Goal and Income Redistribution: recent evidence from Albania</article-title>
+          <source>European Economic Review</source>
+          <date>
+            <year>2001</year>
+          </date>
+          <fpage>405</fpage>
+          <lpage>423</lpage>
+          <issue>3</issue>
+          <volume>45</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>CASE</surname>
+              <given-names>Anne</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>COX, Gary, and McCUBBINS, Mathew. (1986), Electoral Politics as a Redistributive Game, <italic>The Journal of Politics</italic>, vol. 48, nº 2, pp. 370-389.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Electoral Politics as a Redistributive Game</article-title>
+          <source>The Journal of Politics</source>
+          <date>
+            <year>1986</year>
+          </date>
+          <fpage>370</fpage>
+          <lpage>389</lpage>
+          <issue>2</issue>
+          <volume>48</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COX</surname>
+              <given-names>Gary</given-names>
+            </name>
+            <name>
+              <surname>McCUBBINS</surname>
+              <given-names>Mathew</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>COX, Gary. (2009), Swing Voters, Core Voters and Distributive Politics, In: <italic>Political Representation</italic>, edited by Ian Shapiro, Susan Stokes, Elisabeth Wood and Alexander S. Kirshner. New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Political Representation</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>COX</surname>
+              <given-names>Gary</given-names>
+            </name>
+            <name>
+              <surname>Shapiro</surname>
+              <given-names>Ian</given-names>
+            </name>
+            <name>
+              <surname>Stokes</surname>
+              <given-names>Susan</given-names>
+            </name>
+            <name>
+              <surname>Wood</surname>
+              <given-names>Elisabeth</given-names>
+            </name>
+            <name>
+              <surname>Kirshner</surname>
+              <given-names>Alexander S.</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>DAHLBERG, Matz, and JOHANSSON, Eva. (2002), On the Vote-purchasing Behavior of Incumbents Governments, <italic>American Political Science Review</italic>, vol. 96, nº 2, pp. 27-40.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>On the Vote-purchasing Behavior of Incumbents Governments</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>27</fpage>
+          <lpage>40</lpage>
+          <issue>2</issue>
+          <volume>96</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DAHLBERG</surname>
+              <given-names>Matz</given-names>
+            </name>
+            <name>
+              <surname>JOHANSSON</surname>
+              <given-names>Eva</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>DIAZ-CAYEROS, Alberto. (2008), Electoral Risk and redistributive politics in Mexico and the US, <italic>Studies in Comparative International Development</italic>, vol. 43, nº 2, pp. 129-150.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Electoral Risk and redistributive politics in Mexico and the US</article-title>
+          <source>Studies in Comparative International Development</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>129</fpage>
+          <lpage>150</lpage>
+          <issue>2</issue>
+          <volume>43</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DIAZ-CAYEROS</surname>
+              <given-names>Alberto</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>DUNNING, Thad, and STOKES, Susan. (2008), <italic>Persuasion vs. Mobilization: When Do Clientelist Parties Buy Votes or Turnout?, </italic>Paper presented at the 66<sup>th</sup> Midwest Political Science Association Annual National Conference, Chicago, IL.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Persuasion vs. Mobilization: When Do Clientelist Parties Buy Votes or Turnout?</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>DUNNING</surname>
+              <given-names>Thad</given-names>
+            </name>
+            <name>
+              <surname>STOKES</surname>
+              <given-names>Susan</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>FIRTH, Michael. (1981), Racial Discrimination in the British Labor Market, <italic>Industrial and Labor Relations Review</italic>, vol. 34, nº 2, pp. 265-272.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Racial Discrimination in the British Labor Market</article-title>
+          <source>Industrial and Labor Relations Review</source>
+          <date>
+            <year>1981</year>
+          </date>
+          <fpage>265</fpage>
+          <lpage>272</lpage>
+          <issue>2</issue>
+          <volume>34</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>FIRTH</surname>
+              <given-names>Michael</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>GERBER, Alan; GREEN, Donald, and KAPLAN, Edward. (2004), The Illusion of Learning from Observational Research, In: <italic>Problems and Methods in the Study of Politics</italic>, edited by Ian Shapiro, Roger Smith, and Tarek Massoud. New York: Cambridge University Press.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Problems and Methods in the Study of Politics</source>
+          <date>
+            <year>2004</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GERBER</surname>
+              <given-names>Alan</given-names>
+            </name>
+            <name>
+              <surname>GREEN</surname>
+              <given-names>Donald</given-names>
+            </name>
+            <name>
+              <surname>KAPLAN</surname>
+              <given-names>Edward</given-names>
+            </name>
+            <name>
+              <surname>Shapiro</surname>
+              <given-names>Ian</given-names>
+            </name>
+            <name>
+              <surname>Smith</surname>
+              <given-names>Roger</given-names>
+            </name>
+            <name>
+              <surname>Massoud</surname>
+              <given-names>Tarek</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>GERBER, Alan, and GREEN, Donald. (2012), <italic>Field Experiments: design, analysis, and interpretation</italic>. New York: W.W. Norton &amp; Company.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Field Experiments: design, analysis, and interpretation</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GERBER</surname>
+              <given-names>Alan</given-names>
+            </name>
+            <name>
+              <surname>GREEN</surname>
+              <given-names>Donald</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>GREEN, Donald. (2009), <italic>Regression Adjustments to Experimental Data: Do David Freedman's Concerns Apply to Political Science?, </italic>Paper presented at the 26<sup>th</sup> annual meeting of the Society for Political Methodology, Yale University, July 23-25. &lt;<ext-link ext-link-type="uri" xlink:href="http://www.polmeth.wustl.edu/media/Paper/Green%20--%20Regression%20Adjustments%20to%20Experimental%20Data%20070809.pdf">http://www.polmeth.wustl.edu/media/Paper/Green -- Regression Adjustments to Experimental Data 070809.pdf</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Regression Adjustments to Experimental Data: Do David Freedman's Concerns Apply to Political Science?</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>GREEN</surname>
+              <given-names>Donald</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>LINDBECK, Assar, and WEIBULL, Jorgen. (1987), Balanced-budget Redistribution as the Outcome of Political Competition, <italic>Public Choice</italic>, nº 52, pp. 273-297.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Balanced-budget Redistribution as the Outcome of Political Competition</article-title>
+          <source>Public Choice</source>
+          <date>
+            <year>1987</year>
+          </date>
+          <fpage>273</fpage>
+          <lpage>297</lpage>
+          <issue>52</issue>
+          <person-group person-group-type="author">
+            <name>
+              <surname>LINDBECK</surname>
+              <given-names>Assar</given-names>
+            </name>
+            <name>
+              <surname>WEIBULL</surname>
+              <given-names>Jorgen</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>MAGALONI, Beatriz; DIAZ-CAYEROS, Alberto, and ESTEVEZ, Frederico. (2008), <italic>The Core Voter Model: evidence from Mexico</italic>, Paper presented at 104<sup>th</sup> American Political Science Association Meeting, Boston, MA.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>The Core Voter Model: evidence from Mexico</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>MAGALONI</surname>
+              <given-names>Beatriz</given-names>
+            </name>
+            <name>
+              <surname>DIAZ-CAYEROS</surname>
+              <given-names>Alberto</given-names>
+            </name>
+            <name>
+              <surname>ESTEVEZ</surname>
+              <given-names>Frederico</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>NICHTER, Simeon. (2008), Vote Buying or Vote Turnout Buying? Machine Politics and the Secret Ballot, <italic>American Political Science Review</italic>, vol. 102, nº1, pp. 19-31.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Vote Buying or Vote Turnout Buying?: Machine Politics and the Secret Ballot</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>2008</year>
+          </date>
+          <fpage>19</fpage>
+          <lpage>31</lpage>
+          <issue>1</issue>
+          <volume>102</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NICHTER</surname>
+              <given-names>Simeon</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>NICOLAU, Jairo. (1996), <italic>Multipartidarismo e Democracia: Um Estudo sobre o Sistema Partidário Brasileiro (1985-94).</italic> Rio de Janeiro: Fundação Getulio Vargas Editora.</mixed-citation>
+        <element-citation publication-type="book">
+          <source>Multipartidarismo e Democracia: Um Estudo sobre o Sistema Partidário Brasileiro (1985-94)</source>
+          <date>
+            <year>1996</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NICOLAU</surname>
+              <given-names>Jairo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>NICOLAU, Jairo. (2002), Como Controlar o Representante? Considerações sobre as eleições para a Câmara dos Deputados, <italic>Revista Dados</italic>, vol. 45, nº 2, pp. 219-236.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Como Controlar o Representante?: Considerações sobre as eleições para a Câmara dos Deputados</article-title>
+          <source>Revista Dados</source>
+          <date>
+            <year>2002</year>
+          </date>
+          <fpage>219</fpage>
+          <lpage>236</lpage>
+          <issue>2</issue>
+          <volume>45</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>NICOLAU</surname>
+              <given-names>Jairo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>OREOPOULOS, Philip. (2009), <italic>Why Do Skilled Immigrants Struggle in the Labor Market? A Field Experiment with Six Thousand Resumes, </italic>NBER Working Paper Series nº 15036, National Bureau of Economic Research, Cambridge, &lt;<ext-link ext-link-type="uri" xlink:href="http://www.nber.org/papers/w15036.pdf">http://www.nber.org/papers/w15036.pdf</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Why Do Skilled Immigrants Struggle in the Labor Market?: A Field Experiment with Six Thousand Resumes</source>
+          <date>
+            <year>2009</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>OREOPOULOS</surname>
+              <given-names>Philip</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>SAMUELS, David, and ZUCCO, Cesar. (2012), <italic>The Power of Partisanship in Brazil: Evidence from Survey Experiments</italic>, Working paper, &lt;<ext-link ext-link-type="uri" xlink:href="http://cepesp.foles.wordpress.com/2013/03/samuels-zucco-rr.pdf">http://cepesp.foles.wordpress.com/2013/03/samuels-zucco-rr.pdf</ext-link>&gt;</mixed-citation>
+        <element-citation publication-type="book">
+          <source>The Power of Partisanship in Brazil: Evidence from Survey Experiments</source>
+          <date>
+            <year>2012</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SAMUELS</surname>
+              <given-names>David</given-names>
+            </name>
+            <name>
+              <surname>ZUCCO</surname>
+              <given-names>Cesar</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B26">
+        <mixed-citation>SCHADY, Norbert. (2000), The Political Economy of Expenditure by the Peruvian Social Fund (FONCODES), <italic>American Political Science Review</italic>, vol. 94, nº 2, pp. 289-304.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>The Political Economy of Expenditure by the Peruvian Social Fund (FONCODES)</article-title>
+          <source>American Political Science Revie</source>
+          <date>
+            <year>2000</year>
+          </date>
+          <fpage>289</fpage>
+          <lpage>304</lpage>
+          <issue>2</issue>
+          <volume>94</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SCHADY</surname>
+              <given-names>Norbert</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B27">
+        <mixed-citation>SPADA, Paolo. (2007), <italic>Political Competition, Candidate Rationality and Selective Perception: a Field Experiment of Italian 2006 National Elections</italic>, Paper presented at the 65<sup>th</sup> Midwest Political Science Association Annual National Conference, Chicago, IL.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>Political Competition, Candidate Rationality and Selective Perception: a Field Experiment of Italian 2006 National Elections</source>
+          <date>
+            <year>2007</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SPADA</surname>
+              <given-names>Paolo</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B28">
+        <mixed-citation>SPADA, Paolo, GUIMARÃES, Feliciano S, CEPALUNI, Gabriel, and KERN, Holger. (2010), <italic>On Politicians' Office-seeking behavior: evidence from a pair of field experiments in Brazil, </italic>Paper presented at the 68<sup>th</sup> Midwest Political Science Association Annual National Conference, Chicago, IL.</mixed-citation>
+        <element-citation publication-type="confproc">
+          <source>On Politicians' Office-seeking behavior: evidence from a pair of field experiments in Brazil</source>
+          <date>
+            <year>2010</year>
+          </date>
+          <person-group person-group-type="author">
+            <name>
+              <surname>SPADA</surname>
+              <given-names>Paolo</given-names>
+            </name>
+            <name>
+              <surname>GUIMARÃES</surname>
+              <given-names>Feliciano S</given-names>
+            </name>
+            <name>
+              <surname>CEPALUNI</surname>
+              <given-names>Gabriel</given-names>
+            </name>
+            <name>
+              <surname>KERN</surname>
+              <given-names>Holger</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B29">
+        <mixed-citation>STOKES, Susan. (2005), Perverse Accountability: a formal model of machine politics with evidence from Argentina, <italic>American Political Science Review</italic>, vol. 99, nº 3, pp. 315-326.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Perverse Accountability: a formal model of machine politics with evidence from Argentina</article-title>
+          <source>American Political Science Review</source>
+          <date>
+            <year>2005</year>
+          </date>
+          <fpage>315</fpage>
+          <lpage>326</lpage>
+          <issue>3</issue>
+          <volume>99</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>STOKES</surname>
+              <given-names>Susan</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+      <ref id="B30">
+        <mixed-citation>WEICHSELBAUMER, Doris. (2003), Sexual Orientation Discrimination in Hiring, <italic>Labour Economics,</italic> vol. 10, nº 6, pp. 629-642.</mixed-citation>
+        <element-citation publication-type="journal">
+          <article-title>Sexual Orientation Discrimination in Hiring</article-title>
+          <source>Labour Economics</source>
+          <date>
+            <year>2003</year>
+          </date>
+          <fpage>629</fpage>
+          <lpage>642</lpage>
+          <issue>6</issue>
+          <volume>10</volume>
+          <person-group person-group-type="author">
+            <name>
+              <surname>WEICHSELBAUMER</surname>
+              <given-names>Doris</given-names>
+            </name>
+          </person-group>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>

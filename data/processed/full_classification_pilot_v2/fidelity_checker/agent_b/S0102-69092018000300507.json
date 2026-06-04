@@ -1,0 +1,165 @@
+{
+  "pid": "S0102-69092018000300507",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "d06db8a6e911c0c2c7a0c7ca4a10b6f06dfab66712abbc099170b5f547c8fbbb",
+  "classification_hash": "066436ca07094d109336f356a8a111a32b42f28c5f395aa6a168c0bccfb3bdd7",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "de renda, apresentando-os como a explicação dessa migração eleitoral, esses autores assumem o fato de o eleitorado de classe m édia ter abandonado Lula e o partido dele como natural . Na verdade, eles apenas explicam uma parte do fenômeno, qual seja,",
+      "classification_value": [
+        {
+          "variable_name": "Media exposure",
+          "variable_description": "Exposure to specific news outlets or journalistic frames during the 2014 election."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "0,1% em 2014. Revisão teórica Uma ampla literatura sobre o voto econômico dá lastro a já famosa advertência: It’s the economy , stupid! O desenvolvimento de tal vertente é tributário da teoria econômica da democracia de Anthony Downs (1957), ainda que não",
+      "classification_value": [
+        {
+          "variable_name": "Economic evaluation and government approval",
+          "variable_description": "Audience reception variables related to the economy and approval of the federal government."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classified relationship items have variable and result-language support in the body.",
+      "supporting_excerpt": "de renda, apresentando-os como a explicação dessa migração eleitoral, esses autores assumem o fato de o eleitorado de classe m édia ter abandonado Lula e o partido dele como natural . Na verdade, eles apenas explicam uma parte do fenômeno, qual seja,",
+      "classification_value": [
+        {
+          "iv_var_name": "Media exposure",
+          "dv_var_name": "Economic evaluation and government approval",
+          "relationship_type": "Unknown",
+          "statistically_significant": true,
+          "substantively_significant": false
+        }
+      ]
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The classification claims survey data, but no own-analysis survey/questionnaire/opinion-poll evidence was found.",
+      "supporting_excerpt": null,
+      "classification_value": "uses_public_available_survey"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification says not original, but the body describes original data construction, collection, or qualitative field interviews.",
+      "supporting_excerpt": "das variáveis, mas a intensidades de associações e relacionamentos controlados pela presença de medidas sociodemográficas relevantes. O ba nco de dados utilizado n esta fase do artigo advém da “Pesquisa Brasileira de Mídia, de 2015”, um survey quantitativo nacional encomendado pela Secretaria",
+      "classification_value": "not_original"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "pela Secretaria de Comunicação da Presidência da República, também em 2014. A ferramenta de análise estatística utilizada é a re gressão m ultinominal, na qual as variáveis dependentes serão a “satisfação com o governo” e a “avaliação retrospectiva sociotrópica da economia”. As",
+      "classification_value": "Kitchen Sink Linear Model"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "contradicted_by_text",
+      "severity": "medium",
+      "reason": "The classification is false, but the body contains direct evidence for the field.",
+      "supporting_excerpt": "da economia e da popularidade do presidente. Utilizando a autoregressão vetorial e o teste de Granger para estabelecer anterioridade ca usal, os autores concluem que manchetes relatando recessão econômica influenciam o sentimento dos consumidores em relação à economia. Também encontram uma tendência",
+      "classification_value": false
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains explanatory, determinant, or association language consistent with an implicit causal claim.",
+      "supporting_excerpt": "ou mesmo ao longo da história do mesmo país (Duch e Stevenson, 2008). A maneira pela qual os autores e xplicam as variações significativas no voto econômico é atribuí-las a outros fatores contextuais pertinentes a cada caso nacional (Duch, 2007). Entre os",
+      "classification_value": true
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains equation, model-specification, or regression language.",
+      "supporting_excerpt": "no modelo anterior, é importante destacar que esse efeito já é controlado por todas as variáveis sociodemográficas inseridas na e quação, mesmo que mantidas estáveis as idades, escolaridade, classe social, sexo e local de moradia, o efeito da audiência continua estatisticamente válido.",
+      "classification_value": true
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "contradicted_by_text",
+      "severity": "low",
+      "reason": "The classification says no mechanisms/channels, but mechanism/channel language appears in the body.",
+      "supporting_excerpt": "objetiva da economia (Veiga e Ross, 2016). No presente trabalho, propomos avançar um passo no sentido de deslindar os me canismos f ormadores de tais percepções, ao incluir a questão da mediação da informação na hipótese explicativa. Utilizamos dois bancos de dados.",
+      "classification_value": "No Mention of Mechanisms/Channels"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains statistical-significance language.",
+      "supporting_excerpt": "representativos da população em geral devido à própria natureza dessa metodologia. Já os surveys são capazes de gerar dados estatisticamente significativo s, mas não são apropriados para o acompanhamento – passo a passo – da recepção da mensagem e do processo de",
+      "classification_value": true
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 4 priority fidelity issue(s): 3 contradicted and 1 not found in text; overall status fail."
+}

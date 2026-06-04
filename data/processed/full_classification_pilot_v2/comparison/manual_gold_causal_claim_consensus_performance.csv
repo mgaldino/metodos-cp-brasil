@@ -1,0 +1,3 @@
+field,n_articles,n_consensus_accepted,accepted_coverage,n_matches_previous,agreement_rate
+makes_explicit_causal_claim,175,18,0.10285714285714286,13,0.7222222222222222
+makes_implicit_causal_claim,175,8,0.045714285714285714,7,0.875

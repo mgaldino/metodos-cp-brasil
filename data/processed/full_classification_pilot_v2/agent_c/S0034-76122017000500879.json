@@ -1,0 +1,88 @@
+{
+  "pid": "S0034-76122017000500879",
+  "agent_id": "agent_c",
+  "prompt_version": "agent_c_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "449e3c37351931c33632f2f8bb552dfb03763098b383fb2108c75789847cf754",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": true,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "procure_original_data",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Kitchen Sink Linear Model",
+    "other_research_design": null,
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "procurement_modality",
+        "variable_description": "Modalidade de licitação da obra"
+      },
+      {
+        "variable_name": "service_type",
+        "variable_description": "Tipo de serviço/obra"
+      },
+      {
+        "variable_name": "municipal_characteristics",
+        "variable_description": "População, renda per capita, anos de estudo, IDHM e IFGF"
+      },
+      {
+        "variable_name": "mayor_profile",
+        "variable_description": "Escolaridade, sexo, reeleição e alinhamento político do prefeito"
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "delta_deadline",
+        "variable_description": "Percentual de dias em atraso da obra"
+      },
+      {
+        "variable_name": "delta_price",
+        "variable_description": "Percentual pago acima do valor orçado"
+      }
+    ],
+    "main_variable_relationship": [
+      {
+        "iv_var_name": "procurement_modality",
+        "dv_var_name": "delta_deadline",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      },
+      {
+        "iv_var_name": "municipal_characteristics",
+        "dv_var_name": "delta_price",
+        "relationship_type": "Unknown",
+        "statistically_significant": true,
+        "substantively_significant": true
+      }
+    ],
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": true,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": 333,
+    "sample_size_quote": "retiradas do portal Geo-Obras, reunidas entre 3 de junho e 12 de agosto de 2015, totalizando 333 obras em 50 municípios, com contratos assinados e concluídos entre os anos de 2006 e 2015.",
+    "claims_any_statistically_significant_results": true,
+    "references_power_analysis": false,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": true,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned But Not Explored",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "quantitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo estima modelos Tobit para explicar atraso e sobrepreço em 333 obras educacionais nos municípios capixabas. Há variáveis dependentes e independentes definidas, equações/regressões e resultados de significância, mas o desenho é observacional sem identificação causal forte."
+  },
+  "raw_response_path": null
+}

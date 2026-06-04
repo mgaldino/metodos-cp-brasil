@@ -1,0 +1,57 @@
+{
+  "pid": "S0102-69092025000100509",
+  "agent_id": "agent_b",
+  "prompt_version": "agent_b_v2+common_schema_v2",
+  "model": "codex_subagent_inherited",
+  "run_timestamp": "2026-06-03T00:00:00Z",
+  "input_text_hash": "1fb0a14524471b0fe2baa476ae2a4d58f343e4bc73963b7887238759a01c5e4d",
+  "source_file": "data/processed/fulltext_gold/article_texts_gold.csv",
+  "classification": {
+    "error_in_raw_text": "No Error",
+    "subfield": "Public Policy/Administration",
+    "is_empirical_quant_paper": false,
+    "general_goal_of_analysis": "Explain",
+    "single_country_study": "single_country",
+    "single_region": "single_region",
+    "countries_of_focus": "Brazil",
+    "paper_uses_survey_data": "no_survey_data",
+    "uses_original_dataset": "not_original",
+    "seeks_determinants": true,
+    "main_causal_research_design": "Other",
+    "other_research_design": "qualitative human-rights crisis case analysis",
+    "instrumental_variable_instrument": null,
+    "placebo_test": false,
+    "independent_variables": [
+      {
+        "variable_name": "State action and omission",
+        "variable_description": "Government policy, illegal mining, health-system failures and violence in Yanomami territory."
+      }
+    ],
+    "dependent_variables": [
+      {
+        "variable_name": "Yanomami humanitarian crisis",
+        "variable_description": "Hunger, malnutrition, mortality and rights violations in the Yanomami Indigenous Land."
+      }
+    ],
+    "main_variable_relationship": null,
+    "makes_explicit_causal_claim": true,
+    "makes_implicit_causal_claim": false,
+    "strong_non_causal_causal_qualification": false,
+    "sample_size": null,
+    "sample_size_quote": null,
+    "claims_any_statistically_significant_results": null,
+    "references_power_analysis": null,
+    "clearly_defined_explanatory_variable": true,
+    "clear_causal_quantity_of_interest": "FALSE",
+    "specifies_estimate_equations": null,
+    "discusses_threats_to_causality": false,
+    "statement_of_identification_assumptions_quote": null,
+    "statement_of_identification_assumptions": false,
+    "effort_to_explore_mechanisms": "Mechanisms/Channels Mentioned With Substantial Exploration",
+    "mentions_pre_registered_design_and_analysis_plan": false,
+    "evidence_type": "qualitative",
+    "method_status": "explicit",
+    "brief_justification": "O artigo \"Negligência ou Genocídio? A crise humanitária na Terra Indígena Yanomami no Brasil\" apresenta argumento qualitativo explicativo com linguagem causal ou processual. Como não define estimando nem suposições de identificação, classifiquei o desenho como Other e a quantidade causal como FALSE."
+  },
+  "raw_response_path": null
+}

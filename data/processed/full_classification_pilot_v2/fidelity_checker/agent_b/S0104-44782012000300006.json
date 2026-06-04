@@ -1,0 +1,157 @@
+{
+  "pid": "S0104-44782012000300006",
+  "audited_agent_id": "agent_b",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "1ea508e73eac6769646eb5ca9a75a93013f90c8955f3978fa0f20719e3f5196a",
+  "classification_hash": "ab7873c75f47b19e60cbf168eb0209a2947bbb1198fcf94dcdc6fb3307c1d381",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no sample-size quotation claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "dos estudos sobre o processo de criação e funcionamento, há poucos trabalhos que analisam o controle das instituições brasileiras de accountabilit y horizontal sobre as agências. O modelo de agência reguladora autônoma tem suscitado a discussão dos riscos que esse desenho institucional",
+      "classification_value": [
+        {
+          "variable_name": "TCU accountability rulings",
+          "variable_description": "Selected audit-court decisions over regulatory agencies."
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "forma, esta constitui-se uma relação naturalmente conflituosa, gerando dois tipos de problemas denominados pela literatura de \"perdas de agência\" (a gency losses). Primeiro, o mandatário pode, sistematicamente, optar por ações que sejam contrárias aos desejos do mandante. Segundo, para garantir o cumprimento",
+      "classification_value": [
+        {
+          "variable_name": "Regulatory-agency control and user impact",
+          "variable_description": "Horizontal accountability over agencies and implications for service users."
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "os temas são, eles próprios, menos relevantes. Clique para ampliar Para completar a análise dos acórdãos, também foram realizadas 15 entrevistas qualitati vas com parlamentares do Congresso Nacional, auditores do TCU, funcionários das agências reguladoras, diretores das empresas reguladas e funcionários dos",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains method/design language consistent with the classified design.",
+      "supporting_excerpt": "uma apresentação do desenho de pesquisa e do método utilizado neste estudo. Por fim, na quarta seção, faço uma a nálise de discurso de três acórdãos selecionados para este artigo com o objetivo de testar as hipóteses apresentadas na primeira seção. II.",
+      "classification_value": "Other"
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains direct causal/effect/impact language.",
+      "supporting_excerpt": "2004); iii) para quem a agência reguladora deve ser accountable (idem)? Nesse contexto, o objetivo deste artigo é analisar o efeit o do controle externo horizontal exercido pelo Tribunal de Contas da União (TCU) sobre as atividades das agências reguladoras brasileiras federais.",
+      "classification_value": true
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim implicit causal language.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim explicit identification assumptions.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains mechanism/channel language consistent with the classification.",
+      "supporting_excerpt": "bojo da reforma do Estado durante a década de 1990 e diferenciam-se de outras instituições burocráticas devido à existência de mecanismo s institucionais que lhe conferem autonomia em relação aos políticos eleitos. O desenho dessas instituições pode variar bastante de acordo com",
+      "classification_value": "Mechanisms/Channels Mentioned But Not Explored"
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim preregistration or a pre-analysis plan.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    }
+  ],
+  "overall_fidelity_status": "pass",
+  "brief_summary": "All priority factual fields audited by Agent D were supported or made no specific factual claim."
+}

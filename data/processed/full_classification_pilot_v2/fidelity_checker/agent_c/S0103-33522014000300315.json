@@ -1,0 +1,157 @@
+{
+  "pid": "S0103-33522014000300315",
+  "audited_agent_id": "agent_c",
+  "checker_agent_id": "agent_d",
+  "input_text_hash": "3615a20582a50c6f0db4abb1da050cf24a8fecf8ace0f8564c0dba1895c33941",
+  "classification_hash": "a01936b0844a5840f6515dda7617839a01d325ed7cc132d7413bda7e1e4ed0be",
+  "field_audits": [
+    {
+      "field": "sample_size",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The accompanying quote is in the body text but does not clearly contain the classified sample size with sample-unit language.",
+      "supporting_excerpt": "política criminal brasileira aprovada de 1989 a 2006 A seguir, apresento os dados coletados nesta pesquisa de acordo com algumas variáveis que serão apresentadas em relação às 84 leis aprovadas e transformadas em leis ordinárias. Com relação aos partidos, estados e regiões",
+      "classification_value": 84
+    },
+    {
+      "field": "sample_size_quote",
+      "status": "not_found_in_text",
+      "severity": "high",
+      "reason": "The quote appears in the body text but does not clearly support the paired sample-size value.",
+      "supporting_excerpt": "política criminal brasileira aprovada de 1989 a 2006 A seguir, apresento os dados coletados nesta pesquisa de acordo com algumas variáveis que serão apresentadas em relação às 84 leis aprovadas e transformadas em leis ordinárias. Com relação aos partidos, estados e regiões",
+      "classification_value": "A seguir, apresento os dados coletados nesta pesquisa de acordo com algumas variáveis que serão apresentadas em relação às 84 leis aprovadas e transformadas em leis ordinárias."
+    },
+    {
+      "field": "independent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "aprovada por partido Em relação às iniciativas dos deputados e senadores, os dados referem-se somente aos projetos de leis com orige m na Câmara dos Deputados e no Senado Federal - o que totalizou 40 iniciativas que são oriundas especificamente do Congresso",
+      "classification_value": [
+        {
+          "variable_name": "law_origin_and_proponent",
+          "variable_description": "Origem, partido, estado e região dos proponentes das leis"
+        }
+      ]
+    },
+    {
+      "field": "dependent_variables",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "All classified variables have textual evidence in the canonical body.",
+      "supporting_excerpt": "mecanismos não legais ou extralegais que envolvam a segurança pública no Brasil. A análise, portanto, limita-se ao conteúdo das l eis resultantes da votação final (outputs) do Parlamento brasileiro1. Em relação ao campo teórico, dialogo criticamente com as teses sobre o recrudescimento",
+      "classification_value": [
+        {
+          "variable_name": "criminal_policy_outputs",
+          "variable_description": "Leis de segurança pública e justiça criminal aprovadas"
+        }
+      ]
+    },
+    {
+      "field": "main_variable_relationship",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no specific IV-DV relationship claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "paper_uses_survey_data",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "No own-analysis survey/questionnaire/opinion-poll evidence was found; contextual or qualitative-interview mentions are not counted.",
+      "supporting_excerpt": null,
+      "classification_value": "no_survey_data"
+    },
+    {
+      "field": "uses_original_dataset",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The body contains evidence of data collection, construction, systematization, field interviews, or sourced dataset assembly compatible with the classified category.",
+      "supporting_excerpt": "possibilita dialogar com as interpretações produzidas até o momento sobre punição-políticas de segurança e justiça criminal a partir do banco de dados construído com as normas sancionadas no período descrito. Por essa especificidade, o trabalho não contempla uma análise das práticas e",
+      "classification_value": "structure_systematize"
+    },
+    {
+      "field": "main_causal_research_design",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no causal-research-design claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_explicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "makes_implicit_causal_claim",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate identification-assumption claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "statement_of_identification_assumptions_quote",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no quotation claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "specifies_estimate_equations",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim specified estimating equations.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "effort_to_explore_mechanisms",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no mechanism-effort claim.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    },
+    {
+      "field": "claims_any_statistically_significant_results",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim statistically significant results.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "references_power_analysis",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification does not claim a power-analysis reference.",
+      "supporting_excerpt": null,
+      "classification_value": false
+    },
+    {
+      "field": "mentions_pre_registered_design_and_analysis_plan",
+      "status": "supported_by_text",
+      "severity": "none",
+      "reason": "The classification makes no determinate factual claim for this field.",
+      "supporting_excerpt": null,
+      "classification_value": null
+    }
+  ],
+  "overall_fidelity_status": "fail",
+  "brief_summary": "Agent D found 2 priority fidelity issue(s): 0 contradicted and 2 not found in text; overall status fail."
+}
