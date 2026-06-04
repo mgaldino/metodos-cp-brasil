@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Relatorio de takeaways - piloto v3</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_pilot/outputs/takeaways_report_pilot_175.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Relatorio de takeaways - piloto v3</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#relatório-de-takeaways---piloto-v3-175-artigos"
+id="toc-relatório-de-takeaways---piloto-v3-175-artigos">Relatório de
+takeaways - piloto v3 (175 artigos)</a>
+<ul>
+<li><a href="#takeaways-principais"
+id="toc-takeaways-principais">Takeaways principais</a></li>
+<li><a href="#distribuições-finais"
+id="toc-distribuições-finais">Distribuições finais</a>
+<ul>
+<li><a href="#artigo-empírico" id="toc-artigo-empírico">Artigo
+empírico</a></li>
+<li><a href="#tipo-de-evidência-empírica"
+id="toc-tipo-de-evidência-empírica">Tipo de evidência empírica</a></li>
+<li><a href="#tipo-de-análise-quantitativa"
+id="toc-tipo-de-análise-quantitativa">Tipo de análise
+quantitativa</a></li>
+<li><a href="#triagem-de-revolução-da-credibilidade"
+id="toc-triagem-de-revolução-da-credibilidade">Triagem de revolução da
+credibilidade</a></li>
+</ul></li>
+<li><a href="#o-que-funcionou" id="toc-o-que-funcionou">O que
+funcionou</a></li>
+<li><a href="#o-que-não-deu-certo-na-primeira-passada"
+id="toc-o-que-não-deu-certo-na-primeira-passada">O que não deu certo na
+primeira passada</a></li>
+<li><a href="#métodos-de-credibilidade-detectados"
+id="toc-métodos-de-credibilidade-detectados">Métodos de credibilidade
+detectados</a></li>
+<li><a href="#tough-calls" id="toc-tough-calls">Tough calls</a></li>
+<li><a href="#checagens-de-integridade"
+id="toc-checagens-de-integridade">Checagens de integridade</a></li>
+<li><a href="#recomendação" id="toc-recomendação">Recomendação</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="relatório-de-takeaways---piloto-v3-175-artigos">Relatório de
+takeaways - piloto v3 (175 artigos)</h1>
+<p>Gerado em: 2026-06-04 14:04:09 -03</p>
+<p>Este relatório resume a expansão do classificador metodológico
+<code>credibility_prompt_v3</code> para o conjunto completo do piloto. A
+classificação foi feita sem API keys e sem runners de API, usando o
+<code>body_text</code> canônico e o consenso full-body v2 apenas como
+guarda conservadora contra falsos positivos.</p>
+<h2 id="takeaways-principais">Takeaways principais</h2>
+<ul>
+<li>O piloto ficou com <strong>108/175 artigos empíricos</strong>
+(61.7%) e <strong>67 não empíricos</strong> (38.3%).</li>
+<li>A variável Torreblanca ampla identifica <strong>52 artigos com
+alguma análise quantitativa original ou reanálise</strong> (29.7%).</li>
+<li>O módulo qualitativo identifica <strong>74 artigos com evidência
+qualitativa substantiva</strong> (42.3%).</li>
+<li>Apenas <strong>35 artigos</strong> (20.0%) entram na triagem de
+métodos da revolução da credibilidade.</li>
+<li>Só <strong>1 artigo</strong> foi classificado com método moderno de
+credibilidade: <code>S0104-62762018000100209</code>, por
+<code>other_modern_causal_method</code>.</li>
+<li>Houve <strong>51 tough calls</strong> (29.1%). A maioria é esperada:
+artigos qualitativos com números contextuais e modelos observacionais
+com linguagem causal, mas sem desenho moderno.</li>
+</ul>
+<h2 id="distribuições-finais">Distribuições finais</h2>
+<h3 id="artigo-empírico">Artigo empírico</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">is_empirical_paper</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: left;">61.7%</td>
+</tr>
+<tr>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: left;">38.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipo-de-evidência-empírica">Tipo de evidência empírica</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">empirical_evidence_type</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: left;">38.3%</td>
+</tr>
+<tr>
+<td style="text-align: left;">qualitative_only</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: left;">32.0%</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantitative_only</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: left;">19.4%</td>
+</tr>
+<tr>
+<td style="text-align: left;">mixed_empirical</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">10.3%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipo-de-análise-quantitativa">Tipo de análise quantitativa</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">quantitative_analysis_type</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">70.3%</td>
+</tr>
+<tr>
+<td style="text-align: left;">statistical_modeling</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">12.6%</td>
+</tr>
+<tr>
+<td style="text-align: left;">descriptive_statistics_only</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">9.7%</td>
+</tr>
+<tr>
+<td style="text-align: left;">bivariate_tests_or_correlations_only</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">7.4%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="triagem-de-revolução-da-credibilidade">Triagem de revolução da
+credibilidade</h3>
+<table>
+<thead>
+<tr>
+<th
+style="text-align: left;">credibility_revolution_screen_applicable</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: left;">80.0%</td>
+</tr>
+<tr>
+<td style="text-align: left;">TRUE</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">20.0%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="o-que-funcionou">O que funcionou</h2>
+<ul>
+<li><strong>A regra anti-falso-positivo foi indispensável.</strong>
+Depois da auditoria, artigos qualitativos que só mencionavam
+estatísticas externas ou números contextuais deixaram de virar
+quantitativos.</li>
+<li><strong>A separação entre Torreblanca amplo e tipo quantitativo
+brasileiro ficou operacional.</strong> O classificador distingue
+<code>descriptive_statistics_only</code> de
+<code>bivariate_tests_or_correlations_only</code> e
+<code>statistical_modeling</code>.</li>
+<li><strong>A triagem causal ficou conservadora.</strong> Dos 175
+artigos, 35 entram no screen; entre eles, quase todos são
+regressões/modelos observacionais sem desenho moderno explícito.</li>
+<li><strong>O reaproveitamento dos 5 objetos v3 já classificados
+funcionou.</strong> Eles entraram diretamente no CSV/JSONL final sem
+reclassificação por regra.</li>
+<li><strong>As validações automáticas pegaram problemas reais.</strong>
+O CSV tem 175 linhas, 175 PIDs únicos e nenhum caso de inferência
+estatística marcada como verdadeira sem citação.</li>
+</ul>
+<h2 id="o-que-não-deu-certo-na-primeira-passada">O que não deu certo na
+primeira passada</h2>
+<p>A primeira versão das regras era permissiva demais. Ela capturava
+palavras soltas como <code>modelo</code>, <code>correlação</code>,
+<code>base de dados</code>, <code>survey</code> e
+<code>regressões</code>, mesmo quando apareciam em sentido conceitual,
+em revisão de literatura ou em dados de terceiros. A auditoria manual
+dos falsos positivos levou a estes ajustes:</p>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 7%" />
+<col style="width: 3%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">indicador</th>
+<th style="text-align: right;">pre_auditoria</th>
+<th style="text-align: right;">final</th>
+<th style="text-align: left;">interpretacao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">mixed_empirical</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">A regra inicial superestimava artigos
+mistos quando textos qualitativos mencionavam dados ou surveys de
+terceiros.</td>
+</tr>
+<tr>
+<td style="text-align: left;">quantitative_analysis_type == none</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">A auditoria aumentou a proteção contra
+falsos positivos quantitativos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">statistical_modeling</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">Termos vagos como modelo, regressões e
+correlação foram apertados.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;">credibility_revolution_screen_applicable</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">A fila de triagem causal ficou menor e
+mais defensável.</td>
+</tr>
+</tbody>
+</table>
+<p>Também apareceram dois falsos positivos metodológicos importantes
+durante a auditoria:</p>
+<ul>
+<li><code>matching</code> em texto sobre mercado de trabalho foi lido
+inicialmente como pareamento causal; a regra foi restringida para
+<code>propensity score</code>, <code>pareamento</code>, grupos de
+tratamento/controle e expressões equivalentes.</li>
+<li>Menções a <code>2SLS</code>/procedimentos de mediação em um artigo
+sobre violência e democracia não foram tratadas automaticamente como IV;
+o caso final ficou como <code>other_modern_causal_method</code> por
+mediação causal.</li>
+</ul>
+<h2 id="métodos-de-credibilidade-detectados">Métodos de credibilidade
+detectados</h2>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 36%" />
+<col style="width: 19%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">pid</th>
+<th style="text-align: left;">title</th>
+<th style="text-align: left;">quantitative_analysis_type</th>
+<th style="text-align: left;">credibility_revolution_method_type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S0104-62762018000100209</td>
+<td style="text-align: left;">Violência e satisfação com a democracia no
+Brasil</td>
+<td style="text-align: left;">statistical_modeling</td>
+<td style="text-align: left;">[“other_modern_causal_method”]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tough-calls">Tough calls</h2>
+<p>Foram marcados <strong>51 tough calls</strong>. A distribuição por
+tipo de ambiguidade foi:</p>
+<table>
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 4%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">bucket</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">percentual_dos_tough_calls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Qualitativo com números contextuais</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: left;">58.8%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Modelagem observacional sem desenho
+moderno</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">41.2%</td>
+</tr>
+</tbody>
+</table>
+<p>Interpretação: os tough calls não indicam necessariamente erro. Eles
+identificam a fila que deve ser revisada por humano antes de usar a
+classificação como gold ou como base para estimar métricas
+substantivas.</p>
+<h2 id="checagens-de-integridade">Checagens de integridade</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">checagem</th>
+<th style="text-align: left;">resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Linhas no CSV</td>
+<td style="text-align: left;">175</td>
+</tr>
+<tr>
+<td style="text-align: left;">PIDs únicos</td>
+<td style="text-align: left;">175</td>
+</tr>
+<tr>
+<td style="text-align: left;">Artigos com inferência estatística sem
+citação</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Objetos v3 reaproveitados do teste de 10
+papers</td>
+<td style="text-align: left;">5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recomendação">Recomendação</h2>
+<p>O prompt e o schema estão prontos para a próxima rodada de validação
+humana, mas ainda não estão prontos para classificação automática em
+escala sem auditoria. Para escalar com segurança, eu manteria três filas
+obrigatórias de revisão: <code>tough_call == true</code>,
+<code>credibility_revolution_screen_applicable == true</code> e todos os
+casos com
+<code>credibility_revolution_method_present == true</code>.</p>
+<p>A principal revisão de prompt recomendada é tornar ainda mais
+explícito que: números contextuais, estatísticas de outros estudos,
+menções a surveys externos e uso conceitual de palavras como modelo ou
+correlação não contam como análise quantitativa original.</p>
+</body>
+</html>
