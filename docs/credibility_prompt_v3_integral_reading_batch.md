@@ -33,6 +33,10 @@ O script não classifica por regex, regras ou labels auxiliares. Ele apenas mont
   - Rejeita outputs incompletos ou inválidos.
   - Consolida JSONL/CSV apenas para PIDs com reading log e classificação válidos.
 
+- `docs/credibility_prompt_v3_integral_175_session_prompt.md`
+  - Prompt operacional para abrir uma nova sessão Codex e rodar os 175 artigos do piloto com o mesmo protocolo.
+  - Reforça que outputs de execução em `pilot_175/` são artefatos locais ignorados pelo Git.
+
 ## Estrutura de outputs
 
 Para o teste dos 10 artigos:
@@ -47,6 +51,8 @@ data/processed/credibility_prompt_v3_integral_reading/test_10/
   failed/               # falhas por PID
   combined/             # JSONL, CSV e relatório agregados
 ```
+
+Os diretórios locais de execução `test_10/`, `pilot_175/` e `runs/` estão no `.gitignore`. Eles preservam auditoria local, mas não devem ser versionados como fonte do pipeline. O que deve ir para Git é o código, o prompt, o schema e a documentação.
 
 Outputs agregados do teste:
 
