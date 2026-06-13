@@ -15,10 +15,12 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 import json
 import re
 import subprocess
 import sys
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -218,6 +220,20 @@ def extract_json_object(text: str) -> dict[str, Any]:
         raise
 
 
+def normalize_metadata_text(value: Any) -> str:
+    text = "" if value is None else str(value)
+    text = html.unescape(text)
+    text = unicodedata.normalize("NFC", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def metadata_field_matches(field: str, expected: str, got: Any) -> bool:
+    if field in {"title", "journal_title"}:
+        return normalize_metadata_text(expected) == normalize_metadata_text(got)
+    return got == expected
+
+
 def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
     errors: list[str] = []
 
@@ -231,7 +247,7 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
     for field in ["pid", "title", "journal_title", "input_text_hash"]:
         expected = row.get(field, "")
         got = record.get(field)
-        if expected and got != expected:
+        if expected and not metadata_field_matches(field, expected, got):
             errors.append(f"top-level {field} mismatch: expected {expected!r}, got {got!r}")
 
     if record.get("status") not in {"complete", "incomplete"}:
@@ -307,7 +323,7 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
     for field in ["pid", "title", "journal_title", "input_text_hash"]:
         expected = row.get(field, "")
         got = classification.get(field)
-        if expected and got != expected:
+        if expected and not metadata_field_matches(field, expected, got):
             errors.append(f"classification {field} mismatch: expected {expected!r}, got {got!r}")
 
     for field, allowed in ENUMS.items():
