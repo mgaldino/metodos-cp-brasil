@@ -75,6 +75,15 @@ md_table <- function(data) {
   paste(c(header, separator, rows), collapse = "\n")
 }
 
+write_utf8_lines <- function(lines, path) {
+  con <- file(path, open = "wb")
+  on.exit(close(con), add = TRUE)
+  for (line in lines) {
+    writeBin(charToRaw(line), con)
+    writeBin(charToRaw("\n"), con)
+  }
+}
+
 failure_queue <- readr::read_csv(paths$failure_queue, show_col_types = FALSE)
 inventory <- readr::read_csv(paths$inventory, show_col_types = FALSE)
 
@@ -180,7 +189,7 @@ report_lines <- c(
   "4. Só declarar o fulltext corpus pronto para escala quando `scripts/17_validate_fulltext_corpus.R` não tiver bloqueios ou quando os bloqueios remanescentes estiverem documentados como exclusões metodológicas."
 )
 
-readr::write_lines(report_lines, paths$report)
+write_utf8_lines(report_lines, paths$report)
 
 cat("Triagem escrita em:", paths$triage_csv, "\n")
 cat("Relatório escrito em:", paths$report, "\n")
