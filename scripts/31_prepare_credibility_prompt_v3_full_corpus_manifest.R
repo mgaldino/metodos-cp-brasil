@@ -90,6 +90,10 @@ sha256_text <- function(x) {
   vapply(enc2utf8(x), digest::digest, character(1), algo = "sha256", serialize = FALSE)
 }
 
+sha256_text_inventory_style <- function(x) {
+  vapply(enc2utf8(x), digest::digest, character(1), algo = "sha256")
+}
+
 md_table <- function(data) {
   if (nrow(data) == 0) {
     return("_Nenhum caso._")
@@ -151,16 +155,28 @@ pass_pids <- inventory |>
   dplyr::filter(validation_status == "PASS") |>
   dplyr::distinct(pid)
 
+pass_inventory_hashes <- inventory |>
+  dplyr::filter(validation_status == "PASS") |>
+  dplyr::select(
+    pid,
+    inventory_input_hash = input_hash,
+    inventory_input_hash_recomputed = input_hash_recomputed,
+    inventory_body_hash = body_hash
+  )
+
 pilot_pids <- pilot_manifest |>
   dplyr::distinct(pid)
 
 manifest_source <- corpus |>
   dplyr::semi_join(pass_pids, by = "pid") |>
+  dplyr::left_join(pass_inventory_hashes, by = "pid") |>
   dplyr::mutate(
     body_text = enc2utf8(body_text),
     body_present = !is.na(body_text) & nzchar(stringr::str_trim(body_text)),
     input_text_hash = sha256_text(body_text),
-    input_hash_matches_source = input_text_hash == input_hash,
+    input_hash_matches_source = input_hash == inventory_input_hash &
+      input_hash == inventory_input_hash_recomputed,
+    body_hash_matches_inventory = sha256_text_inventory_style(body_text) == inventory_body_hash,
     excluded_pilot = pid %in% pilot_pids$pid
   )
 
@@ -184,7 +200,14 @@ if (any(!manifest_source$input_hash_matches_source, na.rm = TRUE)) {
   bad_pids <- manifest_source |>
     dplyr::filter(!input_hash_matches_source) |>
     dplyr::pull(pid)
-  stop("Hash recalculado diverge de input_hash para PIDs: ", paste(utils::head(bad_pids, 20), collapse = ", "))
+  stop("input_hash diverge do hash bruto validado no inventário para PIDs: ", paste(utils::head(bad_pids, 20), collapse = ", "))
+}
+
+if (any(!manifest_source$body_hash_matches_inventory, na.rm = TRUE)) {
+  bad_pids <- manifest_source |>
+    dplyr::filter(!body_hash_matches_inventory) |>
+    dplyr::pull(pid)
+  stop("Hash do body_text diverge do body_hash validado no inventário para PIDs: ", paste(utils::head(bad_pids, 20), collapse = ", "))
 }
 
 manifest <- manifest_source |>
@@ -222,6 +245,7 @@ manifest_out <- manifest |>
     input_text_hash,
     input_hash,
     input_hash_matches_source,
+    body_hash_matches_inventory,
     body_char_count,
     body_word_count,
     source_method,

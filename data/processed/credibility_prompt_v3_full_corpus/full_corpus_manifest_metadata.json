@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-06-15T20:35:47Z",
+  "objective": "Manifest para classificacao credibility_prompt_v3 por leitura integral no corpus completo restante.",
+  "include_pilot_175": false,
+  "canonical_body_source": "data/processed/fulltext_corpus/article_texts_corpus.csv",
+  "fulltext_inventory": "quality_reports/fulltext_corpus_inventory.csv",
+  "pilot_manifest": "data/processed/full_classification_pilot_v2/pilot_manifest.csv",
+  "n_articles": 6464,
+  "n_fulltext_pass": 6638,
+  "n_pilot_pids": 175,
+  "manifest": "data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv",
+  "task_packets": "data/processed/credibility_prompt_v3_full_corpus/task_packets"
+}
