@@ -205,6 +205,31 @@ Use `null` if `credibility_revolution_screen_applicable` is `false`.
 
 `false` if the article passes the screen but does not use such a method.
 
+Important identification rule:
+
+Do not count causal language, SEM, structural equation modeling, causal mediation,
+path analysis, regression adjustment, fixed effects, controls, or observational
+modeling as a credibility-revolution method merely because the article estimates
+effects or cites causal-methods literature. For any method outside the usual
+credibility-revolution designs listed below, classify `credibility_revolution_method_present`
+as `true` only if the article explicitly discusses the relevant causal identification
+assumption or strategy and gives a textual reason why that assumption is plausible
+in the empirical setting.
+
+For causal mediation or SEM-style causal claims, look specifically for discussion
+of sequential ignorability, treatment/mediator ignorability, randomization,
+design-based identification, sensitivity analysis, or another explicit
+identification argument. If the article applies SEM or causal mediation to
+observational data without such discussion, classify it as
+`observational_regression_with_causal_claim_no_design`, set
+`credibility_revolution_method_present` to `false`, and explain the issue in
+`tough_call_reason`.
+
+If `credibility_revolution_method_type` contains only `none_detected`,
+`fixed_effects_causal_panel_claim`, or
+`observational_regression_with_causal_claim_no_design`, then
+`credibility_revolution_method_present` must be `false`.
+
 - `credibility_revolution_method_type`: array or null
 
 Allowed values:

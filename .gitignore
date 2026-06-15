@@ -8,7 +8,9 @@ data/processed/fulltext_corpus/article_texts_corpus.csv
 # Artefatos gerados por execuções locais do classificador por leitura integral
 data/processed/credibility_prompt_v3_integral_reading/test_10/
 data/processed/credibility_prompt_v3_integral_reading/pilot_175/
+data/processed/credibility_prompt_v3_integral_reading/full_corpus/
 data/processed/credibility_prompt_v3_integral_reading/runs/
+data/processed/credibility_prompt_v3_full_corpus/task_packets/
 
 # Logs
 data/raw/logs/

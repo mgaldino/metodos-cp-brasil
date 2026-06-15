@@ -148,6 +148,12 @@ METHOD_TYPES = {
     "none_detected",
 }
 
+DIAGNOSTIC_NOT_DESIGN_METHOD_TYPES = {
+    "fixed_effects_causal_panel_claim",
+    "observational_regression_with_causal_claim_no_design",
+    "none_detected",
+}
+
 BOOLEAN_CLASSIFICATION_FIELDS = {
     "is_empirical_paper",
     "is_empirical_quant_paper_torreblanca",
@@ -194,6 +200,21 @@ def load_manifest(path: Path, pids: set[str] | None = None) -> list[dict[str, st
         if not packet.exists():
             raise FileNotFoundError(f"Task packet not found for {row['pid']}: {packet}")
     return rows
+
+
+def select_manifest_window(
+    rows: list[dict[str, str]],
+    offset: int = 0,
+    limit: int | None = None,
+) -> list[dict[str, str]]:
+    if offset < 0:
+        raise ValueError("--offset must be non-negative")
+    if limit is not None and limit < 0:
+        raise ValueError("--limit must be non-negative")
+    selected = rows[offset:]
+    if limit is not None:
+        selected = selected[:limit]
+    return selected
 
 
 def render_prompt(row: dict[str, str]) -> str:
@@ -347,6 +368,14 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
             invalid = [value for value in method_type if value not in METHOD_TYPES]
             if invalid:
                 errors.append(f"invalid credibility method types: {invalid}")
+            if (
+                classification.get("credibility_revolution_method_present") is True
+                and method_type
+                and set(method_type).issubset(DIAGNOSTIC_NOT_DESIGN_METHOD_TYPES)
+            ):
+                errors.append(
+                    "method_present cannot be true when method_type contains only diagnostic non-design labels"
+                )
 
     if classification.get("tough_call") is False and classification.get("tough_call_reason") is not None:
         errors.append("tough_call_reason must be null when tough_call is false")
@@ -361,6 +390,12 @@ def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
         and classification.get("credibility_revolution_method_present") is not None
     ):
         errors.append("method_present must be null when screen_applicable is false")
+
+    if (
+        classification.get("credibility_revolution_screen_applicable") is False
+        and classification.get("credibility_revolution_method_type") is not None
+    ):
+        errors.append("method_type must be null when screen_applicable is false")
 
     return errors
 
@@ -579,6 +614,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
     parser.add_argument("--pid", action="append", help="Restrict to one PID; repeatable.")
+    parser.add_argument("--offset", type=int, default=0, help="Skip this many selected manifest rows.")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of selected PIDs.")
     parser.add_argument("--force", action="store_true", help="Re-run PIDs with existing valid outputs.")
     parser.add_argument("--dry-run", action="store_true", help="Render prompts but do not call Codex.")
@@ -598,8 +634,11 @@ def main() -> int:
 
     selected_pids = set(args.pid) if args.pid else None
     rows = load_manifest(manifest_path, selected_pids)
-    if args.limit is not None:
-        rows = rows[: args.limit]
+    try:
+        rows = select_manifest_window(rows, offset=args.offset, limit=args.limit)
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
 
     if not rows:
         print("No manifest rows selected.", file=sys.stderr)

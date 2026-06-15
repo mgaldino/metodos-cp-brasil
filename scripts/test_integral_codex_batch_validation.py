@@ -134,3 +134,85 @@ def test_validate_record_still_requires_literal_pid_match():
 
     assert "top-level pid mismatch: expected 'S001', got 'S002'" in errors
     assert "classification pid mismatch: expected 'S001', got 'S002'" in errors
+
+
+def test_validate_record_rejects_diagnostic_method_as_positive_design():
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "title": "A Imprensa Brasileira e suas &#8220;Cruzadas Morais&#8221;",
+        "journal_title": "Opini&#227;o P&#250;blica",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="A Imprensa Brasileira e suas “Cruzadas Morais”",
+        journal_title="Opinião Pública",
+        input_text_hash="abc123",
+    )
+    classification = record["classification"]
+    classification["is_empirical_paper"] = True
+    classification["empirical_evidence_type"] = "quantitative_only"
+    classification["is_empirical_quant_paper_torreblanca"] = True
+    classification["quantitative_analysis_type"] = "statistical_modeling"
+    classification["causal_or_explanatory_claim_present"] = True
+    classification["credibility_revolution_screen_applicable"] = True
+    classification["credibility_revolution_screen_reason"] = "statistical_modeling_screen"
+    classification["credibility_revolution_method_present"] = True
+    classification["credibility_revolution_method_type"] = [
+        "observational_regression_with_causal_claim_no_design"
+    ]
+
+    errors = runner.validate_record(record, row)
+
+    assert (
+        "method_present cannot be true when method_type contains only diagnostic non-design labels"
+        in errors
+    )
+
+
+def test_validate_record_rejects_method_type_when_screen_is_false():
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "title": "A Imprensa Brasileira e suas &#8220;Cruzadas Morais&#8221;",
+        "journal_title": "Opini&#227;o P&#250;blica",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="A Imprensa Brasileira e suas “Cruzadas Morais”",
+        journal_title="Opinião Pública",
+        input_text_hash="abc123",
+    )
+    record["classification"]["credibility_revolution_method_type"] = ["none_detected"]
+
+    errors = runner.validate_record(record, row)
+
+    assert "method_type must be null when screen_applicable is false" in errors
+
+
+def test_select_manifest_window_applies_offset_and_limit():
+    runner = load_runner()
+    rows = [{"pid": f"S{i:03d}"} for i in range(5)]
+
+    selected = runner.select_manifest_window(rows, offset=2, limit=2)
+
+    assert [row["pid"] for row in selected] == ["S002", "S003"]
+
+
+def test_select_manifest_window_rejects_negative_values():
+    runner = load_runner()
+    rows = [{"pid": "S001"}]
+
+    try:
+        runner.select_manifest_window(rows, offset=-1, limit=None)
+    except ValueError as exc:
+        assert "--offset must be non-negative" in str(exc)
+    else:
+        raise AssertionError("negative offset should raise ValueError")
+
+    try:
+        runner.select_manifest_window(rows, offset=0, limit=-1)
+    except ValueError as exc:
+        assert "--limit must be non-negative" in str(exc)
+    else:
+        raise AssertionError("negative limit should raise ValueError")
