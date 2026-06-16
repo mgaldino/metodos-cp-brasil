@@ -18,6 +18,8 @@ O piloto v3 de 175 artigos foi concluído e auditado parcialmente. A regra ajust
 
 O caso de borda do piloto, A017 (`S0104-62762018000100209`), foi removido do numerador porque usa SEM/mediação causal citando Imai, Keele e Tingley, mas não discute nem justifica ignorabilidade sequencial.
 
+Convenção analítica documentada: `docs/credibility_method_counting_rule.md`. Nas tabelas e gráficos, use como numerador principal apenas métodos estritos de identificação causal; trate `other_modern_causal_method` como fila de auditoria manual; e reporte métodos estritos + `other_modern_causal_method` apenas como medida inclusiva de sensibilidade.
+
 ## Regras de execução
 
 - Não faça classificação por regex, heurística, título, abstract, metadata ou labels auxiliares.
