@@ -1,0 +1,11 @@
+indicator,n,denominator,percent,note
+Artigos classificados,400,6464,6.2,Cobertura preliminar do manifest completo
+Artigos empíricos,342,400,85.5,
+Quantitativos Torreblanca,247,400,61.8,
+Qualitativos,258,400,64.5,
+Screen de credibilidade aplicável,133,400,33.2,
+Método estrito de credibilidade,15,400,3.8,Numerador principal/conservador
+other_modern_causal_method,2,400,0.5,Fila de auditoria manual; pode sobrepor métodos estritos
+other_modern_causal_method sem método estrito,0,400,0,Casos residuais adicionais a adjudicar
+Medida inclusiva de sensibilidade,15,400,3.8,União de artigos únicos: métodos estritos ou other_modern_causal_method
+Tough calls,249,400,62.2,

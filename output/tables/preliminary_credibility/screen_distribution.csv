@@ -1,0 +1,8 @@
+credibility_revolution_screen_applicable,credibility_revolution_screen_reason,n,percent
+FALSE,descriptive_quantitative_only,114,28.5
+TRUE,statistical_modeling_screen,96,24
+FALSE,qualitative_only,95,23.8
+FALSE,not_empirical,58,14.5
+TRUE,explicit_causal_design_screen,14,3.5
+TRUE,causal_claim_with_quantitative_analysis_screen,12,3
+TRUE,bivariate_or_correlation_screen,11,2.8

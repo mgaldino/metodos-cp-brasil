@@ -1,0 +1,208 @@
+---
+title: "Análise preliminar da classificação de métodos da revolução da credibilidade"
+date: "2026-06-16"
+lang: "pt-BR"
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(knitr)
+  library(readr)
+  library(stringr)
+})
+
+table_path <- function(file) file.path("..", "output", "tables", "preliminary_credibility", file)
+figure_path <- function(file) file.path("..", "output", "figures", "preliminary_credibility", file)
+
+indicator_summary <- readr::read_csv(table_path("indicator_summary.csv"), show_col_types = FALSE)
+sensitivity_summary <- readr::read_csv(table_path("sensitivity_summary.csv"), show_col_types = FALSE)
+validation_summary <- readr::read_csv(
+  file.path("..", "data", "processed", "credibility_prompt_v3_integral_reading", "preliminary_analysis", "validation_summary.csv"),
+  show_col_types = FALSE
+)
+coverage_by_journal <- readr::read_csv(table_path("coverage_by_journal.csv"), show_col_types = FALSE)
+coverage_by_year <- readr::read_csv(table_path("coverage_by_year.csv"), show_col_types = FALSE)
+evidence_distribution <- readr::read_csv(table_path("evidence_distribution.csv"), show_col_types = FALSE)
+screen_distribution <- readr::read_csv(table_path("screen_distribution.csv"), show_col_types = FALSE)
+method_distribution <- readr::read_csv(table_path("method_distribution.csv"), show_col_types = FALSE)
+strict_method_cases <- readr::read_csv(table_path("strict_method_cases.csv"), show_col_types = FALSE)
+other_modern_audit_queue <- readr::read_csv(table_path("other_modern_audit_queue.csv"), show_col_types = FALSE)
+tough_call_queue <- readr::read_csv(table_path("tough_call_queue.csv"), show_col_types = FALSE)
+
+n_manifest <- indicator_summary$denominator[indicator_summary$indicator == "Artigos classificados"]
+n_classified <- indicator_summary$n[indicator_summary$indicator == "Artigos classificados"]
+coverage_pct <- indicator_summary$percent[indicator_summary$indicator == "Artigos classificados"]
+n_conservative <- sensitivity_summary$n[sensitivity_summary$measure == "Principal/conservadora"]
+n_other <- sensitivity_summary$n[sensitivity_summary$measure == "Fila other_modern_causal_method"]
+n_other_broad_only <- sensitivity_summary$n[sensitivity_summary$measure == "other_modern sem método estrito"]
+n_inclusive <- sensitivity_summary$n[sensitivity_summary$measure == "Inclusiva (união de artigos únicos)"]
+```
+
+# Escopo e cautela
+
+Este relatório antecipa a estrutura da análise final usando os artigos já classificados por leitura integral. A base atual contém `r n_classified` artigos classificados de um manifest de `r n_manifest`, ou `r coverage_pct`% do corpus elegível preparado para classificação.
+
+Os resultados são **preliminares**. Os artigos classificados correspondem aos primeiros registros do manifest, não a uma amostra aleatória do corpus completo. Portanto, as taxas abaixo servem para testar o pipeline analítico, identificar casos para auditoria e preparar o relatório final; elas não devem ser tratadas como estimativas substantivas finais do paper.
+
+# Regra de contagem
+
+A análise usa a convenção documentada em `docs/credibility_method_counting_rule.md`:
+
+- a **medida principal/conservadora** conta apenas métodos estritos de identificação causal;
+- `other_modern_causal_method` é tratado como **fila de auditoria manual**;
+- a medida **inclusiva de sensibilidade** é a união de artigos únicos com método estrito ou `other_modern_causal_method`, mas permanece preliminar enquanto não houver adjudicação manual.
+
+Na base atual, a medida conservadora identifica `r n_conservative` artigos; a fila `other_modern_causal_method` tem `r n_other` artigos, dos quais `r n_other_broad_only` não têm método estrito também; e a medida inclusiva teria `r n_inclusive` artigos únicos.
+
+```{r sensitivity-table}
+knitr::kable(
+  sensitivity_summary,
+  caption = "Medidas preliminares para métodos da revolução da credibilidade",
+  digits = 1
+)
+```
+
+# Validação do pipeline
+
+Todas as validações duras passaram antes da geração deste relatório: unicidade de PIDs, correspondência com o manifest, compatibilidade estrita do `input_text_hash`, presença de reading logs, existência e vazio do diretório `failed/`, anos no intervalo esperado, exclusão dos periódicos fora do escopo e status `PASS` de fulltext.
+
+```{r validation-table}
+knitr::kable(
+  validation_summary,
+  caption = "Validações de integridade da base preliminar"
+)
+```
+
+# Cobertura da classificação
+
+```{r progress-figure, fig.cap="Progresso da classificação por bloco de 100 artigos.", out.width="100%"}
+knitr::include_graphics(figure_path("figure_1_progress_by_block.png"))
+```
+
+```{r journal-figure, fig.cap="Cobertura preliminar por periódico.", out.width="100%"}
+knitr::include_graphics(figure_path("figure_2_coverage_by_journal.png"))
+```
+
+```{r coverage-journal-table}
+knitr::kable(
+  coverage_by_journal,
+  caption = "Cobertura por periódico no manifest e na base classificada",
+  digits = 1
+)
+```
+
+```{r coverage-year-table}
+knitr::kable(
+  coverage_by_year,
+  caption = "Cobertura por ano no manifest e na base classificada",
+  digits = 1
+)
+```
+
+# Perfil dos artigos classificados
+
+```{r indicator-table}
+knitr::kable(
+  indicator_summary,
+  caption = "Indicadores básicos da base preliminar",
+  digits = 1
+)
+```
+
+```{r annual-figure, fig.cap="Indicadores por ano nos artigos já classificados.", out.width="100%"}
+knitr::include_graphics(figure_path("figure_3_annual_indicators.png"))
+```
+
+```{r evidence-figure, fig.cap="Tipo de evidência e análise quantitativa.", out.width="100%"}
+knitr::include_graphics(figure_path("figure_4_evidence_distribution.png"))
+```
+
+```{r evidence-table}
+knitr::kable(
+  evidence_distribution,
+  caption = "Tipo de evidência e análise quantitativa",
+  digits = 1
+)
+```
+
+```{r screen-table}
+knitr::kable(
+  screen_distribution,
+  caption = "Razões do screen de revolução da credibilidade",
+  digits = 1
+)
+```
+
+# Métodos da revolução da credibilidade
+
+```{r methods-figure, fig.cap="Métodos detectados e classes analíticas.", out.width="100%"}
+knitr::include_graphics(figure_path("figure_5_method_distribution.png"))
+```
+
+```{r sensitivity-figure, fig.cap="Medidas conservadora, fila de auditoria e sensibilidade inclusiva.", out.width="90%"}
+knitr::include_graphics(figure_path("figure_6_credibility_sensitivity.png"))
+```
+
+```{r method-table}
+knitr::kable(
+  method_distribution,
+  caption = "Distribuição dos métodos detectados",
+  digits = 1
+)
+```
+
+## Casos no numerador conservador
+
+```{r strict-cases-table}
+if (nrow(strict_method_cases) == 0) {
+  cat("Nenhum caso com método estrito de identificação causal foi encontrado na base preliminar.")
+} else {
+  knitr::kable(
+    strict_method_cases |>
+      dplyr::select(pid, title, journal_title, year, method_type, causal_design_quote, tough_call_reason),
+    caption = "Casos com métodos estritos de identificação causal"
+  )
+}
+```
+
+## Fila `other_modern_causal_method`
+
+```{r other-modern-table}
+if (nrow(other_modern_audit_queue) == 0) {
+  cat("Nenhum caso `other_modern_causal_method` foi encontrado na base preliminar.")
+} else {
+  knitr::kable(
+    other_modern_audit_queue |>
+      dplyr::select(pid, title, journal_title, year, other_modern_overlap_with_strict, other_modern_broad_only, causal_design_quote, tough_call_reason),
+    caption = "Fila de auditoria manual para `other_modern_causal_method`"
+  )
+}
+```
+
+# Fila de atenção
+
+Os `tough calls` são úteis para a próxima rodada de auditoria manual, porque indicam decisões em que o classificador registrou ambiguidade substantiva ou operacional.
+
+```{r tough-call-table}
+if (nrow(tough_call_queue) == 0) {
+  cat("Nenhum `tough_call` foi encontrado na base preliminar.")
+} else {
+  knitr::kable(
+    tough_call_queue |>
+      dplyr::select(pid, title, journal_title, year, empirical_evidence_type, quantitative_analysis_type, credibility_revolution_screen_reason, tough_call_reason) |>
+      head(25),
+    caption = "Primeiros 25 tough calls para auditoria"
+  )
+}
+```
+
+# Próximos usos
+
+Quando a classificação do corpus completo terminar, o mesmo pipeline deve ser rerodado após a consolidação final com `--combine-only`. A estrutura de tabelas e figuras já estará pronta; a etapa substantiva final será substituir a base preliminar parcial pela base completa classificada e revisar manualmente a fila `other_modern_causal_method`.

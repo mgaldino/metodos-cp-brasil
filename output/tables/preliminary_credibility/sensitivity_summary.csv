@@ -1,0 +1,5 @@
+measure,n,denominator,percent,interpretation
+Principal/conservadora,15,400,3.8,Conta apenas métodos estritos de identificação causal.
+Fila other_modern_causal_method,2,400,0.5,Não entra automaticamente no numerador principal; pode sobrepor casos estritos.
+other_modern sem método estrito,0,400,0,Subconjunto residual ainda não capturado por método estrito.
+Inclusiva (união de artigos únicos),15,400,3.8,União de artigos únicos com método estrito ou other_modern_causal_method.
