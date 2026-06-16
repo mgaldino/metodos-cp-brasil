@@ -20,6 +20,8 @@ paths <- list(
   corpus_texts = file.path(project_dir, "data", "processed", "fulltext_corpus", "article_texts_corpus.csv"),
   corpus_inventory = file.path(project_dir, "quality_reports", "fulltext_corpus_inventory.csv"),
   pilot_manifest = file.path(project_dir, "data", "processed", "full_classification_pilot_v2", "pilot_manifest.csv"),
+  excluded_journals = file.path(project_dir, "data", "processed", "excluded_journals.csv"),
+  excluded_articles = file.path(project_dir, "data", "processed", "excluded_articles.csv"),
   out_dir = file.path(project_dir, "data", "processed", "credibility_prompt_v3_full_corpus"),
   packets_dir = file.path(project_dir, "data", "processed", "credibility_prompt_v3_full_corpus", "task_packets"),
   manifest = file.path(project_dir, "data", "processed", "credibility_prompt_v3_full_corpus", "full_corpus_manifest.csv"),
@@ -94,6 +96,13 @@ sha256_text_inventory_style <- function(x) {
   vapply(enc2utf8(x), digest::digest, character(1), algo = "sha256")
 }
 
+parse_bool <- function(x) {
+  if (is.logical(x)) {
+    return(dplyr::coalesce(x, FALSE))
+  }
+  stringr::str_to_upper(stringr::str_trim(dplyr::coalesce(as.character(x), ""))) == "TRUE"
+}
+
 md_table <- function(data) {
   if (nrow(data) == 0) {
     return("_Nenhum caso._")
@@ -138,6 +147,18 @@ write_task_packet <- function(row) {
 corpus <- read_csv_utf8(paths$corpus_texts)
 inventory <- read_csv_utf8(paths$corpus_inventory)
 pilot_manifest <- read_csv_utf8(paths$pilot_manifest)
+excluded_journals <- read_csv_utf8(paths$excluded_journals) |>
+  dplyr::filter(parse_bool(exclude_from_analysis)) |>
+  dplyr::mutate(
+    journal_title = stringr::str_squish(journal_title),
+    issn = stringr::str_squish(dplyr::coalesce(as.character(issn), "")),
+    exclusion_key = paste(journal_title, issn, sep = "||")
+  ) |>
+  dplyr::distinct(journal_title, issn, exclusion_key, .keep_all = TRUE)
+
+excluded_articles <- read_csv_utf8(paths$excluded_articles) |>
+  dplyr::filter(parse_bool(exclude_from_analysis)) |>
+  dplyr::distinct(pid, .keep_all = TRUE)
 
 required_corpus_cols <- c(
   "pid", "title", "authors", "year", "issn", "journal_title", "language",
@@ -177,13 +198,29 @@ manifest_source <- corpus |>
     input_hash_matches_source = input_hash == inventory_input_hash &
       input_hash == inventory_input_hash_recomputed,
     body_hash_matches_inventory = sha256_text_inventory_style(body_text) == inventory_body_hash,
-    excluded_pilot = pid %in% pilot_pids$pid
+    excluded_pilot = pid %in% pilot_pids$pid,
+    journal_exclusion_key = paste(
+      stringr::str_squish(journal_title),
+      stringr::str_squish(dplyr::coalesce(as.character(issn), "")),
+      sep = "||"
+    ),
+    excluded_by_journal = journal_exclusion_key %in% excluded_journals$exclusion_key,
+    excluded_by_article = pid %in% excluded_articles$pid
   )
 
 if (!include_pilot) {
   manifest_source <- manifest_source |>
     dplyr::filter(!excluded_pilot)
 }
+
+scope_counts <- manifest_source |>
+  dplyr::summarise(
+    excluded_by_journal = sum(excluded_by_journal, na.rm = TRUE),
+    excluded_by_article = sum(excluded_by_article, na.rm = TRUE)
+  )
+
+manifest_source <- manifest_source |>
+  dplyr::filter(!excluded_by_journal, !excluded_by_article)
 
 if (any(!manifest_source$body_present)) {
   missing_pids <- manifest_source |>
@@ -211,14 +248,17 @@ if (any(!manifest_source$body_hash_matches_inventory, na.rm = TRUE)) {
 }
 
 manifest <- manifest_source |>
-  dplyr::arrange(journal_title, year, pid) |>
+  dplyr::mutate(lua_nova_last = journal_title == "Lua Nova: Revista de Cultura e Política") |>
+  dplyr::arrange(lua_nova_last, journal_title, year, pid) |>
   dplyr::mutate(
     eligible_order = dplyr::row_number(),
     source_file = relative_path(paths$corpus_texts),
     source_file_exists = file.exists(paths$corpus_texts),
     source_column = "body_text",
     fulltext_validation_status = "PASS",
-    pilot_exclusion_policy = if_else(include_pilot, "include_pilot_175", "exclude_pilot_175")
+    pilot_exclusion_policy = if_else(include_pilot, "include_pilot_175", "exclude_pilot_175"),
+    scope_exclusion_policy = "exclude_analysis_ledger_journals_and_articles",
+    ordering_policy = "journal_year_pid_with_lua_nova_last"
   )
 
 manifest$task_packet_file <- vapply(seq_len(nrow(manifest)), function(i) {
@@ -255,7 +295,9 @@ manifest_out <- manifest |>
     reference_tail_ratio,
     validation_flags,
     fulltext_validation_status,
-    pilot_exclusion_policy
+    pilot_exclusion_policy,
+    scope_exclusion_policy,
+    ordering_policy
   )
 
 readr::write_csv(manifest_out, paths$manifest, na = "")
@@ -267,9 +309,14 @@ metadata <- list(
   canonical_body_source = relative_path(paths$corpus_texts),
   fulltext_inventory = relative_path(paths$corpus_inventory),
   pilot_manifest = relative_path(paths$pilot_manifest),
+  excluded_journals = relative_path(paths$excluded_journals),
+  excluded_articles = relative_path(paths$excluded_articles),
   n_articles = nrow(manifest_out),
   n_fulltext_pass = nrow(pass_pids),
   n_pilot_pids = nrow(pilot_pids),
+  n_excluded_by_journal_after_pilot_filter = scope_counts$excluded_by_journal[[1]],
+  n_excluded_by_article_after_pilot_filter = scope_counts$excluded_by_article[[1]],
+  ordering_policy = "Lua Nova: Revista de Cultura e Política last; remaining journals sorted by journal_title, year, pid",
   manifest = relative_path(paths$manifest),
   task_packets = relative_path(paths$packets_dir)
 )
@@ -289,9 +336,13 @@ report_lines <- c(
   "",
   paste0("- Artigos PASS no inventário de fulltext: ", nrow(pass_pids), "."),
   paste0("- PIDs do piloto excluídos por padrão: ", ifelse(include_pilot, 0, nrow(pilot_pids)), "."),
+  paste0("- Artigos excluídos por periódico no ledger: ", scope_counts$excluded_by_journal[[1]], "."),
+  paste0("- Artigos excluídos individualmente no ledger: ", scope_counts$excluded_by_article[[1]], "."),
   paste0("- Artigos no manifest gerado: ", nrow(manifest_out), "."),
   paste0("- Manifest: `", relative_path(paths$manifest), "`."),
   paste0("- Task packets: `", relative_path(paths$packets_dir), "/`."),
+  "",
+  "Regra de ordenação: `Lua Nova: Revista de Cultura e Política` fica no fim do manifest; os demais periódicos são ordenados por `journal_title`, `year` e `pid`.",
   "",
   "Este script não altera dados brutos nem o corpus processado. Ele apenas cria task packets derivados do `body_text` canônico para execução do classificador por leitura integral.",
   "",

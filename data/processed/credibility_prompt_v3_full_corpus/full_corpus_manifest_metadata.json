@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-06-15T20:35:47Z",
+  "generated_at": "2026-06-16T23:26:15Z",
   "objective": "Manifest para classificacao credibility_prompt_v3 por leitura integral no corpus completo restante.",
   "include_pilot_175": false,
   "canonical_body_source": "data/processed/fulltext_corpus/article_texts_corpus.csv",
   "fulltext_inventory": "quality_reports/fulltext_corpus_inventory.csv",
   "pilot_manifest": "data/processed/full_classification_pilot_v2/pilot_manifest.csv",
-  "n_articles": 6464,
+  "excluded_journals": "data/processed/excluded_journals.csv",
+  "excluded_articles": "data/processed/excluded_articles.csv",
+  "n_articles": 5250,
   "n_fulltext_pass": 6638,
   "n_pilot_pids": 175,
+  "n_excluded_by_journal_after_pilot_filter": 1213,
+  "n_excluded_by_article_after_pilot_filter": 1,
+  "ordering_policy": "Lua Nova: Revista de Cultura e Política last; remaining journals sorted by journal_title, year, pid",
   "manifest": "data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv",
   "task_packets": "data/processed/credibility_prompt_v3_full_corpus/task_packets"
 }

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 
@@ -216,3 +217,56 @@ def test_select_manifest_window_rejects_negative_values():
         assert "--limit must be non-negative" in str(exc)
     else:
         raise AssertionError("negative limit should raise ValueError")
+
+
+def test_combine_outputs_custom_stem_does_not_write_canonical_files(tmp_path):
+    runner = load_runner()
+    dirs = {}
+    for name in ["combined", "classifications", "reading", "failed"]:
+        dirs[name] = tmp_path / name
+        dirs[name].mkdir()
+
+    row = {
+        "pid": "S001",
+        "title": "Title",
+        "journal_title": "Journal",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="Title",
+        journal_title="Journal",
+        input_text_hash="abc123",
+    )
+    reading_record = {
+        field: record[field]
+        for field in [
+            "pid",
+            "title",
+            "journal_title",
+            "input_text_hash",
+            "status",
+            "full_body_read",
+            "incomplete_reason",
+            "section_reading_log",
+            "general_summary",
+            "decision_audit",
+        ]
+    }
+    (dirs["reading"] / "S001.json").write_text(
+        json.dumps(reading_record, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    (dirs["classifications"] / "S001.json").write_text(
+        json.dumps(record["classification"], ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    summary = runner.combine_outputs([row], dirs, combined_stem="active_batch_005")
+
+    assert summary["n_complete"] == 1
+    assert (dirs["combined"] / "active_batch_005.csv").exists()
+    assert (dirs["combined"] / "active_batch_005.jsonl").exists()
+    assert (dirs["combined"] / "active_batch_005_batch_report.md").exists()
+    assert not (dirs["combined"] / "classifications_integral_reading.csv").exists()
+    assert not (dirs["combined"] / "classifications_integral_reading.jsonl").exists()
+    assert not (dirs["combined"] / "integral_reading_batch_report.md").exists()

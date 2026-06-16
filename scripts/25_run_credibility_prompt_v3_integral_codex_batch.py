@@ -455,7 +455,11 @@ def csv_value(value: Any) -> str:
     return str(value)
 
 
-def combine_outputs(rows: list[dict[str, str]], dirs: dict[str, Path]) -> dict[str, Any]:
+def combine_outputs(
+    rows: list[dict[str, str]],
+    dirs: dict[str, Path],
+    combined_stem: str = "classifications_integral_reading",
+) -> dict[str, Any]:
     manifest_pids = [row["pid"] for row in rows]
     records: list[dict[str, Any]] = []
     complete_pids: set[str] = set()
@@ -472,9 +476,15 @@ def combine_outputs(rows: list[dict[str, str]], dirs: dict[str, Path]) -> dict[s
         records.append(ordered_classification(record))
         complete_pids.add(pid)
 
-    jsonl_path = dirs["combined"] / "classifications_integral_reading.jsonl"
-    csv_path = dirs["combined"] / "classifications_integral_reading.csv"
-    report_path = dirs["combined"] / "integral_reading_batch_report.md"
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+", combined_stem):
+        raise ValueError("--combined-stem may contain only letters, numbers, underscore, dot, and hyphen")
+
+    jsonl_path = dirs["combined"] / f"{combined_stem}.jsonl"
+    csv_path = dirs["combined"] / f"{combined_stem}.csv"
+    if combined_stem == "classifications_integral_reading":
+        report_path = dirs["combined"] / "integral_reading_batch_report.md"
+    else:
+        report_path = dirs["combined"] / f"{combined_stem}_batch_report.md"
 
     with jsonl_path.open("w", encoding="utf-8") as f:
         for record in records:
@@ -623,6 +633,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", default=None, help="Optional Codex model name.")
     parser.add_argument("--timeout", type=int, default=1800, help="Timeout per article in seconds.")
     parser.add_argument("--ephemeral", action="store_true", help="Pass --ephemeral to codex exec.")
+    parser.add_argument(
+        "--combined-stem",
+        default="classifications_integral_reading",
+        help=(
+            "Filename stem for combined CSV/JSONL outputs. The default preserves historical "
+            "paths; use a block-specific stem to avoid overwriting canonical combined files."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -645,7 +663,7 @@ def main() -> int:
         return 1
 
     if args.combine_only:
-        summary = combine_outputs(rows, dirs)
+        summary = combine_outputs(rows, dirs, combined_stem=args.combined_stem)
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return 0
 
@@ -698,7 +716,7 @@ def main() -> int:
         )
         return 0
 
-    summary = combine_outputs(rows, dirs)
+    summary = combine_outputs(rows, dirs, combined_stem=args.combined_stem)
     print(
         json.dumps(
             {
