@@ -1,0 +1,574 @@
+OpenAI Codex v0.140.0
+--------
+workdir: /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 019ed37e-a364-7402-9ad0-8126d6f5b55a
+--------
+user
+# Credibility Prompt v3 - Integral Reading Batch Prompt
+
+You are classifying exactly one article in this run.
+
+## Absolute Rule: Integral Reading Before Classification
+
+You must read the full article body from beginning to end before classifying it.
+
+It is prohibited to classify by:
+
+- regexes, scripts, keyword matching, heuristics, or automated rules;
+- previous consensus labels, gold labels, auxiliary classifications, or journal priors;
+- title, abstract, metadata, isolated tables, or selected excerpts alone;
+- guessing from the journal, year, topic, or style.
+
+The purpose of this task is interpretive article-by-article classification, not scale automation. If the article is long, keep reading until the end. Do not substitute a shortcut for full reading.
+
+If you cannot read the full body text, return `status: "incomplete"`, set `full_body_read: false`, explain why in `incomplete_reason`, and set `classification: null`. Do not produce a final classification for an article you did not read fully.
+
+## Mandatory Reading Log Before Classification
+
+Before producing the classification, build a `section_reading_log`. This log is part of the required JSON output.
+
+For each section explicitly present in the paper, include:
+
+- `section_title`: the section heading as it appears in the article;
+- `section_position`: 1-based section order;
+- `section_summary`: one or two substantive paragraphs summarizing what the section argues or does;
+- `methods_or_data_mentions`: one paragraph identifying data, methods, tables, figures, interviews, documents, models, tests, or stating that none appear in the section;
+- `classification_relevance`: one paragraph explaining how this section matters, or does not matter, for empirical/quantitative/qualitative/causal/statistical classification.
+
+If the article has no clear section headings, divide the body into sequential chunks and use `chunk_1`, `chunk_2`, etc. as section titles. Still summarize every chunk.
+
+After the section log, write:
+
+- `general_summary`: one or two paragraphs summarizing the paper as a whole;
+- `decision_audit`: answers to the final audit questions listed below.
+
+Only after completing these steps may you fill the `classification` object.
+
+## Final Audit Questions
+
+Answer these in `decision_audit` before classification:
+
+1. Where does the article present its own empirical evidence, if anywhere?
+2. Where does the article present original or reanalyzed quantitative analysis, if anywhere?
+3. Where does the article present substantive qualitative evidence, if anywhere?
+4. Where does the article report statistical inference, if anywhere?
+5. Where does the article present a causal or credibility-revolution design, if anywhere?
+6. Is there any section that contradicts the likely classification?
+
+## Output Shape
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Top-level required fields:
+
+- `pid`
+- `title`
+- `journal_title`
+- `input_text_hash`
+- `status`: `"complete"` or `"incomplete"`
+- `full_body_read`: boolean
+- `incomplete_reason`: string or null
+- `section_reading_log`: array
+- `general_summary`: string
+- `decision_audit`: object
+- `classification`: object if `status == "complete"`, otherwise null
+
+The nested `classification` object must follow the original credibility prompt v3 schema exactly.
+
+## Original Classifier Prompt v3
+
+The following classifier instructions define the classification schema and field meanings. They are binding, but they do not override the integral-reading rule above.
+
+# Credibility Revolution Brazil Classifier Prompt v3
+
+You are a methodological classifier for political science, international relations, and public administration articles published in Brazilian SciELO journals.
+
+Read the full article body and classify the article using only textual evidence from the article itself. The title, year, journal, DOI, and language may be used as context, but they are never sufficient evidence for methods, data, causality, or statistical analysis.
+
+This project replicates and adapts Torreblanca et al., "The Credibility Revolution in Political Science", for Brazil. The Torreblanca-style quantitative variable is broad: any original quantitative data analysis counts, including descriptive, predictive, explanatory, causal, or other quantitative analysis. However, for the Brazilian replication, we also need to distinguish purely descriptive quantitative articles from articles that go beyond descriptive statistics.
+
+## Anti-False-Positive Rule
+
+Do not classify an article as quantitative merely because it mentions a number, percentage, statistic, election result, survey result, or empirical finding from another study. To count as original quantitative analysis, the article must use its own data analysis or a reanalysis of data in its empirical analysis, usually in a table, figure, graph, appendix, methods section, data section, or results section.
+
+Descriptive counts, percentages, means, distributions, and cross-tabulations are descriptive statistics. If these are the only quantitative analyses in the article, classify the quantitative analysis type as `descriptive_statistics_only`.
+
+Use `null` when the text does not support a field. Do not invent sample sizes, variables, methods, causal designs, identification assumptions, mechanisms, statistical inference, or results.
+
+## Journal Context
+
+The main analysis includes these journals:
+
+- Brazilian Political Science Review
+- Cadernos Gestao Publica e Cidadania
+- Contexto Internacional
+- Dados
+- Lua Nova: Revista de Cultura e Politica
+- Novos estudos CEBRAP
+- Opiniao Publica
+- Revista Brasileira de Ciencia Politica
+- Revista Brasileira de Ciencias Sociais
+- Revista Brasileira de Politica Internacional
+- Revista de Administracao Publica
+- Revista de Sociologia e Politica
+- Sur. Revista Internacional de Direitos Humanos
+
+`Brazilian Journal of Political Economy` and `Civitas - Revista de Ciencias Sociais` are outside the main analysis.
+
+Some journals have higher prior probability of quantitative or causal work than others, but this is only a weak prior. Always classify based on the body text.
+
+Very low prior for credibility-revolution methods:
+
+- Novos estudos CEBRAP
+- Lua Nova: Revista de Cultura e Politica
+- Cadernos Gestao Publica e Cidadania
+- Sur. Revista Internacional de Direitos Humanos
+
+Articles in these journals are unlikely to use credibility-revolution methods such as experiments, DiD, IV, RDD, synthetic control, matching, or modern causal estimators. Use this only as a caution against over-classification. If the body clearly shows one of these designs, classify it normally.
+
+## Output
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Required fields:
+
+### Metadata
+
+- `pid`: string
+- `title`: string
+- `journal_title`: string
+- `input_text_hash`: string
+
+### Broad Empirical Classification
+
+- `is_empirical_paper`: boolean
+
+`true` if the article analyzes substantive empirical evidence, including quantitative data, qualitative evidence, documents, interviews, surveys, administrative data, content analysis, case studies, process tracing, archival materials, or other empirical material.
+
+`false` for normative theory, pure formal theory, conceptual essays, literature reviews without original empirical analysis, methodological articles without empirical application, and purely theoretical articles.
+
+- `empirical_evidence_type`: one of:
+  - `none`
+  - `quantitative_only`
+  - `qualitative_only`
+  - `mixed_empirical`
+  - `unclear`
+
+`mixed_empirical` requires both substantive qualitative evidence and substantive quantitative evidence. Do not classify as mixed merely because a quantitative article has a theory section, or because a qualitative article mentions contextual numbers.
+
+- `is_empirical_quant_paper_torreblanca`: boolean
+
+`true` if the article contains any original or reanalyzed quantitative data analysis, whether descriptive, bivariate, modeled, predictive, explanatory, causal, or other.
+
+`false` if the article is purely qualitative, theoretical, normative, formal, methodological without empirical quantitative application, or lacks original quantitative analysis.
+
+- `is_empirical_qual_paper`: boolean
+
+`true` if the article uses substantive qualitative evidence, such as case studies, historical comparison, interviews, documents, archival material, process tracing, interpretive analysis, discourse analysis, or qualitative content analysis.
+
+### Quantitative Module
+
+- `quantitative_analysis_type`: one of:
+  - `none`
+  - `descriptive_statistics_only`
+  - `bivariate_tests_or_correlations_only`
+  - `statistical_modeling`
+  - `unclear`
+
+Definitions:
+
+`none`: no original quantitative analysis.
+
+`descriptive_statistics_only`: the article presents only descriptive statistics from its own analysis or reanalysis, such as counts, percentages, means, distributions, descriptive cross-tabs, descriptive figures, or descriptive tables. It does not use statistical tests, correlations, regression, models, uncertainty estimates, or inferential claims from statistical tests.
+
+`bivariate_tests_or_correlations_only`: the article includes descriptive statistics and goes beyond them using t-tests, chi-square tests, Fisher tests, simple ANOVA, mean comparisons with p-values, Pearson/Spearman correlations, or equivalent bivariate tests, but does not use multivariable statistical modeling.
+
+`statistical_modeling`: the article uses regression, logit/probit, panel models, fixed effects, multilevel models, survival/event-history models, choice models, estimated matching or weighting, PCA/factor analysis, clustering used analytically, modeled text-as-data, network models, or equivalent statistical models.
+
+`unclear`: there are signals of quantitative analysis, but the body text does not allow confident classification.
+
+- `quantitative_analysis_evidence_quote`: string or null
+
+Short excerpt supporting `quantitative_analysis_type`, preferably from methods, data, results, table, figure, or appendix discussion.
+
+- `has_statistical_inference`: boolean or null
+
+`true` if the article reports p-values, standard errors, confidence intervals, Bayesian intervals, statistical tests, bootstrap intervals, randomization inference, or another uncertainty quantification.
+
+`false` if the article reports only descriptive analysis without statistical inference.
+
+`null` if not applicable or unsupported.
+
+- `statistical_inference_quote`: string or null
+
+Short excerpt supporting statistical inference. Use `null` if absent.
+
+### Qualitative Module
+
+- `qualitative_analysis_goal`: one of:
+  - `null`
+  - `descriptive_reconstruction`
+  - `explanatory_why`
+  - `interpretive_meaning`
+  - `mixed_descriptive_explanatory`
+  - `unclear`
+
+Use `null` if there is no qualitative component.
+
+`descriptive_reconstruction`: the article mainly describes how something happened, reconstructs a trajectory, maps actors/events/processes, or systematizes an empirical phenomenon.
+
+`explanatory_why`: the article seeks to explain why something happened, identifying causes, conditions, mechanisms, determinants, consequences, or explanatory processes.
+
+`interpretive_meaning`: the article mainly interprets meanings, concepts, discourses, intellectual traditions, norms, or texts without making a clear empirical explanatory claim.
+
+`mixed_descriptive_explanatory`: the article combines descriptive reconstruction with substantive causal or explanatory arguments.
+
+`unclear`: the qualitative goal is ambiguous.
+
+- `qualitative_goal_clarity`: one of:
+  - `null`
+  - `clear`
+  - `ambiguous_tough_call`
+  - `internally_inconsistent`
+
+If the article says it will describe how something happened but later explains why it happened, classify the qualitative goal as `explanatory_why` or `mixed_descriptive_explanatory` and set this field to `ambiguous_tough_call` or `internally_inconsistent`.
+
+- `qualitative_goal_quote`: string or null
+
+Short excerpt supporting the qualitative classification. Use `null` if not applicable.
+
+### Causal and Credibility-Revolution Screening
+
+- `causal_or_explanatory_claim_present`: boolean
+
+`true` if the article seeks to explain causes, effects, consequences, determinants, impacts, influence, mechanisms, or why something happened.
+
+`false` if it merely describes, interprets, reviews literature, or reports association without an explanatory or causal claim.
+
+Do not confuse vague association language with a causal claim.
+
+- `causal_or_explanatory_claim_quote`: string or null
+
+Short excerpt supporting the claim. Use `null` if absent.
+
+- `credibility_revolution_screen_applicable`: boolean
+
+`true` if the article should be screened for credibility-revolution methods.
+
+Classify as `true` if at least one condition holds:
+
+1. `quantitative_analysis_type` is `bivariate_tests_or_correlations_only` or `statistical_modeling`;
+2. the article uses an experiment, DiD, IV, RDD, RKD, synthetic control, synthetic DiD, matching, weighting, DAG used for identification, causal forest/tree, doubly robust estimator, causal discovery, or similar causal method;
+3. the article makes a causal or explanatory claim associated with quantitative analysis.
+
+Classify as `false` if:
+
+1. `quantitative_analysis_type` is `none`;
+2. `quantitative_analysis_type` is `descriptive_statistics_only` and there is no causal design;
+3. the article is purely qualitative;
+4. the article is theoretical, normative, formal, or conceptual without quantitative empirical analysis.
+
+- `credibility_revolution_screen_reason`: one of:
+  - `not_empirical`
+  - `qualitative_only`
+  - `descriptive_quantitative_only`
+  - `bivariate_or_correlation_screen`
+  - `statistical_modeling_screen`
+  - `explicit_causal_design_screen`
+  - `causal_claim_with_quantitative_analysis_screen`
+  - `unclear`
+
+- `credibility_revolution_method_present`: boolean or null
+
+Use `null` if `credibility_revolution_screen_applicable` is `false`.
+
+`true` if the article uses at least one credibility-revolution method.
+
+`false` if the article passes the screen but does not use such a method.
+
+Important identification rule:
+
+Do not count causal language, SEM, structural equation modeling, causal mediation,
+path analysis, regression adjustment, fixed effects, controls, or observational
+modeling as a credibility-revolution method merely because the article estimates
+effects or cites causal-methods literature. For any method outside the usual
+credibility-revolution designs listed below, classify `credibility_revolution_method_present`
+as `true` only if the article explicitly discusses the relevant causal identification
+assumption or strategy and gives a textual reason why that assumption is plausible
+in the empirical setting.
+
+For causal mediation or SEM-style causal claims, look specifically for discussion
+of sequential ignorability, treatment/mediator ignorability, randomization,
+design-based identification, sensitivity analysis, or another explicit
+identification argument. If the article applies SEM or causal mediation to
+observational data without such discussion, classify it as
+`observational_regression_with_causal_claim_no_design`, set
+`credibility_revolution_method_present` to `false`, and explain the issue in
+`tough_call_reason`.
+
+If `credibility_revolution_method_type` contains only `none_detected`,
+`fixed_effects_causal_panel_claim`, or
+`observational_regression_with_causal_claim_no_design`, then
+`credibility_revolution_method_present` must be `false`.
+
+- `credibility_revolution_method_type`: array or null
+
+Allowed values:
+
+- `experiment_field`
+- `experiment_survey`
+- `experiment_lab`
+- `experiment_list`
+- `difference_in_differences`
+- `event_study`
+- `instrumental_variables`
+- `regression_discontinuity`
+- `regression_kink`
+- `synthetic_control`
+- `synthetic_difference_in_differences`
+- `matching_or_weighting`
+- `dag_or_formal_causal_graph`
+- `doubly_robust`
+- `causal_trees_or_forests`
+- `causal_discovery`
+- `other_modern_causal_method`
+- `fixed_effects_causal_panel_claim`
+- `observational_regression_with_causal_claim_no_design`
+- `none_detected`
+
+Fixed effects rule:
+
+Do not classify every fixed-effects model as DiD. Classify as DiD or event study only if the article has treatment, time variation, treated/control comparison, intervention/event timing, or parallel-trends logic. If an article uses fixed effects and causal language but no clear causal design, classify as `fixed_effects_causal_panel_claim` or `observational_regression_with_causal_claim_no_design`.
+
+- `causal_design_quote`: string or null
+
+Short excerpt supporting the causal method classification. Use `null` if absent.
+
+### Substantive Extraction
+
+- `main_variables_or_relationship`: string or null
+
+Short summary of the main empirical relationship analyzed. Use `null` if unsupported.
+
+- `sample_or_data_source`: string or null
+
+Short summary of the main data source or sample. Use `null` if unsupported.
+
+### Uncertainty and Justification
+
+- `tough_call`: boolean
+
+`true` if a central decision required difficult judgment.
+
+- `tough_call_reason`: string or null
+
+Briefly explain the ambiguity. Use `null` if `tough_call` is `false`.
+
+- `brief_justification`: string
+
+Brief text-based justification for the overall classification.
+
+
+## Output Reconciliation
+
+The original prompt v3 above describes the fields of the nested `classification` object.
+When it says to return one JSON object, that object must be placed inside the top-level
+object required by this integral-reading prompt. Your final response must always have
+the top-level fields `section_reading_log`, `general_summary`, `decision_audit`, and
+`classification`.
+
+## Article Task Packet
+
+The task packet below contains the article metadata and full body text. Use only this packet for substantive classification.
+
+# Article task packet full corpus: S1981-38212020000100201
+
+This packet is derived from `data/processed/fulltext_corpus/article_texts_corpus.csv`.
+Use only the `body_text` below plus the metadata in this packet for substantive classification.
+
+## Metadata
+
+- eligible_order: 173
+- pid: S1981-38212020000100201
+- title: How 'Democratic' is the Democratic Peace? A Survey Experiment of Foreign Policy Preferences in Brazil and China
+- title_en: How 'Democratic' is the Democratic Peace? A Survey Experiment of Foreign Policy Preferences in Brazil and China
+- authors: Clara H. Suong; Scott Desposato; Erik Gartzke
+- year: 2020
+- journal_title: Brazilian Political Science Review
+- language: en
+- doi: 10.1590/1981-3821202000010002
+- canonical_source_file: data/processed/fulltext_corpus/article_texts_corpus.csv
+- canonical_source_column: body_text
+- input_text_hash: 2686188d6ef37194525ed99c97afdeb99223519bf05fbb2ccf53fc2020f13ca1
+
+## Body Text
+
+Students of politics have devoted enormous attention to exploring the role that domestic publics play in formulating foreign policy. Evidence of the impact of public opinion has been difficult to unearth, however. Given difficulties with inference and identification, researchers have begun to apply experimental techniques to assist in better understanding relationships.
+
+In a recent example, Tomz and Weeks (2013) demonstrate experimentally that subjects in the United States and the United Kingdom are less willing to advocate attacks against democracies than against non-democratic countries. Popular preferences might thus account for the democratic peace — the observation that democracies seldom fight each other.
+
+Yet while experiments can establish strong causal linkages, ambiguity persists in the interpretation of results and in connecting individual-level findings to macro-level processes. It is not clear, for example, that asking citizens in a democracy whether they are willing to go to war with another democratic country necessarily implies that respondents in a non-democracy will behave differently, or that the populations in all democracies are equally reticent to make war on other democracies. Much remains before researchers can confidently tie findings about a subject's stated preferences to patterns of conflict involving liberal republics. A critical step, as Tomz and Weeks (2013) point out, is to determine the generalizability of the linkage between public opinion, regime type, and war.
+
+How 'democratic' are popular preferences for peace with liberal states? To answer this question, we conducted survey experiments involving subjects in two emerging powers, China and Brazil. The United States and the United Kingdom are 'exceptional' nations, possessing extraordinary wealth, power, social status and with closely linked histories and cultures. The foreign policy attitudes of citizens in these two English-speaking democracies might prove equally exceptional.
+
+The two countries in our survey were chosen with considerable care. Each nation is a rising regional power, capable of acting aggressively if it so chooses. Using military force is thus more than a mere abstraction for publics in either country. Each nation's interests are also at odds with the global status quo; questions about the use of force are unlikely to be confused in the public mind with hegemonic leadership or acting 'as the world's policeman'.
+
+Brazil is a young democracy, exhibiting key differences from established leading nations. As in many younger democracies, support for democracy is not strong as in the United States or Western Europe; in some surveys, fewer than half of respondents identify democracy as the best form of government. Popular enthusiasm for cooperating with other democracies may be affected by the degree to which democracy is consolidated domestically.
+
+China is a non-democracy. The democratic peace is defined by critical differences in the foreign policy behaviors of democratic and non-democratic states. It is thus essential to examine the determinants of foreign policy in both types of regimes. If public opinion has an impact on the use of force by regimes, then we must examine opinion in both types of systems. Of course, it may well be that public preferences have less impact on foreign policy in authoritarian than in non-authoritarian countries. But this would imply an interaction between institutions and public opinion as the causal mechanism that explains the democratic peace. Either way, a critical first step is empirical — examining public attitudes toward democracies in both democratic and non-democratic regimes. These cases thus offer important variation in regime type, development, status and culture needed to evaluate the generality of the link between public opinion and democratic peace.
+
+A second concern has to do with meaning. Publics may imbue the word 'democracy' with content that researchers ignore at their peril. It is possible that subjects interpret democracy, not as a set of political institutions and norms as understood by academic researchers, but as coded language for a 'good', 'friendly' or 'responsible' country. To find out, we included a second experimental variable in our survey. Subjects were randomly informed that the United Nations had, or had not, authorized using force against a target nation. While only an initial step in determining how subjects perceive democracy, the treatment addresses concerns that democracy may be interpreted by subjects as an authoritative cue indicating quality or virtue.
+
+As it turns out, the public preference for peace with democracies is widespread but context dependent. Respondents from both Brazil and China were generally less likely to endorse military violence against a state when it was randomly identified as a democracy in our experiment. At the same time, however, United Nations authorization — or a lack thereof — proved much more important in predicting public preferences for using force.
+
+After reviewing relevant literatures, we detail the benefits of a broader assessment of the connection between public opinion and the democratic peace, across cultures, regime type and economic development. We then discuss details of our experimental design and present the results from the Brazilian and Chinese samples. We conclude by reviewing implications of our findings for democratic peace theory.
+
+Literature: democracy and peace
+
+Democracies are much more peaceful with each other than are other pairings of states, though democracies are about as war prone as other regimes in general ( RUSSETT and ONEAL, 2001 )1 . This implies that democratic dyads are the most cooperative, followed by non-democratic dyads, while mixed dyads (democracy and non-democracy) are the most conflictual. Numerous studies observe or document a significant reduction in conflict in democratic dyads (e.g. BABST, 1964 ; DOYLE, 1997 ; HUTH and ALLEE, 2003 ; LEVY, 1988 ; MAOZ and RUSSETT, 1993 ; RUSSETT, 1993 ; SMALL and SINGER, 1976 )2 .
+
+Theorizing the democratic peace has proven to be a greater challenge. Initial explanations focused on linkages between domestic political attributes and observed reductions in the use of force. Institutionalists argued that representation, deliberation, and civilian bureaucracy inhibit military violence ( MESQUITA and LALMAN, 1992 ; MAOZ and RUSSETT, 1993 ; RUSSETT, 1993 ). Kant (1972) saw constitutional constraints as restraining the sovereign's innate proclivity to make war. Normative explanations assign an analogous role to democratic culture ( DIXON, 1994 ; MINTZ and GEVA, 1993 ; OWEN, 1997 ; RUSSETT, 1993)3 . Constructivists claim that force in the international system is becoming socially unacceptable ( RISSE-KAPPEN, 1997 ; WENDT, 1999) . Some see the evolution of a common community or identity ( DEUTSCH, 1978 ; FLYNN and FARRELL, 1999) . Others assert that mature democracies fail to fight states they perceive as democratic ( WEART, 1998)4 . Many authors have focused on the informational aspect of democracies, viewing them as more transparent (e.g. SMALL, 1996 ; VAN BELLE, 1997) or possibly more credible due to the 'audience costs' or opposition groups that enable democracies to signal resolve (e.g. FEARON, 1994 ; SCHULTZ, 1998, 1999 , 1999 ; SMITH, 1998)5 .
+
+However, constraint theories have been criticized as ad hoc and deductively flawed ( MESQUITA et al., 1999 ; ROSATO, 2003 ). Moreover, scholars have noted that efforts to avoid circularity between theory and evidence would benefit most from new empirical content ( HUTH and ALLEE, 2003 ). Work by Mousseau (2000) and Hegre (2000) , for example, limits the democratic peace to advanced industrial economies. It is not obvious why norms, institutions, or other factors would inhibit conflict among rich democracies but fail to do so for poor democratic states.
+
+Recent efforts seek to apply public opinion research to the democratic peace, attributing the democratic peace to publics' preferences (e.g. DAFOE et al., 2015 ; LACINA and LEE, 2013 )6 . For instance, Tomz and Weeks (2013) report a survey experiment of public attitudes toward military violence among US and British citizens. Subjects were asked to consider whether or not their country should use force in a hypothetical international crisis. The study finds a consistent treatment effect for democracy; subjects are significantly less likely to support attacks against a democracy. In a follow-up study, Tomz and Weeks (2018) find that normative concerns separable from democracy matter much more than regime type in explaining popular opinion concerning the use of force. Their survey experiment, again using samples from the United States and the United Kingdom, shows that the pacifying effect of a treatment for whether the target country supports human rights subsumes the effect of the treatment for democracy.
+
+Evidence that citizens care more about whether a hypothetical target is humanistic than democratic suggests a role for social affinity. Common preferences or values may be a key contributor to democratic peace ( GARTZKE, 1998 , 2000 ; HUTH and ALLE, 2003). The term 'democracy' may also have important socially constructed connotations for respondents, reflecting subjective normative 'goods' in addition to a nation's actual political attributes.
+
+The notion that democratic peace can be explained by elite or popular affinities is also attractive because it is uncomplicated ( FARBER and GOWA, 1997 ). If democratic citizens or their leaders 'like' each other, then this could account for the democratic peace observation, without requiring an elaborate theory to generate the special dyadic nature of the relationship. However, the risk in such an explanation is that it again tends toward tautology, given that the absence of war among societies is an important indication of affinity. The proper way forward, then, is to assess cases where affinities are not inherent or obvious. If the democratic peace works by making democracies more friendly toward one another, then capable revisionist democracies (such as Brazil) confronting a world dominated by capable democratic powers should behave differently from capable revisionist autocracies (such as China) confronting this same world of powerful status quo democracies.
+
+Theory: public opinion and the democratic peace
+
+The democratic peace is an observation about how pairs of democracies differ in their foreign policies from other combinations of states. It follows that explaining the democratic peace most likely involves identifying differences between democracies and non-democracies. If public opinion differs systematically between citizens in democracies and non-democracies, then this would be evidence that public attitudes may be critical to the democratic peace.
+
+More generally, while 'micro' evidence of a link between public opinion and a preference for peace toward democracies — at least in some countries — is provocative and interesting, questions remain about how to tie this finding to the 'macro' evidence typically associated with the dyadic democratic peace observation. The democratic peace is a global phenomenon best suited to evidence that the impact of public opinion on foreign policy spans many, if not most, democracies. While Tomz and Weeks (2013) argue that their results are generalizable "to countries with varying attitudes about military action" ( TOMZ and WEEKS, 2013, p , p. 860), it is difficult to conclude this from their sample. The United States and the United Kingdom are consolidated, wealthy democracies that enjoy a privileged status and whose citizens are somewhat used to interventions abroad. Few countries are more alike, and at the same time are less like other nations in so many respects. The bulk of democracies are younger, poorer, and possess histories of political instability. Many are also confronted by ongoing border disputes, resource crises, and important gaps in human and national security. Given prima facie claims of Anglo exceptionalism (c.f., LIPSET, 1996) , an important next step is testing whether Tomz and Weeks's 2013 results hold in more typical democracies.
+
+Further, explaining the relationship between public opinion and the democratic peace also requires diverse regime types. The democratic peace is defined by behavioral differences between democratic and non-democratic regimes. Thus, some consideration of public opinion in non-democracies is warranted. If public opinion alone explains the democratic peace, then democratic publics must typically prefer peace with other democracies, while non-democratic publics should not prefer peace with democracies.
+
+Of course, it may be that institutions matter as well — publics in non-democracies may have less influence over foreign policy than do democratic publics. However, such a finding would shift scholarly focus from public opinion to the role of democratic institutions. Indeed, it may be that all types of publics generally oppose attacking democracies, but autocratic elites may ignore their constituents, while democratic leaders are forced to listen to popular preferences. This framework could also account for the democratic peace. However, the critical causal variable in this framework would be the way that regimes differ in their attentiveness to public opinion. Public opinion would then be no more causal as a variable — since it would not vary —than the venerable realist concept of international anarchy. Instead, public opinion favorable to democracies would merely be a 'permissive condition'. Again, a critical first step is empirical: measuring public attitudes in both democracies and non-democracies.
+
+Our analysis also explores the role of international institutions in opinion formation. Specifically, our survey experiment varies whether or not the proposed use of force has been endorsed by the United Nations. The inclusion of this second treatment helps separate procedural democracy from 'good' countries. Although academics have learned to use terms like 'democracy' with considerable analytical precision, it does not follow that our subjects have in mind the Freedom House definition. Democracy may simply serve as a convenient proxy for things respondents deem to be good or similar to themselves or their nation. Subjects may treat the researcher's use of the term as an authoritative cue that force is unwarranted, and that recommending military action will be frowned upon. Subjects may also view the approval of international institutions as an important mechanism for assessing the legitimacy of proposed uses of force, as suggested by sources in the literature.
+
+Just as 'princely virtues' were once presented as the standard by which the behavior of political leaders was to be evaluated—even though very few princes actually exhibited these virtues—so too 'democracy' has now come to represent a broad and amorphous set of desirable national qualities. Almost every country claims to be a democracy, even those that clearly do not qualify by any reasonable definition. At the same time, enemies are capable of misrepresenting regime type. Saddam Hussein and Fidel Castro each claimed that their regimes were democratic, and each offered a skeptical view of democracy in the United States. Symbolic or socially constructed interpretations of democracy are bound to appear among subjects from powerful western nations, where a country's virtues will tend to be associated with a willingness to accept the status quo. Rather than capturing the effects of the political institutions of democracy on the willingness of subjects to advocate war, experimental research may really be measuring whether the hypothetical opponent is perceived to be in good standing with the international order or is even hostile or friendly.
+
+A partial solution may stem from evidence that international institutions help to shape public preferences involving the use of force7 . Experimental work on the effects of IOs (international organizations) on public opinion ( TINGLEY and TOMZ, 2012 ) has shown that the United Nations Security Council's (UNSC) approval boosts public support for war via a process of 'legalizing' the proposed action by granting it moral authority, serving as a useful heuristic for the public. While the regime type of the target country may be perceived as 'cheap talk' on the part of strategic actors, approval from IOs may serve as a more reliable and costly cue from an authoritative entity for determining individuals' stances on the use of force. Existing literature has documented the 'second opinion role' of IOs ( GRIECO et al., 2011 ); it shows that the American public is affected by IO approval of the use of force because it provides a credible cue that such use of force is good policy ( CHAPMAN, 2011 ; GRIECO et al., 2011) .
+
+We use international institutional approval of the use of force to control for the virtues of a potential target. Specifically, we vary whether or not the use of force has been approved by the United Nations. We thus measure the impact of regime type on public attitudes in an environment where the international community has judged action necessary, and in one where it has not.
+
+Previous attempts to tie public opinion to the democratic peace have not considered that this relationship may be mediated through international institutions, or that 'democracy' itself may be interpreted by subjects as an authoritative cue to the effect that they should oppose the exercise of military violence. Combined with the exceptional nature of the samples used in previous studies, the danger is that the impact of popular preferences is either too ubiquitous or too unusual to conform to the dyadic macro observation that democracies do not fight each other, while other combinations of regimes continue to interact through force. We explore these possibilities by means of the survey experiment that we detail below.
+
+Experimental design
+
+The ideal experiment on public opinion and the democratic peace would measure the support of subjects for their government's use of force against every country. An opponent's regime type would be randomly assigned, and each country would face identical scenarios and geopolitical contexts. Our resources are too limited to survey every country, and each country faces unique security environments that no doubt affect public perspectives (compare, for example, Iceland and Israel). However, we believe that careful case selection and an experimental design that decontextualizes security threats helps to advance the literature.
+
+Our study involved survey experiments in China and Brazil. As with previous work ( LACINA and LEE, 2013 ; TOMZ and WEEKS, 2013 ), we use internet-based polling. Subjects in each country were asked to read short scenarios ('vignettes') about crises involving two hypothetical countries ('A' and 'B') and to express their support for using force. Two treatments were randomly assigned: the regime type of Country B and UN authorization for Country A's use of force.
+
+Our survey used the following format. The script was translated into the local language8 . Prior to reading the script, subjects were advised that the scenario is hypothetical and should not be read as if it referred to any particular country9: a country in the same part of the world as 'Country A' is developing nuclear weapons and will have its first nuclear bomb within six months. This country (Country B) could then threaten other countries in the region with possible nuclear attack. 'Country A' has attempted to resolve the situation peacefully, but 'Country B' refuses to stop or even discuss the issue. Additional information: 'Country A' would almost certainly defeat 'Country B' in a military dispute. If 'Country B' acquires nuclear weapons, it will have the power to blackmail or destroy other countries. 'Country B' is [not ] a democracy. If 'Country A' attacks, it will be able to destroy 'Country B's' nuclear development sites and prevent 'Country B' from developing nuclear weapons. The United Nations has [not] authorized 'Country A' to use force against 'Country B' to resolve the situation.
+
+Immediately after the vignette, subjects were asked: should 'Country A' attack and use force to resolve the situation? Subjects were given only two options, attack or not attack.
+
+The first treatment involves a simple dichotomous assignment of the regime type of the nominal target of potential military action: democratic or not democratic. This treatment consists of a one-word change in the vignette, identifying the target country as a democratic neighbor of the potential initiating state, or as a non-democratic neighbor. Explaining the observation of the democratic peace with public opinion requires that democratic publics are not generally less willing to use force – only uniquely more peaceful toward other democracies.
+
+The second treatment varies UN authorization for Country A's use of force against 'Country B'. Extensive theoretical research identifies the approval of international institutions as a key factor in determining popular support for war. One strain of thought emphasizes the legitimizing effect of authorization by an international institution ( FINNEMORE, 2003 ; HURD, 2007) . A second perspective argues that international approval plays an informational role, reducing uncertainty about the likely reaction of the international community to a state's use of force ( BOEHMER et al. 2004 ; CHAPMAN, 2011 ; FANG, 2008 ; GRIECO et al., 2011 ; VOETEN, 2005) . The combination of regime type and international institutional support for using force defines 2x2=4 treatments.
+
+The impact of democracy in encouraging peace could be attributed to domestic and/or international institutions. Democracies may be perceived to be more peaceful because of the mechanisms, such as elections, legislatures and courts, that allow popular influence over foreign policy. International institutions could also precipitate peace through their authority or legitimacy, or because subjects perceive approval as indicating something about the target state in the vignette. Including an experimental control for international approval will thus aid in assessing the effect of regime type on popular preferences. While we are not directly concerned here with unraveling the causal mechanisms linking UN approval with public opinion, we include questions in the survey about whether respondents care whether their country cooperates with the United Nations, whether their country cooperates with other countries in the region, and whether they believe their government should be more or less active in world affairs.
+
+For consistency with previous work, our vignette discusses a crisis involving a hypothetical neighboring country's pursuit of nuclear weapons ( TOMZ and WEEKS, 2013 ). Research is divided on the impact of nuclear proliferation on interstate conflict (c.f., KROENIG, 2013 ; SAGAN and WALTZ, 2012 ; SECHSER and FUHRMANN, 2013) . Nevertheless, most people seem to think that nuclear weapons are dangerous, particularly in instances where an adversary is allowed to acquire nuclear capabilities. Our vignette about possible nuclear proliferation in a neighboring state with generally hostile relations should thus tap into popular attitudes about the dangers of proliferation and capture variation in support for the use of military force attributable to democracy.
+
+We intentionally use hypothetical labels for the two states in our vignettes, referring only to 'Country A' and 'Country B'. Previous work has focused on whether a respondent's own country should use force. While not unreasonable, vignettes with descriptive and/or contextual labels pose confounding problems. Consider the potential confounders of asking Brazilian subjects whether a neighbor should be prevented from proliferating. Most will have some difficulty imagining a grave threat emanating from Paraguay (at least since the War of the Triple Alliance). A few may recall that Argentina had a nuclear weapons program in the 1980s. Further, today, every one of Brazil's immediate neighbors is a democracy10 . What country will they think of if asked to consider using force against a neighboring nondemocracy? The closest nondemocracy is Cuba, with whom Brazil has generally friendly relations. In contrast, China has democratic and non-democratic neighbors, some of whom are already nuclear powers. A Chinese respondent might think of North Korean proliferation, Japanese latent nuclear capabilities, concerns about South Korea and Taiwan, as well as neighbors like Mongolia or Bhutan on one hand and India and Pakistan on the other. Contextual factors could confound results and make cross-national comparisons difficult. It is difficult to imagine that we could learn anything generalizable about the democratic peace by comparing Brazilians’ thoughts on attacking Cuba with Chinese attitudes toward Japan.
+
+Democratic peace theory is supposed to be context free. Countries in the theory have regime type labels but proper nouns are absent. A faithful test of democratic peace theory thus involves questions about hypothetical democracies or non-democracies, not about particular countries in specific contexts. We create a much more general framework for assessing the willingness to use force — one that more nearly reflects the axiomatic nature of democratic peace theory — by using generic country names in our vignettes. Our approach is also useful in simplifying the process of conducting surveys in locations where government officials might reject more specific or pointed survey questions addressing national policy.
+
+The choice to use generic country names also has a more practical motive. Survey firms in China are hesitant to ask any direct questions about Chinese national security policy, and such questions are illegal under Chinese rules on research ( LÜ, 2016 ).
+
+Our design allows us to test the generalizability of Tomz and Weeks' (2013) key findings. Rather than trying to measure public opinion experimentally in all countries, or even selecting a representative sample of states, we focus on a pair of 'critical case' countries, where popular preferences are most likely to delineate the scope of previous findings and connect micro level opinion data to the macro democratic peace observation. As emerging, non-Western powers, Brazil and China also offer a geo-strategic justification for their selection. Each is a member of the 'BRICs', with rising status in the global system, even as each represents an important challenger and focus for opposition to the international status quo. At the same time, Brazil and China provide key variance in terms of regime type. Of course, an important limitation of this design is that we are only examining two countries, and any country-specific idiosyncrasies could confound our findings, so that we cannot generalize to all developing democracies or all developing autocracies. We will test for security context heterogeneity in treatment effects and will also address the limitations of our findings in the discussion.
+
+Sample
+
+Our initial survey experiment was conducted online in August and September of 201311 . We collected a total of 4,214 responses from Brazil and 5,744 responses from China. We conducted a follow-up study in China using a more representative sample recruited by YouGov, where we collected 2,500 responses in April 2015. Survey responses were recorded in an online anonymous survey, with subjects recruited by professional polling companies in each country. Subjects were provided with an online link to the survey experiment, which was programmed in the local language, and routed back to the survey firm's website where subjects were compensated for participating in the survey. We adopted many of Peifer and Garrett's (2014) recommended best-practices for online panels, and data were screened for duplicate responses. Following Tomz and Weeks (2013) , we also collected subjects' demographic information — age, gender, education, income, religiosity, and interest in international news — and foreign policy attitudes, such as militarism, internationalism, and nationalism.
+
+While each sample of respondents is not perfectly representative of the population of the two countries, they give us a good picture of the opinions of middle class, well-educated citizens, a sample population that is particularly well disposed to reflect the values sought in democratic peace research. Table 01 reports some descriptive statistics of the respondents[12]. Chinese respondents were more militaristic and nationalistic than Brazilians, but they were also more internationalist on our composite scale. As expected, Brazilian respondents were more religious than Chinese respondents. In other respects, however, the Brazilian sample was comparable demographically to the Chinese sample. In general, both groups were young, well-educated, economically stable, and distinctly interested in international affairs.
+
+How might these sampling frames affect results? Without observing a fully representative sample, we cannot be sure, but we did examine the World Values Survey from Wave 06 ( INGLEHART et al., 2014 ) for some indications. For both Brazil and China, we examined the relationship between internet access, education, and respondent ratings of the importance of democracy. For both countries, daily internet access increases the percentage of respondents that say democracy is, 'absolutely important' by about 10 percentage points (Brazil, no access to internet, 44% versus daily access 55%; China no access 26%, daily access 36%). Similarly, comparing attitudes about democracy as a function of education, the percentage responding that democracy is 'absolutely important' increases with education, but similarly in both countries. Respondents with a primary school education who called democracy, 'absolutely important' were 40% of respondents in Brazil and 28% of respondents in China; for those with a secondary education the percentages were 49% and 35%.
+
+Consequently, excluding those with no internet access or with the lowest educational levels will probably inflate the impact of democracy, and given the similar relationships between internet access and democracy observed in the World Values Survey ( INGLEHART et al., 2014 ), this effect will likely be similar in each country. Note that the same pattern is even stronger in the United States, where previous work on this topic has used internet-based surveys (no internet access, democracy 'absolutely important', 37%, daily internet access, 52%). For our study, this means we can still explore whether patterns in Brazil and China are different than or the same as those documented in the United States, but we cannot claim that our results are representative of all Brazilians or all Chinese. We partially addressed this with our second sample where we oversampled low education respondents.
+
+In an ideal world, we would have a fully representative sample for both of our cases. Tomz and Weeks (2013) do not provide this, even using samples from the United States and the United Kingdom. A representative sample in an internet survey in China, and to a lesser extent, Brazil would be quite difficult — perhaps impossible — to obtain. In practice, our sample is heavily weighted towards elites, especially in China. This has some benefits. Urban elites are most likely to have opinions on foreign policy. Elites are also the most likely group to influence foreign policy, especially in an authoritarian regime, where social networking sites, online discussions, and calls for collective action are closely monitored.
+
+Results
+
+The sections below review the major findings for our study. The results reveal surprising differences and remarkable similarities across two populations with very different cultures and political structures. A final section attempts to make sense of these findings.
+
+Main effects of regime type
+
+Table 02 reports the effect of the target country's regime type on public support for the use of force in Brazil and China. Figures are the percentage of subjects in each country and treatment that answered 'yes', when asked whether 'Country A' should use force against 'Country B'. Citizens of both countries were significantly less likely to support the use of force against a democracy than against a non-democracy. Only 32 percent of Brazilian subjects — less than a third — supported attacking a democracy whereas nearly 40 percent backed military action against a non-democratic target. The estimated effect of regime type was thus -7.7 percentage points in Brazil, significant at the 0.05 level. Chinese subjects were uniformly more willing to support the use of force. Over fifty percent of Chinese subjects supported using force against 'Country B' in both treatments. However, there was a significantly smaller effect of democracy. When 'Country B' was democratic, 50 percent of Chinese respondents advocated using force. Support for using force increased only modestly, to approximately 53 percent, when the target was a non-democracy. The effect of regime type is thus about -2.8 percentage points for Sample 01 and the YouGov Sample with the former — but not the latter —significant at the 0.05 level.
+
+These experimentally-generated effects demonstrate consistency with findings offered by Tomz and Weeks (2013) . Brazilian subjects are reluctant to advocate war with a democracy. Chinese respondents show the same tendency but are: 01. more willing to use force; and 02. less responsive to the democracy treatment.
+
+Table 03 shows support for the use of force by regime type and by UN approval. The effect of democracy persists after controlling for UN approval for the Brazilian sample but not for the Chinese samples. For Brazil, only 38 percent of respondents supported a UN-approved attack against the democratic nuclear proliferator, while roughly 47 percent endorsed an attack against a non-democratic target with UN approval. The impact of democracy for the Brazilian sample treated with UN approval was thus -9 percentage points. The effect of democracy was also significant in the absence of UN approval, but was smaller. Approximately 26 percent of Brazilian respondents supported an attack against a democratic nuclear proliferator without UN authorization whereas about 31 percent backed an attack against a non-democratic target without UN approval. The effect of democracy for the Brazilian sample without UN approval decreased to -5 percentage points, smaller than its equivalent with UN approval but still statistically significant.
+
+For Chinese respondents, the effect of democracy was much smaller and at times insignificant after controlling for UN approval. When force was approved by the United Nations, 54 percent of Chinese respondents in the first sample and 58 percent in the YouGov sample backed an attack against a democracy compared with 56 percent and 58 percent who supported military action against a non-democracy, a difference that is not statistically significant. The effect of democracy was also smaller for Chinese respondents in the 'no UN approval' condition. Approximately 45 percent of those assigned democratic Country B without UN approval in the first study and 44 percentage in the YouGov study favored an attack versus nearly 49 percent in the case of a non-democratic Country B for both samples. The effect of regime type was again insignificant. In each country, the difference was not significant; variation in the size of the democracy effect was not significant.
+
+The table also reveals the effect of UN approval on willingness to advocate force. In both countries, the effect is much larger than for democracy. For Brazilians facing a democratic target, UN approval produces nearly a 12-percentage point increase in willingness to use force. The effect is even larger when regarding non-democratic targets (almost 17 percentage points). Both of these effects are statistically significant. For Chinese subjects, the impact of UN approval is close to 8 percentage points — and 14 and 09 percentage points in the YouGov sample — in democratic and non-democratic treatments.
+
+These results suggest several initial conclusions. First, there is an effect of democracy in Brazil, and evidence of a suggestive but not significant effect in China. Second, in both cases, there is an even larger impact of UN approval on the willingness to use force. Finally, our Chinese subjects are generally more supportive of using force than are our Brazilian subjects. These differences between Brazil and China are striking but may reflect demographic differences or other features of sample variability. For example, China's sample is younger and more male than the Brazilian sample, variables associated with a willingness to advocate force. We next conduct multivariate analysis to address a variety of demographic and attitudinal variables.
+
+Robustness checks
+
+We complement our basic analysis with robustness checks in the presence of control variables. We adopt two strategies. First, we use logistic regression to predict support for 'Country A' using force against 'Country B', controlling for demographic and attitudinal variables. Second, we examine the simple effect of democracy for different values of control variables.
+
+Table 04 reports results from a logistic regression of respondent support for the use of force incorporating both our experimental variables and also attitudinal and demographic controls. The variable labels 'Democracy' and 'UN Approval' denote the experimental treatments. Following existing works on support for the use of force, 'Militarism', 'Internationalism' ( HURWITZ and PEFFLEY, 1987 ; HERRMANN et al., 1999 ; TOMZ and WEEKS, 2013) , and 'Nationalism' ( JOHNS and DAVIES, 2012) are composite measures that control for a respondent's basic foreign policy disposition.
+
+The results reiterate the earlier summary tables: regime type and international organization approval affect subjects' attitudes toward the use of force, in both Brazil and China. In both countries, respondents are significantly less willing to approve the use of force against a democracy but are much more willing to support an attack sanctioned by the United Nations. Variables for both treatments are significant at the 0.05 level in both countries. Both sets of coefficients are consistent with our basic results; democracy diminishes support for using force, while support for war increases with UN endorsement.
+
+Many of the demographic variables are statistically significant for Brazil but not for China, though the signs are nearly always the same. For Brazil, demographic factors such as age, gender, education, income, and interest in international news are all significant at the 0.05 level. Older, female, better-educated Brazilians were more likely to oppose war, while Brazilians with higher incomes and a strong interest in international news were more likely to support war. The lack of significance for most Chinese demographics controls may reflect sampling differences. The Chinese sample is less demographically diverse than the Brazil sample; there is less variance to leverage in estimating these coefficients. Generally, Chinese respondents tend to be younger than Brazilian respondents; the mean age for Chinese respondents is 31 (Sample 01) or 32 (YouGov Sample), with a standard deviation of 8 (Sample 01) or about 11 (YouGov Sample), whereas the mean age for Brazilian subjects is 36 and the standard deviation is 12. Chinese respondents are overall better educated, with 73 percent reporting that they have a college degree whereas only 26 percent of Brazilian respondents claiming this level of formal education. Chinese respondents are also much less religious than Brazilian respondents, 85 percent of whom reported having a religion13 .
+
+In both countries, self-reported levels of militarism, internationalism, and nationalism had a sizable effect on the likelihood of a respondent advocating the use of force. Not surprisingly, a respondent with strong militaristic attitudes is more likely to support military action than are less militaristic individuals. Nationalistic respondents in both countries tend to be more favorable toward to the use of force than less nationalistic respondents. Higher levels of these two variables in China may explain the greater overall willingness of Chinese respondents to use force. Those who thought of specific cases in response to the vignettes were also more likely to favor aggressive foreign policy action, which may explain the relatively smaller effect sizes in studies with hypothetical situations than in studies that rely on real cases14 .
+
+Perhaps the most striking distinction between the two samples occurs in the context of the internationalism measure, which produced large, significant but contrasting effects for Brazil and China. Internationalism substantially increases support for using force among Brazilian subjects of the survey experiment, whereas it is negatively associated with a willingness to war among Chinese subjects. We speculate that this difference reflects contrasts in how subjects in the two countries interpret the role of the United Nations. China's permanent seat on the UN Security Council may alter the meaning of UN authorization for some Chinese, as UN authorization requires, at a minimum, China's acquiescence.
+
+Figure 01 shows the mean predicted probability of an average respondent from each sample supporting the use of force in each country, contingent on the target's regime type and UN approval15 . Attitudinal variables, such as militarism, internationalism, nationalism, were held at their means and other control variables at their medians of each country.
+
+The predicted probabilities generated reveal how these citizens react to the target country's regime type and IO endorsement. Again, the rallying effect of UN approval is clear whereas the pacific effect of democracy is weaker. Given UN approval, the predicted probability of the Brazilian respondent advocating the use of force against a non-democratic nuclear proliferator is 0.43 and against a democratic proliferator is 0.37. Without UN approval, however, the probability of supporting war decreases to 0.28 when the target is a non-democratic regime and further to 0.21 when the target is a democracy. Similarly, the predicted probability that a Chinese subject in our first sample backs military action sanctioned by the UN is 0.57 against a non-democratic target and 0.53 against a democratic target. Without authorization by the United Nations, the likelihood that Chinese respondents support an attack is 0.47 if the target regime is non-democratic and 0.43 if the target is said to be a democracy. In our follow-up study in China, the predicted probability that a Chinese subject supports an UN approved attack is about 0.58 regardless of the target's regime type. Without UN approval, the predicted probability is 0.45 against a non-democratic target and 0.39 against a democracy.
+
+Of course, the average respondent does not represent the average citizen. For this reason, we also generated predicted values using population medians and percentages for age group, education and gender (not shown) ( Minnesota Population Center, 201716 ). The comparative patterns were identical as were the hypothesis tests. The only difference was that in every cell the predicted probability of support for using force was about 0.05 higher for the population mean than for the sample mean. This was true for both Brazil and China, reflecting greater support for the use of force among poorer and less educated subjects.
+
+As an alternative robustness check, we examine the effect of the treatment as a function of each of the control variables in our Appendix. The analysis result for Brazil, shows how strong and consistent the effect of democracy is on the expressed support for Country A's use of force. Of the 29 reported treatment effects of regime type, 28 are negative - meaning that democracy reduced support for Country A's use of force. Further, 23 of the 29 are statistically significant, and those that are not tend to have small samples and low power.
+
+The results are weaker for China. Of the 29 estimated effects, 26 are again negative, and the positive values tend to have very small sample sizes — in one case, just 11 subjects17 ! On the other hand, only 09 of the 29 are significantly different from zero. This may reflect real variation within the population, or it may just reflect lower power given the slightly smaller effect of democracy in China. Our study does not provide the power needed to explore all these differences, but several are intriguing and worth mentioning. The lowest education cohort actually had a positive treatment effect - they were more likely to support attacking a democratic Country B. The impact of democracy was very large for subjects with low nationalism, but again, the sample size in this category is very small.
+
+We also estimated the treatment effects using randomization inference ( RIGDON and HUDGENS, 2015 )18 . The results do not change substantially. Among our Brazilian sample, the average treatment effect (ATE) based on attributable effects was estimated as -7.7 percent for our democracy treatment with the confidence interval from -11 to -4.4 percent19 . Among our Chinese samples, the ATE based on attributable effects was -2.7 percent (Sample 01) and -2.8 percent (YouGov sample) for our democracy treatment. The confidence interval for the effect was from -5.6 to 0.1 percent for the former and from -7.2 to 1.6 percent for the latter20 .
+
+Discussion
+
+This study provides evidence of democracy's pacifist but limited effect among respondents from Brazil and China. Respondents from Brazil, a democracy, are less supportive of the use of force against another democracy, but respondents from China, a non-democratic country, do not distinguish between regime type. Apparently, the willingness to fight a democracy is highly context dependent. In addition, our study suggests an existence of a large signaling effect of IO endorsements on public opinion. Respondents were extremely sensitive to the cues from international organizations —more than the cues about the potential target country itself. In other words, respondents from Brazil and China are more supportive of attacking a democracy if an international organization approves the attack.
+
+Our findings show that Tomz and Weeks' (2013) work on the United States and United Kingdom do not neatly generalize to all countries, with important differences in the impact of democracy on the willingness to use force when comparing Brazil and China. One possible interpretation is that our findings provide evidence in support of a democratic peace - respondents in democratic Brazil were less supportive of using force against another democracy than against an autocracy; respondents in authoritarian China made no such distinction. However, a major limitation of the study is that, since we only examined two countries, we cannot say decisively that the differences in treatment effects between China and Brazil are driven only by those countries' regime types or that these findings generalize more broadly to other democracies or authoritarian regimes. Each country is situated in a very different security context which could explain its perspectives on the use of force. We attempted to partially address these challenges by decontextualizing our experimental vignette to use generic situations rather than a threat facing our respondents' own countries. Further, when testing for heterogeneity in treatment effects and when respondents reported thinking of one context or another, we failed to reject the null of no heterogeneity, suggesting that our decontextualized vignette was effective. Even so, there are many other differences between these cases, including economic, historical, and even cultural, that could explain away our results. At the same time, although our ability to generalize is limited, Brazil and China are both leading countries demographically, militarily, and economically, and as such, our finding that support for a democratic peace is stronger in Brazil than in China remains important.
+
+Our study is also limited by our sampling method. Like other scholars working in this area, we rely on an internet-based survey drawn from a commercial panel, not random samples21 . For the Chinese case, we validated our results with a second survey that over-sampled respondents with low-levels of education. Ultimately, however, scholars studying the public opinion of a non-democratic country face a conundrum. They can strive to recruit a nationally representative sample characteristic of 'the median voter'. However, it is unclear whether a median voter is a meaningful political entity in a society lacking universal suffrage. An ideal sample of respondents for a non-democracy may consist of elites, individuals who more nearly reflect a 'pivotal' opinion in the society. Researchers may need to make a choice between the median voter sample and the pivotal voter sample, facing questions and concerns in each case about what 'representative' means in a polity that lacks representation. We chose to pursue both options, collecting and analyzing data from a more representative sample of the Chinese population through YouGov, in addition to the initial samples. The results from both samples are largely consistent.
+
+These limitations suggest directions for future research. An important next step would be to extend this research to a larger sample of countries, ideally with fully representative simple random samples. In addition, future work should also further dissect and explore the meaning of democracy for research subjects. The limited popularity of democracy in China might well derive from different factors than those that provide its appeal in Brazil or the United States, though we were unable to find any indications of this in the current research design. It remains possible that 'democracy' means different things in different places. Perhaps democratic citizens may correctly perceive democracy while the subjects of nondemocratic regimes may mis-interpret the label. Perhaps, too, 'democracy' means something subjective in both democracies and non-democracies.
+
+While our discovery of the 'democratic' nature of popular preferences for peace with democracies is important, we find an even larger effect of UN approval on individuals' support for the use of force. Our effort here has focused on the role of democracy and thus we have devoted less attention to the effects of UN approval. Nonetheless, the strong experimental performance of UN authorization and its close relationship to concepts of liberal peace calls for further investigation.
+
+
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+{"pid":"S1981-38212020000100201","title":"How 'Democratic' is the Democratic Peace? A Survey Experiment of Foreign Policy Preferences in Brazil and China","journal_title":"Brazilian Political Science Review","input_text_hash":"2686188d6ef37194525ed99c97afdeb99223519bf05fbb2ccf53fc2020f13ca1","status":"complete","full_body_read":true,"incomplete_reason":null,"section_reading_log":[{"section_title":"unnamed introductory section","section_position":1,"section_summary":"The opening frames the article as an extension and test of experimental research on public opinion and the democratic peace. It argues that prior survey experiments in the United States and United Kingdom show citizens are less willing to attack democracies, but that the generalizability and interpretation of those findings remain uncertain.\n\nThe authors motivate Brazil and China as cases that vary by regime type, development, status, and culture. They present the study's central claim: popular reluctance to attack democracies exists beyond Anglo-American democracies, but is context dependent and may be outweighed by United Nations authorization.","methods_or_data_mentions":"This section states that the authors conducted survey experiments in China and Brazil. It identifies two experimental dimensions: the target state's regime type and whether the United Nations authorized the use of force. It also previews results comparing support for military action across these randomized conditions.","classification_relevance":"This opening establishes that the article is empirical, quantitative, and explicitly experimental. It also signals a causal design because respondents were randomly assigned to treatment conditions and the study interprets differences in support for force as treatment effects."},{"section_title":"Literature: democracy and peace","section_position":2,"section_summary":"This section reviews the democratic peace literature, emphasizing the empirical regularity that democracies rarely fight one another and the difficulty of explaining why. It summarizes institutional, normative, constructivist, informational, and audience-cost explanations, and notes criticisms of some accounts as circular or under-specified.\n\nThe section then turns to public opinion explanations, especially Tomz and Weeks' survey experiments. It argues that prior evidence from US and UK respondents may reflect exceptional samples and that democracy may be functioning as a proxy for affinity, goodness, human rights, or status within the international order.","methods_or_data_mentions":"The section primarily reviews prior studies and does not present new data analysis by the authors. It discusses earlier survey experiments and empirical findings from the literature, but these are contextual rather than the article's own empirical evidence.","classification_relevance":"This section is mostly theoretical and literature-review material. It does not itself justify a quantitative classification, but it clarifies the causal/explanatory question that the authors later test experimentally: whether target democracy and international legitimacy affect public support for the use of force."},{"section_title":"Theory: public opinion and the democratic peace","section_position":3,"section_summary":"This section develops the theoretical logic linking public opinion to the democratic peace. It argues that a public-opinion explanation must account for differences between democratic and non-democratic regimes and therefore requires evidence on publics in both types of systems.\n\nThe authors also develop the idea that international institutions may shape public support for war and that the word democracy may serve as a cue for legitimacy or virtue rather than a precise institutional category. The section motivates the inclusion of UN authorization as a second treatment to distinguish the effect of democracy from broader perceptions of legitimacy or goodness.","methods_or_data_mentions":"The section describes the planned experimental manipulation of UN approval and target democracy but does not report results. It refers to previous experimental work on international organizations and public opinion. No tables, models, or original empirical estimates appear in this section.","classification_relevance":"This section supports the article's causal/explanatory classification by stating why the experiment is designed to identify effects of democracy and UN authorization on support for force. It is not itself quantitative evidence, but it defines the causal variables and interpretation used in the empirical sections."},{"section_title":"Experimental design","section_position":4,"section_summary":"This section describes the survey experiment. Respondents in Brazil and China read hypothetical vignettes about a crisis involving two generic countries and indicated whether Country A should attack Country B to prevent nuclear weapons development. The design intentionally avoids naming real countries to reduce contextual confounding and to make the test closer to the abstract logic of democratic peace theory.\n\nThe authors explain the two randomized treatments: whether Country B is described as democratic or not democratic, and whether the United Nations has authorized force. These two binary treatments produce a 2x2 design. The section also justifies the choice of Brazil and China as emerging powers with variation in regime type and acknowledges limitations from studying only two countries.","methods_or_data_mentions":"This section provides the core research design: internet-based survey experiments, translated vignettes, random assignment of target regime type and UN authorization, and a binary outcome measuring support for attack. It also mentions additional survey questions on attitudes toward the UN, regional cooperation, and world affairs.","classification_relevance":"This is the strongest evidence for classifying the paper as an empirical quantitative article using a survey experiment. Random assignment and treatment effects make the credibility-revolution screen applicable, and the method type is a survey experiment."},{"section_title":"Sample","section_position":5,"section_summary":"This section describes the survey samples. The initial online survey was conducted in August and September 2013, yielding 4,214 responses from Brazil and 5,744 from China. A follow-up China study using YouGov collected 2,500 responses in April 2015. Respondents were recruited by professional polling firms, completed anonymous online surveys, and provided demographic and foreign-policy attitude information.\n\nThe authors discuss sample representativeness and limitations. They note that the samples are not fully representative and are weighted toward middle-class, educated, internet-connected respondents, but argue that these respondents are relevant for democratic peace research and foreign policy opinion. They use World Values Survey comparisons to reason about how internet access and education may affect attitudes toward democracy.","methods_or_data_mentions":"This section reports sample sizes, recruitment mode, survey timing, screening for duplicate responses, demographic variables, and attitude measures such as militarism, internationalism, nationalism, religiosity, and interest in international news. It refers to Table 01 as descriptive statistics for respondents and uses World Values Survey figures as contextual comparison.","classification_relevance":"This section confirms original quantitative data collection and analysis. It supports the sample/data-source field and reinforces that the empirical evidence is survey-based and quantitative rather than qualitative."},{"section_title":"Results","section_position":6,"section_summary":"The Results section introduces the empirical findings. It states that the following subsections review the main findings, emphasizing similarities and differences between Brazilian and Chinese respondents and setting up interpretation of treatment effects.\n\nThe section is brief and functions mainly as a bridge into the detailed analysis of regime-type effects, UN authorization effects, and robustness checks.","methods_or_data_mentions":"This section mentions results generally but does not itself report a table, model, figure, or estimate beyond previewing the empirical analysis that follows.","classification_relevance":"This section indicates the empirical-results portion of the article, but the detailed classification evidence comes from the subsections on main effects and robustness checks."},{"section_title":"Main effects of regime type","section_position":7,"section_summary":"This subsection reports the main experimental treatment effects. Table 02 shows that Brazilian respondents were significantly less likely to support force against a democracy than against a non-democracy, with an estimated regime-type effect of -7.7 percentage points. Chinese respondents were generally more willing to support force, and the democracy effect was smaller, around -2.8 percentage points, significant in the first sample but not the YouGov sample.\n\nTable 03 adds UN authorization. In Brazil, the democracy effect persists with and without UN approval. In China, the democracy effect becomes smaller and often insignificant after conditioning on UN approval. Across both countries, UN authorization has a larger positive effect on support for force than target democracy has in reducing support for force.","methods_or_data_mentions":"This subsection reports original experimental estimates using percentages, treatment effects, significance statements, and comparisons across treatment cells. It discusses Tables 02 and 03, the percentage supporting attack in each treatment condition, and statistically significant differences.","classification_relevance":"This section supports quantitative analysis and statistical inference. It reports experimental treatment effects and significance levels, showing that the article goes beyond descriptive statistics even before the later regression models."},{"section_title":"Robustness checks","section_position":8,"section_summary":"This subsection conducts additional analyses to assess whether the experimental findings persist after controls and across respondent subgroups. The authors estimate logistic regression models predicting support for force using experimental treatments plus demographic and attitudinal controls. They find that democracy reduces support for force and UN approval increases it, with both treatment variables significant in both countries.\n\nThe section also discusses predicted probabilities, subgroup treatment effects, and randomization inference. It reports that most subgroup treatment effects are negative, especially in Brazil, while results are weaker in China. Randomization inference produces similar average treatment effect estimates and confidence intervals.","methods_or_data_mentions":"This subsection reports logistic regression, predicted probabilities, subgroup treatment effects, and randomization inference. It references Table 04, Figure 01, appendix analyses, p-value-style significance, average treatment effects, and confidence intervals such as Brazil's democracy-treatment ATE of -7.7 percent with confidence interval from -11 to -4.4 percent.","classification_relevance":"This is decisive evidence for `statistical_modeling` and `has_statistical_inference`. Logistic regression and randomization inference are quantitative models and inferential procedures. The randomized survey experiment also clearly qualifies as a credibility-revolution method."},{"section_title":"Discussion","section_position":9,"section_summary":"The discussion interprets the findings as evidence that democracy has a pacifying but limited and context-dependent effect on public preferences. Brazilian respondents distinguish between democratic and non-democratic targets more clearly than Chinese respondents, while UN authorization has a larger effect than target regime type in both countries.\n\nThe authors emphasize limits to generalization: only two countries are studied, security contexts may differ, and the internet-based commercial-panel samples are not random national samples. They propose future research with more countries, better samples, and deeper investigation into how respondents understand democracy.","methods_or_data_mentions":"The section summarizes the study's experimental findings and limitations but does not introduce new quantitative models or new data. It discusses the sampling method, the China follow-up sample, treatment-effect heterogeneity checks, and the distinction between median-voter and pivotal-opinion samples in non-democracies.","classification_relevance":"This section reinforces the causal and empirical interpretation while acknowledging external-validity and sampling limitations. It does not contradict the classification; instead, it confirms that the authors understand the evidence as experimental treatment effects with limited generalizability."}],"general_summary":"The article studies whether public reluctance to use force against democracies generalizes beyond the United States and United Kingdom and whether it appears in both democratic and non-democratic publics. It uses survey experiments in Brazil and China in which respondents read hypothetical conflict vignettes and were randomly assigned information about the target country's regime type and UN authorization for force.\n\nThe paper is an empirical quantitative study with a randomized survey-experimental design. It reports treatment-cell percentages, treatment effects, logistic regression models, predicted probabilities, subgroup robustness checks, and randomization inference. The central finding is that Brazilian respondents are less willing to support attacking democracies, Chinese respondents show weaker and less consistent democracy effects, and UN authorization has a larger effect on support for force than target regime type.","decision_audit":{"own_empirical_evidence":"The article presents its own empirical evidence in the Experimental design, Sample, Main effects of regime type, and Robustness checks sections. The evidence consists of original online survey experiments conducted in Brazil and China, including a follow-up Chinese YouGov sample.","own_quantitative_analysis":"Original quantitative analysis appears in the Sample section's descriptive sample statistics, the Main effects section's treatment-cell percentages and treatment effects, and especially the Robustness checks section's logistic regressions, predicted probabilities, subgroup treatment effects, and randomization inference.","qualitative_evidence":"The article does not present substantive qualitative evidence such as interviews, archival documents, process tracing, discourse analysis, or qualitative case analysis. Literature and theory sections discuss prior scholarship but are not qualitative empirical analysis.","statistical_inference":"Statistical inference appears in the Main effects and Robustness checks sections through significance statements, logistic regression results, hypothesis tests, average treatment effects, randomization inference, and confidence intervals.","causal_or_credibility_design":"The causal design appears in the Experimental design section, where the authors state that two treatments were randomly assigned: target regime type and UN authorization. The study estimates effects of those randomized treatments on support for using force.","contradictory_sections":"No section contradicts the classification. The literature and theory sections are non-empirical, but the design, sample, results, and robustness sections clearly present original quantitative experimental evidence."},"classification":{"pid":"S1981-38212020000100201","title":"How 'Democratic' is the Democratic Peace? A Survey Experiment of Foreign Policy Preferences in Brazil and China","journal_title":"Brazilian Political Science Review","input_text_hash":"2686188d6ef37194525ed99c97afdeb99223519bf05fbb2ccf53fc2020f13ca1","is_empirical_paper":true,"empirical_evidence_type":"quantitative_only","is_empirical_quant_paper_torreblanca":true,"is_empirical_qual_paper":false,"quantitative_analysis_type":"statistical_modeling","quantitative_analysis_evidence_quote":"we use logistic regression to predict support for 'Country A' using force against 'Country B', controlling for demographic and attitudinal variables","has_statistical_inference":true,"statistical_inference_quote":"The estimated effect of regime type was thus -7.7 percentage points in Brazil, significant at the 0.05 level.","qualitative_analysis_goal":null,"qualitative_goal_clarity":null,"qualitative_goal_quote":null,"causal_or_explanatory_claim_present":true,"causal_or_explanatory_claim_quote":"Two treatments were randomly assigned: the regime type of Country B and UN authorization for Country A's use of force.","credibility_revolution_screen_applicable":true,"credibility_revolution_screen_reason":"explicit_causal_design_screen","credibility_revolution_method_present":true,"credibility_revolution_method_type":["experiment_survey"],"causal_design_quote":"Subjects in each country were asked to read short scenarios ('vignettes') about crises involving two hypothetical countries ('A' and 'B') and to express their support for using force. Two treatments were randomly assigned","main_variables_or_relationship":"The article estimates how randomized information about the target country's regime type and UN authorization affects respondent support for using military force, comparing Brazilian and Chinese samples.","sample_or_data_source":"Online survey experiments in Brazil and China: 4,214 Brazilian responses and 5,744 Chinese responses collected in 2013, plus a 2,500-response China follow-up sample recruited by YouGov in 2015.","tough_call":false,"tough_call_reason":null,"brief_justification":"The article is an original quantitative empirical study using randomized survey experiments, treatment-effect comparisons, logistic regression, predicted probabilities, and randomization inference. It contains no substantive qualitative empirical component and clearly uses a credibility-revolution method: a survey experiment."}}
+hook: Stop
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Completed
+hook: Stop Completed
+tokens used
+37.417

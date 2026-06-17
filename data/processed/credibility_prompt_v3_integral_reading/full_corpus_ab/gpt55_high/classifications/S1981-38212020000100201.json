@@ -1,0 +1,31 @@
+{
+  "pid": "S1981-38212020000100201",
+  "title": "How 'Democratic' is the Democratic Peace? A Survey Experiment of Foreign Policy Preferences in Brazil and China",
+  "journal_title": "Brazilian Political Science Review",
+  "input_text_hash": "2686188d6ef37194525ed99c97afdeb99223519bf05fbb2ccf53fc2020f13ca1",
+  "is_empirical_paper": true,
+  "empirical_evidence_type": "quantitative_only",
+  "is_empirical_quant_paper_torreblanca": true,
+  "is_empirical_qual_paper": false,
+  "quantitative_analysis_type": "statistical_modeling",
+  "quantitative_analysis_evidence_quote": "we use logistic regression to predict support for 'Country A' using force against 'Country B', controlling for demographic and attitudinal variables",
+  "has_statistical_inference": true,
+  "statistical_inference_quote": "The estimated effect of regime type was thus -7.7 percentage points in Brazil, significant at the 0.05 level.",
+  "qualitative_analysis_goal": null,
+  "qualitative_goal_clarity": null,
+  "qualitative_goal_quote": null,
+  "causal_or_explanatory_claim_present": true,
+  "causal_or_explanatory_claim_quote": "Two treatments were randomly assigned: the regime type of Country B and UN authorization for Country A's use of force.",
+  "credibility_revolution_screen_applicable": true,
+  "credibility_revolution_screen_reason": "explicit_causal_design_screen",
+  "credibility_revolution_method_present": true,
+  "credibility_revolution_method_type": [
+    "experiment_survey"
+  ],
+  "causal_design_quote": "Subjects in each country were asked to read short scenarios ('vignettes') about crises involving two hypothetical countries ('A' and 'B') and to express their support for using force. Two treatments were randomly assigned",
+  "main_variables_or_relationship": "The article estimates how randomized information about the target country's regime type and UN authorization affects respondent support for using military force, comparing Brazilian and Chinese samples.",
+  "sample_or_data_source": "Online survey experiments in Brazil and China: 4,214 Brazilian responses and 5,744 Chinese responses collected in 2013, plus a 2,500-response China follow-up sample recruited by YouGov in 2015.",
+  "tough_call": false,
+  "tough_call_reason": null,
+  "brief_justification": "The article is an original quantitative empirical study using randomized survey experiments, treatment-effect comparisons, logistic regression, predicted probabilities, and randomization inference. It contains no substantive qualitative empirical component and clearly uses a credibility-revolution method: a survey experiment."
+}

@@ -1,0 +1,83 @@
+{
+  "pid": "S1981-38212020000100201",
+  "title": "How 'Democratic' is the Democratic Peace? A Survey Experiment of Foreign Policy Preferences in Brazil and China",
+  "journal_title": "Brazilian Political Science Review",
+  "input_text_hash": "2686188d6ef37194525ed99c97afdeb99223519bf05fbb2ccf53fc2020f13ca1",
+  "status": "complete",
+  "full_body_read": true,
+  "incomplete_reason": null,
+  "section_reading_log": [
+    {
+      "section_title": "unnamed introductory section",
+      "section_position": 1,
+      "section_summary": "The opening frames the article as an extension and test of experimental research on public opinion and the democratic peace. It argues that prior survey experiments in the United States and United Kingdom show citizens are less willing to attack democracies, but that the generalizability and interpretation of those findings remain uncertain.\n\nThe authors motivate Brazil and China as cases that vary by regime type, development, status, and culture. They present the study's central claim: popular reluctance to attack democracies exists beyond Anglo-American democracies, but is context dependent and may be outweighed by United Nations authorization.",
+      "methods_or_data_mentions": "This section states that the authors conducted survey experiments in China and Brazil. It identifies two experimental dimensions: the target state's regime type and whether the United Nations authorized the use of force. It also previews results comparing support for military action across these randomized conditions.",
+      "classification_relevance": "This opening establishes that the article is empirical, quantitative, and explicitly experimental. It also signals a causal design because respondents were randomly assigned to treatment conditions and the study interprets differences in support for force as treatment effects."
+    },
+    {
+      "section_title": "Literature: democracy and peace",
+      "section_position": 2,
+      "section_summary": "This section reviews the democratic peace literature, emphasizing the empirical regularity that democracies rarely fight one another and the difficulty of explaining why. It summarizes institutional, normative, constructivist, informational, and audience-cost explanations, and notes criticisms of some accounts as circular or under-specified.\n\nThe section then turns to public opinion explanations, especially Tomz and Weeks' survey experiments. It argues that prior evidence from US and UK respondents may reflect exceptional samples and that democracy may be functioning as a proxy for affinity, goodness, human rights, or status within the international order.",
+      "methods_or_data_mentions": "The section primarily reviews prior studies and does not present new data analysis by the authors. It discusses earlier survey experiments and empirical findings from the literature, but these are contextual rather than the article's own empirical evidence.",
+      "classification_relevance": "This section is mostly theoretical and literature-review material. It does not itself justify a quantitative classification, but it clarifies the causal/explanatory question that the authors later test experimentally: whether target democracy and international legitimacy affect public support for the use of force."
+    },
+    {
+      "section_title": "Theory: public opinion and the democratic peace",
+      "section_position": 3,
+      "section_summary": "This section develops the theoretical logic linking public opinion to the democratic peace. It argues that a public-opinion explanation must account for differences between democratic and non-democratic regimes and therefore requires evidence on publics in both types of systems.\n\nThe authors also develop the idea that international institutions may shape public support for war and that the word democracy may serve as a cue for legitimacy or virtue rather than a precise institutional category. The section motivates the inclusion of UN authorization as a second treatment to distinguish the effect of democracy from broader perceptions of legitimacy or goodness.",
+      "methods_or_data_mentions": "The section describes the planned experimental manipulation of UN approval and target democracy but does not report results. It refers to previous experimental work on international organizations and public opinion. No tables, models, or original empirical estimates appear in this section.",
+      "classification_relevance": "This section supports the article's causal/explanatory classification by stating why the experiment is designed to identify effects of democracy and UN authorization on support for force. It is not itself quantitative evidence, but it defines the causal variables and interpretation used in the empirical sections."
+    },
+    {
+      "section_title": "Experimental design",
+      "section_position": 4,
+      "section_summary": "This section describes the survey experiment. Respondents in Brazil and China read hypothetical vignettes about a crisis involving two generic countries and indicated whether Country A should attack Country B to prevent nuclear weapons development. The design intentionally avoids naming real countries to reduce contextual confounding and to make the test closer to the abstract logic of democratic peace theory.\n\nThe authors explain the two randomized treatments: whether Country B is described as democratic or not democratic, and whether the United Nations has authorized force. These two binary treatments produce a 2x2 design. The section also justifies the choice of Brazil and China as emerging powers with variation in regime type and acknowledges limitations from studying only two countries.",
+      "methods_or_data_mentions": "This section provides the core research design: internet-based survey experiments, translated vignettes, random assignment of target regime type and UN authorization, and a binary outcome measuring support for attack. It also mentions additional survey questions on attitudes toward the UN, regional cooperation, and world affairs.",
+      "classification_relevance": "This is the strongest evidence for classifying the paper as an empirical quantitative article using a survey experiment. Random assignment and treatment effects make the credibility-revolution screen applicable, and the method type is a survey experiment."
+    },
+    {
+      "section_title": "Sample",
+      "section_position": 5,
+      "section_summary": "This section describes the survey samples. The initial online survey was conducted in August and September 2013, yielding 4,214 responses from Brazil and 5,744 from China. A follow-up China study using YouGov collected 2,500 responses in April 2015. Respondents were recruited by professional polling firms, completed anonymous online surveys, and provided demographic and foreign-policy attitude information.\n\nThe authors discuss sample representativeness and limitations. They note that the samples are not fully representative and are weighted toward middle-class, educated, internet-connected respondents, but argue that these respondents are relevant for democratic peace research and foreign policy opinion. They use World Values Survey comparisons to reason about how internet access and education may affect attitudes toward democracy.",
+      "methods_or_data_mentions": "This section reports sample sizes, recruitment mode, survey timing, screening for duplicate responses, demographic variables, and attitude measures such as militarism, internationalism, nationalism, religiosity, and interest in international news. It refers to Table 01 as descriptive statistics for respondents and uses World Values Survey figures as contextual comparison.",
+      "classification_relevance": "This section confirms original quantitative data collection and analysis. It supports the sample/data-source field and reinforces that the empirical evidence is survey-based and quantitative rather than qualitative."
+    },
+    {
+      "section_title": "Results",
+      "section_position": 6,
+      "section_summary": "The Results section introduces the empirical findings. It states that the following subsections review the main findings, emphasizing similarities and differences between Brazilian and Chinese respondents and setting up interpretation of treatment effects.\n\nThe section is brief and functions mainly as a bridge into the detailed analysis of regime-type effects, UN authorization effects, and robustness checks.",
+      "methods_or_data_mentions": "This section mentions results generally but does not itself report a table, model, figure, or estimate beyond previewing the empirical analysis that follows.",
+      "classification_relevance": "This section indicates the empirical-results portion of the article, but the detailed classification evidence comes from the subsections on main effects and robustness checks."
+    },
+    {
+      "section_title": "Main effects of regime type",
+      "section_position": 7,
+      "section_summary": "This subsection reports the main experimental treatment effects. Table 02 shows that Brazilian respondents were significantly less likely to support force against a democracy than against a non-democracy, with an estimated regime-type effect of -7.7 percentage points. Chinese respondents were generally more willing to support force, and the democracy effect was smaller, around -2.8 percentage points, significant in the first sample but not the YouGov sample.\n\nTable 03 adds UN authorization. In Brazil, the democracy effect persists with and without UN approval. In China, the democracy effect becomes smaller and often insignificant after conditioning on UN approval. Across both countries, UN authorization has a larger positive effect on support for force than target democracy has in reducing support for force.",
+      "methods_or_data_mentions": "This subsection reports original experimental estimates using percentages, treatment effects, significance statements, and comparisons across treatment cells. It discusses Tables 02 and 03, the percentage supporting attack in each treatment condition, and statistically significant differences.",
+      "classification_relevance": "This section supports quantitative analysis and statistical inference. It reports experimental treatment effects and significance levels, showing that the article goes beyond descriptive statistics even before the later regression models."
+    },
+    {
+      "section_title": "Robustness checks",
+      "section_position": 8,
+      "section_summary": "This subsection conducts additional analyses to assess whether the experimental findings persist after controls and across respondent subgroups. The authors estimate logistic regression models predicting support for force using experimental treatments plus demographic and attitudinal controls. They find that democracy reduces support for force and UN approval increases it, with both treatment variables significant in both countries.\n\nThe section also discusses predicted probabilities, subgroup treatment effects, and randomization inference. It reports that most subgroup treatment effects are negative, especially in Brazil, while results are weaker in China. Randomization inference produces similar average treatment effect estimates and confidence intervals.",
+      "methods_or_data_mentions": "This subsection reports logistic regression, predicted probabilities, subgroup treatment effects, and randomization inference. It references Table 04, Figure 01, appendix analyses, p-value-style significance, average treatment effects, and confidence intervals such as Brazil's democracy-treatment ATE of -7.7 percent with confidence interval from -11 to -4.4 percent.",
+      "classification_relevance": "This is decisive evidence for `statistical_modeling` and `has_statistical_inference`. Logistic regression and randomization inference are quantitative models and inferential procedures. The randomized survey experiment also clearly qualifies as a credibility-revolution method."
+    },
+    {
+      "section_title": "Discussion",
+      "section_position": 9,
+      "section_summary": "The discussion interprets the findings as evidence that democracy has a pacifying but limited and context-dependent effect on public preferences. Brazilian respondents distinguish between democratic and non-democratic targets more clearly than Chinese respondents, while UN authorization has a larger effect than target regime type in both countries.\n\nThe authors emphasize limits to generalization: only two countries are studied, security contexts may differ, and the internet-based commercial-panel samples are not random national samples. They propose future research with more countries, better samples, and deeper investigation into how respondents understand democracy.",
+      "methods_or_data_mentions": "The section summarizes the study's experimental findings and limitations but does not introduce new quantitative models or new data. It discusses the sampling method, the China follow-up sample, treatment-effect heterogeneity checks, and the distinction between median-voter and pivotal-opinion samples in non-democracies.",
+      "classification_relevance": "This section reinforces the causal and empirical interpretation while acknowledging external-validity and sampling limitations. It does not contradict the classification; instead, it confirms that the authors understand the evidence as experimental treatment effects with limited generalizability."
+    }
+  ],
+  "general_summary": "The article studies whether public reluctance to use force against democracies generalizes beyond the United States and United Kingdom and whether it appears in both democratic and non-democratic publics. It uses survey experiments in Brazil and China in which respondents read hypothetical conflict vignettes and were randomly assigned information about the target country's regime type and UN authorization for force.\n\nThe paper is an empirical quantitative study with a randomized survey-experimental design. It reports treatment-cell percentages, treatment effects, logistic regression models, predicted probabilities, subgroup robustness checks, and randomization inference. The central finding is that Brazilian respondents are less willing to support attacking democracies, Chinese respondents show weaker and less consistent democracy effects, and UN authorization has a larger effect on support for force than target regime type.",
+  "decision_audit": {
+    "own_empirical_evidence": "The article presents its own empirical evidence in the Experimental design, Sample, Main effects of regime type, and Robustness checks sections. The evidence consists of original online survey experiments conducted in Brazil and China, including a follow-up Chinese YouGov sample.",
+    "own_quantitative_analysis": "Original quantitative analysis appears in the Sample section's descriptive sample statistics, the Main effects section's treatment-cell percentages and treatment effects, and especially the Robustness checks section's logistic regressions, predicted probabilities, subgroup treatment effects, and randomization inference.",
+    "qualitative_evidence": "The article does not present substantive qualitative evidence such as interviews, archival documents, process tracing, discourse analysis, or qualitative case analysis. Literature and theory sections discuss prior scholarship but are not qualitative empirical analysis.",
+    "statistical_inference": "Statistical inference appears in the Main effects and Robustness checks sections through significance statements, logistic regression results, hypothesis tests, average treatment effects, randomization inference, and confidence intervals.",
+    "causal_or_credibility_design": "The causal design appears in the Experimental design section, where the authors state that two treatments were randomly assigned: target regime type and UN authorization. The study estimates effects of those randomized treatments on support for using force.",
+    "contradictory_sections": "No section contradicts the classification. The literature and theory sections are non-empirical, but the design, sample, results, and robustness sections clearly present original quantitative experimental evidence."
+  }
+}
