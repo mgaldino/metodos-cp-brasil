@@ -1,0 +1,586 @@
+OpenAI Codex v0.140.0
+--------
+workdir: /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 019ed381-3b93-70d3-a041-caec3a86fb77
+--------
+user
+# Credibility Prompt v3 - Integral Reading Batch Prompt
+
+You are classifying exactly one article in this run.
+
+## Absolute Rule: Integral Reading Before Classification
+
+You must read the full article body from beginning to end before classifying it.
+
+It is prohibited to classify by:
+
+- regexes, scripts, keyword matching, heuristics, or automated rules;
+- previous consensus labels, gold labels, auxiliary classifications, or journal priors;
+- title, abstract, metadata, isolated tables, or selected excerpts alone;
+- guessing from the journal, year, topic, or style.
+
+The purpose of this task is interpretive article-by-article classification, not scale automation. If the article is long, keep reading until the end. Do not substitute a shortcut for full reading.
+
+If you cannot read the full body text, return `status: "incomplete"`, set `full_body_read: false`, explain why in `incomplete_reason`, and set `classification: null`. Do not produce a final classification for an article you did not read fully.
+
+## Mandatory Reading Log Before Classification
+
+Before producing the classification, build a `section_reading_log`. This log is part of the required JSON output.
+
+For each section explicitly present in the paper, include:
+
+- `section_title`: the section heading as it appears in the article;
+- `section_position`: 1-based section order;
+- `section_summary`: one or two substantive paragraphs summarizing what the section argues or does;
+- `methods_or_data_mentions`: one paragraph identifying data, methods, tables, figures, interviews, documents, models, tests, or stating that none appear in the section;
+- `classification_relevance`: one paragraph explaining how this section matters, or does not matter, for empirical/quantitative/qualitative/causal/statistical classification.
+
+If the article has no clear section headings, divide the body into sequential chunks and use `chunk_1`, `chunk_2`, etc. as section titles. Still summarize every chunk.
+
+After the section log, write:
+
+- `general_summary`: one or two paragraphs summarizing the paper as a whole;
+- `decision_audit`: answers to the final audit questions listed below.
+
+Only after completing these steps may you fill the `classification` object.
+
+## Final Audit Questions
+
+Answer these in `decision_audit` before classification:
+
+1. Where does the article present its own empirical evidence, if anywhere?
+2. Where does the article present original or reanalyzed quantitative analysis, if anywhere?
+3. Where does the article present substantive qualitative evidence, if anywhere?
+4. Where does the article report statistical inference, if anywhere?
+5. Where does the article present a causal or credibility-revolution design, if anywhere?
+6. Is there any section that contradicts the likely classification?
+
+## Output Shape
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Top-level required fields:
+
+- `pid`
+- `title`
+- `journal_title`
+- `input_text_hash`
+- `status`: `"complete"` or `"incomplete"`
+- `full_body_read`: boolean
+- `incomplete_reason`: string or null
+- `section_reading_log`: array
+- `general_summary`: string
+- `decision_audit`: object
+- `classification`: object if `status == "complete"`, otherwise null
+
+The nested `classification` object must follow the original credibility prompt v3 schema exactly.
+
+## Original Classifier Prompt v3
+
+The following classifier instructions define the classification schema and field meanings. They are binding, but they do not override the integral-reading rule above.
+
+# Credibility Revolution Brazil Classifier Prompt v3
+
+You are a methodological classifier for political science, international relations, and public administration articles published in Brazilian SciELO journals.
+
+Read the full article body and classify the article using only textual evidence from the article itself. The title, year, journal, DOI, and language may be used as context, but they are never sufficient evidence for methods, data, causality, or statistical analysis.
+
+This project replicates and adapts Torreblanca et al., "The Credibility Revolution in Political Science", for Brazil. The Torreblanca-style quantitative variable is broad: any original quantitative data analysis counts, including descriptive, predictive, explanatory, causal, or other quantitative analysis. However, for the Brazilian replication, we also need to distinguish purely descriptive quantitative articles from articles that go beyond descriptive statistics.
+
+## Anti-False-Positive Rule
+
+Do not classify an article as quantitative merely because it mentions a number, percentage, statistic, election result, survey result, or empirical finding from another study. To count as original quantitative analysis, the article must use its own data analysis or a reanalysis of data in its empirical analysis, usually in a table, figure, graph, appendix, methods section, data section, or results section.
+
+Descriptive counts, percentages, means, distributions, and cross-tabulations are descriptive statistics. If these are the only quantitative analyses in the article, classify the quantitative analysis type as `descriptive_statistics_only`.
+
+Use `null` when the text does not support a field. Do not invent sample sizes, variables, methods, causal designs, identification assumptions, mechanisms, statistical inference, or results.
+
+## Journal Context
+
+The main analysis includes these journals:
+
+- Brazilian Political Science Review
+- Cadernos Gestao Publica e Cidadania
+- Contexto Internacional
+- Dados
+- Lua Nova: Revista de Cultura e Politica
+- Novos estudos CEBRAP
+- Opiniao Publica
+- Revista Brasileira de Ciencia Politica
+- Revista Brasileira de Ciencias Sociais
+- Revista Brasileira de Politica Internacional
+- Revista de Administracao Publica
+- Revista de Sociologia e Politica
+- Sur. Revista Internacional de Direitos Humanos
+
+`Brazilian Journal of Political Economy` and `Civitas - Revista de Ciencias Sociais` are outside the main analysis.
+
+Some journals have higher prior probability of quantitative or causal work than others, but this is only a weak prior. Always classify based on the body text.
+
+Very low prior for credibility-revolution methods:
+
+- Novos estudos CEBRAP
+- Lua Nova: Revista de Cultura e Politica
+- Cadernos Gestao Publica e Cidadania
+- Sur. Revista Internacional de Direitos Humanos
+
+Articles in these journals are unlikely to use credibility-revolution methods such as experiments, DiD, IV, RDD, synthetic control, matching, or modern causal estimators. Use this only as a caution against over-classification. If the body clearly shows one of these designs, classify it normally.
+
+## Output
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Required fields:
+
+### Metadata
+
+- `pid`: string
+- `title`: string
+- `journal_title`: string
+- `input_text_hash`: string
+
+### Broad Empirical Classification
+
+- `is_empirical_paper`: boolean
+
+`true` if the article analyzes substantive empirical evidence, including quantitative data, qualitative evidence, documents, interviews, surveys, administrative data, content analysis, case studies, process tracing, archival materials, or other empirical material.
+
+`false` for normative theory, pure formal theory, conceptual essays, literature reviews without original empirical analysis, methodological articles without empirical application, and purely theoretical articles.
+
+- `empirical_evidence_type`: one of:
+  - `none`
+  - `quantitative_only`
+  - `qualitative_only`
+  - `mixed_empirical`
+  - `unclear`
+
+`mixed_empirical` requires both substantive qualitative evidence and substantive quantitative evidence. Do not classify as mixed merely because a quantitative article has a theory section, or because a qualitative article mentions contextual numbers.
+
+- `is_empirical_quant_paper_torreblanca`: boolean
+
+`true` if the article contains any original or reanalyzed quantitative data analysis, whether descriptive, bivariate, modeled, predictive, explanatory, causal, or other.
+
+`false` if the article is purely qualitative, theoretical, normative, formal, methodological without empirical quantitative application, or lacks original quantitative analysis.
+
+- `is_empirical_qual_paper`: boolean
+
+`true` if the article uses substantive qualitative evidence, such as case studies, historical comparison, interviews, documents, archival material, process tracing, interpretive analysis, discourse analysis, or qualitative content analysis.
+
+### Quantitative Module
+
+- `quantitative_analysis_type`: one of:
+  - `none`
+  - `descriptive_statistics_only`
+  - `bivariate_tests_or_correlations_only`
+  - `statistical_modeling`
+  - `unclear`
+
+Definitions:
+
+`none`: no original quantitative analysis.
+
+`descriptive_statistics_only`: the article presents only descriptive statistics from its own analysis or reanalysis, such as counts, percentages, means, distributions, descriptive cross-tabs, descriptive figures, or descriptive tables. It does not use statistical tests, correlations, regression, models, uncertainty estimates, or inferential claims from statistical tests.
+
+`bivariate_tests_or_correlations_only`: the article includes descriptive statistics and goes beyond them using t-tests, chi-square tests, Fisher tests, simple ANOVA, mean comparisons with p-values, Pearson/Spearman correlations, or equivalent bivariate tests, but does not use multivariable statistical modeling.
+
+`statistical_modeling`: the article uses regression, logit/probit, panel models, fixed effects, multilevel models, survival/event-history models, choice models, estimated matching or weighting, PCA/factor analysis, clustering used analytically, modeled text-as-data, network models, or equivalent statistical models.
+
+`unclear`: there are signals of quantitative analysis, but the body text does not allow confident classification.
+
+- `quantitative_analysis_evidence_quote`: string or null
+
+Short excerpt supporting `quantitative_analysis_type`, preferably from methods, data, results, table, figure, or appendix discussion.
+
+- `has_statistical_inference`: boolean or null
+
+`true` if the article reports p-values, standard errors, confidence intervals, Bayesian intervals, statistical tests, bootstrap intervals, randomization inference, or another uncertainty quantification.
+
+`false` if the article reports only descriptive analysis without statistical inference.
+
+`null` if not applicable or unsupported.
+
+- `statistical_inference_quote`: string or null
+
+Short excerpt supporting statistical inference. Use `null` if absent.
+
+### Qualitative Module
+
+- `qualitative_analysis_goal`: one of:
+  - `null`
+  - `descriptive_reconstruction`
+  - `explanatory_why`
+  - `interpretive_meaning`
+  - `mixed_descriptive_explanatory`
+  - `unclear`
+
+Use `null` if there is no qualitative component.
+
+`descriptive_reconstruction`: the article mainly describes how something happened, reconstructs a trajectory, maps actors/events/processes, or systematizes an empirical phenomenon.
+
+`explanatory_why`: the article seeks to explain why something happened, identifying causes, conditions, mechanisms, determinants, consequences, or explanatory processes.
+
+`interpretive_meaning`: the article mainly interprets meanings, concepts, discourses, intellectual traditions, norms, or texts without making a clear empirical explanatory claim.
+
+`mixed_descriptive_explanatory`: the article combines descriptive reconstruction with substantive causal or explanatory arguments.
+
+`unclear`: the qualitative goal is ambiguous.
+
+- `qualitative_goal_clarity`: one of:
+  - `null`
+  - `clear`
+  - `ambiguous_tough_call`
+  - `internally_inconsistent`
+
+If the article says it will describe how something happened but later explains why it happened, classify the qualitative goal as `explanatory_why` or `mixed_descriptive_explanatory` and set this field to `ambiguous_tough_call` or `internally_inconsistent`.
+
+- `qualitative_goal_quote`: string or null
+
+Short excerpt supporting the qualitative classification. Use `null` if not applicable.
+
+### Causal and Credibility-Revolution Screening
+
+- `causal_or_explanatory_claim_present`: boolean
+
+`true` if the article seeks to explain causes, effects, consequences, determinants, impacts, influence, mechanisms, or why something happened.
+
+`false` if it merely describes, interprets, reviews literature, or reports association without an explanatory or causal claim.
+
+Do not confuse vague association language with a causal claim.
+
+- `causal_or_explanatory_claim_quote`: string or null
+
+Short excerpt supporting the claim. Use `null` if absent.
+
+- `credibility_revolution_screen_applicable`: boolean
+
+`true` if the article should be screened for credibility-revolution methods.
+
+Classify as `true` if at least one condition holds:
+
+1. `quantitative_analysis_type` is `bivariate_tests_or_correlations_only` or `statistical_modeling`;
+2. the article uses an experiment, DiD, IV, RDD, RKD, synthetic control, synthetic DiD, matching, weighting, DAG used for identification, causal forest/tree, doubly robust estimator, causal discovery, or similar causal method;
+3. the article makes a causal or explanatory claim associated with quantitative analysis.
+
+Classify as `false` if:
+
+1. `quantitative_analysis_type` is `none`;
+2. `quantitative_analysis_type` is `descriptive_statistics_only` and there is no causal design;
+3. the article is purely qualitative;
+4. the article is theoretical, normative, formal, or conceptual without quantitative empirical analysis.
+
+- `credibility_revolution_screen_reason`: one of:
+  - `not_empirical`
+  - `qualitative_only`
+  - `descriptive_quantitative_only`
+  - `bivariate_or_correlation_screen`
+  - `statistical_modeling_screen`
+  - `explicit_causal_design_screen`
+  - `causal_claim_with_quantitative_analysis_screen`
+  - `unclear`
+
+- `credibility_revolution_method_present`: boolean or null
+
+Use `null` if `credibility_revolution_screen_applicable` is `false`.
+
+`true` if the article uses at least one credibility-revolution method.
+
+`false` if the article passes the screen but does not use such a method.
+
+Important identification rule:
+
+Do not count causal language, SEM, structural equation modeling, causal mediation,
+path analysis, regression adjustment, fixed effects, controls, or observational
+modeling as a credibility-revolution method merely because the article estimates
+effects or cites causal-methods literature. For any method outside the usual
+credibility-revolution designs listed below, classify `credibility_revolution_method_present`
+as `true` only if the article explicitly discusses the relevant causal identification
+assumption or strategy and gives a textual reason why that assumption is plausible
+in the empirical setting.
+
+For causal mediation or SEM-style causal claims, look specifically for discussion
+of sequential ignorability, treatment/mediator ignorability, randomization,
+design-based identification, sensitivity analysis, or another explicit
+identification argument. If the article applies SEM or causal mediation to
+observational data without such discussion, classify it as
+`observational_regression_with_causal_claim_no_design`, set
+`credibility_revolution_method_present` to `false`, and explain the issue in
+`tough_call_reason`.
+
+If `credibility_revolution_method_type` contains only `none_detected`,
+`fixed_effects_causal_panel_claim`, or
+`observational_regression_with_causal_claim_no_design`, then
+`credibility_revolution_method_present` must be `false`.
+
+- `credibility_revolution_method_type`: array or null
+
+Allowed values:
+
+- `experiment_field`
+- `experiment_survey`
+- `experiment_lab`
+- `experiment_list`
+- `difference_in_differences`
+- `event_study`
+- `instrumental_variables`
+- `regression_discontinuity`
+- `regression_kink`
+- `synthetic_control`
+- `synthetic_difference_in_differences`
+- `matching_or_weighting`
+- `dag_or_formal_causal_graph`
+- `doubly_robust`
+- `causal_trees_or_forests`
+- `causal_discovery`
+- `other_modern_causal_method`
+- `fixed_effects_causal_panel_claim`
+- `observational_regression_with_causal_claim_no_design`
+- `none_detected`
+
+Fixed effects rule:
+
+Do not classify every fixed-effects model as DiD. Classify as DiD or event study only if the article has treatment, time variation, treated/control comparison, intervention/event timing, or parallel-trends logic. If an article uses fixed effects and causal language but no clear causal design, classify as `fixed_effects_causal_panel_claim` or `observational_regression_with_causal_claim_no_design`.
+
+- `causal_design_quote`: string or null
+
+Short excerpt supporting the causal method classification. Use `null` if absent.
+
+### Substantive Extraction
+
+- `main_variables_or_relationship`: string or null
+
+Short summary of the main empirical relationship analyzed. Use `null` if unsupported.
+
+- `sample_or_data_source`: string or null
+
+Short summary of the main data source or sample. Use `null` if unsupported.
+
+### Uncertainty and Justification
+
+- `tough_call`: boolean
+
+`true` if a central decision required difficult judgment.
+
+- `tough_call_reason`: string or null
+
+Briefly explain the ambiguity. Use `null` if `tough_call` is `false`.
+
+- `brief_justification`: string
+
+Brief text-based justification for the overall classification.
+
+
+## Output Reconciliation
+
+The original prompt v3 above describes the fields of the nested `classification` object.
+When it says to return one JSON object, that object must be placed inside the top-level
+object required by this integral-reading prompt. Your final response must always have
+the top-level fields `section_reading_log`, `general_summary`, `decision_audit`, and
+`classification`.
+
+## Article Task Packet
+
+The task packet below contains the article metadata and full body text. Use only this packet for substantive classification.
+
+# Article task packet full corpus: S2236-57102024000100204
+
+This packet is derived from `data/processed/fulltext_corpus/article_texts_corpus.csv`.
+Use only the `body_text` below plus the metadata in this packet for substantive classification.
+
+## Metadata
+
+- eligible_order: 307
+- pid: S2236-57102024000100204
+- title: FATORES FISCAIS E SOCIOECONÔMICOS QUE AFETAM A CRIMINALIDADE NO BRASIL
+- title_en: Fiscal and socioeconomic factors affecting criminality in Brazil
+- authors: Rhomenig Oliveira de Souza; Felipe Storch Damasceno; Rebeca Corrêa Gomes Marques; Neyla Tardin
+- year: 2024
+- journal_title: Cadernos Gestão Pública e Cidadania
+- language: pt
+- doi: 10.12660/CGPC.V29.89194
+- canonical_source_file: data/processed/fulltext_corpus/article_texts_corpus.csv
+- canonical_source_column: body_text
+- input_text_hash: f0cc55aa643481ac9bca1d1c6ae6c3f6e48cb3bdcf3cae7a0fcfafbae61cf31d
+
+## Body Text
+
+INTRODUÇÃO
+
+As ciências econômicas têm sido utilizadas para explicar diversos fenômenos sociais. Como forma de apresentar condicionantes para a atividade delituosa, Becker (1968) lançou as bases da Teoria Econômica do Crime, que foi aperfeiçoada por outros autores, como Ehrlich (1973). Nesse contexto, o presente trabalho tem como tema os efeitos de fatores fiscais e socioeconômicos nas taxas de homicídio estaduais.
+
+De acordo com o Anuário Brasileiro de Segurança Pública (2020), organizado pelo Fórum Brasileiro de Segurança Pública (2020), apenas no 1º semestre de 2020, ocorreram 25.712 mortes violentas intencionais, o que representa um aumento de 7,1% em relação a 2019. Além de trazer repercussões de ordem coletiva, a criminalidade também produz reflexos na economia. Conforme Cerqueira e Soares (2016), o custo social dos homicídios no Brasil pode chegar a 2,3% do Produto Interno Bruto (PIB). Assim, é necessário entender quais fatores contribuem para a diminuição dos índices de criminalidade, especialmente para a taxa de homicídios, para que seja possível fornecer subsídios para a construção de políticas públicas embasadas cientificamente e que sejam mais assertivas e eficazes no combate ao crime.
+
+Nesse escopo, alguns fatores socioeconômicos são apresentados pela literatura, como educação, desemprego e renda per capita (Becker & Kassouf, 2017). Além disso, os gastos com segurança pública demonstram ser outra variável de interesse. Intuitivamente pode-se deduzir que o estado deve dispor de orçamentos cada vez maiores para a área de segurança pública para que haja uma melhora nos índices de violência.
+
+Ocorre que, ainda que exista uma relação teórica entre dispêndios estatais e o aumento da segurança pública, estudos no país têm sido divergentes quanto a esse efeito. Sachsida, Mendonça, Loureiro e Gutierrez (2010) e Becker e Kassouf (2017) encontraram relação significante entre dispêndio de verba pública na área da segurança pública e redução de homicídios. Santos (2009), por sua vez, conclui que não se observa significância entre gastos públicos e redução da criminalidade, o que também foi verificado em outros estudos (Kume, 2004; Santos & Kassouf, 2007; Santos, 2009; Marques Júnior, 2014). A ausência de causalidade pode ser proveniente de uma alocação equivocada dos recursos públicos, além de apontar a possibilidade de existência de nãolinearidade entre dispêndios estatais e taxas de ilícitos (Santos, 2009).
+
+Ocorre que as pesquisas realizadas anteriormente não diferenciaram as verbas que eram provenientes de transferências federais, valores que têm assumido protagonismo cada vez maior como fontes de investimentos, haja vista o comprometimento das receitas estaduais com o próprio custeio. Ademais, a literatura pretérita não buscou verificar atributos intrínsecos dos entes federados, e tratou todos os estados, independentemente de sua gestão fiscal, da mesma maneira. Distinguir os entes estaduais pode ser importante pois espera-se que as administrações com boa gestão fiscal tenham mais eficiência alocativa na realização do gasto público, de forma que os dispêndios tragam maiores retornos sociais.
+
+Desse modo, este estudo pretende responder a seguinte questão de pesquisa:
+
+Quais fatores fiscais e socioeconômicos afetam as taxas de homicídio dos estados brasileiros? Portanto, a pesquisa tem como objetivo contribuir com duas lacunas na literatura. A primeira é verificar de forma empírica aspectos que podem impactar as taxas de homicídio nos estados, especialmente do ponto de vista das finanças públicas e das transferências federais recebidas pelos entes federados. A segunda é analisar se esse impacto é diferente em estados com boa gestão fiscal quando comparado a seus pares com contas públicas em dificuldade.
+
+Para isso, foi elaborado um Indicador de Gestão Fiscal Estadual (IGFE) com o intuito de diferenciar estados com boa gestão fiscal daqueles cujas suas finanças estão em situação crítica. Esse indicador foi fundamentado na metodologia do Índice Firjan de Gestão Fiscal (IFGF) (Federação das Indústrias do Estado do Rio de Janeiro, 2022).
+
+Depois foi feita uma regressão linear múltipla em recorte transversal e de dados em painel, pelos métodos de efeitos fixos e aleatórios, em uma amostra composta por 135 observações, tendo como variável dependente a taxa de homicídios dos estados brasileiros e do Distrito Federal. Foram usados como regressores os dados fiscais e socioeconômicos das Unidades Federativas (UF), considerando os exercícios financeiros de 2015 a 2019. Esse período foi determinado em virtude da alteração constitucional ocorrida em 2015, que instituiu o caráter obrigatório das emendas parlamentares, e do surgimento da pandemia de Covid-19 em 2020 que tornou inoportuna a utilização dos dados a partir desse período.
+
+Assim, este estudo contribuiu para evidenciar a importância de fatores fiscais e socioeconômicos, especialmente os relacionados à gestão fiscal e às transferências federais, instrumento que ganha destaque como relevante fonte de financiamento de políticas públicas de entes subnacionais. Outra contribuição deste trabalho é a construção do Indicador de Gestão Fiscal Estadual, uma vez que ainda existem poucas metodologias que permitem uma análise global das contas públicas desses entes da federação.
+
+REFERENCIAL TEÓRICO
+
+Teoria do crime, fatores socioeconômicos e a violência urbana
+
+A violência é um problema complexo com impacto multissetorial, o que desperta o interesse de diversas áreas do saber. Sob o ponto de vista econômico, em 1968, Becker lançou as bases da Economia do Crime. Em seu trabalho Seminal Crime and Punishment: An economic approach, é apresentada uma abordagem microeconômica da criminalidade. O autor demostra que o indivíduo faz uma escolha ótima de delinquir ou não, a partir de uma análise do ganho esperado com o crime e o seu custo de punição, medido pela probabilidade de condenação e pela duração da punição.
+
+Em consonância com Becker, Ehrlich (1973) demonstrou qual seria a alocação ótima de tempo da força de trabalho, entre atividades lícitas e ilícitas, de um indivíduo que busca maximizar sua utilidade esperada. O autor também apresentou a influência da distribuição de renda sobre o crime. Esses trabalhos, portanto, equiparam o mercado da criminalidade ao de um produto qualquer, e os criminosos, a ofertantes que buscam maximizar seu ganho líquido. A decisão de delinquir, para além de fatores éticos, assim como a de produzir determinado produto, é, portanto, uma escolha individual que leva em consideração o benefício a ser obtido pelo agente.
+
+Não obstante as motivações individuais, é possível também pensar a violência como um fenômeno com causas econômicas e sociais e, assim, se torna relevante identificar seus fatores determinantes com vistas a clarear a análise desse problema, bem como subsidiar políticas públicas eficazes que contribuirão com a sua diminuição, de forma a aumentar o bem-estar social (Clemente & Welters, 2007).
+
+Gibbons (1982), por exemplo, entende que as motivações para se cometer um crime vão além do raciocínio de maximização de utilidade. De acordo com o autor, deve-se levar em consideração as normas e os valores presentes no contexto social do indivíduo e, ao optar pelo comportamento delituoso, o criminoso quebrará normas que gerarão reprovação social. Portanto, para o autor, o conjunto normativo no qual o agente está envolvido se torna relevante em sua tomada de decisão.
+
+Ademais, Shikida e Nickel (2022) enfatizaram nos resultados da pesquisa com apenados do Paraná, que a principal motivação dos crimes de natureza econômica foi o conglomerado de pensamentos como “ganho fácil/indução de amigos/cobiça, ambição, ganância/inveja/manter o status”. A partir dos referidos resultados, pode-se observar que os aspectos decisórios para o processo de tomada de decisão de um crime de natureza econômica é a racionalidade e não as emoções extemporâneas. Conforme Bauermann et al. (2021), os principais fatores que estão positivamente associados ao envolvimento no crime consistem em: o indivíduo não pertencer a uma família com composição tradicional, pais que trabalham, utilizar arma de fogo, ter pensamentos de ganho fácil, ser favorável à legalização das drogas, e ser consumidor de bebidas alcoólicas.
+
+A partir da Teoria Econômica do Crime apresentada por Becker (1968), espera-se que fatores que diminuam o ganho de uma atividade ilícita ou aumentem seu custo de punição sejam negativamente relacionados às taxas de criminalidade. Nesse sentido, pesquisas empíricas contemporâneas foram desenvolvidas com o objetivo de verificar que outros motivos poderiam contribuir para reduzir a violência na sociedade.
+
+Uma das causas apontadas pela literatura é a educação. Intuitivamente, espera-se que os anos de estudo afetem negativamente a violência, uma vez que tornam o indivíduo mais qualificado para exercer uma atividade lícita e mais bem remunerada. Além disso, o tempo que o agente passará encarcerado e, portanto, fora do mercado de trabalho ficará mais custoso, haja vista que ele deixará de receber rendimentos enquanto cumpre sua pena, conforme teorizado por Becker (1968) e confirmado por diversos estudos aplicados, nos quais se constatou a correlação negativa entre a educação e o cometimento de crimes (Kume, 2004; Santos, 2009; Becker & Kassouf, 2017).
+
+Outro fator socioeconômico em teoria negativamente correlacionado com a violência é a renda, uma vez que, assim como a educação, aumenta o custo de punição do agente delituoso ao cumprir uma detenção (Sjoquist, 1973). Entretanto, estudos empíricos têm demonstrado, ao contrário, que a renda medida pelo PIB per capita tem correlação positiva com a violência, uma vez que a maior renda significaria maior ganho com a atividade ilícita (Kume, 2004; Santos, 2009; Becker & Kassouf, 2017).
+
+O nível de desemprego é também um quesito socioeconômico com sinal positivo esperado. Isso se dá pelo fato de que o aumento das taxas de desocupação diminui os custos de punição de o agente delinquir. (Bitu, 2008; Sachsida et al., 2010; Becker & Kassouf, 2017). Ante o exposto, verifica-se que diversos fatores socioeconômicos, como educação, renda e desemprego, podem influenciar a criminalidade de um local, especialmente as taxas de homicídio. Por isso, esse estudo testou a seguinte hipótese:
+
+H1: Fatores socioeconômicos como educação afetam negativamente a taxa de homicídios dos estados; já renda e desemprego exercem influência positiva.
+
+Gastos públicos e criminalidade brasileira
+
+Tomando-se por base a Teoria Econômica do Crime, intui-se que a violência poderia ser combatida aumentando o custo de punição de se cometer um ato criminoso, o que pode ser obtido por meio do aumento da probabilidade de condenação do agente que comete um crime. Para isso, é importante robustecer o aparato estatal com segurança pública, que é responsável pela investigação e repressão criminal, o que demandaria, em tese, incremento de gastos públicos.
+
+Santos (2009), entretanto, conclui que não se observa significância entre gastos públicos e redução da criminalidade. O autor também adverte que esse resultado pode ser proveniente de uma alocação equivocada dos recursos públicos, e aponta a possibilidade de existência de não linearidade entre dispêndios estatais e taxas de ilícitos.
+
+A influência do volume de recursos públicos na redução da criminalidade, na verdade, não é pacífica na literatura, havendo autores, como Sachsida et al. (2010) e Becker e Kassouf (2017) que encontraram relação significante, o que não é sustentado por outros estudos (Kume, 2004; Santos & Kassouf, 2007; Santos, 2009; Marques Júnior, 2014). Santos e Kassouf (2007) argumentam que os gastos em segurança pública, embora não significativos, apresentam coeficientes negativos, o que é coerente com a teoria do crime. Além disso, os autores expõem que as verbas públicas são alocadas mais por força política do que por necessidade.
+
+Ao analisar os dados empíricos, nem sempre é possível estabelecer uma relação de linearidade entre investimentos estatais e melhoria dos índices de violência. O Anuário Brasileiro de Segurança Pública (2020), organizado pelo Fórum Brasileiro de Segurança Pública (2020), mostra que, embora Acre (AC) e Amapá (AP) sejam os dois estados com maior gasto per capita em segurança, eles apresentam a sexta e a quarta maiores taxas de homicídio por 100 mil habitantes. Por outro lado, São Paulo (SP) foi o estado com o menor gasto per capita com segurança pública e também o estado com a menor taxa do Brasil de homicídio por 100 mil habitantes.
+
+Essas questões, especialmente a falta de correlação entre gastos e diminuição da violência, fomentam o debate sobre qual seria o modelo mais efetivo para o financiamento da segurança pública, uma vez que o Estado brasileiro, por meio de seus entes federados, deve prestar um serviço de qualidade para os cidadãos. A Constituição Federal de 1988 (CF/1988), em seu artigo 144, prevê que a segurança pública é direito e responsabilidade de todos, cabendo ao Estado, o dever de garantir a preservação da ordem pública e a incolumidade das pessoas e do patrimônio (Brasil, 1988).
+
+Cabe ao Estado brasileiro, portanto, se articular com seus entes federados (União, estados, Distrito Federal e municípios), por meio da repartição de competências, para promover a segurança pública, uma vez que, conforme o artigo 2º da CF/1988, o país é uma república federativa “formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal” (Brasil, 1998).
+
+Com a Constituição Federal de 1988 (Brasil, 1988), a responsabilidade da segurança pública passou a ser prioritariamente dos estados, que são os responsáveis pelas polícias civis e militares. Essa escolha proporcionou autonomia às unidades federativas, mas dificultou a efetivação de orientações gerais de segurança, o que é negativo para o combate à violência, em virtude de seu caráter transfronteiriço (Madeira & Rodrigues, 2015).
+
+Com essa escolha política, os estados se tornaram responsáveis pela maior parcela do financiamento da segurança pública, embora a União tenha aumentado as transferências para os entes subnacionais (Peres, Bueno, da Silva Leite & de Lima, 2014). Dados levantados pelo Fórum Brasileiro de Segurança Pública e compilados no Anuário Brasileiro de Segurança Pública (2020) apontam que as Unidades da Federação (UF) são responsáveis por, em média, 81% da participação no financiamento da segurança pública, enquanto a União e os municípios respondem, em média, por 12% e 7%, respectivamente.
+
+Assim, nota-se que o Estado brasileiro optou por compartilhar competências no âmbito da segurança pública, o que demanda, também, a repartição de recursos para sua efetivação. A União, embora não seja responsável pelas polícias civis e militares, pode assumir um papel importante na coordenação e na gestão da segurança pública, por meio de definição de estratégias e repasse de recursos. A esse fenômeno dá-se o nome de descentralização que, quando é bem realizada e implementada apresenta impacto positivo na melhora de serviços públicos, e na diminuição na desigualdade de renda e da pobreza (Martinez-Vazquez, Lago-Penãs & Agnese Sacchi, 2017)
+
+No Brasil, a descentralização de recursos federais pode ocorrer por meio de transferências voluntárias ou obrigatórias. De acordo com o artigo 25 da Lei de Responsabilidade Fiscal (LRF) (Brasil, 2000), é voluntária a transferência de recursos que não ocorra por determinação constitucional, legal ou não se trate de verba destinada ao Sistema Único de Saúde (SUS). Considerável espécie de transferência voluntária, as emendas parlamentares são de execução orçamentária e financeira obrigatória pelo Poder Executivo federal, conforme alteração legislativa trazida pela Emenda Constitucional nº 86/2015 (Brasil, 2015).
+
+Pelo exposto, verifica-se que os gastos com segurança pública podem influenciar a criminalidade de um local, especialmente as taxas de homicídio. Como forma de complementação a estudos anteriores e, considerando a crescente importância que as transferências voluntárias têm assumido no contexto brasileiro, este estudo buscou analisar de forma isolada o efeito das transferências voluntárias nas taxas estaduais de homicídios e testou a seguinte hipótese:
+
+H2: Fatores fiscais como transferências federais e gastos com segurança são negativamente correlacionados com as taxas de homicídio dos estados.
+
+Gestão fiscal estadual e criminalidade
+
+Com o objetivo de estabelecer normas de finanças públicas voltadas para a responsabilidade na gestão fiscal, a LRF introduziu um novo paradigma em relação às contas públicas brasileiras. Por exemplo, ela aumentou o dever de transparência dos entes públicos, o que possibilitou o controle social das contas públicas. Além disso, trouxe importantes prescrições, como a limitação das despesas com pessoal a 50% da Receita Corrente Líquida (RCL) da União e a 60% da RCL dos estados e municípios (Brasil, 2000).
+
+Nesse contexto, a Federação da Indústria do Estado do Rio de Janeiro (FIRJAN) publicou o Índice FIRJAN de Gestão Fiscal (IFGF). O IFGF é um índice nacional e de comparação anual representado por uma pontuação que varia de 0 a 1 e é composto por quatro indicadores com o mesmo peso (25%) para o cálculo da nota final, a saber: autonomia, gastos com pessoal, liquidez e investimento (Federação das Indústrias do Estado do Rio de Janeiro, 2022).
+
+Autonomia representa a capacidade dos entes de financiarem a sua estrutura administrativa conforme suas próprias receitas. Gastos com pessoal informam o quanto a Receita Corrente Líquida do ente está comprometida com o pagamento do funcionalismo. Já a liquidez, terceiro indicador do IFGF, tem como objetivo verificar se o ente tem disponibilidade suficiente para pagar os compromissos assumidos no fim do exercício anterior. Por fim, o último componente do indicador, investimentos, informa o quanto da RCL do ente é destinado a promover o investimento em equipamentos públicos (Federação das Indústrias do Estado do Rio de Janeiro, 2022).
+
+A partir da nota dos municípios em cada indicador, é calculado o índice geral e atribuída uma nota, que varia de 0 a 1. Ato contínuo, os municípios recebem uma classificação em virtude de sua nota, a saber: gestão de excelência (para nota acima de 0,8); boa gestão (para nota entre 0,6 e 0,8); gestão em dificuldade (para nota entre 0,4 e 0,6) e gestão crítica (para nota abaixo de 0,4) (Federação das Indústrias do Estado do Rio de Janeiro, 2022).
+
+A partir da metodologia criada pela FIRJAN (2022), foi desenvolvido no âmbito deste estudo o Indicador de Gestão Fiscal Estadual (IGFE). O indicador, portanto, adaptou para o nível estadual a mesma metodologia aplicada pela FIRJAN (2022) em nível municipal. A construção de um indicador se demonstrou necessária uma vez que não há um índice anual que classifique as contas estaduais.
+
+Com base na metodologia desenvolvida pela Federação das Indústrias do Estado do Rio de Janeiro (2022), buscou-se verificar se o retorno social dos gastos com segurança pública seria condicionado ou não à eficiência da UF. Distinguir os entes estaduais pode ser importante uma vez que se espera que as administrações com boa gestão fiscal tenham mais eficiência alocativa na realização do gasto público, de forma que os dispêndios tragam maiores benefícios à população. Nesse contexto, foi testada a seguinte hipótese:
+
+H3: Boa gestão fiscal tem correlação negativa com as taxas de homicídio estaduais.
+
+METODOLOGIA
+
+Esse trabalho utilizou-se de uma metodologia descritivo-explicativa de legislação, de documentação e de literatura prévia de estudos sobre teoria do crime, descentralização financeira e financiamento da segurança pública. Para a análise quantitativa foram utilizadas bases de dados governamentais, como o Painel de Transferências Abertas +Brasil (Brasil, 2021), o Instituto de Pesquisa Econômica Aplicada (IPEA), responsável pela divulgação do Atlas da Violência (Instituto de Pesquisa Econômica Aplicada, 2021), o Instituto Brasileiro de Geografia e Estatística (IBGE, 2022) e o Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (SICONFI) (Tesouro Nacional, 2022).
+
+Para este estudo foram consideradas as transferências voluntárias realizadas pela União entre 2015 e 2019 em favor de órgãos de segurança pública estaduais. Esse período foi determinado considerando a alteração constitucional ocorrida em 2015, que instituiu o caráter obrigatório das emendas parlamentares, e o surgimento da pandemia de Covid-19, em 2020, que tornou inoportuna a utilização dos dados a partir desse período, constituindo, assim, uma amostra com lapso temporal de cinco anos. O valor considerado foi o total da transferência, sendo excluídas da amostra aquelas com alguma irregularidade.
+
+Os dados referentes às transferências voluntárias foram extraídos do Painel de Transferências Abertas +Brasil, sendo selecionados os anos de 2015 a 2019. Os dados referentes às 987 transferências realizadas pela União foram agrupados de forma a apresentarem o valor total dos repasses que cada UF recebeu por ano. Dessa forma, a amostra conta com 135 observações.
+
+Indicador de Gestão Fiscal Estadual (IGFE)
+
+Foi desenvolvido no âmbito deste trabalho o Indicador de Gestão Fiscal Estadual (IGFE), com base nos dados coletados no SICONFI. O indicador se baseou na metodologia desenvolvida pela Federação das Indústrias do Estado do Rio de Janeiro que publica anualmente o Índice Firjan de Gestão Fiscal (IFGF) (Federação das Indústrias do Estado do Rio de Janeiro, 2022). Na Tabela 1 é apresentada a fórmula de cálculo dos componentes do IGFE.
+
+Modelo econométrico
+
+Foi feita uma regressão linear múltipla de dados em painel, pelo método de efeitos fixos e aleatórios tendo como variável dependente a taxa de homicídios dos estados brasileiros e do Distrito Federal, conforme dados disponíveis no Atlas da Violência (Instituto de Pesquisa Econômica Aplicada, 2021).Como regressores foram escolhidas variáveis fiscais e socioeconômicas, com base na literatura. O modelo econométrico adotado foi o seguinte:
+
+Na Tabela 2 é apresentada a lista de variáveis acompanhada de uma breve descrição. No estudo foram considerados para os anos de 2015 a 2018 os partidos Partido dos Trabalhadores (PT), Partido do Movimento Democrático Brasileiro (ANTIGO PMDB), Partido Democrático Trabalhista (PDT), Partido Comunista do Brasil (PCdoB), Progressistas (ANTIGO PP) Republicanos (ANTIGO PR), Partido Social Democrático (PSD), Partido Republicano da Ordem Social (PROS) e Republicanos (ANTIGO PRB) que compuseram a coligação “Com a Força do Povo” na qual foi eleita a presidente Dilma Rousseff. Para o ano de 2019 foram considerados os partidos Partido Social Liberal (PSL) e Partido Renovador Trabalhista Brasileiro (PRTB) que formaram a coligação “Brasil acima de tudo, Deus acima de todos”, pela qual foi eleito o presidente Jair Bolsonaro.
+
+RESULTADOS E DISCUSSÃO
+
+Estatística descritiva
+
+Na Tabela 3 é mostrada a variação da taxa de homicídios das Unidades da Federação a cada 100 mil habitantes. Os estados do Ceará, São Paulo, Paraíba, Minas Gerais e o Distrito Federal foram os que, entre 2015 e 2019, apresentaram a maior redução percentual de suas taxas, enquanto Amazonas, Bahia, Amapá e Acre apresentaram acréscimo, conforme dados extraídos do Atlas da Violência (Instituto de Pesquisa Econômica Aplicada, 2021).
+
+Na Tabela 4 são evidenciadas as despesas estaduais per capita liquidadas na função segurança pública, a preços constantes de 2010. Piauí, Maranhão, Tocantins, Mato Grosso e Rio Grande do Sul foram os estados que mais incrementaram o orçamento de segurança pública, enquanto Roraima, Rondônia, São Paulo, Paraná e Espírito Santo foram os que apresentaram maior redução em termos reais.
+
+Ao confrontar os dados das Tabelas 4 e 5 percebe-se que os estados que mais aumentaram as despesas com segurança pública não foram os que tiveram as maiores reduções de taxas de homicídio. Entretanto, é possível ver relação negativa, em alguns estados, entre as variações dos gastos públicos com as taxas de homicídio. No período analisado, o Maranhão, por exemplo, aumentou em 40,08% o seu gasto na referida função e obteve uma redução de 31,80% em seus índices de homicídio. O Mato Grosso, por sua vez, aumentou seu orçamento em 36,18% e teve uma redução de 30,27% do índice.
+
+Ainda, alguns estados foram bem-sucedidos no decréscimo das mortes intencionais mesmo com a redução, em termos reais, das despesas com segurança pública. A exemplo, cita-se São Paulo, estado que reduziu em 13,95% seu orçamento e ainda assim ostentou a segunda maior redução percentual da taxa de homicídio (43,38%). Já o Acre, mesmo incrementando suas despesas em segurança pública em 20,15% ainda teve um aumento de 36,43% no número de mortes a cada 100 mil habitantes. Ressalta-se ainda que o Acre foi o estado que mais gastou, relativamente à sua população, em segurança pública (R$ 446,85 por habitante). Assim percebe-se que, enquanto alguns estados foram bem-sucedidos em suas estratégias de aumentar os gastos com segurança pública e obtiveram resultados sociais positivos, o mesmo não ocorreu com outros entes da federação.
+
+No que tange às transferências voluntárias, ao analisar os dados coletados, percebe-se que 58% dos repasses realizados são provenientes de emendas parlamentares, o que corresponde a 571 das 987 transferências analisadas, e reforça a importância desse instrumento como forma de distribuição de recursos federais. No que tange aos valores transferidos, nota-se que as emendas parlamentares, embora ocorram com mais frequência do que as outras transferências, somam R$ 1.080.348.226,48 e correspondem a 39% do total repassado, que é de R$ 2.771.665.542,60. Além disso, as transferências que não são do tipo emenda parlamentar têm valor médio de R$ 4.065.666,63, enquanto as emendas parlamentares têm média de R$ 1.892.028,42 por transação efetivada. Os dados compilados são apresentados na Tabela 5.
+
+Em relação ao comportamento das transferências ao longo do tempo, verifica-se que, à exceção de 2016, os valores absolutos aumentaram ao longo dos anos, tendo saído de R$ 414.544.818,29 em 2015, para R$ 1.097.877.321,99 em 2019, o que representa um aumento de 165%, sendo que 2019 foi o ano com o aumento mais expressivo, impulsionado, principalmente, pelo aumento das transferências voluntárias que não são do tipo emenda parlamentar.
+
+Assim, ao investigar os dados de forma descritiva, constata-se que as transferências voluntárias para a segurança pública têm aumentado e, nesse contexto, as emendas parlamentares representam importante forma de financiamento para os entes subnacionais.
+
+Em relação ao IGFE, a Tabela 6 apresenta os estados classificados com gestão excelente e boa gestão ao longo do tempo, de forma a assumirem o valor 1 para a dummy eficiência no modelo econométrico. Observa-se uma diminuição dos estados com boa gestão fiscal, o que demonstra uma possível deterioração das contas públicas estaduais ao longo do tempo, sendo que nenhum estado atingiu o conceito de gestão excelente.
+
+O Ceará foi o único estado a apresentar o conceito de boa gestão em todos os anos analisados. Esse estado foi também o 6º com a maior variação de gastos com segurança pública (+26,75%) e o que obteve a maior redução nas taxas de homicídio (-43,38%) entre 2015 e 2019.
+
+A baixa performance verificada entre os estados se deve, entre outros fatores, à nota obtida no componente Gastos com Pessoal. Em 2015, apenas seis estados tiveram nota diferente de zero nesse quesito, número que passou para dois em 2019. Portanto, observa-se que os estados comprometem cada vez mais sua RCL com o pagamento da folha de pessoal, muitas vezes ficando acima do limite prudencial, o que evidencia um alerta para as contas públicas.
+
+Outro componente que também influenciou negativamente a composição da nota final dos estados foi o item Investimentos. Em nenhum exercício financeiro foi atingida a nota máxima por qualquer UF, o que demonstra que nenhum estado conseguiu investir 12% de sua RCL, e revela um alto grau de comprometimento das receitas estaduais com o custeio. Além disso, em 2015 apenas dois estados obtiveram nota superior a 0,6 nesse quesito, feito que não foi repetido por nenhum estado em 2019, ano no qual a maior nota alcançada foi 0,53.
+
+O componente Liquidez, entretanto, evidenciou estabilidade ao longo do tempo. Em 2015, apenas três UF atingiram a nota máxima no quesito, e dezesseis entes tiveram nota superior a 0,6, números que foram mantidos em 2019. Já o componente Autonomia, por sua vez, apresenta uma influência positiva na média final do indicador, pois a maior parte dos estados performou a nota máxima nesse componente. Em 2015 apenas seis UF não obtiveram nota 1, número que foi reduzido para três em 2019. Esse fenômeno demonstra que os estados são capazes de gerar a receita necessária para o custeio de sua atividade administrativa. Na Tabela 7 são apresentados os valores médios dos componentes e da nota final ao longo dos anos.
+
+De forma geral percebe-se que o aumento dos gastos com pessoal e a diminuição da capacidade de investimento dos estados contribuíram para a degradação das contas públicas. Isso evidencia um alerta para a gestão fiscal dos estados, que necessitarão implementar medidas corretivas para sanear esses problemas, de forma a recuperarem a saúde fiscal e manterem a qualidade da prestação dos serviços públicos que podem ser comprometidos em virtude do quadro de vulnerabilidade fiscal. Esse cenário de piora da situação fiscal dos estados resulta em uma diminuição da quantidade de UF com conceito de Boa Gestão e um aumento dos entes com Gestão em Dificuldade ou Gestão Crítica, conforme retratado na Tabela 8.
+
+Resultados econométricos
+
+Na Tabela 9 são apresentados os resultados da regressão linear múltipla de dados em painel com efeitos fixos (EF) e aleatórios (EA) e Pooled OLS (para fins de comparação). Foi realizado teste que indicou heterocedasticidade. Por isso, foram utilizados estimadores robustos. Ainda, foi realizado o teste de Hausman, no qual foi aceita a hipótese nula de que não há diferença sistemática entre os coeficientes de efeitos fixos e aleatórios. Por esse motivo, os resultados serão baseados nas estimações de efeitos aleatórios, que se mostram mais eficientes e consistentes. No que se refere aos fatores socioeconômicos, os resultados econométricos mostram que a variável Anos de Estudo indicou ser, em média, significante e negativamente relacionada às taxas de homicídio, o que está em conformidade com a literatura (Kume, 2004; Santos, 2009; Becker & Kassouf, 2017).
+
+Já as variáveis PIB per capita e gastos municipais com educação não mostraram significância. O desemprego, em contrapartida, apresentou-se como estatisticamente significante e positivamente relacionado com as taxas de homicídio dos estados, conforme apontado por estudos pretéritos (Bitu, 2008; Sachsida et al., 2010; Becker & Kassouf, 2017). Dessa forma, a hipótese de que fatores socioeconômicos são correlacionados com as taxas de homicídio dos estados pode ser validada, sobretudo no que tange à educação (negativamente relacionada) e ao desemprego (positivamente relacionado), resultados congruentes com a literatura. Na Tabela 9 são apresentados os resultados econométricos.
+
+Quanto aos fatores fiscais, o valor das transferências do tipo não emendas, é significativo e, em média, afeta negativamente a taxa de homicídios. Em relação às emendas parlamentares, nenhum estimador encontrou significância estatística. Acerca dos gastos com segurança pública, descontadas as transferências voluntárias, não foi encontrada significância estatística, o que está em linha com estudos anteriores (Kume, 2004; Santos & Kassouf, 2007; Santos, 2009; Marques Júnior, 2014). Assim, foram encontradas evidências que permitem validar a segunda hipótese desse trabalho, de que fatores fiscais estão correlacionados com as taxas de homicídios dos estados, especialmente as transferências voluntárias que não são emendas parlamentares (negativamente relacionadas).
+
+No modelo também foram incluídos os gastos municipais com educação, uma vez que o sistema educacional conta com a participação das prefeituras, e com segurança, pois eles financiam as guardas-civis municipais. A contrário senso, os gastos municipais com segurança apresentaram, em média, significância estatística e relação positiva com a taxa de homicídios para os estimadores de EA.
+
+Portanto, as transferências voluntárias, especialmente as que não são do tipo emenda parlamentar, apresentam comportamento diferente quando comparadas com os gastos de recursos próprios dos estados. Ressalta-se que esse tipo de verba oferece critérios mais rígidos para ser dispendida, ao contrário dos recursos próprios dos entes federados. Para que um estado receba verbas federais, é necessário cumprir uma série de requisitos que vão desde a apresentação de projetos para a União, que analisará a relevância e os resultados esperados, até a prestação de contas após o envio dos recursos, o que irá conferir maior efetividade ao gasto público. Nesse contexto, as administrações estaduais devem empreender esforços para buscar recursos federais de forma a financiar políticas de segurança pública, com o intuito de melhorar os indicadores sociais e assim garantir mais qualidade de vida para a população.
+
+Já os gastos com segurança pública são, por sua vez, determinações genéricas que, ao contrário das transferências, podem ser usadas para várias finalidades, como pagamento de servidores, compra de material de expediente e combustível para viaturas policiais, despesas que, muitas vezes, não estão diretamente relacionadas com a melhoria de indicadores sociais. No que tange à terceira hipótese do trabalho, não foi encontrada correlação estatística entre boa gestão fiscal e as taxas de homicídio estaduais. Pontua-se ainda que foi realizada uma estimação alternativa com os dados das transferências federais defasados em um ano bem como utilizando o IFGE como variável contínua e, nesse cenário, as variáveis de interesse foram não significantes.
+
+CONCLUSÃO
+
+Este estudo objetivou verificar o impacto de fatores fiscais e socioeconômicos nas taxas de homicídio e analisar se essa influência é diferente em estados com boa gestão fiscal. Encontrou-se evidências de que fatores socioeconômicos afetam, em média, as taxas de homicídio dos estados, a exemplo de anos de estudo (relação negativa) e do desemprego (relação positiva). Além disso, verificou-se que, em média, fatores fiscais, como as transferências voluntárias (exceto emendas parlamentares) são negativamente relacionados com as taxas estaduais de homicídios. Já em relação às emendas parlamentares, não foi encontrada significância estatística.
+
+Assim, este estudo contribuiu para evidenciar a importância de fatores socioeconômicos como educação e geração de emprego como forma de combater a criminalidade. Além disso, lançou luz sobre a relevância das transferências federais para a segurança pública, instrumento que ganha destaque como considerável fonte de financiamento de políticas públicas de entes subnacionais, no que tange à melhora das taxas de homicídio nos estados.
+
+Outra colaboração desta pesquisa foi fornecer o Indicador de Gestão Fiscal Estadual, uma vez que ainda existem poucas metodologias que permitem uma análise global das contas públicas desses entes da federação. O estudo demonstrou que a situação fiscal dos estados tem piorado ao longo do tempo, sendo que em 2019 apenas duas UF alcançaram o conceito de boa gestão fiscal. Demonstrar um diagnóstico da saúde financeira dos entes públicos baseado em dados e evidências científicas é primordial para que se possa avançar nesse quesito, uma vez que os estados precisam ter condições de financiar as suas políticas, como forma de prestar um bom serviço público para seus cidadãos.
+
+Em relação às limitações da pesquisa, aponta-se a quantidade de dados disponíveis, uma vez que as emendas parlamentares, como conhecidas atualmente, foram criadas em 2015. Além disso, estudos futuros podem investigar por que os repasses federais têm a especificidade de serem negativamente relacionados com a taxa de homicídios quando comparados com os recursos orçamentários dos estados.
+
+
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+{"pid":"S2236-57102024000100204","title":"FATORES FISCAIS E SOCIOECONÔMICOS QUE AFETAM A CRIMINALIDADE NO BRASIL","journal_title":"Cadernos Gestão Pública e Cidadania","input_text_hash":"f0cc55aa643481ac9bca1d1c6ae6c3f6e48cb3bdcf3cae7a0fcfafbae61cf31d","status":"complete","full_body_read":true,"incomplete_reason":null,"section_reading_log":[{"section_title":"INTRODUÇÃO","section_position":1,"section_summary":"A introdução situa o artigo na Teoria Econômica do Crime e apresenta o problema substantivo: entender como fatores fiscais e socioeconômicos se relacionam com as taxas estaduais de homicídio no Brasil. O texto destaca a relevância social e econômica da criminalidade, menciona divergências na literatura sobre gastos em segurança pública e identifica lacunas relativas às transferências federais e à gestão fiscal dos estados.\n\nA seção formula a pergunta de pesquisa sobre quais fatores fiscais e socioeconômicos afetam as taxas de homicídio estaduais. Também antecipa a construção de um Indicador de Gestão Fiscal Estadual e informa que serão usadas regressões lineares múltiplas em corte transversal e painel para 135 observações dos estados e do Distrito Federal entre 2015 e 2019.","methods_or_data_mentions":"A introdução menciona explicitamente a construção do IGFE, regressão linear múltipla, recorte transversal, dados em painel, efeitos fixos e aleatórios, uma amostra de 135 observações, a taxa de homicídios como variável dependente e regressores fiscais e socioeconômicos das UFs entre 2015 e 2019.","classification_relevance":"Esta seção já indica que o artigo é empírico e quantitativo, com análise própria de dados estaduais. Também mostra linguagem causal ou explicativa forte, como efeitos, impacto e fatores que afetam homicídios, e antecipa modelos estatísticos, o que torna aplicável a triagem de métodos da revolução da credibilidade."},{"section_title":"REFERENCIAL TEÓRICO","section_position":2,"section_summary":"O cabeçalho introduz a parte teórica do artigo, dedicada a fundamentar os mecanismos esperados entre criminalidade, fatores socioeconômicos, gastos públicos, transferências federais e gestão fiscal. A seção funciona como enquadramento conceitual para as hipóteses que serão testadas posteriormente.\n\nComo seção agregadora, ela organiza a discussão em subseções temáticas, cada uma voltada a justificar variáveis e sinais esperados no modelo empírico.","methods_or_data_mentions":"O cabeçalho em si não apresenta dados originais nem métodos, mas introduz a literatura e a base conceitual usada para selecionar variáveis e formular hipóteses.","classification_relevance":"A seção é relevante para identificar o caráter explicativo do artigo, mas não é evidência suficiente de análise empírica ou quantitativa própria; essa evidência aparece nas seções metodológica e de resultados."},{"section_title":"Teoria do crime, fatores socioeconômicos e a violência urbana","section_position":3,"section_summary":"A subseção revisa a Teoria Econômica do Crime a partir de Becker e Ehrlich, apresentando a criminalidade como escolha racional influenciada por benefícios esperados, custos de punição, renda, educação e desemprego. Também incorpora argumentos sociológicos sobre normas, valores e contexto social.\n\nA partir dessa literatura, o artigo sustenta que educação deve reduzir a violência ao aumentar oportunidades lícitas e custos de encarceramento, enquanto renda e desemprego podem se relacionar positivamente com criminalidade. A subseção culmina na hipótese H1 sobre fatores socioeconômicos e taxas estaduais de homicídio.","methods_or_data_mentions":"Não há análise de dados própria nesta subseção. Ela menciona resultados de estudos anteriores e formula a hipótese H1: educação teria efeito negativo, enquanto renda e desemprego teriam influência positiva sobre homicídios.","classification_relevance":"A seção confirma a presença de uma pergunta explicativa e hipóteses testáveis, mas a evidência empírica é apenas de literatura. Ela apoia a classificação de causal_or_explanatory_claim_present como verdadeira, embora não demonstre por si só método quantitativo próprio."},{"section_title":"Gastos públicos e criminalidade brasileira","section_position":4,"section_summary":"Esta subseção discute como gastos públicos em segurança poderiam elevar o custo esperado do crime ao aumentar a probabilidade de punição, mas destaca que a literatura brasileira encontra resultados divergentes sobre a relação entre gastos e redução da criminalidade. O texto também contextualiza a responsabilidade federativa pela segurança pública e a importância das transferências da União para entes subnacionais.\n\nA seção diferencia transferências voluntárias e obrigatórias, discute emendas parlamentares após a Emenda Constitucional nº 86/2015 e sustenta que transferências federais podem ser fonte relevante de financiamento de políticas de segurança pública. Ao final, formula a hipótese H2 de que transferências federais e gastos com segurança são negativamente correlacionados com homicídios.","methods_or_data_mentions":"A seção usa dados contextuais de estudos e anuários, como participação média de estados, União e municípios no financiamento da segurança pública, mas não apresenta análise quantitativa original. Ela formula uma hipótese empírica sobre fatores fiscais e homicídios.","classification_relevance":"A subseção reforça o caráter empírico-explicativo do artigo e a centralidade das variáveis fiscais. A referência à correlação esperada indica análise associacional, mas ainda não há método de identificação causal ou desenho de credibilidade."},{"section_title":"Gestão fiscal estadual e criminalidade","section_position":5,"section_summary":"A subseção apresenta a Lei de Responsabilidade Fiscal e o Índice FIRJAN de Gestão Fiscal como referência para avaliar saúde fiscal dos entes públicos. O artigo descreve os componentes do IFGF, como autonomia, gastos com pessoal, liquidez e investimento, e explica sua adaptação ao nível estadual por meio do IGFE.\n\nO argumento substantivo é que estados com melhor gestão fiscal poderiam alocar recursos de forma mais eficiente, gerando maiores retornos sociais dos gastos públicos. A seção termina com a hipótese H3, segundo a qual boa gestão fiscal teria correlação negativa com taxas estaduais de homicídio.","methods_or_data_mentions":"A subseção menciona a construção do IGFE com base na metodologia FIRJAN, mas ainda não detalha o cálculo empírico. A principal informação metodológica é a criação de uma variável ou indicador estadual de gestão fiscal a ser usado no modelo.","classification_relevance":"A seção contribui para identificar uma variável construída pelos autores e uma hipótese explicativa. Ela é relevante para a classificação como análise quantitativa própria, mas a comprovação metodológica aparece mais claramente na metodologia e nos resultados."},{"section_title":"METODOLOGIA","section_position":6,"section_summary":"A metodologia declara que o artigo utiliza uma abordagem descritivo-explicativa com legislação, documentação, literatura prévia e análise quantitativa. O texto lista as bases governamentais usadas: Painel de Transferências Abertas +Brasil, Atlas da Violência/IPEA, IBGE e SICONFI.\n\nA seção define o recorte temporal de 2015 a 2019, justificado pela obrigatoriedade das emendas parlamentares a partir de 2015 e pela pandemia em 2020. Também informa que as transferências voluntárias da União para órgãos estaduais de segurança pública foram extraídas, filtradas e agrupadas por UF e ano, gerando 135 observações.","methods_or_data_mentions":"A seção apresenta dados governamentais originais ou reanalisados pelos autores, 987 transferências federais agrupadas por unidade federativa e ano, amostra de 135 observações, exclusão de transferências com irregularidade e fontes como +Brasil, IPEA, IBGE e SICONFI.","classification_relevance":"Esta é evidência direta de artigo empírico quantitativo. A seção também mostra componente documental/legislativo e de literatura, mas a classificação principal é quantitativa, pois há base de dados estruturada e análise estatística própria."},{"section_title":"Indicador de Gestão Fiscal Estadual (IGFE)","section_position":7,"section_summary":"A subseção explica que os autores desenvolveram o Indicador de Gestão Fiscal Estadual com base em dados do SICONFI e na metodologia do Índice FIRJAN de Gestão Fiscal. O objetivo é criar um instrumento anual para classificar a saúde fiscal dos estados, dada a ausência de índice estadual equivalente.\n\nEmbora o corpo textual fornecido mencione a Tabela 1 sem reproduzir suas fórmulas, a seção informa que o indicador possui componentes calculados a partir de dados fiscais estaduais e será usado na análise econométrica.","methods_or_data_mentions":"Há menção a dados do SICONFI, à fórmula de cálculo dos componentes do IGFE apresentada na Tabela 1 e à adaptação de metodologia existente para mensuração fiscal estadual.","classification_relevance":"A criação do IGFE é parte da contribuição empírica e quantitativa do artigo. É uma variável construída pelos autores, relevante para a relação entre gestão fiscal e homicídios, mas não constitui por si só um método causal de credibilidade."},{"section_title":"Modelo econométrico","section_position":8,"section_summary":"A subseção descreve o modelo econométrico: regressão linear múltipla com dados em painel, por efeitos fixos e aleatórios, tendo como variável dependente a taxa de homicídios dos estados e do Distrito Federal. As variáveis explicativas são fiscais e socioeconômicas, selecionadas com base na literatura.\n\nO texto também menciona variáveis políticas relacionadas às coligações presidenciais de Dilma Rousseff e Jair Bolsonaro para os anos correspondentes. A equação e a lista de variáveis são remetidas à Tabela 2.","methods_or_data_mentions":"A seção menciona regressão linear múltipla, dados em painel, efeitos fixos, efeitos aleatórios, variável dependente de homicídios do Atlas da Violência, regressores fiscais e socioeconômicos e uma tabela de variáveis.","classification_relevance":"Esta seção é a principal evidência para classificar o artigo como quantitativo com statistical_modeling. Ela também ativa a triagem de credibilidade, mas o desenho é regressão observacional em painel, sem indicação de experimento, DiD, IV, RDD, sintético, matching ou outra estratégia causal moderna."},{"section_title":"RESULTADOS E DISCUSSÃO","section_position":9,"section_summary":"O cabeçalho introduz os achados empíricos, divididos entre estatística descritiva e resultados econométricos. A seção reúne tanto exploração descritiva dos dados quanto interpretação dos modelos.\n\nEla é a parte substantiva em que os autores conectam os dados coletados às hipóteses sobre homicídios, transferências, gastos, educação, desemprego e gestão fiscal.","methods_or_data_mentions":"O cabeçalho não apresenta isoladamente resultados, mas organiza tabelas descritivas, indicadores fiscais e regressões econométricas discutidas nas subseções seguintes.","classification_relevance":"A seção é central para a classificação empírica quantitativa porque contém a análise própria dos dados e a interpretação dos modelos estatísticos."},{"section_title":"Estatística descritiva","section_position":10,"section_summary":"A subseção descreve variações nas taxas de homicídios por UF, despesas estaduais per capita em segurança pública, transferências voluntárias e evolução do IGFE. O texto compara estados que reduziram ou aumentaram homicídios, contrasta variações de gastos e homicídios e observa padrões como aumento de transferências voluntárias e deterioração fiscal dos estados.\n\nA análise mostra, por exemplo, que alguns estados aumentaram gastos e reduziram homicídios, enquanto outros não obtiveram melhora, sugerindo ausência de relação simples entre gasto agregado e violência. Também destaca o peso das emendas parlamentares em número de transferências e a diminuição de estados classificados com boa gestão fiscal.","methods_or_data_mentions":"A subseção apresenta estatísticas descritivas em várias tabelas: variação de homicídios, despesas per capita em segurança, transferências voluntárias, valores e médias de emendas e não emendas, classificação por IGFE e médias dos componentes do indicador. Inclui percentuais, valores monetários e comparações entre UFs e anos.","classification_relevance":"Esta subseção confirma análise quantitativa própria, ao menos descritiva. Como há também uma subseção posterior com regressões e inferência estatística, o artigo não fica limitado a descriptive_statistics_only."},{"section_title":"Resultados econométricos","section_position":11,"section_summary":"A subseção apresenta os resultados da regressão linear múltipla com painel, comparando efeitos fixos, efeitos aleatórios e Pooled OLS. O texto informa que houve teste de heterocedasticidade, uso de estimadores robustos e teste de Hausman, com preferência pelos efeitos aleatórios.\n\nNos resultados, anos de estudo aparece negativamente relacionado e significativo para homicídios; desemprego aparece positivamente relacionado e significativo; transferências voluntárias não emendas aparecem significativas e negativamente associadas às taxas de homicídio; emendas parlamentares e gastos estaduais com segurança não apresentam significância. A gestão fiscal não tem correlação estatística encontrada, e uma estimação alternativa com transferências defasadas e IGFE contínuo também não apresenta significância nas variáveis de interesse.","methods_or_data_mentions":"A seção menciona regressões em painel, efeitos fixos, efeitos aleatórios, Pooled OLS, teste de heterocedasticidade, estimadores robustos, teste de Hausman, significância estatística e estimação alternativa com variáveis defasadas e IGFE contínuo.","classification_relevance":"Esta é evidência decisiva de statistical_modeling e de statistical_inference. Também evidencia causal ou explicative language, mas o desenho é observacional com regressão em painel; não há indicação de identificação causal moderna além de modelos com efeitos fixos/aleatórios e controles."},{"section_title":"CONCLUSÃO","section_position":12,"section_summary":"A conclusão retoma o objetivo de verificar o impacto de fatores fiscais e socioeconômicos nas taxas de homicídio e de analisar diferenças associadas à boa gestão fiscal. O artigo conclui que educação e desemprego se relacionam com homicídios, que transferências voluntárias não emendas têm relação negativa com homicídios e que emendas parlamentares não apresentam significância estatística.\n\nA seção também destaca como contribuições a evidência sobre educação, emprego e transferências federais, além da criação do IGFE. Reconhece limitações ligadas à disponibilidade de dados desde 2015 e sugere estudos futuros sobre a especificidade dos repasses federais em comparação com recursos orçamentários estaduais.","methods_or_data_mentions":"A conclusão sintetiza achados estatísticos e menciona significância estatística, dados disponíveis e limitações temporais. Não introduz novos métodos ou dados.","classification_relevance":"A conclusão reforça a classificação de artigo quantitativo com modelagem estatística e inferência. Também confirma o caráter explicativo/causal na linguagem de impacto e fatores que afetam, embora sem desenho causal de credibilidade."}],"general_summary":"O artigo investiga como fatores fiscais e socioeconômicos se relacionam com as taxas de homicídio dos estados brasileiros e do Distrito Federal entre 2015 e 2019. Ele combina revisão teórica sobre economia do crime, gastos públicos e gestão fiscal com análise quantitativa de dados governamentais, incluindo transferências federais, homicídios, indicadores socioeconômicos, gastos públicos e um Indicador de Gestão Fiscal Estadual construído pelos autores.\n\nA análise empírica inclui estatísticas descritivas e regressões lineares múltiplas com dados em painel, efeitos fixos, efeitos aleatórios, Pooled OLS, estimadores robustos e teste de Hausman. O artigo encontra associações estatisticamente significativas entre homicídios e anos de estudo, desemprego e transferências voluntárias não emendas, mas não encontra significância para emendas parlamentares, gastos estaduais com segurança ou boa gestão fiscal. Apesar da linguagem de impacto e fatores que afetam, o desenho é observacional e não apresenta uma estratégia causal moderna de identificação.","decision_audit":{"own_empirical_evidence":"O artigo apresenta evidência empírica própria nas seções Metodologia e Resultados e Discussão, usando dados de transferências federais, homicídios, variáveis socioeconômicas e fiscais dos estados brasileiros entre 2015 e 2019.","own_quantitative_analysis":"A análise quantitativa própria aparece nas estatísticas descritivas e nos resultados econométricos, incluindo tabelas de variações, indicadores fiscais e regressões lineares múltiplas com dados em painel, efeitos fixos, efeitos aleatórios e Pooled OLS.","qualitative_evidence":"Há uso de legislação, documentação e literatura na contextualização teórica, mas não há análise qualitativa substantiva própria como entrevistas, processo histórico reconstruído com documentos primários, análise interpretativa ou estudo de caso qualitativo.","statistical_inference":"A inferência estatística aparece na seção Resultados econométricos, que menciona teste de heterocedasticidade, estimadores robustos, teste de Hausman, significância estatística e comparação entre modelos de efeitos fixos, efeitos aleatórios e Pooled OLS.","causal_or_credibility_design":"O artigo usa linguagem de impacto, efeito e fatores que afetam, além de regressão em painel, mas não apresenta desenho de experimento, DiD, IV, RDD, controle sintético, matching, ponderação causal, DAG ou outra estratégia explícita de identificação causal. Efeitos fixos aparecem como modelo de painel, não como desenho DiD.","contradictory_sections":"Nenhuma seção contradiz a classificação como artigo empírico quantitativo com modelagem estatística. A metodologia menciona também legislação, documentação e literatura, mas isso serve ao enquadramento e não configura análise qualitativa substantiva própria suficiente para classificar o artigo como mixed_empirical."},"classification":{"pid":"S2236-57102024000100204","title":"FATORES FISCAIS E SOCIOECONÔMICOS QUE AFETAM A CRIMINALIDADE NO BRASIL","journal_title":"Cadernos Gestão Pública e Cidadania","input_text_hash":"f0cc55aa643481ac9bca1d1c6ae6c3f6e48cb3bdcf3cae7a0fcfafbae61cf31d","is_empirical_paper":true,"empirical_evidence_type":"quantitative_only","is_empirical_quant_paper_torreblanca":true,"is_empirical_qual_paper":false,"quantitative_analysis_type":"statistical_modeling","quantitative_analysis_evidence_quote":"Foi feita uma regressão linear múltipla de dados em painel, pelo método de efeitos fixos e aleatórios tendo como variável dependente a taxa de homicídios dos estados brasileiros e do Distrito Federal","has_statistical_inference":true,"statistical_inference_quote":"Foi realizado teste que indicou heterocedasticidade. Por isso, foram utilizados estimadores robustos. Ainda, foi realizado o teste de Hausman","qualitative_analysis_goal":null,"qualitative_goal_clarity":null,"qualitative_goal_quote":null,"causal_or_explanatory_claim_present":true,"causal_or_explanatory_claim_quote":"Quais fatores fiscais e socioeconômicos afetam as taxas de homicídio dos estados brasileiros?","credibility_revolution_screen_applicable":true,"credibility_revolution_screen_reason":"statistical_modeling_screen","credibility_revolution_method_present":false,"credibility_revolution_method_type":["fixed_effects_causal_panel_claim","observational_regression_with_causal_claim_no_design"],"causal_design_quote":"regressão linear múltipla de dados em painel, pelo método de efeitos fixos e aleatórios","main_variables_or_relationship":"Relação entre taxas estaduais de homicídio e fatores socioeconômicos e fiscais, incluindo anos de estudo, desemprego, PIB per capita, transferências federais, emendas parlamentares, gastos em segurança e gestão fiscal estadual.","sample_or_data_source":"135 observações dos estados brasileiros e do Distrito Federal entre 2015 e 2019, com dados do Painel de Transferências Abertas +Brasil, Atlas da Violência/IPEA, IBGE e SICONFI.","tough_call":true,"tough_call_reason":"O artigo usa linguagem de impacto e efeitos e estima modelos de painel com efeitos fixos e aleatórios, mas não apresenta desenho causal explícito; por isso passa pela triagem de credibilidade por modelagem estatística, sem método de credibilidade presente.","brief_justification":"O artigo é empírico quantitativo porque constrói uma base estadual de 2015 a 2019, elabora o IGFE, apresenta estatísticas descritivas e estima regressões em painel. A presença de testes, estimadores robustos, Hausman e significância estatística caracteriza modelagem com inferência. Não há análise qualitativa substantiva própria nem desenho causal moderno de identificação."}}
+hook: Stop
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Completed
+hook: Stop Completed
+tokens used
+36.996

@@ -1,0 +1,32 @@
+{
+  "pid": "S2236-57102024000100204",
+  "title": "FATORES FISCAIS E SOCIOECONÔMICOS QUE AFETAM A CRIMINALIDADE NO BRASIL",
+  "journal_title": "Cadernos Gestão Pública e Cidadania",
+  "input_text_hash": "f0cc55aa643481ac9bca1d1c6ae6c3f6e48cb3bdcf3cae7a0fcfafbae61cf31d",
+  "is_empirical_paper": true,
+  "empirical_evidence_type": "quantitative_only",
+  "is_empirical_quant_paper_torreblanca": true,
+  "is_empirical_qual_paper": false,
+  "quantitative_analysis_type": "statistical_modeling",
+  "quantitative_analysis_evidence_quote": "Foi feita uma regressão linear múltipla de dados em painel, pelo método de efeitos fixos e aleatórios tendo como variável dependente a taxa de homicídios dos estados brasileiros e do Distrito Federal",
+  "has_statistical_inference": true,
+  "statistical_inference_quote": "Foi realizado teste que indicou heterocedasticidade. Por isso, foram utilizados estimadores robustos. Ainda, foi realizado o teste de Hausman",
+  "qualitative_analysis_goal": null,
+  "qualitative_goal_clarity": null,
+  "qualitative_goal_quote": null,
+  "causal_or_explanatory_claim_present": true,
+  "causal_or_explanatory_claim_quote": "Quais fatores fiscais e socioeconômicos afetam as taxas de homicídio dos estados brasileiros?",
+  "credibility_revolution_screen_applicable": true,
+  "credibility_revolution_screen_reason": "statistical_modeling_screen",
+  "credibility_revolution_method_present": false,
+  "credibility_revolution_method_type": [
+    "fixed_effects_causal_panel_claim",
+    "observational_regression_with_causal_claim_no_design"
+  ],
+  "causal_design_quote": "regressão linear múltipla de dados em painel, pelo método de efeitos fixos e aleatórios",
+  "main_variables_or_relationship": "Relação entre taxas estaduais de homicídio e fatores socioeconômicos e fiscais, incluindo anos de estudo, desemprego, PIB per capita, transferências federais, emendas parlamentares, gastos em segurança e gestão fiscal estadual.",
+  "sample_or_data_source": "135 observações dos estados brasileiros e do Distrito Federal entre 2015 e 2019, com dados do Painel de Transferências Abertas +Brasil, Atlas da Violência/IPEA, IBGE e SICONFI.",
+  "tough_call": true,
+  "tough_call_reason": "O artigo usa linguagem de impacto e efeitos e estima modelos de painel com efeitos fixos e aleatórios, mas não apresenta desenho causal explícito; por isso passa pela triagem de credibilidade por modelagem estatística, sem método de credibilidade presente.",
+  "brief_justification": "O artigo é empírico quantitativo porque constrói uma base estadual de 2015 a 2019, elabora o IGFE, apresenta estatísticas descritivas e estima regressões em painel. A presença de testes, estimadores robustos, Hausman e significância estatística caracteriza modelagem com inferência. Não há análise qualitativa substantiva própria nem desenho causal moderno de identificação."
+}
