@@ -582,6 +582,15 @@ def build_codex_command(args: argparse.Namespace, raw_path: Path) -> list[str]:
     return cmd
 
 
+def output_naming_errors(out_dir: Path, combined_stem: str) -> list[str]:
+    if "full_corpus_ab" in out_dir.parts and combined_stem == "classifications_integral_reading":
+        return [
+            "A/B output directories under full_corpus_ab require a non-default --combined-stem "
+            "to keep test outputs distinct from canonical combined filenames."
+        ]
+    return []
+
+
 def run_codex_for_row(
     row: dict[str, str],
     prompt: str,
@@ -636,7 +645,7 @@ def run_codex_for_row(
     return True, "ok"
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR)
@@ -667,13 +676,18 @@ def parse_args() -> argparse.Namespace:
             "paths; use a block-specific stem to avoid overwriting canonical combined files."
         ),
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
 def main() -> int:
     args = parse_args()
     manifest_path = args.manifest if args.manifest.is_absolute() else PROJECT_DIR / args.manifest
     out_dir = args.out_dir if args.out_dir.is_absolute() else PROJECT_DIR / args.out_dir
+    naming_errors = output_naming_errors(out_dir, args.combined_stem)
+    if naming_errors:
+        for error in naming_errors:
+            print(error, file=sys.stderr)
+        return 1
     dirs = ensure_dirs(out_dir)
 
     selected_pids = set(args.pid) if args.pid else None
