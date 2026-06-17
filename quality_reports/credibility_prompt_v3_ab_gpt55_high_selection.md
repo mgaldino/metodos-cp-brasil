@@ -1,6 +1,6 @@
 # Seleção A/B gpt-5.5 high vs xhigh
 
-Gerado em: 2026-06-16 23:52:12 -0300
+Gerado em: 2026-06-17 01:04:46 -0300
 
 ## Escopo
 
@@ -8,8 +8,9 @@ Gerado em: 2026-06-16 23:52:12 -0300
 - Manifesto completo: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv`
 - Manifesto congelado A/B: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_full_corpus/batch_manifests/ab_gpt55_high_50.csv`
 - N total selecionado: 50
+- Validações: PIDs únicos, task packets existentes, hash `input_text_hash` idêntico entre baseline e manifesto, N=50 e quotas exatas.
 
-A seleção usa apenas artigos já classificados no corpus principal por leitura integral. Os estratos são escolhidos sequencialmente na ordem de prioridade: método positivo/diagnóstico, screen de credibilidade, tough call, quantitativo Torreblanca sem método positivo, qualitativo ou não empírico. Um PID já escolhido em estrato prioritário não pode ser escolhido novamente.
+A seleção usa apenas artigos já classificados no corpus principal por leitura integral. Os estratos são escolhidos sequencialmente na ordem de prioridade: método positivo/diagnóstico, screen de credibilidade, tough call, quantitativo Torreblanca sem método positivo, qualitativo ou não empírico. Um PID já escolhido em estrato prioritário não pode ser escolhido novamente. Como os critérios se sobrepõem fortemente, esta interpretação preserva as quotas alvo sem duplicar PIDs.
 
 ## Tabela 1. Distribuição por estrato selecionado
 
@@ -146,3 +147,7 @@ selection_order | pid | assigned_stratum | raw_candidate_strata | title | journa
 ## Reprodutibilidade
 
 A ordenação dentro de cada estrato é determinística: SHA-256 de `pid`, estrato e a semente textual `ab_gpt55_high_20260616`. Não há sorteio dependente de estado global do R.
+
+Comando de reprodução:
+
+`LC_ALL=pt_BR.UTF-8 Rscript --vanilla scripts/34_select_credibility_prompt_v3_ab_sample.R`
