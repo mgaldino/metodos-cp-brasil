@@ -246,6 +246,15 @@ def normalize_metadata_text(value: Any) -> str:
     text = html.unescape(text)
     text = unicodedata.normalize("NFC", text)
     text = re.sub(r"\s+", " ", text).strip()
+    quote_pairs = {
+        '"': '"',
+        "'": "'",
+        "“": "”",
+        "‘": "’",
+        "«": "»",
+    }
+    while len(text) >= 2 and quote_pairs.get(text[0]) == text[-1]:
+        text = text[1:-1].strip()
     return text
 
 

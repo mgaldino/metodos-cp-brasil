@@ -95,6 +95,23 @@ def test_validate_record_accepts_html_entity_equivalent_titles():
     assert runner.validate_record(record, row) == []
 
 
+def test_validate_record_accepts_omitted_outer_title_quotes():
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "title": '"Acordem! Nossos relógios estão lentos em relação ao nosso tempo"',
+        "journal_title": "Contexto Internacional",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="Acordem! Nossos relógios estão lentos em relação ao nosso tempo",
+        journal_title="Contexto Internacional",
+        input_text_hash="abc123",
+    )
+
+    assert runner.validate_record(record, row) == []
+
+
 def test_validate_record_still_requires_literal_hash_match():
     runner = load_runner()
     row = {
