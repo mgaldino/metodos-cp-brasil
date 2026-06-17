@@ -1,0 +1,566 @@
+OpenAI Codex v0.140.0
+--------
+workdir: /Users/manoelgaldino/Documents/DCP/Papers/metodos_CP
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 019ed37f-d5ea-7dc0-821c-40998362831b
+--------
+user
+# Credibility Prompt v3 - Integral Reading Batch Prompt
+
+You are classifying exactly one article in this run.
+
+## Absolute Rule: Integral Reading Before Classification
+
+You must read the full article body from beginning to end before classifying it.
+
+It is prohibited to classify by:
+
+- regexes, scripts, keyword matching, heuristics, or automated rules;
+- previous consensus labels, gold labels, auxiliary classifications, or journal priors;
+- title, abstract, metadata, isolated tables, or selected excerpts alone;
+- guessing from the journal, year, topic, or style.
+
+The purpose of this task is interpretive article-by-article classification, not scale automation. If the article is long, keep reading until the end. Do not substitute a shortcut for full reading.
+
+If you cannot read the full body text, return `status: "incomplete"`, set `full_body_read: false`, explain why in `incomplete_reason`, and set `classification: null`. Do not produce a final classification for an article you did not read fully.
+
+## Mandatory Reading Log Before Classification
+
+Before producing the classification, build a `section_reading_log`. This log is part of the required JSON output.
+
+For each section explicitly present in the paper, include:
+
+- `section_title`: the section heading as it appears in the article;
+- `section_position`: 1-based section order;
+- `section_summary`: one or two substantive paragraphs summarizing what the section argues or does;
+- `methods_or_data_mentions`: one paragraph identifying data, methods, tables, figures, interviews, documents, models, tests, or stating that none appear in the section;
+- `classification_relevance`: one paragraph explaining how this section matters, or does not matter, for empirical/quantitative/qualitative/causal/statistical classification.
+
+If the article has no clear section headings, divide the body into sequential chunks and use `chunk_1`, `chunk_2`, etc. as section titles. Still summarize every chunk.
+
+After the section log, write:
+
+- `general_summary`: one or two paragraphs summarizing the paper as a whole;
+- `decision_audit`: answers to the final audit questions listed below.
+
+Only after completing these steps may you fill the `classification` object.
+
+## Final Audit Questions
+
+Answer these in `decision_audit` before classification:
+
+1. Where does the article present its own empirical evidence, if anywhere?
+2. Where does the article present original or reanalyzed quantitative analysis, if anywhere?
+3. Where does the article present substantive qualitative evidence, if anywhere?
+4. Where does the article report statistical inference, if anywhere?
+5. Where does the article present a causal or credibility-revolution design, if anywhere?
+6. Is there any section that contradicts the likely classification?
+
+## Output Shape
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Top-level required fields:
+
+- `pid`
+- `title`
+- `journal_title`
+- `input_text_hash`
+- `status`: `"complete"` or `"incomplete"`
+- `full_body_read`: boolean
+- `incomplete_reason`: string or null
+- `section_reading_log`: array
+- `general_summary`: string
+- `decision_audit`: object
+- `classification`: object if `status == "complete"`, otherwise null
+
+The nested `classification` object must follow the original credibility prompt v3 schema exactly.
+
+## Original Classifier Prompt v3
+
+The following classifier instructions define the classification schema and field meanings. They are binding, but they do not override the integral-reading rule above.
+
+# Credibility Revolution Brazil Classifier Prompt v3
+
+You are a methodological classifier for political science, international relations, and public administration articles published in Brazilian SciELO journals.
+
+Read the full article body and classify the article using only textual evidence from the article itself. The title, year, journal, DOI, and language may be used as context, but they are never sufficient evidence for methods, data, causality, or statistical analysis.
+
+This project replicates and adapts Torreblanca et al., "The Credibility Revolution in Political Science", for Brazil. The Torreblanca-style quantitative variable is broad: any original quantitative data analysis counts, including descriptive, predictive, explanatory, causal, or other quantitative analysis. However, for the Brazilian replication, we also need to distinguish purely descriptive quantitative articles from articles that go beyond descriptive statistics.
+
+## Anti-False-Positive Rule
+
+Do not classify an article as quantitative merely because it mentions a number, percentage, statistic, election result, survey result, or empirical finding from another study. To count as original quantitative analysis, the article must use its own data analysis or a reanalysis of data in its empirical analysis, usually in a table, figure, graph, appendix, methods section, data section, or results section.
+
+Descriptive counts, percentages, means, distributions, and cross-tabulations are descriptive statistics. If these are the only quantitative analyses in the article, classify the quantitative analysis type as `descriptive_statistics_only`.
+
+Use `null` when the text does not support a field. Do not invent sample sizes, variables, methods, causal designs, identification assumptions, mechanisms, statistical inference, or results.
+
+## Journal Context
+
+The main analysis includes these journals:
+
+- Brazilian Political Science Review
+- Cadernos Gestao Publica e Cidadania
+- Contexto Internacional
+- Dados
+- Lua Nova: Revista de Cultura e Politica
+- Novos estudos CEBRAP
+- Opiniao Publica
+- Revista Brasileira de Ciencia Politica
+- Revista Brasileira de Ciencias Sociais
+- Revista Brasileira de Politica Internacional
+- Revista de Administracao Publica
+- Revista de Sociologia e Politica
+- Sur. Revista Internacional de Direitos Humanos
+
+`Brazilian Journal of Political Economy` and `Civitas - Revista de Ciencias Sociais` are outside the main analysis.
+
+Some journals have higher prior probability of quantitative or causal work than others, but this is only a weak prior. Always classify based on the body text.
+
+Very low prior for credibility-revolution methods:
+
+- Novos estudos CEBRAP
+- Lua Nova: Revista de Cultura e Politica
+- Cadernos Gestao Publica e Cidadania
+- Sur. Revista Internacional de Direitos Humanos
+
+Articles in these journals are unlikely to use credibility-revolution methods such as experiments, DiD, IV, RDD, synthetic control, matching, or modern causal estimators. Use this only as a caution against over-classification. If the body clearly shows one of these designs, classify it normally.
+
+## Output
+
+Return exactly one valid JSON object and no text outside the JSON.
+
+Required fields:
+
+### Metadata
+
+- `pid`: string
+- `title`: string
+- `journal_title`: string
+- `input_text_hash`: string
+
+### Broad Empirical Classification
+
+- `is_empirical_paper`: boolean
+
+`true` if the article analyzes substantive empirical evidence, including quantitative data, qualitative evidence, documents, interviews, surveys, administrative data, content analysis, case studies, process tracing, archival materials, or other empirical material.
+
+`false` for normative theory, pure formal theory, conceptual essays, literature reviews without original empirical analysis, methodological articles without empirical application, and purely theoretical articles.
+
+- `empirical_evidence_type`: one of:
+  - `none`
+  - `quantitative_only`
+  - `qualitative_only`
+  - `mixed_empirical`
+  - `unclear`
+
+`mixed_empirical` requires both substantive qualitative evidence and substantive quantitative evidence. Do not classify as mixed merely because a quantitative article has a theory section, or because a qualitative article mentions contextual numbers.
+
+- `is_empirical_quant_paper_torreblanca`: boolean
+
+`true` if the article contains any original or reanalyzed quantitative data analysis, whether descriptive, bivariate, modeled, predictive, explanatory, causal, or other.
+
+`false` if the article is purely qualitative, theoretical, normative, formal, methodological without empirical quantitative application, or lacks original quantitative analysis.
+
+- `is_empirical_qual_paper`: boolean
+
+`true` if the article uses substantive qualitative evidence, such as case studies, historical comparison, interviews, documents, archival material, process tracing, interpretive analysis, discourse analysis, or qualitative content analysis.
+
+### Quantitative Module
+
+- `quantitative_analysis_type`: one of:
+  - `none`
+  - `descriptive_statistics_only`
+  - `bivariate_tests_or_correlations_only`
+  - `statistical_modeling`
+  - `unclear`
+
+Definitions:
+
+`none`: no original quantitative analysis.
+
+`descriptive_statistics_only`: the article presents only descriptive statistics from its own analysis or reanalysis, such as counts, percentages, means, distributions, descriptive cross-tabs, descriptive figures, or descriptive tables. It does not use statistical tests, correlations, regression, models, uncertainty estimates, or inferential claims from statistical tests.
+
+`bivariate_tests_or_correlations_only`: the article includes descriptive statistics and goes beyond them using t-tests, chi-square tests, Fisher tests, simple ANOVA, mean comparisons with p-values, Pearson/Spearman correlations, or equivalent bivariate tests, but does not use multivariable statistical modeling.
+
+`statistical_modeling`: the article uses regression, logit/probit, panel models, fixed effects, multilevel models, survival/event-history models, choice models, estimated matching or weighting, PCA/factor analysis, clustering used analytically, modeled text-as-data, network models, or equivalent statistical models.
+
+`unclear`: there are signals of quantitative analysis, but the body text does not allow confident classification.
+
+- `quantitative_analysis_evidence_quote`: string or null
+
+Short excerpt supporting `quantitative_analysis_type`, preferably from methods, data, results, table, figure, or appendix discussion.
+
+- `has_statistical_inference`: boolean or null
+
+`true` if the article reports p-values, standard errors, confidence intervals, Bayesian intervals, statistical tests, bootstrap intervals, randomization inference, or another uncertainty quantification.
+
+`false` if the article reports only descriptive analysis without statistical inference.
+
+`null` if not applicable or unsupported.
+
+- `statistical_inference_quote`: string or null
+
+Short excerpt supporting statistical inference. Use `null` if absent.
+
+### Qualitative Module
+
+- `qualitative_analysis_goal`: one of:
+  - `null`
+  - `descriptive_reconstruction`
+  - `explanatory_why`
+  - `interpretive_meaning`
+  - `mixed_descriptive_explanatory`
+  - `unclear`
+
+Use `null` if there is no qualitative component.
+
+`descriptive_reconstruction`: the article mainly describes how something happened, reconstructs a trajectory, maps actors/events/processes, or systematizes an empirical phenomenon.
+
+`explanatory_why`: the article seeks to explain why something happened, identifying causes, conditions, mechanisms, determinants, consequences, or explanatory processes.
+
+`interpretive_meaning`: the article mainly interprets meanings, concepts, discourses, intellectual traditions, norms, or texts without making a clear empirical explanatory claim.
+
+`mixed_descriptive_explanatory`: the article combines descriptive reconstruction with substantive causal or explanatory arguments.
+
+`unclear`: the qualitative goal is ambiguous.
+
+- `qualitative_goal_clarity`: one of:
+  - `null`
+  - `clear`
+  - `ambiguous_tough_call`
+  - `internally_inconsistent`
+
+If the article says it will describe how something happened but later explains why it happened, classify the qualitative goal as `explanatory_why` or `mixed_descriptive_explanatory` and set this field to `ambiguous_tough_call` or `internally_inconsistent`.
+
+- `qualitative_goal_quote`: string or null
+
+Short excerpt supporting the qualitative classification. Use `null` if not applicable.
+
+### Causal and Credibility-Revolution Screening
+
+- `causal_or_explanatory_claim_present`: boolean
+
+`true` if the article seeks to explain causes, effects, consequences, determinants, impacts, influence, mechanisms, or why something happened.
+
+`false` if it merely describes, interprets, reviews literature, or reports association without an explanatory or causal claim.
+
+Do not confuse vague association language with a causal claim.
+
+- `causal_or_explanatory_claim_quote`: string or null
+
+Short excerpt supporting the claim. Use `null` if absent.
+
+- `credibility_revolution_screen_applicable`: boolean
+
+`true` if the article should be screened for credibility-revolution methods.
+
+Classify as `true` if at least one condition holds:
+
+1. `quantitative_analysis_type` is `bivariate_tests_or_correlations_only` or `statistical_modeling`;
+2. the article uses an experiment, DiD, IV, RDD, RKD, synthetic control, synthetic DiD, matching, weighting, DAG used for identification, causal forest/tree, doubly robust estimator, causal discovery, or similar causal method;
+3. the article makes a causal or explanatory claim associated with quantitative analysis.
+
+Classify as `false` if:
+
+1. `quantitative_analysis_type` is `none`;
+2. `quantitative_analysis_type` is `descriptive_statistics_only` and there is no causal design;
+3. the article is purely qualitative;
+4. the article is theoretical, normative, formal, or conceptual without quantitative empirical analysis.
+
+- `credibility_revolution_screen_reason`: one of:
+  - `not_empirical`
+  - `qualitative_only`
+  - `descriptive_quantitative_only`
+  - `bivariate_or_correlation_screen`
+  - `statistical_modeling_screen`
+  - `explicit_causal_design_screen`
+  - `causal_claim_with_quantitative_analysis_screen`
+  - `unclear`
+
+- `credibility_revolution_method_present`: boolean or null
+
+Use `null` if `credibility_revolution_screen_applicable` is `false`.
+
+`true` if the article uses at least one credibility-revolution method.
+
+`false` if the article passes the screen but does not use such a method.
+
+Important identification rule:
+
+Do not count causal language, SEM, structural equation modeling, causal mediation,
+path analysis, regression adjustment, fixed effects, controls, or observational
+modeling as a credibility-revolution method merely because the article estimates
+effects or cites causal-methods literature. For any method outside the usual
+credibility-revolution designs listed below, classify `credibility_revolution_method_present`
+as `true` only if the article explicitly discusses the relevant causal identification
+assumption or strategy and gives a textual reason why that assumption is plausible
+in the empirical setting.
+
+For causal mediation or SEM-style causal claims, look specifically for discussion
+of sequential ignorability, treatment/mediator ignorability, randomization,
+design-based identification, sensitivity analysis, or another explicit
+identification argument. If the article applies SEM or causal mediation to
+observational data without such discussion, classify it as
+`observational_regression_with_causal_claim_no_design`, set
+`credibility_revolution_method_present` to `false`, and explain the issue in
+`tough_call_reason`.
+
+If `credibility_revolution_method_type` contains only `none_detected`,
+`fixed_effects_causal_panel_claim`, or
+`observational_regression_with_causal_claim_no_design`, then
+`credibility_revolution_method_present` must be `false`.
+
+- `credibility_revolution_method_type`: array or null
+
+Allowed values:
+
+- `experiment_field`
+- `experiment_survey`
+- `experiment_lab`
+- `experiment_list`
+- `difference_in_differences`
+- `event_study`
+- `instrumental_variables`
+- `regression_discontinuity`
+- `regression_kink`
+- `synthetic_control`
+- `synthetic_difference_in_differences`
+- `matching_or_weighting`
+- `dag_or_formal_causal_graph`
+- `doubly_robust`
+- `causal_trees_or_forests`
+- `causal_discovery`
+- `other_modern_causal_method`
+- `fixed_effects_causal_panel_claim`
+- `observational_regression_with_causal_claim_no_design`
+- `none_detected`
+
+Fixed effects rule:
+
+Do not classify every fixed-effects model as DiD. Classify as DiD or event study only if the article has treatment, time variation, treated/control comparison, intervention/event timing, or parallel-trends logic. If an article uses fixed effects and causal language but no clear causal design, classify as `fixed_effects_causal_panel_claim` or `observational_regression_with_causal_claim_no_design`.
+
+- `causal_design_quote`: string or null
+
+Short excerpt supporting the causal method classification. Use `null` if absent.
+
+### Substantive Extraction
+
+- `main_variables_or_relationship`: string or null
+
+Short summary of the main empirical relationship analyzed. Use `null` if unsupported.
+
+- `sample_or_data_source`: string or null
+
+Short summary of the main data source or sample. Use `null` if unsupported.
+
+### Uncertainty and Justification
+
+- `tough_call`: boolean
+
+`true` if a central decision required difficult judgment.
+
+- `tough_call_reason`: string or null
+
+Briefly explain the ambiguity. Use `null` if `tough_call` is `false`.
+
+- `brief_justification`: string
+
+Brief text-based justification for the overall classification.
+
+
+## Output Reconciliation
+
+The original prompt v3 above describes the fields of the nested `classification` object.
+When it says to return one JSON object, that object must be placed inside the top-level
+object required by this integral-reading prompt. Your final response must always have
+the top-level fields `section_reading_log`, `general_summary`, `decision_audit`, and
+`classification`.
+
+## Article Task Packet
+
+The task packet below contains the article metadata and full body text. Use only this packet for substantive classification.
+
+# Article task packet full corpus: S2236-57102023000100205
+
+This packet is derived from `data/processed/fulltext_corpus/article_texts_corpus.csv`.
+Use only the `body_text` below plus the metadata in this packet for substantive classification.
+
+## Metadata
+
+- eligible_order: 274
+- pid: S2236-57102023000100205
+- title: A AGENDA DE PESQUISA DA BUROCRACIA DE NÍVEL DE RUA NO CONTEXTO DA PANDEMIA: UMA REVISÃO INTEGRATIVA
+- title_en: THE STREET-LEVEL BUREAUCRACY RESEARCH AGENDA IN THE PANDEMIC CONTEXT: AN INTEGRATIVE REVIEW
+- authors: Carlos Eduardo Guilarducci Fonseca; Magnus Luiz Emmendoerfer; Josiel Lopes Valadares
+- year: 2023
+- journal_title: Cadernos Gestão Pública e Cidadania
+- language: pt
+- doi: 10.12660/CGPC.V28.85447
+- canonical_source_file: data/processed/fulltext_corpus/article_texts_corpus.csv
+- canonical_source_column: body_text
+- input_text_hash: 3f27d5c4760051b4dd5f824d39c9bc1bf0ec6782a096611064d8ce2c0b2ecd5a
+
+## Body Text
+
+INTRODUÇÃO
+
+A implementação das políticas públicas em situações de normalidade é um campo de estudo com espaço restrito de pesquisa quando comparada às investigações sobre as fases da agenda, formulação, tomada de decisão e avaliação (Lotta et al., 2018). A escassez de pesquisas que abordam o diálogo entre o fundamento teórico da implementação com os casos empíricos das mais variadas áreas públicas setoriais é apontada como uma lacuna do campo de estudo (Lotta, 2008, 2010; Cavalcanti, Lotta, & Pires, 2018; Lotta et al., 2018) e passa a ser ampliada quando se considera o contexto das crises, sobretudo no nível de rua, em que há a interação entre o Estado e o cidadão e se devem debruçar os esforços de compreensão (Henderson, 2014; Brodkin, 2021; Gofen & Lotta, 2021; Lotta et al., 2021).
+
+O profissional que trabalha na linha de frente tanto nas situações de normalidade quanto de anormalidade, denominado de burocrata de nível de rua, é o elemento central dessa implementação, por exercer sua discricionariedade durante o contato com o cidadão na entrega dos serviços à sociedade e modificando a política formulada localmente, podendo ser visto como um formulador de políticas (Ferreira & Medeiros, 2016; Lima-Silva, Sandim, Magri, & Lotta, 2020). Na literatura que aborda esse agente público são encontradas outras expressões sinônimas ao burocrata de nível de rua: agente de implementação (Cavalcanti et al., 2018), burocratas da linha de frente (Ferreira & Medeiros, 2016) ou implementadores (Lima & D’Ascenzi, 2017), e elas serão intercambiadas ao longo deste trabalho.
+
+A pandemia enquanto crise (Christensen & Lægreid, 2020) revelou a importância desses profissionais que atuam na linha de frente em um cenário de insuficiência de recursos para o atendimento ao usuário e para sua proteção individual, além de ter seu ambiente de trabalho e suas rotinas alterados por respostas governamentais ambíguas e que lhes dão maior autonomia de ação (Cox, Dickson, & Marier, 2021; Davidovitz, Cohen, & Gofen, 2021; Meza, PérezChiqués, Campos, & Varela Castro, 2021). Os limites de atuação do burocrata são definidos pelas regras formais e informais, que no decorrer da pandemia foram determinantes para alterar a sua extensão, deslocando-se no sentido contrário a como ocorre em épocas de normalidade (Malandrino & Sager, 2021; Pérez-Chiqués et al., 2021).
+
+A crise não apenas afetou a autonomia do profissional da linha de frente, como também o seu comportamento (Christensen & Lægreid, 2020; Lima-Silva et al., 2020; Oliveira, Barabashev, Tapscott, Thompson, & Qian, 2021; Gofen, Lotta, & Marchesini da Costa, 2021), fazendo emergir novas estratégias de enfrentamento das pressões (Lotta et al., 2018) e mudando os papéis exercidos, colocando o racionamento de recursos como o principal fator de orientação no processamento dos clientes (Meza et al., 2021), sobretudo influenciado por fatores organizacionais, considerando o impacto das regras, recursos, produção de incentivos e o aprendizado disponível sobre seus comportamentos (Lotta, 2010; Bonelli, Fernandes, Coêlho, & Palmeira, 2019). De igual maneira, as relações e as interações entre os burocratas e os usuários foram profundamente afetadas pela pandemia, destacando a motivação e a vontade do agente público de implementar, mesmo em meio ao contexto de incertezas e medo de contágio com o vírus (Malandrino & Sager, 2021; Meza et al., 2021; Pérez-Chiqués et al., 2021).
+
+Para compreender as influências da crise para a burocracia de nível de rua, este estudo explorou a agenda de pesquisa no contexto da pandemia, utilizando para esse fim o método de revisão integrativa, em que são feitas análises tanto quantitativas quanto qualitativas (Botelho, Cunha, & Macedo, 2011). Adotou-se a técnica bibliométrica, de caráter estatístico-quantitativo (Araújo, 2006), em que são aplicadas categorias analíticas e que serão apresentadas na próxima seção.
+
+A leitura integral dos textos foi feita na perspectiva da crise e sua influência para três categorias analíticas: o espaço discricionário, as estratégias de enfrentamento das pressões e o exercício de papéis na atuação. A primeira categoria mensura a extensão das decisões dos profissionais atendendo ou excluindo os usuários, podendo ser também compreendida como a autonomia disponível para sua ação (Hupe & Hill, 2007). A segunda categoria analisa as influências das regras formais e não ditadas, incentivos e recursos para o comportamento discricionário, e, por fim, a terceira categoria avalia as dinâmicas de interação e as relações no contato entre os profissionais e os usuários (Lotta, 2010; Bonelli et al., 2019).
+
+Adicionalmente, empreendeu-se com a pesquisa entender de que forma o uso de softwares contribui na análise dos dados, apontando suas vantagens e limitações. Para isso, optou-se por explorar o VOSViewer 1.6.17, por causa da compatibilidade dos arquivos gerados pela fonte de onde foram extraídos os dados. Pretendeu-se contribuir no campo de estudo de análise das burocracias de nível de rua em contextos de crise (Henderson, 2014; Lima-Silva et al., 2020).
+
+Quanto à estrutura do estudo, além desta introdução, na qual foram delimitados o tema e os objetivos, são apresentados na próxima seção os procedimentos metodológicos empregados durante a pesquisa, suas características e limitações. A seguir, são elencadas as contribuições para o campo de estudo da burocracia de nível de rua no contexto de crise. Na última seção, há as indicações de futuras investigações para o campo de análise.
+
+METODOLOGIA
+
+Este estudo buscou aplicar o método de revisão integrativa da literatura para investigar a agenda de pesquisa da burocracia de nível de rua em contextos de crise, como a pandemia, utilizando como dados primários os artigos que abordassem simultaneamente a pandemia e a burocracia de nível de rua encontrados na base de dados da Web of Science, mediante o seu acesso pela plataforma dos periódicos da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (Capes). A revisão integrativa faz parte de uma estrutura de revisão sistemática em que há a combinação de métodos quantitativos e qualitativos (De-la-Torre-Ugarte-Guanilo, Takahashi, & Bertolozzi, 2011).
+
+Esse é um recurso metodológico empregado por pesquisadores no início de seus estudos, com o propósito de responder a perguntas de pesquisa sobre determinado tema (Sampaio & Mancini, 2007; Botelho et al., 2011). O objetivo desse método qualitativo perpassa pelo compartilhamento dos resultados de outros estudos aproximados, pelo relacionamento do diálogo entre estudos sobre um tópico ou até mesmo pelo fornecimento de uma estrutura que estabeleça a importância de uma pesquisa e seus indicadores de comparação com outros resultados (Creswell, 2010).
+
+Além disso, a revisão possui caráter exploratório, pois permite maior aderência do pesquisador ao tema pesquisado, desenvolvimento de insights e ideias (Conforto, Amaral, & Silva, 2011).
+
+O método sumariza a literatura antecedente para prover uma compreensão mais ampla sobre fenômenos particulares (Botelho et al., 2011), por meio da consolidação e análise de estudos experimentais e não experimentais, teóricos ou empíricos, com contribuição ao campo de conhecimento anteriormente investigado, permitindo a construção de teorias, identificação de lacunas e proposição de novos estudos (Grant & Booth, 2009; Botelho et al., 2011), em direção ao estado da arte sobre o assunto. Alguns cuidados devem ser tomados pelos pesquisadores que decidem utilizar esse método, a começar pela sistematização do estudo. A revisão integrativa requer uma ordem procedimental na busca, coleta e seleção dos dados a serem analisados, evitando erros metodológicos ou de viés de pesquisa (Botelho et al., 2011). Para isso, os autores propõem um processo compreendendo seis etapas para o desenvolvimento de uma revisão integrativa, conforme apresentado na Figura 1.
+
+Fonte: adaptada de Botelho et al. (2011)
+
+O detalhamento dessas etapas ficará para outro momento, em razão dos objetivos propostos para este estudo e pela limitação para discussão. A seguir, serão descritos os procedimentos metodológicos adotados neste artigo, utilizando o processo de revisão integrativa proposto por Botelho et al. (2011).
+
+Como critério de inclusão, foram selecionados os artigos que apresentassem algum dos descritores de busca em seu título, resumo ou palavra-chave. As buscas ocorreram no banco de dados da Web of Science, entre os meses de setembro e novembro de 2021. Como descritores de busca, empregaram-se as expressões “street-level bureaucrats”, “street-level bureaucracy” e “frontline professionals” associadas com indexador boleano “AND” aos termos “COVID-19”, “pandemic” e “coronavirus”. O recorte temporal estabelecido deu-se do dia 30 de janeiro de 2020, quando a Organização Mundial da Saúde (OPAS, 2020) declarou que o novo coronavírus constituía uma emergência de saúde pública de importância internacional, até o dia 1º de junho de 2021, quando essa organização validou mundialmente a oitavavacina para uso emergencial contra o novo coronavírus (OPAS, 2021).
+
+A tabela 1 mostra o número total de artigos encontrados no banco de dados escolhido e os números parciais por descritores de busca.
+
+Uma primeira seleção por meio do processo de exclusão foi feita adotando-se os critérios de descarte das duplicidades, das publicações que não se encaixaram no recorte temporal e dos artigos em que não foi possível obter seus conteúdos na íntegra. Por fim, um último filtro foi aplicado, durante a leitura integral dos artigos, confirmando-se a adequação de seu conteúdo ao objetivo da pesquisa. Após a aplicação de todos os critérios, foram selecionados nove artigos para a análise, embora o total de artigos encontrados tenha sido 86. Esse fenômeno é decorrente do elevado número de duplicidades encontradas a cada etapa de busca com os descritores escolhidos. Os artigos que preencheram os parâmetros estabelecidos para a pesquisa foram categorizados segundo critérios de análise definidos pelos autores do artigo: áreas setoriais, métodos de abordagem, instrumentos de coleta de dados, países onde foram desenvolvidas as pesquisas e fontes de publicação.
+
+O software VOSViewer 1.6.17 foi utilizado para realizar um estudo bibliométrico de caráter quantitativo-estatístico, o qual permite analisar a produção científica e identificar a sua contribuição para o conhecimento (Araújo, 2006), aplicando-se a análise dos dados obtidos da plataforma Web of Science. Explorou-se no software a análise de coautoria de autores e países, cocitação e acoplamento bibliográfico das referências. A análise de coautoria propicia identificar as relações entre os autores na elaboração dos artigos, as linhas de pesquisa, temas e abordagens. A análise de cocitação e acoplamento bibliográfico possibilita conhecer as relações de conexão teórico-metodológica de um campo de estudo, sua aproximação, limites, associações e interface entre documentos e autores (Grácio, 2016). Pode-se afirmar que a cocitação lista os autores utilizados nas referências dos trabalhos em ordem decrescente de recorrência, revelando, portanto, aqueles mais utilizados por outros pesquisadores. O número reduzido de artigos selecionados pode ser um problema no estudo bibliométrico com o uso de software. Por outro lado, os resultados podem contribuir para atingir um dos objetivos da pesquisa.
+
+Os resultados serão apresentados a seguir e discutidos amplamente para melhor compreensão do assunto.
+
+RESULTADOS E DISCUSSÃO
+
+A pandemia trouxe inúmeras consequências para o mundo, sobretudo para os profissionais da linha de frente no atendimento das pessoas doentes, submetidos à alta carga de estresse e de trabalho e a um forte sentimento de medo pela exposição ao risco de contaminação, tomando decisões extremamente complexas no enfrentamento do coronavírus (Lima-Silva et al., 2020; Matarazzo, Fernandes, & Alcadipani, 2020; Moura, Furtado, & Sobral, 2020; Vidal, 2020).
+
+As consequências do vírus adentraram também no campo das pesquisas sociais, deslocando a agenda de pesquisa, de maneira especial em relação aos estudos sobre a implementação, que tiveram crescimento exponencial a partir de fevereiro de 2020, na perspectiva dos burocratas de nível de rua, em razão de suas contribuições no enfrentamento da doença (Musheno, Musheno, & Austin, 2021). Os resultados gerais da pesquisa são apresentados no quadro analítico da Tabela 2.
+
+As áreas públicas setoriais abordadas nas investigações sobre o trabalho dos burocratas de nível de rua no contexto de uma crise se limitaram às da assistência social, educação, segurança pública e, sobretudo, saúde. Um tema emergente foi o empreendedorismo de rua, que abordou a avaliação da atuação dos agentes de saúde comunitários, revelando que os burocratas de nível de rua (BNR) agiram de forma defensiva em ações empreendedoras durante a implementação das políticas de enfrentamento ao vírus (Gofen et al., 2021). Os profissionais da saúde que atuam nos hospitais e em asilos, os agentes de saúde comunitários, os agentes de assistência social, os professores e os policiais foram as categorias de burocratas encontradas nos estudos, desenvolvidos em oito países - Brasil, Estados Unidos da América, Canadá, México, Israel, Itália, Suíça e Índia. Os países da África e da Oceania não foram abordados nos estudos encontrados. As fontes de publicação limitaram-se ao Journal of Comparative Policy Analysis, concentrando seis publicações, ao Journal of Public Affairs e à Revista de Administração Pública.
+
+Quanto aos métodos, identificou-se preponderância de estudos qualitativos, embora tenham sido encontrados estudos quantitativos e de métodos mistos. As técnicas de pesquisa empregadas foram a documental, entrevistas, survey, triangulação de dados e revisão da literatura, utilizando como instrumentos de coleta de dados documentos, jornais, revistas, entrevista semiestruturada, storytelling, questionário, artigos, vinhetas, Facebook e outras fontes online, como transmissões ao vivo. A triangulação foi empregada em apenas dois estudos, embora seja uma técnica importante para a validação de qualquer pesquisa. Por fim, as restrições impostas pelas políticas públicas de saúde de distanciamento e isolamento social alteraram a instrumentalização tradicional de coleta de dados, como as entrevistas e a aplicação de questionários presenciais para métodos de busca de informações em revistas (Cox et al., 2021; Gofen et al., 2021).
+
+A seção a seguir continuará a análise dos resultados por meio da aplicação do software na análise bibliométrica.
+
+Aplicação de software para análise bibliométrica
+
+A medição estatística da produção científica literária surgiu do que se conhecia como bibliografia estatística e foi modificada para bibliometria (Vanti, 2001; Araújo, 2006). Esse método quantitativo aplica conceitos matemáticos da estatística para avaliar a produção científica, descrevendo seus aspectos (Araújo, 2006). Os softwares auxiliam os pesquisadores no desenvolvimento dos estudos bibliométricos, contribuindo para a elaboração das análises e discussão dos resultados das pesquisas, e reduzem o tempo empregado nessas etapas. Neste estudo, optou-se pela utilização do software VOSviewer 1.6.17 por ser uma ferramenta gratuita capaz de mapear o conhecimento em estruturas de redes bibliométricas, por meio de técnicas que agrupam os dados (van Eck & Waltman, 2017; Vieira, Lemos, & Teixeira, 2021).
+
+Os tipos de análise empregados com o uso do software foram de coautoria de autores e países, coocorrência de palavras, cocitação de referência e acoplamento bibliográfico de documentos. O software para análise dos dados está limitado à sua compatibilidade com os arquivos gerados pelas bases Scopus, Dimensions, Lens, PubMed e Web of Science, esta última utilizada para coleta neste estudo. Para análise de coautoria, foram considerados os 21 autores identificados pelo software, que gerou seis clusters, conforme ilustrado na Figura 2.
+
+A análise de coautoria de autores revela as associações entre os autores nas investigações sobre um tema, quais deles são os elementos centrais nas pesquisas e, por consequência, as áreas temáticas de maior expressão. Quanto maior a ligação entre os autores, maior será o número de publicações sobre um tema.
+
+Assim, a Figura 2 relevou três clusters principais, identificados pelas cores vermelha, verde e amarela, tendo como autoras centrais Elizabeth Pérez-Chiqués, Gabriela Lotta e Anat Gofen. O cluster formado por Elizabeth Pérez-Chiqués investigou a implementação das políticas de saúde no contexto pandêmico. Nos três grupos de artigos, a ambiguidade das regras aumentou o espaço discricionário dos profissionais da linha de frente, embora na prática tenha ocorrido o efeito contrário para o caso da dispensação de medicamentos para pacientes dependentes em tratamento, provocado pela mediação das organizações que limitaram o espaço de decisão dos burocratas de nível de rua (Pérez-Chiqués et al., 2021). Na sequência, o empreendedorismo de nível de rua e a percepção do público sobre a ação do profissional implementador foram temas abordados por Lotta e Gofen (Gofen et al., 2021; Gofen & Lotta, 2021). De outro modo, houve três clusters de autores que não se associaram com os demais, permanecendo isolados no campo de análise.
+
+A análise de coautoria de países permite avaliar como os autores de um país se relacionam com os de países diferentes, identificando a conexão existente entre eles. Dessa forma, a análise revelou quatro grupos, formados por:
+
+(i) Brasil, Israel e México;
+
+(ii) Canadá e Estados Unidos da América;
+
+(iii) Itália e Suécia;
+
+(iv) Índia.
+
+Os grupos (i) e (ii) conectaram-se por meio do estudo realizado no México, indicando convergência de pesquisa nesse ponto. Os demais não apresentaram interconexões, permanecendo isolados.
+
+Na análise de coocorrência de palavras, é possível ao pesquisador extrair informações que permitem sugerir novos descritores de busca, contribuindo com as futuras investigações. Desse modo, as palavras de maior recorrência foram “street-level bureaucrats”, “COVID-19” e “discretion”. Em certa medida, o resultado validou os descritores utilizados nesta pesquisa demonstrando que o caminho adotado foi adequado ao objeto de análise. Em continuidade, a Figura 3 traz a análise de cocitação de referência, em que foi aplicada a limitação do número mínimo de três citações. A cocitação de uma referência indica a proximidade conceitual, teórica e/ ou metodológica com outros autores também citados em um mesmo documento, e a intensidade dessa característica revela o grau de relação estabelecido entre eles para um assunto abordado (Grácio, 2016).
+
+A Figura 3 permite extrair informações analíticas relevantes. Em primeiro lugar, pode-se verificar que há predominantemente dois grupos, identificados pelas cores vermelha e verde. Esses grupos são formados pelas referências utilizadas para a elaboração dos artigos (dados de análise da pesquisa) e aparecem em pelo menos três deles. Além disso, as referências de um grupo revelam convergência entre eles. É possível afirmar que os autores que utilizaram uma referência (a) também utilizaram (b), (c) e (n), pois seus temas dialogavam entre si com maior força de conexão. Todavia, percebe-se que em algum momento os grupos se inter-relacionam. Isso significa que os assuntos abordados pelos autores dessa conexão dialogam com ambos os grupos em um ponto específico.
+
+Na análise de acoplamento bibliográfico, identificou-se a utilização de uma ou mais referências em artigos diferentes, demonstrando sua proximidade teórico-conceitual e/ou metodológica e uma “relação implícita entre eles” (Grácio, 2016, pp. 85). Logo, a análise do acoplamento bibliográfico de documentos apontou para a existência de dois clusters.
+
+O primeiro é formado por Cox et al. (2021), Davidovitz et al. (2021), Gofen e Lotta (2021), Malandrino e Sager (2021) e Prusty e Mahapatra (2021). Os trabalhos fazem uma interlocução nas investigações sobre governança e como as respostas governamentais, muitas vezes ambíguas, podem moldar o comportamento dos profissionais da linha de frente de maneiras muito diferentes, além de aumentar sua autonomia na implementação das políticas públicas nos contextos de crise. O segundo cluster, composto de Gofen et al. (2021), Lima-Silva et al. (2020), Meza et al. (2021) e Pérez-Chiqués, Strach e Zuber (2021), forma o grupo de estudos que analisam a emergência de novos papéis e funções e a importância dos burocratas de nível de rua na implementação dos serviços ao cidadão, diante das rápidas mudanças nas políticas em períodos de crise. O artigo de Gofen e Lotta (2021) é uma edição especial dos estudos que tratam da burocracia de nível de rua publicados nos primeiros meses da pandemia e utiliza uma metodologia comparativa dos dados encontrados.
+
+Finalmente, a utilização do software contribuiu significativamente para a análise dos dados ao permitir a compreensão das relações estabelecidas nos estudos coletados, o que indica para futuros pesquisadores os autores a serem consultados nas linhas de pesquisa escolhidas, no entanto o software não permite uma análise textual com formação de nuvem de palavras, classificação hierárquica descendente, análise lexical ou de estatísticas textuais básicas, sendo uma de suas limitações. A utilização de outros softwares gratuitos é indicada para os estudos que se propõem a realizar esse tipo de análise.
+
+Na sequência, serão apresentados os resultados da análise da leitura integral dos artigos, na perspectiva da crise e sua influência, para três categorias analíticas: o espaço discricionário, as estratégias de enfrentamento das pressões e o exercício de papéis na atuação. Essas categorias emergiram após a leitura dos textos, direcionando a análise a seguir.
+
+O espaço discricionário no contexto da crise
+
+Em geral, os formuladores de políticas buscam limitar o espaço de ação no nível de rua, estabelecendo regras não flexíveis para a implementação (Davidovitz et al., 2021). No entanto, durante a pandemia, o movimento deu-se no sentido oposto, na medida em que as diretrizes dos órgãos centrais ampliavam o poder de ação no nível de rua (Malandrino & Sager, 2021; Pérez-Chiqués et al., 2021).
+
+As respostas formais nas políticas públicas setoriais na pandemia ocorreram de forma heterogênea, mudando rapidamente em curtos períodos de tempo, e aumentaram a autonomia dos trabalhadores responsáveis pela implementação. A frequência e a intensidade das mudanças nas políticas foram quase que diárias, expandindo a ambiguidade das regras e dificultando a aderência dos profissionais durante a tomada de decisão em situações extremamente complexas (Cox et al., 2021). As dinâmicas de trabalho dos burocratas de nível de rua mudavam tanto o ambiente de trabalho quanto os procedimentos adotados, sendo alteradas em razão das restrições formais estabelecidas pelos governos nacionais e subnacionais, e seus mecanismos de controle foram comprometidos (Malandrino & Sager, 2021).
+
+A interrupção do contato entre o profissional de nível de rua e o cidadão implicou em sérios problemas para a implementação dos serviços públicos de assistência social (Lima-Silva et al., 2020), de saúde comunitária (Gofen et al., 2021), de assistência a dependentes químicos (Pérez-Chiqués et al., 2021) e para a atuação de policiais, médicos e professores (Davidovitz et al., 2021; Malandrino & Sager, 2021). A rotina do profissional da linha de frente foi alterada com a criação de um ambiente de trabalho remoto, com redução ou suspensão das atividades presenciais com o cidadão/usuário do serviço público e com o aumento da carga de trabalho (Lima-Silva et al., 2020; Malandrino & Sager, 2021).
+
+Na área educacional o distanciamento entre professores e alunos fez com que ocorresse uma transferência de responsabilidades aos profissionais, modificando as práticas pedagógicas e concedendo novos papéis para a sua atuação no ensino, com o aumento de sua carga horária na elaboração de conteúdos e atendimentos não convencionais por telefone fora do horário de aula (Malandrino & Sager, 2021). Para os agentes comunitários da rede socioassistencial, as medidas restritivas de contato trouxeram mudanças profundas para seu trabalho, pois, ao mesmo tempo que havia preocupação com a autoproteção, a carência das pessoas e famílias atendidas era uma realidade a ser considerada ao se escolher adotar as ações de isolamento social (LimaSilva et al., 2020).
+
+No ambiente hospitalar as políticas formais dos documentos diretivos alteraram o modo de operação dos hospitais, com a designação de leitos específicos para o tratamento de Covid-19 (Meza et al., 2021). As cirurgias eletivas e os tratamentos clínicos nesses locais foram suspensos, e os burocratas de nível de rua tiveram de alinhar sua tomada de decisão às mudanças implementadas. A intensidade das interações também foi afetada, na medida em que houve uma mudança na abordagem de ação dos burocratas de nível de rua de cliente-centrada para população-centrada, em razão da escassez de recursos ante o maior número de pacientes atendidos (Meza et al., 2021).
+
+Na assistência à saúde de idosos implementada por cuidadores, a mudança foi no sentido de garantir a não contaminação dos pacientes atendidos que estavam sujeitos às consequências mais prejudiciais da doença (Cox et al., 2021). Adicionalmente, as implicações da pandemia para a autonomia dos profissionais da linha de frente em governos multiníveis são inconclusivas, tendo em vista que há um descompasso de decisões entre governo federal e os estaduais (Gofen & Lotta, 2021).
+
+Desse modo, os estudos revelaram que o espaço de atuação dos burocratas de nível aumentou durante a crise e que essa ampliação foi provocada pela desconexão entre as instâncias de governo e pelas respostas formais que estabeleceram regras ambíguas e complexas de serem colocadas em prática, moldando o comportamento dos profissionais que trabalham no nível de rua. Veremos adiante como os agentes reagiram perante as dificuldades do momento de crise e quais fatores foram determinantes em seu comportamento.
+
+A crise e as estratégias de enfrentamento das pressões (coping)
+
+Os burocratas de nível de rua enfrentam dois tipos de pressão na execução de suas tarefas fora do ambiente de crise, dicotômicos entre si. De um lado, encontra-se um Estado demandante de eficiência na implementação de seus serviços ofertados à população. De outro, há o usuário em busca de atendimento personalizado (Lotta et al., 2018). Todavia, outras formas de pressão emergiram da crise, exigindo novas estratégias de enfrentamento baseadas em cálculos de custo-benefício e na autoproteção contra o risco de contaminação com o vírus (Cox et al., 2021).
+
+O medo de contágio e as incertezas sobre a doença determinaram, de um lado, o heroísmo e a vocação profissional (Lima-Silva et al., 2020) e, de outro, a inação, a segurança e o modo de agir protetivo dos trabalhadores no nível de rua que evitaram o atendimento físico com os usuários de serviços de saúde e assistenciais (Meza et al., 2021; Pérez-Chiqués et al., 2021). As regras formais que mudavam o ambiente de trabalho foram aceitas com maior facilidade do que aquelas que buscaram direcionar suas decisões (Meza et al., 2021). A falta de apoio institucional, que não forneceu os meios de proteção necessários, causou engajamento de resistência e inação por parte dos burocratas de nível de rua (Lima-Silva et al., 2020; Cox et al., 2021).
+
+As estratégias foram tanto cooperativas quanto conflitivas (Bonelli et al., 2019). No primeiro caso, a adesão aos protocolos de segurança, a adaptação de equipamentos de proteção individual diante da escassez de recursos e as novas práticas de implementação adotadas na crise para os cuidados de idosos refletiram em ações de inovação de improvisação. No segundo caso, as ações de autoproteção e a fuga à responsabilidade foram identificadas como formas de resistência de alguns profissionais que evitaram o contato com os pacientes em um comportamento autointeressado (Cox et al., 2021). Cox et al. (2021) apontam que os profissionais da linha de frente responderam às mudanças provocadas pela crise com improvisação, seguida de um discurso de acomodação e de frustração pela incapacidade de mudança do cenário, contentando-se com o que é disponível e colocando-se muitas vezes em risco, com base no senso de dever e com resistência para proteger seus familiares, evitando a sua exposição em tarefas de alto risco de contágio e quando as respostas não forneceram as acomodações de redução dos sacrifícios realizados por eles.
+
+De igual maneira, a falta de profissionais qualificados, de recursos de proteção individual e de informações a respeito dos procedimentos de segurança contra o vírus foi determinante para conformar as relações e interações entre os agentes e o cidadão, interrompendo o processo de construção de vínculos e impactando de maneira negativa a implementação da política (LimaSilva et al., 2020). A crise também trouxe para o debate as condições de trabalho e remuneração perante os sacrifícios feitos na implementação de serviços essenciais (Cox et al., 2021).
+
+Assim, o ambiente de crise revelou novos aspectos das estratégias de enfrentamento das pressões não encontrados em situações normais e que carecem de aprofundamento em pesquisas futuras.
+
+A mudança de papéis em situações de emergência
+
+O acesso do cidadão ao Estado é condicionado pela disponibilidade dos serviços públicos, na medida em que se estabelecem critérios para tal, facilitando esse acesso para alguns e dificultando-o para outros (Lipsky, 2019). Essa função é definida como o processamento de clientes e, em geral, orientada pelo racionamento de recursos, que são limitados, não garantindo a entrega do serviço a todos os usuários. Todavia, durante a pandemia, houve uma mudança na ordem desses papéis. A alta demanda de serviços públicos gerada no contexto da pandemia fez com que a escassez de recursos fosse exacerbada (Prusty & Mahapatra, 2021). Dessa forma, as decisões dos burocratas de nível de rua passaram a ser orientadas de acordo com o número de recursos disponíveis para o atendimento do maior número de pessoas (Meza et al., 2021).
+
+Na saúde, as regras formais de planos de emergência alteraram a disponibilidade dos serviços que deixaram de atender aos procedimentos de rotina para dedicar os leitos e equipamentos hospitalares aos pacientes contaminados e que necessitavam de atendimento especializado (Cox et al., 2021). Conscientização de recursos, equilíbrio em estresse, conscientização no cliente e autocuidado emergiram no ambiente hospitalar como subpapéis desenvolvidos pelos profissionais (Meza et al., 2021). Os policiais passaram a lidar ainda com novas tarefas, como a aplicação de sanções sobre os cidadãos que se recusavam a cumprir as regras de isolamento social, e com a preocupação do risco de contágio, aumentando os conflitos diários entre Estado e usuário (Davidovitz et al., 2021).
+
+Os professores de escolas públicas e privadas que passaram a ensinar remotamente se dedicaram em jornadas extra de trabalho a atender alguns alunos, por meio de tecnologias e de celulares particulares, prestando um atendimento heterogêneo e orientado pelo seu tempo disponível (Malandrino & Sager, 2021). A crise aumentou a vocação profissional desses burocratas, em razão da redução de controle e da ausência de diretrizes claras, fazendo com que eles empregassem mais tempo e recursos para os usuários de seus serviços (Malandrino & Sager, 2021). Na assistência social a insuficiência de recursos, como equipamentos de proteção individual, impactou na implementação, distanciando o Estado do usuário que não recebeu o acompanhamento dos profissionais dessa área, aumentando as gravidades socioeconômicas das pessoas de classes mais baixas (Lima-Silva et al., 2020) e daqueles em tratamento de dependência química (Pérez-Chiqués et al., 2021).
+
+De maneira geral, a insuficiência de recursos e a capacidade administrativa do Estado de gerenciamento durante a crise demonstraram existir relação direta entre as preferências dos burocratas e seus papéis para a implementação no nível de rua.
+
+CONCLUSÃO
+
+Embora as investigações sobre a implementação das políticas públicas no nível de rua tenham avançado nas últimas décadas, a compreensão acerca da atuação desses profissionais em situações de emergência ou crise permanece incipiente e pouco explorada (Lima-Silva et al., 2020). Dessa forma, este estudo buscou entender as influências da crise para a burocracia de nível de rua, explorando a agenda de pesquisa no contexto da pandemia, utilizando o método de revisão integrativa.
+
+Na análise bibliométrica, observou-se um deslocamento da agenda de pesquisa a respeito da implementação, sobretudo no nível de rua, que teve relevante crescimento a partir de fevereiro de 2020, em razão da importância dos profissionais da linha de frente no enfrentamento da doença (Musheno et al., 2021). Os estudos, com abordagens quantitativas, qualitativas e de métodos mistos, investigaram a atuação de médicos, enfermeiros, agentes comunitários de saúde, cuidadores de idosos, policiais, professores e assistentes sociais em oito países das Américas, Europa e Ásia. Estudos em países da África e Oceania não foram encontrados durante a pesquisa. O periódico que concentrou o maior número de publicações foi o Journal of Comparative Policy Analysis. As mídias digitais utilizadas para a coleta de dados em alguns casos demonstraram ser importantes ferramentas em contextos de crise, em que há restrições de contato social, de maneira a permitir a continuidade dos estudos científicos.
+
+A utilização do software VOSviewer 1.6.17 contribuiu significativamente para a análise dos dados ao permitir a compreensão das relações estabelecidas nos estudos coletados, indicando possíveis linhas de pesquisa e os autores que mais se destacaram, no entanto o software possui limitações de análises textuais e de conteúdo que podem ser exploradas em outros programas para complementar a fase de análise de dados das pesquisas.
+
+Na etapa de leitura integral dos textos, os estudos revelaram que o espaço de atuação dos burocratas de nível aumentou durante a crise e que essa expansão foi provocada pela desconexão entre as instâncias de governo e pelas respostas formais que estabeleceram regras ambíguas e complexas de serem colocadas em prática. Os fatores organizacionais, tais como a exacerbação da insuficiência de recursos e de informações, a ambiguidade das regras e a falta de incentivos, influenciaram profundamente o comportamento dos profissionais de nível de rua, ampliando as estratégias de enfrentamento das pressões, com resistência, inovação e improvisação (Cox et al., 2021). Em última instância, as relações e as dinâmicas de interação entre os burocratas de nível de rua e os usuários foram modificadas pelo isolamento social, afetando negativamente na implementação das políticas públicas.
+
+Assim, percebeu-se que contextos de crise como a pandemia influenciam profundamente a implementação no nível de rua, com impactos negativos para o atendimento do usuário. O trabalho possui limitações metodológicas ao ter coletado poucos dados na etapa empírica, embora sejam os existentes para o recorte definido. Todavia, acredita-se que o desenho feito pode ser expandido em futuras investigações, em análises comparativas do comportamento científico para o campo de estudo, que permanece incipiente quando se trata da atuação das burocracias de nível de rua em crises.
+
+Por fim, a pesquisa contribuiu para a melhor compreensão das influências das crises para a implementação de políticas públicas no nível de rua, aumentando o espaço discricionário dos profissionais que lidam com as situações de emergência, além de ter revelado como os fatores organizacionais e relacionais moldam o seu comportamento. Podem-se indicar futuras investigações sobre as consequências emocionais nos profissionais da linha de frente da saúde que trabalharam nos centros de urgência de Covid-19 e a análise da atuação de profissionais que trabalham diariamente com situações de emergência, no contexto da pandemia e de outras crises, como os bombeiros e profissionais dos veículos móveis das redes de urgência e emergência médicas.
+
+
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+codex
+{"pid":"S2236-57102023000100205","title":"A AGENDA DE PESQUISA DA BUROCRACIA DE NÍVEL DE RUA NO CONTEXTO DA PANDEMIA: UMA REVISÃO INTEGRATIVA","journal_title":"Cadernos Gestão Pública e Cidadania","input_text_hash":"3f27d5c4760051b4dd5f824d39c9bc1bf0ec6782a096611064d8ce2c0b2ecd5a","status":"complete","full_body_read":true,"incomplete_reason":null,"section_reading_log":[{"section_title":"INTRODUÇÃO","section_position":1,"section_summary":"A introdução situa a implementação de políticas públicas como um campo relativamente menos estudado que agenda, formulação, decisão e avaliação, destacando a lacuna ainda maior quando se consideram crises e atuação no nível de rua. Define burocratas de nível de rua como profissionais que interagem diretamente com cidadãos, exercem discricionariedade e podem modificar localmente a política formulada.\n\nA seção argumenta que a pandemia alterou autonomia, comportamento, estratégias de enfrentamento e papéis desses profissionais, em razão de recursos insuficientes, regras ambíguas, medo de contágio e mudanças nas interações com usuários. O objetivo declarado é explorar a agenda de pesquisa sobre burocracia de nível de rua no contexto pandêmico por meio de revisão integrativa, técnica bibliométrica e leitura integral dos textos segundo três categorias analíticas: espaço discricionário, estratégias de enfrentamento e exercício de papéis.","methods_or_data_mentions":"A seção menciona explicitamente o método de revisão integrativa, com análises quantitativas e qualitativas, o uso de técnica bibliométrica de caráter estatístico-quantitativo e o software VOSViewer 1.6.17. Também antecipa que os textos foram lidos integralmente e analisados segundo categorias analíticas substantivas.","classification_relevance":"A introdução é decisiva para classificar o artigo como uma revisão integrativa com componente empírico próprio sobre um corpus de artigos. Ela já indica análise quantitativa bibliométrica e análise qualitativa dos textos, mas não aponta desenho causal ou inferência estatística."},{"section_title":"METODOLOGIA","section_position":2,"section_summary":"A metodologia descreve a revisão integrativa da literatura como uma estratégia sistemática para investigar a agenda de pesquisa sobre burocracia de nível de rua em contexto de crise, especialmente a pandemia. A seção apresenta a revisão integrativa como método exploratório que combina procedimentos quantitativos e qualitativos, resume literatura anterior, identifica lacunas e pode apoiar proposição de novos estudos.\n\nO artigo informa que buscou artigos na Web of Science, via portal Capes, entre setembro e novembro de 2021, usando descritores ligados a street-level bureaucracy e COVID-19/pandemia/coronavírus. O recorte temporal foi de 30 de janeiro de 2020 a 1 de junho de 2021. Após exclusão de duplicidades, itens fora do recorte, textos inacessíveis e artigos inadequados ao objetivo após leitura integral, nove artigos foram selecionados entre 86 encontrados.","methods_or_data_mentions":"A seção detalha os dados e procedimentos: base Web of Science, busca por descritores em título, resumo ou palavras-chave, critérios de inclusão e exclusão, recorte temporal, leitura integral, seleção final de nove artigos e categorização por áreas setoriais, métodos de abordagem, instrumentos de coleta, países e fontes de publicação. Também descreve o uso do VOSViewer 1.6.17 para análise bibliométrica quantitativo-estatística, incluindo coautoria de autores e países, cocitação e acoplamento bibliográfico.","classification_relevance":"Esta seção fornece a principal evidência de análise empírica própria. O corpus de artigos é tratado como dado primário, há categorização sistemática e há análise bibliométrica com software. Isso sustenta classificação como artigo empírico misto e como quantitativo no sentido amplo, embora não haja menção a p-valores, erros-padrão, intervalos ou testes inferenciais."},{"section_title":"RESULTADOS E DISCUSSÃO","section_position":3,"section_summary":"A seção apresenta os resultados gerais da revisão, destacando que a pandemia deslocou a agenda de pesquisa social sobre implementação e aumentou o interesse em burocratas de nível de rua. Informa que os estudos encontrados cobrem assistência social, educação, segurança pública e saúde, com destaque para profissionais como médicos, enfermeiros, agentes comunitários, assistentes sociais, professores e policiais.\n\nTambém resume características dos estudos selecionados: oito países, ausência de África e Oceania, concentração de publicações no Journal of Comparative Policy Analysis e presença predominante de estudos qualitativos, embora com estudos quantitativos e de métodos mistos. Discute técnicas de pesquisa encontradas, como documental, entrevistas, survey, triangulação, revisão da literatura, storytelling, questionário e fontes digitais.","methods_or_data_mentions":"A seção menciona uma tabela analítica de resultados gerais e apresenta categorização dos nove estudos por áreas, países, fontes de publicação, métodos, técnicas e instrumentos de coleta. Os dados analisados são os artigos selecionados e suas características metodológicas e substantivas.","classification_relevance":"A seção confirma que o artigo realiza análise descritiva própria de um corpus bibliográfico. A enumeração de áreas, métodos, países e fontes de publicação sustenta componente quantitativo-descritivo, enquanto a síntese dos métodos e temas dos estudos sustenta componente qualitativo. Não há inferência estatística nem desenho causal próprio."},{"section_title":"Aplicação de software para análise bibliométrica","section_position":4,"section_summary":"Esta subseção explica a bibliometria como medição estatística da produção científica e justifica o uso do VOSviewer por ser ferramenta gratuita para mapear conhecimento em redes bibliométricas. O artigo descreve os tipos de análise empregados: coautoria de autores e países, coocorrência de palavras, cocitação de referência e acoplamento bibliográfico de documentos.\n\nA subseção interpreta os resultados das redes: identifica clusters de autores, países, palavras recorrentes, referências cocitadas e documentos bibliograficamente acoplados. Também destaca a utilidade e limitações do software, afirmando que ele ajuda a compreender relações entre estudos, mas não realiza análises textuais como nuvem de palavras, classificação hierárquica descendente, análise lexical ou estatísticas textuais básicas.","methods_or_data_mentions":"Há uso explícito de VOSViewer 1.6.17, análise de coautoria, coocorrência de palavras, cocitação e acoplamento bibliográfico. A seção menciona 21 autores identificados, seis clusters, quatro grupos de países, recorrência de palavras e clusters de referências/documentos. Trata-se da principal análise quantitativa/bibliométrica do artigo, baseada nos metadados e referências dos estudos coletados.","classification_relevance":"Esta é a seção mais forte para classificar o artigo como quantitativo no sentido Torreblanca. O uso de redes bibliométricas e clusters analíticos vai além de mera narrativa, mas o texto não apresenta inferência estatística. Como o artigo usa agrupamentos e redes bibliométricas de modo analítico, a classificação quantitativa pode ser tratada como modelagem estatística/network-clustering, com a ressalva de que não é causal."},{"section_title":"O espaço discricionário no contexto da crise","section_position":5,"section_summary":"A subseção sintetiza a literatura revisada sobre como a pandemia afetou o espaço discricionário dos burocratas de nível de rua. Argumenta que, embora em situações ordinárias formuladores tendam a limitar a ação no nível de rua por regras, durante a pandemia diretrizes ambíguas e mudanças rápidas ampliaram a autonomia dos trabalhadores responsáveis pela implementação.\n\nA seção discute efeitos em assistência social, saúde comunitária, dependência química, polícia, medicina e educação. Destaca que o trabalho remoto, a suspensão de atividades presenciais, a escassez de recursos, o atendimento centrado na população e o descompasso entre níveis de governo alteraram rotinas, interações e decisões profissionais.","methods_or_data_mentions":"A seção baseia-se na leitura integral e síntese qualitativa dos artigos selecionados. Não apresenta nova tabela, modelo, teste ou estimativa, mas mobiliza evidência documental/bibliográfica dos estudos revisados para reconstruir padrões substantivos sobre autonomia e discricionariedade.","classification_relevance":"A subseção sustenta o componente qualitativo do artigo: há síntese interpretativa e explicativa da literatura selecionada. Também contém alegações explicativas sobre fatores que ampliaram a discricionariedade, mas essas são inferências substantivas da revisão, não um desenho causal quantitativo nem uma estratégia de identificação da revolução da credibilidade."},{"section_title":"A crise e as estratégias de enfrentamento das pressões (coping)","section_position":6,"section_summary":"A subseção analisa como a pandemia criou novas pressões para burocratas de nível de rua, além da tensão ordinária entre eficiência estatal e atendimento personalizado ao usuário. Argumenta que medo de contágio, incerteza, falta de apoio institucional e escassez de recursos geraram estratégias baseadas em autoproteção, resistência, inovação, improvisação, acomodação e inação.\n\nA discussão diferencia estratégias cooperativas e conflitivas, mostrando que alguns profissionais aderiram a protocolos e improvisaram equipamentos ou práticas, enquanto outros evitaram contato físico ou tarefas de alto risco. A seção também aponta impactos sobre vínculos com usuários, condições de trabalho, remuneração e implementação de serviços essenciais.","methods_or_data_mentions":"A seção usa síntese qualitativa dos estudos revisados e cita evidências desses trabalhos, mas não apresenta análise quantitativa adicional, testes, modelos, entrevistas próprias ou dados primários coletados diretamente com burocratas. A evidência própria do artigo é a leitura e organização temática dos estudos selecionados.","classification_relevance":"A seção reforça a dimensão qualitativa e explicativa da revisão, pois busca explicar mudanças nas estratégias de coping durante a crise. Ela não altera a classificação quantitativa e não contém inferência estatística ou método causal de credibilidade."},{"section_title":"A mudança de papéis em situações de emergência","section_position":7,"section_summary":"A subseção discute como a pandemia alterou os papéis dos burocratas de nível de rua no processamento de clientes e na alocação de serviços públicos. Argumenta que a alta demanda e a escassez exacerbada de recursos fizeram com que decisões profissionais fossem orientadas pelo atendimento do maior número possível de pessoas e pela disponibilidade de recursos.\n\nA seção examina exemplos em saúde, policiamento, educação e assistência social. Mostra que profissionais passaram a priorizar leitos e equipamentos para Covid-19, aplicar sanções de isolamento, atender alunos remotamente em jornadas ampliadas e lidar com a ausência de equipamentos de proteção, afetando usuários vulneráveis e pessoas em tratamento.","methods_or_data_mentions":"A seção é uma síntese qualitativa de achados dos artigos analisados. Não apresenta nova coleta primária, estatística inferencial ou modelagem, mas organiza evidências dos estudos revisados em torno da categoria analítica de mudança de papéis.","classification_relevance":"A seção contribui para a classificação qualitativa como reconstrução e explicação temática. Apresenta relações explicativas entre escassez, capacidade administrativa, preferências dos burocratas e papéis de implementação, mas sem desenho causal próprio ou método quantitativo causal."},{"section_title":"CONCLUSÃO","section_position":8,"section_summary":"A conclusão retoma o objetivo de compreender influências da crise sobre a burocracia de nível de rua por meio de revisão integrativa. Resume que houve deslocamento da agenda de pesquisa sobre implementação, com crescimento após fevereiro de 2020, e que os estudos cobriram diferentes profissionais de linha de frente em oito países, com predominância do Journal of Comparative Policy Analysis.\n\nA seção afirma que o VOSviewer contribuiu para compreender relações entre estudos, linhas de pesquisa e autores centrais, mas tem limitações para análise textual e de conteúdo. Conclui que a crise ampliou o espaço discricionário, intensificou estratégias de enfrentamento e modificou interações entre burocratas e usuários, além de indicar futuras investigações sobre impactos emocionais e profissionais que trabalham cotidianamente em emergências.","methods_or_data_mentions":"A conclusão menciona novamente a análise bibliométrica, o software VOSviewer, a leitura integral dos textos e a limitação metodológica do pequeno número de dados coletados na etapa empírica. Não apresenta novos dados, testes ou modelos.","classification_relevance":"A conclusão confirma que o artigo se entende como pesquisa empírica de revisão integrativa com dados bibliográficos limitados. Também reforça que há análise quantitativa bibliométrica e análise qualitativa temática, mas não há inferência estatística nem desenho causal de credibilidade."}],"general_summary":"O artigo é uma revisão integrativa sobre a agenda de pesquisa da burocracia de nível de rua no contexto da pandemia. A partir de buscas na Web of Science, seleciona nove artigos entre 86 registros iniciais e os analisa por categorias como área setorial, abordagem metodológica, instrumentos de coleta, países, fontes de publicação, redes bibliométricas e temas substantivos ligados a espaço discricionário, estratégias de coping e mudança de papéis.\n\nA pesquisa combina análise bibliométrica com VOSviewer e síntese qualitativa dos textos revisados. O artigo apresenta análise empírica própria sobre um corpus bibliográfico, mas não testa hipóteses com inferência estatística, não estima efeitos causais e não emprega métodos da revolução da credibilidade como experimentos, DiD, IV, RDD, synthetic control ou matching causal.","decision_audit":{"own_empirical_evidence":"O artigo apresenta sua própria evidência empírica na metodologia e nos resultados, usando como dados primários os artigos da Web of Science selecionados por descritores sobre street-level bureaucracy e pandemia. A análise empírica aparece na seleção dos nove artigos, na categorização por áreas, métodos, instrumentos, países e fontes, na análise bibliométrica e na leitura integral temática.","own_quantitative_analysis":"A análise quantitativa própria aparece principalmente na metodologia e na subseção 'Aplicação de software para análise bibliométrica', com uso do VOSviewer 1.6.17 para coautoria, coocorrência de palavras, cocitação e acoplamento bibliográfico, incluindo identificação de autores, países, palavras recorrentes e clusters.","qualitative_evidence":"A evidência qualitativa substantiva aparece na leitura integral e síntese dos artigos revisados, especialmente nas subseções sobre espaço discricionário, estratégias de enfrentamento e mudança de papéis. O artigo reconstrói e interpreta achados dos estudos selecionados sobre saúde, assistência social, educação, polícia e outros serviços.","statistical_inference":"O artigo não reporta p-valores, erros-padrão, intervalos de confiança, testes estatísticos, bootstrap, inferência bayesiana ou outra quantificação de incerteza. A bibliometria é descrita como quantitativo-estatística, mas os resultados apresentados são descritivos e de mapeamento de redes/clusters.","causal_or_credibility_design":"O artigo não apresenta desenho causal ou método da revolução da credibilidade. Há alegações explicativas qualitativas sobre como a crise, regras ambíguas, escassez de recursos e respostas governamentais influenciaram burocratas de nível de rua, mas não há identificação causal quantitativa nem desenho como experimento, DiD, IV, RDD, synthetic control ou matching.","contradictory_sections":"Nenhuma seção contradiz a classificação geral. A única tensão é que o texto chama a revisão integrativa de método qualitativo e também afirma combinar análises quantitativas e qualitativas; a seção de bibliometria resolve isso ao mostrar um componente quantitativo próprio, enquanto as seções temáticas mostram síntese qualitativa."},"classification":{"pid":"S2236-57102023000100205","title":"A AGENDA DE PESQUISA DA BUROCRACIA DE NÍVEL DE RUA NO CONTEXTO DA PANDEMIA: UMA REVISÃO INTEGRATIVA","journal_title":"Cadernos Gestão Pública e Cidadania","input_text_hash":"3f27d5c4760051b4dd5f824d39c9bc1bf0ec6782a096611064d8ce2c0b2ecd5a","is_empirical_paper":true,"empirical_evidence_type":"mixed_empirical","is_empirical_quant_paper_torreblanca":true,"is_empirical_qual_paper":true,"quantitative_analysis_type":"statistical_modeling","quantitative_analysis_evidence_quote":"Os tipos de análise empregados com o uso do software foram de coautoria de autores e países, coocorrência de palavras, cocitação de referência e acoplamento bibliográfico de documentos.","has_statistical_inference":false,"statistical_inference_quote":null,"qualitative_analysis_goal":"mixed_descriptive_explanatory","qualitative_goal_clarity":"clear","qualitative_goal_quote":"Na sequência, serão apresentados os resultados da análise da leitura integral dos artigos, na perspectiva da crise e sua influência, para três categorias analíticas: o espaço discricionário, as estratégias de enfrentamento das pressões e o exercício de papéis na atuação.","causal_or_explanatory_claim_present":true,"causal_or_explanatory_claim_quote":"Assim, percebeu-se que contextos de crise como a pandemia influenciam profundamente a implementação no nível de rua, com impactos negativos para o atendimento do usuário.","credibility_revolution_screen_applicable":true,"credibility_revolution_screen_reason":"statistical_modeling_screen","credibility_revolution_method_present":false,"credibility_revolution_method_type":["none_detected"],"causal_design_quote":null,"main_variables_or_relationship":"O artigo analisa como a pandemia, enquanto contexto de crise, influenciou a agenda de pesquisa sobre burocracia de nível de rua e como os estudos revisados tratam espaço discricionário, estratégias de coping e mudança de papéis dos profissionais de linha de frente.","sample_or_data_source":"Artigos sobre pandemia e burocracia de nível de rua encontrados na Web of Science via portal Capes, buscados entre setembro e novembro de 2021, com recorte de 30 de janeiro de 2020 a 1 de junho de 2021; após filtros, nove artigos foram selecionados para análise.","tough_call":true,"tough_call_reason":"A principal decisão difícil é classificar a bibliometria com VOSviewer como statistical_modeling em vez de descriptive_statistics_only. O texto usa redes bibliométricas e clusters analíticos de coautoria, cocitação e acoplamento, o que se aproxima de network/clustering used analytically; porém não há inferência estatística nem modelagem causal.","brief_justification":"O artigo é uma revisão integrativa empírica que usa um corpus de artigos como dados, combina análise bibliométrica quantitativa com VOSviewer e síntese qualitativa temática por leitura integral. Ele contém análise quantitativa própria e evidência qualitativa substantiva, mas não apresenta inferência estatística nem método de credibilidade/revolução causal."}}
+hook: Stop
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Completed
+hook: Stop Completed
+tokens used
+36.514

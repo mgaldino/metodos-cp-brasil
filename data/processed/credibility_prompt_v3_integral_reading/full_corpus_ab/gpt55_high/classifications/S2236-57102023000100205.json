@@ -1,0 +1,31 @@
+{
+  "pid": "S2236-57102023000100205",
+  "title": "A AGENDA DE PESQUISA DA BUROCRACIA DE NÍVEL DE RUA NO CONTEXTO DA PANDEMIA: UMA REVISÃO INTEGRATIVA",
+  "journal_title": "Cadernos Gestão Pública e Cidadania",
+  "input_text_hash": "3f27d5c4760051b4dd5f824d39c9bc1bf0ec6782a096611064d8ce2c0b2ecd5a",
+  "is_empirical_paper": true,
+  "empirical_evidence_type": "mixed_empirical",
+  "is_empirical_quant_paper_torreblanca": true,
+  "is_empirical_qual_paper": true,
+  "quantitative_analysis_type": "statistical_modeling",
+  "quantitative_analysis_evidence_quote": "Os tipos de análise empregados com o uso do software foram de coautoria de autores e países, coocorrência de palavras, cocitação de referência e acoplamento bibliográfico de documentos.",
+  "has_statistical_inference": false,
+  "statistical_inference_quote": null,
+  "qualitative_analysis_goal": "mixed_descriptive_explanatory",
+  "qualitative_goal_clarity": "clear",
+  "qualitative_goal_quote": "Na sequência, serão apresentados os resultados da análise da leitura integral dos artigos, na perspectiva da crise e sua influência, para três categorias analíticas: o espaço discricionário, as estratégias de enfrentamento das pressões e o exercício de papéis na atuação.",
+  "causal_or_explanatory_claim_present": true,
+  "causal_or_explanatory_claim_quote": "Assim, percebeu-se que contextos de crise como a pandemia influenciam profundamente a implementação no nível de rua, com impactos negativos para o atendimento do usuário.",
+  "credibility_revolution_screen_applicable": true,
+  "credibility_revolution_screen_reason": "statistical_modeling_screen",
+  "credibility_revolution_method_present": false,
+  "credibility_revolution_method_type": [
+    "none_detected"
+  ],
+  "causal_design_quote": null,
+  "main_variables_or_relationship": "O artigo analisa como a pandemia, enquanto contexto de crise, influenciou a agenda de pesquisa sobre burocracia de nível de rua e como os estudos revisados tratam espaço discricionário, estratégias de coping e mudança de papéis dos profissionais de linha de frente.",
+  "sample_or_data_source": "Artigos sobre pandemia e burocracia de nível de rua encontrados na Web of Science via portal Capes, buscados entre setembro e novembro de 2021, com recorte de 30 de janeiro de 2020 a 1 de junho de 2021; após filtros, nove artigos foram selecionados para análise.",
+  "tough_call": true,
+  "tough_call_reason": "A principal decisão difícil é classificar a bibliometria com VOSviewer como statistical_modeling em vez de descriptive_statistics_only. O texto usa redes bibliométricas e clusters analíticos de coautoria, cocitação e acoplamento, o que se aproxima de network/clustering used analytically; porém não há inferência estatística nem modelagem causal.",
+  "brief_justification": "O artigo é uma revisão integrativa empírica que usa um corpus de artigos como dados, combina análise bibliométrica quantitativa com VOSviewer e síntese qualitativa temática por leitura integral. Ele contém análise quantitativa própria e evidência qualitativa substantiva, mas não apresenta inferência estatística nem método de credibilidade/revolução causal."
+}
