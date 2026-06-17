@@ -76,6 +76,10 @@ write_utf8_lines <- function(lines, file) {
   writeLines(enc2utf8(lines), con = con, useBytes = TRUE)
 }
 
+label_value <- function(x, labels) {
+  dplyr::recode(as.character(x), !!!labels, .default = stringr::str_replace_all(as.character(x), "_", " "))
+}
+
 strict_design_methods <- c(
   "experiment_field",
   "experiment_survey",
@@ -99,6 +103,53 @@ diagnostic_not_design_methods <- c(
   "observational_regression_with_causal_claim_no_design",
   "fixed_effects_causal_panel_claim",
   "none_detected"
+)
+
+method_labels <- c(
+  experiment_field = "Experimento de campo",
+  experiment_survey = "Experimento em survey",
+  experiment_lab = "Experimento de laboratório",
+  experiment_list = "Experimento de lista",
+  difference_in_differences = "Diferenças-em-diferenças",
+  event_study = "Event study",
+  instrumental_variables = "Variáveis instrumentais",
+  regression_discontinuity = "Regressão descontínua",
+  regression_kink = "Regression kink",
+  synthetic_control = "Controle sintético",
+  synthetic_difference_in_differences = "Diferenças-em-diferenças sintéticas",
+  matching_or_weighting = "Pareamento/ponderação",
+  dag_or_formal_causal_graph = "DAG/grafo causal formal",
+  doubly_robust = "Estimador duplamente robusto",
+  causal_trees_or_forests = "Árvores/florestas causais",
+  causal_discovery = "Descoberta causal",
+  other_modern_causal_method = "Outro método causal moderno",
+  observational_regression_with_causal_claim_no_design = "Regressão observacional com linguagem causal",
+  fixed_effects_causal_panel_claim = "Painel com efeitos fixos e linguagem causal",
+  none_detected = "Nenhum método detectado"
+)
+
+evidence_labels <- c(
+  none = "Não empírico",
+  qualitative_only = "Somente qualitativo",
+  quantitative_only = "Somente quantitativo",
+  mixed_empirical = "Misto"
+)
+
+quantitative_labels <- c(
+  none = "sem análise quantitativa",
+  descriptive_statistics_only = "estatística descritiva",
+  bivariate_tests_or_correlations_only = "testes bivariados/correlação",
+  statistical_modeling = "modelagem estatística"
+)
+
+screen_reason_labels <- c(
+  descriptive_quantitative_only = "Quantitativo descritivo",
+  qualitative_only = "Somente qualitativo",
+  not_empirical = "Não empírico",
+  statistical_modeling_screen = "Modelagem estatística",
+  explicit_causal_design_screen = "Desenho causal explícito",
+  causal_claim_with_quantitative_analysis_screen = "Alegação causal + análise quantitativa",
+  bivariate_or_correlation_screen = "Bivariado/correlação"
 )
 
 excluded_main_journals <- c(
@@ -476,14 +527,55 @@ evidence_distribution <- analysis_df |>
   dplyr::mutate(percent = round(100 * n / sum(n), 1)) |>
   dplyr::arrange(dplyr::desc(n), empirical_evidence_type, quantitative_analysis_type)
 
+evidence_distribution_display <- evidence_distribution |>
+  dplyr::mutate(
+    tipo_de_evidencia = label_value(empirical_evidence_type, evidence_labels),
+    tipo_de_analise_quantitativa = label_value(quantitative_analysis_type, quantitative_labels),
+    categoria = paste0(tipo_de_evidencia, " / ", tipo_de_analise_quantitativa)
+  ) |>
+  dplyr::select(categoria, tipo_de_evidencia, tipo_de_analise_quantitativa, n, percent)
+
 screen_distribution <- analysis_df |>
   dplyr::count(credibility_revolution_screen_applicable, credibility_revolution_screen_reason, name = "n") |>
   dplyr::mutate(percent = round(100 * n / sum(n), 1)) |>
   dplyr::arrange(dplyr::desc(n), credibility_revolution_screen_reason)
 
+screen_distribution_display <- screen_distribution |>
+  dplyr::mutate(
+    screen = if_else(credibility_revolution_screen_applicable, "Entra no screen", "Fora do screen"),
+    razao = label_value(credibility_revolution_screen_reason, screen_reason_labels)
+  ) |>
+  dplyr::select(screen, razao, n, percent)
+
 method_distribution <- method_long |>
   dplyr::count(method_class, method_type, name = "n") |>
   dplyr::arrange(method_class, dplyr::desc(n), method_type)
+
+method_distribution_display <- method_distribution |>
+  dplyr::mutate(
+    classe = dplyr::case_when(
+      method_class == "strict_design_method" ~ "Método estrito",
+      method_class == "broad_other_modern_causal_method" ~ "Fila other_modern",
+      method_class == "diagnostic_not_design" ~ "Diagnóstico",
+      TRUE ~ "Não classificado"
+    ),
+    metodo = label_value(method_type, method_labels)
+  ) |>
+  dplyr::select(classe, metodo, n)
+
+strict_method_counts <- tibble::tibble(method_type = strict_design_methods) |>
+  dplyr::left_join(
+    method_long |>
+      dplyr::filter(method_class == "strict_design_method") |>
+      dplyr::count(method_type, name = "n"),
+    by = "method_type"
+  ) |>
+  dplyr::mutate(
+    n = dplyr::coalesce(n, 0L),
+    metodo = label_value(method_type, method_labels),
+    status = if_else(n > 0, "Detectado", "Zero casos")
+  ) |>
+  dplyr::arrange(dplyr::desc(n), metodo)
 
 method_long_with_flags <- method_long |>
   dplyr::left_join(
@@ -512,6 +604,14 @@ strict_method_cases <- method_long_with_flags |>
   ) |>
   dplyr::arrange(eligible_order, pid, method_type)
 
+strict_method_cases_display <- strict_method_cases |>
+  dplyr::mutate(
+    metodo = label_value(method_type, method_labels),
+    titulo = stringr::str_trunc(title, width = 68),
+    evidencia = stringr::str_trunc(causal_design_quote, width = 90)
+  ) |>
+  dplyr::select(pid, year, journal_title, metodo, titulo, evidencia)
+
 other_modern_audit_queue <- method_long_with_flags |>
   dplyr::filter(method_class == "broad_other_modern_causal_method", other_modern_audit_queue) |>
   dplyr::select(
@@ -528,6 +628,14 @@ other_modern_audit_queue <- method_long_with_flags |>
   ) |>
   dplyr::arrange(eligible_order, pid, method_type)
 
+other_modern_audit_queue_display <- other_modern_audit_queue |>
+  dplyr::mutate(
+    titulo = stringr::str_trunc(title, width = 68),
+    tambem_tem_metodo_estrito = if_else(other_modern_overlap_with_strict, "Sim", "Não"),
+    evidencia = stringr::str_trunc(causal_design_quote, width = 90)
+  ) |>
+  dplyr::select(pid, year, journal_title, tambem_tem_metodo_estrito, titulo, evidencia)
+
 tough_call_queue <- analysis_df |>
   dplyr::filter(tough_call) |>
   dplyr::select(
@@ -542,6 +650,27 @@ tough_call_queue <- analysis_df |>
     tough_call_reason
   ) |>
   dplyr::arrange(eligible_order, pid)
+
+tough_call_summary <- tough_call_queue |>
+  dplyr::count(empirical_evidence_type, quantitative_analysis_type, name = "n") |>
+  dplyr::mutate(
+    categoria = paste0(
+      label_value(empirical_evidence_type, evidence_labels),
+      " / ",
+      label_value(quantitative_analysis_type, quantitative_labels)
+    ),
+    percent = round(100 * n / sum(n), 1)
+  ) |>
+  dplyr::arrange(dplyr::desc(n)) |>
+  dplyr::select(categoria, n, percent)
+
+tough_call_queue_display <- tough_call_queue |>
+  dplyr::mutate(
+    titulo = stringr::str_trunc(title, width = 68),
+    razao_do_screen = label_value(credibility_revolution_screen_reason, screen_reason_labels),
+    motivo = stringr::str_trunc(tough_call_reason, width = 100)
+  ) |>
+  dplyr::select(pid, year, journal_title, titulo, razao_do_screen, motivo)
 
 annual_indicators <- analysis_df |>
   dplyr::group_by(year) |>
@@ -584,11 +713,19 @@ readr::write_csv(progress_by_block, file.path(tables_dir, "progress_by_block.csv
 readr::write_csv(coverage_by_journal, file.path(tables_dir, "coverage_by_journal.csv"))
 readr::write_csv(coverage_by_year, file.path(tables_dir, "coverage_by_year.csv"))
 readr::write_csv(evidence_distribution, file.path(tables_dir, "evidence_distribution.csv"))
+readr::write_csv(evidence_distribution_display, file.path(tables_dir, "evidence_distribution_display.csv"))
 readr::write_csv(screen_distribution, file.path(tables_dir, "screen_distribution.csv"))
+readr::write_csv(screen_distribution_display, file.path(tables_dir, "screen_distribution_display.csv"))
 readr::write_csv(method_distribution, file.path(tables_dir, "method_distribution.csv"))
+readr::write_csv(method_distribution_display, file.path(tables_dir, "method_distribution_display.csv"))
+readr::write_csv(strict_method_counts, file.path(tables_dir, "strict_method_counts.csv"))
 readr::write_csv(strict_method_cases, file.path(tables_dir, "strict_method_cases.csv"))
+readr::write_csv(strict_method_cases_display, file.path(tables_dir, "strict_method_cases_display.csv"))
 readr::write_csv(other_modern_audit_queue, file.path(tables_dir, "other_modern_audit_queue.csv"))
+readr::write_csv(other_modern_audit_queue_display, file.path(tables_dir, "other_modern_audit_queue_display.csv"))
 readr::write_csv(tough_call_queue, file.path(tables_dir, "tough_call_queue.csv"))
+readr::write_csv(tough_call_summary, file.path(tables_dir, "tough_call_summary.csv"))
+readr::write_csv(tough_call_queue_display, file.path(tables_dir, "tough_call_queue_display.csv"))
 readr::write_csv(annual_indicators, file.path(tables_dir, "annual_indicators.csv"))
 readr::write_csv(annual_indicator_long, file.path(tables_dir, "annual_indicator_long.csv"))
 
