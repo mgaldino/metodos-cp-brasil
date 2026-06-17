@@ -131,6 +131,13 @@ read_csv_utf8_chr <- function(path) {
   )
 }
 
+assert_unique <- function(data, key, label) {
+  duplicates <- data[[key]][duplicated(data[[key]])]
+  if (length(duplicates) > 0) {
+    stop(label, " tem PIDs duplicados: ", paste(unique(duplicates), collapse = ", "))
+  }
+}
+
 parse_bool <- function(x) {
   value <- stringr::str_to_upper(stringr::str_trim(dplyr::coalesce(as.character(x), "")))
   dplyr::case_when(
@@ -205,6 +212,7 @@ reading_log_metrics <- function(pid, reading_dir) {
     return(data.frame(
       pid = pid,
       log_exists = FALSE,
+      input_text_hash = NA_character_,
       full_body_read = NA,
       status = NA_character_,
       n_sections = NA_integer_,
@@ -221,6 +229,7 @@ reading_log_metrics <- function(pid, reading_dir) {
     return(data.frame(
       pid = pid,
       log_exists = TRUE,
+      input_text_hash = NA_character_,
       full_body_read = NA,
       status = "unparseable",
       n_sections = NA_integer_,
@@ -243,8 +252,9 @@ reading_log_metrics <- function(pid, reading_dir) {
   data.frame(
     pid = pid,
     log_exists = TRUE,
+    input_text_hash = null_coalesce(record$input_text_hash, NA_character_),
     full_body_read = isTRUE(record$full_body_read),
-    status = dplyr::coalesce(as.character(record$status), NA_character_),
+    status = null_coalesce(record$status, NA_character_),
     n_sections = length(sections),
     total_summary_chars = sum(nchar(summaries), na.rm = TRUE),
     avg_summary_chars = if (length(summaries) > 0) mean(nchar(summaries), na.rm = TRUE) else NA_real_,
@@ -255,6 +265,10 @@ reading_log_metrics <- function(pid, reading_dir) {
 sample_manifest <- read_csv_utf8_chr(paths$sample_manifest)
 baseline <- read_csv_utf8_chr(paths$baseline_csv)
 treatment <- read_csv_utf8_chr(paths$treatment_csv)
+
+assert_unique(sample_manifest, "pid", "Manifesto A/B")
+assert_unique(baseline, "pid", "Baseline xhigh")
+assert_unique(treatment, "pid", "Tratamento high")
 
 missing_priority_baseline <- setdiff(priority_fields, names(baseline))
 missing_priority_treatment <- setdiff(priority_fields, names(treatment))
@@ -271,6 +285,31 @@ baseline_sample <- baseline |>
 
 missing_in_baseline <- setdiff(expected_pids, baseline_sample$pid)
 missing_in_treatment <- setdiff(expected_pids, treatment$pid)
+extra_in_treatment <- setdiff(treatment$pid, expected_pids)
+
+baseline_hash_mismatches <- baseline_sample |>
+  dplyr::select(pid, baseline_input_text_hash = input_text_hash) |>
+  dplyr::left_join(
+    sample_manifest |> dplyr::select(pid, manifest_input_text_hash = input_text_hash),
+    by = "pid"
+  ) |>
+  dplyr::filter(baseline_input_text_hash != manifest_input_text_hash)
+
+treatment_hash_mismatches <- treatment |>
+  dplyr::semi_join(sample_manifest |> dplyr::select(pid), by = "pid") |>
+  dplyr::select(pid, treatment_input_text_hash = input_text_hash) |>
+  dplyr::left_join(
+    sample_manifest |> dplyr::select(pid, manifest_input_text_hash = input_text_hash),
+    by = "pid"
+  ) |>
+  dplyr::filter(treatment_input_text_hash != manifest_input_text_hash)
+
+if (nrow(baseline_hash_mismatches) > 0) {
+  stop("Hash baseline vs manifesto diverge para PIDs: ", paste(baseline_hash_mismatches$pid, collapse = ", "))
+}
+if (nrow(treatment_hash_mismatches) > 0) {
+  stop("Hash tratamento vs manifesto diverge para PIDs: ", paste(treatment_hash_mismatches$pid, collapse = ", "))
+}
 
 comparison <- baseline_sample |>
   dplyr::inner_join(treatment, by = "pid", suffix = c("_xhigh", "_high")) |>
