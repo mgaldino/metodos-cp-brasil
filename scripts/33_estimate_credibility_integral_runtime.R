@@ -139,7 +139,7 @@ p90_seconds <- duration_stats$p90_seg[[1]]
 estimate_table <- tibble::tibble(
   cenário = c("mediana observada", "média observada", "p90 observado"),
   segundos_por_artigo = c(median_seconds, mean_seconds, p90_seconds),
-  tempo_total_6464 = vapply(segundos_por_artigo * total_articles, fmt_duration, character(1)),
+  tempo_total_manifesto = vapply(segundos_por_artigo * total_articles, fmt_duration, character(1)),
   tempo_restante = vapply(segundos_por_artigo * remaining_articles, fmt_duration, character(1))
 ) |>
   dplyr::mutate(segundos_por_artigo = round(segundos_por_artigo, 1))
@@ -212,7 +212,7 @@ report_lines <- c(
   "",
   paste0(
     "Usando a média observada, os ", total_articles,
-    " artigos exigiriam cerca de ", estimate_table$tempo_total_6464[estimate_table$cenário == "média observada"],
+    " artigos exigiriam cerca de ", estimate_table$tempo_total_manifesto[estimate_table$cenário == "média observada"],
     " de processamento serial efetivo. Como ", completed_articles,
     " já estão concluídos, o restante exigiria cerca de ",
     estimate_table$tempo_restante[estimate_table$cenário == "média observada"],
