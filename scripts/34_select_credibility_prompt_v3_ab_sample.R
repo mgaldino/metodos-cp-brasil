@@ -11,6 +11,7 @@ suppressPackageStartupMessages({
   library(stringr)
 })
 
+args <- commandArgs(trailingOnly = TRUE)
 project_dir <- normalizePath(".", mustWork = TRUE)
 
 paths <- list(
@@ -83,6 +84,13 @@ read_csv_utf8 <- function(path) {
     progress = FALSE,
     locale = readr::locale(encoding = "UTF-8")
   )
+}
+
+assert_unique <- function(data, key, label) {
+  duplicates <- data[[key]][duplicated(data[[key]])]
+  if (length(duplicates) > 0) {
+    stop(label, " tem PIDs duplicados: ", paste(unique(duplicates), collapse = ", "))
+  }
 }
 
 parse_bool <- function(x) {
@@ -193,13 +201,40 @@ baseline <- read_csv_utf8(paths$baseline_csv) |>
 
 manifest <- read_csv_utf8(paths$full_manifest)
 
+assert_unique(baseline, "pid", "Baseline xhigh")
+assert_unique(manifest, "pid", "Manifesto completo")
+
 eligible <- baseline |>
   dplyr::inner_join(
     manifest |>
-      dplyr::select(pid, eligible_order, year, language, task_packet_file),
+      dplyr::select(
+        pid,
+        eligible_order,
+        year,
+        language,
+        task_packet_file,
+        manifest_input_text_hash = input_text_hash
+      ),
     by = "pid"
   ) |>
   dplyr::filter(!is.na(raw_candidate_strata))
+
+hash_mismatches <- eligible |>
+  dplyr::filter(input_text_hash != manifest_input_text_hash) |>
+  dplyr::select(pid, input_text_hash, manifest_input_text_hash)
+
+if (nrow(hash_mismatches) > 0) {
+  stop("Hash do texto diverge entre baseline e manifesto para PIDs: ", paste(hash_mismatches$pid, collapse = ", "))
+}
+
+missing_task_packets <- eligible |>
+  dplyr::mutate(task_packet_exists = file.exists(file.path(project_dir, task_packet_file))) |>
+  dplyr::filter(!task_packet_exists) |>
+  dplyr::select(pid, task_packet_file)
+
+if (nrow(missing_task_packets) > 0) {
+  stop("Task packets ausentes para PIDs: ", paste(missing_task_packets$pid, collapse = ", "))
+}
 
 candidate_columns <- c(
   positive_or_diagnostic_method = "candidate_method",
@@ -248,6 +283,24 @@ selected <- selected_by_quota |>
   ) |>
   dplyr::arrange(assigned_stratum, selection_hash, pid) |>
   dplyr::mutate(selection_order = dplyr::row_number())
+
+if (nrow(selected) != sum(quotas)) {
+  stop("Seleção não atingiu N esperado: ", nrow(selected), " vs ", sum(quotas))
+}
+if (anyDuplicated(selected$pid) > 0) {
+  stop("Seleção contém PIDs duplicados.")
+}
+
+quota_check <- selected |>
+  dplyr::count(assigned_stratum, name = "n") |>
+  dplyr::mutate(target_n = quotas[as.character(assigned_stratum)])
+
+quota_mismatches <- quota_check |>
+  dplyr::filter(n != target_n)
+
+if (nrow(quota_mismatches) > 0) {
+  stop("Quotas não batem com alvos: ", paste(quota_mismatches$assigned_stratum, collapse = ", "))
+}
 
 selected_manifest <- selected |>
   dplyr::select(pid, selection_order) |>
@@ -306,8 +359,9 @@ report_lines <- c(
   paste0("- Manifesto completo: `", paths$full_manifest, "`"),
   paste0("- Manifesto congelado A/B: `", paths$out_manifest, "`"),
   paste0("- N total selecionado: ", nrow(selected)),
+  "- Validações: PIDs únicos, task packets existentes, hash `input_text_hash` idêntico entre baseline e manifesto, N=50 e quotas exatas.",
   "",
-  "A seleção usa apenas artigos já classificados no corpus principal por leitura integral. Os estratos são escolhidos sequencialmente na ordem de prioridade: método positivo/diagnóstico, screen de credibilidade, tough call, quantitativo Torreblanca sem método positivo, qualitativo ou não empírico. Um PID já escolhido em estrato prioritário não pode ser escolhido novamente.",
+  "A seleção usa apenas artigos já classificados no corpus principal por leitura integral. Os estratos são escolhidos sequencialmente na ordem de prioridade: método positivo/diagnóstico, screen de credibilidade, tough call, quantitativo Torreblanca sem método positivo, qualitativo ou não empírico. Um PID já escolhido em estrato prioritário não pode ser escolhido novamente. Como os critérios se sobrepõem fortemente, esta interpretação preserva as quotas alvo sem duplicar PIDs.",
   "",
   "## Tabela 1. Distribuição por estrato selecionado",
   "",
@@ -336,6 +390,11 @@ report_lines <- c(
   "## Reprodutibilidade",
   "",
   "A ordenação dentro de cada estrato é determinística: SHA-256 de `pid`, estrato e a semente textual `ab_gpt55_high_20260616`. Não há sorteio dependente de estado global do R."
+  ,
+  "",
+  "Comando de reprodução:",
+  "",
+  "`LC_ALL=pt_BR.UTF-8 Rscript --vanilla scripts/34_select_credibility_prompt_v3_ab_sample.R`"
 )
 
 write_utf8_lines(report_lines, paths$out_report)
