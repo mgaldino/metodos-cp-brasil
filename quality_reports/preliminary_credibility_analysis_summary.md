@@ -1,12 +1,14 @@
 # Síntese da análise preliminar de credibilidade
 
-Gerado em: 2026-06-16 19:59:42 -0300
+Gerado em: 2026-06-16 23:52:02 -0300
 
 ## Escopo
 
-- Artigos no manifest completo: 6464.
-- Artigos classificados e validados: 400.
-- Cobertura preliminar: 6.2%.
+- Artigos no manifest completo: 5250.
+- Linhas classificadas no CSV combinado bruto: 400.
+- Artigos classificados e validados: 399.
+- Linhas classificadas fora do manifest atual: 1.
+- Cobertura preliminar: 7.6%.
 - Blocos completos observados: 0, 100, 200, 300.
 
 ## Regra de contagem
@@ -24,7 +26,7 @@ Gerado em: 2026-06-16 19:59:42 -0300
 
 ## Aviso de interpretação
 
-Os 400 artigos classificados correspondem aos primeiros PIDs do manifest e não formam uma amostra aleatória do corpus completo. As taxas deste relatório servem para validar o pipeline e antecipar a estrutura analítica; não devem ser usadas como estimativa substantiva final do paper.
+Os 399 artigos classificados e validados contra o manifest atual não formam uma amostra aleatória do corpus completo. As taxas deste relatório servem para validar o pipeline e antecipar a estrutura analítica; não devem ser usadas como estimativa substantiva final do paper.
 
 ## Artefatos principais
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import importlib.util
 import json
 from pathlib import Path
@@ -287,3 +288,38 @@ def test_combine_outputs_custom_stem_does_not_write_canonical_files(tmp_path):
     assert not (dirs["combined"] / "classifications_integral_reading.csv").exists()
     assert not (dirs["combined"] / "classifications_integral_reading.jsonl").exists()
     assert not (dirs["combined"] / "integral_reading_batch_report.md").exists()
+
+
+def test_build_codex_command_passes_model_reasoning_effort(tmp_path):
+    runner = load_runner()
+    raw_path = tmp_path / "response.json"
+    args = argparse.Namespace(
+        codex_bin="codex",
+        model="gpt-5.5",
+        model_reasoning_effort="high",
+        ephemeral=False,
+    )
+
+    cmd = runner.build_codex_command(args, raw_path)
+
+    assert cmd[0:2] == ["codex", "exec"]
+    assert ["--model", "gpt-5.5"] == cmd[2:4]
+    config_pos = cmd.index("-c")
+    assert cmd[config_pos + 1] == 'model_reasoning_effort="high"'
+    assert cmd[-1] == "-"
+
+
+def test_build_codex_command_omits_model_reasoning_effort_by_default(tmp_path):
+    runner = load_runner()
+    raw_path = tmp_path / "response.json"
+    args = argparse.Namespace(
+        codex_bin="codex",
+        model=None,
+        model_reasoning_effort=None,
+        ephemeral=False,
+    )
+
+    cmd = runner.build_codex_command(args, raw_path)
+
+    assert "-c" not in cmd
+    assert not any("model_reasoning_effort" in value for value in cmd)

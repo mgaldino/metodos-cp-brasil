@@ -1,9 +1,9 @@
 empirical_evidence_type,quantitative_analysis_type,n,percent
-mixed_empirical,descriptive_statistics_only,112,28
+mixed_empirical,descriptive_statistics_only,112,28.1
 qualitative_only,none,95,23.8
 quantitative_only,statistical_modeling,67,16.8
-none,none,58,14.5
+none,none,57,14.3
 mixed_empirical,statistical_modeling,44,11
-quantitative_only,descriptive_statistics_only,13,3.2
+quantitative_only,descriptive_statistics_only,13,3.3
 mixed_empirical,bivariate_tests_or_correlations_only,7,1.8
 quantitative_only,bivariate_tests_or_correlations_only,4,1

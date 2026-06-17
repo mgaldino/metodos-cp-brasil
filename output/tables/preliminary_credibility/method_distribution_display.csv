@@ -1,0 +1,15 @@
+classe,metodo,n
+Fila de auditoria,Outro método causal moderno,2
+Diagnóstico,Regressão observacional com linguagem causal,69
+Diagnóstico,Nenhum método detectado,48
+Diagnóstico,Painel com efeitos fixos e linguagem causal,7
+Método estrito,Diferenças-em-diferenças,4
+Método estrito,Experimento em survey,3
+Método estrito,Pareamento/ponderação,3
+Método estrito,Regressão descontínua,2
+Método estrito,DAG/grafo causal formal,1
+Método estrito,Event study,1
+Método estrito,Experimento de campo,1
+Método estrito,Experimento de lista,1
+Método estrito,Variáveis instrumentais,1
+Método estrito,Controle sintético,1

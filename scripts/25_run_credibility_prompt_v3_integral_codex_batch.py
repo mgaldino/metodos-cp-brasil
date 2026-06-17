@@ -558,6 +558,30 @@ def already_complete(pid: str, dirs: dict[str, Path]) -> bool:
     return (dirs["reading"] / f"{pid}.json").exists() and (dirs["classifications"] / f"{pid}.json").exists()
 
 
+def build_codex_command(args: argparse.Namespace, raw_path: Path) -> list[str]:
+    cmd = [args.codex_bin, "exec"]
+    if args.model:
+        cmd.extend(["--model", args.model])
+    if args.model_reasoning_effort:
+        cmd.extend(["-c", f'model_reasoning_effort="{args.model_reasoning_effort}"'])
+    cmd.extend(
+        [
+            "--cd",
+            str(PROJECT_DIR),
+            "--sandbox",
+            "read-only",
+            "--output-schema",
+            str(OUTPUT_SCHEMA),
+            "-o",
+            str(raw_path),
+        ]
+    )
+    if args.ephemeral:
+        cmd.append("--ephemeral")
+    cmd.append("-")
+    return cmd
+
+
 def run_codex_for_row(
     row: dict[str, str],
     prompt: str,
@@ -569,23 +593,7 @@ def run_codex_for_row(
     stdout_path = dirs["logs"] / f"{pid}.stdout.log"
     stderr_path = dirs["logs"] / f"{pid}.stderr.log"
 
-    cmd = [
-        args.codex_bin,
-        "exec",
-        "--cd",
-        str(PROJECT_DIR),
-        "--sandbox",
-        "read-only",
-        "--output-schema",
-        str(OUTPUT_SCHEMA),
-        "-o",
-        str(raw_path),
-        "-",
-    ]
-    if args.model:
-        cmd[2:2] = ["--model", args.model]
-    if args.ephemeral:
-        cmd.insert(-1, "--ephemeral")
+    cmd = build_codex_command(args, raw_path)
 
     try:
         result = subprocess.run(
@@ -640,6 +648,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--combine-only", action="store_true", help="Only combine existing valid classification files.")
     parser.add_argument("--codex-bin", default="codex")
     parser.add_argument("--model", default=None, help="Optional Codex model name.")
+    parser.add_argument(
+        "--model-reasoning-effort",
+        choices=["low", "medium", "high", "xhigh"],
+        default=None,
+        help=(
+            "Optional Codex model reasoning effort. When provided, passed to codex exec as "
+            "-c model_reasoning_effort=\"<effort>\" without editing user config."
+        ),
+    )
     parser.add_argument("--timeout", type=int, default=1800, help="Timeout per article in seconds.")
     parser.add_argument("--ephemeral", action="store_true", help="Pass --ephemeral to codex exec.")
     parser.add_argument(

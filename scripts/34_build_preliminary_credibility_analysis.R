@@ -206,7 +206,36 @@ if (length(missing_manifest_cols) > 0) {
   stop("Colunas ausentes no manifest: ", paste(missing_manifest_cols, collapse = ", "))
 }
 
+n_classifications_raw <- nrow(classifications_raw)
+
+classification_manifest_issues <- classifications_raw |>
+  dplyr::anti_join(manifest_raw |> dplyr::select(pid), by = "pid") |>
+  dplyr::transmute(
+    issue = "PID classificado ausente do manifest analítico atual",
+    pid,
+    title,
+    journal_title,
+    input_text_hash
+  )
+
+classification_scope_summary <- tibble::tibble(
+  measure = c(
+    "Linhas classificadas no CSV combinado bruto",
+    "Linhas classificadas com PID no manifest atual",
+    "Linhas classificadas fora do manifest atual"
+  ),
+  n = c(
+    n_classifications_raw,
+    n_classifications_raw - nrow(classification_manifest_issues),
+    nrow(classification_manifest_issues)
+  )
+)
+
+readr::write_csv(classification_manifest_issues, file.path(analysis_dir, "classification_scope_issues.csv"))
+readr::write_csv(classification_scope_summary, file.path(analysis_dir, "classification_scope_summary.csv"))
+
 classifications <- classifications_raw |>
+  dplyr::semi_join(manifest_raw |> dplyr::select(pid), by = "pid") |>
   dplyr::rename(classification_input_text_hash = input_text_hash) |>
   dplyr::mutate(
     is_empirical_paper = parse_bool(is_empirical_paper),
@@ -555,7 +584,7 @@ method_distribution_display <- method_distribution |>
   dplyr::mutate(
     classe = dplyr::case_when(
       method_class == "strict_design_method" ~ "Método estrito",
-      method_class == "broad_other_modern_causal_method" ~ "Fila other_modern",
+      method_class == "broad_other_modern_causal_method" ~ "Fila de auditoria",
       method_class == "diagnostic_not_design" ~ "Diagnóstico",
       TRUE ~ "Não classificado"
     ),
@@ -797,7 +826,7 @@ figure_annual <- annual_indicator_long |>
   ggplot2::scale_color_manual(values = c("#2A6F97", "#C1666B", "#6A994E", "#7B2CBF")) +
   ggplot2::labs(
     title = "Indicadores por ano nos artigos já classificados",
-    subtitle = "Séries preliminares; a cobertura atual é parcial e concentrada nos primeiros 400 artigos do manifest.",
+    subtitle = paste0("Séries preliminares; a cobertura atual é parcial e inclui ", n_classified, " artigos validados no manifest."),
     x = "Ano",
     y = "Percentual dos classificados no ano",
     color = "Legenda",
@@ -852,11 +881,17 @@ method_plot_data <- strict_method_counts |>
     status = factor(status, levels = c("Detectado", "Zero casos"))
   )
 
+synthetic_control_n <- strict_method_counts |>
+  dplyr::filter(method_type == "synthetic_control") |>
+  dplyr::pull(n)
+
+synthetic_control_n <- if (length(synthetic_control_n) == 0) 0L else synthetic_control_n[[1]]
+
 figure_methods <- method_plot_data |>
   ggplot2::ggplot(ggplot2::aes(x = n, y = stats::reorder(metodo, n), fill = status)) +
   ggplot2::geom_col() +
   ggplot2::geom_text(ggplot2::aes(label = n), hjust = -0.25, size = 3.3) +
-  ggplot2::scale_x_continuous(limits = c(0, max(method_plot_data$n, 1) + 1)) +
+  ggplot2::scale_x_continuous(limits = c(0, max(method_plot_data$n, 1) + 1), expand = ggplot2::expansion(mult = c(0, 0.08))) +
   ggplot2::scale_fill_manual(values = c("Detectado" = "#2A6F97", "Zero casos" = "#B8B8B8")) +
   ggplot2::labs(
     title = "Métodos estritos de identificação causal",
@@ -864,21 +899,31 @@ figure_methods <- method_plot_data |>
     x = "Artigos",
     y = NULL,
     fill = "Legenda",
-    caption = "Legenda: barras azuis indicam métodos estritos detectados; barras cinzas indicam zero casos. Controle sintético aparece como zero quando não foi detectado."
+    caption = paste0("Legenda: barras azuis indicam métodos detectados; barras cinzas indicam zero casos. Controle sintético está explícito: ", synthetic_control_n, " caso(s) nesta base preliminar.")
   ) +
-  theme_preliminary()
+  theme_preliminary() +
+  ggplot2::guides(fill = ggplot2::guide_legend(nrow = 1))
 
 ggplot2::ggsave(
   file.path(figures_dir, "figure_5_method_distribution.png"),
   figure_methods,
   width = 9,
-  height = 5.5,
+  height = 6.6,
   dpi = 320
 )
 
 figure_sensitivity <- sensitivity_summary |>
-  dplyr::mutate(measure = factor(measure, levels = measure)) |>
-  ggplot2::ggplot(ggplot2::aes(x = measure, y = percent, fill = measure)) +
+  dplyr::mutate(
+    measure_label = dplyr::recode(
+      measure,
+      "Principal/conservadora" = "Principal",
+      "Fila other_modern_causal_method" = "Fila: outro moderno",
+      "other_modern sem método estrito" = "Outro moderno sem estrito",
+      "Inclusiva (união de artigos únicos)" = "Inclusiva"
+    ),
+    measure_label = factor(measure_label, levels = measure_label)
+  ) |>
+  ggplot2::ggplot(ggplot2::aes(x = measure_label, y = percent, fill = measure_label)) +
   ggplot2::geom_col(width = 0.68) +
   ggplot2::geom_text(
     ggplot2::aes(label = paste0(n, " (", percent, "%)")),
@@ -886,6 +931,7 @@ figure_sensitivity <- sensitivity_summary |>
     size = 3.6
   ) +
   ggplot2::scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, max(5, max(sensitivity_summary$percent) + 2))) +
+  ggplot2::scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 14)) +
   ggplot2::scale_fill_manual(values = c("#2A6F97", "#7B2CBF", "#B08968", "#6A994E")) +
   ggplot2::labs(
     title = "Medidas de métodos da revolução da credibilidade",
@@ -893,15 +939,16 @@ figure_sensitivity <- sensitivity_summary |>
     x = NULL,
     y = "Percentual dos classificados",
     fill = "Legenda",
-    caption = "Legenda: a fila other_modern é uma lista de auditoria manual; a medida inclusiva conta artigos únicos com método estrito ou other_modern."
+    caption = "Legenda: a fila de outro método moderno é uma lista de auditoria manual; a medida inclusiva conta artigos únicos com método estrito ou outro método moderno."
   ) +
   theme_preliminary() +
-  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 15, hjust = 1))
+  ggplot2::guides(fill = ggplot2::guide_legend(nrow = 2)) +
+  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 0, hjust = 0.5))
 
 ggplot2::ggsave(
   file.path(figures_dir, "figure_6_credibility_sensitivity.png"),
   figure_sensitivity,
-  width = 8,
+  width = 9,
   height = 4.8,
   dpi = 320
 )
@@ -914,7 +961,9 @@ summary_lines <- c(
   "## Escopo",
   "",
   paste0("- Artigos no manifest completo: ", n_manifest, "."),
+  paste0("- Linhas classificadas no CSV combinado bruto: ", n_classifications_raw, "."),
   paste0("- Artigos classificados e validados: ", n_classified, "."),
+  paste0("- Linhas classificadas fora do manifest atual: ", nrow(classification_manifest_issues), "."),
   paste0("- Cobertura preliminar: ", round(100 * n_classified / n_manifest, 1), "%."),
   paste0("- Blocos completos observados: ", paste(progress_by_block$block_offset[progress_by_block$classified_n > 0], collapse = ", "), "."),
   "",
@@ -933,7 +982,7 @@ summary_lines <- c(
   "",
   "## Aviso de interpretação",
   "",
-  "Os 400 artigos classificados correspondem aos primeiros PIDs do manifest e não formam uma amostra aleatória do corpus completo. As taxas deste relatório servem para validar o pipeline e antecipar a estrutura analítica; não devem ser usadas como estimativa substantiva final do paper.",
+  paste0("Os ", n_classified, " artigos classificados e validados contra o manifest atual não formam uma amostra aleatória do corpus completo. As taxas deste relatório servem para validar o pipeline e antecipar a estrutura analítica; não devem ser usadas como estimativa substantiva final do paper."),
   "",
   "## Artefatos principais",
   "",

@@ -1,0 +1,17 @@
+method_type,n,metodo,status
+difference_in_differences,4,Diferenças-em-diferenças,Detectado
+experiment_survey,3,Experimento em survey,Detectado
+matching_or_weighting,3,Pareamento/ponderação,Detectado
+regression_discontinuity,2,Regressão descontínua,Detectado
+synthetic_control,1,Controle sintético,Detectado
+dag_or_formal_causal_graph,1,DAG/grafo causal formal,Detectado
+event_study,1,Event study,Detectado
+experiment_field,1,Experimento de campo,Detectado
+experiment_list,1,Experimento de lista,Detectado
+instrumental_variables,1,Variáveis instrumentais,Detectado
+causal_discovery,0,Descoberta causal,Zero casos
+synthetic_difference_in_differences,0,Diferenças-em-diferenças sintéticas,Zero casos
+doubly_robust,0,Estimador duplamente robusto,Zero casos
+experiment_lab,0,Experimento de laboratório,Zero casos
+regression_kink,0,Regression kink,Zero casos
+causal_trees_or_forests,0,Árvores/florestas causais,Zero casos

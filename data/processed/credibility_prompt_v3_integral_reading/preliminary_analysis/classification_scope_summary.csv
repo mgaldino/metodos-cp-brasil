@@ -1,0 +1,4 @@
+measure,n
+Linhas classificadas no CSV combinado bruto,400
+Linhas classificadas com PID no manifest atual,399
+Linhas classificadas fora do manifest atual,1

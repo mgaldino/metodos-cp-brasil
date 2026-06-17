@@ -27,29 +27,243 @@ validation_summary <- readr::read_csv(
   file.path("..", "data", "processed", "credibility_prompt_v3_integral_reading", "preliminary_analysis", "validation_summary.csv"),
   show_col_types = FALSE
 )
+classification_scope_summary <- readr::read_csv(
+  file.path("..", "data", "processed", "credibility_prompt_v3_integral_reading", "preliminary_analysis", "classification_scope_summary.csv"),
+  show_col_types = FALSE
+)
+classification_scope_issues <- readr::read_csv(
+  file.path("..", "data", "processed", "credibility_prompt_v3_integral_reading", "preliminary_analysis", "classification_scope_issues.csv"),
+  show_col_types = FALSE
+)
 coverage_by_journal <- readr::read_csv(table_path("coverage_by_journal.csv"), show_col_types = FALSE)
 coverage_by_year <- readr::read_csv(table_path("coverage_by_year.csv"), show_col_types = FALSE)
-evidence_distribution <- readr::read_csv(table_path("evidence_distribution.csv"), show_col_types = FALSE)
-screen_distribution <- readr::read_csv(table_path("screen_distribution.csv"), show_col_types = FALSE)
-method_distribution <- readr::read_csv(table_path("method_distribution.csv"), show_col_types = FALSE)
-strict_method_cases <- readr::read_csv(table_path("strict_method_cases.csv"), show_col_types = FALSE)
-other_modern_audit_queue <- readr::read_csv(table_path("other_modern_audit_queue.csv"), show_col_types = FALSE)
-tough_call_queue <- readr::read_csv(table_path("tough_call_queue.csv"), show_col_types = FALSE)
+evidence_distribution_display <- readr::read_csv(table_path("evidence_distribution_display.csv"), show_col_types = FALSE)
+screen_distribution_display <- readr::read_csv(table_path("screen_distribution_display.csv"), show_col_types = FALSE)
+method_distribution_display <- readr::read_csv(table_path("method_distribution_display.csv"), show_col_types = FALSE)
+strict_method_counts <- readr::read_csv(table_path("strict_method_counts.csv"), show_col_types = FALSE)
+strict_method_cases_display <- readr::read_csv(table_path("strict_method_cases_display.csv"), show_col_types = FALSE)
+other_modern_audit_queue_display <- readr::read_csv(table_path("other_modern_audit_queue_display.csv"), show_col_types = FALSE)
+tough_call_summary <- readr::read_csv(table_path("tough_call_summary.csv"), show_col_types = FALSE)
+tough_call_queue_display <- readr::read_csv(table_path("tough_call_queue_display.csv"), show_col_types = FALSE)
 
 n_manifest <- indicator_summary$denominator[indicator_summary$indicator == "Artigos classificados"]
 n_classified <- indicator_summary$n[indicator_summary$indicator == "Artigos classificados"]
 coverage_pct <- indicator_summary$percent[indicator_summary$indicator == "Artigos classificados"]
+n_classifications_raw <- classification_scope_summary$n[[1]]
+n_scope_issues <- classification_scope_summary$n[[3]]
 n_conservative <- sensitivity_summary$n[sensitivity_summary$measure == "Principal/conservadora"]
 n_other <- sensitivity_summary$n[sensitivity_summary$measure == "Fila other_modern_causal_method"]
 n_other_broad_only <- sensitivity_summary$n[sensitivity_summary$measure == "other_modern sem método estrito"]
 n_inclusive <- sensitivity_summary$n[sensitivity_summary$measure == "Inclusiva (união de artigos únicos)"]
+
+scope_issue_sentence <- if (n_scope_issues > 0) {
+  paste0(
+    " O CSV combinado bruto contém ", n_classifications_raw,
+    " linhas classificadas; ", n_scope_issues,
+    " foi preservada em arquivo de auditoria, mas excluída da base analítica porque seu PID não aparece no manifest atual."
+  )
+} else {
+  " Todas as linhas classificadas no CSV combinado cruzam com o manifest atual."
+}
+
+validation_value <- function(check_name) {
+  value <- validation_summary$value[validation_summary$check == check_name]
+  if (length(value) == 0) "" else value[[1]]
+}
+
+validation_status <- function(check_name) {
+  status <- validation_summary$status[validation_summary$check == check_name]
+  if (length(status) == 0) "" else status[[1]]
+}
+
+short_pid <- function(x) {
+  dplyr::if_else(
+    nchar(x) > 15,
+    paste0(substr(x, 1, 6), "...", substr(x, nchar(x) - 5, nchar(x))),
+    x
+  )
+}
+
+label_sensitivity <- function(x) {
+  dplyr::recode(
+    x,
+    "Principal/conservadora" = "Principal/conservadora",
+    "Fila other_modern_causal_method" = "Fila: outro método moderno",
+    "other_modern sem método estrito" = "Outro moderno sem método estrito",
+    "Inclusiva (união de artigos únicos)" = "Inclusiva: artigos únicos"
+  )
+}
+
+label_indicator <- function(x) {
+  dplyr::recode(
+    x,
+    "other_modern_causal_method" = "Outro método moderno",
+    "other_modern_causal_method sem método estrito" = "Outro moderno sem método estrito",
+    .default = x
+  )
+}
+
+sensitivity_display <- sensitivity_summary |>
+  transmute(
+    Medida = label_sensitivity(measure),
+    Artigos = n,
+    Base = denominator,
+    Percentual = percent
+  )
+
+scope_summary_display <- classification_scope_summary |>
+  transmute(
+    Medida = measure,
+    Linhas = n
+  )
+
+scope_issues_display <- classification_scope_issues |>
+  transmute(
+    PID = short_pid(pid),
+    Periódico = stringr::str_trunc(journal_title, width = 32),
+    Título = stringr::str_trunc(title, width = 52),
+    Problema = stringr::str_trunc(issue, width = 48)
+  )
+
+validation_display <- tibble::tibble(
+  Validação = c(
+    "PIDs classificados únicos",
+    "PIDs no manifest",
+    "Hash do texto",
+    "Reading logs",
+    "Diretório failed",
+    "Anos",
+    "Tipo documental",
+    "Fulltext"
+  ),
+  Status = c(
+    validation_status("classification_pids_unique"),
+    validation_status("classified_pids_in_manifest"),
+    validation_status("input_text_hash_matches_manifest"),
+    validation_status("reading_log_for_each_classified_pid"),
+    validation_status("failed_directory_empty"),
+    validation_status("years_in_expected_range"),
+    validation_status("document_type_research_article"),
+    validation_status("fulltext_validation_pass")
+  ),
+  Resultado = stringr::str_trunc(c(
+    validation_value("classification_pids_unique"),
+    validation_value("classified_pids_in_manifest"),
+    validation_value("input_text_hash_matches_manifest"),
+    validation_value("reading_log_for_each_classified_pid"),
+    validation_value("failed_directory_empty"),
+    validation_value("years_in_expected_range"),
+    validation_value("document_type_research_article"),
+    validation_value("fulltext_validation_pass")
+  ), width = 72)
+)
+
+coverage_by_journal_display <- coverage_by_journal |>
+  transmute(
+    Periódico = stringr::str_trunc(journal_title, width = 46),
+    Classificados = classified_n,
+    Manifest = manifest_n,
+    Cobertura = percent_classified
+  )
+
+coverage_by_year_display <- coverage_by_year |>
+  transmute(
+    Ano = year,
+    Classificados = classified_n,
+    Manifest = manifest_n,
+    Cobertura = percent_classified
+  )
+
+indicator_display <- indicator_summary |>
+  transmute(
+    Indicador = stringr::str_trunc(label_indicator(indicator), width = 46),
+    Artigos = n,
+    Base = denominator,
+    Percentual = percent
+  )
+
+evidence_table_display <- evidence_distribution_display |>
+  transmute(
+    Categoria = stringr::str_trunc(categoria, width = 58),
+    Artigos = n,
+    Percentual = percent
+  )
+
+screen_table_display <- screen_distribution_display |>
+  transmute(
+    Screen = screen,
+    Razão = stringr::str_trunc(razao, width = 52),
+    Artigos = n,
+    Percentual = percent
+  )
+
+method_table_display <- method_distribution_display |>
+  transmute(
+    Classe = classe,
+    Método = stringr::str_trunc(metodo, width = 48),
+    Ocorrências = n
+  )
+
+strict_counts_display <- strict_method_counts |>
+  transmute(
+    Método = stringr::str_trunc(metodo, width = 48),
+    Artigos = n,
+    Status = status
+  )
+
+strict_cases_pdf <- strict_method_cases_display |>
+  transmute(
+    PID = short_pid(pid),
+    Ano = year,
+    Método = stringr::str_trunc(metodo, width = 34),
+    Título = stringr::str_trunc(titulo, width = 54)
+  )
+
+other_modern_pdf <- other_modern_audit_queue_display |>
+  transmute(
+    PID = short_pid(pid),
+    Ano = year,
+    `Método estrito também` = tambem_tem_metodo_estrito,
+    Título = stringr::str_trunc(titulo, width = 56)
+  )
+
+tough_call_summary_pdf <- tough_call_summary |>
+  transmute(
+    Categoria = stringr::str_trunc(categoria, width = 58),
+    Artigos = n,
+    Percentual = percent
+  )
+
+tough_call_queue_pdf <- tough_call_queue_display |>
+  transmute(
+    PID = short_pid(pid),
+    Ano = year,
+    Título = stringr::str_trunc(titulo, width = 52),
+    Motivo = stringr::str_trunc(motivo, width = 58)
+  )
 ```
 
 # Escopo e cautela
 
-Este relatório antecipa a estrutura da análise final usando os artigos já classificados por leitura integral. A base atual contém `r n_classified` artigos classificados de um manifest de `r n_manifest`, ou `r coverage_pct`% do corpus elegível preparado para classificação.
+Este relatório antecipa a estrutura da análise final usando os artigos já classificados por leitura integral. A base analítica atual contém `r n_classified` artigos classificados de um manifest de `r n_manifest`, ou `r coverage_pct`% do corpus elegível preparado para classificação.`r scope_issue_sentence`
 
 Os resultados são **preliminares**. Os artigos classificados correspondem aos primeiros registros do manifest, não a uma amostra aleatória do corpus completo. Portanto, as taxas abaixo servem para testar o pipeline analítico, identificar casos para auditoria e preparar o relatório final; elas não devem ser tratadas como estimativas substantivas finais do paper.
+
+```{r scope-table}
+knitr::kable(
+  scope_summary_display,
+  caption = "Escopo do CSV combinado e da base analítica preliminar"
+)
+```
+
+```{r scope-issues-table}
+if (nrow(scope_issues_display) > 0) {
+  knitr::kable(
+    scope_issues_display,
+    caption = "Registros classificados preservados, mas excluídos da base analítica por ausência no manifest atual"
+  )
+}
+```
 
 # Regra de contagem
 
@@ -63,7 +277,7 @@ Na base atual, a medida conservadora identifica `r n_conservative` artigos; a fi
 
 ```{r sensitivity-table}
 knitr::kable(
-  sensitivity_summary,
+  sensitivity_display,
   caption = "Medidas preliminares para métodos da revolução da credibilidade",
   digits = 1
 )
@@ -75,24 +289,24 @@ Todas as validações duras passaram antes da geração deste relatório: unicid
 
 ```{r validation-table}
 knitr::kable(
-  validation_summary,
+  validation_display,
   caption = "Validações de integridade da base preliminar"
 )
 ```
 
 # Cobertura da classificação
 
-```{r progress-figure, fig.cap="Progresso da classificação por bloco de 100 artigos.", out.width="100%"}
+```{r progress-figure, fig.cap="Progresso da classificação por bloco de 100 artigos. Legenda: barras indicam artigos classificados; a linha tracejada marca o alvo de 100 artigos por bloco completo.", out.width="100%"}
 knitr::include_graphics(figure_path("figure_1_progress_by_block.png"))
 ```
 
-```{r journal-figure, fig.cap="Cobertura preliminar por periódico.", out.width="100%"}
+```{r journal-figure, fig.cap="Cobertura preliminar por periódico. Legenda: barras indicam quantos artigos de cada periódico já entraram na classificação preliminar.", out.width="100%"}
 knitr::include_graphics(figure_path("figure_2_coverage_by_journal.png"))
 ```
 
 ```{r coverage-journal-table}
 knitr::kable(
-  coverage_by_journal,
+  coverage_by_journal_display,
   caption = "Cobertura por periódico no manifest e na base classificada",
   digits = 1
 )
@@ -100,7 +314,7 @@ knitr::kable(
 
 ```{r coverage-year-table}
 knitr::kable(
-  coverage_by_year,
+  coverage_by_year_display,
   caption = "Cobertura por ano no manifest e na base classificada",
   digits = 1
 )
@@ -110,23 +324,23 @@ knitr::kable(
 
 ```{r indicator-table}
 knitr::kable(
-  indicator_summary,
+  indicator_display,
   caption = "Indicadores básicos da base preliminar",
   digits = 1
 )
 ```
 
-```{r annual-figure, fig.cap="Indicadores por ano nos artigos já classificados.", out.width="100%"}
+```{r annual-figure, fig.cap="Indicadores por ano nos artigos já classificados. Legenda: cada linha mostra a proporção anual dentro dos artigos classificados, não dentro do corpus anual completo.", out.width="100%"}
 knitr::include_graphics(figure_path("figure_3_annual_indicators.png"))
 ```
 
-```{r evidence-figure, fig.cap="Tipo de evidência e análise quantitativa.", out.width="100%"}
+```{r evidence-figure, fig.cap="Tipo de evidência e análise quantitativa. Legenda: antes da barra está o tipo de evidência; depois da barra está o tipo de análise quantitativa.", out.width="100%"}
 knitr::include_graphics(figure_path("figure_4_evidence_distribution.png"))
 ```
 
 ```{r evidence-table}
 knitr::kable(
-  evidence_distribution,
+  evidence_table_display,
   caption = "Tipo de evidência e análise quantitativa",
   digits = 1
 )
@@ -134,54 +348,64 @@ knitr::kable(
 
 ```{r screen-table}
 knitr::kable(
-  screen_distribution,
+  screen_table_display,
   caption = "Razões do screen de revolução da credibilidade",
   digits = 1
 )
 ```
 
+\clearpage
+
 # Métodos da revolução da credibilidade
 
-```{r methods-figure, fig.cap="Métodos detectados e classes analíticas.", out.width="100%"}
+```{r methods-figure, fig.cap="Métodos estritos de identificação causal. Legenda: barras azuis indicam métodos detectados; barras cinzas indicam zero casos; controle sintético aparece explicitamente com sua contagem observada.", out.width="100%"}
 knitr::include_graphics(figure_path("figure_5_method_distribution.png"))
 ```
 
-```{r sensitivity-figure, fig.cap="Medidas conservadora, fila de auditoria e sensibilidade inclusiva.", out.width="90%"}
+```{r sensitivity-figure, fig.cap="Medidas conservadora, fila de auditoria e sensibilidade inclusiva. Legenda: outro método moderno é uma fila de auditoria; a medida inclusiva conta artigos únicos.", out.width="100%"}
 knitr::include_graphics(figure_path("figure_6_credibility_sensitivity.png"))
+```
+
+```{r strict-method-counts-table}
+knitr::kable(
+  strict_counts_display,
+  caption = "Contagem dos métodos estritos de identificação causal, incluindo métodos com zero casos",
+  digits = 1
+)
 ```
 
 ```{r method-table}
 knitr::kable(
-  method_distribution,
-  caption = "Distribuição dos métodos detectados",
+  method_table_display,
+  caption = "Distribuição dos métodos detectados por classe analítica",
   digits = 1
 )
 ```
 
 ## Casos no numerador conservador
 
+As tabelas abaixo são compactas para leitura no PDF. As evidências textuais e campos completos estão preservados nos CSVs em `output/tables/preliminary_credibility/`.
+
 ```{r strict-cases-table}
-if (nrow(strict_method_cases) == 0) {
+if (nrow(strict_cases_pdf) == 0) {
   cat("Nenhum caso com método estrito de identificação causal foi encontrado na base preliminar.")
 } else {
   knitr::kable(
-    strict_method_cases |>
-      dplyr::select(pid, title, journal_title, year, method_type, causal_design_quote, tough_call_reason),
+    strict_cases_pdf,
     caption = "Casos com métodos estritos de identificação causal"
   )
 }
 ```
 
-## Fila `other_modern_causal_method`
+## Fila de auditoria: outro método moderno
 
 ```{r other-modern-table}
-if (nrow(other_modern_audit_queue) == 0) {
+if (nrow(other_modern_pdf) == 0) {
   cat("Nenhum caso `other_modern_causal_method` foi encontrado na base preliminar.")
 } else {
   knitr::kable(
-    other_modern_audit_queue |>
-      dplyr::select(pid, title, journal_title, year, other_modern_overlap_with_strict, other_modern_broad_only, causal_design_quote, tough_call_reason),
-    caption = "Fila de auditoria manual para `other_modern_causal_method`"
+    other_modern_pdf,
+    caption = "Fila de auditoria manual para outro método moderno"
   )
 }
 ```
@@ -190,15 +414,25 @@ if (nrow(other_modern_audit_queue) == 0) {
 
 Os `tough calls` são úteis para a próxima rodada de auditoria manual, porque indicam decisões em que o classificador registrou ambiguidade substantiva ou operacional.
 
-```{r tough-call-table}
-if (nrow(tough_call_queue) == 0) {
+```{r tough-call-summary-table}
+if (nrow(tough_call_summary_pdf) == 0) {
   cat("Nenhum `tough_call` foi encontrado na base preliminar.")
 } else {
   knitr::kable(
-    tough_call_queue |>
-      dplyr::select(pid, title, journal_title, year, empirical_evidence_type, quantitative_analysis_type, credibility_revolution_screen_reason, tough_call_reason) |>
-      head(25),
-    caption = "Primeiros 25 tough calls para auditoria"
+    tough_call_summary_pdf,
+    caption = "Resumo dos tough calls por tipo de evidência e análise quantitativa",
+    digits = 1
+  )
+}
+```
+
+```{r tough-call-table}
+if (nrow(tough_call_queue_pdf) == 0) {
+  cat("Nenhum `tough_call` foi encontrado na base preliminar.")
+} else {
+  knitr::kable(
+    head(tough_call_queue_pdf, 15),
+    caption = "Primeiros 15 tough calls para auditoria"
   )
 }
 ```
