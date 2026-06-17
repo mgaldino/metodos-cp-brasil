@@ -385,63 +385,68 @@ screen_method_disagreement <- disagreements |>
     credibility_revolution_method_type_high
   )
 
-divergent_pids <- disagreements$pid
-log_assessment <- if (length(divergent_pids) > 0) {
-  xhigh_logs <- lapply(divergent_pids, reading_log_metrics, reading_dir = paths$baseline_reading_dir) |>
-    dplyr::bind_rows() |>
-    dplyr::rename_with(~ paste0("xhigh_", .x), -pid)
-  high_logs <- lapply(divergent_pids, reading_log_metrics, reading_dir = paths$treatment_reading_dir) |>
-    dplyr::bind_rows() |>
-    dplyr::rename_with(~ paste0("high_", .x), -pid)
-  disagreements |>
-    dplyr::select(pid, fields_disagree) |>
-    dplyr::left_join(xhigh_logs, by = "pid") |>
-    dplyr::left_join(high_logs, by = "pid") |>
-    dplyr::mutate(
-      high_to_xhigh_section_ratio = high_n_sections / xhigh_n_sections,
-      high_to_xhigh_summary_ratio = high_total_summary_chars / xhigh_total_summary_chars,
-      high_log_assessment = dplyr::case_when(
-        !high_log_exists ~ "Log high ausente.",
-        !dplyr::coalesce(high_full_body_read, FALSE) ~ "High não registrou leitura integral.",
-        is.na(high_n_sections) | high_n_sections == 0 ~ "High sem seções registradas.",
-        !is.na(xhigh_n_sections) & high_n_sections < pmax(3, 0.6 * xhigh_n_sections) ~
-          "Possível superficialidade: bem menos seções que xhigh.",
-        !is.na(xhigh_total_summary_chars) &
-          high_total_summary_chars < 0.6 * xhigh_total_summary_chars ~
-          "Possível superficialidade: resumos bem mais curtos que xhigh.",
-        TRUE ~ "Sem sinal mecânico de superficialidade no reading log."
-      )
-    ) |>
-    dplyr::select(
-      pid,
-      fields_disagree,
-      xhigh_n_sections,
-      high_n_sections,
-      xhigh_total_summary_chars,
-      high_total_summary_chars,
-      high_to_xhigh_section_ratio,
-      high_to_xhigh_summary_ratio,
-      high_log_assessment
+all_xhigh_logs <- lapply(expected_pids, reading_log_metrics, reading_dir = paths$baseline_reading_dir) |>
+  dplyr::bind_rows() |>
+  dplyr::rename_with(~ paste0("xhigh_", .x), -pid)
+
+all_high_logs <- lapply(expected_pids, reading_log_metrics, reading_dir = paths$treatment_reading_dir) |>
+  dplyr::bind_rows() |>
+  dplyr::rename_with(~ paste0("high_", .x), -pid)
+
+all_log_assessment <- sample_manifest |>
+  dplyr::select(pid, title, journal_title, manifest_input_text_hash = input_text_hash) |>
+  dplyr::left_join(all_xhigh_logs, by = "pid") |>
+  dplyr::left_join(all_high_logs, by = "pid") |>
+  dplyr::mutate(
+    high_to_xhigh_section_ratio = high_n_sections / xhigh_n_sections,
+    high_to_xhigh_summary_ratio = high_total_summary_chars / xhigh_total_summary_chars,
+    high_log_assessment = dplyr::case_when(
+      pid %in% missing_in_treatment ~ "Classificação high ausente.",
+      !high_log_exists ~ "Log high ausente.",
+      !dplyr::coalesce(high_full_body_read, FALSE) ~ "High não registrou leitura integral.",
+      high_input_text_hash != manifest_input_text_hash ~ "Hash do log high diverge do manifesto.",
+      is.na(high_n_sections) | high_n_sections == 0 ~ "High sem seções registradas.",
+      !is.na(xhigh_n_sections) & high_n_sections < pmax(3, 0.6 * xhigh_n_sections) ~
+        "Possível superficialidade: bem menos seções que xhigh.",
+      !is.na(xhigh_total_summary_chars) &
+        high_total_summary_chars < 0.6 * xhigh_total_summary_chars ~
+        "Possível superficialidade: resumos bem mais curtos que xhigh.",
+      TRUE ~ "Sem sinal mecânico de superficialidade no reading log."
     )
-} else {
-  data.frame(
-    pid = character(),
-    fields_disagree = character(),
-    xhigh_n_sections = integer(),
-    high_n_sections = integer(),
-    xhigh_total_summary_chars = integer(),
-    high_total_summary_chars = integer(),
-    high_to_xhigh_section_ratio = numeric(),
-    high_to_xhigh_summary_ratio = numeric(),
-    high_log_assessment = character()
   )
-}
+
+log_issue_distribution <- all_log_assessment |>
+  dplyr::count(high_log_assessment, name = "n") |>
+  dplyr::arrange(dplyr::desc(n), high_log_assessment)
+
+log_assessment <- all_log_assessment |>
+  dplyr::semi_join(disagreements |> dplyr::select(pid), by = "pid") |>
+  dplyr::left_join(disagreements |> dplyr::select(pid, fields_disagree), by = "pid") |>
+  dplyr::select(
+    pid,
+    fields_disagree,
+    xhigh_status,
+    high_status,
+    xhigh_full_body_read,
+    high_full_body_read,
+    xhigh_n_sections,
+    high_n_sections,
+    xhigh_total_summary_chars,
+    high_total_summary_chars,
+    high_to_xhigh_section_ratio,
+    high_to_xhigh_summary_ratio,
+    high_first_sections,
+    high_log_assessment
+  )
 
 mean_agreement <- mean(field_agreement$agreement_rate, na.rm = TRUE)
 min_agreement <- min(field_agreement$agreement_rate, na.rm = TRUE)
 n_screen_method_disagreement <- nrow(screen_method_disagreement)
 n_superficial_flags <- sum(
-  stringr::str_detect(log_assessment$high_log_assessment, "ausente|não registrou|sem seções|Possível"),
+  stringr::str_detect(
+    all_log_assessment$high_log_assessment,
+    "ausente|não registrou|sem seções|Possível|Hash do log high diverge"
+  ),
   na.rm = TRUE
 )
 
@@ -479,6 +484,8 @@ report_lines <- c(
   paste0("- N comparado: ", nrow(comparison)),
   paste0("- PIDs ausentes no baseline: ", length(missing_in_baseline)),
   paste0("- PIDs ausentes no high: ", length(missing_in_treatment)),
+  paste0("- PIDs extras no high fora do manifesto: ", length(extra_in_treatment)),
+  "- Validações: PIDs únicos em manifesto/baseline/high e `input_text_hash` idêntico entre manifesto, baseline e tratamento nos PIDs comparados.",
   "",
   "## Tabela 1. Concordância por campo prioritário",
   "",
@@ -492,7 +499,11 @@ report_lines <- c(
   "",
   md_table(screen_method_disagreement),
   "",
-  "## Tabela 4. Avaliação curta dos reading logs em casos divergentes",
+  "## Tabela 4. Cobertura dos reading logs high em todos os PIDs",
+  "",
+  md_table(log_issue_distribution),
+  "",
+  "## Tabela 5. Avaliação curta dos reading logs em casos divergentes",
   "",
   md_table(log_assessment),
   "",
@@ -504,7 +515,7 @@ report_lines <- c(
   paste0("- PIDs com sinal mecânico de superficialidade no high: ", n_superficial_flags),
   paste0("- Recomendação: ", recommendation),
   "",
-  "A avaliação dos `section_reading_log` é uma checagem reprodutível de cobertura, não uma leitura substantiva humana. Ela marca superficialidade apenas quando o log high está ausente, incompleto ou muito mais curto que o xhigh."
+  "A avaliação dos `section_reading_log` é uma checagem reprodutível de cobertura, não uma leitura substantiva humana. Ela marca superficialidade apenas quando o log high está ausente, incompleto, com hash divergente, ou muito mais curto que o xhigh."
 )
 
 write_utf8_lines(report_lines, paths$out_report)
