@@ -743,15 +743,18 @@ theme_preliminary <- function() {
 
 figure_progress <- progress_by_block |>
   dplyr::filter(classified_n > 0 | block_offset <= 500) |>
-  ggplot2::ggplot(ggplot2::aes(x = block_offset, y = classified_n)) +
-  ggplot2::geom_col(fill = "#2A6F97", width = 82) +
+  ggplot2::ggplot(ggplot2::aes(x = block_offset, y = classified_n, fill = "Artigos classificados")) +
+  ggplot2::geom_col(width = 82) +
   ggplot2::geom_hline(yintercept = 100, linetype = "dashed", color = "grey45") +
   ggplot2::scale_x_continuous(breaks = seq(0, max(progress_by_block$block_offset), by = 100)) +
+  ggplot2::scale_fill_manual(values = c("Artigos classificados" = "#2A6F97")) +
   ggplot2::labs(
     title = "Progresso da classificação por bloco",
     subtitle = "Cada bloco planejado tem até 100 artigos; barras zeradas indicam blocos ainda não processados.",
     x = "Offset do bloco no manifest",
-    y = "Artigos classificados"
+    y = "Artigos classificados",
+    fill = "Legenda",
+    caption = "Legenda: barras mostram artigos classificados por bloco; linha tracejada marca o alvo de 100 artigos por bloco completo."
   ) +
   theme_preliminary()
 
@@ -765,13 +768,16 @@ ggplot2::ggsave(
 
 figure_coverage_journal <- coverage_by_journal |>
   dplyr::mutate(journal_label = stringr::str_wrap(journal_title, width = 34)) |>
-  ggplot2::ggplot(ggplot2::aes(x = classified_n, y = stats::reorder(journal_label, classified_n))) +
-  ggplot2::geom_col(fill = "#6A994E") +
+  ggplot2::ggplot(ggplot2::aes(x = classified_n, y = stats::reorder(journal_label, classified_n), fill = "Artigos classificados")) +
+  ggplot2::geom_col() +
+  ggplot2::scale_fill_manual(values = c("Artigos classificados" = "#6A994E")) +
   ggplot2::labs(
     title = "Cobertura preliminar por periódico",
     subtitle = "A cobertura reflete a ordem do manifest, não uma amostra aleatória do corpus.",
     x = "Artigos classificados",
-    y = NULL
+    y = NULL,
+    fill = "Legenda",
+    caption = "Legenda: barras mostram quantos artigos de cada periódico já entraram na classificação preliminar."
   ) +
   theme_preliminary()
 
@@ -794,7 +800,8 @@ figure_annual <- annual_indicator_long |>
     subtitle = "Séries preliminares; a cobertura atual é parcial e concentrada nos primeiros 400 artigos do manifest.",
     x = "Ano",
     y = "Percentual dos classificados no ano",
-    color = NULL
+    color = "Legenda",
+    caption = "Legenda: cada linha mostra a proporção anual dentro dos artigos atualmente classificados, não dentro do corpus anual completo."
   ) +
   theme_preliminary()
 
@@ -806,19 +813,28 @@ ggplot2::ggsave(
   dpi = 320
 )
 
-figure_evidence <- evidence_distribution |>
+figure_evidence <- evidence_distribution_display |>
   dplyr::mutate(
-    evidence_label = stringr::str_replace_all(empirical_evidence_type, "_", " "),
-    quant_label = stringr::str_replace_all(quantitative_analysis_type, "_", " "),
-    label = stringr::str_wrap(paste0(evidence_label, " / ", quant_label), width = 36)
+    categoria_label = stringr::str_wrap(categoria, width = 38),
+    tipo_de_evidencia = factor(tipo_de_evidencia, levels = unique(tipo_de_evidencia[order(n, decreasing = TRUE)]))
   ) |>
-  ggplot2::ggplot(ggplot2::aes(x = n, y = stats::reorder(label, n))) +
-  ggplot2::geom_col(fill = "#B08968") +
+  ggplot2::ggplot(ggplot2::aes(x = n, y = stats::reorder(categoria_label, n), fill = tipo_de_evidencia)) +
+  ggplot2::geom_col() +
+  ggplot2::scale_fill_manual(
+    values = c(
+      "Misto" = "#2A6F97",
+      "Somente quantitativo" = "#6A994E",
+      "Somente qualitativo" = "#C1666B",
+      "Não empírico" = "#8D99AE"
+    )
+  ) +
   ggplot2::labs(
     title = "Tipo de evidência e análise quantitativa",
-    subtitle = "Distribuição entre os artigos classificados até agora.",
+    subtitle = "Antes da barra: tipo de evidência. Depois da barra: tipo de análise quantitativa.",
     x = "Artigos",
-    y = NULL
+    y = NULL,
+    fill = "Tipo de evidência",
+    caption = "Legenda: categorias como 'Não empírico / sem análise quantitativa' substituem os códigos brutos 'none / none'."
   ) +
   theme_preliminary()
 
@@ -830,28 +846,25 @@ ggplot2::ggsave(
   dpi = 320
 )
 
-method_plot_data <- method_distribution |>
+method_plot_data <- strict_method_counts |>
   dplyr::mutate(
-    method_label = stringr::str_wrap(stringr::str_replace_all(method_type, "_", " "), width = 34)
+    metodo = stringr::str_wrap(metodo, width = 34),
+    status = factor(status, levels = c("Detectado", "Zero casos"))
   )
 
 figure_methods <- method_plot_data |>
-  ggplot2::ggplot(ggplot2::aes(x = n, y = stats::reorder(method_label, n), fill = method_class)) +
+  ggplot2::ggplot(ggplot2::aes(x = n, y = stats::reorder(metodo, n), fill = status)) +
   ggplot2::geom_col() +
-  ggplot2::scale_fill_manual(
-    values = c(
-      broad_other_modern_causal_method = "#7B2CBF",
-      diagnostic_not_design = "#8D99AE",
-      strict_design_method = "#2A6F97",
-      unclassified = "#C1666B"
-    )
-  ) +
+  ggplot2::geom_text(ggplot2::aes(label = n), hjust = -0.25, size = 3.3) +
+  ggplot2::scale_x_continuous(limits = c(0, max(method_plot_data$n, 1) + 1)) +
+  ggplot2::scale_fill_manual(values = c("Detectado" = "#2A6F97", "Zero casos" = "#B8B8B8")) +
   ggplot2::labs(
-    title = "Métodos detectados",
-    subtitle = "`other_modern_causal_method` aparece separado da medida principal.",
-    x = "Ocorrências de método",
+    title = "Métodos estritos de identificação causal",
+    subtitle = "Todos os métodos estritos são mostrados, inclusive os que tiveram zero casos.",
+    x = "Artigos",
     y = NULL,
-    fill = "Classe"
+    fill = "Legenda",
+    caption = "Legenda: barras azuis indicam métodos estritos detectados; barras cinzas indicam zero casos. Controle sintético aparece como zero quando não foi detectado."
   ) +
   theme_preliminary()
 
@@ -879,7 +892,8 @@ figure_sensitivity <- sensitivity_summary |>
     subtitle = "A medida inclusiva é união de artigos únicos, não soma de ocorrências de método.",
     x = NULL,
     y = "Percentual dos classificados",
-    fill = NULL
+    fill = "Legenda",
+    caption = "Legenda: a fila other_modern é uma lista de auditoria manual; a medida inclusiva conta artigos únicos com método estrito ou other_modern."
   ) +
   theme_preliminary() +
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 15, hjust = 1))
