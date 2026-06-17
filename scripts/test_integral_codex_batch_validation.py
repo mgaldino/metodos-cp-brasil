@@ -309,6 +309,21 @@ def test_build_codex_command_passes_model_reasoning_effort(tmp_path):
     assert cmd[-1] == "-"
 
 
+def test_build_codex_command_places_ephemeral_before_stdin_prompt(tmp_path):
+    runner = load_runner()
+    raw_path = tmp_path / "response.json"
+    args = argparse.Namespace(
+        codex_bin="codex",
+        model=None,
+        model_reasoning_effort=None,
+        ephemeral=True,
+    )
+
+    cmd = runner.build_codex_command(args, raw_path)
+
+    assert cmd[-2:] == ["--ephemeral", "-"]
+
+
 def test_build_codex_command_omits_model_reasoning_effort_by_default(tmp_path):
     runner = load_runner()
     raw_path = tmp_path / "response.json"
@@ -323,3 +338,27 @@ def test_build_codex_command_omits_model_reasoning_effort_by_default(tmp_path):
 
     assert "-c" not in cmd
     assert not any("model_reasoning_effort" in value for value in cmd)
+
+
+def test_parse_args_accepts_model_reasoning_effort_cli():
+    runner = load_runner()
+
+    args = runner.parse_args(["--model", "gpt-5.5", "--model-reasoning-effort", "high"])
+
+    assert args.model == "gpt-5.5"
+    assert args.model_reasoning_effort == "high"
+
+
+def test_ab_output_dir_requires_custom_combined_stem():
+    runner = load_runner()
+
+    errors = runner.output_naming_errors(
+        Path("data/processed/credibility_prompt_v3_integral_reading/full_corpus_ab/gpt55_high"),
+        "classifications_integral_reading",
+    )
+
+    assert errors
+    assert runner.output_naming_errors(
+        Path("data/processed/credibility_prompt_v3_integral_reading/full_corpus_ab/gpt55_high"),
+        "classifications_integral_reading_ab_gpt55_high_50",
+    ) == []
