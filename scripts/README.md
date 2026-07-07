@@ -25,6 +25,13 @@ O pipeline deve avançar da amostra de validação para a classificação do cor
 
 O piloto triplo em `data/processed/full_classification_pilot/` não usa `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` nem chamadas de API. As classificações substantivas são produzidas por três subagentes Codex locais independentes.
 
+Para a classificação por leitura integral em escala, os scripts operacionais são:
+
+- `25_run_credibility_prompt_v3_integral_codex_batch.py`: roda uma chamada `codex exec` por artigo, valida o JSON com log de leitura integral e consolida CSV/JSONL.
+- `32_summarize_credibility_integral_batch.R`: resume um CSV consolidado de classificações por leitura integral.
+- `34_select_credibility_integral_next_batch.R`: seleciona um bloco congelado de PIDs ainda não concluídos no manifesto ativo.
+- `36_run_credibility_integral_next_batch.py`: wrapper do loop de produção; reutiliza o batch ativo incompleto ou seleciona o próximo bloco de 100 PIDs, renderiza prompts, roda o batch real com `xhigh`, consolida e resume outputs.
+
 ## Validação e normalização
 
 - `05_validate_classifications.R`: valida corpus, amostra, JSONs de classificação e CSV consolidado.
