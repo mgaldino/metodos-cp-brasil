@@ -1,0 +1,26 @@
+## Dados
+
+O universo empírico do projeto é o conjunto de artigos de Ciência Política, Relações Internacionais, Ciências Sociais adjacentes e Administração Pública indexados no SciELO entre 2005 e 2025. A coleta bruta preservada no repositório reúne 8.400 registros em 15 periódicos, mas a base analítica do paper não é definida diretamente por esse arquivo bruto. Para a análise substantiva, o pipeline constrói um manifest canônico do corpus elegível, aplicando os critérios de escopo do projeto, os registros de exclusão de periódicos e artigos, e a filtragem de itens que não devem entrar como artigos de pesquisa. No estado atual da auditoria, esse manifest contém 5.250 PIDs únicos, todos dentro do intervalo 2005-2025.
+
+As exclusões de escopo são parte substantiva da definição do corpus. `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` não entram na base analítica do paper. Seus registros podem permanecer preservados em dados brutos e artefatos rastreáveis, mas as validações atuais confirmam que esses dois periódicos estão ausentes tanto do manifest analítico quanto das classificações usadas para os resultados do manuscrito. A mesma lógica vale para artigos listados nos ledgers de exclusão: eles continuam documentados para fins de rastreabilidade, mas não compõem o denominador substantivo do paper.
+
+A unidade de observação é o artigo identificado por PID. O manifest completo elegível está em `data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv` e foi validado como tendo uma linha por PID. A recuperação de texto integral foi feita em árvore separada do piloto inicial, com preservação de arquivos brutos e extraídos. O arquivo corpus-wide de texto integral contém 6.642 PIDs, mas o subconjunto usado pela base analítica é o manifest elegível de 5.250 PIDs. A checagem de Gate 0 confirma que os 5.250 PIDs do manifest têm texto integral rastreável no corpus. Portanto, a restrição atual do paper não é falta de texto integral para o manifest, mas a cobertura ainda parcial das classificações por leitura integral.
+
+As classificações usadas nesta versão são classificações por leitura integral. O arquivo combinado atual contém 699 PIDs classificados, todos presentes no manifest analítico, e a auditoria confirma que cada um desses 699 PIDs possui log de leitura correspondente. Isso diferencia a base atual de exercícios anteriores baseados em metadados, resumos ou XMLs sem corpo de texto utilizável: os resultados aqui reportados derivam de leitura integral documentada do artigo. Ainda assim, apenas 699 dos 5.250 artigos elegíveis foram classificados até agora, o que corresponde a 13,3% do manifest. Os 4.551 PIDs restantes, ou 86,7% do manifest, ainda não têm classificação combinada.
+
+Por essa razão, todos os resultados do manuscrito nesta etapa devem ser lidos como preliminares. Eles descrevem os artigos já classificados por leitura integral, não o corpus completo elegível de 2005-2025. A inferência substantiva sobre a trajetória da revolução da credibilidade na Ciência Política brasileira só poderá ser apresentada como resultado final depois que a classificação cobrir o manifest completo ou depois que o desenho amostral for redefinido e justificado como base de inferência. No estágio atual, a cobertura das classificações também é operacionalmente desbalanceada por periódico: há cobertura completa para `Brazilian Political Science Review` no manifest atual, para `Contexto Internacional` até 2018 e para `Cadernos Gestão Pública e Cidadania`, além de cobertura parcial de `Contexto Internacional` em 2019-2025; os demais periódicos do manifest ainda não têm classificações combinadas. Esse padrão reforça que os resultados abaixo não devem ser interpretados como estimativas finais do universo SciELO elegível.
+
+Tabela 1. Denominadores atuais da seção de dados e dos resultados preliminares.
+
+| Denominador | N | Referência | Percentual |
+|---|---:|---|---:|
+| Corpus completo elegível | 5.250 | manifest completo | 100,0% |
+| Artigos classificados por leitura integral | 699 | manifest completo | 13,3% |
+| Artigos ainda não classificados | 4.551 | manifest completo | 86,7% |
+| Artigos empíricos classificados | 568 | classificados por leitura integral | 81,3% |
+| Artigos empíricos quantitativos classificados | 324 | classificados por leitura integral | 46,4% |
+| Artigos com claim causal ou explicativo classificados | 597 | classificados por leitura integral | 85,4% |
+| Artigos no screen de credibilidade classificados | 147 | classificados por leitura integral | 21,0% |
+| Artigos classificados com desenho estrito | 16 | classificados por leitura integral | 2,3% |
+
+Esses denominadores devem orientar a redação das demais seções. Sempre que o manuscrito reportar percentuais de artigos empíricos, artigos quantitativos, claims causais ou desenhos associados à revolução da credibilidade, o denominador correto no estágio atual é o conjunto de 699 artigos classificados por leitura integral. O denominador de 5.250 artigos deve ser usado para afirmações de cobertura do manifest, como a proporção já classificada ou a proporção ainda pendente. A base atual permite testar e auditar o esquema de classificação em escala crescente, mas ainda não autoriza apresentar conclusões finais sobre todo o corpus elegível.
