@@ -1,0 +1,6 @@
+check,status,value,implication
+classified_rows_positive,PASS,699,Há artigos classificados para gerar artefatos preliminares.
+strict_design_subset_of_screen,PASS,0 exceções,Todo desenho estrito deve pertencer ao screen de credibilidade.
+method_type_json_no_parse_errors,PASS,0 erros de parse,Tipos de método devem ser JSON válido ou vazio.
+method_type_present_when_method_present,PASS,0 métodos presentes sem tipo parseado,Casos com método presente devem ter ao menos um tipo de método parseado.
+journal_area_mapped,PASS,0 linhas,Todos os periódicos do manifest atual devem ter área mapeada.

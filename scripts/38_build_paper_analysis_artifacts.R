@@ -45,6 +45,17 @@ parse_method_types <- function(x) {
   as.character(parsed)
 }
 
+method_type_parse_status <- function(x) {
+  if (is.na(x) || stringr::str_trim(x) == "") {
+    return("empty")
+  }
+  parsed <- tryCatch(jsonlite::fromJSON(x), error = function(e) NULL)
+  if (is.null(parsed)) {
+    return("parse_error")
+  }
+  "parsed"
+}
+
 period_3 <- function(year) {
   dplyr::case_when(
     dplyr::between(year, 2005L, 2011L) ~ "2005-2011",
@@ -169,6 +180,11 @@ classifications <- readr::read_csv(classifications_path, show_col_types = FALSE)
     credibility_revolution_screen_applicable = parse_bool(credibility_revolution_screen_applicable),
     credibility_revolution_method_present = parse_bool(credibility_revolution_method_present),
     tough_call = parse_bool(tough_call),
+    method_type_parse_status = vapply(
+      credibility_revolution_method_type,
+      method_type_parse_status,
+      character(1)
+    ),
     method_type = lapply(credibility_revolution_method_type, parse_method_types),
     sample_or_data_source_present = !is.na(sample_or_data_source) &
       stringr::str_squish(sample_or_data_source) != "" &
@@ -255,6 +271,39 @@ n_quant <- sum(analysis_df$is_empirical_quant_paper_torreblanca, na.rm = TRUE)
 n_causal <- sum(analysis_df$causal_or_explanatory_claim_present, na.rm = TRUE)
 n_screen <- sum(analysis_df$credibility_revolution_screen_applicable, na.rm = TRUE)
 n_strict <- sum(analysis_df$strict_design_method, na.rm = TRUE)
+
+artifact_validation_checks <- tibble::tibble(
+  check = c(
+    "classified_rows_positive",
+    "strict_design_subset_of_screen",
+    "method_type_json_no_parse_errors",
+    "method_type_present_when_method_present",
+    "journal_area_mapped"
+  ),
+  status = c(
+    n_classified > 0,
+    all(!analysis_df$strict_design_method | dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)),
+    !any(analysis_df$method_type_parse_status == "parse_error"),
+    all(!dplyr::coalesce(analysis_df$credibility_revolution_method_present, FALSE) |
+      lengths(analysis_df$method_type) > 0),
+    !any(analysis_df$journal_area == "Área a revisar")
+  ),
+  value = c(
+    as.character(n_classified),
+    paste0(sum(analysis_df$strict_design_method & !dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), " exceções"),
+    paste0(sum(analysis_df$method_type_parse_status == "parse_error"), " erros de parse"),
+    paste0(sum(dplyr::coalesce(analysis_df$credibility_revolution_method_present, FALSE) & lengths(analysis_df$method_type) == 0), " métodos presentes sem tipo parseado"),
+    paste0(sum(analysis_df$journal_area == "Área a revisar"), " linhas")
+  ),
+  implication = c(
+    "Há artigos classificados para gerar artefatos preliminares.",
+    "Todo desenho estrito deve pertencer ao screen de credibilidade.",
+    "Tipos de método devem ser JSON válido ou vazio.",
+    "Casos com método presente devem ter ao menos um tipo de método parseado.",
+    "Todos os periódicos do manifest atual devem ter área mapeada."
+  )
+) |>
+  dplyr::mutate(status = if_else(status, "PASS", "FAIL"))
 
 variable_mapping <- tibble::tribble(
   ~variable, ~status, ~source, ~derivation_rule, ~used_in_main_text, ~classification_complement_needed,
@@ -409,6 +458,7 @@ coverage_journal_period <- manifest |>
 
 readr::write_csv(analysis_df |> dplyr::select(-method_type), file.path(analysis_dir, "paper_analysis_dataset_preliminary.csv"))
 readr::write_csv(method_long, file.path(analysis_dir, "paper_method_long_preliminary.csv"))
+readr::write_csv(artifact_validation_checks, file.path(analysis_dir, "paper_artifact_validation_checks.csv"))
 readr::write_csv(variable_mapping, file.path(audit_dir, "variable_mapping_final.csv"))
 readr::write_csv(denominator_summary, file.path(tables_dir, "denominator_summary.csv"))
 readr::write_csv(table_1_corpus_description, file.path(tables_dir, "table_1_corpus_description.csv"))
@@ -452,11 +502,11 @@ figure_1 <- funnel_data |>
   ggplot2::geom_text(ggplot2::aes(label = n), vjust = -0.35, size = 3.4) +
   ggplot2::scale_fill_manual(values = c("#22577A", "#558B6E", "#DDA15E", "#BC6C25", "#6D597A", "#B56576", "#4A4E69")) +
   ggplot2::labs(
-    title = "Figura 1. Funil do corpus e da classificação disponível",
-    subtitle = "O primeiro degrau é o manifest elegível completo; os demais resultados substantivos usam apenas os artigos classificados.",
+    title = "Figura 1. Denominadores e dimensões da classificação disponível",
+    subtitle = "Os degraus substantivos não são todos aninhados: claims causais ou explicativos podem ocorrer em artigos qualitativos ou mistos.",
     x = NULL,
     y = "Artigos",
-    caption = "Denominadores: corpus elegível para o manifest; artigos classificados por leitura integral para variáveis substantivas; screen de credibilidade para desenho estrito."
+    caption = "Denominadores: manifest para cobertura; artigos classificados por leitura integral para variáveis substantivas; screen de credibilidade para desenho estrito."
   ) +
   theme_paper() +
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 25, hjust = 1))
