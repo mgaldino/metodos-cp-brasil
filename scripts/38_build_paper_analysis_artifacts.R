@@ -68,13 +68,15 @@ map_journal_area <- function(journal_title) {
     ) ~ "Relações Internacionais",
     journal_title %in% c(
       "Revista de Administração Pública",
-      "Cadernos EBAPE.BR"
+      "Cadernos EBAPE.BR",
+      "Cadernos Gestão Pública e Cidadania"
     ) ~ "Administração Pública",
     journal_title %in% c(
       "Dados",
       "DADOS - Revista de Ciências Sociais",
       "Lua Nova: Revista de Cultura e Política",
       "Novos Estudos CEBRAP",
+      "Novos estudos CEBRAP",
       "Revista Brasileira de Ciências Sociais"
     ) ~ "Ciência Política e Ciências Sociais",
     TRUE ~ "Área a revisar"
@@ -333,6 +335,7 @@ table_1_corpus_description <- manifest |>
     classified_n = dplyr::coalesce(classified_n, 0L),
     coverage_percent = fmt_pct(classified_n, manifest_n)
   ) |>
+  dplyr::select(-coverage_percent) |>
   tidyr::pivot_wider(
     names_from = period_3,
     values_from = c(manifest_n, classified_n),
