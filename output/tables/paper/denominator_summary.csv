@@ -1,0 +1,9 @@
+denominator,n,denominator_reference,denominator_n,percent
+Corpus completo elegível,5250,manifest completo,5250,100
+Artigos classificados por leitura integral,699,manifest completo,5250,13.3
+Artigos ainda não classificados,4551,manifest completo,5250,86.7
+Artigos empíricos classificados,568,classificados,699,81.3
+Artigos empíricos quantitativos classificados,324,classificados,699,46.4
+Artigos com claim causal ou explicativo classificados,597,classificados,699,85.4
+Artigos no screen de credibilidade classificados,147,classificados,699,21
+Artigos classificados com desenho estrito,16,classificados,699,2.3

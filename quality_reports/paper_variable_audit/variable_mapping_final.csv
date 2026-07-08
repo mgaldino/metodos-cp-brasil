@@ -1,0 +1,12 @@
+variable,status,source,derivation_rule,used_in_main_text,classification_complement_needed
+is_empirical_paper,available,classifications_integral_reading.csv,Classifier v3 boolean parsed from TRUE/FALSE.,TRUE,FALSE
+method_explicitness,missing,not available,No defensible derivation from current schema without a complementary classification of method/data/analytic-strategy explicitness.,FALSE,TRUE
+empirical_evidence_type,available,classifications_integral_reading.csv,Classifier v3 categorical field.,TRUE,FALSE
+quantitative_analysis_type,available,classifications_integral_reading.csv,Classifier v3 categorical field.,TRUE,FALSE
+has_statistical_inference,available,classifications_integral_reading.csv,Classifier v3 boolean parsed from TRUE/FALSE; interpreted only for quantitative articles.,TRUE,FALSE
+empirical_article_format,missing,not available,"Section reading logs are evidence for a future classifier, but the current logs do not encode IMRaD/essayistic format as a validated variable.",FALSE,TRUE
+causal_or_explanatory_claim_present,available,classifications_integral_reading.csv,Classifier v3 boolean parsed from TRUE/FALSE.,TRUE,FALSE
+strict_design_method,derived,credibility_revolution_method_type,"TRUE if any method type is in the conservative strict-design list; SEM, mediation, observational regression and fixed effects without explicit design do not count.",TRUE,FALSE
+journal_title,available,manifest and classifications,"Use classification value when present, coalesced with manifest title.",TRUE,FALSE
+journal_area,derived,journal_title,Hand-coded journal-title map in this script; unknown journals flagged as 'Área a revisar'.,TRUE,TRUE
+period_3,derived,year,"2005-2011, 2012-2018, 2019-2025.",TRUE,FALSE

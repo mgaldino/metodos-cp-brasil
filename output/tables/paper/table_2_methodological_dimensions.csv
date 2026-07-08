@@ -1,0 +1,9 @@
+dimension,category,n,denominator,denominator_n,percent,note
+Evidência,Artigo empírico,568,classificados,699,81.3,Variável disponível no classificador atual.
+Evidência,Somente qualitativo,244,classificados,699,34.9,Variável disponível no classificador atual.
+Evidência,Somente quantitativo,89,classificados,699,12.7,Variável disponível no classificador atual.
+Evidência,Misto,235,classificados,699,33.6,Variável disponível no classificador atual.
+Quantificação,Modelagem estatística,117,classificados,699,16.7,Variável disponível no classificador atual.
+Quantificação,Inferência estatística,104,classificados,699,14.9,Variável disponível no classificador atual.
+Explicitação,method_explicitness,NA,não disponível,NA,NA,Não usada como resultado; exige classificação complementar.
+Formato,empirical_article_format,NA,não disponível,NA,NA,Não usada como resultado; exige classificação complementar.

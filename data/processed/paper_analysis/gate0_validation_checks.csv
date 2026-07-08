@@ -1,0 +1,12 @@
+check,status,value,implication
+manifest_exists,PASS,/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv,Manifest canônico encontrado.
+manifest_pid_unique,PASS,5250 PIDs únicos em 5250 linhas,O manifest tem uma linha por PID.
+classifications_pid_unique,PASS,699 PIDs únicos em 699 linhas,O CSV combinado tem uma linha por PID.
+classified_pids_in_manifest,PASS,0 PIDs classificados fora do manifest,Classificações combinadas estão dentro do escopo analítico atual.
+reading_log_for_each_classified_pid,PASS,699 de 699 classificados com log,Cada classificação integrada deve ter evidência de leitura integral.
+fulltext_for_each_manifest_pid,PASS,5250 de 5250 PIDs do manifest com texto integral,Todo PID do manifest deve ter texto integral rastreável.
+excluded_main_journals_absent_from_manifest,PASS,,BJPE e Civitas não entram na base analítica do paper.
+excluded_main_journals_absent_from_classifications,PASS,,BJPE e Civitas não entram nos resultados do paper.
+manifest_years_2005_2025,PASS,2005-2025,O escopo temporal do manifest está correto.
+classified_years_2005_2025,PASS,2005-2025,O escopo temporal das classificações está correto.
+classification_covers_full_manifest,FAIL,699 de 5250 PIDs classificados (13.3%),"Se FAIL, os resultados do paper precisam ser explicitamente preliminares."
