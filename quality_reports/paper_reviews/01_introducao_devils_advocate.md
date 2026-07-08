@@ -1,4 +1,4 @@
-# Devil's Advocate Report — Introdução
+# Devil's Advocate Report: Introdução
 
 ## Escopo
 
@@ -100,12 +100,12 @@ A introdução ainda promete mais do que a base atual pode entregar. Ela formula
 
 ## Ranking de vulnerabilidades
 
-1. **Promessa de medir explicitação e arquitetura sem variáveis disponíveis** — pode derrubar a coerência da contribuição se a introdução não for rebaixada para versão preliminar/desenho de pesquisa.
-2. **Uso retórico do universo 2005-2025 apesar de só 699/5.250 PIDs classificados** — pode virar overclaiming sobre o campo.
-3. **Denominação ampla demais do corpus como Ciência Política brasileira** — expõe o paper a crítica de cobertura, mesmo quando o manifest estiver completo.
-4. **Número de 16 desenhos estritos sem qualificação derivada e denominador preferencial** — não derruba o paper, mas fragiliza a primeira impressão dos resultados.
-5. **Risco residual de parecer ataque ao pluralismo** — parcialmente mitigado pelo texto, mas ainda depende de formulações sobre "arquitetura" e "padronização".
-6. **Citações narrativas potencialmente redundantes** — problema mecânico, fácil de corrigir.
+1. **Promessa de medir explicitação e arquitetura sem variáveis disponíveis**: pode derrubar a coerência da contribuição se a introdução não for rebaixada para versão preliminar/desenho de pesquisa.
+2. **Uso retórico do universo 2005-2025 apesar de só 699/5.250 PIDs classificados**: pode virar overclaiming sobre o campo.
+3. **Denominação ampla demais do corpus como Ciência Política brasileira**: expõe o paper a crítica de cobertura, mesmo quando o manifest estiver completo.
+4. **Número de 16 desenhos estritos sem qualificação derivada e denominador preferencial**: não derruba o paper, mas fragiliza a primeira impressão dos resultados.
+5. **Risco residual de parecer ataque ao pluralismo**: parcialmente mitigado pelo texto, mas ainda depende de formulações sobre "arquitetura" e "padronização".
+6. **Citações narrativas potencialmente redundantes**: problema mecânico, fácil de corrigir.
 
 ## O que sobrevive ao escrutínio
 
