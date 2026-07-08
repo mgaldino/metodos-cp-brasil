@@ -1,6 +1,18 @@
 # Prompt `/goal` para escrever o paper
 
-Use este prompt em uma nova sessão Codex aberta na raiz do repositório.
+Use uma das duas opções abaixo em uma nova sessão Codex aberta na raiz do repositório.
+
+## Opção curta
+
+Copie e cole este bloco curto na nova sessão:
+
+```text
+/goal Leia integralmente `quality_reports/plans/2026-07-08-write-paper-goal-prompt.md`, ignore a seção "Opção curta" depois de entendê-la, e execute o bloco longo em "Opção completa" como a especificação operacional do goal. Siga todos os gates, separações entre implementação e revisão, skills obrigatórias, verificações e critérios de encerramento definidos naquele bloco. Não faça commit ou push sem pedido explícito.
+```
+
+## Opção completa
+
+Copie e cole o bloco longo abaixo se quiser passar toda a especificação diretamente na conversa.
 
 ````text
 /goal Escrever uma versão metodologicamente defensável do paper `paper/paper.Rmd`, substituindo os placeholders atuais por texto, tabelas, figuras e um PDF renderizado, sem overclaiming sobre dados ainda incompletos. O processo deve separar implementação e revisão: cada parte substantiva do paper deve ser escrita por um subagente implementador independente e revisada por outro subagente, sempre com Devil's Advocate. Quem revisa não implementa; quem implementa não revisa o próprio trabalho.
