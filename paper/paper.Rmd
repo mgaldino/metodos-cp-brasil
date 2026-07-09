@@ -128,11 +128,11 @@ A estratégia empírica é uma estratégia de mensuração e auditoria, não uma
 
 A palavra "funil" deve ser lida com cuidado. Algumas etapas são aninhadas, como o cálculo de desenhos estritos dentro do screen de credibilidade. Outras dimensões são cruzadas: claims causais ou explicativos podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos os degraus.
 
-```{r figura-1, fig.cap="Denominadores e dimensões da classificação disponível. Os degraus substantivos não são todos aninhados; o desenho estrito deve ser lido dentro do screen de credibilidade.", out.width="95%"}
+```{r figura-1, fig.cap="Denominadores e dimensões da classificação disponível. Os painéis são independentes para evitar ler dimensões cruzadas como funil aninhado; o desenho estrito deve ser lido dentro do screen de credibilidade.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 ```
 
-O núcleo atual de variáveis usadas no texto principal é composto apenas por campos disponíveis ou derivados de modo auditável. `is_empirical_paper` identifica se o artigo apresenta evidência empírica própria ou reanalisada. `empirical_evidence_type` classifica a evidência como ausente, qualitativa, quantitativa ou mista. `quantitative_analysis_type` separa ausência de análise quantitativa, estatística descritiva, testes ou correlações bivariadas e modelagem estatística. `has_statistical_inference` registra teste, intervalo, erro-padrão, p-valor, modelo inferencial ou procedimento equivalente. `causal_or_explanatory_claim_present` identifica claims causais ou explicativos. `credibility_revolution_screen_applicable` delimita artigos em que a comparação com a revolução da credibilidade é aplicável. `strict_design_method` é derivada de `credibility_revolution_method_type` por uma regra conservadora.
+O núcleo atual de variáveis usadas no texto principal é composto apenas por campos disponíveis ou derivados de modo auditável. `is_empirical_paper` identifica se o artigo apresenta evidência empírica própria ou reanalisada. `empirical_evidence_type` classifica a evidência como ausente, qualitativa, quantitativa ou mista. `quantitative_analysis_type` separa ausência de análise quantitativa, estatística descritiva, testes ou correlações bivariadas e modelagem estatística. `has_statistical_inference` registra teste, intervalo, erro-padrão, p-valor, modelo inferencial ou procedimento equivalente. `causal_or_explanatory_claim_present` identifica claims causais ou explicativos. `credibility_revolution_screen_applicable` delimita artigos em que a comparação com a revolução da credibilidade é aplicável; o screen pode ser acionado por critério quantitativo/modelagem ou por claim causal ou explicativo, e por isso não é tratado como subconjunto puro de `causal_or_explanatory_claim_present`. `strict_design_method` é derivada de `credibility_revolution_method_type` por uma regra conservadora.
 
 A regra de `strict_design_method` inclui apenas métodos associados a desenhos explícitos de identificação causal: experimentos, diferenças-em-diferenças, event study, variáveis instrumentais, regressão descontínua, regression kink, controle sintético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais formais, estimadores duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, SEM, mediação causal e efeitos fixos não entram no numerador estrito pela simples presença nominal. Na regra atual, esses casos só poderiam ser reclassificados como desenho de identificação por auditoria complementar que demonstrasse discussão explícita de identificação e plausibilidade dos pressupostos.
 
@@ -189,7 +189,7 @@ A Figura 4 mostra por que essa cautela é necessária: ela é um diagnóstico de
 knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
 ```
 
-O resultado mais claro no subconjunto classificado é a distância entre claims causais ou explicativos e desenhos estritos de identificação. Entre os `r format_n(n_classificados)` artigos classificados, `r format_n(n_claim)` apresentam claim causal ou explicativo. Apenas `r format_n(n_screen)` entram no screen de credibilidade. Dentro desse screen, `r format_n(n_estrito)` apresentam desenho estrito de identificação. A Tabela 3 usa denominadores distintos por linha: o desenho estrito é calculado sobre o screen de credibilidade, enquanto diagnósticos e filas de auditoria são contagens no conjunto classificado.
+O resultado mais claro no subconjunto classificado é a distância entre claims causais ou explicativos e desenhos estritos de identificação. Entre os `r format_n(n_classificados)` artigos classificados, `r format_n(n_claim)` apresentam claim causal ou explicativo. `r format_n(n_screen)` entram no screen de credibilidade, que também pode ser acionado por modelagem ou critério quantitativo. Dentro desse screen, `r format_n(n_estrito)` apresentam desenho estrito de identificação. A Tabela 3 usa denominadores distintos por linha: o desenho estrito é calculado sobre o screen de credibilidade, enquanto diagnósticos e filas de auditoria são contagens no conjunto classificado. As categorias de método do painel diagnóstico não são mutuamente exclusivas.
 
 ```{r tabela-3}
 tabela_3_display <- tabela_credibilidade |>
@@ -199,6 +199,7 @@ tabela_3_display <- tabela_credibilidade |>
     percent = format_pct(percent)
   ) |>
   dplyr::rename(
+    Painel = panel,
     Dimensão = dimension,
     Categoria = category,
     N = n,
@@ -210,7 +211,7 @@ tabela_3_display <- tabela_credibilidade |>
 
 knitr::kable(
   tabela_3_display,
-  caption = "Causalidade e credibilidade nos artigos classificados. As linhas usam denominadores distintos e não formam uma distribuição única.",
+  caption = "Causalidade e credibilidade nos artigos classificados. As linhas usam denominadores distintos e não formam uma distribuição única; categorias de método no painel diagnóstico não são mutuamente exclusivas.",
   booktabs = TRUE,
   longtable = TRUE
 )

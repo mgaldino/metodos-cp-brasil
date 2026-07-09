@@ -15,6 +15,7 @@ suppressPackageStartupMessages({
 
 project_dir <- normalizePath(".", mustWork = TRUE)
 path <- function(...) file.path(project_dir, ...)
+period_3_levels <- c("2005-2011", "2012-2018", "2019-2025")
 
 manifest_path <- path("data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv")
 classifications_path <- path("data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined/classifications_integral_reading.csv")
@@ -57,12 +58,12 @@ method_type_parse_status <- function(x) {
 }
 
 period_3 <- function(year) {
-  dplyr::case_when(
+  factor(dplyr::case_when(
     dplyr::between(year, 2005L, 2011L) ~ "2005-2011",
     dplyr::between(year, 2012L, 2018L) ~ "2012-2018",
     dplyr::between(year, 2019L, 2025L) ~ "2019-2025",
     TRUE ~ NA_character_
-  )
+  ), levels = period_3_levels)
 }
 
 map_journal_area <- function(journal_title) {
@@ -271,35 +272,105 @@ n_quant <- sum(analysis_df$is_empirical_quant_paper_torreblanca, na.rm = TRUE)
 n_causal <- sum(analysis_df$causal_or_explanatory_claim_present, na.rm = TRUE)
 n_screen <- sum(analysis_df$credibility_revolution_screen_applicable, na.rm = TRUE)
 n_strict <- sum(analysis_df$strict_design_method, na.rm = TRUE)
+hash_matches <- !is.na(analysis_df$classification_input_text_hash) &
+  !is.na(analysis_df$manifest_input_text_hash) &
+  analysis_df$classification_input_text_hash == analysis_df$manifest_input_text_hash
+
+screen_without_causal_claim <- analysis_df |>
+  dplyr::filter(
+    dplyr::coalesce(credibility_revolution_screen_applicable, FALSE),
+    !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE)
+  ) |>
+  dplyr::select(
+    pid,
+    title,
+    journal_title,
+    year,
+    quantitative_analysis_type,
+    credibility_revolution_screen_reason,
+    credibility_revolution_method_present,
+    credibility_revolution_method_type
+  )
+
+screen_reason_diagnostics <- analysis_df |>
+  dplyr::filter(dplyr::coalesce(credibility_revolution_screen_applicable, FALSE)) |>
+  dplyr::count(
+    credibility_revolution_screen_reason,
+    causal_or_explanatory_claim_present,
+    is_empirical_quant_paper_torreblanca,
+    name = "n"
+  ) |>
+  dplyr::arrange(credibility_revolution_screen_reason, causal_or_explanatory_claim_present)
+
+method_overlap_summary <- tibble::tibble(
+  overlap = c(
+    "strict_and_diagnostic",
+    "strict_and_other_modern",
+    "diagnostic_and_other_modern",
+    "strict_diagnostic_other_modern"
+  ),
+  n = c(
+    sum(analysis_df$strict_design_method & analysis_df$diagnostic_not_design, na.rm = TRUE),
+    sum(analysis_df$strict_design_method & analysis_df$other_modern_causal_method, na.rm = TRUE),
+    sum(analysis_df$diagnostic_not_design & analysis_df$other_modern_causal_method, na.rm = TRUE),
+    sum(analysis_df$strict_design_method & analysis_df$diagnostic_not_design & analysis_df$other_modern_causal_method, na.rm = TRUE)
+  ),
+  note = c(
+    "Categorias de método não são mutuamente exclusivas; um artigo pode registrar desenho estrito e diagnóstico.",
+    "Categorias de método não são mutuamente exclusivas; other_modern pode coexistir com desenho estrito.",
+    "Categorias de método não são mutuamente exclusivas.",
+    "Sobreposição tripla."
+  )
+)
 
 artifact_validation_checks <- tibble::tibble(
   check = c(
     "classified_rows_positive",
     "strict_design_subset_of_screen",
+    "screen_has_quant_or_causal_trigger",
+    "screen_without_causal_claim_documented",
     "method_type_json_no_parse_errors",
     "method_type_present_when_method_present",
+    "classification_hash_matches_manifest",
+    "classified_fulltext_validation_pass",
     "journal_area_mapped"
   ),
   status = c(
     n_classified > 0,
     all(!analysis_df$strict_design_method | dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)),
+    all(!dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE) |
+      dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE) |
+      dplyr::coalesce(analysis_df$causal_or_explanatory_claim_present, FALSE)),
+    TRUE,
     !any(analysis_df$method_type_parse_status == "parse_error"),
     all(!dplyr::coalesce(analysis_df$credibility_revolution_method_present, FALSE) |
       lengths(analysis_df$method_type) > 0),
+    all(hash_matches),
+    all(analysis_df$fulltext_validation_status == "PASS"),
     !any(analysis_df$journal_area == "Área a revisar")
   ),
   value = c(
     as.character(n_classified),
     paste0(sum(analysis_df$strict_design_method & !dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), " exceções"),
+    paste0(sum(dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE) &
+      !dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE) &
+      !dplyr::coalesce(analysis_df$causal_or_explanatory_claim_present, FALSE)), " exceções"),
+    paste0(nrow(screen_without_causal_claim), " casos screen=TRUE sem claim causal/explicativo; ver screen_without_causal_claim.csv"),
     paste0(sum(analysis_df$method_type_parse_status == "parse_error"), " erros de parse"),
     paste0(sum(dplyr::coalesce(analysis_df$credibility_revolution_method_present, FALSE) & lengths(analysis_df$method_type) == 0), " métodos presentes sem tipo parseado"),
+    paste0(sum(!hash_matches), " divergências"),
+    paste0(sum(analysis_df$fulltext_validation_status != "PASS"), " casos sem PASS"),
     paste0(sum(analysis_df$journal_area == "Área a revisar"), " linhas")
   ),
   implication = c(
     "Há artigos classificados para gerar artefatos preliminares.",
     "Todo desenho estrito deve pertencer ao screen de credibilidade.",
+    "O screen pode ser acionado por critério quantitativo/modelagem ou por claim causal/explicativo.",
+    "Casos de screen sem claim causal/explicativo são diagnóstico documentado, não falha automática.",
     "Tipos de método devem ser JSON válido ou vazio.",
     "Casos com método presente devem ter ao menos um tipo de método parseado.",
+    "Classificações e manifest devem apontar para o mesmo texto de entrada.",
+    "Artigos classificados devem ter texto integral validado como PASS no manifest.",
     "Todos os periódicos do manifest atual devem ter área mapeada."
   )
 ) |>
@@ -395,6 +466,19 @@ table_1_corpus_description <- manifest |>
     classified_total = `classified_n_2005-2011` + `classified_n_2012-2018` + `classified_n_2019-2025`,
     coverage_percent = fmt_pct(classified_total, manifest_total)
   ) |>
+  dplyr::select(
+    journal_area,
+    journal_title,
+    `manifest_n_2005-2011`,
+    `manifest_n_2012-2018`,
+    `manifest_n_2019-2025`,
+    `classified_n_2005-2011`,
+    `classified_n_2012-2018`,
+    `classified_n_2019-2025`,
+    manifest_total,
+    classified_total,
+    coverage_percent
+  ) |>
   dplyr::arrange(journal_area, journal_title)
 
 table_2_methodological_dimensions <- tibble::tribble(
@@ -410,12 +494,12 @@ table_2_methodological_dimensions <- tibble::tribble(
 )
 
 table_3_causality_credibility <- tibble::tribble(
-  ~dimension, ~category, ~n, ~denominator, ~denominator_n, ~percent, ~note,
-  "Causalidade", "Claim causal ou explicativo", n_causal, "classificados", n_classified, fmt_pct(n_causal, n_classified), "Variável disponível no classificador atual.",
-  "Causalidade", "Screen de credibilidade aplicável", n_screen, "classificados", n_classified, fmt_pct(n_screen, n_classified), "Funil inspirado em Torreblanca et al.",
-  "Credibilidade", "Desenho estrito de identificação", n_strict, "screen de credibilidade", n_screen, fmt_pct(n_strict, n_screen), "Numerador conservador do paper.",
-  "Credibilidade", "Diagnóstico, não desenho", sum(analysis_df$diagnostic_not_design, na.rm = TRUE), "classificados", n_classified, fmt_pct(sum(analysis_df$diagnostic_not_design, na.rm = TRUE), n_classified), "Inclui regressão observacional causal, efeitos fixos sem desenho ou nenhum método detectado.",
-  "Credibilidade", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method, na.rm = TRUE), "classificados", n_classified, fmt_pct(sum(analysis_df$other_modern_causal_method, na.rm = TRUE), n_classified), "Fila conservadora de auditoria; não entra automaticamente no numerador principal."
+  ~panel, ~dimension, ~category, ~n, ~denominator, ~denominator_n, ~percent, ~note,
+  "Claims e screen", "Causalidade", "Claim causal ou explicativo", n_causal, "classificados", n_classified, fmt_pct(n_causal, n_classified), "Variável disponível no classificador atual.",
+  "Claims e screen", "Causalidade", "Screen de credibilidade aplicável", n_screen, "classificados", n_classified, fmt_pct(n_screen, n_classified), "Screen pode ser acionado por modelagem/critério quantitativo ou por claim causal/explicativo.",
+  "Claims e screen", "Credibilidade", "Desenho estrito de identificação", n_strict, "screen de credibilidade", n_screen, fmt_pct(n_strict, n_screen), "Numerador conservador do paper; também corresponde a 2,3% dos classificados.",
+  "Diagnóstico de método (não exclusivo)", "Credibilidade", "Diagnóstico, não desenho", sum(analysis_df$diagnostic_not_design, na.rm = TRUE), "classificados", n_classified, fmt_pct(sum(analysis_df$diagnostic_not_design, na.rm = TRUE), n_classified), "Categorias de método não são mutuamente exclusivas; inclui regressão observacional causal, efeitos fixos sem desenho ou nenhum método detectado.",
+  "Diagnóstico de método (não exclusivo)", "Credibilidade", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method, na.rm = TRUE), "classificados", n_classified, fmt_pct(sum(analysis_df$other_modern_causal_method, na.rm = TRUE), n_classified), "Categorias de método não são mutuamente exclusivas; fila conservadora de auditoria."
 )
 
 journal_metrics <- analysis_df |>
@@ -459,6 +543,9 @@ coverage_journal_period <- manifest |>
 readr::write_csv(analysis_df |> dplyr::select(-method_type), file.path(analysis_dir, "paper_analysis_dataset_preliminary.csv"))
 readr::write_csv(method_long, file.path(analysis_dir, "paper_method_long_preliminary.csv"))
 readr::write_csv(artifact_validation_checks, file.path(analysis_dir, "paper_artifact_validation_checks.csv"))
+readr::write_csv(screen_without_causal_claim, file.path(analysis_dir, "screen_without_causal_claim.csv"))
+readr::write_csv(screen_reason_diagnostics, file.path(analysis_dir, "screen_reason_diagnostics.csv"))
+readr::write_csv(method_overlap_summary, file.path(analysis_dir, "method_overlap_summary.csv"))
 readr::write_csv(variable_mapping, file.path(audit_dir, "variable_mapping_final.csv"))
 readr::write_csv(denominator_summary, file.path(tables_dir, "denominator_summary.csv"))
 readr::write_csv(table_1_corpus_description, file.path(tables_dir, "table_1_corpus_description.csv"))
@@ -479,10 +566,14 @@ theme_paper <- function() {
     )
 }
 
-funnel_data <- tibble::tibble(
-  step = factor(
-    c("Corpus elegível", "Classificados", "Empíricos", "Quantitativos", "Claim causal/explicativo", "Screen de credibilidade", "Desenho estrito"),
-    levels = c("Corpus elegível", "Classificados", "Empíricos", "Quantitativos", "Claim causal/explicativo", "Screen de credibilidade", "Desenho estrito")
+classification_dimension_data <- tibble::tibble(
+  group = factor(
+    c("Cobertura", "Cobertura", "Evidência", "Quantificação", "Claims e screen", "Claims e screen", "Credibilidade"),
+    levels = c("Cobertura", "Evidência", "Quantificação", "Claims e screen", "Credibilidade")
+  ),
+  measure = factor(
+    c("Corpus elegível", "Classificados", "Empíricos", "Componente quantitativo", "Claim causal/explicativo", "Screen de credibilidade", "Desenho estrito"),
+    levels = rev(c("Corpus elegível", "Classificados", "Empíricos", "Componente quantitativo", "Claim causal/explicativo", "Screen de credibilidade", "Desenho estrito"))
   ),
   n = c(n_manifest, n_classified, n_empirical, n_quant, n_causal, n_screen, n_strict),
   denominator_note = c(
@@ -496,20 +587,27 @@ funnel_data <- tibble::tibble(
   )
 )
 
-figure_1 <- funnel_data |>
-  ggplot2::ggplot(ggplot2::aes(x = step, y = n, fill = step)) +
-  ggplot2::geom_col(width = 0.72, show.legend = FALSE) +
-  ggplot2::geom_text(ggplot2::aes(label = n), vjust = -0.35, size = 3.4) +
-  ggplot2::scale_fill_manual(values = c("#22577A", "#558B6E", "#DDA15E", "#BC6C25", "#6D597A", "#B56576", "#4A4E69")) +
+figure_1 <- classification_dimension_data |>
+  ggplot2::ggplot(ggplot2::aes(x = n, y = measure, fill = group)) +
+  ggplot2::geom_col(width = 0.68, show.legend = FALSE) +
+  ggplot2::geom_text(ggplot2::aes(label = n), hjust = -0.12, size = 3.2) +
+  ggplot2::facet_wrap(~group, scales = "free_x", ncol = 1) +
+  ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = c(0, 0.18))) +
+  ggplot2::scale_fill_manual(values = c(
+    "Cobertura" = "#22577A",
+    "Evidência" = "#558B6E",
+    "Quantificação" = "#DDA15E",
+    "Claims e screen" = "#6D597A",
+    "Credibilidade" = "#B56576"
+  )) +
   ggplot2::labs(
     title = "Denominadores e dimensões da classificação disponível",
-    subtitle = "Os degraus substantivos não são todos aninhados: claims causais ou explicativos podem ocorrer em artigos qualitativos ou mistos.",
-    x = NULL,
-    y = "Artigos",
+    subtitle = "Barras em painéis independentes evitam interpretar dimensões cruzadas como funil aninhado.",
+    x = "Artigos",
+    y = NULL,
     caption = "Denominadores: manifest para cobertura; artigos classificados por leitura integral para variáveis substantivas; screen de credibilidade para desenho estrito."
   ) +
-  theme_paper() +
-  ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 25, hjust = 1))
+  theme_paper()
 
 ggplot2::ggsave(file.path(figures_dir, "figure_1_corpus_funnel.pdf"), figure_1, width = 8.5, height = 5.2)
 
