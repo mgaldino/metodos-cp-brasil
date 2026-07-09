@@ -50,7 +50,10 @@ def as_project_path(path: Path) -> Path:
 
 
 def project_relative(path: Path) -> str:
-    return str(path.relative_to(PROJECT_DIR))
+    try:
+        return str(path.relative_to(PROJECT_DIR))
+    except ValueError:
+        return str(path)
 
 
 def load_labels(args: argparse.Namespace) -> list[str]:

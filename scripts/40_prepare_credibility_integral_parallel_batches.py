@@ -77,7 +77,10 @@ def as_project_path(path: Path) -> Path:
 
 
 def project_relative(path: Path) -> str:
-    return str(path.relative_to(PROJECT_DIR))
+    try:
+        return str(path.relative_to(PROJECT_DIR))
+    except ValueError:
+        return str(path)
 
 
 def read_csv_rows(path: Path) -> list[dict[str, str]]:
@@ -405,12 +408,16 @@ def write_plan_reports(args: argparse.Namespace, batches: list[BatchStatus], man
 
 def main() -> int:
     args = parse_args()
+    plan_md_was_default = args.plan_md == DEFAULT_PLAN_MD
+    plan_json_was_default = args.plan_json == DEFAULT_PLAN_JSON
     args.manifest = as_project_path(args.manifest)
     args.out_dir = as_project_path(args.out_dir)
     args.batch_dir = as_project_path(args.batch_dir)
     args.quality_dir = as_project_path(args.quality_dir)
-    args.plan_md = as_project_path(args.plan_md)
-    args.plan_json = as_project_path(args.plan_json)
+    args.plan_md = args.quality_dir / DEFAULT_PLAN_MD.name if plan_md_was_default else as_project_path(args.plan_md)
+    args.plan_json = (
+        args.quality_dir / DEFAULT_PLAN_JSON.name if plan_json_was_default else as_project_path(args.plan_json)
+    )
 
     if args.workers <= 0:
         raise SystemExit("--workers deve ser positivo.")
