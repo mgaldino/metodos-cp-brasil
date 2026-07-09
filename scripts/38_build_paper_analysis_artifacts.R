@@ -502,7 +502,7 @@ figure_1 <- funnel_data |>
   ggplot2::geom_text(ggplot2::aes(label = n), vjust = -0.35, size = 3.4) +
   ggplot2::scale_fill_manual(values = c("#22577A", "#558B6E", "#DDA15E", "#BC6C25", "#6D597A", "#B56576", "#4A4E69")) +
   ggplot2::labs(
-    title = "Figura 1. Denominadores e dimensões da classificação disponível",
+    title = "Denominadores e dimensões da classificação disponível",
     subtitle = "Os degraus substantivos não são todos aninhados: claims causais ou explicativos podem ocorrer em artigos qualitativos ou mistos.",
     x = NULL,
     y = "Artigos",
@@ -530,7 +530,7 @@ figure_2 <- matrix_data |>
   ggplot2::geom_text(ggplot2::aes(label = if_else(is.na(percent), "", paste0(percent, "%"))), size = 2.7) +
   ggplot2::scale_fill_gradient(low = "#F5F1E8", high = "#22577A", na.value = "grey90", limits = c(0, 100)) +
   ggplot2::labs(
-    title = "Figura 2. Matriz preliminar por periódico e dimensão observada",
+    title = "Matriz preliminar por periódico e dimensão observada",
     subtitle = "Dimensões de explicitação metodológica e formato textual não são exibidas porque ainda exigem classificação complementar.",
     x = NULL,
     y = NULL,
@@ -557,7 +557,7 @@ figure_3 <- period_plot_data |>
   ggplot2::scale_y_continuous(labels = function(x) paste0(x, "%"), limits = c(0, 100)) +
   ggplot2::scale_color_manual(values = c("#22577A", "#558B6E", "#DDA15E", "#BC6C25", "#6D597A", "#B56576")) +
   ggplot2::labs(
-    title = "Figura 3. Variação por período entre artigos classificados",
+    title = "Variação por período entre artigos classificados",
     subtitle = "Série preliminar calculada somente sobre artigos já classificados por leitura integral.",
     x = "Período",
     y = "Percentual",
@@ -575,7 +575,7 @@ figure_4 <- coverage_journal_period |>
   ggplot2::geom_text(ggplot2::aes(label = paste0(classified_n, "/", manifest_n)), size = 2.8) +
   ggplot2::scale_fill_gradient(low = "#F5F1E8", high = "#6D597A", na.value = "grey90", limits = c(0, 100)) +
   ggplot2::labs(
-    title = "Figura 4. Cobertura de classificação por periódico e período",
+    title = "Cobertura de classificação por periódico e período",
     subtitle = "Esta figura é diagnóstico de cobertura, não resultado substantivo sobre práticas metodológicas.",
     x = "Período",
     y = NULL,
