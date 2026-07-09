@@ -588,8 +588,8 @@ classification_dimension_data <- tibble::tibble(
   ),
   n = c(n_manifest, n_classified, n_empirical, n_quant, n_causal, n_screen, n_strict),
   denominator_note = c(
-    "manifest completo",
-    "manifest completo",
+    "universo completo",
+    "universo completo",
     "classificados",
     "classificados",
     "classificados",
@@ -638,7 +638,7 @@ figure_1 <- figure_1_data |>
   ggplot2::scale_y_continuous(limits = c(0.4, max(figure_1_data$y) + 1.1), expand = c(0, 0)) +
   ggplot2::labs(
     title = "Denominadores e dimensões da classificação disponível",
-    subtitle = "Percentuais usam manifest, artigos classificados ou screen de credibilidade conforme a linha.",
+    subtitle = "Percentuais usam universo completo, artigos classificados ou screen de credibilidade conforme a linha.",
     x = NULL,
     y = NULL
   ) +
@@ -718,7 +718,7 @@ figure_4 <- coverage_journal_period |>
     x = "Período",
     y = NULL,
     fill = "% classificado",
-    caption = "Denominador: PIDs do manifest elegível em cada célula periódico-período; rótulos mostram classificados/manifest."
+    caption = "Denominador: artigos elegíveis em cada célula periódico-período; rótulos mostram classificados/total."
   ) +
   theme_paper()
 

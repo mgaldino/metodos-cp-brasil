@@ -189,7 +189,7 @@ Com esse diagnóstico de cobertura em primeiro plano, a figura posterior organiz
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
-O resultado mais claro no subconjunto classificado é a distância entre claims causais ou explicativos e desenhos estritos de identificação. Entre os `r format_n(n_classificados)` artigos classificados, `r format_n(n_claim)` apresentam claim causal ou explicativo. `r format_n(n_screen)` entram no screen de credibilidade, que também pode ser acionado por modelagem ou critério quantitativo. Dentro desse screen, `r format_n(n_estrito)` apresentam desenho estrito de identificação. A Tabela 3 usa denominadores distintos por linha: o desenho estrito é calculado sobre o screen de credibilidade, enquanto diagnósticos e filas de auditoria são contagens no conjunto classificado. As categorias de método do painel diagnóstico não são mutuamente exclusivas.
+O resultado mais claro no subconjunto classificado é a distância entre claims causais ou explicativos e desenhos estritos de identificação. Entre os `r format_n(n_classificados)` artigos classificados, `r format_n(n_claim)` apresentam claim causal ou explicativo. `r format_n(n_screen)` entram no screen de credibilidade, que também pode ser acionado por modelagem ou critério quantitativo. Dentro desse screen, `r format_n(n_estrito)` apresentam desenho estrito de identificação. A Tabela 3 usa denominadores distintos por linha: o desenho estrito é calculado sobre o screen de credibilidade, enquanto diagnósticos e casos a revisar são contagens no conjunto classificado. As categorias de método do painel diagnóstico não são mutuamente exclusivas.
 
 ```{r tabela-3}
 tabela_3_display <- tabela_credibilidade |>
@@ -212,7 +212,7 @@ tabela_3_display <- tabela_credibilidade |>
       Categoria,
       "Screen de credibilidade aplicável" = "Screen de credibilidade",
       "Desenho estrito de identificação" = "Desenho estrito",
-      "Outro método moderno a auditar" = "Outro método a auditar"
+      "Outro método moderno a auditar" = "Outro método a revisar"
     )
   )
 
@@ -224,7 +224,7 @@ knitr::kable(
 )
 ```
 
-As categorias de método no painel diagnóstico não são mutuamente exclusivas. O desenho estrito usa o screen de credibilidade como denominador principal; diagnósticos e filas de auditoria são contagens no conjunto classificado.
+As categorias de método no painel diagnóstico não são mutuamente exclusivas. O desenho estrito usa o screen de credibilidade como denominador principal; diagnósticos e casos a revisar são contagens no conjunto classificado.
 
 Essa diferença não significa que artigos fora do screen tenham menor valor científico. Ela significa que a comparação com a revolução da credibilidade só é diretamente aplicável a um subconjunto de claims e desenhos. Fora desse screen, a pergunta é a adequação entre evidência, método e claim. Dentro do screen, a pergunta é a presença de desenho de identificação e discussão de pressupostos.
 
