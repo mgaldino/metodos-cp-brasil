@@ -1,8 +1,8 @@
 denominator,n,denominator_reference,denominator_n,percent
 corpus_completo_elegivel,5250,manifest completo,5250,100
-artigos_classificados_com_leitura_integral,699,manifest completo,5250,13.3
-artigos_a_classificar,4551,manifest completo,5250,86.7
-artigos_empiricos_classificados,568,classificados,699,81.3
-artigos_empiricos_quantitativos_classificados,324,classificados,699,46.4
-artigos_com_claim_causal_ou_explicativo_classificados,597,classificados,699,85.4
-artigos_no_screen_de_credibilidade_classificados,147,classificados,699,21
+artigos_classificados_com_leitura_integral,799,manifest completo,5250,15.2
+artigos_a_classificar,4451,manifest completo,5250,84.8
+artigos_empiricos_classificados,647,classificados,799,81
+artigos_empiricos_quantitativos_classificados,349,classificados,799,43.7
+artigos_com_claim_causal_ou_explicativo_classificados,682,classificados,799,85.4
+artigos_no_screen_de_credibilidade_classificados,150,classificados,799,18.8

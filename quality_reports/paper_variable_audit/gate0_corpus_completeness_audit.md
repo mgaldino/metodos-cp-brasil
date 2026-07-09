@@ -1,24 +1,24 @@
 # Gate 0: auditoria de completude e escopo do paper
 
-Gerado em: 2026-07-08 21:12:48 -0300
+Gerado em: 2026-07-08 21:21:05 -0300
 
 ## Resultado do gate
 
 - A classificação ainda não cobre o manifest completo; qualquer manuscrito precisa rotular os resultados como preliminares.
 - Manifest completo elegível: 5250 PIDs.
-- PIDs classificados com leitura integral e no manifest: 699 (13.3% do manifest).
-- PIDs ainda sem classificação combinada: 4551.
+- PIDs classificados com leitura integral e no manifest: 799 (15.2% do manifest).
+- PIDs ainda sem classificação combinada: 4451.
 - PIDs do manifest com texto integral no corpus: 5250 de 5250.
 - PIDs totais no arquivo de texto integral do corpus: 6642.
 
 ## Denominadores atuais
 
 - Corpus completo elegível: 5250.
-- Artigos classificados: 699.
-- Artigos empíricos entre classificados: 568 de 699 (81.3%).
-- Artigos empíricos quantitativos entre classificados: 324 de 699 (46.4%).
-- Artigos com claim causal ou explicativo entre classificados: 597 de 699 (85.4%).
-- Artigos no screen de credibilidade entre classificados: 147 de 699 (21%).
+- Artigos classificados: 799.
+- Artigos empíricos entre classificados: 647 de 799 (81%).
+- Artigos empíricos quantitativos entre classificados: 349 de 799 (43.7%).
+- Artigos com claim causal ou explicativo entre classificados: 682 de 799 (85.4%).
+- Artigos no screen de credibilidade entre classificados: 150 de 799 (18.8%).
 
 ## Checagens
 
