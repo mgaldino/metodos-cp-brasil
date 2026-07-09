@@ -106,7 +106,9 @@ KEYWORD_MARKERS = (
     "palabra clave",
     "palabras clave",
     "mots-clés",
+    "mots-clé",
     "mots cles",
+    "mots cle",
     "mots-clefs",
     "descritores",
 )
