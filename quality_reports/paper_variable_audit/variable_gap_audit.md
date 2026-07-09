@@ -1,12 +1,12 @@
 # Auditoria de variáveis finais do paper
 
-Gerado em: 2026-07-08 21:12:49 -0300
+Gerado em: 2026-07-08 21:31:40 -0300
 
 ## Síntese
 
 - Manifest completo elegível: 5250 PIDs.
-- Artigos classificados por leitura integral disponíveis: 699 (13.3% do manifest).
-- O corpus completo ainda não está classificado: 4551 PIDs permanecem sem classificação combinada.
+- Artigos classificados por leitura integral disponíveis: 799 (15.2% do manifest).
+- O corpus completo ainda não está classificado: 4451 PIDs permanecem sem classificação combinada.
 - `method_explicitness` e `empirical_article_format` não são variáveis disponíveis no classificador atual.
 - Os `section_reading_log` podem subsidiar uma rodada complementar, mas não codificam sozinhos uma regra validada para essas duas dimensões.
 

@@ -1,5 +1,5 @@
 check,status,value,implication
-classified_rows_positive,PASS,699,Há artigos classificados para gerar artefatos preliminares.
+classified_rows_positive,PASS,799,Há artigos classificados para gerar artefatos preliminares.
 strict_design_subset_of_screen,PASS,0 exceções,Todo desenho estrito deve pertencer ao screen de credibilidade.
 screen_has_quant_or_causal_trigger,PASS,0 exceções,O screen pode ser acionado por critério quantitativo/modelagem ou por claim causal/explicativo.
 screen_without_causal_claim_documented,PASS,4 casos screen=TRUE sem claim causal/explicativo; ver screen_without_causal_claim.csv,"Casos de screen sem claim causal/explicativo são diagnóstico documentado, não falha automática."

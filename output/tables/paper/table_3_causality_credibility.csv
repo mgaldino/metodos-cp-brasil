@@ -1,6 +1,6 @@
 panel,dimension,category,n,denominator,denominator_n,percent,note
-Claims e screen,Causalidade,Claim causal ou explicativo,597,classificados,699,85.4,Variável disponível no classificador atual.
-Claims e screen,Causalidade,Screen de credibilidade aplicável,147,classificados,699,21,Screen pode ser acionado por modelagem/critério quantitativo ou por claim causal/explicativo.
-Claims e screen,Credibilidade,Desenho estrito de identificação,16,screen de credibilidade,147,10.9,"Numerador conservador do paper; também corresponde a 2,3% dos classificados."
-Diagnóstico de método (não exclusivo),Credibilidade,"Diagnóstico, não desenho",132,classificados,699,18.9,"Categorias de método não são mutuamente exclusivas; inclui regressão observacional causal, efeitos fixos sem desenho ou nenhum método detectado."
-Diagnóstico de método (não exclusivo),Credibilidade,Outro método moderno a auditar,2,classificados,699,0.3,Categorias de método não são mutuamente exclusivas; fila conservadora de auditoria.
+Claims e screen,Causalidade,Claim causal ou explicativo,682,classificados,799,85.4,Variável disponível no classificador atual.
+Claims e screen,Causalidade,Screen de credibilidade aplicável,150,classificados,799,18.8,Screen pode ser acionado por modelagem/critério quantitativo ou por claim causal/explicativo.
+Claims e screen,Credibilidade,Desenho estrito de identificação,16,screen de credibilidade,150,10.7,"Numerador conservador do paper; também corresponde a 2,3% dos classificados."
+Diagnóstico de método (não exclusivo),Credibilidade,"Diagnóstico, não desenho",135,classificados,799,16.9,"Categorias de método não são mutuamente exclusivas; inclui regressão observacional causal, efeitos fixos sem desenho ou nenhum método detectado."
+Diagnóstico de método (não exclusivo),Credibilidade,Outro método moderno a auditar,2,classificados,799,0.3,Categorias de método não são mutuamente exclusivas; fila conservadora de auditoria.

@@ -1,6 +1,6 @@
 # Gate 0: auditoria de completude e escopo do paper
 
-Gerado em: 2026-07-08 21:21:05 -0300
+Gerado em: 2026-07-08 21:31:26 -0300
 
 ## Resultado do gate
 

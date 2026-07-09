@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Este artigo apresenta um protocolo de mensuração e resultados preliminares sobre práticas metodológicas em artigos brasileiros elegíveis no SciELO entre 2005 e 2025. O objetivo substantivo final é avaliar em que medida a produção publicada em Ciência Política, Relações Internacionais e Administração Pública explicita evidências, métodos, inferências e limites analíticos de modo compatível com convenções contemporâneas de pesquisa empírica. Esta versão não entrega ainda esse diagnóstico final: o manifest elegível contém 5.250 PIDs com texto integral rastreável, mas a classificação por leitura integral cobre 699 artigos, ou 13,3% do manifest, com concentração composicional por periódico e período. Nos artigos já classificados, 568 são empíricos, 324 têm componente quantitativo, 597 apresentam claim causal ou explicativo, 147 entram no screen de credibilidade e 16 têm desenho estrito de identificação sob regra conservadora. Esses números descrevem apenas o subconjunto classificado e não são estimativas finais do corpus completo. As variáveis de explicitação metodológica e formato do artigo empírico ainda exigem rodada complementar de classificação.
+  Este artigo apresenta um protocolo de mensuração e resultados preliminares sobre práticas metodológicas em artigos brasileiros elegíveis no SciELO entre 2005 e 2025. O objetivo substantivo final é avaliar em que medida a produção publicada em Ciência Política, Relações Internacionais e Administração Pública explicita evidências, métodos, inferências e limites analíticos de modo compatível com convenções contemporâneas de pesquisa empírica. Esta versão não entrega ainda esse diagnóstico final: o manifest elegível contém 5.250 PIDs com texto integral rastreável, mas a classificação por leitura integral cobre 799 artigos, ou 15,2% do manifest, com concentração composicional por periódico e período. Nos artigos já classificados, 647 são empíricos, 349 têm componente quantitativo, 682 apresentam claim causal ou explicativo, 150 entram no screen de credibilidade e 16 têm desenho estrito de identificação sob regra conservadora. Esses números descrevem apenas o subconjunto classificado e não são estimativas finais do corpus completo. As variáveis de explicitação metodológica e formato do artigo empírico ainda exigem rodada complementar de classificação.
 ---
 
 ```{r setup, include=FALSE}
@@ -196,26 +196,40 @@ tabela_3_display <- tabela_credibilidade |>
   dplyr::mutate(
     n = format_n(n),
     denominator_n = format_n(denominator_n),
-    percent = format_pct(percent)
+    percent = format_pct(percent),
+    denominator_display = paste0(denominator, " (", denominator_n, ")")
   ) |>
-  dplyr::rename(
+  dplyr::transmute(
     Painel = panel,
-    Dimensão = dimension,
     Categoria = category,
     N = n,
-    Denominador = denominator,
-    `N denominador` = denominator_n,
-    Percentual = percent,
-    Nota = note
+    Denominador = denominator_display,
+    Percentual = percent
+  ) |>
+  dplyr::mutate(
+    Painel = stringr::str_replace(Painel, "Diagnóstico de método \\(não exclusivo\\)", "Diagnóstico não exclusivo"),
+    Categoria = dplyr::recode(
+      Categoria,
+      "Screen de credibilidade aplicável" = "Screen de credibilidade",
+      "Desenho estrito de identificação" = "Desenho estrito",
+      "Outro método moderno a auditar" = "Outro método a auditar"
+    )
   )
 
 knitr::kable(
   tabela_3_display,
-  caption = "Causalidade e credibilidade nos artigos classificados. As linhas usam denominadores distintos e não formam uma distribuição única; categorias de método no painel diagnóstico não são mutuamente exclusivas.",
+  caption = "Causalidade e credibilidade nos artigos classificados. As linhas usam denominadores distintos e não formam uma distribuição única.",
   booktabs = TRUE,
   longtable = TRUE
 )
 ```
+
+As categorias de método no painel diagnóstico não são mutuamente exclusivas. O desenho estrito usa o screen de credibilidade como denominador principal; diagnósticos e filas de auditoria são contagens no conjunto classificado.
+
+<!--
+Notas completas ficam preservadas no CSV gerado pelo script:
+output/tables/paper/table_3_causality_credibility.csv.
+-->
 
 Essa diferença não significa que artigos fora do screen tenham menor valor científico. Ela significa que a comparação com a revolução da credibilidade só é diretamente aplicável a um subconjunto de claims e desenhos. Fora desse screen, a pergunta é a adequação entre evidência, método e claim. Dentro do screen, a pergunta é a presença de desenho de identificação e discussão de pressupostos.
 

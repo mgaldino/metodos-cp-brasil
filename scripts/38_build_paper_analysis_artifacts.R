@@ -96,7 +96,18 @@ map_journal_area <- function(journal_title) {
 }
 
 fmt_pct <- function(n, d) {
-  dplyr::if_else(is.na(d) | d == 0, NA_real_, round(100 * n / d, 1))
+  d_vec <- rep(d, length.out = length(n))
+  out <- round(100 * n / d_vec, 1)
+  out[is.na(d_vec) | d_vec == 0] <- NA_real_
+  out
+}
+
+fmt_num_label <- function(x) {
+  format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE)
+}
+
+fmt_pct_label <- function(x) {
+  ifelse(is.na(x), "-", paste0(format(x, decimal.mark = ",", nsmall = 1, trim = TRUE), "%"))
 }
 
 write_utf8_lines <- function(lines, file) {
@@ -587,29 +598,58 @@ classification_dimension_data <- tibble::tibble(
   )
 )
 
-figure_1 <- classification_dimension_data |>
-  ggplot2::ggplot(ggplot2::aes(x = n, y = measure, fill = group)) +
-  ggplot2::geom_col(width = 0.68, show.legend = FALSE) +
-  ggplot2::geom_text(ggplot2::aes(label = n), hjust = -0.12, size = 3.2) +
-  ggplot2::facet_wrap(~group, scales = "free_x", ncol = 1) +
-  ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = c(0, 0.18))) +
-  ggplot2::scale_fill_manual(values = c(
-    "Cobertura" = "#22577A",
-    "Evidência" = "#558B6E",
-    "Quantificação" = "#DDA15E",
-    "Claims e screen" = "#6D597A",
-    "Credibilidade" = "#B56576"
-  )) +
+figure_1_data <- classification_dimension_data |>
+  dplyr::mutate(
+    row = dplyr::row_number(),
+    y = dplyr::n() - row + 1,
+    percent = dplyr::case_when(
+      as.character(measure) == "Corpus elegível" ~ 100,
+      as.character(measure) == "Classificados" ~ fmt_pct(n_classified, n_manifest),
+      as.character(measure) == "Desenho estrito" ~ fmt_pct(n_strict, n_screen),
+      TRUE ~ fmt_pct(n, n_classified)
+    ),
+    group_label = ifelse(duplicated(as.character(group)), "", as.character(group)),
+    n_label = fmt_num_label(n),
+    percent_label = fmt_pct_label(percent),
+    row_fill = ifelse(row %% 2 == 0, "#F4F6F8", "#FFFFFF")
+  )
+
+figure_1 <- figure_1_data |>
+  ggplot2::ggplot(ggplot2::aes(y = y)) +
+  ggplot2::geom_rect(
+    ggplot2::aes(ymin = y - 0.45, ymax = y + 0.45, fill = row_fill),
+    xmin = 0,
+    xmax = 1,
+    color = NA,
+    show.legend = FALSE
+  ) +
+  ggplot2::geom_text(ggplot2::aes(x = 0.02, label = group_label), hjust = 0, size = 3.0, fontface = "bold") +
+  ggplot2::geom_text(ggplot2::aes(x = 0.25, label = measure), hjust = 0, size = 3.0) +
+  ggplot2::geom_text(ggplot2::aes(x = 0.60, label = n_label), hjust = 1, size = 3.0, fontface = "bold") +
+  ggplot2::geom_text(ggplot2::aes(x = 0.72, label = percent_label), hjust = 1, size = 3.0) +
+  ggplot2::geom_text(ggplot2::aes(x = 0.78, label = denominator_note), hjust = 0, size = 2.9, color = "grey25") +
+  ggplot2::annotate("text", x = 0.02, y = max(figure_1_data$y) + 0.75, label = "Grupo", hjust = 0, size = 3.0, fontface = "bold") +
+  ggplot2::annotate("text", x = 0.25, y = max(figure_1_data$y) + 0.75, label = "Dimensão", hjust = 0, size = 3.0, fontface = "bold") +
+  ggplot2::annotate("text", x = 0.60, y = max(figure_1_data$y) + 0.75, label = "N", hjust = 1, size = 3.0, fontface = "bold") +
+  ggplot2::annotate("text", x = 0.72, y = max(figure_1_data$y) + 0.75, label = "%", hjust = 1, size = 3.0, fontface = "bold") +
+  ggplot2::annotate("text", x = 0.78, y = max(figure_1_data$y) + 0.75, label = "Denominador", hjust = 0, size = 3.0, fontface = "bold") +
+  ggplot2::scale_fill_identity() +
+  ggplot2::scale_x_continuous(limits = c(0, 1), expand = c(0, 0)) +
+  ggplot2::scale_y_continuous(limits = c(0.4, max(figure_1_data$y) + 1.1), expand = c(0, 0)) +
   ggplot2::labs(
     title = "Denominadores e dimensões da classificação disponível",
-    subtitle = "Barras em painéis independentes evitam interpretar dimensões cruzadas como funil aninhado.",
-    x = "Artigos",
-    y = NULL,
-    caption = "Denominadores: manifest para cobertura; artigos classificados por leitura integral para variáveis substantivas; screen de credibilidade para desenho estrito."
+    subtitle = "Percentuais usam manifest, artigos classificados ou screen de credibilidade conforme a linha.",
+    x = NULL,
+    y = NULL
   ) +
-  theme_paper()
+  ggplot2::theme_void(base_size = 11) +
+  ggplot2::theme(
+    plot.title = ggplot2::element_text(face = "bold"),
+    plot.subtitle = ggplot2::element_text(color = "grey30"),
+    plot.caption = ggplot2::element_text(color = "grey30", hjust = 0)
+  )
 
-ggplot2::ggsave(file.path(figures_dir, "figure_1_corpus_funnel.pdf"), figure_1, width = 8.5, height = 5.2)
+ggplot2::ggsave(file.path(figures_dir, "figure_1_corpus_funnel.pdf"), figure_1, width = 8.5, height = 4.6)
 
 matrix_data <- journal_metrics |>
   tidyr::pivot_longer(
