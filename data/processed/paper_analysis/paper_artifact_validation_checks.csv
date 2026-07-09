@@ -1,6 +1,10 @@
 check,status,value,implication
 classified_rows_positive,PASS,699,Há artigos classificados para gerar artefatos preliminares.
 strict_design_subset_of_screen,PASS,0 exceções,Todo desenho estrito deve pertencer ao screen de credibilidade.
+screen_has_quant_or_causal_trigger,PASS,0 exceções,O screen pode ser acionado por critério quantitativo/modelagem ou por claim causal/explicativo.
+screen_without_causal_claim_documented,PASS,4 casos screen=TRUE sem claim causal/explicativo; ver screen_without_causal_claim.csv,"Casos de screen sem claim causal/explicativo são diagnóstico documentado, não falha automática."
 method_type_json_no_parse_errors,PASS,0 erros de parse,Tipos de método devem ser JSON válido ou vazio.
 method_type_present_when_method_present,PASS,0 métodos presentes sem tipo parseado,Casos com método presente devem ter ao menos um tipo de método parseado.
+classification_hash_matches_manifest,PASS,0 divergências,Classificações e manifest devem apontar para o mesmo texto de entrada.
+classified_fulltext_validation_pass,PASS,0 casos sem PASS,Artigos classificados devem ter texto integral validado como PASS no manifest.
 journal_area_mapped,PASS,0 linhas,Todos os periódicos do manifest atual devem ter área mapeada.

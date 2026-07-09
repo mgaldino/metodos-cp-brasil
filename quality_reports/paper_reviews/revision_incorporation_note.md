@@ -17,12 +17,18 @@ Os sete drafts substantivos foram escritos em `quality_reports/paper_drafts/` po
 - Reforçar que periódico e período são estratos de descrição e auditoria de cobertura, não explicações causais nem rankings de qualidade.
 - Tratar os logs de leitura como evidência operacional de rastreabilidade, não como validação substantiva plena da qualidade da classificação.
 - Gerar tabelas no Rmd a partir dos CSVs produzidos pelos scripts, reduzindo risco de números copiados manualmente ficarem dessincronizados.
+- Substituir a Figura 1 por painéis independentes, evitando que dimensões cruzadas sejam lidas como funil estritamente aninhado.
+- Documentar que o screen de credibilidade pode ser acionado por modelagem/critério quantitativo ou por claim causal/explicativo, com tabela auxiliar para os 4 casos `screen=TRUE` sem claim causal/explicativo.
+- Adicionar checagens de igualdade entre hash da classificação e hash do manifest, `fulltext_validation_status == PASS`, parse de tipos de método e mapeamento de área dos periódicos.
+- Documentar sobreposições entre categorias de método e tratar o painel diagnóstico da Tabela 3 como não exclusivo.
+- Reordenar colunas de período na Tabela 1 para 2005-2011, 2012-2018 e 2019-2025.
 
 ## Correções parcialmente incorporadas
 
 - A crítica de que `strict_design_method` deveria ser tratado como candidato sujeito a auditoria manual foi incorporada na redação como regra conservadora derivada e passível de auditoria complementar. O texto mantém a variável como resultado preliminar porque ela é gerada por script e passou por checagens auxiliares.
 - A recomendação de retirar completamente comparações por periódico e período foi incorporada apenas parcialmente. As figuras permanecem porque fazem parte do plano operacional, mas a redação as interpreta como perfil da fração classificada e diagnóstico de cobertura.
 - A sugestão de justificar mais amplamente todas as fronteiras de escopo foi incorporada de forma curta no texto principal. Uma defesa mais detalhada das exclusões deve ficar no apêndice ou em relatório de corpus.
+- A recomendação de abortar automaticamente a geração de artefatos preliminares quando o Gate 0 falha não foi aplicada como bloqueio, porque o objetivo operacional deste goal era produzir uma versão preliminar compilável. Em vez disso, a redação, os captions e os relatórios marcam explicitamente o status preliminar e os denominadores.
 
 ## Pontos deixados para o autor ou para rodada futura
 

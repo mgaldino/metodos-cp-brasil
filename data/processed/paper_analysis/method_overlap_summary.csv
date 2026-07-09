@@ -1,0 +1,5 @@
+overlap,n,note
+strict_and_diagnostic,1,Categorias de método não são mutuamente exclusivas; um artigo pode registrar desenho estrito e diagnóstico.
+strict_and_other_modern,2,Categorias de método não são mutuamente exclusivas; other_modern pode coexistir com desenho estrito.
+diagnostic_and_other_modern,0,Categorias de método não são mutuamente exclusivas.
+strict_diagnostic_other_modern,0,Sobreposição tripla.
