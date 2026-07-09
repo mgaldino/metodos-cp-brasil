@@ -67,6 +67,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-reasoning-effort", choices=["low", "medium", "high", "xhigh"], default="high")
     parser.add_argument("--ephemeral", action="store_true")
     parser.add_argument("--force", action="store_true", help="Include --force in the later run plan.")
+    parser.add_argument(
+        "--assume-complete-label",
+        action="append",
+        default=[],
+        help=(
+            "Treat an existing active_batch label as complete for planning. "
+            "This reserves its PIDs and excludes it from the parallel slots without editing its outputs."
+        ),
+    )
     parser.add_argument("--plan-md", type=Path, default=DEFAULT_PLAN_MD)
     parser.add_argument("--plan-json", type=Path, default=DEFAULT_PLAN_JSON)
     return parser.parse_args()
@@ -242,9 +251,14 @@ def write_selection_report(
 ) -> Path:
     report_path = args.quality_dir / f"credibility_prompt_v3_{batch.label}_selection.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
+    complete_label = (
+        "artigos completos ou assumidos completos no plano"
+        if args.assume_complete_label
+        else "artigos já completos no manifesto ativo"
+    )
     summary_rows = [
         {"indicador": "artigos no manifesto ativo", "valor": len(manifest_rows)},
-        {"indicador": "artigos já completos no manifesto ativo", "valor": complete_count},
+        {"indicador": complete_label, "valor": complete_count},
         {"indicador": "PIDs pendentes já reservados por outros batches", "valor": reserved_before_count},
         {"indicador": "artigos selecionados neste bloco", "valor": len(batch.rows)},
     ]
@@ -332,6 +346,10 @@ def write_plan_reports(args: argparse.Namespace, batches: list[BatchStatus], man
                 {"campo": "slots paralelos", "valor": len(batches)},
                 {"campo": "limite por novo batch", "valor": args.limit},
                 {"campo": "model_reasoning_effort", "valor": args.model_reasoning_effort},
+                {
+                    "campo": "batches assumidos completos no plano",
+                    "valor": ", ".join(args.assume_complete_label) if args.assume_complete_label else "_nenhum_",
+                },
                 {"campo": "manifesto ativo", "valor": project_relative(args.manifest)},
                 {"campo": "artigos no manifesto", "valor": len(manifest_rows)},
             ],
@@ -385,6 +403,7 @@ def write_plan_reports(args: argparse.Namespace, batches: list[BatchStatus], man
         "model": args.model,
         "model_reasoning_effort": args.model_reasoning_effort,
         "timeout": args.timeout,
+        "assume_complete_label": args.assume_complete_label,
         "manifest": project_relative(args.manifest),
         "out_dir": project_relative(args.out_dir),
         "batches": [
@@ -431,11 +450,19 @@ def main() -> int:
     manifest_rows = read_csv_rows(args.manifest)
     manifest_fieldnames = list(manifest_rows[0].keys()) if manifest_rows else []
     complete_pids = complete_manifest_pids(manifest_rows, args.out_dir)
+    assumed_complete_pids: set[str] = set()
+    for label in args.assume_complete_label:
+        assumed_manifest = args.batch_dir / f"{label}.csv"
+        if not assumed_manifest.exists():
+            raise SystemExit(f"Manifesto assumido completo ausente: {assumed_manifest}")
+        assumed_complete_pids.update(row["pid"] for row in read_csv_rows(assumed_manifest))
+    effective_complete_pids = complete_pids | assumed_complete_pids
 
     incomplete_existing = [
         status
         for path in active_batch_paths(args.batch_dir)
-        if not (status := batch_status(path, complete_pids, args.out_dir)).is_complete
+        if path.stem not in set(args.assume_complete_label)
+        and not (status := batch_status(path, effective_complete_pids, args.out_dir)).is_complete
     ]
     planned_batches = incomplete_existing[: args.workers]
     planned_labels = {batch.label for batch in planned_batches}
@@ -444,16 +471,16 @@ def main() -> int:
     while len(planned_batches) < args.workers:
         label = next_active_label(args.batch_dir, planned_labels)
         batch_path = args.batch_dir / f"{label}.csv"
-        selected = select_pending_rows(manifest_rows, complete_pids, reserved_pids, args.limit)
+        selected = select_pending_rows(manifest_rows, effective_complete_pids, reserved_pids, args.limit)
         if not selected:
             break
         write_csv_rows(batch_path, selected, manifest_fieldnames)
-        batch = batch_status(batch_path, complete_pids, args.out_dir, created_now=True)
+        batch = batch_status(batch_path, effective_complete_pids, args.out_dir, created_now=True)
         write_selection_report(
             args,
             batch,
             manifest_rows,
-            complete_count=len(complete_pids),
+            complete_count=len(effective_complete_pids),
             reserved_before_count=len(reserved_pids - complete_pids),
         )
         planned_batches.append(batch)

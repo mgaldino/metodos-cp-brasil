@@ -103,6 +103,54 @@ def test_prepare_reuses_incomplete_batch_and_creates_disjoint_next_batch(tmp_pat
     )
 
 
+def test_prepare_can_assume_existing_batch_complete_for_next_parallel_round(tmp_path, monkeypatch):
+    prep = load_module(PREP_PATH, "parallel_prep_assume_complete")
+    manifest = tmp_path / "full_corpus_manifest.csv"
+    batch_dir = tmp_path / "batch_manifests"
+    out_dir = tmp_path / "full_corpus"
+    quality_dir = tmp_path / "quality_reports"
+    rows = manifest_rows(6)
+    write_rows(manifest, rows)
+    write_rows(batch_dir / "active_batch_001.csv", rows[:2])
+    write_rows(batch_dir / "active_batch_002.csv", rows[2:4])
+    (out_dir / "reading_logs").mkdir(parents=True, exist_ok=True)
+    (out_dir / "classifications").mkdir(parents=True, exist_ok=True)
+
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "prep",
+            "--manifest",
+            str(manifest),
+            "--out-dir",
+            str(out_dir),
+            "--batch-dir",
+            str(batch_dir),
+            "--quality-dir",
+            str(quality_dir),
+            "--workers",
+            "2",
+            "--limit",
+            "2",
+            "--model-reasoning-effort",
+            "high",
+            "--assume-complete-label",
+            "active_batch_001",
+        ],
+    )
+
+    assert prep.main() == 0
+
+    assert read_pids(batch_dir / "active_batch_003.csv") == ["S005", "S006"]
+    plan = json.loads((quality_dir / "credibility_prompt_v3_parallel_batches_plan.json").read_text(encoding="utf-8"))
+    assert plan["labels"] == ["active_batch_002", "active_batch_003"]
+    assert plan["assume_complete_label"] == ["active_batch_001"]
+    plan_md = (quality_dir / "credibility_prompt_v3_parallel_batches_plan.md").read_text(encoding="utf-8")
+    assert "active_batch_001" in plan_md
+    assert "--labels active_batch_002 active_batch_003" in plan_md
+
+
 def test_runner_prints_commands_without_run(tmp_path, monkeypatch, capsys):
     runner = load_module(RUNNER_PATH, "parallel_runner")
     batch_dir = tmp_path / "batch_manifests"
