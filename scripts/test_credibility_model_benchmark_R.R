@@ -141,4 +141,12 @@ if (invalid_status == 0) {
   stop("Comparador deveria rejeitar rótulo categórico inválido.")
 }
 
+terra_invalid <- baseline
+terra_invalid$credibility_revolution_method_type[[1]] <- '"none_detected"'
+readr::write_csv(terra_invalid, terra_csv, na = "")
+invalid_method_status <- system2("Rscript", command, stdout = FALSE, stderr = FALSE)
+if (invalid_method_status == 0) {
+  stop("Comparador deveria rejeitar method_type que não seja array JSON.")
+}
+
 cat("Teste end-to-end R: PASS\n")

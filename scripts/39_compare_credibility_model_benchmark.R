@@ -174,6 +174,18 @@ parse_method_types <- function(x) {
   sort(unique(as.character(parsed)))
 }
 
+is_method_json_array <- function(x) {
+  if (is.na(x) || stringr::str_trim(x) == "") {
+    return(TRUE)
+  }
+  trimmed <- stringr::str_trim(x)
+  if (!stringr::str_starts(trimmed, "\\[") || !stringr::str_ends(trimmed, "\\]")) {
+    return(FALSE)
+  }
+  parsed <- tryCatch(jsonlite::fromJSON(trimmed), error = function(e) NULL)
+  is.character(parsed)
+}
+
 normalize_field <- function(field, value) {
   if (field %in% boolean_fields) {
     return(parse_bool(value))
@@ -251,7 +263,9 @@ validate_classification <- function(data, label) {
   }
   invalid_json <- vapply(
     data$credibility_revolution_method_type,
-    function(value) "<INVALID_JSON>" %in% parse_method_types(value),
+    function(value) {
+      !is_method_json_array(value) || "<INVALID_JSON>" %in% parse_method_types(value)
+    },
     logical(1)
   )
   if (any(invalid_json)) {
@@ -278,6 +292,31 @@ validate_classification <- function(data, label) {
   invalid_applicable <- screen == "TRUE" & method_present == "<NA>"
   if (any(invalid_applicable)) {
     stop(label, " tem method_present ausente quando screen é TRUE: ", paste(data$pid[invalid_applicable], collapse = ", "))
+  }
+  diagnostic_methods <- c(
+    "fixed_effects_causal_panel_claim",
+    "observational_regression_with_causal_claim_no_design",
+    "none_detected"
+  )
+  invalid_empty_applicable <- screen == "TRUE" & lengths(parsed_methods) == 0L
+  if (any(invalid_empty_applicable)) {
+    stop(label, " tem method_type vazio quando screen é TRUE: ", paste(data$pid[invalid_empty_applicable], collapse = ", "))
+  }
+  invalid_present_true <- screen == "TRUE" & method_present == "TRUE" & vapply(
+    parsed_methods,
+    function(values) length(values) == 0 || all(values %in% diagnostic_methods),
+    logical(1)
+  )
+  if (any(invalid_present_true)) {
+    stop(label, " não identifica método estrito quando method_present é TRUE: ", paste(data$pid[invalid_present_true], collapse = ", "))
+  }
+  invalid_present_false <- screen == "TRUE" & method_present == "FALSE" & vapply(
+    parsed_methods,
+    function(values) length(values) == 0 || any(!values %in% diagnostic_methods),
+    logical(1)
+  )
+  if (any(invalid_present_false)) {
+    stop(label, " usa method_type incompatível quando method_present é FALSE: ", paste(data$pid[invalid_present_false], collapse = ", "))
   }
 }
 
