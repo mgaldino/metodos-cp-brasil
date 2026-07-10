@@ -64,6 +64,26 @@ class RunMetadataTests(unittest.TestCase):
                         self.args(model="gpt-5.6-sol", effort="medium"), manifest, rows, dirs
                     )
 
+    def test_pid_provenance_must_match_contract(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            dirs = {"provenance": root / "provenance"}
+            dirs["provenance"].mkdir()
+            contract = {"model": "gpt-5.6-terra", "model_reasoning_effort": "medium"}
+            self.assertFalse(RUNNER.provenance_matches("P1", contract, dirs))
+            RUNNER.save_pid_provenance("P1", contract, dirs)
+            self.assertTrue(RUNNER.provenance_matches("P1", contract, dirs))
+            self.assertFalse(
+                RUNNER.provenance_matches("P1", {**contract, "model": "gpt-5.6-sol"}, dirs)
+            )
+
+    def test_codex_home_is_used_for_config_resolution(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            config = Path(tmp) / "config.toml"
+            config.write_text('model = "gpt-5.6-terra"\n', encoding="utf-8")
+            with patch.dict("os.environ", {"CODEX_HOME": tmp}):
+                self.assertEqual(RUNNER.codex_config()["model"], "gpt-5.6-terra")
+
 
 if __name__ == "__main__":
     unittest.main()

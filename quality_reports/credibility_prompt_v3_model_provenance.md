@@ -20,6 +20,6 @@ O `active_batch_016` usa explicitamente `gpt-5.6-terra`, esforço `medium` e `se
 
 ## Registro automático a partir do active_batch_016
 
-O script `scripts/25_run_credibility_prompt_v3_integral_codex_batch.py` grava `combined/<combined_stem>_run_metadata.json` antes de chamar o Codex. O sidecar registra modelo e esforço efetivos, tier, manifesto e PIDs, hashes do manifesto, prompts, schema e runner, além da versão do Codex. Uma retomada com contrato diferente é recusada para impedir mistura de modelos no mesmo batch.
+O script `scripts/25_run_credibility_prompt_v3_integral_codex_batch.py` grava `combined/<combined_stem>_run_metadata.json` antes de chamar o Codex e `provenance/<pid>.json` após cada classificação válida. Os sidecars registram modelo e esforço efetivos, tier, manifesto e PIDs, hashes do manifesto, prompts, schema e runner, além da versão do Codex. Uma retomada só ignora um PID já completo quando sua proveniência coincide com o contrato atual; caso contrário, o artigo é reprocessado.
 
 Os batches anteriores não devem ser tratados como tendo proveniência por PID: a documentação disponível permite reconstruir a configuração operacional, mas não substitui o sidecar introduzido nesta rodada.

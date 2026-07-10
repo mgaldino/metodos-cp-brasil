@@ -18,6 +18,7 @@ import csv
 import hashlib
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -183,6 +184,7 @@ def ensure_dirs(out_dir: Path) -> dict[str, Path]:
         "logs": out_dir / "run_logs",
         "reading": out_dir / "reading_logs",
         "classifications": out_dir / "classifications",
+        "provenance": out_dir / "provenance",
         "failed": out_dir / "failed",
         "combined": out_dir / "combined",
     }
@@ -490,7 +492,8 @@ def sha256_file(path: Path) -> str:
 
 
 def codex_config() -> dict[str, Any]:
-    config_path = Path.home() / ".codex" / "config.toml"
+    codex_home = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
+    config_path = codex_home / "config.toml"
     if not config_path.exists():
         return {}
     try:
@@ -538,6 +541,13 @@ def write_run_metadata(
         raise ValueError(
             "Could not resolve model reasoning effort; pass --model-reasoning-effort explicitly."
         )
+    if not runtime["service_tier"]:
+        raise ValueError("Could not resolve service tier; pass --service-tier explicitly.")
+
+    args.model = runtime["model"]
+    args.model_reasoning_effort = runtime["model_reasoning_effort"]
+    args.service_tier = runtime["service_tier"]
+    version = codex_version(args.codex_bin)
 
     metadata_path = dirs["combined"] / f"{args.combined_stem}_run_metadata.json"
     contract = {
@@ -550,6 +560,9 @@ def write_run_metadata(
         "prompt_template_sha256": sha256_file(PROMPT_TEMPLATE),
         "classifier_prompt_sha256": sha256_file(CLASSIFIER_PROMPT_V3),
         "output_schema_sha256": sha256_file(OUTPUT_SCHEMA),
+        "codex_binary": args.codex_bin,
+        "codex_version": version,
+        "runner_script_sha256": sha256_file(Path(__file__).resolve()),
     }
     if metadata_path.exists():
         existing = json.loads(metadata_path.read_text(encoding="utf-8"))
@@ -569,12 +582,39 @@ def write_run_metadata(
             "service_tier": args.service_tier,
         },
         "codex_binary": args.codex_bin,
-        "codex_version": codex_version(args.codex_bin),
+        "codex_version": version,
         "runner_script": str(Path(__file__).resolve()),
         "runner_script_sha256": sha256_file(Path(__file__).resolve()),
     }
     atomic_write_text(metadata_path, json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
     return metadata_path
+
+
+def pid_provenance_path(pid: str, dirs: dict[str, Path]) -> Path:
+    return dirs["provenance"] / f"{pid}.json"
+
+
+def save_pid_provenance(pid: str, contract: dict[str, Any], dirs: dict[str, Path]) -> None:
+    payload = {
+        "pid": pid,
+        "recorded_at_utc": datetime.now(timezone.utc).isoformat(),
+        "contract": contract,
+    }
+    atomic_write_text(
+        pid_provenance_path(pid, dirs),
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+    )
+
+
+def provenance_matches(pid: str, contract: dict[str, Any], dirs: dict[str, Path]) -> bool:
+    path = pid_provenance_path(pid, dirs)
+    if not path.exists():
+        return False
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    return payload.get("pid") == pid and payload.get("contract") == contract
 
 
 def csv_value(value: Any) -> str:
@@ -694,9 +734,13 @@ def load_saved_record(
     return record, []
 
 
-def already_complete(row: dict[str, str], dirs: dict[str, Path]) -> bool:
+def already_complete(
+    row: dict[str, str], dirs: dict[str, Path], contract: dict[str, Any] | None = None
+) -> bool:
     record, _ = load_saved_record(row, dirs)
-    return record is not None
+    if record is None:
+        return False
+    return contract is None or provenance_matches(row["pid"], contract, dirs)
 
 
 def build_codex_command(args: argparse.Namespace, raw_path: Path) -> list[str]:
@@ -739,6 +783,7 @@ def run_codex_for_row(
     prompt: str,
     dirs: dict[str, Path],
     args: argparse.Namespace,
+    contract: dict[str, Any],
 ) -> tuple[bool, str]:
     pid = row["pid"]
     raw_path = dirs["raw"] / f"{pid}.json"
@@ -786,6 +831,7 @@ def run_codex_for_row(
         return False, f"incomplete record: {record.get('incomplete_reason')}"
 
     save_valid_record(record, row, dirs)
+    save_pid_provenance(pid, contract, dirs)
     return True, "ok"
 
 
@@ -857,16 +903,20 @@ def main() -> int:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return 0
 
-    try:
-        metadata_path = write_run_metadata(args, manifest_path, rows, dirs)
-    except (ValueError, OSError, json.JSONDecodeError) as exc:
-        print(str(exc), file=sys.stderr)
-        return 1
-
     print(f"Manifest: {manifest_path}")
     print(f"Output dir: {out_dir}")
     print(f"Selected articles: {len(rows)}")
-    print(f"Run metadata: {metadata_path}")
+
+    contract = None
+    if not args.dry_run:
+        try:
+            metadata_path = write_run_metadata(args, manifest_path, rows, dirs)
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+            contract = metadata["contract"]
+        except (ValueError, OSError, json.JSONDecodeError, KeyError) as exc:
+            print(str(exc), file=sys.stderr)
+            return 1
+        print(f"Run metadata: {metadata_path}")
 
     ok = 0
     failed = 0
@@ -874,7 +924,7 @@ def main() -> int:
 
     for index, row in enumerate(rows, start=1):
         pid = row["pid"]
-        if already_complete(row, dirs) and not args.force:
+        if already_complete(row, dirs, contract) and not args.force:
             print(f"[{index}/{len(rows)}] SKIP {pid} already complete")
             skipped += 1
             continue
@@ -889,7 +939,8 @@ def main() -> int:
             continue
 
         print(f"[{index}/{len(rows)}] RUN {pid}", flush=True)
-        success, message = run_codex_for_row(row, prompt, dirs, args)
+        assert contract is not None
+        success, message = run_codex_for_row(row, prompt, dirs, args, contract)
         if success:
             print(f"[{index}/{len(rows)}] OK  {pid}")
             ok += 1
