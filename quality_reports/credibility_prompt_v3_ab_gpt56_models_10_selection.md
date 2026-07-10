@@ -1,16 +1,16 @@
-# Sele<c3><a7><c3><a3>o do benchmark GPT-5.6: 10 casos dif<c3><ad>ceis
+# Seleção do benchmark GPT-5.6: 10 casos difíceis
 
-Gerado em: 2026-07-10 11:31:48 -0300
+Gerado em: 2026-07-10 17:39:53 -0300
 
-## Crit<c3><a9>rio
+## Critério
 
-Foram selecionados 7 casos com desacordo anterior em screen/m<c3><a9>todo, 2 com desacordo estrutural sobre empirismo/evid<c3><aa>ncia e 1 com desacordo em `tough_call`. Dentro de cada grupo, casos com mais campos divergentes t<c3><aa>m prioridade; empates s<c3><a3>o resolvidos por PID.
+Foram selecionados 7 casos com desacordo anterior em screen/método, 2 com desacordo estrutural sobre empirismo/evidência e 1 com desacordo em `tough_call`. Dentro de cada grupo, casos com mais campos divergentes têm prioridade; empates são resolvidos por PID.
 
 - Manifesto de origem: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_full_corpus/batch_manifests/ab_gpt55_high_50.csv`
 - Desacordos de origem: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_integral_reading/full_corpus_ab/gpt55_high/combined/ab_gpt55_high_disagreements.csv`
 - Manifesto congelado: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_full_corpus/batch_manifests/ab_gpt56_models_10.csv`
 - PIDs selecionados: 10
-- PIDs <c3><ba>nicos: 10
+- PIDs únicos: 10
 - Task packets ausentes: 0
 
 ## Tabela 1. Artigos selecionados para o benchmark

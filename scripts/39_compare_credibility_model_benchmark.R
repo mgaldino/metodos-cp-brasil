@@ -65,7 +65,7 @@ out_comparison <- get_arg(
 
 configurations <- tibble::tribble(
   ~label, ~display_name, ~model, ~effort, ~csv_path, ~reading_dir, ~is_new,
-  "gpt55_high", "GPT-5.5 high (histórico)",
+  "gpt55_high", "GPT-5.5 high (historical)",
   NA_character_, NA_character_, historical_high_path,
   file.path(
     project_dir, "data", "processed", "credibility_prompt_v3_integral_reading",
@@ -221,10 +221,8 @@ md_table <- function(data) {
 write_utf8_lines <- function(lines, path) {
   con <- file(path, open = "wb")
   on.exit(close(con), add = TRUE)
-  for (line in lines) {
-    writeBin(charToRaw(enc2utf8(line)), con)
-    writeBin(charToRaw("\n"), con)
-  }
+  Encoding(lines) <- "UTF-8"
+  writeLines(lines, con = con, useBytes = TRUE)
 }
 
 parse_iso_timestamp <- function(x) {
@@ -625,7 +623,8 @@ if (nrow(eligible_decision) == 0) {
   winner <- eligible_decision[1, ]
   recommendation <- paste0(
     "Escolher ", winner$display_name,
-    " entre os braços testados: passou os gates e liderou a ordenação lexicográfica por desacordos críticos, concordância geral e tempo."
+    " entre os braços testados: passou os gates e venceu a ordenação lexicográfica. ",
+    "O tempo só seria usado após os critérios de desacordos críticos e concordância geral."
   )
 }
 
@@ -723,6 +722,7 @@ report_lines <- c(
   "- Regra lexicográfica: completude e logs válidos; menos desacordos screen/método; maior concordância média; menor tempo total.",
   "- Piso histórico: um braço novo não pode ter mais desacordos críticos nem menor concordância média que o GPT-5.5 high nos mesmos 10 casos.",
   "- O tempo de parede inclui filas, suspensões e tentativas falhas; ele mede a latência fim a fim usada na decisão. O tempo ativo do processo também é reportado separadamente.",
+  "- A coluna de timings registra sucesso/falha e retorno, mas não categoriza a causa de cada falha; mensagens diagnósticas permanecem nos logs de execução.",
   "- A concordância com o baseline mede continuidade classificatória, não verdade substantiva.",
   "",
   "## Tabela 1. Resultado geral por configuração",

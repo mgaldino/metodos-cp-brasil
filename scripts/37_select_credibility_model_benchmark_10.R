@@ -75,10 +75,8 @@ md_table <- function(data) {
 write_utf8_lines <- function(lines, path) {
   con <- file(path, open = "wb")
   on.exit(close(con), add = TRUE)
-  for (line in lines) {
-    writeBin(charToRaw(enc2utf8(line)), con)
-    writeBin(charToRaw("\n"), con)
-  }
+  Encoding(lines) <- "UTF-8"
+  writeLines(lines, con = con, useBytes = TRUE)
 }
 
 manifest <- read_utf8(manifest_path)
@@ -154,9 +152,19 @@ if (length(missing_packets) > 0) {
   stop("Task packets ausentes: ", paste(missing_packets, collapse = ", "))
 }
 
+report_only <- "--report-only" %in% args
+if (report_only) {
+  frozen_manifest <- read_utf8(out_manifest)
+  if (!identical(frozen_manifest$pid, selected_manifest$pid)) {
+    stop("O manifesto congelado diverge da seleção reproduzida.")
+  }
+}
+
 dir.create(dirname(out_manifest), recursive = TRUE, showWarnings = FALSE)
 dir.create(dirname(out_report), recursive = TRUE, showWarnings = FALSE)
-readr::write_csv(selected_manifest, out_manifest, na = "")
+if (!report_only) {
+  readr::write_csv(selected_manifest, out_manifest, na = "")
+}
 
 selection_table <- selected_manifest |>
   dplyr::select(pid, title, journal_title, selection_reason, fields_disagree)
