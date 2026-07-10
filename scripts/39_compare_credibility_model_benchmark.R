@@ -118,6 +118,32 @@ boolean_fields <- c(
   "tough_call"
 )
 
+allowed_values <- list(
+  empirical_evidence_type = c(
+    "none", "quantitative_only", "qualitative_only", "mixed_empirical", "unclear"
+  ),
+  quantitative_analysis_type = c(
+    "none", "descriptive_statistics_only", "bivariate_tests_or_correlations_only",
+    "statistical_modeling", "unclear"
+  ),
+  credibility_revolution_screen_reason = c(
+    "not_empirical", "qualitative_only", "descriptive_quantitative_only",
+    "bivariate_or_correlation_screen", "statistical_modeling_screen",
+    "explicit_causal_design_screen", "causal_claim_with_quantitative_analysis_screen",
+    "unclear"
+  )
+)
+
+allowed_method_types <- c(
+  "experiment_field", "experiment_survey", "experiment_lab", "experiment_list",
+  "difference_in_differences", "event_study", "instrumental_variables",
+  "regression_discontinuity", "regression_kink", "synthetic_control",
+  "synthetic_difference_in_differences", "matching_or_weighting",
+  "dag_or_formal_causal_graph", "doubly_robust", "causal_trees_or_forests",
+  "causal_discovery", "other_modern_causal_method", "fixed_effects_causal_panel_claim",
+  "observational_regression_with_causal_claim_no_design", "none_detected"
+)
+
 read_utf8 <- function(path) {
   if (!file.exists(path)) {
     stop("Arquivo ausente: ", path)
@@ -207,6 +233,22 @@ validate_classification <- function(data, label) {
   if (length(invalid_required) > 0) {
     stop(label, " tem booleanos obrigatórios inválidos: ", paste(invalid_required, collapse = ", "))
   }
+  for (field in names(allowed_values)) {
+    invalid <- is.na(data[[field]]) | !data[[field]] %in% allowed_values[[field]]
+    if (any(invalid)) {
+      stop(label, " tem valores inválidos em ", field, ": ", paste(data$pid[invalid], collapse = ", "))
+    }
+  }
+  nullable_boolean_fields <- c(
+    "has_statistical_inference", "credibility_revolution_method_present"
+  )
+  for (field in nullable_boolean_fields) {
+    values <- parse_bool(data[[field]])
+    invalid <- !values %in% c("TRUE", "FALSE", "<NA>")
+    if (any(invalid)) {
+      stop(label, " tem booleano anulável inválido em ", field, ": ", paste(data$pid[invalid], collapse = ", "))
+    }
+  }
   invalid_json <- vapply(
     data$credibility_revolution_method_type,
     function(value) "<INVALID_JSON>" %in% parse_method_types(value),
@@ -214,6 +256,28 @@ validate_classification <- function(data, label) {
   )
   if (any(invalid_json)) {
     stop(label, " tem JSON inválido em method_type: ", paste(data$pid[invalid_json], collapse = ", "))
+  }
+  parsed_methods <- lapply(data$credibility_revolution_method_type, parse_method_types)
+  invalid_method_values <- vapply(
+    parsed_methods,
+    function(values) any(!values %in% allowed_method_types),
+    logical(1)
+  )
+  if (any(invalid_method_values)) {
+    stop(label, " tem rótulos inválidos em method_type: ", paste(data$pid[invalid_method_values], collapse = ", "))
+  }
+  screen <- parse_bool(data$credibility_revolution_screen_applicable)
+  method_present <- parse_bool(data$credibility_revolution_method_present)
+  invalid_not_applicable <- screen == "FALSE" & (
+    method_present != "<NA>" |
+      stringr::str_trim(dplyr::coalesce(data$credibility_revolution_method_type, "")) != ""
+  )
+  if (any(invalid_not_applicable)) {
+    stop(label, " viola nulidade de método quando screen é FALSE: ", paste(data$pid[invalid_not_applicable], collapse = ", "))
+  }
+  invalid_applicable <- screen == "TRUE" & method_present == "<NA>"
+  if (any(invalid_applicable)) {
+    stop(label, " tem method_present ausente quando screen é TRUE: ", paste(data$pid[invalid_applicable], collapse = ", "))
   }
 }
 
@@ -298,6 +362,12 @@ if (any(
     timing_validated$effort != timing_validated$expected_effort
 )) {
   stop("Timing contém combinação label/model/effort incompatível.")
+}
+if (any(!timing_validated$status %in% c("complete", "failed"))) {
+  stop("Timing contém status inválido.")
+}
+if (any((timing_validated$status == "complete") != (timing_validated$return_code == 0L))) {
+  stop("Status e return_code divergem no timing.")
 }
 if (any(!is.finite(timing_validated$elapsed_seconds) | timing_validated$elapsed_seconds < 0)) {
   stop("Timing contém duração inválida.")
@@ -442,6 +512,14 @@ field_agreement <- dplyr::bind_rows(field_rows)
 disagreements <- dplyr::bind_rows(disagreement_rows)
 log_status <- dplyr::bind_rows(log_rows) |>
   dplyr::count(label, log_status, name = "n")
+if (any(log_status$log_status != "válido")) {
+  invalid_logs <- log_status |>
+    dplyr::filter(log_status != "válido")
+  stop(
+    "Há reading logs inválidos em referências ou candidatos: ",
+    paste0(invalid_logs$label, "=", invalid_logs$log_status, collapse = "; ")
+  )
+}
 
 speed <- timing_validated |>
   dplyr::group_by(label, model, effort) |>

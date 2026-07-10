@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import importlib.util
 import json
 import subprocess
 import sys
@@ -42,6 +43,26 @@ PROMPT_TEMPLATE = (
     / "classifier_prompt_v3_integral_reading.md"
 )
 OUTPUT_SCHEMA = PROMPT_TEMPLATE.with_name("integral_reading_output_schema.json")
+CLASSIFIER_PROMPT_V3 = (
+    PROJECT_DIR
+    / "data"
+    / "processed"
+    / "credibility_prompt_v3_test"
+    / "prompts"
+    / "classifier_prompt_v3.md"
+)
+
+
+def load_integral_runner():
+    spec = importlib.util.spec_from_file_location("integral_benchmark_base_runner", RUNNER)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Could not load integral runner from {RUNNER}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+INTEGRAL_RUNNER = load_integral_runner()
 
 
 @dataclass(frozen=True)
@@ -169,37 +190,14 @@ def validate_saved_output(
     out_root: Path, config: BenchmarkConfig, row: dict[str, str]
 ) -> tuple[bool, str]:
     base = arm_dir(out_root, config)
-    pid = row["pid"]
-    classification_path = base / "classifications" / f"{pid}.json"
-    reading_path = base / "reading_logs" / f"{pid}.json"
-    if not classification_path.exists() or not reading_path.exists():
-        return False, "classification or reading log missing"
-    try:
-        classification = json.loads(classification_path.read_text(encoding="utf-8"))
-        reading = json.loads(reading_path.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError) as exc:
-        return False, f"unparseable saved output: {exc}"
-    if not isinstance(classification, dict) or not isinstance(reading, dict):
-        return False, "saved outputs must be JSON objects"
-    expected_hash = row["input_text_hash"]
-    if classification.get("pid") != pid or reading.get("pid") != pid:
-        return False, "saved PID mismatch"
-    if (
-        classification.get("input_text_hash") != expected_hash
-        or reading.get("input_text_hash") != expected_hash
-    ):
-        return False, "saved input_text_hash mismatch"
-    if reading.get("status") != "complete" or reading.get("full_body_read") is not True:
-        return False, "reading log is not complete"
-    sections = reading.get("section_reading_log")
-    if not isinstance(sections, list) or not sections:
-        return False, "reading log has no sections"
-    if any(
-        not isinstance(section, dict) or not str(section.get("section_summary", "")).strip()
-        for section in sections
-    ):
-        return False, "reading log has an empty section summary"
-    return True, "ok"
+    record, errors = INTEGRAL_RUNNER.load_saved_record(
+        row,
+        {
+            "classifications": base / "classifications",
+            "reading": base / "reading_logs",
+        },
+    )
+    return (True, "ok") if record is not None else (False, "; ".join(errors))
 
 
 def read_timings(path: Path) -> list[dict[str, str]]:
@@ -240,7 +238,24 @@ def codex_version(codex_bin: str) -> str:
 
 
 def ensure_metadata(out_root: Path, manifest: Path, codex_bin: str) -> None:
-    contract_files = [manifest, Path(__file__), RUNNER, PROMPT_TEMPLATE, OUTPUT_SCHEMA]
+    with manifest.open(encoding="utf-8", newline="") as handle:
+        manifest_rows = list(csv.DictReader(handle))
+    task_packets = []
+    for row in manifest_rows:
+        packet_value = row.get("task_packet_file", "")
+        if not packet_value:
+            raise ValueError("Every benchmark row must identify task_packet_file.")
+        packet_path = Path(packet_value)
+        task_packets.append(packet_path if packet_path.is_absolute() else PROJECT_DIR / packet_path)
+    contract_files = [
+        manifest,
+        Path(__file__),
+        RUNNER,
+        PROMPT_TEMPLATE,
+        OUTPUT_SCHEMA,
+        CLASSIFIER_PROMPT_V3,
+        *task_packets,
+    ]
     contract = {
         "manifest": str(manifest),
         "configurations": [asdict(config) for config in CONFIGS],
@@ -271,9 +286,30 @@ def ensure_metadata(out_root: Path, manifest: Path, codex_bin: str) -> None:
 def has_complete_timing(
     rows: list[dict[str, object]], label: str, pid: str
 ) -> bool:
+    config = next((item for item in CONFIGS if item.label == label), None)
+    if config is None:
+        return False
+
+    def is_valid(row: dict[str, object]) -> bool:
+        try:
+            elapsed = float(row["elapsed_seconds"])
+            return_code = int(row["return_code"])
+        except (KeyError, TypeError, ValueError):
+            return False
+        return (
+            row.get("label") == label
+            and row.get("pid") == pid
+            and row.get("model") == config.model
+            and row.get("effort") == config.effort
+            and row.get("status") == "complete"
+            and return_code == 0
+            and elapsed >= 0
+            and bool(row.get("started_at_utc"))
+            and bool(row.get("finished_at_utc"))
+        )
+
     return any(
-        row["label"] == label and row["pid"] == pid and row["status"] == "complete"
-        for row in rows
+        is_valid(row) for row in rows
     )
 
 

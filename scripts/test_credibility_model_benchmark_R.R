@@ -125,4 +125,20 @@ if (any(new_rows$mean_field_agreement != 1)) {
   stop("Braços sintéticos idênticos ao baseline deveriam ter concordância 100%.")
 }
 
+terra_csv <- file.path(
+  test_root, "terra_medium", "combined",
+  "classifications_integral_reading_terra_medium_10.csv"
+)
+terra_invalid <- readr::read_csv(
+  terra_csv,
+  col_types = readr::cols(.default = readr::col_character()),
+  show_col_types = FALSE
+)
+terra_invalid$empirical_evidence_type[[1]] <- "invalid_label"
+readr::write_csv(terra_invalid, terra_csv, na = "")
+invalid_status <- system2("Rscript", command, stdout = FALSE, stderr = FALSE)
+if (invalid_status == 0) {
+  stop("Comparador deveria rejeitar rótulo categórico inválido.")
+}
+
 cat("Teste end-to-end R: PASS\n")
