@@ -1,6 +1,6 @@
 # Sele<c3><a7><c3><a3>o do benchmark GPT-5.6: 10 casos dif<c3><ad>ceis
 
-Gerado em: 2026-07-10 11:19:40 -0300
+Gerado em: 2026-07-10 11:31:48 -0300
 
 ## Crit<c3><a9>rio
 

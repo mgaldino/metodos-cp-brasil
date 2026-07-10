@@ -121,7 +121,7 @@ screen_selected <- ranked |>
   dplyr::mutate(selection_reason = "Desacordo anterior em screen/método")
 
 structural_selected <- ranked |>
-  dplyr::filter(structural_issue, !pid %in% screen_selected$pid) |>
+  dplyr::filter(structural_issue, !screen_method_issue) |>
   dplyr::arrange(dplyr::desc(n_fields_disagree), pid) |>
   dplyr::slice_head(n = 2) |>
   dplyr::mutate(selection_reason = "Desacordo anterior sobre empirismo/evidência")
@@ -129,7 +129,8 @@ structural_selected <- ranked |>
 tough_selected <- ranked |>
   dplyr::filter(
     tough_call_issue,
-    !pid %in% c(screen_selected$pid, structural_selected$pid)
+    !screen_method_issue,
+    !structural_issue
   ) |>
   dplyr::arrange(dplyr::desc(n_fields_disagree), pid) |>
   dplyr::slice_head(n = 1) |>

@@ -498,17 +498,12 @@ def combine_outputs(
     records: list[dict[str, Any]] = []
     complete_pids: set[str] = set()
 
-    for pid in manifest_pids:
-        classification_path = dirs["classifications"] / f"{pid}.json"
-        reading_path = dirs["reading"] / f"{pid}.json"
-        if not classification_path.exists() or not reading_path.exists():
+    for row in rows:
+        record, _ = load_saved_record(row, dirs)
+        if record is None:
             continue
-        reading_record = json.loads(reading_path.read_text(encoding="utf-8"))
-        if reading_record.get("full_body_read") is not True or reading_record.get("status") != "complete":
-            continue
-        record = json.loads(classification_path.read_text(encoding="utf-8"))
-        records.append(ordered_classification(record))
-        complete_pids.add(pid)
+        records.append(ordered_classification(record["classification"]))
+        complete_pids.add(row["pid"])
 
     if not re.fullmatch(r"[A-Za-z0-9_.-]+", combined_stem):
         raise ValueError("--combined-stem may contain only letters, numbers, underscore, dot, and hyphen")
@@ -579,8 +574,31 @@ def combine_outputs(
     }
 
 
-def already_complete(pid: str, dirs: dict[str, Path]) -> bool:
-    return (dirs["reading"] / f"{pid}.json").exists() and (dirs["classifications"] / f"{pid}.json").exists()
+def load_saved_record(
+    row: dict[str, str], dirs: dict[str, Path]
+) -> tuple[dict[str, Any] | None, list[str]]:
+    pid = row["pid"]
+    classification_path = dirs["classifications"] / f"{pid}.json"
+    reading_path = dirs["reading"] / f"{pid}.json"
+    if not classification_path.exists() or not reading_path.exists():
+        return None, ["saved classification or reading log is missing"]
+    try:
+        reading_record = json.loads(reading_path.read_text(encoding="utf-8"))
+        classification = json.loads(classification_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        return None, [f"could not parse saved output: {exc}"]
+    if not isinstance(reading_record, dict) or not isinstance(classification, dict):
+        return None, ["saved outputs must be JSON objects"]
+    record = {**reading_record, "classification": classification}
+    errors = validate_record(record, row)
+    if errors or record.get("status") != "complete":
+        return None, errors or ["saved record status is not complete"]
+    return record, []
+
+
+def already_complete(row: dict[str, str], dirs: dict[str, Path]) -> bool:
+    record, _ = load_saved_record(row, dirs)
+    return record is not None
 
 
 def build_codex_command(args: argparse.Namespace, raw_path: Path) -> list[str]:
@@ -589,6 +607,8 @@ def build_codex_command(args: argparse.Namespace, raw_path: Path) -> list[str]:
         cmd.extend(["--model", args.model])
     if args.model_reasoning_effort:
         cmd.extend(["-c", f'model_reasoning_effort="{args.model_reasoning_effort}"'])
+    if getattr(args, "service_tier", None):
+        cmd.extend(["-c", f'service_tier="{args.service_tier}"'])
     cmd.extend(
         [
             "--cd",
@@ -692,6 +712,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "-c model_reasoning_effort=\"<effort>\" without editing user config."
         ),
     )
+    parser.add_argument(
+        "--service-tier",
+        choices=["default", "fast"],
+        default=None,
+        help="Optional Codex service tier override passed with -c service_tier=...",
+    )
     parser.add_argument("--timeout", type=int, default=1800, help="Timeout per article in seconds.")
     parser.add_argument("--ephemeral", action="store_true", help="Pass --ephemeral to codex exec.")
     parser.add_argument(
@@ -743,7 +769,7 @@ def main() -> int:
 
     for index, row in enumerate(rows, start=1):
         pid = row["pid"]
-        if already_complete(pid, dirs) and not args.force:
+        if already_complete(row, dirs) and not args.force:
             print(f"[{index}/{len(rows)}] SKIP {pid} already complete")
             skipped += 1
             continue

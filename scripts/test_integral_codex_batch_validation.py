@@ -418,6 +418,48 @@ def test_build_codex_command_passes_model_reasoning_effort(tmp_path):
     assert cmd[-1] == "-"
 
 
+def test_build_codex_command_passes_service_tier(tmp_path):
+    runner = load_runner()
+    raw_path = tmp_path / "response.json"
+    args = argparse.Namespace(
+        codex_bin="codex",
+        model="gpt-5.6-terra",
+        model_reasoning_effort="medium",
+        service_tier="default",
+        ephemeral=True,
+    )
+
+    cmd = runner.build_codex_command(args, raw_path)
+
+    assert 'service_tier="default"' in cmd
+
+
+def test_load_saved_record_rejects_hash_mismatch(tmp_path):
+    runner = load_runner()
+    dirs = {}
+    for name in ["classifications", "reading"]:
+        dirs[name] = tmp_path / name
+        dirs[name].mkdir()
+    row = {
+        "pid": "S001",
+        "title": "Title",
+        "journal_title": "Journal",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record("Title", "Journal", "abc123")
+    reading = {field: record[field] for field in runner.TOP_LEVEL_FIELDS if field != "classification"}
+    reading["input_text_hash"] = "wrong"
+    (dirs["reading"] / "S001.json").write_text(json.dumps(reading), encoding="utf-8")
+    (dirs["classifications"] / "S001.json").write_text(
+        json.dumps(record["classification"]), encoding="utf-8"
+    )
+
+    saved, errors = runner.load_saved_record(row, dirs)
+
+    assert saved is None
+    assert any("input_text_hash mismatch" in error for error in errors)
+
+
 def test_build_codex_command_places_ephemeral_before_stdin_prompt(tmp_path):
     runner = load_runner()
     raw_path = tmp_path / "response.json"
