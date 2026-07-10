@@ -271,6 +271,8 @@ def canonicalize_descriptive_metadata(record: dict[str, Any], row: dict[str, str
         return
 
     identity_fields = ("pid", "input_text_hash")
+    if not all(row.get(field) for field in identity_fields):
+        return
     identity_matches = all(
         record.get(field) == row.get(field) and classification.get(field) == row.get(field)
         for field in identity_fields

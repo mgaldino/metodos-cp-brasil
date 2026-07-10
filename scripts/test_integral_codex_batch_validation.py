@@ -5,6 +5,8 @@ import importlib.util
 import json
 from pathlib import Path
 
+import pytest
+
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 RUNNER_PATH = PROJECT_DIR / "scripts/25_run_credibility_prompt_v3_integral_codex_batch.py"
@@ -178,7 +180,20 @@ def test_canonicalize_descriptive_metadata_restores_manifest_titles_when_identit
     assert runner.validate_record(record, row) == []
 
 
-def test_canonicalize_descriptive_metadata_preserves_mismatch_when_hash_differs():
+@pytest.mark.parametrize(
+    ("level", "field", "mismatched_value"),
+    [
+        ("top", "pid", "S002"),
+        ("classification", "pid", "S002"),
+        ("top", "input_text_hash", "def456"),
+        ("classification", "input_text_hash", "def456"),
+    ],
+)
+def test_canonicalize_descriptive_metadata_requires_identity_at_both_levels(
+    level: str,
+    field: str,
+    mismatched_value: str,
+):
     runner = load_runner()
     row = {
         "pid": "S001",
@@ -189,16 +204,39 @@ def test_canonicalize_descriptive_metadata_preserves_mismatch_when_hash_differs(
     record = valid_record(
         title="Translated title",
         journal_title="DADOS",
-        input_text_hash="def456",
+        input_text_hash="abc123",
     )
+    target = record if level == "top" else record["classification"]
+    target[field] = mismatched_value
 
     runner.canonicalize_descriptive_metadata(record, row)
 
     assert record["title"] == "Translated title"
     assert record["classification"]["title"] == "Translated title"
-    errors = runner.validate_record(record, row)
-    assert "top-level input_text_hash mismatch: expected 'abc123', got 'def456'" in errors
-    assert "classification input_text_hash mismatch: expected 'abc123', got 'def456'" in errors
+
+
+@pytest.mark.parametrize("empty_field", ["pid", "input_text_hash"])
+def test_canonicalize_descriptive_metadata_rejects_empty_manifest_identity(empty_field: str):
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "title": "Canonical title",
+        "journal_title": "Dados",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="Translated title",
+        journal_title="DADOS",
+        input_text_hash="abc123",
+    )
+    row[empty_field] = ""
+    record[empty_field] = ""
+    record["classification"][empty_field] = ""
+
+    runner.canonicalize_descriptive_metadata(record, row)
+
+    assert record["title"] == "Translated title"
+    assert record["classification"]["title"] == "Translated title"
 
 
 def test_validate_record_rejects_diagnostic_method_as_positive_design():
