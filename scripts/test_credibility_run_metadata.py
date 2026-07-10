@@ -67,8 +67,15 @@ class RunMetadataTests(unittest.TestCase):
     def test_pid_provenance_must_match_contract(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            dirs = {"provenance": root / "provenance"}
-            dirs["provenance"].mkdir()
+            dirs = {
+                "provenance": root / "provenance",
+                "reading": root / "reading",
+                "classifications": root / "classifications",
+            }
+            for directory in dirs.values():
+                directory.mkdir()
+            (dirs["reading"] / "P1.json").write_text("{}\n", encoding="utf-8")
+            (dirs["classifications"] / "P1.json").write_text("{}\n", encoding="utf-8")
             contract = {"model": "gpt-5.6-terra", "model_reasoning_effort": "medium"}
             self.assertFalse(RUNNER.provenance_matches("P1", contract, dirs))
             RUNNER.save_pid_provenance("P1", contract, dirs)
@@ -76,6 +83,17 @@ class RunMetadataTests(unittest.TestCase):
             self.assertFalse(
                 RUNNER.provenance_matches("P1", {**contract, "model": "gpt-5.6-sol"}, dirs)
             )
+            (dirs["classifications"] / "P1.json").write_text('{"changed": true}\n', encoding="utf-8")
+            self.assertFalse(RUNNER.provenance_matches("P1", contract, dirs))
+
+    def test_codex_command_uses_materialized_runtime(self):
+        args = self.args()
+        args.ephemeral = False
+        args.codex_bin = "codex"
+        command = RUNNER.build_codex_command(args, Path("result.json"))
+        self.assertIn("gpt-5.6-terra", command)
+        self.assertIn('model_reasoning_effort="medium"', command)
+        self.assertIn('service_tier="default"', command)
 
     def test_codex_home_is_used_for_config_resolution(self):
         with tempfile.TemporaryDirectory() as tmp:

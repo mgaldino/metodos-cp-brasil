@@ -595,10 +595,14 @@ def pid_provenance_path(pid: str, dirs: dict[str, Path]) -> Path:
 
 
 def save_pid_provenance(pid: str, contract: dict[str, Any], dirs: dict[str, Path]) -> None:
+    reading_path = dirs["reading"] / f"{pid}.json"
+    classification_path = dirs["classifications"] / f"{pid}.json"
     payload = {
         "pid": pid,
         "recorded_at_utc": datetime.now(timezone.utc).isoformat(),
         "contract": contract,
+        "reading_log_sha256": sha256_file(reading_path),
+        "classification_sha256": sha256_file(classification_path),
     }
     atomic_write_text(
         pid_provenance_path(pid, dirs),
@@ -614,7 +618,16 @@ def provenance_matches(pid: str, contract: dict[str, Any], dirs: dict[str, Path]
         payload = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return False
-    return payload.get("pid") == pid and payload.get("contract") == contract
+    reading_path = dirs["reading"] / f"{pid}.json"
+    classification_path = dirs["classifications"] / f"{pid}.json"
+    if not reading_path.exists() or not classification_path.exists():
+        return False
+    return (
+        payload.get("pid") == pid
+        and payload.get("contract") == contract
+        and payload.get("reading_log_sha256") == sha256_file(reading_path)
+        and payload.get("classification_sha256") == sha256_file(classification_path)
+    )
 
 
 def csv_value(value: Any) -> str:
@@ -631,6 +644,7 @@ def combine_outputs(
     rows: list[dict[str, str]],
     dirs: dict[str, Path],
     combined_stem: str = "classifications_integral_reading",
+    contract: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     manifest_pids = [row["pid"] for row in rows]
     records: list[dict[str, Any]] = []
@@ -638,7 +652,9 @@ def combine_outputs(
 
     for row in rows:
         record, _ = load_saved_record(row, dirs)
-        if record is None:
+        if record is None or (
+            contract is not None and not provenance_matches(row["pid"], contract, dirs)
+        ):
             continue
         records.append(ordered_classification(record["classification"]))
         complete_pids.add(row["pid"])
@@ -899,7 +915,17 @@ def main() -> int:
         return 1
 
     if args.combine_only:
-        summary = combine_outputs(rows, dirs, combined_stem=args.combined_stem)
+        metadata_path = dirs["combined"] / f"{args.combined_stem}_run_metadata.json"
+        contract = None
+        if metadata_path.exists():
+            try:
+                contract = json.loads(metadata_path.read_text(encoding="utf-8"))["contract"]
+            except (OSError, json.JSONDecodeError, KeyError) as exc:
+                print(f"Invalid run metadata at {metadata_path}: {exc}", file=sys.stderr)
+                return 1
+        summary = combine_outputs(
+            rows, dirs, combined_stem=args.combined_stem, contract=contract
+        )
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return 0
 
@@ -964,7 +990,9 @@ def main() -> int:
         )
         return 0
 
-    summary = combine_outputs(rows, dirs, combined_stem=args.combined_stem)
+    summary = combine_outputs(
+        rows, dirs, combined_stem=args.combined_stem, contract=contract
+    )
     print(
         json.dumps(
             {
