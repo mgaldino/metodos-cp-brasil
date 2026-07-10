@@ -155,6 +155,52 @@ def test_validate_record_still_requires_literal_pid_match():
     assert "classification pid mismatch: expected 'S001', got 'S002'" in errors
 
 
+def test_canonicalize_descriptive_metadata_restores_manifest_titles_when_identity_matches():
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "title": "Divididos no Reconhecimento",
+        "journal_title": "Dados",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="Divididos no Reconocimiento",
+        journal_title="DADOS",
+        input_text_hash="abc123",
+    )
+
+    runner.canonicalize_descriptive_metadata(record, row)
+
+    assert record["title"] == row["title"]
+    assert record["journal_title"] == row["journal_title"]
+    assert record["classification"]["title"] == row["title"]
+    assert record["classification"]["journal_title"] == row["journal_title"]
+    assert runner.validate_record(record, row) == []
+
+
+def test_canonicalize_descriptive_metadata_preserves_mismatch_when_hash_differs():
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "title": "Canonical title",
+        "journal_title": "Dados",
+        "input_text_hash": "abc123",
+    }
+    record = valid_record(
+        title="Translated title",
+        journal_title="DADOS",
+        input_text_hash="def456",
+    )
+
+    runner.canonicalize_descriptive_metadata(record, row)
+
+    assert record["title"] == "Translated title"
+    assert record["classification"]["title"] == "Translated title"
+    errors = runner.validate_record(record, row)
+    assert "top-level input_text_hash mismatch: expected 'abc123', got 'def456'" in errors
+    assert "classification input_text_hash mismatch: expected 'abc123', got 'def456'" in errors
+
+
 def test_validate_record_rejects_diagnostic_method_as_positive_design():
     runner = load_runner()
     row = {

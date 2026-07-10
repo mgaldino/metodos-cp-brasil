@@ -264,6 +264,25 @@ def metadata_field_matches(field: str, expected: str, got: Any) -> bool:
     return got == expected
 
 
+def canonicalize_descriptive_metadata(record: dict[str, Any], row: dict[str, str]) -> None:
+    """Restore manifest titles only after the model preserves literal article identity."""
+    classification = record.get("classification")
+    if not isinstance(classification, dict):
+        return
+
+    identity_fields = ("pid", "input_text_hash")
+    identity_matches = all(
+        record.get(field) == row.get(field) and classification.get(field) == row.get(field)
+        for field in identity_fields
+    )
+    if not identity_matches:
+        return
+
+    for field in ("title", "journal_title"):
+        record[field] = row.get(field, "")
+        classification[field] = row.get(field, "")
+
+
 def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
     errors: list[str] = []
 
@@ -634,6 +653,7 @@ def run_codex_for_row(
     except Exception as exc:  # noqa: BLE001
         return False, f"could not parse JSON from final message: {exc}"
 
+    canonicalize_descriptive_metadata(record, row)
     errors = validate_record(record, row)
     if errors:
         return False, "validation errors:\n" + "\n".join(f"- {error}" for error in errors)
