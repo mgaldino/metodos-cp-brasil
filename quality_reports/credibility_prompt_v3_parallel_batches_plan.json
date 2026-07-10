@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T21:37:46.048134-03:00",
+  "generated_at": "2026-07-09T21:43:06.635361-03:00",
   "labels": [
     "active_batch_014",
     "active_batch_015"
@@ -14,13 +14,12 @@
     {
       "label": "active_batch_014",
       "manifest": "data/processed/credibility_prompt_v3_full_corpus/batch_manifests/active_batch_014.csv",
-      "created_now": true,
+      "created_now": false,
       "n_manifest": 100,
-      "n_complete": 0,
-      "n_missing": 100,
-      "n_failed_files": 0,
+      "n_complete": 1,
+      "n_missing": 99,
+      "n_failed_files": 24,
       "missing_pids": [
-        "S0011-52582021000100207",
         "S0011-52582021000200201",
         "S0011-52582021000200202",
         "S0011-52582021000200203",
@@ -131,7 +130,7 @@
         "--timeout",
         "2400",
         "--codex-bin",
-        "codex",
+        "/Applications/Codex.app/Contents/Resources/codex",
         "--model-reasoning-effort",
         "medium",
         "--combined-stem",
@@ -143,11 +142,11 @@
     {
       "label": "active_batch_015",
       "manifest": "data/processed/credibility_prompt_v3_full_corpus/batch_manifests/active_batch_015.csv",
-      "created_now": true,
+      "created_now": false,
       "n_manifest": 100,
       "n_complete": 0,
       "n_missing": 100,
-      "n_failed_files": 0,
+      "n_failed_files": 25,
       "missing_pids": [
         "S0011-52582024000400201",
         "S0011-52582024000400202",
@@ -260,7 +259,7 @@
         "--timeout",
         "2400",
         "--codex-bin",
-        "codex",
+        "/Applications/Codex.app/Contents/Resources/codex",
         "--model-reasoning-effort",
         "medium",
         "--combined-stem",
