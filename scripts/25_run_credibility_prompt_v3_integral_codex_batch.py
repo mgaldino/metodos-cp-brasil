@@ -15,11 +15,13 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import html
 import json
 import re
 import subprocess
 import sys
+import tomllib
 import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
@@ -479,6 +481,102 @@ def atomic_write_text(path: Path, text: str) -> None:
     tmp_path.replace(path)
 
 
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def codex_config() -> dict[str, Any]:
+    config_path = Path.home() / ".codex" / "config.toml"
+    if not config_path.exists():
+        return {}
+    try:
+        with config_path.open("rb") as handle:
+            return tomllib.load(handle)
+    except (OSError, tomllib.TOMLDecodeError):
+        return {}
+
+
+def effective_runtime(args: argparse.Namespace) -> dict[str, str | None]:
+    config = codex_config()
+    return {
+        "model": args.model or config.get("model"),
+        "model_reasoning_effort": args.model_reasoning_effort or config.get("model_reasoning_effort"),
+        "service_tier": args.service_tier or config.get("service_tier"),
+    }
+
+
+def codex_version(codex_bin: str) -> str | None:
+    try:
+        result = subprocess.run(
+            [codex_bin, "--version"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            timeout=30,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    return result.stdout.strip() or result.stderr.strip() or None
+
+
+def write_run_metadata(
+    args: argparse.Namespace,
+    manifest_path: Path,
+    rows: list[dict[str, str]],
+    dirs: dict[str, Path],
+) -> Path:
+    runtime = effective_runtime(args)
+    if not runtime["model"]:
+        raise ValueError("Could not resolve the effective Codex model; pass --model explicitly.")
+    if not runtime["model_reasoning_effort"]:
+        raise ValueError(
+            "Could not resolve model reasoning effort; pass --model-reasoning-effort explicitly."
+        )
+
+    metadata_path = dirs["combined"] / f"{args.combined_stem}_run_metadata.json"
+    contract = {
+        "manifest_path": str(manifest_path.resolve()),
+        "manifest_sha256": sha256_file(manifest_path),
+        "selected_pids": [row["pid"] for row in rows],
+        "model": runtime["model"],
+        "model_reasoning_effort": runtime["model_reasoning_effort"],
+        "service_tier": runtime["service_tier"],
+        "prompt_template_sha256": sha256_file(PROMPT_TEMPLATE),
+        "classifier_prompt_sha256": sha256_file(CLASSIFIER_PROMPT_V3),
+        "output_schema_sha256": sha256_file(OUTPUT_SCHEMA),
+    }
+    if metadata_path.exists():
+        existing = json.loads(metadata_path.read_text(encoding="utf-8"))
+        if existing.get("contract") != contract:
+            raise ValueError(
+                f"Run metadata conflict at {metadata_path}; refusing to mix models, efforts, "
+                "manifests, or prompt versions in one combined stem."
+            )
+        return metadata_path
+
+    payload = {
+        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "contract": contract,
+        "requested": {
+            "model": args.model,
+            "model_reasoning_effort": args.model_reasoning_effort,
+            "service_tier": args.service_tier,
+        },
+        "codex_binary": args.codex_bin,
+        "codex_version": codex_version(args.codex_bin),
+        "runner_script": str(Path(__file__).resolve()),
+        "runner_script_sha256": sha256_file(Path(__file__).resolve()),
+    }
+    atomic_write_text(metadata_path, json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    return metadata_path
+
+
 def csv_value(value: Any) -> str:
     if value is None:
         return ""
@@ -759,9 +857,16 @@ def main() -> int:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
         return 0
 
+    try:
+        metadata_path = write_run_metadata(args, manifest_path, rows, dirs)
+    except (ValueError, OSError, json.JSONDecodeError) as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
+
     print(f"Manifest: {manifest_path}")
     print(f"Output dir: {out_dir}")
     print(f"Selected articles: {len(rows)}")
+    print(f"Run metadata: {metadata_path}")
 
     ok = 0
     failed = 0

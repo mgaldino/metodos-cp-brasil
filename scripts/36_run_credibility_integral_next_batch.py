@@ -42,6 +42,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--codex-bin", default="codex")
     parser.add_argument("--model", default=None)
     parser.add_argument("--model-reasoning-effort", choices=["low", "medium", "high", "xhigh"], default="xhigh")
+    parser.add_argument("--service-tier", choices=["default", "fast"], default="default")
     parser.add_argument("--ephemeral", action="store_true")
     parser.add_argument("--force", action="store_true", help="Pass --force to the batch runner.")
     parser.add_argument("--dry-run", action="store_true", help="Render prompts for the selected batch, but do not call Codex.")
@@ -120,6 +121,8 @@ def runner_base(args: argparse.Namespace, batch_manifest: Path) -> list[str]:
     ]
     if args.model:
         cmd.extend(["--model", args.model])
+    if args.service_tier:
+        cmd.extend(["--service-tier", args.service_tier])
     if args.ephemeral:
         cmd.append("--ephemeral")
     if args.force:
