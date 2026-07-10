@@ -239,6 +239,26 @@ def test_canonicalize_descriptive_metadata_rejects_empty_manifest_identity(empty
     assert record["classification"]["title"] == "Translated title"
 
 
+@pytest.mark.parametrize("empty_field", ["pid", "input_text_hash"])
+def test_load_manifest_rejects_empty_identity(tmp_path: Path, empty_field: str):
+    runner = load_runner()
+    row = {
+        "pid": "S001",
+        "input_text_hash": "abc123",
+        "task_packet_file": "unused.md",
+    }
+    row[empty_field] = ""
+    manifest = tmp_path / "manifest.csv"
+    manifest.write_text(
+        "pid,input_text_hash,task_packet_file\n"
+        f"{row['pid']},{row['input_text_hash']},{row['task_packet_file']}\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match=f"Manifest row lacks {empty_field}"):
+        runner.load_manifest(manifest)
+
+
 def test_validate_record_rejects_diagnostic_method_as_positive_design():
     runner = load_runner()
     row = {

@@ -1,31 +1,20 @@
-# Independent Python review
+# Follow-up Python review
 
-No blocking findings. The implementation matches the intended rule.
+## 🔴 Blocking
 
-## Medium — asymmetric identity conditions are not tested
+- Empty manifest identity still does not fail closed. The new guard in [runner](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/25_run_credibility_prompt_v3_integral_codex_batch.py:273) prevents metadata canonicalization, but `validate_record()` skips comparison whenever the manifest value is empty ([line 298](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/25_run_credibility_prompt_v3_integral_codex_batch.py:298), [line 374](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/25_run_credibility_prompt_v3_integral_codex_batch.py:374)). A record with empty PID or hash at both levels returns zero validation errors. The new test only verifies that titles remain unchanged; it does not assert rejection ([test line 218](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/test_integral_codex_batch_validation.py:218)).
 
-The negative test changes the hash at both levels simultaneously ([test file](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/test_integral_codex_batch_validation.py:181)). It does not prove that canonicalization is rejected when only one of these differs:
+  Required fix: reject manifest rows with empty `pid` or `input_text_hash`, preferably during `load_manifest()`, and add tests asserting an exception or validation error.
 
-- Top-level `pid`
-- Classification `pid`
-- Top-level `input_text_hash`
-- Classification `input_text_hash`
+## Resolved
 
-Add parameterized tests for these four asymmetric cases. Otherwise, a future regression checking only one level could pass the suite.
+- The asymmetric test gap is resolved: all four top-level/classification × PID/hash mismatch combinations are covered ([test line 183](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/test_integral_codex_batch_validation.py:183)).
+- The focused validation tests passed: **13 passed**.
+- No additional blocking issue was found in the reviewed diff.
 
-## Low — empty manifest identities are not fail-closed
+The full test file could not run in this read-only environment because pytest could not create temporary directories.
 
-The predicate uses `row.get()` ([runner](/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/scripts/25_run_credibility_prompt_v3_integral_codex_batch.py:273)), while validation skips comparisons when the manifest value is empty. Thus, empty `pid` or hash values could match empty response values and permit canonicalization. The frozen manifest presumably prevents this, but `load_manifest()` does not enforce non-empty identity fields. A manifest-integrity test would make that assumption auditable.
+## Decision
 
-## Low — persistence behavior lacks integration coverage
+**Execution rejected.** The empty-manifest-identity issue remains blocking.
 
-Unit tests confirm the in-memory mutation, but not the complete `run_codex_for_row()` path. Add a test confirming that:
-
-- Only `title` and `journal_title` change.
-- Canonicalized values reach both saved processed outputs.
-- The raw response remains unchanged.
-- Nothing is persisted when either identity level differs.
-
-## Confirmed behavior
-
-The implementation requires literal equality of both identity fields at both levels, mutates only `title` and `journal_title`, validates before processed persistence, and retains the original raw-response file. `git diff --check` passed. Pytest could not run because the read-only environment had no writable temporary directory; no files were edited.
