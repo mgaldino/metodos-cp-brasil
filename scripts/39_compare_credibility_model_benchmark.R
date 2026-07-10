@@ -227,6 +227,11 @@ write_utf8_lines <- function(lines, path) {
   }
 }
 
+parse_iso_timestamp <- function(x) {
+  normalized <- stringr::str_replace(x, "([+-][0-9]{2}):([0-9]{2})$", "\\1\\2")
+  as.POSIXct(normalized, format = "%Y-%m-%dT%H:%M:%OS%z", tz = "UTC")
+}
+
 validate_classification <- function(data, label) {
   missing_fields <- setdiff(priority_fields, names(data))
   if (length(missing_fields) > 0) {
@@ -366,8 +371,13 @@ baseline <- read_utf8(baseline_path) |>
   dplyr::semi_join(manifest |> dplyr::select(pid), by = "pid")
 timings <- read_utf8(timings_path) |>
   dplyr::mutate(
-    elapsed_seconds = as.numeric(elapsed_seconds),
-    return_code = as.integer(return_code)
+    active_elapsed_seconds = as.numeric(elapsed_seconds),
+    return_code = as.integer(return_code),
+    started_at = parse_iso_timestamp(started_at_utc),
+    finished_at = parse_iso_timestamp(finished_at_utc),
+    wall_elapsed_seconds = as.numeric(
+      difftime(finished_at, started_at, units = "secs")
+    )
   )
 
 if (nrow(manifest) != 10 || anyDuplicated(manifest$pid)) {
@@ -408,8 +418,13 @@ if (any(!timing_validated$status %in% c("complete", "failed"))) {
 if (any((timing_validated$status == "complete") != (timing_validated$return_code == 0L))) {
   stop("Status e return_code divergem no timing.")
 }
-if (any(!is.finite(timing_validated$elapsed_seconds) | timing_validated$elapsed_seconds < 0)) {
-  stop("Timing contém duração inválida.")
+if (any(
+  !is.finite(timing_validated$active_elapsed_seconds) |
+    timing_validated$active_elapsed_seconds < 0 |
+    !is.finite(timing_validated$wall_elapsed_seconds) |
+    timing_validated$wall_elapsed_seconds < 0
+)) {
+  stop("Timing contém duração ativa ou de parede inválida.")
 }
 success_counts <- timing_validated |>
   dplyr::filter(status == "complete", return_code == 0L) |>
@@ -565,9 +580,12 @@ speed <- timing_validated |>
   dplyr::summarise(
     n_attempts = dplyr::n(),
     n_failed_attempts = sum(status != "complete"),
-    total_elapsed_seconds = sum(elapsed_seconds),
-    median_success_seconds = median(elapsed_seconds[status == "complete"]),
-    mean_success_seconds = mean(elapsed_seconds[status == "complete"]),
+    total_elapsed_seconds = sum(wall_elapsed_seconds),
+    total_active_seconds = sum(active_elapsed_seconds),
+    median_success_seconds = median(wall_elapsed_seconds[status == "complete"]),
+    median_active_seconds = median(active_elapsed_seconds[status == "complete"]),
+    mean_success_seconds = mean(wall_elapsed_seconds[status == "complete"]),
+    mean_active_seconds = mean(active_elapsed_seconds[status == "complete"]),
     .groups = "drop"
   )
 
@@ -629,8 +647,10 @@ summary_table <- comparison_export |>
     concordancia_media = mean_field_agreement_percent,
     tentativas = n_attempts,
     falhas_transitorias = n_failed_attempts,
-    tempo_total_segundos = total_elapsed_seconds,
-    mediana_por_artigo_segundos = median_success_seconds
+    tempo_total_parede_segundos = total_elapsed_seconds,
+    tempo_total_ativo_segundos = total_active_seconds,
+    mediana_parede_por_artigo_segundos = median_success_seconds,
+    mediana_ativa_por_artigo_segundos = median_active_seconds
   )
 
 field_table <- field_agreement |>
@@ -656,8 +676,11 @@ disagreement_table <- disagreements |>
 speed_table <- speed |>
   dplyr::mutate(
     total_elapsed_seconds = round(total_elapsed_seconds, 1),
+    total_active_seconds = round(total_active_seconds, 1),
     median_success_seconds = round(median_success_seconds, 1),
-    mean_success_seconds = round(mean_success_seconds, 1)
+    median_active_seconds = round(median_active_seconds, 1),
+    mean_success_seconds = round(mean_success_seconds, 1),
+    mean_active_seconds = round(mean_active_seconds, 1)
   ) |>
   dplyr::select(
     configuracao = label,
@@ -665,9 +688,12 @@ speed_table <- speed |>
     esforco = effort,
     tentativas = n_attempts,
     falhas = n_failed_attempts,
-    tempo_total_segundos = total_elapsed_seconds,
-    mediana_segundos = median_success_seconds,
-    media_segundos = mean_success_seconds
+    tempo_total_parede_segundos = total_elapsed_seconds,
+    tempo_total_ativo_segundos = total_active_seconds,
+    mediana_parede_segundos = median_success_seconds,
+    mediana_ativa_segundos = median_active_seconds,
+    media_parede_segundos = mean_success_seconds,
+    media_ativa_segundos = mean_active_seconds
   )
 
 log_table <- log_status |>
@@ -696,7 +722,7 @@ report_lines <- c(
   "- Execução sequencial com rotação da ordem dos braços por PID.",
   "- Regra lexicográfica: completude e logs válidos; menos desacordos screen/método; maior concordância média; menor tempo total.",
   "- Piso histórico: um braço novo não pode ter mais desacordos críticos nem menor concordância média que o GPT-5.5 high nos mesmos 10 casos.",
-  "- O tempo total inclui tentativas falhas porque mede latência fim a fim, inclusive reparos e retries.",
+  "- O tempo de parede inclui filas, suspensões e tentativas falhas; ele mede a latência fim a fim usada na decisão. O tempo ativo do processo também é reportado separadamente.",
   "- A concordância com o baseline mede continuidade classificatória, não verdade substantiva.",
   "",
   "## Tabela 1. Resultado geral por configuração",
