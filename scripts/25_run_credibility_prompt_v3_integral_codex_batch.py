@@ -191,12 +191,13 @@ def ensure_dirs(out_dir: Path) -> dict[str, Path]:
 
 def load_manifest(path: Path, pids: set[str] | None = None) -> list[dict[str, str]]:
     rows = read_csv_dict(path)
-    if pids is not None:
-        rows = [row for row in rows if row["pid"] in pids]
     for row in rows:
         for field in ("pid", "input_text_hash"):
             if not row.get(field):
                 raise ValueError(f"Manifest row lacks {field}: {row.get('pid', '')}")
+    if pids is not None:
+        rows = [row for row in rows if row["pid"] in pids]
+    for row in rows:
         if not row.get("task_packet_file"):
             raise ValueError(f"Manifest row lacks task_packet_file: {row.get('pid')}")
         packet = PROJECT_DIR / row["task_packet_file"]

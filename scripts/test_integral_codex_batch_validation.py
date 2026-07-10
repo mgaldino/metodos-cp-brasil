@@ -240,7 +240,12 @@ def test_canonicalize_descriptive_metadata_rejects_empty_manifest_identity(empty
 
 
 @pytest.mark.parametrize("empty_field", ["pid", "input_text_hash"])
-def test_load_manifest_rejects_empty_identity(tmp_path: Path, empty_field: str):
+@pytest.mark.parametrize("pids", [None, {"S999"}])
+def test_load_manifest_rejects_empty_identity(
+    tmp_path: Path,
+    empty_field: str,
+    pids: set[str] | None,
+):
     runner = load_runner()
     row = {
         "pid": "S001",
@@ -256,7 +261,7 @@ def test_load_manifest_rejects_empty_identity(tmp_path: Path, empty_field: str):
     )
 
     with pytest.raises(ValueError, match=f"Manifest row lacks {empty_field}"):
-        runner.load_manifest(manifest)
+        runner.load_manifest(manifest, pids)
 
 
 def test_validate_record_rejects_diagnostic_method_as_positive_design():
