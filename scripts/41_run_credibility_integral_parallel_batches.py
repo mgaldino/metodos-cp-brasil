@@ -36,6 +36,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--codex-bin", default="codex")
     parser.add_argument("--model", default=None)
     parser.add_argument("--model-reasoning-effort", choices=["low", "medium", "high", "xhigh"], default="high")
+    parser.add_argument("--service-tier", choices=["default", "fast"], default="default")
     parser.add_argument("--ephemeral", action="store_true")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--run", action="store_true", help="Actually launch child batch runners.")
@@ -94,6 +95,8 @@ def batch_command(args: argparse.Namespace, label: str) -> list[str]:
         args.model_reasoning_effort,
         "--combined-stem",
         label,
+        "--service-tier",
+        args.service_tier,
     ]
     if args.model:
         cmd.extend(["--model", args.model])

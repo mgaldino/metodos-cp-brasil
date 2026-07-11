@@ -37,6 +37,7 @@ report_out <- get_arg(
   "--report-out",
   file.path("quality_reports", paste0("credibility_prompt_v3_", label, "_selection.md"))
 )
+journal_title_filter <- get_arg("--journal-title", NULL)
 
 if (is.na(limit) || limit <= 0) {
   stop("--limit deve ser um inteiro positivo.")
@@ -71,8 +72,13 @@ status <- manifest |>
     already_complete = file.exists(reading_log_file) & file.exists(classification_file)
   )
 
-selected <- status |>
-  dplyr::filter(!already_complete) |>
+selection_pool <- status |>
+  dplyr::filter(!already_complete)
+if (!is.null(journal_title_filter)) {
+  selection_pool <- selection_pool |>
+    dplyr::filter(journal_title == journal_title_filter)
+}
+selected <- selection_pool |>
   dplyr::slice_head(n = limit)
 
 if (nrow(selected) == 0) {
