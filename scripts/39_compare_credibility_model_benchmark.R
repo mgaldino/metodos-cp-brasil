@@ -54,6 +54,7 @@ timings_path <- get_arg(
   "--timings",
   file.path(benchmark_root, "benchmark_timings.csv")
 )
+luna_root <- get_arg("--luna-root", NA_character_)
 out_report <- get_arg(
   "--out-report",
   file.path(project_dir, "quality_reports", "credibility_prompt_v3_ab_gpt56_model_benchmark_10.md")
@@ -84,6 +85,21 @@ configurations <- tibble::tribble(
   file.path(benchmark_root, "terra_xhigh", "combined", "classifications_integral_reading_terra_xhigh_10.csv"),
   file.path(benchmark_root, "terra_xhigh", "reading_logs"), TRUE
 )
+
+luna_extension <- !is.na(luna_root) && nzchar(luna_root)
+
+if (luna_extension) {
+  configurations <- dplyr::bind_rows(
+    configurations,
+    tibble::tribble(
+      ~label, ~display_name, ~model, ~effort, ~csv_path, ~reading_dir, ~is_new,
+      "luna_xhigh", "GPT-5.6 Luna xhigh",
+      "gpt-5.6-luna", "xhigh",
+      file.path(luna_root, "luna_xhigh", "combined", "classifications_integral_reading_luna_xhigh_10.csv"),
+      file.path(luna_root, "luna_xhigh", "reading_logs"), TRUE
+    )
+  )
+}
 
 priority_fields <- c(
   "is_empirical_paper",
@@ -377,6 +393,18 @@ timings <- read_utf8(timings_path) |>
       difftime(finished_at, started_at, units = "secs")
     )
   )
+if (luna_extension) {
+  luna_timings_path <- file.path(luna_root, "benchmark_timings.csv")
+  luna_timings <- read_utf8(luna_timings_path) |>
+    dplyr::mutate(
+      active_elapsed_seconds = as.numeric(elapsed_seconds),
+      return_code = as.integer(return_code),
+      started_at = parse_iso_timestamp(started_at_utc),
+      finished_at = parse_iso_timestamp(finished_at_utc),
+      wall_elapsed_seconds = as.numeric(difftime(finished_at, started_at, units = "secs"))
+    )
+  timings <- dplyr::bind_rows(timings, luna_timings)
+}
 
 if (nrow(manifest) != 10 || anyDuplicated(manifest$pid)) {
   stop("Manifesto deve conter exatamente 10 PIDs únicos.")
@@ -716,9 +744,9 @@ report_lines <- c(
   paste0("- Manifesto congelado: `", manifest_path, "`"),
   "- Baseline de consistência: GPT-5.5 xhigh já classificado.",
   "- Benchmark histórico incorporado: GPT-5.5 high nos mesmos PIDs.",
-  "- Novos braços: GPT-5.6 Sol medium, Terra medium e Terra xhigh.",
+  paste0("- Novos braços: GPT-5.6 Sol medium, Terra medium e Terra xhigh", if (luna_extension) ", mais a extensão GPT-5.6 Luna xhigh." else "."),
   "- Velocidade solicitada: standard/default em todos os braços; o `codex exec` não expõe a velocidade efetiva.",
-  "- Execução sequencial com rotação da ordem dos braços por PID.",
+  paste0("- Os três braços originais foram executados sequencialmente com rotação da ordem por PID", if (luna_extension) "; Luna xhigh foi executado posteriormente como extensão isolada nos mesmos 10 PIDs." else "."),
   "- Regra lexicográfica: completude e logs válidos; menos desacordos screen/método; maior concordância média; menor tempo total.",
   "- Piso histórico: um braço novo não pode ter mais desacordos críticos nem menor concordância média que o GPT-5.5 high nos mesmos 10 casos.",
   "- O tempo de parede inclui filas, suspensões e tentativas falhas; ele mede a latência fim a fim usada na decisão. O tempo ativo do processo também é reportado separadamente.",
