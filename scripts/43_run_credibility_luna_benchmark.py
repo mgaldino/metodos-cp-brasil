@@ -129,7 +129,7 @@ def main() -> int:
         log_dir.mkdir(parents=True, exist_ok=True)
         (log_dir / f"{pid}.attempt_{attempt}.stdout.log").write_text(result.stdout, encoding="utf-8")
         (log_dir / f"{pid}.attempt_{attempt}.stderr.log").write_text(result.stderr, encoding="utf-8")
-        complete, _ = base.validate_saved_output(out_dir(), type("Config", (), {"label": LABEL})(), row)
+        complete, _ = base.validate_saved_output(OUT_ROOT, type("Config", (), {"label": LABEL})(), row)
         status = "complete" if result.returncode == 0 and complete else "failed"
         timing_rows.append({
             "label": LABEL, "model": MODEL, "effort": EFFORT, "pid": pid,
