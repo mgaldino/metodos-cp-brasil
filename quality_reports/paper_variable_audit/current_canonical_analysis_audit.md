@@ -1,6 +1,6 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-13 10:44:10 -0300
+Gerado em: 2026-07-13 10:45:46 -0300
 
 ## Universo reconciliado
 

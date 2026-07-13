@@ -114,15 +114,26 @@ Esta versão usa `r format_n(n_classificados)` artigos já classificados, equiva
 ```{r tabela-1}
 tabela_1_display <- tabela_corpus |>
   dplyr::transmute(
-    Área = journal_area,
-    Periódico = journal_title,
-    `Universo total` = format_n(eligible_total),
-    `Classificados` = format_n(classified_total),
+    Periódico = dplyr::recode(
+      journal_title,
+      "Brazilian Political Science Review" = "BPSR",
+      "Cadernos Gestão Pública e Cidadania" = "CGPC",
+      "Contexto Internacional" = "Contexto Internacional",
+      "Dados" = "Dados",
+      "Lua Nova: Revista de Cultura e Política" = "Lua Nova",
+      "Novos estudos CEBRAP" = "Novos Estudos CEBRAP",
+      "Opinião Pública" = "Opinião Pública",
+      "Revista Brasileira de Ciência Política" = "RBCP",
+      "Revista Brasileira de Ciências Sociais" = "RBCS",
+      "Revista Brasileira de Política Internacional" = "RBPI",
+      "Revista de Sociologia e Política" = "RSP"
+    ),
+    Total = format_n(eligible_total),
+    `Classif.` = format_n(classified_total),
     `Cobertura` = format_pct(coverage_percent),
-    Status = coverage_status,
-    `2005-2011` = paste0(`classified_n_2005-2011`, "/", `eligible_n_2005-2011`),
-    `2012-2018` = paste0(`classified_n_2012-2018`, "/", `eligible_n_2012-2018`),
-    `2019-2025` = paste0(`classified_n_2019-2025`, "/", `eligible_n_2019-2025`)
+    `2005-11` = paste0(`classified_n_2005-2011`, "/", `eligible_n_2005-2011`),
+    `2012-18` = paste0(`classified_n_2012-2018`, "/", `eligible_n_2012-2018`),
+    `2019-25` = paste0(`classified_n_2019-2025`, "/", `eligible_n_2019-2025`)
   )
 
 knitr::kable(
@@ -160,16 +171,24 @@ tabela_2_display <- tabela_dimensoes |>
   dplyr::mutate(
     n = ifelse(is.na(n), "-", format_n(n)),
     denominator_n = ifelse(is.na(denominator_n), "-", format_n(denominator_n)),
-    percent = format_pct(percent)
+    percent = format_pct(percent),
+    category = dplyr::recode(
+      category,
+      "method_explicitness" = "Explicitação metodológica",
+      "empirical_article_format" = "Formato do artigo empírico"
+    ),
+    denominator_display = ifelse(
+      denominator == "não disponível",
+      denominator,
+      paste0(denominator, " (", denominator_n, ")")
+    )
   ) |>
-  dplyr::rename(
+  dplyr::transmute(
     Dimensão = dimension,
     Categoria = category,
     N = n,
-    Denominador = denominator,
-    `N denominador` = denominator_n,
-    Percentual = percent,
-    Nota = note
+    Denominador = denominator_display,
+    Percentual = percent
   )
 
 knitr::kable(
@@ -235,7 +254,7 @@ O campo de claim causal ou explicativo é deliberadamente amplo. Ele aparece em 
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-O contraste conservador começa no screen de credibilidade. Dos `r format_n(n_screen)` artigos que entram nesse screen, `r format_n(n_estrito)` apresentam desenho estrito, equivalentes a `r format_pct(100 * n_estrito / n_screen)`. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
+O contraste conservador começa no screen de credibilidade. Dos `r format_n(n_screen)` artigos que entram nesse screen, `r format_n(n_estrito)` apresentam desenho estrito, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
@@ -243,7 +262,18 @@ tabela_3_display <- tabela_credibilidade |>
     n = format_n(n),
     denominator_n = format_n(denominator_n),
     percent = format_pct(percent),
-    denominator_display = paste0(denominator, " (", denominator_n, ")")
+    denominator_display = dplyr::recode(
+      denominator,
+      "artigos classificados" = paste0("Classificados (", denominator_n, ")"),
+      "artigos empíricos" = paste0("Empíricos (", denominator_n, ")"),
+      "screen de credibilidade" = paste0("Screen (", denominator_n, ")")
+    ),
+    category = dplyr::recode(
+      category,
+      "Claim causal ou explicativo" = "Claim amplo",
+      "Claim causal ou explicativo em artigo empírico" = "Claim amplo em artigo empírico",
+      "Outro método moderno a auditar" = "Outro método moderno"
+    )
   ) |>
   dplyr::transmute(
     Painel = panel,

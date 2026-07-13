@@ -858,15 +858,16 @@ figure_1_data <- tibble::tibble(
   dplyr::mutate(
     percent = fmt_pct(n, denominator_n),
     measure = factor(measure, levels = rev(measure)),
-    label = paste0(fmt_n(n), " / ", fmt_n(denominator_n), " (", fmt_pct_label(percent), ")")
+    label = paste0(fmt_n(n), " / ", fmt_n(denominator_n), " (", fmt_pct_label(percent), ")"),
+    label_hjust = ifelse(percent >= 80, 1.08, -0.08)
   )
 
 figure_1 <- figure_1_data |>
   ggplot2::ggplot(ggplot2::aes(x = percent, y = measure, color = group)) +
   ggplot2::geom_segment(ggplot2::aes(x = 0, xend = percent, yend = measure), linewidth = 0.7, color = "grey80") +
   ggplot2::geom_point(size = 3) +
-  ggplot2::geom_text(ggplot2::aes(label = label), hjust = -0.08, size = 3, color = "grey15") +
-  ggplot2::scale_x_continuous(limits = c(0, 118), breaks = seq(0, 100, 20), labels = function(x) paste0(x, "%")) +
+  ggplot2::geom_text(ggplot2::aes(label = label, hjust = label_hjust), size = 3, color = "grey15") +
+  ggplot2::scale_x_continuous(limits = c(0, 105), breaks = seq(0, 100, 20), labels = function(x) paste0(x, "%")) +
   ggplot2::scale_color_manual(values = c(
     Cobertura = "#4C78A8",
     Evidência = "#59A14F",
@@ -908,11 +909,7 @@ figure_2 <- complete_journal_profile_long |>
     subtitle = "Quatro periódicos, 1.466 artigos; o denominador varia por dimensão e é informado na legenda da figura.",
     x = NULL,
     y = NULL,
-    fill = "%",
-    caption = paste(
-      "Denominadores: empíricos = todos os artigos; componente quantitativo e claim = empíricos;",
-      "inferência = empíricos quantitativos; screen = todos os artigos; desenho estrito = screen."
-    )
+    fill = "%"
   ) +
   theme_paper() +
   ggplot2::theme(
@@ -1024,13 +1021,12 @@ figure_5 <- claim_method_alignment |>
   ggplot2::ggplot(ggplot2::aes(x = percent, y = alignment_category)) +
   ggplot2::geom_col(fill = "#4C78A8", width = 0.7) +
   ggplot2::geom_text(ggplot2::aes(label = label), hjust = -0.08, size = 3) +
-  ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = c(0, 0.18)), labels = function(x) paste0(x, "%")) +
+  ggplot2::scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10), labels = function(x) paste0(x, "%")) +
   ggplot2::labs(
     title = "Alinhamento entre claim, componente quantitativo e desenho estrito",
     subtitle = "Categorias mutuamente exclusivas entre os artigos elegíveis já classificados.",
     x = "Percentual dos artigos classificados",
-    y = NULL,
-    caption = "Claim reúne pretensões causais ou explicativas; não deve ser interpretado como claim causal estrito."
+    y = NULL
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
