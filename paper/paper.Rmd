@@ -45,13 +45,9 @@ denominadores <- readr::read_csv("../output/tables/paper/denominator_summary.csv
 tabela_corpus <- readr::read_csv("../output/tables/paper/table_1_corpus_description.csv", show_col_types = FALSE)
 tabela_dimensoes <- readr::read_csv("../output/tables/paper/table_2_methodological_dimensions.csv", show_col_types = FALSE)
 tabela_credibilidade <- readr::read_csv("../output/tables/paper/table_3_causality_credibility.csv", show_col_types = FALSE)
-matriz_periodo <- readr::read_csv("../output/tables/paper/period_dimension_summary.csv", show_col_types = FALSE)
-matriz_periodico <- readr::read_csv("../output/tables/paper/journal_dimension_matrix.csv", show_col_types = FALSE)
 tabela_periodicos_completos <- readr::read_csv("../output/tables/paper/table_4_complete_journal_profile.csv", show_col_types = FALSE)
-tabela_alinhamento <- readr::read_csv("../output/tables/paper/table_5_claim_method_alignment.csv", show_col_types = FALSE)
 tabela_qualitativa_completa <- readr::read_csv("../output/tables/paper/table_8_qualitative_complete_summary.csv", show_col_types = FALSE)
 perfil_periodo_padronizado <- readr::read_csv("../output/tables/paper/period_equal_weight_profile.csv", show_col_types = FALSE)
-metodos_estritos <- readr::read_csv("../output/tables/paper/strict_method_totals.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]

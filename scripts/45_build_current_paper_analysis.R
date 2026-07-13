@@ -841,7 +841,7 @@ figure_1_data <- tibble::tibble(
     "manifest elegível",
     "classificados",
     "empíricos",
-    "empíricos",
+    "classificados",
     "classificados",
     "screen"
   ),
@@ -850,7 +850,7 @@ figure_1_data <- tibble::tibble(
     n_manifest,
     n_classified,
     overall_metrics$n_empirical,
-    overall_metrics$n_empirical,
+    n_classified,
     n_classified,
     overall_metrics$n_screen
   )
