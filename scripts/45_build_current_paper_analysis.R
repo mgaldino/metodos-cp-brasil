@@ -214,7 +214,31 @@ excluded_articles <- readr::read_csv(excluded_articles_path, show_col_types = FA
 eligible_manifest <- manifest_raw |>
   dplyr::anti_join(excluded_articles |> dplyr::select(pid), by = "pid")
 
-classifications_raw <- readr::read_csv(classifications_path, show_col_types = FALSE) |>
+classifications_source <- readr::read_csv(classifications_path, show_col_types = FALSE)
+
+duplicate_pid_rows <- classifications_source |>
+  dplyr::add_count(pid, name = "pid_rows") |>
+  dplyr::filter(pid_rows > 1) |>
+  dplyr::arrange(pid) |>
+  dplyr::select(-pid_rows)
+
+duplicate_pid_status <- duplicate_pid_rows |>
+  dplyr::group_by(pid) |>
+  dplyr::group_modify(~ tibble::tibble(
+    rows = nrow(.x),
+    distinct_rows = nrow(dplyr::distinct(.x)),
+    exact_duplicates_only = nrow(dplyr::distinct(.x)) == 1
+  )) |>
+  dplyr::ungroup()
+
+if (any(!duplicate_pid_status$exact_duplicates_only)) {
+  readr::write_csv(duplicate_pid_rows, file.path(analysis_dir, "current_duplicate_pid_rows.csv"))
+  readr::write_csv(duplicate_pid_status, file.path(analysis_dir, "current_duplicate_pid_status.csv"))
+  stop("Há PIDs repetidos com classificações não idênticas; a análise foi interrompida.")
+}
+
+classifications_raw <- classifications_source |>
+  dplyr::distinct() |>
   dplyr::rename(classification_input_text_hash = input_text_hash) |>
   dplyr::mutate(
     is_empirical_paper = parse_bool(is_empirical_paper),
@@ -656,19 +680,23 @@ tough_call_profile <- analysis_df |>
   ) |>
   dplyr::arrange(journal_title, period_3)
 
-required_boolean_fields <- c(
+required_core_boolean_fields <- c(
   "is_empirical_paper",
   "is_empirical_quant_paper_torreblanca",
   "is_empirical_qual_paper",
   "causal_or_explanatory_claim_present",
   "credibility_revolution_screen_applicable",
-  "credibility_revolution_method_present",
   "tough_call"
 )
 
 boolean_missing_n <- analysis_df |>
-  dplyr::summarise(dplyr::across(dplyr::all_of(required_boolean_fields), ~ sum(is.na(.x)))) |>
+  dplyr::summarise(dplyr::across(dplyr::all_of(required_core_boolean_fields), ~ sum(is.na(.x)))) |>
   tidyr::pivot_longer(dplyr::everything(), names_to = "field", values_to = "missing_n")
+
+method_present_missing_within_screen <- sum(
+  dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE) &
+    is.na(analysis_df$credibility_revolution_method_present)
+)
 
 hash_matches <- !is.na(analysis_df$classification_input_text_hash) &
   !is.na(analysis_df$manifest_input_text_hash) &
@@ -680,37 +708,43 @@ logical_inconsistencies <- tibble::tibble(
     "quantitative_flag_with_quantitative_type_none",
     "statistical_inference_without_quantitative_analysis",
     "strict_design_outside_screen",
+    "nonidentical_duplicate_pids",
     "classified_outside_manifest",
     "classified_excluded_by_ledger",
     "classified_hash_mismatch",
     "classified_fulltext_not_pass",
     "journal_area_unmapped",
-    "required_boolean_missing"
+    "required_core_boolean_missing",
+    "method_present_missing_within_screen"
   ),
   n = c(
     sum(!dplyr::coalesce(analysis_df$is_empirical_paper, FALSE) & as.character(analysis_df$empirical_evidence_type) != "none", na.rm = TRUE),
     sum(dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE) & analysis_df$quantitative_analysis_type == "none", na.rm = TRUE),
     sum(dplyr::coalesce(analysis_df$has_statistical_inference, FALSE) & analysis_df$quantitative_analysis_type == "none", na.rm = TRUE),
     sum(analysis_df$strict_design_method & !dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)),
+    sum(!duplicate_pid_status$exact_duplicates_only),
     nrow(classified_outside_manifest),
     nrow(classified_excluded_by_ledger),
     sum(!hash_matches),
     sum(is.na(analysis_df$fulltext_validation_status) | analysis_df$fulltext_validation_status != "PASS"),
     sum(analysis_df$journal_area == "Área a revisar"),
-    sum(boolean_missing_n$missing_n)
+    sum(boolean_missing_n$missing_n),
+    method_present_missing_within_screen
   ),
-  expected = c(0L, 0L, 0L, 0L, 1L, 1L, 0L, 0L, 0L, 0L),
+  expected = rep(0L, 12),
   implication = c(
     "Artigos não empíricos não devem carregar tipo de evidência empírica.",
     "Flag quantitativa exige tipo de análise quantitativa diferente de none.",
     "Inferência estatística exige componente quantitativo.",
     "Desenhos estritos devem estar no screen de credibilidade.",
-    "Registro preservado fora do manifest não entra na análise.",
-    "Registro documentado no ledger não entra na análise.",
+    "Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.",
+    "Nenhuma classificação analítica deve estar fora do manifest.",
+    "Nenhuma classificação analítica deve estar no ledger de exclusões.",
     "Classificação deve apontar para o mesmo texto do manifest.",
     "Toda classificação analítica deve ter fulltext PASS.",
     "Todo periódico analítico deve ter área mapeada.",
-    "Campos booleanos obrigatórios não podem ficar ausentes."
+    "Campos booleanos centrais não podem ficar ausentes.",
+    "Presença de método deve estar preenchida em todos os artigos que entram no screen."
   )
 ) |>
   dplyr::mutate(status = if_else(n == expected, "PASS", "FAIL")) |>
@@ -718,6 +752,9 @@ logical_inconsistencies <- tibble::tibble(
 
 if (any(logical_inconsistencies$status == "FAIL")) {
   readr::write_csv(logical_inconsistencies, file.path(analysis_dir, "current_analysis_validation_checks.csv"))
+  readr::write_csv(boolean_missing_n, file.path(analysis_dir, "current_boolean_missingness.csv"))
+  readr::write_csv(duplicate_pid_rows, file.path(analysis_dir, "current_duplicate_pid_rows.csv"))
+  readr::write_csv(duplicate_pid_status, file.path(analysis_dir, "current_duplicate_pid_status.csv"))
   stop(
     "Validações lógicas falharam: ",
     paste(logical_inconsistencies$check[logical_inconsistencies$status == "FAIL"], collapse = "; ")
@@ -728,6 +765,8 @@ readr::write_csv(analysis_df |> dplyr::select(-method_type), file.path(analysis_
 readr::write_csv(method_long, file.path(analysis_dir, "paper_method_long_current.csv"))
 readr::write_csv(logical_inconsistencies, file.path(analysis_dir, "current_analysis_validation_checks.csv"))
 readr::write_csv(boolean_missing_n, file.path(analysis_dir, "current_boolean_missingness.csv"))
+readr::write_csv(duplicate_pid_rows, file.path(analysis_dir, "current_duplicate_pid_rows.csv"))
+readr::write_csv(duplicate_pid_status, file.path(analysis_dir, "current_duplicate_pid_status.csv"))
 readr::write_csv(classified_outside_manifest, file.path(analysis_dir, "current_classified_outside_manifest.csv"))
 readr::write_csv(classified_excluded_by_ledger, file.path(analysis_dir, "current_classified_excluded_by_ledger.csv"))
 readr::write_csv(coverage_by_journal_period, file.path(analysis_dir, "current_coverage_by_journal_period.csv"))
@@ -1022,7 +1061,8 @@ audit_report <- c(
   "",
   "## Universo reconciliado",
   "",
-  paste0("- Linhas no CSV canônico bruto: ", nrow(classifications_raw), "."),
+  paste0("- Linhas no CSV canônico bruto: ", nrow(classifications_source), "."),
+  paste0("- Linhas duplicadas exatas removidas apenas na camada analítica: ", nrow(classifications_source) - nrow(classifications_raw), "."),
   paste0("- Artigos elegíveis no manifest após ledger: ", n_manifest, "."),
   paste0("- Artigos elegíveis classificados: ", n_classified, " (", fmt_pct_label(fmt_pct(n_classified, n_manifest)), ")."),
   paste0("- Artigos elegíveis ainda não classificados: ", n_remaining, "."),
