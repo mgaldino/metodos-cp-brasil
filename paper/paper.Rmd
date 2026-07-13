@@ -1,5 +1,5 @@
 ---
-title: "Práticas Metodológicas e Revolução da Credibilidade em Periódicos Brasileiros: Evidência de Quatro Periódicos Completos"
+title: "Práticas Metodológicas em Quatro Periódicos Brasileiros: Mensuração Preliminar da Difusão de Desenhos de Identificação, 2005--2025"
 author: ""
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Este artigo examina práticas metodológicas em artigos brasileiros publicados no SciELO entre 2005 e 2025. O universo elegível reúne 5.249 artigos de onze periódicos, dos quais 1.798 (34,3%) foram classificados por leitura integral. Quatro periódicos estão integralmente classificados, totalizando 1.466 artigos, e constituem o estrato principal das comparações editoriais. No conjunto classificado, 1.446 artigos são empíricos; entre eles, 833 têm componente quantitativo. Entre os quantitativos, 308 apresentam inferência estatística. O screen de credibilidade inclui 463 artigos, dos quais 27 contêm desenho estrito de identificação sob regra conservadora. Nos três periódicos completos com publicação nos três períodos analisados, a presença de artigos empíricos cresce, enquanto a participação quantitativa permanece aproximadamente estável e a inferência estatística aumenta modestamente. Os resultados mostram heterogeneidade editorial e uma difusão ainda restrita de desenhos de identificação, sem reduzir pluralismo metodológico a uma hierarquia única. Como a cobertura dos onze periódicos permanece incompleta e as variáveis de explicitação metodológica e formato textual ainda não foram classificadas, as conclusões nacionais continuam provisórias.
+  Este artigo apresenta uma mensuração preliminar de práticas metodológicas em artigos publicados no SciELO entre 2005 e 2025. O universo elegível reúne 5.249 artigos de onze periódicos, dos quais 1.798 (34,3%) foram classificados por modelos de linguagem a partir da leitura integral. Quatro periódicos estão integralmente cobertos, totalizando 1.466 artigos, e constituem o estrato principal das comparações editoriais. No conjunto classificado, 1.446 artigos são empíricos; entre eles, 833 têm componente quantitativo e 308 registram inferência estatística. O screen exploratório inclui 463 artigos, dos quais 27 mencionam famílias de desenho de identificação sob regra conservadora. Nos três periódicos completos com publicação nos três períodos, a presença de artigos empíricos cresce e a participação quantitativa permanece aproximadamente estável. A trajetória da inferência depende da ponderação: cresce modestamente quando cada periódico recebe o mesmo peso, mas permanece estável quando os artigos são agrupados. Os resultados documentam heterogeneidade entre periódicos e difusão restrita de famílias de desenho. Como a classificação ainda não foi integralmente adjudicada por humanos, a configuração do classificador variou entre lotes e as variáveis de explicitação metodológica e formato textual não estão disponíveis, os resultados são um relatório intermediário de mensuração, não um teste final da revolução da credibilidade.
 ---
 
 ```{r setup, include=FALSE}
@@ -48,6 +48,8 @@ tabela_credibilidade <- readr::read_csv("../output/tables/paper/table_3_causalit
 tabela_periodicos_completos <- readr::read_csv("../output/tables/paper/table_4_complete_journal_profile.csv", show_col_types = FALSE)
 tabela_qualitativa_completa <- readr::read_csv("../output/tables/paper/table_8_qualitative_complete_summary.csv", show_col_types = FALSE)
 perfil_periodo_padronizado <- readr::read_csv("../output/tables/paper/period_equal_weight_profile.csv", show_col_types = FALSE)
+perfil_periodo_artigos <- readr::read_csv("../output/tables/paper/period_article_weight_profile.csv", show_col_types = FALSE)
+perfil_tough_call <- readr::read_csv("../output/tables/paper/tough_call_profile.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -67,6 +69,23 @@ n_estrito_periodicos_completos <- sum(tabela_periodicos_completos$n_strict)
 n_qualitativos_periodicos_completos <- unique(tabela_qualitativa_completa$denominator_n)
 n_objetivo_qualitativo_claro <- tabela_qualitativa_completa$n[tabela_qualitativa_completa$qualitative_goal_clarity == "Clara"]
 pct_objetivo_qualitativo_claro <- tabela_qualitativa_completa$percent[tabela_qualitativa_completa$qualitative_goal_clarity == "Clara"]
+periodicos_completos_nomes <- tabela_periodicos_completos$journal_title
+tough_call_completos <- perfil_tough_call |>
+  dplyr::filter(journal_title %in% periodicos_completos_nomes)
+tough_call_min <- min(tough_call_completos$tough_call_percent)
+tough_call_max <- max(tough_call_completos$tough_call_percent)
+
+stopifnot(
+  n_manifest == 5249,
+  n_classificados == 1798,
+  n_artigos_periodicos_completos == 1466,
+  n_periodicos_completos == 4,
+  n_empiricos == 1446,
+  n_quant == 833,
+  n_inferencia == 308,
+  n_screen == 463,
+  n_estrito == 27
+)
 
 profile_value <- function(journal, variable) {
   tabela_periodicos_completos[[variable]][tabela_periodicos_completos$journal_title == journal]
@@ -75,7 +94,7 @@ profile_value <- function(journal, variable) {
 
 # Introdução
 
-A profissionalização metodológica de uma disciplina não se traduz automaticamente no modo como seus artigos tornam a pesquisa avaliável. Desde o diagnóstico do "calcanhar metodológico" da Ciência Política brasileira formulado por Soares [-@soares2005], a área ampliou a formação em métodos, intensificou a circulação internacional e passou a dialogar de forma mais direta com transparência, reprodutibilidade e identificação causal, como mostram Barberia, Godoy e Barboza [-@barberia2014] e Figueiredo et al. [-@figueiredo2019]. Cada artigo publicado é uma evidência desse processo: nele, a profissionalização metodológica aparece como uma escolha concreta de apresentação da pesquisa, não apenas como oferta de treinamento ou adesão declarada a normas de transparência. A análise observa se o texto identifica dados e fontes, explicita procedimentos, define o tipo de inferência que sustenta seus claims e reconhece os limites do desenho de pesquisa.
+A profissionalização metodológica de uma disciplina não se traduz automaticamente no modo como seus artigos tornam a pesquisa avaliável. Desde o diagnóstico do "calcanhar metodológico" da Ciência Política brasileira formulado por Soares [-@soares2005], a área ampliou a formação em métodos, intensificou a circulação internacional e passou a dialogar de forma mais direta com transparência, reprodutibilidade e identificação causal, como mostram Barberia, Godoy e Barboza [-@barberia2014] e Figueiredo et al. [-@figueiredo2019]. Cada artigo publicado oferece uma observação potencial desse processo. A versão atual mede empiria, tipo de evidência, quantificação, inferência estatística e presença nominal de famílias de desenho; a mensuração de explicitação de dados, fontes, procedimentos e limites permanece para a rodada complementar.
 
 O projeto pergunta como se organiza a prática metodológica dos artigos brasileiros elegíveis no SciELO, no escopo de Ciência Política, Relações Internacionais e Administração Pública, entre 2005 e 2025. Nesta versão, a pergunta é mais circunscrita: como construir uma mensuração reprodutível dessa prática e o que a fração já classificada permite observar sem generalizar para o corpus completo. A pergunta parte de uma exigência restrita: a relação entre claim, evidência e método precisa ser reconstruível pelo leitor. Essa exigência preserva o pluralismo metodológico da área. Ensaios teóricos, estudos qualitativos, análises históricas, revisões e trabalhos normativos podem sustentar claims válidos sem seguir um formato único de artigo empírico. O problema aparece quando o texto formula claims empíricos, explicativos ou causais e não oferece uma conexão clara entre dados, procedimentos, resultados e interpretação.
 
@@ -85,11 +104,11 @@ A literatura internacional sobre a revolução da credibilidade oferece uma cama
 
 A versão atual combina dois níveis de evidência. O universo elegível contém `r format_n(n_manifest)` artigos com texto integral disponível, mas a classificação substantiva por leitura integral cobre `r format_n(n_classificados)` artigos, equivalentes a `r format_pct(pct_classificados)` do total. Esse conjunto não forma amostra representativa demonstrada dos onze periódicos. Dentro dele, porém, `r format_n(n_periodicos_completos)` periódicos estão integralmente classificados, somando `r format_n(n_artigos_periodicos_completos)` artigos. As comparações editoriais principais são censitárias para esses quatro periódicos; os agregados do conjunto classificado continuam provisórios para o universo completo.
 
-Dentro do conjunto classificado, `r format_n(n_empiricos)` artigos são empíricos e `r format_n(n_quant)` têm componente quantitativo. O campo amplo de claim causal ou explicativo aparece em `r format_n(n_claim)` artigos, inclusive textos não empíricos, e não deve ser lido como medida de causalidade estrita. O contraste metodologicamente relevante ocorre no screen de credibilidade: `r format_n(n_screen)` artigos satisfazem seus critérios, mas apenas `r format_n(n_estrito)` apresentam desenho estrito de identificação. Essa distância separa linguagem explicativa ampla, elegibilidade para escrutínio causal-quantitativo e presença efetiva de desenho de identificação.
+Dentro do conjunto classificado, `r format_n(n_empiricos)` artigos são empíricos e `r format_n(n_quant)` têm componente quantitativo. O campo amplo de claim causal ou explicativo aparece em `r format_n(n_claim)` artigos, inclusive textos não empíricos, e não deve ser lido como medida de causalidade estrita. O screen exploratório inclui `r format_n(n_screen)` artigos, mas não constitui um conjunto puro de claims causais. Dentro dele, `r format_n(n_estrito)` mencionam ao menos uma família de desenho sob a regra conservadora. Essa contagem registra presença nominal, não qualidade de implementação nem validade da identificação.
 
 A contribuição desta versão é propor uma estratégia reprodutível de mensuração, explicitar os denominadores do corpus, apresentar resultados preliminares para as dimensões já classificadas e declarar as lacunas de mensuração ainda abertas. Duas variáveis diretamente ligadas à tese sobre rastreabilidade metodológica ainda não estão disponíveis no classificador atual: `method_explicitness` e `empirical_article_format`. A primeira deve medir se dados, fontes e estratégia analítica são explicitados de modo claro, parcial ou ausente. A segunda deve classificar a arquitetura textual do artigo empírico. Nesta versão, baixa explicitação metodológica e baixa padronização textual são hipóteses e tarefas de classificação complementar, não achados demonstrados.
 
-O artigo, portanto, trata a revolução da credibilidade como uma pergunta de mensuração aplicada ao caso brasileiro. Ele não presume que todo artigo deva ser design-based, nem que pluralismo metodológico seja um problema. A pergunta é se o claim formulado pelo texto vem acompanhado da evidência, do método e das condições de inferência necessárias para sua avaliação. A resposta nacional final depende da classificação completa dos `r format_n(n_manifest)` artigos elegíveis e da rodada complementar sobre explicitação metodológica e formato do artigo empírico. A cobertura atual, contudo, já permite resultados substantivos delimitados para quatro periódicos completos.
+O artigo, portanto, trata a revolução da credibilidade como uma pergunta de mensuração aplicada ao caso brasileiro. Ele não presume que todo artigo deva ser design-based, nem que pluralismo metodológico seja um problema. A pergunta é se o claim formulado pelo texto vem acompanhado da evidência, do método e das condições de inferência necessárias para sua avaliação. A resposta nacional final depende da classificação completa dos `r format_n(n_manifest)` artigos elegíveis e da rodada complementar sobre explicitação metodológica e formato do artigo empírico. A cobertura atual permite apenas descrições preliminares delimitadas para quatro periódicos completos.
 
 # Contexto e Expectativas
 
@@ -107,7 +126,9 @@ Essa cautela é especialmente importante nesta versão. As expectativas podem se
 
 Analiso artigos publicados entre 2005 e 2025 em onze periódicos indexados no SciELO: `Brazilian Political Science Review`, `Opinião Pública`, `Revista Brasileira de Ciência Política`, `Revista de Sociologia e Política`, `Dados`, `Lua Nova`, `Novos Estudos CEBRAP`, `Revista Brasileira de Ciências Sociais`, `Contexto Internacional`, `Revista Brasileira de Política Internacional` e `Cadernos Gestão Pública e Cidadania`. Juntos, esses periódicos somam `r format_n(n_manifest)` artigos elegíveis no período.
 
-Dois periódicos mapeados no levantamento inicial não entram na análise principal: `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`. A exclusão mantém o foco nos periódicos mais diretamente vinculados à Ciência Política, Relações Internacionais, Administração Pública e Ciências Sociais políticas. A Tabela 1 apresenta o número de artigos elegíveis e classificados por periódico e período.
+Quatro periódicos mapeados no levantamento inicial não entram na análise principal conforme o ledger de escopo: `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais`, `Revista de Administração Pública` e `Sur. Revista Internacional de Direitos Humanos`. As exclusões foram decididas antes desta atualização e preservam os registros no corpus bruto. A regra delimita um núcleo de Ciência Política, Relações Internacionais, gestão pública e Ciências Sociais políticas, mas sua fronteira é contestável; por isso, os critérios e as decisões ficam documentados em `data/processed/excluded_journals.csv`. A Tabela 1 apresenta o número de artigos elegíveis e classificados por periódico e período.
+
+Os textos integrais foram recuperados do SciELO em junho de 2026; o manifest preserva URL, método e horário de recuperação por PID. O snapshot analítico desta versão foi fechado em 13 de julho de 2026. Os hashes dos inputs, os ledgers aplicados e o intervalo de recuperação estão registrados no relatório de auditoria reproduzível.
 
 Esta versão usa `r format_n(n_classificados)` artigos já classificados, equivalentes a `r format_pct(pct_classificados)` do universo elegível. A cobertura é desigual. `Brazilian Political Science Review`, `Cadernos Gestão Pública e Cidadania`, `Contexto Internacional` e `Dados` estão integralmente classificados e somam `r format_n(n_artigos_periodicos_completos)` artigos. `Opinião Pública`, `Revista Brasileira de Ciência Política` e `Novos Estudos CEBRAP` têm cobertura parcial; quatro periódicos ainda não foram iniciados. Assim, o paper separa o censo dos quatro periódicos completos do retrato provisório formado por todos os artigos já classificados.
 
@@ -157,6 +178,12 @@ knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quantitativa, mista ou ausente. Em seguida, distingue artigos com análise quantitativa, inferência estatística e claims causais ou explicativos. Para a camada associada à revolução da credibilidade, o artigo entra no screen quando combina claim causal ou explicativo com evidência empírica pertinente, ou quando usa modelagem quantitativa que torna a comparação metodológica relevante. O screen, portanto, não é um subconjunto puro de artigos com claim causal ou explicativo.
 
 A regra de desenho estrito inclui apenas métodos associados a desenhos explícitos de identificação causal: experimentos, diferenças-em-diferenças, event study, variáveis instrumentais, regressão descontínua, regression kink, controle sintético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais formais, estimadores duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, SEM, mediação causal e efeitos fixos não entram no numerador estrito pela simples presença nominal. Na regra atual, esses casos só poderiam ser reclassificados como desenho de identificação por revisão complementar que demonstrasse discussão explícita de identificação e plausibilidade dos pressupostos.
+
+## Protocolo de classificação e validade da mensuração
+
+As variáveis foram produzidas pelo schema `credibility_prompt_v3` a partir do texto integral de cada artigo e consolidadas no CSV canônico. O pipeline verifica PID, hash do texto, schema, categorias, relações hierárquicas e reconciliação com os ledgers. Nesta atualização, 28 checks lógicos precisam passar antes da geração das tabelas. Esses checks garantem integridade estrutural; não estimam acurácia, concordância humana ou validade de construto.
+
+Os rótulos em escala ainda não foram integralmente adjudicados por humanos. Nos quatro periódicos completos, a fração marcada como caso difícil varia de `r format_pct(tough_call_min)` a `r format_pct(tough_call_max)` entre células periódico--período. Além disso, lotes diferentes foram classificados com configurações distintas de modelo e esforço, e essa proveniência ainda não está consolidada por PID no CSV analítico. Como a ordem dos lotes se relaciona ao período de publicação, comparações temporais podem combinar mudança editorial e mudança do classificador. Por isso, as tendências são apresentadas apenas como diagnóstico exploratório. Antes de um teste substantivo, será necessário adjudicar os casos difíceis e os positivos raros, estimar erro por variável e reclassificar uma amostra estratificada com uma configuração congelada.
 
 Os denominadores são parte substantiva da interpretação. Proporções de cobertura usam os `r format_n(n_manifest)` artigos elegíveis. Proporções sobre práticas metodológicas usam os `r format_n(n_classificados)` artigos já classificados. Proporções sobre desenho estrito devem ser lidas principalmente dentro dos `r format_n(n_screen)` artigos no screen de credibilidade, com a proporção sobre o total classificado como referência adicional. Nenhuma tabela ou figura deve omitir o denominador, porque o significado de uma proporção muda conforme a dimensão analisada.
 
@@ -248,13 +275,13 @@ Nos quatro periódicos completos, `r format_n(n_qualitativos_periodicos_completo
 
 ## Claims, screen e desenho de identificação
 
-O campo de claim causal ou explicativo é deliberadamente amplo. Ele aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 4 separa categorias mutuamente exclusivas e mostra por que essa variável não pode ser tratada como claim causal estrito: há claims em artigos não empíricos, claims empíricos sem componente quantitativo e claims empíricos quantitativos sem desenho estrito.
+O campo de claim causal ou explicativo é deliberadamente amplo. Ele aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 4 separa categorias mutuamente exclusivas e mostra por que essa variável não pode ser tratada como claim causal estrito: há claims em artigos não empíricos, claims empíricos sem componente quantitativo e claims empíricos quantitativos sem desenho estrito. Esses cruzamentos descrevem coexistência de atributos; não medem adequação entre claim e método.
 
-```{r figura-5, fig.cap="Alinhamento entre claim causal ou explicativo, componente quantitativo e desenho estrito. Categorias mutuamente exclusivas entre os artigos classificados.", out.width="95%"}
+```{r figura-5, fig.cap="Distribuição conjunta de claim causal ou explicativo, componente quantitativo e desenho estrito. As categorias são mutuamente exclusivas, mas não constituem teste de adequação entre claim e método.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-O contraste conservador começa no screen de credibilidade. Dos `r format_n(n_screen)` artigos que entram nesse screen, `r format_n(n_estrito)` apresentam desenho estrito, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
+O diagnóstico conservador começa no screen exploratório. Dos `r format_n(n_screen)` artigos que entram nesse screen, `r format_n(n_estrito)` mencionam uma família de desenho, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Como o screen inclui claims explicativos amplos e modelagem quantitativa, ele não é um *risk set* causal puro. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
@@ -291,7 +318,7 @@ knitr::kable(
 )
 ```
 
-Nos quatro periódicos completos, `r format_n(n_estrito_periodicos_completos)` artigos apresentam ao menos um desenho estrito. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de um desenho.
+Nos quatro periódicos completos, `r format_n(n_estrito_periodicos_completos)` artigos mencionam ao menos uma família de desenho sob a regra estrita. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de um desenho. A contagem não audita a execução nem a plausibilidade dos pressupostos.
 
 ```{r figura-6, fig.cap="Distribuição dos métodos de identificação nos quatro periódicos completos. Um artigo pode mobilizar mais de um método.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
@@ -299,7 +326,24 @@ knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribu
 
 ## Variação por período
 
-A comparação temporal usa apenas BPSR, `Contexto Internacional` e `Dados`, os três periódicos completos com artigos nos três períodos, e atribui o mesmo peso a cada periódico. A presença média de artigos empíricos cresce de `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2005-2011"])` em 2005--2011 para `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2019-2025"])` em 2019--2025. A proporção quantitativa entre os empíricos permanece próxima de 56% nos três períodos. A inferência estatística entre quantitativos cresce modestamente, de `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2019-2025"])`. Desenhos estritos continuam raros e não apresentam trajetória monotônica.
+A comparação temporal usa apenas BPSR, `Contexto Internacional` e `Dados`, os três periódicos completos com artigos nos três períodos. A presença média de artigos empíricos cresce de `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2005-2011"])` em 2005--2011 para `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2019-2025"])` em 2019--2025. A proporção quantitativa entre os empíricos permanece próxima de 56% nos três períodos. Para inferência estatística, porém, a conclusão depende da ponderação. Com peso igual por periódico, a proporção cresce de `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2019-2025"])`; agrupando os artigos quantitativos, passa de `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2019-2025"])`, com queda intermediária. O resultado mais prudente é estabilidade, não crescimento robusto. Desenhos estritos continuam raros e não apresentam trajetória monotônica.
+
+```{r tabela-5-sensibilidade-temporal}
+tabela_temporal <- dplyr::bind_rows(
+  perfil_periodo_padronizado |>
+    dplyr::transmute(period_3, Ponderação = "Peso igual por periódico", pct_inference),
+  perfil_periodo_artigos |>
+    dplyr::transmute(period_3, Ponderação = "Artigos quantitativos agrupados", pct_inference)
+) |>
+  tidyr::pivot_wider(names_from = period_3, values_from = pct_inference) |>
+  dplyr::mutate(dplyr::across(dplyr::all_of(c("2005-2011", "2012-2018", "2019-2025")), format_pct))
+
+knitr::kable(
+  tabela_temporal,
+  caption = "Sensibilidade da proporção de artigos quantitativos com inferência estatística à regra de ponderação. Universo: BPSR, Contexto Internacional e Dados.",
+  booktabs = TRUE
+)
+```
 
 ```{r figura-3, fig.cap="Variação por período em BPSR, Contexto Internacional e Dados. Cada ponto é a média simples das proporções dos três periódicos completos.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
@@ -309,11 +353,11 @@ As duas dimensões mais diretamente ligadas à tese sobre explicitação e forma
 
 # Discussão
 
-Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala. A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência estatística e a entrada no screen variam fortemente. BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. Essas diferenças são descritivas e refletem missões editoriais, áreas e tipos de pergunta distintos.
+Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala. A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência estatística e a entrada no screen variam fortemente. BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
 
-A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção de artigos empíricos cresce, a participação quantitativa permanece estável e a inferência aumenta modestamente. Não há difusão monotônica dos desenhos estritos. Profissionalização metodológica, portanto, não aparece como substituição linear de pesquisa qualitativa por quantitativa nem como marcha uniforme rumo a desenhos causais. Ela combina ampliação da empiria, estabilidade relativa da composição quantitativa e adoção seletiva de práticas inferenciais e de identificação.
+A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção de artigos empíricos cresce e a participação quantitativa permanece estável. A inferência aumenta apenas na média que dá peso igual aos periódicos; quando os artigos são agrupados, permanece praticamente estável. Não há difusão monotônica das famílias de desenho. O snapshot, portanto, não sustenta uma narrativa linear de substituição da pesquisa qualitativa pela quantitativa nem de marcha uniforme rumo a desenhos causais.
 
-O campo amplo de claim causal ou explicativo precisa ser interpretado com especial cautela. Sua frequência elevada não significa que quase todos os artigos façam inferência causal: ele também registra explicações qualitativas, argumentos teóricos e interpretações substantivas. A comparação com a revolução da credibilidade começa propriamente no screen e se torna exigente no numerador de desenhos estritos. Nesse estrato, a diferença entre `r format_n(n_screen)` artigos elegíveis e `r format_n(n_estrito)` com desenho estrito mostra difusão limitada, embora metodologicamente diversificada, das estratégias de identificação.
+O campo amplo de claim causal ou explicativo precisa ser interpretado com especial cautela. Sua frequência elevada não significa que quase todos os artigos façam inferência causal: ele também registra explicações qualitativas, argumentos teóricos e interpretações substantivas. O screen não é um *risk set* causal puro, e o numerador de `r format_n(n_estrito)` casos registra famílias nominais de método. A distância em relação aos `r format_n(n_screen)` artigos do screen é uma descrição taxonômica útil, mas não mede diretamente credibilidade, alinhamento entre claim e método ou qualidade da identificação.
 
 O principal limite permanece fora das dimensões já observadas. A base não mede diretamente explicitação metodológica nem formato do artigo empírico. A clareza do objetivo qualitativo mostra que o propósito substantivo costuma ser reconstruível, mas não revela se fontes, seleção, procedimentos e limites são suficientemente explicitados. A hipótese sobre opacidade e rastreabilidade funcional só poderá ser testada depois da classificação complementar de `method_explicitness` e `empirical_article_format`.
 
@@ -321,12 +365,14 @@ Por fim, o pluralismo metodológico não é uma concessão retórica, mas parte 
 
 # Conclusão
 
-Esta versão entrega dois resultados. Primeiro, oferece um censo metodológico de `r format_n(n_artigos_periodicos_completos)` artigos em quatro periódicos completos. Segundo, descreve de forma provisória os `r format_n(n_classificados)` artigos já classificados de um universo elegível de `r format_n(n_manifest)`. Ainda faltam `r format_n(n_pendentes)` artigos, de modo que os agregados nacionais não são finais.
+Esta versão entrega dois resultados intermediários. Primeiro, oferece cobertura integral dos `r format_n(n_artigos_periodicos_completos)` artigos de quatro periódicos, com rótulos automatizados ainda sujeitos a validação humana. Segundo, descreve de forma provisória os `r format_n(n_classificados)` artigos já classificados de um universo elegível de `r format_n(n_manifest)`. Ainda faltam `r format_n(n_pendentes)` artigos, de modo que os agregados nacionais não são finais.
 
-Os resultados rejeitam uma descrição simples de ausência de empiria ou de quantificação. O conjunto classificado contém `r format_n(n_empiricos)` artigos empíricos, dos quais `r format_n(n_quant)` têm componente quantitativo. A heterogeneidade aparece na passagem da quantificação para inferência e, principalmente, na passagem do screen para desenho estrito: apenas `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos no screen apresentam estratégia de identificação sob a regra conservadora.
+Os resultados rejeitam uma descrição simples de ausência de empiria ou de quantificação. O conjunto classificado contém `r format_n(n_empiricos)` artigos empíricos, dos quais `r format_n(n_quant)` têm componente quantitativo. A heterogeneidade aparece na passagem da quantificação para inferência. As `r format_n(n_estrito)` ocorrências positivas entre `r format_n(n_screen)` artigos no screen mostram que famílias de desenho são pouco frequentes sob a regra conservadora, mas não permitem inferir qualidade de identificação.
 
-A lacuna mais importante permanece nas variáveis `method_explicitness` e `empirical_article_format`. Elas são indispensáveis para avaliar se artigos empíricos tornam rastreáveis dados, métodos, estratégia analítica, resultados e limites inferenciais. Como essas variáveis ainda não estão disponíveis, esta versão não conclui que há baixa explicitação ou baixa padronização textual. Ela conclui que essa é a próxima medição necessária para transformar a hipótese em resultado.
+As variáveis `method_explicitness` e `empirical_article_format` continuam indisponíveis. Sem elas, esta versão não mede rastreabilidade nem conclui sobre explicitação metodológica ou padronização textual.
 
-A próxima etapa deve completar a classificação dos onze periódicos e implementar a rodada complementar sobre explicitação e formato. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza e em que medida a produção brasileira superou, reformulou ou preservou as lacunas metodológicas identificadas desde o diagnóstico do calcanhar metodológico.
+A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador por PID, adjudicar uma amostra humana estratificada e implementar a rodada complementar sobre explicitação e formato. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza e em que medida a produção brasileira superou, reformulou ou preservou as lacunas metodológicas identificadas desde o diagnóstico do calcanhar metodológico.
+
+\small
 
 # Referências

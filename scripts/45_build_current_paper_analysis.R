@@ -31,6 +31,7 @@ classifications_path <- path(
   "data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined/classifications_integral_reading.csv"
 )
 excluded_articles_path <- path("data/processed/excluded_articles.csv")
+excluded_journals_path <- path("data/processed/excluded_journals.csv")
 
 analysis_dir <- path("data/processed/paper_analysis")
 tables_dir <- path("output/tables/paper")
@@ -42,7 +43,12 @@ dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(figures_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(audit_dir, recursive = TRUE, showWarnings = FALSE)
 
-required_files <- c(manifest_path, classifications_path, excluded_articles_path)
+required_files <- c(
+  manifest_path,
+  classifications_path,
+  excluded_articles_path,
+  excluded_journals_path
+)
 if (!all(file.exists(required_files))) {
   stop("Arquivos canônicos ausentes: ", paste(required_files[!file.exists(required_files)], collapse = "; "))
 }
@@ -211,6 +217,12 @@ excluded_articles <- readr::read_csv(excluded_articles_path, show_col_types = FA
   dplyr::filter(dplyr::coalesce(exclude_from_analysis, FALSE)) |>
   dplyr::select(pid, exclusion_reason)
 
+excluded_journals <- readr::read_csv(excluded_journals_path, show_col_types = FALSE) |>
+  dplyr::mutate(exclude_from_analysis = parse_bool(exclude_from_analysis)) |>
+  dplyr::filter(dplyr::coalesce(exclude_from_analysis, FALSE)) |>
+  dplyr::distinct(journal_title, exclusion_reason) |>
+  dplyr::select(journal_title, exclusion_reason)
+
 eligible_manifest <- manifest_raw |>
   dplyr::anti_join(excluded_articles |> dplyr::select(pid), by = "pid")
 
@@ -269,6 +281,26 @@ classified_excluded_by_ledger <- classifications_raw |>
   dplyr::semi_join(excluded_articles |> dplyr::select(pid), by = "pid") |>
   dplyr::left_join(excluded_articles, by = "pid") |>
   dplyr::select(pid, title, journal_title, exclusion_reason)
+
+excluded_journals_in_manifest <- manifest_raw |>
+  dplyr::semi_join(excluded_journals |> dplyr::select(journal_title), by = "journal_title") |>
+  dplyr::distinct(pid, journal_title)
+
+excluded_journals_in_classifications <- classifications_raw |>
+  dplyr::semi_join(excluded_journals |> dplyr::select(journal_title), by = "journal_title") |>
+  dplyr::distinct(pid, journal_title)
+
+journal_title_mismatches <- classifications_raw |>
+  dplyr::inner_join(
+    eligible_manifest |> dplyr::select(pid, manifest_journal_title = journal_title),
+    by = "pid"
+  ) |>
+  dplyr::filter(
+    !is.na(journal_title),
+    !is.na(manifest_journal_title),
+    journal_title != manifest_journal_title
+  ) |>
+  dplyr::select(pid, classification_journal_title = journal_title, manifest_journal_title)
 
 analysis_df <- classifications_raw |>
   dplyr::semi_join(eligible_manifest |> dplyr::select(pid), by = "pid") |>
@@ -419,15 +451,24 @@ metric_summary <- function(data, groups = character()) {
     dplyr::summarise(
       n_articles = dplyr::n(),
       n_empirical = sum(dplyr::coalesce(is_empirical_paper, FALSE)),
-      n_quantitative = sum(dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE)),
-      n_inference = sum(dplyr::coalesce(has_statistical_inference, FALSE)),
+      n_quantitative = sum(
+        dplyr::coalesce(is_empirical_paper, FALSE) &
+          dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE)
+      ),
+      n_inference = sum(
+        dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) &
+          dplyr::coalesce(has_statistical_inference, FALSE)
+      ),
       n_claim = sum(dplyr::coalesce(causal_or_explanatory_claim_present, FALSE)),
       n_empirical_claim = sum(
         dplyr::coalesce(is_empirical_paper, FALSE) &
           dplyr::coalesce(causal_or_explanatory_claim_present, FALSE)
       ),
       n_screen = sum(dplyr::coalesce(credibility_revolution_screen_applicable, FALSE)),
-      n_strict = sum(strict_design_method),
+      n_strict = sum(
+        dplyr::coalesce(credibility_revolution_screen_applicable, FALSE) &
+          strict_design_method
+      ),
       pct_empirical = fmt_pct(n_empirical, n_articles),
       pct_quantitative = fmt_pct(n_quantitative, n_empirical),
       pct_inference = fmt_pct(n_inference, n_quantitative),
@@ -671,6 +712,24 @@ period_equal_weight_profile <- period_journal_profile |>
     .groups = "drop"
   )
 
+period_article_weight_profile <- metric_summary(temporal_df, "period_3") |>
+  dplyr::mutate(
+    journals_n = length(temporal_complete_journals),
+    weighting = "proporção agrupada dos artigos nos periódicos completos com suporte temporal comum"
+  ) |>
+  dplyr::select(
+    period_3,
+    journals_n,
+    articles_n = n_articles,
+    pct_empirical,
+    pct_quantitative,
+    pct_inference,
+    pct_claim,
+    pct_screen,
+    pct_strict,
+    weighting
+  )
+
 strict_method_diffusion <- method_long |>
   dplyr::filter(
     journal_title %in% complete_journals,
@@ -718,49 +777,140 @@ hash_matches <- !is.na(analysis_df$classification_input_text_hash) &
   !is.na(analysis_df$manifest_input_text_hash) &
   analysis_df$classification_input_text_hash == analysis_df$manifest_input_text_hash
 
+classified_for_level_validation <- classifications_raw |>
+  dplyr::semi_join(eligible_manifest |> dplyr::select(pid), by = "pid")
+
+unknown_evidence_levels <- sum(
+  !is.na(classified_for_level_validation$empirical_evidence_type) &
+    classified_for_level_validation$empirical_evidence_type != "" &
+    !classified_for_level_validation$empirical_evidence_type %in% evidence_levels
+)
+
+unknown_quantitative_levels <- sum(
+  !is.na(classified_for_level_validation$quantitative_analysis_type) &
+    classified_for_level_validation$quantitative_analysis_type != "" &
+    !classified_for_level_validation$quantitative_analysis_type %in% quantitative_levels
+)
+
+inference_missing_within_quantitative <- sum(
+  dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE) &
+    is.na(analysis_df$has_statistical_inference)
+)
+
+method_present_without_type <- sum(
+  dplyr::coalesce(analysis_df$credibility_revolution_method_present, FALSE) &
+    !analysis_df$pid %in% method_long$pid
+)
+
+strict_without_quote <- sum(
+  analysis_df$strict_design_method &
+    (is.na(analysis_df$causal_design_quote) | stringr::str_trim(analysis_df$causal_design_quote) == "")
+)
+
+coverage_exceeds_eligible <- sum(
+  coverage_by_journal_period$classified_n > coverage_by_journal_period$eligible_n
+)
+
 logical_inconsistencies <- tibble::tibble(
   check = c(
+    "manifest_duplicate_pids",
+    "manifest_year_outside_2005_2025",
+    "manifest_non_research_article",
     "non_empirical_with_empirical_evidence",
+    "quantitative_without_empirical_flag",
     "quantitative_flag_with_quantitative_type_none",
+    "statistical_inference_without_quantitative_flag",
     "statistical_inference_without_quantitative_analysis",
+    "statistical_inference_missing_within_quantitative",
     "strict_design_outside_screen",
+    "strict_design_without_method_present",
+    "strict_design_without_quote",
+    "method_present_without_parsed_type",
+    "method_type_parse_or_unclassified",
+    "unknown_evidence_level",
+    "unknown_quantitative_level",
     "nonidentical_duplicate_pids",
     "classified_outside_manifest",
     "classified_excluded_by_ledger",
+    "excluded_journal_in_manifest",
+    "excluded_journal_in_classifications",
+    "classification_manifest_journal_mismatch",
     "classified_hash_mismatch",
     "classified_fulltext_not_pass",
     "journal_area_unmapped",
     "required_core_boolean_missing",
-    "method_present_missing_within_screen"
+    "method_present_missing_within_screen",
+    "classified_exceeds_eligible_by_journal_period"
   ),
   n = c(
+    nrow(manifest_raw) - dplyr::n_distinct(manifest_raw$pid),
+    sum(is.na(manifest_raw$year) | !dplyr::between(manifest_raw$year, 2005L, 2025L)),
+    sum(is.na(manifest_raw$document_type) | manifest_raw$document_type != "research-article"),
     sum(!dplyr::coalesce(analysis_df$is_empirical_paper, FALSE) & as.character(analysis_df$empirical_evidence_type) != "none", na.rm = TRUE),
+    sum(
+      dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE) &
+        !dplyr::coalesce(analysis_df$is_empirical_paper, FALSE)
+    ),
     sum(dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE) & analysis_df$quantitative_analysis_type == "none", na.rm = TRUE),
+    sum(
+      dplyr::coalesce(analysis_df$has_statistical_inference, FALSE) &
+        !dplyr::coalesce(analysis_df$is_empirical_quant_paper_torreblanca, FALSE)
+    ),
     sum(dplyr::coalesce(analysis_df$has_statistical_inference, FALSE) & analysis_df$quantitative_analysis_type == "none", na.rm = TRUE),
+    inference_missing_within_quantitative,
     sum(analysis_df$strict_design_method & !dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)),
+    sum(
+      analysis_df$strict_design_method &
+        !dplyr::coalesce(analysis_df$credibility_revolution_method_present, FALSE)
+    ),
+    strict_without_quote,
+    method_present_without_type,
+    sum(method_long$method_class %in% c("parse_error", "unclassified")),
+    unknown_evidence_levels,
+    unknown_quantitative_levels,
     sum(!duplicate_pid_status$exact_duplicates_only),
     nrow(classified_outside_manifest),
     nrow(classified_excluded_by_ledger),
+    nrow(excluded_journals_in_manifest),
+    nrow(excluded_journals_in_classifications),
+    nrow(journal_title_mismatches),
     sum(!hash_matches),
     sum(is.na(analysis_df$fulltext_validation_status) | analysis_df$fulltext_validation_status != "PASS"),
     sum(analysis_df$journal_area == "Área a revisar"),
     sum(boolean_missing_n$missing_n),
-    method_present_missing_within_screen
+    method_present_missing_within_screen,
+    coverage_exceeds_eligible
   ),
-  expected = rep(0L, 12),
+  expected = rep(0L, 28),
   implication = c(
+    "O manifest deve conter um único registro por PID.",
+    "Todos os artigos do manifest devem estar entre 2005 e 2025.",
+    "O manifest analítico deve conter apenas research-article.",
     "Artigos não empíricos não devem carregar tipo de evidência empírica.",
+    "O componente quantitativo pressupõe artigo empírico.",
     "Flag quantitativa exige tipo de análise quantitativa diferente de none.",
+    "Inferência estatística exige flag de componente quantitativo.",
     "Inferência estatística exige componente quantitativo.",
+    "Inferência deve estar preenchida em todos os artigos quantitativos.",
     "Desenhos estritos devem estar no screen de credibilidade.",
+    "Desenhos estritos exigem method_present TRUE.",
+    "Desenhos estritos exigem citação textual do desenho.",
+    "method_present TRUE exige ao menos um tipo de método parseado.",
+    "Todo tipo de método deve pertencer à taxonomia conhecida e ter JSON válido.",
+    "Todo tipo de evidência deve pertencer aos níveis previstos.",
+    "Todo tipo de análise quantitativa deve pertencer aos níveis previstos.",
     "Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.",
     "Nenhuma classificação analítica deve estar fora do manifest.",
     "Nenhuma classificação analítica deve estar no ledger de exclusões.",
+    "Nenhum periódico excluído pode aparecer no manifest analítico.",
+    "Nenhum periódico excluído pode aparecer nas classificações canônicas.",
+    "O periódico da classificação deve coincidir com o periódico do manifest.",
     "Classificação deve apontar para o mesmo texto do manifest.",
     "Toda classificação analítica deve ter fulltext PASS.",
     "Todo periódico analítico deve ter área mapeada.",
     "Campos booleanos centrais não podem ficar ausentes.",
-    "Presença de método deve estar preenchida em todos os artigos que entram no screen."
+    "Presença de método deve estar preenchida em todos os artigos que entram no screen.",
+    "Classificados não podem superar elegíveis em nenhuma célula periódico-período."
   )
 ) |>
   dplyr::mutate(status = if_else(n == expected, "PASS", "FAIL")) |>
@@ -785,6 +935,9 @@ readr::write_csv(duplicate_pid_rows, file.path(analysis_dir, "current_duplicate_
 readr::write_csv(duplicate_pid_status, file.path(analysis_dir, "current_duplicate_pid_status.csv"))
 readr::write_csv(classified_outside_manifest, file.path(analysis_dir, "current_classified_outside_manifest.csv"))
 readr::write_csv(classified_excluded_by_ledger, file.path(analysis_dir, "current_classified_excluded_by_ledger.csv"))
+readr::write_csv(excluded_journals_in_manifest, file.path(analysis_dir, "current_excluded_journals_in_manifest.csv"))
+readr::write_csv(excluded_journals_in_classifications, file.path(analysis_dir, "current_excluded_journals_in_classifications.csv"))
+readr::write_csv(journal_title_mismatches, file.path(analysis_dir, "current_journal_title_mismatches.csv"))
 readr::write_csv(coverage_by_journal_period, file.path(analysis_dir, "current_coverage_by_journal_period.csv"))
 
 readr::write_csv(denominator_summary, file.path(tables_dir, "denominator_summary.csv"))
@@ -798,6 +951,7 @@ readr::write_csv(qualitative_profile, file.path(tables_dir, "table_7_qualitative
 readr::write_csv(qualitative_complete_summary, file.path(tables_dir, "table_8_qualitative_complete_summary.csv"))
 readr::write_csv(period_journal_profile, file.path(tables_dir, "period_complete_journal_profile.csv"))
 readr::write_csv(period_equal_weight_profile, file.path(tables_dir, "period_equal_weight_profile.csv"))
+readr::write_csv(period_article_weight_profile, file.path(tables_dir, "period_article_weight_profile.csv"))
 readr::write_csv(strict_method_diffusion, file.path(tables_dir, "strict_method_diffusion.csv"))
 readr::write_csv(strict_method_totals, file.path(tables_dir, "strict_method_totals.csv"))
 readr::write_csv(tough_call_profile, file.path(tables_dir, "tough_call_profile.csv"))
@@ -906,7 +1060,12 @@ figure_2 <- complete_journal_profile_long |>
   ggplot2::scale_fill_gradient(low = "#F2F5F8", high = "#2F6B8A", limits = c(0, 100)) +
   ggplot2::labs(
     title = "Perfil metodológico dos periódicos com classificação completa",
-    subtitle = "Quatro periódicos, 1.466 artigos; o denominador varia por dimensão e é informado na legenda da figura.",
+    subtitle = paste0(
+      n_complete_journals,
+      " periódicos, ",
+      fmt_n(n_complete_journal_articles),
+      " artigos; o denominador varia por dimensão."
+    ),
     x = NULL,
     y = NULL,
     fill = "%"
@@ -1023,8 +1182,8 @@ figure_5 <- claim_method_alignment |>
   ggplot2::geom_text(ggplot2::aes(label = label), hjust = -0.08, size = 3) +
   ggplot2::scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10), labels = function(x) paste0(x, "%")) +
   ggplot2::labs(
-    title = "Alinhamento entre claim, componente quantitativo e desenho estrito",
-    subtitle = "Categorias mutuamente exclusivas entre os artigos elegíveis já classificados.",
+    title = "Distribuição conjunta de claim, componente quantitativo e desenho estrito",
+    subtitle = "Categorias descritivas mutuamente exclusivas entre os artigos já classificados.",
     x = "Percentual dos artigos classificados",
     y = NULL
   ) +
@@ -1081,6 +1240,12 @@ audit_report <- c(
   paste0("- Artigos elegíveis ainda não classificados: ", n_remaining, "."),
   paste0("- Classificações preservadas fora do manifest: ", nrow(classified_outside_manifest), "."),
   paste0("- Classificações excluídas pelo ledger: ", nrow(classified_excluded_by_ledger), "."),
+  paste0("- Periódicos excluídos pelo ledger: ", paste(excluded_journals$journal_title, collapse = "; "), "."),
+  paste0("- Intervalo de recuperação dos textos no manifest: ", min(manifest_raw$retrieved_at, na.rm = TRUE), " a ", max(manifest_raw$retrieved_at, na.rm = TRUE), "."),
+  paste0("- MD5 do manifest: `", unname(tools::md5sum(manifest_path)), "`."),
+  paste0("- MD5 do CSV canônico: `", unname(tools::md5sum(classifications_path)), "`."),
+  paste0("- MD5 do ledger de artigos: `", unname(tools::md5sum(excluded_articles_path)), "`."),
+  paste0("- MD5 do ledger de periódicos: `", unname(tools::md5sum(excluded_journals_path)), "`."),
   "",
   "## Estratos analíticos",
   "",
@@ -1090,7 +1255,7 @@ audit_report <- c(
   "",
   "## Regra de interpretação",
   "",
-  "Os agregados dos artigos classificados continuam preliminares para o universo de onze periódicos, porque a seleção segue a ordem operacional da classificação e não um desenho amostral representativo. Os resultados dos periódicos completos são censitários apenas para esses periódicos. A comparação temporal padronizada usa somente periódicos completos com artigos nos três períodos e dá o mesmo peso a cada periódico.",
+  "Os agregados dos artigos classificados continuam preliminares para o universo de onze periódicos, porque a seleção segue a ordem operacional da classificação e não um desenho amostral representativo. Os resultados dos periódicos completos cobrem todos os artigos desses periódicos, mas os rótulos automatizados ainda não foram integralmente adjudicados por humanos. A comparação temporal usa somente periódicos completos com artigos nos três períodos e reporta tanto a média com peso igual por periódico quanto a proporção agrupada por artigo.",
   "",
   "## Validações lógicas",
   "",
@@ -1102,6 +1267,9 @@ audit_report <- c(
   "- `method_explicitness` não está disponível no CSV canônico.",
   "- `empirical_article_format` não está disponível no CSV canônico.",
   "- O campo de claim combina pretensões causais e explicativas; não deve ser interpretado como claim causal estrito.",
+  "- A classificação em escala ainda carece de validação humana estratificada e adjudicação dos casos difíceis e dos métodos raros.",
+  "- A proveniência de modelo e esforço de classificação ainda não está consolidada por PID; por isso, variação temporal pode refletir mudança do classificador.",
+  "- Os desenhos estritos registram presença nominal de famílias de método, não qualidade de implementação nem validade da identificação.",
   "- Qualis e gênero de autoria não entram nesta atualização.",
   "",
   "## Artefatos principais",
@@ -1111,6 +1279,7 @@ audit_report <- c(
   "- `output/tables/paper/table_5_claim_method_alignment.csv`",
   "- `output/tables/paper/table_8_qualitative_complete_summary.csv`",
   "- `output/tables/paper/period_equal_weight_profile.csv`",
+  "- `output/tables/paper/period_article_weight_profile.csv`",
   "- `output/figures/paper/figure_2_journal_dimension_matrix.pdf`",
   "- `output/figures/paper/figure_3_period_variation.pdf`",
   "- `output/figures/paper/figure_5_claim_method_alignment.pdf`"
