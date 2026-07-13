@@ -1107,8 +1107,13 @@ figure_3 <- period_plot_data |>
   ggplot2::geom_line(color = "#2F6B8A", linewidth = 0.8) +
   ggplot2::geom_point(color = "#2F6B8A", size = 2.2) +
   ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), vjust = -0.8, size = 2.8) +
-  ggplot2::facet_wrap(~ metric_label, ncol = 3, scales = "free_y") +
-  ggplot2::scale_y_continuous(expand = ggplot2::expansion(mult = c(0.05, 0.18))) +
+  ggplot2::facet_wrap(~ metric_label, ncol = 3, scales = "fixed") +
+  ggplot2::scale_y_continuous(
+    limits = c(0, 100),
+    breaks = seq(0, 100, 25),
+    labels = function(x) paste0(x, "%"),
+    expand = ggplot2::expansion(mult = c(0, 0.05))
+  ) +
   ggplot2::labs(
     title = "Variação por período em periódicos completos com suporte temporal comum",
     subtitle = "Média simples de BPSR, Contexto Internacional e Dados; composição de periódicos mantida constante.",
