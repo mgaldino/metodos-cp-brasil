@@ -291,14 +291,19 @@ tabela_3_display <- tabela_credibilidade |>
     percent = format_pct(percent),
     denominator_display = dplyr::recode(
       denominator,
-      "artigos classificados" = paste0("Classificados (", denominator_n, ")"),
+      "artigos classificados" = paste0("Todos (", denominator_n, ")"),
       "artigos empíricos" = paste0("Empíricos (", denominator_n, ")"),
-      "casos relevantes para identificação" = paste0("Identificação relevante (", denominator_n, ")")
+      "casos relevantes para identificação" = paste0("Selecionados (", denominator_n, ")")
     ),
     category = dplyr::recode(
       category,
+      "Afirmação causal ou explicativa em artigo empírico" = "Afirmação em artigo empírico",
+      "Casos relevantes para avaliar identificação" = "Casos selecionados",
+      "Estratégia explícita de identificação causal" = "Estratégia explícita",
+      "Método quantitativo sem estratégia explícita" = "Sem estratégia explícita",
       "Outro método moderno a auditar" = "Outro método moderno"
-    )
+    ),
+    panel = dplyr::recode(panel, "Seleção analítica" = "Seleção")
   ) |>
   dplyr::transmute(
     Painel = panel,
@@ -348,6 +353,8 @@ knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
 As duas dimensões mais diretamente ligadas à tese sobre explicitação e formato ainda permanecem como lacunas de mensuração. `method_explicitness` e `empirical_article_format` aparecem na Tabela 2 como não disponíveis. Portanto, esta seção não afirma que a produção brasileira tem baixa explicitação ou baixa padronização textual. Ela mostra que a arquitetura atual permite medir empiria, quantificação, afirmações e menções a estratégias de identificação, e que a próxima rodada precisa medir explicitamente rastreabilidade metodológica e formato empírico.
+
+\newpage
 
 # Discussão
 

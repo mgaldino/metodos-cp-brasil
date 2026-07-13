@@ -1,21 +1,22 @@
 Práticas Metodológicas em Quatro Periódicos Brasileiros:
-Mensuração Preliminar da Difusão de Desenhos de Identificação,
-2005–2025
+Mensuração Preliminar da Difusão de Estratégias de Identificação
+Causal, 2005–2025
 13 de Julho de 2026
 Resumo
 Este artigo apresenta uma mensuração preliminar de práticas metodológicas em artigos publicados
 no SciELO entre 2005 e 2025. O universo elegível reúne 5.249 artigos de onze periódicos, dos quais 1.798
 (34,3%) foram classificados por modelos de linguagem a partir da leitura integral. Quatro periódicos
 estão integralmente cobertos, totalizando 1.466 artigos, e constituem o estrato principal das comparações editoriais. No conjunto classificado, 1.446 artigos são empíricos; entre eles, 833 têm componente
-quantitativo e 308 registram inferência estatística. O screen exploratório inclui 463 artigos, dos quais 27
-mencionam famílias de desenho de identificação sob regra conservadora. Nos três periódicos completos
-com publicação nos três períodos, a presença de artigos empíricos cresce e a participação quantitativa
-permanece aproximadamente estável. A trajetória da inferência depende da ponderação: cresce modestamente quando cada periódico recebe o mesmo peso, mas permanece estável quando os artigos são
-agrupados. Os resultados documentam heterogeneidade entre periódicos e difusão restrita de famílias de
-desenho. Como a classificação ainda não foi integralmente adjudicada por humanos, a configuração do
-classificador variou entre lotes e as variáveis de explicitação metodológica e formato textual não estão
-disponíveis, os resultados são um relatório intermediário de mensuração, não um teste final da revolução
-da credibilidade.
+quantitativo e 308 registram inferência estatística. Em 463 artigos, o tipo de afirmação ou de análise
+torna especialmente relevante examinar como o estudo procura sustentar inferências causais. Apenas
+27 deles mencionam uma estratégia explícita de identificação causal, como experimento, diferença-emdiferenças, variável instrumental ou regressão descontínua. Essa contagem registra a presença declarada
+da estratégia, não sua qualidade. Nos três periódicos completos com publicação nos três períodos, a
+presença de artigos empíricos cresce e a participação quantitativa permanece aproximadamente estável.
+A trajetória da inferência depende da ponderação: cresce modestamente quando cada periódico recebe o
+mesmo peso, mas permanece estável quando os artigos são agrupados. Como a classificação ainda não foi
+integralmente adjudicada por humanos, a configuração do classificador variou entre lotes e as variáveis
+de explicitação metodológica e formato textual não estão disponíveis, os resultados são um relatório
+intermediário de mensuração, não um teste final da revolução da credibilidade.
 
 Introdução
 A profissionalização metodológica de uma disciplina não se traduz automaticamente no modo como seus
@@ -27,13 +28,13 @@ oferece uma observação potencial desse processo. A versão atual mede empiria,
 dados, fontes, procedimentos e limites permanece para a rodada complementar.
 O projeto pergunta como se organiza a prática metodológica dos artigos brasileiros elegíveis no SciELO,
 no escopo de Ciência Política, Relações Internacionais e Administração Pública, entre 2005 e 2025. Nesta
-versão, a pergunta é mais circunscrita: como construir uma mensuração reprodutível dessa prática e o
-que a fração já classificada permite observar sem generalizar para o corpus completo. A pergunta parte
-de uma exigência restrita: a relação entre claim, evidência e método precisa ser reconstruível pelo leitor.
+versão, a pergunta é mais circunscrita: como construir uma mensuração reprodutível dessa prática e o que
+a fração já classificada permite observar sem generalizar para o corpus completo. A pergunta parte de
+uma exigência restrita: a relação entre afirmação, evidência e método precisa ser reconstruível pelo leitor.
 Essa exigência preserva o pluralismo metodológico da área. Ensaios teóricos, estudos qualitativos, análises
-históricas, revisões e trabalhos normativos podem sustentar claims válidos sem seguir um formato único de
-artigo empírico. O problema aparece quando o texto formula claims empíricos, explicativos ou causais e não
-oferece uma conexão clara entre dados, procedimentos, resultados e interpretação.
+históricas, revisões e trabalhos normativos podem sustentar afirmações válidas sem seguir um formato único
+de artigo empírico. O problema aparece quando o texto formula afirmações empíricas, explicativas ou causais
+e não oferece uma conexão clara entre dados, procedimentos, resultados e interpretação.
 O debate brasileiro fornece o ponto de partida substantivo. Soares (2005) associou o déficit metodológico a
 dificuldades de consolidação disciplinar. Barberia, Godoy e Barboza (2014) deslocaram parte da discussão
 para a formação, mostrando avanços e desigualdades no ensino de métodos. Albuquerque, Mesquita e Brito
@@ -44,12 +45,12 @@ para a formação, mostrando avanços e desigualdades no ensino de métodos. Alb
 metodológica em Relações Internacionais e áreas próximas. Figueiredo et al. (2019) acrescentaram a dimensão da reprodutibilidade como condição de avaliação coletiva dos resultados. Em conjunto, esses trabalhos
 indicam que a profissionalização metodológica deve ser observada também na prática publicada.
 A literatura internacional sobre a revolução da credibilidade oferece uma camada comparável para uma parte
-desse problema. Torreblanca et al. (2026) organizam a mudança metodológica por meio da decomposição
-entre corpus total, artigos empíricos, artigos quantitativos, trabalhos com pretensão causal ou explicativa e
-desenhos de identificação mais exigentes. Essa linguagem é útil para o caso brasileiro porque separa alcance
-empírico e aderência a padrões de identificação causal. Um campo pode publicar muitos artigos empíricos
-sem adotar desenhos causais estritos; pode usar estatística sem explicitar identificação; pode formular claims
-explicativos sem discutir as suposições que tornam esses claims avaliáveis. O artigo usa essa camada como
+desse problema. Torreblanca et al. (2026) organizam a mudança metodológica distinguindo o corpus total,
+os artigos empíricos, os trabalhos quantitativos, os estudos com pretensão causal ou explicativa e aqueles
+que mobilizam estratégias explícitas de identificação causal. Essa linguagem é útil para o caso brasileiro
+porque separa alcance empírico e esforço de identificação. Um campo pode publicar muitos artigos empíricos
+sem recorrer a estratégias causais explícitas; pode usar estatística sem discutir identificação; pode formular
+explicações sem tornar claras as suposições necessárias para avaliá-las. O artigo usa essa camada como
 instrumento de mensuração, não como regra geral de qualidade científica.
 A versão atual combina dois níveis de evidência. O universo elegível contém 5.249 artigos com texto integral
 disponível, mas a classificação substantiva por leitura integral cobre 1.798 artigos, equivalentes a 34,3% do
@@ -57,12 +58,14 @@ total. Esse conjunto não forma amostra representativa demonstrada dos onze peri
 4 periódicos estão integralmente classificados, somando 1.466 artigos. As comparações editoriais principais
 são censitárias para esses quatro periódicos; os agregados do conjunto classificado continuam provisórios
 para o universo completo.
-Dentro do conjunto classificado, 1.446 artigos são empíricos e 833 têm componente quantitativo. O campo
-amplo de claim causal ou explicativo aparece em 1.535 artigos, inclusive textos não empíricos, e não deve
-ser lido como medida de causalidade estrita. O screen exploratório inclui 463 artigos, mas não constitui um
-conjunto puro de claims causais. Dentro dele, 27 mencionam ao menos uma família de desenho sob a regra
-conservadora. Essa contagem registra presença nominal, não qualidade de implementação nem validade da
-identificação.
+Dentro do conjunto classificado, 1.446 artigos são empíricos e 833 têm componente quantitativo. A categoria
+ampla de afirmação causal ou explicativa aparece em 1.535 artigos, inclusive textos não empíricos, e não
+deve ser lida como medida de causalidade estrita. Em 463 artigos, a combinação entre afirmação, evidência e
+tipo de análise torna especialmente relevante examinar como a identificação é sustentada. Esse subconjunto
+inclui tanto estudos com afirmações explicativas apoiadas em evidência empírica quanto trabalhos com
+modelagem quantitativa; portanto, não contém apenas estudos causais. Nele, 27 artigos mencionam alguma
+estratégia explícita de identificação causal. A contagem registra a presença declarada da estratégia, não sua
+implementação nem a validade da inferência.
 A contribuição desta versão é propor uma estratégia reprodutível de mensuração, explicitar os denominadores
 do corpus, apresentar resultados preliminares para as dimensões já classificadas e declarar as lacunas de
 mensuração ainda abertas. Duas variáveis diretamente ligadas à tese sobre rastreabilidade metodológica
@@ -72,12 +75,11 @@ ausente. A segunda deve classificar a arquitetura textual do artigo empírico. N
 metodológica e baixa padronização textual são hipóteses e tarefas de classificação complementar, não achados
 demonstrados.
 O artigo, portanto, trata a revolução da credibilidade como uma pergunta de mensuração aplicada ao caso
-brasileiro. Ele não presume que todo artigo deva ser design-based, nem que pluralismo metodológico seja
-um problema. A pergunta é se o claim formulado pelo texto vem acompanhado da evidência, do método e
-das condições de inferência necessárias para sua avaliação. A resposta nacional final depende da classificação
-completa dos 5.249 artigos elegíveis e da rodada complementar sobre explicitação metodológica e formato do
-artigo empírico. A cobertura atual permite apenas descrições preliminares delimitadas para quatro periódicos
-completos.
+brasileiro. Ele não presume que todo artigo deva usar uma estratégia causal explícita, nem que pluralismo
+metodológico seja um problema. A pergunta é se a afirmação formulada pelo texto vem acompanhada da
+evidência, do método e das condições de inferência necessárias para sua avaliação. A resposta nacional
+final depende da classificação completa dos 5.249 artigos elegíveis e da rodada complementar sobre explicitação metodológica e formato do artigo empírico. A cobertura atual permite apenas descrições preliminares
+delimitadas para quatro periódicos completos.
 
 Contexto e Expectativas
 A discussão brasileira sobre métodos em Ciência Política parte de um diagnóstico recorrente: a profissionalização da área avançou, mas não eliminou lacunas persistentes de formação, explicitação metodológica e
@@ -85,30 +87,31 @@ transparência inferencial. A formulação do “calcanhar metodológico” em S
 a fragilidade relativa do treinamento metodológico e para seus efeitos potenciais sobre a capacidade acumulativa da pesquisa publicada. Trabalhos posteriores mostraram que a formação em métodos se ampliou, mas
 de modo desigual entre instituições e sem produzir automaticamente padronização das práticas publicadas,
 como indicam Barberia, Godoy e Barboza (2014). A literatura sobre obscuridade metodológica sugere que
-a presença de métodos nos currículos não garante artigos que explicitem dados, técnicas, procedimentos e
-limites de inferência, argumento desenvolvido por Albuquerque, Mesquita e Brito (2022).
 
 2
 
-O problema substantivo não é a existência de pluralismo. Um artigo qualitativo, histórico ou interpretativo
+a presença de métodos nos currículos não garante artigos que explicitem dados, técnicas, procedimentos e
+limites de inferência, argumento desenvolvido por Albuquerque, Mesquita e Brito (2022).
+O problema substantivo não é a existência de pluralismo. Um artigo qualitativo, histórico ou interpretativo
 pode não seguir um formato IMRaD e ainda assim explicitar de forma substantiva suas fontes, critérios
 de seleção, procedimentos de leitura e escopo inferencial. Da mesma forma, um artigo quantitativo pode
 ter seções formais e oferecer pouca clareza sobre dados, modelos ou pressupostos. A exigência comum é
 rastreabilidade funcional: o leitor precisa conseguir reconstruir como a evidência foi mobilizada e que tipo de
-claim ela sustenta. Essa rastreabilidade deve ser avaliada segundo o tipo de claim, não por adesão universal
-a um formato textual único.
-Torreblanca et al. (2026) entram, nesse desenho, como benchmark operacional para a camada causalquantitativa do problema. A comparação internacional ajuda a distinguir artigos empíricos, quantitativos,
-explicativos ou causais e efetivamente design-based. Ao mesmo tempo, o caso brasileiro exige uma camada
-complementar. Antes de perguntar apenas se há diferença-em-diferenças, regressão descontínua, experimento, variável instrumental ou controle sintético, é necessário perguntar se o artigo explicita dados, método,
-estratégia de análise, resultados e limites inferenciais. Essa segunda camada é indispensável para dialogar
-com a literatura nacional sobre formação, obscuridade e reprodutibilidade.
+afirmação ela sustenta. Essa rastreabilidade deve ser avaliada segundo o tipo de afirmação, não por adesão
+universal a um formato textual único.
+Torreblanca et al. (2026) entram, nesse desenho, como referência operacional para a camada causalquantitativa do problema. A comparação internacional ajuda a distinguir artigos empíricos, quantitativos,
+explicativos ou causais e aqueles que recorrem a estratégias explícitas de identificação. Ao mesmo tempo, o
+caso brasileiro exige uma camada complementar. Antes de perguntar apenas se há diferença-em-diferenças,
+regressão descontínua, experimento, variável instrumental ou controle sintético, é necessário perguntar se o
+artigo explicita dados, método, estratégia de análise, resultados e limites inferenciais. Essa segunda camada
+é indispensável para dialogar com a literatura nacional sobre formação, obscuridade e reprodutibilidade.
 As expectativas do artigo são descritivas e devem ser entendidas como hipóteses a testar no corpus completo.
 Primeiro, espera-se que sinais de empiria, quantificação e inferência estejam distribuídos de modo desigual
 entre periódicos, períodos e áreas disciplinares. Segundo, espera-se que explicitação metodológica e formato
 empírico sejam dimensões relacionadas, mas não equivalentes. Terceiro, espera-se distância entre a presença
-de claims causais ou explicativos e a presença de desenhos estritos de identificação. Quarto, espera-se
-heterogeneidade por periódico e período. Essas dimensões são estratos de descrição e comparação; o desenho
-atual não identifica causalmente por que diferenças entre periódicos, áreas ou períodos ocorrem.
+de afirmações causais ou explicativas e a menção a estratégias explícitas de identificação causal. Quarto,
+espera-se heterogeneidade por periódico e período. Essas dimensões são estratos de descrição e comparação;
+o desenho atual não identifica causalmente por que diferenças entre periódicos, áreas ou períodos ocorrem.
 Essa cautela é especialmente importante nesta versão. As expectativas podem ser avaliadas de modo censitário nos quatro periódicos completos e de modo provisório no conjunto de 1.798 artigos classificados.
 Nenhuma comparação identifica causalmente por que periódicos ou períodos diferem.
 
@@ -135,12 +138,11 @@ reproduzível.
 Esta versão usa 1.798 artigos já classificados, equivalentes a 34,3% do universo elegível. A cobertura é
 desigual. Brazilian Political Science Review, Cadernos Gestão Pública e Cidadania, Contexto
 Internacional e Dados estão integralmente classificados e somam 1.466 artigos. Opinião Pública,
-Revista Brasileira de Ciência Política e Novos Estudos CEBRAP têm cobertura parcial; quatro
-periódicos ainda não foram iniciados. Assim, o paper separa o censo dos quatro periódicos completos do
-
 3
 
-retrato provisório formado por todos os artigos já classificados.
+Revista Brasileira de Ciência Política e Novos Estudos CEBRAP têm cobertura parcial; quatro
+periódicos ainda não foram iniciados. Assim, o paper separa o censo dos quatro periódicos completos do
+retrato provisório formado por todos os artigos já classificados.
 Tabela 1: Artigos elegíveis e cobertura classificada. As células de período mostram classificados/total por periódico.
 
 Periódico
@@ -244,31 +246,28 @@ RBPI
 Estratégia Empírica
 A estratégia empírica é uma estratégia de mensuração, não uma estratégia de identificação causal do próprio
 paper. O objetivo é descrever como os artigos se distribuem em dimensões metodológicas observáveis:
-presença de evidência empírica, tipo de evidência, componente quantitativo, inferência estatística, claim
-causal ou explicativo, entrada no screen de credibilidade e presença de desenho estrito de identificação. Os
-agregados dos 1.798 artigos classificados descrevem cobertura parcial. As comparações entre periódicos usam
-apenas os quatro periódicos completos; as comparações temporais usam os três periódicos completos que
-publicaram nos três períodos, com o mesmo peso para cada periódico.
-O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas, como o cálculo de
-desenhos estritos dentro do screen de credibilidade. Outras dimensões são cruzadas: claims causais ou
-explicativos podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta
-denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos
-os degraus.
+presença de evidência empírica, tipo de evidência, componente quantitativo, inferência estatística, afirmação
+causal ou explicativa e menção a estratégias explícitas de identificação causal. Os agregados dos 1.798 artigos
+classificados descrevem cobertura parcial. As comparações entre periódicos usam apenas os quatro periódicos
+completos; as comparações temporais usam os três periódicos completos que publicaram nos três períodos,
+com o mesmo peso para cada periódico.
+O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas: a frequência das
+estratégias de identificação é calculada dentro do subconjunto em que a identificação é metodologicamente
+relevante. Outras dimensões são cruzadas: afirmações causais ou explicativas podem aparecer em artigos
+qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos os degraus.
 O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quantitativa, mista ou ausente. Em seguida, distingue artigos com análise quantitativa, inferência estatística e
-claims causais ou explicativos. Para a camada associada à revolução da credibilidade, o artigo entra no screen
-quando combina claim causal ou explicativo com evidência empírica pertinente, ou quando usa modelagem
-quantitativa que torna a comparação metodológica relevante. O screen, portanto, não é um subconjunto
-puro de artigos com claim causal ou explicativo.
-A regra de desenho estrito inclui apenas métodos associados a desenhos explícitos de identificação causal:
-experimentos, diferenças-em-diferenças, event study, variáveis instrumentais, regressão descontínua, regression kink, controle sintético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais
-formais, estimadores duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, SEM, mediação causal e efeitos fixos não entram no numerador estrito pela simples presença
-nominal. Na regra atual, esses casos só poderiam ser reclassificados como desenho de identificação por revisão
-complementar que demonstrasse discussão explícita de identificação e plausibilidade dos pressupostos.
-
-Protocolo de classificação e validade da mensuração
-As variáveis foram produzidas pelo schema credibility_prompt_v3 a partir do texto integral de cada
-artigo e consolidadas no CSV canônico. O pipeline verifica PID, hash do texto, schema, categorias, relações
-hierárquicas e reconciliação com os ledgers. Nesta atualização, 28 checks lógicos precisam passar antes da
+afirmações causais ou explicativas. Para examinar a camada associada à identificação causal, selecionamos
+um subconjunto de artigos em que essa questão é especialmente relevante. O artigo entra nesse subconjunto
+por um de dois caminhos: combina uma afirmação causal ou explicativa com evidência empírica pertinente;
+ou emprega modelagem quantitativa que torna necessário examinar como as inferências são sustentadas.
+Portanto, esse subconjunto não equivale ao conjunto de estudos causais. Ele é apenas o universo no qual
+procuramos, na etapa seguinte, menções a estratégias explícitas de identificação.
+Consideramos como estratégia explícita de identificação causal a menção a experimentos, diferenças-emdiferenças, estudos de evento, variáveis instrumentais, regressão descontínua, regression kink, controle sintético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais formais, estimadores
+duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, modelos de
+equações estruturais, mediação causal e efeitos fixos não entram automaticamente nessa contagem. Esses
+casos só seriam incluídos após revisão complementar que encontrasse uma discussão explícita da estratégia
+de identificação e da plausibilidade de seus pressupostos. Mesmo entre os casos incluídos, a classificação
+registra apenas que uma estratégia foi mencionada; não avalia se foi bem executada.
 
 4
 
@@ -286,20 +285,21 @@ Classificados
 
 Empíricos
 
-Componente quantitativo
-
 833 / 1.446 (57,6%)
 
-Claim causal/explicativo
+Componente quantitativo
 
 1.535 / 1.798 (85,4%)
+
+Afirmação causal/explicativa
+
 463 / 1.798 (25,8%)
 
-Screen de credibilidade
+Casos relevantes para identificação
 
 27 / 463 (5,8%)
 
-Desenho estrito
+Estratégia explícita de identificação
 0%
 
 20%
@@ -313,21 +313,28 @@ Desenho estrito
 100%
 
 Percentual no denominador da linha
-Claims
+Afirmações
 
 Cobertura
 
-Credibilidade
-
 Evidência
+
+Identificação
 
 Quantificação
 
 Fonte: classificação canônica por leitura integral. Corpus completo ainda parcialmente classificado.
 
-Figura 1: Denominadores e dimensões da classificação disponível. Os painéis são independentes para evitar ler
-dimensões cruzadas como sequência aninhada; o desenho estrito deve ser lido dentro do screen de credibilidade.
+Figura 1: Denominadores e dimensões da classificação disponível. Os painéis são independentes. A proporção de
+estratégias explícitas de identificação é calculada entre os artigos nos quais o tipo de afirmação ou de análise torna a
+identificação especialmente relevante.
 
+5
+
+Protocolo de classificação e validade da mensuração
+As variáveis foram produzidas pelo schema credibility_prompt_v3 a partir do texto integral de cada
+artigo e consolidadas no CSV canônico. O pipeline verifica PID, hash do texto, schema, categorias, relações
+hierárquicas e reconciliação com os ledgers. Nesta atualização, 28 checks lógicos precisam passar antes da
 geração das tabelas. Esses checks garantem integridade estrutural; não estimam acurácia, concordância
 humana ou validade de construto.
 Os rótulos em escala ainda não foram integralmente adjudicados por humanos. Nos quatro periódicos
@@ -339,10 +346,11 @@ isso, as tendências são apresentadas apenas como diagnóstico exploratório. A
 será necessário adjudicar os casos difíceis e os positivos raros, estimar erro por variável e reclassificar uma
 amostra estratificada com uma configuração congelada.
 Os denominadores são parte substantiva da interpretação. Proporções de cobertura usam os 5.249 artigos
-elegíveis. Proporções sobre práticas metodológicas usam os 1.798 artigos já classificados. Proporções sobre
-desenho estrito devem ser lidas principalmente dentro dos 463 artigos no screen de credibilidade, com a
-proporção sobre o total classificado como referência adicional. Nenhuma tabela ou figura deve omitir o
-denominador, porque o significado de uma proporção muda conforme a dimensão analisada.
+elegíveis. Proporções sobre práticas metodológicas usam os 1.798 artigos já classificados. A frequência de
+estratégias explícitas de identificação deve ser lida principalmente entre os 463 artigos nos quais a identificação
+é especialmente relevante, com a proporção sobre o total classificado como referência adicional. Nenhuma
+tabela ou figura deve omitir o denominador, porque o significado de uma proporção muda conforme a
+dimensão analisada.
 Duas dimensões diretamente ligadas à pergunta do artigo ainda não foram classificadas: explicitação
 metodológica e formato do artigo empírico. A primeira deve distinguir se dados, fontes e estratégia analítica
 aparecem de forma clara, parcial ou ausente. A segunda deve classificar a arquitetura textual do artigo
@@ -350,9 +358,7 @@ empírico, separando formatos próximos de IMRaD, textos estruturados de outro m
 ensaísticos e casos incertos. Usar essas dimensões agora por proxy fraca criaria exatamente o tipo de
 opacidade que o paper pretende diagnosticar.
 
-5
-
-Resultados
+Resultados
 O universo elegível contém 5.249 artigos, dos quais 1.798 estão classificados. A Tabela 2 descreve esse conjunto
 parcial com denominadores específicos para cada dimensão. Entre os classificados, 1.446 são empíricos. Entre
 os empíricos, 833 têm componente quantitativo; entre estes, 315 apresentam modelagem estatística e 308
@@ -421,76 +427,13 @@ não disponível
 A composição da evidência é plural. Dos artigos empíricos, 612 usam apenas evidência qualitativa, 341 usam
 apenas evidência quantitativa e 493 combinam ambas. Quantificação, portanto, não substitui a pesquisa
 qualitativa nem organiza sozinha a prática empírica observada.
-A Figura 2 apresenta primeiro o problema de cobertura. Quatro periódicos estão completos, três estão
+6
+
+A Figura 2 apresenta primeiro o problema de cobertura. Quatro periódicos estão completos, três estão
 parciais e quatro ainda não têm artigos classificados. Isso impede transformar a média dos 1.798 casos em
 estimativa da produção brasileira como um todo.
 
-Periódicos com classificação completa
-Os quatro periódicos completos somam 1.466 artigos. A Tabela 3 e a Figura 3 mostram diferenças editoriais
-substantivas. O percentual de artigos empíricos varia de 75,7% em Contexto Internacional a 88,3% em
-Cadernos Gestão Pública e Cidadania. Entre os artigos empíricos, o componente quantitativo corresponde a 32,2% em Contexto Internacional, 62,7% em Dados, 70,8% em Cadernos Gestão Pública e
-Cidadania e 74,0% na BPSR.
-Tabela 3: Perfil metodológico dos quatro periódicos completos. Denominadores: empíricos sobre todos os artigos;
-quantitativos sobre empíricos; inferência sobre quantitativos; screen sobre todos; desenho estrito sobre o screen.
-
-Periódico
-
-N
-
-Empíricos
-
-Quantitativos
-
-Inferência
-
-Screen
-
-Desenho estrito
-
-BPSR
-CGPC
-Contexto Internacional
-Dados
-
-268
-120
-456
-622
-
-86,2%
-88,3%
-75,7%
-87,1%
-
-74,0%
-70,8%
-32,2%
-62,7%
-
-49,7%
-18,7%
-7,2%
-41,8%
-
-40,3%
-20,0%
-4,2%
-31,8%
-
-12,0%
-8,3%
-5,3%
-5,1%
-
-A diferença mais nítida está na inferência estatística entre artigos quantitativos: 49,7% na BPSR e 41,8% em
-Dados, contra 18,7% em CGPC e 7,2% em Contexto Internacional. Esses contrastes descrevem ecologias
-editoriais e disciplinares distintas; não constituem ranking de qualidade nem efeito causal do periódico.
-
-Evidência qualitativa
-Nos quatro periódicos completos, 971 artigos apresentam evidência qualitativa, isoladamente ou em combinação com evidência quantitativa. O classificador identifica objetivo qualitativo claro em 954 deles, ou
-6
-
-Cobertura da classificação por periódico
+Cobertura da classificação por periódico
 Os rótulos mostram artigos classificados sobre artigos elegíveis após o ledger de exclusões.
 Brazilian Political Science
 Review
@@ -568,7 +511,168 @@ Quatro periódicos completos; comparações substantivas principais são restrit
 Figura 2: Cobertura da classificação por periódico. Os rótulos mostram artigos classificados sobre artigos elegíveis
 após as exclusões documentadas.
 
+Periódicos com classificação completa
+Os quatro periódicos completos somam 1.466 artigos. A Tabela 3 e a Figura 3 mostram diferenças editoriais
+substantivas. O percentual de artigos empíricos varia de 75,7% em Contexto Internacional a 88,3% em
+Cadernos Gestão Pública e Cidadania. Entre os artigos empíricos, o componente quantitativo corresponde a 32,2% em Contexto Internacional, 62,7% em Dados, 70,8% em Cadernos Gestão Pública e
+Cidadania e 74,0% na BPSR.
+Tabela 3: Perfil metodológico dos quatro periódicos completos. Denominadores: empíricos sobre todos os artigos;
+quantitativos sobre empíricos; inferência sobre quantitativos; identificação relevante sobre todos os artigos; estratégia
+explícita sobre os casos em que a identificação é relevante.
+
+Periódico
+
+N
+
+Empíricos Quantitativos Inferência
+
+Identificação
+relevante
+
+Estratégia
+explícita
+
+BPSR
+CGPC
+
+268
+120
+
+86,2%
+88,3%
+
+40,3%
+20,0%
+
+12,0%
+8,3%
+
+74,0%
+70,8%
+
+49,7%
+18,7%
+
 7
+
+Periódico
+
+N
+
+Empíricos Quantitativos Inferência
+
+Identificação
+relevante
+
+Estratégia
+explícita
+
+Contexto
+Internacional
+Dados
+
+456
+
+75,7%
+
+32,2%
+
+7,2%
+
+4,2%
+
+5,3%
+
+622
+
+87,1%
+
+62,7%
+
+41,8%
+
+31,8%
+
+5,1%
+
+A diferença mais nítida está na inferência estatística entre artigos quantitativos: 49,7% na BPSR e 41,8% em
+Dados, contra 18,7% em CGPC e 7,2% em Contexto Internacional. Esses contrastes descrevem ecologias
+editoriais e disciplinares distintas; não constituem ranking de qualidade nem efeito causal do periódico.
+
+Evidência qualitativa
+Nos quatro periódicos completos, 971 artigos apresentam evidência qualitativa, isoladamente ou em combinação com evidência quantitativa. O classificador identifica objetivo qualitativo claro em 954 deles, ou
+98,2%. Esse resultado indica que o propósito substantivo da análise qualitativa costuma ser reconstruível,
+mas não mede explicitação de seleção de casos, procedimentos interpretativos ou rastreabilidade documental.
+Portanto, não substitui a futura variável de explicitação metodológica.
+
+Afirmações e estratégias de identificação
+A categoria de afirmação causal ou explicativa é deliberadamente ampla. Ela aparece em 1.535 artigos, dos
+quais 1.382 são empíricos. A Figura 4 separa categorias mutuamente exclusivas e mostra por que essa variável
+não pode ser tratada como afirmação causal estrita: há afirmações em artigos não empíricos, afirmações
+empíricas sem componente quantitativo e afirmações empíricas quantitativas sem estratégia explícita de
+identificação. Esses cruzamentos descrevem coexistência de atributos; não medem adequação entre afirmação
+e método.
+Dos 463 artigos em que a identificação é especialmente relevante, 27 mencionam ao menos uma estratégia
+explícita de identificação causal, equivalentes a 5,8%. Como esse subconjunto inclui afirmações explicativas
+amplas e modelagem quantitativa, ele não contém apenas estudos causais. A Tabela 4 mantém visíveis
+os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser
+somadas como uma distribuição.
+Tabela 4: Afirmações e estratégias de identificação. As linhas usam denominadores distintos e não formam uma
+distribuição única.
+
+Painel
+
+Categoria
+
+N
+
+Denominador
+
+Percentual
+
+Afirmações
+Afirmações
+Seleção
+Identificação
+Diagnóstico não exclusivo
+Diagnóstico não exclusivo
+
+Afirmação causal ou explicativa
+Afirmação em artigo empírico
+Casos selecionados
+Estratégia explícita
+Sem estratégia explícita
+Outro método moderno
+
+1.535
+1.382
+463
+27
+437
+5
+
+Todos (1.798)
+Empíricos (1.446)
+Todos (1.798)
+Selecionados ( 463)
+Selecionados ( 463)
+Selecionados ( 463)
+
+85,4%
+95,6%
+25,8%
+5,8%
+94,4%
+1,1%
+
+Nos quatro periódicos completos, 26 artigos mencionam ao menos uma estratégia explícita de identificação
+causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método; um mesmo artigo pode
+mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
+
+Variação por período
+A comparação temporal usa apenas BPSR, Contexto Internacional e Dados, os três periódicos completos
+com artigos nos três períodos. A presença média de artigos empíricos cresce de 74,3% em 2005–2011 para
+8
 
 Perfil metodológico dos periódicos com classificação completa
 4 periódicos, 1.466 artigos; o denominador varia por dimensão.
@@ -635,85 +739,88 @@ Science Review
 
 os
 
+tivo
+
+tita
+
+mp
+se
+
 Ar
 
 o
 tig
 
-nte
+te
+en
 
-ne
-
-o
-mp
-
+m
 Co
 
-ivo
-tat
+n
+po
 
+q
+
+n
+ua
+
+cia
+
+ta
+es
+
+tica
+
+va
+ati
+plic
+x
+l/e
+
+tís
+
+çã
+fica
 nti
-
-mp
-se
+e
+d
+I
 
 a
-qu
 
-ci
+s
+au
 
 n
 erê
 Inf
 
-vo
-ati
-plic
+nte
+va
+ele
+r
+o
 
-ica
+c
+ão
+aç
 
-íst
+rm
+Afi
 
-tat
+a
 
-s
+t
+líci
+
+xp
 ae
 
-us
-
-laim
-
-ca
-
-e
-ad
-ilid
-
-ex
-al/
-
-e
-nd
-
-ree
-
-dib
-cre
-
-ho
-en
-es
-
-tr
-es
-
-ito
-
-D
-
-Sc
-
-C
+i
+tég
+tra
+Es
 
 %
 0
@@ -729,45 +836,34 @@ C
 Figura 3: Perfil metodológico dos quatro periódicos completos. Cada dimensão usa o denominador indicado na
 legenda.
 
-8
+9
 
-98,2%. Esse resultado indica que o propósito substantivo da análise qualitativa costuma ser reconstruível,
-mas não mede explicitação de seleção de casos, procedimentos interpretativos ou rastreabilidade documental.
-Portanto, não substitui a futura variável de explicitação metodológica.
-
-Claims, screen e desenho de identificação
-O campo de claim causal ou explicativo é deliberadamente amplo. Ele aparece em 1.535 artigos, dos quais
-1.382 são empíricos. A Figura 4 separa categorias mutuamente exclusivas e mostra por que essa variável
-não pode ser tratada como claim causal estrito: há claims em artigos não empíricos, claims empíricos sem
-componente quantitativo e claims empíricos quantitativos sem desenho estrito. Esses cruzamentos descrevem
-coexistência de atributos; não medem adequação entre claim e método.
-
-Distribuição conjunta de claim, componente quantitativo e desenho estrito
+Afirmações, uso de dados quantitativos e estratégias de identificação
 Categorias descritivas mutuamente exclusivas entre os artigos já classificados.
 
 27 (1,5%)
 
-Claim e desenho estrito
+Afirmação e estratégia explícita de identificação
 
 772 (42,9%)
 
-Claim empírico e componente quantitativo, sem desenho estrito
+Afirmação empírica e componente quantitativo, sem estratégia explícita
 
 583 (32,4%)
 
-Claim empírico sem componente quantitativo
+Afirmação empírica sem componente quantitativo
 
 153 (8,5%)
 
-Claim em artigo não empírico
+Afirmação em artigo não empírico
 
 34 (1,9%)
 
-Componente quantitativo sem claim
+Componente quantitativo sem afirmação
 
 229 (12,7%)
 
-Sem claim ou componente quantitativo
+Sem afirmação ou componente quantitativo
 
 0%
 
@@ -784,92 +880,10 @@ Sem claim ou componente quantitativo
 60%
 
 Percentual dos artigos classificados
-Figura 4: Distribuição conjunta de claim causal ou explicativo, componente quantitativo e desenho estrito. As
-categorias são mutuamente exclusivas, mas não constituem teste de adequação entre claim e método.
+Figura 4: Distribuição conjunta de afirmações causais ou explicativas, uso de dados quantitativos e menção a
+estratégias explícitas de identificação causal. As categorias são mutuamente exclusivas, mas não constituem teste de
+adequação entre afirmação e método.
 
-O diagnóstico conservador começa no screen exploratório. Dos 463 artigos que entram nesse screen, 27
-mencionam uma família de desenho, equivalentes a 5,8%. Como o screen inclui claims explicativos amplos
-e modelagem quantitativa, ele não é um risk set causal puro. A Tabela 4 mantém visíveis os diferentes
-denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como
-uma distribuição.
-Tabela 4: Claims, screen e desenhos de identificação. As linhas usam denominadores distintos e não formam uma
-distribuição única.
-
-Painel
-
-Categoria
-
-N
-
-Denominador
-
-Percentual
-
-Claims
-Claims
-
-Claim amplo
-Claim amplo em artigo
-empírico
-Screen de credibilidade
-Desenho estrito
-
-1.535
-1.382
-
-Classificados (1.798)
-Empíricos (1.446)
-
-85,4%
-95,6%
-
-463
-27
-
-Classificados (1.798)
-Screen ( 463)
-
-25,8%
-5,8%
-
-Screen
-Desenho
-
-9
-
-Painel
-
-Categoria
-
-N
-
-Denominador
-
-Percentual
-
-Diagnóstico não exclusivo
-Diagnóstico não exclusivo
-
-Diagnóstico, não desenho
-Outro método moderno
-
-437
-5
-
-Screen ( 463)
-Screen ( 463)
-
-94,4%
-1,1%
-
-Nos quatro periódicos completos, 26 artigos mencionam ao menos uma família de desenho sob a regra estrita.
-Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são
-as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método; um mesmo artigo pode mobilizar
-mais de um desenho. A contagem não audita a execução nem a plausibilidade dos pressupostos.
-
-Variação por período
-A comparação temporal usa apenas BPSR, Contexto Internacional e Dados, os três periódicos completos
-com artigos nos três períodos. A presença média de artigos empíricos cresce de 74,3% em 2005–2011 para
 86,4% em 2019–2025. A proporção quantitativa entre os empíricos permanece próxima de 56% nos três
 períodos. Para inferência estatística, porém, a conclusão depende da ponderação. Com peso igual por
 periódico, a proporção cresce de 30,3% para 34,9%; agrupando os artigos quantitativos, passa de 37,7%
@@ -901,29 +915,14 @@ Artigos quantitativos agrupados
 As duas dimensões mais diretamente ligadas à tese sobre explicitação e formato ainda permanecem como
 lacunas de mensuração. method_explicitness e empirical_article_format aparecem na Tabela 2 como
 não disponíveis. Portanto, esta seção não afirma que a produção brasileira tem baixa explicitação ou baixa
-padronização textual. Ela mostra que a arquitetura atual permite medir empiria, quantificação, claims
-e desenhos estritos, e que a próxima rodada precisa medir explicitamente rastreabilidade metodológica e
-formato empírico.
+padronização textual. Ela mostra que a arquitetura atual permite medir empiria, quantificação, afirmações e
+menções a estratégias de identificação, e que a próxima rodada precisa medir explicitamente rastreabilidade
+metodológica e formato empírico.
 
-Discussão
-Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala.
-A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência
-estatística e a entrada no screen variam fortemente. BPSR e Dados combinam elevada presença empírica
-com maior frequência de inferência; Contexto Internacional é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor
-frequência de inferência. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos
-de pergunta e políticas editoriais; o desenho não separa essas explicações.
-A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção
-de artigos empíricos cresce e a participação quantitativa permanece estável. A inferência aumenta apenas na
-média que dá peso igual aos periódicos; quando os artigos são agrupados, permanece praticamente estável.
-Não há difusão monotônica das famílias de desenho. O snapshot, portanto, não sustenta uma narrativa
-linear de substituição da pesquisa qualitativa pela quantitativa nem de marcha uniforme rumo a desenhos
-causais.
-O campo amplo de claim causal ou explicativo precisa ser interpretado com especial cautela. Sua frequência
-elevada não significa que quase todos os artigos façam inferência causal: ele também registra explicações
 10
 
 Métodos de identificação nos periódicos com classificação completa
-Contagem artigo−método; um artigo pode mobilizar mais de um desenho.
+Contagem artigo−método; um artigo pode mobilizar mais de uma estratégia.
 7
 
 Diferenças−em−diferenças
@@ -974,10 +973,10 @@ Experimento de lista
 8
 
 Artigos com o método
-A contagem segue a regra conservadora de desenho estrito.
+A contagem registra famílias de estratégia explicitamente mencionadas; não avalia sua qualidade.
 
-Figura 5: Distribuição dos métodos de identificação nos quatro periódicos completos. Um artigo pode mobilizar
-mais de um método.
+Figura 5: Estratégias explícitas de identificação causal mencionadas nos quatro periódicos completos. Um artigo
+pode mobilizar mais de uma estratégia; a contagem não avalia sua qualidade.
 
 11
 
@@ -1026,13 +1025,13 @@ Percentual
 
 55,8%
 
-Claim causal/explicativo
+Afirmação causal/explicativa
 
 30,3%
 
-Screen de credibilidade
+Identificação relevante
 
-Desenho estrito
+Estratégia explícita
 
 30
 98,1%
@@ -1075,21 +1074,38 @@ proporções dos três periódicos completos.
 
 12
 
-qualitativas, argumentos teóricos e interpretações substantivas. O screen não é um risk set causal puro, e
-o numerador de 27 casos registra famílias nominais de método. A distância em relação aos 463 artigos do
-screen é uma descrição taxonômica útil, mas não mede diretamente credibilidade, alinhamento entre claim
-e método ou qualidade da identificação.
+Discussão
+Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala.
+A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência
+estatística e a proporção de casos em que a identificação é especialmente relevante variam fortemente. BPSR
+e Dados combinam elevada presença empírica com maior frequência de inferência; Contexto Internacional
+é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina
+elevada empiria e quantificação com menor frequência de inferência. Essas diferenças são descritivas e podem
+refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas
+explicações.
+A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção
+de artigos empíricos cresce e a participação quantitativa permanece estável. A inferência aumenta apenas na
+média que dá peso igual aos periódicos; quando os artigos são agrupados, permanece praticamente estável.
+Não há difusão monotônica das famílias de desenho. O snapshot, portanto, não sustenta uma narrativa
+linear de substituição da pesquisa qualitativa pela quantitativa nem de marcha uniforme rumo a desenhos
+causais.
+A categoria ampla de afirmação causal ou explicativa precisa ser interpretada com especial cautela. Sua
+frequência elevada não significa que quase todos os artigos façam inferência causal: ela também registra
+explicações qualitativas, argumentos teóricos e interpretações substantivas. O subconjunto de 463 artigos
+selecionado para examinar identificação não contém apenas estudos causais, e os 27 casos positivos registram
+famílias de método mencionadas no texto. A diferença entre essas contagens é uma descrição taxonômica útil,
+mas não mede diretamente credibilidade, adequação entre afirmação e método ou qualidade da identificação.
 O principal limite permanece fora das dimensões já observadas. A base não mede diretamente explicitação
 metodológica nem formato do artigo empírico. A clareza do objetivo qualitativo mostra que o propósito
 substantivo costuma ser reconstruível, mas não revela se fontes, seleção, procedimentos e limites são suficientemente explicitados. A hipótese sobre opacidade e rastreabilidade funcional só poderá ser testada depois
 da classificação complementar de method_explicitness e empirical_article_format.
 Por fim, o pluralismo metodológico não é uma concessão retórica, mas parte do desenho. A crítica relevante
-não é a ausência de métodos design-based em todo tipo de artigo. O problema substantivo aparece quando
-o tipo de claim excede o que o texto torna avaliável. Um ensaio teórico não precisa discutir pré-tendências;
-um artigo com claim causal quantitativo precisa discutir como a identificação é sustentada. Um estudo
-qualitativo não precisa seguir IMRaD; precisa permitir que o leitor entenda suas fontes, critérios de seleção,
-procedimentos interpretativos e limites. A agenda do paper é mapear essa adequação entre claim, evidência
-e forma de apresentação.
+não é a ausência de estratégias explícitas de identificação causal em todo tipo de artigo. O problema
+substantivo aparece quando o tipo de afirmação excede o que o texto torna avaliável. Um ensaio teórico
+não precisa discutir pré-tendências; um artigo com afirmação causal quantitativa precisa discutir como a
+identificação é sustentada. Um estudo qualitativo não precisa seguir IMRaD; precisa permitir que o leitor
+entenda suas fontes, critérios de seleção, procedimentos interpretativos e limites. A agenda do paper é
+mapear essa adequação entre afirmação, evidência e forma de apresentação.
 
 Conclusão
 Esta versão entrega dois resultados intermediários. Primeiro, oferece cobertura integral dos 1.466 artigos
@@ -1098,13 +1114,17 @@ forma provisória os 1.798 artigos já classificados de um universo elegível de
 de modo que os agregados nacionais não são finais.
 Os resultados rejeitam uma descrição simples de ausência de empiria ou de quantificação. O conjunto
 classificado contém 1.446 artigos empíricos, dos quais 833 têm componente quantitativo. A heterogeneidade
-aparece na passagem da quantificação para inferência. As 27 ocorrências positivas entre 463 artigos no screen
-mostram que famílias de desenho são pouco frequentes sob a regra conservadora, mas não permitem inferir
-qualidade de identificação.
+aparece na passagem da quantificação para inferência. Entre os 463 artigos nos quais a identificação é
+especialmente relevante, apenas 27 mencionam uma estratégia explícita de identificação causal. Essa baixa
+frequência não permite, por si só, inferir a qualidade dos estudos.
 As variáveis method_explicitness e empirical_article_format continuam indisponíveis. Sem elas, esta
 versão não mede rastreabilidade nem conclui sobre explicitação metodológica ou padronização textual.
 A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador
-por PID, adjudicar uma amostra humana estratificada e implementar a rodada complementar sobre explicitação e formato. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se
+por PID, adjudicar uma amostra humana estratificada e implementar a rodada complementar sobre explic-
+
+13
+
+itação e formato. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se
 generaliza e em que medida a produção brasileira superou, reformulou ou preservou as lacunas metodológicas
 identificadas desde o diagnóstico do calcanhar metodológico.
 
@@ -1123,6 +1143,6 @@ e Práticas, no. 48: 27–52.
 Torreblanca, Carolina, William Dinneen, Guy Grossman, and Yiqing Xu. 2026. “The Credibility Revolution in
 Political Science.” arXiv:2601.11542.
 
-13
+14
 
 
