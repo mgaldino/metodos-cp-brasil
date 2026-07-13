@@ -1,5 +1,5 @@
 ---
-title: "Protocolo de Mensuração e Evidência Preliminar sobre a Revolução da Credibilidade na Ciência Política Brasileira"
+title: "Práticas Metodológicas e Revolução da Credibilidade em Periódicos Brasileiros: Evidência de Quatro Periódicos Completos"
 author: ""
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Este artigo apresenta um protocolo de mensuração e resultados preliminares sobre práticas metodológicas em artigos brasileiros elegíveis no SciELO entre 2005 e 2025. O objetivo substantivo final é avaliar em que medida a produção publicada em Ciência Política, Relações Internacionais e Administração Pública explicita evidências, métodos, inferências e limites analíticos de modo compatível com convenções contemporâneas de pesquisa empírica. O universo elegível contém 5.250 artigos em onze periódicos. Esta versão classifica 799 desses artigos por leitura integral, ou 15,2% do total, com concentração em poucos periódicos e períodos. Nos artigos já classificados, 647 são empíricos, 349 têm componente quantitativo, 682 apresentam claim causal ou explicativo, 150 entram no screen de credibilidade e 16 têm desenho estrito de identificação sob regra conservadora. Esses números descrevem apenas o subconjunto classificado e não são estimativas finais do corpus completo. As variáveis de explicitação metodológica e formato do artigo empírico ainda exigem rodada complementar de classificação.
+  Este artigo examina práticas metodológicas em artigos brasileiros publicados no SciELO entre 2005 e 2025. O universo elegível reúne 5.249 artigos de onze periódicos, dos quais 1.798 (34,3%) foram classificados por leitura integral. Quatro periódicos estão integralmente classificados, totalizando 1.466 artigos, e constituem o estrato principal das comparações editoriais. No conjunto classificado, 1.446 artigos são empíricos; entre eles, 833 têm componente quantitativo. Entre os quantitativos, 308 apresentam inferência estatística. O screen de credibilidade inclui 463 artigos, dos quais 27 contêm desenho estrito de identificação sob regra conservadora. Nos três periódicos completos com publicação nos três períodos analisados, a presença de artigos empíricos cresce, enquanto a participação quantitativa permanece aproximadamente estável e a inferência estatística aumenta modestamente. Os resultados mostram heterogeneidade editorial e uma difusão ainda restrita de desenhos de identificação, sem reduzir pluralismo metodológico a uma hierarquia única. Como a cobertura dos onze periódicos permanece incompleta e as variáveis de explicitação metodológica e formato textual ainda não foram classificadas, as conclusões nacionais continuam provisórias.
 ---
 
 ```{r setup, include=FALSE}
@@ -47,6 +47,11 @@ tabela_dimensoes <- readr::read_csv("../output/tables/paper/table_2_methodologic
 tabela_credibilidade <- readr::read_csv("../output/tables/paper/table_3_causality_credibility.csv", show_col_types = FALSE)
 matriz_periodo <- readr::read_csv("../output/tables/paper/period_dimension_summary.csv", show_col_types = FALSE)
 matriz_periodico <- readr::read_csv("../output/tables/paper/journal_dimension_matrix.csv", show_col_types = FALSE)
+tabela_periodicos_completos <- readr::read_csv("../output/tables/paper/table_4_complete_journal_profile.csv", show_col_types = FALSE)
+tabela_alinhamento <- readr::read_csv("../output/tables/paper/table_5_claim_method_alignment.csv", show_col_types = FALSE)
+tabela_qualitativa_completa <- readr::read_csv("../output/tables/paper/table_8_qualitative_complete_summary.csv", show_col_types = FALSE)
+perfil_periodo_padronizado <- readr::read_csv("../output/tables/paper/period_equal_weight_profile.csv", show_col_types = FALSE)
+metodos_estritos <- readr::read_csv("../output/tables/paper/strict_method_totals.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -56,7 +61,20 @@ n_quant <- denominadores$n[denominadores$denominator == "Artigos empíricos quan
 n_claim <- denominadores$n[denominadores$denominator == "Artigos com claim causal ou explicativo classificados"]
 n_screen <- denominadores$n[denominadores$denominator == "Artigos no screen de credibilidade classificados"]
 n_estrito <- denominadores$n[denominadores$denominator == "Artigos classificados com desenho estrito"]
+n_periodicos_completos <- denominadores$n[denominadores$denominator == "Periódicos com classificação completa"]
+n_artigos_periodicos_completos <- denominadores$n[denominadores$denominator == "Artigos dos periódicos completos"]
 pct_classificados <- denominadores$percent[denominadores$denominator == "Artigos classificados por leitura integral"]
+n_modelagem <- tabela_dimensoes$n[tabela_dimensoes$category == "Modelagem estatística"]
+n_inferencia <- tabela_dimensoes$n[tabela_dimensoes$category == "Inferência estatística"]
+n_claim_empirico <- tabela_credibilidade$n[tabela_credibilidade$category == "Claim causal ou explicativo em artigo empírico"]
+n_estrito_periodicos_completos <- sum(tabela_periodicos_completos$n_strict)
+n_qualitativos_periodicos_completos <- unique(tabela_qualitativa_completa$denominator_n)
+n_objetivo_qualitativo_claro <- tabela_qualitativa_completa$n[tabela_qualitativa_completa$qualitative_goal_clarity == "Clara"]
+pct_objetivo_qualitativo_claro <- tabela_qualitativa_completa$percent[tabela_qualitativa_completa$qualitative_goal_clarity == "Clara"]
+
+profile_value <- function(journal, variable) {
+  tabela_periodicos_completos[[variable]][tabela_periodicos_completos$journal_title == journal]
+}
 ```
 
 # Introdução
