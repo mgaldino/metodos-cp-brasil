@@ -273,22 +273,17 @@ def metadata_field_matches(field: str, expected: str, got: Any) -> bool:
 
 
 def canonicalize_descriptive_metadata(record: dict[str, Any], row: dict[str, str]) -> None:
-    """Restore manifest titles only after the model preserves literal article identity."""
+    """Use the manifest as the source of truth after the model preserves the PID."""
     classification = record.get("classification")
     if not isinstance(classification, dict):
         return
 
-    identity_fields = ("pid", "input_text_hash")
-    if not all(row.get(field) for field in identity_fields):
+    if not row.get("pid"):
         return
-    identity_matches = all(
-        record.get(field) == row.get(field) and classification.get(field) == row.get(field)
-        for field in identity_fields
-    )
-    if not identity_matches:
+    if record.get("pid") != row["pid"] or classification.get("pid") != row["pid"]:
         return
 
-    for field in ("title", "journal_title"):
+    for field in ("pid", "title", "journal_title", "input_text_hash"):
         record[field] = row.get(field, "")
         classification[field] = row.get(field, "")
 
