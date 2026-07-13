@@ -8,7 +8,7 @@ quantitative_flag_with_quantitative_type_none,PASS,0,0,Flag quantitativa exige t
 statistical_inference_without_quantitative_flag,PASS,0,0,Inferência estatística exige flag de componente quantitativo.
 statistical_inference_without_quantitative_analysis,PASS,0,0,Inferência estatística exige componente quantitativo.
 statistical_inference_missing_within_quantitative,PASS,0,0,Inferência deve estar preenchida em todos os artigos quantitativos.
-strict_design_outside_screen,PASS,0,0,Desenhos estritos devem estar no screen de credibilidade.
+strict_design_outside_screen,PASS,0,0,Estratégias explícitas de identificação só são contadas nos artigos em que a identificação é especialmente relevante.
 strict_design_without_method_present,PASS,0,0,Desenhos estritos exigem method_present TRUE.
 strict_design_without_quote,PASS,0,0,Desenhos estritos exigem citação textual do desenho.
 method_present_without_parsed_type,PASS,0,0,method_present TRUE exige ao menos um tipo de método parseado.
@@ -25,5 +25,5 @@ classified_hash_mismatch,PASS,0,0,Classificação deve apontar para o mesmo text
 classified_fulltext_not_pass,PASS,0,0,Toda classificação analítica deve ter fulltext PASS.
 journal_area_unmapped,PASS,0,0,Todo periódico analítico deve ter área mapeada.
 required_core_boolean_missing,PASS,0,0,Campos booleanos centrais não podem ficar ausentes.
-method_present_missing_within_screen,PASS,0,0,Presença de método deve estar preenchida em todos os artigos que entram no screen.
+method_present_missing_within_screen,PASS,0,0,A presença de método deve estar preenchida em todos os artigos selecionados para examinar identificação.
 classified_exceeds_eligible_by_journal_period,PASS,0,0,Classificados não podem superar elegíveis em nenhuma célula periódico-período.

@@ -1,6 +1,6 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-13 11:08:47 -0300
+Gerado em: 2026-07-13 11:46:44 -0300
 
 ## Universo reconciliado
 
@@ -37,7 +37,7 @@ Os agregados dos artigos classificados continuam preliminares para o universo de
 
 - `method_explicitness` não está disponível no CSV canônico.
 - `empirical_article_format` não está disponível no CSV canônico.
-- O campo de claim combina pretensões causais e explicativas; não deve ser interpretado como claim causal estrito.
+- A categoria de afirmação combina pretensões causais e explicativas; não deve ser interpretada como afirmação causal estrita.
 - A classificação em escala ainda carece de validação humana estratificada e adjudicação dos casos difíceis e dos métodos raros.
 - A proveniência de modelo e esforço de classificação ainda não está consolidada por PID; por isso, variação temporal pode refletir mudança do classificador.
 - Os desenhos estritos registram presença nominal de famílias de método, não qualidade de implementação nem validade da identificação.

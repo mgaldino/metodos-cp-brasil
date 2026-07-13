@@ -1,7 +1,7 @@
 panel,category,n,denominator,denominator_n,percent,note
-Claims,Claim causal ou explicativo,1535,artigos classificados,1798,85.4,O campo combina claims causais e explicativos e também pode marcar textos não empíricos.
-Claims,Claim causal ou explicativo em artigo empírico,1382,artigos empíricos,1446,95.6,Subconjunto empírico; ainda não equivale a claim causal estrito.
-Screen,Screen de credibilidade,463,artigos classificados,1798,25.8,Pode ser acionado por modelagem quantitativa ou claim causal/explicativo.
-Desenho,Desenho estrito,27,screen de credibilidade,463,5.8,Numerador conservador do paper.
-Diagnóstico não exclusivo,"Diagnóstico, não desenho",437,screen de credibilidade,463,94.4,Rótulos podem coexistir com desenho estrito.
-Diagnóstico não exclusivo,Outro método moderno a auditar,5,screen de credibilidade,463,1.1,Fila conservadora; pode coexistir com desenho estrito.
+Afirmações,Afirmação causal ou explicativa,1535,artigos classificados,1798,85.4,A categoria combina afirmações causais e explicativas e também pode marcar textos não empíricos.
+Afirmações,Afirmação causal ou explicativa em artigo empírico,1382,artigos empíricos,1446,95.6,O subconjunto empírico ainda não equivale a uma afirmação causal explícita.
+Seleção analítica,Casos relevantes para avaliar identificação,463,artigos classificados,1798,25.8,"Inclui artigos com afirmação causal ou explicativa e evidência empírica, além de modelagem quantitativa relevante."
+Identificação,Estratégia explícita de identificação causal,27,casos relevantes para identificação,463,5.8,Contagem conservadora de famílias de método explicitamente mencionadas.
+Diagnóstico não exclusivo,Método quantitativo sem estratégia explícita,437,casos relevantes para identificação,463,94.4,A categoria pode coexistir com uma estratégia explícita.
+Diagnóstico não exclusivo,Outro método moderno a auditar,5,casos relevantes para identificação,463,1.1,Categoria conservadora que exige auditoria adicional.

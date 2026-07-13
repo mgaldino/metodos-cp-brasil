@@ -190,9 +190,9 @@ metric_labels <- c(
   empirical = "Artigos empíricos",
   quantitative = "Componente quantitativo",
   inference = "Inferência estatística",
-  claim = "Claim causal/explicativo",
-  screen = "Screen de credibilidade",
-  strict = "Desenho estrito"
+  claim = "Afirmação causal/explicativa",
+  screen = "Identificação relevante",
+  strict = "Estratégia explícita"
 )
 
 metric_denominators <- c(
@@ -201,7 +201,7 @@ metric_denominators <- c(
   inference = "empíricos quantitativos",
   claim = "artigos empíricos",
   screen = "todos os artigos",
-  strict = "screen de credibilidade"
+  strict = "casos relevantes para identificação"
 )
 
 manifest_raw <- readr::read_csv(manifest_path, show_col_types = FALSE) |>
@@ -498,9 +498,9 @@ denominator_summary <- tibble::tibble(
     "Artigos dos periódicos completos",
     "Artigos empíricos classificados",
     "Artigos empíricos quantitativos classificados",
-    "Artigos com claim causal ou explicativo classificados",
-    "Artigos no screen de credibilidade classificados",
-    "Artigos classificados com desenho estrito"
+    "Artigos com afirmação causal ou explicativa classificados",
+    "Artigos em que a identificação é especialmente relevante",
+    "Artigos com estratégia explícita de identificação causal"
   ),
   n = c(
     n_manifest,
@@ -524,7 +524,7 @@ denominator_summary <- tibble::tibble(
     "artigos empíricos classificados",
     "artigos classificados",
     "artigos classificados",
-    "screen de credibilidade"
+    "casos relevantes para identificação"
   ),
   denominator_n = c(
     n_manifest,
@@ -593,7 +593,7 @@ table_2_methodological_dimensions <- tibble::tribble(
   "Evidência", "Somente qualitativo", sum(analysis_df$empirical_evidence_type == "qualitative_only", na.rm = TRUE), "artigos empíricos", overall_metrics$n_empirical, fmt_pct(sum(analysis_df$empirical_evidence_type == "qualitative_only", na.rm = TRUE), overall_metrics$n_empirical), "Categoria exclusiva entre artigos empíricos.",
   "Evidência", "Somente quantitativo", sum(analysis_df$empirical_evidence_type == "quantitative_only", na.rm = TRUE), "artigos empíricos", overall_metrics$n_empirical, fmt_pct(sum(analysis_df$empirical_evidence_type == "quantitative_only", na.rm = TRUE), overall_metrics$n_empirical), "Categoria exclusiva entre artigos empíricos.",
   "Evidência", "Misto", sum(analysis_df$empirical_evidence_type == "mixed_empirical", na.rm = TRUE), "artigos empíricos", overall_metrics$n_empirical, fmt_pct(sum(analysis_df$empirical_evidence_type == "mixed_empirical", na.rm = TRUE), overall_metrics$n_empirical), "Categoria exclusiva entre artigos empíricos.",
-  "Quantificação", "Componente quantitativo", overall_metrics$n_quantitative, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_quantitative, "Screen quantitativo de Torreblanca.",
+  "Quantificação", "Componente quantitativo", overall_metrics$n_quantitative, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_quantitative, "Subconjunto quantitativo comparável ao estudo de referência.",
   "Quantificação", "Modelagem estatística", sum(analysis_df$quantitative_analysis_type == "statistical_modeling", na.rm = TRUE), "empíricos quantitativos", overall_metrics$n_quantitative, fmt_pct(sum(analysis_df$quantitative_analysis_type == "statistical_modeling", na.rm = TRUE), overall_metrics$n_quantitative), "Tipo de análise quantitativa.",
   "Quantificação", "Inferência estatística", overall_metrics$n_inference, "empíricos quantitativos", overall_metrics$n_quantitative, overall_metrics$pct_inference, "Testes, intervalos, erros-padrão ou inferência equivalente.",
   "Explicitação", "method_explicitness", NA_integer_, "não disponível", NA_integer_, NA_real_, "Exige classificação complementar; não é resultado substantivo.",
@@ -602,12 +602,12 @@ table_2_methodological_dimensions <- tibble::tribble(
 
 table_3_causality_credibility <- tibble::tribble(
   ~panel, ~category, ~n, ~denominator, ~denominator_n, ~percent, ~note,
-  "Claims", "Claim causal ou explicativo", overall_metrics$n_claim, "artigos classificados", n_classified, overall_metrics$pct_claim_all, "O campo combina claims causais e explicativos e também pode marcar textos não empíricos.",
-  "Claims", "Claim causal ou explicativo em artigo empírico", overall_metrics$n_empirical_claim, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_claim, "Subconjunto empírico; ainda não equivale a claim causal estrito.",
-  "Screen", "Screen de credibilidade", overall_metrics$n_screen, "artigos classificados", n_classified, overall_metrics$pct_screen, "Pode ser acionado por modelagem quantitativa ou claim causal/explicativo.",
-  "Desenho", "Desenho estrito", overall_metrics$n_strict, "screen de credibilidade", overall_metrics$n_screen, overall_metrics$pct_strict, "Numerador conservador do paper.",
-  "Diagnóstico não exclusivo", "Diagnóstico, não desenho", sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "screen de credibilidade", overall_metrics$n_screen, fmt_pct(sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Rótulos podem coexistir com desenho estrito.",
-  "Diagnóstico não exclusivo", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "screen de credibilidade", overall_metrics$n_screen, fmt_pct(sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Fila conservadora; pode coexistir com desenho estrito."
+  "Afirmações", "Afirmação causal ou explicativa", overall_metrics$n_claim, "artigos classificados", n_classified, overall_metrics$pct_claim_all, "A categoria combina afirmações causais e explicativas e também pode marcar textos não empíricos.",
+  "Afirmações", "Afirmação causal ou explicativa em artigo empírico", overall_metrics$n_empirical_claim, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_claim, "O subconjunto empírico ainda não equivale a uma afirmação causal explícita.",
+  "Seleção analítica", "Casos relevantes para avaliar identificação", overall_metrics$n_screen, "artigos classificados", n_classified, overall_metrics$pct_screen, "Inclui artigos com afirmação causal ou explicativa e evidência empírica, além de modelagem quantitativa relevante.",
+  "Identificação", "Estratégia explícita de identificação causal", overall_metrics$n_strict, "casos relevantes para identificação", overall_metrics$n_screen, overall_metrics$pct_strict, "Contagem conservadora de famílias de método explicitamente mencionadas.",
+  "Diagnóstico não exclusivo", "Método quantitativo sem estratégia explícita", sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "casos relevantes para identificação", overall_metrics$n_screen, fmt_pct(sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "A categoria pode coexistir com uma estratégia explícita.",
+  "Diagnóstico não exclusivo", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "casos relevantes para identificação", overall_metrics$n_screen, fmt_pct(sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Categoria conservadora que exige auditoria adicional."
 )
 
 complete_journal_profile <- metric_summary(complete_df, "journal_title") |>
@@ -638,13 +638,13 @@ complete_journal_profile_long <- complete_journal_profile |>
 claim_method_alignment <- analysis_df |>
   dplyr::mutate(
     alignment_category = dplyr::case_when(
-      strict_design_method & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Claim e desenho estrito",
-      strict_design_method & !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Desenho estrito sem claim codificado",
-      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Claim empírico e componente quantitativo, sem desenho estrito",
-      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Claim empírico sem componente quantitativo",
-      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Claim em artigo não empírico",
-      !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Componente quantitativo sem claim",
-      TRUE ~ "Sem claim ou componente quantitativo"
+      strict_design_method & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Afirmação e estratégia explícita de identificação",
+      strict_design_method & !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Estratégia explícita sem afirmação codificada",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Afirmação empírica e componente quantitativo, sem estratégia explícita",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Afirmação empírica sem componente quantitativo",
+      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Afirmação em artigo não empírico",
+      !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Componente quantitativo sem afirmação",
+      TRUE ~ "Sem afirmação ou componente quantitativo"
     )
   ) |>
   dplyr::count(alignment_category, name = "n") |>
@@ -660,8 +660,8 @@ claim_evidence_matrix <- analysis_df |>
     empirical_evidence_type = as.character(empirical_evidence_type),
     claim_status = if_else(
       dplyr::coalesce(causal_or_explanatory_claim_present, FALSE),
-      "Com claim causal/explicativo",
-      "Sem claim causal/explicativo"
+      "Com afirmação causal/explicativa",
+      "Sem afirmação causal/explicativa"
     )
   ) |>
   dplyr::count(empirical_evidence_type, claim_status, strict_design_method, name = "n") |>
@@ -892,7 +892,7 @@ logical_inconsistencies <- tibble::tibble(
     "Inferência estatística exige flag de componente quantitativo.",
     "Inferência estatística exige componente quantitativo.",
     "Inferência deve estar preenchida em todos os artigos quantitativos.",
-    "Desenhos estritos devem estar no screen de credibilidade.",
+    "Estratégias explícitas de identificação só são contadas nos artigos em que a identificação é especialmente relevante.",
     "Desenhos estritos exigem method_present TRUE.",
     "Desenhos estritos exigem citação textual do desenho.",
     "method_present TRUE exige ao menos um tipo de método parseado.",
@@ -909,7 +909,7 @@ logical_inconsistencies <- tibble::tibble(
     "Toda classificação analítica deve ter fulltext PASS.",
     "Todo periódico analítico deve ter área mapeada.",
     "Campos booleanos centrais não podem ficar ausentes.",
-    "Presença de método deve estar preenchida em todos os artigos que entram no screen.",
+    "A presença de método deve estar preenchida em todos os artigos selecionados para examinar identificação.",
     "Classificados não podem superar elegíveis em nenhuma célula periódico-período."
   )
 ) |>
@@ -971,15 +971,15 @@ theme_paper <- function() {
 }
 
 figure_1_data <- tibble::tibble(
-  group = c("Cobertura", "Cobertura", "Evidência", "Quantificação", "Claims", "Credibilidade", "Credibilidade"),
+  group = c("Cobertura", "Cobertura", "Evidência", "Quantificação", "Afirmações", "Identificação", "Identificação"),
   measure = c(
     "Corpus elegível",
     "Classificados",
     "Empíricos",
     "Componente quantitativo",
-    "Claim causal/explicativo",
-    "Screen de credibilidade",
-    "Desenho estrito"
+    "Afirmação causal/explicativa",
+    "Casos relevantes para identificação",
+    "Estratégia explícita de identificação"
   ),
   n = c(
     n_manifest,
@@ -997,7 +997,7 @@ figure_1_data <- tibble::tibble(
     "empíricos",
     "classificados",
     "classificados",
-    "screen"
+    "casos relevantes"
   ),
   denominator_n = c(
     n_manifest,
@@ -1026,8 +1026,8 @@ figure_1 <- figure_1_data |>
     Cobertura = "#4C78A8",
     Evidência = "#59A14F",
     Quantificação = "#F28E2B",
-    Claims = "#B279A2",
-    Credibilidade = "#E15759"
+    Afirmações = "#B279A2",
+    Identificação = "#E15759"
   )) +
   ggplot2::labs(
     title = "Dimensões observadas e seus denominadores",
@@ -1163,13 +1163,13 @@ ggplot2::ggsave(
 )
 
 alignment_levels <- c(
-  "Claim e desenho estrito",
-  "Claim empírico e componente quantitativo, sem desenho estrito",
-  "Claim empírico sem componente quantitativo",
-  "Claim em artigo não empírico",
-  "Componente quantitativo sem claim",
-  "Desenho estrito sem claim codificado",
-  "Sem claim ou componente quantitativo"
+  "Afirmação e estratégia explícita de identificação",
+  "Afirmação empírica e componente quantitativo, sem estratégia explícita",
+  "Afirmação empírica sem componente quantitativo",
+  "Afirmação em artigo não empírico",
+  "Componente quantitativo sem afirmação",
+  "Estratégia explícita sem afirmação codificada",
+  "Sem afirmação ou componente quantitativo"
 )
 
 figure_5 <- claim_method_alignment |>
@@ -1182,7 +1182,7 @@ figure_5 <- claim_method_alignment |>
   ggplot2::geom_text(ggplot2::aes(label = label), hjust = -0.08, size = 3) +
   ggplot2::scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10), labels = function(x) paste0(x, "%")) +
   ggplot2::labs(
-    title = "Distribuição conjunta de claim, componente quantitativo e desenho estrito",
+    title = "Afirmações, uso de dados quantitativos e estratégias de identificação",
     subtitle = "Categorias descritivas mutuamente exclusivas entre os artigos já classificados.",
     x = "Percentual dos artigos classificados",
     y = NULL
@@ -1208,10 +1208,10 @@ if (nrow(strict_method_totals) > 0) {
     ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = c(0, 0.15))) +
     ggplot2::labs(
       title = "Métodos de identificação nos periódicos com classificação completa",
-      subtitle = "Contagem artigo-método; um artigo pode mobilizar mais de um desenho.",
+      subtitle = "Contagem artigo-método; um artigo pode mobilizar mais de uma estratégia.",
       x = "Artigos com o método",
       y = NULL,
-      caption = "A contagem segue a regra conservadora de desenho estrito."
+      caption = "A contagem registra famílias de estratégia explicitamente mencionadas; não avalia sua qualidade."
     ) +
     theme_paper() +
     ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
@@ -1266,7 +1266,7 @@ audit_report <- c(
   "",
   "- `method_explicitness` não está disponível no CSV canônico.",
   "- `empirical_article_format` não está disponível no CSV canônico.",
-  "- O campo de claim combina pretensões causais e explicativas; não deve ser interpretado como claim causal estrito.",
+  "- A categoria de afirmação combina pretensões causais e explicativas; não deve ser interpretada como afirmação causal estrita.",
   "- A classificação em escala ainda carece de validação humana estratificada e adjudicação dos casos difíceis e dos métodos raros.",
   "- A proveniência de modelo e esforço de classificação ainda não está consolidada por PID; por isso, variação temporal pode refletir mudança do classificador.",
   "- Os desenhos estritos registram presença nominal de famílias de método, não qualidade de implementação nem validade da identificação.",
