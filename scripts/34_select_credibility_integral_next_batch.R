@@ -39,6 +39,17 @@ report_out <- get_arg(
 )
 journal_title_filter <- get_arg("--journal-title", NULL)
 
+utf8_key <- function(values) {
+  vapply(
+    as.character(values),
+    function(value) {
+      Encoding(value) <- "UTF-8"
+      paste(as.integer(charToRaw(value)), collapse = ":")
+    },
+    character(1)
+  )
+}
+
 if (is.na(limit) || limit <= 0) {
   stop("--limit deve ser um inteiro positivo.")
 }
@@ -75,8 +86,9 @@ status <- manifest |>
 selection_pool <- status |>
   dplyr::filter(!already_complete)
 if (!is.null(journal_title_filter)) {
+  journal_title_filter_key <- utf8_key(journal_title_filter)
   selection_pool <- selection_pool |>
-    dplyr::filter(journal_title == journal_title_filter)
+    dplyr::filter(utf8_key(journal_title) == journal_title_filter_key)
 }
 selected <- selection_pool |>
   dplyr::slice_head(n = limit)
