@@ -87,13 +87,13 @@ O debate brasileiro fornece o ponto de partida substantivo. Soares [-@soares2005
 
 A literatura internacional sobre a revolução da credibilidade oferece uma camada comparável para uma parte desse problema. Torreblanca et al. [-@torreblanca2026] organizam a mudança metodológica por meio da decomposição entre corpus total, artigos empíricos, artigos quantitativos, trabalhos com pretensão causal ou explicativa e desenhos de identificação mais exigentes. Essa linguagem é útil para o caso brasileiro porque separa alcance empírico e aderência a padrões de identificação causal. Um campo pode publicar muitos artigos empíricos sem adotar desenhos causais estritos; pode usar estatística sem explicitar identificação; pode formular claims explicativos sem discutir as suposições que tornam esses claims avaliáveis. O artigo usa essa camada como instrumento de mensuração, não como regra geral de qualidade científica.
 
-A versão atual deve ser lida como etapa de construção e validação do diagnóstico. O universo elegível contém `r format_n(n_manifest)` artigos com texto integral disponível, mas a classificação substantiva por leitura integral cobre `r format_n(n_classificados)` artigos, equivalentes a `r format_pct(pct_classificados)` do total. Esses `r format_n(n_classificados)` artigos não formam amostra representativa demonstrada do corpus completo. Eles descrevem a fração atualmente classificada, concentrada em parte dos periódicos e períodos. Por isso, todos os resultados substantivos apresentados aqui se referem ao subconjunto classificado.
+A versão atual combina dois níveis de evidência. O universo elegível contém `r format_n(n_manifest)` artigos com texto integral disponível, mas a classificação substantiva por leitura integral cobre `r format_n(n_classificados)` artigos, equivalentes a `r format_pct(pct_classificados)` do total. Esse conjunto não forma amostra representativa demonstrada dos onze periódicos. Dentro dele, porém, `r format_n(n_periodicos_completos)` periódicos estão integralmente classificados, somando `r format_n(n_artigos_periodicos_completos)` artigos. As comparações editoriais principais são censitárias para esses quatro periódicos; os agregados do conjunto classificado continuam provisórios para o universo completo.
 
-Dentro desse subconjunto, `r format_n(n_empiricos)` artigos foram classificados como empíricos, `r format_n(n_quant)` têm componente quantitativo, `r format_n(n_claim)` apresentam claim causal ou explicativo, `r format_n(n_screen)` entram no screen de credibilidade e `r format_n(n_estrito)` têm desenho estrito de identificação sob regra conservadora. Esses números descrevem uma dissociação preliminar entre dimensões que não são perfeitamente equivalentes: claims causais ou explicativos aparecem com frequência muito maior que desenhos estritos de identificação, mas a comparação exige atenção aos denominadores e ao tipo de claim. O resultado orienta uma hipótese para a versão completa do projeto, a ser testada quando a classificação cobrir o universo elegível.
+Dentro do conjunto classificado, `r format_n(n_empiricos)` artigos são empíricos e `r format_n(n_quant)` têm componente quantitativo. O campo amplo de claim causal ou explicativo aparece em `r format_n(n_claim)` artigos, inclusive textos não empíricos, e não deve ser lido como medida de causalidade estrita. O contraste metodologicamente relevante ocorre no screen de credibilidade: `r format_n(n_screen)` artigos satisfazem seus critérios, mas apenas `r format_n(n_estrito)` apresentam desenho estrito de identificação. Essa distância separa linguagem explicativa ampla, elegibilidade para escrutínio causal-quantitativo e presença efetiva de desenho de identificação.
 
 A contribuição desta versão é propor uma estratégia reprodutível de mensuração, explicitar os denominadores do corpus, apresentar resultados preliminares para as dimensões já classificadas e declarar as lacunas de mensuração ainda abertas. Duas variáveis diretamente ligadas à tese sobre rastreabilidade metodológica ainda não estão disponíveis no classificador atual: `method_explicitness` e `empirical_article_format`. A primeira deve medir se dados, fontes e estratégia analítica são explicitados de modo claro, parcial ou ausente. A segunda deve classificar a arquitetura textual do artigo empírico. Nesta versão, baixa explicitação metodológica e baixa padronização textual são hipóteses e tarefas de classificação complementar, não achados demonstrados.
 
-O artigo, portanto, trata a revolução da credibilidade como uma pergunta de mensuração aplicada ao caso brasileiro. Ele não presume que todo artigo deva ser design-based, nem que pluralismo metodológico seja um problema. A pergunta é se o claim formulado pelo texto vem acompanhado da evidência, do método e das condições de inferência necessárias para sua avaliação. A resposta final depende da classificação completa dos `r format_n(n_manifest)` artigos elegíveis e da rodada complementar sobre explicitação metodológica e formato do artigo empírico.
+O artigo, portanto, trata a revolução da credibilidade como uma pergunta de mensuração aplicada ao caso brasileiro. Ele não presume que todo artigo deva ser design-based, nem que pluralismo metodológico seja um problema. A pergunta é se o claim formulado pelo texto vem acompanhado da evidência, do método e das condições de inferência necessárias para sua avaliação. A resposta nacional final depende da classificação completa dos `r format_n(n_manifest)` artigos elegíveis e da rodada complementar sobre explicitação metodológica e formato do artigo empírico. A cobertura atual, contudo, já permite resultados substantivos delimitados para quatro periódicos completos.
 
 # Contexto e Expectativas
 
@@ -105,7 +105,7 @@ Torreblanca et al. [-@torreblanca2026] entram, nesse desenho, como benchmark ope
 
 As expectativas do artigo são descritivas e devem ser entendidas como hipóteses a testar no corpus completo. Primeiro, espera-se que sinais de empiria, quantificação e inferência estejam distribuídos de modo desigual entre periódicos, períodos e áreas disciplinares. Segundo, espera-se que explicitação metodológica e formato empírico sejam dimensões relacionadas, mas não equivalentes. Terceiro, espera-se distância entre a presença de claims causais ou explicativos e a presença de desenhos estritos de identificação. Quarto, espera-se heterogeneidade por periódico e período. Essas dimensões são estratos de descrição e comparação; o desenho atual não identifica causalmente por que diferenças entre periódicos, áreas ou períodos ocorrem.
 
-Essa cautela é especialmente importante nesta versão. Enquanto a classificação cobre apenas `r format_n(n_classificados)` dos `r format_n(n_manifest)` artigos elegíveis, as expectativas acima orientam a arquitetura de mensuração e a próxima rodada de classificação. Elas não devem ser confundidas com resultados finais sobre a produção brasileira entre 2005 e 2025.
+Essa cautela é especialmente importante nesta versão. As expectativas podem ser avaliadas de modo censitário nos quatro periódicos completos e de modo provisório no conjunto de `r format_n(n_classificados)` artigos classificados. Nenhuma comparação identifica causalmente por que periódicos ou períodos diferem.
 
 # Dados
 
@@ -113,19 +113,20 @@ Analiso artigos publicados entre 2005 e 2025 em onze periódicos indexados no Sc
 
 Dois periódicos mapeados no levantamento inicial não entram na análise principal: `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`. A exclusão mantém o foco nos periódicos mais diretamente vinculados à Ciência Política, Relações Internacionais, Administração Pública e Ciências Sociais políticas. A Tabela 1 apresenta o número de artigos elegíveis e classificados por periódico e período.
 
-Esta versão usa `r format_n(n_classificados)` artigos já classificados, equivalentes a `r format_pct(pct_classificados)` do universo elegível. A cobertura ainda é desigual: `Brazilian Political Science Review` e `Cadernos Gestão Pública e Cidadania` estão integralmente classificados, `Contexto Internacional` está quase completo, e os demais periódicos ainda não foram classificados nesta etapa. Por isso, os resultados substantivos descrevem a fração já classificada; eles não devem ser lidos como estimativas do corpus completo.
+Esta versão usa `r format_n(n_classificados)` artigos já classificados, equivalentes a `r format_pct(pct_classificados)` do universo elegível. A cobertura é desigual. `Brazilian Political Science Review`, `Cadernos Gestão Pública e Cidadania`, `Contexto Internacional` e `Dados` estão integralmente classificados e somam `r format_n(n_artigos_periodicos_completos)` artigos. `Opinião Pública`, `Revista Brasileira de Ciência Política` e `Novos Estudos CEBRAP` têm cobertura parcial; quatro periódicos ainda não foram iniciados. Assim, o paper separa o censo dos quatro periódicos completos do retrato provisório formado por todos os artigos já classificados.
 
 ```{r tabela-1}
 tabela_1_display <- tabela_corpus |>
   dplyr::transmute(
     Área = journal_area,
     Periódico = journal_title,
-    `Universo total` = format_n(manifest_total),
+    `Universo total` = format_n(eligible_total),
     `Classificados` = format_n(classified_total),
     `Cobertura` = format_pct(coverage_percent),
-    `2005-2011` = paste0(`classified_n_2005-2011`, "/", `manifest_n_2005-2011`),
-    `2012-2018` = paste0(`classified_n_2012-2018`, "/", `manifest_n_2012-2018`),
-    `2019-2025` = paste0(`classified_n_2019-2025`, "/", `manifest_n_2019-2025`)
+    Status = coverage_status,
+    `2005-2011` = paste0(`classified_n_2005-2011`, "/", `eligible_n_2005-2011`),
+    `2012-2018` = paste0(`classified_n_2012-2018`, "/", `eligible_n_2012-2018`),
+    `2019-2025` = paste0(`classified_n_2019-2025`, "/", `eligible_n_2019-2025`)
   )
 
 knitr::kable(
