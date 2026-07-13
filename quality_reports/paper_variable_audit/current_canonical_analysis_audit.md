@@ -1,6 +1,6 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-13 11:57:33 -0300
+Gerado em: 2026-07-13 13:17:53 -0300
 
 ## Universo reconciliado
 
@@ -51,6 +51,8 @@ Os agregados dos artigos classificados continuam preliminares para o universo de
 - `output/tables/paper/table_8_qualitative_complete_summary.csv`
 - `output/tables/paper/period_equal_weight_profile.csv`
 - `output/tables/paper/period_article_weight_profile.csv`
+- `output/tables/paper/year_article_weight_profile.csv`
 - `output/figures/paper/figure_2_journal_dimension_matrix.pdf`
 - `output/figures/paper/figure_3_period_variation.pdf`
+- `output/figures/paper/figure_7_year_variation.pdf`
 - `output/figures/paper/figure_5_claim_method_alignment.pdf`

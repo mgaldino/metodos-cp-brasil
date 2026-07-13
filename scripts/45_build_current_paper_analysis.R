@@ -730,6 +730,34 @@ period_article_weight_profile <- metric_summary(temporal_df, "period_3") |>
     weighting
   )
 
+year_journal_profile <- metric_summary(temporal_df, c("journal_title", "year")) |>
+  dplyr::arrange(journal_title, year)
+
+common_support_years <- year_journal_profile |>
+  dplyr::count(year, name = "journals_n") |>
+  dplyr::filter(journals_n == length(temporal_complete_journals)) |>
+  dplyr::pull(year)
+
+year_article_weight_profile <- temporal_df |>
+  dplyr::filter(year %in% common_support_years) |>
+  metric_summary("year") |>
+  dplyr::mutate(
+    journals_n = length(temporal_complete_journals),
+    weighting = "proporção agrupada dos artigos dos periódicos presentes em todos os anos exibidos"
+  ) |>
+  dplyr::select(
+    year,
+    journals_n,
+    articles_n = n_articles,
+    pct_empirical,
+    pct_quantitative,
+    pct_inference,
+    pct_claim,
+    pct_screen,
+    pct_strict,
+    weighting
+  )
+
 strict_method_diffusion <- method_long |>
   dplyr::filter(
     journal_title %in% complete_journals,
@@ -952,6 +980,8 @@ readr::write_csv(qualitative_complete_summary, file.path(tables_dir, "table_8_qu
 readr::write_csv(period_journal_profile, file.path(tables_dir, "period_complete_journal_profile.csv"))
 readr::write_csv(period_equal_weight_profile, file.path(tables_dir, "period_equal_weight_profile.csv"))
 readr::write_csv(period_article_weight_profile, file.path(tables_dir, "period_article_weight_profile.csv"))
+readr::write_csv(year_journal_profile, file.path(tables_dir, "year_complete_journal_profile.csv"))
+readr::write_csv(year_article_weight_profile, file.path(tables_dir, "year_article_weight_profile.csv"))
 readr::write_csv(strict_method_diffusion, file.path(tables_dir, "strict_method_diffusion.csv"))
 readr::write_csv(strict_method_totals, file.path(tables_dir, "strict_method_totals.csv"))
 readr::write_csv(tough_call_profile, file.path(tables_dir, "tough_call_profile.csv"))
@@ -1133,6 +1163,67 @@ ggplot2::ggsave(
   device = grDevices::pdf
 )
 
+year_plot_data <- year_article_weight_profile |>
+  dplyr::select(
+    year,
+    pct_empirical,
+    pct_quantitative,
+    pct_inference,
+    pct_claim,
+    pct_screen,
+    pct_strict
+  ) |>
+  tidyr::pivot_longer(dplyr::starts_with("pct_"), names_to = "metric", values_to = "percent") |>
+  dplyr::mutate(
+    metric = stringr::str_remove(metric, "^pct_"),
+    metric_label = factor(unname(metric_labels[metric]), levels = unname(metric_labels))
+  )
+
+year_axis_breaks <- sort(unique(c(
+  seq(min(year_article_weight_profile$year), max(year_article_weight_profile$year), by = 3),
+  max(year_article_weight_profile$year)
+)))
+
+figure_7 <- year_plot_data |>
+  ggplot2::ggplot(ggplot2::aes(x = year, y = percent)) +
+  ggplot2::geom_line(color = "#2F6B8A", linewidth = 0.7) +
+  ggplot2::geom_point(color = "#2F6B8A", size = 1.5) +
+  ggplot2::facet_wrap(~ metric_label, ncol = 3, scales = "fixed") +
+  ggplot2::scale_x_continuous(breaks = year_axis_breaks) +
+  ggplot2::scale_y_continuous(
+    limits = c(0, 100),
+    breaks = seq(0, 100, 25),
+    labels = function(x) paste0(x, "%"),
+    expand = ggplot2::expansion(mult = c(0, 0.03))
+  ) +
+  ggplot2::labs(
+    title = "Variação anual em periódicos completos com suporte temporal comum",
+    subtitle = paste0(
+      "Proporções agrupadas de BPSR, Contexto Internacional e Dados; ",
+      min(year_article_weight_profile$year),
+      " a ",
+      max(year_article_weight_profile$year),
+      "."
+    ),
+    x = "Ano",
+    y = "Percentual",
+    caption = "Apenas anos com artigos nos três periódicos. Série descritiva; denominadores variam por dimensão."
+  ) +
+  theme_paper() +
+  ggplot2::theme(
+    legend.position = "none",
+    axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)
+  )
+
+ggplot2::ggsave(
+  file.path(figures_dir, "figure_7_year_variation.pdf"),
+  figure_7,
+  width = 7,
+  height = 5.2,
+  units = "in",
+  device = grDevices::pdf
+)
+
 coverage_plot_data <- coverage_by_journal |>
   dplyr::mutate(
     journal_label = stringr::str_wrap(journal_title, 28),
@@ -1285,8 +1376,10 @@ audit_report <- c(
   "- `output/tables/paper/table_8_qualitative_complete_summary.csv`",
   "- `output/tables/paper/period_equal_weight_profile.csv`",
   "- `output/tables/paper/period_article_weight_profile.csv`",
+  "- `output/tables/paper/year_article_weight_profile.csv`",
   "- `output/figures/paper/figure_2_journal_dimension_matrix.pdf`",
   "- `output/figures/paper/figure_3_period_variation.pdf`",
+  "- `output/figures/paper/figure_7_year_variation.pdf`",
   "- `output/figures/paper/figure_5_claim_method_alignment.pdf`"
 )
 

@@ -888,7 +888,7 @@ adequação entre afirmação e método.
 períodos. Para inferência estatística, porém, a conclusão depende da ponderação. Com peso igual por
 periódico, a proporção cresce de 30,3% para 34,9%; agrupando os artigos quantitativos, passa de 37,7%
 para 38,8%, com queda intermediária. O resultado mais prudente é estabilidade, não crescimento robusto.
-Desenhos estritos continuam raros e não apresentam trajetória monotônica.
+Estratégias explícitas de identificação continuam raras e não apresentam trajetória monotônica.
 Tabela 5: Sensibilidade da proporção de artigos quantitativos com inferência estatística à regra de ponderação.
 Universo: BPSR, Contexto Internacional e Dados.
 
@@ -912,13 +912,17 @@ Artigos quantitativos agrupados
 34,9%
 38,8%
 
+A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados
+podem ocultar. Para manter a composição dos periódicos, ela inclui apenas anos em que BPSR, Contexto
+Internacional e Dados têm artigos. As proporções anuais agrupam os artigos dos três periódicos, enquanto
+a Figura 6 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados
+diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
 As duas dimensões mais diretamente ligadas à tese sobre explicitação e formato ainda permanecem como
 lacunas de mensuração. method_explicitness e empirical_article_format aparecem na Tabela 2 como
 não disponíveis. Portanto, esta seção não afirma que a produção brasileira tem baixa explicitação ou baixa
 padronização textual. Ela mostra que a arquitetura atual permite medir empiria, quantificação, afirmações e
 menções a estratégias de identificação, e que a próxima rodada precisa medir explicitamente rastreabilidade
 metodológica e formato empírico.
-
 10
 
 Métodos de identificação nos periódicos com classificação completa
@@ -1053,6 +1057,112 @@ proporções dos três periódicos completos.
 
 12
 
+Variação anual em periódicos completos com suporte temporal comum
+Proporções agrupadas de BPSR, Contexto Internacional e Dados; 2007 a 2025.
+Artigos empíricos
+
+Componente quantitativo
+
+Inferência estatística
+
+Afirmação causal/explicativa
+
+Identificação relevante
+
+Estratégia explícita
+
+100%
+
+75%
+
+50%
+
+Percentual
+
+25%
+
+0%
+100%
+
+75%
+
+50%
+
+25%
+
+20
+25
+
+20
+22
+
+20
+19
+
+20
+16
+
+20
+13
+
+20
+10
+
+20
+07
+
+20
+25
+
+20
+22
+
+20
+19
+
+20
+16
+
+20
+13
+
+20
+10
+
+20
+07
+
+20
+25
+
+20
+22
+
+20
+19
+
+20
+16
+
+20
+13
+
+20
+10
+
+20
+07
+
+0%
+
+Ano
+Apenas anos com artigos nos três periódicos. Série descritiva; denominadores variam por dimensão.
+
+Figura 7: Variação anual em BPSR, Contexto Internacional e Dados. As proporções agrupam os artigos e incluem
+apenas anos com publicação nos três periódicos. Todos os painéis usam escala de 0% a 100%.
+
+13
+
 Discussão
 Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala.
 A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência
@@ -1101,7 +1211,7 @@ versão não mede rastreabilidade nem conclui sobre explicitação metodológica
 A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador
 por PID, adjudicar uma amostra humana estratificada e implementar a rodada complementar sobre explic-
 
-13
+14
 
 itação e formato. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se
 generaliza e em que medida a produção brasileira superou, reformulou ou preservou as lacunas metodológicas
@@ -1122,6 +1232,6 @@ e Práticas, no. 48: 27–52.
 Torreblanca, Carolina, William Dinneen, Guy Grossman, and Yiqing Xu. 2026. “The Credibility Revolution in
 Political Science.” arXiv:2601.11542.
 
-14
+15
 
 
