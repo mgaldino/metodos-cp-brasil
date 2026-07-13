@@ -31,6 +31,7 @@ Para a classificação por leitura integral em escala, os scripts operacionais s
 - `32_summarize_credibility_integral_batch.R`: resume um CSV consolidado de classificações por leitura integral.
 - `34_select_credibility_integral_next_batch.R`: seleciona um bloco congelado de PIDs ainda não concluídos no manifesto ativo.
 - `36_run_credibility_integral_next_batch.py`: wrapper do loop de produção; reutiliza o batch ativo incompleto ou seleciona o próximo bloco de 100 PIDs, renderiza prompts, roda o batch real com `xhigh`, consolida e resume outputs.
+- `45_build_current_paper_analysis.R`: reconcilia o CSV canônico corrente com o manifest e o ledger de exclusões, valida regras lógicas, separa o estrato de periódicos com classificação completa e produz as tabelas e figuras atuais do paper. Agregados dos classificados permanecem preliminares para o corpus; comparações substantivas usam os periódicos completos.
 
 ## Validação e normalização
 
