@@ -222,14 +222,23 @@ duplicate_pid_rows <- classifications_source |>
   dplyr::arrange(pid) |>
   dplyr::select(-pid_rows)
 
-duplicate_pid_status <- duplicate_pid_rows |>
-  dplyr::group_by(pid) |>
-  dplyr::group_modify(~ tibble::tibble(
-    rows = nrow(.x),
-    distinct_rows = nrow(dplyr::distinct(.x)),
-    exact_duplicates_only = nrow(dplyr::distinct(.x)) == 1
-  )) |>
-  dplyr::ungroup()
+duplicate_pid_status <- if (nrow(duplicate_pid_rows) == 0) {
+  tibble::tibble(
+    pid = character(),
+    rows = integer(),
+    distinct_rows = integer(),
+    exact_duplicates_only = logical()
+  )
+} else {
+  duplicate_pid_rows |>
+    dplyr::group_by(pid) |>
+    dplyr::group_modify(~ tibble::tibble(
+      rows = nrow(.x),
+      distinct_rows = nrow(dplyr::distinct(.x)),
+      exact_duplicates_only = nrow(dplyr::distinct(.x)) == 1
+    )) |>
+    dplyr::ungroup()
+}
 
 if (any(!duplicate_pid_status$exact_duplicates_only)) {
   readr::write_csv(duplicate_pid_rows, file.path(analysis_dir, "current_duplicate_pid_rows.csv"))
@@ -413,12 +422,17 @@ metric_summary <- function(data, groups = character()) {
       n_quantitative = sum(dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE)),
       n_inference = sum(dplyr::coalesce(has_statistical_inference, FALSE)),
       n_claim = sum(dplyr::coalesce(causal_or_explanatory_claim_present, FALSE)),
+      n_empirical_claim = sum(
+        dplyr::coalesce(is_empirical_paper, FALSE) &
+          dplyr::coalesce(causal_or_explanatory_claim_present, FALSE)
+      ),
       n_screen = sum(dplyr::coalesce(credibility_revolution_screen_applicable, FALSE)),
       n_strict = sum(strict_design_method),
       pct_empirical = fmt_pct(n_empirical, n_articles),
       pct_quantitative = fmt_pct(n_quantitative, n_empirical),
       pct_inference = fmt_pct(n_inference, n_quantitative),
-      pct_claim = fmt_pct(n_claim, n_empirical),
+      pct_claim = fmt_pct(n_empirical_claim, n_empirical),
+      pct_claim_all = fmt_pct(n_claim, n_articles),
       pct_screen = fmt_pct(n_screen, n_articles),
       pct_strict = fmt_pct(n_strict, n_screen),
       .groups = "drop"
@@ -467,7 +481,7 @@ denominator_summary <- tibble::tibble(
     "artigos classificados",
     "artigos classificados",
     "artigos empíricos classificados",
-    "artigos empíricos classificados",
+    "artigos classificados",
     "artigos classificados",
     "screen de credibilidade"
   ),
@@ -479,7 +493,7 @@ denominator_summary <- tibble::tibble(
     n_classified,
     n_classified,
     overall_metrics$n_empirical,
-    overall_metrics$n_empirical,
+    n_classified,
     n_classified,
     overall_metrics$n_screen
   ),
@@ -491,7 +505,7 @@ denominator_summary <- tibble::tibble(
     fmt_pct(n_complete_journal_articles, n_classified),
     overall_metrics$pct_empirical,
     overall_metrics$pct_quantitative,
-    overall_metrics$pct_claim,
+    overall_metrics$pct_claim_all,
     overall_metrics$pct_screen,
     overall_metrics$pct_strict
   )
@@ -547,11 +561,12 @@ table_2_methodological_dimensions <- tibble::tribble(
 
 table_3_causality_credibility <- tibble::tribble(
   ~panel, ~category, ~n, ~denominator, ~denominator_n, ~percent, ~note,
-  "Claims", "Claim causal ou explicativo", overall_metrics$n_claim, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_claim, "O campo combina claims causais e explicativos; não equivale a claim causal estrito.",
+  "Claims", "Claim causal ou explicativo", overall_metrics$n_claim, "artigos classificados", n_classified, overall_metrics$pct_claim_all, "O campo combina claims causais e explicativos e também pode marcar textos não empíricos.",
+  "Claims", "Claim causal ou explicativo em artigo empírico", overall_metrics$n_empirical_claim, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_claim, "Subconjunto empírico; ainda não equivale a claim causal estrito.",
   "Screen", "Screen de credibilidade", overall_metrics$n_screen, "artigos classificados", n_classified, overall_metrics$pct_screen, "Pode ser acionado por modelagem quantitativa ou claim causal/explicativo.",
   "Desenho", "Desenho estrito", overall_metrics$n_strict, "screen de credibilidade", overall_metrics$n_screen, overall_metrics$pct_strict, "Numerador conservador do paper.",
-  "Diagnóstico não exclusivo", "Diagnóstico, não desenho", sum(analysis_df$diagnostic_not_design), "screen de credibilidade", overall_metrics$n_screen, fmt_pct(sum(analysis_df$diagnostic_not_design), overall_metrics$n_screen), "Rótulos podem coexistir com desenho estrito.",
-  "Diagnóstico não exclusivo", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method), "screen de credibilidade", overall_metrics$n_screen, fmt_pct(sum(analysis_df$other_modern_causal_method), overall_metrics$n_screen), "Fila conservadora; pode coexistir com desenho estrito."
+  "Diagnóstico não exclusivo", "Diagnóstico, não desenho", sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "screen de credibilidade", overall_metrics$n_screen, fmt_pct(sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Rótulos podem coexistir com desenho estrito.",
+  "Diagnóstico não exclusivo", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "screen de credibilidade", overall_metrics$n_screen, fmt_pct(sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Fila conservadora; pode coexistir com desenho estrito."
 )
 
 complete_journal_profile <- metric_summary(complete_df, "journal_title") |>
@@ -584,8 +599,9 @@ claim_method_alignment <- analysis_df |>
     alignment_category = dplyr::case_when(
       strict_design_method & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Claim e desenho estrito",
       strict_design_method & !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Desenho estrito sem claim codificado",
-      dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Claim e componente quantitativo, sem desenho estrito",
-      dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Claim sem componente quantitativo",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Claim empírico e componente quantitativo, sem desenho estrito",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Claim empírico sem componente quantitativo",
+      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Claim em artigo não empírico",
       !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Componente quantitativo sem claim",
       TRUE ~ "Sem claim ou componente quantitativo"
     )
@@ -992,8 +1008,9 @@ ggplot2::ggsave(
 
 alignment_levels <- c(
   "Claim e desenho estrito",
-  "Claim e componente quantitativo, sem desenho estrito",
-  "Claim sem componente quantitativo",
+  "Claim empírico e componente quantitativo, sem desenho estrito",
+  "Claim empírico sem componente quantitativo",
+  "Claim em artigo não empírico",
   "Componente quantitativo sem claim",
   "Desenho estrito sem claim codificado",
   "Sem claim ou componente quantitativo"

@@ -3,9 +3,11 @@ non_empirical_with_empirical_evidence,PASS,0,0,Artigos não empíricos não deve
 quantitative_flag_with_quantitative_type_none,PASS,0,0,Flag quantitativa exige tipo de análise quantitativa diferente de none.
 statistical_inference_without_quantitative_analysis,PASS,0,0,Inferência estatística exige componente quantitativo.
 strict_design_outside_screen,PASS,0,0,Desenhos estritos devem estar no screen de credibilidade.
-classified_outside_manifest,FAIL,0,1,Registro preservado fora do manifest não entra na análise.
-classified_excluded_by_ledger,FAIL,0,1,Registro documentado no ledger não entra na análise.
+nonidentical_duplicate_pids,PASS,0,0,Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.
+classified_outside_manifest,PASS,0,0,Nenhuma classificação analítica deve estar fora do manifest.
+classified_excluded_by_ledger,PASS,0,0,Nenhuma classificação analítica deve estar no ledger de exclusões.
 classified_hash_mismatch,PASS,0,0,Classificação deve apontar para o mesmo texto do manifest.
 classified_fulltext_not_pass,PASS,0,0,Toda classificação analítica deve ter fulltext PASS.
 journal_area_unmapped,PASS,0,0,Todo periódico analítico deve ter área mapeada.
-required_boolean_missing,FAIL,1335,0,Campos booleanos obrigatórios não podem ficar ausentes.
+required_core_boolean_missing,PASS,0,0,Campos booleanos centrais não podem ficar ausentes.
+method_present_missing_within_screen,PASS,0,0,Presença de método deve estar preenchida em todos os artigos que entram no screen.

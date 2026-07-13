@@ -1,0 +1,26 @@
+method_type,journal_title,period_3,article_method_n,method_label
+synthetic_control,Brazilian Political Science Review,2019-2025,1,Controle sintético
+dag_or_formal_causal_graph,Brazilian Political Science Review,2019-2025,1,DAG/grafo causal formal
+difference_in_differences,Brazilian Political Science Review,2012-2018,2,Diferenças-em-diferenças
+difference_in_differences,Brazilian Political Science Review,2019-2025,1,Diferenças-em-diferenças
+difference_in_differences,Cadernos Gestão Pública e Cidadania,2019-2025,1,Diferenças-em-diferenças
+difference_in_differences,Dados,2012-2018,1,Diferenças-em-diferenças
+difference_in_differences,Dados,2019-2025,2,Diferenças-em-diferenças
+event_study,Cadernos Gestão Pública e Cidadania,2019-2025,1,Event study
+experiment_field,Brazilian Political Science Review,2012-2018,1,Experimento de campo
+experiment_list,Brazilian Political Science Review,2012-2018,1,Experimento de lista
+experiment_survey,Brazilian Political Science Review,2012-2018,1,Experimento em survey
+experiment_survey,Brazilian Political Science Review,2019-2025,2,Experimento em survey
+experiment_survey,Contexto Internacional,2012-2018,1,Experimento em survey
+matching_or_weighting,Brazilian Political Science Review,2012-2018,1,Pareamento/ponderação
+matching_or_weighting,Brazilian Political Science Review,2019-2025,1,Pareamento/ponderação
+matching_or_weighting,Cadernos Gestão Pública e Cidadania,2019-2025,1,Pareamento/ponderação
+matching_or_weighting,Dados,2012-2018,1,Pareamento/ponderação
+matching_or_weighting,Dados,2019-2025,2,Pareamento/ponderação
+regression_discontinuity,Brazilian Political Science Review,2012-2018,1,Regressão descontínua
+regression_discontinuity,Brazilian Political Science Review,2019-2025,1,Regressão descontínua
+regression_discontinuity,Dados,2012-2018,1,Regressão descontínua
+regression_discontinuity,Dados,2019-2025,1,Regressão descontínua
+instrumental_variables,Brazilian Political Science Review,2019-2025,1,Variáveis instrumentais
+instrumental_variables,Dados,2012-2018,1,Variáveis instrumentais
+instrumental_variables,Dados,2019-2025,1,Variáveis instrumentais

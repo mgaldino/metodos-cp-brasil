@@ -1,6 +1,6 @@
-panel,dimension,category,n,denominator,denominator_n,percent,note
-Claims e screen,Causalidade,Claim causal ou explicativo,682,classificados,799,85.4,Variável disponível no classificador atual.
-Claims e screen,Causalidade,Screen de credibilidade aplicável,150,classificados,799,18.8,Screen pode ser acionado por modelagem/critério quantitativo ou por claim causal/explicativo.
-Claims e screen,Credibilidade,Desenho estrito de identificação,16,screen de credibilidade,150,10.7,"Numerador conservador do paper; também corresponde a 2,3% dos classificados."
-Diagnóstico de método (não exclusivo),Credibilidade,"Diagnóstico, não desenho",135,classificados,799,16.9,"Categorias de método não são mutuamente exclusivas; inclui regressão observacional causal, efeitos fixos sem desenho ou nenhum método detectado."
-Diagnóstico de método (não exclusivo),Credibilidade,Outro método moderno a auditar,2,classificados,799,0.3,Categorias de método não são mutuamente exclusivas; fila conservadora de auditoria.
+panel,category,n,denominator,denominator_n,percent,note
+Claims,Claim causal ou explicativo,1535,artigos empíricos,1446,106.2,O campo combina claims causais e explicativos; não equivale a claim causal estrito.
+Screen,Screen de credibilidade,463,artigos classificados,1798,25.8,Pode ser acionado por modelagem quantitativa ou claim causal/explicativo.
+Desenho,Desenho estrito,27,screen de credibilidade,463,5.8,Numerador conservador do paper.
+Diagnóstico não exclusivo,"Diagnóstico, não desenho",437,screen de credibilidade,463,94.4,Rótulos podem coexistir com desenho estrito.
+Diagnóstico não exclusivo,Outro método moderno a auditar,5,screen de credibilidade,463,1.1,Fila conservadora; pode coexistir com desenho estrito.

@@ -1,9 +1,10 @@
 dimension,category,n,denominator,denominator_n,percent,note
-Evidência,Artigo empírico,647,classificados,799,81,Variável disponível no classificador atual.
-Evidência,Somente qualitativo,298,classificados,799,37.3,Variável disponível no classificador atual.
-Evidência,Somente quantitativo,94,classificados,799,11.8,Variável disponível no classificador atual.
-Evidência,Misto,255,classificados,799,31.9,Variável disponível no classificador atual.
-Quantificação,Modelagem estatística,119,classificados,799,14.9,Variável disponível no classificador atual.
-Quantificação,Inferência estatística,106,classificados,799,13.3,Variável disponível no classificador atual.
-Explicitação,method_explicitness,NA,não disponível,NA,NA,Não usada como resultado; exige classificação complementar.
-Formato,empirical_article_format,NA,não disponível,NA,NA,Não usada como resultado; exige classificação complementar.
+Evidência,Artigo empírico,1446,artigos classificados,1798,80.4,Cobertura parcial; não representa o corpus completo.
+Evidência,Somente qualitativo,612,artigos empíricos,1446,42.3,Categoria exclusiva entre artigos empíricos.
+Evidência,Somente quantitativo,341,artigos empíricos,1446,23.6,Categoria exclusiva entre artigos empíricos.
+Evidência,Misto,493,artigos empíricos,1446,34.1,Categoria exclusiva entre artigos empíricos.
+Quantificação,Componente quantitativo,833,artigos empíricos,1446,57.6,Screen quantitativo de Torreblanca.
+Quantificação,Modelagem estatística,315,empíricos quantitativos,833,37.8,Tipo de análise quantitativa.
+Quantificação,Inferência estatística,308,empíricos quantitativos,833,37,"Testes, intervalos, erros-padrão ou inferência equivalente."
+Explicitação,method_explicitness,NA,não disponível,NA,NA,Exige classificação complementar; não é resultado substantivo.
+Formato,empirical_article_format,NA,não disponível,NA,NA,Exige classificação complementar; não é resultado substantivo.
