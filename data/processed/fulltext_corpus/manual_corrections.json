@@ -1,0 +1,10 @@
+[
+  {
+    "pid": "S0102-69092007000100010",
+    "match_text": "Apesar disso, o grande número de assassinatos de homossexuais,",
+    "replacement_text": "Apesar disso, o grande número de assassinatos de homossexuais, a exemplo do caso Edson Néris em São Paulo, e a ampla homofobia existente na população revelam à militância homossexual os desafios futuros na luta pela garantia de direitos humanos para a população homossexual.",
+    "source_url": "https://bibliobase.sermais.pt/BiblioNET/Upload/PDF5/003351_Rev%20Bras%20Ci%C3%AAncias%20Sociais%201.pdf",
+    "source_accessed": "2026-07-14",
+    "reason": "The locally extracted SciELO HTML ends mid-sentence immediately before the Notes section; the full PDF supplies the missing continuation."
+  }
+]

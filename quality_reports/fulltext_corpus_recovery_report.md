@@ -1,28 +1,30 @@
 # Fulltext corpus recovery report
 
-Generated at: 2026-06-03 22:34:24 -03
+Generated at: 2026-07-14 15:22:27 -03
 
 ## Summary
 
 - Expected eligible PIDs from plan: 6672
-- Eligible PIDs rebuilt from ledgers: 6672
+- Eligible PIDs rebuilt from ledgers: 5426
 - Rows in processed corpus fulltext CSV: 6642
 - Unique processed PIDs: 6642
-- Validated bodies: 6638/6672
-- Row-level failed or missing bodies: 34
-- Global validation failures: 5
+- Validated bodies: 5403/5426
+- Row-level failed or missing bodies: 23
+- Global validation failures: 7
 
 ## Recovery methods
 
-- articlemeta_fulltexts_html: 6590
-- pdf_text_extraction: 44
+- articlemeta_fulltexts_html: 5357
+- pdf_text_extraction: 42
 - citation_xml_body: 4
 
 ## Blocking failures
 
-- processed_row_count_not_6672: 6642
-- processed_unique_pid_count_not_6672: 6642
-- processed_missing_pids: S0011-52582008000200001, S0011-52582013000100001, S0034-73292011000100001, S0034-76122006000100001, S0034-76122006000300001, S0034-76122007000100001, S0034-76122008000100001, S0034-76122008000400001, S0034-76122009000400001, S0034-76122010000100001, S0034-76122010000300008, S0034-76122010000400001, S0034-76122010000400012, S0034-76122011000100001, S0101-33002006000200018, S0101-33002007000300018, S0101-33002010000200014, S0101-33002011000100014, S0102-64452006000100001, S0102-64452006000300001, S0102-64452006000400001, S0102-64452008000200001, S0102-64452008000300001, S0102-64452009000100001, S0102-64452009000100008, S0102-64452009000300002, S0102-64452011000300001, S0102-69092007000100001, S0102-69092009000100010, S0102-69092009000100019
+- eligible_row_count_not_6672: 5426
+- processed_row_count_not_5426: 6642
+- processed_unique_pid_count_not_5426: 6642
+- processed_extra_pids: S0034-76122006000100002, S0034-76122006000100003, S0034-76122006000100004, S0034-76122006000100005, S0034-76122006000100006, S0034-76122006000100007, S0034-76122006000100008, S0034-76122006000200002, S0034-76122006000200003, S0034-76122006000200004, S0034-76122006000200005, S0034-76122006000200006, S0034-76122006000200007, S0034-76122006000200008, S0034-76122006000300002, S0034-76122006000300003, S0034-76122006000300004, S0034-76122006000300005, S0034-76122006000300006, S0034-76122006000300007, S0034-76122006000300008, S0034-76122006000300009, S0034-76122006000400001, S0034-76122006000400002, S0034-76122006000400003, S0034-76122006000400004, S0034-76122006000400005, S0034-76122006000400006, S0034-76122006000400007, S0034-76122006000400008, S0034-76122006000400009, S0034-76122006000400010, S0034-76122006000400011, S0034-76122006000400012, S0034-76122006000500002, S0034-76122006000500003, S0034-76122006000500004, S0034-76122006000500005, S0034-76122006000500006, S0034-76122006000500007, S0034-76122006000500008, S0034-76122006000500009, S0034-76122006000600003, S0034-76122006000600004, S0034-76122006000600005, S0034-76122006000600006, S0034-76122006000600007, S0034-76122006000600008, S0034-76122006000600009, S0034-76122006000600010
+- processed_missing_pids: S0011-52582008000200001, S0011-52582013000100001, S0034-73292011000100001, S0101-33002006000200018, S0101-33002007000300018, S0101-33002010000200014, S0101-33002011000100014, S0102-64452006000100001, S0102-64452006000300001, S0102-64452006000400001, S0102-64452008000200001, S0102-64452008000300001, S0102-64452009000100001, S0102-64452009000100008, S0102-64452009000300002, S0102-64452011000300001, S0102-69092007000100001, S0102-69092009000100010, S0102-69092009000100019
 - duplicate_input_hash_across_pids: S0011-52582014000200007, S0011-52582014000200008, S0011-52582025000400225, S0011-52582025000400230
 - duplicate_body_hash_across_pids: S0011-52582014000200007, S0011-52582014000200008, S0011-52582025000400225, S0011-52582025000400230
 - `S0011-52582008000200001` (Dados, 2008): missing_pid
@@ -32,17 +34,6 @@ Generated at: 2026-06-03 22:34:24 -03
 - `S0011-52582025000400225` (Dados, 2025): duplicate_input_hash_across_pids;duplicate_body_hash_across_pids
 - `S0011-52582025000400230` (Dados, 2025): duplicate_input_hash_across_pids;duplicate_body_hash_across_pids
 - `S0034-73292011000100001` (Revista Brasileira de Política Internacional, 2011): missing_pid
-- `S0034-76122006000100001` (Revista de Administração Pública, 2006): missing_pid
-- `S0034-76122006000300001` (Revista de Administração Pública, 2006): missing_pid
-- `S0034-76122007000100001` (Revista de Administração Pública, 2007): missing_pid
-- `S0034-76122008000100001` (Revista de Administração Pública, 2008): missing_pid
-- `S0034-76122008000400001` (Revista de Administração Pública, 2008): missing_pid
-- `S0034-76122009000400001` (Revista de Administração Pública, 2009): missing_pid
-- `S0034-76122010000100001` (Revista de Administração Pública, 2010): missing_pid
-- `S0034-76122010000300008` (Revista de Administração Pública, 2010): missing_pid
-- `S0034-76122010000400001` (Revista de Administração Pública, 2010): missing_pid
-- `S0034-76122010000400012` (Revista de Administração Pública, 2010): missing_pid
-- `S0034-76122011000100001` (Revista de Administração Pública, 2011): missing_pid
 - `S0101-33002006000200018` (Novos estudos CEBRAP, 2006): missing_pid
 - `S0101-33002007000300018` (Novos estudos CEBRAP, 2007): missing_pid
 - `S0101-33002010000200014` (Novos estudos CEBRAP, 2010): missing_pid
@@ -74,12 +65,6 @@ Generated at: 2026-06-03 22:34:24 -03
 - `S0034-73292009000100011`: 740 words via pdf_text_extraction (low_word_count_but_valid)
 - `S0034-73292009000100012`: 843 words via articlemeta_fulltexts_html (low_word_count_but_valid)
 - `S0034-73292011000100012`: 849 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S0034-76122006000400001`: 744 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S0034-76122007000600001`: 646 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
-- `S0034-76122007000700001`: 920 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S0034-76122007000700007`: 738 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
-- `S0034-76122009000500002`: 952 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S0034-76122010000400002`: 703 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
 - `S0101-33002006000100001`: 747 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
 - `S0101-33002006000200001`: 905 words via articlemeta_fulltexts_html (low_word_count_but_valid)
 - `S0101-33002006000200017`: 957 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
@@ -105,16 +90,10 @@ Generated at: 2026-06-03 22:34:24 -03
 - `S0104-62762012000100012`: 1041 words via articlemeta_fulltexts_html (low_word_count_but_valid)
 - `S0104-62762012000200013`: 963 words via articlemeta_fulltexts_html (low_word_count_but_valid)
 - `S0104-62762013000100010`: 782 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
-- `S1806-64452006000100010`: 775 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
-- `S1806-64452007000200001`: 708 words via articlemeta_fulltexts_html (short_but_valid;low_word_count_but_valid)
-- `S1806-64452007000200009`: 1009 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S1806-64452007000200010`: 881 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S1806-64452008000100001`: 829 words via articlemeta_fulltexts_html (low_word_count_but_valid)
-- `S1806-64452008000200001`: 913 words via articlemeta_fulltexts_html (low_word_count_but_valid)
 
 ## Validation rules
 
-- All 6672 eligible PIDs rebuilt from raw metadata and exclusion ledgers must be present.
+- All 5426 eligible PIDs rebuilt from raw metadata and exclusion ledgers must be present.
 - PIDs must be unique in the processed fulltext CSV.
 - `document_type` must be exactly `research-article`; excluded journals and article PIDs must be absent.
 - Publication year must be compatible with the 2005-2025 corpus window.
