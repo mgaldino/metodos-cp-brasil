@@ -1,11 +1,11 @@
 # Cobertura atual da classificação por periódico
 
-Gerado em: 2026-07-13 10:12:17 -0300
+Gerado em: 2026-07-17 13:15:47 -0300
 
 ## Totais
 
-- Registros no manifesto: 5250
-- Exclusões documentadas presentes no manifesto: 1
+- Registros no manifesto: 5249
+- Exclusões documentadas presentes no manifesto: 0
 - Artigos elegíveis para análise: 5249
 - Artigos classificados: 1798
 - Artigos ainda não classificados: 3451
