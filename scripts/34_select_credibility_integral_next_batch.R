@@ -19,6 +19,15 @@ get_arg <- function(flag, default = NULL) {
   args[[pos + 1]]
 }
 
+get_args <- function(flag) {
+  positions <- which(args == flag)
+  positions <- positions[positions < length(args)]
+  if (length(positions) == 0) {
+    return(character(0))
+  }
+  args[positions + 1]
+}
+
 manifest_path <- get_arg(
   "--manifest",
   "data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv"
@@ -38,7 +47,7 @@ report_out <- get_arg(
   file.path("quality_reports", paste0("credibility_prompt_v3_", label, "_selection.md"))
 )
 journal_title_filter <- get_arg("--journal-title", NULL)
-exclude_manifest <- get_arg("--exclude-manifest", NULL)
+exclude_manifests <- get_args("--exclude-manifest")
 
 utf8_key <- function(values) {
   vapply(
@@ -64,17 +73,23 @@ if (!dir.exists(out_dir)) {
 }
 
 excluded_pids <- character(0)
-if (!is.null(exclude_manifest)) {
-  if (!file.exists(exclude_manifest)) {
-    stop("Manifesto a excluir ausente: ", exclude_manifest)
+if (length(exclude_manifests) > 0) {
+  for (exclude_manifest in exclude_manifests) {
+    if (!file.exists(exclude_manifest)) {
+      stop("Manifesto a excluir ausente: ", exclude_manifest)
+    }
+    excluded_pids <- c(
+      excluded_pids,
+      readr::read_csv(
+        exclude_manifest,
+        show_col_types = FALSE,
+        progress = FALSE
+      ) |>
+        dplyr::pull(pid) |>
+        as.character()
+    )
   }
-  excluded_pids <- readr::read_csv(
-    exclude_manifest,
-    show_col_types = FALSE,
-    progress = FALSE
-  ) |>
-    dplyr::pull(pid) |>
-    as.character()
+  excluded_pids <- unique(excluded_pids)
 }
 
 md_table <- function(data) {
@@ -170,10 +185,16 @@ report_lines <- c(
   paste0("- Manifesto congelado do bloco: `", batch_manifest_out, "`.")
 )
 
-if (!is.null(exclude_manifest)) {
+if (length(exclude_manifests) > 0) {
   report_lines <- c(
     report_lines,
-    paste0("- PIDs excluídos por manifesto anterior: `", exclude_manifest, "` (", length(excluded_pids), ").")
+    paste0(
+      "- PIDs excluídos por manifestos anteriores: `",
+      paste(exclude_manifests, collapse = "`, `"),
+      "` (",
+      length(excluded_pids),
+      ")."
+    )
   )
 }
 
