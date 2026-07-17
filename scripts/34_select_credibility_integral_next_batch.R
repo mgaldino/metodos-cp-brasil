@@ -38,6 +38,7 @@ report_out <- get_arg(
   file.path("quality_reports", paste0("credibility_prompt_v3_", label, "_selection.md"))
 )
 journal_title_filter <- get_arg("--journal-title", NULL)
+exclude_manifest <- get_arg("--exclude-manifest", NULL)
 
 utf8_key <- function(values) {
   vapply(
@@ -62,6 +63,20 @@ if (!dir.exists(out_dir)) {
   stop("Diretório de outputs ausente: ", out_dir)
 }
 
+excluded_pids <- character(0)
+if (!is.null(exclude_manifest)) {
+  if (!file.exists(exclude_manifest)) {
+    stop("Manifesto a excluir ausente: ", exclude_manifest)
+  }
+  excluded_pids <- readr::read_csv(
+    exclude_manifest,
+    show_col_types = FALSE,
+    progress = FALSE
+  ) |>
+    dplyr::pull(pid) |>
+    as.character()
+}
+
 md_table <- function(data) {
   if (nrow(data) == 0) {
     return("_Nenhum caso._")
@@ -84,7 +99,7 @@ status <- manifest |>
   )
 
 selection_pool <- status |>
-  dplyr::filter(!already_complete)
+  dplyr::filter(!already_complete, !pid %in% excluded_pids)
 if (!is.null(journal_title_filter)) {
   journal_title_filter_key <- utf8_key(journal_title_filter)
   selection_pool <- selection_pool |>
@@ -154,6 +169,13 @@ report_lines <- c(
   paste0("- Manifesto ativo: `", manifest_path, "`."),
   paste0("- Manifesto congelado do bloco: `", batch_manifest_out, "`.")
 )
+
+if (!is.null(exclude_manifest)) {
+  report_lines <- c(
+    report_lines,
+    paste0("- PIDs excluídos por manifesto anterior: `", exclude_manifest, "` (", length(excluded_pids), ").")
+  )
+}
 
 writeLines(enc2utf8(report_lines), report_out, useBytes = TRUE)
 
