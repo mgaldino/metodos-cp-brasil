@@ -47,6 +47,15 @@ format_percent_label <- function(x) {
   stringr::str_replace(sprintf("%.1f", x), stringr::fixed("."), ",")
 }
 
+format_count_label <- function(x) {
+  format(
+    x,
+    big.mark = ".",
+    decimal.mark = ",",
+    scientific = FALSE
+  )
+}
+
 analysis_df <- readr::read_csv(analysis_path, show_col_types = FALSE)
 complete_profile <- readr::read_csv(complete_profile_path, show_col_types = FALSE)
 complete_journals <- complete_profile$journal_title
@@ -466,6 +475,42 @@ plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
     )
   )
 
+cross_plot_data <- inference_claim_cross |>
+  dplyr::mutate(
+    combination = dplyr::case_when(
+      causal_language == "Com linguagem causal ou explicativa" &
+        inference_status == "Com inferência estatística" ~
+        "Linguagem causal ou explicativa\ncom inferência estatística",
+      causal_language == "Com linguagem causal ou explicativa" &
+        inference_status == "Sem inferência estatística" ~
+        "Linguagem causal ou explicativa\nsem inferência estatística",
+      causal_language == "Sem linguagem causal ou explicativa" &
+        inference_status == "Com inferência estatística" ~
+        "Sem linguagem causal ou explicativa,\ncom inferência estatística",
+      TRUE ~ "Sem linguagem causal ou explicativa\ne sem inferência estatística"
+    ),
+    panel = "Combinações nos seis periódicos brasileiros",
+    percent = percent_of_cross,
+    value_label = paste0(
+      format_count_label(n),
+      "/",
+      format_count_label(cross_denominator_n),
+      " (",
+      format_percent_label(percent_of_cross),
+      "%)"
+    ),
+    label_hjust = ifelse(percent >= 50, 1.08, -0.08),
+    combination = factor(
+      combination,
+      levels = rev(c(
+        "Linguagem causal ou explicativa\ncom inferência estatística",
+        "Linguagem causal ou explicativa\nsem inferência estatística",
+        "Sem linguagem causal ou explicativa,\ncom inferência estatística",
+        "Sem linguagem causal ou explicativa\ne sem inferência estatística"
+      ))
+    )
+  )
+
 theme_paper <- function() {
   ggplot2::theme_minimal(base_size = 10) +
     ggplot2::theme(
@@ -479,7 +524,7 @@ theme_paper <- function() {
     )
 }
 
-figure_inference_benchmark <- plot_data |>
+figure_benchmark_panels <- plot_data |>
   ggplot2::ggplot(ggplot2::aes(x = percent, y = label)) +
   ggplot2::geom_segment(
     ggplot2::aes(x = 0, xend = percent, yend = label),
@@ -499,6 +544,34 @@ figure_inference_benchmark <- plot_data |>
   ) +
   ggplot2::labs(x = "Parcela de artigos (%)", y = NULL) +
   theme_paper()
+
+figure_claim_inference_cross <- cross_plot_data |>
+  ggplot2::ggplot(ggplot2::aes(x = percent, y = combination)) +
+  ggplot2::geom_segment(
+    ggplot2::aes(x = 0, xend = percent, yend = combination),
+    color = "grey80",
+    linewidth = 0.7
+  ) +
+  ggplot2::geom_point(color = "#2F6B8A", size = 2.8) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = value_label, hjust = label_hjust),
+    size = 2.8
+  ) +
+  ggplot2::facet_wrap(~ panel, ncol = 1) +
+  ggplot2::scale_x_continuous(
+    limits = c(0, 100),
+    breaks = seq(0, 100, 20),
+    labels = function(x) paste0(x, "%")
+  ) +
+  ggplot2::labs(x = "Parcela dos artigos quantitativos (%)", y = NULL) +
+  theme_paper()
+
+figure_inference_benchmark <- patchwork::wrap_plots(
+  figure_benchmark_panels,
+  figure_claim_inference_cross,
+  ncol = 1,
+  heights = c(1.45, 1)
+)
 
 readr::write_csv(
   inference_by_scope,
@@ -545,7 +618,7 @@ ggplot2::ggsave(
   file.path(figures_dir, "figure_statistical_inference_benchmark.pdf"),
   figure_inference_benchmark,
   width = 7,
-  height = 4.4,
+  height = 7.3,
   units = "in",
   device = grDevices::pdf
 )
