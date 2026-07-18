@@ -292,8 +292,10 @@ benchmark_summary <- dplyr::bind_rows(
 complete_quantitative_observed <- quantitative_df |>
   dplyr::filter(journal_title %in% complete_journals, !is.na(has_statistical_inference))
 
-inference_claim_cross <- complete_quantitative_observed |>
-  dplyr::filter(!is.na(causal_or_explanatory_claim_present)) |>
+complete_claim_inference_observed <- complete_quantitative_observed |>
+  dplyr::filter(!is.na(causal_or_explanatory_claim_present))
+
+inference_claim_cross <- complete_claim_inference_observed |>
   dplyr::mutate(
     causal_language = dplyr::if_else(
       causal_or_explanatory_claim_present,
@@ -311,7 +313,7 @@ inference_claim_cross <- complete_quantitative_observed |>
   dplyr::mutate(
     language_denominator_n = sum(n),
     percent_within_language = fmt_pct(n, language_denominator_n),
-    cross_denominator_n = sum(nrow(complete_quantitative_observed)),
+    cross_denominator_n = nrow(complete_claim_inference_observed),
     percent_of_cross = fmt_pct(n, cross_denominator_n)
   ) |>
   dplyr::ungroup() |>
@@ -324,6 +326,13 @@ inference_claim_cross <- complete_quantitative_observed |>
     cross_denominator_n,
     percent_of_cross
   )
+
+if (
+  nrow(inference_claim_cross) != 4 ||
+    sum(inference_claim_cross$n) != nrow(complete_claim_inference_observed)
+) {
+  stop("O cruzamento entre linguagem causal e inferência não produziu quatro combinações válidas.")
+}
 
 descriptive_inference_conflicts <- complete_quantitative_observed |>
   dplyr::filter(
@@ -440,7 +449,7 @@ brazil_plot_data <- inference_by_scope |>
 
 international_plot_data <- top_three |>
   dplyr::transmute(
-    panel = "Com abordagem baseada em desenho\nentre quantitativos explicativos",
+    panel = "Abordagem baseada em desenho\nentre quantitativos explicativos",
     label = dplyr::recode(journal, !!!journal_abbreviations, .default = journal),
     percent = design_based_percent,
     value_label = paste0(
@@ -462,7 +471,7 @@ plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
       panel,
       levels = c(
         "Com inferência estatística\nentre artigos quantitativos",
-        "Com abordagem baseada em desenho\nentre quantitativos explicativos"
+        "Abordagem baseada em desenho\nentre quantitativos explicativos"
       )
     ),
     label_hjust = ifelse(percent >= 55, 1.08, -0.08),
