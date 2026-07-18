@@ -339,9 +339,9 @@ knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 
 # Discussão
 
-Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala. A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência estatística e a proporção de artigos selecionados para examinar identificação variam fortemente. BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
+Os seis periódicos completos mostram que a prática metodológica não se organiza em uma única escala. A presença de artigos empíricos é elevada em todos, mas a participação quantitativa, o uso de inferência estatística e a proporção de artigos selecionados para examinar identificação variam fortemente. `Opinião Pública`, BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. A RBCP ocupa posição intermediária na quantificação e na inferência. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
 
-A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção de artigos empíricos cresce e a participação quantitativa permanece estável. A inferência aumenta apenas na média que dá peso igual aos periódicos; quando os artigos são agrupados, permanece praticamente estável. Não há difusão monotônica das famílias de desenho. Os resultados preliminares não sustentam uma narrativa linear de substituição da pesquisa qualitativa pela quantitativa nem de marcha uniforme rumo a desenhos causais.
+A análise temporal reforça essa multidimensionalidade. Nos cinco periódicos com suporte comum, as proporções de artigos empíricos e quantitativos crescem. A inferência aumenta na média que dá peso igual aos periódicos, mas permanece praticamente estável quando os artigos são agrupados. Não há difusão monotônica das famílias de desenho. Os resultados preliminares indicam expansão da quantificação, mas não sustentam uma narrativa de marcha uniforme rumo à inferência estatística ou a desenhos causais.
 
 A categoria ampla de afirmação causal ou explicativa precisa ser interpretada com especial cautela. Sua frequência elevada não significa que quase todos os artigos façam inferência causal: ela também registra explicações qualitativas, argumentos teóricos e interpretações substantivas. O subconjunto de `r format_n(n_screen)` artigos selecionado para examinar identificação não contém apenas estudos causais, e os `r format_n(n_estrito)` casos positivos registram famílias de método mencionadas no texto. A diferença entre essas contagens é uma descrição taxonômica útil, mas não mede diretamente credibilidade, adequação entre afirmação e método ou qualidade da identificação.
 
@@ -349,9 +349,9 @@ O pluralismo metodológico delimita a interpretação dos resultados. A ausênci
 
 # Conclusão
 
-Nos quatro periódicos integralmente classificados, a presença elevada de artigos empíricos convive com diferenças substantivas na quantificação e na inferência estatística. Nos três periódicos com cobertura temporal comum, a participação empírica cresce, enquanto a quantificação permanece estável e a trajetória da inferência depende da regra de ponderação. Esses resultados não sustentam uma narrativa de substituição linear da pesquisa qualitativa nem de difusão uniforme de estratégias causais.
+Nos seis periódicos integralmente classificados, a presença elevada de artigos empíricos convive com diferenças substantivas na quantificação e na inferência estatística. Nos cinco periódicos com cobertura temporal comum, as participações empírica e quantitativa crescem, enquanto a trajetória da inferência depende da regra de ponderação. Esses resultados apontam expansão da quantificação, mas não difusão uniforme da inferência estatística ou de estratégias causais.
 
-No conjunto de `r format_n(n_classificados)` artigos classificados, apenas `r format_n(n_estrito)` dos `r format_n(n_screen)` selecionados pelo protocolo para examinar identificação mencionam uma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Essa frequência descreve presença nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana e cobre apenas parte do universo de `r format_n(n_manifest)` artigos, as conclusões permanecem restritas aos quatro periódicos integralmente classificados.
+No conjunto de `r format_n(n_classificados)` artigos classificados, apenas `r format_n(n_estrito)` dos `r format_n(n_screen)` selecionados pelo protocolo para examinar identificação mencionam uma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Essa frequência descreve presença nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana e cobre apenas parte do universo de `r format_n(n_manifest)` artigos, as comparações editoriais permanecem restritas aos seis periódicos integralmente classificados.
 
 \newpage
 
@@ -359,15 +359,15 @@ No conjunto de `r format_n(n_classificados)` artigos classificados, apenas `r fo
 
 # Apêndice: Cobertura e variação anual
 
-A Figura 6 detalha a cobertura da classificação por periódico. Quatro periódicos estão completos, três estão parciais e quatro ainda não têm artigos classificados. Essa distribuição impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
+A Figura 6 detalha a cobertura da classificação por periódico. Seis periódicos estão completos e cinco estão parcialmente classificados; todos os onze já têm artigos classificados. A distribuição ainda desigual impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
 
 ```{r figura-4, fig.cap="Cobertura da classificação por periódico. Os rótulos mostram artigos classificados sobre artigos elegíveis após as exclusões documentadas.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
 ```
 
-A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas anos em que BPSR, `Contexto Internacional` e `Dados` têm artigos. As proporções anuais agrupam os artigos dos três periódicos, enquanto a Figura 5 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
+A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas 2011--2025, intervalo em que BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP têm artigos em todos os anos. As proporções anuais agrupam os artigos dos cinco periódicos, enquanto a Figura 5 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
 
-```{r figura-7, fig.cap="Variação anual em BPSR, Contexto Internacional e Dados. As proporções agrupam os artigos e incluem apenas anos com publicação nos três periódicos. Todos os painéis usam escala de 0% a 100%.", out.width="95%"}
+```{r figura-7, fig.cap="Variação anual em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, 2011--2025. As proporções agrupam os artigos e incluem apenas anos com publicação nos cinco periódicos. Todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
 ```
 
