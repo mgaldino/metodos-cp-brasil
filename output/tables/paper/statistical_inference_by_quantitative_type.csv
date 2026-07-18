@@ -1,0 +1,8 @@
+scope,quantitative_type,quantitative_n,inference_n,inference_percent
+Cobertura classificada,Classificação quantitativa incerta,2,1,50
+Cobertura classificada,Estatística descritiva,256,0,0
+Cobertura classificada,Modelagem estatística,66,51,77.3
+Cobertura classificada,Testes bivariados ou correlações,24,15,62.5
+Seis periódicos integralmente classificados,Estatística descritiva,643,9,1.4
+Seis periódicos integralmente classificados,Modelagem estatística,546,469,85.9
+Seis periódicos integralmente classificados,Testes bivariados ou correlações,92,73,79.3
