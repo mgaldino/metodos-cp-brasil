@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Este artigo mensura a presença de pesquisa empírica, quantificação, inferência estatística e estratégias explícitas de identificação causal em periódicos brasileiros indexados no SciELO entre 2005 e 2025. O universo elegível reúne 5.249 artigos de onze periódicos; 3.565 foram classificados por modelos de linguagem a partir da leitura integral. Seis periódicos estão integralmente cobertos e constituem o estrato principal das comparações editoriais. Entre os 1.116 artigos selecionados pelo protocolo para examinar identificação, apenas 49 (4,4%) mencionam uma estratégia explícita, como experimento, diferença-em-diferenças, variável instrumental ou regressão descontínua. Entre artigos quantitativos, a presença de inferência estatística varia de 60,3% em Opinião Pública a 7,2% em Contexto Internacional. Nos cinco periódicos com suporte temporal comum, a participação de artigos empíricos e quantitativos cresce, enquanto a trajetória da inferência depende da regra de ponderação. As contagens registram atributos declarados, não a qualidade da execução metodológica. Como a classificação ainda requer validação humana e a configuração do classificador variou entre lotes, os resultados constituem um diagnóstico preliminar, restrito aos periódicos já integralmente classificados.
+  Este artigo mensura a presença de pesquisa empírica, quantificação, inferência estatística e estratégias explícitas de identificação causal em periódicos brasileiros indexados no SciELO entre 2005 e 2025. O universo elegível reúne 5.249 artigos de onze periódicos; 3.565 foram classificados por modelos de linguagem a partir da leitura integral. Seis periódicos estão integralmente cobertos e constituem o estrato principal das comparações editoriais. Entre os 846 artigos desses periódicos selecionados pelo protocolo para examinar identificação, apenas 49 (5,8%) mencionam uma estratégia explícita, como experimento, diferença-em-diferenças, variável instrumental ou regressão descontínua. Entre artigos quantitativos, a presença de inferência estatística varia de 60,3% em Opinião Pública a 7,2% em Contexto Internacional. Nos cinco periódicos com suporte temporal comum, a participação de artigos empíricos e quantitativos cresce, enquanto a trajetória da inferência depende da regra de ponderação. As contagens registram atributos declarados, não a qualidade da execução metodológica. Como a classificação ainda requer validação humana e a configuração do classificador variou entre lotes, os resultados constituem um diagnóstico preliminar, restrito aos periódicos já integralmente classificados.
 ---
 
 ```{r setup, include=FALSE}
@@ -65,11 +65,15 @@ n_screen <- denominadores$n[denominadores$denominator == "Artigos em que a ident
 n_estrito <- denominadores$n[denominadores$denominator == "Artigos com estratégia explícita de identificação causal"]
 n_periodicos_completos <- denominadores$n[denominadores$denominator == "Periódicos com classificação completa"]
 n_artigos_periodicos_completos <- denominadores$n[denominadores$denominator == "Artigos dos periódicos completos"]
+n_screen_periodicos_completos <- denominadores$n[denominadores$denominator == "Artigos dos periódicos completos em que a identificação é especialmente relevante"]
+n_estrito_periodicos_completos_denominadores <- denominadores$n[denominadores$denominator == "Artigos dos periódicos completos com estratégia explícita de identificação causal"]
 pct_classificados <- denominadores$percent[denominadores$denominator == "Artigos classificados por leitura integral"]
 n_modelagem <- tabela_dimensoes$n[tabela_dimensoes$category == "Modelagem estatística"]
 n_inferencia <- tabela_dimensoes$n[tabela_dimensoes$category == "Inferência estatística"]
 n_claim_empirico <- tabela_credibilidade$n[tabela_credibilidade$category == "Afirmação causal ou explicativa em artigo empírico"]
 n_estrito_periodicos_completos <- sum(tabela_periodicos_completos$n_strict)
+n_screen_periodicos_parciais <- n_screen - n_screen_periodicos_completos
+n_estrito_periodicos_parciais <- n_estrito - n_estrito_periodicos_completos
 n_qualitativos_periodicos_completos <- unique(tabela_qualitativa_completa$denominator_n)
 n_objetivo_qualitativo_claro <- tabela_qualitativa_completa$n[tabela_qualitativa_completa$qualitative_goal_clarity %in% "Clara"]
 pct_objetivo_qualitativo_claro <- tabela_qualitativa_completa$percent[tabela_qualitativa_completa$qualitative_goal_clarity %in% "Clara"]
@@ -92,7 +96,10 @@ stopifnot(
   n_quant <= n_empiricos,
   n_inferencia_observada + n_inferencia_ausente == n_quant,
   n_inferencia <= n_inferencia_observada,
-  n_estrito <= n_screen
+  n_estrito <= n_screen,
+  n_estrito_periodicos_completos == n_estrito_periodicos_completos_denominadores,
+  n_screen_periodicos_completos <= n_artigos_periodicos_completos,
+  n_estrito_periodicos_parciais <= n_screen_periodicos_parciais
 )
 
 profile_value <- function(journal, variable) {
@@ -108,7 +115,7 @@ O artigo pergunta como essas práticas se distribuem entre periódicos brasileir
 
 Torreblanca et al. [-@torreblanca2026] oferecem a referência internacional para distinguir o corpus total, os artigos empíricos, os trabalhos quantitativos, os estudos com afirmações causais ou explicativas e aqueles que mencionam estratégias explícitas de identificação. Aplicamos essa classificação ao caso brasileiro e mantemos explícito o denominador de cada medida. Esperamos encontrar diferenças entre periódicos e períodos, além de distância entre a presença de afirmações causais ou explicativas e a menção a estratégias de identificação. As comparações são descritivas: o desenho não identifica por que periódicos ou períodos diferem.
 
-O universo elegível contém `r format_n(n_manifest)` artigos de onze periódicos. A classificação por leitura integral cobre `r format_n(n_classificados)`, ou `r format_pct(pct_classificados)` do total. Seis periódicos estão integralmente classificados e somam `r format_n(n_artigos_periodicos_completos)` artigos; as comparações editoriais principais restringem-se a esse estrato. Entre os `r format_n(n_screen)` artigos selecionados pelo protocolo para examinar identificação, `r format_n(n_estrito)` mencionam alguma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Entre artigos quantitativos, a inferência estatística varia de `r format_pct(profile_value("Opinião Pública", "pct_inference"))` em `Opinião Pública` a `r format_pct(profile_value("Contexto Internacional", "pct_inference"))` em `Contexto Internacional`.
+O universo elegível contém `r format_n(n_manifest)` artigos de onze periódicos. A classificação por leitura integral cobre `r format_n(n_classificados)`, ou `r format_pct(pct_classificados)` do total. Seis periódicos estão integralmente classificados e somam `r format_n(n_artigos_periodicos_completos)` artigos; as comparações editoriais principais restringem-se a esse estrato. Entre os `r format_n(n_screen_periodicos_completos)` artigos desses periódicos selecionados pelo protocolo para examinar identificação, `r format_n(n_estrito_periodicos_completos)` mencionam alguma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`. Entre artigos quantitativos, a inferência estatística varia de `r format_pct(profile_value("Opinião Pública", "pct_inference"))` em `Opinião Pública` a `r format_pct(profile_value("Contexto Internacional", "pct_inference"))` em `Contexto Internacional`.
 
 A contribuição é uma mensuração comparável de quatro dimensões da prática publicada e um diagnóstico preliminar de sua heterogeneidade editorial e temporal. A classificação automatizada ainda requer validação humana, e sua configuração variou entre lotes; por isso, as tendências são exploratórias e os resultados não representam o conjunto da produção nacional. O artigo registra a presença declarada de métodos e procedimentos, sem avaliar sua qualidade de execução.
 
@@ -263,7 +270,7 @@ A categoria de afirmação causal ou explicativa é deliberadamente ampla. Ela a
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-Dos `r format_n(n_screen)` artigos selecionados pelo protocolo para examinar identificação, `r format_n(n_estrito)` mencionam ao menos uma estratégia explícita de identificação causal, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Como esse subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, ele não contém apenas estudos causais. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
+No conjunto parcial dos artigos classificados, `r format_n(n_estrito)` dos `r format_n(n_screen)` selecionados pelo protocolo para examinar identificação mencionam ao menos uma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. No estrato principal dos seis periódicos completos, a proporção é `r format_n(n_estrito_periodicos_completos)` em `r format_n(n_screen_periodicos_completos)`, ou `r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`. Como esse subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, ele não contém apenas estudos causais. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
@@ -304,7 +311,7 @@ knitr::kable(
 )
 ```
 
-Nos seis periódicos completos, `r format_n(n_estrito_periodicos_completos)` artigos mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
+Nos seis periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos examinados mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
 
 ```{r figura-6, fig.cap="Estratégias explícitas de identificação causal mencionadas nos seis periódicos completos. Um artigo pode mobilizar mais de uma estratégia; a contagem não avalia sua qualidade.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
@@ -343,7 +350,7 @@ Os seis periódicos completos mostram que a prática metodológica não se organ
 
 A análise temporal reforça essa multidimensionalidade. Nos cinco periódicos com suporte comum, as proporções de artigos empíricos e quantitativos crescem. A inferência aumenta na média que dá peso igual aos periódicos, mas permanece praticamente estável quando os artigos são agrupados. Não há difusão monotônica das famílias de desenho. Os resultados preliminares indicam expansão da quantificação, mas não sustentam uma narrativa de marcha uniforme rumo à inferência estatística ou a desenhos causais.
 
-A categoria ampla de afirmação causal ou explicativa precisa ser interpretada com especial cautela. Sua frequência elevada não significa que quase todos os artigos façam inferência causal: ela também registra explicações qualitativas, argumentos teóricos e interpretações substantivas. O subconjunto de `r format_n(n_screen)` artigos selecionado para examinar identificação não contém apenas estudos causais, e os `r format_n(n_estrito)` casos positivos registram famílias de método mencionadas no texto. A diferença entre essas contagens é uma descrição taxonômica útil, mas não mede diretamente credibilidade, adequação entre afirmação e método ou qualidade da identificação.
+A categoria ampla de afirmação causal ou explicativa precisa ser interpretada com especial cautela. Sua frequência elevada não significa que quase todos os artigos façam inferência causal: ela também registra explicações qualitativas, argumentos teóricos e interpretações substantivas. O subconjunto de `r format_n(n_screen)` artigos selecionado para examinar identificação não contém apenas estudos causais, e os `r format_n(n_estrito)` casos positivos registram famílias de método mencionadas no texto. A diferença entre essas contagens é uma descrição taxonômica útil, mas não mede diretamente credibilidade, adequação entre afirmação e método ou qualidade da identificação. Além disso, os `r format_n(n_screen_periodicos_parciais)` casos examinados nos periódicos parciais contêm `r format_n(n_estrito_periodicos_parciais)` positivos, enquanto os `r format_n(n_screen_periodicos_completos)` casos dos periódicos completos contêm todos os `r format_n(n_estrito_periodicos_completos)` positivos. Essa concentração pode refletir diferenças substantivas entre periódicos, mas também a configuração dos lotes; por isso, o agregado parcial não sustenta comparação editorial e exige reclassificação de validação com configuração comum.
 
 O pluralismo metodológico delimita a interpretação dos resultados. A ausência de uma estratégia explícita de identificação causal não representa deficiência em todo tipo de artigo, e sua presença nominal não demonstra qualidade. Esta versão mapeia a incidência de práticas empíricas, quantitativas, inferenciais e de identificação; não mede a adequação entre cada afirmação e o método empregado.
 
@@ -351,7 +358,7 @@ O pluralismo metodológico delimita a interpretação dos resultados. A ausênci
 
 Nos seis periódicos integralmente classificados, a presença elevada de artigos empíricos convive com diferenças substantivas na quantificação e na inferência estatística. Nos cinco periódicos com cobertura temporal comum, as participações empírica e quantitativa crescem, enquanto a trajetória da inferência depende da regra de ponderação. Esses resultados apontam expansão da quantificação, mas não difusão uniforme da inferência estatística ou de estratégias causais.
 
-No conjunto de `r format_n(n_classificados)` artigos classificados, apenas `r format_n(n_estrito)` dos `r format_n(n_screen)` selecionados pelo protocolo para examinar identificação mencionam uma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Essa frequência descreve presença nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana e cobre apenas parte do universo de `r format_n(n_manifest)` artigos, as comparações editoriais permanecem restritas aos seis periódicos integralmente classificados.
+Nos seis periódicos integralmente classificados, apenas `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos selecionados pelo protocolo para examinar identificação mencionam uma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`. No conjunto parcial de `r format_n(n_classificados)` artigos, a referência correspondente é `r format_n(n_estrito)` em `r format_n(n_screen)`, ou `r format_pct(round(100 * n_estrito / n_screen, 1))`. Essas frequências descrevem presença nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana e cobre apenas parte do universo de `r format_n(n_manifest)` artigos, as comparações editoriais permanecem restritas aos seis periódicos integralmente classificados.
 
 \newpage
 

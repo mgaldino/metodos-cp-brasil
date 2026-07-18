@@ -26,7 +26,7 @@ input_paths <- c(
 stopifnot(all(file.exists(input_paths)))
 
 expected_md5 <- c(
-  denominators = "a002966d539b3699d047ad8979650a25",
+  denominators = "d88f1700b4245c5c186e7e763f8f4d34",
   complete_journals = "2e0a97210b0ed1604f0f82cd38de65a1",
   periods = "a1cfbb7d34c7ff2eef451b780def8e36",
   years = "378190a17a4ccfb2f2e7984e023cfa00",
