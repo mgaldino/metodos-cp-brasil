@@ -70,7 +70,8 @@ required_columns <- c(
   "period_3",
   "is_empirical_quant_paper_torreblanca",
   "quantitative_analysis_type",
-  "has_statistical_inference"
+  "has_statistical_inference",
+  "causal_or_explanatory_claim_present"
 )
 missing_columns <- setdiff(required_columns, names(analysis_df))
 if (length(missing_columns) > 0) {
@@ -282,6 +283,39 @@ benchmark_summary <- dplyr::bind_rows(
 complete_quantitative_observed <- quantitative_df |>
   dplyr::filter(journal_title %in% complete_journals, !is.na(has_statistical_inference))
 
+inference_claim_cross <- complete_quantitative_observed |>
+  dplyr::filter(!is.na(causal_or_explanatory_claim_present)) |>
+  dplyr::mutate(
+    causal_language = dplyr::if_else(
+      causal_or_explanatory_claim_present,
+      "Com linguagem causal ou explicativa",
+      "Sem linguagem causal ou explicativa"
+    ),
+    inference_status = dplyr::if_else(
+      has_statistical_inference,
+      "Com inferência estatística",
+      "Sem inferência estatística"
+    )
+  ) |>
+  dplyr::count(causal_language, inference_status, name = "n") |>
+  dplyr::group_by(causal_language) |>
+  dplyr::mutate(
+    language_denominator_n = sum(n),
+    percent_within_language = fmt_pct(n, language_denominator_n),
+    cross_denominator_n = sum(nrow(complete_quantitative_observed)),
+    percent_of_cross = fmt_pct(n, cross_denominator_n)
+  ) |>
+  dplyr::ungroup() |>
+  dplyr::select(
+    causal_language,
+    inference_status,
+    n,
+    language_denominator_n,
+    percent_within_language,
+    cross_denominator_n,
+    percent_of_cross
+  )
+
 descriptive_inference_conflicts <- complete_quantitative_observed |>
   dplyr::filter(
     quantitative_analysis_type == "descriptive_statistics_only",
@@ -474,6 +508,11 @@ readr::write_csv(
 readr::write_csv(
   inference_by_quantitative_type,
   file.path(tables_dir, "statistical_inference_by_quantitative_type.csv"),
+  na = ""
+)
+readr::write_csv(
+  inference_claim_cross,
+  file.path(tables_dir, "statistical_inference_by_causal_language.csv"),
   na = ""
 )
 readr::write_csv(

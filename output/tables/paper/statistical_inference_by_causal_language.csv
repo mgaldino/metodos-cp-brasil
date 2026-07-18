@@ -1,0 +1,5 @@
+causal_language,inference_status,n,language_denominator_n,percent_within_language,cross_denominator_n,percent_of_cross
+Com linguagem causal ou explicativa,Com inferência estatística,543,1232,44.1,1281,42.4
+Com linguagem causal ou explicativa,Sem inferência estatística,689,1232,55.9,1281,53.8
+Sem linguagem causal ou explicativa,Com inferência estatística,8,49,16.3,1281,0.6
+Sem linguagem causal ou explicativa,Sem inferência estatística,41,49,83.7,1281,3.2
