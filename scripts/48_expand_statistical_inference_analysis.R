@@ -161,7 +161,11 @@ inference_by_period_complete <- quantitative_df |>
   ) |>
   dplyr::arrange(factor(period_3, levels = c("2005-2011", "2012-2018", "2019-2025")))
 
-tex_lines <- readLines(torreblanca_tex_path, encoding = "UTF-8", warn = FALSE)
+tex_lines <- readr::read_lines(
+  torreblanca_tex_path,
+  locale = readr::locale(encoding = "UTF-8"),
+  progress = FALSE
+)
 table_start <- grep("^Quarterly Journal of Political Science &", tex_lines)
 if (length(table_start) != 1) {
   stop("Não foi possível localizar o início da tabela de top 20 no TeX de Torreblanca et al.")
