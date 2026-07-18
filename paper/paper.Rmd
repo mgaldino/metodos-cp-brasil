@@ -230,7 +230,7 @@ tabela_periodicos_display <- tabela_periodicos_completos |>
 
 knitr::kable(
   tabela_periodicos_display,
-  caption = "Perfil metodológico dos quatro periódicos completos. Denominadores: empíricos sobre todos os artigos; quantitativos sobre empíricos; inferência sobre quantitativos; identificação relevante sobre todos os artigos; estratégia explícita sobre os casos em que a identificação é relevante.",
+  caption = "Perfil metodológico dos quatro periódicos completos. Denominadores: empíricos sobre todos os artigos; quantitativos sobre empíricos; inferência sobre quantitativos; exame de identificação sobre todos os artigos; estratégia explícita sobre os artigos examinados.",
   booktabs = TRUE
 )
 ```
@@ -345,6 +345,8 @@ Nos quatro periódicos integralmente classificados, os resultados preliminares n
 
 A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador, adjudicar uma amostra humana estratificada e implementar as medidas complementares de explicitação e formato. Sem essas medidas, esta versão não conclui sobre rastreabilidade ou padronização textual. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza.
 
+\newpage
+
 \appendix
 
 # Apêndice: Cobertura e variação anual
@@ -360,6 +362,8 @@ A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que o
 ```{r figura-7, fig.cap="Variação anual em BPSR, Contexto Internacional e Dados. As proporções agrupam os artigos e incluem apenas anos com publicação nos três periódicos. Todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
 ```
+
+\clearpage
 
 \small
 
