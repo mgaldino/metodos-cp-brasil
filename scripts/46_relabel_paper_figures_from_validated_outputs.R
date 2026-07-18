@@ -104,24 +104,24 @@ theme_paper <- function() {
 }
 
 metric_labels <- c(
-  empirical = "Artigos empíricos",
-  quantitative = "Componente quantitativo",
+  empirical = "Empíricos",
+  quantitative = "Análise quantitativa",
   inference = "Inferência estatística",
   claim = "Linguagem explicativa ampla",
-  screen = "Exame de identificação",
+  screen = "Examinados para identificação",
   strict = "Estratégia explícita"
 )
 
 figure_1_data <- tibble::tibble(
   group = c("Cobertura", "Cobertura", "Evidência", "Quantificação", "Afirmações", "Identificação", "Identificação"),
   measure = c(
-    "Corpus elegível",
-    "Classificados",
-    "Empíricos",
-    "Componente quantitativo",
-    "Afirmação causal/explicativa",
-    "Artigos examinados para identificação",
-    "Estratégia explícita de identificação"
+    "Artigos elegíveis",
+    "Artigos classificados",
+    "Artigos empíricos",
+    "Com análise quantitativa",
+    "Com linguagem causal ou explicativa",
+    "Examinados para identificação",
+    "Com estratégia explícita"
   ),
   n = c(n_manifest, n_classified, n_empirical, n_quantitative, n_claim, n_examined, n_strict),
   denominator_n = c(n_manifest, n_manifest, n_classified, n_empirical, n_classified, n_classified, n_examined)
@@ -134,25 +134,15 @@ figure_1_data <- tibble::tibble(
   )
 
 figure_1 <- figure_1_data |>
-  ggplot2::ggplot(ggplot2::aes(x = percent, y = measure, color = group)) +
+  ggplot2::ggplot(ggplot2::aes(x = percent, y = measure)) +
   ggplot2::geom_segment(ggplot2::aes(x = 0, xend = percent, yend = measure), linewidth = 0.7, color = "grey80") +
-  ggplot2::geom_point(size = 3) +
+  ggplot2::geom_point(size = 3, color = "#2F6B8A") +
   ggplot2::geom_text(ggplot2::aes(label = label, hjust = label_hjust), size = 3, color = "grey15") +
   ggplot2::scale_x_continuous(limits = c(0, 105), breaks = seq(0, 100, 20), labels = function(x) paste0(x, "%")) +
-  ggplot2::scale_color_manual(values = c(
-    Cobertura = "#4C78A8",
-    Evidência = "#59A14F",
-    Quantificação = "#F28E2B",
-    Afirmações = "#B279A2",
-    Identificação = "#E15759"
-  )) +
   ggplot2::labs(
-    title = "Dimensões observadas e seus denominadores",
-    subtitle = NULL,
+    title = NULL,
     x = "Percentual",
-    y = NULL,
-    color = NULL,
-    caption = "Fonte: classificação por leitura integral. Corpus completo ainda parcialmente classificado."
+    y = NULL
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
@@ -192,13 +182,7 @@ figure_2 <- complete_journals_long |>
   ggplot2::geom_tile(fill = "#F2F5F8", color = "white", linewidth = 0.6) +
   ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), color = "#173B4F", size = 3) +
   ggplot2::labs(
-    title = "Perfil metodológico dos periódicos com classificação completa",
-    subtitle = paste0(
-      fmt_n(n_complete_journals),
-      " periódicos, ",
-      fmt_n(n_complete_articles),
-      " artigos; o denominador varia por dimensão."
-    ),
+    title = NULL,
     x = NULL,
     y = NULL
   ) +
@@ -251,15 +235,9 @@ figure_3 <- period_plot_data |>
     expand = ggplot2::expansion(mult = c(0, 0.05))
   ) +
   ggplot2::labs(
-    title = "Variação por período em periódicos completos presentes nos três períodos",
-    subtitle = paste0(
-      "Média simples de ",
-      fmt_n(n_temporal_journals),
-      " periódicos; composição editorial mantida constante."
-    ),
+    title = NULL,
     x = "Período",
-    y = "Percentual",
-    caption = "Descrição padronizada por periódico; não identifica efeito causal do tempo. Denominadores variam por dimensão."
+    y = "Artigos (%)"
   ) +
   theme_paper() +
   ggplot2::theme(legend.position = "none")
@@ -288,15 +266,10 @@ figure_4 <- coverage_plot_data |>
   ggplot2::scale_x_continuous(limits = c(0, 116), breaks = seq(0, 100, 20), labels = function(x) paste0(x, "%")) +
   ggplot2::scale_color_manual(values = c(Completo = "#2E7D32", Parcial = "#E69F00", `Não iniciado` = "#9E9E9E")) +
   ggplot2::labs(
-    title = "Cobertura da classificação por periódico",
-    subtitle = "Os rótulos mostram artigos classificados sobre artigos elegíveis após as exclusões documentadas.",
-    x = "Cobertura",
+    title = NULL,
+    x = "Artigos classificados (%)",
     y = NULL,
-    color = "Status",
-    caption = paste0(
-      fmt_n(n_complete_journals),
-      " periódicos completos; comparações substantivas principais são restritas a esse estrato."
-    )
+    color = NULL
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
@@ -341,23 +314,9 @@ figure_7 <- year_plot_data |>
     expand = ggplot2::expansion(mult = c(0, 0.03))
   ) +
   ggplot2::labs(
-    title = "Variação anual em periódicos completos com suporte temporal comum",
-    subtitle = paste0(
-      "Proporções agrupadas de ",
-      fmt_n(n_temporal_journals),
-      " periódicos; ",
-      min(years$year),
-      " a ",
-      max(years$year),
-      "."
-    ),
+    title = NULL,
     x = "Ano",
-    y = "Percentual",
-    caption = paste0(
-      "Apenas anos com artigos nos ",
-      fmt_n(n_temporal_journals),
-      " periódicos. Série descritiva; denominadores variam por dimensão."
-    )
+    y = "Artigos (%)"
   ) +
   theme_paper() +
   ggplot2::theme(

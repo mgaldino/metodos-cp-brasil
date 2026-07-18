@@ -188,11 +188,11 @@ method_labels <- c(
 )
 
 metric_labels <- c(
-  empirical = "Artigos empíricos",
-  quantitative = "Componente quantitativo",
+  empirical = "Empíricos",
+  quantitative = "Análise quantitativa",
   inference = "Inferência estatística",
   claim = "Linguagem explicativa ampla",
-  screen = "Identificação relevante",
+  screen = "Examinados para identificação",
   strict = "Estratégia explícita"
 )
 
@@ -669,13 +669,13 @@ complete_journal_profile_long <- complete_journal_profile |>
 claim_method_alignment <- analysis_df |>
   dplyr::mutate(
     alignment_category = dplyr::case_when(
-      strict_design_method & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Afirmação e estratégia explícita de identificação",
-      strict_design_method & !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Estratégia explícita sem afirmação codificada",
-      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Afirmação empírica e componente quantitativo, sem estratégia explícita",
-      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Afirmação empírica sem componente quantitativo",
-      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Afirmação em artigo não empírico",
-      !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Componente quantitativo sem afirmação",
-      TRUE ~ "Sem afirmação ou componente quantitativo"
+      strict_design_method & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Linguagem causal ou explicativa e estratégia explícita",
+      strict_design_method & !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Estratégia explícita sem linguagem causal ou explicativa",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Linguagem empírica e análise quantitativa, sem estratégia explícita",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Linguagem empírica sem análise quantitativa",
+      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Linguagem em artigo não empírico",
+      !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Análise quantitativa sem linguagem causal ou explicativa",
+      TRUE ~ "Sem linguagem causal ou explicativa ou análise quantitativa"
     )
   ) |>
   dplyr::count(alignment_category, name = "n") |>
@@ -1089,25 +1089,15 @@ figure_1_data <- tibble::tibble(
   )
 
 figure_1 <- figure_1_data |>
-  ggplot2::ggplot(ggplot2::aes(x = percent, y = measure, color = group)) +
+  ggplot2::ggplot(ggplot2::aes(x = percent, y = measure)) +
   ggplot2::geom_segment(ggplot2::aes(x = 0, xend = percent, yend = measure), linewidth = 0.7, color = "grey80") +
-  ggplot2::geom_point(size = 3) +
+  ggplot2::geom_point(size = 3, color = "#2F6B8A") +
   ggplot2::geom_text(ggplot2::aes(label = label, hjust = label_hjust), size = 3, color = "grey15") +
   ggplot2::scale_x_continuous(limits = c(0, 105), breaks = seq(0, 100, 20), labels = function(x) paste0(x, "%")) +
-  ggplot2::scale_color_manual(values = c(
-    Cobertura = "#4C78A8",
-    Evidência = "#59A14F",
-    Quantificação = "#F28E2B",
-    Afirmações = "#B279A2",
-    Identificação = "#E15759"
-  )) +
   ggplot2::labs(
-    title = "Dimensões observadas e seus denominadores",
-    subtitle = NULL,
+    title = NULL,
     x = "Percentual",
-    y = NULL,
-    color = NULL,
-    caption = "Fonte: classificação canônica por leitura integral. Corpus completo ainda parcialmente classificado."
+    y = NULL
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
@@ -1131,13 +1121,7 @@ figure_2 <- complete_journal_profile_long |>
   ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), size = 3) +
   ggplot2::scale_fill_gradient(low = "#F2F5F8", high = "#2F6B8A", limits = c(0, 100)) +
   ggplot2::labs(
-    title = "Perfil metodológico dos periódicos com classificação completa",
-    subtitle = paste0(
-      n_complete_journals,
-      " periódicos, ",
-      fmt_n(n_complete_journal_articles),
-      " artigos; o denominador varia por dimensão."
-    ),
+    title = NULL,
     x = NULL,
     y = NULL,
     fill = "%"
@@ -1190,15 +1174,9 @@ figure_3 <- period_plot_data |>
     expand = ggplot2::expansion(mult = c(0, 0.05))
   ) +
   ggplot2::labs(
-    title = "Variação por período em periódicos completos presentes nos três períodos",
-    subtitle = paste0(
-      "Média simples de ",
-      length(temporal_complete_journals),
-      " periódicos; composição editorial mantida constante."
-    ),
+    title = NULL,
     x = "Período",
-    y = "Percentual",
-    caption = "Descrição padronizada por periódico; não identifica efeito causal do tempo. Denominadores variam por dimensão."
+    y = "Artigos (%)"
   ) +
   theme_paper() +
   ggplot2::theme(legend.position = "none")
@@ -1246,23 +1224,9 @@ figure_7 <- year_plot_data |>
     expand = ggplot2::expansion(mult = c(0, 0.03))
   ) +
   ggplot2::labs(
-    title = "Variação anual em periódicos completos com suporte temporal comum",
-    subtitle = paste0(
-      "Proporções agrupadas de ",
-      length(temporal_complete_journals),
-      " periódicos; ",
-      min(year_article_weight_profile$year),
-      " a ",
-      max(year_article_weight_profile$year),
-      "."
-    ),
+    title = NULL,
     x = "Ano",
-    y = "Percentual",
-    caption = paste0(
-      "Apenas anos com artigos nos ",
-      length(temporal_complete_journals),
-      " periódicos. Série descritiva; denominadores variam por dimensão."
-    )
+    y = "Artigos (%)"
   ) +
   theme_paper() +
   ggplot2::theme(
@@ -1294,15 +1258,10 @@ figure_4 <- coverage_plot_data |>
   ggplot2::scale_x_continuous(limits = c(0, 116), breaks = seq(0, 100, 20), labels = function(x) paste0(x, "%")) +
   ggplot2::scale_color_manual(values = c(Completo = "#2E7D32", Parcial = "#E69F00", `Não iniciado` = "#9E9E9E")) +
   ggplot2::labs(
-    title = "Cobertura da classificação por periódico",
-    subtitle = "Os rótulos mostram artigos classificados sobre artigos elegíveis após o ledger de exclusões.",
-    x = "Cobertura",
+    title = NULL,
+    x = "Artigos classificados (%)",
     y = NULL,
-    color = "Status",
-    caption = paste0(
-      n_complete_journals,
-      " periódicos completos; comparações substantivas principais são restritas a esse estrato."
-    )
+    color = NULL
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
@@ -1317,13 +1276,13 @@ ggplot2::ggsave(
 )
 
 alignment_levels <- c(
-  "Afirmação e estratégia explícita de identificação",
-  "Afirmação empírica e componente quantitativo, sem estratégia explícita",
-  "Afirmação empírica sem componente quantitativo",
-  "Afirmação em artigo não empírico",
-  "Componente quantitativo sem afirmação",
-  "Estratégia explícita sem afirmação codificada",
-  "Sem afirmação ou componente quantitativo"
+  "Linguagem causal ou explicativa e estratégia explícita",
+  "Linguagem empírica e análise quantitativa, sem estratégia explícita",
+  "Linguagem empírica sem análise quantitativa",
+  "Linguagem em artigo não empírico",
+  "Análise quantitativa sem linguagem causal ou explicativa",
+  "Estratégia explícita sem linguagem causal ou explicativa",
+  "Sem linguagem causal ou explicativa ou análise quantitativa"
 )
 
 figure_5 <- claim_method_alignment |>
@@ -1336,9 +1295,8 @@ figure_5 <- claim_method_alignment |>
   ggplot2::geom_text(ggplot2::aes(label = label), hjust = -0.08, size = 3) +
   ggplot2::scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10), labels = function(x) paste0(x, "%")) +
   ggplot2::labs(
-    title = "Linguagem causal ou explicativa ampla, dados quantitativos e identificação",
-    subtitle = "Categorias descritivas; o atributo amplo não equivale a uma pretensão causal estrita.",
-    x = "Percentual dos artigos classificados",
+    title = NULL,
+    x = "Artigos classificados (%)",
     y = NULL
   ) +
   theme_paper() +
@@ -1361,11 +1319,9 @@ if (nrow(strict_method_totals) > 0) {
     ggplot2::geom_text(ggplot2::aes(label = article_method_n), hjust = -0.15, size = 3) +
     ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = c(0, 0.15))) +
     ggplot2::labs(
-      title = "Métodos de identificação nos periódicos com classificação completa",
-      subtitle = "Contagem artigo-método; um artigo pode mobilizar mais de uma estratégia.",
-      x = "Artigos com o método",
-      y = NULL,
-      caption = "A contagem registra famílias de estratégia explicitamente mencionadas; não avalia sua qualidade."
+      title = NULL,
+      x = "Número de artigos",
+      y = NULL
     ) +
     theme_paper() +
     ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())

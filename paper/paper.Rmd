@@ -155,8 +155,8 @@ tabela_1_display <- tabela_corpus |>
       "Revista Brasileira de Política Internacional" = "RBPI",
       "Revista de Sociologia e Política" = "RSP"
     ),
-    Total = format_n(eligible_total),
-    `Classif.` = format_n(classified_total),
+    Elegíveis = format_n(eligible_total),
+    Classificados = format_n(classified_total),
     `Cobertura` = format_pct(coverage_percent),
     `2005-11` = paste0(`classified_n_2005-2011`, "/", `eligible_n_2005-2011`),
     `2012-18` = paste0(`classified_n_2012-2018`, "/", `eligible_n_2012-2018`),
@@ -165,7 +165,7 @@ tabela_1_display <- tabela_corpus |>
 
 knitr::kable(
   tabela_1_display,
-  caption = "Artigos elegíveis e cobertura classificada. As células de período mostram classificados/total por periódico.",
+  caption = "Artigos elegíveis e classificados por periódico e período. Nas colunas de período, classificados/elegíveis.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -177,7 +177,7 @@ A estratégia empírica é uma estratégia de mensuração, não uma estratégia
 
 O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas: a frequência das estratégias de identificação é calculada dentro do subconjunto em que a identificação é metodologicamente relevante. Outras dimensões são cruzadas: afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos os degraus.
 
-```{r figura-1, fig.cap="Denominadores e dimensões da classificação disponível. Os painéis são independentes. A proporção de estratégias explícitas de identificação é calculada entre os artigos selecionados pelo protocolo para examinar identificação.", out.width="95%"}
+```{r figura-1, fig.cap="Cobertura da classificação e frequência das práticas metodológicas.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 ```
 
@@ -222,7 +222,7 @@ tabela_2_display <- tabela_dimensoes |>
 
 knitr::kable(
   tabela_2_display,
-  caption = "Dimensões metodológicas nos artigos classificados por leitura integral.",
+  caption = paste0("Práticas metodológicas nos ", format_n(n_classificados), " artigos classificados."),
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -248,20 +248,20 @@ tabela_periodicos_display <- tabela_periodicos_completos |>
     ),
     N = format_n(n_articles),
     Empíricos = format_pct(pct_empirical),
-    Quantitativos = format_pct(pct_quantitative),
-    Inferência = format_pct(pct_inference),
-    `Exame de identificação` = format_pct(pct_screen),
+    `Análise quantitativa` = format_pct(pct_quantitative),
+    `Inferência estatística` = format_pct(pct_inference),
+    Examinados = format_pct(pct_screen),
     `Estratégia explícita` = format_pct(pct_strict)
   )
 
 knitr::kable(
   tabela_periodicos_display,
-  caption = "Perfil metodológico dos seis periódicos completos. Denominadores: empíricos sobre todos os artigos; quantitativos sobre empíricos; inferência sobre os quantitativos com rótulo observado; exame de identificação sobre todos os artigos; estratégia explícita sobre os artigos examinados.",
+  caption = "Práticas metodológicas nos seis periódicos integralmente classificados.",
   booktabs = TRUE
 )
 ```
 
-```{r figura-2, fig.cap="Perfil metodológico dos seis periódicos completos. Cada dimensão usa o denominador indicado na legenda.", out.width="95%"}
+```{r figura-2, fig.cap="Práticas metodológicas nos seis periódicos integralmente classificados.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
 ```
 
@@ -277,7 +277,7 @@ Nos seis periódicos completos, `r format_n(n_qualitativos_periodicos_completos)
 
 A categoria de linguagem causal ou explicativa é deliberadamente ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 3 é um diagnóstico dessa amplitude e mostra por que a variável não discrimina pretensões causais estritas: há marcações em artigos não empíricos, em artigos empíricos sem componente quantitativo e em artigos empíricos quantitativos sem estratégia explícita de identificação. Esses cruzamentos descrevem coexistência de atributos; não medem desalinhamento ou adequação entre afirmação e método.
 
-```{r figura-5, fig.cap="Distribuição conjunta de afirmações causais ou explicativas, uso de dados quantitativos e menção a estratégias explícitas de identificação causal. As categorias são mutuamente exclusivas, mas não constituem teste de adequação entre afirmação e método.", out.width="95%"}
+```{r figura-5, fig.cap="Combinações entre linguagem causal ou explicativa, análise quantitativa e estratégias explícitas de identificação. As categorias são mutuamente exclusivas.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
@@ -298,13 +298,17 @@ tabela_3_display <- tabela_credibilidade |>
     ),
     category = dplyr::recode(
       category,
-      "Afirmação causal ou explicativa em artigo empírico" = "Afirmação em artigo empírico",
-      "Casos relevantes para avaliar identificação" = "Artigos selecionados para examinar identificação",
+      "Afirmação causal ou explicativa em artigo empírico" = "Linguagem causal ou explicativa em artigo empírico",
+      "Casos relevantes para avaliar identificação" = "Artigos examinados",
       "Estratégia explícita de identificação causal" = "Estratégia explícita",
       "Método quantitativo sem estratégia explícita" = "Sem estratégia explícita",
       "Outro método moderno a auditar" = "Outras estratégias codificadas"
     ),
-    panel = dplyr::recode(panel, "Seleção analítica" = "Seleção")
+    panel = dplyr::recode(
+      panel,
+      "Seleção analítica" = "Artigos examinados",
+      "Diagnóstico não exclusivo" = "Outros diagnósticos"
+    )
   ) |>
   dplyr::transmute(
     Painel = panel,
@@ -316,7 +320,7 @@ tabela_3_display <- tabela_credibilidade |>
 
 knitr::kable(
   tabela_3_display,
-  caption = "Afirmações e estratégias de identificação. As linhas usam denominadores distintos e não formam uma distribuição única.",
+  caption = "Linguagem causal ou explicativa e estratégias explícitas de identificação.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -324,7 +328,7 @@ knitr::kable(
 
 Nos seis periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos examinados mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
 
-```{r figura-6, fig.cap="Estratégias explícitas de identificação causal mencionadas nos seis periódicos completos. Um artigo pode mobilizar mais de uma estratégia; a contagem não avalia sua qualidade.", out.width="95%"}
+```{r figura-6, fig.cap="Estratégias explícitas de identificação nos seis periódicos integralmente classificados. Um artigo pode mencionar mais de uma estratégia.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
 ```
 
@@ -348,12 +352,12 @@ tabela_temporal <- dplyr::bind_rows(
 
 knitr::kable(
   tabela_temporal,
-  caption = "Sensibilidade das proporções de quantificação e inferência estatística à regra de ponderação. Universo: BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP.",
+  caption = "Quantificação e inferência estatística por período, segundo a regra de ponderação.",
   booktabs = TRUE
 )
 ```
 
-```{r figura-3, fig.cap="Variação por período em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, presentes nos três períodos agregados. Cada ponto é a média simples das proporções dos cinco periódicos completos.", out.width="95%"}
+```{r figura-3, fig.cap="Práticas metodológicas por período em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP. Médias com peso igual para cada periódico.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
@@ -383,13 +387,13 @@ Nos seis periódicos integralmente classificados, apenas `r format_n(n_estrito_p
 
 A Figura 6 detalha a cobertura da classificação por periódico. Seis periódicos estão completos e cinco estão parcialmente classificados; todos os onze já têm artigos classificados. A distribuição ainda desigual impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
 
-```{r figura-4, fig.cap="Cobertura da classificação por periódico. Os rótulos mostram artigos classificados sobre artigos elegíveis após as exclusões documentadas.", out.width="95%"}
+```{r figura-4, fig.cap="Cobertura da classificação nos onze periódicos. Os rótulos mostram artigos classificados/elegíveis.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
 ```
 
 A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas 2011--2025, intervalo em que BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP têm artigos em todos os anos. As proporções anuais agrupam os artigos dos cinco periódicos, enquanto a Figura 5 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
 
-```{r figura-7, fig.cap="Variação anual em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, 2011--2025. As proporções agrupam os artigos e incluem apenas anos com publicação nos cinco periódicos. Todos os painéis usam escala de 0% a 100%.", out.width="95%"}
+```{r figura-7, fig.cap="Práticas metodológicas por ano em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, 2011--2025. Todos os painéis usam a mesma escala, de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
 ```
 
