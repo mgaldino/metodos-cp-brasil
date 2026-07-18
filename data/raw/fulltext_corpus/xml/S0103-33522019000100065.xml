@@ -1,0 +1,2290 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" specific-use="sps-1.9" xml:lang="pt">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">rbcpol</journal-id>
+      <journal-title-group>
+        <journal-title>Revista Brasileira de Ciência Política</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Rev. Bras. Ciênc. Polít.</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="ppub">0103-3352</issn>
+      <issn pub-type="epub">2178-4884</issn>
+      <publisher>
+        <publisher-name>Universidade de Brasília. Instituto de Ciência Política</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v3">qbsnm7VHDCqbvDSmFBQvFtn</article-id>
+      <article-id pub-id-type="publisher-id" specific-use="scielo-v2">S0103-33522019000100065</article-id>
+      <article-id pub-id-type="doi">10.1590/0103-335220192803</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Artigo</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Os diretórios partidários municipais e o perfil sociodemográfico dos seus membros<xref ref-type="fn" rid="fn1"><sup>3</sup></xref>
+				</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0001-8073-014X</contrib-id>
+          <name>
+            <surname>Cervi</surname>
+            <given-names>Emerson Urizzi</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff1">
+            <sup>1</sup>
+          </xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0001-8396-7548</contrib-id>
+          <name>
+            <surname>Borba</surname>
+            <given-names>Felipe</given-names>
+          </name>
+          <xref ref-type="aff" rid="aff2">
+            <sup>2</sup>
+          </xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff1">
+        <label>1</label>
+        <institution content-type="original"> Emerson Urizzi Cervi é doutor pelo Instituto Universitário de Pesquisas do Rio de Janeiro (IUPERJ). Professor associado do Departamento de Ciência Política da Universidade Federal do Paraná (UFPR). Professor permanente do Programa de Pós-Graduação em Ciência Política (PPGCP) e do Programa de Pós-Graduação em comunicação (PPGCOM) da UFPR, Curitiba, PR, Brasil. E-mail: &lt;ecervi7@gmail.com.&gt;</institution>
+        <institution content-type="normalized">Universidade Federal do Paraná</institution>
+        <institution content-type="orgdiv1">Departamento de Ciência Política</institution>
+        <institution content-type="orgname">Universidade Federal do Paraná</institution>
+        <institution content-type="orgdiv2">Programa de Pós-Graduação em Ciência Política</institution>
+        <addr-line>
+          <city>Curitiba</city>
+          <state>PR</state>
+        </addr-line>
+        <country country="BR">Brazil</country>
+        <email>ecervi7@gmail.com</email>
+      </aff>
+      <aff id="aff2">
+        <label>2</label>
+        <institution content-type="original"> Felipe Borba é doutor em Ciência Política pelo Instituto de Estudos Sociais e Políticos da Universidade do Estado do Rio de Janeiro (IESP/UERJ). Professor adjunto e chefe do Departamento de Estudos Políticos da Universidade Federal do Estado do Rio de Janeiro (Unirio). Professor permanente do Programa de Pós-graduação em Ciência Política (PPGCP) e do Programa de Pós-Graduação em Direito e Políticas Públicas (PPGDPP) da Unirio, Rio de Janeiro, RJ, Brasil. E-mail: &lt;felipe.borba10@gmail.com&gt;</institution>
+        <institution content-type="normalized">Universidade Federal do Estado do Rio de Janeiro</institution>
+        <institution content-type="orgdiv1">Departamento de Estudos Políticos</institution>
+        <institution content-type="orgname">Universidade Federal do Estado do Rio de Janeiro</institution>
+        <institution content-type="orgdiv2">Programa de Pós-graduação em Ciência Política</institution>
+        <addr-line>
+          <city>Rio de Janeiro</city>
+          <state>RJ</state>
+        </addr-line>
+        <country country="BR">Brazil</country>
+        <email>felipe.borba10@gmail.com</email>
+      </aff>
+      <pub-date date-type="pub" publication-format="electronic">
+        <day>03</day>
+        <month>06</month>
+        <year>2019</year>
+      </pub-date>
+      <pub-date date-type="collection" publication-format="electronic">
+        <season>Jan-Apr</season>
+        <year>2019</year>
+      </pub-date>
+      <issue>28</issue>
+      <fpage>65</fpage>
+      <lpage>92</lpage>
+      <history>
+        <date date-type="received">
+          <day>13</day>
+          <month>03</month>
+          <year>2018</year>
+        </date>
+        <date date-type="accepted">
+          <day>05</day>
+          <month>03</month>
+          <year>2019</year>
+        </date>
+      </history>
+      <permissions>
+        <license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by-nc/4.0/" xml:lang="pt">
+          <license-p>Este é um artigo publicado em acesso aberto sob uma licença Creative Commons</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <title>Resumo</title>
+        <p>Este artigo se insere no conjunto de pesquisas que investiga a política local brasileira a partir de dois objetivos. O primeiro descreve a presença dos partidos políticos nos municípios brasileiros por tipo de organização. O segundo investiga o perfil político e social dos dirigentes partidários locais com mandato vigente em 2016 que concorreram a um cargo eletivo nas eleições de 2016, 2014 ou 2012. Para isso, usamos o cadastro dos diretórios partidários municipais disponibilizados pelo Tribunal Superior Eleitoral. Os resultados indicam que os órgãos partidários municipais são comissões majoritariamente provisórias, seguidas por diretórios municipais permanentes e por comissões interventoras, enquanto os seus dirigentes são predominantemente do sexo masculino, com nível de escolaridade médio, média de idade de 48 anos e com baixa profissionalização política. </p>
+      </abstract>
+      <trans-abstract xml:lang="en">
+        <title>Abstract</title>
+        <p>This article is part of a wider body of research investigating Brazilian local politics. It is based on two objectives: first to describe the presence of parties in Brazilian municipalities by type of organization; second to investigate the political and social profile of local party leaders who were in office as of 2016 and who have run for election in the 2016, 2014 or 2012 elections. To this end we used the registration records of municipal party directories provided by the Superior Electoral Court. The results indicate that municipal party bodies mostly consist of provisional commissions, followed by permanent municipal directories and intervention committees. Regarding profile, leaders are predominantly male, with average schooling, average age of 48 years and low level of political professionalization.</p>
+      </trans-abstract>
+      <kwd-group xml:lang="pt">
+        <title>Palavras-chave:</title>
+        <kwd>partidos políticos</kwd>
+        <kwd>recrutamento partidário</kwd>
+        <kwd>elites políticas</kwd>
+        <kwd>política local</kwd>
+        <kwd>diretórios partidários municipais</kwd>
+      </kwd-group>
+      <kwd-group xml:lang="en">
+        <title>Keywords:</title>
+        <kwd>political parties</kwd>
+        <kwd>party recruitment</kwd>
+        <kwd>political elites</kwd>
+        <kwd>local politics</kwd>
+        <kwd>municipal party directories</kwd>
+      </kwd-group>
+      <counts>
+        <fig-count count="2"/>
+        <table-count count="8"/>
+        <equation-count count="0"/>
+        <ref-count count="25"/>
+        <page-count count="28"/>
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="intro">
+      <title>Introdução</title>
+      <p>A Constituição Federal de 1988 alçou o município à categoria de ente federado juntamente com a União, os Estados e o Distrito Federal. A condição de ente federado garantiu aos municípios a autonomia plena relativa às questões administrativas, legislativas, financeiras e políticas. Ao assegurar a autonomia política dos municípios, a Carta Federal de 1988 instituiu eleições diretas e simultâneas para prefeito, vice-prefeito e vereadores, com mandatos fixos de quatro anos. Desde então, o brasileiro é chamado às urnas periodicamente para eleger um número relativamente alto de dirigentes locais. Nas eleições municipais de 2016, por exemplo, 16.139 pessoas concorreram ao cargo de prefeito e outras 445.818 candidataram-se a vereador, para o total de 5.540 prefeitos e 57.852 vereadores eleitos naquele ano. </p>
+      <p>Os poderes executivos e legislativos municipais são responsáveis constitucionais por uma série atribuições políticas, econômicas e sociais. O artigo 30 da Constituição, por exemplo, determina que cabe aos municípios organizar e prestar diferentes serviços públicos, incluindo entre os principais o transporte coletivo, os programas de educação infantil e de ensino fundamental e os serviços de atendimento à saúde. Apesar da centralidade do poder público municipal na vida dos brasileiros, são escassos os estudos que se dedicaram a mapear a organização dos partidos no nível local e o perfil sociodemográfico dos seus dirigentes.</p>
+      <p>A revisão da literatura demonstra que os estudos sobre elites políticas buscam, basicamente, descrever as características da elite dirigente brasileira de candidatos e/ou eleitos para a Câmara dos Deputados. Esses estudos mostram que a classe política brasileira destoa das estatísticas populacionais oficiais. Deputados federais eleitos formam um corpo político relativamente homogêneo, compostos predominantemente por políticos do sexo masculino, autodeclarados brancos, empresários, na faixa etária acima de 40 anos e portadores de diploma de nível superior (<xref ref-type="bibr" rid="B7">Braga, Veiga e Miríade, 2009</xref>; <xref ref-type="bibr" rid="B8">Campos, 2015</xref>; Campos e Machado, 2015; <xref ref-type="bibr" rid="B21">Perissinotto e Miríade, 2009</xref>; <xref ref-type="bibr" rid="B20">Perissinotto e Bolognesi, 2010</xref>; <xref ref-type="bibr" rid="B22">Perissinotto e Veiga, 2014</xref>; Rodrigues, 2002 e 2006). </p>
+      <p><xref ref-type="bibr" rid="B13">Kerbauy (2005)</xref> é uma das raras exceções a se debruçar sobre a composição de elites locais. A autora analisa dados sobre o perfil de vereadores eleitos nas disputas municipais de 1996, 2000 e 2004. A análise mostra que a composição social da época era majoritariamente masculina, repetindo o padrão observado nos legislativos estaduais e nacionais. A escolaridade seria o principal elemento de diferenciação em relação à realidade nacional, com a maioria dos legisladores locais possuindo o ensino médio completo ou incompleto. Dados divulgados pelo Tribunal Superior Eleitoral (TSE) sobre o perfil das candidaturas nas eleições municipais de 2016 sugerem que esse perfil segue praticamente inalterado. Os prefeitos, vice-prefeitos e vereadores eleitos em 2016 eram 87% do sexo masculino, 36% possuíam o ensino médio completo (contra 29% com ensino superior) e a faixa de idade mais frequente situou-se entre 40 e 49 anos<xref ref-type="fn" rid="fn2"><sup>4</sup></xref>. </p>
+      <p>Estudos sobre a organização partidária no nível local são ainda mais escassos, apesar da importância fundamental que os órgãos partidários exercem sobre a dinâmica política e eleitoral brasileira. A proporção de comissões provisórias de um partido pode ser usada como um indicador do grau de centralização de poder nas mãos de dirigentes partidários nacionais, que controlariam, de cima, as principais decisões partidárias estaduais e municipais, como a política de alianças e o lançamento de candidaturas. Ao analisar o conjunto dos diretórios de sete partidos, Guarnieri (2011) mostra que a capacidade de coordenação política-eleitoral de estruturas partidárias com poucas de comissões provisórias é menor, dado o alto custo das negociações internas.</p>
+      <p>Nesse artigo, procuramos contribuir com essas duas discussões - o perfil das elites locais e o nível de estrutura dos partidos nos municípios - partir do cadastro dos diretórios partidários obtido no Tribunal Superior Eleitoral (TSE). No primeiro momento, descrevemos a organização partidária local com o objetivo de mapear o tipo predominante de composição local - se permanente, provisória ou interventora. No segundo momento, buscamos descrever as características socioeconômicas dos dirigentes partidários municipais que ocupavam algum cargo em estruturas locais de seus partidos em 2016 e haviam se candidato a algum cargo eletivo entre nas eleições de 2012, 2014 ou 2016. Em síntese, os dados mostram que a maioria dos órgãos partidários municipais era provisória, compostas por dirigentes majoritariamente do sexo masculino, detentores de nível médio de escolaridade, variando a idade entre 40 e 50 anos e com baixa profissionalização política.</p>
+      <p>O artigo prossegue da seguinte maneira. A próxima seção descreve o corpus empírico da pesquisa. Em seguida, apresentamos os resultados relativos ao tipo de organização dos diretórios municipais e o seu nível de estruturação politica. A quarta seção descreve o perfil socioeconômico dos dirigentes municipais. Finalizamos com discussão dos principais resultados.</p>
+    </sec>
+    <sec>
+      <title>Corpus Empírico</title>
+      <p>A análise empírica realizada no artigo parte de um banco de dados brutos do Tribunal Superior Eleitoral (TSE) cuja unidade é o nome do dirigente partidário municipal. Analisamos a presença dos partidos nos municípios brasileiros no ano de 2016 por tipo de organização. Ao todo, são 46.712 organizações partidárias, sendo a maioria comissões provisórias, seguidas por diretórios municipais e por comissões interventoras. Isso significa uma média de 8,38 organizações partidárias por município brasileiro em 2016 - naquele ano o Brasil contava com 30 partidos com registro definitivo no TSE. Apresentaremos as frequências de organizações por partido e, ao fim, propomos uma tipologia que leva em conta o enraizamento (distribuição proporcional em municípios e Unidades da Federação do país) e institucionalização (participação de diretórios no total de organizações) dos partidos políticos quanto as suas estruturas municipais.</p>
+      <p>A segunda parte da análise trata das características socioeconômicas dos dirigentes municipais partidários. Ao todo são 103.510 nomes de dirigentes municipais registrados no TSE com cargo em organização partidária municipal em 2016. Alguns desses dirigentes aparecem mais de uma vez quando são reconduzidos, tendo, portanto, os seus nomes repetidos no banco de dados. As informações individuais fornecidas pelo TSE sobre os dirigentes incluem apenas a localidade, nome e documento pessoal. Com base nisso, cruzamos o banco de dados com as informações eleitorais de todos os que foram candidatos em pelo menos uma das eleições ocorridas entre 2012 e 2016. As informações pessoais dos candidatos são mais completas do que a dos dirigentes partidários, apresentando idade, escolaridade, estado civil, religião e sexo. Com o cruzamento dos dados passamos a ter informações relativas ao perfil socioeconômico dos dirigentes municipais que foram candidatos nessas eleições. Isso representa o total de 55.290 dirigentes de diretórios municipais que se candidataram, de um total de 103.510. Ou seja, em média, 53,5% dos dirigentes com cargo em organização partidária municipal em 2016 tinham se candidato a algum cargo eletivo entre 2012 e 2016. Assim, estamos tratando de dados a partir de uma amostra por conveniência<xref ref-type="fn" rid="fn3"><sup>5</sup></xref> de pouco mais da metade da população, proporcional por partido e região do país para representar as características socioeconômicas do universo de dirigentes partidários municipais.</p>
+    </sec>
+    <sec>
+      <title>Política Local e os Diretórios Municipais</title>
+      <p>A legislação eleitoral brasileira determina que para se candidatar a um cargo político em nível local o indivíduo precisa, entre outras exigências, ter domicílio eleitoral na cidade onde pretende concorrer e ser filiado a um partido político pelo menos por seis meses antes da data do pleito - a partir da reforma eleitoral promovida em 2015. A legislação demanda ainda que os partidos políticos estejam organizados formalmente nos municípios para poderem apresentar candidatos ou se coligar nas eleições municipais. Nas cidades onde não há diretório municipal constituído, a convenção municipal destinada a deliberar sobre as coligações e a escolha de candidatos deve ser organizada e dirigida por uma comissão municipal provisória<xref ref-type="fn" rid="fn4"><sup>6</sup></xref>. A direção nacional ou a estadual dos partidos políticos pode, se julgar necessário, intervir e dissolver o diretório municipal. Para isso, é preciso que a intervenção e a dissolução estejam previstas nos estatutos dos partidos.</p>
+      <p>Essa exigência constitucional parece ser a chave para entendermos o elevado número de comissões provisórias existentes (<xref ref-type="table" rid="t1">Tabela 1</xref>). Na tabela, apresentamos a síntese da presença dos partidos nos municípios por tipo de organização, apenas para as organizações partidárias municipais que estavam ativas em 2016, segundo os registros do TSE. Para os casos em que o partido tinha comissão provisória ou interventora, mas em 2016 foi substituída por diretório municipal, mantivemos apenas este último no banco de dados. Partidos com organizações com período de vigência até 2015 e sem renovação também foram excluídos. Sendo assim, considerando apenas uma organização por partido no município em 2016, temos 46.712 organizações partidárias municipais em atividade no em 2016 no Brasil. No total, 179 das comissões eram interventoras (0,4%), 39.036 eram provisórias (83,6%) e 46.712 eram diretórios municipais permanentes (16,0%).</p>
+      <p>A tabela está ordenada de forma decrescente em total de organizações municipais e dividida em duas partes a partir da mediana - que é o partido SD. Do “Solidariedade” para cima está a metade dos partidos com registro no TSE com mais organizações municipais, enquanto que abaixo do SD estão aqueles partidos com menor presença formal em número de municípios em 2016. A média da presença de partidos fica em 1.323 municípios, enquanto a mediana fica em 1.374 municípios, indicando que há uma presença média dos partidos bem abaixo da metade dos municípios brasileiros, o que pode ser explicado pela recente expansão no número de partidos no Brasil. Aqueles que se encontram na segunda parte da <xref ref-type="table" rid="t1">tabela 1</xref> tendem a ser os mais jovens.</p>
+      <p>Em relação ao tipo de organização municipal, a comissão provisória predomina, representando em média 83,6% do total de organizações. Entre os partidos da primeira parte da tabela, a média é de 82,6%, mas vários deles ficam acima desse percentual, como PRB (99,7%) e PROS (99,7%), PR (98,7%), PTB (97,0%), SD (96,8%), PSB (94,0%), PSD (92,3%), PSC (92,8%) e PV (92,3%). Em segundo lugar estão os diretórios permanentes, com 16,0% de média geral dos partidos. Mas, se considerarmos somente os grandes partidos, a média de diretórios sobe para 17,0%. O PT é o partido que se destaca com a maior média de diretórios municipais (70,8%), bem à frente de seus concorrentes ou aliados, como PMDB (50,9%), PSDB (35,4%), PCdoB (30,9%), PP (20,2%) e PDT (17,9%). </p>
+      <p>A comissão interventora não figura como um tipo muito frequente nas organizações municipais dos partidos. No total, ela representa apenas 0,4% das organizações partidárias locais, o mesmo percentual se considerarmos apenas os maiores partidos. O partido com maior participação percentual de comissão interventora nos municípios é o PP, com 4,3% do total de organizações municipais da agremiação. Outra informação importante apresentada na <xref ref-type="table" rid="t1">tabela 1</xref> é que apenas cinco partidos estão presentes em mais de 2,5 mil municípios brasileiros com direção da organização local vigente em 2016 que são, por ordem de grandeza, PMDB, PSDB, PP, PDT e PT.</p>
+      <p>
+        <table-wrap id="t1">
+          <label>Tabela 1.</label>
+          <caption>
+            <title>Organizações partidárias nos municípios brasileiros vigentes em 2016</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col span="2"/>
+              <col span="2"/>
+              <col span="2"/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center" rowspan="2">Partido</td>
+                <td align="center" colspan="2">Comissão Interventora </td>
+                <td align="center" colspan="2">Comissão Provisória </td>
+                <td align="center" colspan="2">Diretório Municipal </td>
+                <td align="center" rowspan="2">Total</td>
+              </tr>
+              <tr>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+              </tr>
+              <tr>
+                <td align="center">PMDB</td>
+                <td align="center">15</td>
+                <td align="center">0,5%</td>
+                <td align="center">1.460</td>
+                <td align="center">48,6%</td>
+                <td align="center" style="background: #D9D9D9">1.528</td>
+                <td align="center" style="background: #D9D9D9">50,9%</td>
+                <td align="center">3.003</td>
+              </tr>
+              <tr>
+                <td align="center">PSDB</td>
+                <td align="center">7</td>
+                <td align="center">0,3%</td>
+                <td align="center">1.757</td>
+                <td align="center">64,3%</td>
+                <td align="center">967</td>
+                <td align="center">35,4%</td>
+                <td align="center">2.731</td>
+              </tr>
+              <tr>
+                <td align="center">PP</td>
+                <td align="center" style="background: #D9D9D9">111</td>
+                <td align="center" style="background: #D9D9D9">4,3%</td>
+                <td align="center">1.946</td>
+                <td align="center">75,5%</td>
+                <td align="center" style="background: #D9D9D9">520</td>
+                <td align="center" style="background: #D9D9D9">20,2%</td>
+                <td align="center">2.577</td>
+              </tr>
+              <tr>
+                <td align="center">PDT</td>
+                <td align="center">3</td>
+                <td align="center">0,1%</td>
+                <td align="center">2.057</td>
+                <td align="center">82,0%</td>
+                <td align="center" style="background: #D9D9D9">449</td>
+                <td align="center" style="background: #D9D9D9">17,9%</td>
+                <td align="center">2.509</td>
+              </tr>
+              <tr>
+                <td align="center">PT</td>
+                <td align="center">1</td>
+                <td align="center">0,0%</td>
+                <td align="center">729</td>
+                <td align="center">29,2%</td>
+                <td align="center" style="background: #D9D9D9">1.770</td>
+                <td align="center" style="background: #D9D9D9">70,8%</td>
+                <td align="center">2.500</td>
+              </tr>
+              <tr>
+                <td align="center">PSB</td>
+                <td align="center">2</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">2.281</td>
+                <td align="center" style="background: #D9D9D9">94,0%</td>
+                <td align="center">143</td>
+                <td align="center">5,9%</td>
+                <td align="center">2.426</td>
+              </tr>
+              <tr>
+                <td align="center">DEM</td>
+                <td align="center">2</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">1.894</td>
+                <td align="center" style="background: #D9D9D9">87,0%</td>
+                <td align="center" style="background: #D9D9D9">282</td>
+                <td align="center" style="background: #D9D9D9">12,9%</td>
+                <td align="center">2.178</td>
+              </tr>
+              <tr>
+                <td align="center">PSD</td>
+                <td align="center">1</td>
+                <td align="center">0,0%</td>
+                <td align="center" style="background: #D9D9D9">2.006</td>
+                <td align="center" style="background: #D9D9D9">92,3%</td>
+                <td align="center">167</td>
+                <td align="center">7,7%</td>
+                <td align="center">2.174</td>
+              </tr>
+              <tr>
+                <td align="center">PTB</td>
+                <td align="center">3</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">2.069</td>
+                <td align="center" style="background: #D9D9D9">97,0%</td>
+                <td align="center">60</td>
+                <td align="center">2,8%</td>
+                <td align="center">2.132</td>
+              </tr>
+              <tr>
+                <td align="center">PR</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">2.072</td>
+                <td align="center" style="background: #D9D9D9">98,7%</td>
+                <td align="center">27</td>
+                <td align="center">1,3%</td>
+                <td align="center">2.099</td>
+              </tr>
+              <tr>
+                <td align="center">PRB</td>
+                <td align="center">1</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">1.823</td>
+                <td align="center" style="background: #D9D9D9">99,7%</td>
+                <td align="center">4</td>
+                <td align="center">0,2%</td>
+                <td align="center">1.828</td>
+              </tr>
+              <tr>
+                <td align="center">PPS</td>
+                <td align="center">6</td>
+                <td align="center">0,3%</td>
+                <td align="center" style="background: #D9D9D9">1.531</td>
+                <td align="center" style="background: #D9D9D9">85,1%</td>
+                <td align="center">262</td>
+                <td align="center">14,6%</td>
+                <td align="center">1.799</td>
+              </tr>
+              <tr>
+                <td align="center">PSC</td>
+                <td align="center">2</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">1.467</td>
+                <td align="center" style="background: #D9D9D9">92,8%</td>
+                <td align="center">112</td>
+                <td align="center">7,1%</td>
+                <td align="center">1.581</td>
+              </tr>
+              <tr>
+                <td align="center">PV</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">1.404</td>
+                <td align="center" style="background: #D9D9D9">92,3%</td>
+                <td align="center">117</td>
+                <td align="center">7,7%</td>
+                <td align="center">1.521</td>
+              </tr>
+              <tr>
+                <td align="center">PCDOB</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center">1.027</td>
+                <td align="center">69,1%</td>
+                <td align="center" style="background: #D9D9D9">460</td>
+                <td align="center" style="background: #D9D9D9">30,9%</td>
+                <td align="center">1.487</td>
+              </tr>
+              <tr>
+                <td align="center">PROS</td>
+                <td align="center">2</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">1.455</td>
+                <td align="center" style="background: #D9D9D9">99,7%</td>
+                <td align="center">3</td>
+                <td align="center">0,2%</td>
+                <td align="center">1.460</td>
+              </tr>
+              <tr>
+                <td align="center">SD</td>
+                <td align="center">1</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">1.333</td>
+                <td align="center" style="background: #D9D9D9">96,8%</td>
+                <td align="center">43</td>
+                <td align="center">3,1%</td>
+                <td align="center">1.377</td>
+              </tr>
+              <tr>
+                <td align="center">PHS</td>
+                <td align="center" style="background: #D9D9D9">6</td>
+                <td align="center" style="background: #D9D9D9">0,5%</td>
+                <td align="center" style="background: #D9D9D9">1.122</td>
+                <td align="center" style="background: #D9D9D9">88,5%</td>
+                <td align="center">140</td>
+                <td align="center">11,0%</td>
+                <td align="center">1.268</td>
+              </tr>
+              <tr>
+                <td align="center">PSL</td>
+                <td align="center">2</td>
+                <td align="center">0,2%</td>
+                <td align="center" style="background: #D9D9D9">1.049</td>
+                <td align="center" style="background: #D9D9D9">94,2%</td>
+                <td align="center">62</td>
+                <td align="center">5,6%</td>
+                <td align="center">1.113</td>
+              </tr>
+              <tr>
+                <td align="center">PEN</td>
+                <td align="center">1</td>
+                <td align="center">0,1%</td>
+                <td align="center" style="background: #D9D9D9">1.004</td>
+                <td align="center" style="background: #D9D9D9">99,4%</td>
+                <td align="center">5</td>
+                <td align="center">0,5%</td>
+                <td align="center">1.010</td>
+              </tr>
+              <tr>
+                <td align="center">PMN</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">903</td>
+                <td align="center" style="background: #D9D9D9">97,0%</td>
+                <td align="center">28</td>
+                <td align="center">3,0%</td>
+                <td align="center">931</td>
+              </tr>
+              <tr>
+                <td align="center">PRP</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">913</td>
+                <td align="center" style="background: #D9D9D9">98,5%</td>
+                <td align="center">14</td>
+                <td align="center">1,5%</td>
+                <td align="center">927</td>
+              </tr>
+              <tr>
+                <td align="center">PTN</td>
+                <td align="center">2</td>
+                <td align="center">0,2%</td>
+                <td align="center" style="background: #D9D9D9">913</td>
+                <td align="center" style="background: #D9D9D9">99,5%</td>
+                <td align="center">3</td>
+                <td align="center">0,3%</td>
+                <td align="center">918</td>
+              </tr>
+              <tr>
+                <td align="center">PTC</td>
+                <td align="center">4</td>
+                <td align="center">0,4%</td>
+                <td align="center" style="background: #D9D9D9">863</td>
+                <td align="center" style="background: #D9D9D9">96,5%</td>
+                <td align="center">27</td>
+                <td align="center">3,0%</td>
+                <td align="center">894</td>
+              </tr>
+              <tr>
+                <td align="center">PTdoB</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">828</td>
+                <td align="center" style="background: #D9D9D9">95,1%</td>
+                <td align="center">43</td>
+                <td align="center">4,9%</td>
+                <td align="center">871</td>
+              </tr>
+              <tr>
+                <td align="center">PSDC</td>
+                <td align="center">2</td>
+                <td align="center">0,2%</td>
+                <td align="center" style="background: #D9D9D9">805</td>
+                <td align="center" style="background: #D9D9D9">95,4%</td>
+                <td align="center">37</td>
+                <td align="center">4,4%</td>
+                <td align="center">844</td>
+              </tr>
+              <tr>
+                <td align="center">PRTB</td>
+                <td align="center">2</td>
+                <td align="center">0,2%</td>
+                <td align="center" style="background: #D9D9D9">796</td>
+                <td align="center" style="background: #D9D9D9">99,4%</td>
+                <td align="center">3</td>
+                <td align="center">0,4%</td>
+                <td align="center">801</td>
+              </tr>
+              <tr>
+                <td align="center">PSOL</td>
+                <td align="center">0</td>
+                <td align="center">0,0%</td>
+                <td align="center">378</td>
+                <td align="center">69,2%</td>
+                <td align="center" style="background: #D9D9D9">168</td>
+                <td align="center" style="background: #D9D9D9">30,8%</td>
+                <td align="center">546</td>
+              </tr>
+              <tr>
+                <td align="center">PPL</td>
+                <td align="center" style="background: #D9D9D9">2</td>
+                <td align="center" style="background: #D9D9D9">0,5%</td>
+                <td align="center" style="background: #D9D9D9">417</td>
+                <td align="center" style="background: #D9D9D9">99,3%</td>
+                <td align="center">1</td>
+                <td align="center">0,2%</td>
+                <td align="center">420</td>
+              </tr>
+              <tr>
+                <td align="center">PMB</td>
+                <td align="center">1</td>
+                <td align="center">0,2%</td>
+                <td align="center" style="background: #D9D9D9">413</td>
+                <td align="center" style="background: #D9D9D9">99,8%</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center">414</td>
+              </tr>
+              <tr>
+                <td align="center">REDE</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">273</td>
+                <td align="center" style="background: #D9D9D9">96,5%</td>
+                <td align="center">10</td>
+                <td align="center">3,5%</td>
+                <td align="center">283</td>
+              </tr>
+              <tr>
+                <td align="center">PSTU</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center">11</td>
+                <td align="center">21,6%</td>
+                <td align="center" style="background: #D9D9D9">40</td>
+                <td align="center" style="background: #D9D9D9">78,4%</td>
+                <td align="center">51</td>
+              </tr>
+              <tr>
+                <td align="center">PCB</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">36</td>
+                <td align="center" style="background: #D9D9D9">94,7%</td>
+                <td align="center">2</td>
+                <td align="center">5,3%</td>
+                <td align="center">38</td>
+              </tr>
+              <tr>
+                <td align="center">PCO</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center" style="background: #D9D9D9">1</td>
+                <td align="center" style="background: #D9D9D9">100,0%</td>
+                <td align="center">0</td>
+                <td align="left">
+								</td>
+                <td align="center">1</td>
+              </tr>
+              <tr>
+                <td align="center">Total</td>
+                <td align="center">179</td>
+                <td align="center">0,4%</td>
+                <td align="center">39.036</td>
+                <td align="center">83,6%</td>
+                <td align="center">7497</td>
+                <td align="center">16,0%</td>
+                <td align="center">46.712</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN1">
+              <p>Fonte: Elaboração dos autores com dados do Repositório de dados do TSE</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>Na <xref ref-type="table" rid="t1">tabela 1</xref> acima foram marcados em cinza as células que apresentam percentuais acima da média para o tipo de organização municipal. Isso permite agrupar todos os partidos em três categorias: aqueles que ficam acima da média de comissões interventoras, acima da média de comissões provisórias e acima da média de diretórios municipais permanentes. Essas categorias estão sumarizadas no <xref ref-type="table" rid="t2">quadro 1</xref> a seguir. Do ponto de vista da organização partidária espera-se que os partidos com presença mais permanente nos municípios apresentem-se acima da média para diretórios municipais. Estar acima da média em comissões provisórias indica que tal partido não é tão institucionalizado, mas ainda é mais institucionalizado que do que aqueles com mais comissões interventoras nos municípios que a média nacional. O quadro mostra que apenas três partidos ficam acima da média em comissões interventoras (PP, PPL e PHS). No entanto, esses três partidos aparecem acima da média em outras categorias também. O PP está no grupo acima da média de diretórios municipais e PHS e PPL no grupo das comissões provisórias. O DEM aparece acima da média em duas categorias: comissões provisórias e em diretórios municipais. Apenas nove partidos ficam acima da média percentual de diretórios municipais. Além do PP, fazem parte desse grupo o PMDB, PSDB, PDT, PT, DEM, PCdoB, PSOL e PSTU. Fica evidente que integrantes desse grupo dividem-se em partidos grandes e médios independente de posição ideológica e partidos pequenos de esquerda.</p>
+      <p>
+        <table-wrap id="t2">
+          <label>Quadro 1.</label>
+          <caption>
+            <title>Partidos por grupo acima do percentual médio de tipo de organização municipal</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center" style="width: 303px">Comissão Interventora</td>
+                <td align="center" style="width: 229px;">Comissão Provisória</td>
+                <td align="center" style="width: 158px;">Diretório</td>
+              </tr>
+              <tr>
+                <td align="center">PP*, PPL* e PHS*.</td>
+                <td align="center">PSB, DEM*, PSD, PTB, PR, PRB, PPS, PSC, PV, PROS, PHS*, SD, PSL, PEN, PMN, PRP, PTN, PSDC, PTC, PRTB, PTB, PPL*, PMB, REDE, PCB, PCO.</td>
+                <td align="center">PMDB, PSDB, PP*, PDT, PT, DEM*, PCdoB, PSOL, PSTU.</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN2">
+              <p>*partido que aparece acima da média nacional em mais de um tipo de organização</p>
+            </fn>
+            <fn id="TFN3">
+              <p>Fonte: Elaboração dos autores</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>Como os percentuais de tipo de organização municipal não permitem comparar diretamente os partidos, a <xref ref-type="table" rid="t3">tabela 2</xref> a seguir apresenta os resíduos padronizados por partido e tipo de organização municipal. Utilizamos o limite crítico de 2,0 para considerar o resíduo estatisticamente significativo. Assim, valores acima de +2,0 indicam presença do partido em determinado tipo de organização acima do esperado se as distribuições fossem independentes e valores negativos maiores que -2,0 como estatisticamente significativos para valores abaixo do esperado. Para facilitar a leitura, todas as tabelas de resíduos a partir daqui estão com valores significativos marcados por tons de cinza (cinza-claro para positivo e cinza-escuro para negativo). Além disso, embora o cálculo para resíduos tenha sido feito para todos os partidos, são apresentados apenas os valores para aqueles acima da mediana de presença nos municípios.</p>
+      <p>A <xref ref-type="table" rid="t3">tabela 2</xref> está organizada em ordem decrescente de resíduos padronizados para os diretórios municipais com vigência em 2016. O diretório municipal é o tipo de organização que apresentou o maior número de resíduos padronizados acima de ±2,0 pra todos os principais partidos. Apenas o PPS (-1,57) ficou dentro do intervalo de confiança para diretórios, indicando que este partido fica muito próximo da distribuição geral para esse tipo de organização. A <xref ref-type="table" rid="t3">tabela 2</xref> indica que dos principais partidos, seis apresentam resíduos positivos e significativos para diretório municipal: PT, PMDB, PSDB, PCdoB, PP e PDT. Ou seja, considerando os totais de diretórios municipais e totais de municípios com presença desses partidos, eles apresentam proporcionalmente mais diretórios que os demais tipos de organização local e que os demais partidos brasileiros. Todos os demais apresentam valores negativos, ou seja, menos diretórios que o esperado caso a distribuição fosse independente. A <xref ref-type="table" rid="t3">tabela 2</xref> também mostra que os partidos com menos diretórios tendem a ter mais comissões provisórias (células cinza-claros). Em relação às comissões interventoras, apenas o PP apresenta resíduo padronizado positivo e significativo. Uma informação interessante presente na tabela 2 acima é que apenas o PPS não possui resíduos positivos acima do valor de ±2,00 para nenhum dos tipos de organização.</p>
+      <p>
+        <table-wrap id="t3">
+          <label>Tabela 2.</label>
+          <caption>
+            <title>Resíduos Padronizados por partidos grandes e tipo de organização</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col/>
+              <col/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center">Partido</td>
+                <td align="center">Comissão Interventora</td>
+                <td align="center">Comissão Provisória</td>
+                <td align="center">Diretório Municipal</td>
+              </tr>
+              <tr>
+                <td align="center">PT</td>
+                <td align="center" style="background: #808080">-2,77</td>
+                <td align="center" style="background: #808080">-29,76</td>
+                <td align="center" style="background: #D9D9D9">68,33</td>
+              </tr>
+              <tr>
+                <td align="center">PMDB</td>
+                <td align="center">1,03</td>
+                <td align="center" style="background: #808080">-20,95</td>
+                <td align="center" style="background: #D9D9D9">47,65</td>
+              </tr>
+              <tr>
+                <td align="center">PSDB</td>
+                <td align="center">-1,07</td>
+                <td align="center" style="background: #808080">-10,99</td>
+                <td align="center" style="background: #D9D9D9">25,25</td>
+              </tr>
+              <tr>
+                <td align="center">PCDOB</td>
+                <td align="center" style="background: #808080">-2,39</td>
+                <td align="center" style="background: #808080">-6,12</td>
+                <td align="center" style="background: #D9D9D9">14,33</td>
+              </tr>
+              <tr>
+                <td align="center">PP</td>
+                <td align="center" style="background: #D9D9D9">32,18</td>
+                <td align="center" style="background: #808080">-4,47</td>
+                <td align="center" style="background: #D9D9D9">5,23</td>
+              </tr>
+              <tr>
+                <td align="center">PDT</td>
+                <td align="center" style="background: #808080">-2,13</td>
+                <td align="center">-0,87</td>
+                <td align="center" style="background: #D9D9D9">2,31</td>
+              </tr>
+              <tr>
+                <td align="center">PPS</td>
+                <td align="center">-0,34</td>
+                <td align="center">0,71</td>
+                <td align="center">-1,57</td>
+              </tr>
+              <tr>
+                <td align="center">DEM</td>
+                <td align="center" style="background: #808080">-2,20</td>
+                <td align="center">1,73</td>
+                <td align="center" style="background: #808080">-3,61</td>
+              </tr>
+              <tr>
+                <td align="center">PV</td>
+                <td align="center" style="background: #808080">-2,41</td>
+                <td align="center" style="background: #D9D9D9">3,73</td>
+                <td align="center" style="background: #808080">-8,14</td>
+              </tr>
+              <tr>
+                <td align="center">PSC</td>
+                <td align="center">-1,65</td>
+                <td align="center" style="background: #D9D9D9">4,01</td>
+                <td align="center" style="background: #808080">-8,90</td>
+              </tr>
+              <tr>
+                <td align="center">PSD</td>
+                <td align="center" style="background: #808080">-2,54</td>
+                <td align="center" style="background: #D9D9D9">4,44</td>
+                <td align="center" style="background: #808080">-9,74</td>
+              </tr>
+              <tr>
+                <td align="center">SD</td>
+                <td align="center">-1,86</td>
+                <td align="center" style="background: #D9D9D9">5,37</td>
+                <td align="center" style="background: #808080">-11,97</td>
+              </tr>
+              <tr>
+                <td align="center">PSB</td>
+                <td align="center" style="background: #808080">-2,39</td>
+                <td align="center" style="background: #D9D9D9">5,63</td>
+                <td align="center" style="background: #808080">-12,49</td>
+              </tr>
+              <tr>
+                <td align="center">PROS</td>
+                <td align="center">-1,52</td>
+                <td align="center" style="background: #D9D9D9">6,73</td>
+                <td align="center" style="background: #808080">-15,11</td>
+              </tr>
+              <tr>
+                <td align="center">PTB</td>
+                <td align="center">-1,81</td>
+                <td align="center" style="background: #D9D9D9">6,81</td>
+                <td align="center" style="background: #808080">-15,25</td>
+              </tr>
+              <tr>
+                <td align="center">PR</td>
+                <td align="center" style="background: #808080">-2,84</td>
+                <td align="center" style="background: #D9D9D9">7,59</td>
+                <td align="center" style="background: #808080">-16,88</td>
+              </tr>
+              <tr>
+                <td align="center">PRB</td>
+                <td align="center" style="background: #808080">-2,27</td>
+                <td align="center" style="background: #D9D9D9">7,56</td>
+                <td align="center" style="background: #808080">-16,89</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN4">
+              <p>Fonte: Elaboração dos autores com dados do TSE</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>A partir das estatísticas descritivas apresentadas acima é possível propor uma tipologia a partir das distribuições de médias de duas variáveis para identificar o enraizamento e a institucionalização das organizações municipais dos partidos. Por enraizamento entendemos a presença e a distribuição das organizações partidárias municipais pelo país. Por institucionalização entendemos a participação de diretórios municipais no total de organizações municipais dos partidos. Quanto mais diretórios, menos comissões provisórias e interventoras, portanto, maior a independência da organização local em relação ao diretório estadual, o que usamos como <italic>proxy</italic> para identificar a institucionalização local dos partidos. Se considerarmos as duas variáveis como binárias, o resultado do cruzamento entre elas será a produção de quatro quadrantes. Quadrante I (q.I) de partidos com baixo enraizamento e alta institucionalização; Quadrante II (q.II) de partidos com alto enraizamento e alta institucionalização; Quadrante III (q.III) de partidos com baixo enraizamento e baixa institucionalização; e Quadrante IV (q.IV) de partidos com alto enraizamento e baixa institucionalização, como apresentado no <xref ref-type="fig" rid="f1">gráfico 1</xref> a seguir.</p>
+      <p>Para calcular as distâncias dos partidos nos eixos enraizamento e institucionalização, utilizamos as médias de presença e de diretórios, controladas por Unidades da Federação (UFs). É que no Brasil, como o número de municípios varia muito entre UFs, considerar a média aritmética simples poderia distorcer os resultados nos casos em que partidos tenham muitos diretórios municipais em UFs com poucos municípios. Assim como partidos com presença baixa em municípios de UFs com grande número de municípios, porém, distribuídos de forma homogênea em todo o Brasil, apresentariam baixo enraizamento. Os controles são justificados para evitar as distorções geradas pelos diferentes números de municípios entre UFs. Para gerar os indicadores usamos os testes post-hoc de <italic>Tukey</italic> em Análises de Variância (Anova) para cada uma das variáveis de forma independente. Em seguida os valores foram plotados no gráfico de dispersão abaixo. As retas horizontais e verticais indicam as medianas de cada variável, dividindo cada uma das distribuições em duas partes iguais. Como a Análise de Variância necessita de pelo menos dois casos para identificar variação, foram excluídos os partidos que não apresentaram pelo menos dois diretórios em todas as UFs brasileiras em 2016.</p>
+      <p>
+        <fig id="f1">
+          <label>Gráfico 1.</label>
+          <caption>
+            <title>Distribuição dos partidos por tipologia de enraizamento e institucionalização</title>
+          </caption>
+          <attrib>- No q.I: Baixo enraizamento e alta institucionalização estão PSC, PHS, PV e PPS;</attrib>
+          <attrib>- No q.II: Alto enraizamento e alta institucionalização estão PT, PMDB, PSDB, PCdoB, PDT, DEM e PR;</attrib>
+          <attrib>- No q.III: Alto enraizamento e baixa institucionalização estão PT do B, PSD, PTB e PSB;</attrib>
+          <attrib>- No q.IV: Baixo enraizamento e baixa institucionalização estão SD, PSL, PMN, PRP, PSDC, PTC, PSOL, REDE e PSTU.</attrib>
+          <attrib>Fonte: Elaboração dos autores com dados do Repositório de Dados do TSE</attrib>
+          <alternatives>
+            <graphic xlink:href="https://minio.scielo.br/documentstore/2178-4884/qbsnm7VHDCqbvDSmFBQvFtn/e31236daa3247a0c3919caf31f5e8e0ef828819b.jpg"/>
+            <graphic xlink:href="https://minio.scielo.br/documentstore/2178-4884/qbsnm7VHDCqbvDSmFBQvFtn/c5eef94e554194100993e4a8a5f125a4eee42167.jpg" specific-use="scielo-web" content-type="scielo-267x140"/>
+          </alternatives>
+        </fig>
+      </p>
+      <p>A tipologia apresentada acima permite uma análise mais detalhada da distribuição dos diretórios municipais dos partidos brasileiros. Em primeiro lugar, é possível verificar as diferenças de variações entre os partidos que integram o mesmo quadrante. O q.II é o que apresenta maiores distâncias entre partidos para institucionalização, o que indica que mesmo entre os que têm mais diretórios municipais há grande variação. Já para os partidos que se encontram no q.III (baixa institucionalização e enraizamento), as variações são bem menores. </p>
+      <p>O <xref ref-type="fig" rid="f1">gráfico 1</xref> também mostra que, do total de partidos, apenas sete encontram-se acima da mediana tanto da variável enraizamento quanto para institucionalização. Não é surpresa que estes partidos, localizados no q.II, estão entre os mais antigos em funcionamento. No entanto, nem todos são grandes no que diz respeito ao desempenho eleitoral. O PCdoB, por exemplo, está entre os partidos mais enraizados e mais institucionalizados nos municípios, embora seja um partido pequeno em termos de desempenho eleitoral. Na outra ponta, no q.III, estão os partidos com menor presença municipal e com baixa institucionalização, pois estão abaixo da mediana de diretórios municipais. Este quadrante é formado por partidos pequenos tradicionais (PTC, PMN e PSTC) e por novos partidos (Rede e SD).</p>
+      <p>Feitas as considerações a respeito da presença dos partidos nos municípios e os tipos de organizações, no próximo tópico o artigo explora as características dos dirigentes partidários municipais em 2016.</p>
+    </sec>
+    <sec>
+      <title>Perfil Sociodemográfico dos Dirigentes Municipais</title>
+      <p>Feita a exploração das distribuições das organizações partidárias municipais, esta seção analisa as principais características socioeconômicas dos dirigentes municipais que em 2016 ocupavam um cargo em uma organização partidária municipal. Aqui são apresentados os dados dos presidentes e demais integrantes das executivas em exercício em 2016 e que se candidataram em pelo menos uma das eleições entre 2012 e 2016. Isso representa 55.290 dirigentes municipais. Serão exploradas as variações por partido de quatro variáveis individuais: sexo, escolaridade, idade e trajetória política (se o dirigente municipal declarou ser detentor de algum cargo político eletivo.</p>
+      <p>Do total de dirigentes municipais candidatos, apenas 13,3% (7.358) são do sexo feminino. Os homens chegam a 86,7% (47.932) dos presidentes ou demais integrantes da Executiva municipal que se candidataram. Tais números confirmam o que vem mostrando a literatura especializada, que a política brasileira é uma atividade controlada majoritariamente por homens. A <xref ref-type="table" rid="t4">tabela 3</xref> a seguir mostra as distribuições de dirigentes municipais por partido e sexo que foram candidatos nas últimas eleições. São indicados nos totais de dirigentes os percentuais por partido e os resíduos padronizados para cada par de categorias. As variações percentuais por sexo do dirigente do partido são pequenas entre os maiores partidos. No caso de homens, o percentual gira entre 85% e 89%, enquanto as mulheres ficam entre 15% e 10% do total.<xref ref-type="fn" rid="fn5"><sup>7</sup></xref>
+			</p>
+      <p>
+        <table-wrap id="t4">
+          <label>Tabela 3.</label>
+          <caption>
+            <title>Frequência e Resíduos Padronizados por partidos grandes e sexo do dirigente do diretório municipal</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col span="3"/>
+              <col span="3"/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center" rowspan="2">Partido</td>
+                <td align="center" colspan="3">Homem </td>
+                <td align="center" colspan="3">Mulher </td>
+                <td align="center" rowspan="2">Total</td>
+              </tr>
+              <tr>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+              </tr>
+              <tr>
+                <td align="center">PMDB</td>
+                <td align="center">3.450</td>
+                <td align="center">87,7%</td>
+                <td align="center">0,661</td>
+                <td align="center">485</td>
+                <td align="center">12,3%</td>
+                <td align="center">-1,688</td>
+                <td align="center">3.935</td>
+              </tr>
+              <tr>
+                <td align="center">PSDB</td>
+                <td align="center">2.986</td>
+                <td align="center">87,7%</td>
+                <td align="center">0,660</td>
+                <td align="center">417</td>
+                <td align="center">12,3%</td>
+                <td align="center">-1,684</td>
+                <td align="center">3.403</td>
+              </tr>
+              <tr>
+                <td align="center">PP</td>
+                <td align="center">2.786</td>
+                <td align="center">87,9%</td>
+                <td align="center">0,722</td>
+                <td align="center">384</td>
+                <td align="center">12,1%</td>
+                <td align="center">-1,842</td>
+                <td align="center">3.170</td>
+              </tr>
+              <tr>
+                <td align="center">PDT</td>
+                <td align="center">2.805</td>
+                <td align="center">89,8%</td>
+                <td align="center">1,841</td>
+                <td align="center">320</td>
+                <td align="center">10,2%</td>
+                <td align="center" style="background: #808080;">-4,700</td>
+                <td align="center">3.125</td>
+              </tr>
+              <tr>
+                <td align="center">PT</td>
+                <td align="center">2.544</td>
+                <td align="center">85,0%</td>
+                <td align="center">-0,996</td>
+                <td align="center">449</td>
+                <td align="center">15,0%</td>
+                <td align="center" style="background: #D9D9D9;">2,541</td>
+                <td align="center">2.993</td>
+              </tr>
+              <tr>
+                <td align="center">PSB</td>
+                <td align="center">2.528</td>
+                <td align="center">86,9%</td>
+                <td align="center">0,104</td>
+                <td align="center">382</td>
+                <td align="center">13,1%</td>
+                <td align="center">-0,266</td>
+                <td align="center">2.910</td>
+              </tr>
+              <tr>
+                <td align="center">DEM</td>
+                <td align="center">2.270</td>
+                <td align="center">87,4%</td>
+                <td align="center">0,392</td>
+                <td align="center">327</td>
+                <td align="center">12,6%</td>
+                <td align="center">-1,000</td>
+                <td align="center">2.597</td>
+              </tr>
+              <tr>
+                <td align="center">PSD</td>
+                <td align="center">2.248</td>
+                <td align="center">87,4%</td>
+                <td align="center">0,387</td>
+                <td align="center">324</td>
+                <td align="center">12,6%</td>
+                <td align="center">-0,987</td>
+                <td align="center">2.572</td>
+              </tr>
+              <tr>
+                <td align="center">PTB</td>
+                <td align="center">2.178</td>
+                <td align="center">86,7%</td>
+                <td align="center">0,006</td>
+                <td align="center">334</td>
+                <td align="center">13,3%</td>
+                <td align="center">-0,015</td>
+                <td align="center">2.512</td>
+              </tr>
+              <tr>
+                <td align="center">PR</td>
+                <td align="center">2.125</td>
+                <td align="center">87,2%</td>
+                <td align="center">0,249</td>
+                <td align="center">313</td>
+                <td align="center">12,8%</td>
+                <td align="center">-0,634</td>
+                <td align="center">2.438</td>
+              </tr>
+              <tr>
+                <td align="center">PRB</td>
+                <td align="center">1.857</td>
+                <td align="center">86,6%</td>
+                <td align="center">-0,059</td>
+                <td align="center">288</td>
+                <td align="center">13,4%</td>
+                <td align="center">0,152</td>
+                <td align="center">2.145</td>
+              </tr>
+              <tr>
+                <td align="center">PPS</td>
+                <td align="center">1.859</td>
+                <td align="center">87,8%</td>
+                <td align="center">0,553</td>
+                <td align="center">258</td>
+                <td align="center">12,2%</td>
+                <td align="center">-1,413</td>
+                <td align="center">2.117</td>
+              </tr>
+              <tr>
+                <td align="center">PSC</td>
+                <td align="center">1.652</td>
+                <td align="center">89,4%</td>
+                <td align="center">1,269</td>
+                <td align="center">195</td>
+                <td align="center">10,6%</td>
+                <td align="center" style="background: #808080;">-3,239</td>
+                <td align="center">1.847</td>
+              </tr>
+              <tr>
+                <td align="center">PV</td>
+                <td align="center">1.520</td>
+                <td align="center">87,9%</td>
+                <td align="center">0,522</td>
+                <td align="center">210</td>
+                <td align="center">12,1%</td>
+                <td align="center">-1,332</td>
+                <td align="center">1.730</td>
+              </tr>
+              <tr>
+                <td align="center">PROS</td>
+                <td align="center">1.425</td>
+                <td align="center">88,6%</td>
+                <td align="center">0,806</td>
+                <td align="center">184</td>
+                <td align="center">11,4%</td>
+                <td align="center" style="background: #808080;">-2,058</td>
+                <td align="center">1.609</td>
+              </tr>
+              <tr>
+                <td align="center">PHS</td>
+                <td align="center">1.322</td>
+                <td align="center">86,1%</td>
+                <td align="center">-0,240</td>
+                <td align="center">213</td>
+                <td align="center">13,9%</td>
+                <td align="center">0,611</td>
+                <td align="center">1.535</td>
+              </tr>
+              <tr>
+                <td align="center">SD</td>
+                <td align="center">1.297</td>
+                <td align="center">86,5%</td>
+                <td align="center">-0,070</td>
+                <td align="center">202</td>
+                <td align="center">13,5%</td>
+                <td align="center">0,179</td>
+                <td align="center">1.499</td>
+              </tr>
+              <tr>
+                <td align="center">TOT. GERAL</td>
+                <td align="center">47.936</td>
+                <td align="center">86,7%</td>
+                <td align="left">
+								</td>
+                <td align="center">7.358</td>
+                <td align="center">13,3%</td>
+                <td align="left">
+								</td>
+                <td align="center">55.290</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN5">
+              <p>χ<sup>2</sup> =896,25 (p=0,000)</p>
+            </fn>
+            <fn id="TFN6">
+              <p>Fonte: Elaboração dos autores com dados do TSE</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>Em relação aos resíduos padronizados para sexo do dirigente do órgão municipal, a tabela 2 acima mostra que a maior parte dos partidos grandes não apresenta diferenças significativas de seus dirigentes em relação aos percentuais gerais. No caso dos homens não há nenhum resíduo padronizado acima do limite de ±2,00. Já para as mulheres, quatro partidos apresentam resíduos acima do limite crítico. PDT, PSC e PROS têm resíduos negativos, indicando que havia menos mulheres nos diretórios locais desses partidos do que se esperaria na distribuição geral. O único partido no qual os resíduos são positivos para as mulheres nas direções municipais é o PT. O coeficiente chi-quadrado, ao final da tabela 2, mostra que as diferenças são estatisticamente significativas.</p>
+      <p>Em relação à escolaridade dos dirigentes municipais, a média fica acima da distribuição nacional. A <xref ref-type="table" rid="t5">tabela 4</xref> a seguir mostra os percentuais por categoria de escolaridade registrada pelo TSE agregados em três grupos ordinais (Lê, escreve e ensino fundamental; Ensino médio completo ou incompleto; Ensino superior incompleto ou completo). Do total de dirigentes, apenas 20,6% tem até o ensino fundamental completo, 38,7% tem o ensino médio e 40,8% ensino superior.</p>
+      <p>Esses números sobre o nível de escolaridade de líderes partidários locais que se lançaram candidatos nas últimas três eleições diferem consideravelmente dos obtidos por <xref ref-type="bibr" rid="B13">Kerbauy (2005)</xref> em sua análise sobre o perfil dos vereadores eleitos em 1996, 2000 e 2004 e das estatísticas eleitorais recentes. Em 2016, por exemplo, 25,44% dos candidatos a prefeito e vereador (eleitos e não eleitos) possuíam o ensino superior completo ou incompleto, percentual que subiu para 33,59% entre eleitos - contra 40,3% entre os líderes. O crescimento no número de líderes-candidatos com ensino superior completo ou incompleto se deu, basicamente, em prejuízo daqueles com ensino fundamental completo ou incompleto. Entre os líderes-candidatos, apenas 19,5% tinham esses níveis de escolaridade, número bem abaixo se comparado ao total de candidatos (28,98%) e eleitos (25,43%) em 2016, segundo dados do TSE<xref ref-type="fn" rid="fn6"><sup>8</sup></xref>.</p>
+      <p>As variações percentuais por nível de escolaridade dos dirigentes são maiores que as da variável anterior. Enquanto a média de até o fundamental está em 20,6%, os partidos variam entre 16% e 23%. Já a escolaridade média varia de 35% a 44%, para uma média geral de 38,7%, enquanto a escolaridade superior vai de 35% a 45%, para uma média de 40,8%.</p>
+      <p>
+        <table-wrap id="t5">
+          <label>Tabela 4.</label>
+          <caption>
+            <title>Frequência e Resíduos Padronizados por partidos grandes e escolaridade do dirigente do diretório municipal</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col span="3"/>
+              <col span="3"/>
+              <col span="3"/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center" rowspan="2">Partido</td>
+                <td align="center" colspan="3">Até Fundamental </td>
+                <td align="center" colspan="3">Ensino Médio </td>
+                <td align="center" colspan="3">Ensino Superior </td>
+                <td align="center" rowspan="2">Total</td>
+              </tr>
+              <tr>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+              </tr>
+              <tr>
+                <td align="center">PMDB</td>
+                <td align="center">845</td>
+                <td align="center">21,5%</td>
+                <td align="center">1,225</td>
+                <td align="center">1.391</td>
+                <td align="center">35,3%</td>
+                <td align="center" style="background: #808080;">-3,335</td>
+                <td align="center">1.699</td>
+                <td align="center">43,2%</td>
+                <td align="center" style="background: #D9D9D9;">2,377</td>
+                <td align="center">3.935</td>
+              </tr>
+              <tr>
+                <td align="center">PSDB</td>
+                <td align="center">664</td>
+                <td align="center">19,5%</td>
+                <td align="center">-1,383</td>
+                <td align="center">1.193</td>
+                <td align="center">35,1%</td>
+                <td align="center" style="background: #808080;">-3,375</td>
+                <td align="center">1.546</td>
+                <td align="center">45,4%</td>
+                <td align="center" style="background: #D9D9D9;">4,270</td>
+                <td align="center">3.403</td>
+              </tr>
+              <tr>
+                <td align="center">PP</td>
+                <td align="center">735</td>
+                <td align="center">23,2%</td>
+                <td align="center" style="background: #D9D9D9;">3,224</td>
+                <td align="center">1.226</td>
+                <td align="center">38,7%</td>
+                <td align="center">0,019</td>
+                <td align="center">1.209</td>
+                <td align="center">38,1%</td>
+                <td align="center">-2,310</td>
+                <td align="center">3.170</td>
+              </tr>
+              <tr>
+                <td align="center">PDT</td>
+                <td align="center">649</td>
+                <td align="center">20,8%</td>
+                <td align="center">0,222</td>
+                <td align="center">1.170</td>
+                <td align="center">37,4%</td>
+                <td align="center">-1,092</td>
+                <td align="center">1.306</td>
+                <td align="center">41,8%</td>
+                <td align="center">0,906</td>
+                <td align="center">3.125</td>
+              </tr>
+              <tr>
+                <td align="center">PT</td>
+                <td align="center">576</td>
+                <td align="center">19,2%</td>
+                <td align="center">-1,619</td>
+                <td align="center">1.055</td>
+                <td align="center">35,2%</td>
+                <td align="center" style="background: #808080;">-2,997</td>
+                <td align="center">1.362</td>
+                <td align="center">45,5%</td>
+                <td align="center" style="background: #D9D9D9;">4,069</td>
+                <td align="center">2.993</td>
+              </tr>
+              <tr>
+                <td align="center">PSB</td>
+                <td align="center">552</td>
+                <td align="center">19,0%</td>
+                <td align="center">-1,924</td>
+                <td align="center">1.034</td>
+                <td align="center">35,5%</td>
+                <td align="center" style="background: #808080;">-2,709</td>
+                <td align="center">1.324</td>
+                <td align="center">45,5%</td>
+                <td align="center" style="background: #D9D9D9;">4,006</td>
+                <td align="center">2.910</td>
+              </tr>
+              <tr>
+                <td align="center">DEM</td>
+                <td align="center">555</td>
+                <td align="center">21,4%</td>
+                <td align="center">0,879</td>
+                <td align="center">998</td>
+                <td align="center">38,4%</td>
+                <td align="center">-0,185</td>
+                <td align="center">1.044</td>
+                <td align="center">40,2%</td>
+                <td align="center">-0,445</td>
+                <td align="center">2.597</td>
+              </tr>
+              <tr>
+                <td align="center">PSD</td>
+                <td align="center">538</td>
+                <td align="center">20,9%</td>
+                <td align="center">0,369</td>
+                <td align="center">937</td>
+                <td align="center">36,4%</td>
+                <td align="center">-1,814</td>
+                <td align="center">1.097</td>
+                <td align="center">42,7%</td>
+                <td align="center">1,504</td>
+                <td align="center">2.572</td>
+              </tr>
+              <tr>
+                <td align="center">PTB</td>
+                <td align="center">565</td>
+                <td align="center">22,5%</td>
+                <td align="center" style="background: #D9D9D9;">2,103</td>
+                <td align="center">980</td>
+                <td align="center">39,0%</td>
+                <td align="center">0,289</td>
+                <td align="center">967</td>
+                <td align="center">38,5%</td>
+                <td align="center">-1,776</td>
+                <td align="center">2.512</td>
+              </tr>
+              <tr>
+                <td align="center">PR</td>
+                <td align="center">507</td>
+                <td align="center">20,8%</td>
+                <td align="center">0,226</td>
+                <td align="center">938</td>
+                <td align="center">38,5%</td>
+                <td align="center">-0,143</td>
+                <td align="center">993</td>
+                <td align="center">40,7%</td>
+                <td align="center">-0,021</td>
+                <td align="center">2.438</td>
+              </tr>
+              <tr>
+                <td align="center">PRB</td>
+                <td align="center">503</td>
+                <td align="center">23,4%</td>
+                <td align="center" style="background: #D9D9D9;">2,921</td>
+                <td align="center">955</td>
+                <td align="center">44,5%</td>
+                <td align="center" style="background: #D9D9D9;">4,371</td>
+                <td align="center">687</td>
+                <td align="center">32,0%</td>
+                <td align="center" style="background: #808080;">-6,333</td>
+                <td align="center">2.145</td>
+              </tr>
+              <tr>
+                <td align="center">PPS</td>
+                <td align="center">400</td>
+                <td align="center">18,9%</td>
+                <td align="center">-1,717</td>
+                <td align="center">842</td>
+                <td align="center">39,8%</td>
+                <td align="center">0,828</td>
+                <td align="center">875</td>
+                <td align="center">41,3%</td>
+                <td align="center">0,414</td>
+                <td align="center">2.117</td>
+              </tr>
+              <tr>
+                <td align="center">PSC</td>
+                <td align="center">408</td>
+                <td align="center">22,1%</td>
+                <td align="center">1,423</td>
+                <td align="center">787</td>
+                <td align="center">42,6%</td>
+                <td align="center" style="background: #D9D9D9;">2,734</td>
+                <td align="center">652</td>
+                <td align="center">35,3%</td>
+                <td align="center" style="background: #808080;">-3,674</td>
+                <td align="center">1.847</td>
+              </tr>
+              <tr>
+                <td align="center">PV</td>
+                <td align="center">287</td>
+                <td align="center">16,6%</td>
+                <td align="center" style="background: #808080;">-3,665</td>
+                <td align="center">650</td>
+                <td align="center">37,6%</td>
+                <td align="center">-0,724</td>
+                <td align="center">793</td>
+                <td align="center">45,8%</td>
+                <td align="center">3,310</td>
+                <td align="center">1.730</td>
+              </tr>
+              <tr>
+                <td align="center">PROS</td>
+                <td align="center">330</td>
+                <td align="center">20,5%</td>
+                <td align="center">-0,069</td>
+                <td align="center">693</td>
+                <td align="center">43,1%</td>
+                <td align="center" style="background: #D9D9D9;">2,849</td>
+                <td align="center">586</td>
+                <td align="center">36,4%</td>
+                <td align="center" style="background: #808080;">-2,725</td>
+                <td align="center">1.609</td>
+              </tr>
+              <tr>
+                <td align="center">PHS</td>
+                <td align="center">293</td>
+                <td align="center">19,1%</td>
+                <td align="center">-1,295</td>
+                <td align="center">615</td>
+                <td align="center">40,1%</td>
+                <td align="center">0,889</td>
+                <td align="center">627</td>
+                <td align="center">40,8%</td>
+                <td align="center">0,055</td>
+                <td align="center">1.535</td>
+              </tr>
+              <tr>
+                <td align="center">SD</td>
+                <td align="center">306</td>
+                <td align="center">20,4%</td>
+                <td align="center">-0,149</td>
+                <td align="center">618</td>
+                <td align="center">41,2%</td>
+                <td align="center">1,602</td>
+                <td align="center">575</td>
+                <td align="center">38,4%</td>
+                <td align="center">-1,455</td>
+                <td align="center">1.499</td>
+              </tr>
+              <tr>
+                <td align="center">TOTAL</td>
+                <td align="center">11.383</td>
+                <td align="center">20,6%</td>
+                <td align="left">
+								</td>
+                <td align="center">21.372</td>
+                <td align="center">38,7%</td>
+                <td align="left">
+								</td>
+                <td align="center">22.535</td>
+                <td align="center">40,8%</td>
+                <td align="left">
+								</td>
+                <td align="center">55.290</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN7">
+              <p>χ<sup>2</sup> = 601,177 (0,000)</p>
+            </fn>
+            <fn id="TFN8">
+              <p>Fonte: Elaboração dos autores com dados do Repositório de Dados do TSE</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>A análise dos resíduos padronizados permite identificar que PP, PTB e PRB são os partidos com maior participação de escolaridade fundamental. Já o PV é o único com resíduo negativo significativo. Na categoria de escolaridade média, destacam-se os resíduos positivo do PRB (novamente), PSC e PROS. São partidos com resíduos negativos para nível médio de escolaridade PMDB, PSDB, PT e PSB. Por fim, quatro partidos apresentam resíduos positivos altos para escolaridade superior: PMDB, PSDB, PT e PSB. Têm resíduos negativos significativos para escolaridade superior o PROS, PSC e PRB, principalmente O coeficiente chi-quadrado ao final da <xref ref-type="table" rid="t5">tabela 4</xref> (601,177) indica significância estatística para as variações dos casos, embora não seja tão forte quanto a distribuição da variável sexo.</p>
+      <p>A idade é uma variável permanente nas análises de perfil de elite. Ela indica o grau de centralidade da permanência versus renovação nos grupos dirigentes. No caso dos diretórios municipais, a média de idade dos dirigentes partidários municipais de 2016 que se candidataram nas três eleições anteriores era de 48,07 anos, com desvio padrão de 10,70, relativamente baixo. O teste “t” de diferença de médias para a distribuição das idades mostrou-se altamente significativo (t=1.055,959 p-value=0,000) e um intervalo de confiança ao nível de 95% que fica entre 47,99 e 48,16 anos de idade para os casos analisados. Isso indica uma homogeneidade em relação às idades dos dirigentes municipais. A <xref ref-type="table" rid="t6">tabela 5</xref> a seguir mostra as médias e variâncias de idades para os maiores partidos brasileiros.</p>
+      <p>
+        <table-wrap id="t6">
+          <label>Tabela 5.</label>
+          <caption>
+            <title>Número de dirigentes, média e desvio padrão das idades por partido para dirigente de diretório municipal</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col/>
+              <col/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center">Partido</td>
+                <td align="center">N</td>
+                <td align="center">Média</td>
+                <td align="center">Desv. Pad.</td>
+              </tr>
+              <tr>
+                <td align="center">PMDB</td>
+                <td align="center">3.935</td>
+                <td align="center">51,06</td>
+                <td align="center">10,871</td>
+              </tr>
+              <tr>
+                <td align="center">PSDB</td>
+                <td align="center">3.403</td>
+                <td align="center">50,22</td>
+                <td align="center">10,860</td>
+              </tr>
+              <tr>
+                <td align="center">PP</td>
+                <td align="center">3.170</td>
+                <td align="center">49,34</td>
+                <td align="center">10,887</td>
+              </tr>
+              <tr>
+                <td align="center">PDT</td>
+                <td align="center">3.125</td>
+                <td align="center">49,44</td>
+                <td align="center">10,483</td>
+              </tr>
+              <tr>
+                <td align="center">PT</td>
+                <td align="center">2.993</td>
+                <td align="center">48,41</td>
+                <td align="center">9,362</td>
+              </tr>
+              <tr>
+                <td align="center">PSB</td>
+                <td align="center">2.910</td>
+                <td align="center">48,53</td>
+                <td align="center">10,431</td>
+              </tr>
+              <tr>
+                <td align="center">DEM</td>
+                <td align="center">2.597</td>
+                <td align="center">50,13</td>
+                <td align="center">10,807</td>
+              </tr>
+              <tr>
+                <td align="center">PSD</td>
+                <td align="center">2.572</td>
+                <td align="center">48,55</td>
+                <td align="center">10,519</td>
+              </tr>
+              <tr>
+                <td align="center">PTB</td>
+                <td align="center">2.512</td>
+                <td align="center">49,09</td>
+                <td align="center">10,906</td>
+              </tr>
+              <tr>
+                <td align="center">PR</td>
+                <td align="center">2.438</td>
+                <td align="center">48,60</td>
+                <td align="center">10,483</td>
+              </tr>
+              <tr>
+                <td align="center">PRB</td>
+                <td align="center">2.145</td>
+                <td align="center">46,27</td>
+                <td align="center">10,229</td>
+              </tr>
+              <tr>
+                <td align="center">PPS</td>
+                <td align="center">2.117</td>
+                <td align="center">48,34</td>
+                <td align="center">10,687</td>
+              </tr>
+              <tr>
+                <td align="center">PSC</td>
+                <td align="center">1.847</td>
+                <td align="center">46,92</td>
+                <td align="center">10,081</td>
+              </tr>
+              <tr>
+                <td align="center">PV</td>
+                <td align="center">1.730</td>
+                <td align="center">47,86</td>
+                <td align="center">10,438</td>
+              </tr>
+              <tr>
+                <td align="center">PROS</td>
+                <td align="center">1.609</td>
+                <td align="center">45,47</td>
+                <td align="center">10,094</td>
+              </tr>
+              <tr>
+                <td align="center">PHS</td>
+                <td align="center">1.535</td>
+                <td align="center">45,66</td>
+                <td align="center">10,540</td>
+              </tr>
+              <tr>
+                <td align="center">SD</td>
+                <td align="center">1.499</td>
+                <td align="center">45,31</td>
+                <td align="center">10,361</td>
+              </tr>
+              <tr>
+                <td align="center">TOTAL</td>
+                <td align="center">55.290</td>
+                <td align="center">48,07</td>
+                <td align="center">10,705</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN9">
+              <p>Fonte: Elaboração dos autores com dados do Repositório de Dados do TSE</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>A <xref ref-type="table" rid="t6">tabela 5</xref> acima mostra que a idade média cresce conforme aumenta o tamanho do partido. O PMDB é o único que apresenta uma média acima de 51 anos para seus dirigentes municipais. Na casa dos 50 anos estão PSDB e DEM. Em 49 de média, PP, PDT e PTB. Todos partidos tradicionais. As menores médias entre os partidos grandes estão em PROS, PHS e SD, na casa dos 45 anos. Os desvios em relação à média ficam todos muito próximos de 10,705 anos, que é a variação para todos os casos.</p>
+      <p>A última variável apresentada individualmente aqui para tratar das características dos dirigentes de órgãos municipais partidários identifica a atividade dos dirigentes que já ocupam algum cargo eletivo. O objetivo identificar o peso da carreira eleitoral sobre os dirigentes municipais. Neste caso, como estamos trabalhando com o banco de dados de dirigentes que se candidataram nas mais recentes eleições, as frequências mostram as distribuições de presidentes e membros das executivas de diretórios municipais que tiveram sucesso em pelo menos uma das campanhas eleitorais que disputou.</p>
+      <p>A <xref ref-type="table" rid="t7">tabela 6</xref> a seguir apresenta as distribuições dos dirigentes de organizações partidárias municipais que declararam ser vereador, prefeito ou deputado (estadual ou federal) ao TSE nas mais recentes eleições. A coluna dos totais de políticos dirigentes indica que dos 55.290 dirigentes incluídos na análise, 9.089 (16,4%) indicaram ocupar um cargo eletivo. Entre os partidos grandes os percentuais totais tendem a ser maiores que a média geral, com destaque para PROS (25,8%), SD (25,2%) e PSD (21,2%), todos em torno de um em cada quatro dirigentes de diretórios municipais ocupando um cargo eletivo. Os partidos menores, não incluídos na tabela 6, apresentam percentuais mais baixos de políticos dirigentes municipais. Entre os três cargos eletivos, o de vereador predomina, representando 87,1% do total. Em seguida vem prefeito, com 11,9% e deputado com 0,9%. Os demais cargos apresentaram percentuais muito baixos e foram desprezados da análise geral.</p>
+      <p>
+        <table-wrap id="t7">
+          <label>Tabela 6.</label>
+          <caption>
+            <title>Frequência e Resíduos Padronizados por partidos grandes e ocupação política do dirigente do diretório municipal</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col span="3"/>
+              <col span="3"/>
+              <col span="3"/>
+              <col/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center" rowspan="2">Partido</td>
+                <td align="center" colspan="3">Vereador </td>
+                <td align="center" colspan="3">Prefeito </td>
+                <td align="center" colspan="3">Deputado </td>
+                <td align="center" rowspan="2">Total Polít.</td>
+                <td align="center" rowspan="2">% Polít.</td>
+              </tr>
+              <tr>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+                <td align="center">N</td>
+                <td align="center">%</td>
+                <td align="center">Rp</td>
+              </tr>
+              <tr>
+                <td align="center">PMDB</td>
+                <td align="center">585</td>
+                <td align="center">80,1%</td>
+                <td align="center" style="background: #808080;">-2,030</td>
+                <td align="center">134</td>
+                <td align="center">18,4%</td>
+                <td align="center" style="background: #D9D9D9;">5,041</td>
+                <td align="center">11</td>
+                <td align="center">1,5%</td>
+                <td align="center">1,597</td>
+                <td align="center">730</td>
+                <td align="center">18,6%</td>
+              </tr>
+              <tr>
+                <td align="center">PSDB</td>
+                <td align="center">502</td>
+                <td align="center">76,2%</td>
+                <td align="center" style="background: #808080;">-3,017</td>
+                <td align="center">150</td>
+                <td align="center">22,8%</td>
+                <td align="center" style="background: #D9D9D9;">8,066</td>
+                <td align="center">7</td>
+                <td align="center">1,1%</td>
+                <td align="center">0,337</td>
+                <td align="center">659</td>
+                <td align="center">19,4%</td>
+              </tr>
+              <tr>
+                <td align="center">PP</td>
+                <td align="center">514</td>
+                <td align="center">85,8%</td>
+                <td align="center">-0,351</td>
+                <td align="center">77</td>
+                <td align="center">12,9%</td>
+                <td align="center">0,666</td>
+                <td align="center">8</td>
+                <td align="center">1,3%</td>
+                <td align="center">1,013</td>
+                <td align="center">599</td>
+                <td align="center">18,9%</td>
+              </tr>
+              <tr>
+                <td align="center">PDT</td>
+                <td align="center">469</td>
+                <td align="center">82,9%</td>
+                <td align="center">-1,093</td>
+                <td align="center">91</td>
+                <td align="center">16,1%</td>
+                <td align="center" style="background: #D9D9D9;">2,869</td>
+                <td align="center">6</td>
+                <td align="center">1,1%</td>
+                <td align="center">0,307</td>
+                <td align="center">566</td>
+                <td align="center">18,1%</td>
+              </tr>
+              <tr>
+                <td align="center">PSB</td>
+                <td align="center">458</td>
+                <td align="center">82,8%</td>
+                <td align="center">-1,090</td>
+                <td align="center">83</td>
+                <td align="center">15,0%</td>
+                <td align="center" style="background: #D9D9D9;">2,107</td>
+                <td align="center">12</td>
+                <td align="center">2,2%</td>
+                <td align="center" style="background: #D9D9D9;">3,003</td>
+                <td align="center">553</td>
+                <td align="center">19,0%</td>
+              </tr>
+              <tr>
+                <td align="center">PSD</td>
+                <td align="center">439</td>
+                <td align="center">80,6%</td>
+                <td align="center">-1,650</td>
+                <td align="center">99</td>
+                <td align="center">18,2%</td>
+                <td align="center" style="background: #D9D9D9;">4,227</td>
+                <td align="center">7</td>
+                <td align="center">1,3%</td>
+                <td align="center">0,843</td>
+                <td align="center">545</td>
+                <td align="center">21,2%</td>
+              </tr>
+              <tr>
+                <td align="center">DEM</td>
+                <td align="center">410</td>
+                <td align="center">81,8%</td>
+                <td align="center">-1,274</td>
+                <td align="center">89</td>
+                <td align="center">17,8%</td>
+                <td align="center" style="background: #D9D9D9;">3,793</td>
+                <td align="center">2</td>
+                <td align="center">0,4%</td>
+                <td align="center">-1,241</td>
+                <td align="center">501</td>
+                <td align="center">19,3%</td>
+              </tr>
+              <tr>
+                <td align="center">PR</td>
+                <td align="center">415</td>
+                <td align="center">85,9%</td>
+                <td align="center">-0,289</td>
+                <td align="center">65</td>
+                <td align="center">13,5%</td>
+                <td align="center">0,982</td>
+                <td align="center">3</td>
+                <td align="center">0,6%</td>
+                <td align="center">-0,714</td>
+                <td align="center">483</td>
+                <td align="center">19,8%</td>
+              </tr>
+              <tr>
+                <td align="center">PTB</td>
+                <td align="center">389</td>
+                <td align="center">85,5%</td>
+                <td align="center">-0,378</td>
+                <td align="center">61</td>
+                <td align="center">13,4%</td>
+                <td align="center">0,921</td>
+                <td align="center">5</td>
+                <td align="center">1,1%</td>
+                <td align="center">0,361</td>
+                <td align="center">455</td>
+                <td align="center">18,1%</td>
+              </tr>
+              <tr>
+                <td align="center">PT</td>
+                <td align="center">389</td>
+                <td align="center">88,8%</td>
+                <td align="center">0,373</td>
+                <td align="center">48</td>
+                <td align="center">11,0%</td>
+                <td align="center">-0,580</td>
+                <td align="center">1</td>
+                <td align="center">0,2%</td>
+                <td align="center">-1,530</td>
+                <td align="center">438</td>
+                <td align="center">14,6%</td>
+              </tr>
+              <tr>
+                <td align="center">PROS</td>
+                <td align="center">393</td>
+                <td align="center">94,7%</td>
+                <td align="center">1,647</td>
+                <td align="center">22</td>
+                <td align="center">5,3%</td>
+                <td align="center" style="background: #808080;">-3,903</td>
+                <td align="center">0</td>
+                <td align="center">0,0%</td>
+                <td align="center">-1,970</td>
+                <td align="center">415</td>
+                <td align="center">25,8%</td>
+              </tr>
+              <tr>
+                <td align="center">SD</td>
+                <td align="center">371</td>
+                <td align="center">98,1%</td>
+                <td align="center" style="background: #D9D9D9;">2,291</td>
+                <td align="center">6</td>
+                <td align="center">1,6%</td>
+                <td align="center" style="background: #808080;">-5,817</td>
+                <td align="center">1</td>
+                <td align="center">0,3%</td>
+                <td align="center">-1,348</td>
+                <td align="center">378</td>
+                <td align="center">25,2%</td>
+              </tr>
+              <tr>
+                <td align="center">Tot. Polít.</td>
+                <td align="center">7.921</td>
+                <td align="center">87,1%</td>
+                <td align="left">
+								</td>
+                <td align="center">1.083</td>
+                <td align="center">11,9%</td>
+                <td align="left">
+								</td>
+                <td align="center">85</td>
+                <td align="center">0,9%</td>
+                <td align="left">
+								</td>
+                <td align="center">9.089</td>
+                <td align="center">16,4%</td>
+              </tr>
+              <tr>
+                <td align="center">Tot. Geral</td>
+                <td align="left" colspan="9">
+								</td>
+                <td align="center">55.290 </td>
+                <td align="center">100,0%</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN10">
+              <p>χ<sup>2</sup> = 388,150 (0,000)</p>
+            </fn>
+            <fn id="TFN11">
+              <p>Fonte: Elaboração dos autores com dados do Repositório de Dados do TSE</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>Finalmente, a <xref ref-type="table" rid="t7">tabela 6</xref> também mostra os resíduos padronizados para os três cargos eletivos com número de casos representativos. Nela, o SD é o único partido a apresentar resíduo positivo significativo para dirigente municipal com o cargo de vereador. Por outro lado, PMDB e PSDB apresentaram resíduos negativos para vereador. Já o cargo de prefeito aparece com resíduo positivo e significativo para PMDB, PSDB, PDT, PSB, PSD e DEM. Os partidos com resíduos negativos para prefeito são PROS e SD. Para deputado, apenas o PSB apresenta resíduos positivos significativos ao cargo de dirigente de diretório municipal do partido. O coeficiente chi-quadrado de 388,150 também indica diferenças estatisticamente significativas.</p>
+      <p>A exemplo do que fizemos na primeira seção de análises, propomos novamente uma categorização dos partidos em função das características predominantes de seus dirigentes de organizações municipais. Como agora estamos com quatro variáveis das características sócio demográficas dos dirigentes, usaremos a técnica de análise de correspondência múltipla para identificar as proximidades e distâncias simultâneas entre as categorias das variáveis carreira política (vereador, prefeito, deputado ou não é político), sexo (homem ou mulher), escolaridade (fundamental, médio e superior) e idade, que classificamos a partir dos quartis da distribuição da idade em anos (até 40 anos, de 40 a 48 anos, de 49 a 55 anos e acima de 55 anos). O <xref ref-type="fig" rid="f2">gráfico 2 </xref>a seguir apresenta a distribuição das categorias e a distribuição dos partidos ao lado para facilitar a leitura. A análise mostrou uma baixa correspondência entre as categorias, com cronbach de apenas 0,250, o que não nos permite extrapolar os valores para além da descrição das posições. A variância explicada também ficou em torno de ¼ do total, com 24,99%. </p>
+      <p>
+        <fig id="f2">
+          <label>Gráfico 2.</label>
+          <caption>
+            <title>Distribuições das características dos dirigentes municipais pela correspondência múltipla</title>
+          </caption>
+          <alternatives>
+            <graphic xlink:href="https://minio.scielo.br/documentstore/2178-4884/qbsnm7VHDCqbvDSmFBQvFtn/b0048fedc7b96958ab38981e157d591efa0d276a.png"/>
+            <graphic xlink:href="https://minio.scielo.br/documentstore/2178-4884/qbsnm7VHDCqbvDSmFBQvFtn/d650437696bac6160e1fe091e89c0562613db6fd.jpg" specific-use="scielo-web" content-type="scielo-267x140"/>
+          </alternatives>
+        </fig>
+      </p>
+      <p>As correlações das variáveis transformadas mostram maiores associações positivas entre escolaridade e idade, entre escolaridade e sexo (indicando que as mulheres dirigentes tendem a ter escolaridade mais alta). Como nosso objetivo não é testar a validade das variáveis para predição de características dos dirigentes e sim organizar os partidos em quadrantes a partir das quatro variáveis, o <xref ref-type="table" rid="t8">quadro 2</xref> a seguir sumariza as características presentes em cada quadrante (divididos pelo valor mediano de cada uma das dimensões) e os partidos que ficaram em cada um.</p>
+      <p>No quadrante I encontram-se os partidos pequenos e médios de centro-esquerda e esquerda, além do PT. As categorias que tendem a aparecer nesse quadrante são o sexo feminino, ensino superior, deputado e prefeito. No quadrante II estão os partidos grandes, PMDB e PSDB, além de partidos médios DEM, PSD e PDT. Nele tendem a estar dirigentes apenas com ensino fundamental e idade superior a 55 anos, os mais velhos. Nos demais partidos, quadrantes III e IV, estão dirigentes com idade baixa e média, homens e escolaridade média. A diferença entre eles é que os partidos do quadrante III tendem a ter mais dirigentes não políticos e os do quadrante IV tendem a ter vereador como dirigente municipal.</p>
+      <p>
+        <table-wrap id="t8">
+          <label>Quadro 2.</label>
+          <caption>
+            <title>Distribuição das categorias e partidos por quadrante</title>
+          </caption>
+          <table cellpadding="5" frame="hsides" rules="rows" style="width: 720px;">
+            <colgroup>
+              <col/>
+              <col/>
+              <col/>
+            </colgroup>
+            <tbody>
+              <tr>
+                <td align="center" style="background: #D9D9D9;">Quadrante</td>
+                <td align="center" style="background: #D9D9D9;">Categorias</td>
+                <td align="center" style="background: #D9D9D9;">Partidos</td>
+              </tr>
+              <tr>
+                <td align="center" style="background: #D9D9D9;">I</td>
+                <td align="center">Deputado, prefeito, mulher, ensino superior.</td>
+                <td align="center">PSTU, PMB, REDE, PSOL, PSB, PT.</td>
+              </tr>
+              <tr>
+                <td align="center" style="background: #D9D9D9;">II</td>
+                <td align="center">Ensino fundamental, idade acima de 55 anos.</td>
+                <td align="center">PMDB, PSDB, DEM, PSD, PDT.</td>
+              </tr>
+              <tr>
+                <td align="center" style="background: #D9D9D9;">III</td>
+                <td align="center">Idade até 40 anos, não político.</td>
+                <td align="center">PTB, PP, PR, PCB, PSC, PMN, PSL.</td>
+              </tr>
+              <tr>
+                <td align="center" style="background: #D9D9D9;">IV</td>
+                <td align="center">Idade de 41 a 55 anos, homem, ensino médio, vereador.</td>
+                <td align="center">PC do B, PV, PPS, PRTB, PRP, PTC, PTN, PPL, PEN, PSDC, PHS, PT do B, PRB, SD, PROS.</td>
+              </tr>
+            </tbody>
+          </table>
+          <table-wrap-foot>
+            <fn id="TFN12">
+              <p>Elaboração: Autores</p>
+            </fn>
+          </table-wrap-foot>
+        </table-wrap>
+      </p>
+      <p>Se compararmos os resultados do <xref ref-type="table" rid="t8">quadro 2</xref> (dados sociodemográficos dos dirigentes municipais) com os do <xref ref-type="fig" rid="f1">gráfico 1</xref> (institucionalização e enraizamento dos diretórios partidários), perceberemos que os partidos mais institucionalizados nos municípios (quadrante II do <xref ref-type="fig" rid="f1">gráfico 1</xref>) dividem-se entre os quadrantes I e II no <xref ref-type="table" rid="t8">quadro 2</xref>, do perfil dos dirigentes. Isso indica que o padrão de institucionalização, pelo menos entre os partidos mais institucionalizados, não se associa diretamente a um perfil específico de dirigentes municipais. Uma parte dos partidos institucionalizados tende a ter proporcionalmente mais mulheres com alta escolaridade em suas organizações, enquanto outra parte tende a ter homens, mais velhos e de baixa escolaridade.</p>
+    </sec>
+    <sec sec-type="conclusions">
+      <title>Considerações Finais</title>
+      <p>O artigo apresenta alguns resultados interessantes. Um dos principais, sem dúvida, é a constatação de que a maioria dos partidos não possui organização formal na maior parte dos municípios brasileiros. A ampla maioria (83,6%) é composta por comissões provisórias. Isso vale em geral para todos os partidos, embora os grandes e tradicionais tendem a ter mais diretórios permanentes, como já havia sido detectado por Guarnieri (2011) em sua análise dos diretórios partidários existentes em 2009. Como argumentamos acima, a chave para entender esse elevado percentual é a legislação eleitoral brasileira que exige que os partidos estejam formalmente organizados nos municípios, mesmo que de maneira provisória, caso queiram disputar as eleições com candidatos próprios ou coligados. A tipologia proposta neste artigo, que permite distinguir nacionalização/enraizamento de institucionalização dos diretórios municipais, mostrou que apenas sete partidos apresentaram enraizamento e institucionalização ao mesmo tempo. Todos entre os mais antigos em atuação no Brasil.</p>
+      <p>Sobre o perfil dos dirigentes, vale relembrar que tratamos apenas dos que foram candidatos a algum cargo eletivo nas eleições de 2012, 2014 e 2016. Dentro do universo analisado, foi possível verificar que o percentual de dirigentes que se candidata gira em torno de 53%. Outra característica marcante, que reproduz o padrão político brasileiro nos demais níveis de disputa, é a maciça presença de dirigentes partidários do sexo masculino (mais de oito em cada dez dirigentes são homens). Esse número é bem próximo do observado para o caso dos candidatos e eleitos para a Câmara dos Deputados (<xref ref-type="bibr" rid="B20">Perissinotto e Bolognesi, 2010</xref>) e também do número de prefeitos e vereadores eleitos em 2016 (87%). </p>
+      <p>Os dirigentes partidários distinguem-se pela elevada escolaridade - 40,8% desses dirigentes possuíam ensino superior completo ou incompleto. Esse percentual afasta os líderes partidários locais do conjunto de candidatos e eleitos nas eleições municipais de 2016, porém ainda os mantém abaixo do nível de escolaridade de candidatos e eleitos para a Câmara Federal nas eleições de 1998, 2002 e 2006 - em 2006, por exemplo, 87,9% dos eleitos e 61,3% dos não eleitos tinham ensino superior completo ou incompleto (<xref ref-type="bibr" rid="B20">Perissinotto e Bolognesi, 2010</xref>). Tais números colocam os dirigentes municipais partidários como uma categoria intermediária entre o corpo político municipal e federal. </p>
+      <p>Os dados revelam ainda que a profissionalização política, medida pelo número de dirigentes de diretórios municipais que se identificam como políticos profissionais, é relativamente baixa. Dentre os que disputaram pelo menos uma das três eleições entre 2012 e 2016, a soma daqueles líderes que declararam ocupar algum cargo eletivo como vereador, prefeito ou deputado alcança 16,4%, superior aos 2,99% do total de não eleitos em 2016, porém abaixo do total de eleitos (20,28%) nessa mesma eleição - os demais cargos somam perto de 0,0%. Finalmente, os dados revelam que há, sim, diferenças entre os principais partidos em relação às características sociais de seus líderes partidários municipais. Assim, por exemplo, PT, Rede e PCdoB reúnem entre os seus quadros número maior de mulheres do que seus concorrentes, do mesmo modo que PT, PSDB e PMDB aparentam ter dirigentes municipais com nível escolaridade acima da média dos demais partidos. Por fim, sobre o perfil dos dirigentes, quando analisado em termos de correspondência das categorias, percebe-se que diretórios com mulheres e escolaridade superior tendem a ser os de partidos de esquerda, enquanto os demais partidos institucionalizados apresentam tendência de dirigentes homens, com idade acima de 55 anos e baixa escolaridade (<xref ref-type="table" rid="t8">quadro 2</xref>).</p>
+      <p>O elevado percentual de comissões provisórias, a baixa institucionalização/enraizamento da maior parte dos diretórios partidários municipais e baixa profissionalização dos líderes incorporam, portanto, novas variáveis à conhecida controvérsia sobre o grau de institucionalização dos partidos e do sistema partidário brasileiro. Esse debate é extenso e envolve diferentes abordagens como a evolução do sistema partidário (<xref ref-type="bibr" rid="B12">Ferreira, Batista e Stabile, 2008</xref>; <xref ref-type="bibr" rid="B3">Bohn e Paiva, 2009</xref>; <xref ref-type="bibr" rid="B15">Limongi e Cortez, 2010</xref>; <xref ref-type="bibr" rid="B24">Tarouco, 2010</xref>; <xref ref-type="bibr" rid="B16">Melo e Câmara, 2012</xref>), a disciplina e a migração partidária na arena legislativa (<xref ref-type="bibr" rid="B1">Amorim Neto, 2000</xref>; <xref ref-type="bibr" rid="B2">Amorim Neto e Santos, 2001</xref>; <xref ref-type="bibr" rid="B17">Melo, 2004</xref>), a lógica das coligações e seus efeitos sobre o número de partidos (<xref ref-type="bibr" rid="B11">Carreirão e Nascimento, 2010</xref>; <xref ref-type="bibr" rid="B14">Krause, Dantas e Miguel, 2010</xref>; <xref ref-type="bibr" rid="B18">Miguel e Assis, 2016</xref>), os laços partidários dos eleitores brasileiros (<xref ref-type="bibr" rid="B10">Carreirão e Kinzo, 2004</xref>; <xref ref-type="bibr" rid="B6">Braga e Pimentel, 2011</xref>; <xref ref-type="bibr" rid="B25">Veiga, 2011</xref>; <xref ref-type="bibr" rid="B19">Paiva e Tarouco, 2011</xref>) e a organização interna e os padrões de recrutamento eleitoral (Braga, 2008; <xref ref-type="bibr" rid="B5">Braga e Amaral, 2013</xref>; <xref ref-type="bibr" rid="B4">Bolognesi, 2013</xref>; <xref ref-type="bibr" rid="B23">Ribeiro, 2013</xref>; Santos, 2016)<xref ref-type="fn" rid="fn7"><sup>9</sup></xref>. </p>
+      <p>A nossa sugestão é que outra possível medida de saúde institucional do sistema partidário brasileiro é o grau de enraizamento dos seus diretórios partidários municipais e a análise do perfil dessas lideranças que, de uma maneira ou de outra, organizam e dão vida à política nos pequenos e nos médios municípios. Pelo o que os dados sobre os diretórios municipais e o perfil político de seus líderes sugerem, apesar de grande número de legendas, poucas conseguiram a institucionalização/enraizamento</p>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>Referências</title>
+      <ref id="B1">
+        <mixed-citation>AMORIM NETO, O. Gabinetes presidenciais, ciclos eleitorais e disciplina legislativa no Brasil. <italic>Dados</italic>, v. 43, n. 3, p. 479-520, 2000.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>AMORIM</surname>
+              <given-names>O.</given-names>
+              <suffix>NETO</suffix>
+            </name>
+          </person-group>
+          <article-title>Gabinetes presidenciais, ciclos eleitorais e disciplina legislativa no Brasil</article-title>
+          <source>Dados</source>
+          <volume>43</volume>
+          <issue>3</issue>
+          <fpage>479</fpage>
+          <lpage>520</lpage>
+          <year>2000</year>
+        </element-citation>
+      </ref>
+      <ref id="B2">
+        <mixed-citation>AMORIM NETO, O.; SANTOS, F. A conexão presidencial: facções pró e antigoverno e disciplina partidária no Brasil. <italic>Dados</italic>, v. 44, n. 2, p. 291-321, 2001.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>AMORIM</surname>
+              <given-names>O.</given-names>
+              <suffix>NETO</suffix>
+            </name>
+            <name>
+              <surname>SANTOS</surname>
+              <given-names>F.</given-names>
+            </name>
+          </person-group>
+          <article-title>A conexão presidencial: facções pró e antigoverno e disciplina partidária no Brasil</article-title>
+          <source>Dados</source>
+          <volume>44</volume>
+          <issue>2</issue>
+          <fpage>291</fpage>
+          <lpage>321</lpage>
+          <year>2001</year>
+        </element-citation>
+      </ref>
+      <ref id="B3">
+        <mixed-citation>BOHN, S.; PAIVA, D. A volatilidade eleitoral nos estados: sistema partidário e democracia no Brasil. <italic>Revista de Sociologia e Política</italic>, v. 17, n. 33, p. 187-208, 2009.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BOHN</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>PAIVA</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>A volatilidade eleitoral nos estados: sistema partidário e democracia no Brasil</article-title>
+          <source>Revista de Sociologia e Política</source>
+          <volume>17</volume>
+          <issue>33</issue>
+          <fpage>187</fpage>
+          <lpage>208</lpage>
+          <year>2009</year>
+        </element-citation>
+      </ref>
+      <ref id="B4">
+        <mixed-citation>BOLOGNESI, B. A seleção de candidaturas no DEM, PMDB, PSDB e PT nas eleições legislativas federais brasileiras de 2010: percepções dos candidatos sobre a formação das listas. <italic>Revista de Sociologia e Política</italic>. v. 21, n. 46, p.45-68, 2013.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BOLOGNESI</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+          <article-title>A seleção de candidaturas no DEM, PMDB, PSDB e PT nas eleições legislativas federais brasileiras de 2010: percepções dos candidatos sobre a formação das listas</article-title>
+          <source>Revista de Sociologia e Política</source>
+          <volume>21</volume>
+          <issue>46</issue>
+          <fpage>45</fpage>
+          <lpage>68</lpage>
+          <year>2013</year>
+        </element-citation>
+      </ref>
+      <ref id="B5">
+        <mixed-citation>BRAGA, M. S. S.; AMARAL, O.E. Implicações do processo de seleção de candidatos na competição partidária: o caso brasileiro. <italic>Revista de Sociologia e Política</italic>. v. 21, n. 46, p.33-43, 2013.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BRAGA</surname>
+              <given-names>M. S. S.</given-names>
+            </name>
+            <name>
+              <surname>AMARAL</surname>
+              <given-names>O.E.</given-names>
+            </name>
+          </person-group>
+          <article-title>Implicações do processo de seleção de candidatos na competição partidária: o caso brasileiro</article-title>
+          <source>Revista de Sociologia e Política</source>
+          <volume>21</volume>
+          <issue>46</issue>
+          <fpage>33</fpage>
+          <lpage>43</lpage>
+          <year>2013</year>
+        </element-citation>
+      </ref>
+      <ref id="B6">
+        <mixed-citation>BRAGA, M. S. S.; PIMENTEL, J. Os partidos políticos brasileiros realmente não importam?. <italic>Opinião Pública</italic>, v.17, n. 2, p.271-303, 2011</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BRAGA</surname>
+              <given-names>M. S. S.</given-names>
+            </name>
+            <name>
+              <surname>PIMENTEL</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Os partidos políticos brasileiros realmente não importam?</article-title>
+          <source>Opinião Pública</source>
+          <volume>17</volume>
+          <issue>2</issue>
+          <fpage>271</fpage>
+          <lpage>303</lpage>
+          <year>2011</year>
+        </element-citation>
+      </ref>
+      <ref id="B7">
+        <mixed-citation>BRAGA, M. S. S.; VEIGA, L. F.; MIRÍADE, A. Recrutamento e perfil dos candidatos e dos eleitos à Câmara dos Deputados nas eleições de 2006. <italic>Revista Brasileira de Ciências Sociais</italic>, v. 24, n.70, p.123-142, 2009.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>BRAGA</surname>
+              <given-names>M. S. S.</given-names>
+            </name>
+            <name>
+              <surname>VEIGA</surname>
+              <given-names>L. F.</given-names>
+            </name>
+            <name>
+              <surname>MIRÍADE</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Recrutamento e perfil dos candidatos e dos eleitos à Câmara dos Deputados nas eleições de 2006</article-title>
+          <source>Revista Brasileira de Ciências Sociais</source>
+          <volume>24</volume>
+          <issue>70</issue>
+          <fpage>123</fpage>
+          <lpage>142</lpage>
+          <year>2009</year>
+        </element-citation>
+      </ref>
+      <ref id="B8">
+        <mixed-citation>CAMPOS, L. A. Socialismo Moreno, Conservadorismo Pálido? Cor e Recrutamento Partidário em São Paulo e Rio de Janeiro nas Eleições de 2012. <italic>Dados</italic>, v. 58, n. 3, p.689-719, 2015.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CAMPOS</surname>
+              <given-names>L. A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Socialismo Moreno, Conservadorismo Pálido? Cor e Recrutamento Partidário em São Paulo e Rio de Janeiro nas Eleições de 2012</article-title>
+          <source>Dados</source>
+          <volume>58</volume>
+          <issue>3</issue>
+          <fpage>689</fpage>
+          <lpage>719</lpage>
+          <year>2015</year>
+        </element-citation>
+      </ref>
+      <ref id="B9">
+        <mixed-citation>CARREIRÃO, Y. O sistema partidário brasileiro: um debate com a literatura recente. <italic>Revista Brasileira de Ciência Política</italic>, n.14, p.255-295, 2014.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARREIRÃO</surname>
+              <given-names>Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>O sistema partidário brasileiro: um debate com a literatura recente</article-title>
+          <source>Revista Brasileira de Ciência Política</source>
+          <issue>14</issue>
+          <fpage>255</fpage>
+          <lpage>295</lpage>
+          <year>2014</year>
+        </element-citation>
+      </ref>
+      <ref id="B10">
+        <mixed-citation>CARREIRÃO, Y.; KINZO, M. D. Partidos políticos, preferência partidária e decisão eleitoral no Brasil (1989-2002). <italic>Dados</italic>, v. 47, n. 1, p.131-167, 2004.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARREIRÃO</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>KINZO</surname>
+              <given-names>M. D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Partidos políticos, preferência partidária e decisão eleitoral no Brasil (1989-2002)</article-title>
+          <source>Dados</source>
+          <volume>47</volume>
+          <issue>1</issue>
+          <fpage>131</fpage>
+          <lpage>167</lpage>
+          <year>2004</year>
+        </element-citation>
+      </ref>
+      <ref id="B11">
+        <mixed-citation>CARREIRÃO, Y. e NASCIMENTO, F. P. (2010). As coligações nas eleições para os cargos de governador, senador, deputado federal e deputado estadual no Brasil (1986/2006). <italic>Revista Brasileira de Ciência Política</italic>, n. 4, p. 75-104.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>CARREIRÃO</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>NASCIMENTO</surname>
+              <given-names>F. P.</given-names>
+            </name>
+          </person-group>
+          <year>2010</year>
+          <article-title>As coligações nas eleições para os cargos de governador, senador, deputado federal e deputado estadual no Brasil (1986/2006)</article-title>
+          <source>Revista Brasileira de Ciência Política</source>
+          <issue>4</issue>
+          <fpage>75</fpage>
+          <lpage>104</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B12">
+        <mixed-citation>FERREIRA, D. P., BATISTA, C. M.; STABILE, M. A evolução do sistema partidário brasileiro: número de partidos e votação no plano subnacional (1982-2006). <italic>Opinião Pública</italic>, v. 14, n. 2, p.432-453, 2008.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>FERREIRA</surname>
+              <given-names>C. M.</given-names>
+            </name>
+            <name>
+              <surname>STABILE</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>A evolução do sistema partidário brasileiro: número de partidos e votação no plano subnacional (1982-2006)</article-title>
+          <source>Opinião Pública</source>
+          <volume>14</volume>
+          <issue>2</issue>
+          <fpage>432</fpage>
+          <lpage>453</lpage>
+          <year>2008</year>
+        </element-citation>
+      </ref>
+      <ref id="B13">
+        <mixed-citation>KERBAUY, M. T. As câmaras municipais brasileiras: perfil de carreira e percepção sobre o processo decisório local. <italic>Opinião Pública</italic>, v.11, n. 2, p. 337-365, 2005.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>KERBAUY</surname>
+              <given-names>M. T.</given-names>
+            </name>
+          </person-group>
+          <article-title>As câmaras municipais brasileiras: perfil de carreira e percepção sobre o processo decisório local</article-title>
+          <source>Opinião Pública</source>
+          <volume>11</volume>
+          <issue>2</issue>
+          <fpage>337</fpage>
+          <lpage>365</lpage>
+          <year>2005</year>
+        </element-citation>
+      </ref>
+      <ref id="B14">
+        <mixed-citation>KRAUSE, S.; DANTAS, H.; MIGUEL, L. F. (Org.). Coligações eleitorais na nova democracia brasileira: perfis e tendências. Rio de Janeiro: Konrad-Adenauer Stiftung; São Paulo: Editora Unesp, 2010.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="compiler">
+            <name>
+              <surname>KRAUSE</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>DANTAS</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>MIGUEL</surname>
+              <given-names>L. F.</given-names>
+            </name>
+          </person-group>
+          <source>Coligações eleitorais na nova democracia brasileira: perfis e tendências</source>
+          <publisher-loc>Rio de Janeiro</publisher-loc>
+          <publisher-name>Konrad-Adenauer Stiftung</publisher-name>
+          <publisher-loc>São Paulo</publisher-loc>
+          <publisher-name>Editora Unesp</publisher-name>
+          <year>2010</year>
+        </element-citation>
+      </ref>
+      <ref id="B15">
+        <mixed-citation>LIMONGI, F.; CORTEZ, R. As eleições de 2010 e o quadro partidário. <italic>Novos Estudos Cebrap</italic>, n. 88, p. 21-37, 2010.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>LIMONGI</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>CORTEZ</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>As eleições de 2010 e o quadro partidário</article-title>
+          <source>Novos Estudos Cebrap</source>
+          <issue>88</issue>
+          <fpage>21</fpage>
+          <lpage>37</lpage>
+          <year>2010</year>
+        </element-citation>
+      </ref>
+      <ref id="B16">
+        <mixed-citation>MELO, C. R.; CÂMARA, R. Estrutura da competição pela presidência e consolidação do sistema partidário no Brasil. <italic>Dados</italic>, v. 55, n. 1, p. 71-117, 2012.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MELO</surname>
+              <given-names>C. R.</given-names>
+            </name>
+            <name>
+              <surname>CÂMARA</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Estrutura da competição pela presidência e consolidação do sistema partidário no Brasil</article-title>
+          <source>Dados</source>
+          <volume>55</volume>
+          <issue>1</issue>
+          <fpage>71</fpage>
+          <lpage>117</lpage>
+          <year>2012</year>
+        </element-citation>
+      </ref>
+      <ref id="B17">
+        <mixed-citation>MELO, C. R. Retirando as cadeiras do lugar: migração partidária na Câmara dos Deputados (1985-2002). Belo Horizonte: Editora UFMG, 2004.</mixed-citation>
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MELO</surname>
+              <given-names>C. R.</given-names>
+            </name>
+          </person-group>
+          <source>Retirando as cadeiras do lugar: migração partidária na Câmara dos Deputados (1985-2002)</source>
+          <publisher-loc>Belo Horizonte</publisher-loc>
+          <publisher-name>Editora UFMG</publisher-name>
+          <year>2004</year>
+        </element-citation>
+      </ref>
+      <ref id="B18">
+        <mixed-citation>MIGUEL, L. F.; ASSIS, P. P. F. B. Coligações eleitorais e fragmentação das bancadas parlamentares no Brasil: simulações a partir das eleições de 2014. <italic>Revista de Sociologia e Política</italic>, v. 24, n. 60, p.29-46, 2016.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>MIGUEL</surname>
+              <given-names>L. F.</given-names>
+            </name>
+            <name>
+              <surname>ASSIS</surname>
+              <given-names>P. P. F. B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Coligações eleitorais e fragmentação das bancadas parlamentares no Brasil: simulações a partir das eleições de 2014</article-title>
+          <source>Revista de Sociologia e Política</source>
+          <volume>24</volume>
+          <issue>60</issue>
+          <fpage>29</fpage>
+          <lpage>46</lpage>
+          <year>2016</year>
+        </element-citation>
+      </ref>
+      <ref id="B19">
+        <mixed-citation>PAIVA, D.; TAROUCO, G. Voto e identificação partidária: os partidos brasileiros e a preferência dos eleitores. <italic>Opinião Pública</italic>, v. 17, n. 2, p. 426-451, 2011.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>PAIVA</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>TAROUCO</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Voto e identificação partidária: os partidos brasileiros e a preferência dos eleitores</article-title>
+          <source>Opinião Pública</source>
+          <volume>17</volume>
+          <issue>2</issue>
+          <fpage>426</fpage>
+          <lpage>451</lpage>
+          <year>2011</year>
+        </element-citation>
+      </ref>
+      <ref id="B20">
+        <mixed-citation>PERISSINOTTO, R. M.; BOLOGNESI, B. Electoral Success and Political Institutionalization in the Federal Deputy Elections in Brazil (1998, 2002 and 2006). <italic>Brazilian Political Science Review</italic>, v. 4, n. 1, p. 10-32, 2010. </mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>PERISSINOTTO</surname>
+              <given-names>R. M.</given-names>
+            </name>
+            <name>
+              <surname>BOLOGNESI</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Electoral Success and Political Institutionalization in the Federal Deputy Elections in Brazil (1998, 2002 and 2006)</article-title>
+          <source>Brazilian Political Science Review</source>
+          <volume>4</volume>
+          <issue>1</issue>
+          <fpage>10</fpage>
+          <lpage>32</lpage>
+          <year>2010</year>
+        </element-citation>
+      </ref>
+      <ref id="B21">
+        <mixed-citation>PERISSINOTTO, R. M.; MIRÍADE, A. Caminhos para o parlamento: candidatos e eleitos nas eleições para deputado federal em 2006. <italic>Dados</italic>, v. 52, n.2, p. 301-333, 2009.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>PERISSINOTTO</surname>
+              <given-names>R. M.</given-names>
+            </name>
+            <name>
+              <surname>MIRÍADE</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Caminhos para o parlamento: candidatos e eleitos nas eleições para deputado federal em 2006</article-title>
+          <source>Dados</source>
+          <volume>52</volume>
+          <issue>2</issue>
+          <fpage>301</fpage>
+          <lpage>333</lpage>
+          <year>2009</year>
+        </element-citation>
+      </ref>
+      <ref id="B22">
+        <mixed-citation>PERISSINOTTO, R. M.; VEIGA, L. F. Profissionalização política, processo seletivo e recursos partidários: uma análise da percepção dos candidatos do PT, PMDB, PSDB e DEM nas eleições para Deputado Federal de 2010. <italic>Opinião Pública</italic>, v. 20, n.1, p. 49-66, 2014.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>PERISSINOTTO</surname>
+              <given-names>R. M.</given-names>
+            </name>
+            <name>
+              <surname>VEIGA</surname>
+              <given-names>L. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Profissionalização política, processo seletivo e recursos partidários: uma análise da percepção dos candidatos do PT, PMDB, PSDB e DEM nas eleições para Deputado Federal de 2010</article-title>
+          <source>Opinião Pública</source>
+          <volume>20</volume>
+          <issue>1</issue>
+          <fpage>49</fpage>
+          <lpage>66</lpage>
+          <year>2014</year>
+        </element-citation>
+      </ref>
+      <ref id="B23">
+        <mixed-citation>RIBEIRO, P. F. Organização e poder nos partidos brasileiros: uma análise dos estatutos. <italic>Revista Brasileira de Ciência Política</italic>, n.10, p. 225-265, 2013.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>RIBEIRO</surname>
+              <given-names>P. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Organização e poder nos partidos brasileiros: uma análise dos estatutos</article-title>
+          <source>Revista Brasileira de Ciência Política</source>
+          <issue>10</issue>
+          <fpage>225</fpage>
+          <lpage>265</lpage>
+          <year>2013</year>
+        </element-citation>
+      </ref>
+      <ref id="B24">
+        <mixed-citation>TAROUCO, G. Institucionalização partidária no Brasil (1982- 2006). <italic>Revista Brasileira de Ciência Política</italic>, n. 4, p. 169-186, 2010.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>TAROUCO</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Institucionalização partidária no Brasil (1982- 2006)</article-title>
+          <source>Revista Brasileira de Ciência Política</source>
+          <issue>4</issue>
+          <fpage>169</fpage>
+          <lpage>186</lpage>
+          <year>2010</year>
+        </element-citation>
+      </ref>
+      <ref id="B25">
+        <mixed-citation>VEIGA, L. F. O partidarismo no Brasil (2002/2010). <italic>Opinião Pública</italic>, v. 17, n. 2, p. 400-425, 2011.</mixed-citation>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>VEIGA</surname>
+              <given-names>L. F.</given-names>
+            </name>
+          </person-group>
+          <article-title>O partidarismo no Brasil (2002/2010)</article-title>
+          <source>Opinião Pública</source>
+          <volume>17</volume>
+          <issue>2</issue>
+          <fpage>400</fpage>
+          <lpage>425</lpage>
+          <year>2011</year>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <fn-group>
+      <fn fn-type="other" id="fn1">
+        <label>
+          <sup>3</sup>
+        </label>
+        <p> Esse trabalho contou com recursos da Fundação Carlos Chagas de Apoio à Pesquisa do Estado do Rio de Janeiro (Faperj).</p>
+      </fn>
+      <fn fn-type="other" id="fn2">
+        <label>
+          <sup>4</sup>
+        </label>
+        <p> Acessado em 19/02/2018 (<ext-link ext-link-type="uri" xlink:href="http://www.tse.jus.br/eleitor-e-eleicoes/estatisticas/eleicoes/eleicoes-anteriores/estatisticas-eleitorais-2016/candidaturas">http://www.tse.jus.br/eleitor-e-eleicoes/estatisticas/eleicoes/eleicoes-anteriores/estatisticas-eleitorais-2016/candidaturas</ext-link>). </p>
+      </fn>
+      <fn fn-type="other" id="fn3">
+        <label>
+          <sup>5</sup>
+        </label>
+        <p> É uma amostra formada a partir de dados disponíveis a partir de uma seleção anterior. Ela se justifica quando não é possível extrair uma amostra aleatória da população a ser estudada.</p>
+      </fn>
+      <fn fn-type="other" id="fn4">
+        <label>
+          <sup>6</sup>
+        </label>
+        <p> Ver art. 4º da Lei nº 9.504/97 e art. 10º da Lei 9.096/95, alterados pela lei 13.488/17. No início de 2019, quando o artigo passou pela última revisão, o Congresso Nacional estava finalizando as votações de uma alteração na legislação partidária. O objetivo é dar mais autonomia aos partidos quando à prestação de contas dos diretórios e, principalmente, quanto ao tempo de duração de uma comissão provisória partidária. As propostas giram entre os extremos de oito a dois anos para comissão provisória.</p>
+      </fn>
+      <fn fn-type="other" id="fn5">
+        <label>
+          <sup>7</sup>
+        </label>
+        <p> Entre os partidos pequenos existem variações maiores. Por exemplo, os percentuais de mulheres em presidências de diretórios municipais são de 57,9% no PMB, 30,2% no PSTU e 26,8% na REDE.</p>
+      </fn>
+      <fn fn-type="other" id="fn6">
+        <label>
+          <sup>8</sup>
+        </label>
+        <p> TSE: <ext-link ext-link-type="uri" xlink:href="http://www.tse.jus.br/eleicoes/estatisticas/estatisticas-eleitorais-2016/candidaturas">http://www.tse.jus.br/eleicoes/estatisticas/estatisticas-eleitorais-2016/candidaturas</ext-link>. Acessado em 15/09/2017.</p>
+      </fn>
+      <fn fn-type="other" id="fn7">
+        <label>
+          <sup>9</sup>
+        </label>
+        <p> Para uma revisão desse debate, consultar <xref ref-type="bibr" rid="B9">Carreirão (2014)</xref>. </p>
+      </fn>
+    </fn-group>
+  </back>
+</article>

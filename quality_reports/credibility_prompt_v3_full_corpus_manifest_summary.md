@@ -1,6 +1,6 @@
 # Manifest do corpus completo restante para credibility_prompt_v3
 
-Gerado em: 2026-07-18 08:04:07 -0300
+Gerado em: 2026-07-18 08:38:55 -0300
 
 ## Síntese
 
