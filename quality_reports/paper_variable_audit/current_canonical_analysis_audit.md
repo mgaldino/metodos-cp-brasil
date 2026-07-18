@@ -1,6 +1,6 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-18 18:00:52 -0300
+Gerado em: 2026-07-18 18:02:15 -0300
 
 ## Universo reconciliado
 
@@ -31,7 +31,8 @@ Os agregados dos artigos classificados continuam preliminares para o universo de
 ## Validações lógicas
 
 - Checks PASS: 25 de 28.
-- Checks FAIL: 
+- Checks WARN: statistical_inference_without_quantitative_flag (n=1); statistical_inference_without_quantitative_analysis (n=1); statistical_inference_missing_within_quantitative (n=5).
+- Checks FAIL: nenhum.
 
 ## Lacunas que permanecem
 

@@ -1368,6 +1368,15 @@ if (nrow(strict_method_totals) > 0) {
   )
 }
 
+warning_summary <- logical_inconsistencies |>
+  dplyr::filter(status == "WARN") |>
+  dplyr::transmute(label = paste0(check, " (n=", n, ")")) |>
+  dplyr::pull(label)
+
+failure_summary <- logical_inconsistencies |>
+  dplyr::filter(status == "FAIL") |>
+  dplyr::pull(check)
+
 audit_report <- c(
   "# Atualização analítica do paper com o CSV canônico",
   "",
@@ -1402,7 +1411,8 @@ audit_report <- c(
   "## Validações lógicas",
   "",
   paste0("- Checks PASS: ", sum(logical_inconsistencies$status == "PASS"), " de ", nrow(logical_inconsistencies), "."),
-  paste0("- Checks FAIL: ", paste(logical_inconsistencies$check[logical_inconsistencies$status == "FAIL"], collapse = "; ")), 
+  paste0("- Checks WARN: ", ifelse(length(warning_summary) == 0, "nenhum", paste(warning_summary, collapse = "; ")), "."),
+  paste0("- Checks FAIL: ", ifelse(length(failure_summary) == 0, "nenhum", paste(failure_summary, collapse = "; ")), "."),
   "",
   "## Lacunas que permanecem",
   "",
