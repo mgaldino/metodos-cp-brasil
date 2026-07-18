@@ -671,11 +671,11 @@ claim_method_alignment <- analysis_df |>
     alignment_category = dplyr::case_when(
       strict_design_method & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Linguagem causal ou explicativa e estratégia explícita",
       strict_design_method & !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Estratégia explícita sem linguagem causal ou explicativa",
-      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Linguagem empírica e análise quantitativa, sem estratégia explícita",
-      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Linguagem empírica sem análise quantitativa",
-      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Linguagem em artigo não empírico",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita",
+      dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & !dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Linguagem causal ou explicativa em artigo empírico, sem análise quantitativa",
+      !dplyr::coalesce(is_empirical_paper, FALSE) & dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) ~ "Linguagem causal ou explicativa em artigo não empírico",
       !dplyr::coalesce(causal_or_explanatory_claim_present, FALSE) & dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) ~ "Análise quantitativa sem linguagem causal ou explicativa",
-      TRUE ~ "Sem linguagem causal ou explicativa ou análise quantitativa"
+      TRUE ~ "Sem linguagem causal ou explicativa e sem análise quantitativa"
     )
   ) |>
   dplyr::count(alignment_category, name = "n") |>
@@ -1277,12 +1277,12 @@ ggplot2::ggsave(
 
 alignment_levels <- c(
   "Linguagem causal ou explicativa e estratégia explícita",
-  "Linguagem empírica e análise quantitativa, sem estratégia explícita",
-  "Linguagem empírica sem análise quantitativa",
-  "Linguagem em artigo não empírico",
+  "Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita",
+  "Linguagem causal ou explicativa em artigo empírico, sem análise quantitativa",
+  "Linguagem causal ou explicativa em artigo não empírico",
   "Análise quantitativa sem linguagem causal ou explicativa",
   "Estratégia explícita sem linguagem causal ou explicativa",
-  "Sem linguagem causal ou explicativa ou análise quantitativa"
+  "Sem linguagem causal ou explicativa e sem análise quantitativa"
 )
 
 figure_5 <- claim_method_alignment |>
