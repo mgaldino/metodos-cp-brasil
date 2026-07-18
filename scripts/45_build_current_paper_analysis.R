@@ -191,7 +191,7 @@ metric_labels <- c(
   quantitative = "Componente quantitativo",
   inference = "Inferência estatística",
   claim = "Afirmação causal/explicativa",
-  screen = "Identificação relevante",
+  screen = "Exame de identificação",
   strict = "Estratégia explícita"
 )
 
@@ -201,7 +201,7 @@ metric_denominators <- c(
   inference = "empíricos quantitativos",
   claim = "artigos empíricos",
   screen = "todos os artigos",
-  strict = "casos relevantes para identificação"
+  strict = "artigos examinados para identificação"
 )
 
 manifest_raw <- readr::read_csv(manifest_path, show_col_types = FALSE) |>
@@ -604,10 +604,10 @@ table_3_causality_credibility <- tibble::tribble(
   ~panel, ~category, ~n, ~denominator, ~denominator_n, ~percent, ~note,
   "Afirmações", "Afirmação causal ou explicativa", overall_metrics$n_claim, "artigos classificados", n_classified, overall_metrics$pct_claim_all, "A categoria combina afirmações causais e explicativas e também pode marcar textos não empíricos.",
   "Afirmações", "Afirmação causal ou explicativa em artigo empírico", overall_metrics$n_empirical_claim, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_claim, "O subconjunto empírico ainda não equivale a uma afirmação causal explícita.",
-  "Seleção analítica", "Casos relevantes para avaliar identificação", overall_metrics$n_screen, "artigos classificados", n_classified, overall_metrics$pct_screen, "Inclui artigos com afirmação causal ou explicativa e evidência empírica, além de modelagem quantitativa relevante.",
-  "Identificação", "Estratégia explícita de identificação causal", overall_metrics$n_strict, "casos relevantes para identificação", overall_metrics$n_screen, overall_metrics$pct_strict, "Contagem conservadora de famílias de método explicitamente mencionadas.",
-  "Diagnóstico não exclusivo", "Método quantitativo sem estratégia explícita", sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "casos relevantes para identificação", overall_metrics$n_screen, fmt_pct(sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "A categoria pode coexistir com uma estratégia explícita.",
-  "Diagnóstico não exclusivo", "Outro método moderno a auditar", sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "casos relevantes para identificação", overall_metrics$n_screen, fmt_pct(sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Categoria conservadora que exige auditoria adicional."
+  "Seleção", "Artigos selecionados para examinar identificação", overall_metrics$n_screen, "artigos classificados", n_classified, overall_metrics$pct_screen, "Inclui artigos com afirmação causal ou explicativa e evidência empírica, além de modelagem quantitativa relevante.",
+  "Identificação", "Estratégia explícita de identificação causal", overall_metrics$n_strict, "artigos examinados para identificação", overall_metrics$n_screen, overall_metrics$pct_strict, "Contagem conservadora de famílias de método explicitamente mencionadas.",
+  "Diagnóstico não exclusivo", "Método quantitativo sem estratégia explícita", sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "artigos examinados para identificação", overall_metrics$n_screen, fmt_pct(sum(analysis_df$diagnostic_not_design & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "A categoria pode coexistir com uma estratégia explícita.",
+  "Diagnóstico não exclusivo", "Outras estratégias codificadas", sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), "artigos examinados para identificação", overall_metrics$n_screen, fmt_pct(sum(analysis_df$other_modern_causal_method & dplyr::coalesce(analysis_df$credibility_revolution_screen_applicable, FALSE)), overall_metrics$n_screen), "Categoria conservadora que exige auditoria adicional."
 )
 
 complete_journal_profile <- metric_summary(complete_df, "journal_title") |>
@@ -1008,7 +1008,7 @@ figure_1_data <- tibble::tibble(
     "Empíricos",
     "Componente quantitativo",
     "Afirmação causal/explicativa",
-    "Casos relevantes para identificação",
+    "Artigos examinados para identificação",
     "Estratégia explícita de identificação"
   ),
   n = c(
@@ -1027,7 +1027,7 @@ figure_1_data <- tibble::tibble(
     "empíricos",
     "classificados",
     "classificados",
-    "casos relevantes"
+    "artigos examinados"
   ),
   denominator_n = c(
     n_manifest,
