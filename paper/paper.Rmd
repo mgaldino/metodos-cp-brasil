@@ -54,6 +54,7 @@ perfil_tough_call <- readr::read_csv("../output/tables/paper/tough_call_profile.
 cobertura_periodicos <- readr::read_csv("../output/tables/paper/coverage_by_journal.csv", show_col_types = FALSE)
 inferencia_numeros <- readr::read_csv("../output/tables/paper/statistical_inference_key_numbers.csv", show_col_types = FALSE)
 benchmark_inferencia <- readr::read_csv("../output/tables/paper/statistical_inference_torreblanca_benchmark.csv", show_col_types = FALSE)
+inferencia_linguagem_causal <- readr::read_csv("../output/tables/paper/statistical_inference_by_causal_language.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -99,6 +100,13 @@ benchmark_value <- function(publication, variable) {
   benchmark_inferencia[[variable]][benchmark_inferencia$publication == publication]
 }
 
+claim_inference_value <- function(causal_language, inference_status, variable) {
+  inferencia_linguagem_causal[[variable]][
+    inferencia_linguagem_causal$causal_language == causal_language &
+      inferencia_linguagem_causal$inference_status == inference_status
+  ]
+}
+
 n_inferencia_completos <- inference_metric_value("Inferência estatística nos seis periódicos completos", "n")
 n_inferencia_completos_den <- inference_metric_value("Inferência estatística nos seis periódicos completos", "denominator_n")
 pct_inferencia_completos <- inference_metric_value("Inferência estatística nos seis periódicos completos", "percent")
@@ -117,6 +125,51 @@ pct_torreblanca_apsr <- benchmark_value("American Political Science Review", "pe
 pct_torreblanca_ajps <- benchmark_value("American Journal of Political Science", "percent")
 pct_torreblanca_jop <- benchmark_value("Journal of Politics", "percent")
 pct_torreblanca_top3 <- benchmark_value("Média ponderada: APSR, AJPS e Journal of Politics", "percent")
+n_linguagem_com_inferencia <- claim_inference_value(
+  "Com linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "n"
+)
+n_linguagem_sem_inferencia <- claim_inference_value(
+  "Com linguagem causal ou explicativa",
+  "Sem inferência estatística",
+  "n"
+)
+n_linguagem_total <- claim_inference_value(
+  "Com linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "language_denominator_n"
+)
+pct_inferencia_com_linguagem <- claim_inference_value(
+  "Com linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "percent_within_language"
+)
+n_sem_linguagem_com_inferencia <- claim_inference_value(
+  "Sem linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "n"
+)
+n_sem_linguagem_sem_inferencia <- claim_inference_value(
+  "Sem linguagem causal ou explicativa",
+  "Sem inferência estatística",
+  "n"
+)
+n_sem_linguagem_total <- claim_inference_value(
+  "Sem linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "language_denominator_n"
+)
+pct_inferencia_sem_linguagem <- claim_inference_value(
+  "Sem linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "percent_within_language"
+)
+n_cruzamento_inferencia <- claim_inference_value(
+  "Com linguagem causal ou explicativa",
+  "Com inferência estatística",
+  "cross_denominator_n"
+)
 
 stopifnot(
   n_manifest == 5249,
@@ -132,7 +185,11 @@ stopifnot(
   n_screen_periodicos_completos <= n_artigos_periodicos_completos,
   n_estrito_periodicos_parciais <= n_screen_periodicos_parciais,
   n_inferencia_completos <= n_inferencia_completos_den,
-  n_inferencia_analise_formal <= n_analise_formal
+  n_inferencia_analise_formal <= n_analise_formal,
+  n_linguagem_com_inferencia + n_linguagem_sem_inferencia == n_linguagem_total,
+  n_sem_linguagem_com_inferencia + n_sem_linguagem_sem_inferencia == n_sem_linguagem_total,
+  n_linguagem_total + n_sem_linguagem_total == n_cruzamento_inferencia,
+  n_cruzamento_inferencia == n_inferencia_completos_den
 )
 
 profile_value <- function(journal, variable) {
@@ -319,7 +376,9 @@ No suporte temporal comum, as proporções observadas não sugerem crescimento d
 
 A Figura 3 oferece um benchmark internacional com três periódicos generalistas canônicos: APSR, AJPS e *Journal of Politics*. Torreblanca et al. [-@torreblanca2026] encontram abordagens baseadas em desenho causal em `r format_pct(pct_torreblanca_jop)` dos artigos quantitativos explicativos do *Journal of Politics*, `r format_pct(pct_torreblanca_ajps)` da AJPS e `r format_pct(pct_torreblanca_apsr)` da APSR. A média dos três percentuais, ponderada pelo número de artigos de cada periódico, é `r format_pct(pct_torreblanca_top3)`. Esses números ficam próximos dos `r format_pct(pct_inferencia_completos)` brasileiros, mas a coincidência de magnitudes serve apenas para colocar o resultado em perspectiva. As medidas variam no atributo classificado, no denominador, na composição editorial e no período. A seleção internacional de artigos explicativos torna o denominador mais orientado a métodos, enquanto seu numerador é mais restritivo. A justaposição não estima um hiato internacional nem permite comparar diretamente prevalência ou credibilidade.
 
-```{r figura-inferencia-benchmark, fig.cap="Incidência por periódico de duas práticas metodológicas distintas e não diretamente comparáveis. À esquerda, parcela com quantificação formal da incerteza entre os artigos quantitativos dos seis periódicos brasileiros, de 2005 a 2025; os rótulos apresentam numerador/denominador. À direita, parcela com abordagem baseada em desenho causal entre os artigos quantitativos explicativos da APSR, AJPS e Journal of Politics, de 2003 a 2023; N é o denominador, conforme a tabela suplementar de Torreblanca et al. As medidas e os universos diferem; a justaposição situa ordens de grandeza e não estima um hiato internacional.", out.width="95%"}
+O cruzamento acrescentado à Figura 3 mostra que linguagem causal ou explicativa é muito mais disseminada do que inferência estatística. Dos `r format_n(n_linguagem_total)` artigos quantitativos que empregam essa linguagem, `r format_n(n_linguagem_com_inferencia)` apresentam inferência (`r format_pct(pct_inferencia_com_linguagem)`) e `r format_n(n_linguagem_sem_inferencia)` não apresentam. Entre os apenas `r format_n(n_sem_linguagem_total)` quantitativos sem essa linguagem, `r format_n(n_sem_linguagem_com_inferencia)` apresentam inferência (`r format_pct(pct_inferencia_sem_linguagem)`). O cruzamento descreve coexistência de atributos; como a categoria de linguagem também inclui explicações amplas, ele não mede incompatibilidade entre afirmação causal e método.
+
+```{r figura-inferencia-benchmark, fig.cap="Linguagem causal ou explicativa é muito mais frequente do que inferência estatística entre os artigos quantitativos. Os painéis superiores mostram, à esquerda, a parcela com quantificação formal da incerteza nos seis periódicos brasileiros, de 2005 a 2025, e, à direita, a parcela com abordagem baseada em desenho causal entre os quantitativos explicativos da APSR, AJPS e Journal of Politics, de 2003 a 2023, segundo Torreblanca et al. O painel inferior cruza linguagem causal ou explicativa e inferência nos 1.281 artigos quantitativos brasileiros com informação válida para as duas medidas; as quatro categorias são mutuamente exclusivas, e os rótulos apresentam numerador/denominador. Linguagem causal ou explicativa é uma categoria ampla e não equivale a uma afirmação causal estrita. A comparação internacional situa ordens de grandeza e não estima um hiato.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_statistical_inference_benchmark.pdf")
 ```
 
