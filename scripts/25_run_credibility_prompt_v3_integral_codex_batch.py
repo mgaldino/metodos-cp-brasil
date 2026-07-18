@@ -287,6 +287,12 @@ def canonicalize_descriptive_metadata(record: dict[str, Any], row: dict[str, str
         record[field] = row.get(field, "")
         classification[field] = row.get(field, "")
 
+    # The schema uses null for method fields when the credibility screen does
+    # not apply; normalize redundant model output before validation.
+    if classification.get("credibility_revolution_screen_applicable") is False:
+        classification["credibility_revolution_method_present"] = None
+        classification["credibility_revolution_method_type"] = None
+
 
 def validate_record(record: dict[str, Any], row: dict[str, str]) -> list[str]:
     errors: list[str] = []
