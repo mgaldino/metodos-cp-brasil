@@ -71,8 +71,8 @@ n_inferencia <- tabela_dimensoes$n[tabela_dimensoes$category == "Inferência est
 n_claim_empirico <- tabela_credibilidade$n[tabela_credibilidade$category == "Afirmação causal ou explicativa em artigo empírico"]
 n_estrito_periodicos_completos <- sum(tabela_periodicos_completos$n_strict)
 n_qualitativos_periodicos_completos <- unique(tabela_qualitativa_completa$denominator_n)
-n_objetivo_qualitativo_claro <- tabela_qualitativa_completa$n[tabela_qualitativa_completa$qualitative_goal_clarity == "Clara"]
-pct_objetivo_qualitativo_claro <- tabela_qualitativa_completa$percent[tabela_qualitativa_completa$qualitative_goal_clarity == "Clara"]
+n_objetivo_qualitativo_claro <- tabela_qualitativa_completa$n[tabela_qualitativa_completa$qualitative_goal_clarity %in% "Clara"]
+pct_objetivo_qualitativo_claro <- tabela_qualitativa_completa$percent[tabela_qualitativa_completa$qualitative_goal_clarity %in% "Clara"]
 periodicos_completos_nomes <- tabela_periodicos_completos$journal_title
 periodicos_temporais_nomes <- sort(unique(perfil_periodico_periodo$journal_title))
 n_periodicos_temporais <- length(periodicos_temporais_nomes)

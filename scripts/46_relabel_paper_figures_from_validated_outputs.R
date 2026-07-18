@@ -239,7 +239,10 @@ figure_3 <- period_plot_data |>
   ggplot2::ggplot(ggplot2::aes(x = period_3, y = percent, group = 1)) +
   ggplot2::geom_line(color = "#2F6B8A", linewidth = 0.8) +
   ggplot2::geom_point(color = "#2F6B8A", size = 2.2) +
-  ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), vjust = -0.8, size = 2.8) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = fmt_pct_label(percent), vjust = ifelse(percent >= 90, 1.5, -0.8)),
+    size = 2.8
+  ) +
   ggplot2::facet_wrap(~ metric_label, ncol = 3, scales = "fixed") +
   ggplot2::scale_y_continuous(
     limits = c(0, 100),
