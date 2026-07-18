@@ -330,6 +330,8 @@ analysis_df <- classifications_raw |>
     qualitative_goal_clarity = dplyr::case_when(
       qualitative_goal_clarity == "clear" ~ "Clara",
       qualitative_goal_clarity == "ambiguous_tough_call" ~ "Ambígua/caso difícil",
+      qualitative_goal_clarity == "internally_inconsistent" ~ "Internamente inconsistente",
+      qualitative_goal_clarity == "unclear" ~ "Incerta",
       is_empirical_qual_paper & (is.na(qualitative_goal_clarity) | qualitative_goal_clarity == "") ~ "Não registrada",
       TRUE ~ NA_character_
     )
