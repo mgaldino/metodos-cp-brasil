@@ -177,7 +177,7 @@ A estratégia empírica é uma estratégia de mensuração, não uma estratégia
 
 O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas: a frequência das estratégias de identificação é calculada dentro do subconjunto em que a identificação é metodologicamente relevante. Outras dimensões são cruzadas: afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos os degraus.
 
-```{r figura-1, fig.cap="Cobertura da classificação e frequência das práticas metodológicas.", out.width="95%"}
+```{r figura-1, fig.cap="Cobertura da classificação e, entre os 3.565 artigos classificados, frequência de empiria, análise quantitativa e identificação explícita.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 ```
 
@@ -248,20 +248,28 @@ tabela_periodicos_display <- tabela_periodicos_completos |>
     ),
     N = format_n(n_articles),
     Empíricos = format_pct(pct_empirical),
-    Quantitativos = format_pct(pct_quantitative),
-    Inferência = format_pct(pct_inference),
-    Examinados = format_pct(pct_screen),
-    Estratégia = format_pct(pct_strict)
+    `Análise quantitativa` = format_pct(pct_quantitative),
+    `Inferência estatística` = format_pct(pct_inference),
+    `Examinados para identificação` = format_pct(pct_screen),
+    `Estratégia explícita` = format_pct(pct_strict)
   )
 
 knitr::kable(
   tabela_periodicos_display,
   caption = "Práticas metodológicas nos seis periódicos integralmente classificados.",
   booktabs = TRUE
-)
+) |>
+  kableExtra::kable_styling(
+    latex_options = "scale_down",
+    font_size = 9
+  ) |>
+  kableExtra::footnote(
+    general = "Percentuais: empíricos e examinados sobre todos os artigos; análise quantitativa sobre empíricos; inferência estatística sobre quantitativos com rótulo observado; estratégia explícita sobre examinados.",
+    threeparttable = TRUE
+  )
 ```
 
-```{r figura-2, fig.cap="Práticas metodológicas nos seis periódicos integralmente classificados.", out.width="95%"}
+```{r figura-2, fig.cap="Comparação das práticas metodológicas entre os seis periódicos integralmente classificados.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
 ```
 
