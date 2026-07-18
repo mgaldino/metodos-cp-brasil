@@ -397,7 +397,7 @@ brazil_plot_data <- inference_by_scope |>
 
 international_plot_data <- top_three |>
   dplyr::transmute(
-    panel = "Com desenho causal\nentre quantitativos explicativos",
+    panel = "Com abordagem baseada em desenho\nentre quantitativos explicativos",
     label = dplyr::recode(journal, !!!journal_abbreviations, .default = journal),
     percent = design_based_percent,
     value_label = paste0(
@@ -419,7 +419,7 @@ plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
       panel,
       levels = c(
         "Com inferência estatística\nentre artigos quantitativos",
-        "Com desenho causal\nentre quantitativos explicativos"
+        "Com abordagem baseada em desenho\nentre quantitativos explicativos"
       )
     ),
     label_hjust = ifelse(percent >= 55, 1.08, -0.08),
