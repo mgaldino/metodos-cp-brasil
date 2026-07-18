@@ -1284,10 +1284,14 @@ alignment_levels <- c(
   "Estratégia explícita sem linguagem causal ou explicativa",
   "Sem linguagem causal ou explicativa e sem análise quantitativa"
 )
+alignment_levels_wrapped <- stringr::str_wrap(alignment_levels, width = 58)
 
 figure_5 <- claim_method_alignment |>
   dplyr::mutate(
-    alignment_category = factor(alignment_category, levels = rev(alignment_levels)),
+    alignment_category = factor(
+      stringr::str_wrap(alignment_category, width = 58),
+      levels = rev(alignment_levels_wrapped)
+    ),
     label = paste0(fmt_n(n), " (", fmt_pct_label(percent), ")")
   ) |>
   ggplot2::ggplot(ggplot2::aes(x = percent, y = alignment_category)) +
@@ -1306,7 +1310,7 @@ ggplot2::ggsave(
   file.path(figures_dir, "figure_5_claim_method_alignment.pdf"),
   figure_5,
   width = 7,
-  height = 4.4,
+  height = 5,
   units = "in",
   device = grDevices::pdf
 )
