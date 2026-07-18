@@ -1176,7 +1176,11 @@ figure_3 <- period_plot_data |>
   ) +
   ggplot2::labs(
     title = "Variação por período em periódicos completos com suporte temporal comum",
-    subtitle = "Média simples de BPSR, Contexto Internacional e Dados; composição de periódicos mantida constante.",
+    subtitle = paste0(
+      "Média simples de ",
+      length(temporal_complete_journals),
+      " periódicos; composição editorial mantida constante."
+    ),
     x = "Período",
     y = "Percentual",
     caption = "Descrição padronizada por periódico; não identifica efeito causal do tempo. Denominadores variam por dimensão."
@@ -1229,7 +1233,9 @@ figure_7 <- year_plot_data |>
   ggplot2::labs(
     title = "Variação anual em periódicos completos com suporte temporal comum",
     subtitle = paste0(
-      "Proporções agrupadas de BPSR, Contexto Internacional e Dados; ",
+      "Proporções agrupadas de ",
+      length(temporal_complete_journals),
+      " periódicos; ",
       min(year_article_weight_profile$year),
       " a ",
       max(year_article_weight_profile$year),
@@ -1237,7 +1243,11 @@ figure_7 <- year_plot_data |>
     ),
     x = "Ano",
     y = "Percentual",
-    caption = "Apenas anos com artigos nos três periódicos. Série descritiva; denominadores variam por dimensão."
+    caption = paste0(
+      "Apenas anos com artigos nos ",
+      length(temporal_complete_journals),
+      " periódicos. Série descritiva; denominadores variam por dimensão."
+    )
   ) +
   theme_paper() +
   ggplot2::theme(
@@ -1274,7 +1284,10 @@ figure_4 <- coverage_plot_data |>
     x = "Cobertura",
     y = NULL,
     color = "Status",
-    caption = "Quatro periódicos completos; comparações substantivas principais são restritas a esse estrato."
+    caption = paste0(
+      n_complete_journals,
+      " periódicos completos; comparações substantivas principais são restritas a esse estrato."
+    )
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())

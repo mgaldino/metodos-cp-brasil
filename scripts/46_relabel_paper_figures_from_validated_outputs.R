@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 # Regenera figuras com ajustes editoriais a partir das tabelas
-# validadas usadas pelo paper de 13 de julho de 2026. O script não lê nem
+# validadas produzidas pela atualização corrente do paper. O script não lê nem
 # altera o corpus canônico e não recalcula classificações ou denominadores.
 
 suppressPackageStartupMessages({
@@ -26,11 +26,11 @@ input_paths <- c(
 stopifnot(all(file.exists(input_paths)))
 
 expected_md5 <- c(
-  denominators = "1f20e0b844d814110097dd104a68532b",
-  complete_journals = "c1e124f22c71f70dce6829f94f560c7d",
-  periods = "4fa28a87540d097194c72c02ad26be2c",
-  years = "573606c9f6427682c0039f5de168f46d",
-  coverage = "386030da0c22e564ec8c2b02edcd09dd"
+  denominators = "a002966d539b3699d047ad8979650a25",
+  complete_journals = "2e0a97210b0ed1604f0f82cd38de65a1",
+  periods = "a1cfbb7d34c7ff2eef451b780def8e36",
+  years = "378190a17a4ccfb2f2e7984e023cfa00",
+  coverage = "8fc47d6b626cd3510c341bbd8818c6be"
 )
 
 actual_md5 <- unname(tools::md5sum(unname(input_paths)))
@@ -56,17 +56,21 @@ n_quantitative <- denominator_n("Artigos empíricos quantitativos classificados"
 n_claim <- denominator_n("Artigos com afirmação causal ou explicativa classificados")
 n_examined <- denominator_n("Artigos em que a identificação é especialmente relevante")
 n_strict <- denominator_n("Artigos com estratégia explícita de identificação causal")
+n_complete_journals <- denominator_n("Periódicos com classificação completa")
+n_complete_articles <- denominator_n("Artigos dos periódicos completos")
+n_temporal_journals <- unique(periods$journals_n)
 
 stopifnot(
-  n_manifest == 5249,
-  n_classified == 1798,
-  n_empirical == 1446,
-  n_quantitative == 833,
-  n_examined == 463,
-  n_strict == 27,
-  nrow(complete_journals) == 4L,
-  all(periods$journals_n == 3L),
-  all(years$journals_n == 3L),
+  n_manifest > 0,
+  n_classified <= n_manifest,
+  n_empirical <= n_classified,
+  n_quantitative <= n_empirical,
+  n_examined <= n_classified,
+  n_strict <= n_examined,
+  nrow(complete_journals) == n_complete_journals,
+  sum(complete_journals$n_articles) == n_complete_articles,
+  length(n_temporal_journals) == 1L,
+  all(years$journals_n == n_temporal_journals),
   nrow(coverage) == 11L
 )
 
@@ -189,7 +193,12 @@ figure_2 <- complete_journals_long |>
   ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), color = "#173B4F", size = 3) +
   ggplot2::labs(
     title = "Perfil metodológico dos periódicos com classificação completa",
-    subtitle = "4 periódicos, 1.466 artigos; o denominador varia por dimensão.",
+    subtitle = paste0(
+      fmt_n(n_complete_journals),
+      " periódicos, ",
+      fmt_n(n_complete_articles),
+      " artigos; o denominador varia por dimensão."
+    ),
     x = NULL,
     y = NULL
   ) +
@@ -240,7 +249,11 @@ figure_3 <- period_plot_data |>
   ) +
   ggplot2::labs(
     title = "Variação por período em periódicos completos com suporte temporal comum",
-    subtitle = "Média simples de BPSR, Contexto Internacional e Dados; composição de periódicos mantida constante.",
+    subtitle = paste0(
+      "Média simples de ",
+      fmt_n(n_temporal_journals),
+      " periódicos; composição editorial mantida constante."
+    ),
     x = "Período",
     y = "Percentual",
     caption = "Descrição padronizada por periódico; não identifica efeito causal do tempo. Denominadores variam por dimensão."
@@ -277,7 +290,10 @@ figure_4 <- coverage_plot_data |>
     x = "Cobertura",
     y = NULL,
     color = "Status",
-    caption = "Quatro periódicos completos; comparações substantivas principais são restritas a esse estrato."
+    caption = paste0(
+      fmt_n(n_complete_journals),
+      " periódicos completos; comparações substantivas principais são restritas a esse estrato."
+    )
   ) +
   theme_paper() +
   ggplot2::theme(panel.grid.major.y = ggplot2::element_blank())
@@ -323,10 +339,22 @@ figure_7 <- year_plot_data |>
   ) +
   ggplot2::labs(
     title = "Variação anual em periódicos completos com suporte temporal comum",
-    subtitle = paste0("Proporções agrupadas de BPSR, Contexto Internacional e Dados; ", min(years$year), " a ", max(years$year), "."),
+    subtitle = paste0(
+      "Proporções agrupadas de ",
+      fmt_n(n_temporal_journals),
+      " periódicos; ",
+      min(years$year),
+      " a ",
+      max(years$year),
+      "."
+    ),
     x = "Ano",
     y = "Percentual",
-    caption = "Apenas anos com artigos nos três periódicos. Série descritiva; denominadores variam por dimensão."
+    caption = paste0(
+      "Apenas anos com artigos nos ",
+      fmt_n(n_temporal_journals),
+      " periódicos. Série descritiva; denominadores variam por dimensão."
+    )
   ) +
   theme_paper() +
   ggplot2::theme(
