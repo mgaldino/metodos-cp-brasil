@@ -352,7 +352,12 @@ international_plot_data <- top_three |>
     value_label = paste0(
       format_percent_label(design_based_percent),
       "% (N = ",
-      format(n_explanatory_quantitative, big.mark = ".", scientific = FALSE),
+      format(
+        n_explanatory_quantitative,
+        big.mark = ".",
+        decimal.mark = ",",
+        scientific = FALSE
+      ),
       ")"
     )
   )
