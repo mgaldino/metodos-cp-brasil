@@ -109,9 +109,9 @@ quantitative_type_labels <- c(
   unclear = "Classificação quantitativa incerta"
 )
 
-inference_by_quantitative_type <- quantitative_df |>
-  dplyr::mutate(
-    complete_stratum = journal_title %in% complete_journals,
+summarise_inference_by_type <- function(data, scope_label) {
+  data |>
+    dplyr::mutate(
     quantitative_type = dplyr::recode(
       quantitative_analysis_type,
       !!!quantitative_type_labels,
@@ -119,26 +119,41 @@ inference_by_quantitative_type <- quantitative_df |>
     )
   ) |>
   dplyr::filter(!is.na(has_statistical_inference)) |>
-  dplyr::group_by(complete_stratum, quantitative_type) |>
+    dplyr::group_by(quantitative_type) |>
   dplyr::summarise(
     quantitative_n = dplyr::n(),
     inference_n = sum(has_statistical_inference %in% TRUE),
     inference_percent = fmt_pct(inference_n, quantitative_n),
     .groups = "drop"
   ) |>
-  dplyr::mutate(
-    scope = ifelse(
-      complete_stratum,
-      "Seis periódicos integralmente classificados",
-      "Cobertura classificada"
-    )
-  ) |>
-  dplyr::select(scope, quantitative_type, quantitative_n, inference_n, inference_percent)
+    dplyr::mutate(scope = scope_label) |>
+    dplyr::select(scope, quantitative_type, quantitative_n, inference_n, inference_percent)
+}
+
+inference_by_quantitative_type <- dplyr::bind_rows(
+  summarise_inference_by_type(quantitative_df, "Cobertura classificada"),
+  summarise_inference_by_type(
+    quantitative_df |> dplyr::filter(journal_title %in% complete_journals),
+    "Seis periódicos integralmente classificados"
+  )
+)
+
+temporal_complete_journals <- analysis_df |>
+  dplyr::filter(journal_title %in% complete_journals) |>
+  dplyr::distinct(journal_title, period_3) |>
+  dplyr::count(journal_title, name = "periods_n") |>
+  dplyr::filter(periods_n == 3) |>
+  dplyr::pull(journal_title)
+
+if (length(temporal_complete_journals) != 5) {
+  stop("O suporte temporal comum deveria conter cinco periódicos completos.")
+}
 
 inference_by_period_complete <- quantitative_df |>
-  dplyr::filter(journal_title %in% complete_journals, !is.na(has_statistical_inference)) |>
+  dplyr::filter(journal_title %in% temporal_complete_journals, !is.na(has_statistical_inference)) |>
   dplyr::group_by(period_3) |>
   dplyr::summarise(
+    journals_n = dplyr::n_distinct(journal_title),
     quantitative_n = dplyr::n(),
     inference_n = sum(has_statistical_inference %in% TRUE),
     inference_percent = fmt_pct(inference_n, quantitative_n),
@@ -272,6 +287,14 @@ international_plot_data <- top_three |>
 
 plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
   dplyr::mutate(
+    panel = factor(
+      panel,
+      levels = c(
+        "Inferência estatística\n(periódicos brasileiros)",
+        "Desenho causal\n(Torreblanca et al.)"
+      )
+    ),
+    label_hjust = ifelse(percent >= 55, 1.08, -0.08),
     label = factor(
       label,
       levels = rev(c(
@@ -303,8 +326,7 @@ figure_inference_benchmark <- plot_data |>
   ) +
   ggplot2::geom_point(color = "#2F6B8A", size = 2.8) +
   ggplot2::geom_text(
-    ggplot2::aes(label = value_label),
-    hjust = -0.08,
+    ggplot2::aes(label = value_label, hjust = label_hjust),
     size = 2.8
   ) +
   ggplot2::facet_wrap(~ panel, ncol = 2, scales = "free_y") +
