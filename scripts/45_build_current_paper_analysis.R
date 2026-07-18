@@ -1045,13 +1045,13 @@ theme_paper <- function() {
 figure_1_data <- tibble::tibble(
   group = c("Cobertura", "Cobertura", "Evidência", "Quantificação", "Afirmações", "Identificação", "Identificação"),
   measure = c(
-    "Corpus elegível",
-    "Classificados",
-    "Empíricos",
-    "Componente quantitativo",
-    "Afirmação causal/explicativa",
-    "Casos relevantes para identificação",
-    "Estratégia explícita de identificação"
+    "Artigos elegíveis",
+    "Artigos classificados",
+    "Artigos empíricos",
+    "Com análise quantitativa",
+    "Com linguagem causal ou explicativa",
+    "Examinados para identificação",
+    "Com estratégia explícita"
   ),
   n = c(
     n_manifest,
