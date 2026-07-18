@@ -177,7 +177,7 @@ A estratégia empírica é uma estratégia de mensuração, não uma estratégia
 
 O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas: a frequência das estratégias de identificação é calculada dentro do subconjunto em que a identificação é metodologicamente relevante. Outras dimensões são cruzadas: afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos os degraus.
 
-```{r figura-1, fig.cap="Cobertura da classificação e, entre os 3.565 artigos classificados, frequência de empiria, análise quantitativa e identificação explícita.", out.width="95%"}
+```{r figura-1, fig.cap=paste0("Cobertura do corpus e incidência de práticas metodológicas. A cobertura usa os ", format_n(n_manifest), " artigos elegíveis; as demais linhas descrevem os ", format_n(n_classificados), " artigos classificados, com numerador e denominador indicados junto a cada ponto."), out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 ```
 
@@ -269,7 +269,7 @@ knitr::kable(
   )
 ```
 
-```{r figura-2, fig.cap="Comparação das práticas metodológicas entre os seis periódicos integralmente classificados.", out.width="95%"}
+```{r figura-2, fig.cap="As práticas metodológicas variam entre os seis periódicos integralmente classificados. Empíricos e examinados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com rótulo observado; estratégia explícita usa os examinados.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
 ```
 
@@ -285,7 +285,7 @@ Nos seis periódicos completos, `r format_n(n_qualitativos_periodicos_completos)
 
 A categoria de linguagem causal ou explicativa é deliberadamente ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 3 é um diagnóstico dessa amplitude e mostra por que a variável não discrimina pretensões causais estritas: há marcações em artigos não empíricos, em artigos empíricos sem componente quantitativo e em artigos empíricos quantitativos sem estratégia explícita de identificação. Esses cruzamentos descrevem coexistência de atributos; não medem desalinhamento ou adequação entre afirmação e método.
 
-```{r figura-5, fig.cap="Combinações entre linguagem causal ou explicativa, análise quantitativa e estratégias explícitas de identificação. As categorias são mutuamente exclusivas.", out.width="95%"}
+```{r figura-5, fig.cap=paste0("Combinações entre linguagem causal ou explicativa, análise quantitativa e estratégias explícitas nos ", format_n(n_classificados), " artigos classificados. As categorias são mutuamente exclusivas; os rótulos mostram número e percentual de artigos."), out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
@@ -331,7 +331,7 @@ knitr::kable(
 
 Nos seis periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos examinados mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
 
-```{r figura-6, fig.cap="Estratégias explícitas de identificação nos seis periódicos integralmente classificados. Um artigo pode mencionar mais de uma estratégia.", out.width="95%"}
+```{r figura-6, fig.cap="Estratégias explícitas de identificação nos seis periódicos integralmente classificados. As barras contam os artigos que mencionam cada estratégia; um artigo pode mencionar mais de uma.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
 ```
 
@@ -360,7 +360,7 @@ knitr::kable(
 )
 ```
 
-```{r figura-3, fig.cap="Práticas metodológicas por período em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP. Médias com peso igual para cada periódico.", out.width="95%"}
+```{r figura-3, fig.cap="A presença de artigos empíricos cresce entre os períodos, enquanto estratégias explícitas permanecem raras. Os pontos são médias com peso igual para BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
@@ -390,13 +390,13 @@ Nos seis periódicos integralmente classificados, apenas `r format_n(n_estrito_p
 
 A Figura 6 detalha a cobertura da classificação por periódico. Seis periódicos estão completos e cinco estão parcialmente classificados; todos os onze já têm artigos classificados. A distribuição ainda desigual impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
 
-```{r figura-4, fig.cap="Cobertura da classificação nos onze periódicos. Os rótulos mostram artigos classificados/elegíveis.", out.width="95%"}
+```{r figura-4, fig.cap="Seis dos onze periódicos estão integralmente classificados. Os pontos mostram a proporção classificada, e os rótulos, artigos classificados/elegíveis.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
 ```
 
 A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas 2011--2025, intervalo em que BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP têm artigos em todos os anos. As proporções anuais agrupam os artigos dos cinco periódicos, enquanto a Figura 5 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
 
-```{r figura-7, fig.cap="Práticas metodológicas por ano em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, 2011--2025. Todos os painéis usam a mesma escala, de 0% a 100%.", out.width="95%"}
+```{r figura-7, fig.cap="As séries anuais mostram crescimento da empiria e oscilação das demais práticas entre 2011 e 2025. As proporções agrupam os artigos de BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP e incluem apenas anos com publicação nos cinco periódicos; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
 ```
 
