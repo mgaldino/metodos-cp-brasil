@@ -256,6 +256,58 @@ benchmark_summary <- dplyr::bind_rows(
     difference_from_brazil_pp = round(percent - complete_aggregate$inference_percent, 1)
   )
 
+complete_type_summary <- inference_by_quantitative_type |>
+  dplyr::filter(scope == "Seis periódicos integralmente classificados")
+complete_descriptive <- complete_type_summary |>
+  dplyr::filter(quantitative_type == "Estatística descritiva")
+complete_formal_analysis <- complete_type_summary |>
+  dplyr::filter(quantitative_type %in% c("Modelagem estatística", "Testes bivariados ou correlações")) |>
+  dplyr::summarise(
+    n = sum(inference_n),
+    denominator_n = sum(quantitative_n),
+    percent = fmt_pct(n, denominator_n)
+  )
+
+inference_key_numbers <- dplyr::bind_rows(
+  tibble::tibble(
+    metric = "Inferência estatística na cobertura classificada",
+    n = inference_by_scope$inference_n[inference_by_scope$scope == "Cobertura classificada"],
+    denominator_n = inference_by_scope$inference_observed_n[inference_by_scope$scope == "Cobertura classificada"],
+    percent = inference_by_scope$inference_percent[inference_by_scope$scope == "Cobertura classificada"]
+  ),
+  tibble::tibble(
+    metric = "Inferência estatística nos seis periódicos completos",
+    n = complete_aggregate$inference_n,
+    denominator_n = complete_aggregate$inference_observed_n,
+    percent = complete_aggregate$inference_percent
+  ),
+  tibble::tibble(
+    metric = "Artigos apenas descritivos entre quantitativos nos seis periódicos completos",
+    n = complete_descriptive$quantitative_n,
+    denominator_n = complete_aggregate$inference_observed_n,
+    percent = fmt_pct(complete_descriptive$quantitative_n, complete_aggregate$inference_observed_n)
+  ),
+  tibble::tibble(
+    metric = "Inferência entre testes bivariados ou modelagem nos seis periódicos completos",
+    n = complete_formal_analysis$n,
+    denominator_n = complete_formal_analysis$denominator_n,
+    percent = complete_formal_analysis$percent
+  ),
+  inference_by_period_complete |>
+    dplyr::transmute(
+      metric = paste0("Inferência no suporte temporal comum: ", period_3),
+      n = inference_n,
+      denominator_n = quantitative_n,
+      percent = inference_percent
+    ),
+  tibble::tibble(
+    metric = "Desenho causal: média ponderada de APSR, AJPS e Journal of Politics",
+    n = NA_real_,
+    denominator_n = sum(top_three$n_explanatory_quantitative),
+    percent = round(top_three_weighted_percent, 1)
+  )
+)
+
 journal_abbreviations <- c(
   "Brazilian Political Science Review" = "BPSR",
   "Cadernos Gestão Pública e Cidadania" = "CGPC",
@@ -361,6 +413,11 @@ readr::write_csv(
 readr::write_csv(
   benchmark_summary,
   file.path(tables_dir, "statistical_inference_torreblanca_benchmark.csv"),
+  na = ""
+)
+readr::write_csv(
+  inference_key_numbers,
+  file.path(tables_dir, "statistical_inference_key_numbers.csv"),
   na = ""
 )
 
