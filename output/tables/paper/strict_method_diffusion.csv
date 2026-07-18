@@ -1,7 +1,5 @@
 method_type,journal_title,period_3,article_method_n,method_label
 synthetic_control,Brazilian Political Science Review,2019-2025,1,Controle sintético
-dag_or_formal_causal_graph,Brazilian Political Science Review,2019-2025,1,DAG/grafo causal formal
-dag_or_formal_causal_graph,Opinião Pública,2019-2025,1,DAG/grafo causal formal
 difference_in_differences,Brazilian Political Science Review,2012-2018,2,Diferenças-em-diferenças
 difference_in_differences,Brazilian Political Science Review,2019-2025,1,Diferenças-em-diferenças
 difference_in_differences,Cadernos Gestão Pública e Cidadania,2019-2025,1,Diferenças-em-diferenças
@@ -11,7 +9,7 @@ difference_in_differences,Opinião Pública,2012-2018,1,Diferenças-em-diferenç
 difference_in_differences,Opinião Pública,2019-2025,1,Diferenças-em-diferenças
 difference_in_differences,Revista Brasileira de Ciência Política,2019-2025,2,Diferenças-em-diferenças
 doubly_robust,Opinião Pública,2019-2025,2,Estimador duplamente robusto
-event_study,Cadernos Gestão Pública e Cidadania,2019-2025,1,Event study
+event_study,Cadernos Gestão Pública e Cidadania,2019-2025,1,Estudo de evento
 experiment_field,Brazilian Political Science Review,2012-2018,1,Experimento de campo
 experiment_field,Opinião Pública,2012-2018,1,Experimento de campo
 experiment_lab,Opinião Pública,2019-2025,1,Experimento de laboratório
@@ -25,6 +23,8 @@ experiment_survey,Opinião Pública,2005-2011,1,Experimento em survey
 experiment_survey,Opinião Pública,2012-2018,1,Experimento em survey
 experiment_survey,Opinião Pública,2019-2025,3,Experimento em survey
 experiment_survey,Revista Brasileira de Ciência Política,2019-2025,1,Experimento em survey
+dag_or_formal_causal_graph,Brazilian Political Science Review,2019-2025,1,Grafo causal formal (DAG)
+dag_or_formal_causal_graph,Opinião Pública,2019-2025,1,Grafo causal formal (DAG)
 matching_or_weighting,Brazilian Political Science Review,2012-2018,1,Pareamento/ponderação
 matching_or_weighting,Brazilian Political Science Review,2019-2025,1,Pareamento/ponderação
 matching_or_weighting,Cadernos Gestão Pública e Cidadania,2019-2025,1,Pareamento/ponderação

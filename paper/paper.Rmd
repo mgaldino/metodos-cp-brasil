@@ -304,8 +304,7 @@ tabela_3_display <- tabela_credibilidade |>
       "Estratégia explícita de identificação causal" = "Estratégia explícita",
       "Método quantitativo sem estratégia explícita" = "Sem estratégia explícita",
       "Outro método moderno a auditar" = "Outras estratégias codificadas"
-    ),
-    panel = panel
+    )
   ) |>
   dplyr::transmute(
     Categoria = category,
