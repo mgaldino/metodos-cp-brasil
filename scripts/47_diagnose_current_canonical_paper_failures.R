@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
-## Diagnostica, sem alterar dados, inconsistências do CSV canônico que
-## bloqueiam a atualização dos artefatos analíticos do paper.
+## Diagnostica, sem alterar dados, exceções relevantes para os denominadores
+## do paper e violações efetivas do schema do CSV canônico.
 
 options(scipen = 999, encoding = "UTF-8")
 
@@ -46,7 +46,8 @@ quantitative_levels <- c(
   "none",
   "descriptive_statistics_only",
   "bivariate_tests_or_correlations_only",
-  "statistical_modeling"
+  "statistical_modeling",
+  "unclear"
 )
 
 canonical <- readr::read_csv(canonical_path, show_col_types = FALSE)
@@ -54,6 +55,8 @@ manifest <- readr::read_csv(manifest_path, show_col_types = FALSE)
 
 excluded_pids <- if (file.exists(excluded_articles_path)) {
   readr::read_csv(excluded_articles_path, show_col_types = FALSE) |>
+    dplyr::mutate(exclude_from_analysis = parse_bool(exclude_from_analysis)) |>
+    dplyr::filter(dplyr::coalesce(exclude_from_analysis, FALSE)) |>
     dplyr::pull(pid)
 } else {
   character()
@@ -61,6 +64,8 @@ excluded_pids <- if (file.exists(excluded_articles_path)) {
 
 excluded_journals <- if (file.exists(excluded_journals_path)) {
   readr::read_csv(excluded_journals_path, show_col_types = FALSE) |>
+    dplyr::mutate(exclude_from_analysis = parse_bool(exclude_from_analysis)) |>
+    dplyr::filter(dplyr::coalesce(exclude_from_analysis, FALSE)) |>
     dplyr::pull(journal_title)
 } else {
   character()
@@ -83,10 +88,8 @@ diagnostic_base <- canonical |>
 
 diagnostics <- diagnostic_base |>
   dplyr::mutate(
-    statistical_inference_without_quantitative_flag =
+    statistical_inference_outside_quantitative_definition =
       dplyr::coalesce(inference_flag, FALSE) & !dplyr::coalesce(quant_flag, FALSE),
-    statistical_inference_without_quantitative_analysis =
-      dplyr::coalesce(inference_flag, FALSE) & quantitative_analysis_type == "none",
     statistical_inference_missing_within_quantitative =
       dplyr::coalesce(quant_flag, FALSE) & is.na(inference_flag),
     unknown_quantitative_level =
@@ -96,17 +99,20 @@ diagnostics <- diagnostic_base |>
   ) |>
   tidyr::pivot_longer(
     cols = dplyr::all_of(c(
-      "statistical_inference_without_quantitative_flag",
-      "statistical_inference_without_quantitative_analysis",
+      "statistical_inference_outside_quantitative_definition",
       "statistical_inference_missing_within_quantitative",
       "unknown_quantitative_level"
     )),
-    names_to = "failed_check",
-    values_to = "failed"
+    names_to = "audit_check",
+    values_to = "flagged"
   ) |>
-  dplyr::filter(failed) |>
+  dplyr::filter(flagged) |>
+  dplyr::mutate(
+    severity = dplyr::if_else(audit_check == "unknown_quantitative_level", "error", "warning")
+  ) |>
   dplyr::select(
-    failed_check,
+    audit_check,
+    severity,
     pid,
     title,
     journal_title,
@@ -121,7 +127,7 @@ diagnostics <- diagnostic_base |>
     tough_call_reason,
     brief_justification
   ) |>
-  dplyr::arrange(failed_check, journal_title, pid)
+  dplyr::arrange(severity, audit_check, journal_title, pid)
 
 level_counts <- diagnostic_base |>
   dplyr::count(quantitative_analysis_type, sort = TRUE, name = "n") |>
@@ -132,8 +138,8 @@ level_counts <- diagnostic_base |>
   dplyr::arrange(known_level, missing_level, dplyr::desc(n), quantitative_analysis_type)
 
 check_summary <- diagnostics |>
-  dplyr::count(failed_check, name = "failure_rows") |>
-  dplyr::arrange(failed_check)
+  dplyr::count(severity, audit_check, name = "audit_rows") |>
+  dplyr::arrange(severity, audit_check)
 
 readr::write_csv(
   diagnostics,
@@ -145,21 +151,23 @@ readr::write_csv(
 )
 
 diagnostic_lines <- c(
-  "# Diagnóstico das falhas do CSV canônico na análise do paper",
+  "# Diagnóstico das exceções do CSV canônico relevantes para o paper",
   "",
   paste0("- Data de execução: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S %z")),
   paste0("- CSV canônico: `", canonical_path, "`"),
   paste0("- Dimensão do CSV: ", format(nrow(canonical), big.mark = "."), " linhas x ", ncol(canonical), " colunas"),
   paste0("- PIDs elegíveis classificados: ", dplyr::n_distinct(diagnostic_base$pid)),
-  paste0("- PIDs distintos com ao menos uma falha: ", dplyr::n_distinct(diagnostics$pid)),
+  paste0("- PIDs distintos com ao menos uma exceção: ", dplyr::n_distinct(diagnostics$pid)),
   "",
-  "## Contagem por validação",
+  "## Contagem por verificação",
   "",
   if (nrow(check_summary) == 0L) {
-    "Nenhuma falha encontrada."
+    "Nenhuma exceção encontrada."
   } else {
-    paste0("- `", check_summary$failed_check, "`: ", check_summary$failure_rows)
+    paste0("- `", check_summary$audit_check, "` [", check_summary$severity, "]: ", check_summary$audit_rows)
   },
+  "",
+  "Os avisos são compatíveis com o schema: valores nulos de inferência são excluídos do denominador observado, e inferência fora da definição de artigo quantitativo não entra no numerador quantitativo. Apenas níveis fora da taxonomia seriam erros bloqueantes.",
   "",
   "## Níveis de `quantitative_analysis_type`",
   "",
@@ -186,5 +194,5 @@ writeLines(
 message(
   "Diagnóstico concluído: ",
   dplyr::n_distinct(diagnostics$pid),
-  " PIDs distintos com falhas."
+  " PIDs distintos com exceções auditadas."
 )
