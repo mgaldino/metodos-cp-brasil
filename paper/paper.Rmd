@@ -177,15 +177,11 @@ O universo elegível contém `r format_n(n_manifest)` artigos, dos quais `r form
 
 ```{r tabela-2}
 tabela_2_display <- tabela_dimensoes |>
+  dplyr::filter(!is.na(n)) |>
   dplyr::mutate(
     n = ifelse(is.na(n), "-", format_n(n)),
     denominator_n = ifelse(is.na(denominator_n), "-", format_n(denominator_n)),
     percent = format_pct(percent),
-    category = dplyr::recode(
-      category,
-      "method_explicitness" = "Explicitação metodológica",
-      "empirical_article_format" = "Formato do artigo empírico"
-    ),
     denominator_display = ifelse(
       denominator == "não disponível",
       denominator,
@@ -202,7 +198,7 @@ tabela_2_display <- tabela_dimensoes |>
 
 knitr::kable(
   tabela_2_display,
-  caption = "Dimensões metodológicas nos artigos classificados por leitura integral. Linhas sem N indicam variáveis ainda não disponíveis e não são resultados substantivos.",
+  caption = "Dimensões metodológicas nos artigos classificados por leitura integral.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -328,37 +324,41 @@ knitr::kable(
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
-A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas anos em que BPSR, `Contexto Internacional` e `Dados` têm artigos. As proporções anuais agrupam os artigos dos três periódicos, enquanto a Figura 6 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
-
-```{r figura-7, fig.cap="Variação anual em BPSR, Contexto Internacional e Dados. As proporções agrupam os artigos e incluem apenas anos com publicação nos três periódicos. Todos os painéis usam escala de 0% a 100%.", out.width="95%"}
-knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
-```
-
-As duas dimensões mais diretamente ligadas à tese sobre explicitação e formato ainda permanecem como lacunas de mensuração. `method_explicitness` e `empirical_article_format` aparecem na Tabela 2 como não disponíveis. Portanto, esta seção não afirma que a produção brasileira tem baixa explicitação ou baixa padronização textual. Ela mostra que a arquitetura atual permite medir empiria, quantificação, afirmações e menções a estratégias de identificação, e que a próxima rodada precisa medir explicitamente rastreabilidade metodológica e formato empírico.
-
 \newpage
 
 # Discussão
 
-Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala. A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência estatística e a proporção de casos em que a identificação é especialmente relevante variam fortemente. BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
+Os quatro periódicos completos mostram que a prática metodológica não se organiza em uma única escala. A presença de artigos empíricos é elevada nos quatro, mas a participação quantitativa, o uso de inferência estatística e a proporção de artigos selecionados para examinar identificação variam fortemente. BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
 
-A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção de artigos empíricos cresce e a participação quantitativa permanece estável. A inferência aumenta apenas na média que dá peso igual aos periódicos; quando os artigos são agrupados, permanece praticamente estável. Não há difusão monotônica das famílias de desenho. O snapshot, portanto, não sustenta uma narrativa linear de substituição da pesquisa qualitativa pela quantitativa nem de marcha uniforme rumo a desenhos causais.
+A análise temporal reforça essa multidimensionalidade. Nos três periódicos com suporte comum, a proporção de artigos empíricos cresce e a participação quantitativa permanece estável. A inferência aumenta apenas na média que dá peso igual aos periódicos; quando os artigos são agrupados, permanece praticamente estável. Não há difusão monotônica das famílias de desenho. Os resultados preliminares não sustentam uma narrativa linear de substituição da pesquisa qualitativa pela quantitativa nem de marcha uniforme rumo a desenhos causais.
 
 A categoria ampla de afirmação causal ou explicativa precisa ser interpretada com especial cautela. Sua frequência elevada não significa que quase todos os artigos façam inferência causal: ela também registra explicações qualitativas, argumentos teóricos e interpretações substantivas. O subconjunto de `r format_n(n_screen)` artigos selecionado para examinar identificação não contém apenas estudos causais, e os `r format_n(n_estrito)` casos positivos registram famílias de método mencionadas no texto. A diferença entre essas contagens é uma descrição taxonômica útil, mas não mede diretamente credibilidade, adequação entre afirmação e método ou qualidade da identificação.
 
-O principal limite permanece fora das dimensões já observadas. A base não mede diretamente explicitação metodológica nem formato do artigo empírico. A clareza do objetivo qualitativo mostra que o propósito substantivo costuma ser reconstruível, mas não revela se fontes, seleção, procedimentos e limites são suficientemente explicitados. A hipótese sobre opacidade e rastreabilidade funcional só poderá ser testada depois da classificação complementar de `method_explicitness` e `empirical_article_format`.
-
-Por fim, o pluralismo metodológico não é uma concessão retórica, mas parte do desenho. A crítica relevante não é a ausência de estratégias explícitas de identificação causal em todo tipo de artigo. O problema substantivo aparece quando o tipo de afirmação excede o que o texto torna avaliável. Um ensaio teórico não precisa discutir pré-tendências; um artigo com afirmação causal quantitativa precisa discutir como a identificação é sustentada. Um estudo qualitativo não precisa seguir IMRaD; precisa permitir que o leitor entenda suas fontes, critérios de seleção, procedimentos interpretativos e limites. A agenda do paper é mapear essa adequação entre afirmação, evidência e forma de apresentação.
+O pluralismo metodológico delimita a interpretação dos resultados. A ausência de uma estratégia explícita de identificação causal não representa deficiência em todo tipo de artigo, e sua presença nominal não demonstra qualidade. Esta versão mapeia a incidência de práticas empíricas, quantitativas, inferenciais e de identificação; não mede a adequação entre cada afirmação e o método empregado.
 
 # Conclusão
 
 Esta versão entrega dois resultados intermediários. Primeiro, oferece cobertura integral dos `r format_n(n_artigos_periodicos_completos)` artigos de quatro periódicos, com rótulos automatizados ainda sujeitos a validação humana. Segundo, descreve de forma provisória os `r format_n(n_classificados)` artigos já classificados de um universo elegível de `r format_n(n_manifest)`. Ainda faltam `r format_n(n_pendentes)` artigos, de modo que os agregados nacionais não são finais.
 
-Os resultados rejeitam uma descrição simples de ausência de empiria ou de quantificação. O conjunto classificado contém `r format_n(n_empiricos)` artigos empíricos, dos quais `r format_n(n_quant)` têm componente quantitativo. A heterogeneidade aparece na passagem da quantificação para inferência. Entre os `r format_n(n_screen)` artigos nos quais a identificação é especialmente relevante, apenas `r format_n(n_estrito)` mencionam uma estratégia explícita de identificação causal. Essa baixa frequência não permite, por si só, inferir a qualidade dos estudos.
+Nos quatro periódicos integralmente classificados, os resultados preliminares não sustentam uma descrição simples de ausência de empiria ou de quantificação. O conjunto classificado contém `r format_n(n_empiricos)` artigos empíricos, dos quais `r format_n(n_quant)` têm componente quantitativo. A heterogeneidade aparece na passagem da quantificação para inferência. Entre os `r format_n(n_screen)` artigos selecionados pelo protocolo para examinar identificação, apenas `r format_n(n_estrito)` mencionam uma estratégia explícita de identificação causal. Essa baixa frequência não permite, por si só, inferir a qualidade dos estudos.
 
-As variáveis `method_explicitness` e `empirical_article_format` continuam indisponíveis. Sem elas, esta versão não mede rastreabilidade nem conclui sobre explicitação metodológica ou padronização textual.
+A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador, adjudicar uma amostra humana estratificada e implementar as medidas complementares de explicitação e formato. Sem essas medidas, esta versão não conclui sobre rastreabilidade ou padronização textual. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza.
 
-A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador por PID, adjudicar uma amostra humana estratificada e implementar a rodada complementar sobre explicitação e formato. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza e em que medida a produção brasileira superou, reformulou ou preservou as lacunas metodológicas identificadas desde o diagnóstico do calcanhar metodológico.
+\appendix
+
+# Apêndice: Cobertura e variação anual
+
+A Figura 6 detalha a cobertura da classificação por periódico. Quatro periódicos estão completos, três estão parciais e quatro ainda não têm artigos classificados. Essa distribuição impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
+
+```{r figura-4, fig.cap="Cobertura da classificação por periódico. Os rótulos mostram artigos classificados sobre artigos elegíveis após as exclusões documentadas.", out.width="95%"}
+knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
+```
+
+A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas anos em que BPSR, `Contexto Internacional` e `Dados` têm artigos. As proporções anuais agrupam os artigos dos três periódicos, enquanto a Figura 5 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
+
+```{r figura-7, fig.cap="Variação anual em BPSR, Contexto Internacional e Dados. As proporções agrupam os artigos e incluem apenas anos com publicação nos três periódicos. Todos os painéis usam escala de 0% a 100%.", out.width="95%"}
+knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
+```
 
 \small
 
