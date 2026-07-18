@@ -1,5 +1,5 @@
 ---
-title: "Práticas Metodológicas em Periódicos Brasileiros: Empiria, Quantificação e Identificação Causal, 2005--2025"
+title: "Empiria, Quantificação e Identificação Causal em Periódicos Brasileiros: Diagnóstico Preliminar em Quatro Periódicos Integralmente Classificados"
 author: ""
 date: "`r format(Sys.Date(), '%d de %B de %Y')`"
 output:
@@ -339,11 +339,9 @@ O pluralismo metodológico delimita a interpretação dos resultados. A ausênci
 
 # Conclusão
 
-Esta versão entrega dois resultados intermediários. Primeiro, oferece cobertura integral dos `r format_n(n_artigos_periodicos_completos)` artigos de quatro periódicos, com rótulos automatizados ainda sujeitos a validação humana. Segundo, descreve de forma provisória os `r format_n(n_classificados)` artigos já classificados de um universo elegível de `r format_n(n_manifest)`. Ainda faltam `r format_n(n_pendentes)` artigos, de modo que os agregados nacionais não são finais.
+Nos quatro periódicos integralmente classificados, a presença elevada de artigos empíricos convive com diferenças substantivas na quantificação e na inferência estatística. Nos três periódicos com cobertura temporal comum, a participação empírica cresce, enquanto a quantificação permanece estável e a trajetória da inferência depende da regra de ponderação. Esses resultados não sustentam uma narrativa de substituição linear da pesquisa qualitativa nem de difusão uniforme de estratégias causais.
 
-Nos quatro periódicos integralmente classificados, os resultados preliminares não sustentam uma descrição simples de ausência de empiria ou de quantificação. O conjunto classificado contém `r format_n(n_empiricos)` artigos empíricos, dos quais `r format_n(n_quant)` têm componente quantitativo. A heterogeneidade aparece na passagem da quantificação para inferência. Entre os `r format_n(n_screen)` artigos selecionados pelo protocolo para examinar identificação, apenas `r format_n(n_estrito)` mencionam uma estratégia explícita de identificação causal. Essa baixa frequência não permite, por si só, inferir a qualidade dos estudos.
-
-A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador, adjudicar uma amostra humana estratificada e implementar as medidas complementares de explicitação e formato. Sem essas medidas, esta versão não conclui sobre rastreabilidade ou padronização textual. Só então será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza.
+No conjunto de `r format_n(n_classificados)` artigos classificados, apenas `r format_n(n_estrito)` dos `r format_n(n_screen)` selecionados pelo protocolo para examinar identificação mencionam uma estratégia explícita, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Essa frequência descreve presença nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana e cobre apenas parte do universo de `r format_n(n_manifest)` artigos, as conclusões permanecem restritas aos quatro periódicos integralmente classificados.
 
 \newpage
 
