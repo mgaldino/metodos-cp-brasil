@@ -191,7 +191,7 @@ metric_labels <- c(
   empirical = "Artigos empíricos",
   quantitative = "Componente quantitativo",
   inference = "Inferência estatística",
-  claim = "Afirmação causal/explicativa",
+  claim = "Linguagem explicativa ampla",
   screen = "Identificação relevante",
   strict = "Estratégia explícita"
 )
@@ -1190,7 +1190,7 @@ figure_3 <- period_plot_data |>
     expand = ggplot2::expansion(mult = c(0, 0.05))
   ) +
   ggplot2::labs(
-    title = "Variação por período em periódicos completos com suporte temporal comum",
+    title = "Variação por período em periódicos completos presentes nos três períodos",
     subtitle = paste0(
       "Média simples de ",
       length(temporal_complete_journals),
@@ -1336,8 +1336,8 @@ figure_5 <- claim_method_alignment |>
   ggplot2::geom_text(ggplot2::aes(label = label), hjust = -0.08, size = 3) +
   ggplot2::scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10), labels = function(x) paste0(x, "%")) +
   ggplot2::labs(
-    title = "Afirmações, uso de dados quantitativos e estratégias de identificação",
-    subtitle = "Categorias descritivas mutuamente exclusivas entre os artigos já classificados.",
+    title = "Linguagem causal ou explicativa ampla, dados quantitativos e identificação",
+    subtitle = "Categorias descritivas; o atributo amplo não equivale a uma pretensão causal estrita.",
     x = "Percentual dos artigos classificados",
     y = NULL
   ) +

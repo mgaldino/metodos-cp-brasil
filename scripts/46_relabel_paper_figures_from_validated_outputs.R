@@ -107,7 +107,7 @@ metric_labels <- c(
   empirical = "Artigos empíricos",
   quantitative = "Componente quantitativo",
   inference = "Inferência estatística",
-  claim = "Afirmação causal/explicativa",
+  claim = "Linguagem explicativa ampla",
   screen = "Exame de identificação",
   strict = "Estratégia explícita"
 )
@@ -251,7 +251,7 @@ figure_3 <- period_plot_data |>
     expand = ggplot2::expansion(mult = c(0, 0.05))
   ) +
   ggplot2::labs(
-    title = "Variação por período em periódicos completos com suporte temporal comum",
+    title = "Variação por período em periódicos completos presentes nos três períodos",
     subtitle = paste0(
       "Média simples de ",
       fmt_n(n_temporal_journals),
