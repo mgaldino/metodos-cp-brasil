@@ -367,12 +367,12 @@ knitr::kable(
 ) |>
   kableExtra::footnote(
     general_title = "Nota: ",
-    general = "Quantitativos = análise quantitativa; Inferência = inferência estatística; Examinados = artigos examinados para identificação; Estratégia = estratégia explícita. Empíricos e Examinados usam todos os artigos; Quantitativos usam os empíricos; Inferência usa os quantitativos com rótulo observado; Estratégia usa os Examinados.",
+    general = "Quantitativos = análise quantitativa; Inferência = inferência estatística; Examinados = artigos examinados para identificação; Estratégia = estratégia explícita. Empíricos e Examinados usam todos os artigos; Quantitativos usam os empíricos; Inferência usa os quantitativos com informação disponível; Estratégia usa os Examinados.",
     threeparttable = TRUE
   )
 ```
 
-```{r figura-2, fig.cap="As práticas metodológicas variam entre os seis periódicos integralmente classificados. Empíricos e examinados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com rótulo observado; estratégia explícita usa os examinados.", out.width="95%"}
+```{r figura-2, fig.cap="Os periódicos diferem tanto na composição da pesquisa publicada quanto no uso de inferência e identificação. Empíricos e examinados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com informação disponível; estratégia explícita usa os examinados.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
 ```
 
@@ -392,7 +392,7 @@ A linguagem dos artigos avança mais rapidamente do que seus procedimentos infer
 
 O benchmark internacional transforma esse diagnóstico em uma comparação substantiva. Torreblanca et al. [-@torreblanca2026] encontram abordagens baseadas em desenho causal em `r format_pct(pct_torreblanca_jop)` dos quantitativos explicativos do *Journal of Politics*, `r format_pct(pct_torreblanca_ajps)` da AJPS e `r format_pct(pct_torreblanca_apsr)` da APSR. Em outras palavras, uma parcela de `r format_pct(pct_torreblanca_jop)` a `r format_pct(pct_torreblanca_apsr)` desses artigos já enfrenta explicitamente o problema da identificação causal; no Brasil, apenas `r format_pct(pct_inferencia_completos)` dos quantitativos alcançam o patamar anterior de quantificar a incerteza, e somente `r format_pct(pct_estrito_total_completos)` de todos os artigos mencionam uma estratégia causal explícita. A fronteira brasileira ainda é inferencial; a fronteira dos periódicos internacionais de referência já é causal.
 
-Os percentuais internacionais têm um numerador mais exigente e um denominador mais seletivo --- artigos quantitativos explicativos publicados entre 2003 e 2023 --- do que a taxa brasileira de inferência entre quantitativos de 2005 a 2025. Essa diferença impede tratar os números como um ranking exato, mas reforça a conclusão substantiva: práticas que há anos constituem um requisito básico da análise quantitativa internacional ainda distinguem menos da metade da produção quantitativa brasileira.
+Os percentuais internacionais têm um numerador mais exigente e um denominador mais seletivo --- artigos quantitativos explicativos publicados entre 2003 e 2023 --- do que a taxa brasileira de inferência entre quantitativos de 2005 a 2025. Essa diferença impede tratar os números como um ranking exato, mas reforça a conclusão substantiva: o patamar anterior ao desenho causal --- quantificar a incerteza --- ainda distingue menos da metade da produção quantitativa brasileira.
 
 ```{r figura-inferencia-benchmark, fig.cap="A fronteira metodológica brasileira ainda é a inferência estatística; nos periódicos internacionais de referência, ela já é a identificação causal. Os painéis superiores mostram a proporção de artigos quantitativos que quantificam formalmente a incerteza nos seis periódicos brasileiros (2005--2025) e a proporção de quantitativos explicativos que empregam abordagens baseadas em desenho causal na APSR, AJPS e Journal of Politics (2003--2023), segundo Torreblanca et al. O painel inferior cruza inferência e linguagem causal ou explicativa nos 1.281 quantitativos brasileiros. Essa linguagem é uma categoria ampla e não equivale a uma pretensão causal estrita. Os percentuais internacionais e brasileiros usam denominadores distintos, informados nos painéis e no texto.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_statistical_inference_benchmark.pdf")
