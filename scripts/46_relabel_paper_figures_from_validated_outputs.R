@@ -149,7 +149,7 @@ figure_1 <- figure_1_data |>
   ggplot2::labs(
     title = "Dimensões observadas e seus denominadores",
     subtitle = "As linhas não formam um funil único: cada percentual usa o denominador indicado no rótulo.",
-    x = "Percentual no denominador da linha",
+    x = "Percentual",
     y = NULL,
     color = NULL,
     caption = "Fonte: classificação por leitura integral. Corpus completo ainda parcialmente classificado."
