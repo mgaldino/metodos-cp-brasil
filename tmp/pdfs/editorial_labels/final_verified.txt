@@ -1,0 +1,708 @@
+      Empiria, Quantificação e Identificação Causal em Periódicos
+        Brasileiros: Diagnóstico Preliminar em Seis Periódicos
+                      Integralmente Classificados
+                                              18 de July de 2026
+
+                                                      Resumo
+         Este artigo mensura a presença de pesquisa empírica, quantificação, inferência estatística e estratégias
+     explícitas de identificação causal em periódicos brasileiros indexados no SciELO entre 2005 e 2025.
+     O universo elegível reúne 5.249 artigos de onze periódicos; 3.565 foram classificados por modelos de
+     linguagem a partir da leitura integral. Seis periódicos estão integralmente cobertos e constituem o estrato
+     principal das comparações editoriais. Entre os 846 artigos desses periódicos selecionados pelo protocolo
+     para examinar identificação, apenas 49 (5,8%) mencionam uma estratégia explícita, como experimento,
+     diferença-em-diferenças, variável instrumental ou regressão descontínua. Entre artigos quantitativos, a
+     presença de inferência estatística varia de 60,3% em Opinião Pública a 7,2% em Contexto Internacional.
+     Nos cinco periódicos presentes nos três períodos agregados, a participação empírica cresce; as trajetórias
+     da quantificação e da inferência dependem da ponderação e da composição editorial. As contagens
+     registram atributos declarados, não a qualidade da execução metodológica. Como a classificação ainda
+     requer validação humana e a configuração do classificador variou entre lotes, os resultados constituem
+     um diagnóstico preliminar, restrito aos periódicos já integralmente classificados.
+
+
+Introdução
+O diagnóstico do “calcanhar metodológico” chamou atenção para as limitações do treinamento em métodos
+na Ciência Política brasileira e para seus efeitos sobre a acumulação de conhecimento (2005). Barberia,
+Godoy e Barboza (2014) documentaram a expansão e a distribuição desigual do ensino de métodos nos
+programas de pós-graduação. Albuquerque, Mesquita e Brito (2022) examinaram a formação metodológica
+em Relações Internacionais e áreas afins, enquanto Figueiredo Filho et al. (2019) defenderam transparência
+e reprodutibilidade como condições para a avaliação coletiva da pesquisa. Esses trabalhos tratam principal-
+mente de formação e normas de pesquisa. Este artigo observa o produto publicado: a presença de evidência
+empírica, quantificação, inferência estatística e estratégias explícitas de identificação causal.
+O artigo pergunta como essas práticas se distribuem entre periódicos brasileiros indexados no SciELO, entre
+2005 e 2025. A mensuração preserva o pluralismo metodológico da área. Estudos qualitativos, históricos,
+interpretativos e normativos não precisam adotar um formato único nem recorrer a estratégias causais.
+A comparação separa dimensões que frequentemente são confundidas: um artigo pode ser empírico sem
+ser quantitativo, quantitativo sem realizar inferência estatística e explicativo sem mobilizar uma estratégia
+explícita de identificação causal.
+Torreblanca et al. (2026) oferecem a referência internacional para distinguir o corpus total, os artigos empíri-
+cos, os trabalhos quantitativos, os estudos com afirmações causais ou explicativas e aqueles que mencionam
+estratégias explícitas de identificação. Aplicamos essa classificação ao caso brasileiro e mantemos explícito
+o denominador de cada medida. Esperamos encontrar diferenças entre periódicos e períodos, além de dis-
+tância entre a presença de afirmações causais ou explicativas e a menção a estratégias de identificação. As
+comparações são descritivas: o desenho não identifica por que periódicos ou períodos diferem.
+O universo elegível contém 5.249 artigos de onze periódicos. A classificação por leitura integral cobre 3.565,
+ou 67,9% do total. Seis periódicos estão integralmente classificados e somam 2.321 artigos; as comparações
+editoriais principais restringem-se a esse estrato. Entre os 846 artigos desses periódicos selecionados pelo
+
+
+                                                          1
+protocolo para examinar identificação, 49 mencionam alguma estratégia explícita, equivalentes a 5,8%. Entre
+artigos quantitativos, a inferência estatística varia de 60,3% em Opinião Pública a 7,2% em Contexto
+Internacional.
+A contribuição é uma mensuração comparável de quatro dimensões da prática publicada e um diagnóstico
+preliminar de sua heterogeneidade editorial e temporal. A classificação automatizada ainda requer validação
+humana, e sua configuração variou entre lotes; por isso, as tendências são exploratórias e os resultados
+não representam o conjunto da produção nacional. O artigo registra a presença declarada de métodos e
+procedimentos, sem avaliar sua qualidade de execução.
+
+
+Dados
+Analiso artigos publicados entre 2005 e 2025 em onze periódicos indexados no SciELO: Brazilian
+Political Science Review, Opinião Pública, Revista Brasileira de Ciência Política, Revista
+de Sociologia e Política, Dados, Lua Nova, Novos Estudos CEBRAP, Revista Brasileira de
+Ciências Sociais, Contexto Internacional, Revista Brasileira de Política Internacional e
+Cadernos Gestão Pública e Cidadania. Juntos, esses periódicos somam 5.249 artigos elegíveis no
+período.
+Quatro periódicos mapeados no levantamento inicial não entram na análise principal: Brazilian Journal
+of Political Economy,        Civitas - Revista de Ciências Sociais,             Revista de Administração
+Pública e Sur. Revista Internacional de Direitos Humanos. As exclusões foram definidas antes
+desta atualização para delimitar um núcleo de Ciência Política, Relações Internacionais, gestão pública e
+Ciências Sociais políticas. Como essa fronteira é contestável, os critérios e as decisões são preservados no
+material de replicação. A Tabela 1 apresenta o número de artigos elegíveis e classificados por periódico e
+período.
+Os textos integrais foram recuperados do SciELO em junho de 2026, e a base analítica desta versão foi
+atualizada em 18 de julho de 2026. O material de replicação preserva as fontes, as datas de acesso, as
+decisões de exclusão e as verificações de integridade dos arquivos.
+Esta versão usa 3.565 artigos já classificados, equivalentes a 67,9% do universo elegível. A cobertura é
+desigual. Brazilian Political Science Review, Cadernos Gestão Pública e Cidadania, Contexto
+Internacional, Dados, Opinião Pública e Revista Brasileira de Ciência Política estão integral-
+mente classificados e somam 2.321 artigos. Os outros cinco periódicos têm cobertura parcial. Assim, o
+paper separa a cobertura integral dos artigos de seis periódicos — cujos rótulos automatizados ainda exigem
+validação — do retrato provisório formado por todos os artigos já classificados.
+
+Tabela 1: Artigos elegíveis e classificados por periódico e período. Nas colunas de período, classificados/elegíveis.
+
+Periódico                     Elegíveis       Classificados       Cobertura      2005-11      2012-18      2019-25
+CGPC                          120             120                 100,0%         0/0          0/0          120/120
+BPSR                          268             268                 100,0%         46/46        108/108      114/114
+Opinião Pública               464             464                 100,0%         117/117      163/163      184/184
+RBCP                          391             391                 100,0%         29/29        194/194      168/168
+RSP                           638             406                 63,6%          254/254      149/224      3/160
+Dados                         622             622                 100,0%         181/181      212/212      229/229
+Lua Nova                      511             100                 19,6%          100/141      0/188        0/182
+Novos Estudos CEBRAP          581             132                 22,7%          132/235      0/180        0/166
+RBCS                          708             300                 42,4%          222/222      78/237       0/249
+Contexto Internacional        456             456                 100,0%         102/102      170/170      184/184
+RBPI                          490             306                 62,4%          155/155      148/168      3/167
+
+
+
+
+                                                         2
+Estratégia Empírica
+A estratégia empírica é uma estratégia de mensuração, não uma estratégia de identificação causal do próprio
+paper. O objetivo é descrever como os artigos se distribuem em dimensões metodológicas observáveis:
+presença de evidência empírica, tipo de evidência, componente quantitativo, inferência estatística, afirmação
+causal ou explicativa e menção a estratégias explícitas de identificação causal. Os agregados dos 3.565 artigos
+classificados descrevem cobertura parcial. As comparações entre periódicos usam apenas os seis periódicos
+completos; as comparações temporais usam os cinco periódicos completos que publicaram nos três períodos,
+com o mesmo peso para cada periódico.
+O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas: a frequência das
+estratégias de identificação é calculada dentro do subconjunto em que a identificação é metodologicamente
+relevante. Outras dimensões são cruzadas: afirmações causais ou explicativas podem aparecer em artigos
+qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classifi-
+cação disponível, e não uma sequência estritamente aninhada em todos os degraus.
+
+
+
+                    Artigos elegíveis                                                     5.249 / 5.249 (100,0%)
+
+
+
+                Artigos classificados                                                       3.565 / 5.249 (67,9%)
+
+
+
+                   Artigos empíricos                                                                2.825 / 3.565 (79,2%)
+
+
+
+            Com análise quantitativa                                                1.634 / 2.825 (57,8%)
+
+
+
+ Com linguagem causal ou explicativa                                                3.194 / 3.565 (89,6%)
+
+
+
+       Examinados para identificação                             1.116 / 3.565 (31,3%)
+
+
+
+             Com estratégia explícita        49 / 1.116 (4,4%)
+
+
+                                        0%         20%               40%          60%            80%           100%
+                                                                           Percentual
+
+Figura 1: Cobertura do corpus e incidência de práticas metodológicas. A cobertura usa os 5.249 artigos elegíveis; as
+demais linhas descrevem os 3.565 artigos classificados, com numerador e denominador indicados junto a cada ponto.
+
+O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quan-
+titativa, mista ou ausente. Em seguida, distingue artigos com análise quantitativa, inferência estatística e
+afirmações causais ou explicativas. Para examinar a camada associada à identificação causal, o protocolo
+seleciona artigos por um de dois caminhos: combinação de afirmação causal ou explicativa com evidência
+empírica pertinente; ou emprego de modelagem quantitativa que exige examinar como as inferências são
+sustentadas. Esse subconjunto não equivale ao conjunto de estudos causais. Ele define apenas os artigos nos
+quais procuramos, na etapa seguinte, menções a estratégias explícitas de identificação.
+Consideramos como estratégia explícita de identificação causal a menção a experimentos, diferenças-em-
+diferenças, estudos de evento, variáveis instrumentais, regressão descontínua, regression kink, controle sin-
+tético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais formais, estimadores
+duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, modelos de
+
+
+                                                                 3
+equações estruturais, mediação causal e efeitos fixos não entram automaticamente nessa contagem. Esses
+casos só seriam incluídos após revisão complementar que encontrasse uma discussão explícita da estratégia
+de identificação e da plausibilidade de seus pressupostos. Mesmo entre os casos incluídos, a classificação
+registra apenas que uma estratégia foi mencionada; não avalia se foi bem executada.
+
+Protocolo de classificação e validade da mensuração
+Classificamos o texto integral de cada artigo com um protocolo padronizado aplicado por modelos de lin-
+guagem. Verificações automáticas de consistência asseguram a integridade estrutural dos dados e das relações
+entre categorias, mas não substituem a validação humana nem estimam validade de construto.
+Os rótulos em escala ainda não foram integralmente adjudicados por humanos. Nos seis periódicos completos,
+a fração marcada como caso difícil varia de 51,0% a 91,5% entre células periódico–período. Além disso, lotes
+diferentes foram classificados com configurações distintas de modelo e esforço. Como a ordem dos lotes se
+relaciona ao período de publicação, comparações temporais podem combinar mudança editorial e mudança
+do classificador. Por isso, as tendências são apresentadas apenas como diagnóstico exploratório. Antes de
+um teste substantivo, será necessário adjudicar os casos difíceis e os positivos raros, estimar erro por variável
+e reclassificar uma amostra estratificada com uma configuração congelada.
+Os denominadores são parte substantiva da interpretação. Proporções de cobertura usam os 5.249 artigos
+elegíveis. Proporções sobre práticas metodológicas usam os 3.565 artigos já classificados. A proporção de
+inferência estatística exclui do denominador 5 artigos quantitativos cujo rótulo está ausente, correspondentes
+a 0,3% desse subconjunto; eles não são convertidos em ausência de inferência. Se os cinco fossem tratados
+como ausência ou presença, a taxa global variaria apenas entre 37,8% e 38,1%. A frequência de estratégias
+explícitas de identificação deve ser lida principalmente entre os 846 artigos examinados nos seis periódicos
+completos; o agregado dos 1.116 casos examinados em toda a cobertura parcial aparece apenas como referên-
+cia. Nenhuma tabela ou figura omite o denominador, porque o significado de uma proporção muda conforme
+a dimensão analisada.
+Duas dimensões complementares ainda não foram classificadas: explicitação metodológica e formato do artigo
+empírico. A primeira deve distinguir se dados, fontes e estratégia analítica aparecem de forma clara, parcial
+ou ausente. A segunda deve classificar a arquitetura textual do artigo empírico. Como essas dimensões não
+integram os resultados desta versão, nenhuma conclusão é apresentada sobre rastreabilidade ou padronização
+textual.
+
+
+Resultados
+O universo elegível contém 5.249 artigos, dos quais 3.565 estão classificados. A Tabela 2 descreve esse conjunto
+parcial com denominadores específicos para cada dimensão. Entre os classificados, 2.825 são empíricos. Entre
+os empíricos, 1.634 têm componente quantitativo; entre estes, 617 apresentam modelagem estatística e 618
+registram inferência estatística.
+
+                        Tabela 2: Práticas metodológicas nos 3.565 artigos classificados.
+
+Dimensão       Categoria               N       Denominador                                             Percentual
+Evidência     Artigo empírico          2.825   artigos classificados (3.565)                           79,2%
+Evidência     Somente qualitativo      1.190   artigos empíricos (2.825)                               42,1%
+Evidência     Somente                  707     artigos empíricos (2.825)                               25,0%
+              quantitativo
+Evidência     Misto                    928     artigos empíricos (2.825)                               32,8%
+Quantificação Componente               1.634   artigos empíricos (2.825)                               57,8%
+              quantitativo
+Quantificação Modelagem                617     empíricos quantitativos (1.634)                         37,8%
+              estatística
+
+
+
+                                                       4
+Dimensão        Categoria              N        Denominador                                                 Percentual
+Quantificação Inferência               618      empíricos quantitativos com inferência classificada         37,9%
+              estatística                       (1.629)
+
+
+A composição da evidência é plural. Dos artigos empíricos, 1.190 usam apenas evidência qualitativa, 707 usam
+apenas evidência quantitativa e 928 combinam ambas. Quantificação, portanto, não substitui a pesquisa
+qualitativa nem organiza sozinha a prática empírica observada.
+
+Periódicos com classificação completa
+Os seis periódicos completos somam 2.321 artigos. A Tabela 3 e a Figura 2 mostram diferenças editoriais
+substantivas. O percentual de artigos empíricos varia de 74,2% na RBCP a 94,6% em Opinião Pública.
+Entre os artigos empíricos, o componente quantitativo vai de 32,2% em Contexto Internacional a 91,8%
+em Opinião Pública.
+
+                 Tabela 3: Práticas metodológicas nos seis periódicos integralmente classificados.
+
+    Periódico                   N     Empíricos     Quantitativos     Inferência   Examinados        Estratégia
+    BPSR                        268   86,2%         74,0%             49,7%        40,3%             12,0%
+    CGPC                        120   88,3%         70,8%             18,7%        20,0%             8,3%
+    Contexto Internacional      456   75,7%         32,2%             7,2%         4,2%              5,3%
+    Dados                       622   87,1%         62,7%             41,8%        31,8%             5,1%
+    Opinião Pública             464   94,6%         91,8%             60,3%        77,4%             5,3%
+    RBCP                        391   74,2%         63,4%             32,8%        35,3%             2,9%
+      Nota:
+      Quantitativos = análise quantitativa; Inferência = inferência estatística; Examinados = artigos
+      examinados para identificação; Estratégia = estratégia explícita. Empíricos e Examinados usam
+      todos os artigos; Quantitativos usam os empíricos; Inferência usa os quantitativos com rótulo
+      observado; Estratégia usa os Examinados.
+
+A diferença mais nítida está na inferência estatística entre artigos quantitativos: 60,3% em Opinião Pública,
+49,7% na BPSR e 41,8% em Dados, contra 18,7% em CGPC e 7,2% em Contexto Internacional. Esses
+contrastes podem refletir diferenças de composição temática, tradição disciplinar e política editorial que o
+desenho atual não permite decompor; não constituem ranking de qualidade nem efeito causal do periódico.
+O perfil agregado de CGPC cobre apenas 2019–2025, enquanto os demais periódicos completos contribuem
+também em períodos anteriores. Sua comparação histórica direta com os outros cinco, portanto, combina
+diferenças editoriais e composição temporal.
+
+Evidência qualitativa
+Nos seis periódicos completos, 1.352 artigos apresentam evidência qualitativa, isoladamente ou em combi-
+nação com evidência quantitativa. O classificador identifica objetivo qualitativo claro em 1.261 deles, ou
+93,3%. Esse resultado indica que o propósito substantivo da análise qualitativa costuma ser reconstruível,
+mas não mede explicitação de seleção de casos, procedimentos interpretativos ou rastreabilidade documental.
+Portanto, não substitui a futura variável de explicitação metodológica.
+
+Linguagem causal ou explicativa ampla e estratégias de identificação
+A categoria de linguagem causal ou explicativa é deliberadamente ampla. Ela aparece em 3.194 artigos,
+dos quais 2.726 são empíricos. A Figura 3 é um diagnóstico dessa amplitude e mostra por que a variável
+não discrimina pretensões causais estritas: há marcações em artigos não empíricos, em artigos empíricos sem
+
+
+                                                        5
+     Revista Brasileira de
+          Ciência Política
+                                     74,2%                       63,4%                        32,8%                     96,2%                    35,3%                    2,9%
+
+
+
+         Opinião Pública             94,6%                       91,8%                        60,3%                     95,7%                    77,4%                    5,3%
+
+
+
+                   Dados             87,1%                       62,7%                        41,8%                     96,5%                    31,8%                    5,1%
+
+
+
+   Contexto Internacional            75,7%                       32,2%                         7,2%                     97,4%                        4,2%                 5,3%
+
+
+
+ Cadernos Gestão Pública
+            e Cidadania
+                                     88,3%                       70,8%                        18,7%                     89,6%                    20,0%                    8,3%
+
+
+
+        Brazilian Political
+         Science Review
+                                     86,2%                       74,0%                        49,7%                     98,7%                    40,3%                12,0%
+
+
+
+                                      os                         iva                            tica                      tiva                       ão
+                                                                                                                                                                       líci
+                                                                                                                                                                            ta
+                                 píric                      titat                            tís                      lica                     ficaç                 xp
+                                                         an                             ta                           p                     nti
+                              Em                      u                              es                          ue
+                                                                                                                   x                                              iae
+                                                    eq                         cia                              o                       ide                    tég
+                                             ális                         erê
+                                                                              n
+                                                                                                          us
+                                                                                                             al                   ara                       tra
+                                           An                          Inf                             ca                      sp                         Es
+                                                                                                   m                        ado
+                                                                                         ag
+                                                                                            e                            in
+                                                                                      gu                              am
+                                                                                  Lin                               Ex
+
+
+Figura 2: As práticas metodológicas variam entre os seis periódicos integralmente classificados. Empíricos e exam-
+inados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com
+rótulo observado; estratégia explícita usa os examinados.
+
+
+
+
+                                                                                                   6
+componente quantitativo e em artigos empíricos quantitativos sem estratégia explícita de identificação. Esses
+cruzamentos descrevem coexistência de atributos; não medem desalinhamento ou adequação entre afirmação
+e método.
+
+
+
+    Linguagem causal ou explicativa e estratégia explícita        49 (1,4%)
+
+
+
+
+ Linguagem causal ou explicativa em artigo empírico, com
+           análise quantitativa e sem estratégia explícita
+                                                                                                             1.530 (42,9%)
+
+
+
+
+ Linguagem causal ou explicativa em artigo empírico, sem
+                                     análise quantitativa
+                                                                                                   1.147 (32,2%)
+
+
+
+
+  Linguagem causal ou explicativa em artigo não empírico                      468 (13,1%)
+
+
+
+
+ Análise quantitativa sem linguagem causal ou explicativa         55 (1,5%)
+
+
+
+
+      Sem linguagem causal ou explicativa e sem análise
+                                            quantitativa
+                                                                          316 (8,9%)
+
+
+
+                                                             0%       10%         20%        30%       40%         50%       60%
+                                                                               Artigos classificados (%)
+
+Figura 3: Combinações entre linguagem causal ou explicativa, análise quantitativa e estratégias explícitas nos 3.565
+artigos classificados. As categorias são mutuamente exclusivas; os rótulos mostram número e percentual de artigos.
+
+No conjunto parcial dos artigos classificados, 49 dos 1.116 selecionados pelo protocolo para examinar iden-
+tificação mencionam ao menos uma estratégia explícita, equivalentes a 4,4%. No estrato principal dos seis
+periódicos completos, a proporção é 49 em 846, ou 5,8%. Como esse subconjunto inclui afirmações explicati-
+vas amplas e modelagem quantitativa, ele não contém apenas estudos causais. A Tabela 4 mantém visíveis
+os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser
+somadas como uma distribuição.
+
+                   Tabela 4: Linguagem causal ou explicativa e estratégias explícitas de identificação.
+
+Categoria                                                                 N             Denominador                          Percentual
+Linguagem causal ou explicativa                                           3.194         Todos (3.565)                        89,6%
+Linguagem causal ou explicativa em artigo empírico                        2.726         Empíricos (2.825)                    96,5%
+Artigos examinados                                                        1.116         Todos (3.565)                        31,3%
+Estratégia explícita                                                      49            Artigos examinados (1.116)           4,4%
+Sem estratégia explícita                                                  1.066         Artigos examinados (1.116)           95,5%
+Outras estratégias codificadas                                            9             Artigos examinados (1.116)           0,8%
+
+
+Nos seis periódicos completos, 49 dos 846 artigos examinados mencionam ao menos uma estratégia explícita
+de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e
+
+
+                                                                      7
+regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um
+mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade
+dos pressupostos.
+
+
+      Pareamento/ponderação                                                                      15
+
+
+    Diferenças−em−diferenças                                                      11
+
+
+       Experimento em survey                                                10
+
+
+       Regressão descontínua                              6
+
+
+       Variáveis instrumentais                        5
+
+
+          Experimento de lista                3
+
+
+ Estimador duplamente robusto             2
+
+
+       Experimento de campo               2
+
+
+    Grafo causal formal (DAG)             2
+
+
+             Controle sintético       1
+
+
+             Estudo de evento         1
+
+
+    Experimento de laboratório        1
+
+
+                                  0               4                8                   12             16
+                                                              Número de artigos
+
+Figura 4: Estratégias explícitas de identificação nos seis periódicos integralmente classificados. As barras contam
+os artigos que mencionam cada estratégia; um artigo pode mencionar mais de uma.
+
+
+Variação por período
+A comparação temporal usa BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, os cinco
+periódicos completos presentes nos três períodos agregados. A presença média de artigos empíricos cresce
+de 71,5% em 2005–2011 para 88,3% em 2019–2025. Para quantificação, a conclusão depende da ponderação:
+com peso igual por periódico, a proporção passa de 56,2% para 66,5%; agrupando os artigos, passa de 65,1%
+para 67,5%, com queda intermediária. O aumento equiponderado é concentrado sobretudo na RBCP, que
+parte de apenas 2 artigos quantitativos entre 12 empíricos em 2005–2011 (16,7%) e alcança 71,1% em 2019–
+2025. Para inferência estatística, a média equiponderada cresce de 29,9% para 39,4%, enquanto a proporção
+agrupada passa de 46,1% para 44,1%. O resultado mais prudente é crescimento da empiria, estabilidade
+aproximada da quantificação e da inferência quando os artigos são agrupados, e forte sensibilidade das
+médias equiponderadas à composição dos periódicos. Estratégias explícitas de identificação continuam raras
+
+
+                                                              8
+e não apresentam trajetória monotônica.
+
+                      Tabela 5: Quantificação e inferência estatística por período, segundo a regra de ponderação.
+
+Dimensão                                    Ponderação                                    2005-2011          2012-2018            2019-2025
+Quantificação                               Peso igual por periódico                      56,2%              63,8%                66,5%
+Quantificação                               Artigos agrupados                             65,1%              63,4%                67,5%
+Inferência estatística                      Peso igual por periódico                      29,9%              38,4%                39,4%
+Inferência estatística                      Artigos quantitativos agrupados               46,1%              44,2%                44,1%
+
+
+
+                                Empíricos                      Análise quantitativa                   Inferência estatística
+               100%
+                                              88,3%
+                                  82,9%
+
+               75%     71,5%
+                                                                     63,8%        66,5%
+                                                          56,2%
+
+               50%
+                                                                                                               38,4%        39,4%
+                                                                                                  29,9%
+               25%
+
+
+
+
+ Artigos (%)
+                0%
+                      Linguagem causal ou explicativa     Examinados para identificação                  Estratégia explícita
+               100%
+                       97,8%      97,2%       96,5%
+
+
+               75%
+
+
+
+               50%
+                                                                                  41,5%
+                                                                     35,6%
+                                                          31,2%
+
+               25%
+
+                                                                                                                7,9%            6,7%
+                                                                                                  0,4%
+                0%
+                      2005−2011 2012−2018 2019−2025      2005−2011 2012−2018 2019−2025        2005−2011 2012−2018 2019−2025
+                                                                   Período
+
+Figura 5: A presença de artigos empíricos cresce entre os períodos, enquanto estratégias explícitas permanecem
+raras. Os pontos são médias com peso igual para BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP;
+todos os painéis usam escala de 0% a 100%.
+
+
+
+
+                                                                      9
+Discussão
+Os seis periódicos completos mostram que a prática metodológica não se organiza em uma única escala.
+A presença de artigos empíricos é elevada em todos, mas a participação quantitativa, o uso de inferência
+estatística e a proporção de artigos selecionados para examinar identificação variam fortemente. Opinião
+Pública, BPSR e Dados combinam elevada presença empírica com maior frequência de inferência; Contexto
+Internacional é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística;
+CGPC combina elevada empiria e quantificação com menor frequência de inferência. A RBCP ocupa posição
+intermediária na quantificação e na inferência. Essas diferenças são descritivas e podem refletir composição
+temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
+A análise temporal reforça essa multidimensionalidade. Nos cinco periódicos presentes nos três períodos
+agregados, a proporção de artigos empíricos cresce. Quantificação e inferência aumentam na média que dá
+peso igual aos periódicos, mas permanecem aproximadamente estáveis quando os artigos são agrupados; o
+aumento equiponderado da quantificação é fortemente influenciado pela RBCP. Não há difusão monotônica
+das famílias de desenho. Os resultados preliminares não sustentam uma narrativa de marcha uniforme rumo
+à quantificação, à inferência estatística ou a desenhos causais.
+A categoria ampla de afirmação causal ou explicativa precisa ser interpretada com especial cautela. Sua
+frequência elevada não significa que quase todos os artigos façam inferência causal: ela também registra
+explicações qualitativas, argumentos teóricos e interpretações substantivas. O subconjunto de 1.116 artigos
+selecionado para examinar identificação não contém apenas estudos causais, e os 49 casos positivos registram
+famílias de método mencionadas no texto. A diferença entre essas contagens é uma descrição taxonômica útil,
+mas não mede diretamente credibilidade, adequação entre afirmação e método ou qualidade da identificação.
+Além disso, os 270 casos examinados nos periódicos parciais contêm 0 positivos, enquanto os 846 casos dos
+periódicos completos contêm todos os 49 positivos. Essa concentração pode refletir diferenças substantivas
+entre periódicos, mas também a configuração dos lotes; por isso, o agregado parcial não sustenta comparação
+editorial e exige reclassificação de validação com configuração comum.
+O pluralismo metodológico delimita a interpretação dos resultados. A ausência de uma estratégia explícita de
+identificação causal não representa deficiência em todo tipo de artigo, e sua presença nominal não demonstra
+qualidade. Esta versão mapeia a incidência de práticas empíricas, quantitativas, inferenciais e de identifi-
+cação; não mede a adequação entre cada afirmação e o método empregado.
+
+
+Conclusão
+Nos seis periódicos integralmente classificados, a presença elevada de artigos empíricos convive com diferenças
+substantivas na quantificação e na inferência estatística. Nos cinco periódicos presentes nos três períodos
+agregados, a participação empírica cresce, enquanto as trajetórias da quantificação e da inferência dependem
+da regra de ponderação e da composição editorial. Esses resultados não sustentam difusão uniforme da
+quantificação, da inferência estatística ou de estratégias causais.
+Nos seis periódicos integralmente classificados, apenas 49 dos 846 artigos selecionados pelo protocolo para
+examinar identificação mencionam uma estratégia explícita, equivalentes a 5,8%. No conjunto parcial de
+3.565 artigos, a referência correspondente é 49 em 1.116, ou 4,4%. Essas frequências descrevem presença
+nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana
+e cobre apenas parte do universo de 5.249 artigos, as comparações editoriais permanecem restritas aos seis
+periódicos integralmente classificados.
+
+
+
+
+                                                      10
+Apêndice: Cobertura e variação anual
+A Figura 6 detalha a cobertura da classificação por periódico. Seis periódicos estão completos e cinco estão
+parcialmente classificados; todos os onze já têm artigos classificados. A distribuição ainda desigual impede
+transformar a média dos 3.565 casos em estimativa da produção brasileira como um todo.
+
+
+    Brazilian Political Science
+                                                                                                  268/268
+                        Review
+
+  Cadernos Gestão Pública e
+                                                                                                  120/120
+                 Cidadania
+
+
+       Contexto Internacional                                                                     456/456
+
+
+                        Dados                                                                     622/622
+
+
+              Opinião Pública                                                                     464/464
+
+
+         Revista Brasileira de
+                                                                                                  391/391
+              Ciência Política
+
+      Revista de Sociologia e
+                                                                             406/638
+                     Política
+
+         Revista Brasileira de
+                                                                             306/490
+         Política Internacional
+
+         Revista Brasileira de
+                                                             300/708
+            Ciências Sociais
+
+
+     Novos estudos CEBRAP                    132/581
+
+
+ Lua Nova: Revista de Cultura
+                                          100/511
+                    e Política
+
+                                  0%   20%             40%             60%                80%   100%
+                                                       Artigos classificados (%)
+
+                                                               Completo         Parcial
+
+
+
+Figura 6: Seis dos onze periódicos estão integralmente classificados. Os pontos mostram a proporção classificada, e
+os rótulos, artigos classificados/elegíveis.
+
+A Figura 7 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados
+podem ocultar. Para manter a composição dos periódicos, ela inclui apenas 2011–2025, intervalo em que
+BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP têm artigos em todos os anos. As
+proporções anuais agrupam os artigos dos cinco periódicos, enquanto a Figura 5 dá peso igual a cada
+periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais
+são descritivas e podem refletir denominadores pequenos.
+
+
+
+
+                                                         11
+                                     Empíricos                             Análise quantitativa                         Inferência estatística
+               100%
+
+
+
+               75%
+
+
+
+               50%
+
+
+
+               25%
+
+
+
+
+ Artigos (%)
+                0%
+                           Linguagem causal ou explicativa           Examinados para identificação                      Estratégia explícita
+               100%
+
+
+
+               75%
+
+
+
+               50%
+
+
+
+               25%
+
+
+
+                0%
+                      11      14      17     20     23    25    11      14      17       20       23    25    11    14        17      20         23    25
+                  20         20     20     20     20     20    20     20      20        20    20       20    20    20       20      20      20        20
+                                                                                   Ano
+
+Figura 7: As séries anuais mostram crescimento da empiria e oscilação das demais práticas entre 2011 e 2025. As
+proporções agrupam os artigos de BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP e incluem apenas
+anos com publicação nos cinco periódicos; todos os painéis usam escala de 0% a 100%.
+
+
+
+
+                                                                                   12
+Referências
+Albuquerque, Rodrigo Barros de, Rafael Mesquita, and Renato Victor Lira Brito. 2022. “Obscuridade metodológica:
+   um mapeamento da formação em métodos na pós-graduação em Relações Internacionais e áreas afins no Brasil.”
+   Revista Brasileira de Ciência Política, no. 39. https://doi.org/10.1590/0103-3352.2022.39.258379.
+Barberia, Lorena Guadalupe, Samuel Ralize de Godoy, and Danilo Praxedes Barboza. 2014. “Novas perspectivas
+   sobre o calcanhar metodológico: o ensino de métodos de pesquisa em Ciência Política no Brasil.” Teoria &
+   Sociedade 22 (2).
+Figueiredo Filho, Dalson Britto, Rodrigo Lins, Amanda Domingos, Nicole Janz, and Lucas Silva. 2019. “Seven
+   Reasons Why: A User’s Guide to Transparency and Reproducibility.” Brazilian Political Science Review 13 (2).
+   https://doi.org/10.1590/1981-3821201900020001.
+Soares, Gláucio Ary Dillon. 2005. “O calcanhar metodológico da ciência política no Brasil.” Sociologia, Problemas e
+   Práticas, no. 48: 27–52.
+Torreblanca, Carolina, William Dinneen, Guy Grossman, and Yiqing Xu. 2026. “The Credibility Revolution in
+   Political Science.” arXiv:2601.11542.
+
+
+
+
+                                                        13
+
