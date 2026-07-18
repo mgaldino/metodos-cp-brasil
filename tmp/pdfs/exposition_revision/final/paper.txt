@@ -1,5 +1,6 @@
-       Práticas Metodológicas em Periódicos Brasileiros: Empiria,
-             Quantificação e Identificação Causal, 2005–2025
+      Empiria, Quantificação e Identificação Causal em Periódicos
+       Brasileiros: Diagnóstico Preliminar em Quatro Periódicos
+                       Integralmente Classificados
                                              18 de Julho de 2026
 
                                                       Resumo
@@ -42,12 +43,12 @@ comparações são descritivas: o desenho não identifica por que periódicos ou
 O universo elegível contém 5.249 artigos de onze periódicos. A classificação por leitura integral cobre 1.798,
 ou 34,3% do total. Quatro periódicos estão integralmente classificados e somam 1.466 artigos; as com-
 parações editoriais principais restringem-se a esse estrato. Entre os 463 artigos selecionados pelo protocolo
-para examinar identificação, 27 mencionam alguma estratégia explícita, equivalentes a 5,8%. Entre artigos
-quantitativos, a inferência estatística varia de 49,7% na BPSR a 7,2% em Contexto Internacional.
 
 
                                                           1
-A contribuição é uma mensuração comparável de quatro dimensões da prática publicada e um diagnóstico
+para examinar identificação, 27 mencionam alguma estratégia explícita, equivalentes a 5,8%. Entre artigos
+quantitativos, a inferência estatística varia de 49,7% na BPSR a 7,2% em Contexto Internacional.
+A contribuição é uma mensuração comparável de quatro dimensões da prática publicada e um diagnóstico
 preliminar de sua heterogeneidade editorial e temporal. A classificação automatizada ainda requer validação
 humana, e sua configuração variou entre lotes; por isso, as tendências são exploratórias e os resultados
 não representam o conjunto da produção nacional. O artigo registra a presença declarada de métodos e
@@ -95,13 +96,12 @@ RBPI                              490         0               0,0%            0/
 
 
 
-Estratégia Empírica
-A estratégia empírica é uma estratégia de mensuração, não uma estratégia de identificação causal do próprio
-paper. O objetivo é descrever como os artigos se distribuem em dimensões metodológicas observáveis:
-
 
                                                           2
-presença de evidência empírica, tipo de evidência, componente quantitativo, inferência estatística, afirmação
+Estratégia Empírica
+A estratégia empírica é uma estratégia de mensuração, não uma estratégia de identificação causal do próprio
+paper. O objetivo é descrever como os artigos se distribuem em dimensões metodológicas observáveis:
+presença de evidência empírica, tipo de evidência, componente quantitativo, inferência estatística, afirmação
 causal ou explicativa e menção a estratégias explícitas de identificação causal. Os agregados dos 1.798 artigos
 classificados descrevem cobertura parcial. As comparações entre periódicos usam apenas os quatro periódicos
 completos; as comparações temporais usam os três periódicos completos que publicaram nos três períodos,
@@ -157,14 +157,14 @@ quais procuramos, na etapa seguinte, menções a estratégias explícitas de ide
 Consideramos como estratégia explícita de identificação causal a menção a experimentos, diferenças-em-
 diferenças, estudos de evento, variáveis instrumentais, regressão descontínua, regression kink, controle sin-
 tético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais formais, estimadores
-duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, modelos de
-equações estruturais, mediação causal e efeitos fixos não entram automaticamente nessa contagem. Esses
-casos só seriam incluídos após revisão complementar que encontrasse uma discussão explícita da estratégia
-de identificação e da plausibilidade de seus pressupostos. Mesmo entre os casos incluídos, a classificação
 
 
                                                                             3
-registra apenas que uma estratégia foi mencionada; não avalia se foi bem executada.
+duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, modelos de
+equações estruturais, mediação causal e efeitos fixos não entram automaticamente nessa contagem. Esses
+casos só seriam incluídos após revisão complementar que encontrasse uma discussão explícita da estratégia
+de identificação e da plausibilidade de seus pressupostos. Mesmo entre os casos incluídos, a classificação
+registra apenas que uma estratégia foi mencionada; não avalia se foi bem executada.
 
 Protocolo de classificação e validade da mensuração
 Classificamos o texto integral de cada artigo com um protocolo padronizado aplicado por modelos de lin-
@@ -195,6 +195,7 @@ O universo elegível contém 5.249 artigos, dos quais 1.798 estão classificados
 parcial com denominadores específicos para cada dimensão. Entre os classificados, 1.446 são empíricos. Entre
 os empíricos, 833 têm componente quantitativo; entre estes, 315 apresentam modelagem estatística e 308
 registram inferência estatística.
+
                 Tabela 2: Dimensões metodológicas nos artigos classificados por leitura integral.
 
 Dimensão           Categoria                     N           Denominador                            Percentual
@@ -211,13 +212,12 @@ A composição da evidência é plural. Dos artigos empíricos, 612 usam apenas 
 apenas evidência quantitativa e 493 combinam ambas. Quantificação, portanto, não substitui a pesquisa
 qualitativa nem organiza sozinha a prática empírica observada.
 
-Periódicos com classificação completa
-Os quatro periódicos completos somam 1.466 artigos. A Tabela 3 e a Figura 2 mostram diferenças editoriais
-substantivas. O percentual de artigos empíricos varia de 75,7% em Contexto Internacional a 88,3% em
-
 
                                                          4
-Cadernos Gestão Pública e Cidadania. Entre os artigos empíricos, o componente quantitativo corre-
+Periódicos com classificação completa
+Os quatro periódicos completos somam 1.466 artigos. A Tabela 3 e a Figura 2 mostram diferenças editoriais
+substantivas. O percentual de artigos empíricos varia de 75,7% em Contexto Internacional a 88,3% em
+Cadernos Gestão Pública e Cidadania. Entre os artigos empíricos, o componente quantitativo corre-
 sponde a 32,2% em Contexto Internacional, 62,7% em Dados, 70,8% em Cadernos Gestão Pública e
 Cidadania e 74,0% na BPSR.
 
@@ -225,13 +225,13 @@ Tabela 3: Perfil metodológico dos quatro periódicos completos. Denominadores: 
 quantitativos sobre empíricos; inferência sobre quantitativos; exame de identificação sobre todos os artigos; estratégia
 explícita sobre os artigos examinados.
 
-                                                                                                                                      Exame de                                  Estratégia
-Periódico                            N           Empíricos Quantitativos Inferência                                                   identificação                             explícita
-BPSR                                 268         86,2%                      74,0%                               49,7%                 40,3%                                     12,0%
-CGPC                                 120         88,3%                      70,8%                               18,7%                 20,0%                                     8,3%
-Contexto                             456         75,7%                      32,2%                               7,2%                  4,2%                                      5,3%
+                                                                                                                                    Exame de                                   Estratégia
+Periódico                            N           Empíricos Quantitativos Inferência                                                 identificação                              explícita
+BPSR                                 268         86,2%                   74,0%                               49,7%                  40,3%                                      12,0%
+CGPC                                 120         88,3%                   70,8%                               18,7%                  20,0%                                      8,3%
+Contexto                             456         75,7%                   32,2%                               7,2%                   4,2%                                       5,3%
 Internacional
-Dados                                622         87,1%                      62,7%                               41,8%                 31,8%                                     5,1%
+Dados                                622         87,1%                   62,7%                               41,8%                  31,8%                                      5,1%
 
 
 
@@ -239,54 +239,47 @@ Dados                                622         87,1%                      62,7
  4 periódicos, 1.466 artigos; o denominador varia por dimensão.
 
 
-                   Dados                 87,1%                          62,7%                          41,8%                     96,5%                      31,8%                   5,1%
+
+                   Dados                 87,1%                       62,7%                          41,8%                      96,5%                       31,8%                     5,1%
 
 
 
 
-   Contexto Internacional                75,7%                          32,2%                           7,2%                     97,4%                          4,2%                5,3%
+   Contexto Internacional                75,7%                       32,2%                           7,2%                      97,4%                           4,2%                  5,3%
+
 
 
 
  Cadernos Gestão Pública
             e Cidadania
-                                         88,3%                          70,8%                          18,7%                     89,6%                      20,0%                   8,3%
+                                         88,3%                       70,8%                          18,7%                      89,6%                       20,0%                     8,3%
+
 
 
 
         Brazilian Political
          Science Review
-                                         86,2%                          74,0%                          49,7%                     98,7%                      40,3%                12,0%
+                                         86,2%                       74,0%                          49,7%                      98,7%                       40,3%                 12,0%
 
 
 
-                                                os                       tivo                            tica                         va                       ão                líci
-                                                                                                                                                                                      ta
-                                         íric                        tita                             tís                          ati                       aç
-                                    mp                           ua
-                                                                    n
-                                                                                              es
-                                                                                                 ta                         x plic                    nti
-                                                                                                                                                          fic
-                                                                                                                                                                             ae
-                                                                                                                                                                               xp
-                                 ose                            q                       cia                           a  l/e                      ide                    tég
-                                                                                                                                                                            i
-                             tig                           te                          n                             s                       de
-                        Ar                               en                        erê                            au                                                  tra
-                                                     po
-                                                        n
-                                                                                Inf                           ão
-                                                                                                                 c                      me                          Es
-                                              m                                                             aç                      E xa
-                                           Co                                                       rm
-                                                                                                 Afi
 
-
-
-                                                                                                 %
-                                                                                                            0    25       50       75      100
-
+                                                os                    tivo                            tica                          va                        ão                       ta
+                                         íric                     tita                             tís                           ati                        aç                    líci
+                                    mp                        ua
+                                                                 n
+                                                                                           es
+                                                                                              ta                          x plic                     nti
+                                                                                                                                                         fic                  ex
+                                                                                                                                                                                 p
+                                 ose                         q                       cia                            a  l/e                       ide                    tégia
+                             tig                       nte                          n                             us                        de                       tra
+                        Ar                           ne                         erê                             ca                      e                          Es
+                                                mp
+                                                   o                         Inf                           ão                        am
+                                           Co                                                            aç                       Ex
+                                                                                                 rm
+                                                                                              Afi
 
 
 Figura 2: Perfil metodológico dos quatro periódicos completos. Cada dimensão usa o denominador indicado na
@@ -299,9 +292,7 @@ diferenças de composição temática, tradição disciplinar e política editor
 decompor; não constituem ranking de qualidade nem efeito causal do periódico.
 
 
-
-
-                                                                                                            5
+                                                                                                         5
 Evidência qualitativa
 Nos quatro periódicos completos, 971 artigos apresentam evidência qualitativa, isoladamente ou em com-
 binação com evidência quantitativa. O classificador identifica objetivo qualitativo claro em 954 deles, ou
@@ -520,25 +511,21 @@ cação; não mede a adequação entre cada afirmação e o método empregado.
 
 
 Conclusão
-Esta versão entrega dois resultados intermediários. Primeiro, oferece cobertura integral dos 1.466 artigos
-de quatro periódicos, com rótulos automatizados ainda sujeitos a validação humana. Segundo, descreve de
-forma provisória os 1.798 artigos já classificados de um universo elegível de 5.249. Ainda faltam 3.451 artigos,
-de modo que os agregados nacionais não são finais.
-Nos quatro periódicos integralmente classificados, os resultados preliminares não sustentam uma descrição
-simples de ausência de empiria ou de quantificação. O conjunto classificado contém 1.446 artigos empíricos,
-dos quais 833 têm componente quantitativo. A heterogeneidade aparece na passagem da quantificação
-para inferência. Entre os 463 artigos selecionados pelo protocolo para examinar identificação, apenas 27
-mencionam uma estratégia explícita de identificação causal. Essa baixa frequência não permite, por si só,
-inferir a qualidade dos estudos.
-A próxima etapa deve completar a classificação dos onze periódicos, consolidar a proveniência do classificador,
-adjudicar uma amostra humana estratificada e implementar as medidas complementares de explicitação e
-formato. Sem essas medidas, esta versão não conclui sobre rastreabilidade ou padronização textual. Só então
-será possível avaliar se o padrão observado nos quatro periódicos completos se generaliza.
+Nos quatro periódicos integralmente classificados, a presença elevada de artigos empíricos convive com difer-
+enças substantivas na quantificação e na inferência estatística. Nos três periódicos com cobertura temporal
+comum, a participação empírica cresce, enquanto a quantificação permanece estável e a trajetória da infer-
+ência depende da regra de ponderação. Esses resultados não sustentam uma narrativa de substituição linear
+da pesquisa qualitativa nem de difusão uniforme de estratégias causais.
+No conjunto de 1.798 artigos classificados, apenas 27 dos 463 selecionados pelo protocolo para examinar
+identificação mencionam uma estratégia explícita, equivalentes a 5,8%. Essa frequência descreve presença
+nominal, não qualidade metodológica. Como a classificação automatizada ainda requer validação humana e
+cobre apenas parte do universo de 5.249 artigos, as conclusões permanecem restritas aos quatro periódicos
+integralmente classificados.
 
 
 
 
-                                                       9
+                                                     9
 Apêndice: Cobertura e variação anual
 A Figura 6 detalha a cobertura da classificação por periódico. Quatro periódicos estão completos, três estão
 parciais e quatro ainda não têm artigos classificados. Essa distribuição impede transformar a média dos
@@ -649,22 +636,22 @@ apenas anos com publicação nos três periódicos. Todos os painéis usam escal
 
                                                                                         11
 Referências
-Albuquerque, Rodrigo Barros de, Rafael Mesquita, and Renato Victor Lira Brito. 2022. “Obscuridade Metodológica:
-   Um Mapeamento Da Formação Em Métodos Na Pós-Graduação Em Relações Internacionais e Áreas Afins No
-   Brasil.” Revista Brasileira de Ciência Política, no. 39. https://doi.org/10.1590/0103-3352.2022.39.258379.
-Barberia, Lorena Guadalupe, Samuel Ralize de Godoy, and Danilo Praxedes Barboza. 2014. “Novas Perspectivas
-   Sobre o Calcanhar Metodológico: O Ensino de Métodos de Pesquisa Em Ciência Política No Brasil.” Teoria &
+Albuquerque, Rodrigo Barros de, Rafael Mesquita, and Renato Victor Lira Brito. 2022. “Obscuridade metodológica:
+   um mapeamento da formação em métodos na pós-graduação em Relações Internacionais e áreas afins no Brasil.”
+   Revista Brasileira de Ciência Política, no. 39. https://doi.org/10.1590/0103-3352.2022.39.258379.
+Barberia, Lorena Guadalupe, Samuel Ralize de Godoy, and Danilo Praxedes Barboza. 2014. “Novas perspectivas
+   sobre o calcanhar metodológico: o ensino de métodos de pesquisa em Ciência Política no Brasil.” Teoria &
    Sociedade 22 (2).
 Figueiredo Filho, Dalson Britto, Rodrigo Lins, Amanda Domingos, Nicole Janz, and Lucas Silva. 2019. “Seven
    Reasons Why: A User’s Guide to Transparency and Reproducibility.” Brazilian Political Science Review 13 (2).
    https://doi.org/10.1590/1981-3821201900020001.
-Soares, Gláucio Ary Dillon. 2005. “O Calcanhar Metodológico Da Ciência Política No Brasil.” Sociologia, Problemas
-   e Práticas, no. 48: 27–52.
+Soares, Gláucio Ary Dillon. 2005. “O calcanhar metodológico da ciência política no Brasil.” Sociologia, Problemas e
+   Práticas, no. 48: 27–52.
 Torreblanca, Carolina, William Dinneen, Guy Grossman, and Yiqing Xu. 2026. “The Credibility Revolution in
    Political Science.” arXiv:2601.11542.
 
 
 
 
-                                                       12
+                                                        12
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-# Regenera apenas figuras com rótulos editoriais a partir das tabelas
+# Regenera figuras com ajustes editoriais a partir das tabelas
 # validadas usadas pelo paper de 13 de julho de 2026. O script não lê nem
 # altera o corpus canônico e não recalcula classificações ou denominadores.
 
@@ -24,6 +24,18 @@ input_paths <- c(
 )
 
 stopifnot(all(file.exists(input_paths)))
+
+expected_md5 <- c(
+  denominators = "1f20e0b844d814110097dd104a68532b",
+  complete_journals = "c1e124f22c71f70dce6829f94f560c7d",
+  periods = "4fa28a87540d097194c72c02ad26be2c",
+  years = "573606c9f6427682c0039f5de168f46d",
+  coverage = "386030da0c22e564ec8c2b02edcd09dd"
+)
+
+actual_md5 <- unname(tools::md5sum(unname(input_paths)))
+names(actual_md5) <- names(input_paths)
+stopifnot(identical(actual_md5, expected_md5))
 
 denominators <- readr::read_csv(input_paths[["denominators"]], show_col_types = FALSE)
 complete_journals <- readr::read_csv(input_paths[["complete_journals"]], show_col_types = FALSE)
@@ -172,21 +184,20 @@ complete_journals_long <- complete_journals |>
   )
 
 figure_2 <- complete_journals_long |>
-  ggplot2::ggplot(ggplot2::aes(x = metric_label, y = journal_title, fill = percent)) +
-  ggplot2::geom_tile(color = "white", linewidth = 0.6) +
-  ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), size = 3) +
-  ggplot2::scale_fill_gradient(low = "#F2F5F8", high = "#2F6B8A", limits = c(0, 100)) +
+  ggplot2::ggplot(ggplot2::aes(x = metric_label, y = journal_title)) +
+  ggplot2::geom_tile(fill = "#F2F5F8", color = "white", linewidth = 0.6) +
+  ggplot2::geom_text(ggplot2::aes(label = fmt_pct_label(percent)), color = "#173B4F", size = 3) +
   ggplot2::labs(
     title = "Perfil metodológico dos periódicos com classificação completa",
     subtitle = "4 periódicos, 1.466 artigos; o denominador varia por dimensão.",
     x = NULL,
-    y = NULL,
-    fill = "%"
+    y = NULL
   ) +
   theme_paper() +
   ggplot2::theme(
     axis.text.x = ggplot2::element_text(angle = 30, hjust = 1),
-    panel.grid = ggplot2::element_blank()
+    panel.grid = ggplot2::element_blank(),
+    legend.position = "none"
   )
 
 ggplot2::ggsave(
