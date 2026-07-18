@@ -247,27 +247,31 @@ tabela_periodicos_display <- tabela_periodicos_completos |>
       "Revista Brasileira de Ciência Política" = "RBCP"
     ),
     N = format_n(n_articles),
-    Empíricos = format_pct(pct_empirical),
-    `Análise quantitativa` = format_pct(pct_quantitative),
-    `Inferência estatística` = format_pct(pct_inference),
-    `Examinados para identificação` = format_pct(pct_screen),
-    `Estratégia explícita` = format_pct(pct_strict)
+    Empíricos = stringr::str_replace_all(format_pct(pct_empirical), stringr::fixed("%"), "\\\\%"),
+    `Análise quantitativa` = stringr::str_replace_all(format_pct(pct_quantitative), stringr::fixed("%"), "\\\\%"),
+    `Inferência estatística` = stringr::str_replace_all(format_pct(pct_inference), stringr::fixed("%"), "\\\\%"),
+    `Examinados para identificação` = stringr::str_replace_all(format_pct(pct_screen), stringr::fixed("%"), "\\\\%"),
+    `Estratégia explícita` = stringr::str_replace_all(format_pct(pct_strict), stringr::fixed("%"), "\\\\%")
   )
 
 knitr::kable(
   tabela_periodicos_display,
+  col.names = c(
+    "Periódico",
+    "N",
+    "Empíricos",
+    "\\shortstack{Análise\\\\quantitativa}",
+    "\\shortstack{Inferência\\\\estatística}",
+    "\\shortstack{Examinados para\\\\identificação}",
+    "\\shortstack{Estratégia\\\\explícita}"
+  ),
   caption = "Práticas metodológicas nos seis periódicos integralmente classificados.",
-  booktabs = TRUE
-) |>
-  kableExtra::kable_styling(
-    latex_options = "scale_down",
-    font_size = 9
-  ) |>
-  kableExtra::footnote(
-    general = "Percentuais: empíricos e examinados sobre todos os artigos; análise quantitativa sobre empíricos; inferência estatística sobre quantitativos com rótulo observado; estratégia explícita sobre examinados.",
-    threeparttable = TRUE
-  )
+  booktabs = TRUE,
+  escape = FALSE
+)
 ```
+
+{\footnotesize\textit{Nota:} Empíricos e examinados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com rótulo observado; estratégia explícita usa os examinados.\par}
 
 ```{r figura-2, fig.cap="As práticas metodológicas variam entre os seis periódicos integralmente classificados. Empíricos e examinados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com rótulo observado; estratégia explícita usa os examinados.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
@@ -331,7 +335,7 @@ knitr::kable(
 
 Nos seis periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos examinados mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
 
-```{r figura-6, fig.cap="Estratégias explícitas de identificação nos seis periódicos integralmente classificados. As barras contam os artigos que mencionam cada estratégia; um artigo pode mencionar mais de uma.", out.width="95%"}
+```{r figura-6, fig.cap="Estratégias explícitas de identificação nos seis periódicos integralmente classificados. As barras contam os artigos que mencionam cada estratégia; um artigo pode mencionar mais de uma.", fig.pos="H", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
 ```
 
