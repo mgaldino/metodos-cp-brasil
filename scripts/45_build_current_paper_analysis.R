@@ -54,12 +54,13 @@ if (!all(file.exists(required_files))) {
 }
 
 period_levels <- c("2005-2011", "2012-2018", "2019-2025")
-evidence_levels <- c("none", "qualitative_only", "quantitative_only", "mixed_empirical")
+evidence_levels <- c("none", "qualitative_only", "quantitative_only", "mixed_empirical", "unclear")
 quantitative_levels <- c(
   "none",
   "descriptive_statistics_only",
   "bivariate_tests_or_correlations_only",
-  "statistical_modeling"
+  "statistical_modeling",
+  "unclear"
 )
 
 parse_bool <- function(x) {
@@ -457,7 +458,15 @@ metric_summary <- function(data, groups = character()) {
       ),
       n_inference = sum(
         dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) &
-          dplyr::coalesce(has_statistical_inference, FALSE)
+          has_statistical_inference %in% TRUE
+      ),
+      n_inference_observed = sum(
+        dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) &
+          !is.na(has_statistical_inference)
+      ),
+      n_inference_missing = sum(
+        dplyr::coalesce(is_empirical_quant_paper_torreblanca, FALSE) &
+          is.na(has_statistical_inference)
       ),
       n_claim = sum(dplyr::coalesce(causal_or_explanatory_claim_present, FALSE)),
       n_empirical_claim = sum(
@@ -471,7 +480,7 @@ metric_summary <- function(data, groups = character()) {
       ),
       pct_empirical = fmt_pct(n_empirical, n_articles),
       pct_quantitative = fmt_pct(n_quantitative, n_empirical),
-      pct_inference = fmt_pct(n_inference, n_quantitative),
+      pct_inference = fmt_pct(n_inference, n_inference_observed),
       pct_claim = fmt_pct(n_empirical_claim, n_empirical),
       pct_claim_all = fmt_pct(n_claim, n_articles),
       pct_screen = fmt_pct(n_screen, n_articles),
@@ -498,6 +507,8 @@ denominator_summary <- tibble::tibble(
     "Artigos dos periódicos completos",
     "Artigos empíricos classificados",
     "Artigos empíricos quantitativos classificados",
+    "Artigos empíricos quantitativos com inferência classificada",
+    "Artigos empíricos quantitativos sem classificação de inferência",
     "Artigos com afirmação causal ou explicativa classificados",
     "Artigos em que a identificação é especialmente relevante",
     "Artigos com estratégia explícita de identificação causal"
@@ -510,6 +521,8 @@ denominator_summary <- tibble::tibble(
     n_complete_journal_articles,
     overall_metrics$n_empirical,
     overall_metrics$n_quantitative,
+    overall_metrics$n_inference_observed,
+    overall_metrics$n_inference_missing,
     overall_metrics$n_claim,
     overall_metrics$n_screen,
     overall_metrics$n_strict
@@ -522,6 +535,8 @@ denominator_summary <- tibble::tibble(
     "artigos classificados",
     "artigos classificados",
     "artigos empíricos classificados",
+    "artigos empíricos quantitativos classificados",
+    "artigos empíricos quantitativos classificados",
     "artigos classificados",
     "artigos classificados",
     "casos relevantes para identificação"
@@ -534,6 +549,8 @@ denominator_summary <- tibble::tibble(
     n_classified,
     n_classified,
     overall_metrics$n_empirical,
+    overall_metrics$n_quantitative,
+    overall_metrics$n_quantitative,
     n_classified,
     n_classified,
     overall_metrics$n_screen
@@ -546,6 +563,8 @@ denominator_summary <- tibble::tibble(
     fmt_pct(n_complete_journal_articles, n_classified),
     overall_metrics$pct_empirical,
     overall_metrics$pct_quantitative,
+    fmt_pct(overall_metrics$n_inference_observed, overall_metrics$n_quantitative),
+    fmt_pct(overall_metrics$n_inference_missing, overall_metrics$n_quantitative),
     overall_metrics$pct_claim_all,
     overall_metrics$pct_screen,
     overall_metrics$pct_strict
@@ -595,7 +614,7 @@ table_2_methodological_dimensions <- tibble::tribble(
   "Evidência", "Misto", sum(analysis_df$empirical_evidence_type == "mixed_empirical", na.rm = TRUE), "artigos empíricos", overall_metrics$n_empirical, fmt_pct(sum(analysis_df$empirical_evidence_type == "mixed_empirical", na.rm = TRUE), overall_metrics$n_empirical), "Categoria exclusiva entre artigos empíricos.",
   "Quantificação", "Componente quantitativo", overall_metrics$n_quantitative, "artigos empíricos", overall_metrics$n_empirical, overall_metrics$pct_quantitative, "Subconjunto quantitativo comparável ao estudo de referência.",
   "Quantificação", "Modelagem estatística", sum(analysis_df$quantitative_analysis_type == "statistical_modeling", na.rm = TRUE), "empíricos quantitativos", overall_metrics$n_quantitative, fmt_pct(sum(analysis_df$quantitative_analysis_type == "statistical_modeling", na.rm = TRUE), overall_metrics$n_quantitative), "Tipo de análise quantitativa.",
-  "Quantificação", "Inferência estatística", overall_metrics$n_inference, "empíricos quantitativos", overall_metrics$n_quantitative, overall_metrics$pct_inference, "Testes, intervalos, erros-padrão ou inferência equivalente.",
+  "Quantificação", "Inferência estatística", overall_metrics$n_inference, "empíricos quantitativos com inferência classificada", overall_metrics$n_inference_observed, overall_metrics$pct_inference, paste0("Testes, intervalos, erros-padrão ou inferência equivalente; ", overall_metrics$n_inference_missing, " casos quantitativos sem classificação são excluídos do denominador."),
   "Explicitação", "method_explicitness", NA_integer_, "não disponível", NA_integer_, NA_real_, "Exige classificação complementar; não é resultado substantivo.",
   "Formato", "empirical_article_format", NA_integer_, "não disponível", NA_integer_, NA_real_, "Exige classificação complementar; não é resultado substantivo."
 )
