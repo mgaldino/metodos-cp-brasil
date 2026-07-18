@@ -1,0 +1,6 @@
+quantitative_analysis_type,n,known_level,missing_level
+unclear,2,FALSE,FALSE
+none,1931,TRUE,FALSE
+descriptive_statistics_only,899,TRUE,FALSE
+statistical_modeling,617,TRUE,FALSE
+bivariate_tests_or_correlations_only,116,TRUE,FALSE
