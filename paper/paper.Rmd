@@ -153,11 +153,11 @@ A estratégia empírica é uma estratégia de mensuração, não uma estratégia
 
 O mapa de denominadores deve ser lido com cuidado. Algumas etapas são aninhadas: a frequência das estratégias de identificação é calculada dentro do subconjunto em que a identificação é metodologicamente relevante. Outras dimensões são cruzadas: afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, a Figura 1 apresenta denominadores e dimensões da classificação disponível, e não uma sequência estritamente aninhada em todos os degraus.
 
-```{r figura-1, fig.cap="Denominadores e dimensões da classificação disponível. Os painéis são independentes. A proporção de estratégias explícitas de identificação é calculada entre os artigos nos quais o tipo de afirmação ou de análise torna a identificação especialmente relevante.", out.width="95%"}
+```{r figura-1, fig.cap="Denominadores e dimensões da classificação disponível. Os painéis são independentes. A proporção de estratégias explícitas de identificação é calculada entre os artigos selecionados pelo protocolo para examinar identificação.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 ```
 
-O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quantitativa, mista ou ausente. Em seguida, distingue artigos com análise quantitativa, inferência estatística e afirmações causais ou explicativas. Para examinar a camada associada à identificação causal, selecionamos um subconjunto de artigos em que essa questão é especialmente relevante. O artigo entra nesse subconjunto por um de dois caminhos: combina uma afirmação causal ou explicativa com evidência empírica pertinente; ou emprega modelagem quantitativa que torna necessário examinar como as inferências são sustentadas. Portanto, esse subconjunto não equivale ao conjunto de estudos causais. Ele é apenas o universo no qual procuramos, na etapa seguinte, menções a estratégias explícitas de identificação.
+O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quantitativa, mista ou ausente. Em seguida, distingue artigos com análise quantitativa, inferência estatística e afirmações causais ou explicativas. Para examinar a camada associada à identificação causal, o protocolo seleciona artigos por um de dois caminhos: combinação de afirmação causal ou explicativa com evidência empírica pertinente; ou emprego de modelagem quantitativa que exige examinar como as inferências são sustentadas. Esse subconjunto não equivale ao conjunto de estudos causais. Ele define apenas os artigos nos quais procuramos, na etapa seguinte, menções a estratégias explícitas de identificação.
 
 Consideramos como estratégia explícita de identificação causal a menção a experimentos, diferenças-em-diferenças, estudos de evento, variáveis instrumentais, regressão descontínua, *regression kink*, controle sintético, diferenças-em-diferenças sintéticas, pareamento ou ponderação, grafos causais formais, estimadores duplamente robustos, árvores ou florestas causais e descoberta causal. Regressão observacional, modelos de equações estruturais, mediação causal e efeitos fixos não entram automaticamente nessa contagem. Esses casos só seriam incluídos após revisão complementar que encontrasse uma discussão explícita da estratégia de identificação e da plausibilidade de seus pressupostos. Mesmo entre os casos incluídos, a classificação registra apenas que uma estratégia foi mencionada; não avalia se foi bem executada.
 
@@ -167,7 +167,7 @@ Classificamos o texto integral de cada artigo com um protocolo padronizado aplic
 
 Os rótulos em escala ainda não foram integralmente adjudicados por humanos. Nos quatro periódicos completos, a fração marcada como caso difícil varia de `r format_pct(tough_call_min)` a `r format_pct(tough_call_max)` entre células periódico--período. Além disso, lotes diferentes foram classificados com configurações distintas de modelo e esforço. Como a ordem dos lotes se relaciona ao período de publicação, comparações temporais podem combinar mudança editorial e mudança do classificador. Por isso, as tendências são apresentadas apenas como diagnóstico exploratório. Antes de um teste substantivo, será necessário adjudicar os casos difíceis e os positivos raros, estimar erro por variável e reclassificar uma amostra estratificada com uma configuração congelada.
 
-Os denominadores são parte substantiva da interpretação. Proporções de cobertura usam os `r format_n(n_manifest)` artigos elegíveis. Proporções sobre práticas metodológicas usam os `r format_n(n_classificados)` artigos já classificados. A frequência de estratégias explícitas de identificação deve ser lida principalmente entre os `r format_n(n_screen)` artigos nos quais a identificação é especialmente relevante, com a proporção sobre o total classificado como referência adicional. Nenhuma tabela ou figura deve omitir o denominador, porque o significado de uma proporção muda conforme a dimensão analisada.
+Os denominadores são parte substantiva da interpretação. Proporções de cobertura usam os `r format_n(n_manifest)` artigos elegíveis. Proporções sobre práticas metodológicas usam os `r format_n(n_classificados)` artigos já classificados. A frequência de estratégias explícitas de identificação deve ser lida principalmente entre os `r format_n(n_screen)` artigos selecionados pelo protocolo para esse exame, com a proporção sobre o total classificado como referência adicional. Nenhuma tabela ou figura omite o denominador, porque o significado de uma proporção muda conforme a dimensão analisada.
 
 Duas dimensões complementares ainda não foram classificadas: explicitação metodológica e formato do artigo empírico. A primeira deve distinguir se dados, fontes e estratégia analítica aparecem de forma clara, parcial ou ausente. A segunda deve classificar a arquitetura textual do artigo empírico. Como essas dimensões não integram os resultados desta versão, nenhuma conclusão é apresentada sobre rastreabilidade ou padronização textual.
 
@@ -210,15 +210,9 @@ knitr::kable(
 
 A composição da evidência é plural. Dos artigos empíricos, `r format_n(tabela_dimensoes$n[tabela_dimensoes$category == "Somente qualitativo"])` usam apenas evidência qualitativa, `r format_n(tabela_dimensoes$n[tabela_dimensoes$category == "Somente quantitativo"])` usam apenas evidência quantitativa e `r format_n(tabela_dimensoes$n[tabela_dimensoes$category == "Misto"])` combinam ambas. Quantificação, portanto, não substitui a pesquisa qualitativa nem organiza sozinha a prática empírica observada.
 
-A Figura 2 apresenta primeiro o problema de cobertura. Quatro periódicos estão completos, três estão parciais e quatro ainda não têm artigos classificados. Isso impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
-
-```{r figura-4, fig.cap="Cobertura da classificação por periódico. Os rótulos mostram artigos classificados sobre artigos elegíveis após as exclusões documentadas.", out.width="95%"}
-knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
-```
-
 ## Periódicos com classificação completa
 
-Os quatro periódicos completos somam `r format_n(n_artigos_periodicos_completos)` artigos. A Tabela 3 e a Figura 3 mostram diferenças editoriais substantivas. O percentual de artigos empíricos varia de `r format_pct(profile_value("Contexto Internacional", "pct_empirical"))` em `Contexto Internacional` a `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_empirical"))` em `Cadernos Gestão Pública e Cidadania`. Entre os artigos empíricos, o componente quantitativo corresponde a `r format_pct(profile_value("Contexto Internacional", "pct_quantitative"))` em `Contexto Internacional`, `r format_pct(profile_value("Dados", "pct_quantitative"))` em `Dados`, `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_quantitative"))` em `Cadernos Gestão Pública e Cidadania` e `r format_pct(profile_value("Brazilian Political Science Review", "pct_quantitative"))` na BPSR.
+Os quatro periódicos completos somam `r format_n(n_artigos_periodicos_completos)` artigos. A Tabela 3 e a Figura 2 mostram diferenças editoriais substantivas. O percentual de artigos empíricos varia de `r format_pct(profile_value("Contexto Internacional", "pct_empirical"))` em `Contexto Internacional` a `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_empirical"))` em `Cadernos Gestão Pública e Cidadania`. Entre os artigos empíricos, o componente quantitativo corresponde a `r format_pct(profile_value("Contexto Internacional", "pct_quantitative"))` em `Contexto Internacional`, `r format_pct(profile_value("Dados", "pct_quantitative"))` em `Dados`, `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_quantitative"))` em `Cadernos Gestão Pública e Cidadania` e `r format_pct(profile_value("Brazilian Political Science Review", "pct_quantitative"))` na BPSR.
 
 ```{r tabela-3-periodicos-completos}
 tabela_periodicos_display <- tabela_periodicos_completos |>
@@ -249,7 +243,7 @@ knitr::kable(
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
 ```
 
-A diferença mais nítida está na inferência estatística entre artigos quantitativos: `r format_pct(profile_value("Brazilian Political Science Review", "pct_inference"))` na BPSR e `r format_pct(profile_value("Dados", "pct_inference"))` em `Dados`, contra `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_inference"))` em CGPC e `r format_pct(profile_value("Contexto Internacional", "pct_inference"))` em `Contexto Internacional`. Esses contrastes descrevem ecologias editoriais e disciplinares distintas; não constituem ranking de qualidade nem efeito causal do periódico.
+A diferença mais nítida está na inferência estatística entre artigos quantitativos: `r format_pct(profile_value("Brazilian Political Science Review", "pct_inference"))` na BPSR e `r format_pct(profile_value("Dados", "pct_inference"))` em `Dados`, contra `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_inference"))` em CGPC e `r format_pct(profile_value("Contexto Internacional", "pct_inference"))` em `Contexto Internacional`. Esses contrastes podem refletir diferenças de composição temática, tradição disciplinar e política editorial que o desenho atual não permite decompor; não constituem ranking de qualidade nem efeito causal do periódico.
 
 ## Evidência qualitativa
 
@@ -257,13 +251,13 @@ Nos quatro periódicos completos, `r format_n(n_qualitativos_periodicos_completo
 
 ## Afirmações e estratégias de identificação
 
-A categoria de afirmação causal ou explicativa é deliberadamente ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 4 separa categorias mutuamente exclusivas e mostra por que essa variável não pode ser tratada como afirmação causal estrita: há afirmações em artigos não empíricos, afirmações empíricas sem componente quantitativo e afirmações empíricas quantitativas sem estratégia explícita de identificação. Esses cruzamentos descrevem coexistência de atributos; não medem adequação entre afirmação e método.
+A categoria de afirmação causal ou explicativa é deliberadamente ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 3 separa categorias mutuamente exclusivas e mostra por que essa variável não pode ser tratada como afirmação causal estrita: há afirmações em artigos não empíricos, afirmações empíricas sem componente quantitativo e afirmações empíricas quantitativas sem estratégia explícita de identificação. Esses cruzamentos descrevem coexistência de atributos; não medem adequação entre afirmação e método.
 
 ```{r figura-5, fig.cap="Distribuição conjunta de afirmações causais ou explicativas, uso de dados quantitativos e menção a estratégias explícitas de identificação causal. As categorias são mutuamente exclusivas, mas não constituem teste de adequação entre afirmação e método.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-Dos `r format_n(n_screen)` artigos em que a identificação é especialmente relevante, `r format_n(n_estrito)` mencionam ao menos uma estratégia explícita de identificação causal, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Como esse subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, ele não contém apenas estudos causais. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
+Dos `r format_n(n_screen)` artigos selecionados pelo protocolo para examinar identificação, `r format_n(n_estrito)` mencionam ao menos uma estratégia explícita de identificação causal, equivalentes a `r format_pct(round(100 * n_estrito / n_screen, 1))`. Como esse subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, ele não contém apenas estudos causais. A Tabela 4 mantém visíveis os diferentes denominadores. As categorias diagnósticas não são mutuamente exclusivas e não devem ser somadas como uma distribuição.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
@@ -275,15 +269,15 @@ tabela_3_display <- tabela_credibilidade |>
       denominator,
       "artigos classificados" = paste0("Todos (", denominator_n, ")"),
       "artigos empíricos" = paste0("Empíricos (", denominator_n, ")"),
-      "casos relevantes para identificação" = paste0("Selecionados (", denominator_n, ")")
+      "casos relevantes para identificação" = paste0("Artigos examinados (", denominator_n, ")")
     ),
     category = dplyr::recode(
       category,
       "Afirmação causal ou explicativa em artigo empírico" = "Afirmação em artigo empírico",
-      "Casos relevantes para avaliar identificação" = "Casos selecionados",
+      "Casos relevantes para avaliar identificação" = "Artigos selecionados para examinar identificação",
       "Estratégia explícita de identificação causal" = "Estratégia explícita",
       "Método quantitativo sem estratégia explícita" = "Sem estratégia explícita",
-      "Outro método moderno a auditar" = "Outro método moderno"
+      "Outro método moderno a auditar" = "Outras estratégias codificadas"
     ),
     panel = dplyr::recode(panel, "Seleção analítica" = "Seleção")
   ) |>
@@ -303,7 +297,7 @@ knitr::kable(
 )
 ```
 
-Nos quatro periódicos completos, `r format_n(n_estrito_periodicos_completos)` artigos mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
+Nos quatro periódicos completos, `r format_n(n_estrito_periodicos_completos)` artigos mencionam ao menos uma estratégia explícita de identificação causal. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 4 conta ocorrências artigo-método; um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita a execução nem a plausibilidade dos pressupostos.
 
 ```{r figura-6, fig.cap="Estratégias explícitas de identificação causal mencionadas nos quatro periódicos completos. Um artigo pode mobilizar mais de uma estratégia; a contagem não avalia sua qualidade.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
