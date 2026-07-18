@@ -155,7 +155,13 @@ diagnostic_lines <- c(
   "",
   paste0("- Data de execução: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S %z")),
   paste0("- CSV canônico: `", canonical_path, "`"),
-  paste0("- Dimensão do CSV: ", format(nrow(canonical), big.mark = "."), " linhas x ", ncol(canonical), " colunas"),
+  paste0(
+    "- Dimensão do CSV: ",
+    format(nrow(canonical), big.mark = ".", decimal.mark = ",", scientific = FALSE),
+    " linhas x ",
+    ncol(canonical),
+    " colunas"
+  ),
   paste0("- PIDs elegíveis classificados: ", dplyr::n_distinct(diagnostic_base$pid)),
   paste0("- PIDs distintos com ao menos uma exceção: ", dplyr::n_distinct(diagnostics$pid)),
   "",

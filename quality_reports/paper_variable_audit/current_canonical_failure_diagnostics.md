@@ -1,25 +1,25 @@
-# Diagnóstico das falhas do CSV canônico na análise do paper
+# Diagnóstico das exceções do CSV canônico relevantes para o paper
 
-- Data de execução: 2026-07-18 17:51:02 -0300
+- Data de execução: 2026-07-18 18:03:27 -0300
 - CSV canônico: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined/classifications_integral_reading.csv`
 - Dimensão do CSV: 3.565 linhas x 27 colunas
 - PIDs elegíveis classificados: 3565
-- PIDs distintos com ao menos uma falha: 8
+- PIDs distintos com ao menos uma exceção: 6
 
-## Contagem por validação
+## Contagem por verificação
 
-- `statistical_inference_missing_within_quantitative`: 5
-- `statistical_inference_without_quantitative_analysis`: 1
-- `statistical_inference_without_quantitative_flag`: 1
-- `unknown_quantitative_level`: 2
+- `statistical_inference_missing_within_quantitative` [warning]: 5
+- `statistical_inference_outside_quantitative_definition` [warning]: 1
+
+Os avisos são compatíveis com o schema: valores nulos de inferência são excluídos do denominador observado, e inferência fora da definição de artigo quantitativo não entra no numerador quantitativo. Apenas níveis fora da taxonomia seriam erros bloqueantes.
 
 ## Níveis de `quantitative_analysis_type`
 
-- `unclear`: 2 (fora da taxonomia)
 - `none`: 1931 (previsto)
 - `descriptive_statistics_only`: 899 (previsto)
 - `statistical_modeling`: 617 (previsto)
 - `bivariate_tests_or_correlations_only`: 116 (previsto)
+- `unclear`: 2 (previsto)
 
 ## Artefatos
 
