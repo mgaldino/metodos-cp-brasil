@@ -50,6 +50,18 @@ format_percent_label <- function(x) {
 analysis_df <- readr::read_csv(analysis_path, show_col_types = FALSE)
 complete_profile <- readr::read_csv(complete_profile_path, show_col_types = FALSE)
 complete_journals <- complete_profile$journal_title
+expected_complete_journals <- c(
+  "Brazilian Political Science Review",
+  "Cadernos Gestão Pública e Cidadania",
+  "Contexto Internacional",
+  "Dados",
+  "Opinião Pública",
+  "Revista Brasileira de Ciência Política"
+)
+excluded_journals <- c(
+  "Brazilian Journal of Political Economy",
+  "Civitas - Revista de Ciências Sociais"
+)
 
 required_columns <- c(
   "pid",
@@ -68,8 +80,11 @@ if (length(missing_columns) > 0) {
 if (dplyr::n_distinct(analysis_df$pid) != nrow(analysis_df)) {
   stop("A base analítica contém PIDs duplicados.")
 }
-if (length(complete_journals) != 6) {
-  stop("O estrato completo deveria conter seis periódicos.")
+if (!setequal(complete_journals, expected_complete_journals)) {
+  stop("A lista dos seis periódicos completos diverge do escopo esperado.")
+}
+if (any(analysis_df$journal_title %in% excluded_journals)) {
+  stop("A base analítica contém periódico excluído da análise substantiva.")
 }
 
 quantitative_df <- analysis_df |>
@@ -125,13 +140,13 @@ summarise_inference_by_type <- function(data, scope_label) {
   dplyr::filter(!is.na(has_statistical_inference)) |>
     dplyr::group_by(quantitative_type) |>
   dplyr::summarise(
-    quantitative_n = dplyr::n(),
+    inference_observed_n = dplyr::n(),
     inference_n = sum(has_statistical_inference %in% TRUE),
-    inference_percent = fmt_pct(inference_n, quantitative_n),
+    inference_percent = fmt_pct(inference_n, inference_observed_n),
     .groups = "drop"
   ) |>
     dplyr::mutate(scope = scope_label) |>
-    dplyr::select(scope, quantitative_type, quantitative_n, inference_n, inference_percent)
+    dplyr::select(scope, quantitative_type, inference_observed_n, inference_n, inference_percent)
 }
 
 inference_by_quantitative_type <- dplyr::bind_rows(
@@ -264,17 +279,41 @@ benchmark_summary <- dplyr::bind_rows(
     difference_from_brazil_pp = round(percent - complete_aggregate$inference_percent, 1)
   )
 
-complete_type_summary <- inference_by_quantitative_type |>
-  dplyr::filter(scope == "Seis periódicos integralmente classificados")
-complete_descriptive <- complete_type_summary |>
-  dplyr::filter(quantitative_type == "Estatística descritiva")
-complete_formal_analysis <- complete_type_summary |>
-  dplyr::filter(quantitative_type %in% c("Modelagem estatística", "Testes bivariados ou correlações")) |>
-  dplyr::summarise(
-    n = sum(inference_n),
-    denominator_n = sum(quantitative_n),
-    percent = fmt_pct(n, denominator_n)
+complete_quantitative_observed <- quantitative_df |>
+  dplyr::filter(journal_title %in% complete_journals, !is.na(has_statistical_inference))
+
+descriptive_inference_conflicts <- complete_quantitative_observed |>
+  dplyr::filter(
+    quantitative_analysis_type == "descriptive_statistics_only",
+    has_statistical_inference %in% TRUE
+  ) |>
+  dplyr::select(
+    pid,
+    journal_title,
+    year,
+    quantitative_analysis_type,
+    has_statistical_inference
   )
+
+complete_descriptive_without_inference <- complete_quantitative_observed |>
+  dplyr::filter(
+    quantitative_analysis_type == "descriptive_statistics_only",
+    has_statistical_inference %in% FALSE
+  )
+
+complete_formal_analysis_all <- quantitative_df |>
+  dplyr::filter(
+    journal_title %in% complete_journals,
+    quantitative_analysis_type %in% c(
+      "statistical_modeling",
+      "bivariate_tests_or_correlations_only"
+    )
+  )
+complete_formal_analysis_observed <- complete_formal_analysis_all |>
+  dplyr::filter(!is.na(has_statistical_inference))
+complete_formal_analysis_n <- sum(
+  complete_formal_analysis_observed$has_statistical_inference %in% TRUE
+)
 
 inference_key_numbers <- dplyr::bind_rows(
   tibble::tibble(
@@ -290,16 +329,28 @@ inference_key_numbers <- dplyr::bind_rows(
     percent = complete_aggregate$inference_percent
   ),
   tibble::tibble(
-    metric = "Artigos apenas descritivos entre quantitativos nos seis periódicos completos",
-    n = complete_descriptive$quantitative_n,
+    metric = "Artigos classificados como descritivos e sem inferência nos seis periódicos completos",
+    n = nrow(complete_descriptive_without_inference),
     denominator_n = complete_aggregate$inference_observed_n,
-    percent = fmt_pct(complete_descriptive$quantitative_n, complete_aggregate$inference_observed_n)
+    percent = fmt_pct(nrow(complete_descriptive_without_inference), complete_aggregate$inference_observed_n)
   ),
   tibble::tibble(
-    metric = "Inferência entre testes bivariados ou modelagem nos seis periódicos completos",
-    n = complete_formal_analysis$n,
-    denominator_n = complete_formal_analysis$denominator_n,
-    percent = complete_formal_analysis$percent
+    metric = "Conflitos entre categoria descritiva e inferência positiva nos seis periódicos completos",
+    n = nrow(descriptive_inference_conflicts),
+    denominator_n = complete_aggregate$inference_observed_n,
+    percent = fmt_pct(nrow(descriptive_inference_conflicts), complete_aggregate$inference_observed_n)
+  ),
+  tibble::tibble(
+    metric = "Inferência entre testes bivariados ou modelagem com rótulo observado nos seis periódicos completos",
+    n = complete_formal_analysis_n,
+    denominator_n = nrow(complete_formal_analysis_observed),
+    percent = fmt_pct(complete_formal_analysis_n, nrow(complete_formal_analysis_observed))
+  ),
+  tibble::tibble(
+    metric = "Testes bivariados ou modelagem sem rótulo de inferência nos seis periódicos completos",
+    n = sum(is.na(complete_formal_analysis_all$has_statistical_inference)),
+    denominator_n = nrow(complete_formal_analysis_all),
+    percent = fmt_pct(sum(is.na(complete_formal_analysis_all$has_statistical_inference)), nrow(complete_formal_analysis_all))
   ),
   inference_by_period_complete |>
     dplyr::transmute(
@@ -408,8 +459,8 @@ figure_inference_benchmark <- plot_data |>
   ) +
   ggplot2::facet_wrap(~ panel, ncol = 2, scales = "free_y") +
   ggplot2::scale_x_continuous(
-    limits = c(0, 78),
-    breaks = seq(0, 70, 10),
+    limits = c(0, 100),
+    breaks = seq(0, 100, 20),
     labels = function(x) paste0(x, "%")
   ) +
   ggplot2::labs(x = "Parcela de artigos (%)", y = NULL) +
@@ -423,6 +474,11 @@ readr::write_csv(
 readr::write_csv(
   inference_by_quantitative_type,
   file.path(tables_dir, "statistical_inference_by_quantitative_type.csv"),
+  na = ""
+)
+readr::write_csv(
+  descriptive_inference_conflicts,
+  file.path(tables_dir, "statistical_inference_type_conflicts.csv"),
   na = ""
 )
 readr::write_csv(
