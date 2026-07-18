@@ -80,7 +80,9 @@ required_columns <- c(
   "is_empirical_quant_paper_torreblanca",
   "quantitative_analysis_type",
   "has_statistical_inference",
-  "causal_or_explanatory_claim_present"
+  "causal_or_explanatory_claim_present",
+  "credibility_revolution_screen_applicable",
+  "strict_design_method"
 )
 missing_columns <- setdiff(required_columns, names(analysis_df))
 if (length(missing_columns) > 0) {
@@ -258,6 +260,17 @@ top_three_weighted_percent <- stats::weighted.mean(
 complete_aggregate <- inference_by_scope |>
   dplyr::filter(scope == "Seis periódicos integralmente classificados")
 
+complete_articles <- analysis_df |>
+  dplyr::filter(journal_title %in% complete_journals)
+complete_screened <- complete_articles |>
+  dplyr::filter(dplyr::coalesce(credibility_revolution_screen_applicable, FALSE))
+complete_strict_n <- complete_articles |>
+  dplyr::filter(
+    dplyr::coalesce(credibility_revolution_screen_applicable, FALSE),
+    dplyr::coalesce(strict_design_method, FALSE)
+  ) |>
+  nrow()
+
 benchmark_summary <- dplyr::bind_rows(
   tibble::tibble(
     source_group = "Brasil",
@@ -416,8 +429,28 @@ inference_key_numbers <- dplyr::bind_rows(
     n = NA_real_,
     denominator_n = sum(top_three$n_explanatory_quantitative),
     percent = round(top_three_weighted_percent, 1)
+  ),
+  tibble::tibble(
+    metric = "Estratégia causal explícita entre todos os artigos dos seis periódicos completos",
+    n = complete_strict_n,
+    denominator_n = nrow(complete_articles),
+    percent = fmt_pct(complete_strict_n, nrow(complete_articles))
+  ),
+  tibble::tibble(
+    metric = "Estratégia causal explícita entre os artigos examinados dos seis periódicos completos",
+    n = complete_strict_n,
+    denominator_n = nrow(complete_screened),
+    percent = fmt_pct(complete_strict_n, nrow(complete_screened))
   )
 )
+
+if (
+  complete_strict_n != 49 ||
+    nrow(complete_articles) != 2321 ||
+    nrow(complete_screened) != 846
+) {
+  stop("As contagens de estratégias causais explícitas nos seis periódicos completos divergiram do esperado.")
+}
 
 journal_abbreviations <- c(
   "Brazilian Political Science Review" = "BPSR",
