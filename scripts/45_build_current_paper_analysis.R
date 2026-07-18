@@ -174,14 +174,14 @@ method_labels <- c(
   experiment_lab = "Experimento de laboratório",
   experiment_list = "Experimento de lista",
   difference_in_differences = "Diferenças-em-diferenças",
-  event_study = "Event study",
+  event_study = "Estudo de evento",
   instrumental_variables = "Variáveis instrumentais",
   regression_discontinuity = "Regressão descontínua",
   regression_kink = "Regression kink",
   synthetic_control = "Controle sintético",
   synthetic_difference_in_differences = "Diferenças-em-diferenças sintéticas",
   matching_or_weighting = "Pareamento/ponderação",
-  dag_or_formal_causal_graph = "DAG/grafo causal formal",
+  dag_or_formal_causal_graph = "Grafo causal formal (DAG)",
   doubly_robust = "Estimador duplamente robusto",
   causal_trees_or_forests = "Árvores/florestas causais",
   causal_discovery = "Descoberta causal"
@@ -191,7 +191,7 @@ metric_labels <- c(
   empirical = "Empíricos",
   quantitative = "Análise quantitativa",
   inference = "Inferência estatística",
-  claim = "Linguagem explicativa ampla",
+  claim = "Linguagem causal ou explicativa",
   screen = "Examinados para identificação",
   strict = "Estratégia explícita"
 )

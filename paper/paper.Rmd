@@ -248,10 +248,10 @@ tabela_periodicos_display <- tabela_periodicos_completos |>
     ),
     N = format_n(n_articles),
     Empíricos = format_pct(pct_empirical),
-    `Análise quantitativa` = format_pct(pct_quantitative),
-    `Inferência estatística` = format_pct(pct_inference),
+    Quantitativos = format_pct(pct_quantitative),
+    Inferência = format_pct(pct_inference),
     Examinados = format_pct(pct_screen),
-    `Estratégia explícita` = format_pct(pct_strict)
+    Estratégia = format_pct(pct_strict)
   )
 
 knitr::kable(
@@ -298,20 +298,16 @@ tabela_3_display <- tabela_credibilidade |>
     ),
     category = dplyr::recode(
       category,
+      "Afirmação causal ou explicativa" = "Linguagem causal ou explicativa",
       "Afirmação causal ou explicativa em artigo empírico" = "Linguagem causal ou explicativa em artigo empírico",
       "Casos relevantes para avaliar identificação" = "Artigos examinados",
       "Estratégia explícita de identificação causal" = "Estratégia explícita",
       "Método quantitativo sem estratégia explícita" = "Sem estratégia explícita",
       "Outro método moderno a auditar" = "Outras estratégias codificadas"
     ),
-    panel = dplyr::recode(
-      panel,
-      "Seleção analítica" = "Artigos examinados",
-      "Diagnóstico não exclusivo" = "Outros diagnósticos"
-    )
+    panel = panel
   ) |>
   dplyr::transmute(
-    Painel = panel,
     Categoria = category,
     N = n,
     Denominador = denominator_display,

@@ -107,7 +107,7 @@ metric_labels <- c(
   empirical = "Empíricos",
   quantitative = "Análise quantitativa",
   inference = "Inferência estatística",
-  claim = "Linguagem explicativa ampla",
+  claim = "Linguagem causal ou explicativa",
   screen = "Examinados para identificação",
   strict = "Estratégia explícita"
 )
