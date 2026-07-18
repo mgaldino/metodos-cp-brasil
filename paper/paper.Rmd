@@ -260,13 +260,15 @@ knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matr
 
 A diferença mais nítida está na inferência estatística entre artigos quantitativos: `r format_pct(profile_value("Opinião Pública", "pct_inference"))` em `Opinião Pública`, `r format_pct(profile_value("Brazilian Political Science Review", "pct_inference"))` na BPSR e `r format_pct(profile_value("Dados", "pct_inference"))` em `Dados`, contra `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_inference"))` em CGPC e `r format_pct(profile_value("Contexto Internacional", "pct_inference"))` em `Contexto Internacional`. Esses contrastes podem refletir diferenças de composição temática, tradição disciplinar e política editorial que o desenho atual não permite decompor; não constituem ranking de qualidade nem efeito causal do periódico.
 
+O perfil agregado de CGPC cobre apenas 2019--2025, enquanto os demais periódicos completos contribuem também em períodos anteriores. Sua comparação histórica direta com os outros cinco, portanto, combina diferenças editoriais e composição temporal.
+
 ## Evidência qualitativa
 
 Nos seis periódicos completos, `r format_n(n_qualitativos_periodicos_completos)` artigos apresentam evidência qualitativa, isoladamente ou em combinação com evidência quantitativa. O classificador identifica objetivo qualitativo claro em `r format_n(n_objetivo_qualitativo_claro)` deles, ou `r format_pct(pct_objetivo_qualitativo_claro)`. Esse resultado indica que o propósito substantivo da análise qualitativa costuma ser reconstruível, mas não mede explicitação de seleção de casos, procedimentos interpretativos ou rastreabilidade documental. Portanto, não substitui a futura variável de explicitação metodológica.
 
-## Afirmações e estratégias de identificação
+## Linguagem causal ou explicativa ampla e estratégias de identificação
 
-A categoria de afirmação causal ou explicativa é deliberadamente ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 3 separa categorias mutuamente exclusivas e mostra por que essa variável não pode ser tratada como afirmação causal estrita: há afirmações em artigos não empíricos, afirmações empíricas sem componente quantitativo e afirmações empíricas quantitativas sem estratégia explícita de identificação. Esses cruzamentos descrevem coexistência de atributos; não medem adequação entre afirmação e método.
+A categoria de linguagem causal ou explicativa é deliberadamente ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 3 é um diagnóstico dessa amplitude e mostra por que a variável não discrimina pretensões causais estritas: há marcações em artigos não empíricos, em artigos empíricos sem componente quantitativo e em artigos empíricos quantitativos sem estratégia explícita de identificação. Esses cruzamentos descrevem coexistência de atributos; não medem desalinhamento ou adequação entre afirmação e método.
 
 ```{r figura-5, fig.cap="Distribuição conjunta de afirmações causais ou explicativas, uso de dados quantitativos e menção a estratégias explícitas de identificação causal. As categorias são mutuamente exclusivas, mas não constituem teste de adequação entre afirmação e método.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
@@ -321,26 +323,30 @@ knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribu
 
 ## Variação por período
 
-A comparação temporal usa BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP, os cinco periódicos completos com artigos nos três períodos. A presença média de artigos empíricos cresce de `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2005-2011"])` em 2005--2011 para `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2019-2025"])` em 2019--2025. A proporção quantitativa entre os empíricos também aumenta, de `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2019-2025"])`. Para inferência estatística, porém, a conclusão depende da ponderação. Com peso igual por periódico, a proporção cresce de `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2019-2025"])`; agrupando os artigos quantitativos, passa de `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2019-2025"])`. O resultado mais prudente é estabilidade agregada, acompanhada de mudança na composição entre periódicos. Estratégias explícitas de identificação continuam raras e não apresentam trajetória monotônica.
+A comparação temporal usa BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP, os cinco periódicos completos presentes nos três períodos agregados. A presença média de artigos empíricos cresce de `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2005-2011"])` em 2005--2011 para `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2019-2025"])` em 2019--2025. Para quantificação, a conclusão depende da ponderação: com peso igual por periódico, a proporção passa de `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2019-2025"])`; agrupando os artigos, passa de `r format_pct(perfil_periodo_artigos$pct_quantitative[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_quantitative[perfil_periodo_artigos$period_3 == "2019-2025"])`, com queda intermediária. O aumento equiponderado é concentrado sobretudo na RBCP, que parte de apenas 2 artigos quantitativos entre 12 empíricos em 2005--2011 (`r format_pct(profile_value("Revista Brasileira de Ciência Política", "pct_quantitative"))` no agregado do periódico não é usado nesta comparação) e alcança 71,1% em 2019--2025. Para inferência estatística, a média equiponderada cresce de `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2019-2025"])`, enquanto a proporção agrupada passa de `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2019-2025"])`. O resultado mais prudente é crescimento da empiria, estabilidade aproximada da quantificação e da inferência quando os artigos são agrupados, e forte sensibilidade das médias equiponderadas à composição dos periódicos. Estratégias explícitas de identificação continuam raras e não apresentam trajetória monotônica.
 
 ```{r tabela-5-sensibilidade-temporal}
 tabela_temporal <- dplyr::bind_rows(
   perfil_periodo_padronizado |>
-    dplyr::transmute(period_3, Ponderação = "Peso igual por periódico", pct_inference),
+    dplyr::transmute(period_3, Dimensão = "Quantificação", Ponderação = "Peso igual por periódico", percent = pct_quantitative),
   perfil_periodo_artigos |>
-    dplyr::transmute(period_3, Ponderação = "Artigos quantitativos agrupados", pct_inference)
+    dplyr::transmute(period_3, Dimensão = "Quantificação", Ponderação = "Artigos agrupados", percent = pct_quantitative),
+  perfil_periodo_padronizado |>
+    dplyr::transmute(period_3, Dimensão = "Inferência estatística", Ponderação = "Peso igual por periódico", percent = pct_inference),
+  perfil_periodo_artigos |>
+    dplyr::transmute(period_3, Dimensão = "Inferência estatística", Ponderação = "Artigos quantitativos agrupados", percent = pct_inference)
 ) |>
-  tidyr::pivot_wider(names_from = period_3, values_from = pct_inference) |>
+  tidyr::pivot_wider(names_from = period_3, values_from = percent) |>
   dplyr::mutate(dplyr::across(dplyr::all_of(c("2005-2011", "2012-2018", "2019-2025")), format_pct))
 
 knitr::kable(
   tabela_temporal,
-  caption = "Sensibilidade da proporção de artigos quantitativos com inferência estatística à regra de ponderação. Universo: BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP.",
+  caption = "Sensibilidade das proporções de quantificação e inferência estatística à regra de ponderação. Universo: BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP.",
   booktabs = TRUE
 )
 ```
 
-```{r figura-3, fig.cap="Variação por período em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP. Cada ponto é a média simples das proporções dos cinco periódicos completos.", out.width="95%"}
+```{r figura-3, fig.cap="Variação por período em BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP, presentes nos três períodos agregados. Cada ponto é a média simples das proporções dos cinco periódicos completos.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
