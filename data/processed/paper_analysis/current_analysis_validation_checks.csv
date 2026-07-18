@@ -5,16 +5,16 @@ manifest_non_research_article,PASS,0,0,O manifest analítico deve conter apenas 
 non_empirical_with_empirical_evidence,PASS,0,0,Artigos não empíricos não devem carregar tipo de evidência empírica.
 quantitative_without_empirical_flag,PASS,0,0,O componente quantitativo pressupõe artigo empírico.
 quantitative_flag_with_quantitative_type_none,PASS,0,0,Flag quantitativa exige tipo de análise quantitativa diferente de none.
-statistical_inference_without_quantitative_flag,PASS,0,0,Inferência estatística exige flag de componente quantitativo.
-statistical_inference_without_quantitative_analysis,PASS,0,0,Inferência estatística exige componente quantitativo.
-statistical_inference_missing_within_quantitative,PASS,0,0,Inferência deve estar preenchida em todos os artigos quantitativos.
+statistical_inference_without_quantitative_flag,FAIL,1,0,Inferência estatística exige flag de componente quantitativo.
+statistical_inference_without_quantitative_analysis,FAIL,1,0,Inferência estatística exige componente quantitativo.
+statistical_inference_missing_within_quantitative,FAIL,5,0,Inferência deve estar preenchida em todos os artigos quantitativos.
 strict_design_outside_screen,PASS,0,0,Estratégias explícitas de identificação só são contadas nos artigos em que a identificação é especialmente relevante.
 strict_design_without_method_present,PASS,0,0,Desenhos estritos exigem method_present TRUE.
 strict_design_without_quote,PASS,0,0,Desenhos estritos exigem citação textual do desenho.
 method_present_without_parsed_type,PASS,0,0,method_present TRUE exige ao menos um tipo de método parseado.
 method_type_parse_or_unclassified,PASS,0,0,Todo tipo de método deve pertencer à taxonomia conhecida e ter JSON válido.
 unknown_evidence_level,PASS,0,0,Todo tipo de evidência deve pertencer aos níveis previstos.
-unknown_quantitative_level,PASS,0,0,Todo tipo de análise quantitativa deve pertencer aos níveis previstos.
+unknown_quantitative_level,FAIL,2,0,Todo tipo de análise quantitativa deve pertencer aos níveis previstos.
 nonidentical_duplicate_pids,PASS,0,0,Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.
 classified_outside_manifest,PASS,0,0,Nenhuma classificação analítica deve estar fora do manifest.
 classified_excluded_by_ledger,PASS,0,0,Nenhuma classificação analítica deve estar no ledger de exclusões.

@@ -224,7 +224,7 @@ tabela_periodicos_display <- tabela_periodicos_completos |>
     Empíricos = format_pct(pct_empirical),
     Quantitativos = format_pct(pct_quantitative),
     Inferência = format_pct(pct_inference),
-    `Identificação relevante` = format_pct(pct_screen),
+    `Exame de identificação` = format_pct(pct_screen),
     `Estratégia explícita` = format_pct(pct_strict)
   )
 
@@ -265,7 +265,8 @@ tabela_3_display <- tabela_credibilidade |>
       denominator,
       "artigos classificados" = paste0("Todos (", denominator_n, ")"),
       "artigos empíricos" = paste0("Empíricos (", denominator_n, ")"),
-      "casos relevantes para identificação" = paste0("Artigos examinados (", denominator_n, ")")
+      "casos relevantes para identificação" = paste0("Artigos examinados (", denominator_n, ")"),
+      "artigos examinados para identificação" = paste0("Artigos examinados (", denominator_n, ")")
     ),
     category = dplyr::recode(
       category,
