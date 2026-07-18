@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Repair one processed fulltext corpus row from preserved raw XML.
+"""Repair one processed fulltext corpus row from preserved raw XML or PDF.
 
-This is a narrow recovery tool for cases where the raw SciELO XML is valid but
-the processed ``body_text`` row was generated from the wrong portion of the XML.
+This is a narrow recovery tool for cases where a preserved SciELO XML or PDF
+contains a more complete body than the processed ``body_text`` row.
 It updates only one PID in the processed corpus and the matching inventory row,
 then refreshes the derived credibility manifest and any active batch manifests
 that already contain that PID.
@@ -47,7 +47,12 @@ def parse_args() -> argparse.Namespace:
         "--xml-path",
         type=Path,
         default=None,
-        help="Raw XML path. Defaults to data/raw/fulltext_corpus/xml/{pid}.xml.",
+        help="Raw XML/PDF path. Defaults to data/raw/fulltext_corpus/xml/{pid}.xml.",
+    )
+    parser.add_argument(
+        "--source-url",
+        default=None,
+        help="Source URL for the supplied XML/PDF when it differs from the old row.",
     )
     parser.add_argument(
         "--apply",
@@ -143,10 +148,11 @@ def block_count(body_text: str) -> int:
 
 def extract_repaired_result(
     pid: str,
-    xml_path: Path,
+    source_path: Path,
     processed_row: dict[str, str],
     raw_article_row: dict[str, str],
     gold_recovery: Any,
+    source_url: str | None = None,
 ) -> Any:
     metadata = dict(raw_article_row)
     for field in [
@@ -163,15 +169,23 @@ def extract_repaired_result(
         if processed_row.get(field):
             metadata[field] = processed_row[field]
 
-    source_url = processed_row.get("source_url") or "cached_xml"
+    source_url = source_url or processed_row.get("source_url") or "cached_source"
     retrieved_at = processed_row.get("retrieved_at") or datetime.now(timezone.utc).isoformat()
-    result, reason = gold_recovery.extract_from_xml_bytes(
-        xml_path.read_bytes(),
-        source_url,
-        xml_path,
-        retrieved_at,
-        metadata,
-    )
+    if source_path.suffix.lower() == ".pdf":
+        result, reason = gold_recovery.extract_from_pdf_file(
+            source_path,
+            source_url,
+            retrieved_at,
+            metadata,
+        )
+    else:
+        result, reason = gold_recovery.extract_from_xml_bytes(
+            source_path.read_bytes(),
+            source_url,
+            source_path,
+            retrieved_at,
+            metadata,
+        )
     if result is None:
         raise ValueError(f"Repaired extraction for {pid} is invalid: {reason}")
     return result
@@ -180,7 +194,7 @@ def extract_repaired_result(
 def repaired_processed_row(
     old_row: dict[str, str],
     result: Any,
-    xml_path: Path,
+    source_path: Path,
     run_timestamp: str,
 ) -> dict[str, Any]:
     row = dict(old_row)
@@ -190,8 +204,8 @@ def repaired_processed_row(
             "body_char_count": str(result.body_char_count),
             "body_word_count": str(result.body_word_count),
             "source_method": result.source_method,
-            "source_url": old_row.get("source_url") or result.source_url,
-            "input_path": rel(xml_path),
+            "source_url": result.source_url,
+            "input_path": rel(source_path),
             "input_hash": result.input_hash,
             "retrieved_at": old_row.get("retrieved_at") or result.retrieved_at,
             "abstract_char_count": str(result.abstract_char_count),
@@ -207,7 +221,7 @@ def repaired_inventory_row(
     old_row: dict[str, str],
     processed_row: dict[str, Any],
     result: Any,
-    xml_path: Path,
+    source_path: Path,
     body_hash: str,
     input_hash_duplicate: bool,
     body_hash_duplicate: bool,
@@ -217,7 +231,7 @@ def repaired_inventory_row(
     body_chars = result.body_char_count
     body_words = result.body_word_count
     abstract_chars = int(old_row.get("abstract_char_count_expected") or result.abstract_char_count or 0)
-    input_path_corpus_ok = rel(xml_path).startswith("data/raw/fulltext_corpus/")
+    input_path_corpus_ok = rel(source_path).startswith("data/raw/fulltext_corpus/")
     input_hash_matches_raw = processed_row["input_hash"] == result.input_hash
     retrieved_at_ok = bool(processed_row.get("retrieved_at", "").startswith(tuple(str(y) for y in range(2000, 2100))))
     source_url_ok = bool(str(processed_row.get("source_url", "")).strip())
@@ -303,7 +317,7 @@ def repaired_inventory_row(
             "body_text_nonempty": bool_text(bool(processed_row.get("body_text", "").strip())),
             "source_provenance_ok": bool_text(source_provenance_ok),
             "input_path_corpus_ok": bool_text(input_path_corpus_ok),
-            "raw_input_exists": bool_text(xml_path.exists()),
+            "raw_input_exists": bool_text(source_path.exists()),
             "input_hash_matches_raw": bool_text(input_hash_matches_raw),
             "input_hash_unique_across_pids": bool_text(not input_hash_duplicate),
             "body_hash_unique_across_pids": bool_text(not body_hash_duplicate),
@@ -378,7 +392,7 @@ def refresh_batch_manifests(pid: str) -> list[str]:
 
 def write_repair_report(
     pid: str,
-    xml_path: Path,
+    source_path: Path,
     old_processed: dict[str, str],
     new_processed: dict[str, Any],
     old_inventory: dict[str, str],
@@ -396,8 +410,8 @@ def write_repair_report(
         "",
         "## Source",
         "",
-        f"- Raw XML: `{rel(xml_path)}`",
-        f"- Raw XML SHA-256: `{new_processed['input_hash']}`",
+        f"- Raw source: `{rel(source_path)}`",
+        f"- Raw source SHA-256: `{new_processed['input_hash']}`",
         f"- Source method: `{new_processed['source_method']}`",
         f"- Source URL: `{new_processed['source_url']}`",
         "",
@@ -429,11 +443,11 @@ def write_repair_report(
 def main() -> int:
     args = parse_args()
     pid = args.pid
-    xml_path = args.xml_path or PROJECT_DIR / f"data/raw/fulltext_corpus/xml/{pid}.xml"
-    if not xml_path.is_absolute():
-        xml_path = PROJECT_DIR / xml_path
-    if not xml_path.exists():
-        raise FileNotFoundError(xml_path)
+    source_path = args.xml_path or PROJECT_DIR / f"data/raw/fulltext_corpus/xml/{pid}.xml"
+    if not source_path.is_absolute():
+        source_path = PROJECT_DIR / source_path
+    if not source_path.exists():
+        raise FileNotFoundError(source_path)
 
     csv.field_size_limit(sys.maxsize)
     run_timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -447,8 +461,15 @@ def main() -> int:
     old_inventory = one_row(inventory_rows, pid, rel(FULLTEXT_INVENTORY))
     raw_article = one_row(raw_article_rows, pid, rel(RAW_ARTICLES))
 
-    result = extract_repaired_result(pid, xml_path, old_processed, raw_article, gold_recovery)
-    new_processed = repaired_processed_row(old_processed, result, xml_path, run_timestamp)
+    result = extract_repaired_result(
+        pid,
+        source_path,
+        old_processed,
+        raw_article,
+        gold_recovery,
+        source_url=args.source_url,
+    )
+    new_processed = repaired_processed_row(old_processed, result, source_path, run_timestamp)
     body_hash = r_digest_text(new_processed["body_text"])
 
     input_hash_duplicate = any(
@@ -463,7 +484,7 @@ def main() -> int:
         old_inventory,
         new_processed,
         result,
-        xml_path,
+        source_path,
         body_hash,
         input_hash_duplicate,
         body_hash_duplicate,
@@ -471,7 +492,7 @@ def main() -> int:
 
     diagnostics = {
         "pid": pid,
-        "xml_path": rel(xml_path),
+        "source_path": rel(source_path),
         "apply": args.apply,
         "old_body_char_count": old_processed.get("body_char_count"),
         "new_body_char_count": new_processed["body_char_count"],
@@ -502,7 +523,7 @@ def main() -> int:
 
     report_path = write_repair_report(
         pid,
-        xml_path,
+        source_path,
         old_processed,
         new_processed,
         old_inventory,

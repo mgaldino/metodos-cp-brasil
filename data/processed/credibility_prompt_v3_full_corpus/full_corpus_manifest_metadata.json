@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T11:38:55Z",
+  "generated_at": "2026-07-18T11:42:34Z",
   "objective": "Manifest para classificacao credibility_prompt_v3 por leitura integral no corpus completo restante.",
   "include_pilot_175": false,
   "canonical_body_source": "data/processed/fulltext_corpus/article_texts_corpus.csv",
