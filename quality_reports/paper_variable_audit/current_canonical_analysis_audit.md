@@ -1,28 +1,28 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-13 13:17:53 -0300
+Gerado em: 2026-07-18 17:53:00 -0300
 
 ## Universo reconciliado
 
-- Linhas no CSV canônico bruto: 1798.
+- Linhas no CSV canônico bruto: 3565.
 - Linhas duplicadas exatas removidas apenas na camada analítica: 0.
 - Artigos elegíveis no manifest após ledger: 5249.
-- Artigos elegíveis classificados: 1798 (34,3%).
-- Artigos elegíveis ainda não classificados: 3451.
+- Artigos elegíveis classificados: 3565 (67,9%).
+- Artigos elegíveis ainda não classificados: 1684.
 - Classificações preservadas fora do manifest: 0.
 - Classificações excluídas pelo ledger: 0.
 - Periódicos excluídos pelo ledger: Brazilian Journal of Political Economy; Civitas - Revista de Ciências Sociais; Revista de Administração Pública; Sur. Revista Internacional de Direitos Humanos.
-- Intervalo de recuperação dos textos no manifest: 2026-06-04 00:04:16 a 2026-06-04 00:51:38.
-- MD5 do manifest: `e9f1f04c025074d1cee3b9b8389b9b4f`.
-- MD5 do CSV canônico: `2dfb23e7adf0d081806b7a410c3a1897`.
+- Intervalo de recuperação dos textos no manifest: 2026-06-04 00:04:16 a 2026-07-18 11:01:42.
+- MD5 do manifest: `ca3988ebbd9f2cbf243f3f2abeab7a50`.
+- MD5 do CSV canônico: `72616ef21a0aa3ca33482e3400fca176`.
 - MD5 do ledger de artigos: `0f155ad948b2a419443e12daf96f2ec0`.
 - MD5 do ledger de periódicos: `d0a3660f87b7c60efdd2efff05b68e6a`.
 
 ## Estratos analíticos
 
-- Periódicos completos: Brazilian Political Science Review; Cadernos Gestão Pública e Cidadania; Contexto Internacional; Dados.
-- Artigos nos periódicos completos: 1466.
-- Periódicos completos com artigos nos três períodos: Brazilian Political Science Review; Contexto Internacional; Dados.
+- Periódicos completos: Brazilian Political Science Review; Cadernos Gestão Pública e Cidadania; Contexto Internacional; Dados; Opinião Pública; Revista Brasileira de Ciência Política.
+- Artigos nos periódicos completos: 2321.
+- Periódicos completos com artigos nos três períodos: Brazilian Political Science Review; Contexto Internacional; Dados; Opinião Pública; Revista Brasileira de Ciência Política.
 
 ## Regra de interpretação
 
@@ -30,7 +30,7 @@ Os agregados dos artigos classificados continuam preliminares para o universo de
 
 ## Validações lógicas
 
-- Checks PASS: 28 de 28.
+- Checks PASS: 25 de 28.
 - Checks FAIL: 
 
 ## Lacunas que permanecem

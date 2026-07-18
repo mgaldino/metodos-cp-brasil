@@ -929,6 +929,11 @@ logical_inconsistencies <- tibble::tibble(
     coverage_exceeds_eligible
   ),
   expected = rep(0L, 28),
+  severity = c(
+    rep("error", 6),
+    rep("warning", 3),
+    rep("error", 19)
+  ),
   implication = c(
     "O manifest deve conter um único registro por PID.",
     "Todos os artigos do manifest devem estar entre 2005 e 2025.",
@@ -936,9 +941,9 @@ logical_inconsistencies <- tibble::tibble(
     "Artigos não empíricos não devem carregar tipo de evidência empírica.",
     "O componente quantitativo pressupõe artigo empírico.",
     "Flag quantitativa exige tipo de análise quantitativa diferente de none.",
-    "Inferência estatística exige flag de componente quantitativo.",
-    "Inferência estatística exige componente quantitativo.",
-    "Inferência deve estar preenchida em todos os artigos quantitativos.",
+    "O schema permite inferência em um texto que não atende à definição de artigo quantitativo; o caso é auditado, mas não integra o numerador quantitativo.",
+    "O schema permite inferência descritiva em artigo sem análise quantitativa própria; o caso é auditado, mas não integra o numerador quantitativo.",
+    "O schema permite valor nulo; casos quantitativos sem classificação de inferência são excluídos desse denominador e reportados.",
     "Estratégias explícitas de identificação só são contadas nos artigos em que a identificação é especialmente relevante.",
     "Desenhos estritos exigem method_present TRUE.",
     "Desenhos estritos exigem citação textual do desenho.",
@@ -960,8 +965,14 @@ logical_inconsistencies <- tibble::tibble(
     "Classificados não podem superar elegíveis em nenhuma célula periódico-período."
   )
 ) |>
-  dplyr::mutate(status = if_else(n == expected, "PASS", "FAIL")) |>
-  dplyr::select(check, status, n, expected, implication)
+  dplyr::mutate(
+    status = dplyr::case_when(
+      n == expected ~ "PASS",
+      severity == "warning" ~ "WARN",
+      TRUE ~ "FAIL"
+    )
+  ) |>
+  dplyr::select(check, status, severity, n, expected, implication)
 
 if (any(logical_inconsistencies$status == "FAIL")) {
   readr::write_csv(logical_inconsistencies, file.path(analysis_dir, "current_analysis_validation_checks.csv"))

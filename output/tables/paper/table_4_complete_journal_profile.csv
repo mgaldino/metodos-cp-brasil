@@ -1,5 +1,7 @@
-journal_title,n_articles,n_empirical,n_quantitative,n_inference,n_claim,n_empirical_claim,n_screen,n_strict,pct_empirical,pct_quantitative,pct_inference,pct_claim,pct_claim_all,pct_screen,pct_strict
-Brazilian Political Science Review,268,231,171,85,237,228,108,13,86.2,74,49.7,98.7,88.4,40.3,12
-Cadernos Gestão Pública e Cidadania,120,106,75,14,100,95,24,2,88.3,70.8,18.7,89.6,83.3,20,8.3
-Contexto Internacional,456,345,111,8,383,336,19,1,75.7,32.2,7.2,97.4,84,4.2,5.3
-Dados,622,542,340,142,552,523,198,10,87.1,62.7,41.8,96.5,88.7,31.8,5.1
+journal_title,n_articles,n_empirical,n_quantitative,n_inference,n_inference_observed,n_inference_missing,n_claim,n_empirical_claim,n_screen,n_strict,pct_empirical,pct_quantitative,pct_inference,pct_claim,pct_claim_all,pct_screen,pct_strict
+Brazilian Political Science Review,268,231,171,85,171,0,237,228,108,13,86.2,74,49.7,98.7,88.4,40.3,12
+Cadernos Gestão Pública e Cidadania,120,106,75,14,75,0,100,95,24,2,88.3,70.8,18.7,89.6,83.3,20,8.3
+Contexto Internacional,456,345,111,8,111,0,383,336,19,1,75.7,32.2,7.2,97.4,84,4.2,5.3
+Dados,622,542,340,142,340,0,552,523,198,10,87.1,62.7,41.8,96.5,88.7,31.8,5.1
+Opinião Pública,464,439,403,242,401,2,442,420,359,19,94.6,91.8,60.3,95.7,95.3,77.4,5.3
+Revista Brasileira de Ciência Política,391,290,184,60,183,1,360,279,138,4,74.2,63.4,32.8,96.2,92.1,35.3,2.9

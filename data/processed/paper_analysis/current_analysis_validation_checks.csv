@@ -1,29 +1,29 @@
-check,status,n,expected,implication
-manifest_duplicate_pids,PASS,0,0,O manifest deve conter um único registro por PID.
-manifest_year_outside_2005_2025,PASS,0,0,Todos os artigos do manifest devem estar entre 2005 e 2025.
-manifest_non_research_article,PASS,0,0,O manifest analítico deve conter apenas research-article.
-non_empirical_with_empirical_evidence,PASS,0,0,Artigos não empíricos não devem carregar tipo de evidência empírica.
-quantitative_without_empirical_flag,PASS,0,0,O componente quantitativo pressupõe artigo empírico.
-quantitative_flag_with_quantitative_type_none,PASS,0,0,Flag quantitativa exige tipo de análise quantitativa diferente de none.
-statistical_inference_without_quantitative_flag,FAIL,1,0,Inferência estatística exige flag de componente quantitativo.
-statistical_inference_without_quantitative_analysis,FAIL,1,0,Inferência estatística exige componente quantitativo.
-statistical_inference_missing_within_quantitative,FAIL,5,0,Inferência deve estar preenchida em todos os artigos quantitativos.
-strict_design_outside_screen,PASS,0,0,Estratégias explícitas de identificação só são contadas nos artigos em que a identificação é especialmente relevante.
-strict_design_without_method_present,PASS,0,0,Desenhos estritos exigem method_present TRUE.
-strict_design_without_quote,PASS,0,0,Desenhos estritos exigem citação textual do desenho.
-method_present_without_parsed_type,PASS,0,0,method_present TRUE exige ao menos um tipo de método parseado.
-method_type_parse_or_unclassified,PASS,0,0,Todo tipo de método deve pertencer à taxonomia conhecida e ter JSON válido.
-unknown_evidence_level,PASS,0,0,Todo tipo de evidência deve pertencer aos níveis previstos.
-unknown_quantitative_level,FAIL,2,0,Todo tipo de análise quantitativa deve pertencer aos níveis previstos.
-nonidentical_duplicate_pids,PASS,0,0,Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.
-classified_outside_manifest,PASS,0,0,Nenhuma classificação analítica deve estar fora do manifest.
-classified_excluded_by_ledger,PASS,0,0,Nenhuma classificação analítica deve estar no ledger de exclusões.
-excluded_journal_in_manifest,PASS,0,0,Nenhum periódico excluído pode aparecer no manifest analítico.
-excluded_journal_in_classifications,PASS,0,0,Nenhum periódico excluído pode aparecer nas classificações canônicas.
-classification_manifest_journal_mismatch,PASS,0,0,O periódico da classificação deve coincidir com o periódico do manifest.
-classified_hash_mismatch,PASS,0,0,Classificação deve apontar para o mesmo texto do manifest.
-classified_fulltext_not_pass,PASS,0,0,Toda classificação analítica deve ter fulltext PASS.
-journal_area_unmapped,PASS,0,0,Todo periódico analítico deve ter área mapeada.
-required_core_boolean_missing,PASS,0,0,Campos booleanos centrais não podem ficar ausentes.
-method_present_missing_within_screen,PASS,0,0,A presença de método deve estar preenchida em todos os artigos selecionados para examinar identificação.
-classified_exceeds_eligible_by_journal_period,PASS,0,0,Classificados não podem superar elegíveis em nenhuma célula periódico-período.
+check,status,severity,n,expected,implication
+manifest_duplicate_pids,PASS,error,0,0,O manifest deve conter um único registro por PID.
+manifest_year_outside_2005_2025,PASS,error,0,0,Todos os artigos do manifest devem estar entre 2005 e 2025.
+manifest_non_research_article,PASS,error,0,0,O manifest analítico deve conter apenas research-article.
+non_empirical_with_empirical_evidence,PASS,error,0,0,Artigos não empíricos não devem carregar tipo de evidência empírica.
+quantitative_without_empirical_flag,PASS,error,0,0,O componente quantitativo pressupõe artigo empírico.
+quantitative_flag_with_quantitative_type_none,PASS,error,0,0,Flag quantitativa exige tipo de análise quantitativa diferente de none.
+statistical_inference_without_quantitative_flag,WARN,warning,1,0,"O schema permite inferência em um texto que não atende à definição de artigo quantitativo; o caso é auditado, mas não integra o numerador quantitativo."
+statistical_inference_without_quantitative_analysis,WARN,warning,1,0,"O schema permite inferência descritiva em artigo sem análise quantitativa própria; o caso é auditado, mas não integra o numerador quantitativo."
+statistical_inference_missing_within_quantitative,WARN,warning,5,0,O schema permite valor nulo; casos quantitativos sem classificação de inferência são excluídos desse denominador e reportados.
+strict_design_outside_screen,PASS,error,0,0,Estratégias explícitas de identificação só são contadas nos artigos em que a identificação é especialmente relevante.
+strict_design_without_method_present,PASS,error,0,0,Desenhos estritos exigem method_present TRUE.
+strict_design_without_quote,PASS,error,0,0,Desenhos estritos exigem citação textual do desenho.
+method_present_without_parsed_type,PASS,error,0,0,method_present TRUE exige ao menos um tipo de método parseado.
+method_type_parse_or_unclassified,PASS,error,0,0,Todo tipo de método deve pertencer à taxonomia conhecida e ter JSON válido.
+unknown_evidence_level,PASS,error,0,0,Todo tipo de evidência deve pertencer aos níveis previstos.
+unknown_quantitative_level,PASS,error,0,0,Todo tipo de análise quantitativa deve pertencer aos níveis previstos.
+nonidentical_duplicate_pids,PASS,error,0,0,Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.
+classified_outside_manifest,PASS,error,0,0,Nenhuma classificação analítica deve estar fora do manifest.
+classified_excluded_by_ledger,PASS,error,0,0,Nenhuma classificação analítica deve estar no ledger de exclusões.
+excluded_journal_in_manifest,PASS,error,0,0,Nenhum periódico excluído pode aparecer no manifest analítico.
+excluded_journal_in_classifications,PASS,error,0,0,Nenhum periódico excluído pode aparecer nas classificações canônicas.
+classification_manifest_journal_mismatch,PASS,error,0,0,O periódico da classificação deve coincidir com o periódico do manifest.
+classified_hash_mismatch,PASS,error,0,0,Classificação deve apontar para o mesmo texto do manifest.
+classified_fulltext_not_pass,PASS,error,0,0,Toda classificação analítica deve ter fulltext PASS.
+journal_area_unmapped,PASS,error,0,0,Todo periódico analítico deve ter área mapeada.
+required_core_boolean_missing,PASS,error,0,0,Campos booleanos centrais não podem ficar ausentes.
+method_present_missing_within_screen,PASS,error,0,0,A presença de método deve estar preenchida em todos os artigos selecionados para examinar identificação.
+classified_exceeds_eligible_by_journal_period,PASS,error,0,0,Classificados não podem superar elegíveis em nenhuma célula periódico-período.

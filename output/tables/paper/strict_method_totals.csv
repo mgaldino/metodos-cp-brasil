@@ -1,11 +1,13 @@
 method_type,method_label,article_method_n
-difference_in_differences,Diferenças-em-diferenças,7
-matching_or_weighting,Pareamento/ponderação,6
-experiment_survey,Experimento em survey,4
-regression_discontinuity,Regressão descontínua,4
-instrumental_variables,Variáveis instrumentais,3
+matching_or_weighting,Pareamento/ponderação,15
+difference_in_differences,Diferenças-em-diferenças,11
+experiment_survey,Experimento em survey,10
+regression_discontinuity,Regressão descontínua,6
+instrumental_variables,Variáveis instrumentais,5
+experiment_list,Experimento de lista,3
+dag_or_formal_causal_graph,DAG/grafo causal formal,2
+doubly_robust,Estimador duplamente robusto,2
+experiment_field,Experimento de campo,2
 synthetic_control,Controle sintético,1
-dag_or_formal_causal_graph,DAG/grafo causal formal,1
 event_study,Event study,1
-experiment_field,Experimento de campo,1
-experiment_list,Experimento de lista,1
+experiment_lab,Experimento de laboratório,1
