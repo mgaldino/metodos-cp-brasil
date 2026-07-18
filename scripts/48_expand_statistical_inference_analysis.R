@@ -43,6 +43,10 @@ fmt_pct <- function(n, denominator) {
   ifelse(denominator > 0, round(100 * n / denominator, 1), NA_real_)
 }
 
+format_percent_label <- function(x) {
+  stringr::str_replace(sprintf("%.1f", x), stringr::fixed("."), ",")
+}
+
 analysis_df <- readr::read_csv(analysis_path, show_col_types = FALSE)
 complete_profile <- readr::read_csv(complete_profile_path, show_col_types = FALSE)
 complete_journals <- complete_profile$journal_title
@@ -327,18 +331,30 @@ journal_abbreviations <- c(
 brazil_plot_data <- inference_by_scope |>
   dplyr::filter(scope_type == "Periódico completo") |>
   dplyr::transmute(
-    panel = "Inferência estatística\n(periódicos brasileiros)",
+    panel = "Com inferência estatística\nentre artigos quantitativos",
     label = dplyr::recode(scope, !!!journal_abbreviations, .default = scope),
     percent = inference_percent,
-    value_label = paste0(inference_n, "/", inference_observed_n, " (", sprintf("%.1f", inference_percent), "%)")
+    value_label = paste0(
+      inference_n,
+      "/",
+      inference_observed_n,
+      " (",
+      format_percent_label(inference_percent),
+      "%)"
+    )
   )
 
 international_plot_data <- top_three |>
   dplyr::transmute(
-    panel = "Desenho causal\n(Torreblanca et al.)",
+    panel = "Com desenho causal\nentre quantitativos explicativos",
     label = dplyr::recode(journal, !!!journal_abbreviations, .default = journal),
     percent = design_based_percent,
-    value_label = paste0(sprintf("%.1f", design_based_percent), "% (N=", n_explanatory_quantitative, ")")
+    value_label = paste0(
+      format_percent_label(design_based_percent),
+      "% (N = ",
+      format(n_explanatory_quantitative, big.mark = ".", scientific = FALSE),
+      ")"
+    )
   )
 
 plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
@@ -346,8 +362,8 @@ plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
     panel = factor(
       panel,
       levels = c(
-        "Inferência estatística\n(periódicos brasileiros)",
-        "Desenho causal\n(Torreblanca et al.)"
+        "Com inferência estatística\nentre artigos quantitativos",
+        "Com desenho causal\nentre quantitativos explicativos"
       )
     ),
     label_hjust = ifelse(percent >= 55, 1.08, -0.08),
@@ -391,7 +407,7 @@ figure_inference_benchmark <- plot_data |>
     breaks = seq(0, 70, 10),
     labels = function(x) paste0(x, "%")
   ) +
-  ggplot2::labs(x = "Artigos (%)", y = NULL) +
+  ggplot2::labs(x = "Parcela de artigos (%)", y = NULL) +
   theme_paper()
 
 readr::write_csv(
