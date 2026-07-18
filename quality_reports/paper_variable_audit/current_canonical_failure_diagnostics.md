@@ -1,6 +1,6 @@
 # Diagnóstico das exceções do CSV canônico relevantes para o paper
 
-- Data de execução: 2026-07-18 18:03:27 -0300
+- Data de execução: 2026-07-18 18:06:56 -0300
 - CSV canônico: `/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined/classifications_integral_reading.csv`
 - Dimensão do CSV: 3.565 linhas x 27 colunas
 - PIDs elegíveis classificados: 3565
