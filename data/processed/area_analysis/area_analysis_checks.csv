@@ -1,0 +1,10 @@
+check,status,value
+Linhas no dataset analítico,PASS,4144
+PIDs únicos,PASS,4144
+Áreas de origem não mapeadas,PASS,0
+Artigos fora da comparação CP–RI,INFO,120
+Soma dos artigos CP e RI,PASS,4024
+PIDs duplicados,PASS,0
+Períodos fora do suporte,PASS,0
+Rótulos de inferência ausentes em CP,INFO,5
+Rótulos de inferência ausentes em RI,INFO,0

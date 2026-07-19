@@ -41,6 +41,10 @@ format_pct <- function(x) {
   ifelse(is.na(x), "-", paste0(format(x, decimal.mark = ",", nsmall = 1, trim = TRUE), "%"))
 }
 
+format_pp <- function(x) {
+  ifelse(is.na(x), "-", paste0(format(x, decimal.mark = ",", nsmall = 1, trim = TRUE), " p.p."))
+}
+
 denominadores <- readr::read_csv("../output/tables/paper/denominator_summary.csv", show_col_types = FALSE)
 tabela_corpus <- readr::read_csv("../output/tables/paper/table_1_corpus_description.csv", show_col_types = FALSE)
 tabela_dimensoes <- readr::read_csv("../output/tables/paper/table_2_methodological_dimensions.csv", show_col_types = FALSE)
@@ -55,6 +59,9 @@ cobertura_periodicos <- readr::read_csv("../output/tables/paper/coverage_by_jour
 inferencia_numeros <- readr::read_csv("../output/tables/paper/statistical_inference_key_numbers.csv", show_col_types = FALSE)
 benchmark_inferencia <- readr::read_csv("../output/tables/paper/statistical_inference_torreblanca_benchmark.csv", show_col_types = FALSE)
 inferencia_linguagem_causal <- readr::read_csv("../output/tables/paper/statistical_inference_by_causal_language.csv", show_col_types = FALSE)
+area_profile <- readr::read_csv("../output/tables/area_analysis/area_profile.csv", show_col_types = FALSE)
+source_area_profile <- readr::read_csv("../output/tables/area_analysis/source_area_profile.csv", show_col_types = FALSE)
+area_period_profile <- readr::read_csv("../output/tables/area_analysis/area_period_profile.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -215,6 +222,57 @@ period_profile_value <- function(journal, period, variable) {
       perfil_periodico_periodo$period_3 == period
   ]
 }
+
+area_cp <- "Ciência Política (inclui escopo compartilhado)"
+area_ri <- "Relações Internacionais"
+
+area_profile_value <- function(area, variable) {
+  area_profile[[variable]][area_profile$area_group == area]
+}
+
+source_area_value <- function(area, variable) {
+  source_area_profile[[variable]][source_area_profile$journal_area_source == area]
+}
+
+area_period_value <- function(area, period, variable) {
+  area_period_profile[[variable]][
+    area_period_profile$area_group == area &
+      area_period_profile$period_3 == period
+  ]
+}
+
+n_area_cp <- area_profile_value(area_cp, "articles_n")
+n_area_ri <- area_profile_value(area_ri, "articles_n")
+n_area_cp_journals <- area_profile_value(area_cp, "journals_n")
+n_area_ri_journals <- area_profile_value(area_ri, "journals_n")
+pct_empirical_area_cp <- area_profile_value(area_cp, "pct_empirical")
+pct_empirical_area_ri <- area_profile_value(area_ri, "pct_empirical")
+n_quant_area_cp <- area_profile_value(area_cp, "quantitative_n")
+n_quant_area_ri <- area_profile_value(area_ri, "quantitative_n")
+pct_quant_area_cp <- area_profile_value(area_cp, "pct_quantitative_empirical")
+pct_quant_area_ri <- area_profile_value(area_ri, "pct_quantitative_empirical")
+n_inference_area_cp <- area_profile_value(area_cp, "inference_n")
+n_inference_area_ri <- area_profile_value(area_ri, "inference_n")
+n_inference_area_cp_den <- area_profile_value(area_cp, "inference_den_observed")
+n_inference_area_ri_den <- area_profile_value(area_ri, "inference_den_observed")
+pct_inference_area_cp <- area_profile_value(area_cp, "pct_inference_quantitative_observed")
+pct_inference_area_ri <- area_profile_value(area_ri, "pct_inference_quantitative_observed")
+n_strict_area_cp <- area_profile_value(area_cp, "strict_n")
+n_strict_area_ri <- area_profile_value(area_ri, "strict_n")
+n_screen_area_cp <- area_profile_value(area_cp, "screen_n")
+n_screen_area_ri <- area_profile_value(area_ri, "screen_n")
+pct_strict_area_cp <- area_profile_value(area_cp, "pct_strict_screen")
+pct_strict_area_ri <- area_profile_value(area_ri, "pct_strict_screen")
+
+stopifnot(
+  n_area_cp + n_area_ri == 4024,
+  n_area_cp_journals == 6,
+  n_area_ri_journals == 2,
+  n_inference_area_cp <= n_inference_area_cp_den,
+  n_inference_area_ri <= n_inference_area_ri_den,
+  n_strict_area_cp <= n_screen_area_cp,
+  n_strict_area_ri <= n_screen_area_ri
+)
 ```
 
 # Introdução
@@ -230,6 +288,8 @@ O artigo distingue quatro dimensões que não devem ser confundidas. Um trabalho
 Analisamos artigos publicados entre 2005 e 2025 em nove periódicos brasileiros indexados no SciELO. O universo elegível contém `r format_n(n_manifest)` artigos; `r format_n(n_classificados)` foram classificados a partir do texto integral. Como os nove periódicos estão integralmente classificados, as comparações principais usam todos os `r format_n(n_artigos_periodicos_completos)` artigos elegíveis. Neles, a inferência estatística permanece minoritária: `r format_pct(pct_inferencia_2005_2011)` em 2005--2011, `r format_pct(pct_inferencia_2012_2018)` em 2012--2018 e `r format_pct(pct_inferencia_2019_2025)` em 2019--2025.
 
 A contribuição é mostrar que a expansão da empiria não implica uma transformação uniforme da prática metodológica. A produção brasileira combina ampla linguagem causal ou explicativa, grande contingente de análises quantitativas descritivas, inferência estatística ainda minoritária e presença rara de estratégias explícitas de identificação. A classificação registra procedimentos mencionados, não sua qualidade, e ainda requer validação humana; essas limitações recomendam cautela quanto à precisão dos percentuais, mas não apagam a distância entre as duas fronteiras metodológicas identificadas aqui.
+
+A decomposição por área acrescenta uma diferença substantiva: a participação de artigos empíricos é quase igual em Ciência Política e Relações Internacionais, mas a inferência estatística aparece em `r format_pct(pct_inference_area_cp)` dos quantitativos de Ciência Política e em apenas `r format_pct(pct_inference_area_ri)` dos quantitativos de Relações Internacionais. A área, portanto, ajuda a localizar onde a fronteira inferencial está mais consolidada, sem ser interpretada como causa dessa diferença.
 
 # Dados
 
@@ -382,6 +442,16 @@ knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matr
 A diferença mais nítida está na inferência estatística entre artigos quantitativos: `r format_pct(profile_value("Opinião Pública", "pct_inference"))` em `Opinião Pública`, `r format_pct(profile_value("Brazilian Political Science Review", "pct_inference"))` na BPSR e `r format_pct(profile_value("Dados", "pct_inference"))` em `Dados`, contra `r format_pct(profile_value("Cadernos Gestão Pública e Cidadania", "pct_inference"))` em CGPC e `r format_pct(profile_value("Contexto Internacional", "pct_inference"))` em `Contexto Internacional`. Esses contrastes podem refletir diferenças de composição temática, tradição disciplinar e política editorial que o desenho atual não permite decompor; não constituem ranking de qualidade nem efeito causal do periódico.
 
 O perfil agregado de CGPC cobre apenas 2019--2025, enquanto os demais periódicos completos contribuem também em períodos anteriores. Sua comparação histórica direta com os demais, portanto, combina diferenças editoriais e composição temporal.
+
+## Diferenças entre Ciência Política e Relações Internacionais
+
+A classificação por área permite separar dois padrões editoriais que ficam ocultos na média dos periódicos. Para esta comparação, Ciência Política reúne os quatro periódicos classificados nessa área e os dois periódicos de escopo compartilhado com Ciências Sociais (`Dados` e RBCS), totalizando `r format_n(n_area_cp)` artigos em `r n_area_cp_journals` periódicos. Relações Internacionais reúne `Contexto Internacional` e RBPI, com `r format_n(n_area_ri)` artigos em `r n_area_ri_journals` periódicos. CGPC não é forçada a entrar em nenhuma das duas áreas: seus `r format_n(source_area_value("Administração Pública", "articles_n"))` artigos permanecem no perfil de origem, mas ficam fora do contraste CP--RI.
+
+A proporção de artigos empíricos é praticamente idêntica nas duas áreas: `r format_pct(pct_empirical_area_cp)` em Ciência Política e `r format_pct(pct_empirical_area_ri)` em Relações Internacionais. A diferença aparece na composição da pesquisa empírica. Análises quantitativas representam `r format_pct(pct_quant_area_cp)` dos artigos empíricos de Ciência Política, contra `r format_pct(pct_quant_area_ri)` em Relações Internacionais. Entre os quantitativos com rótulo de inferência observado, `r format_n(n_inference_area_cp)` de `r format_n(n_inference_area_cp_den)` artigos de Ciência Política (`r format_pct(pct_inference_area_cp)`) quantificam formalmente a incerteza; em Relações Internacionais, são `r format_n(n_inference_area_ri)` de `r format_n(n_inference_area_ri_den)` (`r format_pct(pct_inference_area_ri)`). A diferença é de `r format_pp(pct_inference_area_cp - pct_inference_area_ri)`
+
+O contraste também aparece na identificação causal explícita, embora os números sejam pequenos. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos examinados (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais descrevem menções a estratégias, não qualidade da execução nem superioridade de uma área.
+
+A diferença de inferência persiste ao longo do tempo, mas não deve ser lida como uma tendência causal. Em Ciência Política, a proporção passa de `r format_pct(area_period_value(area_cp, "2005-2011", "pct_inference_quantitative_observed"))` em 2005--2011 para `r format_pct(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed"))` em 2019--2025. Em Relações Internacionais, passa de `r format_pct(area_period_value(area_ri, "2005-2011", "pct_inference_quantitative_observed"))` para `r format_pct(area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`. A distância diminui, mas ainda é de `r format_pp(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed") - area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))` no último período. Como a área é atribuída ao periódico e os grupos têm composições editoriais distintas, a comparação localiza uma diferença descritiva de prática, não um efeito da disciplina sobre os autores.
 
 ## Inferência estatística
 

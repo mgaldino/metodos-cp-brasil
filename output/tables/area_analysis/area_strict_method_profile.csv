@@ -1,0 +1,13 @@
+area_group,method_type,article_method_mentions
+Ciência Política (inclui escopo compartilhado),matching_or_weighting,22
+Ciência Política (inclui escopo compartilhado),difference_in_differences,11
+Ciência Política (inclui escopo compartilhado),experiment_survey,9
+Ciência Política (inclui escopo compartilhado),regression_discontinuity,8
+Ciência Política (inclui escopo compartilhado),instrumental_variables,6
+Ciência Política (inclui escopo compartilhado),dag_or_formal_causal_graph,3
+Ciência Política (inclui escopo compartilhado),experiment_list,3
+Ciência Política (inclui escopo compartilhado),doubly_robust,2
+Ciência Política (inclui escopo compartilhado),experiment_field,2
+Ciência Política (inclui escopo compartilhado),experiment_lab,1
+Ciência Política (inclui escopo compartilhado),synthetic_control,1
+Relações Internacionais,experiment_survey,1

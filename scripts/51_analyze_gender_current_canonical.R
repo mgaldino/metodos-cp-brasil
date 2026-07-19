@@ -225,6 +225,7 @@ canonical_scope <- classifications |>
         pid,
         authors,
         year = as.integer(year),
+        language = as.character(language),
         manifest_journal_title = journal_title
       ),
     by = "pid"
@@ -343,6 +344,12 @@ article_gender <- canonical_scope |>
     n_female_authors = dplyr::coalesce(n_female_authors, 0L),
     n_male_authors = dplyr::coalesce(n_male_authors, 0L),
     n_unclassified_authors = dplyr::coalesce(n_unclassified_authors, 0L),
+    first_author_classification_status = dplyr::case_when(
+      first_author_gender %in% c("Feminino", "Masculino") ~ "Classificado",
+      n_authors == 0L ~ "Autoria ausente",
+      is.na(first_author_female_probability) ~ "Prenome não encontrado",
+      TRUE ~ "Ambíguo no limiar"
+    ),
     team_gender_composition = dplyr::case_when(
       n_authors == 0L | n_unclassified_authors > 0L ~ "Indeterminada",
       n_female_authors > 0L & n_male_authors > 0L ~ "Mista",
@@ -411,6 +418,39 @@ first_author_distribution <- article_gender |>
   dplyr::mutate(percent = 100 * n_articles / sum(n_articles)) |>
   dplyr::arrange(factor(first_author_gender, levels = c("Feminino", "Masculino", "Não classificado")))
 
+first_author_failure_distribution <- article_gender |>
+  dplyr::count(first_author_classification_status, name = "n_articles") |>
+  dplyr::mutate(percent = 100 * n_articles / sum(n_articles)) |>
+  dplyr::arrange(
+    factor(
+      first_author_classification_status,
+      levels = c("Classificado", "Ambíguo no limiar", "Prenome não encontrado", "Autoria ausente")
+    )
+  )
+
+gender_coverage_by_journal <- article_gender |>
+  dplyr::group_by(journal_title) |>
+  dplyr::summarise(
+    n_articles = dplyr::n(),
+    n_classified = sum(first_author_classification_status == "Classificado"),
+    n_unclassified = n_articles - n_classified,
+    coverage_percent = 100 * n_classified / n_articles,
+    .groups = "drop"
+  ) |>
+  dplyr::arrange(coverage_percent, journal_title)
+
+gender_coverage_by_language <- article_gender |>
+  dplyr::mutate(language = dplyr::coalesce(language, "ausente")) |>
+  dplyr::group_by(language) |>
+  dplyr::summarise(
+    n_articles = dplyr::n(),
+    n_classified = sum(first_author_classification_status == "Classificado"),
+    n_unclassified = n_articles - n_classified,
+    coverage_percent = 100 * n_classified / n_articles,
+    .groups = "drop"
+  ) |>
+  dplyr::arrange(coverage_percent, language)
+
 team_distribution <- article_gender |>
   dplyr::count(team_gender_composition, name = "n_articles") |>
   dplyr::mutate(percent = 100 * n_articles / sum(n_articles)) |>
@@ -439,6 +479,76 @@ metric_comparison <- metrics_by_first_author |>
     difference_pp_female_minus_male = percent_Feminino - percent_Masculino
   ) |>
   dplyr::arrange(metric)
+
+standardized_comparison <- metric_summary(
+  binary_gender_df,
+  c("first_author_gender", "journal_title", "period_3")
+) |>
+  dplyr::select(first_author_gender, journal_title, period_3, metric, denominator, percent) |>
+  tidyr::pivot_wider(
+    names_from = first_author_gender,
+    values_from = c(denominator, percent),
+    names_glue = "{.value}_{first_author_gender}"
+  ) |>
+  dplyr::filter(
+    denominator_Feminino > 0,
+    denominator_Masculino > 0,
+    !is.na(percent_Feminino),
+    !is.na(percent_Masculino)
+  ) |>
+  dplyr::group_by(metric) |>
+  dplyr::mutate(
+    pooled_denominator = denominator_Feminino + denominator_Masculino,
+    standardization_weight = pooled_denominator / sum(pooled_denominator)
+  ) |>
+  dplyr::summarise(
+    n_common_strata = dplyr::n(),
+    standardized_percent_female = sum(standardization_weight * percent_Feminino),
+    standardized_percent_male = sum(standardization_weight * percent_Masculino),
+    standardized_difference_pp = standardized_percent_female - standardized_percent_male,
+    .groups = "drop"
+  ) |>
+  dplyr::mutate(metric = factor(metric, levels = metric_levels)) |>
+  dplyr::arrange(metric)
+
+sensitivity_thresholds <- c(0.80, 0.90, 0.95)
+sensitivity_results <- lapply(sensitivity_thresholds, function(current_threshold) {
+  sensitivity_df <- article_gender |>
+    dplyr::mutate(
+      first_author_gender = dplyr::case_when(
+        first_author_female_probability > current_threshold ~ "Feminino",
+        first_author_female_probability < (1 - current_threshold) ~ "Masculino",
+        TRUE ~ "Não classificado"
+      )
+    )
+
+  sensitivity_metrics <- sensitivity_df |>
+    dplyr::filter(first_author_gender %in% c("Feminino", "Masculino")) |>
+    metric_summary("first_author_gender") |>
+    dplyr::filter(metric %in% c("Análise quantitativa", "Inferência estatística")) |>
+    dplyr::select(first_author_gender, metric, percent) |>
+    tidyr::pivot_wider(names_from = first_author_gender, values_from = percent) |>
+    dplyr::mutate(difference_pp_female_minus_male = Feminino - Masculino)
+
+  sensitivity_metrics |>
+    dplyr::mutate(
+      threshold = current_threshold,
+      n_binary_classified = sum(sensitivity_df$first_author_gender %in% c("Feminino", "Masculino")),
+      coverage_percent = 100 * n_binary_classified / nrow(sensitivity_df)
+    ) |>
+    dplyr::select(
+      threshold,
+      n_binary_classified,
+      coverage_percent,
+      metric,
+      Feminino,
+      Masculino,
+      difference_pp_female_minus_male
+    )
+}) |>
+  dplyr::bind_rows() |>
+  dplyr::mutate(metric = factor(metric, levels = metric_levels)) |>
+  dplyr::arrange(threshold, metric)
 
 evidence_by_first_author <- binary_gender_df |>
   dplyr::filter(is_empirical_paper %in% TRUE) |>
@@ -479,35 +589,59 @@ first_author_by_period <- article_gender |>
   ) |>
   dplyr::ungroup()
 
-exclusion_counts <- classifications |>
-  dplyr::mutate(journal_key = stringr::str_to_lower(stringr::str_squish(journal_title))) |>
-  dplyr::inner_join(
-    excluded_journal_rules |> dplyr::select(rule_journal_title = journal_title, journal_key, exclusion_basis),
+exclusion_counts <- excluded_journal_rules |>
+  dplyr::select(rule_journal_title = journal_title, journal_key, exclusion_basis) |>
+  dplyr::left_join(
+    classifications |>
+      dplyr::mutate(journal_key = stringr::str_to_lower(stringr::str_squish(journal_title))) |>
+      dplyr::count(journal_key, name = "n_excluded"),
     by = "journal_key"
   ) |>
-  dplyr::count(rule_journal_title, exclusion_basis, name = "n_excluded")
+  dplyr::mutate(n_excluded = dplyr::coalesce(n_excluded, 0L)) |>
+  dplyr::select(rule_journal_title, exclusion_basis, n_excluded)
+
+method_parse_failures <- sum(vapply(
+  canonical_scope$method_type,
+  function(value) any(is.na(value)),
+  FUN.VALUE = logical(1)
+))
+
+excluded_remaining <- canonical_scope |>
+  dplyr::mutate(journal_key = stringr::str_to_lower(stringr::str_squish(journal_title))) |>
+  dplyr::semi_join(excluded_journal_rules |> dplyr::select(journal_key), by = "journal_key")
+
+metric_denominators_valid <- all(
+  metrics_by_first_author$denominator > 0 &
+    metrics_by_first_author$numerator >= 0 &
+    metrics_by_first_author$numerator <= metrics_by_first_author$denominator
+)
 
 validation_checks <- tibble::tibble(
   check = c(
-    "Duplicatas exatas do CSV tratadas sem alterar PIDs",
     "PIDs únicos no CSV canônico",
     "PIDs canônicos encontrados no manifest",
     "Anos entre 2005 e 2025",
-    "Artigos na base analítica",
-    "Metadados de autoria presentes na base",
-    "Primeiros autores classificados como feminino ou masculino",
-    "Probabilidades dentro do intervalo [0, 1]"
+    "Tamanho analítico reconciliado com as exclusões",
+    "Periódicos excluídos ausentes da base analítica",
+    "Missing de autoria reconciliado com o status",
+    "Categorias do primeiro prenome formam partição exaustiva",
+    "Probabilidades dentro do intervalo [0, 1]",
+    "JSON de métodos sem falhas de parsing",
+    "Numeradores não excedem denominadores"
   ),
   value = c(
-    n_exact_duplicate_rows >= 0,
     nrow(classifications) == dplyr::n_distinct(classifications$pid),
     nrow(canonical_without_metadata) == 0,
     nrow(invalid_years) == 0,
-    nrow(article_gender) > 0,
-    sum(article_gender$n_authors > 0) > 0,
-    sum(article_gender$first_author_gender %in% c("Feminino", "Masculino")) > 0,
+    nrow(article_gender) == nrow(classifications) - sum(exclusion_counts$n_excluded),
+    nrow(excluded_remaining) == 0,
+    sum(article_gender$n_authors == 0L) ==
+      sum(article_gender$first_author_classification_status == "Autoria ausente"),
+    sum(first_author_distribution$n_articles) == nrow(article_gender),
     all(is.na(author_dictionary$female_probability) |
-      dplyr::between(author_dictionary$female_probability, 0, 1))
+      dplyr::between(author_dictionary$female_probability, 0, 1)),
+    method_parse_failures == 0,
+    metric_denominators_valid
   ),
   status = ifelse(value, "PASS", "FAIL")
 )
@@ -530,6 +664,7 @@ readr::write_csv(
       journal_title,
       year,
       period_3,
+      language,
       authors,
       first_author_name,
       first_author_gender,
@@ -538,6 +673,7 @@ readr::write_csv(
       n_female_authors,
       n_male_authors,
       n_unclassified_authors,
+      first_author_classification_status,
       team_gender_composition,
       is_empirical_paper,
       empirical_evidence_type,
@@ -555,6 +691,11 @@ readr::write_csv(metric_comparison, file.path(tables_dir, "table_3_methodologica
 readr::write_csv(evidence_by_first_author, file.path(tables_dir, "table_4_evidence_by_first_author_gender.csv"))
 readr::write_csv(first_author_by_period, file.path(tables_dir, "table_5_first_author_gender_by_period.csv"))
 readr::write_csv(metrics_by_team, file.path(tables_dir, "table_6_methodological_indicators_by_team.csv"))
+readr::write_csv(standardized_comparison, file.path(tables_dir, "table_7_standardized_comparison_journal_period.csv"))
+readr::write_csv(gender_coverage_by_journal, file.path(tables_dir, "table_8_gender_coverage_by_journal.csv"))
+readr::write_csv(gender_coverage_by_language, file.path(tables_dir, "table_9_gender_coverage_by_language.csv"))
+readr::write_csv(first_author_failure_distribution, file.path(tables_dir, "table_10_gender_classification_status.csv"))
+readr::write_csv(sensitivity_results, file.path(tables_dir, "table_11_gender_threshold_sensitivity.csv"))
 readr::write_csv(exclusion_counts, file.path(tables_dir, "excluded_journals_counts.csv"))
 readr::write_csv(validation_checks, file.path(tables_dir, "validation_checks.csv"))
 
@@ -577,7 +718,7 @@ figure_1 <- first_author_by_period |>
   ggplot2::labs(
     x = "Período de publicação",
     y = "Proporção dos artigos",
-    fill = "Gênero inferido\ndo primeiro autor"
+    fill = "Classificação do\nprimeiro prenome"
   ) +
   ggplot2::theme_minimal(base_size = 12) +
   ggplot2::theme(
@@ -619,7 +760,7 @@ figure_2 <- metrics_by_first_author |>
   ggplot2::labs(
     x = "Proporção no denominador relevante",
     y = NULL,
-    fill = "Gênero inferido\ndo primeiro autor"
+    fill = "Classificação do\nprimeiro prenome"
   ) +
   ggplot2::theme_minimal(base_size = 12) +
   ggplot2::theme(
@@ -639,14 +780,20 @@ ggplot2::ggsave(
 
 first_author_table <- first_author_distribution |>
   dplyr::transmute(
-    `Gênero inferido` = first_author_gender,
+    `Classificação do primeiro prenome` = first_author_gender,
     `Artigos` = fmt_int(n_articles),
     `Proporção do corpus` = fmt_pct(percent)
   )
 
 team_table <- team_distribution |>
   dplyr::transmute(
-    `Composição da equipe` = team_gender_composition,
+    `Composição dos prenomes na equipe` = dplyr::recode(
+      team_gender_composition,
+      "Somente mulheres" = "Somente prenomes classificados como femininos",
+      "Somente homens" = "Somente prenomes classificados como masculinos",
+      "Mista" = "Prenomes classificados nas duas categorias",
+      "Indeterminada" = "Indeterminada"
+    ),
     `Artigos` = fmt_int(n_articles),
     `Proporção do corpus` = fmt_pct(percent)
   )
@@ -663,13 +810,13 @@ metric_table <- metric_comparison |>
 
 evidence_table <- evidence_by_first_author |>
   dplyr::transmute(
-    `Gênero inferido` = first_author_gender,
+    `Classificação do primeiro prenome` = first_author_gender,
     `Tipo de evidência` = evidence_type,
     `Artigos` = fmt_int(n_articles),
     `Denominador empírico` = fmt_int(denominator),
     `Proporção` = fmt_pct(percent)
   ) |>
-  dplyr::arrange(`Gênero inferido`, `Tipo de evidência`)
+  dplyr::arrange(`Classificação do primeiro prenome`, `Tipo de evidência`)
 
 team_metric_table <- metrics_by_team |>
   dplyr::mutate(
@@ -681,20 +828,62 @@ team_metric_table <- metrics_by_team |>
   dplyr::arrange(metric) |>
   dplyr::transmute(
     Indicador = as.character(metric),
-    `Somente mulheres` = `Somente mulheres`,
-    `Somente homens` = `Somente homens`,
-    Mista = Mista,
+    `Só prenomes femininos` = `Somente mulheres`,
+    `Só prenomes masculinos` = `Somente homens`,
+    `Duas categorias` = Mista,
     Indeterminada = Indeterminada
+  )
+
+standardized_table <- standardized_comparison |>
+  dplyr::transmute(
+    Indicador = as.character(metric),
+    `Estratos comuns` = fmt_int(n_common_strata),
+    `Prenome feminino padronizado` = fmt_pct(standardized_percent_female),
+    `Prenome masculino padronizado` = fmt_pct(standardized_percent_male),
+    `Diferença padronizada F−M` = fmt_pp(standardized_difference_pp)
+  )
+
+coverage_journal_table <- gender_coverage_by_journal |>
+  dplyr::transmute(
+    Periódico = journal_title,
+    Artigos = fmt_int(n_articles),
+    Classificados = fmt_int(n_classified),
+    `Não classificados` = fmt_int(n_unclassified),
+    Cobertura = fmt_pct(coverage_percent)
+  )
+
+failure_table <- first_author_failure_distribution |>
+  dplyr::transmute(
+    `Status da classificação` = first_author_classification_status,
+    Artigos = fmt_int(n_articles),
+    `Proporção do corpus` = fmt_pct(percent)
+  )
+
+exclusion_table <- exclusion_counts |>
+  dplyr::transmute(
+    Periódico = rule_journal_title,
+    `Base da exclusão` = exclusion_basis,
+    `Registros removidos do CSV` = fmt_int(n_excluded)
+  )
+
+sensitivity_table <- sensitivity_results |>
+  dplyr::transmute(
+    Limiar = format(threshold, decimal.mark = ",", nsmall = 2, trim = TRUE),
+    Cobertura = fmt_pct(coverage_percent),
+    Indicador = as.character(metric),
+    `Prenome feminino` = fmt_pct(Feminino),
+    `Prenome masculino` = fmt_pct(Masculino),
+    `Diferença F−M` = fmt_pp(difference_pp_female_minus_male)
   )
 
 period_table <- first_author_by_period |>
   dplyr::filter(first_author_gender == "Feminino") |>
   dplyr::transmute(
     Período = as.character(period_3),
-    `Primeira autoria feminina` = fmt_int(n_articles),
-    `Primeiras autorias classificadas` = fmt_int(binary_total),
-    `Proporção feminina entre classificadas` = fmt_pct(percent_within_binary),
-    `Não classificadas no período` = fmt_int(
+    `Primeiro prenome classificado como feminino` = fmt_int(n_articles),
+    `Primeiros prenomes classificados` = fmt_int(binary_total),
+    `Proporção feminina entre classificados` = fmt_pct(percent_within_binary),
+    `Primeiros prenomes não classificados` = fmt_int(
       first_author_by_period$n_articles[
         match(
           paste(period_3, "Não classificado"),
@@ -722,133 +911,191 @@ quant_row <- metric_comparison |>
   dplyr::filter(metric == "Análise quantitativa")
 strict_row <- metric_comparison |>
   dplyr::filter(metric == "Estratégia explícita de identificação")
+standardized_quant_row <- standardized_comparison |>
+  dplyr::filter(metric == "Análise quantitativa")
+standardized_inference_row <- standardized_comparison |>
+  dplyr::filter(metric == "Inferência estatística")
+english_coverage_row <- gender_coverage_by_language |>
+  dplyr::filter(language == "en")
+portuguese_coverage_row <- gender_coverage_by_language |>
+  dplyr::filter(language == "pt")
 
 canonical_md5 <- unname(tools::md5sum(classifications_path))
 canonical_mtime <- format(file.info(classifications_path)$mtime, "%Y-%m-%d %H:%M:%S %Z")
+manifest_md5 <- unname(tools::md5sum(manifest_path))
+manifest_mtime <- format(file.info(manifest_path)$mtime, "%Y-%m-%d %H:%M:%S %Z")
+package_versions <- paste0(
+  required_packages,
+  " ",
+  vapply(
+    required_packages,
+    function(package_name) as.character(utils::packageVersion(package_name)),
+    FUN.VALUE = character(1)
+  ),
+  collapse = "; "
+)
 execution_date <- format(Sys.Date(), "%Y-%m-%d")
 
 report_lines <- c(
-  "# Análise adicional por gênero da autoria",
+  "# Análise adicional por classificação binária inferida dos prenomes de autoria",
   "",
   paste0("**Data de execução:** ", execution_date),
   "",
   "## Síntese",
   "",
   paste0(
-    "A análise parte dos ", fmt_int(n_canonical), " artigos presentes no CSV canônico corrente. ",
-    ifelse(
-      n_exact_duplicate_rows > 0,
-      paste0("Foram ignoradas ", fmt_int(n_exact_duplicate_rows), " linhas exatamente duplicadas. "),
-      ""
-    ),
+    "A análise parte dos ", fmt_int(n_canonical), " PIDs distintos do CSV canônico corrente. ",
     "Após as exclusões de escopo, restam ", fmt_int(n_analytic), " artigos; ",
-    fmt_int(n_excluded), " registros foram retirados. O pacote `genderBR` classificou a primeira autoria ",
-    "como feminina ou masculina em ", fmt_int(n_binary), " casos (", fmt_pct(coverage_binary), ")."
+    fmt_int(n_excluded), " registros foram retirados. O `genderBR` classificou o primeiro prenome ",
+    "como feminino ou masculino em ", fmt_int(n_binary), " casos (", fmt_pct(coverage_binary), ")."
   ),
   "",
   paste0(
-    "Entre as primeiras autorias classificadas, ", fmt_int(n_first_female), " (", fmt_pct(female_share_binary),
-    ") foram classificadas como femininas e ", fmt_int(n_first_male), " como masculinas. ",
+    "Entre os primeiros prenomes classificados, ", fmt_int(n_first_female), " (", fmt_pct(female_share_binary),
+    ") ficaram na categoria feminina e ", fmt_int(n_first_male), " na masculina. ",
     "Outros ", fmt_int(n_first_unknown), " artigos permaneceram sem classificação binária; ",
     fmt_int(n_missing_authors), " deles não tinham autoria registrada no manifest."
   ),
   "",
   paste0(
-    "Na análise quantitativa, a prevalência foi ", fmt_pct(quant_row$percent_Feminino),
-    " entre artigos com primeira autoria feminina e ", fmt_pct(quant_row$percent_Masculino),
-    " entre artigos com primeira autoria masculina (diferença descritiva de ",
-    fmt_pp(quant_row$difference_pp_female_minus_male), "). Para estratégias explícitas de identificação, ",
-    "as proporções foram ", fmt_pct(strict_row$percent_Feminino), " e ",
-    fmt_pct(strict_row$percent_Masculino), ", respectivamente."
+    "As diferenças brutas de composição indicam análise quantitativa em ", fmt_pct(quant_row$percent_Feminino),
+    " dos artigos com primeiro prenome feminino e ", fmt_pct(quant_row$percent_Masculino),
+    " daqueles com primeiro prenome masculino (", fmt_pp(quant_row$difference_pp_female_minus_male), "). ",
+    "Após padronização descritiva pela distribuição conjunta de periódico e período, a diferença é ",
+    fmt_pp(standardized_quant_row$standardized_difference_pp), "; para inferência estatística, é ",
+    fmt_pp(standardized_inference_row$standardized_difference_pp)
   ),
   "",
-  "Essas diferenças são descritivas e correlacionais. Elas não identificam preferências individuais nem efeitos de gênero, pois também podem refletir composição por periódico, período, subcampo, coautoria e outros fatores não controlados.",
+  paste0(
+    "Entre os artigos examinados para identificação — e somente nesse denominador — estratégias explícitas aparecem em ",
+    fmt_pct(strict_row$percent_Feminino), " na categoria feminina e ",
+    fmt_pct(strict_row$percent_Masculino), " na masculina."
+  ),
+  "",
+  "Essas diferenças são descritivas e correlacionais. A classificação do prenome não observa identidade de gênero nem necessariamente o sexo de cada pessoa; tampouco os contrastes identificam preferências individuais ou efeitos de gênero.",
   "",
   "## População analítica e exclusões",
   "",
-  "A população de partida é o CSV canônico de classificações por leitura integral. Foram excluídos `Lua Nova: Revista de Cultura e Política` e `Novos estudos CEBRAP`, conforme solicitado. Também foram mantidas as exclusões permanentes de `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`, exigidas pelas regras do projeto.",
+  "A população de partida é o CSV canônico de classificações por leitura integral. Foram excluídos `Lua Nova: Revista de Cultura e Política` e `Novos estudos CEBRAP`, conforme solicitado. Também foram aplicadas as regras permanentes para `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`; estes dois periódicos já tinham zero registros no CSV de partida.",
   "",
   "Os resultados descrevem somente os artigos já presentes no snapshot canônico corrente; não são extrapolados para artigos que ainda não tenham sido incorporados a esse CSV.",
   "",
-  "**Tabela 1. Distribuição do gênero inferido da primeira autoria**",
+  "**Tabela 1. Exclusões de periódicos aplicadas ao CSV canônico**",
+  "",
+  markdown_table(exclusion_table),
+  "",
+  "*Nota:* contagens zero indicam que a regra foi verificada, mas o periódico já não estava no CSV canônico de partida.",
+  "",
+  "**Tabela 2. Classificação binária inferida do primeiro prenome**",
   "",
   markdown_table(first_author_table),
   "",
-  "*Nota:* a proporção usa todos os artigos da base analítica como denominador. `Não classificado` inclui prenomes ausentes do cadastro do IBGE ou com probabilidade insuficiente para ultrapassar o limiar de 90%.",
+  "*Nota:* a proporção usa todos os artigos da base analítica. `Não classificado` inclui autoria ausente, prenomes não encontrados e probabilidades que não ultrapassam o limiar de 90%.",
   "",
-  "**Tabela 2. Composição de gênero inferido da equipe de autoria**",
+  "**Tabela 3. Composição das classificações de prenomes na equipe de autoria**",
   "",
   markdown_table(team_table),
   "",
-  "*Nota:* uma equipe é classificada como `Indeterminada` quando ao menos um autor não pôde ser classificado; a regra conservadora evita chamar uma equipe de exclusivamente feminina ou masculina com informação incompleta.",
+  "*Nota:* uma equipe é `Indeterminada` quando ao menos um autor não pôde ser classificado. A regra evita atribuir composição exclusivamente feminina ou masculina com informação incompleta.",
   "",
-  "![Distribuição do gênero inferido da primeira autoria por período](../output/figures/gender_analysis/figure_1_first_author_gender_by_period.png)",
+  "![Classificação do primeiro prenome por período](../output/figures/gender_analysis/figure_1_first_author_gender_by_period.png)",
   "",
-  "*Figura 1. Distribuição do gênero inferido da primeira autoria por período de publicação.*",
+  "*Figura 1. Classificação binária inferida do primeiro prenome por período de publicação.*",
   "",
-  "## Indicadores metodológicos por gênero da primeira autoria",
+  "## Indicadores metodológicos por classificação do primeiro prenome",
   "",
-  "**Tabela 3. Indicadores metodológicos segundo o gênero inferido da primeira autoria**",
+  "**Tabela 4. Indicadores metodológicos segundo a classificação do primeiro prenome**",
   "",
   markdown_table(metric_table),
   "",
-  "*Nota:* cada célula apresenta numerador/denominador. Os denominadores são: todos os artigos para artigos empíricos; artigos empíricos com classificação observada para análise quantitativa e linguagem causal/explicativa; artigos quantitativos com inferência observada para inferência estatística; todos os artigos com screen observado para exame de identificação; e artigos examinados para identificação para estratégia explícita. Casos não classificados por gênero não entram na comparação feminino–masculino.",
+  "*Nota:* cada célula apresenta numerador/denominador. Os denominadores são: todos os artigos para artigos empíricos; artigos empíricos com classificação observada para análise quantitativa e linguagem causal/explicativa; artigos quantitativos com inferência observada para inferência estatística; todos os artigos com screen observado para exame de identificação; e artigos examinados para identificação para estratégia explícita. Prenomes não classificados não entram no contraste feminino–masculino.",
   "",
-  "![Indicadores metodológicos por gênero inferido da primeira autoria](../output/figures/gender_analysis/figure_2_methodological_indicators_by_first_author_gender.png)",
+  "![Indicadores metodológicos por classificação do primeiro prenome](../output/figures/gender_analysis/figure_2_methodological_indicators_by_first_author_gender.png)",
   "",
-  "*Figura 2. Indicadores metodológicos segundo o gênero inferido da primeira autoria.*",
+  "*Figura 2. Indicadores metodológicos segundo a classificação binária inferida do primeiro prenome.*",
   "",
-  "**Tabela 4. Tipo de evidência entre artigos empíricos, por gênero inferido da primeira autoria**",
+  "**Tabela 5. Comparação padronizada por periódico e período**",
+  "",
+  markdown_table(standardized_table),
+  "",
+  "*Nota:* em cada indicador, as taxas específicas por periódico × período são ponderadas pela distribuição conjunta dos denominadores nas duas categorias, usando somente estratos com suporte em ambas. A padronização reduz diferenças de composição nesses dois eixos, mas não controla subcampo, idioma, tamanho da equipe ou outros confundidores.",
+  "",
+  "**Tabela 6. Tipo de evidência entre artigos empíricos, por classificação do primeiro prenome**",
   "",
   markdown_table(evidence_table),
   "",
-  "*Nota:* o denominador é o total de artigos classificados como empíricos em cada grupo de gênero da primeira autoria.",
+  "*Nota:* o denominador é o total de artigos empíricos em cada categoria do primeiro prenome.",
   "",
-  "## Robustez descritiva: composição da equipe",
+  "## Análise exploratória da composição da equipe",
   "",
-  "**Tabela 5. Indicadores metodológicos segundo a composição de gênero inferido da equipe**",
+  "**Tabela 7. Indicadores metodológicos segundo a composição das classificações de prenomes na equipe**",
   "",
   markdown_table(team_metric_table),
   "",
-  "*Nota:* cada célula apresenta n/N e a proporção entre parênteses. Equipes `Indeterminadas` têm ao menos um autor não classificado; por isso, essa coluna não representa uma quarta categoria de gênero, mas informação incompleta. Os denominadores seguem as definições da Tabela 3.",
+  "*Nota:* cada célula apresenta n/N e a proporção. A composição da equipe é confundida pelo número de autores — equipes com duas categorias são necessariamente coautoradas — e não constitui teste de robustez do contraste de primeira autoria.",
   "",
   "## Evolução temporal",
   "",
-  "**Tabela 6. Participação feminina na primeira autoria por período**",
+  "**Tabela 8. Categoria feminina do primeiro prenome por período**",
   "",
   markdown_table(period_table),
   "",
-  "*Nota:* a proporção feminina usa somente primeiras autorias classificadas como femininas ou masculinas no período. A contagem não classificada é apresentada separadamente.",
+  "*Nota:* a proporção usa somente primeiros prenomes classificados nas categorias feminina ou masculina no período; os não classificados são apresentados separadamente.",
+  "",
+  "## Cobertura e sensibilidade da classificação",
+  "",
+  "**Tabela 9. Motivo da classificação ou não classificação do primeiro prenome**",
+  "",
+  markdown_table(failure_table),
+  "",
+  "*Nota:* `Prenome não encontrado` corresponde a probabilidade ausente no `genderBR`; `Ambíguo no limiar` tem probabilidade válida entre 10% e 90%.",
+  "",
+  "**Tabela 10. Cobertura da classificação binária por periódico**",
+  "",
+  markdown_table(coverage_journal_table),
+  "",
+  paste0(
+    "A cobertura também varia por idioma: ", fmt_pct(english_coverage_row$coverage_percent),
+    " nos artigos em inglês e ", fmt_pct(portuguese_coverage_row$coverage_percent),
+    " nos artigos em português. Essa não classificação diferencial impede tratar os casos classificados como aleatórios."
+  ),
+  "",
+  "**Tabela 11. Sensibilidade ao limiar de classificação**",
+  "",
+  markdown_table(sensitivity_table),
+  "",
+  "*Nota:* o limiar de 90% é o padrão do pacote. Os limiares de 80% e 95% alteram a cobertura, mas permitem verificar se os contrastes principais dependem dessa escolha.",
   "",
   "## Método e limites",
   "",
   paste0(
-    "Os nomes de autoria foram extraídos do manifest canônico e separados pelo delimitador `;`. ",
-    "O pacote `genderBR` versão ", as.character(utils::packageVersion("genderBR")),
-    " aplicou `get_gender(..., prob = TRUE, internal = TRUE, year = 2022)` aos nomes completos; ",
-    "a função usa o primeiro prenome. Foram classificados como feminino os casos com probabilidade feminina maior que ",
-    fmt_pct(100 * gender_threshold, 0), " e como masculino os casos com probabilidade menor que ",
-    fmt_pct(100 * (1 - gender_threshold), 0), ". Os demais ficaram como `Não classificado`."
+    "Os nomes foram extraídos do manifest canônico e separados por `;`. O `genderBR` ",
+    as.character(utils::packageVersion("genderBR")),
+    " aplicou `get_gender(..., prob = TRUE, internal = TRUE, year = 2022)` aos nomes completos e usa o primeiro prenome. ",
+    "A categoria feminina exige probabilidade maior que ", fmt_pct(100 * gender_threshold, 0),
+    "; a masculina, probabilidade menor que ", fmt_pct(100 * (1 - gender_threshold), 0),
+    "; os demais casos ficam não classificados."
   ),
   "",
-  "A classificação é uma proxy baseada na distribuição de prenomes registrada pelo IBGE, não uma observação da identidade de gênero de cada pessoa. O procedimento tem cobertura inferior para nomes estrangeiros, raros, coletivos ou ambíguos e não representa identidades não binárias. A ordem de autoria também não deve ser interpretada como contribuição relativa, pois pode seguir convenções alfabéticas.",
+  "A proxy deriva da distribuição de prenomes registrada por sexo no IBGE. Ela não observa a identidade de gênero de cada pessoa, não representa identidades não binárias e tem cobertura menor para nomes estrangeiros, raros, coletivos ou ambíguos. A posição de primeira autoria também não mede contribuição relativa e pode refletir ordem alfabética.",
   "",
   "Documentação consultada em 2026-07-19: [manual oficial do pacote genderBR no CRAN](https://cran.r-project.org/web/packages/genderBR/refman/genderBR.html) e [nota técnica Nomes no Brasil do Censo 2022/IBGE](https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?id=2102228&view=detalhes).",
   "",
   "## Reprodutibilidade e validação",
   "",
-  paste0("- Script gerador: `scripts/51_analyze_gender_current_canonical.R`."),
+  "- Script gerador: `scripts/51_analyze_gender_current_canonical.R`.",
   paste0("- CSV canônico: `", sub(paste0(project_dir, "/"), "", classifications_path, fixed = TRUE), "`."),
-  paste0("- MD5 do CSV canônico: `", canonical_md5, "`."),
-  paste0("- Modificação do CSV canônico: `", canonical_mtime, "`."),
+  paste0("- MD5 e modificação do CSV canônico: `", canonical_md5, "`; `", canonical_mtime, "`."),
+  paste0("- Manifest: `", sub(paste0(project_dir, "/"), "", manifest_path, fixed = TRUE), "`."),
+  paste0("- MD5 e modificação do manifest: `", manifest_md5, "`; `", manifest_mtime, "`."),
   paste0("- R: `", R.version.string, "`."),
-  paste0("- genderBR: `", as.character(utils::packageVersion("genderBR")), "`."),
+  paste0("- Pacotes: `", package_versions, "`."),
   "",
-  "**Tabela 7. Validações automáticas**",
+  "**Tabela 12. Validações automáticas**",
   "",
   markdown_table(validation_table),
   "",
-  "*Nota:* todos os artefatos derivados deste relatório são recriados pelo script acima."
+  "*Nota:* todos os artefatos derivados são recriados pelo script acima."
 )
 
 write_utf8_lines(report_lines, report_path)

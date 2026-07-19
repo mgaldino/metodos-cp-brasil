@@ -1,9 +1,11 @@
 check,value,status
-Duplicatas exatas do CSV tratadas sem alterar PIDs,TRUE,PASS
 PIDs únicos no CSV canônico,TRUE,PASS
 PIDs canônicos encontrados no manifest,TRUE,PASS
 Anos entre 2005 e 2025,TRUE,PASS
-Artigos na base analítica,TRUE,PASS
-Metadados de autoria presentes na base,TRUE,PASS
-Primeiros autores classificados como feminino ou masculino,TRUE,PASS
+Tamanho analítico reconciliado com as exclusões,TRUE,PASS
+Periódicos excluídos ausentes da base analítica,TRUE,PASS
+Missing de autoria reconciliado com o status,TRUE,PASS
+Categorias do primeiro prenome formam partição exaustiva,TRUE,PASS
 "Probabilidades dentro do intervalo [0, 1]",TRUE,PASS
+JSON de métodos sem falhas de parsing,TRUE,PASS
+Numeradores não excedem denominadores,TRUE,PASS
