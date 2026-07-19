@@ -21,6 +21,10 @@ if (length(file_arg) != 1) {
 
 project_dir <- normalizePath(file.path(dirname(file_arg), ".."), mustWork = TRUE)
 corpus_path <- file.path(project_dir, "data/raw/articles_2005_2025.csv")
+fulltext_path <- file.path(
+  project_dir,
+  "data/processed/fulltext_corpus/article_texts_corpus.csv"
+)
 ledger_path <- file.path(project_dir, "data/processed/excluded_articles.csv")
 output_path <- file.path(
   project_dir,
@@ -28,17 +32,24 @@ output_path <- file.path(
 )
 
 corpus <- readr::read_csv(corpus_path, show_col_types = FALSE)
+fulltext <- readr::read_csv(fulltext_path, show_col_types = FALSE) |>
+  dplyr::select(pid, body_text)
 ledger <- readr::read_csv(ledger_path, show_col_types = FALSE)
 
 expected_pids <- c(
   "S0104-62762005000200008",
   "S0104-62762006000100008",
   "S0104-62762006000200009",
+  "S0104-62762008000200010",
   "S0104-62762008000100009",
+  "S0104-62762009000100010",
   "S0104-62762009000200009",
+  "S0104-62762010000100010",
   "S0104-62762010000200011",
   "S0104-62762011000100009",
+  "S0104-62762012000100012",
   "S0104-62762012000200013"
+  ,"S0104-62762013000100010"
 )
 
 required_columns <- c("pid", "title", "title_en", "authors", "year", "journal_title")
@@ -48,14 +59,26 @@ if (length(missing_columns) > 0) {
 }
 
 tendencias <- corpus |>
-  dplyr::filter(pid %in% expected_pids) |>
+  dplyr::left_join(fulltext, by = "pid") |>
   dplyr::mutate(
     authors_missing = is.na(authors) | stringr::str_trim(authors) == "",
+    tendencias_marker = stringr::str_detect(
+      dplyr::coalesce(body_text, ""),
+      stringr::regex("(^|\\n)\\s*TENDÊNCIAS\\s*($|\\n)|Encarte Tendências", ignore_case = TRUE)
+    ) | stringr::str_detect(
+      dplyr::coalesce(title, ""),
+      stringr::regex("Tendências|Encarte de Dados", ignore_case = TRUE)
+    ),
     title_recovered_from_text = dplyr::if_else(
       is.na(title) | stringr::str_trim(title) == "",
       "Tendências (Encarte)",
       title
     )
+  ) |>
+  dplyr::filter(
+    journal_title == "Opinião Pública",
+    authors_missing,
+    tendencias_marker
   ) |>
   dplyr::left_join(
     ledger |>
@@ -70,6 +93,7 @@ tendencias <- corpus |>
     year,
     authors,
     authors_missing,
+    tendencias_marker,
     exclude_from_analysis,
     exclusion_reason,
     decision_date
