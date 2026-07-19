@@ -459,39 +459,7 @@ A evidência empírica combina diferentes formas. `r format_n(tabela_dimensoes$n
 
 ## Periódicos com classificação completa
 
-Os nove periódicos completos somam `r format_n(n_artigos_periodicos_completos)` artigos. A Tabela 3 e a Figura 2 mostram diferenças editoriais substantivas. O percentual de artigos empíricos varia de `r format_pct(profile_value("Revista Brasileira de Ciência Política", "pct_empirical"))` na RBCP a `r format_pct(profile_value("Opinião Pública", "pct_empirical"))` em `Opinião Pública`. Entre os artigos empíricos, o componente quantitativo vai de `r format_pct(profile_value("Contexto Internacional", "pct_quantitative"))` em `Contexto Internacional` a `r format_pct(profile_value("Opinião Pública", "pct_quantitative"))` em `Opinião Pública`.
-
-```{r tabela-3-periodicos-completos}
-tabela_periodicos_display <- tabela_periodicos_completos |>
-  dplyr::transmute(
-    Periódico = dplyr::recode(
-      journal_title,
-      "Brazilian Political Science Review" = "BPSR",
-      "Cadernos Gestão Pública e Cidadania" = "CGPC",
-      "Contexto Internacional" = "Contexto Internacional",
-      "Dados" = "Dados",
-      "Opinião Pública" = "Opinião Pública",
-      "Revista Brasileira de Ciência Política" = "RBCP"
-    ),
-    N = format_n(n_articles),
-    Empíricos = format_pct(pct_empirical),
-    Quantitativos = format_pct(pct_quantitative),
-    Inferência = format_pct(pct_inference),
-    Examinados = format_pct(pct_screen),
-    Estratégia = format_pct(pct_strict)
-  )
-
-knitr::kable(
-  tabela_periodicos_display,
-  caption = "Práticas metodológicas nos nove periódicos integralmente classificados.",
-  booktabs = TRUE
-) |>
-  kableExtra::footnote(
-    general_title = "Nota: ",
-    general = "Quantitativos = análise quantitativa; Inferência = inferência estatística; Examinados = artigos examinados para identificação; Estratégia = estratégia explícita. Empíricos e Examinados usam todos os artigos; Quantitativos usam os empíricos; Inferência usa os quantitativos com informação disponível; Estratégia usa os Examinados.",
-    threeparttable = TRUE
-  )
-```
+Os nove periódicos completos somam `r format_n(n_artigos_periodicos_completos)` artigos. A Figura 2 mostra diferenças editoriais substantivas. O percentual de artigos empíricos varia de `r format_pct(profile_value("Revista Brasileira de Ciência Política", "pct_empirical"))` na RBCP a `r format_pct(profile_value("Opinião Pública", "pct_empirical"))` em `Opinião Pública`. Entre os artigos empíricos, o componente quantitativo vai de `r format_pct(profile_value("Contexto Internacional", "pct_quantitative"))` em `Contexto Internacional` a `r format_pct(profile_value("Opinião Pública", "pct_quantitative"))` em `Opinião Pública`.
 
 ```{r figura-2, fig.cap="Os periódicos diferem tanto na composição da pesquisa publicada quanto no uso de inferência e identificação. Empíricos e examinados usam todos os artigos; análise quantitativa usa os empíricos; inferência estatística usa os quantitativos com informação disponível; estratégia explícita usa os examinados.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_2_journal_dimension_matrix.pdf")
@@ -507,7 +475,7 @@ A comparação por área revela uma diferença que a média dos periódicos esco
 
 A proporção de artigos empíricos é semelhante nas duas áreas: `r format_pct(pct_empirical_area_cp)` em Ciência Política e `r format_pct(pct_empirical_area_ri)` em Relações Internacionais. A composição quantitativa difere: análises quantitativas representam `r format_pct(pct_quant_area_cp)` dos artigos empíricos de Ciência Política e `r format_pct(pct_quant_area_ri)` dos de Relações Internacionais. Entre os quantitativos com rótulo observado, `r format_n(n_inference_area_cp)` de `r format_n(n_inference_area_cp_den)` artigos de Ciência Política (`r format_pct(pct_inference_area_cp)`) quantificam a incerteza, contra `r format_n(n_inference_area_ri)` de `r format_n(n_inference_area_ri_den)` em Relações Internacionais (`r format_pct(pct_inference_area_ri)`). A diferença é de `r format_pp(pct_inference_area_cp - pct_inference_area_ri)`
 
-Para incorporar a estrutura por periódico, estimamos um modelo Bayesiano binomial hierárquico em `brms` [@buerkner2017brms]. Cada periódico contribui com o número de artigos que reportam inferência e com o respectivo denominador. Um intercepto aleatório torna os periódicos permutáveis dentro das áreas. A Tabela 4 reúne as probabilidades posteriores por área, a diferença CP--RI e a sensibilidade à priori.
+Para incorporar a estrutura por periódico, estimamos um modelo Bayesiano binomial hierárquico em `brms` [@buerkner2017brms]. Cada periódico contribui com o número de artigos que reportam inferência e com o respectivo denominador. Um intercepto aleatório torna os periódicos permutáveis dentro das áreas. A Tabela 3 reúne as probabilidades posteriores por área, a diferença CP--RI e a sensibilidade à priori.
 
 ```{r tabela-5-bayesiana}
 bayesian_posterior_table <- bayesian_area_posterior |>
@@ -547,7 +515,7 @@ knitr::kable(
 )
 ```
 
-A diferença CP--RI permanece positiva sob as duas especificações. A Tabela 5 resume a checagem preditiva das priors e os diagnósticos de amostragem. As priors são centradas em ausência de diferença; a atualização posterior vem dos dados. A análise mede uma diferença descritiva entre periódicos e não estima um efeito causal da área sobre os autores.
+A diferença CP--RI permanece positiva sob as duas especificações. A Tabela 4 resume a checagem preditiva das priors e os diagnósticos de amostragem. As priors são centradas em ausência de diferença; a atualização posterior vem dos dados. A análise mede uma diferença descritiva entre periódicos e não estima um efeito causal da área sobre os autores.
 
 ```{r tabela-6-bayesiana-diagnosticos}
 bayesian_diagnostics_table <- bayesian_area_prior |>
@@ -622,7 +590,7 @@ Entre os `r format_n(n_classificados)` artigos, `r format_n(n_claim_quant_no_str
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 6 mantém os denominadores separados.
+No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 5 mantém os denominadores separados.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
