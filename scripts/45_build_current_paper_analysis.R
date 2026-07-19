@@ -225,7 +225,8 @@ excluded_journals <- readr::read_csv(excluded_journals_path, show_col_types = FA
   dplyr::select(journal_title, exclusion_reason)
 
 eligible_manifest <- manifest_raw |>
-  dplyr::anti_join(excluded_articles |> dplyr::select(pid), by = "pid")
+  dplyr::anti_join(excluded_articles |> dplyr::select(pid), by = "pid") |>
+  dplyr::anti_join(excluded_journals |> dplyr::select(journal_title), by = "journal_title")
 
 classifications_source <- readr::read_csv(classifications_path, show_col_types = FALSE)
 
@@ -283,7 +284,7 @@ classified_excluded_by_ledger <- classifications_raw |>
   dplyr::left_join(excluded_articles, by = "pid") |>
   dplyr::select(pid, title, journal_title, exclusion_reason)
 
-excluded_journals_in_manifest <- manifest_raw |>
+excluded_journals_in_manifest <- eligible_manifest |>
   dplyr::semi_join(excluded_journals |> dplyr::select(journal_title), by = "journal_title") |>
   dplyr::distinct(pid, journal_title)
 
@@ -967,7 +968,7 @@ logical_inconsistencies <- tibble::tibble(
     "Nenhuma classificação analítica deve estar fora do manifest.",
     "Classificações canônicas de itens posteriormente excluídos são preservadas e reportadas, mas removidas da base analítica.",
     "Nenhum periódico excluído pode aparecer no manifest analítico.",
-    "Nenhum periódico excluído pode aparecer nas classificações canônicas.",
+    "Classificações canônicas de periódicos excluídos são preservadas e reportadas, mas removidas da base analítica.",
     "O periódico da classificação deve coincidir com o periódico do manifest.",
     "Classificação deve apontar para o mesmo texto do manifest.",
     "Toda classificação analítica deve ter fulltext PASS.",
@@ -982,6 +983,13 @@ logical_inconsistencies <- tibble::tibble(
     # mesmo quando uma decisão editorial posterior exclui o item da análise.
     severity = dplyr::if_else(
       check == "classified_excluded_by_ledger",
+      "warning",
+      severity
+    )
+  ) |>
+  dplyr::mutate(
+    severity = dplyr::if_else(
+      check == "excluded_journal_in_classifications",
       "warning",
       severity
     )

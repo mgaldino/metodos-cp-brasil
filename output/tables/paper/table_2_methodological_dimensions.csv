@@ -1,10 +1,10 @@
 dimension,category,n,denominator,denominator_n,percent,note
-Evidência,Artigo empírico,3506,artigos classificados,4330,81,Cobertura parcial; não representa o corpus completo.
-Evidência,Somente qualitativo,1506,artigos empíricos,3506,43,Categoria exclusiva entre artigos empíricos.
-Evidência,Somente quantitativo,839,artigos empíricos,3506,23.9,Categoria exclusiva entre artigos empíricos.
-Evidência,Misto,1161,artigos empíricos,3506,33.1,Categoria exclusiva entre artigos empíricos.
-Quantificação,Componente quantitativo,1999,artigos empíricos,3506,57,Subconjunto quantitativo comparável ao estudo de referência.
-Quantificação,Modelagem estatística,750,empíricos quantitativos,1999,37.5,Tipo de análise quantitativa.
-Quantificação,Inferência estatística,732,empíricos quantitativos com inferência classificada,1993,36.7,"Testes, intervalos, erros-padrão ou inferência equivalente; 6 casos quantitativos sem classificação são excluídos do denominador."
+Evidência,Artigo empírico,3414,artigos classificados,4144,82.4,Cobertura parcial; não representa o corpus completo.
+Evidência,Somente qualitativo,1414,artigos empíricos,3414,41.4,Categoria exclusiva entre artigos empíricos.
+Evidência,Somente quantitativo,838,artigos empíricos,3414,24.5,Categoria exclusiva entre artigos empíricos.
+Evidência,Misto,1162,artigos empíricos,3414,34,Categoria exclusiva entre artigos empíricos.
+Quantificação,Componente quantitativo,1999,artigos empíricos,3414,58.6,Subconjunto quantitativo comparável ao estudo de referência.
+Quantificação,Modelagem estatística,758,empíricos quantitativos,1999,37.9,Tipo de análise quantitativa.
+Quantificação,Inferência estatística,743,empíricos quantitativos com inferência classificada,1994,37.3,"Testes, intervalos, erros-padrão ou inferência equivalente; 5 casos quantitativos sem classificação são excluídos do denominador."
 Explicitação,method_explicitness,NA,não disponível,NA,NA,Exige classificação complementar; não é resultado substantivo.
 Formato,empirical_article_format,NA,não disponível,NA,NA,Exige classificação complementar; não é resultado substantivo.
