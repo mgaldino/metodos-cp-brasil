@@ -41,6 +41,16 @@ manifest_titles <- readr::read_csv(manifest_path, show_col_types = FALSE) |>
     source_url
   )
 
+# Três encartes antigos não têm título nos metadados SciELO preservados. O
+# próprio texto dos artigos os identifica como "Encarte Tendências". Mantemos
+# essa recuperação explicitamente marcada, em vez de preencher o dado canônico.
+recovered_titles <- tibble::tribble(
+  ~pid, ~title_recovered, ~title_source,
+  "S0104-62762005000200008", "Tendências (Encarte)", "cabeçalho do texto integral",
+  "S0104-62762006000100008", "Tendências (Encarte)", "cabeçalho do texto integral",
+  "S0104-62762006000200009", "Tendências (Encarte)", "cabeçalho do texto integral"
+)
+
 required_columns <- c(
   "pid",
   "title",
@@ -66,11 +76,19 @@ conflicts <- analysis_df |>
     has_statistical_inference %in% TRUE
   ) |>
   dplyr::left_join(manifest_titles, by = "pid") |>
-  dplyr::mutate(title = dplyr::coalesce(title, title_manifest)) |>
+  dplyr::left_join(recovered_titles, by = "pid") |>
+  dplyr::mutate(
+    title = dplyr::coalesce(title, title_manifest, title_recovered),
+    title_source = dplyr::coalesce(
+      title_source,
+      dplyr::if_else(!is.na(title_manifest), "manifesto do corpus", "base analítica")
+    )
+  ) |>
   dplyr::arrange(year, journal_title, pid) |>
   dplyr::select(
     pid,
     title,
+    title_source,
     journal_title,
     year,
     doi,
