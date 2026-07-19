@@ -23,12 +23,23 @@ input_path <- file.path(
   project_dir,
   "data/processed/paper_analysis/paper_analysis_dataset_current.csv"
 )
+manifest_path <- file.path(
+  project_dir,
+  "data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv"
+)
 output_path <- file.path(
   project_dir,
   "quality_reports/paper_variable_audit/statistical_inference_type_conflicts_detail.csv"
 )
 
 analysis_df <- readr::read_csv(input_path, show_col_types = FALSE)
+manifest_titles <- readr::read_csv(manifest_path, show_col_types = FALSE) |>
+  dplyr::select(
+    pid,
+    title_manifest = title,
+    doi,
+    source_url
+  )
 
 required_columns <- c(
   "pid",
@@ -54,12 +65,16 @@ conflicts <- analysis_df |>
     quantitative_analysis_type == "descriptive_statistics_only",
     has_statistical_inference %in% TRUE
   ) |>
+  dplyr::left_join(manifest_titles, by = "pid") |>
+  dplyr::mutate(title = dplyr::coalesce(title, title_manifest)) |>
   dplyr::arrange(year, journal_title, pid) |>
   dplyr::select(
     pid,
     title,
     journal_title,
     year,
+    doi,
+    source_url,
     quantitative_analysis_type,
     quantitative_analysis_evidence_quote,
     has_statistical_inference,
