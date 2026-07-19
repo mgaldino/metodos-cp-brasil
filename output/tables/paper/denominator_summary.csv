@@ -1,15 +1,15 @@
 denominator,n,denominator_reference,denominator_n,percent
-Corpus completo elegível,5242,manifest elegível reconciliado,5242,100
-Artigos classificados por leitura integral,4336,manifest elegível reconciliado,5242,82.7
-Artigos ainda não classificados,906,manifest elegível reconciliado,5242,17.3
+Corpus completo elegível,5236,manifest elegível reconciliado,5236,100
+Artigos classificados por leitura integral,4330,manifest elegível reconciliado,5236,82.7
+Artigos ainda não classificados,906,manifest elegível reconciliado,5236,17.3
 Periódicos com classificação completa,7,periódicos do manifest,11,63.6
-Artigos dos periódicos completos,2804,artigos classificados,4336,64.7
-Artigos dos periódicos completos em que a identificação é especialmente relevante,952,artigos dos periódicos completos,2804,34
-Artigos dos periódicos completos com estratégia explícita de identificação causal,49,casos relevantes para identificação nos periódicos completos,952,5.1
-Artigos empíricos classificados,3512,artigos classificados,4336,81
-Artigos empíricos quantitativos classificados,2005,artigos empíricos classificados,3512,57.1
-Artigos empíricos quantitativos com inferência classificada,1999,artigos empíricos quantitativos classificados,2005,99.7
-Artigos empíricos quantitativos sem classificação de inferência,6,artigos empíricos quantitativos classificados,2005,0.3
-Artigos com afirmação causal ou explicativa classificados,3935,artigos classificados,4336,90.8
-Artigos em que a identificação é especialmente relevante,1401,artigos classificados,4336,32.3
-Artigos com estratégia explícita de identificação causal,58,casos relevantes para identificação,1401,4.1
+Artigos dos periódicos completos,2798,artigos classificados,4330,64.6
+Artigos dos periódicos completos em que a identificação é especialmente relevante,948,artigos dos periódicos completos,2798,33.9
+Artigos dos periódicos completos com estratégia explícita de identificação causal,49,casos relevantes para identificação nos periódicos completos,948,5.2
+Artigos empíricos classificados,3506,artigos classificados,4330,81
+Artigos empíricos quantitativos classificados,1999,artigos empíricos classificados,3506,57
+Artigos empíricos quantitativos com inferência classificada,1993,artigos empíricos quantitativos classificados,1999,99.7
+Artigos empíricos quantitativos sem classificação de inferência,6,artigos empíricos quantitativos classificados,1999,0.3
+Artigos com afirmação causal ou explicativa classificados,3931,artigos classificados,4330,90.8
+Artigos em que a identificação é especialmente relevante,1397,artigos classificados,4330,32.3
+Artigos com estratégia explícita de identificação causal,58,casos relevantes para identificação,1397,4.2

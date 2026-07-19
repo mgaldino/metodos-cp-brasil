@@ -965,7 +965,7 @@ logical_inconsistencies <- tibble::tibble(
     "Todo tipo de análise quantitativa deve pertencer aos níveis previstos.",
     "Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.",
     "Nenhuma classificação analítica deve estar fora do manifest.",
-    "Nenhuma classificação analítica deve estar no ledger de exclusões.",
+    "Classificações canônicas de itens posteriormente excluídos são preservadas e reportadas, mas removidas da base analítica.",
     "Nenhum periódico excluído pode aparecer no manifest analítico.",
     "Nenhum periódico excluído pode aparecer nas classificações canônicas.",
     "O periódico da classificação deve coincidir com o periódico do manifest.",

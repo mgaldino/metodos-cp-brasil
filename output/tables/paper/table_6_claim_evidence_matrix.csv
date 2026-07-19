@@ -6,6 +6,6 @@ none,Com afirmação causal/explicativa,FALSE,531,824,64.4
 none,Sem afirmação causal/explicativa,FALSE,293,824,35.6
 qualitative_only,Com afirmação causal/explicativa,FALSE,1456,1506,96.7
 qualitative_only,Sem afirmação causal/explicativa,FALSE,50,1506,3.3
-quantitative_only,Com afirmação causal/explicativa,FALSE,762,845,90.2
-quantitative_only,Com afirmação causal/explicativa,TRUE,51,845,6
-quantitative_only,Sem afirmação causal/explicativa,FALSE,32,845,3.8
+quantitative_only,Com afirmação causal/explicativa,FALSE,758,839,90.3
+quantitative_only,Com afirmação causal/explicativa,TRUE,51,839,6.1
+quantitative_only,Sem afirmação causal/explicativa,FALSE,30,839,3.6

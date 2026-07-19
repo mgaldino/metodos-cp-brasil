@@ -37,6 +37,7 @@ fulltext <- readr::read_csv(fulltext_path, show_col_types = FALSE) |>
 ledger <- readr::read_csv(ledger_path, show_col_types = FALSE)
 
 expected_pids <- c(
+  "S0104-62762005000100009",
   "S0104-62762005000200008",
   "S0104-62762006000100008",
   "S0104-62762006000200009",
@@ -47,9 +48,11 @@ expected_pids <- c(
   "S0104-62762010000100010",
   "S0104-62762010000200011",
   "S0104-62762011000100009",
+  "S0104-62762011000200010",
   "S0104-62762012000100012",
-  "S0104-62762012000200013"
-  ,"S0104-62762013000100010"
+  "S0104-62762012000200013",
+  "S0104-62762013000100010",
+  "S0104-62762014000300523"
 )
 
 required_columns <- c("pid", "title", "title_en", "authors", "year", "journal_title")
@@ -100,7 +103,13 @@ tendencias <- corpus |>
   )
 
 if (!setequal(tendencias$pid, expected_pids)) {
-  stop("A busca por encartes Tendências divergiu da lista auditada.")
+  stop(
+    "A busca por encartes Tendências divergiu da lista auditada. Ausentes: ",
+    paste(setdiff(expected_pids, tendencias$pid), collapse = "; "),
+    ". Candidatos adicionais: ",
+    paste(setdiff(tendencias$pid, expected_pids), collapse = "; "),
+    "."
+  )
 }
 if (any(!tendencias$authors_missing)) {
   stop("Há encarte Tendências com autoria registrada; a regra exige revisão.")
