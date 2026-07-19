@@ -193,23 +193,15 @@ extract_diagnostics <- function(fit, metric_name, model_data) {
   )
 }
 
-fit_one_model <- function(model_data, metric_name, template_fit = NULL) {
+fit_one_model <- function(model_data, metric_name) {
   model_path <- file.path(models_dir, paste0("gender_", unname(metric_slugs[[metric_name]])))
-  cached_path <- paste0(model_path, ".rds")
-  if (file.exists(cached_path)) return(readRDS(cached_path))
-  common_args <- list(
+  brms::brm(
+    formula = model_formula, data = model_data, prior = model_priors, backend = "cmdstanr",
     chains = chains, iter = iter, warmup = warmup, cores = parallel_chains,
     seed = seed, sample_prior = "yes",
     control = list(adapt_delta = adapt_delta, max_treedepth = max_treedepth),
     refresh = 200, file = model_path, file_refit = "on_change"
   )
-  if (is.null(template_fit)) {
-    do.call(brms::brm, c(list(
-      formula = model_formula, data = model_data, prior = model_priors, backend = "cmdstanr"
-    ), common_args))
-  } else {
-    do.call(stats::update, c(list(object = template_fit, newdata = model_data, recompile = TRUE), common_args))
-  }
 }
 
 model_data_list <- lapply(metric_levels, function(x) build_metric_data(binary_gender, x))
@@ -221,12 +213,10 @@ for (metric_name in metric_levels) {
 }
 
 fits <- overall_results <- journal_results <- diagnostic_results <- list()
-template_fit <- NULL
 for (metric_name in metric_levels) {
   message("Ajustando modelo: ", metric_name)
   current_data <- model_data_list[[metric_name]]
-  current_fit <- fit_one_model(current_data, metric_name, template_fit)
-  if (is.null(template_fit)) template_fit <- current_fit
+  current_fit <- fit_one_model(current_data, metric_name)
   fits[[metric_name]] <- current_fit
   overall_results[[metric_name]] <- summarize_contrast(contrast_draws(current_fit, current_data)) |>
     dplyr::mutate(
@@ -299,7 +289,7 @@ figure_3 <- figure_data |>
   ggplot2::annotate("rect", xmin = -rope_pp, xmax = rope_pp, ymin = -Inf, ymax = Inf,
     fill = "#D9D9D9", alpha = 0.35) +
   ggplot2::geom_vline(xintercept = 0, color = "#4D4D4D", linewidth = 0.45) +
-  ggplot2::geom_errorbarh(height = 0, linewidth = 0.8) +
+  ggplot2::geom_errorbar(orientation = "y", width = 0, linewidth = 0.8) +
   ggplot2::geom_point(size = 2.8) +
   ggplot2::scale_color_manual(values = c(
     "Maior na categoria feminina" = "#B33A6F", "Menor na categoria feminina" = "#285F8F",
