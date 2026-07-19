@@ -159,13 +159,13 @@ fit_model <- function(prior_beta, prior_intercept, file_suffix) {
   brms::brm(
     formula = brms::bf(y | trials(n) ~ 1 + area_ri + (1 | journal_id)),
     data = journal_data,
-    family = brms::binomial(link = "logit"),
+    family = stats::binomial(link = "logit"),
     prior = priors,
     backend = "cmdstanr",
     chains = 4,
     iter = 4000,
     warmup = 2000,
-    cores = min(4, parallel::detectCores(logical = FALSE)),
+    cores = 4L,
     threads = brms::threading(1),
     seed = 20260719,
     refresh = 0,
@@ -177,17 +177,20 @@ fit_model <- function(prior_beta, prior_intercept, file_suffix) {
   )
 }
 
+message("Ajustando modelo com prior Normal...")
 fit_normal <- fit_model(
   prior_beta = "normal(0, 1.5)",
   prior_intercept = "normal(0, 1.5)",
   file_suffix = "normal"
 )
 
+message("Ajustando modelo com prior Student-t...")
 fit_student <- fit_model(
   prior_beta = "student_t(3, 0, 2.5)",
   prior_intercept = "student_t(3, 0, 2.5)",
   file_suffix = "student"
 )
+message("Modelos ajustados; calculando posteriores e diagnósticos...")
 
 posterior_targets <- function(fit, prior_label) {
   draws <- posterior::as_draws_df(fit)

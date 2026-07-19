@@ -175,9 +175,7 @@ contrast_draws <- function(fit, model_data, current_journal = NULL) {
 }
 
 extract_diagnostics <- function(fit, metric_name, model_data) {
-  convergence <- posterior::summarise_draws(
-    posterior::as_draws_array(fit), posterior::rhat, posterior::ess_bulk, posterior::ess_tail
-  )
+  convergence <- posterior::summarise_draws(posterior::as_draws_array(fit))
   nuts <- brms::nuts_params(fit)
   n_divergent <- nuts |> dplyr::filter(Parameter == "divergent__") |> dplyr::summarise(n = sum(Value > 0)) |> dplyr::pull(n)
   n_max_treedepth <- nuts |> dplyr::filter(Parameter == "treedepth__") |> dplyr::summarise(n = sum(Value >= max_treedepth)) |> dplyr::pull(n)
@@ -200,7 +198,7 @@ fit_one_model <- function(model_data, metric_name, template_fit = NULL) {
   cached_path <- paste0(model_path, ".rds")
   if (file.exists(cached_path)) return(readRDS(cached_path))
   common_args <- list(
-    chains = chains, iter = iter, warmup = warmup, parallel_chains = parallel_chains,
+    chains = chains, iter = iter, warmup = warmup, cores = parallel_chains,
     seed = seed, sample_prior = "yes",
     control = list(adapt_delta = adapt_delta, max_treedepth = max_treedepth),
     refresh = 200, file = model_path, file_refit = "on_change"
@@ -210,7 +208,7 @@ fit_one_model <- function(model_data, metric_name, template_fit = NULL) {
       formula = model_formula, data = model_data, prior = model_priors, backend = "cmdstanr"
     ), common_args))
   } else {
-    do.call(brms::update, c(list(object = template_fit, newdata = model_data, recompile = FALSE), common_args))
+    do.call(stats::update, c(list(object = template_fit, newdata = model_data, recompile = FALSE), common_args))
   }
 }
 
