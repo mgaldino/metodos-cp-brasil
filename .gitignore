@@ -4,6 +4,7 @@ data/raw/api_responses/
 
 # Artefatos processados grandes gerados localmente
 data/processed/fulltext_corpus/article_texts_corpus.csv
+data/processed/gender_analysis/bayesian_models/
 
 # Artefatos gerados por execuções locais do classificador por leitura integral
 data/processed/credibility_prompt_v3_integral_reading/test_10/
