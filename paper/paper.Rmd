@@ -507,11 +507,82 @@ A comparação por área revela uma diferença que a média dos periódicos esco
 
 A proporção de artigos empíricos é semelhante nas duas áreas: `r format_pct(pct_empirical_area_cp)` em Ciência Política e `r format_pct(pct_empirical_area_ri)` em Relações Internacionais. A composição quantitativa difere: análises quantitativas representam `r format_pct(pct_quant_area_cp)` dos artigos empíricos de Ciência Política e `r format_pct(pct_quant_area_ri)` dos de Relações Internacionais. Entre os quantitativos com rótulo observado, `r format_n(n_inference_area_cp)` de `r format_n(n_inference_area_cp_den)` artigos de Ciência Política (`r format_pct(pct_inference_area_cp)`) quantificam a incerteza, contra `r format_n(n_inference_area_ri)` de `r format_n(n_inference_area_ri_den)` em Relações Internacionais (`r format_pct(pct_inference_area_ri)`). A diferença é de `r format_pp(pct_inference_area_cp - pct_inference_area_ri)`
 
-Para incorporar a estrutura por periódico, estimamos um modelo Bayesiano binomial hierárquico em `brms` [@buerkner2017brms]. Cada periódico contribui com o número de artigos que reportam inferência e com o respectivo denominador. Um intercepto aleatório torna os periódicos permutáveis dentro das áreas. Com priors fracamente informativos `Normal(0, 1,5)` para o intercepto e para o contraste de área, seguindo Gelman et al. [-@gelman2008prior], a probabilidade posterior de inferência é `r format_pct(round(100 * bayes_normal_cp, 1))` para um periódico típico de Ciência Política e `r format_pct(round(100 * bayes_normal_ri, 1))` para um periódico típico de Relações Internacionais. A diferença mediana é `r format_pp(100 * bayes_normal_delta)`, com intervalo de credibilidade posterior de 95% entre `r format_pp(100 * bayes_normal_delta_low)` e `r format_pp(100 * bayes_normal_delta_high)`; a probabilidade posterior de uma diferença positiva é `r format_pct(round(100 * bayes_normal_pdelta, 1))`.
+Para incorporar a estrutura por periódico, estimamos um modelo Bayesiano binomial hierárquico em `brms` [@buerkner2017brms]. Cada periódico contribui com o número de artigos que reportam inferência e com o respectivo denominador. Um intercepto aleatório torna os periódicos permutáveis dentro das áreas. A Tabela 4 reúne as probabilidades posteriores por área, a diferença CP--RI e a sensibilidade à priori.
 
-A conclusão permanece sob a priori Student-t, mais dispersa. A diferença mediana é `r format_pp(100 * bayes_student_delta)`, com intervalo de credibilidade de 95% entre `r format_pp(100 * bayes_student_delta_low)` e `r format_pp(100 * bayes_student_delta_high)`, e `r format_pct(round(100 * bayes_student_pdelta, 1))` da massa posterior é positiva. Não houve divergências nas duas especificações; o R-hat máximo foi `r format(round(bayes_max_rhat, 3), decimal.mark = ",", nsmall = 3)`, e o tamanho efetivo mínimo foi `r format_n(round(bayes_min_ess_bulk))`. As oito proporções observadas ficaram dentro dos intervalos preditivos de 95% do modelo Normal.
+```{r tabela-5-bayesiana}
+bayesian_posterior_table <- bayesian_area_posterior |>
+  dplyr::filter(parameter %in% c(
+    "P(inferência | CP, periódico médio)",
+    "P(inferência | RI, periódico médio)",
+    "Diferença CP - RI",
+    "P(delta > 0)"
+  )) |>
+  dplyr::group_by(prior) |>
+  dplyr::summarise(
+    `P(inferência | CP)` = format_pct(round(100 * estimate[parameter == "P(inferência | CP, periódico médio)"][1], 1)),
+    `P(inferência | RI)` = format_pct(round(100 * estimate[parameter == "P(inferência | RI, periódico médio)"][1], 1)),
+    `Mediana da diferença` = format_pp(100 * estimate[parameter == "Diferença CP - RI"][1]),
+    `ICr 95% da diferença` = paste0(
+      format_pp(100 * q025[parameter == "Diferença CP - RI"][1]),
+      "–",
+      format_pp(100 * q975[parameter == "Diferença CP - RI"][1])
+    ),
+    `P(Δ > 0)` = format_pct(round(100 * estimate[parameter == "P(delta > 0)"][1], 1)),
+    .groups = "drop"
+  ) |>
+  dplyr::mutate(
+    Priori = dplyr::recode(
+      prior,
+      "Normal(0, 1.5)" = "Normal(0, 1,5)",
+      "Student-t(3, 0, 2.5)" = "Student-t(3, 0, 2,5)"
+    )
+  ) |>
+  dplyr::select(Priori, dplyr::everything(), -prior)
 
-A checagem preditiva das priors separa a informação dos dados da informação da especificação. Antes de observar os dados, a probabilidade de uma diferença positiva era `r format_pct(round(100 * bayes_normal_prior_pdelta, 1))` com a priori Normal e `r format_pct(round(100 * bayes_student_prior_pdelta, 1))` com a priori Student-t. Depois da observação, passou a `r format_pct(round(100 * bayes_normal_pdelta, 1))` e `r format_pct(round(100 * bayes_student_pdelta, 1))`. As taxas dos `r format_n(bayes_prior_ppc_total)` periódicos ficaram dentro dos intervalos preditivos de 95% de ambas as priors. A análise mede a diferença descritiva entre periódicos; não estima um efeito da área sobre os autores.
+knitr::kable(
+  bayesian_posterior_table,
+  caption = "Resultados posteriores do modelo Bayesiano binomial hierárquico por área. As probabilidades referem-se a um periódico médio; a diferença é medida em pontos percentuais.",
+  booktabs = TRUE,
+  longtable = FALSE
+)
+```
+
+A diferença CP--RI permanece positiva sob as duas especificações. A Tabela 5 resume a checagem preditiva das priors e os diagnósticos de amostragem. As priors são centradas em ausência de diferença; a atualização posterior vem dos dados. A análise mede uma diferença descritiva entre periódicos e não estima um efeito causal da área sobre os autores.
+
+```{r tabela-6-bayesiana-diagnosticos}
+bayesian_diagnostics_table <- bayesian_area_prior |>
+  dplyr::filter(parameter == "P(delta > 0)") |>
+  dplyr::select(prior, prior_probability = estimate) |>
+  dplyr::left_join(
+    bayesian_area_prior_predictive |>
+      dplyr::select(prior, observed_journals_within_ppc_95, observed_journals_total),
+    by = "prior"
+  ) |>
+  dplyr::left_join(
+    bayesian_area_diagnostics |>
+      dplyr::select(prior, max_rhat, divergences),
+    by = "prior"
+  ) |>
+  dplyr::mutate(
+    `Priori P(Δ > 0)` = format_pct(round(100 * prior_probability, 1)),
+    `Periódicos dentro do PPC 95%` = paste0(observed_journals_within_ppc_95, "/", observed_journals_total),
+    `R-hat máximo` = format(round(max_rhat, 3), decimal.mark = ",", nsmall = 3),
+    Divergências = format_n(divergences),
+    Priori = dplyr::recode(
+      prior,
+      "Normal(0, 1.5)" = "Normal(0, 1,5)",
+      "Student-t(3, 0, 2.5)" = "Student-t(3, 0, 2,5)"
+    )
+  ) |>
+  dplyr::select(Priori, `Priori P(Δ > 0)`, `Periódicos dentro do PPC 95%`, `R-hat máximo`, Divergências)
+
+knitr::kable(
+  bayesian_diagnostics_table,
+  caption = "Checagem preditiva das priors e diagnósticos do modelo Bayesiano. PPC: checagem preditiva da priori.",
+  booktabs = TRUE,
+  longtable = FALSE
+)
+```
 
 A identificação causal explícita também difere entre as áreas. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos examinados (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
 
@@ -551,7 +622,7 @@ Entre os `r format_n(n_classificados)` artigos, `r format_n(n_claim_quant_no_str
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 4 mantém os denominadores separados.
+No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 6 mantém os denominadores separados.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
