@@ -2,7 +2,7 @@
 
 ## Decisão
 
-Os 16 encartes editoriais da série *Tendências* publicados por *Opinião Pública*
+As 19 unidades editoriais da série *Tendências* publicadas por *Opinião Pública*
 entre 2005 e 2014 não são elegíveis para a análise substantiva do paper.
 
 ## Justificativa
@@ -37,6 +37,8 @@ um conflito entre análise descritiva e inferência estatística.
 - `S0104-62762005000200008`
 - `S0104-62762006000100008`
 - `S0104-62762006000200009`
+- `S0104-62762007000100008`
+- `S0104-62762007000200008`
 - `S0104-62762008000100009`
 - `S0104-62762008000200010`
 - `S0104-62762009000100010`
@@ -48,4 +50,5 @@ um conflito entre análise descritiva e inferência estatística.
 - `S0104-62762012000100012`
 - `S0104-62762012000200013`
 - `S0104-62762013000100010`
+- `S0104-62762013000200010`
 - `S0104-62762014000300523`

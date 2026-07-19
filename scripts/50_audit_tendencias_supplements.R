@@ -41,6 +41,8 @@ expected_pids <- c(
   "S0104-62762005000200008",
   "S0104-62762006000100008",
   "S0104-62762006000200009",
+  "S0104-62762007000100008",
+  "S0104-62762007000200008",
   "S0104-62762008000200010",
   "S0104-62762008000100009",
   "S0104-62762009000100010",
@@ -52,7 +54,17 @@ expected_pids <- c(
   "S0104-62762012000100012",
   "S0104-62762012000200013",
   "S0104-62762013000100010",
+  "S0104-62762013000200010",
   "S0104-62762014000300523"
+)
+
+# Três membros já estavam fora do manifest por tipo documental e, por isso,
+# não têm corpo utilizável na camada processada. Sua pertença à seção
+# Tendências foi confirmada nos metadados/API ou XML brutos preservados.
+raw_section_tendencias_pids <- c(
+  "S0104-62762007000100008",
+  "S0104-62762007000200008",
+  "S0104-62762013000200010"
 )
 
 required_columns <- c("pid", "title", "title_en", "authors", "year", "journal_title")
@@ -65,7 +77,7 @@ tendencias <- corpus |>
   dplyr::left_join(fulltext, by = "pid") |>
   dplyr::mutate(
     authors_missing = is.na(authors) | stringr::str_trim(authors) == "",
-    tendencias_marker = stringr::str_detect(
+    tendencias_marker = pid %in% raw_section_tendencias_pids | stringr::str_detect(
       dplyr::coalesce(body_text, ""),
       stringr::regex("(^|\\n)\\s*TENDÊNCIAS\\s*($|\\n)|Encarte Tendências", ignore_case = TRUE)
     ) | stringr::str_detect(
