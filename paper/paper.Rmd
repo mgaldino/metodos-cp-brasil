@@ -1,7 +1,7 @@
 ---
-title: "Inferência Estatística Ainda É Minoritária em Seis Periódicos Brasileiros, 2005--2025"
+title: "Inferência Estatística Ainda É Minoritária em Nove Periódicos Brasileiros, 2005--2025"
 author: ""
-date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+date: "19 de julho de 2026"
 output:
   pdf_document:
     latex_engine: xelatex
@@ -237,9 +237,11 @@ Analiso artigos publicados entre 2005 e 2025 em nove periódicos indexados no Sc
 
 Quatro periódicos mapeados no levantamento inicial não entram na análise principal: `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais`, `Revista de Administração Pública` e `Sur. Revista Internacional de Direitos Humanos`. As exclusões foram definidas antes desta atualização para delimitar um núcleo de Ciência Política, Relações Internacionais, gestão pública e Ciências Sociais políticas. Como essa fronteira é contestável, os critérios e as decisões são preservados no material de replicação. A Tabela 1 apresenta o número de artigos elegíveis e classificados por periódico e período.
 
+Nesta versão, `Lua Nova: Revista de Cultura e Política` e `Novos estudos CEBRAP` também ficam fora da análise principal porque a classificação canônica desses periódicos ainda não estava completa no momento do fechamento. Seus registros permanecem preservados, mas não entram nos denominadores. Com essa decisão, os nove periódicos restantes têm cobertura integral.
+
 Também registramos como inelegíveis 19 unidades editoriais da série *Tendências*, publicadas por `Opinião Pública` entre 2005 e 2014. Esses documentos compilam dados de pesquisas, mas não identificam autores e não se apresentam como artigos acadêmicos assinados. Dezesseis haviam sido indexados entre os artigos potencialmente elegíveis; três já estavam fora do universo analítico por seu tipo documental. Os arquivos integrais e as classificações já produzidas permanecem preservados para fins de rastreabilidade, mas essas unidades não integram nenhum denominador ou resultado substantivo.
 
-Os textos integrais foram recuperados do SciELO em junho de 2026, e a base analítica desta versão foi atualizada em 18 de julho de 2026. O material de replicação preserva as fontes, as datas de acesso, as decisões de exclusão e as verificações de integridade dos arquivos.
+Os textos integrais foram recuperados do SciELO em junho de 2026, e a base analítica desta versão foi atualizada em 19 de julho de 2026. O material de replicação preserva as fontes, as datas de acesso, as decisões de exclusão e as verificações de integridade dos arquivos.
 
 Esta versão usa `r format_n(n_classificados)` artigos, equivalentes a `r format_pct(pct_classificados)` do universo elegível. Os nove periódicos estão integralmente classificados e somam `r format_n(n_artigos_periodicos_completos)` artigos. Assim, os resultados principais cobrem todo o universo elegível desta versão; os rótulos automatizados ainda exigem validação humana.
 
@@ -304,7 +306,7 @@ Duas dimensões complementares ainda não foram classificadas: explicitação me
 
 # Resultados
 
-O universo elegível contém `r format_n(n_manifest)` artigos, dos quais `r format_n(n_classificados)` estão classificados. A Tabela 2 descreve esse conjunto parcial com denominadores específicos para cada dimensão. Entre os classificados, `r format_n(n_empiricos)` são empíricos. Entre os empíricos, `r format_n(n_quant)` têm componente quantitativo; entre estes, `r format_n(n_modelagem)` apresentam modelagem estatística e `r format_n(n_inferencia)` registram inferência estatística.
+O universo elegível contém `r format_n(n_manifest)` artigos, e todos estão classificados. A Tabela 2 descreve esse universo completo com denominadores específicos para cada dimensão. Entre os classificados, `r format_n(n_empiricos)` são empíricos. Entre os empíricos, `r format_n(n_quant)` têm componente quantitativo; entre estes, `r format_n(n_modelagem)` apresentam modelagem estatística e `r format_n(n_inferencia)` registram inferência estatística.
 
 ```{r tabela-2}
 tabela_2_display <- tabela_dimensoes |>
@@ -461,7 +463,7 @@ knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribu
 
 ## Variação por período
 
-A comparação temporal usa BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP, os cinco periódicos completos presentes nos três períodos agregados. A presença média de artigos empíricos cresce de `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2005-2011"])` em 2005--2011 para `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2019-2025"])` em 2019--2025. Para quantificação, a conclusão depende da ponderação: com peso igual por periódico, a proporção passa de `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2019-2025"])`; agrupando os artigos, passa de `r format_pct(perfil_periodo_artigos$pct_quantitative[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_quantitative[perfil_periodo_artigos$period_3 == "2019-2025"])`, com queda intermediária. O aumento equiponderado é concentrado sobretudo na RBCP, que parte de apenas 2 artigos quantitativos entre 12 empíricos em 2005--2011 (`r format_pct(period_profile_value("Revista Brasileira de Ciência Política", "2005-2011", "pct_quantitative"))`) e alcança `r format_pct(period_profile_value("Revista Brasileira de Ciência Política", "2019-2025", "pct_quantitative"))` em 2019--2025. Para inferência estatística, a média equiponderada cresce de `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2019-2025"])`, enquanto a proporção agrupada passa de `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2019-2025"])`. O resultado mais prudente é crescimento da empiria, estabilidade aproximada da quantificação e da inferência quando os artigos são agrupados, e forte sensibilidade das médias equiponderadas à composição dos periódicos. Estratégias explícitas de identificação continuam raras e não apresentam trajetória monotônica.
+A comparação temporal usa os oito periódicos completos presentes nos três períodos agregados. A presença média de artigos empíricos cresce de `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2005-2011"])` em 2005--2011 para `r format_pct(perfil_periodo_padronizado$pct_empirical[perfil_periodo_padronizado$period_3 == "2019-2025"])` em 2019--2025. Para quantificação, a conclusão depende da ponderação: com peso igual por periódico, a proporção passa de `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_quantitative[perfil_periodo_padronizado$period_3 == "2019-2025"])`; agrupando os artigos, passa de `r format_pct(perfil_periodo_artigos$pct_quantitative[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_quantitative[perfil_periodo_artigos$period_3 == "2019-2025"])`, com queda intermediária. Para inferência estatística, a média equiponderada passa de `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_padronizado$pct_inference[perfil_periodo_padronizado$period_3 == "2019-2025"])`, enquanto a proporção agrupada passa de `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2005-2011"])` para `r format_pct(perfil_periodo_artigos$pct_inference[perfil_periodo_artigos$period_3 == "2019-2025"])`. O resultado mais prudente é crescimento da empiria, variação moderada da quantificação e da inferência e sensibilidade das médias equiponderadas à composição dos periódicos. Estratégias explícitas de identificação continuam raras e não apresentam trajetória monotônica.
 
 ```{r tabela-5-sensibilidade-temporal}
 tabela_temporal <- dplyr::bind_rows(
@@ -500,7 +502,7 @@ A raridade de estratégias causais explícitas torna o contraste mais forte. Ela
 
 O contraste não depende de supor equivalência perfeita entre as medidas. Torreblanca et al. usam como denominador os artigos quantitativos explicativos; nossa taxa de inferência inclui todos os quantitativos, e a contagem brasileira de estratégias explícitas inclui todos os artigos ou o subconjunto examinado. Períodos e composição editorial também diferem. Essas diferenças limitam a precisão de qualquer hiato em pontos percentuais, mas não invertem a ordem substantiva das práticas comparadas: inferência estatística é um requisito menos exigente do que identificação causal explícita.
 
-Os seis periódicos completos também mostram que a prática metodológica não se organiza em uma única escala. `Opinião Pública`, BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` é amplamente empírico, mas sobretudo qualitativo e pouco orientado à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. A RBCP ocupa posição intermediária. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
+Os nove periódicos completos também mostram que a prática metodológica não se organiza em uma única escala. `Opinião Pública`, BPSR e `Dados` combinam elevada presença empírica com maior frequência de inferência; `Contexto Internacional` e RBPI são amplamente empíricos, mas pouco orientados à inferência estatística; CGPC combina elevada empiria e quantificação com menor frequência de inferência. RBCS e RSP ocupam posições intermediárias. Essas diferenças são descritivas e podem refletir composição temática, áreas, tipos de pergunta e políticas editoriais; o desenho não separa essas explicações.
 
 A análise temporal reforça essa multidimensionalidade. Nos oito periódicos presentes nos três períodos agregados, a proporção de artigos empíricos cresce. Quantificação e inferência variam entre períodos, mas não apresentam uma trajetória de difusão ampla. Não há difusão monotônica das famílias de desenho. Os resultados não sustentam uma narrativa de marcha uniforme rumo à quantificação, à inferência estatística ou a desenhos causais.
 
@@ -524,15 +526,15 @@ Os percentuais internacionais e brasileiros usam denominadores e períodos disti
 
 # Apêndice: Cobertura e variação anual
 
-A Figura 7 detalha a cobertura da classificação por periódico. Seis periódicos estão completos e cinco estão parcialmente classificados; todos os onze já têm artigos classificados. A distribuição ainda desigual impede transformar a média dos `r format_n(n_classificados)` casos em estimativa da produção brasileira como um todo.
+A Figura 7 detalha a cobertura da classificação por periódico. Os nove periódicos incluídos estão completos; Lua Nova e Novos estudos CEBRAP foram retirados do universo desta versão por classificação incompleta. A distribuição por periódico ainda não deve ser transformada em estimativa da produção brasileira como um todo.
 
-```{r figura-4, fig.cap="Seis dos onze periódicos estão integralmente classificados. Os pontos mostram a proporção classificada, e os rótulos, artigos classificados/elegíveis.", out.width="95%"}
+```{r figura-4, fig.cap="Os nove periódicos estão integralmente classificados. Os pontos mostram a proporção classificada, e os rótulos, artigos classificados/elegíveis.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
 ```
 
-A Figura 8 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas 2011--2025, intervalo em que BPSR, `Contexto Internacional`, `Dados`, `Opinião Pública` e RBCP têm artigos em todos os anos. As proporções anuais agrupam os artigos dos cinco periódicos, enquanto a Figura 6 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
+A Figura 8 apresenta as mesmas dimensões por ano para revelar variações que os três períodos agregados podem ocultar. Para manter a composição dos periódicos, ela inclui apenas 2011--2025, intervalo em que oito periódicos têm artigos em todos os anos. As proporções anuais agrupam esses artigos, enquanto a Figura 6 dá peso igual a cada periódico; por isso, os níveis das duas figuras não devem ser comparados diretamente. As oscilações anuais são descritivas e podem refletir denominadores pequenos.
 
-```{r figura-7, fig.cap="As séries anuais mostram crescimento da empiria e oscilação das demais práticas entre 2011 e 2025. As proporções agrupam os artigos de BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP e incluem apenas anos com publicação nos cinco periódicos; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
+```{r figura-7, fig.cap="As séries anuais mostram crescimento da empiria e oscilação das demais práticas entre 2011 e 2025. As proporções agrupam os artigos dos oito periódicos com suporte anual comum; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
 ```
 

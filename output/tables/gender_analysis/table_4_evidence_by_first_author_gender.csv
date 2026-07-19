@@ -1,0 +1,7 @@
+first_author_gender,evidence_type,n_articles,denominator,percent
+Feminino,Mista,430,1133,37.95233892321271
+Feminino,Somente qualitativa,503,1133,44.39541041482789
+Feminino,Somente quantitativa,200,1133,17.6522506619594
+Masculino,Mista,694,2143,32.384507699486704
+Masculino,Somente qualitativa,828,2143,38.63742417172188
+Masculino,Somente quantitativa,621,2143,28.978068128791413

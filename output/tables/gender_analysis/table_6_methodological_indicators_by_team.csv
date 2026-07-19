@@ -1,0 +1,25 @@
+team_gender_composition,metric,numerator,denominator,percent,denominator_definition
+Indeterminada,Artigos empíricos,249,295,84.40677966101696,todos os artigos
+Indeterminada,Análise quantitativa,139,249,55.82329317269076,artigos empíricos com classificação quantitativa observada
+Indeterminada,Inferência estatística,54,139,38.84892086330935,artigos empíricos quantitativos com inferência observada
+Indeterminada,Linguagem causal ou explicativa,240,249,96.3855421686747,artigos empíricos com claim observado
+Indeterminada,Examinados para identificação,96,295,32.54237288135593,todos os artigos com screen observado
+Indeterminada,Estratégia explícita de identificação,1,96,1.0416666666666667,artigos examinados para identificação
+Mista,Artigos empíricos,758,832,91.10576923076923,todos os artigos
+Mista,Análise quantitativa,563,758,74.27440633245382,artigos empíricos com classificação quantitativa observada
+Mista,Inferência estatística,211,563,37.47779751332149,artigos empíricos quantitativos com inferência observada
+Mista,Linguagem causal ou explicativa,720,758,94.9868073878628,artigos empíricos com claim observado
+Mista,Examinados para identificação,396,832,47.59615384615385,todos os artigos com screen observado
+Mista,Estratégia explícita de identificação,15,396,3.787878787878788,artigos examinados para identificação
+Somente homens,Artigos empíricos,1677,2138,78.4377923292797,todos os artigos
+Somente homens,Análise quantitativa,955,1677,56.946929039952295,artigos empíricos com classificação quantitativa observada
+Somente homens,Inferência estatística,392,952,41.1764705882353,artigos empíricos quantitativos com inferência observada
+Somente homens,Linguagem causal ou explicativa,1637,1677,97.61478831246274,artigos empíricos com claim observado
+Somente homens,Examinados para identificação,700,2138,32.74087932647334,todos os artigos com screen observado
+Somente homens,Estratégia explícita de identificação,35,700,5,artigos examinados para identificação
+Somente mulheres,Artigos empíricos,743,892,83.29596412556054,todos os artigos
+Somente mulheres,Análise quantitativa,355,743,47.7792732166891,artigos empíricos com classificação quantitativa observada
+Somente mulheres,Inferência estatística,90,353,25.495750708215297,artigos empíricos quantitativos com inferência observada
+Somente mulheres,Linguagem causal ou explicativa,734,743,98.78869448183042,artigos empíricos com claim observado
+Somente mulheres,Examinados para identificação,211,892,23.654708520179373,todos os artigos com screen observado
+Somente mulheres,Estratégia explícita de identificação,8,211,3.7914691943127963,artigos examinados para identificação

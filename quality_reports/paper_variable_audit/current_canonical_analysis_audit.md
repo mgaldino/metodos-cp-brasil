@@ -1,6 +1,6 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-19 00:07:45 -0300
+Gerado em: 2026-07-19 00:18:16 -0300
 
 ## Universo reconciliado
 
@@ -16,7 +16,7 @@ Gerado em: 2026-07-19 00:07:45 -0300
 - MD5 do manifest: `0d62ffa4738fb496e3f9a05b049185a8`.
 - MD5 do CSV canônico: `b10712af7af5223ff9217f9645813ddb`.
 - MD5 do ledger de artigos: `6ff2d2e1709eda1f551a0ce50bec8b03`.
-- MD5 do ledger de periódicos: `397112e832a30f83287a1450c65edccd`.
+- MD5 do ledger de periódicos: `2a3e3042d3638d733753f40137f27384`.
 
 ## Estratos analíticos
 
@@ -26,7 +26,7 @@ Gerado em: 2026-07-19 00:07:45 -0300
 
 ## Regra de interpretação
 
-Os agregados dos artigos classificados continuam preliminares para o universo de onze periódicos, porque a seleção segue a ordem operacional da classificação e não um desenho amostral representativo. Os resultados dos periódicos completos cobrem todos os artigos desses periódicos, mas os rótulos automatizados ainda não foram integralmente adjudicados por humanos. A comparação temporal usa somente periódicos completos com artigos nos três períodos e reporta tanto a média com peso igual por periódico quanto a proporção agrupada por artigo.
+Os agregados desta versão cobrem o universo de periódicos elegíveis após as exclusões documentadas. Os resultados dos periódicos completos cobrem todos os artigos desses periódicos, mas os rótulos automatizados ainda não foram integralmente adjudicados por humanos. A comparação temporal usa somente periódicos completos com artigos nos três períodos e reporta tanto a média com peso igual por periódico quanto a proporção agrupada por artigo.
 
 ## Validações lógicas
 
