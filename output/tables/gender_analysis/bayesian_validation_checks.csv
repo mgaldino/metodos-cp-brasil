@@ -3,6 +3,6 @@ PIDs únicos na base de entrada,TRUE,PASS
 Apenas categorias binárias entram nos modelos,TRUE,PASS
 Nove periódicos em todos os denominadores,TRUE,PASS
 Desfechos binários com variação,TRUE,PASS
-"R-hat, ESS e amostragem NUTS aprovados",FALSE,FAIL
+"R-hat, ESS e amostragem NUTS aprovados",TRUE,PASS
 Prevalência observada coberta pela checagem preditiva posterior,TRUE,PASS
 "Probabilidades posteriores dentro de [0, 1]",TRUE,PASS
