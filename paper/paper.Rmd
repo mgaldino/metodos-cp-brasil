@@ -45,10 +45,6 @@ format_pp <- function(x) {
   ifelse(is.na(x), "-", paste0(format(round(x, 1), decimal.mark = ",", nsmall = 1, trim = TRUE), " p.p."))
 }
 
-format_p <- function(x) {
-  ifelse(x < 0.001, "<0,001", format(round(x, 3), decimal.mark = ",", nsmall = 3, trim = TRUE))
-}
-
 denominadores <- readr::read_csv("../output/tables/paper/denominator_summary.csv", show_col_types = FALSE)
 tabela_corpus <- readr::read_csv("../output/tables/paper/table_1_corpus_description.csv", show_col_types = FALSE)
 tabela_dimensoes <- readr::read_csv("../output/tables/paper/table_2_methodological_dimensions.csv", show_col_types = FALSE)
@@ -502,7 +498,7 @@ A checagem preditiva das priors separa a informação dos dados da informação 
 
 A identificação causal explícita também difere entre as áreas. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos examinados (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
 
-A diferença de inferência aparece nos três períodos. Em Ciência Política, a proporção passa de `r format_pct(area_period_value(area_cp, "2005-2011", "pct_inference_quantitative_observed"))` em 2005--2011 para `r format_pct(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed"))` em 2019--2025. Em Relações Internacionais, passa de `r format_pct(area_period_value(area_ri, "2005-2011", "pct_inference_quantitative_observed"))` para `r format_pct(area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`. A distância no último período é de `r format_pp(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed") - area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`. Como a área é atribuída ao periódico e as composições editoriais diferem, essa é uma comparação descritiva.
+A diferença de inferência aparece nos três períodos. Em Ciência Política, a proporção passa de `r format_pct(area_period_value(area_cp, "2005-2011", "pct_inference_quantitative_observed"))` em 2005--2011 para `r format_pct(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed"))` em 2019--2025. Em Relações Internacionais, passa de `r format_pct(area_period_value(area_ri, "2005-2011", "pct_inference_quantitative_observed"))` para `r format_pct(area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`. A distância no último período é de `r format_pp(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed") - area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`; como a área é atribuída ao periódico e as composições editoriais diferem, essa é uma comparação descritiva.
 
 ## Inferência estatística
 
