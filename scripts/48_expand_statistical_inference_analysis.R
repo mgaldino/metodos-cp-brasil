@@ -59,14 +59,6 @@ format_count_label <- function(x) {
 analysis_df <- readr::read_csv(analysis_path, show_col_types = FALSE)
 complete_profile <- readr::read_csv(complete_profile_path, show_col_types = FALSE)
 complete_journals <- complete_profile$journal_title
-expected_complete_journals <- c(
-  "Brazilian Political Science Review",
-  "Cadernos Gestão Pública e Cidadania",
-  "Contexto Internacional",
-  "Dados",
-  "Opinião Pública",
-  "Revista Brasileira de Ciência Política"
-)
 excluded_journals <- c(
   "Brazilian Journal of Political Economy",
   "Civitas - Revista de Ciências Sociais"
@@ -92,8 +84,8 @@ if (length(missing_columns) > 0) {
 if (dplyr::n_distinct(analysis_df$pid) != nrow(analysis_df)) {
   stop("A base analítica contém PIDs duplicados.")
 }
-if (!setequal(complete_journals, expected_complete_journals)) {
-  stop("A lista dos seis periódicos completos diverge do escopo esperado.")
+if (length(complete_journals) == 0) {
+  stop("Nenhum periódico completo foi encontrado no perfil canônico.")
 }
 if (any(analysis_df$journal_title %in% excluded_journals)) {
   stop("A base analítica contém periódico excluído da análise substantiva.")
@@ -120,7 +112,7 @@ inference_by_scope <- dplyr::bind_rows(
   inference_summary(quantitative_df, "Cobertura classificada", "Agregado"),
   inference_summary(
     quantitative_df |> dplyr::filter(journal_title %in% complete_journals),
-    "Seis periódicos integralmente classificados",
+    "Periódicos integralmente classificados",
     "Agregado"
   ),
   lapply(complete_journals, function(journal) {
@@ -165,7 +157,7 @@ inference_by_quantitative_type <- dplyr::bind_rows(
   summarise_inference_by_type(quantitative_df, "Cobertura classificada"),
   summarise_inference_by_type(
     quantitative_df |> dplyr::filter(journal_title %in% complete_journals),
-    "Seis periódicos integralmente classificados"
+    "Periódicos integralmente classificados"
   )
 )
 
@@ -176,8 +168,8 @@ temporal_complete_journals <- analysis_df |>
   dplyr::filter(periods_n == 3) |>
   dplyr::pull(journal_title)
 
-if (length(temporal_complete_journals) != 5) {
-  stop("O suporte temporal comum deveria conter cinco periódicos completos.")
+if (length(temporal_complete_journals) == 0) {
+  stop("Nenhum periódico completo tem artigos nos três períodos.")
 }
 
 inference_by_period_complete <- quantitative_df |>
@@ -258,7 +250,7 @@ top_three_weighted_percent <- stats::weighted.mean(
   w = top_three$n_explanatory_quantitative
 )
 complete_aggregate <- inference_by_scope |>
-  dplyr::filter(scope == "Seis periódicos integralmente classificados")
+  dplyr::filter(scope == "Periódicos integralmente classificados")
 
 complete_articles <- analysis_df |>
   dplyr::filter(journal_title %in% complete_journals)
@@ -274,7 +266,7 @@ complete_strict_n <- complete_articles |>
 benchmark_summary <- dplyr::bind_rows(
   tibble::tibble(
     source_group = "Brasil",
-    publication = "Seis periódicos integralmente classificados",
+    publication = "Periódicos integralmente classificados",
     measure = "Inferência estatística",
     denominator_definition = "Artigos empíricos quantitativos com rótulo de inferência observado",
     denominator_n = complete_aggregate$inference_observed_n,
@@ -388,31 +380,31 @@ inference_key_numbers <- dplyr::bind_rows(
     percent = inference_by_scope$inference_percent[inference_by_scope$scope == "Cobertura classificada"]
   ),
   tibble::tibble(
-    metric = "Inferência estatística nos seis periódicos completos",
+    metric = "Inferência estatística nos periódicos completos",
     n = complete_aggregate$inference_n,
     denominator_n = complete_aggregate$inference_observed_n,
     percent = complete_aggregate$inference_percent
   ),
   tibble::tibble(
-    metric = "Artigos classificados como descritivos e sem inferência nos seis periódicos completos",
+    metric = "Artigos classificados como descritivos e sem inferência nos periódicos completos",
     n = nrow(complete_descriptive_without_inference),
     denominator_n = complete_aggregate$inference_observed_n,
     percent = fmt_pct(nrow(complete_descriptive_without_inference), complete_aggregate$inference_observed_n)
   ),
   tibble::tibble(
-    metric = "Conflitos entre categoria descritiva e inferência positiva nos seis periódicos completos",
+    metric = "Conflitos entre categoria descritiva e inferência positiva nos periódicos completos",
     n = nrow(descriptive_inference_conflicts),
     denominator_n = complete_aggregate$inference_observed_n,
     percent = fmt_pct(nrow(descriptive_inference_conflicts), complete_aggregate$inference_observed_n)
   ),
   tibble::tibble(
-    metric = "Inferência entre testes bivariados ou modelagem com rótulo observado nos seis periódicos completos",
+    metric = "Inferência entre testes bivariados ou modelagem com rótulo observado nos periódicos completos",
     n = complete_formal_analysis_n,
     denominator_n = nrow(complete_formal_analysis_observed),
     percent = fmt_pct(complete_formal_analysis_n, nrow(complete_formal_analysis_observed))
   ),
   tibble::tibble(
-    metric = "Testes bivariados ou modelagem sem rótulo de inferência nos seis periódicos completos",
+    metric = "Testes bivariados ou modelagem sem rótulo de inferência nos periódicos completos",
     n = sum(is.na(complete_formal_analysis_all$has_statistical_inference)),
     denominator_n = nrow(complete_formal_analysis_all),
     percent = fmt_pct(sum(is.na(complete_formal_analysis_all$has_statistical_inference)), nrow(complete_formal_analysis_all))
@@ -431,13 +423,13 @@ inference_key_numbers <- dplyr::bind_rows(
     percent = round(top_three_weighted_percent, 1)
   ),
   tibble::tibble(
-    metric = "Estratégia causal explícita entre todos os artigos dos seis periódicos completos",
+    metric = "Estratégia causal explícita entre todos os artigos dos periódicos completos",
     n = complete_strict_n,
     denominator_n = nrow(complete_articles),
     percent = fmt_pct(complete_strict_n, nrow(complete_articles))
   ),
   tibble::tibble(
-    metric = "Estratégia causal explícita entre os artigos examinados dos seis periódicos completos",
+    metric = "Estratégia causal explícita entre os artigos examinados dos periódicos completos",
     n = complete_strict_n,
     denominator_n = nrow(complete_screened),
     percent = fmt_pct(complete_strict_n, nrow(complete_screened))
@@ -445,11 +437,10 @@ inference_key_numbers <- dplyr::bind_rows(
 )
 
 if (
-  complete_strict_n != 49 ||
-    nrow(complete_articles) != 2321 ||
-    nrow(complete_screened) != 846
+  complete_strict_n > nrow(complete_articles) ||
+    complete_strict_n > nrow(complete_screened)
 ) {
-  stop("As contagens de estratégias causais explícitas nos seis periódicos completos divergiram do esperado.")
+  stop("As contagens de estratégias causais explícitas excedem seus denominadores.")
 }
 
 journal_abbreviations <- c(
@@ -459,6 +450,9 @@ journal_abbreviations <- c(
   "Dados" = "Dados",
   "Opinião Pública" = "Opinião Pública",
   "Revista Brasileira de Ciência Política" = "RBCP",
+  "Revista Brasileira de Ciências Sociais" = "RBCS",
+  "Revista de Sociologia e Política" = "RSP",
+  "Revista Brasileira de Política Internacional" = "RBPI",
   "American Political Science Review" = "APSR",
   "American Journal of Political Science" = "AJPS",
   "Journal of Politics" = "Journal of Politics"
@@ -511,7 +505,7 @@ plot_data <- dplyr::bind_rows(brazil_plot_data, international_plot_data) |>
     label = factor(
       label,
       levels = rev(c(
-        "Opinião Pública", "BPSR", "Dados", "RBCP", "CGPC", "Contexto Internacional",
+        "Opinião Pública", "BPSR", "Dados", "RBCP", "RBCS", "RSP", "RBPI", "CGPC", "Contexto Internacional",
         "APSR", "AJPS", "Journal of Politics"
       ))
     )
@@ -531,7 +525,7 @@ cross_plot_data <- inference_claim_cross |>
         "Sem linguagem causal ou explicativa,\ncom inferência estatística",
       TRUE ~ "Sem linguagem causal ou explicativa\ne sem inferência estatística"
     ),
-    panel = "Combinações nos seis periódicos brasileiros",
+    panel = "Combinações nos periódicos brasileiros",
     percent = percent_of_cross,
     value_label = paste0(
       format_count_label(n),
@@ -668,7 +662,7 @@ ggplot2::ggsave(
 capture.output(sessionInfo(), file = file.path(analysis_dir, "statistical_inference_session_info.txt"))
 
 message(
-  "Inferência estatística nos seis periódicos completos: ",
+  "Inferência estatística nos periódicos completos: ",
   complete_aggregate$inference_n,
   "/",
   complete_aggregate$inference_observed_n,

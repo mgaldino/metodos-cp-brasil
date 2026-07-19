@@ -1,13 +1,13 @@
 metric,n,denominator_n,percent
-Inferência estatística na cobertura classificada,618,1629,37.9
-Inferência estatística nos seis periódicos completos,551,1281,43
-Artigos classificados como descritivos e sem inferência nos seis periódicos completos,634,1281,49.5
-Conflitos entre categoria descritiva e inferência positiva nos seis periódicos completos,9,1281,0.7
-Inferência entre testes bivariados ou modelagem com rótulo observado nos seis periódicos completos,542,638,85
-Testes bivariados ou modelagem sem rótulo de inferência nos seis periódicos completos,3,641,0.5
-Inferência no suporte temporal comum: 2005-2011,112,243,46.1
-Inferência no suporte temporal comum: 2012-2018,195,441,44.2
-Inferência no suporte temporal comum: 2019-2025,230,522,44.1
+Inferência estatística na cobertura classificada,743,1994,37.3
+Inferência estatística nos periódicos completos,743,1994,37.3
+Artigos classificados como descritivos e sem inferência nos periódicos completos,1104,1994,55.4
+Conflitos entre categoria descritiva e inferência positiva nos periódicos completos,8,1994,0.4
+Inferência entre testes bivariados ou modelagem com rótulo observado nos periódicos completos,734,879,83.5
+Testes bivariados ou modelagem sem rótulo de inferência nos periódicos completos,5,884,0.6
+Inferência no suporte temporal comum: 2005-2011,141,410,34.4
+Inferência no suporte temporal comum: 2012-2018,261,685,38.1
+Inferência no suporte temporal comum: 2019-2025,327,824,39.7
 "Desenho causal: média ponderada de APSR, AJPS e Journal of Politics",,2976,48.4
-Estratégia causal explícita entre todos os artigos dos seis periódicos completos,49,2321,2.1
-Estratégia causal explícita entre os artigos examinados dos seis periódicos completos,49,846,5.8
+Estratégia causal explícita entre todos os artigos dos periódicos completos,59,4144,1.4
+Estratégia causal explícita entre os artigos examinados dos periódicos completos,59,1395,4.2

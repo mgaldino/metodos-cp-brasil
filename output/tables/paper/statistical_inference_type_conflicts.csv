@@ -1,10 +1,9 @@
 pid,journal_title,year,quantitative_analysis_type,has_statistical_inference
-S0104-62762005000200008,Opinião Pública,2005,descriptive_statistics_only,TRUE
-S0104-62762006000100008,Opinião Pública,2006,descriptive_statistics_only,TRUE
-S0104-62762006000200009,Opinião Pública,2006,descriptive_statistics_only,TRUE
-S0104-62762008000100009,Opinião Pública,2008,descriptive_statistics_only,TRUE
 S0104-62762009000100004,Opinião Pública,2009,descriptive_statistics_only,TRUE
 S0104-62762021000300705,Opinião Pública,2021,descriptive_statistics_only,TRUE
 S0104-62762024000100223,Opinião Pública,2024,descriptive_statistics_only,TRUE
 S0104-62762025000100208,Opinião Pública,2025,descriptive_statistics_only,TRUE
 S0103-33522025000100206,Revista Brasileira de Ciência Política,2025,descriptive_statistics_only,TRUE
+S0102-69092017000200508,Revista Brasileira de Ciências Sociais,2017,descriptive_statistics_only,TRUE
+S0104-44782021000100205,Revista de Sociologia e Política,2021,descriptive_statistics_only,TRUE
+S0104-44782024000100800,Revista de Sociologia e Política,2024,descriptive_statistics_only,TRUE

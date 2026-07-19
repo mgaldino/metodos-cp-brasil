@@ -1,12 +1,12 @@
-journal_title,manifest_n,excluded_n,analysis_eligible_n,classified_n,remaining_n,coverage_percent,status
-Brazilian Political Science Review,268,0,268,268,0,100,completo
-Cadernos Gestão Pública e Cidadania,120,0,120,120,0,100,completo
-Contexto Internacional,456,0,456,456,0,100,completo
-Dados,622,0,622,622,0,100,completo
-Opinião Pública,464,13,451,451,0,100,completo
-Revista Brasileira de Ciência Política,391,0,391,391,0,100,completo
-Revista Brasileira de Ciências Sociais,708,0,708,708,0,100,completo
-Revista Brasileira de Política Internacional,490,0,490,490,0,100,completo
-Revista de Sociologia e Política,638,0,638,638,0,100,completo
-Novos estudos CEBRAP,581,0,581,132,449,22.7,parcial
-Lua Nova: Revista de Cultura e Política,511,0,511,100,411,19.6,parcial
+journal_title,journal_excluded,exclusion_reason,notes,manifest_n,article_excluded_n,journal_excluded_n,preserved_classified_n,analysis_eligible_n,classified_n,remaining_n,future_pending_n,coverage_percent,status
+Brazilian Political Science Review,FALSE,,,268,0,0,268,268,268,0,0,100,completo
+Cadernos Gestão Pública e Cidadania,FALSE,,,120,0,0,120,120,120,0,0,100,completo
+Contexto Internacional,FALSE,,,456,0,0,456,456,456,0,0,100,completo
+Dados,FALSE,,,622,0,0,622,622,622,0,0,100,completo
+Opinião Pública,FALSE,,,464,13,0,464,451,451,0,0,100,completo
+Revista Brasileira de Ciência Política,FALSE,,,391,0,0,391,391,391,0,0,100,completo
+Revista Brasileira de Ciências Sociais,FALSE,,,708,0,0,708,708,708,0,0,100,completo
+Revista Brasileira de Política Internacional,FALSE,,,490,0,0,490,490,490,0,0,100,completo
+Revista de Sociologia e Política,FALSE,,,638,0,0,638,638,638,0,0,100,completo
+Lua Nova: Revista de Cultura e Política,TRUE,temporarily_ineligible_pending_classification,"Excluir o periódico inteiro da análise principal nesta versão porque sua classificação canônica ainda é incompleta; preservar manifest, textos e classificações.",511,0,511,100,0,0,0,411,,não elegível por ora
+Novos estudos CEBRAP,TRUE,temporarily_ineligible_pending_classification,"Excluir o periódico inteiro da análise principal nesta versão porque sua classificação canônica ainda é incompleta; preservar manifest, textos e classificações.",581,0,581,132,0,0,0,449,,não elegível por ora

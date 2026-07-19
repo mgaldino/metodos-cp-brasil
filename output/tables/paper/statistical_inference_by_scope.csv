@@ -1,9 +1,12 @@
 scope_type,scope,quantitative_n,inference_observed_n,inference_missing_n,inference_n,inference_percent
-Agregado,Cobertura classificada,1634,1629,5,618,37.9
-Agregado,Seis periódicos integralmente classificados,1284,1281,3,551,43
+Agregado,Cobertura classificada,1999,1994,5,743,37.3
+Agregado,Periódicos integralmente classificados,1999,1994,5,743,37.3
 Periódico completo,Brazilian Political Science Review,171,171,0,85,49.7
 Periódico completo,Cadernos Gestão Pública e Cidadania,75,75,0,14,18.7
 Periódico completo,Contexto Internacional,111,111,0,8,7.2
 Periódico completo,Dados,340,340,0,142,41.8
-Periódico completo,Opinião Pública,403,401,2,242,60.3
+Periódico completo,Opinião Pública,390,388,2,238,61.3
 Periódico completo,Revista Brasileira de Ciência Política,184,183,1,60,32.8
+Periódico completo,Revista Brasileira de Ciências Sociais,235,235,0,68,28.9
+Periódico completo,Revista Brasileira de Política Internacional,158,158,0,14,8.9
+Periódico completo,Revista de Sociologia e Política,335,333,2,114,34.2
