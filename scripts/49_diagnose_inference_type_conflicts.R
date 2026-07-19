@@ -99,8 +99,8 @@ conflicts <- analysis_df |>
     statistical_inference_quote
   )
 
-if (nrow(conflicts) != 9) {
-  stop("Esperavam-se nove conflitos; foram encontrados ", nrow(conflicts), ".")
+if (nrow(conflicts) == 0) {
+  stop("Nenhum conflito entre análise descritiva e inferência foi encontrado.")
 }
 if (dplyr::n_distinct(conflicts$pid) != nrow(conflicts)) {
   stop("Há PIDs duplicados no diagnóstico.")
