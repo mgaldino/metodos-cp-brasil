@@ -1,0 +1,3 @@
+test,n_cp_journals,n_ri_journals,cp_mean_rate,ri_mean_rate,p_value
+Welch t por periódico,6,2,0.41461634016667176,0.08033983350439047,9.828098499276568e-4
+Wilcoxon por periódico,6,2,0.41461634016667176,0.08033983350439047,0.06675301516963451

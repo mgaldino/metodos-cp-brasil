@@ -153,6 +153,14 @@ fmt_pp <- function(x, digits = 1) {
   )
 }
 
+fmt_p <- function(x) {
+  dplyr::case_when(
+    is.na(x) ~ "-",
+    x < 0.001 ~ "< 0,001",
+    TRUE ~ format(round(x, 3), decimal.mark = ",", nsmall = 3, trim = TRUE)
+  )
+}
+
 write_utf8_lines <- function(lines, file) {
   connection <- file(file, open = "w", encoding = "UTF-8")
   on.exit(close(connection), add = TRUE)
@@ -480,6 +488,101 @@ metric_comparison <- metrics_by_first_author |>
   ) |>
   dplyr::arrange(metric)
 
+build_metric_test_data <- function(data, metric_name) {
+  if (metric_name == "Artigos empíricos") {
+    eligible_for_test <- rep(TRUE, nrow(data))
+    outcome_for_test <- data$is_empirical_paper %in% TRUE
+  } else if (metric_name == "Análise quantitativa") {
+    eligible_for_test <- data$is_empirical_paper %in% TRUE &
+      !is.na(data$is_empirical_quant_paper_torreblanca)
+    outcome_for_test <- data$is_empirical_quant_paper_torreblanca %in% TRUE
+  } else if (metric_name == "Inferência estatística") {
+    eligible_for_test <- data$is_empirical_quant_paper_torreblanca %in% TRUE &
+      !is.na(data$has_statistical_inference)
+    outcome_for_test <- data$has_statistical_inference %in% TRUE
+  } else if (metric_name == "Linguagem causal ou explicativa") {
+    eligible_for_test <- data$is_empirical_paper %in% TRUE &
+      !is.na(data$causal_or_explanatory_claim_present)
+    outcome_for_test <- data$causal_or_explanatory_claim_present %in% TRUE
+  } else if (metric_name == "Examinados para identificação") {
+    eligible_for_test <- !is.na(data$credibility_revolution_screen_applicable)
+    outcome_for_test <- data$credibility_revolution_screen_applicable %in% TRUE
+  } else if (metric_name == "Estratégia explícita de identificação") {
+    eligible_for_test <- data$credibility_revolution_screen_applicable %in% TRUE
+    outcome_for_test <- data$strict_design_method
+  } else {
+    stop("Indicador desconhecido para teste: ", metric_name)
+  }
+
+  data |>
+    dplyr::mutate(
+      eligible_for_test = eligible_for_test,
+      outcome_for_test = outcome_for_test,
+      stratum = interaction(journal_title, period_3, drop = TRUE, lex.order = TRUE)
+    ) |>
+    dplyr::filter(eligible_for_test) |>
+    dplyr::select(pid, first_author_gender, stratum, outcome_for_test)
+}
+
+hypothesis_tests <- lapply(metric_levels, function(current_metric) {
+  raw_row <- metric_comparison |>
+    dplyr::filter(metric == current_metric)
+
+  proportion_test <- stats::prop.test(
+    x = c(raw_row$numerator_Feminino, raw_row$numerator_Masculino),
+    n = c(raw_row$denominator_Feminino, raw_row$denominator_Masculino),
+    alternative = "two.sided",
+    correct = FALSE
+  )
+
+  test_data <- build_metric_test_data(binary_gender_df, current_metric)
+  common_support_data <- test_data |>
+    dplyr::group_by(stratum) |>
+    dplyr::filter(dplyr::n_distinct(first_author_gender) == 2) |>
+    dplyr::ungroup() |>
+    dplyr::mutate(
+      outcome_for_test = factor(ifelse(outcome_for_test, "Sim", "Não"), levels = c("Sim", "Não")),
+      first_author_gender = factor(first_author_gender, levels = c("Feminino", "Masculino"))
+    )
+
+  informative_strata <- common_support_data |>
+    dplyr::group_by(stratum) |>
+    dplyr::summarise(has_outcome_variation = dplyr::n_distinct(outcome_for_test) == 2, .groups = "drop") |>
+    dplyr::summarise(n_informative = sum(has_outcome_variation)) |>
+    dplyr::pull(n_informative)
+
+  mh_array <- stats::xtabs(
+    ~ outcome_for_test + first_author_gender + stratum,
+    data = common_support_data,
+    drop.unused.levels = TRUE
+  )
+  mh_test <- stats::mantelhaen.test(mh_array, correct = FALSE)
+
+  tibble::tibble(
+    metric = current_metric,
+    difference_pp_female_minus_male = raw_row$difference_pp_female_minus_male,
+    ci_95_low_pp = 100 * proportion_test$conf.int[[1]],
+    ci_95_high_pp = 100 * proportion_test$conf.int[[2]],
+    p_value_two_proportion = proportion_test$p.value,
+    mh_n_articles = nrow(common_support_data),
+    common_support_strata = dim(mh_array)[[3]],
+    informative_strata = informative_strata,
+    common_odds_ratio_mh = unname(mh_test$estimate),
+    common_or_ci_95_low = mh_test$conf.int[[1]],
+    common_or_ci_95_high = mh_test$conf.int[[2]],
+    p_value_mantel_haenszel = mh_test$p.value
+  )
+}) |>
+  dplyr::bind_rows() |>
+  dplyr::mutate(
+    metric = factor(metric, levels = metric_levels),
+    p_value_two_proportion_holm = stats::p.adjust(p_value_two_proportion, method = "holm"),
+    p_value_mantel_haenszel_holm = stats::p.adjust(p_value_mantel_haenszel, method = "holm"),
+    significant_two_proportion_holm = p_value_two_proportion_holm < 0.05,
+    significant_mantel_haenszel_holm = p_value_mantel_haenszel_holm < 0.05
+  ) |>
+  dplyr::arrange(metric)
+
 standardized_comparison <- metric_summary(
   binary_gender_df,
   c("first_author_gender", "journal_title", "period_3")
@@ -616,6 +719,31 @@ metric_denominators_valid <- all(
     metrics_by_first_author$numerator <= metrics_by_first_author$denominator
 )
 
+hypothesis_counts_reconciled <- all(vapply(metric_levels, function(current_metric) {
+  current_data <- build_metric_test_data(binary_gender_df, current_metric) |>
+    dplyr::group_by(first_author_gender) |>
+    dplyr::summarise(
+      numerator = sum(outcome_for_test),
+      denominator = dplyr::n(),
+      .groups = "drop"
+    ) |>
+    dplyr::arrange(first_author_gender)
+  current_reference <- metrics_by_first_author |>
+    dplyr::filter(metric == current_metric) |>
+    dplyr::select(first_author_gender, numerator, denominator) |>
+    dplyr::arrange(first_author_gender)
+  identical(current_data$first_author_gender, current_reference$first_author_gender) &&
+    all(as.numeric(current_data$numerator) == as.numeric(current_reference$numerator)) &&
+    all(as.numeric(current_data$denominator) == as.numeric(current_reference$denominator))
+}, FUN.VALUE = logical(1)))
+
+hypothesis_p_values_valid <- all(
+  dplyr::between(hypothesis_tests$p_value_two_proportion, 0, 1) &
+    dplyr::between(hypothesis_tests$p_value_two_proportion_holm, 0, 1) &
+    dplyr::between(hypothesis_tests$p_value_mantel_haenszel, 0, 1) &
+    dplyr::between(hypothesis_tests$p_value_mantel_haenszel_holm, 0, 1)
+)
+
 validation_checks <- tibble::tibble(
   check = c(
     "PIDs únicos no CSV canônico",
@@ -627,7 +755,9 @@ validation_checks <- tibble::tibble(
     "Categorias do primeiro prenome formam partição exaustiva",
     "Probabilidades dentro do intervalo [0, 1]",
     "JSON de métodos sem falhas de parsing",
-    "Numeradores não excedem denominadores"
+    "Numeradores não excedem denominadores",
+    "Numeradores e denominadores dos testes reconciliados",
+    "P-valores dos testes dentro do intervalo [0, 1]"
   ),
   value = c(
     nrow(classifications) == dplyr::n_distinct(classifications$pid),
@@ -641,7 +771,9 @@ validation_checks <- tibble::tibble(
     all(is.na(author_dictionary$female_probability) |
       dplyr::between(author_dictionary$female_probability, 0, 1)),
     method_parse_failures == 0,
-    metric_denominators_valid
+    metric_denominators_valid,
+    hypothesis_counts_reconciled,
+    hypothesis_p_values_valid
   ),
   status = ifelse(value, "PASS", "FAIL")
 )
@@ -696,6 +828,7 @@ readr::write_csv(gender_coverage_by_journal, file.path(tables_dir, "table_8_gend
 readr::write_csv(gender_coverage_by_language, file.path(tables_dir, "table_9_gender_coverage_by_language.csv"))
 readr::write_csv(first_author_failure_distribution, file.path(tables_dir, "table_10_gender_classification_status.csv"))
 readr::write_csv(sensitivity_results, file.path(tables_dir, "table_11_gender_threshold_sensitivity.csv"))
+readr::write_csv(hypothesis_tests, file.path(tables_dir, "table_12_simple_hypothesis_tests.csv"))
 readr::write_csv(exclusion_counts, file.path(tables_dir, "excluded_journals_counts.csv"))
 readr::write_csv(validation_checks, file.path(tables_dir, "validation_checks.csv"))
 
@@ -876,6 +1009,29 @@ sensitivity_table <- sensitivity_results |>
     `Diferença F−M` = fmt_pp(difference_pp_female_minus_male)
   )
 
+hypothesis_test_table <- hypothesis_tests |>
+  dplyr::transmute(
+    Indicador = as.character(metric),
+    `Diferença F−M (IC 95%)` = paste0(
+      fmt_pp(difference_pp_female_minus_male),
+      " [", fmt_pp(ci_95_low_pp), "; ", fmt_pp(ci_95_high_pp), "]"
+    ),
+    `p (duas proporções)` = fmt_p(p_value_two_proportion),
+    `p Holm` = fmt_p(p_value_two_proportion_holm),
+    `Significativo após Holm` = ifelse(significant_two_proportion_holm, "Sim", "Não"),
+    `OR comum MH (IC 95%)` = paste0(
+      format(round(common_odds_ratio_mh, 2), decimal.mark = ",", nsmall = 2, trim = TRUE),
+      " [",
+      format(round(common_or_ci_95_low, 2), decimal.mark = ",", nsmall = 2, trim = TRUE),
+      "; ",
+      format(round(common_or_ci_95_high, 2), decimal.mark = ",", nsmall = 2, trim = TRUE),
+      "]"
+    ),
+    `Estratos MH` = fmt_int(common_support_strata),
+    `p MH Holm` = fmt_p(p_value_mantel_haenszel_holm),
+    `MH significativo` = ifelse(significant_mantel_haenszel_holm, "Sim", "Não")
+  )
+
 period_table <- first_author_by_period |>
   dplyr::filter(first_author_gender == "Feminino") |>
   dplyr::transmute(
@@ -919,6 +1075,14 @@ english_coverage_row <- gender_coverage_by_language |>
   dplyr::filter(language == "en")
 portuguese_coverage_row <- gender_coverage_by_language |>
   dplyr::filter(language == "pt")
+significant_two_proportion_metrics <- hypothesis_tests |>
+  dplyr::filter(significant_two_proportion_holm) |>
+  dplyr::pull(metric) |>
+  as.character()
+significant_mh_metrics <- hypothesis_tests |>
+  dplyr::filter(significant_mantel_haenszel_holm) |>
+  dplyr::pull(metric) |>
+  as.character()
 
 canonical_md5 <- unname(tools::md5sum(classifications_path))
 canonical_mtime <- format(file.info(classifications_path)$mtime, "%Y-%m-%d %H:%M:%S %Z")
@@ -972,6 +1136,12 @@ report_lines <- c(
     fmt_pct(strict_row$percent_Masculino), " na masculina."
   ),
   "",
+  paste0(
+    "Após a correção de Holm para seis comparações, o teste de duas proporções rejeita igualdade para: ",
+    paste(significant_two_proportion_metrics, collapse = "; "), ". No teste de Mantel–Haenszel por periódico × período, ",
+    "permanecem significativos: ", paste(significant_mh_metrics, collapse = "; "), "."
+  ),
+  "",
   "Essas diferenças são descritivas e correlacionais. A classificação do prenome não observa identidade de gênero nem necessariamente o sexo de cada pessoa; tampouco os contrastes identificam preferências individuais ou efeitos de gênero.",
   "",
   "## População analítica e exclusões",
@@ -1014,13 +1184,19 @@ report_lines <- c(
   "",
   "*Figura 2. Indicadores metodológicos segundo a classificação binária inferida do primeiro prenome.*",
   "",
-  "**Tabela 5. Comparação padronizada por periódico e período**",
+  "**Tabela 5. Testes simples de hipótese para diferenças entre as categorias do primeiro prenome**",
+  "",
+  markdown_table(hypothesis_test_table),
+  "",
+  "*Nota:* o teste bilateral de duas proporções avalia H0: p(Feminino) = p(Masculino), sem correção de continuidade. O IC de 95% refere-se à diferença F−M. `p Holm` corrige a família dos seis indicadores. O teste de Cochran–Mantel–Haenszel (MH) estratifica por periódico × período; OR comum acima de 1 indica maior chance na categoria feminina. Significância usa α = 0,05 após Holm. Esses testes não corrigem repetição de autores, dependência entre artigos do mesmo periódico ou confundidores além dos estratos MH.*",
+  "",
+  "**Tabela 6. Comparação padronizada por periódico e período**",
   "",
   markdown_table(standardized_table),
   "",
   "*Nota:* em cada indicador, as taxas específicas por periódico × período são ponderadas pela distribuição conjunta dos denominadores nas duas categorias, usando somente estratos com suporte em ambas. A padronização reduz diferenças de composição nesses dois eixos, mas não controla subcampo, idioma, tamanho da equipe ou outros confundidores.",
   "",
-  "**Tabela 6. Tipo de evidência entre artigos empíricos, por classificação do primeiro prenome**",
+  "**Tabela 7. Tipo de evidência entre artigos empíricos, por classificação do primeiro prenome**",
   "",
   markdown_table(evidence_table),
   "",
@@ -1028,7 +1204,7 @@ report_lines <- c(
   "",
   "## Análise exploratória da composição da equipe",
   "",
-  "**Tabela 7. Indicadores metodológicos segundo a composição das classificações de prenomes na equipe**",
+  "**Tabela 8. Indicadores metodológicos segundo a composição das classificações de prenomes na equipe**",
   "",
   markdown_table(team_metric_table),
   "",
@@ -1036,7 +1212,7 @@ report_lines <- c(
   "",
   "## Evolução temporal",
   "",
-  "**Tabela 8. Categoria feminina do primeiro prenome por período**",
+  "**Tabela 9. Categoria feminina do primeiro prenome por período**",
   "",
   markdown_table(period_table),
   "",
@@ -1044,13 +1220,13 @@ report_lines <- c(
   "",
   "## Cobertura e sensibilidade da classificação",
   "",
-  "**Tabela 9. Motivo da classificação ou não classificação do primeiro prenome**",
+  "**Tabela 10. Motivo da classificação ou não classificação do primeiro prenome**",
   "",
   markdown_table(failure_table),
   "",
   "*Nota:* `Prenome não encontrado` corresponde a probabilidade ausente no `genderBR`; `Ambíguo no limiar` tem probabilidade válida entre 10% e 90%.",
   "",
-  "**Tabela 10. Cobertura da classificação binária por periódico**",
+  "**Tabela 11. Cobertura da classificação binária por periódico**",
   "",
   markdown_table(coverage_journal_table),
   "",
@@ -1060,7 +1236,7 @@ report_lines <- c(
     " nos artigos em português. Essa não classificação diferencial impede tratar os casos classificados como aleatórios."
   ),
   "",
-  "**Tabela 11. Sensibilidade ao limiar de classificação**",
+  "**Tabela 12. Sensibilidade ao limiar de classificação**",
   "",
   markdown_table(sensitivity_table),
   "",
@@ -1091,7 +1267,7 @@ report_lines <- c(
   paste0("- R: `", R.version.string, "`."),
   paste0("- Pacotes: `", package_versions, "`."),
   "",
-  "**Tabela 12. Validações automáticas**",
+  "**Tabela 13. Validações automáticas**",
   "",
   markdown_table(validation_table),
   "",

@@ -42,7 +42,11 @@ format_pct <- function(x) {
 }
 
 format_pp <- function(x) {
-  ifelse(is.na(x), "-", paste0(format(x, decimal.mark = ",", nsmall = 1, trim = TRUE), " p.p."))
+  ifelse(is.na(x), "-", paste0(format(round(x, 1), decimal.mark = ",", nsmall = 1, trim = TRUE), " p.p."))
+}
+
+format_p <- function(x) {
+  ifelse(x < 0.001, "<0,001", format(round(x, 3), decimal.mark = ",", nsmall = 3, trim = TRUE))
 }
 
 denominadores <- readr::read_csv("../output/tables/paper/denominator_summary.csv", show_col_types = FALSE)
@@ -62,6 +66,8 @@ inferencia_linguagem_causal <- readr::read_csv("../output/tables/paper/statistic
 area_profile <- readr::read_csv("../output/tables/area_analysis/area_profile.csv", show_col_types = FALSE)
 source_area_profile <- readr::read_csv("../output/tables/area_analysis/source_area_profile.csv", show_col_types = FALSE)
 area_period_profile <- readr::read_csv("../output/tables/area_analysis/area_period_profile.csv", show_col_types = FALSE)
+area_hypothesis_tests <- readr::read_csv("../output/tables/area_analysis/area_hypothesis_tests.csv", show_col_types = FALSE)
+area_journal_sensitivity <- readr::read_csv("../output/tables/area_analysis/area_journal_sensitivity_tests.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -264,6 +270,16 @@ n_screen_area_ri <- area_profile_value(area_ri, "screen_n")
 pct_strict_area_cp <- area_profile_value(area_cp, "pct_strict_screen")
 pct_strict_area_ri <- area_profile_value(area_ri, "pct_strict_screen")
 
+area_inference_test <- area_hypothesis_tests |>
+  dplyr::filter(metric == "inference")
+area_inference_test_diff <- area_inference_test$difference_pp
+area_inference_test_ci_low <- area_inference_test$prop_test_ci_low_pp
+area_inference_test_ci_high <- area_inference_test$prop_test_ci_high_pp
+area_inference_test_p <- area_inference_test$prop_test_p
+area_inference_test_fisher_p <- area_inference_test$fisher_p
+area_journal_welch_p <- area_journal_sensitivity$p_value[area_journal_sensitivity$test == "Welch t por periódico"]
+area_journal_wilcoxon_p <- area_journal_sensitivity$p_value[area_journal_sensitivity$test == "Wilcoxon por periódico"]
+
 stopifnot(
   n_area_cp + n_area_ri == 4024,
   n_area_cp_journals == 6,
@@ -271,7 +287,13 @@ stopifnot(
   n_inference_area_cp <= n_inference_area_cp_den,
   n_inference_area_ri <= n_inference_area_ri_den,
   n_strict_area_cp <= n_screen_area_cp,
-  n_strict_area_ri <= n_screen_area_ri
+  n_strict_area_ri <= n_screen_area_ri,
+  area_inference_test_diff > 0,
+  area_inference_test_ci_low < area_inference_test_ci_high,
+  area_inference_test_p < 0.05,
+  area_inference_test_fisher_p < 0.05,
+  area_journal_welch_p > 0,
+  area_journal_wilcoxon_p > 0
 )
 ```
 
@@ -448,6 +470,10 @@ O perfil agregado de CGPC cobre apenas 2019--2025, enquanto os demais periódico
 A classificação por área permite separar dois padrões editoriais que ficam ocultos na média dos periódicos. Para esta comparação, Ciência Política reúne os quatro periódicos classificados nessa área e os dois periódicos de escopo compartilhado com Ciências Sociais (`Dados` e RBCS), totalizando `r format_n(n_area_cp)` artigos em `r n_area_cp_journals` periódicos. Relações Internacionais reúne `Contexto Internacional` e RBPI, com `r format_n(n_area_ri)` artigos em `r n_area_ri_journals` periódicos. CGPC não é forçada a entrar em nenhuma das duas áreas: seus `r format_n(source_area_value("Administração Pública", "articles_n"))` artigos permanecem no perfil de origem, mas ficam fora do contraste CP--RI.
 
 A proporção de artigos empíricos é praticamente idêntica nas duas áreas: `r format_pct(pct_empirical_area_cp)` em Ciência Política e `r format_pct(pct_empirical_area_ri)` em Relações Internacionais. A diferença aparece na composição da pesquisa empírica. Análises quantitativas representam `r format_pct(pct_quant_area_cp)` dos artigos empíricos de Ciência Política, contra `r format_pct(pct_quant_area_ri)` em Relações Internacionais. Entre os quantitativos com rótulo de inferência observado, `r format_n(n_inference_area_cp)` de `r format_n(n_inference_area_cp_den)` artigos de Ciência Política (`r format_pct(pct_inference_area_cp)`) quantificam formalmente a incerteza; em Relações Internacionais, são `r format_n(n_inference_area_ri)` de `r format_n(n_inference_area_ri_den)` (`r format_pct(pct_inference_area_ri)`). A diferença é de `r format_pp(pct_inference_area_cp - pct_inference_area_ri)`
+
+Um teste bilateral simples de igualdade de proporções, tratando os artigos como unidades independentes, estima uma diferença de `r format_pp(area_inference_test_diff)` (IC95%: `r format_pp(area_inference_test_ci_low)` a `r format_pp(area_inference_test_ci_high)`; *p* `r format_p(area_inference_test_p)`). O teste exato de Fisher produz *p* `r format_p(area_inference_test_fisher_p)`. Esses valores confirmam que a diferença observada é estatisticamente incompatível com igualdade sob essa hipótese simplificadora; não corrigem, porém, a dependência entre artigos do mesmo periódico.
+
+Essa ressalva é substantiva. Usando o periódico como unidade, o teste *t* de Welch das oito proporções de periódico produz *p* `r format_p(area_journal_welch_p)`, mas o teste de Wilcoxon produz *p* `r format_p(area_journal_wilcoxon_p)`. Como há apenas dois periódicos de Relações Internacionais, tratamos os testes artigo-nível como diagnóstico da diferença observada, não como prova definitiva de um efeito da área.
 
 O contraste também aparece na identificação causal explícita, embora os números sejam pequenos. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos examinados (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais descrevem menções a estratégias, não qualidade da execução nem superioridade de uma área.
 
