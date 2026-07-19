@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos examinados para identificação. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
+  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos examinados para identificação. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
 ---
 
 ```{r setup, include=FALSE}
@@ -49,6 +49,7 @@ denominadores <- readr::read_csv("../output/tables/paper/denominator_summary.csv
 tabela_corpus <- readr::read_csv("../output/tables/paper/table_1_corpus_description.csv", show_col_types = FALSE)
 tabela_dimensoes <- readr::read_csv("../output/tables/paper/table_2_methodological_dimensions.csv", show_col_types = FALSE)
 tabela_credibilidade <- readr::read_csv("../output/tables/paper/table_3_causality_credibility.csv", show_col_types = FALSE)
+tabela_alinhamento <- readr::read_csv("../output/tables/paper/table_5_claim_method_alignment.csv", show_col_types = FALSE)
 tabela_periodicos_completos <- readr::read_csv("../output/tables/paper/table_4_complete_journal_profile.csv", show_col_types = FALSE)
 tabela_qualitativa_completa <- readr::read_csv("../output/tables/paper/table_8_qualitative_complete_summary.csv", show_col_types = FALSE)
 perfil_periodo_padronizado <- readr::read_csv("../output/tables/paper/period_equal_weight_profile.csv", show_col_types = FALSE)
@@ -116,6 +117,10 @@ claim_inference_value <- function(causal_language, inference_status, variable) {
     inferencia_linguagem_causal$causal_language == causal_language &
       inferencia_linguagem_causal$inference_status == inference_status
   ]
+}
+
+claim_alignment_value <- function(category, variable) {
+  tabela_alinhamento[[variable]][tabela_alinhamento$alignment_category == category]
 }
 
 n_inferencia_completos <- inference_metric_value("Inferência estatística nos periódicos completos", "n")
@@ -190,6 +195,22 @@ n_cruzamento_inferencia <- claim_inference_value(
   "Com linguagem causal ou explicativa",
   "Com inferência estatística",
   "cross_denominator_n"
+)
+n_claim_quant_no_strategy <- claim_alignment_value(
+  "Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita",
+  "n"
+)
+pct_claim_quant_no_strategy <- claim_alignment_value(
+  "Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita",
+  "percent"
+)
+n_claim_emp_nonquant <- claim_alignment_value(
+  "Linguagem causal ou explicativa em artigo empírico, sem análise quantitativa",
+  "n"
+)
+pct_claim_emp_nonquant <- claim_alignment_value(
+  "Linguagem causal ou explicativa em artigo empírico, sem análise quantitativa",
+  "percent"
 )
 
 stopifnot(
@@ -377,7 +398,7 @@ knitr::kable(
 
 # Estratégia Empírica
 
-A estratégia empírica organiza a mensuração de seis práticas: presença e tipo de evidência, análise quantitativa, inferência estatística, linguagem causal ou explicativa e menção a estratégias explícitas de identificação causal. Os agregados dos `r format_n(n_classificados)` artigos classificados cobrem todo o universo elegível desta versão. As comparações entre periódicos usam os nove periódicos completos. As comparações temporais usam os oito periódicos completos que publicaram nos três períodos, com peso igual para cada periódico.
+A estratégia empírica organiza a mensuração de seis práticas: presença e tipo de evidência, análise quantitativa, inferência estatística, linguagem causal ou explicativa e menção a estratégias explícitas de identificação causal. Linguagem e estratégia são dimensões distintas: a primeira registra o que o artigo afirma; a segunda, se ele explicita como uma afirmação causal seria identificada. Os agregados dos `r format_n(n_classificados)` artigos classificados cobrem todo o universo elegível desta versão. As comparações entre periódicos usam os nove periódicos completos. As comparações temporais usam os oito periódicos completos que publicaram nos três períodos, com peso igual para cada periódico.
 
 Os percentuais da Figura 1 não formam uma única sequência. Cada linha responde a uma pergunta e usa o conjunto de artigos adequado a ela: a frequência de inferência usa os artigos quantitativos com rótulo observado, enquanto a frequência de estratégias de identificação usa apenas os artigos em que o protocolo procurou esse tipo de estratégia. Já afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, cada percentual deve ser lido com o seu próprio denominador, indicado na figura e nas tabelas.
 
@@ -385,7 +406,7 @@ Os percentuais da Figura 1 não formam uma única sequência. Cada linha respond
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
 ```
 
-O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quantitativa, mista ou ausente. Depois identifica análise quantitativa, inferência estatística e linguagem causal ou explicativa. Para examinar estratégias de identificação, o protocolo seleciona artigos que combinam linguagem causal ou explicativa com evidência empírica pertinente ou que usam modelagem quantitativa cuja sustentação exige essa verificação. Esse subconjunto não é um conjunto de estudos causais. Ele reúne os artigos nos quais procuramos menções explícitas a estratégias de identificação.
+O classificador registra primeiro se o artigo é empírico e que tipo de evidência mobiliza: qualitativa, quantitativa, mista ou ausente. Depois identifica análise quantitativa, inferência estatística e linguagem causal ou explicativa. Para examinar estratégias de identificação, o protocolo seleciona artigos que combinam linguagem causal ou explicativa com evidência empírica pertinente ou que usam modelagem quantitativa cuja sustentação exige essa verificação. Esse subconjunto não é um conjunto de estudos causais nem esgota os casos em que a linguagem pode estar desalinhada do método. Ele reúne os artigos nos quais procuramos menções explícitas a estratégias de identificação.
 
 Classificamos um artigo como inferencial quando ele reporta um procedimento que quantifica formalmente a incerteza: teste de hipótese ou valor de *p*, erro-padrão inferencial, intervalo de confiança ou de credibilidade, intervalo por *bootstrap*, inferência por randomização, incerteza posterior bayesiana ou procedimento equivalente. Estatísticas descritivas, coeficientes e modelos sem uma dessas medidas não bastam. A variável registra a presença do procedimento; não avalia correção, poder estatístico, calibração, adequação dos erros-padrão ou interpretação.
 
@@ -520,15 +541,17 @@ knitr::include_graphics("../output/figures/paper/figure_statistical_inference_be
 
 Nos nove periódicos completos, `r format_n(n_qualitativos_periodicos_completos)` artigos apresentam evidência qualitativa, isoladamente ou combinada à evidência quantitativa. O classificador identifica objetivo qualitativo claro em `r format_n(n_objetivo_qualitativo_claro)` deles (`r format_pct(pct_objetivo_qualitativo_claro)`). A medida indica se o propósito da análise pode ser reconstruído; ela não avalia seleção de casos, procedimentos interpretativos ou rastreabilidade documental. Essas dimensões exigem classificação própria.
 
-## Linguagem causal ou explicativa ampla e estratégias de identificação
+## Linguagem causal ou explicativa e coerência entre afirmação e método
 
-A categoria de linguagem causal ou explicativa é ampla. Ela aparece em `r format_n(n_claim)` artigos, dos quais `r format_n(n_claim_empirico)` são empíricos. A Figura 4 mostra a composição desse conjunto: há marcações em artigos não empíricos, em artigos empíricos sem componente quantitativo e em artigos quantitativos sem estratégia explícita de identificação. Esses cruzamentos descrevem atributos que aparecem juntos; não avaliam a adequação entre afirmação e método.
+A identificação causal explícita não é o único critério relevante. Quando um artigo usa linguagem causal, mas não explica como sustenta essa afirmação, há um problema de coerência entre afirmação e método mesmo que o texto contenha alguma análise estatística. A classificação combina linguagem causal e explicativa, portanto não separa diretamente os casos em que a exigência de identificação causal é indispensável. Ela permite, contudo, localizar o conjunto de possíveis desalinhamentos.
 
-```{r figura-5, fig.cap=paste0("Combinações entre linguagem causal ou explicativa, análise quantitativa e estratégias explícitas nos ", format_n(n_classificados), " artigos classificados. As categorias são mutuamente exclusivas; os rótulos mostram número e percentual de artigos."), out.width="95%"}
+Entre os `r format_n(n_classificados)` artigos, `r format_n(n_claim_quant_no_strategy)` (`r format_pct(pct_claim_quant_no_strategy)`) são empíricos quantitativos com linguagem causal ou explicativa, mas sem estratégia explícita de identificação. Esse grupo não é uma taxa de artigos inadequados: inclui explicações que podem não formular uma pretensão causal estrita e não registra se o artigo justifica a relação entre afirmação, dados e método por outros meios. Ainda assim, seu tamanho mostra que o problema da linguagem sem suporte metodológico é muito maior que o numerador de desenhos estritos. Outros `r format_n(n_claim_emp_nonquant)` artigos (`r format_pct(pct_claim_emp_nonquant)`) são empíricos sem análise quantitativa; nesses casos, a avaliação depende dos critérios próprios da pesquisa qualitativa, histórica ou interpretativa.
+
+```{r figura-5, fig.cap=paste0("Combinações entre linguagem causal ou explicativa, análise quantitativa e estratégias explícitas nos ", format_n(n_classificados), " artigos classificados. A barra de linguagem em artigos quantitativos sem estratégia explícita indica um possível desalinhamento entre afirmação e método; como a classificação combina linguagem causal e explicativa, não mede inadequação diretamente. As categorias são mutuamente exclusivas; os rótulos mostram número e percentual de artigos."), out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A Tabela 4 mantém os denominadores separados.
+No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 4 mantém os denominadores separados.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
@@ -562,7 +585,7 @@ tabela_3_display <- tabela_credibilidade |>
 
 knitr::kable(
   tabela_3_display,
-  caption = "Linguagem causal ou explicativa e estratégias explícitas de identificação.",
+  caption = "Linguagem causal ou explicativa, coerência entre afirmação e método e estratégias explícitas de identificação.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -613,13 +636,15 @@ A decomposição mostra onde a diferença aparece. `r format_pct(pct_descritivos
 
 A identificação causal explícita é rara. Ela aparece em `r format_n(n_estrito_total_completos)` dos `r format_n(n_estrito_total_completos_den)` artigos (`r format_pct(pct_estrito_total_completos)`) e em `r format_pct(pct_estrito_examinados_completos)` dos casos examinados. A comparação não exige que todo artigo adote um desenho causal. Ela mostra que a prática de identificação observada nos periódicos internacionais ainda alcança poucos artigos da produção brasileira analisada.
 
+O problema da linguagem é mais amplo que o problema dos desenhos. `r format_n(n_claim_quant_no_strategy)` artigos (`r format_pct(pct_claim_quant_no_strategy)`) são empíricos quantitativos, usam linguagem causal ou explicativa e não mencionam estratégia explícita de identificação. Como a classificação combina as duas linguagens, esse resultado não prova que todos formulam afirmações causais sem suporte. Ele mostra, porém, que a distância entre afirmar e explicar como a afirmação é sustentada é potencialmente muito maior que a distância medida pela adoção de desenhos estritos.
+
 As medidas têm denominadores, períodos e composições editoriais diferentes. Torreblanca et al. usam artigos quantitativos explicativos, enquanto nossa taxa de inferência inclui todos os quantitativos. A contagem brasileira de estratégias usa todos os artigos ou o subconjunto examinado, conforme a pergunta. Essas diferenças impedem estimar um hiato exato, mas não alteram a ordem das exigências: quantificar a incerteza é menos exigente do que explicitar uma estratégia causal.
 
 Os nove periódicos completos não formam uma única escala metodológica. `Opinião Pública`, BPSR e `Dados` combinam presença empírica elevada com mais inferência. `Contexto Internacional` e RBPI são amplamente empíricos, mas reportam menos inferência. CGPC combina empiria e quantificação com menor frequência de inferência; RBCS e RSP ocupam posições intermediárias. Essas diferenças podem refletir temas, perguntas e políticas editoriais que o desenho não separa.
 
 No tempo, a empiria cresce nos oito periódicos presentes nos três períodos. Quantificação e inferência oscilam, sem trajetória de difusão ampla. As famílias de desenho também não seguem uma tendência monotônica. A produção não percorre uma marcha uniforme rumo à quantificação, à inferência ou à identificação causal.
 
-A linguagem causal ou explicativa é uma categoria ampla. Ela inclui explicações qualitativas, argumentos teóricos e interpretações substantivas. Entre os quantitativos que a empregam, `r format_n(n_linguagem_sem_inferencia)` de `r format_n(n_linguagem_total)` não quantificam formalmente a incerteza. A linguagem, portanto, não pode substituir a medida de incerteza ou a estratégia de identificação.
+A linguagem causal ou explicativa é uma categoria ampla. Ela inclui explicações qualitativas, argumentos teóricos e interpretações substantivas, mas também pode marcar uma pretensão causal para a qual o artigo não apresenta método compatível. Por isso, a análise deve distinguir duas perguntas: se há uma afirmação que exige justificativa causal e se o texto explicita como a sustenta. A classificação atual mede a coexistência dos atributos e indica possíveis desalinhamentos; a confirmação desses casos exige leitura humana.
 
 O pluralismo metodológico delimita a interpretação. A ausência de uma estratégia causal não é uma deficiência em todo tipo de artigo, e sua menção não demonstra qualidade. Esta versão mapeia a incidência de práticas empíricas, quantitativas, inferenciais e de identificação. Ela não mede a adequação entre cada afirmação e o método empregado.
 
@@ -628,6 +653,8 @@ O pluralismo metodológico delimita a interpretação. A ausência de uma estrat
 Nos nove periódicos brasileiros, `r format_n(n_inferencia_completos)` de `r format_n(n_inferencia_completos_den)` artigos quantitativos (`r format_pct(pct_inferencia_completos)`) quantificam formalmente a incerteza. A proporção varia de `r format_pct(pct_inferencia_2005_2011)` a `r format_pct(pct_inferencia_2019_2025)` entre os períodos comparados. Nos periódicos internacionais de referência, `r format_pct(pct_torreblanca_jop)` a `r format_pct(pct_torreblanca_apsr)` dos quantitativos explicativos empregam desenho causal, segundo Torreblanca et al.
 
 O contraste situa práticas metodológicas diferentes. A produção brasileira já é amplamente empírica, mas a inferência estatística continua minoritária e estratégias causais explícitas aparecem em apenas `r format_n(n_estrito_total_completos)` artigos (`r format_pct(pct_estrito_total_completos)`). Pesquisa descritiva, qualitativa, histórica, interpretativa e normativa responde a perguntas próprias, e a presença de um valor de *p*, intervalo ou nome de método não garante qualidade. O achado delimitado é que, na produção quantitativa publicada, quantificar a incerteza ainda é uma divisão importante no Brasil.
+
+Há também um problema anterior à identificação estrita: `r format_n(n_claim_quant_no_strategy)` artigos (`r format_pct(pct_claim_quant_no_strategy)`) combinam linguagem causal ou explicativa com análise quantitativa, mas não mencionam estratégia explícita de identificação. Como a classificação agrega linguagem causal e explicativa, o número é um indicador de possível desalinhamento entre afirmação e método, não uma taxa de erro. A fronteira metodológica brasileira, portanto, não se resume à adoção de desenhos causais; inclui tornar explícita a relação entre o que o artigo afirma e o que seu método pode sustentar.
 
 Os denominadores e períodos diferem entre as comparações, e a classificação automatizada ainda requer validação humana. O próximo passo é avaliar se as práticas identificadas são adequadas às perguntas dos artigos e se foram executadas de modo convincente, no universo de `r format_n(n_manifest)` artigos já classificados.
 
