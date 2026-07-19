@@ -1,6 +1,6 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-18 23:45:11 -0300
+Gerado em: 2026-07-18 23:47:14 -0300
 
 ## Universo reconciliado
 
@@ -15,7 +15,7 @@ Gerado em: 2026-07-18 23:45:11 -0300
 - Intervalo de recuperação dos textos no manifest: 2026-06-04 00:04:16 a 2026-07-18 11:01:42.
 - MD5 do manifest: `0d62ffa4738fb496e3f9a05b049185a8`.
 - MD5 do CSV canônico: `d45fdfef83eb91693e95dcc05d85f86d`.
-- MD5 do ledger de artigos: `5c97549c1caff10529db07336ce77af5`.
+- MD5 do ledger de artigos: `6ff2d2e1709eda1f551a0ce50bec8b03`.
 - MD5 do ledger de periódicos: `d0a3660f87b7c60efdd2efff05b68e6a`.
 
 ## Estratos analíticos
