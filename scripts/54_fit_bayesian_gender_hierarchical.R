@@ -208,7 +208,7 @@ fit_one_model <- function(model_data, metric_name, template_fit = NULL) {
       formula = model_formula, data = model_data, prior = model_priors, backend = "cmdstanr"
     ), common_args))
   } else {
-    do.call(stats::update, c(list(object = template_fit, newdata = model_data, recompile = FALSE), common_args))
+    do.call(stats::update, c(list(object = template_fit, newdata = model_data, recompile = TRUE), common_args))
   }
 }
 
