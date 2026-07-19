@@ -1,10 +1,10 @@
 dimension,category,n,denominator,denominator_n,percent,note
-Evidência,Artigo empírico,2825,artigos classificados,3565,79.2,Cobertura parcial; não representa o corpus completo.
-Evidência,Somente qualitativo,1190,artigos empíricos,2825,42.1,Categoria exclusiva entre artigos empíricos.
-Evidência,Somente quantitativo,707,artigos empíricos,2825,25,Categoria exclusiva entre artigos empíricos.
-Evidência,Misto,928,artigos empíricos,2825,32.8,Categoria exclusiva entre artigos empíricos.
-Quantificação,Componente quantitativo,1634,artigos empíricos,2825,57.8,Subconjunto quantitativo comparável ao estudo de referência.
-Quantificação,Modelagem estatística,617,empíricos quantitativos,1634,37.8,Tipo de análise quantitativa.
-Quantificação,Inferência estatística,618,empíricos quantitativos com inferência classificada,1629,37.9,"Testes, intervalos, erros-padrão ou inferência equivalente; 5 casos quantitativos sem classificação são excluídos do denominador."
+Evidência,Artigo empírico,3512,artigos classificados,4336,81,Cobertura parcial; não representa o corpus completo.
+Evidência,Somente qualitativo,1506,artigos empíricos,3512,42.9,Categoria exclusiva entre artigos empíricos.
+Evidência,Somente quantitativo,845,artigos empíricos,3512,24.1,Categoria exclusiva entre artigos empíricos.
+Evidência,Misto,1161,artigos empíricos,3512,33.1,Categoria exclusiva entre artigos empíricos.
+Quantificação,Componente quantitativo,2005,artigos empíricos,3512,57.1,Subconjunto quantitativo comparável ao estudo de referência.
+Quantificação,Modelagem estatística,750,empíricos quantitativos,2005,37.4,Tipo de análise quantitativa.
+Quantificação,Inferência estatística,732,empíricos quantitativos com inferência classificada,1999,36.6,"Testes, intervalos, erros-padrão ou inferência equivalente; 6 casos quantitativos sem classificação são excluídos do denominador."
 Explicitação,method_explicitness,NA,não disponível,NA,NA,Exige classificação complementar; não é resultado substantivo.
 Formato,empirical_article_format,NA,não disponível,NA,NA,Exige classificação complementar; não é resultado substantivo.

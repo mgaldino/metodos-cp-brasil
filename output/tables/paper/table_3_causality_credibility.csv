@@ -1,7 +1,7 @@
 panel,category,n,denominator,denominator_n,percent,note
-Afirmações,Afirmação causal ou explicativa,3194,artigos classificados,3565,89.6,A categoria combina afirmações causais e explicativas e também pode marcar textos não empíricos.
-Afirmações,Afirmação causal ou explicativa em artigo empírico,2726,artigos empíricos,2825,96.5,O subconjunto empírico ainda não equivale a uma afirmação causal explícita.
-Seleção analítica,Casos relevantes para avaliar identificação,1116,artigos classificados,3565,31.3,"Inclui artigos com afirmação causal ou explicativa e evidência empírica, além de modelagem quantitativa relevante."
-Identificação,Estratégia explícita de identificação causal,49,casos relevantes para identificação,1116,4.4,Contagem conservadora de famílias de método explicitamente mencionadas.
-Diagnóstico não exclusivo,Método quantitativo sem estratégia explícita,1066,casos relevantes para identificação,1116,95.5,A categoria pode coexistir com uma estratégia explícita.
-Diagnóstico não exclusivo,Outro método moderno a auditar,9,casos relevantes para identificação,1116,0.8,Categoria conservadora que exige auditoria adicional.
+Afirmações,Afirmação causal ou explicativa,3935,artigos classificados,4336,90.8,A categoria combina afirmações causais e explicativas e também pode marcar textos não empíricos.
+Afirmações,Afirmação causal ou explicativa em artigo empírico,3404,artigos empíricos,3512,96.9,O subconjunto empírico ainda não equivale a uma afirmação causal explícita.
+Seleção analítica,Casos relevantes para avaliar identificação,1401,artigos classificados,4336,32.3,"Inclui artigos com afirmação causal ou explicativa e evidência empírica, além de modelagem quantitativa relevante."
+Identificação,Estratégia explícita de identificação causal,58,casos relevantes para identificação,1401,4.1,Contagem conservadora de famílias de método explicitamente mencionadas.
+Diagnóstico não exclusivo,Método quantitativo sem estratégia explícita,1343,casos relevantes para identificação,1401,95.9,A categoria pode coexistir com uma estratégia explícita.
+Diagnóstico não exclusivo,Outro método moderno a auditar,10,casos relevantes para identificação,1401,0.7,Categoria conservadora que exige auditoria adicional.

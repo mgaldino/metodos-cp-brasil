@@ -1,11 +1,11 @@
 empirical_evidence_type,claim_status,strict_design_method,n,evidence_denominator_n,percent_within_evidence
-mixed_empirical,Com afirmação causal/explicativa,FALSE,899,928,96.9
-mixed_empirical,Com afirmação causal/explicativa,TRUE,7,928,0.8
-mixed_empirical,Sem afirmação causal/explicativa,FALSE,22,928,2.4
-none,Com afirmação causal/explicativa,FALSE,468,740,63.2
-none,Sem afirmação causal/explicativa,FALSE,272,740,36.8
-qualitative_only,Com afirmação causal/explicativa,FALSE,1146,1190,96.3
-qualitative_only,Sem afirmação causal/explicativa,FALSE,44,1190,3.7
-quantitative_only,Com afirmação causal/explicativa,FALSE,632,707,89.4
-quantitative_only,Com afirmação causal/explicativa,TRUE,42,707,5.9
-quantitative_only,Sem afirmação causal/explicativa,FALSE,33,707,4.7
+mixed_empirical,Com afirmação causal/explicativa,FALSE,1128,1161,97.2
+mixed_empirical,Com afirmação causal/explicativa,TRUE,7,1161,0.6
+mixed_empirical,Sem afirmação causal/explicativa,FALSE,26,1161,2.2
+none,Com afirmação causal/explicativa,FALSE,531,824,64.4
+none,Sem afirmação causal/explicativa,FALSE,293,824,35.6
+qualitative_only,Com afirmação causal/explicativa,FALSE,1456,1506,96.7
+qualitative_only,Sem afirmação causal/explicativa,FALSE,50,1506,3.3
+quantitative_only,Com afirmação causal/explicativa,FALSE,762,845,90.2
+quantitative_only,Com afirmação causal/explicativa,TRUE,51,845,6
+quantitative_only,Sem afirmação causal/explicativa,FALSE,32,845,3.8

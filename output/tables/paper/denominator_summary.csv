@@ -1,15 +1,15 @@
 denominator,n,denominator_reference,denominator_n,percent
-Corpus completo elegível,5249,manifest elegível reconciliado,5249,100
-Artigos classificados por leitura integral,3565,manifest elegível reconciliado,5249,67.9
-Artigos ainda não classificados,1684,manifest elegível reconciliado,5249,32.1
-Periódicos com classificação completa,6,periódicos do manifest,11,54.5
-Artigos dos periódicos completos,2321,artigos classificados,3565,65.1
-Artigos dos periódicos completos em que a identificação é especialmente relevante,846,artigos dos periódicos completos,2321,36.4
-Artigos dos periódicos completos com estratégia explícita de identificação causal,49,casos relevantes para identificação nos periódicos completos,846,5.8
-Artigos empíricos classificados,2825,artigos classificados,3565,79.2
-Artigos empíricos quantitativos classificados,1634,artigos empíricos classificados,2825,57.8
-Artigos empíricos quantitativos com inferência classificada,1629,artigos empíricos quantitativos classificados,1634,99.7
-Artigos empíricos quantitativos sem classificação de inferência,5,artigos empíricos quantitativos classificados,1634,0.3
-Artigos com afirmação causal ou explicativa classificados,3194,artigos classificados,3565,89.6
-Artigos em que a identificação é especialmente relevante,1116,artigos classificados,3565,31.3
-Artigos com estratégia explícita de identificação causal,49,casos relevantes para identificação,1116,4.4
+Corpus completo elegível,5242,manifest elegível reconciliado,5242,100
+Artigos classificados por leitura integral,4336,manifest elegível reconciliado,5242,82.7
+Artigos ainda não classificados,906,manifest elegível reconciliado,5242,17.3
+Periódicos com classificação completa,7,periódicos do manifest,11,63.6
+Artigos dos periódicos completos,2804,artigos classificados,4336,64.7
+Artigos dos periódicos completos em que a identificação é especialmente relevante,952,artigos dos periódicos completos,2804,34
+Artigos dos periódicos completos com estratégia explícita de identificação causal,49,casos relevantes para identificação nos periódicos completos,952,5.1
+Artigos empíricos classificados,3512,artigos classificados,4336,81
+Artigos empíricos quantitativos classificados,2005,artigos empíricos classificados,3512,57.1
+Artigos empíricos quantitativos com inferência classificada,1999,artigos empíricos quantitativos classificados,2005,99.7
+Artigos empíricos quantitativos sem classificação de inferência,6,artigos empíricos quantitativos classificados,2005,0.3
+Artigos com afirmação causal ou explicativa classificados,3935,artigos classificados,4336,90.8
+Artigos em que a identificação é especialmente relevante,1401,artigos classificados,4336,32.3
+Artigos com estratégia explícita de identificação causal,58,casos relevantes para identificação,1401,4.1

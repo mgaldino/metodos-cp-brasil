@@ -1,28 +1,28 @@
 # Atualização analítica do paper com o CSV canônico
 
-Gerado em: 2026-07-18 18:34:00 -0300
+Gerado em: 2026-07-18 23:38:08 -0300
 
 ## Universo reconciliado
 
-- Linhas no CSV canônico bruto: 3565.
+- Linhas no CSV canônico bruto: 4343.
 - Linhas duplicadas exatas removidas apenas na camada analítica: 0.
-- Artigos elegíveis no manifest após ledger: 5249.
-- Artigos elegíveis classificados: 3565 (67,9%).
-- Artigos elegíveis ainda não classificados: 1684.
+- Artigos elegíveis no manifest após ledger: 5242.
+- Artigos elegíveis classificados: 4336 (82,7%).
+- Artigos elegíveis ainda não classificados: 906.
 - Classificações preservadas fora do manifest: 0.
-- Classificações excluídas pelo ledger: 0.
+- Classificações excluídas pelo ledger: 7.
 - Periódicos excluídos pelo ledger: Brazilian Journal of Political Economy; Civitas - Revista de Ciências Sociais; Revista de Administração Pública; Sur. Revista Internacional de Direitos Humanos.
 - Intervalo de recuperação dos textos no manifest: 2026-06-04 00:04:16 a 2026-07-18 11:01:42.
-- MD5 do manifest: `ca3988ebbd9f2cbf243f3f2abeab7a50`.
-- MD5 do CSV canônico: `72616ef21a0aa3ca33482e3400fca176`.
-- MD5 do ledger de artigos: `0f155ad948b2a419443e12daf96f2ec0`.
+- MD5 do manifest: `0d62ffa4738fb496e3f9a05b049185a8`.
+- MD5 do CSV canônico: `d45fdfef83eb91693e95dcc05d85f86d`.
+- MD5 do ledger de artigos: `1ef3997c39ab9db443d351b451226db9`.
 - MD5 do ledger de periódicos: `d0a3660f87b7c60efdd2efff05b68e6a`.
 
 ## Estratos analíticos
 
-- Periódicos completos: Brazilian Political Science Review; Cadernos Gestão Pública e Cidadania; Contexto Internacional; Dados; Opinião Pública; Revista Brasileira de Ciência Política.
-- Artigos nos periódicos completos: 2321.
-- Periódicos completos com artigos nos três períodos: Brazilian Political Science Review; Contexto Internacional; Dados; Opinião Pública; Revista Brasileira de Ciência Política.
+- Periódicos completos: Brazilian Political Science Review; Cadernos Gestão Pública e Cidadania; Contexto Internacional; Dados; Opinião Pública; Revista Brasileira de Ciência Política; Revista Brasileira de Política Internacional.
+- Artigos nos periódicos completos: 2804.
+- Periódicos completos com artigos nos três períodos: Brazilian Political Science Review; Contexto Internacional; Dados; Opinião Pública; Revista Brasileira de Ciência Política; Revista Brasileira de Política Internacional.
 
 ## Regra de interpretação
 
@@ -30,8 +30,8 @@ Os agregados dos artigos classificados continuam preliminares para o universo de
 
 ## Validações lógicas
 
-- Checks PASS: 25 de 28.
-- Checks WARN: statistical_inference_without_quantitative_flag (n=1); statistical_inference_without_quantitative_analysis (n=1); statistical_inference_missing_within_quantitative (n=5).
+- Checks PASS: 24 de 28.
+- Checks WARN: statistical_inference_without_quantitative_flag (n=1); statistical_inference_without_quantitative_analysis (n=1); statistical_inference_missing_within_quantitative (n=6); classified_excluded_by_ledger (n=7).
 - Checks FAIL: nenhum.
 
 ## Lacunas que permanecem
