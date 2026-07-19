@@ -978,6 +978,15 @@ logical_inconsistencies <- tibble::tibble(
   )
 ) |>
   dplyr::mutate(
+    # Classificações já produzidas podem ser preservadas para rastreabilidade
+    # mesmo quando uma decisão editorial posterior exclui o item da análise.
+    severity = dplyr::if_else(
+      check == "classified_excluded_by_ledger",
+      "warning",
+      severity
+    )
+  ) |>
+  dplyr::mutate(
     status = dplyr::case_when(
       n == expected ~ "PASS",
       severity == "warning" ~ "WARN",

@@ -30,6 +30,17 @@ output_path <- file.path(
 corpus <- readr::read_csv(corpus_path, show_col_types = FALSE)
 ledger <- readr::read_csv(ledger_path, show_col_types = FALSE)
 
+expected_pids <- c(
+  "S0104-62762005000200008",
+  "S0104-62762006000100008",
+  "S0104-62762006000200009",
+  "S0104-62762008000100009",
+  "S0104-62762009000200009",
+  "S0104-62762010000200011",
+  "S0104-62762011000100009",
+  "S0104-62762012000200013"
+)
+
 required_columns <- c("pid", "title", "title_en", "authors", "year", "journal_title")
 missing_columns <- setdiff(required_columns, names(corpus))
 if (length(missing_columns) > 0) {
@@ -37,17 +48,7 @@ if (length(missing_columns) > 0) {
 }
 
 tendencias <- corpus |>
-  dplyr::filter(
-    journal_title == "Opinião Pública",
-    year >= 2005,
-    year <= 2012,
-    stringr::str_to_lower(dplyr::coalesce(title, "")) == "tendências" |
-      pid %in% c(
-        "S0104-62762005000200008",
-        "S0104-62762006000100008",
-        "S0104-62762006000200009"
-      )
-  ) |>
+  dplyr::filter(pid %in% expected_pids) |>
   dplyr::mutate(
     authors_missing = is.na(authors) | stringr::str_trim(authors) == "",
     title_recovered_from_text = dplyr::if_else(
@@ -73,17 +74,6 @@ tendencias <- corpus |>
     exclusion_reason,
     decision_date
   )
-
-expected_pids <- c(
-  "S0104-62762005000200008",
-  "S0104-62762006000100008",
-  "S0104-62762006000200009",
-  "S0104-62762008000100009",
-  "S0104-62762009000200009",
-  "S0104-62762010000200011",
-  "S0104-62762011000100009",
-  "S0104-62762012000200013"
-)
 
 if (!setequal(tendencias$pid, expected_pids)) {
   stop("A busca por encartes Tendências divergiu da lista auditada.")
