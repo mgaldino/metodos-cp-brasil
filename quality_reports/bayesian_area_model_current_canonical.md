@@ -1,6 +1,6 @@
 # Modelo bayesiano hierárquico da diferença CP–RI
 
-Gerado em: 2026-07-19 08:00:01 -0300
+Gerado em: 2026-07-19 08:36:06 -0300
 
 ## Especificação
 
@@ -46,6 +46,22 @@ Prior Normal: mediana 31,0 p.p.; intervalo de credibilidade de 95% 13,8 p.p. a 4
 Prior Student-t: mediana 32,2 p.p.; intervalo de credibilidade de 95% 16,6 p.p. a 45,2 p.p.; P(delta > 0) = 0,999.
 
 Os valores de delta são diferenças entre as probabilidades previstas para um periódico médio, mantendo o intercepto aleatório no valor médio da distribuição. Não são efeitos causais da área.
+## Checagem preditiva das priors
+
+A checagem usa draws gerados somente das priors, antes de incorporar os dados. As duas priors são centradas em ausência de contraste: a probabilidade a priori de delta ser positiva é próxima de 0,5. As taxas observadas dos oito periódicos ficam dentro dos intervalos preditivos de 95% gerados por cada especificação. A posterior, em contraste, concentra a massa em delta positivo; portanto, o sinal da diferença é atualizado pelos dados, não imposto pela priori.
+
+| Priori | Parâmetro | Mediana | Quantil 2,5% | Quantil 97,5% |
+| --- | --- | --- | --- | --- |
+| Normal(0, 1.5) | P(inferência \| CP, periódico médio) | 0.502286924581664 | 0.0528664833079105 | 0.95015302973273 |
+| Normal(0, 1.5) | P(inferência \| RI, periódico médio) | 0.496966972204874 | 0.0145747846826091 | 0.984053586096714 |
+| Normal(0, 1.5) | Diferença CP - RI | 0.00489700463455676 | -0.487138246538174 | 0.490380210183835 |
+| Normal(0, 1.5) | P(delta > 0) | 0.510375 | - | - |
+| Student-t(3, 0, 2.5) | P(inferência \| CP, periódico médio) | 0.499088254762299 | 0.000491567560397029 | 0.999595151395667 |
+| Student-t(3, 0, 2.5) | P(inferência \| RI, periódico médio) | 0.481267943158779 | 0.000010559382627768 | 0.999984397849028 |
+| Student-t(3, 0, 2.5) | Diferença CP - RI | 0.000000478433816132654 | -0.738357293535381 | 0.742026816063901 |
+| Student-t(3, 0, 2.5) | P(delta > 0) | 0.503875 | - | - |
+
+Na checagem preditiva das priors, 8 de 8 periódicos ficaram dentro dos intervalos de 95% (Normal(0, 1.5)); 8 de 8 periódicos ficaram dentro dos intervalos de 95% (Student-t(3, 0, 2.5)).
 
 ## Diagnósticos
 
@@ -64,8 +80,11 @@ A análise bayesiana substitui a pergunta binária sobre um p-valor por uma dist
 
 - `output/tables/area_analysis/bayesian_area_journal_data.csv`
 - `output/tables/area_analysis/bayesian_area_posterior_summary.csv`
+- `output/tables/area_analysis/bayesian_area_prior_summary.csv`
 - `output/tables/area_analysis/bayesian_area_posterior_draws_normal.csv`
 - `output/tables/area_analysis/bayesian_area_diagnostics.csv`
 - `output/tables/area_analysis/bayesian_area_ppc_journal_rates.csv`
+- `output/tables/area_analysis/bayesian_area_prior_predictive_journal_rates.csv`
+- `output/tables/area_analysis/bayesian_area_prior_predictive_summary.csv`
 - `data/processed/area_analysis/bayesian_area_normal.rds`
 - `data/processed/area_analysis/bayesian_area_student.rds`

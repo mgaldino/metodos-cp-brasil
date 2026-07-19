@@ -66,6 +66,11 @@ metric_slugs <- c(
   "Examinados para identificação" = "screened_identification",
   "Estratégia explícita de identificação" = "strict_identification"
 )
+challenging_metrics <- c(
+  "Análise quantitativa",
+  "Linguagem causal ou explicativa",
+  "Estratégia explícita de identificação"
+)
 denominator_definitions <- c(
   "Artigos empíricos" = "todos os artigos com primeiro prenome classificado",
   "Análise quantitativa" = "artigos empíricos com classificação quantitativa observada",
@@ -103,7 +108,8 @@ article_gender <- readr::read_csv(input_path, show_col_types = FALSE) |>
       first_author_gender == "Feminino" ~ 1,
       first_author_gender == "Masculino" ~ 0,
       TRUE ~ NA_real_
-    )
+    ),
+    author_id = factor(stringr::str_to_lower(stringr::str_squish(first_author_name)))
   )
 if (anyDuplicated(article_gender$pid) > 0) stop("A base contém PIDs duplicados.")
 if (any(is.na(article_gender$period_3))) stop("Há períodos ausentes ou inválidos.")
@@ -132,12 +138,12 @@ build_metric_data <- function(data, metric_name) {
   data |>
     dplyr::mutate(eligible = eligible, outcome = as.integer(outcome)) |>
     dplyr::filter(eligible, !is.na(outcome)) |>
-    dplyr::select(pid, journal_title, period_3, female, outcome) |>
+    dplyr::select(pid, author_id, journal_title, period_3, female, outcome) |>
     droplevels()
 }
 
 model_formula <- brms::bf(
-  outcome ~ 1 + female + period_3 + (1 + female | journal_title),
+  outcome ~ 1 + female + period_3 + (1 + female | journal_title) + (1 | author_id),
   family = bernoulli(link = "logit")
 )
 model_priors <- c(
@@ -169,12 +175,13 @@ contrast_draws <- function(fit, model_data, current_journal = NULL) {
     dplyr::arrange(journal_title, period_3)
   female_cells <- cells |> dplyr::mutate(female = 1) |> dplyr::select(journal_title, period_3, female)
   male_cells <- cells |> dplyr::mutate(female = 0) |> dplyr::select(journal_title, period_3, female)
-  p_female <- brms::posterior_epred(fit, newdata = female_cells, re_formula = NULL)
-  p_male <- brms::posterior_epred(fit, newdata = male_cells, re_formula = NULL)
+  journal_re_formula <- stats::as.formula("~ (1 + female | journal_title)")
+  p_female <- brms::posterior_epred(fit, newdata = female_cells, re_formula = journal_re_formula)
+  p_male <- brms::posterior_epred(fit, newdata = male_cells, re_formula = journal_re_formula)
   as.numeric(100 * ((p_female - p_male) %*% cells$weight))
 }
 
-extract_diagnostics <- function(fit, metric_name, model_data) {
+extract_diagnostics <- function(fit, metric_name, model_data, model_iter, model_warmup) {
   convergence <- posterior::summarise_draws(posterior::as_draws_array(fit))
   nuts <- brms::nuts_params(fit)
   n_divergent <- nuts |> dplyr::filter(Parameter == "divergent__") |> dplyr::summarise(n = sum(Value > 0)) |> dplyr::pull(n)
@@ -183,6 +190,8 @@ extract_diagnostics <- function(fit, metric_name, model_data) {
   rep_prevalence <- rowMeans(y_rep)
   tibble::tibble(
     metric = metric_name, n_articles = nrow(model_data), n_events = sum(model_data$outcome),
+    iterations_per_chain = model_iter, warmup_per_chain = model_warmup,
+    n_authors = dplyr::n_distinct(model_data$author_id),
     n_journals = dplyr::n_distinct(model_data$journal_title), observed_prevalence = mean(model_data$outcome),
     posterior_predictive_mean = mean(rep_prevalence),
     posterior_predictive_low = stats::quantile(rep_prevalence, 0.025, names = FALSE),
@@ -193,11 +202,55 @@ extract_diagnostics <- function(fit, metric_name, model_data) {
   )
 }
 
+extract_grouped_ppc <- function(fit, metric_name, model_data) {
+  y_rep <- brms::posterior_predict(fit, ndraws = min(300L, chains * (iter - warmup)))
+  group_ids <- list(
+    `Categoria do prenome` = ifelse(model_data$female == 1, "Feminino", "Masculino"),
+    Periódico = as.character(model_data$journal_title),
+    Período = as.character(model_data$period_3),
+    `Periódico × categoria × período` = interaction(
+      model_data$journal_title,
+      ifelse(model_data$female == 1, "Feminino", "Masculino"),
+      model_data$period_3,
+      drop = TRUE,
+      sep = " | "
+    )
+  )
+  lapply(names(group_ids), function(grouping_name) {
+    current_groups <- group_ids[[grouping_name]]
+    lapply(sort(unique(current_groups)), function(group_label) {
+      index <- which(current_groups == group_label)
+      replicated_rate <- rowMeans(y_rep[, index, drop = FALSE])
+      observed_rate <- mean(model_data$outcome[index])
+      tibble::tibble(
+        metric = metric_name,
+        grouping = grouping_name,
+        group = group_label,
+        n_articles = length(index),
+        observed_rate = observed_rate,
+        posterior_predictive_mean = mean(replicated_rate),
+        posterior_predictive_low = stats::quantile(replicated_rate, 0.025, names = FALSE),
+        posterior_predictive_high = stats::quantile(replicated_rate, 0.975, names = FALSE),
+        observed_within_interval = observed_rate >= posterior_predictive_low &
+          observed_rate <= posterior_predictive_high
+      )
+    }) |>
+      dplyr::bind_rows()
+  }) |>
+    dplyr::bind_rows()
+}
+
 fit_one_model <- function(model_data, metric_name) {
-  model_path <- file.path(models_dir, paste0("gender_", unname(metric_slugs[[metric_name]])))
+  sampling_suffix <- if (metric_name %in% challenging_metrics) "_long" else ""
+  model_path <- file.path(
+    models_dir,
+    paste0("gender_", unname(metric_slugs[[metric_name]]), sampling_suffix)
+  )
+  model_iter <- if (metric_name %in% challenging_metrics) 2L * iter else iter
+  model_warmup <- if (metric_name %in% challenging_metrics) 2L * warmup else warmup
   brms::brm(
     formula = model_formula, data = model_data, prior = model_priors, backend = "cmdstanr",
-    chains = chains, iter = iter, warmup = warmup, cores = parallel_chains,
+    chains = chains, iter = model_iter, warmup = model_warmup, cores = parallel_chains,
     seed = seed, sample_prior = "yes",
     control = list(adapt_delta = adapt_delta, max_treedepth = max_treedepth),
     refresh = 200, file = model_path, file_refit = "on_change"
@@ -212,11 +265,13 @@ for (metric_name in metric_levels) {
   if (dplyr::n_distinct(current$journal_title) != 9) stop("Periódicos ausentes em: ", metric_name)
 }
 
-fits <- overall_results <- journal_results <- diagnostic_results <- list()
+fits <- overall_results <- journal_results <- diagnostic_results <- grouped_ppc_results <- list()
 for (metric_name in metric_levels) {
   message("Ajustando modelo: ", metric_name)
   current_data <- model_data_list[[metric_name]]
   current_fit <- fit_one_model(current_data, metric_name)
+  model_iter <- if (metric_name %in% challenging_metrics) 2L * iter else iter
+  model_warmup <- if (metric_name %in% challenging_metrics) 2L * warmup else warmup
   fits[[metric_name]] <- current_fit
   overall_results[[metric_name]] <- summarize_contrast(contrast_draws(current_fit, current_data)) |>
     dplyr::mutate(
@@ -232,7 +287,10 @@ for (metric_name in metric_levels) {
         n_articles = sum(current_data$journal_title == current_journal), .before = 1
       )
   }) |> dplyr::bind_rows()
-  diagnostic_results[[metric_name]] <- extract_diagnostics(current_fit, metric_name, current_data)
+  diagnostic_results[[metric_name]] <- extract_diagnostics(
+    current_fit, metric_name, current_data, model_iter, model_warmup
+  )
+  grouped_ppc_results[[metric_name]] <- extract_grouped_ppc(current_fit, metric_name, current_data)
 }
 
 overall_summary <- dplyr::bind_rows(overall_results) |>
@@ -247,6 +305,9 @@ diagnostics <- dplyr::bind_rows(diagnostic_results) |>
     posterior_predictive_pass = observed_prevalence >= posterior_predictive_low &
       observed_prevalence <= posterior_predictive_high
   ) |> dplyr::arrange(metric)
+grouped_ppc <- dplyr::bind_rows(grouped_ppc_results) |>
+  dplyr::mutate(metric = factor(metric, levels = metric_levels)) |>
+  dplyr::arrange(metric, grouping, group)
 
 validation_checks <- tibble::tibble(
   check = c(
@@ -270,6 +331,7 @@ validation_checks <- tibble::tibble(
 readr::write_csv(overall_summary, file.path(tables_dir, "table_13_bayesian_hierarchical_gender_effects.csv"))
 readr::write_csv(journal_summary, file.path(tables_dir, "table_14_bayesian_gender_effects_by_journal.csv"))
 readr::write_csv(diagnostics, file.path(tables_dir, "table_15_bayesian_model_diagnostics.csv"))
+readr::write_csv(grouped_ppc, file.path(tables_dir, "table_16_bayesian_grouped_ppc.csv"))
 readr::write_csv(validation_checks, file.path(tables_dir, "bayesian_validation_checks.csv"))
 
 figure_data <- overall_summary |>
@@ -319,9 +381,10 @@ report_table <- overall_summary |>
 diagnostic_table <- diagnostics |>
   dplyr::transmute(
     Indicador = as.character(metric), N = fmt_int(n_articles), Eventos = fmt_int(n_events),
+    `Iterações (warmup)` = paste0(fmt_int(iterations_per_chain), " (", fmt_int(warmup_per_chain), ")"),
     `R-hat máximo` = fmt_num(max_rhat, 3), `ESS bulk mínimo` = fmt_int(round(min_ess_bulk)),
     `ESS tail mínimo` = fmt_int(round(min_ess_tail)), `Divergências` = fmt_int(divergent_transitions),
-    `Treedepth máximo` = fmt_int(max_treedepth_transitions),
+    `Saturações de treedepth` = fmt_int(max_treedepth_transitions),
     `PPC prevalência` = ifelse(posterior_predictive_pass, "PASS", "FAIL")
   )
 strong_negative <- overall_summary |> dplyr::filter(posterior_probability_below_negative_rope >= 0.95) |> dplyr::pull(metric) |> as.character()
@@ -340,7 +403,7 @@ report_lines <- c(
   paste0(
     "A inferência principal substitui os testes separados de proporções e o ajuste de Mantel–Haenszel por seis modelos logísticos hierárquicos. ",
     "Os artigos formam o primeiro nível; os nove periódicos elegíveis são tratados como unidades permutáveis no segundo nível. ",
-    "Tanto o intercepto quanto a diferença associada à categoria feminina variam entre periódicos e recebem pooling parcial."
+    "Tanto o intercepto quanto a diferença associada à categoria feminina variam entre periódicos e recebem pooling parcial; um intercepto cruzado por primeiro autor acomoda publicações repetidas da mesma pessoa."
   ), "",
   paste0(
     "Há probabilidade posterior de pelo menos 95% de uma diferença menor que −2 p.p. para: ",
@@ -351,12 +414,12 @@ report_lines <- c(
   "As estimativas são descritivas e correlacionais. O modelo descreve associações condicionais a periódico e período; não identifica efeito causal de gênero.",
   "", "## Especificação", "",
   "Para cada indicador binário pré-especificado, foi ajustado:", "",
-  "`logit Pr(y_ij = 1) = α_j + β_j Feminino_ij + γ_2 Período2_ij + γ_3 Período3_ij`,", "",
-  "em que `(α_j, β_j)` segue uma distribuição normal multivariada entre periódicos. O contraste reportado é a diferença posterior de probabilidade entre `Feminino = 1` e `Feminino = 0`, padronizada pela composição observada de periódico e período no denominador de cada indicador.",
+  "`logit Pr(y_iaj = 1) = α_j + β_j Feminino_iaj + γ_2 Período2_iaj + γ_3 Período3_iaj + u_a`,", "",
+  "em que `(α_j, β_j)` segue uma distribuição normal multivariada entre periódicos e `u_a` é um intercepto aleatório do primeiro autor. O contraste reportado é a diferença posterior de probabilidade entre `Feminino = 1` e `Feminino = 0`, padronizada pela composição observada de periódico e período no denominador de cada indicador e integrada sobre `u_a = 0` (autor típico).",
   "",
   "O pooling parcial regulariza sobretudo os contrastes de periódicos com poucos artigos ou eventos. Por isso não se corrigem p-valores para as nove comparações: elas são estimadas conjuntamente. O argumento segue Gelman, Hill e Yajima (2012), que recomendam modelagem multilevel quando efeitos relacionados são permutáveis.",
   "",
-  "Ressalva: os seis indicadores são desfechos distintos e foram estimados separadamente. O pooling entre periódicos não elimina automaticamente a multiplicidade entre desfechos; por isso eles são seis estimandos pré-especificados, sem declaração binária global de ‘significância’. Reportam-se a distribuição posterior, a direção e a probabilidade de diferença substantiva maior que 2 p.p.",
+  "Ressalva: os seis indicadores são desfechos distintos e foram estimados separadamente. O pooling entre periódicos não elimina automaticamente a multiplicidade entre desfechos; todas as seis comparações são exploratórias e não constituem uma regra de descoberta. Reportam-se a distribuição posterior, a direção e a probabilidade de diferença substantiva maior que 2 p.p.",
   "", "## Resultados", "",
   "**Tabela 1. Diferenças posteriores padronizadas entre as categorias feminina e masculina do primeiro prenome**", "",
   markdown_table(report_table), "",
@@ -376,14 +439,16 @@ report_lines <- c(
   "**Tabela 2. Diagnósticos dos modelos bayesianos hierárquicos**", "",
   markdown_table(diagnostic_table), "",
   paste0(
-    "*Nota:* cada modelo usou ", chains, " cadeias, ", fmt_int(iter), " iterações por cadeia, ",
-    fmt_int(warmup), " de aquecimento, `adapt_delta = ", adapt_delta, "` e `max_treedepth = ",
+    "*Nota:* cada modelo usou ", chains, " cadeias e a quantidade de iterações indicada na tabela, ",
+    "`adapt_delta = ", adapt_delta, "` e `max_treedepth = ",
     max_treedepth, "`. PASS exige R-hat < 1,01, ESS bulk e tail mínimos ≥ 400, nenhuma divergência, ",
     "nenhuma saturação de treedepth e prevalência observada dentro do intervalo preditivo posterior de 95%."
   ), "", "## População e limites", "",
+  "Checagens preditivas adicionais por categoria do prenome, periódico, período e pela combinação desses três eixos estão em `output/tables/gender_analysis/table_16_bayesian_grouped_ppc.csv`. Células pequenas podem ficar fora de intervalos pontuais de 95%; por isso essa tabela é diagnóstico localizado, não um novo teste múltiplo.",
+  "",
   "A entrada é derivada do CSV canônico corrente e exclui `Lua Nova: Revista de Cultura e Política`, `Novos estudos CEBRAP`, `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`. Somente artigos cujo primeiro prenome foi classificado como feminino ou masculino entram nos modelos.",
   "",
-  "A proxy não observa identidade de gênero, exclui identidades não binárias e tem não classificação diferencial. A ordem de autoria não mede contribuição. O modelo não trata a classificação como incerta e não controla subcampo, idioma, coautoria ou repetição da mesma pessoa.",
+  "A proxy não observa identidade de gênero, exclui identidades não binárias e tem não classificação diferencial. A ordem de autoria não mede contribuição. O intercepto de autor usa o nome completo normalizado como identificador aproximado: pode unir homônimos ou separar variantes da mesma pessoa. O modelo não trata a classificação como incerta e não controla subcampo, idioma ou coautoria.",
   "", "## Reprodutibilidade", "",
   "- Script gerador: `scripts/54_fit_bayesian_gender_hierarchical.R`.",
   "- Base de entrada: `data/processed/gender_analysis/current_canonical_article_gender.csv`, gerada por `scripts/51_analyze_gender_current_canonical.R`.",

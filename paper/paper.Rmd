@@ -67,7 +67,9 @@ area_profile <- readr::read_csv("../output/tables/area_analysis/area_profile.csv
 source_area_profile <- readr::read_csv("../output/tables/area_analysis/source_area_profile.csv", show_col_types = FALSE)
 area_period_profile <- readr::read_csv("../output/tables/area_analysis/area_period_profile.csv", show_col_types = FALSE)
 bayesian_area_posterior <- readr::read_csv("../output/tables/area_analysis/bayesian_area_posterior_summary.csv", show_col_types = FALSE)
+bayesian_area_prior <- readr::read_csv("../output/tables/area_analysis/bayesian_area_prior_summary.csv", show_col_types = FALSE)
 bayesian_area_diagnostics <- readr::read_csv("../output/tables/area_analysis/bayesian_area_diagnostics.csv", show_col_types = FALSE)
+bayesian_area_prior_predictive <- readr::read_csv("../output/tables/area_analysis/bayesian_area_prior_predictive_summary.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -270,10 +272,10 @@ n_screen_area_ri <- area_profile_value(area_ri, "screen_n")
 pct_strict_area_cp <- area_profile_value(area_cp, "pct_strict_screen")
 pct_strict_area_ri <- area_profile_value(area_ri, "pct_strict_screen")
 
-bayes_value <- function(prior, parameter, variable) {
-  bayesian_area_posterior[[variable]][
-    bayesian_area_posterior$prior == prior &
-      bayesian_area_posterior$parameter == parameter
+bayes_value <- function(prior, parameter, variable, data = bayesian_area_posterior) {
+  data[[variable]][
+    data$prior == prior &
+      data$parameter == parameter
   ]
 }
 
@@ -287,6 +289,17 @@ bayes_student_delta <- bayes_value("Student-t(3, 0, 2.5)", "Diferença CP - RI",
 bayes_student_delta_low <- bayes_value("Student-t(3, 0, 2.5)", "Diferença CP - RI", "q025")
 bayes_student_delta_high <- bayes_value("Student-t(3, 0, 2.5)", "Diferença CP - RI", "q975")
 bayes_student_pdelta <- bayes_value("Student-t(3, 0, 2.5)", "P(delta > 0)", "estimate")
+bayes_normal_prior_pdelta <- bayes_value("Normal(0, 1.5)", "P(delta > 0)", "estimate", bayesian_area_prior)
+bayes_student_prior_pdelta <- bayes_value("Student-t(3, 0, 2.5)", "P(delta > 0)", "estimate", bayesian_area_prior)
+bayes_normal_prior_ppc_n <- bayesian_area_prior_predictive$observed_journals_within_ppc_95[
+  bayesian_area_prior_predictive$prior == "Normal(0, 1.5)"
+]
+bayes_student_prior_ppc_n <- bayesian_area_prior_predictive$observed_journals_within_ppc_95[
+  bayesian_area_prior_predictive$prior == "Student-t(3, 0, 2.5)"
+]
+bayes_prior_ppc_total <- bayesian_area_prior_predictive$observed_journals_total[
+  bayesian_area_prior_predictive$prior == "Normal(0, 1.5)"
+]
 bayes_max_rhat <- max(bayesian_area_diagnostics$max_rhat)
 bayes_min_ess_bulk <- min(bayesian_area_diagnostics$min_ess_bulk)
 bayes_divergences <- max(bayesian_area_diagnostics$divergences)
@@ -303,7 +316,13 @@ stopifnot(
   bayes_normal_delta_low > 0,
   bayes_student_delta > 0,
   bayes_student_delta_low > 0,
-  bayes_divergences == 0
+  bayes_divergences == 0,
+  bayes_normal_prior_pdelta > 0,
+  bayes_normal_prior_pdelta < 1,
+  bayes_student_prior_pdelta > 0,
+  bayes_student_prior_pdelta < 1,
+  bayes_normal_prior_ppc_n == bayes_prior_ppc_total,
+  bayes_student_prior_ppc_n == bayes_prior_ppc_total
 )
 ```
 
@@ -484,6 +503,8 @@ A proporção de artigos empíricos é praticamente idêntica nas duas áreas: `
 A análise principal da diferença usa um modelo bayesiano hierárquico binomial estimado com `brms` [@buerkner2017brms]. A verossimilhança é agregada por periódico: o numerador é o número de artigos quantitativos com inferência e o denominador é o número com rótulo de inferência observado; periódicos são permutáveis dentro de cada área por meio de um intercepto aleatório. Com priors fracamente informativos `Normal(0, 1,5)` para o intercepto e para o contraste de área, seguindo a recomendação de regularização própria para regressões logísticas de Gelman et al. [-@gelman2008prior], a probabilidade posterior de inferência é `r format_pct(round(100 * bayes_normal_cp, 1))` em um periódico típico de Ciência Política e `r format_pct(round(100 * bayes_normal_ri, 1))` em um periódico típico de Relações Internacionais. A diferença mediana é `r format_pp(100 * bayes_normal_delta)` (intervalo de credibilidade posterior de 95%: `r format_pp(100 * bayes_normal_delta_low)` a `r format_pp(100 * bayes_normal_delta_high)`), com `r format_pct(round(100 * bayes_normal_pdelta, 1))` de probabilidade posterior de que a diferença CP--RI seja positiva.
 
 O resultado é estável a uma priori mais dispersa, `Student-t(3, 0, 2,5)`: a diferença mediana é `r format_pp(100 * bayes_student_delta)` (intervalo de credibilidade de 95%: `r format_pp(100 * bayes_student_delta_low)` a `r format_pp(100 * bayes_student_delta_high)`), e `r format_pct(round(100 * bayes_student_pdelta, 1))` da massa posterior é positiva. As duas especificações tiveram `r format_n(bayes_divergences)` divergências, R-hat máximo de `r format(round(bayes_max_rhat, 3), decimal.mark = ",", nsmall = 3)` e tamanho efetivo mínimo (bulk) de `r format_n(round(bayes_min_ess_bulk))`; as oito proporções observadas ficaram dentro dos intervalos preditivos de 95% do modelo Normal. Esses resultados quantificam a diferença descritiva levando em conta a estrutura por periódico; não identificam um efeito causal da área, e a incerteza permanece condicionada ao pequeno número de periódicos de Relações Internacionais.
+
+A checagem preditiva das priors indica que o sinal não foi imposto pela especificação. Antes de observar os dados, a probabilidade de uma diferença CP--RI positiva era `r format_pct(round(100 * bayes_normal_prior_pdelta, 1))` com a priori Normal e `r format_pct(round(100 * bayes_student_prior_pdelta, 1))` com a priori Student-t; depois da observação, essas probabilidades passam a `r format_pct(round(100 * bayes_normal_pdelta, 1))` e `r format_pct(round(100 * bayes_student_pdelta, 1))`. As taxas observadas dos `r format_n(bayes_prior_ppc_total)` periódicos ficaram dentro dos intervalos preditivos de 95% de ambas as priors (`r format_n(bayes_normal_prior_ppc_n)` na Normal e `r format_n(bayes_student_prior_ppc_n)` na Student-t). Essa checagem avalia a influência da priori, mas não incorpora incerteza na classificação dos artigos, que será tratada em etapa posterior.
 
 O contraste também aparece na identificação causal explícita, embora os números sejam pequenos. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos examinados (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais descrevem menções a estratégias, não qualidade da execução nem superioridade de uma área.
 

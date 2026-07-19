@@ -225,10 +225,43 @@ posterior_targets <- function(fit, prior_label) {
   )
 }
 
+prior_targets <- function(fit, prior_label) {
+  draws <- brms::prior_draws(fit)
+  alpha <- draws$Intercept
+  beta <- draws$b_area_ri
+  p_cp <- plogis(alpha)
+  p_ri <- plogis(alpha + beta)
+  delta <- p_cp - p_ri
+  tibble::tibble(
+    prior = prior_label,
+    parameter = c(
+      "P(inferência | CP, periódico médio)",
+      "P(inferência | RI, periódico médio)",
+      "Diferença CP - RI",
+      "P(delta > 0)"
+    ),
+    estimate = c(
+      median(p_cp), median(p_ri), median(delta), mean(delta > 0)
+    ),
+    q025 = c(
+      quantile(p_cp, 0.025), quantile(p_ri, 0.025), quantile(delta, 0.025), NA_real_
+    ),
+    q975 = c(
+      quantile(p_cp, 0.975), quantile(p_ri, 0.975), quantile(delta, 0.975), NA_real_
+    )
+  )
+}
+
 normal_targets <- posterior_targets(fit_normal, "Normal(0, 1.5)")
 student_targets <- posterior_targets(fit_student, "Student-t(3, 0, 2.5)")
 posterior_summary <- dplyr::bind_rows(normal_targets, student_targets)
 readr::write_csv(posterior_summary, file.path(tables_dir, "bayesian_area_posterior_summary.csv"))
+
+prior_summary <- dplyr::bind_rows(
+  prior_targets(fit_normal, "Normal(0, 1.5)"),
+  prior_targets(fit_student, "Student-t(3, 0, 2.5)")
+)
+readr::write_csv(prior_summary, file.path(tables_dir, "bayesian_area_prior_summary.csv"))
 
 draws_normal <- posterior::as_draws_df(fit_normal) |>
   dplyr::transmute(
@@ -268,6 +301,28 @@ ppc_rates <- function(fit) {
   yrep / matrix(journal_data$n, nrow = nrow(yrep), ncol = nrow(journal_data), byrow = TRUE)
 }
 
+prior_ppc_rates <- function(fit, seed) {
+  yrep <- brms::posterior_predict(
+    fit,
+    ndraws = 1000,
+    sample_prior = "only",
+    seed = seed
+  )
+  yrep / matrix(journal_data$n, nrow = nrow(yrep), ncol = nrow(journal_data), byrow = TRUE)
+}
+
+summarize_ppc_rates <- function(rates, prior_label) {
+  tibble::tibble(
+    prior = prior_label,
+    journal_title = journal_data$journal_title,
+    observed_rate = journal_data$observed_rate,
+    ppc_q025 = apply(rates, 2, quantile, probs = 0.025),
+    ppc_q50 = apply(rates, 2, quantile, probs = 0.5),
+    ppc_q975 = apply(rates, 2, quantile, probs = 0.975)
+  ) |>
+    dplyr::mutate(observed_within_ppc_95 = observed_rate >= ppc_q025 & observed_rate <= ppc_q975)
+}
+
 ppc_normal <- ppc_rates(fit_normal)
 ppc_interval <- tibble::tibble(
   journal_title = journal_data$journal_title,
@@ -278,6 +333,27 @@ ppc_interval <- tibble::tibble(
 ) |>
   dplyr::mutate(observed_within_ppc_95 = observed_rate >= ppc_q025 & observed_rate <= ppc_q975)
 readr::write_csv(ppc_interval, file.path(tables_dir, "bayesian_area_ppc_journal_rates.csv"))
+
+prior_ppc_interval <- dplyr::bind_rows(
+  summarize_ppc_rates(prior_ppc_rates(fit_normal, 20260730), "Normal(0, 1.5)"),
+  summarize_ppc_rates(prior_ppc_rates(fit_student, 20260731), "Student-t(3, 0, 2.5)")
+)
+readr::write_csv(
+  prior_ppc_interval,
+  file.path(tables_dir, "bayesian_area_prior_predictive_journal_rates.csv")
+)
+
+prior_predictive_summary <- prior_ppc_interval |>
+  dplyr::group_by(prior) |>
+  dplyr::summarise(
+    observed_journals_within_ppc_95 = sum(observed_within_ppc_95),
+    observed_journals_total = dplyr::n(),
+    .groups = "drop"
+  )
+readr::write_csv(
+  prior_predictive_summary,
+  file.path(tables_dir, "bayesian_area_prior_predictive_summary.csv")
+)
 
 format_target_line <- function(targets, label) {
   row <- targets |>
@@ -342,6 +418,32 @@ report_lines <- c(
   format_target_line(student_targets, "Prior Student-t"),
   "",
   "Os valores de delta são diferenças entre as probabilidades previstas para um periódico médio, mantendo o intercepto aleatório no valor médio da distribuição. Não são efeitos causais da área.",
+  "## Checagem preditiva das priors",
+  "",
+  "A checagem usa draws gerados somente das priors, antes de incorporar os dados. As duas priors são centradas em ausência de contraste: a probabilidade a priori de delta ser positiva é próxima de 0,5. As taxas observadas dos oito periódicos ficam dentro dos intervalos preditivos de 95% gerados por cada especificação. A posterior, em contraste, concentra a massa em delta positivo; portanto, o sinal da diferença é atualizado pelos dados, não imposto pela priori.",
+  "",
+  markdown_table(
+    prior_summary |>
+      dplyr::transmute(
+        Priori = prior,
+        Parâmetro = parameter,
+        Mediana = estimate,
+        `Quantil 2,5%` = q025,
+        `Quantil 97,5%` = q975
+      )
+  ),
+  "",
+  paste0(
+    "Na checagem preditiva das priors, ",
+    paste0(
+      prior_predictive_summary$observed_journals_within_ppc_95,
+      " de ", prior_predictive_summary$observed_journals_total,
+      " periódicos ficaram dentro dos intervalos de 95% (",
+      prior_predictive_summary$prior, ")",
+      collapse = "; "
+    ),
+    "."
+  ),
   "",
   "## Diagnósticos",
   "",
@@ -360,9 +462,12 @@ report_lines <- c(
   "",
   "- `output/tables/area_analysis/bayesian_area_journal_data.csv`",
   "- `output/tables/area_analysis/bayesian_area_posterior_summary.csv`",
+  "- `output/tables/area_analysis/bayesian_area_prior_summary.csv`",
   "- `output/tables/area_analysis/bayesian_area_posterior_draws_normal.csv`",
   "- `output/tables/area_analysis/bayesian_area_diagnostics.csv`",
   "- `output/tables/area_analysis/bayesian_area_ppc_journal_rates.csv`",
+  "- `output/tables/area_analysis/bayesian_area_prior_predictive_journal_rates.csv`",
+  "- `output/tables/area_analysis/bayesian_area_prior_predictive_summary.csv`",
   "- `data/processed/area_analysis/bayesian_area_normal.rds`",
   "- `data/processed/area_analysis/bayesian_area_student.rds`"
 )
