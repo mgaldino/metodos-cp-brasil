@@ -9,5 +9,3 @@ Categorias do primeiro prenome formam partição exaustiva,TRUE,PASS
 "Probabilidades dentro do intervalo [0, 1]",TRUE,PASS
 JSON de métodos sem falhas de parsing,TRUE,PASS
 Numeradores não excedem denominadores,TRUE,PASS
-Denominadores dos testes reconciliados,TRUE,PASS
-"P-valores dos testes dentro do intervalo [0, 1]",TRUE,PASS

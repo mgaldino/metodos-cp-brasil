@@ -12,9 +12,9 @@ As diferenças brutas de composição indicam análise quantitativa em 55,7% dos
 
 Entre os artigos examinados para identificação — e somente nesse denominador — estratégias explícitas aparecem em 3,0% na categoria feminina e 4,9% na masculina.
 
-Após a correção de Holm para seis comparações, o teste de duas proporções rejeita igualdade para: Artigos empíricos; Análise quantitativa; Inferência estatística; Examinados para identificação. No teste de Mantel–Haenszel por periódico × período, permanecem significativos: Artigos empíricos; Análise quantitativa; Inferência estatística; Examinados para identificação.
-
 Essas diferenças são descritivas e correlacionais. A classificação do prenome não observa identidade de gênero nem necessariamente o sexo de cada pessoa; tampouco os contrastes identificam preferências individuais ou efeitos de gênero.
+
+A inferência está exclusivamente no relatório bayesiano `quality_reports/gender_analysis_bayesian_hierarchical.md`; o presente relatório limita-se à descrição dos dados.
 
 ## População analítica e exclusões
 
@@ -77,20 +77,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 *Figura 2. Indicadores metodológicos segundo a classificação binária inferida do primeiro prenome.*
 
-**Tabela 5. Testes simples de hipótese para diferenças entre as categorias do primeiro prenome**
-
-| Indicador | Diferença F−M (IC 95%) | p (duas proporções) | p Holm | Significativo após Holm | OR comum MH (IC 95%) | p MH Holm | MH significativo |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Artigos empíricos | +4,7 p.p. [+2,3 p.p.; +7,1 p.p.] | < 0,001 | 0,001 | Sim | 1,40 [1,16; 1,69] | 0,002 | Sim |
-| Análise quantitativa | -5,5 p.p. [-9,1 p.p.; -2,0 p.p.] | 0,002 | 0,007 | Sim | 0,78 [0,66; 0,91] | 0,006 | Sim |
-| Inferência estatística | -12,2 p.p. [-16,7 p.p.; -7,8 p.p.] | < 0,001 | < 0,001 | Sim | 0,52 [0,42; 0,65] | < 0,001 | Sim |
-| Linguagem causal ou explicativa | +0,2 p.p. [-1,0 p.p.; +1,4 p.p.] | 0,742 | 0,742 | Não | 1,19 [0,76; 1,85] | 0,446 | Não |
-| Examinados para identificação | -6,4 p.p. [-9,5 p.p.; -3,4 p.p.] | < 0,001 | < 0,001 | Sim | 0,73 [0,62; 0,85] | < 0,001 | Sim |
-| Estratégia explícita de identificação | -1,9 p.p. [-4,0 p.p.; +0,3 p.p.] | 0,128 | 0,257 | Não | 0,64 [0,33; 1,25] | 0,393 | Não |
-
-*Nota:* o teste bilateral de duas proporções avalia H0: p(Feminino) = p(Masculino), sem correção de continuidade. O IC de 95% refere-se à diferença F−M. `p Holm` corrige a família dos seis indicadores. O teste de Cochran–Mantel–Haenszel (MH) estratifica por periódico × período; OR comum acima de 1 indica maior chance na categoria feminina. Significância usa α = 0,05 após Holm. Esses testes não corrigem repetição de autores, dependência entre artigos do mesmo periódico ou confundidores além dos estratos MH.*
-
-**Tabela 6. Comparação padronizada por periódico e período**
+**Tabela 5. Comparação padronizada por periódico e período**
 
 | Indicador | Estratos comuns | Prenome feminino padronizado | Prenome masculino padronizado | Diferença padronizada F−M |
 | --- | --- | --- | --- | --- |
@@ -103,7 +90,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 *Nota:* em cada indicador, as taxas específicas por periódico × período são ponderadas pela distribuição conjunta dos denominadores nas duas categorias, usando somente estratos com suporte em ambas. A padronização reduz diferenças de composição nesses dois eixos, mas não controla subcampo, idioma, tamanho da equipe ou outros confundidores.
 
-**Tabela 7. Tipo de evidência entre artigos empíricos, por classificação do primeiro prenome**
+**Tabela 6. Tipo de evidência entre artigos empíricos, por classificação do primeiro prenome**
 
 | Classificação do primeiro prenome | Tipo de evidência | Artigos | Denominador empírico | Proporção |
 | --- | --- | --- | --- | --- |
@@ -118,7 +105,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 ## Análise exploratória da composição da equipe
 
-**Tabela 8. Indicadores metodológicos segundo a composição das classificações de prenomes na equipe**
+**Tabela 7. Indicadores metodológicos segundo a composição das classificações de prenomes na equipe**
 
 | Indicador | Só prenomes femininos | Só prenomes masculinos | Duas categorias | Indeterminada |
 | --- | --- | --- | --- | --- |
@@ -133,7 +120,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 ## Evolução temporal
 
-**Tabela 9. Categoria feminina do primeiro prenome por período**
+**Tabela 8. Categoria feminina do primeiro prenome por período**
 
 | Período | Primeiro prenome classificado como feminino | Primeiros prenomes classificados | Proporção feminina entre classificados | Primeiros prenomes não classificados |
 | --- | --- | --- | --- | --- |
@@ -145,7 +132,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 ## Cobertura e sensibilidade da classificação
 
-**Tabela 10. Motivo da classificação ou não classificação do primeiro prenome**
+**Tabela 9. Motivo da classificação ou não classificação do primeiro prenome**
 
 | Status da classificação | Artigos | Proporção do corpus |
 | --- | --- | --- |
@@ -156,7 +143,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 *Nota:* `Prenome não encontrado` corresponde a probabilidade ausente no `genderBR`; `Ambíguo no limiar` tem probabilidade válida entre 10% e 90%.
 
-**Tabela 11. Cobertura da classificação binária por periódico**
+**Tabela 10. Cobertura da classificação binária por periódico**
 
 | Periódico | Artigos | Classificados | Não classificados | Cobertura |
 | --- | --- | --- | --- | --- |
@@ -172,7 +159,7 @@ Os resultados descrevem somente os artigos já presentes no snapshot canônico c
 
 A cobertura também varia por idioma: 93,0% nos artigos em inglês e 96,3% nos artigos em português. Essa não classificação diferencial impede tratar os casos classificados como aleatórios.
 
-**Tabela 12. Sensibilidade ao limiar de classificação**
+**Tabela 11. Sensibilidade ao limiar de classificação**
 
 | Limiar | Cobertura | Indicador | Prenome feminino | Prenome masculino | Diferença F−M |
 | --- | --- | --- | --- | --- | --- |
@@ -203,7 +190,7 @@ Documentação consultada em 2026-07-19: [manual oficial do pacote genderBR no C
 - R: `R version 4.4.2 (2024-10-31)`.
 - Pacotes: `dplyr 1.2.0; genderBR 1.4.0; ggplot2 4.0.2; jsonlite 2.0.0; readr 2.1.5; stringr 1.6.0; tidyr 1.3.1`.
 
-**Tabela 13. Validações automáticas**
+**Tabela 12. Validações automáticas**
 
 | Validação | Status |
 | --- | --- |
@@ -217,7 +204,5 @@ Documentação consultada em 2026-07-19: [manual oficial do pacote genderBR no C
 | Probabilidades dentro do intervalo [0, 1] | PASS |
 | JSON de métodos sem falhas de parsing | PASS |
 | Numeradores não excedem denominadores | PASS |
-| Denominadores dos testes reconciliados | PASS |
-| P-valores dos testes dentro do intervalo [0, 1] | PASS |
 
 *Nota:* todos os artefatos derivados são recriados pelo script acima.
