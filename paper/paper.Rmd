@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos examinados para identificação. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
+  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos selecionados para avaliar identificação causal. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
 ---
 
 ```{r setup, include=FALSE}
@@ -418,7 +418,7 @@ Classificamos o texto integral de cada artigo com um protocolo padronizado aplic
 
 Os rótulos em escala ainda não foram integralmente adjudicados por humanos. Nos nove periódicos completos, a fração marcada como caso difícil varia de `r format_pct(tough_call_min)` a `r format_pct(tough_call_max)` entre células periódico--período. Lotes diferentes também foram classificados com configurações distintas de modelo e esforço. Como a ordem dos lotes se relaciona ao período de publicação, uma variação temporal pode combinar mudança editorial e mudança do classificador. Por isso, tratamos as tendências como diagnóstico exploratório.
 
-Cada proporção tem um denominador próprio. A cobertura usa os `r format_n(n_manifest)` artigos elegíveis; as práticas metodológicas usam os `r format_n(n_classificados)` artigos classificados. A taxa de inferência exclui `r format_n(n_inferencia_ausente)` artigos quantitativos sem rótulo observado, `r format_pct(round(100 * n_inferencia_ausente / n_quant, 1))` do subconjunto. Esses artigos não são tratados como casos sem inferência. A frequência de estratégias explícitas usa os `r format_n(n_screen_periodicos_completos)` artigos examinados nos periódicos completos. Todas as tabelas e figuras informam seus denominadores.
+Cada proporção tem um denominador próprio. A cobertura usa os `r format_n(n_manifest)` artigos elegíveis; as práticas metodológicas usam os `r format_n(n_classificados)` artigos classificados. A taxa de inferência exclui `r format_n(n_inferencia_ausente)` artigos quantitativos sem rótulo observado, `r format_pct(round(100 * n_inferencia_ausente / n_quant, 1))` do subconjunto. Esses artigos não são tratados como casos sem inferência. A frequência de estratégias explícitas usa os `r format_n(n_screen_periodicos_completos)` artigos selecionados para avaliar identificação causal nos periódicos completos. Todas as tabelas e figuras informam seus denominadores.
 
 Duas dimensões complementares ainda não foram classificadas: explicitação metodológica e formato do artigo empírico. A primeira deve distinguir se dados, fontes e estratégia analítica aparecem de forma clara, parcial ou ausente. A segunda deve classificar a arquitetura textual do artigo empírico. Como essas dimensões não integram os resultados desta versão, nenhuma conclusão é apresentada sobre rastreabilidade ou padronização textual.
 
@@ -552,7 +552,7 @@ knitr::kable(
 )
 ```
 
-A identificação causal explícita também difere entre as áreas. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos examinados (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
+A identificação causal explícita também difere entre as áreas. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos selecionados para avaliar identificação causal (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
 
 A diferença de inferência aparece nos três períodos. Em Ciência Política, a proporção passa de `r format_pct(area_period_value(area_cp, "2005-2011", "pct_inference_quantitative_observed"))` em 2005--2011 para `r format_pct(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed"))` em 2019--2025. Em Relações Internacionais, passa de `r format_pct(area_period_value(area_ri, "2005-2011", "pct_inference_quantitative_observed"))` para `r format_pct(area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`. A distância no último período é de `r format_pp(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed") - area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`; como a área é atribuída ao periódico e as composições editoriais diferem, essa é uma comparação descritiva.
 
@@ -602,14 +602,14 @@ tabela_3_display <- tabela_credibilidade |>
       denominator,
       "artigos classificados" = paste0("Todos (", denominator_n, ")"),
       "artigos empíricos" = paste0("Empíricos (", denominator_n, ")"),
-      "casos relevantes para identificação" = paste0("Artigos examinados (", denominator_n, ")"),
-      "artigos examinados para identificação" = paste0("Artigos examinados (", denominator_n, ")")
+      "casos relevantes para identificação" = paste0("Selecionados para avaliar identificação causal (", denominator_n, ")"),
+      "artigos examinados para identificação" = paste0("Selecionados para avaliar identificação causal (", denominator_n, ")")
     ),
     category = dplyr::recode(
       category,
       "Afirmação causal ou explicativa" = "Linguagem causal ou explicativa",
       "Afirmação causal ou explicativa em artigo empírico" = "Linguagem causal ou explicativa em artigo empírico",
-      "Casos relevantes para avaliar identificação" = "Artigos examinados",
+      "Casos relevantes para avaliar identificação" = "Selecionados para avaliar identificação causal",
       "Estratégia explícita de identificação causal" = "Estratégia explícita",
       "Método quantitativo sem estratégia explícita" = "Sem estratégia explícita",
       "Outro método moderno a auditar" = "Outras estratégias codificadas"
@@ -630,7 +630,7 @@ knitr::kable(
 )
 ```
 
-Nos periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos examinados mencionam ao menos uma estratégia explícita. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método, e um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita execução ou pressupostos.
+Nos periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos selecionados para avaliar identificação causal mencionam ao menos uma estratégia explícita. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método, e um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita execução ou pressupostos.
 
 ```{r figura-6, fig.cap="Estratégias explícitas de identificação nos nove periódicos integralmente classificados. As barras contam os artigos que mencionam cada estratégia; um artigo pode mencionar mais de uma.", fig.pos="H", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
