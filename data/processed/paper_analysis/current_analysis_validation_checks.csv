@@ -17,7 +17,7 @@ unknown_evidence_level,PASS,error,0,0,Todo tipo de evidência deve pertencer aos
 unknown_quantitative_level,PASS,error,0,0,Todo tipo de análise quantitativa deve pertencer aos níveis previstos.
 nonidentical_duplicate_pids,PASS,error,0,0,Duplicatas exatas podem ser removidas na camada analítica; classificações divergentes bloqueiam a análise.
 classified_outside_manifest,PASS,error,0,0,Nenhuma classificação analítica deve estar fora do manifest.
-classified_excluded_by_ledger,WARN,warning,13,0,Nenhuma classificação analítica deve estar no ledger de exclusões.
+classified_excluded_by_ledger,WARN,warning,13,0,"Classificações canônicas de itens posteriormente excluídos são preservadas e reportadas, mas removidas da base analítica."
 excluded_journal_in_manifest,PASS,error,0,0,Nenhum periódico excluído pode aparecer no manifest analítico.
 excluded_journal_in_classifications,PASS,error,0,0,Nenhum periódico excluído pode aparecer nas classificações canônicas.
 classification_manifest_journal_mismatch,PASS,error,0,0,O periódico da classificação deve coincidir com o periódico do manifest.
