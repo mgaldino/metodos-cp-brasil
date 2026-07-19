@@ -106,7 +106,7 @@ Os nomes de autoria foram extraídos do manifest canônico e separados pelo deli
 
 A classificação é uma proxy baseada na distribuição de prenomes registrada pelo IBGE, não uma observação da identidade de gênero de cada pessoa. O procedimento tem cobertura inferior para nomes estrangeiros, raros, coletivos ou ambíguos e não representa identidades não binárias. A ordem de autoria também não deve ser interpretada como contribuição relativa, pois pode seguir convenções alfabéticas.
 
-Documentação consultada em 2026-07-19: [manual oficial do pacote genderBR no CRAN](https://cran.r-project.org/web/packages/genderBR/refman/genderBR.html) e [base de nomes do Censo do IBGE](https://censo2010.ibge.gov.br/nomes/).
+Documentação consultada em 2026-07-19: [manual oficial do pacote genderBR no CRAN](https://cran.r-project.org/web/packages/genderBR/refman/genderBR.html) e [nota técnica Nomes no Brasil do Censo 2022/IBGE](https://biblioteca.ibge.gov.br/index.php/biblioteca-catalogo?id=2102228&view=detalhes).
 
 ## Reprodutibilidade e validação
 
