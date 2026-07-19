@@ -30,12 +30,12 @@ Ressalva: os seis indicadores são desfechos distintos e foram estimados separad
 
 | Indicador | N | Diferença posterior média F−M | ICr 95% | Pr(F−M > 0) | Pr(F−M < −2 p.p.) | Pr(F−M > +2 p.p.) | Pr(ROPE ±2 p.p.) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Artigos empíricos | 3.970 | +3,2 p.p. | [+0,9 p.p.; +5,3 p.p.] | 0,998 | < 0,001 | 0,844 | 0,156 |
-| Análise quantitativa | 3.276 | -7,2 p.p. | [-12,5 p.p.; -1,8 p.p.] | 0,004 | 0,970 | < 0,001 | 0,030 |
-| Inferência estatística | 1.938 | -12,4 p.p. | [-18,3 p.p.; -6,6 p.p.] | < 0,001 | > 0,999 | < 0,001 | < 0,001 |
-| Linguagem causal ou explicativa | 3.276 | +0,3 p.p. | [-0,7 p.p.; +1,3 p.p.] | 0,710 | < 0,001 | < 0,001 | > 0,999 |
-| Examinados para identificação | 3.970 | -6,3 p.p. | [-10,0 p.p.; -2,7 p.p.] | < 0,001 | 0,987 | < 0,001 | 0,013 |
-| Estratégia explícita de identificação | 1.359 | -0,7 p.p. | [-2,1 p.p.; +0,5 p.p.] | 0,118 | 0,029 | < 0,001 | 0,971 |
+| Artigos empíricos | 3.970 | +3,2 p.p. | [+0,9 p.p.; +5,5 p.p.] | 0,996 | < 0,001 | 0,845 | 0,156 |
+| Análise quantitativa | 3.276 | -7,1 p.p. | [-12,7 p.p.; -1,7 p.p.] | 0,006 | 0,968 | < 0,001 | 0,031 |
+| Inferência estatística | 1.938 | -12,4 p.p. | [-18,1 p.p.; -6,8 p.p.] | < 0,001 | > 0,999 | < 0,001 | < 0,001 |
+| Linguagem causal ou explicativa | 3.276 | +0,3 p.p. | [-0,8 p.p.; +1,3 p.p.] | 0,712 | < 0,001 | < 0,001 | > 0,999 |
+| Examinados para identificação | 3.970 | -6,3 p.p. | [-9,9 p.p.; -2,5 p.p.] | 0,001 | 0,988 | < 0,001 | 0,013 |
+| Estratégia explícita de identificação | 1.359 | -0,7 p.p. | [-2,1 p.p.; +0,5 p.p.] | 0,122 | 0,032 | < 0,001 | 0,968 |
 
 *Nota:* F−M é feminino menos masculino. ICr é o intervalo de credibilidade posterior de 95%. A ROPE de ±2 p.p. é uma margem descritiva de equivalência prática, não um limiar universal.
 
@@ -64,30 +64,32 @@ A regularização segue Gelman (2006) para priors half-t em escalas hierárquica
 
 | Indicador | N | Eventos | Iterações (warmup) | R-hat máximo | ESS bulk mínimo | ESS tail mínimo | Divergências | Saturações de treedepth | PPC prevalência |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Artigos empíricos | 3.970 | 3.276 | 2.000 (1.000) | 1,008 | 467 | 924 | 0 | 0 | PASS |
-| Análise quantitativa | 3.276 | 1.943 | 4.000 (2.000) | 1,004 | 1.057 | 1.833 | 0 | 0 | PASS |
-| Inferência estatística | 1.938 | 727 | 2.000 (1.000) | 1,007 | 658 | 1.162 | 0 | 0 | PASS |
-| Linguagem causal ou explicativa | 3.276 | 3.185 | 4.000 (2.000) | 1,004 | 983 | 1.850 | 0 | 0 | PASS |
-| Examinados para identificação | 3.970 | 1.359 | 2.000 (1.000) | 1,007 | 747 | 1.423 | 0 | 0 | PASS |
-| Estratégia explícita de identificação | 1.359 | 59 | 4.000 (2.000) | 1,008 | 893 | 1.081 | 0 | 0 | PASS |
+| Artigos empíricos | 3.970 | 3.276 | 2.000 (1.000) | 1,010 | 561 | 1.026 | 0 | 0 | PASS |
+| Análise quantitativa | 3.276 | 1.943 | 4.000 (2.000) | 1,005 | 1.028 | 2.143 | 0 | 0 | PASS |
+| Inferência estatística | 1.938 | 727 | 2.000 (1.000) | 1,007 | 721 | 1.263 | 0 | 0 | PASS |
+| Linguagem causal ou explicativa | 3.276 | 3.185 | 4.000 (2.000) | 1,006 | 862 | 1.484 | 0 | 0 | PASS |
+| Examinados para identificação | 3.970 | 1.359 | 2.000 (1.000) | 1,008 | 649 | 1.103 | 0 | 0 | PASS |
+| Estratégia explícita de identificação | 1.359 | 59 | 4.000 (2.000) | 1,004 | 1.184 | 1.280 | 0 | 0 | PASS |
 
 *Nota:* cada modelo usou 4 cadeias e a quantidade de iterações indicada na tabela, `adapt_delta = 0.99` e `max_treedepth = 12`. PASS exige R-hat < 1,01, ESS bulk e tail mínimos ≥ 400, nenhuma divergência, nenhuma saturação de treedepth e prevalência observada dentro do intervalo preditivo posterior de 95%.
+
+O maior R-hat foi 1,0101; um modelo ficou marginalmente acima do corte estrito de 1,01, sem divergências ou saturações de treedepth. Os demais diagnósticos de amostragem e as checagens preditivas foram satisfatórios.
 
 Checagens preditivas adicionais por categoria do prenome, periódico, período e pela combinação desses três eixos estão em `output/tables/gender_analysis/table_16_bayesian_grouped_ppc.csv`. Células pequenas podem ficar fora de intervalos pontuais de 95%; por isso essa tabela é diagnóstico localizado, não um novo teste múltiplo.
 
 ## População e limites
 
-A entrada é derivada do CSV canônico corrente e exclui `Lua Nova: Revista de Cultura e Política`, `Novos estudos CEBRAP`, `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`. Somente artigos cujo primeiro prenome foi classificado como feminino ou masculino entram nos modelos.
+A entrada é derivada do CSV canônico corrente, reconciliada com o ledger de artigos inelegíveis, e exclui `Lua Nova: Revista de Cultura e Política`, `Novos estudos CEBRAP`, `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`. Somente artigos cujo primeiro prenome foi classificado como feminino ou masculino entram nos modelos.
 
 A proxy não observa identidade de gênero, exclui identidades não binárias e tem não classificação diferencial. A ordem de autoria não mede contribuição. O intercepto de autor usa o nome completo normalizado como identificador aproximado: pode unir homônimos ou separar variantes da mesma pessoa. O modelo não trata a classificação como incerta e não controla subcampo, idioma ou coautoria.
 
-Os denominadores são condicionais e não diretamente comparáveis: inferência estatística é estimada entre artigos quantitativos, e estratégia explícita entre artigos examinados para identificação. Esses recortes podem introduzir seleção. A análise descritiva anterior mostrou estabilidade bruta nos limiares de classificação 0,80, 0,90 e 0,95; os modelos hierárquicos não propagam essa incerteza nem imputam os 187 casos não classificados.
+Os denominadores são condicionais e não diretamente comparáveis: inferência estatística é estimada entre artigos quantitativos, e estratégia explícita entre artigos examinados para identificação. Esses recortes podem introduzir seleção. A análise descritiva anterior mostrou estabilidade bruta nos limiares de classificação 0,80, 0,90 e 0,95; os modelos hierárquicos não propagam essa incerteza nem imputam os 174 casos não classificados.
 
 ## Reprodutibilidade
 
 - Script gerador: `scripts/54_fit_bayesian_gender_hierarchical.R`.
-- Base de entrada: `data/processed/gender_analysis/current_canonical_article_gender.csv`, gerada por `scripts/51_analyze_gender_current_canonical.R`.
-- MD5 da base de entrada: `9ba855c38cb5509c2c778b0237ff7f22`.
+- Base de entrada: `data/processed/gender_analysis/current_canonical_article_gender_paper_scope.csv`, reconciliada por `scripts/56_reconcile_gender_to_paper_scope.R` a partir da classificação gerada por `scripts/51_analyze_gender_current_canonical.R`.
+- MD5 da base de entrada: `362d319181f4d9df0df73275b03982c0`.
 - Ambiente: `R 4.4.2; brms 2.23.0; cmdstanr 0.9.0; posterior 1.6.1; CmdStan 2.37.0`.
 - Os objetos `brmsfit` são cache local em `data/processed/gender_analysis/bayesian_models/` e não são versionados devido ao tamanho.
 
@@ -107,6 +109,6 @@ Os denominadores são condicionais e não diretamente comparáveis: inferência 
 | Apenas categorias binárias entram nos modelos | PASS |
 | Nove periódicos em todos os denominadores | PASS |
 | Desfechos binários com variação | PASS |
-| R-hat, ESS e amostragem NUTS aprovados | PASS |
+| R-hat, ESS e amostragem NUTS aprovados | FAIL |
 | Prevalência observada coberta pela checagem preditiva posterior | PASS |
 | Probabilidades posteriores dentro de [0, 1] | PASS |

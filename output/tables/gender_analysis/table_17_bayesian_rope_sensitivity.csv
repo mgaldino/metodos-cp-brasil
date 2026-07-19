@@ -1,25 +1,25 @@
 metric,rope_pp,posterior_probability_in_rope,posterior_probability_above_positive_rope,posterior_probability_below_negative_rope
-Artigos empíricos,1,0.0305,0.96925,2.5e-4
-Artigos empíricos,2,0.15625,0.84375,0
-Artigos empíricos,3,0.43725,0.56275,0
-Artigos empíricos,5,0.94875,0.05125,0
-Análise quantitativa,1,0.011125,0.00125,0.987625
-Análise quantitativa,2,0.03,3.75e-4,0.969625
-Análise quantitativa,3,0.066875,1.25e-4,0.933
-Análise quantitativa,5,0.210125,0,0.789875
+Artigos empíricos,1,0.032,0.9675,5e-4
+Artigos empíricos,2,0.1555,0.8445,0
+Artigos empíricos,3,0.44225,0.55775,0
+Artigos empíricos,5,0.93825,0.06175,0
+Análise quantitativa,1,0.011875,0.002,0.986125
+Análise quantitativa,2,0.031,7.5e-4,0.96825
+Análise quantitativa,3,0.067,1.25e-4,0.932875
+Análise quantitativa,5,0.224375,0,0.775625
 Inferência estatística,1,0,0,1
-Inferência estatística,2,0,0,1
-Inferência estatística,3,2.5e-4,0,0.99975
-Inferência estatística,5,0.00625,0,0.99375
-Linguagem causal ou explicativa,1,0.91625,0.075875,0.007875
+Inferência estatística,2,2.5e-4,0,0.99975
+Inferência estatística,3,0.00175,0,0.99825
+Inferência estatística,5,0.0065,0,0.9935
+Linguagem causal ou explicativa,1,0.912125,0.07825,0.009625
 Linguagem causal ou explicativa,2,0.999625,3.75e-4,0
 Linguagem causal ou explicativa,3,1,0,0
 Linguagem causal ou explicativa,5,1,0,0
-Examinados para identificação,1,0.00425,0,0.99575
-Examinados para identificação,2,0.01275,0,0.98725
-Examinados para identificação,3,0.0365,0,0.9635
-Examinados para identificação,5,0.24125,0,0.75875
-Estratégia explícita de identificação,1,0.737375,0.004375,0.25825
-Estratégia explícita de identificação,2,0.971125,0,0.028875
-Estratégia explícita de identificação,3,0.9975,0,0.0025
+Examinados para identificação,1,0.00275,2.5e-4,0.997
+Examinados para identificação,2,0.0125,0,0.9875
+Examinados para identificação,3,0.0445,0,0.9555
+Examinados para identificação,5,0.24975,0,0.75025
+Estratégia explícita de identificação,1,0.723625,0.00375,0.272625
+Estratégia explícita de identificação,2,0.967625,0,0.032375
+Estratégia explícita de identificação,3,0.998375,0,0.001625
 Estratégia explícita de identificação,5,1,0,0

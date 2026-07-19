@@ -2,6 +2,8 @@
 
 **Data de execução:** 2026-07-19
 
+**Nota de escopo:** esta versão do relatório foi gerada antes da aplicação final do ledger de artigos inelegíveis e parte de 4.157 registros após as exclusões de periódicos. Para o paper, os 13 PIDs inelegíveis presentes nessa base foram removidos por `scripts/56_reconcile_gender_to_paper_scope.R`; os resultados incorporados ao manuscrito usam 4.144 artigos e os artefatos com sufixo `_paper_scope`.
+
 ## Síntese
 
 A análise parte dos 4.389 PIDs distintos do CSV canônico corrente. Após as exclusões de escopo, restam 4.157 artigos; 232 registros foram retirados. O `genderBR` classificou o primeiro prenome como feminino ou masculino em 3.970 casos (95,5%).

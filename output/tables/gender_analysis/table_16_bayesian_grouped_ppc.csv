@@ -1,385 +1,385 @@
 metric,grouping,group,n_articles,observed_rate,posterior_predictive_mean,posterior_predictive_low,posterior_predictive_high,observed_within_interval
-Artigos empíricos,Categoria do prenome,Feminino,1323,0.8563869992441421,0.855477450239355,0.8310468631897203,0.8764361300075585,TRUE
-Artigos empíricos,Categoria do prenome,Masculino,2647,0.8095957687948621,0.8095290265709608,0.7914620324896109,0.8269928220627125,TRUE
-Artigos empíricos,Periódico,Brazilian Political Science Review,261,0.8659003831417624,0.8637547892720306,0.8102490421455939,0.9118773946360154,TRUE
-Artigos empíricos,Periódico,Cadernos Gestão Pública e Cidadania,114,0.8771929824561403,0.8826023391812865,0.7982456140350878,0.9473684210526315,TRUE
-Artigos empíricos,Periódico,Contexto Internacional,421,0.75059382422802845,0.7545605700712589,0.7078384798099763,0.8064726840855106,TRUE
-Artigos empíricos,Periódico,Dados,606,0.8745874587458746,0.872035203520352,0.8366336633663366,0.9026402640264026,TRUE
-Artigos empíricos,Periódico,Opinião Pública,443,0.9503386004514672,0.9448156508653123,0.9142212189616253,0.9683972911963883,TRUE
-Artigos empíricos,Periódico,Revista Brasileira de Ciência Política,383,0.7467362924281984,0.7501218450826805,0.7049608355091384,0.7989556135770235,TRUE
-Artigos empíricos,Periódico,Revista Brasileira de Ciências Sociais,672,0.7738095238095238,0.773640873015873,0.7388020833333333,0.808110119047619,TRUE
-Artigos empíricos,Periódico,Revista Brasileira de Política Internacional,451,0.8802660753880266,0.877819660014782,0.8381374722838137,0.9113082039911308,TRUE
-Artigos empíricos,Periódico,Revista de Sociologia e Política,619,0.7754442649434572,0.7767474421109316,0.7415185783521809,0.8199919224555734,TRUE
-Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,17,0.9411764705882353,0.8631372549019608,0.7058823529411765,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,24,0.7916666666666666,0.8751388888888889,0.75,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,41,0.9512195121951219,0.9315447154471544,0.8292682926829268,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,28,0.6071428571428571,0.7021428571428572,0.5357142857142857,0.8571428571428571,TRUE
-Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,82,0.8780487804878049,0.8462195121951219,0.7439024390243902,0.9146341463414634,TRUE
-Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,69,0.9130434782608695,0.9060869565217391,0.8260869565217391,0.9710144927536232,TRUE
-Artigos empíricos,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,55,0.9272727272727272,0.9073333333333333,0.8,0.9818181818181818,TRUE
-Artigos empíricos,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,59,0.8305084745762712,0.8595480225988701,0.7457627118644068,0.9491525423728814,TRUE
-Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,32,0.75,0.6892708333333334,0.5,0.8289062499999993,TRUE
-Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,62,0.8064516129032258,0.7729569892473118,0.6451612903225806,0.8709677419354839,TRUE
-Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,80,0.7875,0.8417083333333333,0.75,0.925,TRUE
-Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,63,0.5873015873015873,0.6080952380952381,0.47619047619047616,0.7142857142857143,TRUE
-Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,93,0.7741935483870968,0.737741935483871,0.6451612903225806,0.8172043010752689,TRUE
-Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,91,0.7692307692307693,0.806959706959707,0.7252747252747253,0.8791208791208791,TRUE
-Artigos empíricos,Periódico × categoria × período,Dados | Feminino | 2005-2011,51,0.8627450980392157,0.8608496732026144,0.7450980392156863,0.9607843137254902,TRUE
-Artigos empíricos,Periódico × categoria × período,Dados | Feminino | 2012-2018,71,0.9014084507042254,0.9125821596244131,0.8376760563380281,0.971830985915493,TRUE
-Artigos empíricos,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,1,0.9595238095238096,0.9107142857142857,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Dados | Masculino | 2005-2011,124,0.8387096774193549,0.7770430107526882,0.6854838709677419,0.8467741935483871,TRUE
-Artigos empíricos,Periódico × categoria × período,Dados | Masculino | 2012-2018,135,0.8592592592592593,0.8615308641975309,0.8,0.9185185185185185,TRUE
-Artigos empíricos,Periódico × categoria × período,Dados | Masculino | 2019-2025,169,0.863905325443787,0.9074753451676528,0.863905325443787,0.9526627218934911,TRUE
-Artigos empíricos,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,40,0.975,0.947,0.85,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,43,0.9767441860465116,0.9644961240310077,0.9069767441860465,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,1,0.9840350877192983,0.9473684210526315,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,64,0.90625,0.87890625,0.78125,0.953125,TRUE
-Artigos empíricos,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,114,0.9035087719298246,0.930233918128655,0.8725877192982456,0.9736842105263158,TRUE
-Artigos empíricos,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,106,0.9716981132075472,0.9633647798742139,0.9150943396226415,0.9955188679245282,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,8,0.25,0.48500000000000004,0.25,0.75,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,67,0.746268656716418,0.7430845771144279,0.6567164179104478,0.8507462686567164,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,57,0.8596491228070176,0.8366666666666667,0.7276315789473684,0.9298245614035088,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,20,0.45,0.5568333333333333,0.35,0.75,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,122,0.6967213114754098,0.6956830601092896,0.6065573770491803,0.7868852459016393,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,109,0.8348623853211009,0.825045871559633,0.7522935779816514,0.8899082568807339,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,65,0.7384615384615385,0.7316410256410256,0.6307692307692307,0.8388461538461536,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,68,0.7647058823529411,0.8124509803921569,0.7128676470588236,0.8970588235294118,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,80,0.9625,0.9077916666666667,0.825,0.9625,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,146,0.6301369863013698,0.6412557077625571,0.547945205479452,0.7227739726027396,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,154,0.7272727272727273,0.7501298701298701,0.6818181818181818,0.8246753246753247,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,159,0.8742138364779874,0.8510482180293502,0.7924528301886793,0.9089622641509433,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,33,0.9393939393939394,0.8706060606060606,0.7272727272727273,0.9696969696969697,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,54,0.8518518518518519,0.8984567901234568,0.8148148148148148,0.9629629629629629,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,63,0.9365079365079365,0.9504761904761905,0.8964285714285715,1,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,115,0.7739130434782608,0.7864347826086957,0.6956521739130435,0.8608695652173913,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,101,0.8910891089108911,0.8834323432343234,0.8165841584158415,0.9405940594059405,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,85,0.9647058823529412,0.9306274509803921,0.8705882352941177,0.9764705882352941,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,75,0.64,0.6934222222222223,0.5733333333333334,0.8,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,61,0.8360655737704918,0.8197814207650274,0.7127049180327869,0.9102459016393438,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,44,0.8409090909090909,0.8684848484848485,0.75,0.9664772727272722,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,170,0.6529411764705882,0.6774705882352942,0.611764705882353,0.7588235294117647,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,154,0.8376623376623377,0.8003896103896104,0.7272727272727273,0.8636363636363636,TRUE
-Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,115,0.9043478260869565,0.8882608695652174,0.8173913043478261,0.9478260869565217,TRUE
-Artigos empíricos,Período,2005-2011,1051,0.7316841103710752,0.73418648905804,0.7012369172216937,0.7659372026641293,TRUE
-Artigos empíricos,Período,2012-2018,1405,0.8206405693950178,0.8199169632265718,0.7943060498220641,0.8409430604982207,TRUE
-Artigos empíricos,Período,2019-2025,1514,0.8943196829590488,0.8923425803610744,0.873497357992074,0.9128137384412153,TRUE
-Análise quantitativa,Categoria do prenome,Feminino,1133,0.5569285083848191,0.5558546631362166,0.5277140335392763,0.5825242718446602,TRUE
-Análise quantitativa,Categoria do prenome,Masculino,2143,0.6122258516098926,0.6113159122725151,0.5921605226318245,0.6314045730284648,TRUE
-Análise quantitativa,Periódico,Brazilian Political Science Review,226,0.7477876106194691,0.7451032448377581,0.6835176991150442,0.8032079646017698,TRUE
-Análise quantitativa,Periódico,Cadernos Gestão Pública e Cidadania,100,0.71,0.7016333333333333,0.61,0.78,TRUE
-Análise quantitativa,Periódico,Contexto Internacional,316,0.33544303797468356,0.33606540084388187,0.28164556962025317,0.3877373417721518,TRUE
-Análise quantitativa,Periódico,Dados,530,0.630188679245283,0.6295345911949686,0.5858018867924528,0.6708018867924528,TRUE
-Análise quantitativa,Periódico,Opinião Pública,421,0.9144893111638955,0.9101979414093428,0.8788598574821853,0.9382422802850356,TRUE
-Análise quantitativa,Periódico,Revista Brasileira de Ciência Política,286,0.6328671328671329,0.6328205128205128,0.583916083916084,0.6888111888111889,TRUE
-Análise quantitativa,Periódico,Revista Brasileira de Ciências Sociais,520,0.4307692307692308,0.4326025641025641,0.38846153846153847,0.47692307692307695,TRUE
-Análise quantitativa,Periódico,Revista Brasileira de Política Internacional,397,0.37279596977329976,0.3727120067170445,0.3249370277078086,0.4244962216624685,TRUE
-Análise quantitativa,Periódico,Revista de Sociologia e Política,480,0.6770833333333334,0.6756805555555555,0.6310416666666667,0.7177604166666667,TRUE
-Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,16,0.75,0.71,0.5,0.875,TRUE
-Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,19,0.631578947368421,0.6464912280701754,0.4460526315789474,0.8421052631578947,TRUE
-Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,39,0.717948717948718,0.73,0.5897435897435898,0.8461538461538461,TRUE
-Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,17,0.8235294117647058,0.78117647058823525,0.5882352941176471,0.9411764705882353,TRUE
-Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,72,0.7777777777777778,0.7570370370370371,0.6805555555555556,0.8472222222222222,TRUE
-Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,63,0.746031746031746,0.7697354497354497,0.6666666666666666,0.8654761904761901,TRUE
-Análise quantitativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,51,0.6078431372549019,0.6347058823529412,0.5098039215686274,0.7450980392156863,TRUE
-Análise quantitativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,49,0.8163265306122449,0.7712925170068027,0.6530612244897959,0.8979591836734694,TRUE
-Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,24,0.25,0.23527777777777778,0.08333333333333333,0.4166666666666667,TRUE
-Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,50,0.26,0.27853333333333335,0.16,0.38,TRUE
-Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,63,0.3333333333333333,0.33206349206349206,0.2222222222222222,0.4603174603174603,TRUE
-Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,37,0.35135135135135137,0.302972972972973,0.16216216216216217,0.446621621621621,TRUE
-Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,72,0.4305555555555556,0.37569444444444444,0.2777777777777778,0.4861111111111111,TRUE
-Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,70,0.3142857142857143,0.39204761904761903,0.2857142857142857,0.4932142857142854,TRUE
-Análise quantitativa,Periódico × categoria × período,Dados | Feminino | 2005-2011,44,0.6590909090909091,0.5989393939393939,0.45454545454545453,0.7272727272727273,TRUE
-Análise quantitativa,Periódico × categoria × período,Dados | Feminino | 2012-2018,64,0.609375,0.58140625,0.46875,0.6875,TRUE
-Análise quantitativa,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,0.5714285714285714,0.6136309523809523,0.5,0.7321428571428571,TRUE
-Análise quantitativa,Periódico × categoria × período,Dados | Masculino | 2005-2011,104,0.5865384615384616,0.5939423076923077,0.5192307692307693,0.6781249999999999,TRUE
-Análise quantitativa,Periódico × categoria × período,Dados | Masculino | 2012-2018,116,0.5775862068965517,0.6172413793103448,0.5431034482758621,0.6896551724137931,TRUE
-Análise quantitativa,Periódico × categoria × período,Dados | Masculino | 2019-2025,146,0.726027397260274,0.7010730593607306,0.6196917808219178,0.773972602739726,TRUE
-Análise quantitativa,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,39,0.9487179487179487,0.8956410256410257,0.7814102564102565,0.9743589743589743,TRUE
-Análise quantitativa,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,42,0.9285714285714286,0.8929365079365079,0.7857142857142857,0.9761904761904762,TRUE
-Análise quantitativa,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,0.8552631578947368,0.8843421052631579,0.8088815789473685,0.9473684210526315,TRUE
-Análise quantitativa,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,58,0.9310344827586207,0.9081609195402299,0.8275862068965517,0.9827586206896551,TRUE
-Análise quantitativa,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,103,0.912621359223301,0.921326860841424,0.8686893203883495,0.970873786407767,TRUE
-Análise quantitativa,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,103,0.9320388349514563,0.9318446601941748,0.8881067961165049,0.9805825242718447,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,2,0.5,0.48166666666666674,0,1,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,50,0.6,0.5714,0.46,0.7,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,49,0.6938775510204082,0.6823809523809524,0.5607142857142857,0.7959183673469388,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,9,0.1111111111111111,0.29666666666666663,0,0.5555555555555556,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,85,0.5882352941176471,0.5928627450980393,0.4997058823529412,0.6823529411764706,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,91,0.7142857142857143,0.7137728937728938,0.6263736263736264,0.7859890109890106,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,48,0.3333333333333333,0.3300694444444444,0.22916666666666666,0.4484374999999995,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,52,0.40384615384615385,0.38333333333333336,0.2692307692307692,0.5,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,77,0.42857142857142855,0.43398268398268397,0.3438311688311689,0.5324675324675324,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,92,0.41304347826086957,0.42677536231884056,0.33125000000000004,0.5217391304347826,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,112,0.44642857142857145,0.4250892857142857,0.33035714285714285,0.5136160714285712,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,139,0.4748201438848921,0.4955875299760192,0.4244604316546763,0.5611510791366906,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,31,0.2903225806451613,0.26838709677419353,0.12903225806451613,0.41935483870967744,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,46,0.2826086956521739,0.3154347826086957,0.1956521739130435,0.43478260869565216,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,59,0.3898305084745763,0.39887005649717516,0.288135593220339,0.5254237288135594,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,89,0.2696629213483146,0.2889513108614232,0.20224719101123595,0.3707865168539326,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,90,0.35555555555555557,0.3708518518518519,0.2777777777777778,0.4836111111111109,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,82,0.573170731707317,0.5184146341463415,0.4146341463414634,0.6161585365853656,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,48,0.4166666666666667,0.5488194444444444,0.4166666666666667,0.6666666666666666,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,51,0.7254901960784313,0.6680392156862746,0.5490196078431373,0.7843137254901961,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,37,0.8108108108108109,0.7647747747747747,0.6216216216216216,0.8918918918918919,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,111,0.5765765765765766,0.5897897897897898,0.5087837837837837,0.6666666666666666,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,129,0.6356589147286822,0.6664341085271318,0.5813953488372093,0.7364341085271318,TRUE
-Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,104,0.8846153846153846,0.8094230769230769,0.7353365384615385,0.8800480769230767,FALSE
-Análise quantitativa,Período,2005-2011,769,0.5188556566970091,0.5225097529258778,0.48826397919375814,0.556631989596879,TRUE
-Análise quantitativa,Período,2012-2018,1153,0.577623590633131,0.5753772766695576,0.5472679965307893,0.6032307025151777,TRUE
-Análise quantitativa,Período,2019-2025,1354,0.6484490398818316,0.6459478089611029,0.6225997045790251,0.6713441654357459,TRUE
-Inferência estatística,Categoria do prenome,Feminino,629,0.29252782193958665,0.2948171701112878,0.2503577106518283,0.3338632750397456,TRUE
-Inferência estatística,Categoria do prenome,Masculino,1309,0.41482047364400304,0.414532722179781,0.3872803666921314,0.44690603514132926,TRUE
-Inferência estatística,Periódico,Brazilian Political Science Review,169,0.4970414201183432,0.49715976331360945,0.40828402366863903,0.5829881656804732,TRUE
-Inferência estatística,Periódico,Cadernos Gestão Pública e Cidadania,71,0.16901408450704225,0.18023474178403756,0.09119718309859157,0.2890845070422532,TRUE
-Inferência estatística,Periódico,Contexto Internacional,106,0.07547169811320754,0.08654088050314467,0.0233490566037736,0.16037735849056603,TRUE
-Inferência estatística,Periódico,Dados,334,0.41916167664670656,0.4177944111776447,0.3577095808383234,0.4880239520958084,TRUE
-Inferência estatística,Periódico,Opinião Pública,383,0.6135770234986945,0.6110966057441253,0.5535248041775457,0.6697780678851175,TRUE
-Inferência estatística,Periódico,Revista Brasileira de Ciência Política,180,0.3277777777777778,0.32307407407407407,0.24444444444444444,0.39444444444444443,TRUE
-Inferência estatística,Periódico,Revista Brasileira de Ciências Sociais,224,0.29017857142857145,0.29446428571428573,0.22767857142857142,0.36160714285714285,TRUE
-Inferência estatística,Periódico,Revista Brasileira de Política Internacional,148,0.08783783783783784,0.09414414414414415,0.04054054054054054,0.15895270270270256,TRUE
-Inferência estatística,Periódico,Revista de Sociologia e Política,323,0.34365325077399383,0.34189886480908155,0.2848297213622291,0.3886222910216718,TRUE
-Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,12,0.5,0.3725,0.16666666666666666,0.6666666666666666,TRUE
-Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,12,0.4166666666666667,0.41,0.16666666666666666,0.6666666666666666,TRUE
-Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,28,0.42857142857142855,0.4232142857142857,0.21428571428571427,0.6071428571428571,TRUE
-Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,14,0.42857142857142855,0.4361904761904762,0.21428571428571427,0.7142857142857143,TRUE
-Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,56,0.4642857142857143,0.5154166666666666,0.3834821428571429,0.6428571428571429,TRUE
-Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,47,0.6170212765957447,0.5917021276595744,0.44680851063829785,0.7345744680851058,TRUE
-Inferência estatística,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,31,0.0967741935483871,0.12225806451612903,0.03225806451612903,0.25806451612903225,TRUE
-Inferência estatística,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,40,0.225,0.22516666666666668,0.1,0.3631249999999994,TRUE
-Inferência estatística,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,6,0,0.06222222222222223,0,0.3333333333333333,TRUE
-Inferência estatística,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,13,0.15384615384615385,0.07948717948717948,0,0.23076923076923078,TRUE
-Inferência estatística,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,21,0.047619047619047616,0.05888888888888889,0,0.19047619047619047,TRUE
-Inferência estatística,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,13,0,0.06358974358974359,0,0.23076923076923078,TRUE
-Inferência estatística,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,31,0.03225806451612903,0.09161290322580645,0,0.1935483870967742,TRUE
-Inferência estatística,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,22,0.18181818181818182,0.13015151515151516,0,0.3181818181818182,TRUE
-Inferência estatística,Periódico × categoria × período,Dados | Feminino | 2005-2011,29,0.3448275862068966,0.31126436781609196,0.13793103448275862,0.4827586206896552,TRUE
-Inferência estatística,Periódico × categoria × período,Dados | Feminino | 2012-2018,39,0.4358974358974359,0.35512820512820514,0.20512820512820512,0.5006410256410251,TRUE
-Inferência estatística,Periódico × categoria × período,Dados | Feminino | 2019-2025,32,0.1875,0.2878125,0.15625,0.4375,TRUE
-Inferência estatística,Periódico × categoria × período,Dados | Masculino | 2005-2011,61,0.47540983606557374,0.4376502732240437,0.3114754098360656,0.5659836065573767,TRUE
-Inferência estatística,Periódico × categoria × período,Dados | Masculino | 2012-2018,67,0.44776119402985076,0.45557213930348256,0.31343283582089554,0.5671641791044776,TRUE
-Inferência estatística,Periódico × categoria × período,Dados | Masculino | 2019-2025,106,0.4528301886792453,0.4739308176100629,0.3818396226415095,0.5709905660377357,TRUE
-Inferência estatística,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,37,0.6216216216216216,0.560900900900901,0.40540540540540543,0.7297297297297297,TRUE
-Inferência estatística,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,39,0.5384615384615384,0.5269230769230769,0.358974358974359,0.6666666666666666,TRUE
-Inferência estatística,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,65,0.5230769230769231,0.5361025641025641,0.4153846153846154,0.6461538461538462,TRUE
-Inferência estatística,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,54,0.5740740740740741,0.5758024691358025,0.4532407407407408,0.7222222222222222,TRUE
-Inferência estatística,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,92,0.717391304347826,0.682427536231884,0.5760869565217391,0.7774456521739128,TRUE
-Inferência estatística,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,96,0.625,0.6669097222222222,0.5674479166666666,0.7604166666666666,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,1,0,0.08666666666666664,0,1,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,30,0.3,0.24566666666666667,0.1,0.4,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,34,0.17647058823529413,0.22049019607843137,0.08823529411764706,0.35294117647058826,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,1,0,0.16666666666666663,0,1,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,50,0.32,0.3632,0.24950000000000006,0.48,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,64,0.4375,0.38864583333333336,0.273046875,0.53125,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,16,0.375,0.2454166666666667,0.0625,0.4375,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,21,0.14285714285714285,0.18206349206349207,0.047619047619047616,0.3333333333333333,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,33,0.12121212121212122,0.19575757575757577,0.06060606060606061,0.36363636363636365,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,38,0.3684210526315789,0.3375438596491228,0.18421052631578946,0.5,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,50,0.32,0.32826666666666665,0.2,0.44,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,66,0.3333333333333333,0.34106060606060606,0.21931818181818186,0.45454545454545453,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,9,0,0.04185185185185185,0,0.2222222222222222,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,13,0.07692307692307693,0.05487179487179488,0,0.23076923076923078,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,23,0.043478260869565216,0.07376811594202898,0,0.17391304347826086,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,24,0,0.07055555555555555,0,0.20833333333333334,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,32,0.0625,0.09281250000000002,0,0.21875,TRUE
-Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,47,0.19148936170212766,0.13794326241134752,0.0425531914893617,0.2553191489361702,TRUE
-Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,20,0.1,0.175,0.05,0.35,TRUE
-Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,35,0.14285714285714285,0.21314285714285713,0.08571428571428572,0.37142857142857144,TRUE
-Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,30,0.23333333333333334,0.22066666666666668,0.08250000000000005,0.4,TRUE
-Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,64,0.171875,0.28510416666666666,0.1875,0.40625,FALSE
-Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,82,0.4268292682926829,0.39715447154471545,0.3048780487804878,0.5,TRUE
-Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,92,0.5543478260869565,0.45695652173913043,0.358695652173913,0.5652173913043478,TRUE
-Inferência estatística,Período,2005-2011,399,0.3458646616541353,0.3513032581453634,0.2969298245614035,0.40350877192982454,TRUE
-Inferência estatística,Período,2012-2018,662,0.3851963746223565,0.3849546827794562,0.34274924471299095,0.42605740181268875,TRUE
-Inferência estatística,Período,2019-2025,877,0.3808437856328392,0.37976434815659443,0.3483181299885975,0.4127708095781072,TRUE
-Linguagem causal ou explicativa,Categoria do prenome,Feminino,1133,0.9735216240070609,0.9725772285966461,0.9593998234774934,0.9841571050308914,TRUE
-Linguagem causal ou explicativa,Categoria do prenome,Masculino,2143,0.971535230984601,0.9717312179188055,0.9614909006066263,0.9813345776948204,TRUE
-Linguagem causal ou explicativa,Periódico,Brazilian Political Science Review,226,0.9867256637168141,0.97976401179941,0.9557522123893806,0.9978982300884955,TRUE
-Linguagem causal ou explicativa,Periódico,Cadernos Gestão Pública e Cidadania,100,0.89,0.9264333333333333,0.85,0.98,TRUE
-Linguagem causal ou explicativa,Periódico,Contexto Internacional,316,0.9715189873417721,0.9726898734177215,0.9462025316455697,0.9936708860759493,TRUE
-Linguagem causal ou explicativa,Periódico,Dados,530,0.9641509433962264,0.9661886792452831,0.9433018867924529,0.9830188679245283,TRUE
-Linguagem causal ou explicativa,Periódico,Opinião Pública,421,0.9667458432304038,0.9670942201108472,0.9406175771971497,0.9857482185273159,TRUE
-Linguagem causal ou explicativa,Periódico,Revista Brasileira de Ciência Política,286,0.9615384615384616,0.9646620046620047,0.9317307692307693,0.9895104895104895,TRUE
-Linguagem causal ou explicativa,Periódico,Revista Brasileira de Ciências Sociais,520,0.9807692307692307,0.9779102564102564,0.9596153846153846,0.9923076923076923,TRUE
-Linguagem causal ou explicativa,Periódico,Revista Brasileira de Política Internacional,397,0.982367758186398,0.9786230058774139,0.9583753148614609,0.9949622166246851,TRUE
-Linguagem causal ou explicativa,Periódico,Revista de Sociologia e Política,480,0.9854166666666667,0.9807569444444444,0.9604166666666667,0.99375,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,16,1,0.98375,0.9046875000000001,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,19,1,0.9850877192982456,0.8947368421052632,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,39,0.9743589743589743,0.9771794871794872,0.9230769230769231,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,17,1,0.981764705882353,0.8823529411764706,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,72,0.9861111111111112,0.9837037037037037,0.9444444444444444,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,63,0.9841269841269841,0.9737037037037036,0.9206349206349206,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,51,0.9215686274509803,0.9301960784313725,0.8235294117647058,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,49,0.8571428571428571,0.9225170068027211,0.8163265306122449,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,24,0.9583333333333334,0.9770833333333333,0.9166666666666666,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,50,1,0.9826,0.94,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,63,0.9841269841269841,0.9704761904761905,0.9206349206349206,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,37,0.972972972972973,0.9746846846846847,0.8918918918918919,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,72,0.9444444444444444,0.9751388888888889,0.9305555555555556,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,70,0.9714285714285714,0.9625238095238096,0.9,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Feminino | 2005-2011,44,1,0.9728030303030303,0.9090909090909091,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Feminino | 2012-2018,64,0.96875,0.9725520833333333,0.921875,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,0.9285714285714286,0.95625,0.8834821428571429,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Masculino | 2005-2011,104,0.9615384615384616,0.9693589743589743,0.9276442307692307,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Masculino | 2012-2018,116,0.9827586206896551,0.9724712643678161,0.9310344827586207,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Masculino | 2019-2025,146,0.952054794520548,0.9579680365296803,0.9178082191780822,0.9898972602739724,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,39,0.9743589743589743,0.9727350427350427,0.9230769230769231,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,42,0.9761904761904762,0.9761904761904762,0.9047619047619048,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,0.9473684210526315,0.9562280701754385,0.8947368421052632,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,58,0.9482758620689655,0.9711494252873564,0.9137931034482759,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,103,0.9805825242718447,0.9740776699029127,0.9320388349514563,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,103,0.970873786407767,0.96,0.912621359223301,0.9902912621359223,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,2,1,0.9683333333333334,0.5,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,50,0.98,0.9746,0.92,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,49,0.9387755102040817,0.9577551020408163,0.8775510204081632,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,9,1,0.9711111111111111,0.8888888888888888,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,85,0.9529411764705882,0.9722352941176471,0.9294117647058824,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,91,0.967032967032967,0.9551282051282052,0.8953296703296704,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,48,1,0.9852777777777778,0.9375,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,52,1,0.9856410256410256,0.9423076923076923,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,77,0.987012987012987,0.9793939393939394,0.935064935064935,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,92,0.9782608695652174,0.9791304347826086,0.9456521739130435,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,112,0.9553571428571429,0.9788095238095238,0.9464285714285714,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,139,0.9856115107913669,0.9701199040767386,0.935251798561151,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,31,1,0.9818279569892473,0.9032258064516129,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,46,0.9782608695652174,0.9847101449275363,0.9347826086956522,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,59,1,0.9784180790960452,0.9322033898305084,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,89,0.9887640449438202,0.9795505617977528,0.9438202247191011,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,90,0.9888888888888889,0.9825185185185186,0.9444444444444444,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,82,0.9512195121951219,0.9688617886178862,0.926829268292683,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,48,0.9583333333333334,0.98,0.9375,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,51,1,0.9809803921568627,0.9308823529411765,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,37,0.918918918918919,0.9705405405405405,0.8918918918918919,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,111,0.990990990990991,0.9838138138138138,0.954954954954955,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,129,1,0.9849095607235142,0.9534883720930233,1,TRUE
-Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,104,0.9903846153846154,0.9762179487179488,0.9326923076923077,1,TRUE
-Linguagem causal ou explicativa,Período,2005-2011,769,0.9791937581274383,0.9775465973125271,0.9603055916775033,0.9889791937581274,TRUE
-Linguagem causal ou explicativa,Período,2012-2018,1153,0.9791847354726799,0.978594969644406,0.9670424978317432,0.98959236773634,TRUE
-Linguagem causal ou explicativa,Período,2019-2025,1354,0.9623338257016248,0.9632914820285574,0.9464364844903989,0.9767540620384048,TRUE
-Examinados para identificação,Categoria do prenome,Feminino,1323,0.29931972789115646,0.3003930461073318,0.2731859410430839,0.32617157974300826,TRUE
-Examinados para identificação,Categoria do prenome,Masculino,2647,0.36380808462410275,0.3629253242664652,0.34189648658859084,0.3817623724971666,TRUE
-Examinados para identificação,Periódico,Brazilian Political Science Review,261,0.4099616858237548,0.4062324393358876,0.34099616858237547,0.47126436781609193,TRUE
-Examinados para identificação,Periódico,Cadernos Gestão Pública e Cidadania,114,0.18421052631578946,0.18423976608187134,0.11403508771929824,0.276535087719298,TRUE
-Examinados para identificação,Periódico,Contexto Internacional,421,0.04275534441805225,0.04695170229612035,0.026128266033254157,0.07250593824228023,TRUE
-Examinados para identificação,Periódico,Dados,606,0.3234323432343234,0.3244829482948295,0.28217821782178215,0.3688531353135313,TRUE
-Examinados para identificação,Periódico,Opinião Pública,443,0.781038374717833,0.7758540255831452,0.7313769751693002,0.8171557562076749,TRUE
-Examinados para identificação,Periódico,Revista Brasileira de Ciência Política,383,0.3524804177545692,0.352088772845953,0.29889033942558746,0.4034595300261096,TRUE
-Examinados para identificação,Periódico,Revista Brasileira de Ciências Sociais,672,0.25595238095238093,0.25713789682539684,0.22321428571428573,0.2931547619047619,TRUE
-Examinados para identificação,Periódico,Revista Brasileira de Política Internacional,451,0.23059866962305986,0.23133037694013303,0.19290465631929046,0.28159645232815966,TRUE
-Examinados para identificação,Periódico,Revista de Sociologia e Política,619,0.420032310177706,0.41836833602584816,0.37479806138933763,0.4612681744749596,TRUE
-Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,17,0.47058823529411764,0.35254901960784313,0.11764705882352941,0.5294117647058824,TRUE
-Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,24,0.20833333333333334,0.2898611111111111,0.125,0.4583333333333333,TRUE
-Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,41,0.36585365853658536,0.36772357723577237,0.24390243902439024,0.5006097560975604,TRUE
+Artigos empíricos,Categoria do prenome,Feminino,1323,0.8563869992441421,0.8553968253968254,0.8340702947845805,0.8783068783068783,TRUE
+Artigos empíricos,Categoria do prenome,Masculino,2647,0.8095957687948621,0.8101725223523486,0.7929731771817151,0.8283056290139781,TRUE
+Artigos empíricos,Periódico,Brazilian Political Science Review,261,0.8659003831417624,0.8665644955300128,0.8199233716475096,0.9080459770114943,TRUE
+Artigos empíricos,Periódico,Cadernos Gestão Pública e Cidadania,114,0.8771929824561403,0.8834502923976608,0.8157894736842105,0.9473684210526315,TRUE
+Artigos empíricos,Periódico,Contexto Internacional,421,0.75059382422802845,0.7539825811559778,0.7054631828978623,0.7993467933491687,TRUE
+Artigos empíricos,Periódico,Dados,606,0.8745874587458746,0.8740374037403741,0.8432343234323433,0.905940594059406,TRUE
+Artigos empíricos,Periódico,Opinião Pública,443,0.9503386004514672,0.9451166290443943,0.9164785553047404,0.9718397291196388,TRUE
+Artigos empíricos,Periódico,Revista Brasileira de Ciência Política,383,0.7467362924281984,0.7482767624020887,0.6996083550913839,0.8016971279373366,TRUE
+Artigos empíricos,Periódico,Revista Brasileira de Ciências Sociais,672,0.7738095238095238,0.7756944444444445,0.7380952380952381,0.8088169642857143,TRUE
+Artigos empíricos,Periódico,Revista Brasileira de Política Internacional,451,0.8802660753880266,0.8752993348115299,0.835920177383592,0.9113082039911308,TRUE
+Artigos empíricos,Periódico,Revista de Sociologia e Política,619,0.7754442649434572,0.7769520732364028,0.7358239095315025,0.8150646203554119,TRUE
+Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,17,0.9411764705882353,0.8668627450980392,0.7058823529411765,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,24,0.7916666666666666,0.8702777777777778,0.7083333333333334,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,41,0.9512195121951219,0.9356097560975609,0.8536585365853658,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,28,0.6071428571428571,0.7204761904761905,0.5357142857142857,0.8571428571428571,TRUE
+Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,82,0.8780487804878049,0.8466666666666667,0.7682926829268293,0.926829268292683,TRUE
+Artigos empíricos,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,69,0.9130434782608695,0.9071014492753623,0.8260869565217391,0.9710144927536232,TRUE
+Artigos empíricos,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,55,0.9272727272727272,0.9072121212121211,0.8181818181818182,0.9818181818181818,TRUE
+Artigos empíricos,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,59,0.8305084745762712,0.8612994350282486,0.7627118644067796,0.9491525423728814,TRUE
+Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,32,0.75,0.6973958333333333,0.53125,0.84375,TRUE
+Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,62,0.8064516129032258,0.7695161290322581,0.6689516129032258,0.8709677419354839,TRUE
+Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,80,0.7875,0.839,0.7375,0.9125,TRUE
+Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,63,0.5873015873015873,0.6085714285714285,0.49206349206349204,0.7384920634920631,TRUE
+Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,93,0.7741935483870968,0.7334767025089606,0.6451612903225806,0.8279569892473119,TRUE
+Artigos empíricos,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,91,0.7692307692307693,0.8101831501831502,0.7142857142857143,0.8901098901098901,TRUE
+Artigos empíricos,Periódico × categoria × período,Dados | Feminino | 2005-2011,51,0.8627450980392157,0.8550980392156863,0.7450980392156863,0.9607843137254902,TRUE
+Artigos empíricos,Periódico × categoria × período,Dados | Feminino | 2012-2018,71,0.9014084507042254,0.9106103286384977,0.8309859154929577,0.971830985915493,TRUE
+Artigos empíricos,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,1,0.9604761904761905,0.8928571428571429,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Dados | Masculino | 2005-2011,124,0.8387096774193549,0.7870430107526881,0.7096774193548387,0.8629032258064516,TRUE
+Artigos empíricos,Periódico × categoria × período,Dados | Masculino | 2012-2018,135,0.8592592592592593,0.8617530864197531,0.8,0.9259259259259259,TRUE
+Artigos empíricos,Periódico × categoria × período,Dados | Masculino | 2019-2025,169,0.863905325443787,0.9093885601577909,0.8607988165680474,0.9526627218934911,TRUE
+Artigos empíricos,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,40,0.975,0.94825,0.85,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,43,0.9767441860465116,0.9633333333333334,0.8837209302325582,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,1,0.9864035087719298,0.9536184210526315,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,64,0.90625,0.87671875,0.78125,0.953125,TRUE
+Artigos empíricos,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,114,0.9035087719298246,0.9312573099415205,0.8771929824561403,0.9736842105263158,TRUE
+Artigos empíricos,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,106,0.9716981132075472,0.9631446540880503,0.9245283018867925,0.9905660377358491,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,8,0.25,0.4841666666666667,0.125,0.8156249999999972,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,67,0.746268656716418,0.7422388059701492,0.6417910447761194,0.8436567164179101,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,57,0.8596491228070176,0.8348538011695906,0.7192982456140351,0.9298245614035088,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,20,0.45,0.5518333333333333,0.35,0.75,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,122,0.6967213114754098,0.6927322404371584,0.5983606557377049,0.7704918032786885,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,109,0.8348623853211009,0.8243119266055046,0.7431192660550459,0.8990825688073395,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,65,0.7384615384615385,0.7331282051282051,0.6153846153846154,0.8307692307692308,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,68,0.7647058823529411,0.8151960784313725,0.7275735294117648,0.8970588235294118,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,80,0.9625,0.9105416666666667,0.8375,0.9625,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,146,0.6301369863013698,0.6403424657534247,0.5547945205479452,0.7123287671232876,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,154,0.7272727272727273,0.7533766233766234,0.6753246753246753,0.8246753246753247,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,159,0.8742138364779874,0.8542557651991615,0.7987421383647799,0.9089622641509433,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,33,0.9393939393939394,0.8794949494949496,0.7416666666666667,0.9696969696969697,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,54,0.8518518518518519,0.8974074074074074,0.7962962962962963,0.9814814814814815,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,63,0.9365079365079365,0.9483068783068783,0.8888888888888888,1,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,115,0.7739130434782608,0.7828985507246377,0.6869565217391305,0.8654347826086954,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,101,0.8910891089108911,0.8761386138613861,0.8118811881188119,0.9306930693069307,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,85,0.9647058823529412,0.9295294117647058,0.8705882352941177,0.9826470588235292,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,75,0.64,0.6956888888888889,0.5733333333333334,0.8,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,61,0.8360655737704918,0.8148087431693989,0.7127049180327869,0.9102459016393438,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,44,0.8409090909090909,0.8651515151515151,0.75,0.9545454545454546,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,170,0.6529411764705882,0.6787058823529412,0.6,0.7470588235294118,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,154,0.8376623376623377,0.8002164502164503,0.7303571428571429,0.8701298701298701,TRUE
+Artigos empíricos,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,115,0.9043478260869565,0.8902028985507247,0.8260869565217391,0.9391304347826087,TRUE
+Artigos empíricos,Período,2005-2011,1051,0.7316841103710752,0.7359435458293688,0.7021883920076119,0.7635823025689819,TRUE
+Artigos empíricos,Período,2012-2018,1405,0.8206405693950178,0.8187876631079478,0.792846975088968,0.8423665480427046,TRUE
+Artigos empíricos,Período,2019-2025,1514,0.8943196829590488,0.8932254513430207,0.87415785997358,0.9131605019815059,TRUE
+Análise quantitativa,Categoria do prenome,Feminino,1133,0.5569285083848191,0.5577081494557222,0.531332744924978,0.5856354810238306,TRUE
+Análise quantitativa,Categoria do prenome,Masculino,2143,0.6122258516098926,0.6121138590760615,0.592627158189454,0.6334694353709753,TRUE
+Análise quantitativa,Periódico,Brazilian Political Science Review,226,0.7477876106194691,0.746976401179941,0.6858407079646017,0.8053097345132744,TRUE
+Análise quantitativa,Periódico,Cadernos Gestão Pública e Cidadania,100,0.71,0.7058333333333333,0.61,0.79,TRUE
+Análise quantitativa,Periódico,Contexto Internacional,316,0.33544303797468356,0.34149789029535865,0.2848101265822785,0.40039556962025313,TRUE
+Análise quantitativa,Periódico,Dados,530,0.630188679245283,0.6306855345911949,0.590566037735849,0.6764622641509432,TRUE
+Análise quantitativa,Periódico,Opinião Pública,421,0.9144893111638955,0.911409342834521,0.8799881235154394,0.9429928741092637,TRUE
+Análise quantitativa,Periódico,Revista Brasileira de Ciência Política,286,0.6328671328671329,0.6318414918414919,0.571590909090909,0.6836538461538461,TRUE
+Análise quantitativa,Periódico,Revista Brasileira de Ciências Sociais,520,0.4307692307692308,0.43190384615384614,0.38461538461538464,0.47216346153846145,TRUE
+Análise quantitativa,Periódico,Revista Brasileira de Política Internacional,397,0.37279596977329976,0.37489504617968095,0.3311712846347607,0.4256926952141058,TRUE
+Análise quantitativa,Periódico,Revista de Sociologia e Política,480,0.6770833333333334,0.6754861111111111,0.6322395833333333,0.7240104166666665,TRUE
+Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,16,0.75,0.7216666666666667,0.5296875000000001,0.875,TRUE
+Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,19,0.631578947368421,0.649298245614035,0.47368421052631576,0.8421052631578947,TRUE
+Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,39,0.717948717948718,0.7381196581196581,0.5897435897435898,0.8717948717948718,TRUE
+Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,17,0.8235294117647058,0.7750980392156862,0.5882352941176471,0.9411764705882353,TRUE
+Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,72,0.7777777777777778,0.7558333333333334,0.6527777777777778,0.8545138888888886,TRUE
+Análise quantitativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,63,0.746031746031746,0.7706349206349207,0.6583333333333333,0.8654761904761901,TRUE
+Análise quantitativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,51,0.6078431372549019,0.643921568627451,0.5098039215686274,0.7647058823529411,TRUE
+Análise quantitativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,49,0.8163265306122449,0.7702721088435374,0.6530612244897959,0.8775510204081632,TRUE
+Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,24,0.25,0.24736111111111111,0.10312500000000005,0.4166666666666667,TRUE
+Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,50,0.26,0.2929333333333333,0.18,0.42,TRUE
+Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,63,0.3333333333333333,0.34158730158730155,0.22976190476190478,0.4444444444444444,TRUE
+Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,37,0.35135135135135137,0.3054954954954955,0.1891891891891892,0.446621621621621,TRUE
+Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,72,0.4305555555555556,0.3736574074074074,0.2638888888888889,0.4722222222222222,TRUE
+Análise quantitativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,70,0.3142857142857143,0.3943333333333333,0.2857142857142857,0.5,TRUE
+Análise quantitativa,Periódico × categoria × período,Dados | Feminino | 2005-2011,44,0.6590909090909091,0.6004545454545455,0.45454545454545453,0.7164772727272722,TRUE
+Análise quantitativa,Periódico × categoria × período,Dados | Feminino | 2012-2018,64,0.609375,0.58078125,0.46875,0.703125,TRUE
+Análise quantitativa,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,0.5714285714285714,0.6080952380952381,0.5,0.7142857142857143,TRUE
+Análise quantitativa,Periódico × categoria × período,Dados | Masculino | 2005-2011,104,0.5865384615384616,0.5936217948717949,0.5096153846153846,0.6730769230769231,TRUE
+Análise quantitativa,Periódico × categoria × período,Dados | Masculino | 2012-2018,116,0.5775862068965517,0.6253735632183908,0.547198275862069,0.7155172413793104,TRUE
+Análise quantitativa,Periódico × categoria × período,Dados | Masculino | 2019-2025,146,0.726027397260274,0.700958904109589,0.6301369863013698,0.7707191780821916,TRUE
+Análise quantitativa,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,39,0.9487179487179487,0.8901709401709402,0.7692307692307693,0.9743589743589743,TRUE
+Análise quantitativa,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,42,0.9285714285714286,0.888015873015873,0.7857142857142857,0.9761904761904762,TRUE
+Análise quantitativa,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,0.8552631578947368,0.8890789473684211,0.8157894736842105,0.9473684210526315,TRUE
+Análise quantitativa,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,58,0.9310344827586207,0.9122413793103449,0.8275862068965517,0.9655172413793104,TRUE
+Análise quantitativa,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,103,0.912621359223301,0.9221035598705501,0.8543689320388349,0.970873786407767,TRUE
+Análise quantitativa,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,103,0.9320388349514563,0.9343042071197412,0.883495145631068,0.9805825242718447,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,2,0.5,0.48500000000000004,0,1,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,50,0.6,0.5589333333333334,0.4495,0.68,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,49,0.6938775510204082,0.6772789115646258,0.5714285714285714,0.7959183673469388,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,9,0.1111111111111111,0.28703703703703703,0.1111111111111111,0.5555555555555556,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,85,0.5882352941176471,0.5971372549019608,0.49411764705882355,0.7002941176470585,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,91,0.7142857142857143,0.7171794871794872,0.6263736263736264,0.8131868131868132,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,48,0.3333333333333333,0.32513888888888887,0.20833333333333334,0.4375,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,52,0.40384615384615385,0.39006410256410257,0.2692307692307692,0.5192307692307693,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,77,0.42857142857142855,0.4347186147186147,0.33766233766233766,0.5324675324675324,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,92,0.41304347826086957,0.4186594202898551,0.32608695652173914,0.5,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,112,0.44642857142857145,0.4270535714285714,0.34352678571428574,0.5089285714285714,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,139,0.4748201438848921,0.49553956834532376,0.4244604316546763,0.5611510791366906,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,31,0.2903225806451613,0.27559139784946235,0.16129032258064516,0.41935483870967744,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,46,0.2826086956521739,0.3227536231884058,0.21739130434782608,0.43478260869565216,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,59,0.3898305084745763,0.39785310734463275,0.288135593220339,0.5254237288135594,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,89,0.2696629213483146,0.2869288389513109,0.19634831460674157,0.38792134831460645,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,90,0.35555555555555557,0.3772962962962963,0.2777777777777778,0.4666666666666667,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,82,0.573170731707317,0.5180081300813009,0.4146341463414634,0.6161585365853656,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,48,0.4166666666666667,0.5463888888888889,0.4166666666666667,0.6984374999999996,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,51,0.7254901960784313,0.6729411764705883,0.5294117647058824,0.7946078431372545,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,37,0.8108108108108109,0.7612612612612613,0.6216216216216216,0.8790540540540535,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,111,0.5765765765765766,0.5879579579579579,0.4954954954954955,0.6846846846846847,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,129,0.6356589147286822,0.6685012919896641,0.5891472868217055,0.7441860465116279,TRUE
+Análise quantitativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,104,0.8846153846153846,0.8078846153846154,0.7353365384615385,0.875,FALSE
+Análise quantitativa,Período,2005-2011,769,0.5188556566970091,0.5214477676636324,0.486963589076723,0.5533485045513654,TRUE
+Análise quantitativa,Período,2012-2018,1153,0.577623590633131,0.578031222896791,0.5472679965307893,0.6062879444926279,TRUE
+Análise quantitativa,Período,2019-2025,1354,0.6484490398818316,0.6471048744460857,0.622211964549483,0.670605612998523,TRUE
+Inferência estatística,Categoria do prenome,Feminino,629,0.29252782193958665,0.2950344462109168,0.2583068362480127,0.3354531001589825,TRUE
+Inferência estatística,Categoria do prenome,Masculino,1309,0.41482047364400304,0.4142577030812325,0.387318563789152,0.44043162719633305,TRUE
+Inferência estatística,Periódico,Brazilian Political Science Review,169,0.4970414201183432,0.4927218934911243,0.42011834319526625,0.5798816568047337,TRUE
+Inferência estatística,Periódico,Cadernos Gestão Pública e Cidadania,71,0.16901408450704225,0.1788262910798122,0.08450704225352113,0.28169014084507044,TRUE
+Inferência estatística,Periódico,Contexto Internacional,106,0.07547169811320754,0.08845911949685534,0.02830188679245283,0.16533018867924507,TRUE
+Inferência estatística,Periódico,Dados,334,0.41916167664670656,0.41761477045908185,0.3592814371257485,0.47761976047904187,TRUE
+Inferência estatística,Periódico,Opinião Pública,383,0.6135770234986945,0.6103046127067014,0.5573759791122715,0.6657963446475196,TRUE
+Inferência estatística,Periódico,Revista Brasileira de Ciência Política,180,0.3277777777777778,0.32514814814814813,0.24972222222222223,0.40555555555555556,TRUE
+Inferência estatística,Periódico,Revista Brasileira de Ciências Sociais,224,0.29017857142857145,0.29252976190476193,0.22087053571428572,0.36607142857142855,TRUE
+Inferência estatística,Periódico,Revista Brasileira de Política Internacional,148,0.08783783783783784,0.09481981981981982,0.04054054054054054,0.15895270270270256,TRUE
+Inferência estatística,Periódico,Revista de Sociologia e Política,323,0.34365325077399383,0.34421052631578947,0.29102167182662536,0.4055727554179567,TRUE
+Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,12,0.5,0.36694444444444446,0.16666666666666666,0.6270833333333314,TRUE
+Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,12,0.4166666666666667,0.43944444444444447,0.16666666666666666,0.75,TRUE
+Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,28,0.42857142857142855,0.42142857142857143,0.2857142857142857,0.6258928571428564,TRUE
+Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,14,0.42857142857142855,0.42476190476190473,0.21428571428571427,0.6428571428571429,TRUE
+Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,56,0.4642857142857143,0.5122023809523809,0.3834821428571429,0.625,TRUE
+Inferência estatística,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,47,0.6170212765957447,0.5779432624113475,0.425531914893617,0.723404255319149,TRUE
+Inferência estatística,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,31,0.0967741935483871,0.1175268817204301,0.015322580645161336,0.25806451612903225,TRUE
+Inferência estatística,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,40,0.225,0.22633333333333333,0.11187500000000003,0.375,TRUE
+Inferência estatística,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,6,0,0.05833333333333333,0,0.3333333333333333,TRUE
+Inferência estatística,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,13,0.15384615384615385,0.07205128205128206,0,0.23076923076923078,TRUE
+Inferência estatística,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,21,0.047619047619047616,0.05428571428571429,0,0.19047619047619047,TRUE
+Inferência estatística,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,13,0,0.06615384615384616,0,0.23076923076923078,TRUE
+Inferência estatística,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,31,0.03225806451612903,0.0989247311827957,0,0.22580645161290322,TRUE
+Inferência estatística,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,22,0.18181818181818182,0.13742424242424242,0,0.34204545454545354,TRUE
+Inferência estatística,Periódico × categoria × período,Dados | Feminino | 2005-2011,29,0.3448275862068966,0.30586206896551726,0.1724137931034483,0.4827586206896552,TRUE
+Inferência estatística,Periódico × categoria × período,Dados | Feminino | 2012-2018,39,0.4358974358974359,0.36572649572649574,0.23076923076923078,0.5384615384615384,TRUE
+Inferência estatística,Periódico × categoria × período,Dados | Feminino | 2019-2025,32,0.1875,0.28531249999999997,0.15625,0.46875,TRUE
+Inferência estatística,Periódico × categoria × período,Dados | Masculino | 2005-2011,61,0.47540983606557374,0.43245901639344264,0.3114754098360656,0.5409836065573771,TRUE
+Inferência estatística,Periódico × categoria × período,Dados | Masculino | 2012-2018,67,0.44776119402985076,0.45865671641791045,0.34328358208955223,0.5671641791044776,TRUE
+Inferência estatística,Periódico × categoria × período,Dados | Masculino | 2019-2025,106,0.4528301886792453,0.47273584905660376,0.37735849056603776,0.5754716981132075,TRUE
+Inferência estatística,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,37,0.6216216216216216,0.5624324324324325,0.40540540540540543,0.7297297297297297,TRUE
+Inferência estatística,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,39,0.5384615384615384,0.53,0.38461538461538464,0.6666666666666666,TRUE
+Inferência estatística,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,65,0.5230769230769231,0.536051282051282,0.4153846153846154,0.6307692307692307,TRUE
+Inferência estatística,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,54,0.5740740740740741,0.5811728395061728,0.4444444444444444,0.7037037037037037,TRUE
+Inferência estatística,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,92,0.717391304347826,0.6804710144927536,0.5760869565217391,0.7774456521739128,TRUE
+Inferência estatística,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,96,0.625,0.6607986111111112,0.5729166666666666,0.7554687499999997,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,1,0,0.09000000000000004,0,1,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,30,0.3,0.2421111111111111,0.1,0.4,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,34,0.17647058823529413,0.22294117647058823,0.08823529411764706,0.38235294117647056,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,1,0,0.19666666666666674,0,1,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,50,0.32,0.3612,0.24,0.5104999999999995,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,64,0.4375,0.39588541666666666,0.28125,0.53125,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,16,0.375,0.24895833333333334,0.0625,0.4375,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,21,0.14285714285714285,0.17936507936507937,0.047619047619047616,0.3333333333333333,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,33,0.12121212121212122,0.19212121212121214,0.06060606060606061,0.3333333333333333,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,38,0.3684210526315789,0.33649122807017545,0.18421052631578946,0.5,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,50,0.32,0.32433333333333336,0.2,0.46,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,66,0.3333333333333333,0.3398989898989899,0.24242424242424243,0.45454545454545453,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,9,0,0.04148148148148147,0,0.2222222222222222,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,13,0.07692307692307693,0.0569230769230769,0,0.23076923076923078,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,23,0.043478260869565216,0.07086956521739131,0,0.17391304347826086,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,24,0,0.07291666666666667,0,0.20833333333333334,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,32,0.0625,0.09166666666666666,0,0.1875,TRUE
+Inferência estatística,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,47,0.19148936170212766,0.14056737588652482,0.0425531914893617,0.2553191489361702,TRUE
+Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,20,0.1,0.17383333333333334,0.05,0.35,TRUE
+Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,35,0.14285714285714285,0.21714285714285714,0.08571428571428572,0.37142857142857144,TRUE
+Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,30,0.23333333333333334,0.22,0.06666666666666667,0.36666666666666664,TRUE
+Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,64,0.171875,0.28708333333333336,0.1875,0.40625,FALSE
+Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,82,0.4268292682926829,0.3952439024390244,0.2926829268292683,0.5,TRUE
+Inferência estatística,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,92,0.5543478260869565,0.4643478260869565,0.3695652173913043,0.5652173913043478,TRUE
+Inferência estatística,Período,2005-2011,399,0.3458646616541353,0.3509607351712615,0.3057644110275689,0.3973057644110275,TRUE
+Inferência estatística,Período,2012-2018,662,0.3851963746223565,0.3855236656596173,0.34966012084592146,0.42907854984894256,TRUE
+Inferência estatística,Período,2019-2025,877,0.3808437856328392,0.37923603192702393,0.34717787913340936,0.4139680729760547,TRUE
+Linguagem causal ou explicativa,Categoria do prenome,Feminino,1133,0.9735216240070609,0.9726743159752869,0.958053839364519,0.9845763459841129,TRUE
+Linguagem causal ou explicativa,Categoria do prenome,Masculino,2143,0.971535230984601,0.971693887074195,0.9598693420438638,0.9808679421371909,TRUE
+Linguagem causal ou explicativa,Periódico,Brazilian Political Science Review,226,0.9867256637168141,0.9794690265486725,0.9513274336283186,0.995575221238938,TRUE
+Linguagem causal ou explicativa,Periódico,Cadernos Gestão Pública e Cidadania,100,0.89,0.9253,0.84,0.99,TRUE
+Linguagem causal ou explicativa,Periódico,Contexto Internacional,316,0.9715189873417721,0.972457805907173,0.9445411392405063,0.990506329113924,TRUE
+Linguagem causal ou explicativa,Periódico,Dados,530,0.9641509433962264,0.9653144654088051,0.9452830188679245,0.9830188679245283,TRUE
+Linguagem causal ou explicativa,Periódico,Opinião Pública,421,0.9667458432304038,0.9685273159144894,0.9453681710213777,0.9857482185273159,TRUE
+Linguagem causal ou explicativa,Periódico,Revista Brasileira de Ciência Política,286,0.9615384615384616,0.9643123543123543,0.9317307692307693,0.9878496503496503,TRUE
+Linguagem causal ou explicativa,Periódico,Revista Brasileira de Ciências Sociais,520,0.9807692307692307,0.9779358974358975,0.9576923076923077,0.9923076923076923,TRUE
+Linguagem causal ou explicativa,Periódico,Revista Brasileira de Política Internacional,397,0.982367758186398,0.9788413098236776,0.9533375314861461,0.9949622166246851,TRUE
+Linguagem causal ou explicativa,Periódico,Revista de Sociologia e Política,480,0.9854166666666667,0.9810555555555556,0.96140625,0.99375,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,16,1,0.9822916666666667,0.875,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,19,1,0.9856140350877193,0.8947368421052632,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,39,0.9743589743589743,0.9756410256410256,0.8974358974358975,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,17,1,0.9827450980392157,0.9102941176470589,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,72,0.9861111111111112,0.9838425925925927,0.9444444444444444,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,63,0.9841269841269841,0.9733862433862434,0.9206349206349206,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,51,0.9215686274509803,0.9294771241830065,0.803921568627451,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,49,0.8571428571428571,0.920952380952381,0.8163265306122449,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,24,0.9583333333333334,0.9825,0.9166666666666666,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,50,1,0.9812,0.9295,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,63,0.9841269841269841,0.9702645502645503,0.9206349206349206,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,37,0.972972972972973,0.9728828828828829,0.918918918918919,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,72,0.9444444444444444,0.9763888888888889,0.9305555555555556,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,70,0.9714285714285714,0.9604761904761905,0.9,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Feminino | 2005-2011,44,1,0.9715909090909091,0.9090909090909091,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Feminino | 2012-2018,64,0.96875,0.9747916666666666,0.921875,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,0.9285714285714286,0.9545833333333333,0.875,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Masculino | 2005-2011,104,0.9615384615384616,0.9683974358974359,0.9276442307692307,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Masculino | 2012-2018,116,0.9827586206896551,0.9712643678160919,0.9310344827586207,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Dados | Masculino | 2019-2025,146,0.952054794520548,0.9564611872146118,0.910958904109589,0.9863013698630136,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,39,0.9743589743589743,0.974017094017094,0.9230769230769231,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,42,0.9761904761904762,0.9746825396825397,0.9285714285714286,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,0.9473684210526315,0.9587719298245614,0.9009868421052631,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,58,0.9482758620689655,0.9718390804597701,0.9137931034482759,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,103,0.9805825242718447,0.9762459546925566,0.9320388349514563,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,103,0.970873786407767,0.9615533980582525,0.912621359223301,0.9953883495145629,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,2,1,0.9766666666666667,0.5,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,50,0.98,0.9733999999999999,0.92,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,49,0.9387755102040817,0.9570748299319728,0.8775510204081632,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,9,1,0.9718518518518519,0.7777777777777778,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,85,0.9529411764705882,0.9715686274509804,0.9294117647058824,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,91,0.967032967032967,0.9554212454212454,0.9120879120879121,0.9947802197802196,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,48,1,0.985,0.9375,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,52,1,0.9875,0.9423076923076923,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,77,0.987012987012987,0.9778787878787879,0.9282467532467532,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,92,0.9782608695652174,0.9792028985507246,0.9347826086956522,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,112,0.9553571428571429,0.9814583333333333,0.9506696428571428,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,139,0.9856115107913669,0.968273381294964,0.9242805755395684,0.9928057553956835,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,31,1,0.9863440860215054,0.9354838709677419,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,46,0.9782608695652174,0.986231884057971,0.9347826086956522,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,59,1,0.9785310734463277,0.9152542372881356,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,89,0.9887640449438202,0.9801123595505618,0.9438202247191011,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,90,0.9888888888888889,0.9807037037037037,0.9444444444444444,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,82,0.9512195121951219,0.9686585365853658,0.9146341463414634,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,48,0.9583333333333334,0.97875,0.9375,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,51,1,0.9824183006535948,0.9411764705882353,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,37,0.918918918918919,0.9672072072072072,0.8918918918918919,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,111,0.990990990990991,0.9850750750750751,0.954954954954955,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,129,1,0.9851162790697674,0.9534883720930233,1,TRUE
+Linguagem causal ou explicativa,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,104,0.9903846153846154,0.977051282051282,0.9423076923076923,1,TRUE
+Linguagem causal ou explicativa,Período,2005-2011,769,0.9791937581274383,0.9779107065452969,0.9622886866059818,0.9921976592977894,TRUE
+Linguagem causal ou explicativa,Período,2012-2018,1153,0.9791847354726799,0.9790170569528766,0.9661751951431049,0.9887250650477016,TRUE
+Linguagem causal ou explicativa,Período,2019-2025,1354,0.9623338257016248,0.9627474150664698,0.9449593796159528,0.9756277695716395,TRUE
+Examinados para identificação,Categoria do prenome,Feminino,1323,0.29931972789115646,0.29987654320987656,0.2770030234315949,0.3246598639455782,TRUE
+Examinados para identificação,Categoria do prenome,Masculino,2647,0.36380808462410275,0.36311547664022165,0.34338874197204383,0.38345296562145825,TRUE
+Examinados para identificação,Periódico,Brazilian Political Science Review,261,0.4099616858237548,0.4052873563218391,0.33898467432950197,0.47126436781609193,TRUE
+Examinados para identificação,Periódico,Cadernos Gestão Pública e Cidadania,114,0.18421052631578946,0.18909356725146198,0.11403508771929824,0.2719298245614035,TRUE
+Examinados para identificação,Periódico,Contexto Internacional,421,0.04275534441805225,0.046199524940617576,0.021377672209026127,0.07725653206650826,TRUE
+Examinados para identificação,Periódico,Dados,606,0.3234323432343234,0.3211936193619362,0.2829620462046204,0.35973597359735976,TRUE
+Examinados para identificação,Periódico,Opinião Pública,443,0.781038374717833,0.7783897667419112,0.734706546275395,0.8228555304740406,TRUE
+Examinados para identificação,Periódico,Revista Brasileira de Ciência Política,383,0.3524804177545692,0.3524543080939948,0.3028720626631854,0.40992167101827676,TRUE
+Examinados para identificação,Periódico,Revista Brasileira de Ciências Sociais,672,0.25595238095238093,0.2544146825396825,0.21569940476190474,0.29017857142857145,TRUE
+Examinados para identificação,Periódico,Revista Brasileira de Política Internacional,451,0.23059866962305986,0.2329490022172949,0.18403547671840353,0.2793791574279379,TRUE
+Examinados para identificação,Periódico,Revista de Sociologia e Política,619,0.420032310177706,0.42105008077544426,0.3820274636510501,0.4604200323101777,TRUE
+Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,17,0.47058823529411764,0.3298039215686274,0.11764705882352941,0.5602941176470575,TRUE
+Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,24,0.20833333333333334,0.3011111111111111,0.125,0.48020833333333235,TRUE
+Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,41,0.36585365853658536,0.36585365853658536,0.20670731707317078,0.5121951219512195,TRUE
 Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,28,0.2857142857142857,0.3136904761904762,0.14285714285714285,0.4642857142857143,TRUE
-Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,82,0.4024390243902439,0.4167479674796748,0.3170731707317073,0.530792682926829,TRUE
-Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,69,0.5507246376811594,0.5078743961352657,0.391304347826087,0.6376811594202898,TRUE
-Examinados para identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,55,0.09090909090909091,0.1318181818181818,0.03636363636363636,0.23636363636363636,TRUE
-Examinados para identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,59,0.2711864406779661,0.23310734463276836,0.12669491525423732,0.3559322033898305,TRUE
-Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,32,0.09375,0.026666666666666665,0,0.09375,TRUE
-Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,62,0.04838709677419355,0.046612903225806454,0,0.0967741935483871,TRUE
-Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,80,0.0125,0.045625,0.0125,0.1,TRUE
-Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,63,0.031746031746031744,0.032857142857142856,0,0.09523809523809523,TRUE
-Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,93,0.043010752688172046,0.04810035842293907,0.010752688172043012,0.0967741935483871,TRUE
-Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,91,0.054945054945054944,0.06406593406593407,0.016208791208791228,0.12087912087912088,TRUE
-Examinados para identificação,Periódico × categoria × período,Dados | Feminino | 2005-2011,51,0.2549019607843137,0.2318954248366013,0.11764705882352941,0.3333333333333333,TRUE
-Examinados para identificação,Periódico × categoria × período,Dados | Feminino | 2012-2018,71,0.2676056338028169,0.27464788732394363,0.16901408450704225,0.38028169014084506,TRUE
-Examinados para identificação,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,0.23214285714285715,0.2868452380952381,0.1691964285714286,0.4107142857142857,TRUE
-Examinados para identificação,Periódico × categoria × período,Dados | Masculino | 2005-2011,124,0.31451612903225806,0.2796505376344086,0.20161290322580644,0.3629032258064516,TRUE
-Examinados para identificação,Periódico × categoria × período,Dados | Masculino | 2012-2018,135,0.3037037037037037,0.3372098765432099,0.26666666666666666,0.4148148148148148,TRUE
-Examinados para identificação,Periódico × categoria × período,Dados | Masculino | 2019-2025,169,0.42011834319526625,0.408560157790927,0.33136094674556216,0.49423076923076914,TRUE
-Examinados para identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,40,0.85,0.74825,0.6,0.8631249999999995,TRUE
-Examinados para identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,43,0.813953488372093,0.757829457364341,0.6156976744186047,0.8837209302325582,TRUE
-Examinados para identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,0.7105263157894737,0.7490789473684211,0.6447368421052632,0.8421052631578947,TRUE
-Examinados para identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,64,0.75,0.7261458333333334,0.616796875,0.8363281249999996,TRUE
-Examinados para identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,114,0.7631578947368421,0.7837426900584795,0.7017543859649122,0.8596491228070176,TRUE
-Examinados para identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,106,0.8301886792452831,0.834308176100629,0.7735849056603774,0.8962264150943396,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,8,0.125,0.13916666666666666,0,0.375,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,67,0.29850746268656714,0.29054726368159206,0.19402985074626866,0.40298507462686567,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,57,0.3508771929824561,0.36935672514619883,0.24561403508771928,0.49122807017543857,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,20,0.05,0.18433333333333332,0.05,0.37624999999999886,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,122,0.3524590163934426,0.3405464480874317,0.26229508196721313,0.4180327868852459,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,109,0.45871559633027525,0.4402140672782875,0.3486238532110092,0.5369266055045869,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,65,0.2,0.16738461538461538,0.09230769230769231,0.27692307692307694,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,68,0.25,0.2338235294117647,0.1323529411764706,0.3382352941176471,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,80,0.25,0.264625,0.18093750000000003,0.3625,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,146,0.21232876712328766,0.20821917808219176,0.1506849315068493,0.27756849315068477,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,154,0.2662337662337662,0.27870129870129867,0.22077922077922077,0.3475649350649349,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,159,0.31446540880503143,0.3240670859538784,0.25157232704402516,0.40581761006289296,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,33,0.18181818181818182,0.16171717171717173,0.06060606060606061,0.2727272727272727,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,54,0.2222222222222222,0.21796296296296294,0.12962962962962962,0.3333333333333333,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,63,0.25396825396825395,0.26010582010582006,0.15873015873015872,0.38095238095238093,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,115,0.13043478260869565,0.15782608695652176,0.09565217391304348,0.23478260869565218,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,101,0.297029702970297,0.2619471947194719,0.1782178217821782,0.3465346534653465,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,85,0.29411764705882354,0.30858823529411766,0.21176470588235294,0.4117647058823529,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,75,0.17333333333333334,0.26493333333333335,0.17333333333333334,0.37333333333333335,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,61,0.47540983606557374,0.4133879781420765,0.28647540983606556,0.533196721311475,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,44,0.4772727272727273,0.44886363636363635,0.29545454545454547,0.6136363636363636,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,170,0.2647058823529412,0.31433333333333335,0.24397058823529413,0.38544117647058806,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,154,0.45454545454545453,0.4551298701298701,0.37012987012987014,0.525974025974026,TRUE
-Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,115,0.7130434782608696,0.6139710144927536,0.5391304347826087,0.6869565217391305,FALSE
-Examinados para identificação,Período,2005-2011,1051,0.2664129400570885,0.26972407231208373,0.24162702188392007,0.2983111322549952,TRUE
-Examinados para identificação,Período,2012-2018,1405,0.3480427046263345,0.34791221826809016,0.3202491103202847,0.3783096085409252,TRUE
-Examinados para identificação,Período,2019-2025,1514,0.38969616908850724,0.38691325407309557,0.360947820343461,0.4098579920739762,TRUE
-Estratégia explícita de identificação,Categoria do prenome,Feminino,396,0.030303030303030304,0.0325,0.015151515151515152,0.05808080808080808,TRUE
-Estratégia explícita de identificação,Categoria do prenome,Masculino,963,0.04880581516095535,0.04800969193492558,0.03426791277258567,0.06438213914849429,TRUE
-Estratégia explícita de identificação,Periódico,Brazilian Political Science Review,107,0.12149532710280374,0.10102803738317756,0.037383177570093455,0.17757009345794392,TRUE
-Estratégia explícita de identificação,Periódico,Cadernos Gestão Pública e Cidadania,21,0.09523809523809523,0.08190476190476191,0,0.23809523809523808,TRUE
-Estratégia explícita de identificação,Periódico,Contexto Internacional,18,0.05555555555555555,0.050370370370370364,0,0.16666666666666666,TRUE
-Estratégia explícita de identificação,Periódico,Dados,196,0.05102040816326531,0.04977891156462585,0.015306122448979591,0.09183673469387756,TRUE
-Estratégia explícita de identificação,Periódico,Opinião Pública,346,0.05491329479768786,0.052909441233140654,0.028901734104046242,0.08533236994219646,TRUE
-Estratégia explícita de identificação,Periódico,Revista Brasileira de Ciência Política,135,0.02962962962962963,0.031802469135802466,0,0.07407407407407407,TRUE
-Estratégia explícita de identificação,Periódico,Revista Brasileira de Ciências Sociais,172,0.023255813953488372,0.026763565891472867,0.005813953488372093,0.05537790697674405,TRUE
-Estratégia explícita de identificação,Periódico,Revista Brasileira de Política Internacional,104,0,0.016602564102564103,0,0.057692307692307696,TRUE
-Estratégia explícita de identificação,Periódico,Revista de Sociologia e Política,260,0.023076923076923078,0.02684615384615385,0.0038461538461538464,0.05384615384615385,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,8,0,0.02999999999999998,0,0.125,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,5,0,0.04533333333333335,0,0.2,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,15,0.13333333333333333,0.09777777777777778,0,0.26666666666666666,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,8,0,0.04083333333333334,0,0.25,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,33,0.18181818181818182,0.10515151515151515,0,0.21212121212121213,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,38,0.13157894736842105,0.1336842105263158,0.02631578947368421,0.23684210526315788,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,5,0,0.04666666666666666,0,0.4,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,16,0.125,0.09291666666666668,0,0.25,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,3,0,0.02777777777777777,0,0.3333333333333333,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,3,0.3333333333333333,0.07888888888888888,0,0.3333333333333333,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,1,0,0.06000000000000009,0,1,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,2,0,0.021666666666666643,0,0.5,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,4,0,0.03166666666666667,0,0.25,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,5,0,0.07133333333333333,0,0.4,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Dados | Feminino | 2005-2011,13,0,0.015897435897435905,0,0.07692307692307693,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Dados | Feminino | 2012-2018,19,0.10526315789473684,0.0443859649122807,0,0.15789473684210525,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Dados | Feminino | 2019-2025,13,0,0.04666666666666667,0,0.23076923076923078,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Dados | Masculino | 2005-2011,39,0,0.022393162393162393,0,0.07692307692307693,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Dados | Masculino | 2012-2018,41,0.04878048780487805,0.04121951219512195,0,0.11036585365853603,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Dados | Masculino | 2019-2025,71,0.08450704225352113,0.077981220657277,0.014084507042253521,0.15492957746478872,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,34,0,0.01911764705882353,0,0.08823529411764706,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,35,0.02857142857142857,0.03133333333333333,0,0.11428571428571428,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,54,0.05555555555555555,0.0558641975308642,0,0.12962962962962962,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,48,0.041666666666666664,0.03298611111111111,0,0.10416666666666667,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,87,0.05747126436781609,0.052911877394636014,0.011494252873563218,0.10344827586206896,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,88,0.09090909090909091,0.08359848484848485,0.03409090909090909,0.15369318181818156,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,1,0,0.006666666666666683,0,0,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,20,0,0.015833333333333335,0,0.1,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,20,0,0.02366666666666667,0,0.12624999999999886,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,1,0,0.01999999999999999,0,0,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,43,0,0.031240310077519377,0,0.11627906976744186,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,50,0.08,0.042666666666666665,0,0.12,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,13,0,0.016410256410256417,0,0.11730769230769056,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,17,0.058823529411764705,0.025294117647058825,0,0.11764705882352941,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,20,0.05,0.038,0,0.15,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,31,0,0.011827956989247313,0,0.06451612903225806,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,41,0,0.021300813008130085,0,0.07317073170731707,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,50,0.04,0.0392,0,0.12,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,6,0,0.0072222222222222176,0,0.16666666666666666,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,12,0,0.01361111111111111,0,0.08333333333333333,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,16,0,0.021458333333333333,0,0.125,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,15,0,0.008222222222222221,0,0.06666666666666667,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,30,0,0.015777777777777776,0,0.06666666666666667,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,25,0,0.023200000000000005,0,0.12,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,13,0,0.011282051282051283,0,0.07692307692307693,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,29,0,0.015517241379310346,0,0.08706896551724058,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,21,0.047619047619047616,0.0265079365079365,0,0.09523809523809523,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,45,0,0.01214814814814815,0,0.044444444444444446,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,70,0.014285714285714285,0.02238095238095238,0,0.07142857142857142,TRUE
-Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,82,0.04878048780487805,0.04528455284552846,0,0.0975609756097561,TRUE
-Estratégia explícita de identificação,Período,2005-2011,280,0.007142857142857143,0.019547619047619046,0.0035714285714285713,0.04285714285714286,TRUE
-Estratégia explícita de identificação,Período,2012-2018,489,0.03885480572597137,0.036625766871165644,0.02044989775051125,0.05930470347648262,TRUE
-Estratégia explícita de identificação,Período,2019-2025,590,0.06440677966101695,0.06054237288135593,0.03809322033898306,0.0847457627118644,TRUE
+Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,82,0.4024390243902439,0.41321138211382114,0.31067073170731707,0.5121951219512195,TRUE
+Examinados para identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,69,0.5507246376811594,0.5113043478260869,0.4057971014492754,0.630797101449275,TRUE
+Examinados para identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,55,0.09090909090909091,0.13472727272727272,0.03636363636363636,0.23636363636363636,TRUE
+Examinados para identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,59,0.2711864406779661,0.23977401129943504,0.13559322033898305,0.3559322033898305,TRUE
+Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,32,0.09375,0.022499999999999996,0,0.07890624999999929,FALSE
+Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,62,0.04838709677419355,0.04548387096774193,0,0.10524193548387059,TRUE
+Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,80,0.0125,0.0455,0,0.1125,TRUE
+Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,63,0.031746031746031744,0.03026455026455026,0,0.07936507936507936,TRUE
+Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,93,0.043010752688172046,0.04835125448028674,0.010752688172043012,0.0967741935483871,TRUE
+Examinados para identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,91,0.054945054945054944,0.06446886446886448,0.02197802197802198,0.12087912087912088,TRUE
+Examinados para identificação,Periódico × categoria × período,Dados | Feminino | 2005-2011,51,0.2549019607843137,0.22464052287581698,0.13725490196078433,0.3333333333333333,TRUE
+Examinados para identificação,Periódico × categoria × período,Dados | Feminino | 2012-2018,71,0.2676056338028169,0.2651643192488263,0.15492957746478872,0.352112676056338,TRUE
+Examinados para identificação,Periódico × categoria × período,Dados | Feminino | 2019-2025,56,0.23214285714285715,0.2904761904761905,0.17857142857142858,0.4107142857142857,TRUE
+Examinados para identificação,Periódico × categoria × período,Dados | Masculino | 2005-2011,124,0.31451612903225806,0.27661290322580645,0.1935483870967742,0.3548387096774194,TRUE
+Examinados para identificação,Periódico × categoria × período,Dados | Masculino | 2012-2018,135,0.3037037037037037,0.3345925925925926,0.25925925925925924,0.4112962962962961,TRUE
+Examinados para identificação,Periódico × categoria × período,Dados | Masculino | 2019-2025,169,0.42011834319526625,0.4060552268244576,0.3400887573964497,0.46745562130177515,TRUE
+Examinados para identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,40,0.85,0.7546666666666667,0.6,0.875,TRUE
+Examinados para identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,43,0.813953488372093,0.7584496124031007,0.627906976744186,0.8837209302325582,TRUE
+Examinados para identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,76,0.7105263157894737,0.7497368421052631,0.6578947368421053,0.8421052631578947,TRUE
+Examinados para identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,64,0.75,0.73078125,0.616796875,0.84375,TRUE
+Examinados para identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,114,0.7631578947368421,0.787485380116959,0.7017543859649122,0.8642543859649121,TRUE
+Examinados para identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,106,0.8301886792452831,0.8349371069182391,0.7547169811320755,0.9011792452830187,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,8,0.125,0.13416666666666666,0,0.375,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,67,0.29850746268656714,0.287363184079602,0.1791044776119403,0.40298507462686567,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,57,0.3508771929824561,0.36502923976608187,0.2631578947368421,0.49122807017543857,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,20,0.05,0.18316666666666667,0.05,0.35,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,122,0.3524590163934426,0.34084699453551914,0.26229508196721313,0.42233606557377035,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,109,0.45871559633027525,0.4459633027522936,0.3577981651376147,0.5504587155963303,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,65,0.2,0.16584615384615387,0.08423076923076925,0.26153846153846155,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,68,0.25,0.23225490196078433,0.1323529411764706,0.3382352941176471,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,80,0.25,0.2609166666666667,0.16843750000000002,0.3625,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,146,0.21232876712328766,0.20618721461187214,0.14383561643835616,0.2671232876712329,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,154,0.2662337662337662,0.2705194805194805,0.2077922077922078,0.33766233766233766,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,159,0.31446540880503143,0.32551362683438156,0.25157232704402516,0.4025157232704403,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,33,0.18181818181818182,0.16292929292929292,0.06060606060606061,0.30303030303030304,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,54,0.2222222222222222,0.2204320987654321,0.1111111111111111,0.3430555555555551,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,63,0.25396825396825395,0.2606878306878307,0.1662698412698413,0.36507936507936506,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,115,0.13043478260869565,0.15486956521739131,0.08695652173913043,0.22608695652173913,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,101,0.297029702970297,0.2659075907590759,0.1782178217821782,0.3465346534653465,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,85,0.29411764705882354,0.314,0.21176470588235294,0.4235294117647059,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,75,0.17333333333333334,0.2713333333333333,0.1796666666666667,0.37333333333333335,FALSE
+Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,61,0.47540983606557374,0.41775956284153004,0.3114754098360656,0.5409836065573771,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,44,0.4772727272727273,0.45151515151515154,0.3181818181818182,0.5909090909090909,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,170,0.2647058823529412,0.313,0.23808823529411766,0.3764705882352941,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,154,0.45454545454545453,0.4588311688311688,0.3797077922077922,0.538961038961039,TRUE
+Examinados para identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,115,0.7130434782608696,0.6179130434782608,0.5217391304347826,0.7043478260869566,FALSE
+Examinados para identificação,Período,2005-2011,1051,0.2664129400570885,0.2684078655248969,0.23972407231208373,0.2949571836346337,TRUE
+Examinados para identificação,Período,2012-2018,1405,0.3480427046263345,0.3473333333333333,0.32241992882562276,0.37475088967971526,TRUE
+Examinados para identificação,Período,2019-2025,1514,0.38969616908850724,0.38824526640246587,0.36425033025099074,0.4134742404227213,TRUE
+Estratégia explícita de identificação,Categoria do prenome,Feminino,396,0.030303030303030304,0.0314983164983165,0.012626262626262626,0.05303030303030303,TRUE
+Estratégia explícita de identificação,Categoria do prenome,Masculino,963,0.04880581516095535,0.04829698857736241,0.03115264797507788,0.06645898234683281,TRUE
+Estratégia explícita de identificação,Periódico,Brazilian Political Science Review,107,0.12149532710280374,0.1025233644859813,0.04672897196261682,0.1824766355140185,TRUE
+Estratégia explícita de identificação,Periódico,Cadernos Gestão Pública e Cidadania,21,0.09523809523809523,0.08333333333333333,0,0.23809523809523808,TRUE
+Estratégia explícita de identificação,Periódico,Contexto Internacional,18,0.05555555555555555,0.04851851851851852,0,0.16666666666666666,TRUE
+Estratégia explícita de identificação,Periódico,Dados,196,0.05102040816326531,0.048078231292517,0.015306122448979591,0.09183673469387756,TRUE
+Estratégia explícita de identificação,Periódico,Opinião Pública,346,0.05491329479768786,0.052379576107899804,0.02601156069364162,0.07955202312138722,TRUE
+Estratégia explícita de identificação,Periódico,Revista Brasileira de Ciência Política,135,0.02962962962962963,0.033358024691358026,0.007407407407407408,0.07407407407407407,TRUE
+Estratégia explícita de identificação,Periódico,Revista Brasileira de Ciências Sociais,172,0.023255813953488372,0.027248062015503876,0.0027616279069767524,0.061191860465116155,TRUE
+Estratégia explícita de identificação,Periódico,Revista Brasileira de Política Internacional,104,0,0.016346153846153847,0,0.057692307692307696,TRUE
+Estratégia explícita de identificação,Periódico,Revista de Sociologia e Política,260,0.023076923076923078,0.026743589743589747,0.007692307692307693,0.05384615384615385,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2005-2011,8,0,0.035833333333333335,0,0.25,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2012-2018,5,0,0.05933333333333334,0,0.4,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Feminino | 2019-2025,15,0.13333333333333333,0.09755555555555556,0,0.30166666666666514,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2005-2011,8,0,0.03791666666666666,0,0.25,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2012-2018,33,0.18181818181818182,0.10292929292929293,0,0.22803030303030236,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Brazilian Political Science Review | Masculino | 2019-2025,38,0.13157894736842105,0.1374561403508772,0.02631578947368421,0.2894736842105263,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Feminino | 2019-2025,5,0,0.04733333333333334,0,0.3049999999999955,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Cadernos Gestão Pública e Cidadania | Masculino | 2019-2025,16,0.125,0.09458333333333335,0,0.25,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2005-2011,3,0,0.02444444444444443,0,0.3333333333333333,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2012-2018,3,0.3333333333333333,0.08333333333333333,0,0.3333333333333333,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Feminino | 2019-2025,1,0,0.03999999999999997,0,1,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2005-2011,2,0,0.02333333333333334,0,0.5,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2012-2018,4,0,0.03416666666666665,0,0.25,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Contexto Internacional | Masculino | 2019-2025,5,0,0.06533333333333333,0,0.4,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Dados | Feminino | 2005-2011,13,0,0.02307692307692308,0,0.15384615384615385,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Dados | Feminino | 2012-2018,19,0.10526315789473684,0.04157894736842105,0,0.15789473684210525,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Dados | Feminino | 2019-2025,13,0,0.041538461538461545,0,0.15384615384615385,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Dados | Masculino | 2005-2011,39,0,0.021965811965811967,0,0.07692307692307693,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Dados | Masculino | 2012-2018,41,0.04878048780487805,0.036422764227642276,0,0.0975609756097561,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Dados | Masculino | 2019-2025,71,0.08450704225352113,0.07666666666666666,0.014084507042253521,0.15492957746478872,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2005-2011,34,0,0.017352941176470592,0,0.058823529411764705,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2012-2018,35,0.02857142857142857,0.02914285714285714,0,0.10071428571428506,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Feminino | 2019-2025,54,0.05555555555555555,0.05055555555555555,0,0.13935185185185142,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2005-2011,48,0.041666666666666664,0.034305555555555554,0,0.10416666666666667,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2012-2018,87,0.05747126436781609,0.057049808429118776,0.011494252873563218,0.1094827586206894,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Opinião Pública | Masculino | 2019-2025,88,0.09090909090909091,0.08151515151515151,0.022727272727272728,0.14772727272727273,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2005-2011,1,0,0.009999999999999993,0,0,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2012-2018,20,0,0.016833333333333336,0,0.1,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Feminino | 2019-2025,20,0,0.02466666666666667,0,0.12624999999999886,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2005-2011,1,0,0.026666666666666686,0,0.5249999999999773,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2012-2018,43,0,0.03077519379844961,0,0.09302325581395349,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciência Política | Masculino | 2019-2025,50,0.08,0.04626666666666667,0,0.11049999999999954,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2005-2011,13,0,0.014102564102564103,0,0.07692307692307693,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2012-2018,17,0.058823529411764705,0.02372549019607843,0,0.11764705882352941,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Feminino | 2019-2025,20,0.05,0.036000000000000004,0,0.15,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2005-2011,31,0,0.012043010752688176,0,0.06451612903225806,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2012-2018,41,0,0.021544715447154472,0,0.085975609756097,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Ciências Sociais | Masculino | 2019-2025,50,0.04,0.042466666666666666,0,0.12,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2005-2011,6,0,0.004444444444444454,0,0.0874999999999962,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2012-2018,12,0,0.014444444444444444,0,0.08333333333333333,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Feminino | 2019-2025,16,0,0.02041666666666667,0,0.125,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2005-2011,15,0,0.009555555555555555,0,0.06666666666666667,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2012-2018,30,0,0.012999999999999996,0,0.06666666666666667,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista Brasileira de Política Internacional | Masculino | 2019-2025,25,0,0.0256,0,0.12,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2005-2011,13,0,0.009230769230769232,0,0.07692307692307693,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2012-2018,29,0,0.015517241379310346,0,0.06896551724137931,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Feminino | 2019-2025,21,0.047619047619047616,0.029206349206349208,0,0.09523809523809523,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2005-2011,45,0,0.013185185185185187,0,0.056111111111110605,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2012-2018,70,0.014285714285714285,0.021571428571428575,0,0.06464285714285681,TRUE
+Estratégia explícita de identificação,Periódico × categoria × período,Revista de Sociologia e Política | Masculino | 2019-2025,82,0.04878048780487805,0.044715447154471545,0,0.0975609756097561,TRUE
+Estratégia explícita de identificação,Período,2005-2011,280,0.007142857142857143,0.019928571428571427,0.0035714285714285713,0.039285714285714285,TRUE
+Estratégia explícita de identificação,Período,2012-2018,489,0.03885480572597137,0.03643490115882754,0.01937627811860941,0.05725971370143149,TRUE
+Estratégia explícita de identificação,Período,2019-2025,590,0.06440677966101695,0.06031638418079096,0.03809322033898306,0.0907203389830508,TRUE

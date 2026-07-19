@@ -29,7 +29,7 @@ if (length(file_arg) != 1) stop("Não foi possível identificar o caminho do scr
 project_dir <- normalizePath(file.path(dirname(file_arg), ".."), mustWork = TRUE)
 path <- function(...) file.path(project_dir, ...)
 
-input_path <- path("data/processed/gender_analysis/current_canonical_article_gender.csv")
+input_path <- path("data/processed/gender_analysis/current_canonical_article_gender_paper_scope.csv")
 models_dir <- path("data/processed/gender_analysis/bayesian_models")
 tables_dir <- path("output/tables/gender_analysis")
 figures_dir <- path("output/figures/gender_analysis")
@@ -38,7 +38,7 @@ for (directory in c(models_dir, tables_dir, figures_dir)) {
   dir.create(directory, recursive = TRUE, showWarnings = FALSE)
 }
 if (!file.exists(input_path)) {
-  stop("Execute primeiro scripts/51_analyze_gender_current_canonical.R.")
+  stop("Execute primeiro scripts/51_analyze_gender_current_canonical.R e scripts/56_reconcile_gender_to_paper_scope.R.")
 }
 
 chains <- as.integer(Sys.getenv("GENDER_BAYES_CHAINS", "4"))
@@ -465,6 +465,10 @@ report_lines <- c(
     max_treedepth, "`. PASS exige R-hat < 1,01, ESS bulk e tail mínimos ≥ 400, nenhuma divergência, ",
     "nenhuma saturação de treedepth e prevalência observada dentro do intervalo preditivo posterior de 95%."
   ), "",
+  paste0(
+    "O maior R-hat foi ", fmt_num(max(diagnostics$max_rhat), 4),
+    "; um modelo ficou marginalmente acima do corte estrito de 1,01, sem divergências ou saturações de treedepth."
+  ), "",
   "Checagens preditivas adicionais por categoria do prenome, periódico, período e pela combinação desses três eixos estão em `output/tables/gender_analysis/table_16_bayesian_grouped_ppc.csv`. Células pequenas podem ficar fora de intervalos pontuais de 95%; por isso essa tabela é diagnóstico localizado, não um novo teste múltiplo.",
   "", "## População e limites", "",
   "A entrada é derivada do CSV canônico corrente e exclui `Lua Nova: Revista de Cultura e Política`, `Novos estudos CEBRAP`, `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`. Somente artigos cujo primeiro prenome foi classificado como feminino ou masculino entram nos modelos.",
@@ -474,7 +478,7 @@ report_lines <- c(
   "Os denominadores são condicionais e não diretamente comparáveis: inferência estatística é estimada entre artigos quantitativos, e estratégia explícita entre artigos examinados para identificação. Esses recortes podem introduzir seleção. A análise descritiva anterior mostrou estabilidade bruta nos limiares de classificação 0,80, 0,90 e 0,95; os modelos hierárquicos não propagam essa incerteza nem imputam os 187 casos não classificados.",
   "", "## Reprodutibilidade", "",
   "- Script gerador: `scripts/54_fit_bayesian_gender_hierarchical.R`.",
-  "- Base de entrada: `data/processed/gender_analysis/current_canonical_article_gender.csv`, gerada por `scripts/51_analyze_gender_current_canonical.R`.",
+  paste0("- Base de entrada: `", sub(paste0(project_dir, "/"), "", input_path, fixed = TRUE), "`, reconciliada por `scripts/56_reconcile_gender_to_paper_scope.R` a partir da classificação gerada por `scripts/51_analyze_gender_current_canonical.R`."),
   paste0("- MD5 da base de entrada: `", unname(tools::md5sum(input_path)), "`."),
   paste0("- Ambiente: `", paste(session_versions, collapse = "; "), "`."),
   "- Os objetos `brmsfit` são cache local em `data/processed/gender_analysis/bayesian_models/` e não são versionados devido ao tamanho.",

@@ -41,6 +41,7 @@ classifications_path <- path(
   "data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined/classifications_integral_reading.csv"
 )
 manifest_path <- path("data/processed/credibility_prompt_v3_full_corpus/full_corpus_manifest.csv")
+excluded_articles_path <- path("data/processed/excluded_articles.csv")
 processed_dir <- path("data/processed/gender_analysis")
 tables_dir <- path("output/tables/gender_analysis")
 figures_dir <- path("output/figures/gender_analysis")
@@ -50,7 +51,7 @@ dir.create(processed_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(figures_dir, recursive = TRUE, showWarnings = FALSE)
 
-required_files <- c(classifications_path, manifest_path)
+required_files <- c(classifications_path, manifest_path, excluded_articles_path)
 if (!all(file.exists(required_files))) {
   stop("Arquivos ausentes: ", paste(required_files[!file.exists(required_files)], collapse = "; "))
 }
@@ -192,6 +193,19 @@ if (nrow(duplicate_classifications) > 0) {
 }
 
 manifest_source <- readr::read_csv(manifest_path, show_col_types = FALSE)
+excluded_articles <- readr::read_csv(excluded_articles_path, show_col_types = FALSE) |>
+  dplyr::mutate(exclude_from_analysis = parse_bool(exclude_from_analysis)) |>
+  dplyr::filter(dplyr::coalesce(exclude_from_analysis, FALSE)) |>
+  dplyr::select(pid, exclusion_reason)
+
+excluded_journal_pids <- classifications |>
+  dplyr::mutate(journal_key = stringr::str_to_lower(stringr::str_squish(journal_title))) |>
+  dplyr::semi_join(excluded_journal_rules |> dplyr::select(journal_key), by = "journal_key") |>
+  dplyr::pull(pid)
+excluded_article_pids_in_classifications <- excluded_articles |>
+  dplyr::filter(pid %in% classifications$pid) |>
+  dplyr::pull(pid)
+excluded_analysis_pids <- unique(c(excluded_journal_pids, excluded_article_pids_in_classifications))
 duplicate_manifest <- manifest_source |>
   dplyr::count(pid, name = "n_rows") |>
   dplyr::filter(n_rows > 1)
@@ -218,6 +232,7 @@ canonical_scope <- classifications |>
     credibility_revolution_screen_applicable = parse_bool(credibility_revolution_screen_applicable),
     method_type = lapply(credibility_revolution_method_type, parse_method_types)
   ) |>
+  dplyr::anti_join(excluded_articles |> dplyr::select(pid), by = "pid") |>
   dplyr::anti_join(excluded_journal_rules |> dplyr::select(journal_key), by = "journal_key") |>
   dplyr::left_join(
     manifest_source |>
@@ -623,6 +638,7 @@ validation_checks <- tibble::tibble(
     "Anos entre 2005 e 2025",
     "Tamanho analítico reconciliado com as exclusões",
     "Periódicos excluídos ausentes da base analítica",
+    "Artigos excluídos pelo ledger ausentes da base analítica",
     "Missing de autoria reconciliado com o status",
     "Categorias do primeiro prenome formam partição exaustiva",
     "Probabilidades dentro do intervalo [0, 1]",
@@ -633,8 +649,9 @@ validation_checks <- tibble::tibble(
     nrow(classifications) == dplyr::n_distinct(classifications$pid),
     nrow(canonical_without_metadata) == 0,
     nrow(invalid_years) == 0,
-    nrow(article_gender) == nrow(classifications) - sum(exclusion_counts$n_excluded),
+    nrow(article_gender) == nrow(classifications) - length(excluded_analysis_pids),
     nrow(excluded_remaining) == 0,
+    nrow(article_gender |> dplyr::semi_join(excluded_articles |> dplyr::select(pid), by = "pid")) == 0,
     sum(article_gender$n_authors == 0L) ==
       sum(article_gender$first_author_classification_status == "Autoria ausente"),
     sum(first_author_distribution$n_articles) == nrow(article_gender),
@@ -899,6 +916,7 @@ validation_table <- validation_checks |>
 n_canonical <- nrow(classifications)
 n_analytic <- nrow(article_gender)
 n_excluded <- n_canonical - n_analytic
+n_excluded_article_ledger <- length(excluded_article_pids_in_classifications)
 n_binary <- nrow(binary_gender_df)
 n_first_female <- sum(article_gender$first_author_gender == "Feminino")
 n_first_male <- sum(article_gender$first_author_gender == "Masculino")
@@ -945,7 +963,8 @@ report_lines <- c(
   paste0(
     "A análise parte dos ", fmt_int(n_canonical), " PIDs distintos do CSV canônico corrente. ",
     "Após as exclusões de escopo, restam ", fmt_int(n_analytic), " artigos; ",
-    fmt_int(n_excluded), " registros foram retirados. O `genderBR` classificou o primeiro prenome ",
+    fmt_int(n_excluded), " registros foram retirados, dos quais ",
+    fmt_int(n_excluded_article_ledger), " pertencem ao ledger de artigos inelegíveis. O `genderBR` classificou o primeiro prenome ",
     "como feminino ou masculino em ", fmt_int(n_binary), " casos (", fmt_pct(coverage_binary), ")."
   ),
   "",
@@ -977,7 +996,7 @@ report_lines <- c(
   "",
   "## População analítica e exclusões",
   "",
-  "A população de partida é o CSV canônico de classificações por leitura integral. Foram excluídos `Lua Nova: Revista de Cultura e Política` e `Novos estudos CEBRAP`, conforme solicitado. Também foram aplicadas as regras permanentes para `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`; estes dois periódicos já tinham zero registros no CSV de partida.",
+  "A população de partida é o CSV canônico de classificações por leitura integral. Foram excluídos `Lua Nova: Revista de Cultura e Política` e `Novos estudos CEBRAP`, conforme solicitado. Também foram aplicadas as regras permanentes para `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais`, além do ledger de artigos inelegíveis; os dois últimos periódicos já tinham zero registros no CSV de partida.",
   "",
   "Os resultados descrevem somente os artigos já presentes no snapshot canônico corrente; não são extrapolados para artigos que ainda não tenham sido incorporados a esse CSV.",
   "",
@@ -1089,6 +1108,7 @@ report_lines <- c(
   paste0("- MD5 e modificação do CSV canônico: `", canonical_md5, "`; `", canonical_mtime, "`."),
   paste0("- Manifest: `", sub(paste0(project_dir, "/"), "", manifest_path, fixed = TRUE), "`."),
   paste0("- MD5 e modificação do manifest: `", manifest_md5, "`; `", manifest_mtime, "`."),
+  paste0("- Ledger de artigos inelegíveis: `", sub(paste0(project_dir, "/"), "", excluded_articles_path, fixed = TRUE), "`; ", fmt_int(n_excluded_article_ledger), " registros presentes no CSV canônico foram removidos."),
   paste0("- R: `", R.version.string, "`."),
   paste0("- Pacotes: `", package_versions, "`."),
   "",

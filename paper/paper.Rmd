@@ -12,7 +12,7 @@ bibliography: ../references.bib
 biblio-style: apalike
 link-citations: true
 abstract: |
-  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos selecionados para avaliar identificação causal. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
+  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos selecionados para avaliar identificação causal. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. Em uma análise exploratória, entre artigos quantitativos com rótulo de inferência observado, a inferência aparece em 29,3% dos artigos cujo primeiro prenome foi classificado como feminino e em 41,5% daqueles classificados como masculino; a medida é uma proxy de composição da autoria, não uma observação de identidade de gênero. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
 ---
 
 ```{r setup, include=FALSE}
@@ -41,6 +41,13 @@ format_pct <- function(x) {
   ifelse(is.na(x), "-", paste0(format(x, decimal.mark = ",", nsmall = 1, trim = TRUE), "%"))
 }
 
+format_prob_pct <- function(x) {
+  ifelse(
+    is.na(x), "-",
+    ifelse(x < 0.001, "<0,1%", ifelse(x > 0.999, ">99,9%", format_pct(round(100 * x, 1))))
+  )
+}
+
 format_pp <- function(x) {
   ifelse(is.na(x), "-", paste0(format(round(x, 1), decimal.mark = ",", nsmall = 1, trim = TRUE), " p.p."))
 }
@@ -67,6 +74,11 @@ bayesian_area_posterior <- readr::read_csv("../output/tables/area_analysis/bayes
 bayesian_area_prior <- readr::read_csv("../output/tables/area_analysis/bayesian_area_prior_summary.csv", show_col_types = FALSE)
 bayesian_area_diagnostics <- readr::read_csv("../output/tables/area_analysis/bayesian_area_diagnostics.csv", show_col_types = FALSE)
 bayesian_area_prior_predictive <- readr::read_csv("../output/tables/area_analysis/bayesian_area_prior_predictive_summary.csv", show_col_types = FALSE)
+gender_scope <- readr::read_csv("../data/processed/gender_analysis/current_canonical_article_gender_paper_scope.csv", show_col_types = FALSE)
+gender_method <- readr::read_csv("../output/tables/gender_analysis/table_3_methodological_indicators_by_first_author_gender_paper_scope.csv", show_col_types = FALSE)
+gender_standardized <- readr::read_csv("../output/tables/gender_analysis/table_7_standardized_comparison_journal_period_paper_scope.csv", show_col_types = FALSE)
+gender_bayesian <- readr::read_csv("../output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv", show_col_types = FALSE)
+gender_diagnostics <- readr::read_csv("../output/tables/gender_analysis/table_15_bayesian_model_diagnostics.csv", show_col_types = FALSE)
 
 n_manifest <- denominadores$n[denominadores$denominator == "Corpus completo elegível"]
 n_classificados <- denominadores$n[denominadores$denominator == "Artigos classificados por leitura integral"]
@@ -321,6 +333,35 @@ bayes_max_rhat <- max(bayesian_area_diagnostics$max_rhat)
 bayes_min_ess_bulk <- min(bayesian_area_diagnostics$min_ess_bulk)
 bayes_divergences <- max(bayesian_area_diagnostics$divergences)
 
+gender_metric_value <- function(metric, variable, data = gender_method) {
+  data[[variable]][data$metric == metric]
+}
+
+gender_bayes_value <- function(metric, variable) {
+  gender_bayesian[[variable]][gender_bayesian$metric == metric]
+}
+
+gender_binary <- gender_scope |>
+  dplyr::filter(first_author_gender %in% c("Feminino", "Masculino"))
+n_gender_scope <- nrow(gender_scope)
+n_gender_binary <- nrow(gender_binary)
+n_gender_female <- sum(gender_scope$first_author_gender == "Feminino")
+n_gender_male <- sum(gender_scope$first_author_gender == "Masculino")
+n_gender_unclassified <- sum(gender_scope$first_author_gender == "Não classificado")
+n_gender_team_female <- sum(gender_scope$team_gender_composition == "Somente mulheres")
+n_gender_team_male <- sum(gender_scope$team_gender_composition == "Somente homens")
+n_gender_team_mixed <- sum(gender_scope$team_gender_composition == "Mista")
+n_gender_team_indeterminate <- sum(gender_scope$team_gender_composition == "Indeterminada")
+gender_quant_female <- gender_metric_value("Análise quantitativa", "percent_Feminino")
+gender_quant_male <- gender_metric_value("Análise quantitativa", "percent_Masculino")
+gender_inference_female <- gender_metric_value("Inferência estatística", "percent_Feminino")
+gender_inference_male <- gender_metric_value("Inferência estatística", "percent_Masculino")
+gender_inference_standardized <- gender_standardized$standardized_difference_pp[
+  gender_standardized$metric == "Inferência estatística"
+]
+gender_bayes_diagnostic_max_rhat <- max(gender_diagnostics$max_rhat)
+gender_bayes_diagnostic_divergences <- max(gender_diagnostics$divergent_transitions)
+
 stopifnot(
   n_area_cp + n_area_ri == 4024,
   n_area_cp_journals == 6,
@@ -339,7 +380,13 @@ stopifnot(
   bayes_student_prior_pdelta > 0,
   bayes_student_prior_pdelta < 1,
   bayes_normal_prior_ppc_n == bayes_prior_ppc_total,
-  bayes_student_prior_ppc_n == bayes_prior_ppc_total
+  bayes_student_prior_ppc_n == bayes_prior_ppc_total,
+  n_gender_scope == n_manifest,
+  n_gender_binary + n_gender_unclassified == n_gender_scope,
+  n_gender_female + n_gender_male == n_gender_binary,
+  n_gender_team_female + n_gender_team_male + n_gender_team_mixed + n_gender_team_indeterminate == n_gender_scope,
+  gender_bayes_diagnostic_divergences == 0,
+  gender_bayes_diagnostic_max_rhat <= 1.011
 )
 ```
 
@@ -356,6 +403,18 @@ Classificamos o texto integral de `r format_n(n_manifest)` artigos publicados en
 O resultado é uma dissociação entre empiria, inferência e identificação. Nos nove periódicos, `r format_n(n_inferencia_completos)` de `r format_n(n_inferencia_completos_den)` artigos quantitativos (`r format_pct(pct_inferencia_completos)`) reportam alguma medida formal de incerteza, enquanto apenas `r format_n(n_estrito_total_completos)` dos `r format_n(n_estrito_total_completos_den)` artigos (`r format_pct(pct_estrito_total_completos)`) mencionam uma estratégia causal explícita. Nos periódicos generalistas analisados por Torreblanca et al. (APSR, AJPS e *Journal of Politics*), entre `r format_pct(pct_torreblanca_jop)` e `r format_pct(pct_torreblanca_apsr)` dos artigos quantitativos explicativos empregam abordagens baseadas em desenho causal [@torreblanca2026].
 
 A decomposição por área reforça o diagnóstico: a proporção de artigos empíricos é semelhante em Ciência Política e Relações Internacionais, mas a inferência aparece em `r format_pct(pct_inference_area_cp)` dos quantitativos de Ciência Política e em `r format_pct(pct_inference_area_ri)` dos quantitativos de Relações Internacionais. Ao deslocar a observação dos currículos para os artigos publicados, o artigo mede se a profissionalização metodológica se traduz em práticas observáveis de descrição, inferência e identificação.
+
+Como análise adicional, examinamos se essas práticas se distribuem de modo diferente segundo uma classificação binária inferida do primeiro prenome dos autores. Essa medida é uma proxy de composição da autoria, não uma observação de identidade de gênero e não identifica efeitos causais. O objetivo é descrever uma possível dimensão de desigualdade na difusão metodológica, mantendo separados os resultados substantivos sobre métodos.
+
+# Visão geral do campo
+
+A literatura sobre métodos na Ciência Política brasileira passou por quatro deslocamentos. O diagnóstico inicial de Soares descreveu um “calcanhar metodológico” que envolvia formação e uso rigoroso de métodos quantitativos e qualitativos, e não apenas a baixa frequência de números [@soares2005]. Em seguida, levantamentos de currículos e artigos documentaram expansão seletiva do ensino, crescimento da estatística e heterogeneidade entre programas, áreas e periódicos [@barberia2014; @neiva2015; @nicolau2017; @albuquerque2022]. Esses estudos medem capacidade de formação ou intensidade de quantificação; não mostram, por si sós, como os artigos publicados sustentam suas conclusões.
+
+Um segundo eixo da literatura separa tarefas que costumam ser tratadas como se fossem uma só. Trabalhos sobre inferência e pluralismo defendem padrões compartilhados de validade sem exigir que estudos qualitativos imitem regressões [@king1994; @bradycollier2010; @adcockcollier2001]. A presença de estatística também não é sinônimo de inferência: testes e intervalos quantificam incerteza, mas não resolvem identificação nem garantem interpretação adequada [@gill1999; @rainey2014]. A revolução da credibilidade desloca a pergunta para o desenho que torna uma variação informativa sobre um efeito causal [@angrist2010; @torreblanca2026]. Mesmo nesse nível, um rótulo como variável instrumental ou diferenças-em-diferenças não assegura execução convincente [@lal2024], e a endogeneidade inerente a processos políticos exige combinar desenho, teoria e conhecimento do processo [@williams2026].
+
+Um terceiro eixo trata da possibilidade de escrutínio. Transparência quantitativa envolve dados, códigos e decisões analíticas; auditorias brasileiras encontraram baixa disponibilidade histórica de materiais e poucas reproduções completas [@figueiredo2019; @avelino2021]. Em pesquisa qualitativa, o equivalente não é replicar mecanicamente o resultado, mas tornar rastreáveis seleção, produção da evidência, interpretação e conexão entre evidência e conclusão [@domingos2024]. Reprodutibilidade computacional e replicabilidade são, portanto, dimensões relacionadas, mas não intercambiáveis [@brodeur2024].
+
+Por fim, a literatura recente amplia escala e explicita os riscos de mensuração. Estudos anteriores combinaram codificação manual, bibliometria e dicionários; trabalhos com texto integral e modelos de linguagem permitem corpora maiores, mas podem confundir menção, centralidade analítica e execução [@medeiros2016; @grimmer2013; @torreblanca2026]. A validade depende de codebook claro, avaliação por classe, auditoria de erros e atenção à deriva entre lotes e modelos [@halterman2026]. O presente artigo responde a essa lacuna com cobertura integral dos periódicos incluídos, leitura do texto integral e denominadores próprios para empiria, quantificação, inferência, linguagem causal ou explicativa e identificação. Ele mede presença de práticas, não sua qualidade; a adequação entre afirmação e método e a transparência efetiva permanecem perguntas para auditoria humana.
 
 # Dados
 
@@ -667,6 +726,40 @@ knitr::kable(
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
+## Composição da autoria e práticas metodológicas
+
+Como análise exploratória, usamos o `genderBR` para classificar o primeiro prenome como feminino ou masculino quando a probabilidade ultrapassava 90%. A medida cobre `r format_n(n_gender_binary)` dos `r format_n(n_gender_scope)` artigos (`r format_pct(round(100 * n_gender_binary / n_gender_scope, 1))`); `r format_n(n_gender_female)` primeiros prenomes foram classificados como femininos, `r format_n(n_gender_male)` como masculinos e `r format_n(n_gender_unclassified)` ficaram sem classificação. A classificação não observa identidade de gênero, não representa identidades não binárias e pode ter cobertura diferencial por idioma e origem do nome.
+
+Na composição da equipe, `r format_pct(round(100 * n_gender_team_female / n_gender_scope, 1))` dos artigos têm somente prenomes classificados como femininos, `r format_pct(round(100 * n_gender_team_male / n_gender_scope, 1))` somente como masculinos e `r format_pct(round(100 * n_gender_team_mixed / n_gender_scope, 1))` combinam as duas categorias; `r format_pct(round(100 * n_gender_team_indeterminate / n_gender_scope, 1))` permanecem indeterminados. Essa descrição é necessariamente confundida pelo número de autores e não substitui o contraste de primeira autoria.
+
+Estimamos seis modelos Bayesianos logísticos hierárquicos, um para cada prática. Os modelos incluem efeitos que variam por periódico, período de publicação e um intercepto para o primeiro autor; as priors são fracamente informativas e os nove periódicos são tratados como unidades permutáveis para fins de pooling parcial. O contraste é a diferença posterior de probabilidade entre artigos com primeiro prenome classificado como feminino e masculino, padronizada pela composição observada de periódico e período. Ele descreve associação condicional; não identifica efeito causal de gênero. Usamos quatro cadeias, sem divergências, e o maior R-hat foi `r format(round(gender_bayes_diagnostic_max_rhat, 3), decimal.mark = ",", nsmall = 3, trim = TRUE)`. Esse valor é marginalmente superior ao corte estrito de 1,01 em um modelo; os demais diagnósticos de amostragem e as checagens preditivas foram satisfatórios.
+
+```{r tabela-genero-bayesiano}
+gender_bayesian_display <- gender_bayesian |>
+  dplyr::transmute(
+    Indicador = metric,
+    N = format_n(n_articles),
+    `Diferença posterior F−M` = format_pp(posterior_median_pp),
+    `ICr 95%` = paste0(
+      "[", format_pp(credible_interval_95_low_pp), "; ",
+      format_pp(credible_interval_95_high_pp), "]"
+    ),
+    `Pr(Δ < −2 p.p.)` = format_prob_pct(posterior_probability_below_negative_rope),
+    `Pr(Δ > +2 p.p.)` = format_prob_pct(posterior_probability_above_positive_rope)
+  )
+
+knitr::kable(
+  gender_bayesian_display,
+  caption = "Diferenças posteriores entre artigos cujo primeiro prenome foi classificado como feminino ou masculino.",
+  booktabs = TRUE,
+  longtable = TRUE
+)
+```
+
+A diferença bruta na análise quantitativa é de `r format_pp(gender_quant_female - gender_quant_male)` (`r format_pct(round(gender_quant_female, 1))` entre primeiros prenomes femininos e `r format_pct(round(gender_quant_male, 1))` entre masculinos). Para inferência estatística, o contraste bruto é de `r format_pp(gender_inference_female - gender_inference_male)`; depois de incorporar periódico e período no modelo hierárquico, a diferença posterior mediana é `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))`. A padronização descritiva por periódico--período produz `r format_pp(gender_inference_standardized)`, de magnitude semelhante. Para linguagem causal ou explicativa e para estratégia explícita de identificação, os intervalos incluem diferenças substantivamente positivas e negativas; esses resultados não distinguem uma diferença sistemática de uma associação pequena ou incerta.
+
+O contraste deve ser lido como composição da autoria, não como mecanismo individual. A ordem de primeira autoria não mede contribuição relativa, nomes podem ser homônimos e a não classificação não é necessariamente aleatória. Por isso, a análise documenta uma desigualdade possível na distribuição das práticas, mas não atribui preferências metodológicas a mulheres ou homens nem estima um efeito de gênero.
+
 \newpage
 
 # Discussão
@@ -685,6 +778,8 @@ Os nove periódicos completos não formam uma única escala metodológica. `Opin
 
 No tempo, a empiria cresce nos oito periódicos presentes nos três períodos. Quantificação e inferência oscilam, sem trajetória de difusão ampla. As famílias de desenho também não seguem uma tendência monotônica. A produção não percorre uma marcha uniforme rumo à quantificação, à inferência ou à identificação causal.
 
+A análise exploratória da autoria sugere uma diferença concentrada na adoção de práticas quantitativas e, sobretudo, na quantificação da incerteza: `r format_pct(round(gender_inference_female, 1))` dos artigos com primeiro prenome feminino contra `r format_pct(round(gender_inference_male, 1))` dos artigos com primeiro prenome masculino; a diferença posterior, condicionada a periódico e período, é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`. Não há contraste equivalente para linguagem causal ou explicativa, e a diferença em estratégias explícitas é imprecisa. Como a medida é inferida de prenomes, não observa identidade de gênero e não é aleatória quanto a idioma, origem do nome ou autoria ausente, esse resultado deve ser lido como uma associação de composição, não como evidência de um efeito individual.
+
 A linguagem causal ou explicativa é uma categoria ampla. Ela inclui explicações qualitativas, argumentos teóricos e interpretações substantivas, mas também pode marcar uma pretensão causal para a qual o artigo não apresenta método compatível. Por isso, a análise deve distinguir duas perguntas: se há uma afirmação que exige justificativa causal e se o texto explicita como a sustenta. A classificação atual mede a coexistência dos atributos e indica possíveis desalinhamentos; a confirmação desses casos exige leitura humana.
 
 O pluralismo metodológico delimita a interpretação. A ausência de uma estratégia causal não é uma deficiência em todo tipo de artigo, e sua menção não demonstra qualidade. Esta versão mapeia a incidência de práticas empíricas, quantitativas, inferenciais e de identificação. Ela não mede a adequação entre cada afirmação e o método empregado.
@@ -696,6 +791,8 @@ Nos nove periódicos brasileiros, `r format_n(n_inferencia_completos)` de `r for
 O contraste situa práticas metodológicas diferentes. A produção brasileira já é amplamente empírica, mas a inferência estatística continua minoritária e estratégias causais explícitas aparecem em apenas `r format_n(n_estrito_total_completos)` artigos (`r format_pct(pct_estrito_total_completos)`). Pesquisa descritiva, qualitativa, histórica, interpretativa e normativa responde a perguntas próprias, e a presença de um valor de *p*, intervalo ou nome de método não garante qualidade. O achado delimitado é que, na produção quantitativa publicada, quantificar a incerteza ainda é uma divisão importante no Brasil.
 
 Há também um problema anterior à identificação estrita: `r format_n(n_claim_quant_no_strategy)` artigos (`r format_pct(pct_claim_quant_no_strategy)`) combinam linguagem causal ou explicativa com análise quantitativa, mas não mencionam estratégia explícita de identificação. Como a classificação agrega linguagem causal e explicativa, o número é um indicador de possível desalinhamento entre afirmação e método, não uma taxa de erro. A fronteira metodológica brasileira, portanto, não se resume à adoção de desenhos causais; inclui tornar explícita a relação entre o que o artigo afirma e o que seu método pode sustentar.
+
+A análise de composição da autoria acrescenta uma dimensão de desigualdade possível: a inferência estatística é menos frequente entre artigos cujo primeiro prenome foi classificado como feminino, mas essa classificação é apenas uma proxy e o contraste não identifica um efeito de gênero. O achado justifica investigar mecanismos de formação, coautoria, seleção editorial e distribuição de recursos em estudos futuros, sem converter uma associação descritiva em explicação individual.
 
 Os denominadores e períodos diferem entre as comparações, e a classificação automatizada ainda requer validação humana. O próximo passo é avaliar se as práticas identificadas são adequadas às perguntas dos artigos e se foram executadas de modo convincente, no universo de `r format_n(n_manifest)` artigos já classificados.
 
