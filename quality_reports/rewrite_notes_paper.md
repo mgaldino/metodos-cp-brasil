@@ -1,35 +1,23 @@
-# Notas editoriais: Revolução da Credibilidade na Ciência Política Brasileira
+# Notas editoriais da revisão de redação
 
-**Arquivo original**: `paper/paper.Rmd`
-**Data**: 2026-07-08
+**Data:** 19 de julho de 2026
 
-## Diagnóstico da versão original
+## Diagnóstico
 
-A introdução atual já incorpora as cautelas substantivas mais importantes: escopo preliminar, denominadores explícitos, pluralismo metodológico e lacunas de mensuração. O principal problema editorial é que o puzzle aparece diluído entre literatura, escopo e salvaguardas; o leitor entende a prudência do paper antes de entender com nitidez a pergunta que organiza a introdução.
+A versão anterior apresentava as cautelas, os denominadores e a literatura antes de explicitar o resultado substantivo. Isso atrasava o argumento e fazia o texto soar como uma descrição do pipeline de classificação. Havia também parágrafos com mais de uma função e contrastes formulados de modo abstrato.
 
-## Principais mudanças
+## Alterações realizadas
 
-- Abri com a diferença entre profissionalização metodológica e prática publicada, para transformar o "calcanhar metodológico" em problema observável nos artigos.
-- Antecipei a exigência de rastreabilidade entre claim, evidência e método, mantendo a defesa do pluralismo metodológico.
-- Reorganizei a literatura nacional como sequência substantiva curta: formação, obscuridade metodológica, reprodutibilidade e prática publicada.
-- Delimitei Torreblanca et al. como camada comparável para a parte causal-quantitativa do problema, sem convertê-la em régua geral de qualidade científica.
-- Tornei mais visível o escopo preliminar: 699 de 5.250 PIDs classificados, 13,3% do manifest, sem amostra representativa demonstrada.
-- Preservei os resultados disponíveis apenas como descrição da fração classificada: 568 empíricos, 324 com componente quantitativo, 597 com claim causal ou explicativo, 147 no screen de credibilidade e 16 com desenho estrito.
-- Fechei a introdução declarando `method_explicitness` e `empirical_article_format` como variáveis ausentes e tarefas de classificação complementar.
+1. A introdução agora abre com o achado sobre inferência estatística e o contrasta imediatamente com o benchmark de Torreblanca et al.
+2. O argumento distingue explicitamente descrição, quantificação da incerteza e identificação causal.
+3. Dados, estratégia empírica, resultados, discussão e conclusão foram reescritos em parágrafos mais curtos, com sujeito e verbo explícitos.
+4. As seções por área e sobre inferência apresentam primeiro o resultado, depois a interpretação e por fim os limites da medida.
+5. As ressalvas foram concentradas onde são necessárias: denominadores, qualidade da execução e validação humana da classificação.
+6. Foi removida uma função de formatação de valores de *p* que não era mais usada após a retirada dos testes frequentistas.
 
-## O que foi preservado
+## Controle de consistência
 
-- O escopo substantivo em Ciência Política, Relações Internacionais e Administração Pública no SciELO, 2005-2025.
-- As referências já presentes na introdução: Soares, Barberia, Godoy e Barboza, Albuquerque, Mesquita e Brito, Figueiredo et al. e Torreblanca et al.
-- A cautela de que os resultados atuais descrevem a fração classificada, não o corpus completo.
-- A distinção entre pluralismo metodológico e avaliabilidade dos claims.
-- A regra conservadora para desenhos estritos de identificação.
-- A posição de que baixa explicitação metodológica e baixa padronização textual ainda são hipóteses, não resultados demonstrados.
-
-## Pontos para verificação do autor
-
-- Confirmar se "rastreabilidade" é o termo preferido para condensar a relação entre evidência, método, resultados e interpretação.
-- Conferir se a frase sobre "prática metodológica dos artigos brasileiros elegíveis no SciELO" captura bem o objeto, ou se o título deve falar mais diretamente em produção brasileira de Ciência Política.
-- Verificar se o contraste entre "alcance empírico" e "aderência a padrões de identificação causal" deve entrar já na introdução ou ficar concentrado nas seções de estratégia empírica e discussão.
-- Checar se o número de 16 artigos com desenho estrito deve aparecer na introdução proposta ou apenas nos resultados, dado o caráter preliminar e sujeito a auditoria complementar.
-- Avaliar se a última frase deve ser mantida como promessa de resposta futura ou substituída por uma transição mais curta para a seção seguinte.
+- Os números continuam sendo lidos dos artefatos canônicos pelo `paper.Rmd`; a revisão não alterou a análise.
+- O PDF foi recompilado com `rmarkdown::render` e o texto extraído com `pdftotext`.
+- `git diff --check` passou.
+- A pontuação duplicada produzida pelo sufixo “p.p.” foi corrigida.
