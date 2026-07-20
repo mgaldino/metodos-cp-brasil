@@ -441,7 +441,7 @@ tabela_1_display <- tabela_corpus |>
 
 knitr::kable(
   tabela_1_display,
-  caption = "Artigos elegíveis e classificados por periódico e período. As colunas de período apresentam a razão entre artigos classificados e elegíveis.",
+  caption = "Cobertura do corpus por periódico e período. As colunas de período apresentam a razão entre artigos classificados e elegíveis; 0/0 indica que o periódico não contribuiu com artigos naquele período.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -494,7 +494,7 @@ tabela_2_display <- tabela_dimensoes |>
 
 knitr::kable(
   tabela_2_display,
-  caption = paste0("Práticas metodológicas nos ", format_n(n_classificados), " artigos classificados."),
+  caption = paste0("Incidência de práticas metodológicas nos ", format_n(n_classificados), " artigos classificados. Os percentuais são calculados em relação ao denominador indicado em cada linha."),
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -554,7 +554,7 @@ bayesian_posterior_table <- bayesian_area_posterior |>
 
 knitr::kable(
   bayesian_posterior_table,
-  caption = "Resultados posteriores do modelo bayesiano binomial hierárquico por área. As probabilidades referem-se a um periódico médio; a diferença é medida em pontos percentuais.",
+  caption = "Probabilidade posterior de inferência estatística por área no modelo bayesiano binomial hierárquico. As estimativas referem-se a um periódico médio; a diferença é CP menos RI, em pontos percentuais, e o intervalo de credibilidade contém 95% da distribuição posterior.",
   booktabs = TRUE,
   longtable = FALSE
 )
@@ -634,7 +634,7 @@ tabela_3_display <- tabela_credibilidade |>
 
 knitr::kable(
   tabela_3_display,
-  caption = "Linguagem causal ou explicativa, coerência entre afirmação e método e estratégias explícitas de identificação.",
+  caption = "Incidência de linguagem causal ou explicativa e de estratégias explícitas de identificação. Os percentuais usam o denominador indicado em cada linha; a presença ou ausência de estratégia é calculada entre os artigos selecionados para avaliar identificação causal.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -666,7 +666,7 @@ tabela_temporal <- dplyr::bind_rows(
 
 knitr::kable(
   tabela_temporal,
-  caption = "Quantificação e inferência estatística por período, segundo a regra de ponderação.",
+  caption = "Variação temporal da quantificação e da inferência estatística nos oito periódicos presentes nos três períodos. O peso igual calcula a média das proporções dos periódicos; o agrupamento calcula a proporção sobre os artigos reunidos.",
   booktabs = TRUE
 )
 ```
@@ -701,7 +701,7 @@ gender_bayesian_display <- gender_bayesian |>
 
 knitr::kable(
   gender_bayesian_display,
-  caption = "Diferenças posteriores entre artigos cujo primeiro prenome foi classificado como feminino ou masculino.",
+  caption = "Diferenças posteriores entre artigos cujo primeiro prenome foi classificado como feminino ou masculino. Os contrastes apresentam a categoria feminina menos a masculina, em pontos percentuais, padronizados pela composição observada de periódico e período; as duas últimas colunas informam a probabilidade posterior de a diferença ultrapassar −2 ou +2 pontos percentuais.",
   booktabs = TRUE,
   longtable = TRUE
 )
@@ -800,7 +800,7 @@ bayesian_diagnostics_table <- bayesian_area_prior |>
 
 knitr::kable(
   bayesian_diagnostics_table,
-  caption = "Checagem preditiva das distribuições a priori e diagnósticos do modelo bayesiano.",
+  caption = "Checagens preditivas das distribuições a priori e diagnósticos de amostragem do modelo bayesiano por área. A coluna PPC informa quantos dos oito periódicos observados ficam no intervalo preditivo de 95%; R-hat e divergências avaliam a amostragem posterior.",
   booktabs = TRUE,
   longtable = FALSE
 )
