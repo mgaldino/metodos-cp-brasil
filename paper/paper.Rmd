@@ -463,7 +463,7 @@ Contamos como estratégia explícita de identificação causal a menção a expe
 
 ## Protocolo de classificação e validade da mensuração
 
-Classificamos o texto integral de cada artigo com um protocolo padronizado aplicado por modelos de linguagem. Verificações automáticas conferem a estrutura dos dados e as relações entre categorias. Elas não substituem a validação humana nem estimam validade de construto.
+Classificamos o texto integral de cada artigo com um protocolo padronizado aplicado por modelos de linguagem. Verificações automáticas conferem a estrutura dos dados e as relações entre categorias.
 
 As classificações em escala ainda não foram integralmente adjudicadas por humanos. Nos nove periódicos completos, a fração de artigos que o classificador encaminhou para revisão adicional varia de `r format_pct(tough_call_min)` a `r format_pct(tough_call_max)` entre células periódico--período. Lotes diferentes também foram classificados por versões distintas de modelos de linguagem, com profundidades de processamento diferentes. Como a ordem dos lotes se relaciona ao período de publicação, uma variação temporal pode combinar mudança editorial e mudança do classificador. Por isso, tratamos as tendências como diagnóstico exploratório.
 
