@@ -564,42 +564,7 @@ knitr::kable(
 )
 ```
 
-A diferença CP--RI permanece positiva sob as duas especificações. A Tabela 4 resume a checagem preditiva das priors e os diagnósticos de amostragem. As priors são centradas em ausência de diferença; a atualização posterior vem dos dados. A análise mede uma diferença descritiva entre periódicos e não estima um efeito causal da área sobre os autores.
-
-```{r tabela-6-bayesiana-diagnosticos}
-bayesian_diagnostics_table <- bayesian_area_prior |>
-  dplyr::filter(parameter == "P(delta > 0)") |>
-  dplyr::select(prior, prior_probability = estimate) |>
-  dplyr::left_join(
-    bayesian_area_prior_predictive |>
-      dplyr::select(prior, observed_journals_within_ppc_95, observed_journals_total),
-    by = "prior"
-  ) |>
-  dplyr::left_join(
-    bayesian_area_diagnostics |>
-      dplyr::select(prior, max_rhat, divergences),
-    by = "prior"
-  ) |>
-  dplyr::mutate(
-    `Priori P(Δ > 0)` = format_pct(round(100 * prior_probability, 1)),
-    `Periódicos dentro do PPC 95%` = paste0(observed_journals_within_ppc_95, "/", observed_journals_total),
-    `R-hat máximo` = format(round(max_rhat, 3), decimal.mark = ",", nsmall = 3),
-    Divergências = format_n(divergences),
-    Priori = dplyr::recode(
-      prior,
-      "Normal(0, 1.5)" = "Normal(0, 1,5)",
-      "Student-t(3, 0, 2.5)" = "Student-t(3, 0, 2,5)"
-    )
-  ) |>
-  dplyr::select(Priori, `Priori P(Δ > 0)`, `Periódicos dentro do PPC 95%`, `R-hat máximo`, Divergências)
-
-knitr::kable(
-  bayesian_diagnostics_table,
-  caption = "Checagem preditiva das priors e diagnósticos do modelo Bayesiano. PPC: checagem preditiva da priori.",
-  booktabs = TRUE,
-  longtable = FALSE
-)
-```
+A diferença CP--RI permanece positiva sob as duas especificações. A análise mede uma diferença descritiva entre periódicos e não estima um efeito causal da área sobre os autores. As checagens preditivas e os diagnósticos de amostragem são apresentados no apêndice.
 
 A identificação causal explícita também difere entre as áreas. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos selecionados para avaliar identificação causal (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
 
@@ -641,7 +606,7 @@ Entre os `r format_n(n_classificados)` artigos, `r format_n(n_claim_quant_no_str
 knitr::include_graphics("../output/figures/paper/figure_5_claim_method_alignment.pdf")
 ```
 
-No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 5 mantém os denominadores separados.
+No conjunto classificado, `r format_n(n_estrito)` dos `r format_n(n_screen)` artigos selecionados para examinar identificação mencionam ao menos uma estratégia explícita (`r format_pct(round(100 * n_estrito / n_screen, 1))`). Nos periódicos completos, são `r format_n(n_estrito_periodicos_completos)` de `r format_n(n_screen_periodicos_completos)` (`r format_pct(round(100 * n_estrito_periodicos_completos / n_screen_periodicos_completos, 1))`). O subconjunto inclui afirmações explicativas amplas e modelagem quantitativa, e por isso não reúne apenas estudos causais. A estratégia explícita é, portanto, um diagnóstico de fronteira; a ausência de uma explicação metodológica compatível com a linguagem causal é um problema anterior. A Tabela 4 mantém os denominadores separados.
 
 ```{r tabela-4-credibilidade}
 tabela_3_display <- tabela_credibilidade |>
@@ -802,6 +767,47 @@ A Figura 8 apresenta as mesmas dimensões por ano. Ela inclui apenas 2011--2025,
 
 ```{r figura-7, fig.cap="As séries anuais mostram crescimento da empiria e oscilação das demais práticas entre 2011 e 2025. As proporções agrupam os artigos dos oito periódicos com suporte anual comum; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
+```
+
+\clearpage
+
+# Apêndice: Diagnósticos do modelo Bayesiano
+
+A tabela a seguir resume a checagem preditiva das priors e os diagnósticos de amostragem do modelo apresentado na Tabela 3. As priors são centradas em ausência de diferença; a atualização posterior vem dos dados.
+
+```{r tabela-6-bayesiana-diagnosticos}
+bayesian_diagnostics_table <- bayesian_area_prior |>
+  dplyr::filter(parameter == "P(delta > 0)") |>
+  dplyr::select(prior, prior_probability = estimate) |>
+  dplyr::left_join(
+    bayesian_area_prior_predictive |>
+      dplyr::select(prior, observed_journals_within_ppc_95, observed_journals_total),
+    by = "prior"
+  ) |>
+  dplyr::left_join(
+    bayesian_area_diagnostics |>
+      dplyr::select(prior, max_rhat, divergences),
+    by = "prior"
+  ) |>
+  dplyr::mutate(
+    `Priori P(Δ > 0)` = format_pct(round(100 * prior_probability, 1)),
+    `Periódicos dentro do PPC 95%` = paste0(observed_journals_within_ppc_95, "/", observed_journals_total),
+    `R-hat máximo` = format(round(max_rhat, 3), decimal.mark = ",", nsmall = 3),
+    Divergências = format_n(divergences),
+    Priori = dplyr::recode(
+      prior,
+      "Normal(0, 1.5)" = "Normal(0, 1,5)",
+      "Student-t(3, 0, 2.5)" = "Student-t(3, 0, 2,5)"
+    )
+  ) |>
+  dplyr::select(Priori, `Priori P(Δ > 0)`, `Periódicos dentro do PPC 95%`, `R-hat máximo`, Divergências)
+
+knitr::kable(
+  bayesian_diagnostics_table,
+  caption = "Checagem preditiva das priors e diagnósticos do modelo Bayesiano. PPC: checagem preditiva da priori.",
+  booktabs = TRUE,
+  longtable = FALSE
+)
 ```
 
 \clearpage
