@@ -1,160 +1,121 @@
-# Revolução da Credibilidade na Ciência Política Brasileira
+# Depois do calcanhar metodológico
 
-Este repositório replica e expande Torreblanca et al. (2026), "The Credibility Revolution in Political Science", para periódicos brasileiros de Ciência Política, Relações Internacionais e Administração Pública indexados no SciELO.
+Materiais do artigo **“Depois do calcanhar metodológico: inferência e identificação causal na Ciência Política brasileira”**, de Manoel Galdino e Rodrigo Martins.
 
-## Estado Atual
+- Manoel Galdino — professor do Departamento de Ciência Política da Universidade de São Paulo (DCP-USP)
+- Rodrigo Martins — pesquisador de pós-doutorado no Departamento de Ciência Política da Universidade de São Paulo (DCP-USP)
 
-- Corpus coletado: `data/raw/articles_2005_2025.csv`, com 8.400 artigos, 15 periódicos e anos de publicação entre 2005 e 2025.
-- Amostra de validação: `data/processed/sample_validation.csv`, com 208 artigos.
-- Classificações LLM finais pós-revisão manual: `data/processed/classifications_llm.csv`, com 208 artigos classificados e schema validado; os JSONs finais estão em `data/processed/classifications_final/`.
-- Base operacional atual da amostra classificada: `data/processed/classifications_llm_main_analysis.csv`, com 175 artigos após aplicar os ledgers de exclusão. Este arquivo é a amostra validada pós-exclusões, não a base final do paper.
-- Texto integral dos 175 artigos gold/piloto: `data/processed/fulltext_gold/article_texts_gold.csv`, validado em 2026-06-03 com 175/175 bodies recuperados. Esta é a fonte canônica de body para o piloto/gold; não use abstract, metadados, keywords, referências ou os XMLs antigos como substituto de body.
-- Recuperação de texto integral do corpus elegível completo: `scripts/16_recover_fulltext_corpus.py` constrói o manifest a partir de `data/raw/articles_2005_2025.csv`, `data/processed/excluded_journals.csv` e `data/processed/excluded_articles.csv`, exclui periódicos/artigos fora do escopo e registros não `research-article` antes da extração, preserva brutos em `data/raw/fulltext_corpus/` e escreve `data/processed/fulltext_corpus/article_texts_corpus.csv`. A validação correspondente é `scripts/17_validate_fulltext_corpus.R`. Execução em 2026-06-03 recuperou 6.642/6.672 bodies; 30 PIDs permanecem em `data/processed/fulltext_corpus/fulltext_corpus_failure_queue.csv`, majoritariamente apresentações, erratas, notas editoriais, obituários ou críticas curtas marcadas como `research-article` pelo metadado bruto. A validação também sinalizou 2 pares com body/hash duplicado para checagem manual: `S0011-52582014000200007`/`S0011-52582014000200008` e `S0011-52582025000400225`/`S0011-52582025000400230`.
-- Piloto de classificação tripla independente: `data/processed/full_classification_pilot/`, usando subagentes Codex locais e os 175 artigos elegíveis apenas como gold/piloto.
-- Benchmarks internacionais de readability: `data/processed/benchmark_cp.csv` e `data/processed/benchmark_ir.csv`.
-- Validação final das classificações: `Rscript --vanilla scripts/09_apply_manual_review_decisions.R` gerou zero erros de schema em 2026-06-03; o relatório está em `quality_reports/classification_validation_summary_final.md`.
-- Testes locais: `python3 -m pytest scripts` passou com 59 testes em 2026-06-01.
+O projeto investiga quanto a profissionalização metodológica das últimas duas décadas alterou as práticas observáveis nos artigos publicados pela Ciência Política e pelas Relações Internacionais brasileiras. O foco não é apenas saber se um artigo usa números ou modelos, mas distinguir pesquisa empírica, análise quantitativa, inferência estatística, pretensão causal e estratégia explícita de identificação.
 
-## Direção Analítica Atual
+O manuscrito atual está disponível em [paper/paper.pdf](paper/paper.pdf), e seu código-fonte está em [paper/paper.Rmd](paper/paper.Rmd).
 
-- O objetivo do paper é expandir a classificação para o corpus completo elegível, não analisar apenas a amostra de 175 artigos.
-- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` não entrarão na análise principal.
-- Os registros desses periódicos podem permanecer preservados nos dados brutos e artefatos rastreáveis, mas devem ser excluídos de qualquer base analítica substantiva.
-- A amostra de 208 artigos, reduzida a 175 após exclusões, deve ser tratada como etapa de validação/piloto para calibrar e auditar a classificação do corpus completo elegível.
-- A base final de análise substantiva ainda precisa ser gerada depois da classificação do corpus completo elegível.
+## Corpus
 
-## Estrutura
+O corpus analítico reúne **4.144 artigos** publicados entre 2005 e 2025 em nove periódicos indexados no SciELO:
+
+- *Brazilian Political Science Review*;
+- *Cadernos Gestão Pública e Cidadania*;
+- *Contexto Internacional*;
+- *Dados*;
+- *Opinião Pública*;
+- *Revista Brasileira de Ciência Política*;
+- *Revista Brasileira de Ciências Sociais*;
+- *Revista Brasileira de Política Internacional*;
+- *Revista de Sociologia e Política*.
+
+Os nove periódicos estão integralmente classificados nesta versão. *Brazilian Journal of Political Economy*, *Civitas — Revista de Ciências Sociais*, *Revista de Administração Pública*, *Sur — Revista Internacional de Direitos Humanos*, *Lua Nova* e *Novos Estudos CEBRAP* não entram nos denominadores do paper. As 19 unidades editoriais da série *Tendências*, de *Opinião Pública*, também foram consideradas inelegíveis por não se apresentarem como artigos acadêmicos assinados.
+
+## Principais resultados
+
+- Dos 4.144 artigos, **3.414 são empíricos** e **1.999** têm componente quantitativo.
+- Entre os 1.994 quantitativos com classificação disponível para inferência, **743 (37,3%)** quantificam formalmente a incerteza por testes, erros-padrão, intervalos ou procedimento equivalente.
+- Apenas **59 artigos (1,4% do corpus)** mencionam uma estratégia causal explícita.
+- **1.885 artigos (45,5%)** combinam análise quantitativa e pretensão causal sem explicitar uma estratégia de identificação.
+- A incidência de inferência estatística pouco varia entre 2005 e 2025, apesar do crescimento da pesquisa empírica.
+- A análise por área encontra mais inferência estatística em Ciência Política do que em Relações Internacionais, depois de incorporar a variação entre periódicos.
+- Artigos cujo primeiro prenome foi classificado como feminino são mais frequentemente empíricos; entre os empíricos, porém, apresentam menos análise quantitativa e, entre os quantitativos, menos inferência estatística. A pretensão causal tem frequência semelhante nas duas categorias.
+
+O argumento central é que a ambição causal se difundiu mais rapidamente que os métodos capazes de sustentá-la. Nos periódicos brasileiros analisados, a inferência estatística ainda divide a produção quantitativa; nos periódicos internacionais de referência estudados por Torreblanca et al., a fronteira já está na identificação causal explícita.
+
+As classificações registram a presença das práticas, não a qualidade de sua execução. A classificação em escala ainda requer validação humana estratificada.
+
+## Protocolo de classificação
+
+Cada artigo foi processado separadamente a partir do texto integral. Antes de atribuir rótulos, o modelo deveria:
+
+1. ler o corpo completo do artigo;
+2. registrar as seções examinadas e sua relevância metodológica;
+3. resumir o artigo;
+4. responder a perguntas de auditoria sobre evidência empírica, análise quantitativa, evidência qualitativa, inferência e identificação causal;
+5. somente então produzir a classificação estruturada em JSON.
+
+O protocolo proíbe classificações baseadas apenas em título, resumo, palavras-chave, tabelas isoladas, regras lexicais ou rótulos anteriores. As respostas são validadas quanto à estrutura, aos valores permitidos e às relações lógicas entre os campos.
+
+Os componentes versionados do protocolo são:
+
+- [wrapper de leitura integral](data/processed/credibility_prompt_v3_integral_reading/prompts/classifier_prompt_v3_integral_reading.md);
+- [prompt e codebook do classificador v3](data/processed/credibility_prompt_v3_test/prompts/classifier_prompt_v3.md);
+- [esquema JSON de validação](data/processed/credibility_prompt_v3_integral_reading/prompts/integral_reading_output_schema.json).
+
+O apêndice do paper reproduz o prompt integral e descreve as verificações aplicadas.
+
+## Estrutura do repositório
 
 ```text
 metodos_CP/
-├── CLAUDE.md                         # Memória substantiva do projeto
-├── README.md                         # Documentação principal
-├── references.bib                    # Bibliografia do paper
-├── metodos_CP.Rproj                  # Projeto RStudio
-├── paper/                            # Manuscrito e apêndice
-├── scripts/                          # Coleta, amostragem, classificação e auditoria
+├── paper/                 # Manuscrito, preâmbulo e PDF compilado
+├── scripts/               # Coleta, classificação, análise e auditoria
 ├── data/
-│   ├── raw/                          # Dados brutos e metadados de execução
-│   └── processed/                    # Dados processados e classificações
+│   ├── raw/               # Metadados e artefatos brutos de coleta
+│   └── processed/         # Bases canônicas e dados derivados
 ├── output/
-│   ├── figures/
-│   ├── tables/
-│   └── models/
-├── quality_reports/plans/            # Planos antes de novas análises
-├── replication/                      # Materiais finais de replicação
-├── references_pdfs/                  # PDFs de referências
-├── explorations/                     # Explorações não canônicas
-└── notes/                            # Notas de pesquisa
+│   ├── figures/           # Figuras produzidas pelos scripts
+│   ├── tables/            # Tabelas e números intermediários
+│   └── models/            # Artefatos de modelos
+├── quality_reports/       # Validações, pareceres e diagnósticos
+├── notes/                 # Notas de pesquisa e revisão da literatura
+├── references.bib         # Bibliografia do manuscrito
+└── scripts/README.md      # Descrição detalhada dos scripts
 ```
 
-## Pipeline
+Os principais pontos de entrada analíticos são:
 
-1. Descobrir periódicos SciELO:
+- `scripts/45_build_current_paper_analysis.R`: constrói a base analítica, valida regras lógicas e gera os resultados principais;
+- `scripts/48_expand_statistical_inference_analysis.R`: detalha a análise de inferência estatística;
+- `scripts/51_analyze_gender_current_canonical.R`: produz a análise descritiva de composição da autoria;
+- `scripts/52_analyze_area_current_canonical.R`: compara Ciência Política e Relações Internacionais;
+- `scripts/54_bayesian_area_hierarchical_model.R`: estima os modelos bayesianos por área;
+- `scripts/54_fit_bayesian_gender_hierarchical.R`: estima os modelos bayesianos de composição da autoria;
+- `scripts/57_replicate_paper.R`: orquestra a reconstrução dos artefatos analíticos do paper.
 
-```bash
-python3 scripts/01_discover_journals.py
-```
+Uma descrição mais extensa está em [scripts/README.md](scripts/README.md).
 
-2. Coletar artigos:
+## Replicação
 
-```bash
-PUB_YEAR_FROM=2005 PUB_YEAR_UNTIL=2025 python3 scripts/02_collect_articles.py
-```
+O pacote público de replicação está em preparação. As instruções consolidadas serão acrescentadas quando a pasta específica de replicação estiver fechada e validada. Até lá, os caminhos e comandos internos do repositório não devem ser tratados como uma interface estável de reprodução.
 
-3. Gerar amostra de validação:
+## Política de dados e textos integrais
 
-```bash
-Rscript --vanilla scripts/03_sample_articles.R
-```
+Os metadados e textos foram obtidos de páginas públicas do SciELO. Os textos integrais são insumos externos usados para classificação e permanecem sujeitos às licenças dos respectivos artigos, autores e periódicos. A licença deste repositório não transfere direitos sobre esses conteúdos.
 
-4. Testar classificação tripla independente nos 175 artigos gold/piloto:
+A versão pública de replicação deve distribuir scripts de coleta, manifestos, URLs, hashes, decisões de elegibilidade e dados derivados necessários à auditoria. Os corpos integrais devem ser reconstruídos a partir das fontes originais, em vez de redistribuídos como parte do pacote público.
 
-```bash
-Rscript --vanilla scripts/10_prepare_full_classification_pilot.R
-# Em seguida, três subagentes Codex locais classificam os mesmos PIDs em:
-# data/processed/full_classification_pilot/agent_a/
-# data/processed/full_classification_pilot/agent_b/
-# data/processed/full_classification_pilot/agent_c/
-Rscript --vanilla scripts/11_validate_full_classification_pilot_outputs.R
-Rscript --vanilla scripts/12_compare_full_classification_pilot.R
-```
+## Reprodutibilidade e convenções
 
-Este piloto não usa `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` nem runner de API. As classificações são produzidas por subagentes Codex independentes, e `classifications_llm_main_analysis.csv` é usado apenas como gold/piloto para seleção e avaliação.
+- R é usado para análise estatística, validação, tabelas e figuras.
+- Python é usado para coleta, extração de texto e execução dos classificadores.
+- Cálculos derivados permanecem em scripts; o RMarkdown organiza a exposição dos resultados.
+- Dados brutos não são sobrescritos por etapas de limpeza ou consolidação.
+- Seleções de colunas em R usam `dplyr::select()` explicitamente.
+- Figuras e tabelas do paper são numeradas e têm legendas.
+- As análises bayesianas preservam diagnósticos de amostragem e checagens preditivas.
 
-Limitação documentada em 2026-06-03: os 175 XMLs locais usados como entrada não continham `<body>` e eram idênticos entre `data/processed/sample_xmls/` e `data/raw/articles_fulltext/`. O body integral dos 175 gold/piloto foi recuperado posteriormente e a fonte canônica passou a ser `data/processed/fulltext_gold/article_texts_gold.csv`.
+## Licença
 
-```bash
-python3 scripts/13_recover_fulltext_gold.py --offline
-Rscript --vanilla scripts/14_validate_fulltext_gold.R
-Rscript --vanilla scripts/15_write_fulltext_scaling_plan.R
-```
+O código e a documentação original deste repositório são disponibilizados sob a [GNU General Public License v3.0](LICENSE). Essa licença não se aplica automaticamente aos artigos, textos integrais e demais materiais de terceiros preservados para fins de pesquisa.
 
-Os brutos usados estão preservados em `data/raw/fulltext_gold/`; a validação e o plano de escala estão em `quality_reports/fulltext_gold_recovery_report.md`, `quality_reports/fulltext_gold_inventory.csv` e `quality_reports/fulltext_scaling_plan.md`.
+## Citação
 
-Para recuperar e validar o corpus elegível completo, use:
+Uma referência bibliográfica definitiva será acrescentada após a circulação pública da versão correspondente do artigo. Enquanto isso, cite o manuscrito pelo título e pelos autores:
 
-```bash
-python3 scripts/16_recover_fulltext_corpus.py --workers 4 --batch-size 250
-python3 scripts/16_recover_fulltext_corpus.py --offline
-Rscript --vanilla scripts/17_validate_fulltext_corpus.R
-```
-
-O corpus completo usa caminhos separados do gold: brutos em `data/raw/fulltext_corpus/`, manifest e fila de falhas em `data/processed/fulltext_corpus/`, inventário em `quality_reports/fulltext_corpus_inventory.csv` e relatório em `quality_reports/fulltext_corpus_recovery_report.md`. O script preserva a ordem de fontes validada no gold: ArticleMeta `fulltexts.html`, HTML SciELO com `Text`/`Texto`, XML real com `<body>` e PDF fallback. Quando o PID legado do ArticleMeta está stale, o script adiciona o DOI resolver como candidato HTML depois dos URLs SciELO do PID; isso recuperou `S0011-52582025000400225` via DOI sem alterar o gold.
-
-5. Classificar artigos via LLM/API, quando houver decisão posterior de escala:
-
-```bash
-ANTHROPIC_API_KEY=... python3 scripts/04_classify_articles.py
-```
-
-Estado atual: este script foi usado para a amostra de validação. A escala para o corpus completo elegível só deve ocorrer depois do relatório do piloto triplo, mantendo fora da análise os periódicos excluídos.
-
-6. Validar, normalizar e fechar classificações:
-
-```bash
-Rscript --vanilla scripts/05_validate_classifications.R
-Rscript --vanilla scripts/06_normalize_classifications.R
-Rscript --vanilla scripts/07_prepare_manual_review_queue.R
-Rscript --vanilla scripts/08_validate_manual_review_decisions.R
-Rscript --vanilla scripts/09_apply_manual_review_decisions.R
-```
-
-7. Construir benchmarks internacionais:
-
-```bash
-python3 scripts/build_benchmark.py --field both
-```
-
-8. Rodar testes:
-
-```bash
-python3 -m pytest scripts
-```
-
-## Inclusão e Exclusão
-
-- `Brazilian Journal of Political Economy` e `Civitas - Revista de Ciências Sociais` ficam fora da análise principal por decisão de escopo documentada em `data/processed/excluded_journals.csv`.
-- Os artigos listados em `data/processed/excluded_articles.csv` ficam fora da análise principal, mas permanecem preservados no corpus.
-- `data/processed/classifications_llm.csv` mantém os 208 registros da amostra para rastreabilidade.
-- `data/processed/classifications_llm_main_analysis.csv` contém os 175 registros elegíveis da amostra classificada. Use este arquivo para validação, auditoria, desenvolvimento de tabelas e testes do pipeline; não o trate como base final de inferência substantiva do paper.
-- `data/processed/classifications_llm_pre_manual_review.csv` preserva o CSV consolidado antes da aplicação das decisões manuais.
-
-## Convenções
-
-- Use Python para coleta online, extração de texto, PDF, LLM e processamento textual.
-- Use R para análise estatística, validação de dados, tabelas e figuras.
-- Preserve arquivos brutos e extraídos em `data/raw/`.
-- Salve outputs derivados em `data/processed/` ou `output/`.
-- Para os 175 gold/piloto, use `data/processed/fulltext_gold/article_texts_gold.csv` como fonte canônica de body. `has_fulltext_xml=1` e arquivos em `data/raw/articles_fulltext/` não garantem texto integral utilizável.
-- Para o corpus completo elegível, use somente `data/processed/fulltext_corpus/article_texts_corpus.csv` depois de validar com `scripts/17_validate_fulltext_corpus.R`; não misture com `data/processed/fulltext_gold/article_texts_gold.csv`.
-- Antes de análises substantivas novas, registre um plano em `quality_reports/plans/`.
-- Em R, use `dplyr::select()` explicitamente ao selecionar colunas.
-- Figuras e tabelas do paper devem ser numeradas e ter caption.
-
-## Pontos Pendentes
-
-- Validar a recuperação de body do corpus completo elegível com `scripts/17_validate_fulltext_corpus.R` antes de iniciar a classificação em escala. O plano operacional está em `quality_reports/fulltext_scaling_plan.md`.
-- Consolidar um script mestre em R para gerar tabelas e figuras finais a partir da base completa classificada elegível, com os ledgers de exclusão aplicados explicitamente.
-- Escrever o manuscrito em `paper/paper.Rmd`.
-- Documentar a versão final do corpus e os critérios de inclusão/exclusão no apêndice.
-- Preparar um pacote de replicação em `replication/`.
+> Galdino, Manoel; Martins, Rodrigo. *Depois do calcanhar metodológico: inferência e identificação causal na Ciência Política brasileira*. Manuscrito, 2026.
