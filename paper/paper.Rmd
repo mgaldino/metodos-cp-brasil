@@ -1,6 +1,8 @@
 ---
 title: "Depois do calcanhar metodológico: inferência e identificação causal na Ciência Política brasileira"
-author: ""
+author:
+  - "Manoel Galdino^[Professor do Departamento de Ciência Política da Universidade de São Paulo (DCP-USP).]"
+  - "Rodrigo Martins^[Pesquisador de pós-doutorado no Departamento de Ciência Política da Universidade de São Paulo (DCP-USP).]"
 date: "19 de julho de 2026"
 lang: pt-BR
 output:
