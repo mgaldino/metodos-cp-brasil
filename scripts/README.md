@@ -22,7 +22,7 @@ A replicação integral é executada com:
 LC_ALL=pt_BR.UTF-8 Rscript scripts/57_replicate_paper.R
 ```
 
-Use `--skip-render` apenas para recalcular todos os resultados sem recompilar o PDF. Logs timestampados são gravados em `quality_reports/replication/`. A execução integral requer os pacotes R listados no preflight, XeLaTeX e CmdStan; a versão de CmdStan testada é 2.37.0.
+Use `--skip-render` apenas para recalcular todos os resultados sem recompilar o PDF. Logs timestampados são gravados em `quality_reports/replication/`. A execução integral requer os pacotes R listados no preflight, XeLaTeX e CmdStan; as versões críticas registradas nos artefatos são `genderBR` 1.4.0 e CmdStan 2.37.0. O preflight interrompe a execução quando a versão ativa de `genderBR` diverge, evitando misturar outputs produzidos por classificadores diferentes.
 
 ## Coleta e corpus
 

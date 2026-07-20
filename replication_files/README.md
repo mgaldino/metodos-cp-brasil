@@ -50,9 +50,9 @@ O utilitário `scripts/58_build_replication_files.R` reconstrói esta pasta a pa
 - R com suporte UTF-8;
 - XeLaTeX;
 - CmdStan 2.37.0;
-- pacotes R: `brms`, `cmdstanr`, `dplyr`, `genderBR`, `ggplot2`, `jsonlite`, `knitr`, `patchwork`, `posterior`, `readr`, `rmarkdown`, `stringr`, `tibble` e `tidyr`.
+- pacotes R: `brms`, `cmdstanr`, `dplyr`, `genderBR` 1.4.0, `ggplot2`, `jsonlite`, `knitr`, `patchwork`, `posterior`, `readr`, `rmarkdown`, `stringr`, `tibble` e `tidyr`.
 
-O preflight informa quais pacotes estão ausentes. Depois de instalar `cmdstanr`, instale a versão testada do CmdStan com `cmdstanr::install_cmdstan(version = "2.37.0")`.
+O preflight informa quais pacotes estão ausentes e interrompe a execução quando a versão ativa de `genderBR` difere da versão 1.4.0 registrada nos artefatos de gênero. Depois de instalar `cmdstanr`, instale a versão testada do CmdStan com `cmdstanr::install_cmdstan(version = "2.37.0")`.
 
 ## Execução
 
@@ -60,7 +60,7 @@ Execute os comandos a partir da raiz desta pasta.
 
 ### 1. Preflight
 
-O preflight não altera outputs. Ele verifica arquivos, pacotes, XeLaTeX, CmdStan, duplicação de PIDs e compatibilidade entre o CSV canônico e o manifesto.
+O preflight não altera outputs analíticos. Ele verifica arquivos, pacotes e respectivas versões críticas, XeLaTeX, CmdStan, duplicação de PIDs e compatibilidade entre o CSV canônico e o manifesto. Um log datado é gravado em `quality_reports/replication/`.
 
 ```bash
 LC_ALL=pt_BR.UTF-8 Rscript scripts/57_replicate_paper.R --preflight
@@ -101,4 +101,6 @@ O arquivo `MD5SUMS` usa caminhos relativos à raiz desta pasta. A comparação d
 
 Este pacote registra explicitamente as dependências, mas ainda não contém um `renv.lock`. Portanto, versões futuras dos pacotes R podem produzir pequenas diferenças numéricas ou de formatação. Os modelos bayesianos usam sementes fixas e CmdStan 2.37.0, mas diferenças de compilador, sistema operacional e paralelização ainda podem afetar os draws individuais.
 
-No ambiente usado para construir este pacote, o preflight confirmou a integridade do manifesto e do CSV canônico, mas identificou que `genderBR` não estava instalado na biblioteca R ativa. Por isso, a cadeia completa não foi reexecutada durante o empacotamento. Os outputs correntes do paper permanecem no repositório de desenvolvimento, mas não são usados como substitutos para a replicação.
+Em 20 de julho de 2026, a nova checagem confirmou que `genderBR` está instalado e que sua API aceita os argumentos usados pelo script. A biblioteca R ativa, porém, contém a versão 1.2.0, enquanto os CSVs e o relatório de gênero existentes registram a versão 1.4.0. O preflight, portanto, interrompe corretamente a replicação até que a versão 1.4.0 esteja ativa. A integridade estrutural das entradas foi confirmada separadamente: 5.249 registros no manifesto, 4.389 classificações canônicas, sem PIDs duplicados e sem classificações fora do manifesto. O CmdStan ativo é o 2.37.0.
+
+A cadeia completa não foi reexecutada nesta checagem, pois isso misturaria outputs produzidos por versões diferentes do classificador de gênero. Os outputs correntes do paper permanecem preservados e documentam explicitamente a versão 1.4.0 usada em sua geração.

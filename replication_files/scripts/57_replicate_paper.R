@@ -71,6 +71,8 @@ required_packages <- c(
   "tibble", "tidyr"
 )
 
+tested_genderbr_version <- "1.4.0"
+
 validate_preflight <- function() {
   append_log("PREFLIGHT | início")
 
@@ -132,8 +134,18 @@ validate_preflight <- function() {
     stop_logged("Pacotes R ausentes: ", paste(missing_packages, collapse = "; "))
   }
 
+  genderbr_version <- as.character(utils::packageVersion("genderBR"))
+  if (!identical(genderbr_version, tested_genderbr_version)) {
+    stop_logged(
+      "genderBR ", genderbr_version, " instalado; versão exigida para reproduzir ",
+      "os artefatos existentes: ", tested_genderbr_version, "."
+    )
+  }
+
   append_log(
-    "PREFLIGHT | PASS | manifesto=", nrow(manifest),
+    "PREFLIGHT | PASS | R=", as.character(getRversion()),
+    " | genderBR=", genderbr_version,
+    " | manifesto=", nrow(manifest),
     " | classificações canônicas=", nrow(classifications),
     " | CmdStan=", cmdstan_version
   )
