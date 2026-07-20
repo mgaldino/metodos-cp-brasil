@@ -2,6 +2,7 @@
 title: "Depois do calcanhar metodológico: inferência e identificação causal na Ciência Política brasileira"
 author: ""
 date: "19 de julho de 2026"
+lang: pt-BR
 output:
   pdf_document:
     latex_engine: xelatex
@@ -9,10 +10,9 @@ output:
     includes:
       in_header: preamble.tex
 bibliography: ../references.bib
-biblio-style: apalike
 link-citations: true
 abstract: |
-  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da APSR, AJPS e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos selecionados para avaliar identificação causal. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. Em uma análise exploratória, entre artigos quantitativos com rótulo de inferência observado, a inferência aparece em 29,3% dos artigos cujo primeiro prenome foi classificado como feminino e em 41,5% daqueles classificados como masculino; a medida é uma proxy de composição da autoria, não uma observação de identidade de gênero. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
+  Nos nove periódicos brasileiros analisados, 743 de 1.994 artigos quantitativos (37,3%) reportam testes, intervalos ou procedimentos equivalentes para quantificar a incerteza. A proporção varia pouco, de 34,4% em 2005--2011 a 39,7% em 2019--2025. Torreblanca et al. encontram abordagens baseadas em desenho causal em 45,4% a 56,8% dos artigos quantitativos explicativos da American Political Science Review (APSR), American Journal of Political Science (AJPS) e Journal of Politics. Os percentuais têm magnitudes próximas, mas descrevem práticas diferentes: a fronteira brasileira ainda é a quantificação da incerteza, enquanto a dos periódicos internacionais de referência é a identificação causal. Nos periódicos brasileiros, 59 artigos mencionam uma estratégia causal explícita, 1,4% do total e 4,2% dos 1.395 artigos selecionados para avaliar identificação causal. Além disso, 1.885 artigos empíricos quantitativos (45,5% do total) usam linguagem causal ou explicativa sem mencionar estratégia explícita de identificação. Como a classificação combina as duas linguagens, essa contagem indica possível desalinhamento entre afirmação e método, não inadequação comprovada. Em uma análise exploratória, entre os artigos quantitativos cuja classificação de inferência está disponível, a inferência aparece em 29,3% dos artigos cujo primeiro prenome foi classificado como feminino e em 41,5% daqueles classificados como masculino; a medida é uma proxy de composição da autoria, não uma observação de identidade de gênero. O estudo cobre 4.144 artigos publicados entre 2005 e 2025 e classificados a partir do texto integral. As contagens registram presença de procedimentos, não qualidade de execução, e ainda requerem validação humana.
 ---
 
 ```{r setup, include=FALSE}
@@ -408,7 +408,7 @@ Como análise adicional, examinamos se essas práticas se distribuem de modo dif
 
 # Dados
 
-O corpus reúne artigos publicados entre 2005 e 2025 em nove periódicos indexados no SciELO: `Brazilian Political Science Review`, `Opinião Pública`, `Revista Brasileira de Ciência Política`, `Revista de Sociologia e Política`, `Dados`, `Revista Brasileira de Ciências Sociais`, `Contexto Internacional`, `Revista Brasileira de Política Internacional` e `Cadernos Gestão Pública e Cidadania`. Juntos, eles somam `r format_n(n_manifest)` artigos elegíveis.^[As 19 unidades da série *Tendências*, publicada por *Opinião Pública* entre 2005 e 2014, foram excluídas por compilarem dados de pesquisas sem se apresentarem como artigos acadêmicos assinados.]
+O corpus reúne artigos publicados entre 2005 e 2025 em nove periódicos indexados no SciELO: `Brazilian Political Science Review` (BPSR), `Opinião Pública`, `Revista Brasileira de Ciência Política` (RBCP), `Revista de Sociologia e Política` (RSP), `Dados`, `Revista Brasileira de Ciências Sociais` (RBCS), `Contexto Internacional`, `Revista Brasileira de Política Internacional` (RBPI) e `Cadernos Gestão Pública e Cidadania` (CGPC). Juntos, eles somam `r format_n(n_manifest)` artigos elegíveis.^[As 19 unidades da série *Tendências*, publicada por *Opinião Pública* entre 2005 e 2014, foram excluídas por compilarem dados de pesquisas sem se apresentarem como artigos acadêmicos assinados.]
 
 Os textos integrais foram recuperados do SciELO em junho de 2026, e a base analítica foi atualizada em 19 de julho de 2026. O material de replicação preserva fontes, datas de acesso, decisões de exclusão e verificações de integridade. Nesta versão, `r format_n(n_classificados)` artigos, equivalentes a `r format_pct(pct_classificados)` do universo elegível, estão classificados. Como os nove periódicos estão completos, os resultados principais cobrem `r format_n(n_artigos_periodicos_completos)` artigos elegíveis. Os rótulos automatizados ainda requerem validação humana.
 
@@ -439,17 +439,17 @@ tabela_1_display <- tabela_corpus |>
 
 knitr::kable(
   tabela_1_display,
-  caption = "Artigos elegíveis e classificados por periódico e período. Nas colunas de período, classificados/elegíveis.",
+  caption = "Artigos elegíveis e classificados por periódico e período. As colunas de período apresentam a razão entre artigos classificados e elegíveis.",
   booktabs = TRUE,
   longtable = TRUE
 )
 ```
 
-# Estratégia Empírica
+# Estratégia empírica
 
 A estratégia empírica organiza a mensuração de seis práticas: presença e tipo de evidência, análise quantitativa, inferência estatística, linguagem causal ou explicativa e menção a estratégias explícitas de identificação causal. Linguagem e estratégia são dimensões distintas: a primeira registra o que o artigo afirma; a segunda, se ele explicita como uma afirmação causal seria identificada. Os agregados dos `r format_n(n_classificados)` artigos classificados cobrem todo o universo elegível desta versão. As comparações entre periódicos usam os nove periódicos completos. As comparações temporais usam os oito periódicos completos que publicaram nos três períodos, com peso igual para cada periódico.
 
-Os percentuais da Figura 1 não formam uma única sequência. Cada linha responde a uma pergunta e usa o conjunto de artigos adequado a ela: a frequência de inferência usa os artigos quantitativos com rótulo observado, enquanto a frequência de estratégias de identificação usa apenas os artigos em que o protocolo procurou esse tipo de estratégia. Já afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, cada percentual deve ser lido com o seu próprio denominador, indicado na figura e nas tabelas.
+Os percentuais da Figura 1 não formam uma única sequência. Cada linha responde a uma pergunta e usa o conjunto de artigos adequado a ela: a frequência de inferência usa os artigos quantitativos cuja classificação dessa prática está disponível, enquanto a frequência de estratégias de identificação usa apenas os artigos em que o protocolo procurou esse tipo de estratégia. Já afirmações causais ou explicativas podem aparecer em artigos qualitativos, quantitativos ou mistos. Por isso, cada percentual deve ser lido com o seu próprio denominador, indicado na figura e nas tabelas.
 
 ```{r figura-1, fig.cap=paste0("Cobertura do corpus e incidência de práticas metodológicas. A cobertura usa os ", format_n(n_manifest), " artigos elegíveis; as demais linhas descrevem os ", format_n(n_classificados), " artigos classificados, com numerador e denominador indicados junto a cada ponto."), out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_1_corpus_funnel.pdf")
@@ -465,9 +465,9 @@ Contamos como estratégia explícita de identificação causal a menção a expe
 
 Classificamos o texto integral de cada artigo com um protocolo padronizado aplicado por modelos de linguagem. Verificações automáticas conferem a estrutura dos dados e as relações entre categorias. Elas não substituem a validação humana nem estimam validade de construto.
 
-Os rótulos em escala ainda não foram integralmente adjudicados por humanos. Nos nove periódicos completos, a fração marcada como caso difícil varia de `r format_pct(tough_call_min)` a `r format_pct(tough_call_max)` entre células periódico--período. Lotes diferentes também foram classificados com configurações distintas de modelo e esforço. Como a ordem dos lotes se relaciona ao período de publicação, uma variação temporal pode combinar mudança editorial e mudança do classificador. Por isso, tratamos as tendências como diagnóstico exploratório.
+As classificações em escala ainda não foram integralmente adjudicadas por humanos. Nos nove periódicos completos, a fração de artigos que o classificador encaminhou para revisão adicional varia de `r format_pct(tough_call_min)` a `r format_pct(tough_call_max)` entre células periódico--período. Lotes diferentes também foram classificados por versões distintas de modelos de linguagem, com profundidades de processamento diferentes. Como a ordem dos lotes se relaciona ao período de publicação, uma variação temporal pode combinar mudança editorial e mudança do classificador. Por isso, tratamos as tendências como diagnóstico exploratório.
 
-Cada proporção tem um denominador próprio. A cobertura usa os `r format_n(n_manifest)` artigos elegíveis; as práticas metodológicas usam os `r format_n(n_classificados)` artigos classificados. A taxa de inferência exclui `r format_n(n_inferencia_ausente)` artigos quantitativos sem rótulo observado, `r format_pct(round(100 * n_inferencia_ausente / n_quant, 1))` do subconjunto. Esses artigos não são tratados como casos sem inferência. A frequência de estratégias explícitas usa os `r format_n(n_screen_periodicos_completos)` artigos selecionados para avaliar identificação causal nos periódicos completos. Todas as tabelas e figuras informam seus denominadores.
+Cada proporção tem um denominador próprio. A cobertura usa os `r format_n(n_manifest)` artigos elegíveis; as práticas metodológicas usam os `r format_n(n_classificados)` artigos classificados. A taxa de inferência exclui `r format_n(n_inferencia_ausente)` artigos quantitativos sem classificação disponível para essa dimensão, `r format_pct(round(100 * n_inferencia_ausente / n_quant, 1))` do subconjunto. Esses artigos não são tratados como casos sem inferência. A frequência de estratégias explícitas usa os `r format_n(n_screen_periodicos_completos)` artigos selecionados para avaliar identificação causal nos periódicos completos. Todas as tabelas e figuras informam seus denominadores.
 
 Duas dimensões complementares ainda não foram classificadas: explicitação metodológica e formato do artigo empírico. A primeira deve distinguir se dados, fontes e estratégia analítica aparecem de forma clara, parcial ou ausente. A segunda deve classificar a arquitetura textual do artigo empírico. Como essas dimensões não integram os resultados desta versão, nenhuma conclusão é apresentada sobre rastreabilidade ou padronização textual.
 
@@ -520,11 +520,11 @@ CGPC cobre apenas 2019--2025; os demais periódicos completos também contribuem
 
 ## Diferenças entre Ciência Política e Relações Internacionais
 
-A comparação por área revela uma diferença que a média dos periódicos esconde. Ciência Política reúne quatro periódicos da área e dois de escopo compartilhado com Ciências Sociais (`Dados` e RBCS), totalizando `r format_n(n_area_cp)` artigos em `r n_area_cp_journals` periódicos. Relações Internacionais reúne `Contexto Internacional` e RBPI, com `r format_n(n_area_ri)` artigos em `r n_area_ri_journals` periódicos. Os `r format_n(source_area_value("Administração Pública", "articles_n"))` artigos de CGPC permanecem no perfil de Administração Pública e não entram no contraste.
+A comparação por área revela uma diferença que a média dos periódicos esconde. Ciência Política (CP) reúne quatro periódicos da área e dois de escopo compartilhado com Ciências Sociais (`Dados` e RBCS), totalizando `r format_n(n_area_cp)` artigos em `r n_area_cp_journals` periódicos. Relações Internacionais (RI) reúne `Contexto Internacional` e RBPI, com `r format_n(n_area_ri)` artigos em `r n_area_ri_journals` periódicos. Os `r format_n(source_area_value("Administração Pública", "articles_n"))` artigos de CGPC permanecem no perfil de Administração Pública e não entram no contraste.
 
-A proporção de artigos empíricos é semelhante nas duas áreas: `r format_pct(pct_empirical_area_cp)` em Ciência Política e `r format_pct(pct_empirical_area_ri)` em Relações Internacionais. A composição quantitativa difere: análises quantitativas representam `r format_pct(pct_quant_area_cp)` dos artigos empíricos de Ciência Política e `r format_pct(pct_quant_area_ri)` dos de Relações Internacionais. Entre os quantitativos com rótulo observado, `r format_n(n_inference_area_cp)` de `r format_n(n_inference_area_cp_den)` artigos de Ciência Política (`r format_pct(pct_inference_area_cp)`) quantificam a incerteza, contra `r format_n(n_inference_area_ri)` de `r format_n(n_inference_area_ri_den)` em Relações Internacionais (`r format_pct(pct_inference_area_ri)`). A diferença é de `r format_pp(pct_inference_area_cp - pct_inference_area_ri)`
+A proporção de artigos empíricos é semelhante nas duas áreas: `r format_pct(pct_empirical_area_cp)` em Ciência Política e `r format_pct(pct_empirical_area_ri)` em Relações Internacionais. A composição quantitativa difere: análises quantitativas representam `r format_pct(pct_quant_area_cp)` dos artigos empíricos de Ciência Política e `r format_pct(pct_quant_area_ri)` dos de Relações Internacionais. Entre os quantitativos cuja classificação de inferência está disponível, `r format_n(n_inference_area_cp)` de `r format_n(n_inference_area_cp_den)` artigos de Ciência Política (`r format_pct(pct_inference_area_cp)`) quantificam a incerteza, contra `r format_n(n_inference_area_ri)` de `r format_n(n_inference_area_ri_den)` em Relações Internacionais (`r format_pct(pct_inference_area_ri)`). A diferença é de `r format_pp(pct_inference_area_cp - pct_inference_area_ri)`
 
-Para incorporar a estrutura por periódico, estimamos um modelo Bayesiano binomial hierárquico em `brms` [@buerkner2017brms]. Cada periódico contribui com o número de artigos que reportam inferência e com o respectivo denominador. Um intercepto aleatório torna os periódicos permutáveis dentro das áreas. A Tabela 3 reúne as probabilidades posteriores por área, a diferença CP--RI e a sensibilidade à priori.
+Para incorporar a estrutura por periódico, estimamos um modelo bayesiano binomial hierárquico com o pacote `brms` [@buerkner2017brms]. Cada periódico contribui com o número de artigos que reportam inferência e com o respectivo denominador. Um intercepto aleatório torna os periódicos permutáveis dentro das áreas. A Tabela 3 reúne as probabilidades posteriores por área, a diferença CP--RI e a sensibilidade à escolha da distribuição a priori.
 
 ```{r tabela-5-bayesiana}
 bayesian_posterior_table <- bayesian_area_posterior |>
@@ -539,7 +539,7 @@ bayesian_posterior_table <- bayesian_area_posterior |>
     `P(inferência | CP)` = format_pct(round(100 * estimate[parameter == "P(inferência | CP, periódico médio)"][1], 1)),
     `P(inferência | RI)` = format_pct(round(100 * estimate[parameter == "P(inferência | RI, periódico médio)"][1], 1)),
     `Mediana da diferença` = format_pp(100 * estimate[parameter == "Diferença CP - RI"][1]),
-    `ICr 95% da diferença` = paste0(
+    `Intervalo de credibilidade de 95%` = paste0(
       format_pp(100 * q025[parameter == "Diferença CP - RI"][1]),
       "–",
       format_pp(100 * q975[parameter == "Diferença CP - RI"][1])
@@ -548,17 +548,17 @@ bayesian_posterior_table <- bayesian_area_posterior |>
     .groups = "drop"
   ) |>
   dplyr::mutate(
-    Priori = dplyr::recode(
+    `Distribuição a priori` = dplyr::recode(
       prior,
-      "Normal(0, 1.5)" = "Normal(0, 1,5)",
-      "Student-t(3, 0, 2.5)" = "Student-t(3, 0, 2,5)"
+      "Normal(0, 1.5)" = "Normal(0; 1,5)",
+      "Student-t(3, 0, 2.5)" = "Student-t(3; 0; 2,5)"
     )
   ) |>
-  dplyr::select(Priori, dplyr::everything(), -prior)
+  dplyr::select(`Distribuição a priori`, dplyr::everything(), -prior)
 
 knitr::kable(
   bayesian_posterior_table,
-  caption = "Resultados posteriores do modelo Bayesiano binomial hierárquico por área. As probabilidades referem-se a um periódico médio; a diferença é medida em pontos percentuais.",
+  caption = "Resultados posteriores do modelo bayesiano binomial hierárquico por área. As probabilidades referem-se a um periódico médio; a diferença é medida em pontos percentuais.",
   booktabs = TRUE,
   longtable = FALSE
 )
@@ -566,7 +566,7 @@ knitr::kable(
 
 A diferença CP--RI permanece positiva sob as duas especificações. A análise mede uma diferença descritiva entre periódicos e não estima um efeito causal da área sobre os autores. As checagens preditivas e os diagnósticos de amostragem são apresentados no apêndice.
 
-A identificação causal explícita também difere entre as áreas. Ciência Política tem `r format_n(n_strict_area_cp)` estratégias em `r format_n(n_screen_area_cp)` artigos selecionados para avaliar identificação causal (`r format_pct(pct_strict_area_cp)`); Relações Internacionais tem `r format_n(n_strict_area_ri)` em `r format_n(n_screen_area_ri)` (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
+A identificação causal explícita também difere entre as áreas. Em Ciência Política, `r format_n(n_strict_area_cp)` dos `r format_n(n_screen_area_cp)` artigos selecionados para avaliar identificação causal mencionam uma estratégia explícita (`r format_pct(pct_strict_area_cp)`); em Relações Internacionais, `r format_n(n_strict_area_ri)` dos `r format_n(n_screen_area_ri)` artigos o fazem (`r format_pct(pct_strict_area_ri)`). Esses percentuais contam menções a estratégias e não avaliam sua execução.
 
 A diferença de inferência aparece nos três períodos. Em Ciência Política, a proporção passa de `r format_pct(area_period_value(area_cp, "2005-2011", "pct_inference_quantitative_observed"))` em 2005--2011 para `r format_pct(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed"))` em 2019--2025. Em Relações Internacionais, passa de `r format_pct(area_period_value(area_ri, "2005-2011", "pct_inference_quantitative_observed"))` para `r format_pct(area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`. A distância no último período é de `r format_pp(area_period_value(area_cp, "2019-2025", "pct_inference_quantitative_observed") - area_period_value(area_ri, "2019-2025", "pct_inference_quantitative_observed"))`; como a área é atribuída ao periódico e as composições editoriais diferem, essa é uma comparação descritiva.
 
@@ -598,7 +598,7 @@ Nos nove periódicos completos, `r format_n(n_qualitativos_periodicos_completos)
 
 A identificação causal explícita não é o único critério relevante. Quando um artigo usa linguagem causal, mas não explica como sustenta essa afirmação, há um problema de coerência entre afirmação e método mesmo que o texto contenha alguma análise estatística. A classificação combina linguagem causal e explicativa, portanto não separa diretamente os casos em que a exigência de identificação causal é indispensável. Ela permite, contudo, localizar o conjunto de possíveis desalinhamentos.
 
-Os denominadores respondem a perguntas diferentes. Usamos os `r format_n(n_claim)` artigos com linguagem causal ou explicativa para medir a frequência dessa linguagem e os `r format_n(n_claim_empirico)` artigos empíricos com essa linguagem para avaliar possível coerência entre afirmação e método. Os `r format_n(n_screen)` artigos selecionados para avaliar identificação causal não são uma amostra dos anteriores: formam o subconjunto em que o protocolo procurou menções explícitas a desenhos de identificação. Uma auditoria humana da adequação metodológica deve ser sorteada ou estratificada a partir de todos os artigos com linguagem, não apenas desse subconjunto.
+Os denominadores respondem a perguntas diferentes. Usamos os `r format_n(n_claim)` artigos com linguagem causal ou explicativa para medir a frequência dessa linguagem e os `r format_n(n_claim_empirico)` artigos empíricos com essa linguagem para avaliar possível coerência entre afirmação e método. Os `r format_n(n_screen)` artigos selecionados para avaliar identificação causal não são uma amostra dos anteriores: formam o subconjunto em que o protocolo procurou menções explícitas a desenhos de identificação. Uma amostra para auditoria humana da adequação metodológica deve ser sorteada ou estratificada a partir de todos os artigos com linguagem, não apenas desse subconjunto.
 
 Entre os `r format_n(n_classificados)` artigos, `r format_n(n_claim_quant_no_strategy)` (`r format_pct(pct_claim_quant_no_strategy)`) são empíricos quantitativos com linguagem causal ou explicativa, mas sem estratégia explícita de identificação. Esse grupo não é uma taxa de artigos inadequados: inclui explicações que podem não formular uma pretensão causal estrita e não registra se o artigo justifica a relação entre afirmação, dados e método por outros meios. Ainda assim, seu tamanho mostra que o problema da linguagem sem suporte metodológico é muito maior que o numerador de desenhos estritos. Outros `r format_n(n_claim_emp_nonquant)` artigos (`r format_pct(pct_claim_emp_nonquant)`) são empíricos sem análise quantitativa; nesses casos, a avaliação depende dos critérios próprios da pesquisa qualitativa, histórica ou interpretativa.
 
@@ -646,7 +646,7 @@ knitr::kable(
 )
 ```
 
-Nos periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos selecionados para avaliar identificação causal mencionam ao menos uma estratégia explícita. Diferenças-em-diferenças, pareamento ou ponderação, experimentos em survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método, e um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita execução ou pressupostos.
+Nos periódicos completos, `r format_n(n_estrito_periodicos_completos)` dos `r format_n(n_screen_periodicos_completos)` artigos selecionados para avaliar identificação causal mencionam ao menos uma estratégia explícita. Diferenças-em-diferenças, pareamento ou ponderação, experimentos de survey e regressão descontínua são as famílias mais frequentes. A Figura 5 conta ocorrências artigo-método, e um mesmo artigo pode mobilizar mais de uma estratégia. A contagem não audita execução ou pressupostos.
 
 ```{r figura-6, fig.cap="Estratégias explícitas de identificação nos nove periódicos integralmente classificados. As barras contam os artigos que mencionam cada estratégia; um artigo pode mencionar mais de uma.", fig.pos="H", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_6_strict_method_distribution.pdf")
@@ -677,7 +677,7 @@ knitr::kable(
 )
 ```
 
-```{r figura-3, fig.cap="A presença de artigos empíricos cresce entre os períodos, enquanto estratégias explícitas permanecem raras. Os pontos são médias com peso igual para BPSR, Contexto Internacional, Dados, Opinião Pública e RBCP; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
+```{r figura-3, fig.cap="A presença de artigos empíricos cresce entre os períodos, enquanto estratégias explícitas permanecem raras. Os pontos são médias com peso igual para os oito periódicos presentes nos três períodos; todos os painéis usam escala de 0% a 100%.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_3_period_variation.pdf")
 ```
 
@@ -687,9 +687,9 @@ Para aproximar a composição de gênero da autoria, aplicamos a função `get_g
 
 Esse procedimento classificou `r format_n(n_gender_binary)` dos `r format_n(n_gender_scope)` artigos (`r format_pct(round(100 * n_gender_binary / n_gender_scope, 1))`): `r format_n(n_gender_female)` na categoria feminina e `r format_n(n_gender_male)` na masculina. Os `r format_n(n_gender_unclassified)` casos restantes ficaram sem classificação. A medida é uma proxy de composição da autoria: não observa a identidade de gênero dos autores, não contempla identidades não binárias e pode variar sistematicamente com o idioma e a origem dos nomes.
 
-Na composição da equipe, `r format_pct(round(100 * n_gender_team_female / n_gender_scope, 1))` dos artigos têm somente prenomes classificados como femininos, `r format_pct(round(100 * n_gender_team_male / n_gender_scope, 1))` somente como masculinos e `r format_pct(round(100 * n_gender_team_mixed / n_gender_scope, 1))` combinam as duas categorias; `r format_pct(round(100 * n_gender_team_indeterminate / n_gender_scope, 1))` permanecem indeterminados. Essa descrição é necessariamente confundida pelo número de autores e não substitui o contraste de primeira autoria.
+Na composição da equipe, `r format_pct(round(100 * n_gender_team_female / n_gender_scope, 1))` dos artigos têm somente prenomes classificados como femininos, `r format_pct(round(100 * n_gender_team_male / n_gender_scope, 1))` somente como masculinos e `r format_pct(round(100 * n_gender_team_mixed / n_gender_scope, 1))` combinam as duas categorias; `r format_pct(round(100 * n_gender_team_indeterminate / n_gender_scope, 1))` permanecem indeterminados. Essa descrição é necessariamente afetada pelo número de autores e não substitui o contraste de primeira autoria.
 
-Estimamos seis modelos Bayesianos logísticos hierárquicos, um para cada prática. Os modelos incluem efeitos que variam por periódico, período de publicação e um intercepto para o primeiro autor; as priors são fracamente informativas e os nove periódicos são tratados como unidades permutáveis para fins de pooling parcial. O contraste é a diferença posterior de probabilidade entre artigos com primeiro prenome classificado como feminino e masculino, padronizada pela composição observada de periódico e período. Ele descreve associação condicional; não identifica efeito causal de gênero. Usamos quatro cadeias, sem divergências, e o maior R-hat foi `r format(round(gender_bayes_diagnostic_max_rhat, 3), decimal.mark = ",", nsmall = 3, trim = TRUE)`. Esse valor é marginalmente superior ao corte estrito de 1,01 em um modelo; os demais diagnósticos de amostragem e as checagens preditivas foram satisfatórios.
+Estimamos seis modelos bayesianos logísticos hierárquicos, um para cada prática. Os modelos incluem efeitos fixos da categoria associada ao primeiro prenome e do período de publicação, interceptos e inclinações por periódico e um intercepto aleatório para o primeiro autor. As distribuições a priori são fracamente informativas, e os nove periódicos são tratados como unidades permutáveis para fins de agrupamento parcial. O contraste é a diferença posterior de probabilidade entre artigos com primeiro prenome classificado como feminino e masculino, padronizada pela composição observada de periódico e período. Ele descreve associação condicional; não identifica efeito causal de gênero. Usamos quatro cadeias, sem divergências, e o maior R-hat foi `r format(round(gender_bayes_diagnostic_max_rhat, 4), decimal.mark = ",", nsmall = 4, trim = TRUE)`. Esse valor é marginalmente superior ao corte estrito de 1,01 em um modelo; os demais diagnósticos de amostragem e as checagens preditivas foram satisfatórios.
 
 ```{r tabela-genero-bayesiano}
 gender_bayesian_display <- gender_bayesian |>
@@ -697,7 +697,7 @@ gender_bayesian_display <- gender_bayesian |>
     Indicador = metric,
     N = format_n(n_articles),
     `Diferença posterior F−M` = format_pp(posterior_median_pp),
-    `ICr 95%` = paste0(
+    `Intervalo de credibilidade de 95%` = paste0(
       "[", format_pp(credible_interval_95_low_pp), "; ",
       format_pp(credible_interval_95_high_pp), "]"
     ),
@@ -713,7 +713,7 @@ knitr::kable(
 )
 ```
 
-A diferença bruta na análise quantitativa é de `r format_pp(gender_quant_female - gender_quant_male)` (`r format_pct(round(gender_quant_female, 1))` entre primeiros prenomes femininos e `r format_pct(round(gender_quant_male, 1))` entre masculinos). Para inferência estatística, o contraste bruto é de `r format_pp(gender_inference_female - gender_inference_male)`; depois de incorporar periódico e período no modelo hierárquico, a diferença posterior mediana é `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))`. A padronização descritiva por periódico--período produz `r format_pp(gender_inference_standardized)`, de magnitude semelhante. Para linguagem causal ou explicativa e para estratégia explícita de identificação, os intervalos incluem diferenças substantivamente positivas e negativas; esses resultados não distinguem uma diferença sistemática de uma associação pequena ou incerta.
+A diferença bruta na análise quantitativa é de `r format_pp(gender_quant_female - gender_quant_male)` (`r format_pct(round(gender_quant_female, 1))` entre primeiros prenomes femininos e `r format_pct(round(gender_quant_male, 1))` entre masculinos). Para inferência estatística, o contraste bruto é de `r format_pp(gender_inference_female - gender_inference_male)`; depois de incorporar periódico e período no modelo hierárquico, a diferença posterior mediana é `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))` A padronização descritiva por periódico--período produz `r format_pp(gender_inference_standardized)`, de magnitude semelhante. Para linguagem causal ou explicativa e para estratégia explícita de identificação, os intervalos incluem diferenças substantivamente positivas e negativas; esses resultados não distinguem uma diferença sistemática de uma associação pequena ou incerta.
 
 O contraste deve ser lido como composição da autoria, não como mecanismo individual. A ordem de primeira autoria não mede contribuição relativa, nomes podem ser homônimos e a não classificação não é necessariamente aleatória. Por isso, a análise documenta uma desigualdade possível na distribuição das práticas, mas não atribui preferências metodológicas a mulheres ou homens nem estima um efeito de gênero.
 
@@ -735,7 +735,7 @@ Os nove periódicos completos não formam uma única escala metodológica. `Opin
 
 No tempo, a empiria cresce nos oito periódicos presentes nos três períodos. Quantificação e inferência oscilam, sem trajetória de difusão ampla. As famílias de desenho também não seguem uma tendência monotônica. A produção não percorre uma marcha uniforme rumo à quantificação, à inferência ou à identificação causal.
 
-A análise exploratória da autoria sugere uma diferença concentrada na adoção de práticas quantitativas e, sobretudo, na quantificação da incerteza: `r format_pct(round(gender_inference_female, 1))` dos artigos com primeiro prenome feminino contra `r format_pct(round(gender_inference_male, 1))` dos artigos com primeiro prenome masculino; a diferença posterior, condicionada a periódico e período, é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`. Não há contraste equivalente para linguagem causal ou explicativa, e a diferença em estratégias explícitas é imprecisa. Como a medida é inferida de prenomes, não observa identidade de gênero e não é aleatória quanto a idioma, origem do nome ou autoria ausente, esse resultado deve ser lido como uma associação de composição, não como evidência de um efeito individual.
+A análise exploratória da autoria sugere uma diferença concentrada na adoção de práticas quantitativas e, sobretudo, na quantificação da incerteza: `r format_pct(round(gender_inference_female, 1))` dos artigos com primeiro prenome feminino contra `r format_pct(round(gender_inference_male, 1))` dos artigos com primeiro prenome masculino; a diferença posterior, condicionada a periódico e período, é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))` Não há contraste equivalente para linguagem causal ou explicativa, e a diferença em estratégias explícitas é imprecisa. Como a medida é inferida de prenomes, não observa identidade de gênero e não é aleatória quanto a idioma, origem do nome ou autoria ausente, esse resultado deve ser lido como uma associação de composição, não como evidência de um efeito individual.
 
 A linguagem causal ou explicativa é uma categoria ampla. Ela inclui explicações qualitativas, argumentos teóricos e interpretações substantivas, mas também pode marcar uma pretensão causal para a qual o artigo não apresenta método compatível. Por isso, a análise deve distinguir duas perguntas: se há uma afirmação que exige justificativa causal e se o texto explicita como a sustenta. A classificação atual mede a coexistência dos atributos e indica possíveis desalinhamentos; a confirmação desses casos exige leitura humana.
 
@@ -759,9 +759,9 @@ Os denominadores e períodos diferem entre as comparações, e a classificação
 
 # Apêndice: Cobertura e variação anual
 
-A Figura 7 detalha a cobertura por periódico. Os nove periódicos incluídos estão completos; Lua Nova e Novos estudos CEBRAP foram retirados desta versão porque sua classificação ainda estava incompleta. A distribuição não representa a produção brasileira como um todo.
+A Figura 7 detalha a cobertura por periódico. Os nove periódicos incluídos estão completos; Lua Nova e Novos Estudos CEBRAP foram retirados desta versão porque sua classificação ainda estava incompleta. A distribuição não representa a produção brasileira como um todo.
 
-```{r figura-4, fig.cap="Os nove periódicos estão integralmente classificados. Os pontos mostram a proporção classificada, e os rótulos, artigos classificados/elegíveis.", out.width="95%"}
+```{r figura-4, fig.cap="Os nove periódicos estão integralmente classificados. Os pontos mostram a proporção classificada; os rótulos apresentam a razão entre artigos classificados e elegíveis.", out.width="95%"}
 knitr::include_graphics("../output/figures/paper/figure_4_journal_period_coverage.pdf")
 ```
 
@@ -773,9 +773,9 @@ knitr::include_graphics("../output/figures/paper/figure_7_year_variation.pdf")
 
 \clearpage
 
-# Apêndice: Diagnósticos do modelo Bayesiano
+# Apêndice: Diagnósticos do modelo bayesiano
 
-A tabela a seguir resume a checagem preditiva das priors e os diagnósticos de amostragem do modelo apresentado na Tabela 3. As priors são centradas em ausência de diferença; a atualização posterior vem dos dados.
+A tabela a seguir resume a checagem preditiva das distribuições a priori e os diagnósticos de amostragem do modelo apresentado na Tabela 3. A sigla PPC (*prior predictive check*) designa a checagem preditiva a priori: comparamos os resultados observados com a distribuição de resultados simulados antes de incorporar os dados. As distribuições a priori são centradas em ausência de diferença; a atualização posterior vem dos dados.
 
 ```{r tabela-6-bayesiana-diagnosticos}
 bayesian_diagnostics_table <- bayesian_area_prior |>
@@ -792,21 +792,21 @@ bayesian_diagnostics_table <- bayesian_area_prior |>
     by = "prior"
   ) |>
   dplyr::mutate(
-    `Priori P(Δ > 0)` = format_pct(round(100 * prior_probability, 1)),
+    `A priori: P(Δ > 0)` = format_pct(round(100 * prior_probability, 1)),
     `Periódicos dentro do PPC 95%` = paste0(observed_journals_within_ppc_95, "/", observed_journals_total),
     `R-hat máximo` = format(round(max_rhat, 3), decimal.mark = ",", nsmall = 3),
     Divergências = format_n(divergences),
-    Priori = dplyr::recode(
+    `Distribuição a priori` = dplyr::recode(
       prior,
-      "Normal(0, 1.5)" = "Normal(0, 1,5)",
-      "Student-t(3, 0, 2.5)" = "Student-t(3, 0, 2,5)"
+      "Normal(0, 1.5)" = "Normal(0; 1,5)",
+      "Student-t(3, 0, 2.5)" = "Student-t(3; 0; 2,5)"
     )
   ) |>
-  dplyr::select(Priori, `Priori P(Δ > 0)`, `Periódicos dentro do PPC 95%`, `R-hat máximo`, Divergências)
+  dplyr::select(`Distribuição a priori`, `A priori: P(Δ > 0)`, `Periódicos dentro do PPC 95%`, `R-hat máximo`, Divergências)
 
 knitr::kable(
   bayesian_diagnostics_table,
-  caption = "Checagem preditiva das priors e diagnósticos do modelo Bayesiano. PPC: checagem preditiva da priori.",
+  caption = "Checagem preditiva das distribuições a priori e diagnósticos do modelo bayesiano.",
   booktabs = TRUE,
   longtable = FALSE
 )
