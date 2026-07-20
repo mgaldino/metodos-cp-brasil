@@ -6,12 +6,12 @@
 
 **Bibliografia validada:** `references.bib`
 
-**Escopo:** consistência entre as citações remanescentes no paper e o arquivo BibTeX após a retirada da seção “Visão geral do campo”, com conferência dos metadados das oito referências citadas.
+**Escopo:** consistência entre as citações remanescentes no paper e o arquivo BibTeX após a retirada da seção “Visão geral do campo”, com conferência dos metadados das dez referências citadas.
 
 ## Resumo
 
 - Resultado geral: **PASS**.
-- Total de citações no texto: **10 menções**, correspondentes a **8 chaves distintas**.
+- Total de citações no texto: **12 menções**, correspondentes a **10 chaves distintas**.
 - Citações órfãs: **0**.
 - Entradas citadas com campos estruturais ausentes: **0**.
 - Chaves suspeitas ou duplicadas entre as referências citadas: **0**.
@@ -29,6 +29,8 @@
 | `torreblanca2026` | Benchmark internacional da revolução da credibilidade | OK; versão 2 do arXiv confirmada |
 | `buerkner2017brms` | Implementação do modelo Bayesiano hierárquico | OK |
 | `fuks_fialho_2009` | Exemplo qualitativo sobre uso de margem de erro e nível de confiança | OK |
+| `meireles2026genderbr` | Método de classificação do primeiro prenome | OK |
+| `ibge2025nomes` | Fonte da distribuição nacional de prenomes por sexo | OK |
 
 ## Correções efetuadas
 
@@ -43,7 +45,7 @@ As 18 entradas abaixo deixaram de ser usadas pelo paper, principalmente porque s
 
 `adcockcollier2001`, `angrist2010`, `avelino2021`, `bradycollier2010`, `brodeur2024`, `domingos2024`, `figueiredo2019`, `gelman2008prior`, `gill1999`, `grimmer2013`, `halterman2026`, `king1994`, `lal2024`, `leiteferes2021`, `lenine2020`, `medeiros2016`, `rainey2014` e `williams2026`.
 
-Elas não foram excluídas do arquivo compartilhado. O processador de citações do R Markdown inclui na bibliografia final apenas as oito entradas citadas.
+Elas não foram excluídas do arquivo compartilhado. O processador de citações do R Markdown inclui na bibliografia final apenas as dez entradas citadas.
 
 ## Fontes de conferência
 
@@ -51,6 +53,8 @@ Elas não foram excluídas do arquivo compartilhado. O processador de citações
 - Albuquerque, Mesquita e Brito: PDF da *Revista Brasileira de Ciência Política*, n. 39, p. 1--25, DOI `10.1590/0103-3352.2022.39.258379`.
 - Torreblanca et al.: registro arXiv `2601.11542`, versão 2, revisada em 26 de fevereiro de 2026.
 - Bürkner: página editorial do *Journal of Statistical Software*, v. 80, n. 1, p. 1--28, DOI `10.18637/jss.v080.i01`.
+- Meireles: registro oficial do pacote `genderBR`, versão 1.4.0, DOI `10.32614/CRAN.package.genderBR`.
+- IBGE: *Censo Demográfico 2022: Nota técnica 01/2025: Nomes no Brasil*.
 
 ## Critérios de validação
 
@@ -62,4 +66,4 @@ Elas não foram excluídas do arquivo compartilhado. O processador de citações
 
 ## Conclusão
 
-As oito referências remanescentes são pertinentes aos argumentos aos quais estão associadas, possuem entradas BibTeX processáveis e devem permanecer no paper. Não há citação órfã nem referência citada com metadados estruturais incompletos.
+As dez referências remanescentes são pertinentes aos argumentos aos quais estão associadas, possuem entradas BibTeX processáveis e devem permanecer no paper. Não há citação órfã nem referência citada com metadados estruturais incompletos.
