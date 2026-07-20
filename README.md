@@ -72,6 +72,7 @@ metodos_CP/
 │   ├── figures/           # Figuras produzidas pelos scripts
 │   ├── tables/            # Tabelas e números intermediários
 │   └── models/            # Artefatos de modelos
+├── replication_files/     # Pacote público de replicação
 ├── quality_reports/       # Validações, pareceres e diagnósticos
 ├── notes/                 # Notas de pesquisa e revisão da literatura
 ├── references.bib         # Bibliografia do manuscrito
@@ -92,13 +93,22 @@ Uma descrição mais extensa está em [scripts/README.md](scripts/README.md).
 
 ## Replicação
 
-O pacote público de replicação está em preparação. As instruções consolidadas serão acrescentadas quando a pasta específica de replicação estiver fechada e validada. Até lá, os caminhos e comandos internos do repositório não devem ser tratados como uma interface estável de reprodução.
+O [pacote público de replicação](replication_files/README.md) está disponível em `replication_files/`. Ele contém o manifesto do corpus, o CSV canônico de classificações, os ledgers de elegibilidade, os prompts, os scripts analíticos, os arquivos do paper e checksums dos arquivos distribuídos.
+
+Para reproduzir os resultados, execute primeiro o preflight e depois a cadeia completa a partir da raiz do pacote:
+
+```bash
+LC_ALL=pt_BR.UTF-8 Rscript scripts/57_replicate_paper.R --preflight
+LC_ALL=pt_BR.UTF-8 Rscript scripts/57_replicate_paper.R
+```
+
+O pacote não redistribui textos integrais nem refaz a coleta ou a classificação por modelo de linguagem. As dependências, limitações do ambiente e opções de execução estão documentadas no README da pasta de replicação.
 
 ## Política de dados e textos integrais
 
 Os metadados e textos foram obtidos de páginas públicas do SciELO. Os textos integrais são insumos externos usados para classificação e permanecem sujeitos às licenças dos respectivos artigos, autores e periódicos. A licença deste repositório não transfere direitos sobre esses conteúdos.
 
-A versão pública de replicação deve distribuir scripts de coleta, manifestos, URLs, hashes, decisões de elegibilidade e dados derivados necessários à auditoria. Os corpos integrais devem ser reconstruídos a partir das fontes originais, em vez de redistribuídos como parte do pacote público.
+O pacote público de replicação distribui scripts, manifestos, URLs, hashes, decisões de elegibilidade e dados derivados necessários à auditoria. Os corpos integrais devem ser reconstruídos a partir das fontes originais, em vez de redistribuídos como parte do pacote público.
 
 ## Reprodutibilidade e convenções
 
