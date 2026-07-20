@@ -78,6 +78,7 @@ bayesian_area_diagnostics <- readr::read_csv("../output/tables/area_analysis/bay
 bayesian_area_prior_predictive <- readr::read_csv("../output/tables/area_analysis/bayesian_area_prior_predictive_summary.csv", show_col_types = FALSE)
 gender_scope <- readr::read_csv("../data/processed/gender_analysis/current_canonical_article_gender_paper_scope.csv", show_col_types = FALSE)
 gender_method <- readr::read_csv("../output/tables/gender_analysis/table_3_methodological_indicators_by_first_author_gender_paper_scope.csv", show_col_types = FALSE)
+gender_evidence <- readr::read_csv("../output/tables/gender_analysis/table_4_evidence_by_first_author_gender.csv", show_col_types = FALSE)
 gender_standardized <- readr::read_csv("../output/tables/gender_analysis/table_7_standardized_comparison_journal_period_paper_scope.csv", show_col_types = FALSE)
 gender_bayesian <- readr::read_csv("../output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv", show_col_types = FALSE)
 gender_diagnostics <- readr::read_csv("../output/tables/gender_analysis/table_15_bayesian_model_diagnostics.csv", show_col_types = FALSE)
@@ -343,6 +344,13 @@ gender_bayes_value <- function(metric, variable) {
   gender_bayesian[[variable]][gender_bayesian$metric == metric]
 }
 
+gender_evidence_value <- function(gender, evidence, variable) {
+  gender_evidence[[variable]][
+    gender_evidence$first_author_gender == gender &
+      gender_evidence$evidence_type == evidence
+  ]
+}
+
 gender_binary <- gender_scope |>
   dplyr::filter(first_author_gender %in% c("Feminino", "Masculino"))
 n_gender_scope <- nrow(gender_scope)
@@ -358,6 +366,12 @@ gender_quant_female <- gender_metric_value("Análise quantitativa", "percent_Fem
 gender_quant_male <- gender_metric_value("Análise quantitativa", "percent_Masculino")
 gender_inference_female <- gender_metric_value("Inferência estatística", "percent_Feminino")
 gender_inference_male <- gender_metric_value("Inferência estatística", "percent_Masculino")
+gender_qualitative_female <- gender_evidence_value("Feminino", "Somente qualitativa", "percent")
+gender_qualitative_male <- gender_evidence_value("Masculino", "Somente qualitativa", "percent")
+gender_mixed_female <- gender_evidence_value("Feminino", "Mista", "percent")
+gender_mixed_male <- gender_evidence_value("Masculino", "Mista", "percent")
+gender_quant_only_female <- gender_evidence_value("Feminino", "Somente quantitativa", "percent")
+gender_quant_only_male <- gender_evidence_value("Masculino", "Somente quantitativa", "percent")
 gender_inference_standardized <- gender_standardized$standardized_difference_pp[
   gender_standardized$metric == "Inferência estatística"
 ]
@@ -406,7 +420,7 @@ O resultado é uma dissociação entre empiria, inferência e identificação. N
 
 A decomposição por área reforça o diagnóstico: a proporção de artigos empíricos é semelhante em Ciência Política e Relações Internacionais, mas a inferência aparece em `r format_pct(pct_inference_area_cp)` dos quantitativos de Ciência Política e em `r format_pct(pct_inference_area_ri)` dos quantitativos de Relações Internacionais. Ao deslocar a observação dos currículos para os artigos publicados, o artigo mede se a profissionalização metodológica se traduz em práticas observáveis de descrição, inferência e identificação.
 
-Como análise adicional, examinamos se essas práticas se distribuem de modo diferente segundo uma classificação binária inferida do primeiro prenome dos autores. Encontramos uma diferença concentrada na inferência estatística: ela aparece em `r format_pct(round(gender_inference_female, 1))` dos artigos com primeiro prenome classificado como feminino e em `r format_pct(round(gender_inference_male, 1))` daqueles com primeiro prenome classificado como masculino; após incorporar periódico e período, a diferença posterior mediana para a categoria feminina em relação à masculina é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))`
+Como análise adicional, examinamos se essas práticas se distribuem de modo diferente segundo uma classificação binária inferida do primeiro prenome dos autores. Artigos com primeiro prenome classificado como feminino são mais frequentemente empíricos, mas, entre os empíricos, recorrem menos à análise quantitativa. Essa diferença de composição não se estende à pretensão causal ou explicativa, cuja frequência é praticamente idêntica nas duas categorias. A maior desigualdade aparece na inferência estatística: após incorporar periódico e período, a diferença posterior mediana entre as categorias feminina e masculina é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))`
 
 # Dados
 
@@ -683,10 +697,11 @@ Esse procedimento classificou `r format_n(n_gender_binary)` dos `r format_n(n_ge
 
 Na composição da equipe, `r format_pct(round(100 * n_gender_team_female / n_gender_scope, 1))` dos artigos têm somente prenomes classificados como femininos, `r format_pct(round(100 * n_gender_team_male / n_gender_scope, 1))` somente como masculinos e `r format_pct(round(100 * n_gender_team_mixed / n_gender_scope, 1))` combinam as duas categorias; `r format_pct(round(100 * n_gender_team_indeterminate / n_gender_scope, 1))` permanecem indeterminados. Essa descrição é necessariamente afetada pelo número de autores e não substitui o contraste de primeira autoria.
 
-Estimamos seis modelos bayesianos logísticos hierárquicos, um para cada prática. Os modelos incluem interceptos que variam entre periódicos e primeiros autores e inclinações associadas à categoria do primeiro prenome que variam entre periódicos; os coeficientes dos períodos de publicação são comuns a todos os periódicos. As distribuições a priori são fracamente informativas, e os nove periódicos são tratados como unidades permutáveis para fins de agrupamento parcial. O contraste é a diferença posterior de probabilidade entre artigos com primeiro prenome classificado como feminino e masculino, padronizada pela composição observada de periódico e período. Ele descreve associação condicional; não identifica efeito causal de gênero. Usamos quatro cadeias, sem divergências, e o maior R-hat foi `r format(round(gender_bayes_diagnostic_max_rhat, 4), decimal.mark = ",", nsmall = 4, trim = TRUE)`. Esse valor é marginalmente superior ao corte estrito de 1,01 em um modelo; os demais diagnósticos de amostragem e as checagens preditivas foram satisfatórios.
+Apresentamos cinco modelos bayesianos logísticos hierárquicos, um para cada prática substantiva. Os modelos incluem interceptos que variam entre periódicos e primeiros autores e inclinações associadas à categoria do primeiro prenome que variam entre periódicos; os coeficientes dos períodos de publicação são comuns a todos os periódicos. As distribuições a priori são fracamente informativas, e os nove periódicos são tratados como unidades permutáveis para fins de agrupamento parcial. O contraste é a diferença posterior de probabilidade entre artigos com primeiro prenome classificado como feminino e masculino, padronizada pela composição observada de periódico e período. Ele descreve associação condicional; não identifica efeito causal de gênero. Usamos quatro cadeias, sem divergências, e o maior R-hat foi `r format(round(gender_bayes_diagnostic_max_rhat, 4), decimal.mark = ",", nsmall = 4, trim = TRUE)`. Esse valor é marginalmente superior ao corte estrito de 1,01 em um modelo; os demais diagnósticos de amostragem e as checagens preditivas foram satisfatórios.
 
 ```{r tabela-genero-bayesiano}
 gender_bayesian_display <- gender_bayesian |>
+  dplyr::filter(metric != "Examinados para identificação") |>
   dplyr::transmute(
     Indicador = metric,
     N = format_n(n_articles),
@@ -707,7 +722,9 @@ knitr::kable(
 )
 ```
 
-A diferença bruta na análise quantitativa é de `r format_pp(gender_quant_female - gender_quant_male)` (`r format_pct(round(gender_quant_female, 1))` entre primeiros prenomes femininos e `r format_pct(round(gender_quant_male, 1))` entre masculinos). Para inferência estatística, o contraste bruto é de `r format_pp(gender_inference_female - gender_inference_male)`; depois de incorporar periódico e período no modelo hierárquico, a diferença posterior mediana é `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))` A padronização descritiva por periódico--período produz `r format_pp(gender_inference_standardized)`, de magnitude semelhante. Para linguagem causal ou explicativa e para estratégia explícita de identificação, os intervalos incluem diferenças substantivamente positivas e negativas; esses resultados não distinguem uma diferença sistemática de uma associação pequena ou incerta.
+Os artigos com primeiro prenome classificado como feminino são mais frequentemente empíricos: a diferença posterior é de `r format_pp(gender_bayes_value("Artigos empíricos", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Artigos empíricos", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Artigos empíricos", "credible_interval_95_high_pp"))` Entre os artigos empíricos, porém, a análise quantitativa é `r format_pp(abs(gender_bayes_value("Análise quantitativa", "posterior_median_pp")))` menos frequente na categoria feminina, com intervalo entre `r format_pp(gender_bayes_value("Análise quantitativa", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Análise quantitativa", "credible_interval_95_high_pp"))` A composição por tipo de evidência esclarece o contraste: na categoria feminina, `r format_pct(round(gender_qualitative_female, 1))` dos empíricos usam somente evidência qualitativa e `r format_pct(round(gender_mixed_female, 1))` usam evidência mista, ante `r format_pct(round(gender_qualitative_male, 1))` e `r format_pct(round(gender_mixed_male, 1))`, respectivamente, na categoria masculina. A evidência somente quantitativa representa `r format_pct(round(gender_quant_only_female, 1))` dos empíricos na primeira categoria e `r format_pct(round(gender_quant_only_male, 1))` na segunda.
+
+Essa diferença na composição da pesquisa empírica não aparece na pretensão causal ou explicativa. O contraste posterior é de `r format_pp(gender_bayes_value("Linguagem causal ou explicativa", "posterior_median_pp"))`, com intervalo de credibilidade de 95% entre `r format_pp(gender_bayes_value("Linguagem causal ou explicativa", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Linguagem causal ou explicativa", "credible_interval_95_high_pp"))` A desigualdade mais acentuada está na inferência estatística: a diferença posterior mediana é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))`, com intervalo entre `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_low_pp"))` e `r format_pp(gender_bayes_value("Inferência estatística", "credible_interval_95_high_pp"))` Para a estratégia explícita de identificação, o intervalo permanece compatível com diferenças pequenas nas duas direções.
 
 O contraste deve ser lido como composição da autoria, não como mecanismo individual. A ordem de primeira autoria não mede contribuição relativa, nomes podem ser homônimos e a não classificação não é necessariamente aleatória. Por isso, a análise documenta uma desigualdade possível na distribuição das práticas, mas não atribui preferências metodológicas a mulheres ou homens nem estima um efeito de gênero.
 
@@ -729,7 +746,7 @@ Os nove periódicos completos não formam uma única escala metodológica. `Opin
 
 No tempo, a empiria cresce nos oito periódicos presentes nos três períodos. Quantificação e inferência oscilam, sem trajetória de difusão ampla. As famílias de desenho também não seguem uma tendência monotônica. A produção não percorre uma marcha uniforme rumo à quantificação, à inferência ou à identificação causal.
 
-A análise exploratória da autoria sugere uma diferença concentrada na adoção de práticas quantitativas e, sobretudo, na quantificação da incerteza: `r format_pct(round(gender_inference_female, 1))` dos artigos com primeiro prenome feminino contra `r format_pct(round(gender_inference_male, 1))` dos artigos com primeiro prenome masculino; a diferença posterior, condicionada a periódico e período, é de `r format_pp(gender_bayes_value("Inferência estatística", "posterior_median_pp"))` Não há contraste equivalente para linguagem causal ou explicativa, e a diferença em estratégias explícitas é imprecisa. Como a medida é inferida de prenomes, não observa identidade de gênero e não é aleatória quanto a idioma, origem do nome ou autoria ausente, esse resultado deve ser lido como uma associação de composição, não como evidência de um efeito individual.
+A análise exploratória da autoria revela uma diferença de composição. Artigos com primeiro prenome classificado como feminino são mais frequentemente empíricos, mas sua produção empírica combina maior presença de evidência qualitativa e mista com menor presença de análise quantitativa. A pretensão causal ou explicativa, em contraste, tem praticamente a mesma frequência nas duas categorias. A desigualdade mais forte aparece na quantificação da incerteza: `r format_pct(round(gender_inference_female, 1))` dos quantitativos com primeiro prenome feminino apresentam inferência estatística, contra `r format_pct(round(gender_inference_male, 1))` daqueles com primeiro prenome masculino. Como a medida é inferida de prenomes, não observa identidade de gênero e não é aleatória quanto a idioma, origem do nome ou autoria ausente, esse resultado deve ser lido como uma associação de composição, não como evidência de um efeito individual.
 
 A linguagem causal ou explicativa é uma categoria ampla. Ela inclui explicações qualitativas, argumentos teóricos e interpretações substantivas, mas também pode marcar uma pretensão causal para a qual o artigo não apresenta método compatível. Por isso, a análise deve distinguir duas perguntas: se há uma afirmação que exige justificativa causal e se o texto explicita como a sustenta. A classificação atual mede a coexistência dos atributos e indica possíveis desalinhamentos; a confirmação desses casos exige leitura humana.
 
@@ -743,7 +760,7 @@ O contraste situa práticas metodológicas diferentes. A produção brasileira j
 
 Há também um problema anterior à identificação estrita: `r format_n(n_claim_quant_no_strategy)` artigos (`r format_pct(pct_claim_quant_no_strategy)`) combinam linguagem causal ou explicativa com análise quantitativa, mas não mencionam estratégia explícita de identificação. Como a classificação agrega linguagem causal e explicativa, o número é um indicador de possível desalinhamento entre afirmação e método, não uma taxa de erro. A fronteira metodológica brasileira, portanto, não se resume à adoção de desenhos causais; inclui tornar explícita a relação entre o que o artigo afirma e o que seu método pode sustentar.
 
-A análise de composição da autoria acrescenta uma dimensão de desigualdade possível: a inferência estatística é menos frequente entre artigos cujo primeiro prenome foi classificado como feminino, mas essa classificação é apenas uma proxy e o contraste não identifica um efeito de gênero. O achado justifica investigar mecanismos de formação, coautoria, seleção editorial e distribuição de recursos em estudos futuros, sem converter uma associação descritiva em explicação individual.
+A análise da autoria acrescenta uma dimensão de desigualdade possível. Artigos cujo primeiro prenome foi classificado como feminino são mais frequentemente empíricos; entre os empíricos, porém, são menos frequentemente quantitativos e, entre os quantitativos, apresentam menos inferência estatística. A pretensão causal ou explicativa não difere entre as categorias. O padrão justifica investigar mecanismos de formação, coautoria, seleção editorial e distribuição de recursos, sem converter uma associação de composição em explicação individual.
 
 Os denominadores e períodos diferem entre as comparações, e a classificação automatizada ainda requer validação humana. O próximo passo é avaliar se as práticas identificadas são adequadas às perguntas dos artigos e se foram executadas de modo convincente, no universo de `r format_n(n_manifest)` artigos já classificados.
 
