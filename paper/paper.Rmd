@@ -766,6 +766,69 @@ Os denominadores e períodos diferem entre as comparações, e a classificação
 
 \appendix
 
+# Apêndice: Protocolo de classificação
+
+## Unidade de análise e sequência de classificação
+
+Cada artigo foi classificado em uma execução separada. A entrada combinou metadados básicos --- PID, título, periódico, idioma e hash do texto --- com o corpo integral recuperado. O modelo recebeu a instrução de ler o artigo do início ao fim antes de decidir qualquer rótulo. A classificação por título, resumo, palavras-chave, tabelas isoladas, regras lexicais ou rótulos anteriores foi expressamente proibida.
+
+Antes de classificar, o modelo produziu um registro de leitura para cada seção do artigo, com resumo, menções a dados ou métodos e relevância para as decisões de classificação. Em seguida, respondeu a seis perguntas de auditoria sobre evidência empírica, análise quantitativa, evidência qualitativa, inferência estatística, desenho causal e eventuais contradições internas. Se o texto integral não pudesse ser lido, a execução deveria retornar o estado `incomplete`, sem classificação substantiva.
+
+Somente depois dessa sequência o modelo preencheu os rótulos. O protocolo distingue artigo empírico; evidência quantitativa, qualitativa ou mista; tipo de análise quantitativa; inferência estatística; objetivo da análise qualitativa; linguagem causal ou explicativa; e estratégia explícita de identificação. Cada decisão substantiva exige uma passagem do artigo como evidência. O uso de linguagem causal não conta como estratégia de identificação. Regressão observacional, efeitos fixos, equações estruturais, mediação e controles também não contam automaticamente: na ausência de um desenho reconhecido, o artigo precisa explicitar o pressuposto identificador e justificar sua plausibilidade no caso analisado.
+
+## Validação e armazenamento
+
+A resposta foi exigida em JSON e validada por um esquema que fixa campos obrigatórios, tipos, categorias permitidas e relações lógicas entre variáveis. O pipeline rejeita classificações completas sem confirmação de leitura integral, registro de seções, auditoria final ou campos obrigatórios. Também rejeita divergências entre os metadados de entrada e saída, categorias não previstas, inferência sem passagem comprobatória e combinações incoerentes entre a seleção para identificação e o método registrado. As classificações aceitas, os registros de leitura, os hashes dos textos, o prompt, o esquema e os metadados de execução são preservados no material de replicação.
+
+## Prompt integral
+
+O texto abaixo reproduz o prompt aplicado a cada artigo. Ele combina o *wrapper* de leitura integral com o codebook do classificador v3. Na execução, o marcador final era substituído pelos metadados e pelo corpo integral do artigo correspondente; o conteúdo dos artigos não é repetido neste apêndice.
+
+\begingroup
+\footnotesize
+
+```{r apendice-prompt-integral, results='asis'}
+prompt_wrapper_path <- "../data/processed/credibility_prompt_v3_integral_reading/prompts/classifier_prompt_v3_integral_reading.md"
+prompt_classifier_path <- "../data/processed/credibility_prompt_v3_test/prompts/classifier_prompt_v3.md"
+
+prompt_wrapper <- readLines(prompt_wrapper_path, encoding = "UTF-8", warn = FALSE)
+prompt_classifier <- readLines(prompt_classifier_path, encoding = "UTF-8", warn = FALSE)
+
+classifier_marker <- which(prompt_wrapper == "{{CLASSIFIER_PROMPT_V3}}")
+stopifnot(length(classifier_marker) == 1L)
+
+prompt_integral <- c(
+  prompt_wrapper[seq_len(classifier_marker - 1L)],
+  prompt_classifier,
+  prompt_wrapper[seq.int(classifier_marker + 1L, length(prompt_wrapper))]
+)
+
+task_marker <- which(prompt_integral == "{{TASK_PACKET}}")
+stopifnot(length(task_marker) == 1L)
+prompt_integral[task_marker] <- paste0(
+  "> [Na execução, este marcador foi substituído pelos metadados e pelo ",
+  "corpo integral do artigo.]"
+)
+
+prompt_integral <- vapply(
+  prompt_integral,
+  function(line) {
+    if (grepl("^### ", line)) return(sub("^### ", "##### ", line))
+    if (grepl("^## ", line)) return(sub("^## ", "#### ", line))
+    if (grepl("^# ", line)) return(sub("^# ", "### ", line))
+    line
+  },
+  character(1),
+  USE.NAMES = FALSE
+)
+
+cat(paste(prompt_integral, collapse = "\n"))
+```
+
+\endgroup
+
+\clearpage
+
 # Apêndice: Cobertura e variação anual
 
 A Figura 7 detalha a cobertura por periódico. Os nove periódicos incluídos estão completos; Lua Nova e Novos Estudos CEBRAP foram retirados desta versão porque sua classificação ainda estava incompleta. A distribuição não representa a produção brasileira como um todo.
