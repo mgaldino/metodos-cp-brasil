@@ -1,5 +1,5 @@
 ---
-title: "Inferência Estatística Ainda É Minoritária em Nove Periódicos Brasileiros, 2005--2025"
+title: "Depois do calcanhar metodológico: inferência e identificação causal na Ciência Política brasileira"
 author: ""
 date: "19 de julho de 2026"
 output:
