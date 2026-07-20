@@ -778,7 +778,7 @@ Somente depois dessa sequência o modelo preencheu os rótulos. O protocolo dist
 
 ## Validação e armazenamento
 
-A resposta foi exigida em JSON e validada por um esquema que fixa campos obrigatórios, tipos, categorias permitidas e relações lógicas entre variáveis. O pipeline rejeita classificações completas sem confirmação de leitura integral, registro de seções, auditoria final ou campos obrigatórios. Também rejeita divergências entre os metadados de entrada e saída, categorias não previstas, inferência sem passagem comprobatória e combinações incoerentes entre a seleção para identificação e o método registrado. As classificações aceitas, os registros de leitura, os hashes dos textos, o prompt, o esquema e os metadados de execução são preservados no material de replicação.
+A resposta foi exigida em JSON e validada por um esquema que fixa campos obrigatórios, tipos, categorias permitidas e relações lógicas entre variáveis. Quando o modelo preserva corretamente o PID, o pipeline recupera do manifesto o título, o periódico e o hash do texto e normaliza campos de método redundantes antes da validação. Em seguida, rejeita classificações completas sem confirmação de leitura integral, registro de seções, auditoria final ou campos obrigatórios, além de PIDs divergentes, categorias não previstas, inferência sem passagem comprobatória e inconsistências lógicas remanescentes. As classificações aceitas, os registros de leitura, os hashes dos textos, o prompt, o esquema e os metadados de execução são preservados no material de replicação.
 
 ## Prompt integral
 
@@ -820,6 +820,21 @@ prompt_integral <- vapply(
   },
   character(1),
   USE.NAMES = FALSE
+)
+
+replace_fixed <- function(text, old, new) {
+  vapply(
+    strsplit(text, old, fixed = TRUE),
+    function(parts) paste(parts, collapse = new),
+    character(1),
+    USE.NAMES = FALSE
+  )
+}
+
+prompt_integral <- replace_fixed(
+  prompt_integral,
+  "`observational_regression_with_causal_claim_no_design`",
+  "\\path{observational_regression_with_causal_claim_no_design}"
 )
 
 cat(paste(prompt_integral, collapse = "\n"))
