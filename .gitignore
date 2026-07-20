@@ -16,6 +16,7 @@ data/processed/credibility_prompt_v3_full_corpus/task_packets/
 
 # Logs
 data/raw/logs/
+quality_reports/replication/*.log
 
 # Checkpoints
 data/raw/*checkpoint*.json

@@ -4,7 +4,25 @@
 
 O pipeline deve avançar da amostra de validação para a classificação do corpus completo elegível. Os 208 artigos já classificados, reduzidos a 175 após exclusões, servem para validação/piloto do schema e dos scripts; não são a base final de análise substantiva do paper.
 
-Os periódicos marcados em `data/processed/excluded_journals.csv` devem ficar fora da análise principal. No ledger vigente são `Brazilian Journal of Political Economy`, `Civitas - Revista de Ciências Sociais`, `Revista de Administração Pública` e `Sur. Revista Internacional de Direitos Humanos`; seus registros permanecem preservados no corpus bruto e em artefatos rastreáveis.
+Os periódicos marcados em `data/processed/excluded_journals.csv` devem ficar fora da análise principal. O ledger distingue exclusões substantivas permanentes de exclusões temporárias por classificação pendente; todos os registros permanecem preservados no corpus bruto e em artefatos rastreáveis.
+
+## Replicação do paper a partir do CSV canônico
+
+`57_replicate_paper.R` é o ponto de entrada para reproduzir a base analítica, as tabelas, as figuras, os modelos bayesianos e `paper/paper.pdf`. O script pressupõe que o manifesto, o CSV canônico e os ledgers já existem; ele não coleta textos, não executa LLMs e não consolida batches.
+
+O preflight não altera outputs:
+
+```bash
+LC_ALL=pt_BR.UTF-8 Rscript scripts/57_replicate_paper.R --preflight
+```
+
+A replicação integral é executada com:
+
+```bash
+LC_ALL=pt_BR.UTF-8 Rscript scripts/57_replicate_paper.R
+```
+
+Use `--skip-render` apenas para recalcular todos os resultados sem recompilar o PDF. Logs timestampados são gravados em `quality_reports/replication/`. A execução integral requer os pacotes R listados no preflight, XeLaTeX e CmdStan; a versão de CmdStan testada é 2.37.0.
 
 ## Coleta e corpus
 
