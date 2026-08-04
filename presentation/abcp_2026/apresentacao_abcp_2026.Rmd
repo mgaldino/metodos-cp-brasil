@@ -649,10 +649,6 @@ Tempo estimado: 0:55
 \normalsize Torreblanca et al.
 \end{columns}
 
-\vspace{0.45cm}
-\centering\large\bfseries
-Os denominadores diferem — e revelam etapas metodológicas distintas.
-
 <!--
 Notas do apresentador
 Mensagem central: não estimamos um hiato diretamente comparável. O contraste mostra que, no Brasil analisado, a divisão ainda passa por quantificar incerteza; nos top journals, pela identificação baseada em desenho.
