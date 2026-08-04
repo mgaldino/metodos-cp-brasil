@@ -111,6 +111,10 @@ periodos <- readr::read_csv(
   table_path("paper", "period_equal_weight_profile.csv"),
   show_col_types = FALSE
 )
+periodicos_periodo <- readr::read_csv(
+  table_path("paper", "period_complete_journal_profile.csv"),
+  show_col_types = FALSE
+)
 genero <- readr::read_csv(
   table_path("gender_analysis", "table_13_bayesian_hierarchical_gender_effects.csv"),
   show_col_types = FALSE
@@ -195,6 +199,10 @@ stopifnot(
   pct_claim_late == 97.0,
   pct_strict_early == 0.3,
   pct_strict_late == 5.3,
+  nrow(periodicos_periodo) == 24,
+  dplyr::n_distinct(periodicos_periodo$journal_title) == 8,
+  dplyr::n_distinct(periodicos_periodo$period_3) == 3,
+  !anyDuplicated(periodicos_periodo[c("journal_title", "period_3")]),
   round(gender_quant, 1) == -7.1,
   round(gender_inference, 1) == -12.3,
   round(gender_claim, 1) == 0.3
@@ -568,6 +576,110 @@ Tempo estimado: 0:55
 [Sources] output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
 -->
 
+\setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
+\setbeamertemplate{frametitle}{\vspace{0.2cm}\insertframetitle\par\vspace{-0.12cm}\color{USPTeal}\rule{\textwidth}{1.2pt}}
+
+# O avanço variou entre periódicos
+
+```{r figura-periodicos-tempo, fig.width=11, fig.height=3.05, out.width="94%", dev="png", dpi=320}
+ordem_periodicos <- c(
+  "BPSR", "Contexto", "Dados", "Opinião Pública",
+  "RBCP", "RBCS", "RBPI", "RSP"
+)
+
+perfil_periodicos_plot <- periodicos_periodo |>
+  dplyr::filter(period_3 %in% c("2005-2011", "2019-2025")) |>
+  dplyr::select(
+    journal_title,
+    period_3,
+    pct_empirical,
+    pct_quantitative,
+    pct_inference
+  ) |>
+  tidyr::pivot_longer(
+    cols = c(pct_empirical, pct_quantitative, pct_inference),
+    names_to = "indicador",
+    values_to = "percentual"
+  ) |>
+  dplyr::mutate(
+    periodico = dplyr::recode(
+      journal_title,
+      "Brazilian Political Science Review" = "BPSR",
+      "Contexto Internacional" = "Contexto",
+      "Dados" = "Dados",
+      "Opinião Pública" = "Opinião Pública",
+      "Revista Brasileira de Ciência Política" = "RBCP",
+      "Revista Brasileira de Ciências Sociais" = "RBCS",
+      "Revista Brasileira de Política Internacional" = "RBPI",
+      "Revista de Sociologia e Política" = "RSP"
+    ),
+    indicador = factor(
+      indicador,
+      levels = c("pct_empirical", "pct_quantitative", "pct_inference"),
+      labels = c("Empiria", "Quantificação", "Inferência")
+    )
+  ) |>
+  tidyr::pivot_wider(names_from = period_3, values_from = percentual) |>
+  dplyr::mutate(
+    periodico = factor(periodico, levels = rev(ordem_periodicos)),
+    delta_pp = `2019-2025` - `2005-2011`,
+    rotulo = paste0(fmt_num(`2005-2011`), " → ", fmt_num(`2019-2025`)),
+    cor_rotulo = dplyr::if_else(delta_pp >= 28, "white", "#17365D")
+  )
+
+ggplot2::ggplot(
+  perfil_periodicos_plot,
+  ggplot2::aes(x = indicador, y = periodico, fill = delta_pp)
+) +
+  ggplot2::geom_tile(color = "white", linewidth = 1.2, width = 0.96, height = 0.92) +
+  ggplot2::geom_text(
+    ggplot2::aes(label = rotulo, color = cor_rotulo),
+    fontface = "bold",
+    size = 4.2
+  ) +
+  ggplot2::scale_color_identity() +
+  ggplot2::scale_fill_gradient2(
+    low = "#D97706",
+    mid = "#F3F6F8",
+    high = "#007C83",
+    midpoint = 0,
+    limits = c(-12, 55),
+    breaks = c(-10, 0, 20, 40),
+    labels = function(x) paste0(x, " p.p."),
+    oob = scales::squish,
+    name = "Mudança"
+  ) +
+  ggplot2::labs(x = NULL, y = NULL) +
+  ggplot2::theme_minimal(base_size = 14) +
+  ggplot2::theme(
+    panel.grid = ggplot2::element_blank(),
+    axis.text.x = ggplot2::element_text(color = "#17365D", face = "bold", size = 12),
+    axis.text.y = ggplot2::element_text(color = "#17365D", face = "bold", size = 10.5),
+    legend.position = "none",
+    plot.margin = ggplot2::margin(0, 4, 0, 4)
+  )
+```
+
+\vspace{-0.12cm}
+\centering\tiny\color{USPGray}
+Cores: laranja = queda · verde = alta; a intensidade representa a mudança em pontos percentuais.\par
+
+\vspace{0.05cm}
+\centering\small\bfseries\color{USPOrange}
+A empiria cresceu nos oito periódicos; quantificação e inferência avançaram de forma desigual.\par
+
+\vspace{0.02cm}
+\centering\tiny\color{USPGray}
+Figura 1. Percentuais por periódico, 2005--2011 $\rightarrow$ 2019--2025. Empiria: todos; quantificação: empíricos; inferência: quantitativos com informação.\par
+
+<!--
+Notas do apresentador
+Mensagem central: a média do slide anterior não esconde um caso isolado: a empiria cresce nos oito periódicos. A quantificação cresce em seis e recua em dois; a inferência cresce em cinco e recua em três. As células mostram início e fim; a cor representa a mudança em pontos percentuais.
+Transição: apesar dessa heterogeneidade, a ambição causal já era alta em todo o período e a identificação causal explícita permaneceu rara.
+Tempo estimado: 0:50
+[Sources] output/tables/paper/period_complete_journal_profile.csv; scripts/45_build_current_paper_analysis.R; paper/paper.Rmd, “Variação por período”.
+-->
+
 \setbeamerfont{frametitle}{size=\fontsize{15.5}{18.5}\selectfont,series=\bfseries}
 \setbeamertemplate{frametitle}{\vspace{0.55cm}\insertframetitle\par\vspace{-0.12cm}\color{USPTeal}\rule{\textwidth}{1.2pt}}
 
@@ -641,7 +753,7 @@ No corpus: 45,5\% sem estratégia explícita × 1,4\% com identificação causal
 
 \vspace{0.02cm}
 \centering\tiny\color{USPGray}
-Figura 1. Médias simples em oito periódicos. Denominadores: artigos empíricos; artigos em que a identificação causal é relevante.\par
+Figura 2. Médias simples em oito periódicos. Denominadores: artigos empíricos; artigos em que a identificação causal é relevante.\par
 
 <!--
 Notas do apresentador
