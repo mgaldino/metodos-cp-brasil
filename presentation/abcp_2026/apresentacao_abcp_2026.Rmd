@@ -327,42 +327,12 @@ P-valores e intervalos de confiança tratam da incerteza.\par
 <!--
 Notas do apresentador
 Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar p-valores e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito causal. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
-Transição: Torreblanca e coautores mostram que essa última exigência já reorganizou a produção dos periódicos internacionais de topo.
+Transição: essa distinção permite entender como a fronteira passou dos padrões comuns de inferência associados a KKV à credibilidade causal.
 Tempo estimado: 1:05
 [Sources] Angrist e Pischke (2010), https://www.nber.org/papers/w15794; Torreblanca et al. (2026), pp. 4–6; paper/paper.Rmd, Introdução e Estratégia empírica.
 -->
 
 \setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
-
-# Nos periódicos de topo, o desenho causal virou fronteira
-
-\begin{center}
-\small Torreblanca et al.: 91.632 artigos · 156 periódicos · 2003–2023
-\end{center}
-
-\vspace{0.3cm}
-\begin{columns}[T,onlytextwidth]
-\column{0.30\textwidth}
-\centering
-\Large\bfseries\color{USPTeal}`r fmt_num(pct_jop)`\%\\
-\normalsize Journal of Politics
-\column{0.30\textwidth}
-\centering
-\Large\bfseries\color{USPTeal}`r fmt_num(pct_ajps)`\%\\
-\normalsize AJPS
-\column{0.30\textwidth}
-\centering
-\Large\bfseries\color{USPTeal}`r fmt_num(pct_apsr)`\%\\
-\normalsize APSR
-\end{columns}
-
-<!--
-Notas do apresentador
-Mensagem central: a identificação baseada em desenho tornou-se uma referência central nos periódicos internacionais de topo, mas Torreblanca et al. falam em reforma parcial, não transformação completa.
-Transição: a fronteira atual adiciona uma exigência que não estava no centro da recepção de KKV.
-Tempo estimado: 0:55
-[Sources] Torreblanca et al. (2026), arXiv:2601.11542 v2; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; paper/paper.Rmd, “Inferência estatística”.
--->
 
 # Fronteira metodológica: de KKV à credibilidade causal
 
@@ -405,9 +375,39 @@ Já não basta perguntar se o coeficiente é significante.\\
 <!--
 Notas do apresentador
 Mensagem central: KKV não é sinônimo de regressão; sua contribuição foi defender padrões comuns de inferência. Na recepção prática, porém, inferência frequentemente virou estimação com regressão, enquanto a identificação permaneceu implícita.
-Transição: esse deslocamento coloca uma pergunta direta para o Brasil.
+Transição: Torreblanca e coautores mostram como essa nova exigência chegou aos periódicos internacionais de topo.
 Tempo estimado: 0:55
 [Sources] King, Keohane e Verba (1994), Designing Social Inquiry; https://gking.harvard.edu/kkv/; Brady e Collier (2010); Angrist e Pischke (2010).
+-->
+
+# Nos periódicos de topo, o desenho causal virou fronteira
+
+\begin{center}
+\small Torreblanca et al.: 91.632 artigos · 156 periódicos · 2003–2023
+\end{center}
+
+\vspace{0.3cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.30\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}`r fmt_num(pct_jop)`\%\\
+\normalsize Journal of Politics
+\column{0.30\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}`r fmt_num(pct_ajps)`\%\\
+\normalsize AJPS
+\column{0.30\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}`r fmt_num(pct_apsr)`\%\\
+\normalsize APSR
+\end{columns}
+
+<!--
+Notas do apresentador
+Mensagem central: a identificação baseada em desenho tornou-se uma referência central nos periódicos internacionais de topo, mas Torreblanca et al. falam em reforma parcial, não transformação completa.
+Transição: esse contraste coloca uma pergunta direta para o Brasil.
+Tempo estimado: 0:55
+[Sources] Torreblanca et al. (2026), arXiv:2601.11542 v2; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; paper/paper.Rmd, “Inferência estatística”.
 -->
 
 # A pergunta para o Brasil
