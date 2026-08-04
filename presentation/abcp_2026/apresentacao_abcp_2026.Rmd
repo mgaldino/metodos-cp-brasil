@@ -264,10 +264,10 @@ Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPE
 \large\bfseries\color{USPTeal}Quantificação
 
 \vspace{0.12cm}
-\bfseries Há números?
+\bfseries Há estatísticas?
 
 \vspace{0.16cm}
-\normalsize Medidas, comparações e modelos.
+\normalsize Médias, proporções e parâmetros de modelos estatísticos.
 
 \column{0.235\textwidth}
 \large\bfseries\color{USPTeal}Inferência
@@ -276,13 +276,13 @@ Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPE
 \bfseries A incerteza é mensurada?
 
 \vspace{0.16cm}
-\normalsize Testes, intervalos ou incerteza posterior.
+\normalsize Valores-p, intervalos de confiança e afins.
 
 \column{0.235\textwidth}
 \large\bfseries\color{USPOrange}Identificação
 
 \vspace{0.12cm}
-\bfseries A variação isola o efeito?
+\bfseries A variação isola o efeito causal?
 
 \vspace{0.16cm}
 \normalsize Contrafactual, fonte de variação e pressupostos.
@@ -291,13 +291,13 @@ Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPE
 \vspace{0.55cm}
 \begin{center}
 \large\bfseries
-Testes e intervalos tratam da incerteza.\par
+Valores-p e intervalos de confiança tratam da incerteza.\par
 \color{USPOrange}A revolução da credibilidade deslocou a fronteira para a identificação.
 \end{center}
 
 <!--
 Notas do apresentador
-Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode usar números sem quantificar a incerteza. Pode reportar testes e intervalos sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
+Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar valores-p e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
 Transição: Torreblanca e coautores mostram que essa última exigência já reorganizou a produção dos periódicos internacionais de topo.
 Tempo estimado: 1:05
 [Sources] Angrist e Pischke (2010), https://www.nber.org/papers/w15794; Torreblanca et al. (2026), pp. 4–6; paper/paper.Rmd, Introdução e Estratégia empírica.
