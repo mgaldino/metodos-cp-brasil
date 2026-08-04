@@ -161,6 +161,7 @@ n_quant_inf <- den_n("Artigos empíricos quantitativos com inferência classific
 n_inf <- dim_n("Inferência estatística")
 n_strict <- den_n("Artigos com estratégia explícita de identificação causal")
 n_screen <- den_n("Artigos em que a identificação é especialmente relevante")
+n_no_strict <- n_screen - n_strict
 n_claim_no_design <- align_n("Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita")
 pct_claim_no_design <- align_pct("Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita")
 
@@ -169,6 +170,7 @@ pct_quant_emp <- 100 * n_quant / n_emp
 pct_inf_quant <- 100 * n_inf / n_quant_inf
 pct_strict_total <- 100 * n_strict / n_total
 pct_strict_screen <- 100 * n_strict / n_screen
+pct_no_strict_screen <- 100 * n_no_strict / n_screen
 pct_inf_2005 <- metric_pct("Inferência no suporte temporal comum: 2005-2011")
 pct_inf_2019 <- metric_pct("Inferência no suporte temporal comum: 2019-2025")
 pct_jop <- benchmark_pct("Journal of Politics")
@@ -202,9 +204,11 @@ stopifnot(
   n_inf == 743,
   n_strict == 59,
   n_screen == 1395,
+  n_no_strict == 1336,
   n_claim_no_design == 1885,
   round(pct_inf_quant, 1) == 37.3,
   round(pct_claim_no_design, 1) == 45.5,
+  round(pct_no_strict_screen, 1) == 95.8,
   round(pct_jop, 1) == 45.4,
   round(pct_ajps, 1) == 47.0,
   round(pct_apsr, 1) == 56.8,
@@ -707,13 +711,14 @@ Tempo estimado: 0:50
 \setbeamerfont{frametitle}{size=\fontsize{15.5}{18.5}\selectfont,series=\bfseries}
 \setbeamertemplate{frametitle}{\vspace{0.55cm}\insertframetitle\par\vspace{-0.12cm}\color{USPTeal}\rule{\textwidth}{1.2pt}}
 
-# A ambição causal já era alta; a identificação permaneceu rara
+# Identificação causal explícita avançou — mas segue rara
 
 ```{r figura-ambicao-tempo, fig.width=11, fig.height=3.15, out.width="100%", dev="png", dpi=320}
 temporal_causal_plot <- periodos |>
-  dplyr::select(period_3, pct_claim, pct_strict) |>
+  dplyr::select(period_3, pct_strict) |>
+  dplyr::mutate(pct_no_strict = 100 - pct_strict) |>
   tidyr::pivot_longer(
-    cols = c(pct_claim, pct_strict),
+    cols = c(pct_no_strict, pct_strict),
     names_to = "measure",
     values_to = "percent"
   ) |>
@@ -725,14 +730,14 @@ temporal_causal_plot <- periodos |>
     ),
     measure = factor(
       measure,
-      levels = c("pct_claim", "pct_strict"),
+      levels = c("pct_no_strict", "pct_strict"),
       labels = c(
-        "Ambição causal\nentre artigos empíricos",
-        "Identificação causal explícita\nonde a identificação é relevante"
+        "Sem identificação explícita\nentre casos relevantes",
+        "Com identificação causal explícita\nentre casos relevantes"
       )
     ),
     label = paste0(fmt_num(percent), "%"),
-    label_y = dplyr::if_else(percent > 90, percent - 7, percent + 7)
+    label_y = dplyr::if_else(measure == "Sem identificação explícita\nentre casos relevantes", percent - 7, percent + 7)
   )
 
 ggplot2::ggplot(
@@ -756,7 +761,7 @@ ggplot2::ggplot(
     labels = function(x) paste0(x, "%"),
     expand = ggplot2::expansion(mult = c(0, 0))
   ) +
-  ggplot2::scale_color_manual(values = c("#007C83", "#D97706")) +
+  ggplot2::scale_color_manual(values = c("#D97706", "#007C83")) +
   ggplot2::scale_shape_manual(values = c(16, 17)) +
   ggplot2::labs(x = NULL, y = NULL) +
   ggplot2::theme_minimal(base_size = 15) +
@@ -773,11 +778,11 @@ ggplot2::ggplot(
 
 \vspace{-0.20cm}
 \centering\small\bfseries\color{USPOrange}
-No corpus: 59 de 1.395 casos relevantes (`r fmt_num(pct_strict_screen)`\%) explicitam identificação causal.\par
+Conjunto completo (2005--2025): 59 de 1.395 casos relevantes (4\%) explicitam identificação causal.\par
 
 \vspace{0.02cm}
 \centering\tiny\color{USPGray}
-Figura 2. Artigos agrupados em oito periódicos. Denominadores: artigos empíricos; casos relevantes para identificação causal.\par
+Figura 2. Série temporal por período; o mesmo denominador aparece nos dois painéis. A chamada resume o conjunto completo (2005--2025).\par
 
 \vspace{0.01cm}
 \centering\tiny\color{USPGray}
@@ -785,7 +790,7 @@ Casos relevantes: quantitativos com testes/modelos, desenho causal ou ambição 
 
 <!--
 Notas do apresentador
-Mensagem central: a medida de ambição causal já começa saturada e não cresce: passa de 98% para 97% entre os empíricos. A identificação causal explícita aumenta de 0,7% para 6% entre os casos relevantes ao agrupar os artigos, mas permanece rara. O número do corpus que deve ser lembrado é 4%: apenas 59 dos 1.395 casos em que a identificação é relevante explicitam uma estratégia de identificação causal.
+Mensagem central: os dois painéis usam o mesmo denominador. A parcela sem identificação explícita cai de 99% para 94% entre os casos relevantes; a parcela com identificação causal explícita sobe de 0,7% para 6%, mas permanece rara. No conjunto completo, o número memorável é 4%: 59 de 1.395 casos relevantes.
 Transição: por isso, a fronteira que divide a produção brasileira não é a mesma observada nos periódicos internacionais de referência.
 Tempo estimado: 0:55
 [Sources] output/tables/paper/period_article_weight_profile.csv; output/tables/paper/denominator_summary.csv; paper/paper.Rmd, “Variação por período”.
@@ -811,7 +816,7 @@ Tempo estimado: 0:55
 \vspace{0.25cm}
 \large\bfseries\color{USPOrange}`r fmt_num(pct_strict_screen)`\%
 
-\normalsize com identificação explícita em `r fmt_n(n_screen)` casos relevantes
+\normalsize com identificação explícita em `r fmt_n(n_screen)` casos relevantes (2005--2025)
 
 \column{0.47\textwidth}
 \centering
@@ -835,52 +840,6 @@ Transição: o problema se torna mais agudo porque a linguagem causal está muit
 Tempo estimado: 0:55
 [Sources] output/tables/paper/statistical_inference_key_numbers.csv; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; Torreblanca et al. (2026); paper/paper.Rmd, Discussão.
 Pergunta difícil — comparabilidade: os percentuais não medem a mesma prática nem usam o mesmo universo; o contraste é de fronteiras, não um ranking ou estimativa de distância.
--->
-
-# A ambição causal excede a identificação explícita
-
-\begin{columns}[T,onlytextwidth]
-\column{0.47\textwidth}
-\centering
-\large\bfseries\color{USPOrange}Sem estratégia explícita
-
-\vspace{0.20cm}
-\fontsize{35}{39}\selectfont\bfseries `r fmt_n(n_claim_no_design)`
-
-\Large\bfseries `r fmt_num(pct_claim_no_design)`\% do corpus
-
-\vspace{0.20cm}
-\normalsize
-Linguagem causal ou explicativa + análise quantitativa
-
-\column{0.47\textwidth}
-\centering
-\large\bfseries\color{USPTeal}Com estratégia explícita
-
-\vspace{0.20cm}
-\fontsize{35}{39}\selectfont\bfseries `r fmt_n(n_strict)`
-
-\Large\bfseries `r fmt_num(pct_strict_screen)`\% dos casos relevantes
-
-\vspace{0.20cm}
-\normalsize
-Linguagem causal ou explicativa + identificação explícita
-\end{columns}
-
-\vspace{0.48cm}
-\centering\large\bfseries
-A linguagem causal associada à quantificação é comum; a identificação explícita continua rara quando relevante.
-
-\vspace{0.18cm}
-\centering\small\color{USPGray}
-Definição operacional: presença de linguagem causal ou explicativa.
-
-<!--
-Notas do apresentador
-Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito causal. Entre os casos em que a identificação é relevante, apenas 59 de 1.395, ou 4%, explicitam uma estratégia. Este é um hiato de níveis, não evidência de que a ambição causal tenha se difundido no tempo: entre os artigos empíricos dos oito periódicos comparáveis, a medida permanece praticamente estável, de 98% em 2005–2011 para 97% em 2019–2025.
-Transição: o diagnóstico final é de avanço relativo diante de uma fronteira móvel, não de estagnação.
-Tempo estimado: 0:55
-[Sources] output/tables/paper/table_5_claim_method_alignment.csv; output/tables/paper/denominator_summary.csv; output/tables/paper/period_article_weight_profile.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
 -->
 
 # Gênero: a diferença aparece na inferência, não na ambição causal
@@ -952,7 +911,7 @@ Tempo estimado: 0:50
 \small
 \begin{enumerate}
 \item \textbf{Avanço real:} a empiria se difundiu; a inferência estatística cresceu, mas ainda divide os artigos quantitativos.
-\item \textbf{Hiato causal:} 46\% do corpus combina linguagem causal ou explicativa e análise quantitativa sem estratégia explícita; entre os 1.395 casos relevantes, apenas 59 (`r fmt_num(pct_strict_screen)`\%) explicitam identificação causal.
+\item \textbf{Hiato causal:} entre os 1.395 casos relevantes, `r fmt_n(n_no_strict)` (`r fmt_num(pct_no_strict_screen)`\%) não explicitam identificação causal; apenas 59 (`r fmt_num(pct_strict_screen)`\%) explicitam.
 \item \textbf{Fronteira móvel:} enquanto o Brasil avançava na inferência, os periódicos internacionais de topo se deslocavam para métodos causais críveis.
 \end{enumerate}
 
