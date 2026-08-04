@@ -285,115 +285,10 @@ Sabemos que o campo avançou. Ainda não sabemos até onde esse avanço chegou �
 <!--
 Notas do apresentador
 Mensagem central: Soares descreveu um déficit de formação e de uso rigoroso de métodos. Trabalhos posteriores mostraram expansão do ensino e da estatística. Esse avanço é real. Currículos e contagens de técnicas, porém, não informam como os artigos publicados passam da evidência às conclusões. Essa é a pergunta do paper.
-Transição: para respondê-la, precisamos separar práticas diferentes que o rótulo “mais métodos” costuma reunir.
+Transição: a pergunta é como esse deslocamento da fronteira aparece nos periódicos internacionais e, depois, na produção brasileira.
 Tempo estimado: 0:55
 [Sources] Soares (2005); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); paper/paper.Rmd, Introdução.
 Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPES. Tempo estimado: 0:30.
--->
-
-\setbeamerfont{frametitle}{size=\fontsize{14.5}{17.5}\selectfont,series=\bfseries}
-
-# “Mais métodos” pode significar avanços muito diferentes
-
-\begin{columns}[T,onlytextwidth]
-\column{0.235\textwidth}
-\large\bfseries\color{USPTeal}Empiria
-
-\vspace{0.12cm}
-\bfseries Há evidência?
-
-\vspace{0.16cm}
-\normalsize Casos, documentos, entrevistas ou dados.
-
-\column{0.235\textwidth}
-\large\bfseries\color{USPTeal}Quantificação
-
-\vspace{0.12cm}
-\bfseries Há estatísticas?
-
-\vspace{0.16cm}
-\normalsize Médias, proporções e parâmetros de modelos estatísticos.
-
-\column{0.235\textwidth}
-\large\bfseries\color{USPTeal}Inferência
-
-\vspace{0.12cm}
-\bfseries A incerteza é mensurada?
-
-\vspace{0.16cm}
-\normalsize P-valores, intervalos de confiança e afins.
-
-\column{0.235\textwidth}
-\large\bfseries\color{USPOrange}Identificação
-
-\vspace{0.12cm}
-\bfseries A variação isola o efeito causal?
-
-\vspace{0.16cm}
-\normalsize Contrafactual, fonte de variação e pressupostos.
-\end{columns}
-
-\vspace{0.55cm}
-\begin{center}
-\large\bfseries
-P-valores e intervalos de confiança tratam da incerteza.\par
-\color{USPOrange}A revolução da credibilidade deslocou a fronteira para a identificação.
-\end{center}
-
-<!--
-Notas do apresentador
-Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar p-valores e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito causal. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
-Transição: essa distinção permite entender como a fronteira passou dos padrões comuns de inferência associados a KKV à credibilidade causal.
-Tempo estimado: 1:05
-[Sources] Angrist e Pischke (2010), https://www.nber.org/papers/w15794; Torreblanca et al. (2026), pp. 4–6; paper/paper.Rmd, Introdução e Estratégia empírica.
--->
-
-\setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
-
-# Fronteira metodológica: de KKV à credibilidade causal
-
-\begin{columns}[c,onlytextwidth]
-\column{0.28\textwidth}
-\centering
-\Large\bfseries\color{USPGray}KKV
-
-\normalsize
-Uma lógica de inferência para pesquisa quantitativa e qualitativa
-
-\column{0.05\textwidth}
-\centering\Large$\rightarrow$
-
-\column{0.28\textwidth}
-\centering
-\Large\bfseries\color{USPTeal}Inferência
-
-\normalsize
-Procedimentos públicos e incerteza quantificada
-
-\column{0.05\textwidth}
-\centering\Large$\rightarrow$
-
-\column{0.28\textwidth}
-\centering
-\Large\bfseries\color{USPOrange}Identificação
-
-\normalsize
-Contrafactual, variação e pressupostos explícitos
-\end{columns}
-
-\vspace{0.6cm}
-\begin{center}
-\large\bfseries
-Já não basta perguntar se o coeficiente é significante.\\
-É preciso perguntar: o que identifica o efeito causal?
-\end{center}
-
-<!--
-Notas do apresentador
-Mensagem central: KKV não é sinônimo de regressão; sua contribuição foi defender padrões comuns de inferência. Na recepção prática, porém, inferência frequentemente virou estimação com regressão, enquanto a identificação permaneceu implícita.
-Transição: Torreblanca e coautores mostram como essa nova exigência chegou aos periódicos internacionais de topo.
-Tempo estimado: 0:55
-[Sources] King, Keohane e Verba (1994), Designing Social Inquiry; https://gking.harvard.edu/kkv/; Brady e Collier (2010); Angrist e Pischke (2010).
 -->
 
 # Nos periódicos de topo, o desenho causal virou fronteira
@@ -776,13 +671,9 @@ ggplot2::ggplot(
   )
 ```
 
-\vspace{-0.20cm}
-\centering\small\bfseries\color{USPOrange}
-Conjunto completo (2005--2025): 59 de 1.395 casos relevantes (4\%) explicitam identificação causal.\par
-
-\vspace{0.02cm}
+\vspace{0.05cm}
 \centering\tiny\color{USPGray}
-Figura 2. Série temporal por período; o mesmo denominador aparece nos dois painéis. A chamada resume o conjunto completo (2005--2025).\par
+Figura 2. Série temporal por período; o mesmo denominador aparece nos dois painéis: casos relevantes para identificação causal.\par
 
 \vspace{0.01cm}
 \centering\tiny\color{USPGray}
