@@ -284,7 +284,7 @@ Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPE
 \bfseries A incerteza é mensurada?
 
 \vspace{0.16cm}
-\normalsize Valores-p, intervalos de confiança e afins.
+\normalsize P-valores, intervalos de confiança e afins.
 
 \column{0.235\textwidth}
 \large\bfseries\color{USPOrange}Identificação
@@ -299,13 +299,13 @@ Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPE
 \vspace{0.55cm}
 \begin{center}
 \large\bfseries
-Valores-p e intervalos de confiança tratam da incerteza.\par
+P-valores e intervalos de confiança tratam da incerteza.\par
 \color{USPOrange}A revolução da credibilidade deslocou a fronteira para a identificação.
 \end{center}
 
 <!--
 Notas do apresentador
-Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar valores-p e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito causal. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
+Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar p-valores e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito causal. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
 Transição: Torreblanca e coautores mostram que essa última exigência já reorganizou a produção dos periódicos internacionais de topo.
 Tempo estimado: 1:05
 [Sources] Angrist e Pischke (2010), https://www.nber.org/papers/w15794; Torreblanca et al. (2026), pp. 4–6; paper/paper.Rmd, Introdução e Estratégia empírica.
