@@ -335,10 +335,6 @@ Tempo estimado: 1:05
 \normalsize APSR
 \end{columns}
 
-\vspace{0.4cm}
-\centering\normalsize
-Parcela dos artigos quantitativos explicativos com abordagem baseada em desenho.
-
 <!--
 Notas do apresentador
 Mensagem central: a identificação baseada em desenho tornou-se uma referência central nos periódicos internacionais de topo, mas Torreblanca et al. falam em reforma parcial, não transformação completa.
