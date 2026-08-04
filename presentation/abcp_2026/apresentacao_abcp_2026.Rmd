@@ -380,12 +380,33 @@ Já não basta perguntar se o coeficiente é preciso.\\
 <!--
 Notas do apresentador
 Mensagem central: KKV não é sinônimo de regressão; sua contribuição foi defender padrões comuns de inferência. Na recepção prática, porém, inferência frequentemente virou estimação com regressão, enquanto a identificação permaneceu implícita.
-Transição: para saber onde o Brasil se encontra nessa fronteira, examinamos diretamente as práticas publicadas.
+Transição: esse deslocamento coloca uma pergunta direta para o Brasil.
 Tempo estimado: 0:55
 [Sources] King, Keohane e Verba (1994), Designing Social Inquiry; https://gking.harvard.edu/kkv/; Brady e Collier (2010); Angrist e Pischke (2010).
 -->
 
-# Nove periódicos permitem observar as práticas publicadas
+# A pergunta para o Brasil
+
+\vfill
+\begin{center}
+\fontsize{22}{27}\selectfont\bfseries\color{USPBlue}
+A fronteira internacional se deslocou em direção a métodos causais críveis.
+
+\vspace{0.60cm}
+\color{USPOrange}
+Como a CP/RI brasileira respondeu nos periódicos nacionais analisados?
+\end{center}
+\vfill
+
+<!--
+Notas do apresentador
+Mensagem central: essa é a pergunta que organiza o restante da apresentação. Queremos saber se a mudança observada nos periódicos internacionais de topo também aparece nas práticas publicadas pela CP/RI brasileira.
+Transição: para responder, examinamos o texto integral de nove periódicos nacionais ao longo de 21 anos.
+Tempo estimado: 0:20
+[Sources] paper/paper.Rmd, Introdução e Estratégia empírica; Torreblanca et al. (2026).
+-->
+
+# Nove periódicos, texto integral e classificação por LLMs
 
 \begin{columns}[T,onlytextwidth]
 \column{0.23\textwidth}
@@ -413,23 +434,29 @@ Tempo estimado: 0:55
 \normalsize recuperado do SciELO
 \end{columns}
 
-\vspace{0.45cm}
+\vspace{0.30cm}
 \begin{center}
 \small
 BPSR · CGPC · Contexto Internacional · Dados · Opinião Pública\\
 RBCP · RBCS · RBPI · Revista de Sociologia e Política
 \end{center}
 
-\vspace{0.35cm}
-\centering\large\bfseries\color{USPOrange}
-Cobertura completa desses periódicos — não de toda a disciplina.
+\vspace{0.20cm}
+\begin{center}
+\small\bfseries\color{USPOrange}Classificação por LLMs via Codex\par
+\vspace{0.04cm}
+\scriptsize\color{USPGray}
+GPT-5.5 (xhigh) · GPT-5.6 Sol (medium) · GPT-5.6 Terra (medium) · GPT-5.6 Luna (xhigh)\par
+\vspace{0.03cm}
+Versões variaram entre lotes; tendências temporais são exploratórias.
+\end{center}
 
 <!--
 Notas do apresentador
-Mensagem central: o universo é amplo e integral nos nove periódicos, mas não autoriza generalização para toda a Ciência Política brasileira.
+Mensagem central: o universo é amplo e integral nos nove periódicos, mas não autoriza generalização para toda a Ciência Política brasileira. A classificação do texto integral foi feita com LLMs via Codex. As configurações de produção foram GPT-5.5 xhigh, GPT-5.6 Sol medium, GPT-5.6 Terra medium e GPT-5.6 Luna xhigh. Como as versões variaram entre lotes, as tendências temporais são exploratórias.
 Transição: o texto integral permite separar práticas que uma busca por palavras-chave confundiria.
 Tempo estimado: 0:50
-[Sources] paper/paper.Rmd, Dados; README.md, Corpus; output/tables/paper/denominator_summary.csv; SciELO, textos recuperados em junho de 2026.
+[Sources] paper/paper.Rmd, Dados e Estratégia empírica; README.md, Corpus; output/tables/paper/denominator_summary.csv; quality_reports/credibility_prompt_v3_model_provenance.md; sidecars de execução em data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined; SciELO, textos recuperados em junho de 2026.
 -->
 
 # O protocolo separa associação, inferência e identificação
@@ -465,7 +492,7 @@ Texto integral $\rightarrow$ evidência textual $\rightarrow$ rótulos $\rightar
 \end{columns}
 
 \vspace{0.18cm}
-\centering\small Classificação por modelo de linguagem; validação humana estratificada ainda necessária.
+\centering\small Validação humana estratificada ainda necessária.
 
 <!--
 Notas do apresentador
@@ -825,9 +852,10 @@ Manifesto interno de produção
 Frase de comunicação: “Ao final, a audiência da AT04 deve compreender que o Brasil avançou na direção da inferência estatística, mas a fronteira internacional se deslocou para desenhos que tornam a identificação causal explícita.”
 Fonte canônica: paper/paper.Rmd (modificado em 20 jul. 2026); paper/paper.pdf; README.md.
 Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; period_equal_weight_profile.csv; output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv.
+Proveniência dos LLMs: quality_reports/credibility_prompt_v3_model_provenance.md; sidecars de execução em data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined; configurações de produção GPT-5.5 xhigh, GPT-5.6 Sol medium, GPT-5.6 Terra medium e GPT-5.6 Luna xhigh.
 Figuras externas reutilizadas: nenhuma; os números visíveis são inseridos diretamente a partir das tabelas canônicas.
 Referências substantivas: Soares (2005); King, Keohane e Verba (1994); Angrist e Pischke (2010); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); Torreblanca et al. (2026), https://arxiv.org/abs/2601.11542.
 Financiamento e marca: Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (acesso em 3 ago. 2026).
-Decisões e limitações: o título e o corpus cobrem 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada; gênero é análise secundária baseada em proxy pelo primeiro prenome, não identidade observada.
+Decisões e limitações: o título e o corpus cobrem 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada; versões de LLM variaram entre lotes e tornam as tendências temporais exploratórias; gênero é análise secundária baseada em proxy pelo primeiro prenome, não identidade observada.
 Compilação: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abcp_2026.Rmd', output_format = 'rmarkdown::beamer_presentation', clean = TRUE)".
 -->
