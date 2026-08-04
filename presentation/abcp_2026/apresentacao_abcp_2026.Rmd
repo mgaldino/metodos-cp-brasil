@@ -945,53 +945,6 @@ Tempo estimado: 0:50
 [Sources] output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv; paper/paper.Rmd, “Composição da autoria e práticas metodológicas”; scripts/51_analyze_gender_current_canonical.R; scripts/54_fit_bayesian_gender_hierarchical.R.
 -->
 
-# O Brasil avançou — mas a fronteira metodológica mudou
-
-\begin{columns}[T,onlytextwidth]
-\column{0.29\textwidth}
-\large\bfseries\color{USPGray}Calcanhar
-
-\normalsize
-Formação e uso sistemático de métodos
-
-\column{0.04\textwidth}
-\centering\Large$\rightarrow$
-
-\column{0.29\textwidth}
-\large\bfseries\color{USPTeal}Inferência
-
-\normalsize
-Procedimentos públicos e incerteza quantificada
-
-\column{0.04\textwidth}
-\centering\Large$\rightarrow$
-
-\column{0.29\textwidth}
-\large\bfseries\color{USPOrange}Identificação
-
-\normalsize
-Variação, contrafactual e pressupostos críveis
-\end{columns}
-
-\vspace{0.55cm}
-\begin{center}
-\Large\bfseries
-O Brasil se moveu na direção da inferência.\\
-A disciplina internacional moveu a fronteira para a identificação.
-\end{center}
-
-\vspace{0.35cm}
-\centering\small
-Escopo: nove periódicos · presença, não qualidade · classificação ainda requer validação humana
-
-<!--
-Notas do apresentador
-Mensagem central: a principal contribuição é histórica e relacional: reconhecer o avanço brasileiro e mostrar que ele ocorreu enquanto o padrão internacional de credibilidade se tornava mais exigente.
-Transição: concluir com os três achados que a audiência deve levar da apresentação.
-Tempo estimado: 0:50
-[Sources] paper/paper.Rmd, Introdução, Discussão e Conclusão; Soares (2005); KKV (1994); Angrist e Pischke (2010); Torreblanca et al. (2026).
--->
-
 \setbeamerfont{frametitle}{size=\fontsize{16}{19}\selectfont,series=\bfseries}
 
 # Avançamos, mas continuamos longe da fronteira metodológica quantitativa
