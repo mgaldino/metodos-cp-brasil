@@ -1,5 +1,5 @@
 ---
-title: "Do ‘Calcanhar’ à ‘Revolução’?: A Trajetória da Credibilidade Causal na Ciência Política e RI no Brasil (2010–2025)"
+title: "Do ‘Calcanhar’ à ‘Revolução’?: A Trajetória da Credibilidade Causal na Ciência Política e RI no Brasil (2005–2025)"
 author: "Manoel Galdino · Rodrigo Martins da Silva"
 institute: "Departamento de Ciência Política · Universidade de São Paulo"
 date: "15º Encontro da ABCP · AT04 · 4 de agosto de 2026"
@@ -831,6 +831,6 @@ Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_method
 Figuras externas reutilizadas: nenhuma; os números visíveis são inseridos diretamente a partir das tabelas canônicas.
 Referências substantivas: Soares (2005); King, Keohane e Verba (1994); Angrist e Pischke (2010); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); Torreblanca et al. (2026), https://arxiv.org/abs/2601.11542.
 Financiamento e marca: Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (acesso em 3 ago. 2026).
-Decisões e limitações: o título oficial mantém 2010–2025; o corpus cobre 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada; gênero é análise secundária baseada em proxy pelo primeiro prenome, não identidade observada.
+Decisões e limitações: o título e o corpus cobrem 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada; gênero é análise secundária baseada em proxy pelo primeiro prenome, não identidade observada.
 Compilação: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abcp_2026.Rmd', output_format = 'rmarkdown::beamer_presentation', clean = TRUE)".
 -->
