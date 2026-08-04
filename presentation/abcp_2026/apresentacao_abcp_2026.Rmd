@@ -176,6 +176,13 @@ pct_inf_2019 <- metric_pct("Inferência no suporte temporal comum: 2019-2025")
 pct_jop <- benchmark_pct("Journal of Politics")
 pct_ajps <- benchmark_pct("American Journal of Political Science")
 pct_apsr <- benchmark_pct("American Political Science Review")
+# Torreblanca et al., Table A6: all 156 journals, latest year in the study.
+n_torreblanca_2023 <- 1299L
+n_torreblanca_2023_den <- 3212L
+pct_torreblanca_2023 <- 100 * n_torreblanca_2023 / n_torreblanca_2023_den
+pct_strict_late_n <- sum(periodicos_periodo$n_strict[periodicos_periodo$period_3 == "2019-2025"])
+pct_strict_late_den <- sum(periodicos_periodo$n_screen[periodicos_periodo$period_3 == "2019-2025"])
+pct_strict_late_article <- 100 * pct_strict_late_n / pct_strict_late_den
 pct_emp_early <- period_pct("2005-2011", "pct_empirical")
 pct_emp_late <- period_pct("2019-2025", "pct_empirical")
 pct_quant_early <- period_pct("2005-2011", "pct_quantitative")
@@ -213,6 +220,10 @@ stopifnot(
   round(pct_ajps, 1) == 47.0,
   round(pct_apsr, 1) == 56.8,
   round(pct_strict_screen, 1) == 4.2,
+  pct_strict_late_n == 36,
+  pct_strict_late_den == 580,
+  round(pct_strict_late_article, 1) == 6.2,
+  round(pct_torreblanca_2023, 1) == 40.4,
   pct_emp_early == 73.1,
   pct_emp_late == 89.4,
   pct_quant_early == 51.2,
@@ -690,46 +701,50 @@ Tempo estimado: 0:55
 \setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
 \setbeamertemplate{frametitle}{\vspace{0.2cm}\insertframetitle\par\vspace{-0.12cm}\color{USPTeal}\rule{\textwidth}{1.2pt}}
 
-# Brasil e top journals estão em fronteiras diferentes
+# Brasil recente e a fronteira internacional
 
 \vspace{0.45cm}
 
 \begin{columns}[T,onlytextwidth]
 \column{0.47\textwidth}
 \centering
-\Large\bfseries\color{USPTeal}Periódicos brasileiros
+\Large\bfseries\color{USPTeal}Brasil · 2019–2025
 
 \vspace{0.18cm}
-\fontsize{32}{36}\selectfont\bfseries `r fmt_num(pct_inf_quant)`\%
+\fontsize{32}{36}\selectfont\bfseries `r fmt_num(pct_strict_late_article)`\%
 
-\normalsize com inferência entre `r fmt_n(n_quant_inf)` quantitativos
+\normalsize com identificação causal explícita
 
 \vspace{0.25cm}
-\large\bfseries\color{USPOrange}`r fmt_num(pct_strict_screen)`\%
+\large\bfseries\color{USPOrange}`r fmt_n(pct_strict_late_n)` de `r fmt_n(pct_strict_late_den)`
 
-\normalsize com identificação explícita em `r fmt_n(n_screen)` casos relevantes (2005--2025)
+\normalsize casos relevantes
 
 \column{0.47\textwidth}
 \centering
-\Large\bfseries\color{USPOrange}APSR · AJPS · JOP
+\Large\bfseries\color{USPOrange}Internacional · 2023
 
 \vspace{0.18cm}
-\fontsize{32}{36}\selectfont\bfseries `r fmt_num(pct_jop)`–`r fmt_num(pct_apsr)`\%
+\fontsize{32}{36}\selectfont\bfseries `r fmt_num(pct_torreblanca_2023)`\%
 
-\normalsize com desenho causal entre quantitativos explicativos
+\normalsize com desenho causal
 
 \vspace{0.25cm}
-\large\bfseries\color{USPGray}2003–2023
+\large\bfseries\color{USPGray}`r fmt_n(n_torreblanca_2023)` de `r fmt_n(n_torreblanca_2023_den)`
 
-\normalsize Torreblanca et al.
+\normalsize quantitativos explicativos · 156 periódicos
 \end{columns}
+
+\vspace{0.28cm}
+\centering\small\bfseries\color{USPGray}
+Benchmark de topo, agrupado em 2003–2023: APSR · AJPS · JOP = `r fmt_num(pct_jop)`–`r fmt_num(pct_apsr)`\%.
 
 <!--
 Notas do apresentador
-Mensagem central: não estimamos um hiato diretamente comparável. O contraste mostra que, no Brasil analisado, a divisão ainda passa por quantificar incerteza; nos top journals, pela identificação baseada em desenho.
+Mensagem central: alinhamos as janelas finais. No Brasil, 36 de 580 casos relevantes (6%) explicitam identificação causal em 2019–2025; no corpus internacional, 1.299 de 3.212 quantitativos explicativos (40%) empregam desenho causal em 2023. As composições não são idênticas. O benchmark dos três periódicos de topo, agrupado em 2003–2023, permanece em 45–57%.
 Transição: o problema se torna mais agudo porque a linguagem causal está muito mais difundida que os desenhos.
 Tempo estimado: 0:55
-[Sources] output/tables/paper/statistical_inference_key_numbers.csv; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; Torreblanca et al. (2026); paper/paper.Rmd, Discussão.
+[Sources] output/tables/paper/period_complete_journal_profile.csv; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; Torreblanca et al. (2026), Table A6 (2023) e Table A7 (2003–2023); paper/paper.Rmd, Discussão.
 Pergunta difícil — comparabilidade: os percentuais não medem a mesma prática nem usam o mesmo universo; o contraste é de fronteiras, não um ranking ou estimativa de distância.
 -->
 
