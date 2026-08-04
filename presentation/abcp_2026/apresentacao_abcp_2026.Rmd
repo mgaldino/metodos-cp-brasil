@@ -246,7 +246,7 @@ Tempo estimado: 0:55
 Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPES. Tempo estimado: 0:30.
 -->
 
-\setbeamerfont{frametitle}{size=\fontsize{16}{19}\selectfont,series=\bfseries}
+\setbeamerfont{frametitle}{size=\fontsize{14.5}{17.5}\selectfont,series=\bfseries}
 
 # “Mais métodos” pode significar avanços muito diferentes
 
@@ -658,7 +658,7 @@ Tempo estimado: 0:55
 Pergunta difícil — comparabilidade: os percentuais não medem a mesma prática nem usam o mesmo universo; o contraste é de fronteiras, não um ranking ou estimativa de distância.
 -->
 
-# A ambição causal correu à frente do desenho
+# A ambição causal excede a identificação explícita
 
 \begin{columns}[T,onlytextwidth]
 \column{0.47\textwidth}
@@ -690,7 +690,7 @@ Linguagem causal ou explicativa + identificação explícita
 
 \vspace{0.48cm}
 \centering\large\bfseries
-A ambição causal se difundiu muito mais que a explicitação do desenho.
+Quase metade do corpus combina ambição causal e quantificação sem explicitar a identificação causal.
 
 \vspace{0.18cm}
 \centering\small\color{USPGray}
@@ -698,10 +698,10 @@ Definição operacional: presença de linguagem causal ou explicativa.
 
 <!--
 Notas do apresentador
-Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito causal.
+Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito causal. Este é um hiato de níveis, não evidência de que a ambição causal tenha se difundido no tempo: entre os artigos empíricos dos oito periódicos comparáveis, a medida permanece praticamente estável, de 98,3% em 2005–2011 para 97,0% em 2019–2025.
 Transição: o diagnóstico final é de avanço relativo diante de uma fronteira móvel, não de estagnação.
 Tempo estimado: 0:55
-[Sources] output/tables/paper/table_5_claim_method_alignment.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
+[Sources] output/tables/paper/table_5_claim_method_alignment.csv; output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
 -->
 
 # Gênero: a diferença aparece na inferência, não na ambição causal
@@ -813,17 +813,20 @@ Tempo estimado: 0:50
 [Sources] paper/paper.Rmd, Introdução, Discussão e Conclusão; Soares (2005); KKV (1994); Angrist e Pischke (2010); Torreblanca et al. (2026).
 -->
 
-# Três conclusões
+\setbeamerfont{frametitle}{size=\fontsize{16}{19}\selectfont,series=\bfseries}
 
+# Avançamos, mas continuamos longe da fronteira metodológica quantitativa
+
+\small
 \begin{enumerate}
 \item \textbf{Avanço real:} a empiria se difundiu; a inferência estatística cresceu, mas ainda divide os artigos quantitativos.
-\item \textbf{Hiato causal:} a ambição causal se difundiu muito mais que a explicitação de uma estratégia de identificação causal.
+\item \textbf{Hiato causal:} 45,5\% do corpus combina linguagem causal ou explicativa e análise quantitativa sem estratégia explícita; apenas 1,4\% explicita identificação causal.
 \item \textbf{Fronteira móvel:} enquanto o Brasil avançava na inferência, os periódicos internacionais de topo se deslocavam para métodos causais críveis.
 \end{enumerate}
 
 \vspace{0.12cm}
-\centering\normalsize\bfseries\color{USPOrange}
-Próximo salto: tornar a identificação causal explícita, crível e auditável.
+\centering\small\bfseries\color{USPOrange}
+Próximo salto: tornar a identificação causal explícita, crível e auditável.\par
 
 \vspace{0.16cm}
 \begin{columns}[c,onlytextwidth]
@@ -839,7 +842,7 @@ Próximo salto: tornar a identificação causal explícita, crível e auditável
 
 <!--
 Notas do apresentador
-Mensagem central: os takeaways são substantivos: houve avanço brasileiro, persiste um hiato entre ambição causal e identificação causal, e a fronteira internacional se tornou mais exigente. O próximo salto é tornar a identificação causal explícita, crível e auditável.
+Mensagem central: os takeaways são substantivos: houve avanço brasileiro, o hiato memorável é 45,5% sem estratégia explícita contra 1,4% com identificação causal explícita, e a fronteira internacional se tornou mais exigente. O próximo salto é tornar a identificação causal explícita, crível e auditável.
 Transição: abrir para perguntas, retomando denominadores e limites quando necessário.
 Tempo estimado: 0:45
 [Sources] Angrist e Pischke (2010); KKV (1994); Torreblanca et al. (2026); paper/paper.Rmd, Conclusão; Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP; marca oficial: https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca.
