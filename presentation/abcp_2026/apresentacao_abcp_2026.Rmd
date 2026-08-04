@@ -110,9 +110,16 @@ periodos <- readr::read_csv(
   table_path("paper", "period_equal_weight_profile.csv"),
   show_col_types = FALSE
 )
+genero <- readr::read_csv(
+  table_path("gender_analysis", "table_13_bayesian_hierarchical_gender_effects.csv"),
+  show_col_types = FALSE
+)
 
 fmt_n <- function(x) format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE)
 fmt_num <- function(x) format(round(x, 1), decimal.mark = ",", nsmall = 1)
+fmt_signed <- function(x) {
+  paste0(ifelse(x > 0, "+", ifelse(x < 0, "−", "")), fmt_num(abs(x)))
+}
 
 den_n <- function(label) denominadores$n[denominadores$denominator == label]
 dim_n <- function(label) dimensoes$n[dimensoes$category == label]
@@ -121,6 +128,7 @@ align_pct <- function(label) alinhamento$percent[alinhamento$alignment_category 
 metric_pct <- function(label) inferencia$percent[inferencia$metric == label]
 benchmark_pct <- function(publication) benchmark$percent[benchmark$publication == publication]
 period_pct <- function(period, variable) periodos[[variable]][periodos$period_3 == period]
+gender_value <- function(metric, variable) genero[[variable]][genero$metric == metric]
 
 n_total <- den_n("Corpus completo elegível")
 n_emp <- den_n("Artigos empíricos classificados")
@@ -148,6 +156,15 @@ pct_inf_early <- period_pct("2005-2011", "pct_inference")
 pct_inf_late <- period_pct("2019-2025", "pct_inference")
 pct_strict_early <- period_pct("2005-2011", "pct_strict")
 pct_strict_late <- period_pct("2019-2025", "pct_strict")
+gender_quant <- gender_value("Análise quantitativa", "posterior_median_pp")
+gender_quant_low <- gender_value("Análise quantitativa", "credible_interval_95_low_pp")
+gender_quant_high <- gender_value("Análise quantitativa", "credible_interval_95_high_pp")
+gender_inference <- gender_value("Inferência estatística", "posterior_median_pp")
+gender_inference_low <- gender_value("Inferência estatística", "credible_interval_95_low_pp")
+gender_inference_high <- gender_value("Inferência estatística", "credible_interval_95_high_pp")
+gender_claim <- gender_value("Linguagem causal ou explicativa", "posterior_median_pp")
+gender_claim_low <- gender_value("Linguagem causal ou explicativa", "credible_interval_95_low_pp")
+gender_claim_high <- gender_value("Linguagem causal ou explicativa", "credible_interval_95_high_pp")
 
 stopifnot(
   n_total == 4144,
@@ -168,7 +185,10 @@ stopifnot(
   pct_inf_early == 25.4,
   pct_inf_late == 35.8,
   pct_strict_early == 0.3,
-  pct_strict_late == 5.3
+  pct_strict_late == 5.3,
+  round(gender_quant, 1) == -7.1,
+  round(gender_inference, 1) == -12.3,
+  round(gender_claim, 1) == 0.3
 )
 ```
 
@@ -664,6 +684,68 @@ Tempo estimado: 0:55
 [Sources] output/tables/paper/table_5_claim_method_alignment.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
 -->
 
+# Gênero: a diferença aparece na inferência, não na ambição causal
+
+\centering\small\color{USPGray}
+Contraste posterior F−M, padronizado por periódico e período
+
+\vspace{0.28cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.31\textwidth}
+\centering
+\large\bfseries\color{USPTeal}Análise quantitativa
+
+{\scriptsize\color{USPGray}entre artigos empíricos\par}
+
+\vspace{0.14cm}
+\mbox{\fontsize{24}{28}\selectfont\bfseries `r fmt_signed(gender_quant)` p.p.}
+
+\vspace{0.08cm}
+\small ICr 95\%: [`r fmt_signed(gender_quant_low)`; `r fmt_signed(gender_quant_high)`]
+
+\column{0.31\textwidth}
+\centering
+\large\bfseries\color{USPOrange}Inferência estatística
+
+{\scriptsize\color{USPGray}entre artigos quantitativos\par}
+
+\vspace{0.14cm}
+\mbox{\fontsize{24}{28}\selectfont\bfseries `r fmt_signed(gender_inference)` p.p.}
+
+\vspace{0.08cm}
+\small ICr 95\%: [`r fmt_signed(gender_inference_low)`; `r fmt_signed(gender_inference_high)`]
+
+\column{0.31\textwidth}
+\centering
+\large\bfseries\color{USPTeal}Ambição causal
+
+{\scriptsize\color{USPGray}entre artigos empíricos\par}
+
+\vspace{0.14cm}
+\mbox{\fontsize{24}{28}\selectfont\bfseries `r fmt_signed(gender_claim)` p.p.}
+
+\vspace{0.08cm}
+\small ICr 95\%: [`r fmt_signed(gender_claim_low)`; `r fmt_signed(gender_claim_high)`]
+\end{columns}
+
+\vspace{0.38cm}
+\centering\large\bfseries
+A diferença se concentra na inferência — não na ambição causal.
+
+\vspace{0.14cm}
+\centering\small\color{USPGray}
+Proxy pelo primeiro prenome $\neq$ identidade de gênero · associação, não efeito causal
+
+<!--
+Notas do apresentador
+Uso: slide opcional; se restarem menos de dois minutos, pular diretamente para a síntese.
+Mensagem central: após padronizar a composição por periódico e período, artigos cujo primeiro prenome foi classificado como feminino têm menor presença de análise quantitativa e, principalmente, de inferência estatística; a linguagem causal ou explicativa é semelhante nas duas categorias.
+Denominadores: cada contraste usa o universo pertinente ao indicador; a classificação binária cobre 3.970 dos 4.144 artigos. A proxy não observa identidade de gênero, não contempla identidades não binárias e pode variar com idioma e origem dos nomes.
+Transição: essa heterogeneidade interna não altera o diagnóstico geral de avanço diante de uma fronteira móvel.
+Tempo estimado: 0:50
+[Sources] output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv; paper/paper.Rmd, “Composição da autoria e práticas metodológicas”; scripts/51_analyze_gender_current_canonical.R; scripts/54_fit_bayesian_gender_hierarchical.R.
+-->
+
 # O Brasil avançou — mas a fronteira metodológica mudou
 
 \begin{columns}[T,onlytextwidth]
@@ -745,10 +827,10 @@ Tempo estimado: 0:45
 Manifesto interno de produção
 Frase de comunicação: “Ao final, a audiência da AT04 deve compreender que o Brasil avançou na direção da inferência estatística, mas a fronteira internacional se deslocou para desenhos que tornam a identificação causal explícita.”
 Fonte canônica: paper/paper.Rmd (modificado em 20 jul. 2026); paper/paper.pdf; README.md.
-Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; period_equal_weight_profile.csv.
+Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; period_equal_weight_profile.csv; output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv.
 Figuras externas reutilizadas: nenhuma; os números visíveis são inseridos diretamente a partir das tabelas canônicas.
 Referências substantivas: Soares (2005); King, Keohane e Verba (1994); Angrist e Pischke (2010); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); Torreblanca et al. (2026), https://arxiv.org/abs/2601.11542.
 Financiamento e marca: Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (acesso em 3 ago. 2026).
-Decisões e limitações: o título oficial mantém 2010–2025; o corpus cobre 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada.
+Decisões e limitações: o título oficial mantém 2010–2025; o corpus cobre 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada; gênero é análise secundária baseada em proxy pelo primeiro prenome, não identidade observada.
 Compilação: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abcp_2026.Rmd', output_format = 'rmarkdown::beamer_presentation', clean = TRUE)".
 -->
