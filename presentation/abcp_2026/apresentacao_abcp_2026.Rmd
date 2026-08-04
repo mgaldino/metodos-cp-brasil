@@ -297,7 +297,7 @@ Valores-p e intervalos de confiança tratam da incerteza.\par
 
 <!--
 Notas do apresentador
-Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar valores-p e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
+Mensagem central: uma pesquisa pode ser empírica sem ser quantitativa. Pode apresentar estatísticas sem quantificar a incerteza. Pode reportar valores-p e intervalos de confiança sem explicar como identifica um efeito causal. Regressão, controles e significância não transformam automaticamente uma associação em efeito causal. A identificação exige uma comparação contrafactual e uma justificativa para a fonte de variação.
 Transição: Torreblanca e coautores mostram que essa última exigência já reorganizou a produção dos periódicos internacionais de topo.
 Tempo estimado: 1:05
 [Sources] Angrist e Pischke (2010), https://www.nber.org/papers/w15794; Torreblanca et al. (2026), pp. 4–6; paper/paper.Rmd, Introdução e Estratégia empírica.
@@ -374,7 +374,7 @@ Contrafactual, variação e pressupostos explícitos
 \begin{center}
 \large\bfseries
 Já não basta perguntar se o coeficiente é preciso.\\
-É preciso perguntar: o que identifica o efeito?
+É preciso perguntar: o que identifica o efeito causal?
 \end{center}
 
 <!--
@@ -698,7 +698,7 @@ Definição operacional: presença de linguagem causal ou explicativa.
 
 <!--
 Notas do apresentador
-Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito.
+Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito causal.
 Transição: o diagnóstico final é de avanço relativo diante de uma fronteira móvel, não de estagnação.
 Tempo estimado: 0:55
 [Sources] output/tables/paper/table_5_claim_method_alignment.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
@@ -808,30 +808,30 @@ Escopo: nove periódicos · presença, não qualidade · classificação ainda r
 <!--
 Notas do apresentador
 Mensagem central: a principal contribuição é histórica e relacional: reconhecer o avanço brasileiro e mostrar que ele ocorreu enquanto o padrão internacional de credibilidade se tornava mais exigente.
-Transição: concluir com as perguntas que devem anteceder qualquer interpretação causal.
+Transição: concluir com os três achados que a audiência deve levar da apresentação.
 Tempo estimado: 0:50
 [Sources] paper/paper.Rmd, Introdução, Discussão e Conclusão; Soares (2005); KKV (1994); Angrist e Pischke (2010); Torreblanca et al. (2026).
 -->
 
-# Antes de chamar um coeficiente de efeito, responda três perguntas
+# Três conclusões
 
 \begin{enumerate}
-\item \textbf{Contrafactual:} comparado a quê?
-\item \textbf{Variação:} o que torna o tratamento plausivelmente exógeno?
-\item \textbf{Pressupostos:} por que são críveis neste contexto?
+\item \textbf{Avanço real:} a empiria se difundiu; a inferência estatística cresceu, mas ainda divide os artigos quantitativos.
+\item \textbf{Hiato causal:} a ambição causal se difundiu muito mais que a explicitação de uma estratégia de identificação causal.
+\item \textbf{Fronteira móvel:} enquanto o Brasil avançava na inferência, os periódicos internacionais de topo se deslocavam para métodos causais críveis.
 \end{enumerate}
 
-\vspace{0.25cm}
-\centering\large\bfseries\color{USPOrange}
-O próximo salto não é usar mais estatística. É tornar o argumento causal auditável.
+\vspace{0.12cm}
+\centering\normalsize\bfseries\color{USPOrange}
+Próximo salto: tornar a identificação causal explícita, crível e auditável.
 
-\vspace{0.22cm}
+\vspace{0.16cm}
 \begin{columns}[c,onlytextwidth]
 \column{0.72\textwidth}
-\small\color{USPGray}
+\footnotesize\color{USPGray}
 “A participação no 15º Encontro da ABCP, em 2026, foi fomentada com recursos PROEX/CAPES.”
 
-\vspace{0.10cm}
+\vspace{0.07cm}
 “O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) – Código de Financiamento 001.”
 \column{0.22\textwidth}
 \centering\includegraphics[width=\linewidth]{capes_logo_render.png}
@@ -839,7 +839,7 @@ O próximo salto não é usar mais estatística. É tornar o argumento causal au
 
 <!--
 Notas do apresentador
-Mensagem central: a audiência deve incorporar três perguntas mínimas antes de interpretar uma associação como efeito causal.
+Mensagem central: os takeaways são substantivos: houve avanço brasileiro, persiste um hiato entre ambição causal e identificação causal, e a fronteira internacional se tornou mais exigente. O próximo salto é tornar a identificação causal explícita, crível e auditável.
 Transição: abrir para perguntas, retomando denominadores e limites quando necessário.
 Tempo estimado: 0:45
 [Sources] Angrist e Pischke (2010); KKV (1994); Torreblanca et al. (2026); paper/paper.Rmd, Conclusão; Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP; marca oficial: https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca.
