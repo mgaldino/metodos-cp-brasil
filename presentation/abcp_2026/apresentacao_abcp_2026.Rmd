@@ -17,6 +17,7 @@ header-includes:
   - \usepackage{graphicx}
   - \usepackage{booktabs}
   - \usepackage{tikz}
+  - \usepackage{multicol}
   - \definecolor{USPBlue}{HTML}{17365D}
   - \definecolor{USPTeal}{HTML}{007C83}
   - \definecolor{USPOrange}{HTML}{D97706}
@@ -895,4 +896,115 @@ Referências substantivas: Soares (2005); King, Keohane e Verba (1994); Angrist 
 Financiamento e marca: Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (acesso em 3 ago. 2026).
 Decisões e limitações: o título e o corpus cobrem 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada; versões de LLM variaram entre lotes e tornam as tendências temporais exploratórias; gênero é análise secundária baseada em proxy pelo primeiro prenome, não identidade observada.
 Compilação: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abcp_2026.Rmd', output_format = 'rmarkdown::beamer_presentation', clean = TRUE)".
+-->
+
+\setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
+
+# Referências principais
+
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\scriptsize
+
+\textbf{Soares, G. A. D.} (2005). O calcanhar metodológico da ciência política no Brasil. \textit{Sociologia, Problemas e Práticas}, 48, 27--52.
+
+\vspace{0.14cm}
+\textbf{Barberia, L. G.; Godoy, S. R.; Barboza, D. P.} (2014). Novas perspectivas sobre o calcanhar metodológico: o ensino de métodos de pesquisa em Ciência Política no Brasil. \textit{Teoria \& Sociedade}, 22(2), 156--184.
+
+\vspace{0.14cm}
+\textbf{Neiva, P.} (2015). Revisitando o calcanhar de Aquiles metodológico das ciências sociais no Brasil. \textit{Sociologia, Problemas e Práticas}, 79, 65--83.
+
+\vspace{0.14cm}
+\textbf{Nicolau, J.; Oliveira, L.} (2017). Political Science in Brazil: An Analysis of Academic Articles (1966--2015). \textit{Sociologia \& Antropologia}, 7(2), 371--393.
+
+\vspace{0.14cm}
+\textbf{Albuquerque, R. B.; Mesquita, R.; Brito, R. V. L.} (2022). Obscuridade metodológica: um mapeamento da formação em métodos na pós-graduação em Relações Internacionais e áreas afins no Brasil. \textit{Revista Brasileira de Ciência Política}, 39, 1--25.
+
+\column{0.48\textwidth}
+\scriptsize
+
+\textbf{King, G.; Keohane, R. O.; Verba, S.} (1994). \textit{Designing Social Inquiry: Scientific Inference in Qualitative Research}. Princeton University Press.
+
+\vspace{0.20cm}
+\textbf{Brady, H. E.; Collier, D.} (orgs.) (2010). \textit{Rethinking Social Inquiry: Diverse Tools, Shared Standards}. 2. ed. Rowman \& Littlefield.
+
+\vspace{0.20cm}
+\textbf{Angrist, J. D.; Pischke, J.-S.} (2010). The Credibility Revolution in Empirical Economics: How Better Research Design Is Taking the Con out of Econometrics. \textit{Journal of Economic Perspectives}, 24(2), 3--30.
+
+\vspace{0.20cm}
+\textbf{Torreblanca, C.; Dinneen, W.; Grossman, G.; Xu, Y.} (2026). The Credibility Revolution in Political Science. \textit{arXiv:2601.11542}, versão 2.
+\end{columns}
+
+<!--
+Notas do apresentador
+Uso: slide de apoio; não integra a exposição oral planejada.
+[Sources] references.bib; paper/paper.Rmd; fontes citadas ao longo da apresentação.
+-->
+
+\setbeamerfont{frametitle}{size=\fontsize{16}{19}\selectfont,series=\bfseries}
+
+# Prompt principal usado
+
+\vspace{-0.18cm}
+\begin{multicols}{3}
+\setlength{\columnsep}{0.28cm}
+\fontsize{4.15}{4.65}\selectfont
+\raggedright
+
+\textbf{Credibility Prompt v3 -- Integral Reading Batch Prompt}
+
+You are classifying exactly one article in this run.
+
+\textbf{Absolute Rule: Integral Reading Before Classification}
+
+You must read the full article body from beginning to end before classifying it.
+
+It is prohibited to classify by: regexes, scripts, keyword matching, heuristics, or automated rules; previous consensus labels, gold labels, auxiliary classifications, or journal priors; title, abstract, metadata, isolated tables, or selected excerpts alone; guessing from the journal, year, topic, or style.
+
+The purpose of this task is interpretive article-by-article classification, not scale automation. If the article is long, keep reading until the end. Do not substitute a shortcut for full reading.
+
+If you cannot read the full body text, return \texttt{status: "incomplete"}, set \texttt{full\_body\_read: false}, explain why in \texttt{incomplete\_reason}, and set \texttt{classification: null}. Do not produce a final classification for an article you did not read fully.
+
+\textbf{Mandatory Reading Log Before Classification}
+
+Before producing the classification, build a \texttt{section\_reading\_log}. This log is part of the required JSON output.
+
+For each section explicitly present in the paper, include: \texttt{section\_title}, the heading as it appears; \texttt{section\_position}, 1-based order; \texttt{section\_summary}, one or two substantive paragraphs; \texttt{methods\_or\_data\_mentions}, identifying data, methods, tables, figures, interviews, documents, models, tests, or stating that none appear; and \texttt{classification\_relevance}, explaining how the section matters, or does not matter, for empirical, quantitative, qualitative, causal, and statistical classification.
+
+If the article has no clear section headings, divide the body into sequential chunks and use \texttt{chunk\_1}, \texttt{chunk\_2}, etc. Still summarize every chunk.
+
+After the section log, write \texttt{general\_summary}, one or two paragraphs summarizing the paper as a whole, and \texttt{decision\_audit}, answering the final audit questions. Only after completing these steps may you fill the \texttt{classification} object.
+
+\textbf{Final Audit Questions}
+
+1. Where does the article present its own empirical evidence, if anywhere? 2. Where does it present original or reanalyzed quantitative analysis? 3. Where does it present substantive qualitative evidence? 4. Where does it report statistical inference? 5. Where does it present a causal or credibility-revolution design? 6. Is there any section that contradicts the likely classification?
+
+\textbf{Output Shape}
+
+Return exactly one valid JSON object and no text outside the JSON. Top-level required fields: \texttt{pid}; \texttt{title}; \texttt{journal\_title}; \texttt{input\_text\_hash}; \texttt{status}, complete or incomplete; \texttt{full\_body\_read}; \texttt{incomplete\_reason}; \texttt{section\_reading\_log}; \texttt{general\_summary}; \texttt{decision\_audit}; and \texttt{classification}, an object if complete and otherwise null.
+
+The nested \texttt{classification} object must follow the original credibility prompt v3 schema exactly.
+
+\textbf{Original Classifier Prompt v3}
+
+The classifier instructions define the classification schema and field meanings. They are binding, but they do not override the integral-reading rule above. The schema classifies: empirical evidence; quantitative and qualitative analysis; statistical inference; causal or explanatory claims; applicability of the credibility-revolution screen; explicit causal methods and identification; data sources; difficult judgments; evidence quotes; and justification.
+
+\textbf{Output Reconciliation}
+
+The original prompt v3 describes the fields of the nested \texttt{classification} object. When it says to return one JSON object, that object must be placed inside the top-level object required by this integral-reading prompt. The final response must always have \texttt{section\_reading\_log}, \texttt{general\_summary}, \texttt{decision\_audit}, and \texttt{classification}.
+
+\textbf{Article Task Packet}
+
+The task packet contains the article metadata and full body text. Use only this packet for substantive classification.
+
+\end{multicols}
+
+\vspace{-0.10cm}
+\centering\fontsize{4.5}{5.0}\selectfont\color{USPOrange}
+Na execução, o esquema v3 completo e o pacote com metadados + texto integral eram inseridos automaticamente.
+
+<!--
+Notas do apresentador
+Uso: slide de apoio; não integra a exposição oral planejada. O texto reproduz a instrução estática principal, sem o conteúdo específico de cada artigo.
+[Sources] data/processed/credibility_prompt_v3_integral_reading/prompts/classifier_prompt_v3_integral_reading.md; data/processed/credibility_prompt_v3_test/prompts/classifier_prompt_v3.md; scripts/25_run_credibility_prompt_v3_integral_codex_batch.py.
 -->
