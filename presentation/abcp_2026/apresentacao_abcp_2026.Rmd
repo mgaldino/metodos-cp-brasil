@@ -377,7 +377,7 @@ Contrafactual, variação e pressupostos explícitos
 \vspace{0.6cm}
 \begin{center}
 \large\bfseries
-Já não basta perguntar se o coeficiente é preciso.\\
+Já não basta perguntar se o coeficiente é significante.\\
 É preciso perguntar: o que identifica o efeito causal?
 \end{center}
 
