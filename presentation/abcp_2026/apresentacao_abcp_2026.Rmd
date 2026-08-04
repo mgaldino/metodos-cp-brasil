@@ -85,7 +85,6 @@ stopifnot(file.exists(capes_logo_path), file.info(capes_logo_path)$size == 56807
 
 root <- normalizePath("../..", mustWork = TRUE)
 table_path <- function(...) file.path(root, "output", "tables", ...)
-figure_path <- function(name) file.path(root, "output", "figures", "paper", name)
 
 denominadores <- readr::read_csv(
   table_path("paper", "denominator_summary.csv"),
@@ -107,29 +106,21 @@ benchmark <- readr::read_csv(
   table_path("paper", "statistical_inference_torreblanca_benchmark.csv"),
   show_col_types = FALSE
 )
-area <- readr::read_csv(
-  table_path("area_analysis", "area_profile.csv"),
-  show_col_types = FALSE
-)
-area_bayes <- readr::read_csv(
-  table_path("area_analysis", "bayesian_area_posterior_summary.csv"),
-  show_col_types = FALSE
-)
-estrategias <- readr::read_csv(
-  table_path("paper", "strict_method_totals.csv"),
+periodos <- readr::read_csv(
+  table_path("paper", "period_equal_weight_profile.csv"),
   show_col_types = FALSE
 )
 
 fmt_n <- function(x) format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE)
-fmt_pct <- function(x) paste0(format(round(x, 1), decimal.mark = ",", nsmall = 1), "%")
 fmt_num <- function(x) format(round(x, 1), decimal.mark = ",", nsmall = 1)
 
 den_n <- function(label) denominadores$n[denominadores$denominator == label]
 dim_n <- function(label) dimensoes$n[dimensoes$category == label]
-dim_pct <- function(label) dimensoes$percent[dimensoes$category == label]
 align_n <- function(label) alinhamento$n[alinhamento$alignment_category == label]
 align_pct <- function(label) alinhamento$percent[alinhamento$alignment_category == label]
 metric_pct <- function(label) inferencia$percent[inferencia$metric == label]
+benchmark_pct <- function(publication) benchmark$percent[benchmark$publication == publication]
+period_pct <- function(period, variable) periodos[[variable]][periodos$period_3 == period]
 
 n_total <- den_n("Corpus completo elegível")
 n_emp <- den_n("Artigos empíricos classificados")
@@ -141,11 +132,22 @@ n_screen <- den_n("Artigos em que a identificação é especialmente relevante")
 n_claim_no_design <- align_n("Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita")
 pct_claim_no_design <- align_pct("Linguagem causal ou explicativa em artigo empírico, com análise quantitativa e sem estratégia explícita")
 
-cp <- area[area$area_group == "Ciência Política (inclui escopo compartilhado)", ]
-ri <- area[area$area_group == "Relações Internacionais", ]
-delta <- area_bayes[
-  area_bayes$prior == "Normal(0, 1.5)" & area_bayes$parameter == "Diferença CP - RI",
-]
+pct_emp <- 100 * n_emp / n_total
+pct_quant_emp <- 100 * n_quant / n_emp
+pct_inf_quant <- 100 * n_inf / n_quant_inf
+pct_strict_total <- 100 * n_strict / n_total
+pct_strict_screen <- 100 * n_strict / n_screen
+pct_inf_2005 <- metric_pct("Inferência no suporte temporal comum: 2005-2011")
+pct_inf_2019 <- metric_pct("Inferência no suporte temporal comum: 2019-2025")
+pct_jop <- benchmark_pct("Journal of Politics")
+pct_ajps <- benchmark_pct("American Journal of Political Science")
+pct_apsr <- benchmark_pct("American Political Science Review")
+pct_emp_early <- period_pct("2005-2011", "pct_empirical")
+pct_emp_late <- period_pct("2019-2025", "pct_empirical")
+pct_inf_early <- period_pct("2005-2011", "pct_inference")
+pct_inf_late <- period_pct("2019-2025", "pct_inference")
+pct_strict_early <- period_pct("2005-2011", "pct_strict")
+pct_strict_late <- period_pct("2019-2025", "pct_strict")
 
 stopifnot(
   n_total == 4144,
@@ -156,343 +158,578 @@ stopifnot(
   n_strict == 59,
   n_screen == 1395,
   n_claim_no_design == 1885,
-  n_inf <= n_quant_inf,
-  n_strict <= n_screen,
-  file.exists(figure_path("figure_1_corpus_funnel.pdf")),
-  file.exists(figure_path("figure_2_journal_dimension_matrix.pdf")),
-  file.exists(figure_path("figure_5_claim_method_alignment.pdf")),
-  file.exists(figure_path("figure_3_period_variation.pdf"))
+  round(pct_inf_quant, 1) == 37.3,
+  round(pct_claim_no_design, 1) == 45.5,
+  round(pct_jop, 1) == 45.4,
+  round(pct_ajps, 1) == 47.0,
+  round(pct_apsr, 1) == 56.8,
+  pct_emp_early == 71.2,
+  pct_emp_late == 89.5,
+  pct_inf_early == 25.4,
+  pct_inf_late == 35.8,
+  pct_strict_early == 0.3,
+  pct_strict_late == 5.3
 )
 ```
 
-# O avanço na formação não garante avanço nas práticas publicadas
-
-\begin{columns}[T,onlytextwidth]
-\column{0.47\textwidth}
-\Large\bfseries\color{USPOrange}2005
-
-\vspace{0.18cm}
-\normalsize
-O “calcanhar metodológico” diagnosticava baixa difusão de métodos sistemáticos.
-
-\column{0.47\textwidth}
-\Large\bfseries\color{USPTeal}2026
-
-\vspace{0.18cm}
-\normalsize
-O campo se profissionalizou. Mas o que mudou nos artigos publicados?
-\end{columns}
-
-\vspace{0.55cm}
-\begin{center}
-\Large\bfseries Duas décadas depois, até onde avançaram as práticas observadas?
-\end{center}
-
-<!--
-Notas do apresentador
-Mensagem central: A pergunta não é se houve avanço, mas até onde ele chegou na produção publicada.
-Transição: Essa pergunta exige separar práticas que o rótulo “quantitativo” costuma confundir.
-Tempo estimado: 0:55
-[Sources] paper/paper.Rmd, Introdução, parágrafos 1–3; Soares (2005), citado no manuscrito.
--->
-
-# “Quantitativo” reúne degraus metodológicos diferentes
+# Uma regressão pode parecer causal sem identificar um efeito
 
 \begin{center}
-\begin{tikzpicture}[x=1cm,y=1cm]
-\foreach \x/\w/\label/\c in {0/2.55/Empírico/USPGray,2.75/2.55/Quantitativo/USPTeal,5.5/2.55/Inferência/USPTeal,8.25/2.55/Identificação/USPOrange}{
-  \fill[\c!14] (\x,0) rectangle ++(\w,1.35);
-  \draw[\c,line width=1.4pt] (\x,0) rectangle ++(\w,1.35);
-  \node[align=center,text=USPBlue,font=\bfseries] at (\x+1.275,.68) {\label};
-}
-\draw[->,line width=1.8pt,color=USPBlue] (0,-.35) -- (10.8,-.35);
-\node[anchor=north west,text=USPGray] at (0,-.52) {descrever evidência};
-\node[anchor=north east,text=USPGray] at (10.8,-.52) {explicitar como o efeito é identificado};
-\end{tikzpicture}
+\fontsize{22}{26}\selectfont
+$Y_i = \alpha + \beta D_i + X_i'\gamma + \varepsilon_i$
 \end{center}
-
-\vspace{0.3cm}
-\large
-Testes e intervalos quantificam incerteza; não resolvem, sozinhos, identificação causal.
-
-\centering\small\color{USPGray}Dimensões analíticas — não uma escala de qualidade.
-
-<!--
-Notas do apresentador
-Mensagem central: Empiria, quantificação, inferência e identificação são dimensões distintas e cumulativas apenas como exigências, não como juízo de valor.
-Transição: O desenho do estudo mede a presença de cada prática no corpus, preservando seus denominadores.
-Tempo estimado: 0:55
-[Sources] paper/paper.Rmd, Introdução, parágrafo 3; Estratégia empírica, parágrafos 1–4.
--->
-
-# O corpus cobre nove periódicos completos, não toda a disciplina
-
-```{r funnel, out.width='72%', fig.height=4.3}
-knitr::include_graphics(figure_path("figure_1_corpus_funnel.pdf"))
-```
-
-<!--
-Notas do apresentador
-Mensagem central: O estudo cobre integralmente 4.144 artigos elegíveis de nove periódicos, com denominadores diferentes ao longo do funil.
-Transição: A classificação é abrangente, mas mede presença de procedimentos, não sua qualidade.
-Tempo estimado: 1:05
-[Sources] output/figures/paper/figure_1_corpus_funnel.pdf; output/tables/paper/denominator_summary.csv; paper/paper.Rmd, Dados e Estratégia empírica.
--->
-
-# A classificação mede presença — não qualidade de execução
-
-\begin{columns}[T,onlytextwidth]
-\column{0.49\textwidth}
-\large\bfseries\color{USPTeal}O protocolo registra
-
-\normalsize
-\begin{itemize}
-\item leitura do texto integral;
-\item evidência para cada rótulo;
-\item regras lógicas entre campos;
-\item linguagem causal e estratégia separadas.
-\end{itemize}
-
-\column{0.45\textwidth}
-\large\bfseries\color{USPOrange}O protocolo não avalia
-
-\normalsize
-\begin{itemize}
-\item correção dos estimadores;
-\item plausibilidade dos pressupostos;
-\item qualidade da execução;
-\item validade substantiva das conclusões.
-\end{itemize}
-\end{columns}
-
-\vspace{0.3cm}
-\centering\bfseries Classificações em escala ainda requerem validação humana estratificada.
-
-<!--
-Notas do apresentador
-Mensagem central: O classificador distingue dimensões com leitura integral e validações lógicas, mas o resultado é uma mensuração de presença.
-Transição: Com esse limite claro, o funil revela onde a difusão metodológica desacelera.
-Tempo estimado: 1:00
-[Sources] paper/paper.Rmd, “Protocolo de classificação e validade da mensuração” e Apêndice; README.md, “Protocolo de classificação”.
-Pergunta difícil — validade por modelo de linguagem: a escala é útil para mapear presença, mas não substitui adjudicação humana; a validação humana estratificada é o próximo passo necessário.
--->
-
-# Empiria se difundiu mais do que inferência e identificação
-
-\begin{center}
-\begin{tabular}{@{}lrr@{}}
-\toprule
-\textbf{Prática observada} & \textbf{N} & \textbf{Denominador} \\
-\midrule
-Artigo empírico & \textbf{`r fmt_n(n_emp)`} & `r fmt_n(n_total)` artigos \\
-Componente quantitativo & \textbf{`r fmt_n(n_quant)`} & `r fmt_n(n_emp)` empíricos \\
-Inferência estatística & \textbf{`r fmt_n(n_inf)`} & `r fmt_n(n_quant_inf)` quantitativos \\
-Estratégia causal explícita & \textbf{`r fmt_n(n_strict)`} & `r fmt_n(n_total)` artigos \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\vspace{0.45cm}
-\centering\Large\bfseries\color{USPOrange}
-37,3\% quantificam incerteza; 1,4\% explicitam identificação causal.
-
-<!--
-Notas do apresentador
-Mensagem central: A queda não é de empiria para quantificação, mas de quantificação para inferência e, sobretudo, para identificação explícita.
-Transição: As médias agregadas escondem diferenças editoriais muito grandes.
-Tempo estimado: 1:05
-[Sources] output/tables/paper/denominator_summary.csv; output/tables/paper/table_2_methodological_dimensions.csv; paper/paper.Rmd, Resultados.
--->
-
-# Periódicos diferem — sem formar um ranking de qualidade
-
-```{r journals, out.width='68%', fig.height=4.25}
-knitr::include_graphics(figure_path("figure_2_journal_dimension_matrix.pdf"))
-```
-
-<!--
-Notas do apresentador
-Mensagem central: Os periódicos combinam empiria, quantificação, inferência e identificação de formas muito diferentes.
-Transição: Parte dessa heterogeneidade também aparece no contraste entre Ciência Política e Relações Internacionais.
-Tempo estimado: 1:05
-[Sources] output/figures/paper/figure_2_journal_dimension_matrix.pdf; paper/paper.Rmd, “Periódicos com classificação completa”.
--->
-
-# CP publica mais inferência estatística do que RI
-
-\begin{columns}[T,onlytextwidth]
-\column{0.47\textwidth}
-\centering
-\Large\bfseries\color{USPTeal}Ciência Política
 
 \vspace{0.2cm}
-\fontsize{34}{38}\selectfont\bfseries `r fmt_num(cp$pct_inference_quantitative_observed)`\%
-
-\normalsize dos quantitativos com classificação
-
-\column{0.47\textwidth}
-\centering
-\Large\bfseries\color{USPOrange}Relações Internacionais
-
-\vspace{0.2cm}
-\fontsize{34}{38}\selectfont\bfseries `r fmt_num(ri$pct_inference_quantitative_observed)`\%
-
-\normalsize dos quantitativos com classificação
-\end{columns}
-
-\vspace{0.55cm}
 \begin{center}
-Modelo hierárquico: diferença mediana CP–RI de \textbf{`r fmt_num(100 * delta$estimate)` p.p.}
-
-\vspace{0.08cm}
-\small IC de 95\%: `r fmt_num(100 * delta$q025)` a `r fmt_num(100 * delta$q975)` p.p.
+\Large\bfseries\color{USPOrange}
+$\widehat{\beta}$ é uma associação condicional.
 \end{center}
-
-<!--
-Notas do apresentador
-Mensagem central: A diferença entre áreas persiste depois de incorporar a variação entre periódicos, mas continua sendo uma comparação descritiva de composição editorial.
-Transição: A distância mais importante, porém, está entre o que os artigos afirmam e o que explicitam para identificar efeitos.
-Tempo estimado: 0:55
-[Sources] output/tables/area_analysis/area_profile.csv; output/tables/area_analysis/bayesian_area_posterior_summary.csv; paper/paper.Rmd, “Diferenças entre Ciência Política e Relações Internacionais”.
--->
-
-# A ambição causal supera o suporte explícito de identificação
-
-```{r alignment, out.width='89%', fig.height=4.35}
-knitr::include_graphics(figure_path("figure_5_claim_method_alignment.pdf"))
-```
-
-\vspace{-0.1cm}
-\centering\bfseries `r fmt_n(n_claim_no_design)` artigos (`r fmt_pct(pct_claim_no_design)`) combinam linguagem causal, análise quantitativa e nenhuma estratégia explícita.
-
-<!--
-Notas do apresentador
-Mensagem central: O desalinhamento central é entre pretensão causal e explicitação da estratégia de identificação, não entre pesquisa qualitativa e quantitativa.
-Transição: Quando estratégias explícitas aparecem, elas se concentram em poucas famílias de desenho.
-Tempo estimado: 1:10
-[Sources] output/figures/paper/figure_5_claim_method_alignment.pdf; output/tables/paper/table_5_claim_method_alignment.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
--->
-
-# Poucos artigos explicitam estratégias causais reconhecíveis
-
-\begin{columns}[T,onlytextwidth]
-\column{0.50\textwidth}
-\Large\bfseries\color{USPOrange}59 de 4.144
-
-\vspace{0.15cm}
-\normalsize artigos mencionam ao menos uma estratégia causal explícita.
 
 \vspace{0.25cm}
-\small Isso equivale a 4,2\% dos 1.395 casos examinados para identificação.
+\begin{columns}[T,onlytextwidth]
+\column{0.31\textwidth}
+\centering\bfseries O que determina $D$?
+\column{0.31\textwidth}
+\centering\bfseries $X$ bloqueia todo confundimento?
+\column{0.31\textwidth}
+\centering\bfseries Onde está o contrafactual?
+\end{columns}
 
-\column{0.44\textwidth}
-\large\bfseries\color{USPTeal}Estratégias mais frequentes
+\vspace{0.45cm}
+\centering\normalsize
+Para chamar $\widehat{\beta}$ de efeito, é preciso justificar desenho e pressupostos.
+
+<!--
+Notas do apresentador
+Mensagem central: uma regressão pode estimar um efeito causal, mas não o faz apenas porque contém controles e significância estatística.
+Transição: a revolução da credibilidade nasce precisamente da insatisfação com interpretações causais sustentadas apenas por modelagem.
+Tempo estimado: 1:10
+[Sources] Angrist e Pischke (2010), https://www.nber.org/papers/w15794; Torreblanca et al. (2026), pp. 4–6; paper/paper.Rmd, Estratégia empírica.
+Notas da capa: apresentar o título oficial, autores, sessão e apoio PROEX/CAPES. Tempo estimado: 0:30.
+-->
+
+# A credibilidade desloca o foco do modelo para o desenho
+
+\begin{columns}[T,onlytextwidth]
+\column{0.46\textwidth}
+\large\bfseries\color{USPOrange}Credibilidade apoiada no modelo
 
 \normalsize
 \begin{itemize}
-\item Pareamento/ponderação: 23
-\item Diferenças-em-diferenças: 12
-\item Experimento em survey: 10
-\item Regressão descontínua: 8
+\item tratamento e controles entram na equação;
+\item a credibilidade causal tende a depender de forma funcional e independência condicional;
+\item a fonte da variação pode permanecer implícita.
+\end{itemize}
+
+\column{0.46\textwidth}
+\large\bfseries\color{USPTeal}Credibilidade apoiada no desenho
+
+\normalsize
+\begin{itemize}
+\item a fonte de variação é tornada explícita;
+\item o contrafactual é definido pelo desenho;
+\item pressupostos de identificação são separados da estimação.
 \end{itemize}
 \end{columns}
 
 \vspace{0.35cm}
-\centering\bfseries Menção não implica execução convincente.
+\centering\large\bfseries
+Desenho e modelo podem coexistir; o que muda é onde repousa a credibilidade causal.
 
 <!--
 Notas do apresentador
-Mensagem central: A identificação explícita é rara e as contagens registram menções, não auditoria de execução ou pressupostos.
-Transição: A mudança temporal mostra avanço real, mas não uma difusão uniforme dessas práticas.
+Mensagem central: a mudança não é de regressão para ausência de regressão, mas de coeficientes interpretados por convenção para efeitos sustentados por uma estratégia de identificação.
+Transição: essa mudança já aparece na produção internacional, embora de forma seletiva.
+Tempo estimado: 1:00
+[Sources] Angrist e Pischke (2010); Torreblanca et al. (2026), definição de abordagens model-based e design-based; https://arxiv.org/abs/2601.11542.
+-->
+
+# Nos periódicos de topo, o desenho causal virou fronteira
+
+\begin{center}
+\small Torreblanca et al.: 91.632 artigos · 156 periódicos · 2003–2023
+\end{center}
+
+\vspace{0.3cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.30\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}`r fmt_num(pct_jop)`\%\\
+\normalsize Journal of Politics
+\column{0.30\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}`r fmt_num(pct_ajps)`\%\\
+\normalsize AJPS
+\column{0.30\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}`r fmt_num(pct_apsr)`\%\\
+\normalsize APSR
+\end{columns}
+
+\vspace{0.4cm}
+\centering\normalsize
+Parcela dos artigos quantitativos explicativos com abordagem baseada em desenho.
+
+\vspace{0.35cm}
+\centering\large\bfseries\color{USPOrange}
+Mudança real, mas seletiva: top journals e experimentos de survey.
+
+<!--
+Notas do apresentador
+Mensagem central: a identificação baseada em desenho tornou-se uma referência central nos periódicos internacionais de topo, mas Torreblanca et al. falam em reforma parcial, não transformação completa.
+Transição: a fronteira atual adiciona uma exigência que não estava no centro da recepção de KKV.
 Tempo estimado: 0:55
-[Sources] output/tables/paper/denominator_summary.csv; output/tables/paper/strict_method_distribution.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
+[Sources] Torreblanca et al. (2026), arXiv:2601.11542 v2; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; paper/paper.Rmd, “Inferência estatística”.
 -->
 
-# A empiria cresceu; a identificação segue rara
+# KKV unificou a inferência; a nova fronteira exige identificação
 
-```{r time, out.width='72%', fig.height=4.35}
-knitr::include_graphics(figure_path("figure_3_period_variation.pdf"))
-```
+\begin{columns}[c,onlytextwidth]
+\column{0.28\textwidth}
+\centering
+\Large\bfseries\color{USPGray}KKV
+
+\normalsize
+Uma lógica de inferência para pesquisa quantitativa e qualitativa
+
+\column{0.05\textwidth}
+\centering\Large$\rightarrow$
+
+\column{0.28\textwidth}
+\centering
+\Large\bfseries\color{USPTeal}Inferência
+
+\normalsize
+Procedimentos públicos e incerteza quantificada
+
+\column{0.05\textwidth}
+\centering\Large$\rightarrow$
+
+\column{0.28\textwidth}
+\centering
+\Large\bfseries\color{USPOrange}Identificação
+
+\normalsize
+Contrafactual, variação e pressupostos explícitos
+\end{columns}
+
+\vspace{0.6cm}
+\begin{center}
+\large\bfseries
+Já não basta perguntar se o coeficiente é preciso.\\
+É preciso perguntar: o que identifica o efeito?
+\end{center}
 
 <!--
 Notas do apresentador
-Mensagem central: O crescimento da pesquisa empírica não veio acompanhado por uma revolução ampla da inferência ou da identificação.
-Transição: O benchmark internacional ajuda a localizar a fronteira brasileira sem fabricar uma comparação de denominadores equivalentes.
-Tempo estimado: 1:05
-[Sources] output/figures/paper/figure_3_period_variation.pdf; output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
+Mensagem central: KKV não é sinônimo de regressão; sua contribuição foi defender padrões comuns de inferência. Na recepção prática, porém, inferência frequentemente virou estimação com regressão, enquanto a identificação permaneceu implícita.
+Transição: o Brasil avançou justamente nessa agenda anterior — e esse avanço precisa ser reconhecido.
+Tempo estimado: 0:55
+[Sources] King, Keohane e Verba (1994), Designing Social Inquiry; https://gking.harvard.edu/kkv/; Brady e Collier (2010); Angrist e Pischke (2010).
 -->
 
-# Brasil e periódicos internacionais estão em fronteiras diferentes
+# O Brasil avançou desde o “calcanhar metodológico”
+
+\begin{columns}[T,onlytextwidth]
+\column{0.29\textwidth}
+\Large\bfseries\color{USPOrange}2005
+
+\normalsize
+Soares diagnostica déficits de formação e de uso rigoroso de métodos.
+
+\column{0.04\textwidth}
+\centering\Large$\rightarrow$
+
+\column{0.38\textwidth}
+\Large\bfseries\color{USPTeal}2014–2022
+
+\normalsize
+Estudos documentam expansão seletiva do ensino, crescimento da estatística e heterogeneidade.
+
+\column{0.04\textwidth}
+\centering\Large$\rightarrow$
+
+\column{0.19\textwidth}
+\Large\bfseries\color{USPBlue}Agora
+
+\normalsize
+O avanço chegou aos artigos publicados?
+\end{columns}
+
+\vspace{0.6cm}
+\centering\Large\bfseries
+O problema já não é estagnação — é saber até onde avançamos.
+
+<!--
+Notas do apresentador
+Mensagem central: o paper não repete o diagnóstico de Soares; ele parte do avanço documentado e pergunta se a profissionalização se traduziu em práticas observáveis nos artigos.
+Transição: para responder, construímos um corpus de periódicos e textos integrais.
+Tempo estimado: 0:55
+[Sources] Soares (2005); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); paper/paper.Rmd, Introdução.
+-->
+
+# Nove periódicos permitem observar as práticas publicadas
+
+\begin{columns}[T,onlytextwidth]
+\column{0.23\textwidth}
+\centering
+\fontsize{30}{34}\selectfont\bfseries\color{USPBlue}`r fmt_n(n_total)`
+
+\normalsize artigos elegíveis
+
+\column{0.23\textwidth}
+\centering
+\fontsize{30}{34}\selectfont\bfseries\color{USPTeal}9
+
+\normalsize periódicos completos
+
+\column{0.23\textwidth}
+\centering
+\fontsize{26}{30}\selectfont\bfseries\color{USPBlue}2005–2025
+
+\normalsize 21 anos
+
+\column{0.23\textwidth}
+\centering
+\fontsize{26}{30}\selectfont\bfseries\color{USPTeal}Texto integral
+
+\normalsize recuperado do SciELO
+\end{columns}
+
+\vspace{0.45cm}
+\begin{center}
+\small
+BPSR · CGPC · Contexto Internacional · Dados · Opinião Pública\\
+RBCP · RBCS · RBPI · Revista de Sociologia e Política
+\end{center}
+
+\vspace{0.35cm}
+\centering\large\bfseries\color{USPOrange}
+Cobertura completa desses periódicos — não de toda a disciplina.
+
+<!--
+Notas do apresentador
+Mensagem central: o universo é amplo e integral nos nove periódicos, mas não autoriza generalização para toda a Ciência Política brasileira.
+Transição: o texto integral permite separar práticas que uma busca por palavras-chave confundiria.
+Tempo estimado: 0:50
+[Sources] paper/paper.Rmd, Dados; README.md, Corpus; output/tables/paper/denominator_summary.csv; SciELO, textos recuperados em junho de 2026.
+-->
+
+# O protocolo separa associação, inferência e identificação
+
+\begin{center}
+\large\bfseries
+Texto integral $\rightarrow$ evidência textual $\rightarrow$ rótulos $\rightarrow$ regras lógicas
+\end{center}
+
+\vspace{0.35cm}
+\begin{columns}[T,onlytextwidth]
+\column{0.47\textwidth}
+\large\bfseries\color{USPTeal}O que classificamos
+
+\normalsize
+\begin{itemize}
+\item empiria e tipo de evidência;
+\item análise quantitativa e inferência;
+\item linguagem causal ou explicativa;
+\item estratégia explícita de identificação.
+\end{itemize}
+
+\column{0.47\textwidth}
+\large\bfseries\color{USPOrange}O que não classificamos
+
+\normalsize
+\begin{itemize}
+\item qualidade da execução;
+\item plausibilidade dos pressupostos;
+\item validade substantiva da conclusão;
+\item efeito causal do periódico ou da área.
+\end{itemize}
+\end{columns}
+
+\vspace{0.18cm}
+\centering\small Classificação por modelo de linguagem; validação humana estratificada ainda necessária.
+
+<!--
+Notas do apresentador
+Mensagem central: o protocolo mede presença de práticas, não sua qualidade. Regressão, efeitos fixos ou mediação não contam automaticamente como identificação causal.
+Transição: com essa régua, podemos mostrar onde o avanço brasileiro foi maior — e onde desacelera.
+Tempo estimado: 0:55
+[Sources] paper/paper.Rmd, Estratégia empírica, “Protocolo de classificação e validade da mensuração” e Apêndice; prompts e esquema JSON versionados no repositório.
+Pergunta difícil — validade da classificação: cada rótulo exige leitura integral e passagem de evidência; validações estruturais e lógicas reduzem inconsistências, mas não substituem adjudicação humana.
+-->
+
+# Empiria se difundiu; inferência ainda divide os quantitativos
+
+\begin{columns}[T,onlytextwidth]
+\column{0.30\textwidth}
+\centering
+\fontsize{32}{36}\selectfont\bfseries\color{USPTeal}`r fmt_num(pct_emp)`\%
+
+\normalsize `r fmt_n(n_emp)` de `r fmt_n(n_total)`\\
+artigos empíricos
+
+\column{0.30\textwidth}
+\centering
+\fontsize{32}{36}\selectfont\bfseries\color{USPTeal}`r fmt_num(pct_quant_emp)`\%
+
+\normalsize `r fmt_n(n_quant)` de `r fmt_n(n_emp)`\\
+empíricos quantitativos
+
+\column{0.30\textwidth}
+\centering
+\fontsize{32}{36}\selectfont\bfseries\color{USPOrange}`r fmt_num(pct_inf_quant)`\%
+
+\normalsize `r fmt_n(n_inf)` de `r fmt_n(n_quant_inf)`\\
+quantificam incerteza
+\end{columns}
+
+\vspace{0.55cm}
+\centering\Large\bfseries
+O Brasil percorreu boa parte do caminho da empiria — menos o da inferência.
+
+<!--
+Notas do apresentador
+Mensagem central: o diagnóstico não é de ausência de métodos. A pesquisa é amplamente empírica e a maioria dos empíricos usa números, mas só 37,3% dos quantitativos com informação reportam inferência formal.
+Transição: a trajetória temporal confirma que esses componentes não se difundiram no mesmo ritmo.
+Tempo estimado: 0:55
+[Sources] output/tables/paper/denominator_summary.csv; output/tables/paper/table_2_methodological_dimensions.csv; paper/paper.Rmd, Resultados.
+-->
+
+# Empiria avançou; identificação ficou para trás
+
+\begin{columns}[T,onlytextwidth]
+\column{0.31\textwidth}
+\centering
+\large\bfseries\color{USPTeal}Empíricos
+
+\vspace{0.14cm}
+\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_emp_early)`\%
+
+\small 2005–2011
+
+\vspace{0.02cm}
+\large$\downarrow$
+
+\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_emp_late)`\%
+
+\small 2019–2025
+
+\vspace{0.14cm}
+\large\bfseries +`r fmt_num(pct_emp_late - pct_emp_early)` p.p.
+
+\column{0.31\textwidth}
+\centering
+\large\bfseries\color{USPTeal}Inferência estatística
+
+\vspace{0.14cm}
+\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_inf_early)`\%
+
+\small 2005–2011
+
+\vspace{0.02cm}
+\large$\downarrow$
+
+\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_inf_late)`\%
+
+\small 2019–2025
+
+\vspace{0.14cm}
+\large\bfseries +`r fmt_num(pct_inf_late - pct_inf_early)` p.p.
+
+\column{0.31\textwidth}
+\centering
+\large\bfseries\color{USPOrange}Estratégia explícita
+
+\vspace{0.14cm}
+\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_strict_early)`\%
+
+\small 2005–2011
+
+\vspace{0.02cm}
+\large$\downarrow$
+
+\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_strict_late)`\%
+
+\small 2019–2025
+
+\vspace{0.14cm}
+\large\bfseries +`r fmt_num(pct_strict_late - pct_strict_early)` p.p.
+\end{columns}
+
+\vspace{0.30cm}
+\centering\large\bfseries
+A difusão da empiria não foi acompanhada pelo mesmo salto na identificação.
+
+\vspace{0.10cm}
+\centering\small\color{USPGray}
+Médias simples nos oito periódicos completos nos três períodos.
+
+<!--
+Notas do apresentador
+Mensagem central: nos oito periódicos presentes nos três períodos, empiria e quantificação cresceram; inferência avançou de forma mais limitada e estratégias explícitas permaneceram raras.
+Transição: por isso, a fronteira que divide a produção brasileira não é a mesma observada nos periódicos internacionais de referência.
+Tempo estimado: 0:55
+[Sources] output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
+-->
+
+# Brasil e top journals estão em fronteiras diferentes
 
 \begin{columns}[T,onlytextwidth]
 \column{0.47\textwidth}
 \centering
-\Large\bfseries\color{USPTeal}Brasil
+\Large\bfseries\color{USPTeal}Periódicos brasileiros
 
 \vspace{0.18cm}
-\fontsize{31}{35}\selectfont\bfseries 37,3\%
+\fontsize{32}{36}\selectfont\bfseries `r fmt_num(pct_inf_quant)`\%
 
-\normalsize quantificam incerteza entre 1.994 quantitativos
+\normalsize com inferência entre `r fmt_n(n_quant_inf)` quantitativos
+
+\vspace{0.25cm}
+\large\bfseries\color{USPOrange}`r fmt_num(pct_strict_total)`\%
+
+\normalsize com estratégia explícita no corpus
 
 \column{0.47\textwidth}
 \centering
 \Large\bfseries\color{USPOrange}APSR · AJPS · JOP
 
 \vspace{0.18cm}
-\fontsize{31}{35}\selectfont\bfseries 45,4–56,8\%
+\fontsize{32}{36}\selectfont\bfseries `r fmt_num(pct_jop)`–`r fmt_num(pct_apsr)`\%
 
-\normalsize usam desenho causal entre quantitativos explicativos
+\normalsize com desenho causal entre quantitativos explicativos
+
+\vspace{0.25cm}
+\large\bfseries\color{USPGray}2003–2023
+
+\normalsize Torreblanca et al.
 \end{columns}
 
-\vspace{0.5cm}
-\centering\large\bfseries Os denominadores não são equivalentes — o contraste localiza exigências distintas.
-
-<!--
-Notas do apresentador
-Mensagem central: No Brasil analisado, a fronteira ainda é quantificar incerteza; nos periódicos internacionais de referência, é explicitar identificação causal.
-Transição: O resultado sustenta uma interpretação de avanço incompleto, não de estagnação nem de revolução consumada.
-Tempo estimado: 0:55
-[Sources] output/tables/paper/statistical_inference_key_numbers.csv; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; paper/paper.Rmd, “Inferência estatística” e Discussão; Torreblanca et al. (2026), conforme citado no manuscrito.
-Pergunta difícil — comparabilidade internacional: as medidas ocupam degraus diferentes e não estimam um hiato causal; elas situam a ordem das exigências metodológicas.
--->
-
-# O diagnóstico é amplo, mas ainda requer validação humana
-
-\begin{itemize}
-\item \textbf{Cobertura:} nove periódicos SciELO, não toda a Ciência Política brasileira.
-\item \textbf{Mensuração:} presença de procedimentos, não qualidade de execução.
-\item \textbf{Classificação:} modelos e profundidades variaram entre lotes.
-\item \textbf{Próximo passo:} validação humana estratificada e auditoria da adequação às perguntas.
-\end{itemize}
-
 \vspace{0.45cm}
-\centering\large\bfseries Tendências temporais devem ser lidas como diagnóstico exploratório.
+\centering\large\bfseries
+Os denominadores diferem — e revelam etapas metodológicas distintas.
 
 <!--
 Notas do apresentador
-Mensagem central: As conclusões são fortes sobre presença nos periódicos analisados, mas não autorizam juízos sobre qualidade nem generalização para toda a disciplina.
-Transição: Com esses limites, três mensagens respondem diretamente ao quebra-cabeça inicial.
-Tempo estimado: 0:50
-[Sources] paper/paper.Rmd, “Protocolo de classificação e validade da mensuração”, Discussão e Conclusão.
+Mensagem central: não estimamos um hiato diretamente comparável. O contraste mostra que, no Brasil analisado, a divisão ainda passa por quantificar incerteza; nos top journals, pela identificação baseada em desenho.
+Transição: o problema se torna mais agudo porque a linguagem causal está muito mais difundida que os desenhos.
+Tempo estimado: 0:55
+[Sources] output/tables/paper/statistical_inference_key_numbers.csv; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; Torreblanca et al. (2026); paper/paper.Rmd, Discussão.
+Pergunta difícil — comparabilidade: os percentuais não medem a mesma prática nem usam o mesmo universo; o contraste é de fronteiras, não um ranking ou estimativa de distância.
 -->
 
-# A revolução permanece incompleta nos periódicos analisados
+# A ambição causal correu à frente do desenho
+
+\begin{columns}[T,onlytextwidth]
+\column{0.47\textwidth}
+\centering
+\large\bfseries\color{USPOrange}Sem estratégia explícita
+
+\vspace{0.20cm}
+\fontsize{35}{39}\selectfont\bfseries `r fmt_n(n_claim_no_design)`
+
+\Large\bfseries `r fmt_num(pct_claim_no_design)`\% do corpus
+
+\vspace{0.20cm}
+\normalsize
+Linguagem causal ou explicativa + análise quantitativa
+
+\column{0.47\textwidth}
+\centering
+\large\bfseries\color{USPTeal}Com estratégia explícita
+
+\vspace{0.20cm}
+\fontsize{35}{39}\selectfont\bfseries `r fmt_n(n_strict)`
+
+\Large\bfseries `r fmt_num(pct_strict_total)`\% do corpus
+
+\vspace{0.20cm}
+\normalsize
+Linguagem causal ou explicativa + identificação explícita
+\end{columns}
+
+\vspace{0.48cm}
+\centering\large\bfseries
+A ambição causal se difundiu muito mais que a explicitação do desenho.
+
+\vspace{0.18cm}
+\centering\small\color{USPGray}
+Definição operacional: presença de linguagem causal ou explicativa.
+
+<!--
+Notas do apresentador
+Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito.
+Transição: o diagnóstico final é de avanço relativo diante de uma fronteira móvel, não de estagnação.
+Tempo estimado: 0:55
+[Sources] output/tables/paper/table_5_claim_method_alignment.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
+-->
+
+# O Brasil avançou — mas a fronteira metodológica mudou
+
+\begin{columns}[T,onlytextwidth]
+\column{0.29\textwidth}
+\large\bfseries\color{USPGray}Calcanhar
+
+\normalsize
+Formação e uso sistemático de métodos
+
+\column{0.04\textwidth}
+\centering\Large$\rightarrow$
+
+\column{0.29\textwidth}
+\large\bfseries\color{USPTeal}Inferência
+
+\normalsize
+Procedimentos públicos e incerteza quantificada
+
+\column{0.04\textwidth}
+\centering\Large$\rightarrow$
+
+\column{0.29\textwidth}
+\large\bfseries\color{USPOrange}Identificação
+
+\normalsize
+Variação, contrafactual e pressupostos críveis
+\end{columns}
+
+\vspace{0.55cm}
+\begin{center}
+\Large\bfseries
+O Brasil se moveu na direção da inferência.\\
+A disciplina internacional moveu a fronteira para a identificação.
+\end{center}
+
+\vspace{0.35cm}
+\centering\small
+Escopo: nove periódicos · presença, não qualidade · classificação ainda requer validação humana
+
+<!--
+Notas do apresentador
+Mensagem central: a principal contribuição é histórica e relacional: reconhecer o avanço brasileiro e mostrar que ele ocorreu enquanto o padrão internacional de credibilidade se tornava mais exigente.
+Transição: concluir com as perguntas que devem anteceder qualquer interpretação causal.
+Tempo estimado: 0:50
+[Sources] paper/paper.Rmd, Introdução, Discussão e Conclusão; Soares (2005); KKV (1994); Angrist e Pischke (2010); Torreblanca et al. (2026).
+-->
+
+# Antes de chamar um coeficiente de efeito, responda três perguntas
 
 \begin{enumerate}
-\item A pesquisa publicada tornou-se amplamente \textbf{empírica}.
-\item A \textbf{inferência estatística} ainda divide a produção quantitativa.
-\item A \textbf{identificação causal explícita} permanece rara diante da ambição causal.
+\item \textbf{Contrafactual:} comparado a quê?
+\item \textbf{Variação:} o que torna o tratamento plausivelmente exógeno?
+\item \textbf{Pressupostos:} por que são críveis neste contexto?
 \end{enumerate}
 
-\small Formação e políticas editoriais podem alinhar melhor perguntas, afirmações e métodos.
+\vspace{0.25cm}
+\centering\large\bfseries\color{USPOrange}
+O próximo salto não é usar mais estatística. É tornar o argumento causal auditável.
 
-\vspace{0.2cm}
+\vspace{0.22cm}
 \begin{columns}[c,onlytextwidth]
 \column{0.72\textwidth}
-\small
+\small\color{USPGray}
 “A participação no 15º Encontro da ABCP, em 2026, foi fomentada com recursos PROEX/CAPES.”
 
-\vspace{0.12cm}
+\vspace{0.10cm}
 “O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) – Código de Financiamento 001.”
 \column{0.22\textwidth}
 \centering\includegraphics[width=\linewidth]{capes_logo_render.png}
@@ -500,19 +737,18 @@ Tempo estimado: 0:50
 
 <!--
 Notas do apresentador
-Mensagem central: Duas décadas depois, o avanço é substantivo, mas a difusão da ambição causal ultrapassa a difusão de inferência e identificação explícitas.
-Transição: Abrir para perguntas, retomando denominadores e limites quando necessário.
+Mensagem central: a audiência deve incorporar três perguntas mínimas antes de interpretar uma associação como efeito causal.
+Transição: abrir para perguntas, retomando denominadores e limites quando necessário.
 Tempo estimado: 0:45
-[Sources] paper/paper.Rmd, Conclusão; exigências de financiamento fornecidas pelo usuário; Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; marca oficial: https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (acesso em 3 ago. 2026).
-Notas da capa: O trabalho pergunta se duas décadas de profissionalização metodológica alteraram as práticas efetivamente publicadas. Transição: começar pelo contraste entre o diagnóstico histórico e a evidência observável nos artigos. Tempo estimado: 0:35.
+[Sources] Angrist e Pischke (2010); KKV (1994); Torreblanca et al. (2026); paper/paper.Rmd, Conclusão; Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP; marca oficial: https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca.
 
 Manifesto interno de produção
-Frase de comunicação: “Ao final, a audiência da AT04 deve compreender que a ambição causal se difundiu mais rapidamente que a inferência e a identificação explícita porque os denominadores e as práticas observadas nos 4.144 artigos revelam esse descompasso.”
-Fonte canônica: paper/paper.Rmd (modificado em 20 jul. 2026); PDF conferido: paper/paper.pdf; estado do projeto: README.md.
-Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; strict_method_totals.csv; output/tables/area_analysis/area_profile.csv; bayesian_area_posterior_summary.csv.
-Figuras reutilizadas: output/figures/paper/figure_1_corpus_funnel.pdf; figure_2_journal_dimension_matrix.pdf; figure_5_claim_method_alignment.pdf; figure_3_period_variation.pdf.
-Referências de produção verificadas em 3 ago. 2026: https://paulgp.github.io/beamer_tips.pdf ; https://paulgp.substack.com/p/getting-started-with-claude-code ; https://paulgp.substack.com/p/skills-specifying-how-an-agent-should ; https://www.linkedin.com/posts/scott-cunningham-7788912_regarding-using-claude-code-to-make-slides-activity-7422333986070462464-3r0S ; https://www.linkedin.com/posts/scott-cunningham-7788912_claude-code-series-part-7-making-beautiful-activity-7418303589074399233-IPWb ; https://www.linkedin.com/posts/benedikt-heid-099144193_i-am-trying-to-use-claudeclaude-code-or-activity-7418444983067910144-VLJe ; https://mixtape.scunning.com/mixtape_sessions .
-Financiamento e marca: Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (marca horizontal para fundo claro; acesso em 3 ago. 2026; arquivo original 3180 × 577 px; 56.807 bytes).
-Decisões e limitações: o título oficial ABCP mantém 2010–2025; o corpus empírico cobre 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada.
-Compilação exata, a partir deste diretório: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abcp_2026.Rmd', output_format = 'rmarkdown::beamer_presentation', clean = TRUE)".
+Frase de comunicação: “Ao final, a audiência da AT04 deve compreender que o Brasil avançou na direção da inferência estatística, mas a fronteira internacional se deslocou para desenhos que tornam a identificação causal explícita.”
+Fonte canônica: paper/paper.Rmd (modificado em 20 jul. 2026); paper/paper.pdf; README.md.
+Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; period_equal_weight_profile.csv.
+Figuras externas reutilizadas: nenhuma; os números visíveis são inseridos diretamente a partir das tabelas canônicas.
+Referências substantivas: Soares (2005); King, Keohane e Verba (1994); Angrist e Pischke (2010); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); Torreblanca et al. (2026), https://arxiv.org/abs/2601.11542.
+Financiamento e marca: Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP para recursos PROEX; https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca (acesso em 3 ago. 2026).
+Decisões e limitações: o título oficial mantém 2010–2025; o corpus cobre 2005–2025; as medidas registram presença, não qualidade; os denominadores internacionais não são equivalentes aos brasileiros; a classificação requer validação humana estratificada.
+Compilação: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abcp_2026.Rmd', output_format = 'rmarkdown::beamer_presentation', clean = TRUE)".
 -->
