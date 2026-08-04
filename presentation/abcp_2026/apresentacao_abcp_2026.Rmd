@@ -108,6 +108,10 @@ benchmark <- readr::read_csv(
   show_col_types = FALSE
 )
 periodos <- readr::read_csv(
+  table_path("paper", "period_article_weight_profile.csv"),
+  show_col_types = FALSE
+)
+periodos_peso_igual <- readr::read_csv(
   table_path("paper", "period_equal_weight_profile.csv"),
   show_col_types = FALSE
 )
@@ -133,6 +137,9 @@ align_pct <- function(label) alinhamento$percent[alinhamento$alignment_category 
 metric_pct <- function(label) inferencia$percent[inferencia$metric == label]
 benchmark_pct <- function(publication) benchmark$percent[benchmark$publication == publication]
 period_pct <- function(period, variable) periodos[[variable]][periodos$period_3 == period]
+period_pct_equal <- function(period, variable) {
+  periodos_peso_igual[[variable]][periodos_peso_igual$period_3 == period]
+}
 gender_value <- function(metric, variable) genero[[variable]][genero$metric == metric]
 
 n_total <- den_n("Corpus completo elegível")
@@ -189,16 +196,21 @@ stopifnot(
   round(pct_jop, 1) == 45.4,
   round(pct_ajps, 1) == 47.0,
   round(pct_apsr, 1) == 56.8,
-  pct_emp_early == 71.2,
-  pct_emp_late == 89.5,
-  pct_quant_early == 49.8,
-  pct_quant_late == 64.1,
-  pct_inf_early == 25.4,
-  pct_inf_late == 35.8,
-  pct_claim_early == 98.3,
-  pct_claim_late == 97.0,
-  pct_strict_early == 0.3,
-  pct_strict_late == 5.3,
+  round(pct_strict_screen, 1) == 4.2,
+  pct_emp_early == 73.1,
+  pct_emp_late == 89.4,
+  pct_quant_early == 51.2,
+  pct_quant_late == 63.4,
+  pct_inf_early == 34.4,
+  pct_inf_late == 39.7,
+  pct_claim_early == 98.0,
+  pct_claim_late == 96.9,
+  pct_strict_early == 0.7,
+  pct_strict_late == 6.2,
+  period_pct_equal("2005-2011", "pct_empirical") == 71.2,
+  period_pct_equal("2019-2025", "pct_empirical") == 89.5,
+  period_pct_equal("2005-2011", "pct_inference") == 25.4,
+  period_pct_equal("2019-2025", "pct_inference") == 35.8,
   nrow(periodicos_periodo) == 24,
   dplyr::n_distinct(periodicos_periodo$journal_title) == 8,
   dplyr::n_distinct(periodicos_periodo$period_3) == 3,
@@ -519,7 +531,7 @@ Pergunta difícil — validade da classificação: cada rótulo exige leitura in
 # Empiria cresceu; inferência segue minoritária
 
 \centering\small\color{USPGray}
-2005--2011 $\rightarrow$ 2019--2025 · médias simples em oito periódicos
+2005--2011 $\rightarrow$ 2019--2025 · artigos agrupados em oito periódicos
 
 \vspace{0.34cm}
 \begin{columns}[T,onlytextwidth]
@@ -566,14 +578,14 @@ A empiria tornou-se dominante; a inferência cresceu, mas permaneceu minoritári
 
 \vspace{0.12cm}
 \centering\tiny\color{USPGray}
-Comparação no suporte temporal comum; os denominadores variam conforme a dimensão.
+Comparação no suporte temporal comum; proporções calculadas sobre os artigos agrupados.
 
 <!--
 Notas do apresentador
-Mensagem central: a evidência temporal confirma a difusão da empiria: sua presença média sobe de 71,2% para 89,5% dos artigos. A quantificação também cresce, de 49,8% para 64,1% entre os empíricos; a inferência aumenta de 25,4% para 35,8% entre os quantitativos com informação, mas permanece minoritária.
+Mensagem central: a evidência temporal confirma a difusão da empiria: sua presença sobe de 73,1% para 89,4% dos artigos. A quantificação também cresce, de 51,2% para 63,4% entre os empíricos; a inferência aumenta de 34,4% para 39,7% entre os quantitativos com informação, mas permanece minoritária.
 Transição: esse avanço contrasta com uma ambição causal já saturada e uma identificação causal explícita ainda rara.
 Tempo estimado: 0:55
-[Sources] output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
+[Sources] output/tables/paper/period_article_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
 -->
 
 \setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
@@ -674,7 +686,7 @@ Figura 1. Percentuais por periódico, 2005--2011 $\rightarrow$ 2019--2025. Empir
 
 <!--
 Notas do apresentador
-Mensagem central: a média do slide anterior não esconde um caso isolado: a empiria cresce nos oito periódicos. A quantificação cresce em seis e recua em dois; a inferência cresce em cinco e recua em três. As células mostram início e fim; a cor representa a mudança em pontos percentuais.
+Mensagem central: o agregado do slide anterior não esconde um caso isolado: a empiria cresce nos oito periódicos. A quantificação cresce em seis e recua em dois; a inferência cresce em cinco e recua em três. As células mostram início e fim; a cor representa a mudança em pontos percentuais.
 Transição: apesar dessa heterogeneidade, a ambição causal já era alta em todo o período e a identificação causal explícita permaneceu rara.
 Tempo estimado: 0:50
 [Sources] output/tables/paper/period_complete_journal_profile.csv; scripts/45_build_current_paper_analysis.R; paper/paper.Rmd, “Variação por período”.
@@ -749,18 +761,22 @@ ggplot2::ggplot(
 
 \vspace{-0.20cm}
 \centering\small\bfseries\color{USPOrange}
-No corpus: 45,5\% sem estratégia explícita × 1,4\% com identificação causal explícita.\par
+No corpus: 59 de 1.395 casos relevantes (4,2\%) explicitam identificação causal.\par
 
 \vspace{0.02cm}
 \centering\tiny\color{USPGray}
-Figura 2. Médias simples em oito periódicos. Denominadores: artigos empíricos; artigos em que a identificação causal é relevante.\par
+Figura 2. Artigos agrupados em oito periódicos. Denominadores: artigos empíricos; casos relevantes para identificação causal.\par
+
+\vspace{0.01cm}
+\centering\tiny\color{USPGray}
+Casos relevantes: quantitativos com testes/modelos, desenho causal ou ambição causal associada à análise quantitativa.\par
 
 <!--
 Notas do apresentador
-Mensagem central: a medida de ambição causal já começa saturada e não cresce: passa de 98,3% para 97,0% entre os empíricos. A identificação causal explícita aumenta de 0,3% para 5,3% entre os casos em que o screen se aplica, mas permanece rara. O contraste agregado que deve ser lembrado é 45,5% sem estratégia explícita contra 1,4% com identificação causal explícita no corpus.
+Mensagem central: a medida de ambição causal já começa saturada e não cresce: passa de 98,0% para 96,9% entre os empíricos. A identificação causal explícita aumenta de 0,7% para 6,2% entre os casos relevantes ao agrupar os artigos, mas permanece rara. O número do corpus que deve ser lembrado é 4,2%: apenas 59 dos 1.395 casos em que a identificação é relevante explicitam uma estratégia de identificação causal.
 Transição: por isso, a fronteira que divide a produção brasileira não é a mesma observada nos periódicos internacionais de referência.
 Tempo estimado: 0:55
-[Sources] output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
+[Sources] output/tables/paper/period_article_weight_profile.csv; output/tables/paper/denominator_summary.csv; paper/paper.Rmd, “Variação por período”.
 -->
 
 \setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
@@ -781,9 +797,9 @@ Tempo estimado: 0:55
 \normalsize com inferência entre `r fmt_n(n_quant_inf)` quantitativos
 
 \vspace{0.25cm}
-\large\bfseries\color{USPOrange}`r fmt_num(pct_strict_total)`\%
+\large\bfseries\color{USPOrange}`r fmt_num(pct_strict_screen)`\%
 
-\normalsize com estratégia explícita no corpus
+\normalsize com identificação explícita em `r fmt_n(n_screen)` casos relevantes
 
 \column{0.47\textwidth}
 \centering
@@ -832,7 +848,7 @@ Linguagem causal ou explicativa + análise quantitativa
 \vspace{0.20cm}
 \fontsize{35}{39}\selectfont\bfseries `r fmt_n(n_strict)`
 
-\Large\bfseries `r fmt_num(pct_strict_total)`\% do corpus
+\Large\bfseries `r fmt_num(pct_strict_screen)`\% dos casos relevantes
 
 \vspace{0.20cm}
 \normalsize
@@ -841,7 +857,7 @@ Linguagem causal ou explicativa + identificação explícita
 
 \vspace{0.48cm}
 \centering\large\bfseries
-Quase metade do corpus combina ambição causal e quantificação sem explicitar a identificação causal.
+A linguagem causal associada à quantificação é comum; a identificação explícita continua rara quando relevante.
 
 \vspace{0.18cm}
 \centering\small\color{USPGray}
@@ -849,10 +865,10 @@ Definição operacional: presença de linguagem causal ou explicativa.
 
 <!--
 Notas do apresentador
-Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito causal. Este é um hiato de níveis, não evidência de que a ambição causal tenha se difundido no tempo: entre os artigos empíricos dos oito periódicos comparáveis, a medida permanece praticamente estável, de 98,3% em 2005–2011 para 97,0% em 2019–2025.
+Mensagem central: “ambição causal” designa operacionalmente linguagem causal ou explicativa; quase metade do corpus a combina com análise quantitativa sem explicitar como a variação identifica o efeito causal. Entre os casos em que a identificação é relevante, apenas 59 de 1.395, ou 4,2%, explicitam uma estratégia. Este é um hiato de níveis, não evidência de que a ambição causal tenha se difundido no tempo: entre os artigos empíricos dos oito periódicos comparáveis, a medida permanece praticamente estável, de 98,0% em 2005–2011 para 96,9% em 2019–2025.
 Transição: o diagnóstico final é de avanço relativo diante de uma fronteira móvel, não de estagnação.
 Tempo estimado: 0:55
-[Sources] output/tables/paper/table_5_claim_method_alignment.csv; output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
+[Sources] output/tables/paper/table_5_claim_method_alignment.csv; output/tables/paper/denominator_summary.csv; output/tables/paper/period_article_weight_profile.csv; paper/paper.Rmd, “Linguagem causal ou explicativa e coerência entre afirmação e método”.
 -->
 
 # Gênero: a diferença aparece na inferência, não na ambição causal
@@ -971,7 +987,7 @@ Tempo estimado: 0:50
 \small
 \begin{enumerate}
 \item \textbf{Avanço real:} a empiria se difundiu; a inferência estatística cresceu, mas ainda divide os artigos quantitativos.
-\item \textbf{Hiato causal:} 45,5\% do corpus combina linguagem causal ou explicativa e análise quantitativa sem estratégia explícita; apenas 1,4\% explicita identificação causal.
+\item \textbf{Hiato causal:} 45,5\% do corpus combina linguagem causal ou explicativa e análise quantitativa sem estratégia explícita; entre os 1.395 casos relevantes, apenas 59 (4,2\%) explicitam identificação causal.
 \item \textbf{Fronteira móvel:} enquanto o Brasil avançava na inferência, os periódicos internacionais de topo se deslocavam para métodos causais críveis.
 \end{enumerate}
 
@@ -993,7 +1009,7 @@ Próximo salto: tornar a identificação causal explícita, crível e auditável
 
 <!--
 Notas do apresentador
-Mensagem central: os takeaways são substantivos: houve avanço brasileiro, o hiato memorável é 45,5% sem estratégia explícita contra 1,4% com identificação causal explícita, e a fronteira internacional se tornou mais exigente. O próximo salto é tornar a identificação causal explícita, crível e auditável.
+Mensagem central: os takeaways são substantivos: houve avanço brasileiro, mas apenas 59 dos 1.395 casos relevantes — 4,2% — explicitam uma estratégia de identificação causal, e a fronteira internacional se tornou mais exigente. O próximo salto é tornar a identificação causal explícita, crível e auditável.
 Transição: abrir para perguntas, retomando denominadores e limites quando necessário.
 Tempo estimado: 0:45
 [Sources] Angrist e Pischke (2010); KKV (1994); Torreblanca et al. (2026); paper/paper.Rmd, Conclusão; Portaria CAPES nº 206/2018; orientações do Setor de Convênios da FFLCH/USP; marca oficial: https://www.gov.br/capes/pt-br/centrais-de-conteudo/logomarca.
@@ -1001,7 +1017,7 @@ Tempo estimado: 0:45
 Manifesto interno de produção
 Frase de comunicação: “Ao final, a audiência da AT04 deve compreender que o Brasil avançou na direção da inferência estatística, mas a fronteira internacional se deslocou para desenhos que tornam a identificação causal explícita.”
 Fonte canônica: paper/paper.Rmd (modificado em 20 jul. 2026); paper/paper.pdf; README.md.
-Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; period_equal_weight_profile.csv; output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv.
+Insumos analíticos: output/tables/paper/denominator_summary.csv; table_2_methodological_dimensions.csv; table_5_claim_method_alignment.csv; statistical_inference_key_numbers.csv; statistical_inference_torreblanca_benchmark.csv; period_article_weight_profile.csv; period_equal_weight_profile.csv; output/tables/gender_analysis/table_13_bayesian_hierarchical_gender_effects.csv.
 Proveniência dos LLMs: quality_reports/credibility_prompt_v3_model_provenance.md; sidecars de execução em data/processed/credibility_prompt_v3_integral_reading/full_corpus/combined; configurações de produção GPT-5.5 xhigh, GPT-5.6 Sol medium, GPT-5.6 Terra medium e GPT-5.6 Luna xhigh.
 Figuras externas reutilizadas: nenhuma; os números visíveis são inseridos diretamente a partir das tabelas canônicas.
 Referências substantivas: Soares (2005); King, Keohane e Verba (1994); Angrist e Pischke (2010); Barberia et al. (2014); Neiva (2015); Nicolau (2017); Albuquerque et al. (2022); Torreblanca et al. (2026), https://arxiv.org/abs/2601.11542.
@@ -1051,6 +1067,40 @@ Compilação: LC_ALL=pt_BR.UTF-8 Rscript -e "rmarkdown::render('apresentacao_abc
 Notas do apresentador
 Uso: slide de apoio; não integra a exposição oral planejada.
 [Sources] references.bib; paper/paper.Rmd; fontes citadas ao longo da apresentação.
+-->
+
+\setbeamerfont{frametitle}{size=\fontsize{16}{19}\selectfont,series=\bfseries}
+
+# Robustez: ponderar periódicos igualmente não altera o diagnóstico
+
+\vspace{0.02cm}
+\centering\scriptsize
+\renewcommand{\arraystretch}{1.28}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Indicador} & \textbf{Artigos agrupados} & \textbf{Peso igual por periódico} \\
+\midrule
+Empiria & `r fmt_num(period_pct("2005-2011", "pct_empirical"))`\% $\rightarrow$ `r fmt_num(period_pct("2019-2025", "pct_empirical"))`\% & `r fmt_num(period_pct_equal("2005-2011", "pct_empirical"))`\% $\rightarrow$ `r fmt_num(period_pct_equal("2019-2025", "pct_empirical"))`\% \\
+Quantificação & `r fmt_num(period_pct("2005-2011", "pct_quantitative"))`\% $\rightarrow$ `r fmt_num(period_pct("2019-2025", "pct_quantitative"))`\% & `r fmt_num(period_pct_equal("2005-2011", "pct_quantitative"))`\% $\rightarrow$ `r fmt_num(period_pct_equal("2019-2025", "pct_quantitative"))`\% \\
+Inferência estatística & `r fmt_num(period_pct("2005-2011", "pct_inference"))`\% $\rightarrow$ `r fmt_num(period_pct("2019-2025", "pct_inference"))`\% & `r fmt_num(period_pct_equal("2005-2011", "pct_inference"))`\% $\rightarrow$ `r fmt_num(period_pct_equal("2019-2025", "pct_inference"))`\% \\
+Ambição causal & `r fmt_num(period_pct("2005-2011", "pct_claim"))`\% $\rightarrow$ `r fmt_num(period_pct("2019-2025", "pct_claim"))`\% & `r fmt_num(period_pct_equal("2005-2011", "pct_claim"))`\% $\rightarrow$ `r fmt_num(period_pct_equal("2019-2025", "pct_claim"))`\% \\
+Identificação explícita\textsuperscript{*} & `r fmt_num(period_pct("2005-2011", "pct_strict"))`\% $\rightarrow$ `r fmt_num(period_pct("2019-2025", "pct_strict"))`\% & `r fmt_num(period_pct_equal("2005-2011", "pct_strict"))`\% $\rightarrow$ `r fmt_num(period_pct_equal("2019-2025", "pct_strict"))`\% \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.22cm}
+\centering\large\bfseries\color{USPTeal}
+A ponderação altera níveis, mas não a direção nem o diagnóstico substantivo.\par
+
+\vspace{0.10cm}
+\centering\tiny\color{USPGray}
+Tabela 1. Comparação entre 2005--2011 e 2019--2025 no suporte temporal comum.\par
+\textsuperscript{*}Entre casos em que a identificação causal é relevante. Demais denominadores: empiria/todos; quantificação/empíricos; inferência/quantitativos com informação; ambição/empíricos.\par
+
+<!--
+Notas do apresentador
+Uso: slide de apêndice; não integra a exposição oral planejada. A especificação principal agrupa os artigos; a robustez atribui o mesmo peso a cada um dos oito periódicos. As diferenças de nível são maiores para inferência estatística, mas as duas medidas mostram expansão da empiria, da quantificação, da inferência e da identificação explícita, com ambição causal elevada e estável.
+[Sources] output/tables/paper/period_article_weight_profile.csv; output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
 -->
 
 \setbeamerfont{frametitle}{size=\fontsize{16}{19}\selectfont,series=\bfseries}
