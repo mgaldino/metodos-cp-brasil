@@ -331,10 +331,6 @@ Tempo estimado: 1:05
 \centering\normalsize
 Parcela dos artigos quantitativos explicativos com abordagem baseada em desenho.
 
-\vspace{0.35cm}
-\centering\large\bfseries\color{USPOrange}
-Mudança real, mas seletiva: top journals e experimentos de survey.
-
 <!--
 Notas do apresentador
 Mensagem central: a identificação baseada em desenho tornou-se uma referência central nos periódicos internacionais de topo, mas Torreblanca et al. falam em reforma parcial, não transformação completa.
