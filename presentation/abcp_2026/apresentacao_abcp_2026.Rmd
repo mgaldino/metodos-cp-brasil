@@ -343,7 +343,7 @@ Tempo estimado: 0:55
 [Sources] Torreblanca et al. (2026), arXiv:2601.11542 v2; output/tables/paper/statistical_inference_torreblanca_benchmark.csv; paper/paper.Rmd, “Inferência estatística”.
 -->
 
-# KKV unificou a inferência; a nova fronteira exige identificação
+# Fronteira metodológica: de KKV à credibilidade causal
 
 \begin{columns}[c,onlytextwidth]
 \column{0.28\textwidth}
