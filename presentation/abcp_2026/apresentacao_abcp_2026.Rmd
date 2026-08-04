@@ -154,6 +154,8 @@ pct_emp_early <- period_pct("2005-2011", "pct_empirical")
 pct_emp_late <- period_pct("2019-2025", "pct_empirical")
 pct_inf_early <- period_pct("2005-2011", "pct_inference")
 pct_inf_late <- period_pct("2019-2025", "pct_inference")
+pct_claim_early <- period_pct("2005-2011", "pct_claim")
+pct_claim_late <- period_pct("2019-2025", "pct_claim")
 pct_strict_early <- period_pct("2005-2011", "pct_strict")
 pct_strict_late <- period_pct("2019-2025", "pct_strict")
 gender_quant <- gender_value("Análise quantitativa", "posterior_median_pp")
@@ -184,6 +186,8 @@ stopifnot(
   pct_emp_late == 89.5,
   pct_inf_early == 25.4,
   pct_inf_late == 35.8,
+  pct_claim_early == 98.3,
+  pct_claim_late == 97.0,
   pct_strict_early == 0.3,
   pct_strict_late == 5.3,
   round(gender_quant, 1) == -7.1,
@@ -540,84 +544,95 @@ Tempo estimado: 0:55
 [Sources] output/tables/paper/denominator_summary.csv; output/tables/paper/table_2_methodological_dimensions.csv; paper/paper.Rmd, Resultados.
 -->
 
-# Empiria avançou; identificação ficou para trás
+\setbeamerfont{frametitle}{size=\fontsize{15.5}{18.5}\selectfont,series=\bfseries}
+\setbeamertemplate{frametitle}{\vspace{0.55cm}\insertframetitle\par\vspace{-0.12cm}\color{USPTeal}\rule{\textwidth}{1.2pt}}
 
-\begin{columns}[T,onlytextwidth]
-\column{0.31\textwidth}
-\centering
-\large\bfseries\color{USPTeal}Empíricos
+# A ambição causal já era alta; a identificação permaneceu rara
 
-\vspace{0.14cm}
-\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_emp_early)`\%
+```{r figura-ambicao-tempo, fig.width=10, fig.height=1.85, out.width="88%", dev="png", dpi=300}
+temporal_causal_plot <- periodos |>
+  dplyr::select(period_3, pct_claim, pct_strict) |>
+  tidyr::pivot_longer(
+    cols = c(pct_claim, pct_strict),
+    names_to = "measure",
+    values_to = "percent"
+  ) |>
+  dplyr::mutate(
+    period_3 = factor(
+      period_3,
+      levels = c("2005-2011", "2012-2018", "2019-2025"),
+      labels = c("2005-11", "2012-18", "2019-25")
+    ),
+    measure = factor(
+      measure,
+      levels = c("pct_claim", "pct_strict"),
+      labels = c(
+        "Ambição causal\nentre artigos empíricos",
+        "Identificação causal explícita\nonde a identificação é relevante"
+      )
+    ),
+    label = paste0(fmt_num(percent), "%"),
+    label_y = dplyr::if_else(percent > 90, percent - 8, percent + 8)
+  )
 
-\small 2005–2011
+ggplot2::ggplot(
+  temporal_causal_plot,
+  ggplot2::aes(x = period_3, y = percent, group = measure, color = measure, shape = measure)
+) +
+  ggplot2::geom_hline(yintercept = c(0, 25, 50, 75, 100), color = "#D7DEE5", linewidth = 0.3) +
+  ggplot2::geom_line(linewidth = 1.25) +
+  ggplot2::geom_point(size = 3.2) +
+  ggplot2::geom_text(
+    ggplot2::aes(y = label_y, label = label),
+    color = "#17365D",
+    fontface = "bold",
+    size = 4.2,
+    show.legend = FALSE
+  ) +
+  ggplot2::facet_wrap(~measure, nrow = 1) +
+  ggplot2::scale_y_continuous(
+    limits = c(0, 105),
+    breaks = c(0, 25, 50, 75, 100),
+    labels = function(x) paste0(x, "%"),
+    expand = ggplot2::expansion(mult = c(0, 0))
+  ) +
+  ggplot2::scale_color_manual(values = c("#007C83", "#D97706")) +
+  ggplot2::scale_shape_manual(values = c(16, 17)) +
+  ggplot2::labs(x = NULL, y = NULL) +
+  ggplot2::theme_minimal(base_size = 13) +
+  ggplot2::theme(
+    legend.position = "none",
+    panel.grid = ggplot2::element_blank(),
+    panel.spacing = grid::unit(1.2, "cm"),
+    strip.text = ggplot2::element_text(color = "#17365D", face = "bold", size = 13),
+    axis.text.x = ggplot2::element_text(color = "#17365D", face = "bold", size = 11),
+    axis.text.y = ggplot2::element_text(color = "#4B5563", size = 9),
+    plot.margin = ggplot2::margin(4, 8, 0, 8)
+  )
+```
 
-\vspace{0.02cm}
-\large$\downarrow$
+\vspace{-0.12cm}
+\centering\small\bfseries\color{USPOrange}
+No corpus: 45,5\% sem estratégia explícita × 1,4\% com identificação causal explícita.\par
 
-\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_emp_late)`\%
-
-\small 2019–2025
-
-\vspace{0.14cm}
-\large\bfseries +`r fmt_num(pct_emp_late - pct_emp_early)` p.p.
-
-\column{0.31\textwidth}
-\centering
-\large\bfseries\color{USPTeal}Inferência estatística
-
-\vspace{0.14cm}
-\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_inf_early)`\%
-
-\small 2005–2011
-
-\vspace{0.02cm}
-\large$\downarrow$
-
-\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_inf_late)`\%
-
-\small 2019–2025
-
-\vspace{0.14cm}
-\large\bfseries +`r fmt_num(pct_inf_late - pct_inf_early)` p.p.
-
-\column{0.31\textwidth}
-\centering
-\large\bfseries\color{USPOrange}Estratégia explícita
-
-\vspace{0.14cm}
-\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_strict_early)`\%
-
-\small 2005–2011
-
-\vspace{0.02cm}
-\large$\downarrow$
-
-\fontsize{22}{26}\selectfont\bfseries `r fmt_num(pct_strict_late)`\%
-
-\small 2019–2025
-
-\vspace{0.14cm}
-\large\bfseries +`r fmt_num(pct_strict_late - pct_strict_early)` p.p.
-\end{columns}
-
-\vspace{0.30cm}
-\centering\large\bfseries
-A difusão da empiria não foi acompanhada pelo mesmo salto na identificação.
-
-\vspace{0.10cm}
-\centering\small\color{USPGray}
-Médias simples nos oito periódicos completos nos três períodos.
+\vspace{0.04cm}
+\centering\tiny\color{USPGray}
+Figura 1. Médias simples em oito periódicos. Denominadores: artigos empíricos; artigos em que a identificação causal é relevante.\par
 
 <!--
 Notas do apresentador
-Mensagem central: nos oito periódicos presentes nos três períodos, empiria e quantificação cresceram; inferência avançou de forma mais limitada e estratégias explícitas permaneceram raras.
+Mensagem central: a medida de ambição causal já começa saturada e não cresce: passa de 98,3% para 97,0% entre os empíricos. A identificação causal explícita aumenta de 0,3% para 5,3% entre os casos em que o screen se aplica, mas permanece rara. O contraste agregado que deve ser lembrado é 45,5% sem estratégia explícita contra 1,4% com identificação causal explícita no corpus.
 Transição: por isso, a fronteira que divide a produção brasileira não é a mesma observada nos periódicos internacionais de referência.
 Tempo estimado: 0:55
 [Sources] output/tables/paper/period_equal_weight_profile.csv; paper/paper.Rmd, “Variação por período”.
 -->
 
+\setbeamerfont{frametitle}{size=\fontsize{18}{21}\selectfont,series=\bfseries}
+\setbeamertemplate{frametitle}{\vspace{0.2cm}\insertframetitle\par\vspace{-0.12cm}\color{USPTeal}\rule{\textwidth}{1.2pt}}
+
 # Brasil e top journals estão em fronteiras diferentes
+
+\vspace{0.45cm}
 
 \begin{columns}[T,onlytextwidth]
 \column{0.47\textwidth}
