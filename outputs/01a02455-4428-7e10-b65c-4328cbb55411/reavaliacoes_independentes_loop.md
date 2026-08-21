@@ -91,3 +91,31 @@ O relatório identifica corretamente artigo, MAPA/MinC e a nomeação observada 
 - **Confiança:** alta.
 
 O relatório identifica adequadamente artigo, MAPA, MinC e a unidade de análise e informa corretamente 1.038 linhas e 26 colunas. A validação, porém, confunde textos `"NA"` com ausências reais: declara `exp_adm = 0`, `instr = 0` e `exp_car = 1`, quando os totais são 11, 95 e 76, e não verifica `car_pub`. A recodificação deixa de reconhecer três ocorrências de `` `1 ``. A descritiva usa `n()` como denominador bruto e apresenta MAPA n = 525, x = 482 e MinC n = 365, x = 309, em vez de 524/482 e 354/312. Também faltam os intervalos de confiança. No primeiro teste, a tabela mostra 0,8803 para o MinC, mas `prop.test` usa 309/365 = 0,8466, produzindo `p = 0,001241` em vez de aproximadamente 0,057; as rejeições a 5% e 1% ficam erradas. Em contraste, `alto_nivel` é construído corretamente, com 187/525 e 155/365, e o segundo teste (`p = 0,04601`) é bem interpretado. A discussão de amostra maior acerta a direção do erro-padrão, mas omite `1/√2` e a redução de 29,3%.
+
+## Carlos Alberto Vergara — NUSP 3464981
+
+- **Subnotas:** C1 0,75/0,75; C2 0,75/1,50; C3 0,90/1,75; C4 0,35/1,50; C5 1,60/1,75; C6 0,40/0,75; C7 0,50/0,50; C8 1,00/1,50.
+- **Soma e nota normalizada:** 6,25/10; **6,3**.
+- **Confiança:** alta.
+
+O relatório identifica corretamente artigo, MAPA/MinC e unidade, e documenta 1.038 × 26. A validação confunde `NA` textual com `NA` real: informa `exp_adm = 0`, `exp_car = 1` e `instr = 0`, omite `car_pub` e não corrige adequadamente os códigos `` `1 `` e `3`. A descritiva de `exp_adm` usa MAPA 482/525, em vez de 482/524, e MinC 309/365, em vez de 312/354. O primeiro teste estima 7,15 pontos percentuais e `p = 0,0014`; além do cálculo contaminado, afirma que 0,0014 é maior que 0,05 e decide não rejeitar, uma contradição central. Em contraste, `alto_nivel` é construído corretamente: 187/525 no MAPA, 155/365 no MinC, diferença de −6,85 pontos percentuais e `p = 0,0395`, com decisão correta a 5%; somente a conclusão final inverte a direção ao dizer que o MAPA tem proporção maior. A discussão dos níveis é correta para o teste 2, mas contraditória no teste 1. A seção de amostra duplicada acerta a divisão por `√2` e a redução de 29,3%. O relatório é legível, numerado e inclui código e fonte.
+
+## Lincoln Antonio Andrade de Moura — NUSP 14589448
+
+- **Subnotas:** C1 0,60/0,75; C2 1,30/1,50; C3 1,45/1,75; C4 1,30/1,50; C5 1,65/1,75; C6 0,65/0,75; C7 0,30/0,50; C8 1,05/1,50.
+- **Soma e nota normalizada:** 8,30/10; **8,3**.
+- **Confiança:** alta; o PDF não contém texto extraível, mas as oito páginas foram inspecionadas visualmente.
+
+O relatório identifica artigo e pastas e explica por que uma pessoa pode reaparecer, mas descreve a unidade como “pessoas nomeadas”, sem definir com precisão que cada linha representa um ocupante/cargo observado. Informa corretamente 1.038 linhas, 26 colunas, nomes das variáveis e ausências em sete campos. Inspeciona valores de `exp_adm`, `exp_car`, `nivel`, `instr` e `indicacao`; contudo, a limpeza de `exp_adm` produz erro no MinC: n = 351 e x = 309, em vez de n = 354 e x = 312. MAPA está correto: 524, 482 e 91,98%; ambos os intervalos são informados. No teste 1, o uso de teste t sobre variável binária preserva aproximadamente o estimando e gera `p = 0,0607`, dentro da faixa defensável; a decisão a 5% está correta, embora a explicação do p-valor confunda riscos de erro. O segundo teste é bem executado: construção de `alto_nivel`, contagens exatas e `p = 0,0388873`, mas falta avaliar substantivamente a magnitude. As decisões a 10% e 1% estão corretas, apesar de chamar 0,0607 de alfa. Reconhece que dobrar n reduz o erro-padrão, mas omite `1/√2`. Os resultados são legíveis, porém não aparece o código gerador.
+
+## Nathan Henrique de Souza Fonseca — NUSP 16894387
+
+- **Subnotas:** C1 0,75/0,75; C2 0,60/1,50; C3 1,25/1,75; C4 0,60/1,50; C5 0,80/1,75; C6 0,40/0,75; C7 0,50/0,50; C8 1,00/1,50.
+- **Soma e nota normalizada:** 5,90/10; **5,9**.
+- **Confiança:** alta. O número USP não consta no PDF; foi associado pelo diretório da entrega.
+
+O relatório acerta a pergunta do artigo, a comparação e a unidade como evento de nomeação. Mostra 1.038 × 26, mas não apresenta a lista efetiva de variáveis nem as contagens de ausentes; descreve validação sem exibir resultados e usa limpeza/`complete.cases` que altera indevidamente as amostras. Em `exp_adm`, MAPA está correto: 482/524 = 0,9198; MinC aparece como 315/355 = 0,8873, em vez de 312/354 = 0,8814. O teste 1 produz `p = 0,1038`, fora da faixa aceitável de aproximadamente 0,052–0,074, e deixa de rejeitar a 10%. A recodificação `alto_nivel = 1` para níveis 5–6 é correta; MAPA fica próximo do gabarito, mas MinC usa 152/355, em vez de 155/365. O relatório não executa o segundo teste: reutiliza `p = 0,1038` de `exp_adm` para discutir `alto_nivel`, gerando conclusão errada diante de `p ≈ 0,0389`. A explicação sobre dobrar n é excelente: o erro-padrão cai por `1/√2`, cerca de 29%. Há código, fonte, tabelas e gráficos legíveis, mas a cadeia contém uma inconsistência inferencial grave.
+
+## Status do loop
+
+As 14 reavaliações independentes foram concluídas de forma sequencial, cada uma por um subagente novo e sem acesso às notas anteriores ou aos trabalhos dos demais alunos.
