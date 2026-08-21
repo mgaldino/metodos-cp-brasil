@@ -17,6 +17,10 @@ O uso de Wilson por Gabriela é, portanto, atípico e externo ao repertório doc
 
 Esta marcação registra a suspeita informada pelo docente e os elementos observáveis que a motivam. Ela não afirma como fato que houve uso de IA. A verificação proposta é pedir que cada estudante explique e reproduza o próprio procedimento sem consultar o relatório.
 
+## Decisão docente posterior
+
+Em 21/08/2026, o docente determinou desconto de 1,5 ponto para cada aluna marcada: Gabriela Yumi Fraga Assano passou de 9,8 para 8,3 e Beatriz Pessoni passou de 8,3 para 6,8. As notas das releituras independentes permanecem preservadas como resultados brutos. A suspeita continua registrada como não comprovada.
+
 ## O que o enunciado pedia
 
 Na tabela de experiência administrativa, o enunciado solicitava:

@@ -33,7 +33,11 @@ comparacao <- loop %>%
       discrepancia_abs <= 1.0 ~ "moderada",
       TRUE ~ "material"
     ),
-    nota_adotada = dplyr::if_else(NUSP == "4725594", 5.0, nota_independente)
+    desconto_suspeita_ia = dplyr::if_else(NUSP %in% c("14573451", "15442662"), 1.5, 0.0),
+    nota_adotada = round(dplyr::case_when(
+      NUSP == "4725594" ~ 5.0,
+      TRUE ~ nota_independente - desconto_suspeita_ia
+    ), 1)
   ) %>%
   dplyr::select(
     Nome,
@@ -42,6 +46,7 @@ comparacao <- loop %>%
     nota_independente,
     discrepancia,
     classe,
+    desconto_suspeita_ia,
     nota_adotada,
     C1:C8,
     confianca,
@@ -73,6 +78,7 @@ linhas_tabela <- comparacao %>%
       " | ", formatar_numero(nota_independente),
       " | ", formatar_delta(discrepancia),
       " | ", classe,
+      " | ", formatar_numero(desconto_suspeita_ia),
       " | ", formatar_numero(nota_adotada),
       " |"
     )
@@ -91,6 +97,7 @@ obter_n <- function(rotulo) {
 
 media_original <- mean(comparacao$nota_original)
 media_loop <- mean(comparacao$nota_independente)
+media_adotada <- mean(comparacao$nota_adotada)
 media_delta <- mean(comparacao$discrepancia)
 mediana_abs <- median(abs(comparacao$discrepancia))
 
@@ -99,14 +106,14 @@ relatorio <- c(
   "",
   "## Regra de normalização",
   "",
-  "Todas as releituras usaram a mesma rubrica de 0 a 10. A soma dos oito critérios foi arredondada para uma casa decimal, sem reescalonamento posterior. A discrepância é `nota independente − nota original`. Classificação: até 0,5 ponto, consistente; de 0,6 a 1,0, moderada; acima de 1,0, material. A nota adotada é a do loop independente, exceto para Mariana Araujo Püschel (NUSP 4725594), ajustada pelo docente de 4,2 para 5,0.",
+  "Todas as releituras usaram a mesma rubrica de 0 a 10. A soma dos oito critérios foi arredondada para uma casa decimal, sem reescalonamento posterior. A discrepância é `nota independente − nota original`. Classificação: até 0,5 ponto, consistente; de 0,6 a 1,0, moderada; acima de 1,0, material. A nota adotada é a do loop independente, exceto para Mariana Araujo Püschel (NUSP 4725594), ajustada pelo docente de 4,2 para 5,0, e para Gabriela Assano e Beatriz Pessoni, que receberam desconto docente de 1,5 ponto por suspeita não comprovada de assistência por IA.",
   "",
-  "A marcação separada de suspeita de assistência por IA não foi incorporada às notas deste arquivo.",
+  "A suspeita de assistência por IA permanece registrada como não comprovada; o desconto reflete decisão expressa do docente e não altera os resultados brutos do loop.",
   "",
   "## Tabela 1. Comparação das notas",
   "",
-  "| Estudante | NUSP | Original | Loop | Diferença | Classe | Adotada |",
-  "|---|---:|---:|---:|---:|---|---:|",
+  "| Estudante | NUSP | Original | Loop | Diferença | Classe | Desconto IA | Adotada |",
+  "|---|---:|---:|---:|---:|---|---:|---:|",
   linhas_tabela,
   "",
   "## Síntese",
@@ -116,6 +123,7 @@ relatorio <- c(
   paste0("- Materiais: ", obter_n("material"), " de 14."),
   paste0("- Média original: ", formatar_numero(media_original), "."),
   paste0("- Média do loop: ", formatar_numero(media_loop), "."),
+  paste0("- Média adotada após ajustes docentes: ", formatar_numero(media_adotada), "."),
   paste0("- Mudança média: ", formatar_delta(media_delta), " ponto."),
   paste0("- Mediana da discrepância absoluta: ", formatar_numero(mediana_abs), " ponto."),
   "",
@@ -135,6 +143,7 @@ relatorio <- c(
   "- Resultados cegos do loop: `tmp/grading_work/independent_review_results.csv`.",
   "- Justificativas completas: `outputs/01a02455-4428-7e10-b65c-4328cbb55411/reavaliacoes_independentes_loop.md`.",
   "- Ajuste docente: Mariana Araujo Püschel, nota final 5,0; o resultado bruto do loop (4,2) permanece preservado.",
+  "- Desconto docente por suspeita não comprovada de IA: Gabriela Assano, 9,8 → 8,3; Beatriz Pessoni, 8,3 → 6,8.",
   "- Script gerador: `tmp/grading_work/compare_independent_loop.R`."
 )
 

@@ -17,6 +17,7 @@ O relatório identifica a base com 1.038 linhas e 26 variáveis, verifica dados 
 - **Subnotas:** C1 0,75/0,75; C2 1,40/1,50; C3 1,75/1,75; C4 1,50/1,50; C5 1,75/1,75; C6 0,75/0,75; C7 0,50/0,50; C8 1,40/1,50.
 - **Soma e nota normalizada:** 9,80/10; **9,8**.
 - **Confiança:** alta.
+- **Ajuste docente posterior:** desconto de 1,5 ponto por suspeita não comprovada de assistência por IA; nota final adotada **8,3**.
 
 O relatório identifica corretamente artigo, pastas e unidade de análise, além de registrar as 1.038 linhas e 26 colunas. Informa corretamente os ausentes em `instr`, `exp_adm`, `exp_car`, `nivel` e `indicacao`, mas não menciona os 17 ausentes de `car_pub`. As proporções de experiência administrativa e os intervalos coincidem com as referências: 482/524 no MAPA e 312/354 no MinC. O primeiro teste reporta `p = 0,05716` e toma decisões corretas a 1%, 5% e 10%. A construção de `alto_nivel`, as proporções 187/525 e 155/365 e o segundo teste (`p = 0,03889`) também estão corretos. A explicação sobre dobrar a amostra usa corretamente `1/√2`. Os descontos decorrem da omissão de `car_pub`, numeração duplicada de tabelas e alguns símbolos matemáticos mal renderizados.
 
@@ -33,6 +34,7 @@ O relatório identifica artigo, pastas e unidade, e recupera 1.038 × 26. O prin
 - **Subnotas:** C1 0,75/0,75; C2 1,10/1,50; C3 1,65/1,75; C4 1,00/1,50; C5 1,75/1,75; C6 0,75/0,75; C7 0,35/0,50; C8 0,90/1,50.
 - **Soma e nota normalizada:** 8,25/10; **8,3**.
 - **Confiança:** alta.
+- **Ajuste docente posterior:** desconto de 1,5 ponto por suspeita não comprovada de assistência por IA; nota final adotada **6,8**.
 
 O trabalho identifica corretamente comparação e unidade, informa 1.038 × 26 e inspeciona categorias inválidas. A validação trata `"NA"` como categoria; depois corrige `exp_adm` e `exp_car`, mas não os 95 códigos de `instr` nem verifica os 17 ausentes de `car_pub`. A tabela recupera MAPA 482/524 e MinC 312/354, com intervalos de Wilson, mas a narrativa informa 88,03% e limites diferentes. O primeiro teste usa incorretamente 309/351 no MinC, contradizendo a tabela; `p = 0,0519` ainda leva à não rejeição a 5%. A recodificação de `alto_nivel` e o teste 2 estão corretos: 187/525, 155/365 e `p = 0,0389`. As decisões a 10% e 1% também estão corretas. A questão amostral acerta a direção, mas não mostra `1/√2` e chama 1.025 de dobro de 525. O código não é autocontido: `dados2` e `exp_admin` não são definidos e o caminho é local absoluto.
 
