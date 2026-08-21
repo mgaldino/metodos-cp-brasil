@@ -84,10 +84,16 @@ ai_penalties <- tibble::tribble(
   "15442662", 1.5
 )
 
+final_grade_overrides <- tibble::tribble(
+  ~NUSP, ~Nota_final_override,
+  "14586921", 10.0
+)
+
 inputs <- grades_raw |>
   dplyr::left_join(independent, by = "NUSP") |>
   dplyr::left_join(ai_penalties, by = "NUSP") |>
   dplyr::left_join(prior_workbook, by = "NUSP") |>
+  dplyr::left_join(final_grade_overrides, by = "NUSP") |>
   dplyr::mutate(
     Nome = dplyr::coalesce(Nome_planilha_anterior, Nome),
     Penalidade_IA = dplyr::coalesce(Penalidade_IA, 0),
@@ -104,7 +110,15 @@ inputs <- grades_raw |>
     Todas_listas = Lista_1 == 10 & Lista_2 == 10,
     Alguma_lista = Lista_1 == 10 | Lista_2 == 10,
     Entregou_tudo = Trabalho_entregue & Todas_listas,
-    Justificativa = dplyr::coalesce(Justificativa_adotada, Justificativa)
+    Justificativa = dplyr::coalesce(Justificativa_adotada, Justificativa),
+    Justificativa = dplyr::if_else(
+      !is.na(Nota_final_override),
+      paste0(
+        "Nota final ajustada pelo docente para 10,0. ",
+        Justificativa
+      ),
+      Justificativa
+    )
   ) |>
   dplyr::arrange(Nome) |>
   dplyr::select(
@@ -120,7 +134,8 @@ inputs <- grades_raw |>
     Todas_listas,
     Alguma_lista,
     Entregou_tudo,
-    Penalidade_IA
+    Penalidade_IA,
+    Nota_final_override
   )
 
 # A frequência varia pouco com a nota: entre estudantes que entregaram os
@@ -129,7 +144,11 @@ inputs <- grades_raw |>
 expected <- inputs |>
   dplyr::mutate(
     Ajuste_listas = dplyr::if_else(Entregou_tudo, 0.5, -0.5),
-    Nota_final = round(pmax(0, pmin(10, Nota_trabalho_adotada + Ajuste_listas)), 1),
+    Nota_final_regra = round(
+      pmax(0, pmin(10, Nota_trabalho_adotada + Ajuste_listas)),
+      1
+    ),
+    Nota_final = dplyr::coalesce(Nota_final_override, Nota_final_regra),
     Frequencia_base = dplyr::if_else(
       Trabalho_entregue,
       85 + 0.5 * Nota_final,
@@ -175,7 +194,9 @@ expected <- inputs |>
     Todas_listas,
     Alguma_lista,
     Entregou_tudo,
-    Penalidade_IA
+    Penalidade_IA,
+    Nota_final_regra,
+    Nota_final_override
   )
 
 # Controles lógicos e de consistência.
@@ -195,7 +216,9 @@ stopifnot(
   all(expected$Frequencia[!expected$Trabalho_entregue & !expected$Alguma_lista] == 0),
   all(expected$Frequencia[!expected$Trabalho_entregue & expected$Alguma_lista] == 50),
   all(expected$Ajuste_listas[expected$Entregou_tudo] == 0.5),
-  all(expected$Ajuste_listas[!expected$Entregou_tudo] == -0.5)
+  all(expected$Ajuste_listas[!expected$Entregou_tudo] == -0.5),
+  sum(!is.na(expected$Nota_final_override)) == 1L,
+  expected$Nota_final[expected$NUSP == "14586921"] == 10
 )
 
 # A nota deve ser monotônica na frequência dentro de cada grupo de entrega de
@@ -231,6 +254,7 @@ validation <- list(
   submitted_work_missing_lists = sum(expected$Trabalho_entregue & !expected$Todas_listas),
   no_work_no_lists = sum(!expected$Trabalho_entregue & !expected$Alguma_lista),
   no_work_some_list = sum(!expected$Trabalho_entregue & expected$Alguma_lista),
+  teacher_final_grade_overrides = sum(!is.na(expected$Nota_final_override)),
   approved = sum(expected$Resultado == "Aprovado"),
   failed = sum(expected$Resultado == "Reprovado"),
   min_approved_frequency = min(expected$Frequencia[expected$Resultado == "Aprovado"]),

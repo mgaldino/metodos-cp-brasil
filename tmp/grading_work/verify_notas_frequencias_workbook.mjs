@@ -22,11 +22,14 @@ const expectedRows = expectedValues.slice(1);
 const ex = Object.fromEntries(expectedHeader.map((value, index) => [String(value), index]));
 
 const auditSheet = workbook.worksheets.getItem("Auditoria");
-const auditValues = auditSheet.getRange("A8:S81").values;
+const auditValues = auditSheet.getRange("A8:T81").values;
 const launchValues = workbook.worksheets.getItem("Lançamento").getRange("A8:F81").values;
 
 const asNumber = (value) => {
-  const number = Number(value);
+  if (typeof value === "number") return value;
+  const text = String(value ?? "").trim();
+  if (!text) return null;
+  const number = Number(text.replace(",", "."));
   return Number.isFinite(number) ? number : null;
 };
 const nearlyEqual = (left, right, tolerance = 0.000001) =>
@@ -94,6 +97,8 @@ const noWorkNoLists = auditValues.filter((row) => row[16] === "Não" && row[8] =
 const noWorkSomeList = auditValues.filter((row) => row[16] === "Não" && row[8] === "Sim");
 const completeRows = auditValues.filter((row) => row[17] === "Sim");
 const workMissingLists = auditValues.filter((row) => row[16] === "Sim" && row[7] === "Não");
+const teacherOverrides = auditValues.filter((row) => asNumber(row[19]) !== null);
+const laraRow = auditValues.find((row) => String(row[1] ?? "") === "14586921");
 
 const rulesChecks = {
   students: auditValues.length === 74,
@@ -105,15 +110,23 @@ const rulesChecks = {
   completeBonus: completeRows.length === 48 && completeRows.every((row) => asNumber(row[9]) === 0.5),
   incompletePenalty: auditValues.filter((row) => row[17] === "Não").every((row) => asNumber(row[9]) === -0.5),
   workMissingListFrequencyPenalty: workMissingLists.length === 9 && workMissingLists.every((row) => asNumber(row[12]) === 10),
+  oneTeacherOverride: teacherOverrides.length === 1,
+  laraTeacherOverride:
+    Boolean(laraRow) &&
+    asNumber(laraRow[6]) === 9.4 &&
+    asNumber(laraRow[9]) === 0.5 &&
+    asNumber(laraRow[10]) === 10 &&
+    asNumber(laraRow[13]) === 90 &&
+    asNumber(laraRow[19]) === 10,
 };
 
 const inspect = await workbook.inspect({
   kind: "table,formula",
   sheetId: "Auditoria",
-  range: "A7:S14",
+  range: "A7:T14",
   maxChars: 6000,
   tableMaxRows: 8,
-  tableMaxCols: 19,
+  tableMaxCols: 20,
   options: { maxResults: 120 },
 });
 

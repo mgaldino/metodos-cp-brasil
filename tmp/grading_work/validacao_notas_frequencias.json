@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21 20:21:35 -03",
+  "generated_at": "2026-08-21 20:28:07 -03",
   "students": 74,
   "submitted_work": 57,
   "no_work": 17,
@@ -7,6 +7,7 @@
   "submitted_work_missing_lists": 9,
   "no_work_no_lists": 11,
   "no_work_some_list": 6,
+  "teacher_final_grade_overrides": 1,
   "approved": 57,
   "failed": 17,
   "min_approved_frequency": 78,

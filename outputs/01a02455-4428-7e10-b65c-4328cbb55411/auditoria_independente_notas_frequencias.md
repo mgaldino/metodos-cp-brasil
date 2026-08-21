@@ -22,13 +22,15 @@ O revisor independente comparou a planilha final com a planilha anterior de nota
 
 ## Notas e avaliações
 
-As 74 notas do trabalho e as 74 justificativas coincidem com a planilha anterior autoritativa. Nos 14 casos de releitura, as parcelas da rubrica reconciliam com as notas adotadas. As três decisões docentes adicionais estão registradas corretamente:
+As 74 notas do trabalho e as 74 justificativas coincidem com a planilha anterior autoritativa. Nos 14 casos de releitura, as parcelas da rubrica reconciliam com as notas adotadas. As quatro decisões docentes adicionais estão registradas corretamente:
 
 - NUSP 14573451: 9,8 menos 1,5 = 8,3.
 - NUSP 15442662: 8,3 menos 1,5 = 6,8.
 - NUSP 4725594: releitura 4,2 e ajuste docente para 5,0.
+- NUSP 14586921: nota do trabalho 9,4, bônus regular de 0,5, nota regular 9,9 e determinação docente separada para nota final 10,0.
 
 Não foram encontradas contradições substantivas entre nota e avaliação registrada.
+O revisor independente confirmou também que os outros 73 estudantes mantiveram suas notas finais, frequências e resultados anteriores.
 
 ## Frequência
 
@@ -48,6 +50,6 @@ A frequência é monotônica na nota dentro de cada grupo de entrega de listas. 
 - Nenhuma divergência numérica.
 - Nenhum erro de fórmula.
 - A divergência cadastral inicial no NUSP 4725594 foi corrigida; o nome final é **Mariana Araujo Püschel**.
-- SHA-256 final da planilha: `bbb938ef38f6c3bd0220dd9b739e76d9d63afac53cfd91c51ae01dca70b4e453`.
+- SHA-256 final da planilha: `c4f3495a5f259d8907c7d1bd06c3cdd6faf671a14ec04cfcf97a603b2cec7d44`.
 - Nenhuma nota ou frequência foi lançada no Moodle.
 - Nenhuma mensagem foi enviada.

@@ -38,7 +38,9 @@ const ix = Object.fromEntries(header.map((value, index) => [String(value), index
 
 const asNumber = (value) => {
   if (typeof value === "number") return value;
-  const parsed = Number(String(value ?? "").replace(",", "."));
+  const text = String(value ?? "").trim();
+  if (!text) return null;
+  const parsed = Number(text.replace(",", "."));
   return Number.isFinite(parsed) ? parsed : null;
 };
 
@@ -68,6 +70,7 @@ const auditRows = records.map((row) => [
   null,
   null,
   asNumber(row[ix.Penalidade_IA]) ?? 0,
+  asNumber(row[ix.Nota_final_override]),
 ]);
 
 const workbook = Workbook.create();
@@ -151,11 +154,11 @@ function addCard(sheet, labelAddress, valueAddress, label, formula, numberFormat
 styleTitle(
   auditoria,
   "Métodos III — auditoria de notas e frequências (2026)",
-  "A nota do trabalho já incorpora as releituras e decisões docentes anteriores. As colunas derivadas usam fórmulas; nenhuma nota ou frequência foi lançada no Moodle.",
-  "S",
+  "A nota do trabalho já incorpora as releituras e decisões docentes anteriores. Lara tem nota final 10,0 por determinação docente, registrada separadamente. Nenhuma nota ou frequência foi lançada no Moodle.",
+  "T",
 );
 
-auditoria.getRange("A7:S7").values = [[
+auditoria.getRange("A7:T7").values = [[
   "Nome",
   "NUSP",
   "E-mail",
@@ -175,9 +178,10 @@ auditoria.getRange("A7:S7").values = [[
   "Trabalho entregue?",
   "Entregou tudo?",
   "Penalidade de IA já incorporada",
+  "Nota final determinada pelo docente",
 ]];
-styleHeader(auditoria.getRange("A7:S7"));
-auditoria.getRange("A8:S81").values = auditRows;
+styleHeader(auditoria.getRange("A7:T7"));
+auditoria.getRange("A8:T81").values = auditRows;
 
 auditoria.getRange("H8").formulas = [["=IF(AND(E8=10,F8=10),\"Sim\",\"Não\")"]];
 auditoria.getRange("H8:H81").fillDown();
@@ -189,7 +193,7 @@ auditoria.getRange("R8").formulas = [["=IF(AND(Q8=\"Sim\",H8=\"Sim\"),\"Sim\",\"
 auditoria.getRange("R8:R81").fillDown();
 auditoria.getRange("J8").formulas = [["=IF(R8=\"Sim\",0.5,-0.5)"]];
 auditoria.getRange("J8:J81").fillDown();
-auditoria.getRange("K8").formulas = [["=MAX(0,MIN(10,G8+J8))"]];
+auditoria.getRange("K8").formulas = [["=IF(T8<>\"\",T8,MAX(0,MIN(10,G8+J8)))"]];
 auditoria.getRange("K8:K81").fillDown();
 auditoria.getRange("L8").formulas = [["=IF(Q8=\"Sim\",85+0.5*K8,\"\")"]];
 auditoria.getRange("L8:L81").fillDown();
@@ -200,13 +204,14 @@ auditoria.getRange("N8:N81").fillDown();
 auditoria.getRange("O8").formulas = [["=IF(AND(K8>=5,N8>=75),\"Aprovado\",\"Reprovado\")"]];
 auditoria.getRange("O8:O81").fillDown();
 
-styleBody(auditoria.getRange("A8:S81"));
+styleBody(auditoria.getRange("A8:T81"));
 auditoria.getRange("A8:A81").format.font = { bold: true, color: palette.navy, size: 10 };
 auditoria.getRange("B8:B81").format.numberFormat = "@";
 auditoria.getRange("E8:G81").format.numberFormat = "0.0";
 auditoria.getRange("J8:M81").format.numberFormat = "0.0";
 auditoria.getRange("N8:N81").format.numberFormat = "0";
 auditoria.getRange("S8:S81").format.numberFormat = "0.0";
+auditoria.getRange("T8:T81").format.numberFormat = "0.0";
 auditoria.getRange("E8:N81").format.horizontalAlignment = "right";
 auditoria.getRange("D8:D81").format.horizontalAlignment = "center";
 auditoria.getRange("H8:I81").format.horizontalAlignment = "center";
@@ -216,7 +221,7 @@ auditoria.getRange("P8:P81").format.wrapText = true;
 for (let index = 0; index < auditRows.length; index += 1) {
   const justificationLength = String(auditRows[index][15] ?? "").length;
   const rowHeight = Math.max(40, Math.min(240, Math.ceil(justificationLength / 95) * 14 + 10));
-  auditoria.getRange(`A${index + 8}:S${index + 8}`).format.rowHeight = rowHeight;
+  auditoria.getRange(`A${index + 8}:T${index + 8}`).format.rowHeight = rowHeight;
 }
 
 auditoria.getRange("K8:K81").conditionalFormats.add("colorScale", {
@@ -242,7 +247,7 @@ auditoria.getRange("O8:O81").conditionalFormats.add("containsText", {
   format: { fill: palette.red, font: { color: palette.redInk, bold: true } },
 });
 
-const auditTable = auditoria.tables.add("A7:S81", true, "AuditoriaNotasFrequencias");
+const auditTable = auditoria.tables.add("A7:T81", true, "AuditoriaNotasFrequencias");
 auditTable.style = "TableStyleMedium2";
 auditTable.showBandedColumns = false;
 auditTable.showFilterButton = true;
@@ -252,6 +257,7 @@ auditoria.freezePanes.freezeColumns(2);
 const auditWidths = {
   A: 31, B: 13, C: 29, D: 19, E: 9, F: 9, G: 15, H: 13, I: 12,
   J: 13, K: 11, L: 14, M: 15, N: 14, O: 13, P: 66, Q: 14, R: 13, S: 16,
+  T: 18,
 };
 for (const [column, width] of Object.entries(auditWidths)) {
   auditoria.getRange(`${column}:${column}`).format.columnWidth = width;
@@ -288,7 +294,7 @@ for (let row = 8; row <= 81; row += 1) {
     `='Auditoria'!O${row}`,
   ]];
   lancamento.getRange(`F${row}`).formulas = [[
-    `=IF('Auditoria'!R${row}=\"Sim\",\"+0,5: trabalho e todas as listas\",\"−0,5: entrega incompleta\")`,
+    `=IF('Auditoria'!T${row}<>\"\",\"Nota final 10 por decisão docente\",IF('Auditoria'!R${row}=\"Sim\",\"+0,5: trabalho e todas as listas\",\"−0,5: entrega incompleta\"))`,
   ]];
 }
 
@@ -345,7 +351,7 @@ styleTitle(
 );
 regras.getRange("A4:D4").values = [["Etapa", "Regra", "Fórmula aplicada", "Observação"]];
 styleHeader(regras.getRange("A4:D4"));
-regras.getRange("A5:D13").values = [
+regras.getRange("A5:D14").values = [
   [1, "Nota do trabalho", "Nota já adotada na correção anterior", "Inclui releituras independentes, ajuste de Mariana para 5,0 e os dois descontos docentes por suspeita não comprovada de IA."],
   [2, "Bônus por entrega completa", "+0,5", "Aplica-se a quem entregou trabalho, Lista 1 e Lista 2."],
   [3, "Desconto por entrega incompleta", "−0,5", "Aplica-se a qualquer estudante que não tenha entregue os três componentes; a nota é limitada a 0–10."],
@@ -355,13 +361,14 @@ regras.getRange("A5:D13").values = [
   [7, "Sem trabalho, mas com alguma lista", "50%", "Regra especial prevalece sobre a fórmula da frequência base."],
   [8, "Sem trabalho e sem nenhuma lista", "0%", "Regra especial prevalece sobre a fórmula da frequência base."],
   [9, "Precisão", "Notas: 1 casa; frequências: inteiros", "As frequências finais são arredondadas para o percentual inteiro mais próximo."],
+  [10, "Determinação docente individual", "Lara (NUSP 14586921): nota final 10,0", "A nota do trabalho (9,4) e o bônus regular (+0,5) permanecem registrados separadamente."],
 ];
-styleBody(regras.getRange("A5:D13"));
-regras.getRange("A5:A13").format.horizontalAlignment = "center";
-regras.getRange("A5:D13").format.wrapText = true;
-regras.getRange("A5:D13").format.rowHeight = 47;
+styleBody(regras.getRange("A5:D14"));
+regras.getRange("A5:A14").format.horizontalAlignment = "center";
+regras.getRange("A5:D14").format.wrapText = true;
+regras.getRange("A5:D14").format.rowHeight = 47;
 regras.getRange("A5:D5").format.fill = palette.goldLight;
-const rulesTable = regras.tables.add("A4:D13", true, "RegrasCalculo");
+const rulesTable = regras.tables.add("A4:D14", true, "RegrasCalculo");
 rulesTable.style = "TableStyleMedium2";
 rulesTable.showFilterButton = false;
 regras.freezePanes.freezeRows(4);
@@ -379,7 +386,7 @@ styleTitle(
 );
 proveniencia.getRange("A4:D4").values = [["Item", "Valor", "Status", "Nota de auditoria"]];
 styleHeader(proveniencia.getRange("A4:D4"));
-proveniencia.getRange("A5:D15").values = [
+proveniencia.getRange("A5:D16").values = [
   ["Turma", "FLP0406 — Métodos e Técnicas de Pesquisa em Ciência Política (2026)", "Confirmado", "Turma de graduação; não confundir com a oferta conjunta da pós-graduação."],
   ["Planilha anterior", "outputs/01a02455-4428-7e10-b65c-4328cbb55411/notas_metodos_III_2026.xlsx", "Preservada", "Fonte das notas e justificativas já adotadas."],
   ["Registros consolidados", "tmp/grading_work/final_grade_records.csv", "Preservado", "74 estudantes; listas, fonte da entrega e justificativa."],
@@ -390,17 +397,18 @@ proveniencia.getRange("A5:D15").values = [
   ["Trabalho com lista faltante", 9, "Verificado", "Recebem −0,5 na nota e −10 p.p. na frequência."],
   ["Aprovados", null, "Fórmula", "Todos devem ter frequência mínima de 75%."],
   ["Menor frequência aprovada", null, "Fórmula", "Controle do piso de frequência."],
+  ["Determinação docente individual", "Lara Nunes de Lacerda — nota final 10,0", "Registrada", "Nota do trabalho, ajuste de listas e determinação final permanecem separados na Auditoria."],
   ["Ação externa", "Nenhuma", "Confirmado", "Nada foi lançado no Moodle e nenhuma mensagem foi enviada."],
 ];
 proveniencia.getRange("B13").formulas = [["=COUNTIF('Auditoria'!O8:O81,\"Aprovado\")"]];
 proveniencia.getRange("B14").formulas = [["=MINIFS('Auditoria'!N8:N81,'Auditoria'!O8:O81,\"Aprovado\")"]];
-styleBody(proveniencia.getRange("A5:D15"));
-proveniencia.getRange("A5:A15").format.font = { bold: true, color: palette.navy, size: 10 };
+styleBody(proveniencia.getRange("A5:D16"));
+proveniencia.getRange("A5:A16").format.font = { bold: true, color: palette.navy, size: 10 };
 proveniencia.getRange("B13:B14").format.numberFormat = "0";
-proveniencia.getRange("A5:D15").format.wrapText = true;
-proveniencia.getRange("A5:D15").format.rowHeight = 43;
-proveniencia.getRange("C5:C15").format.horizontalAlignment = "center";
-const provenanceTable = proveniencia.tables.add("A4:D15", true, "ProvenienciaControles");
+proveniencia.getRange("A5:D16").format.wrapText = true;
+proveniencia.getRange("A5:D16").format.rowHeight = 43;
+proveniencia.getRange("C5:C16").format.horizontalAlignment = "center";
+const provenanceTable = proveniencia.tables.add("A4:D16", true, "ProvenienciaControles");
 provenanceTable.style = "TableStyleMedium2";
 provenanceTable.showFilterButton = false;
 proveniencia.freezePanes.freezeRows(4);
