@@ -147,9 +147,9 @@ expected <- inputs |>
       Nota_final >= 5 ~ pmax(75, Frequencia_pre_piso),
       TRUE ~ pmax(0, Frequencia_pre_piso)
     ),
-    # Excel usa arredondamento aritmético em empates (por exemplo, 88,85
-    # torna-se 88,9); a função explícita mantém R e Excel idênticos.
-    Frequencia = round_half_up(Frequencia, 1),
+    # A frequência final é arredondada para o percentual inteiro mais próximo.
+    # A função explícita mantém o critério aritmético idêntico em R e Excel.
+    Frequencia = round_half_up(round_half_up(Frequencia, 1), 0),
     Resultado = dplyr::if_else(
       Nota_final >= 5 & Frequencia >= 75,
       "Aprovado",

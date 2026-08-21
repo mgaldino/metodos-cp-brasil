@@ -195,7 +195,7 @@ auditoria.getRange("L8").formulas = [["=IF(Q8=\"Sim\",85+0.5*K8,\"\")"]];
 auditoria.getRange("L8:L81").fillDown();
 auditoria.getRange("M8").formulas = [["=IF(AND(Q8=\"Sim\",H8=\"Não\"),10,0)"]];
 auditoria.getRange("M8:M81").fillDown();
-auditoria.getRange("N8").formulas = [["=ROUND(IF(Q8=\"Não\",IF(I8=\"Não\",0,50),MAX(IF(K8>=5,75,0),L8-M8)),1)"]];
+auditoria.getRange("N8").formulas = [["=ROUND(IF(Q8=\"Não\",IF(I8=\"Não\",0,50),MAX(IF(K8>=5,75,0),L8-M8)),0)"]];
 auditoria.getRange("N8:N81").fillDown();
 auditoria.getRange("O8").formulas = [["=IF(AND(K8>=5,N8>=75),\"Aprovado\",\"Reprovado\")"]];
 auditoria.getRange("O8:O81").fillDown();
@@ -204,7 +204,8 @@ styleBody(auditoria.getRange("A8:S81"));
 auditoria.getRange("A8:A81").format.font = { bold: true, color: palette.navy, size: 10 };
 auditoria.getRange("B8:B81").format.numberFormat = "@";
 auditoria.getRange("E8:G81").format.numberFormat = "0.0";
-auditoria.getRange("J8:N81").format.numberFormat = "0.0";
+auditoria.getRange("J8:M81").format.numberFormat = "0.0";
+auditoria.getRange("N8:N81").format.numberFormat = "0";
 auditoria.getRange("S8:S81").format.numberFormat = "0.0";
 auditoria.getRange("E8:N81").format.horizontalAlignment = "right";
 auditoria.getRange("D8:D81").format.horizontalAlignment = "center";
@@ -266,7 +267,7 @@ styleTitle(
 
 addCard(lancamento, "A4:B4", "A5:B5", "Estudantes", "=COUNTA(A8:A81)");
 addCard(lancamento, "C4:D4", "C5:D5", "Aprovados", '=COUNTIF(E8:E81,"Aprovado")');
-addCard(lancamento, "E4:F4", "E5:F5", "Menor frequência aprovada", '=MINIFS(D8:D81,E8:E81,"Aprovado")', "0.0");
+addCard(lancamento, "E4:F4", "E5:F5", "Menor frequência aprovada", '=MINIFS(D8:D81,E8:E81,"Aprovado")', "0");
 
 lancamento.getRange("A7:F7").values = [[
   "Nome",
@@ -294,7 +295,8 @@ for (let row = 8; row <= 81; row += 1) {
 styleBody(lancamento.getRange("A8:F81"));
 lancamento.getRange("A8:A81").format.font = { bold: true, color: palette.navy, size: 10 };
 lancamento.getRange("B8:B81").format.numberFormat = "@";
-lancamento.getRange("C8:D81").format.numberFormat = "0.0";
+lancamento.getRange("C8:C81").format.numberFormat = "0.0";
+lancamento.getRange("D8:D81").format.numberFormat = "0";
 lancamento.getRange("C8:D81").format.horizontalAlignment = "right";
 lancamento.getRange("E8:E81").format.horizontalAlignment = "center";
 lancamento.getRange("F8:F81").format.wrapText = true;
@@ -352,7 +354,7 @@ regras.getRange("A5:D13").values = [
   [6, "Piso dos aprovados", "máximo entre 75% e o valor calculado", "Passar exige nota final ≥ 5,0 e frequência ≥ 75%."],
   [7, "Sem trabalho, mas com alguma lista", "50%", "Regra especial prevalece sobre a fórmula da frequência base."],
   [8, "Sem trabalho e sem nenhuma lista", "0%", "Regra especial prevalece sobre a fórmula da frequência base."],
-  [9, "Precisão", "1 casa decimal", "Notas e frequências são exibidas com uma casa decimal."],
+  [9, "Precisão", "Notas: 1 casa; frequências: inteiros", "As frequências finais são arredondadas para o percentual inteiro mais próximo."],
 ];
 styleBody(regras.getRange("A5:D13"));
 regras.getRange("A5:A13").format.horizontalAlignment = "center";
@@ -394,7 +396,7 @@ proveniencia.getRange("B13").formulas = [["=COUNTIF('Auditoria'!O8:O81,\"Aprovad
 proveniencia.getRange("B14").formulas = [["=MINIFS('Auditoria'!N8:N81,'Auditoria'!O8:O81,\"Aprovado\")"]];
 styleBody(proveniencia.getRange("A5:D15"));
 proveniencia.getRange("A5:A15").format.font = { bold: true, color: palette.navy, size: 10 };
-proveniencia.getRange("B13:B14").format.numberFormat = "0.0";
+proveniencia.getRange("B13:B14").format.numberFormat = "0";
 proveniencia.getRange("A5:D15").format.wrapText = true;
 proveniencia.getRange("A5:D15").format.rowHeight = 43;
 proveniencia.getRange("C5:C15").format.horizontalAlignment = "center";

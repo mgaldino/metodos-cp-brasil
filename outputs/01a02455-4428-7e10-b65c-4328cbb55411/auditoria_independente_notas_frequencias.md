@@ -18,7 +18,7 @@ O revisor independente comparou a planilha final com a planilha anterior de nota
 - 6 estudantes sem trabalho, mas com alguma lista: frequência de 50%.
 - 11 estudantes sem trabalho e sem nenhuma lista: frequência de 0%.
 - 57 aprovados e 17 reprovados.
-- Menor frequência entre os aprovados: 77,7%.
+- Menor frequência entre os aprovados: 78%.
 
 ## Notas e avaliações
 
@@ -40,7 +40,7 @@ A regra foi implementada conforme solicitado:
 4. Sem trabalho e com alguma lista resulta em 50%.
 5. Sem trabalho e sem listas resulta em 0%.
 
-A frequência é monotônica na nota dentro de cada grupo de entrega de listas. A variação associada à nota é pequena: 0,5 ponto percentual por ponto de nota. O piso de 75% não foi vinculante nesta turma, pois a menor frequência aprovada calculada foi 77,7%.
+A frequência é monotônica na nota dentro de cada grupo de entrega de listas. Antes do arredondamento, a variação associada à nota é pequena: 0,5 ponto percentual por ponto de nota. As frequências finais são arredondadas para percentuais inteiros. O piso de 75% não foi vinculante nesta turma, pois a menor frequência aprovada calculada foi 78%.
 
 ## Controles técnicos
 
@@ -48,6 +48,6 @@ A frequência é monotônica na nota dentro de cada grupo de entrega de listas. 
 - Nenhuma divergência numérica.
 - Nenhum erro de fórmula.
 - A divergência cadastral inicial no NUSP 4725594 foi corrigida; o nome final é **Mariana Araujo Püschel**.
-- SHA-256 final da planilha: `0bf7c7f7970e1396e785774bcef633ad5df24a836fa304a6cd37ced672c30be1`.
+- SHA-256 final da planilha: `98d6a7ff84370bb19842c7053c259a8d00ca3b26780075c0977bf88a12a41491`.
 - Nenhuma nota ou frequência foi lançada no Moodle.
 - Nenhuma mensagem foi enviada.

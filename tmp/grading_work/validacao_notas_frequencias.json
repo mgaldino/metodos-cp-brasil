@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21 20:10:16 -03",
+  "generated_at": "2026-08-21 20:18:17 -03",
   "students": 74,
   "submitted_work": 57,
   "no_work": 17,
@@ -9,7 +9,7 @@
   "no_work_some_list": 6,
   "approved": 57,
   "failed": 17,
-  "min_approved_frequency": 77.7,
+  "min_approved_frequency": 78,
   "max_approved_frequency": 90,
   "grade_frequency_monotonic_within_delivery_group": true,
   "all_checks_passed": true
