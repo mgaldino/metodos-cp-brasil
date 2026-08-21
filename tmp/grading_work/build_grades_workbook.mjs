@@ -4,6 +4,11 @@ import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
 
 const projectRoot = "/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP";
 const sourceCsv = path.join(projectRoot, "tmp/grading_work/final_grade_records.csv");
+const loopCsv = path.join(projectRoot, "tmp/grading_work/independent_review_results.csv");
+const reviewsMd = path.join(
+  projectRoot,
+  "outputs/01a02455-4428-7e10-b65c-4328cbb55411/reavaliacoes_independentes_loop.md",
+);
 const outputDir = path.join(
   projectRoot,
   "outputs/01a02455-4428-7e10-b65c-4328cbb55411",
@@ -29,11 +34,17 @@ const palette = {
 };
 
 const csvText = await fs.readFile(sourceCsv, "utf8");
+const loopText = await fs.readFile(loopCsv, "utf8");
+const reviewsText = await fs.readFile(reviewsMd, "utf8");
 const csvWorkbook = await Workbook.fromCSV(csvText, { sheetName: "Dados" });
+const loopWorkbook = await Workbook.fromCSV(loopText, { sheetName: "Loop" });
 const csvValues = csvWorkbook.worksheets.getItem("Dados").getUsedRange().values;
+const loopValues = loopWorkbook.worksheets.getItem("Loop").getUsedRange().values;
 const header = csvValues[0];
 const records = csvValues.slice(1);
 const ix = Object.fromEntries(header.map((value, index) => [String(value), index]));
+const loopHeader = loopValues[0];
+const loopIx = Object.fromEntries(loopHeader.map((value, index) => [String(value), index]));
 
 const asNumber = (value) => {
   if (typeof value === "number") return value;
@@ -41,18 +52,55 @@ const asNumber = (value) => {
   return Number.isFinite(parsed) ? parsed : null;
 };
 
-const gradeRows = records.map((row) => [
-  String(row[ix.Nome] ?? ""),
-  String(row[ix.NUSP] ?? ""),
-  String(row[ix.Email] ?? ""),
-  asNumber(row[ix.Lista_1]),
-  asNumber(row[ix.Lista_2]),
-  null,
-  asNumber(row[ix.Trabalho_final]),
-  String(row[ix.Situacao] ?? ""),
-  String(row[ix.Fonte_entrega] ?? ""),
-  String(row[ix.Justificativa] ?? ""),
-]);
+const reviewNarratives = new Map();
+for (const section of reviewsText.split(/^## /m).slice(1)) {
+  const nuspMatch = section.match(/NUSP\s+(\d+)/);
+  if (!nuspMatch) continue;
+  const narrative = section
+    .split(/\n\n+/)
+    .map((paragraph) => paragraph.trim())
+    .find((paragraph) => paragraph && !paragraph.startsWith("-") && !paragraph.includes("NUSP "));
+  if (narrative) reviewNarratives.set(nuspMatch[1], narrative.replace(/`/g, ""));
+}
+
+const adoptedOverrides = new Map();
+for (const row of loopValues.slice(1)) {
+  const nusp = String(row[loopIx.NUSP] ?? "");
+  const independentGrade = asNumber(row[loopIx.nota_independente]);
+  if (!nusp || independentGrade === null) continue;
+  const adoptedGrade = nusp === "4725594" ? 5.0 : independentGrade;
+  const prefix = nusp === "4725594"
+    ? "Nota final ajustada pelo docente para 5,0 (releitura independente: 4,2)."
+    : `Nota adotada após releitura independente cega: ${adoptedGrade.toFixed(1).replace(".", ",")}.`;
+  adoptedOverrides.set(nusp, {
+    grade: adoptedGrade,
+    justification: `${prefix} ${reviewNarratives.get(nusp) ?? ""}`.trim(),
+  });
+}
+
+if (adoptedOverrides.size !== 14) {
+  throw new Error(`Esperadas 14 notas adotadas do loop; encontradas ${adoptedOverrides.size}.`);
+}
+
+const gradeRows = records.map((row) => {
+  const nusp = String(row[ix.NUSP] ?? "");
+  const override = adoptedOverrides.get(nusp);
+  const displayName = nusp === "4725594"
+    ? "Mariana Araujo Püschel"
+    : String(row[ix.Nome] ?? "");
+  return [
+    displayName,
+    nusp,
+    String(row[ix.Email] ?? ""),
+    asNumber(row[ix.Lista_1]),
+    asNumber(row[ix.Lista_2]),
+    null,
+    override?.grade ?? asNumber(row[ix.Trabalho_final]),
+    String(row[ix.Situacao] ?? ""),
+    String(row[ix.Fonte_entrega] ?? ""),
+    override?.justification ?? String(row[ix.Justificativa] ?? ""),
+  ];
+});
 
 if (gradeRows.length !== 74) {
   throw new Error(`Esperados 74 estudantes; encontrados ${gradeRows.length}.`);
@@ -115,7 +163,7 @@ function styleBody(range) {
 styleTitle(
   notas,
   "Métodos III — correção do trabalho final (2026)",
-  "Notas locais para revisão docente. Nenhuma nota ou feedback foi lançado no Moodle; a planilha não calcula a média final da disciplina.",
+  "Notas adotadas após releitura independente dos 14 trabalhos selecionados; Mariana Araujo Püschel ajustada para 5,0 por decisão docente. Nenhuma nota foi lançada no Moodle.",
   "J",
 );
 
@@ -323,6 +371,8 @@ const provenanceRows = [
   ["Inventário Moodle", "/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/tmp/grading_work/moodle_roster_and_submissions.json", "56 envios no Moodle e 18 sem envio no Moodle.", "aa200453c3401d2dfbf47d7a19cb4e54227db73b0b0f03eb7846600e07ee5617"],
   ["Exceção por e-mail", "/Users/manoelgaldino/Documents/DCP/Cursos/stat_basica/trabalhos_graduacao_metodos_III_2026/entregas_email/Carmen Maria Serrano dos Santos/avaliacao_Carmen_Maria_Serrano_dos_Santos.pdf", "1 entrega válida por e-mail; total final de 57 trabalhos.", "646f0a938cc97f3a86ff81aba012802f00248216af93cb4bef01fee1d84d2721"],
   ["Base consolidada de notas", "/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/tmp/grading_work/final_grade_records.csv", "74 linhas; 57 entregas; 17 sem entrega; notas dentro de 0–10.", "c084d2905a34218aa60278c21ee6f62b1a3c64d84ff7052f70074e3a13515b2b"],
+  ["Loop independente", "/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/tmp/grading_work/independent_review_results.csv", "14 releituras cegas; notas do loop adotadas nos casos selecionados.", "Resultados brutos preservados"],
+  ["Ajuste docente", "Mariana Araujo Püschel — NUSP 4725594", "Nota do loop: 4,2; nota final adotada: 5,0 por decisão do docente.", "2026-08-21"],
   ["OCR das submissões", "/Users/manoelgaldino/Documents/DCP/Papers/metodos_CP/tmp/grading_work/moodle_ocr/manifest.json", "1.818 capturas processadas; 56 estudantes; 0 falhas de OCR.", "0d2f582d0d530d2df8d573009d5e93a549e260ccd551a016e4b90d78e5842379"],
   ["Enunciado", "/Users/manoelgaldino/Documents/DCP/Cursos/stat_basica/book-stat-basica/avaliacao_aulas_06_09_inferencia_basica.Rmd", "Instruções exatas do trabalho final recuperadas no repositório da disciplina.", "838c72cc19a6e6beef81954e5109291d285fd570c2cbeb5e211720520836f616"],
   ["Gabarito", "/Users/manoelgaldino/Documents/DCP/Cursos/stat_basica/book-stat-basica/avaliacao_aulas_06_09_gabarito.Rmd", "Âncoras substantivas e decisões estatísticas usadas na rubrica.", "a02f205062dcc2684456209232785b37a243c91959cc25b1a1f018bc37177b81"],
@@ -331,11 +381,11 @@ const provenanceRows = [
   ["Escopo da nota", "Trabalho final", "A planilha não calcula média final da disciplina; notas de listas são auxiliares.", "Escala 0–10"],
   ["Caso de leitura longa", "Agnes Francisca Carraro Kunsch — NUSP 14554690", "PDF de 206 páginas: capa/análise e páginas finais foram verificadas; miolo era impressão da base.", "Amostra: p. 1 e 197–206"],
 ];
-proveniencia.getRange("A5:D16").values = provenanceRows;
-styleBody(proveniencia.getRange("A5:D16"));
-proveniencia.getRange("A5:A16").format.font = { bold: true, color: palette.navy };
-proveniencia.getRange("B5:D16").format.wrapText = true;
-proveniencia.getRange("A5:D16").format.rowHeight = 65;
+proveniencia.getRange("A5:D18").values = provenanceRows;
+styleBody(proveniencia.getRange("A5:D18"));
+proveniencia.getRange("A5:A18").format.font = { bold: true, color: palette.navy };
+proveniencia.getRange("B5:D18").format.wrapText = true;
+proveniencia.getRange("A5:D18").format.rowHeight = 65;
 proveniencia.getRange("A:A").format.columnWidth = 24;
 proveniencia.getRange("B:B").format.columnWidth = 76;
 proveniencia.getRange("C:C").format.columnWidth = 58;

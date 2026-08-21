@@ -25,6 +25,7 @@ loop <- readr::read_csv(
 comparacao <- loop %>%
   dplyr::left_join(original, by = "NUSP") %>%
   dplyr::mutate(
+    Nome = dplyr::if_else(NUSP == "4725594", "Mariana Araujo Püschel", Nome),
     discrepancia = round(nota_independente - nota_original, 1),
     discrepancia_abs = abs(discrepancia),
     classe = dplyr::case_when(
@@ -32,7 +33,7 @@ comparacao <- loop %>%
       discrepancia_abs <= 1.0 ~ "moderada",
       TRUE ~ "material"
     ),
-    nota_adotada = nota_independente
+    nota_adotada = dplyr::if_else(NUSP == "4725594", 5.0, nota_independente)
   ) %>%
   dplyr::select(
     Nome,
@@ -98,7 +99,7 @@ relatorio <- c(
   "",
   "## Regra de normalização",
   "",
-  "Todas as releituras usaram a mesma rubrica de 0 a 10. A soma dos oito critérios foi arredondada para uma casa decimal, sem reescalonamento posterior. A discrepância é `nota independente − nota original`. Classificação: até 0,5 ponto, consistente; de 0,6 a 1,0, moderada; acima de 1,0, material. Conforme a instrução do docente, a nota adotada nesta comparação é a do loop independente.",
+  "Todas as releituras usaram a mesma rubrica de 0 a 10. A soma dos oito critérios foi arredondada para uma casa decimal, sem reescalonamento posterior. A discrepância é `nota independente − nota original`. Classificação: até 0,5 ponto, consistente; de 0,6 a 1,0, moderada; acima de 1,0, material. A nota adotada é a do loop independente, exceto para Mariana Araujo Püschel (NUSP 4725594), ajustada pelo docente de 4,2 para 5,0.",
   "",
   "A marcação separada de suspeita de assistência por IA não foi incorporada às notas deste arquivo.",
   "",
@@ -133,6 +134,7 @@ relatorio <- c(
   "- Notas originais: `tmp/grading_work/final_grade_records.csv`.",
   "- Resultados cegos do loop: `tmp/grading_work/independent_review_results.csv`.",
   "- Justificativas completas: `outputs/01a02455-4428-7e10-b65c-4328cbb55411/reavaliacoes_independentes_loop.md`.",
+  "- Ajuste docente: Mariana Araujo Püschel, nota final 5,0; o resultado bruto do loop (4,2) permanece preservado.",
   "- Script gerador: `tmp/grading_work/compare_independent_loop.R`."
 )
 

@@ -73,6 +73,7 @@ O relatório identifica corretamente artigo, pastas e unidade de análise e expl
 - **Subnotas:** C1 0,75/0,75; C2 0,95/1,50; C3 0,55/1,75; C4 0,45/1,50; C5 0,25/1,75; C6 0,15/0,75; C7 0,20/0,50; C8 0,85/1,50.
 - **Soma e nota normalizada:** 4,15/10; **4,2**.
 - **Confiança:** alta.
+- **Ajuste docente posterior:** nota final adotada **5,0**; a nota independente de 4,2 permanece registrada para auditoria.
 
 Há acertos na identificação do estudo e da unidade: nomeações em MAPA e MinC, com possível repetição do indivíduo. A leitura registra 1.038 linhas, 26 colunas, variáveis e vários totais de ausências, além de códigos inesperados em `exp_adm`. Contudo, não trata esses códigos adequadamente e confunde as escalas de `exp_car` e `nivel`. Na descritiva, combina `exp_adm` e `exp_car` e converte ausências ou erros em ausência de experiência, produzindo MinC 309/365 = 0,8466, em vez de 312/354 = 0,8814, e MAPA 483/525 com denominador incorreto. O teste 1 retorna `p = 0,000569` e rejeita a 5%, quando o teste correto tem `p ≈ 0,057` e não rejeita a 5%. No segundo bloco, `alto_nivel` é derivada de `exp_car`, não de `nivel = 5/6`, alterando proporções, direção e p-valor: 0,3987, em vez de aproximadamente 0,0389. As decisões a 10% e 1% ficam erradas e a discussão inverte a exigência dos limiares. A apresentação é organizada, mas falta código reprodutível das recodificações-chave. Ao dobrar n, mantém os sucessos fixos e não demonstra a redução por `1/√2`.
 
