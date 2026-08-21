@@ -195,7 +195,7 @@ auditoria.getRange("L8").formulas = [["=IF(Q8=\"Sim\",85+0.5*K8,\"\")"]];
 auditoria.getRange("L8:L81").fillDown();
 auditoria.getRange("M8").formulas = [["=IF(AND(Q8=\"Sim\",H8=\"Não\"),10,0)"]];
 auditoria.getRange("M8:M81").fillDown();
-auditoria.getRange("N8").formulas = [["=ROUND(IF(Q8=\"Não\",IF(I8=\"Não\",0,50),MAX(IF(K8>=5,75,0),L8-M8)),0)"]];
+auditoria.getRange("N8").formulas = [["=ROUND(ROUND(IF(Q8=\"Não\",IF(I8=\"Não\",0,50),MAX(IF(K8>=5,75,0),L8-M8)),1),0)"]];
 auditoria.getRange("N8:N81").fillDown();
 auditoria.getRange("O8").formulas = [["=IF(AND(K8>=5,N8>=75),\"Aprovado\",\"Reprovado\")"]];
 auditoria.getRange("O8:O81").fillDown();

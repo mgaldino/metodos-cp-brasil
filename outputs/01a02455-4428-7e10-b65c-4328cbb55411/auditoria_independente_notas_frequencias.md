@@ -40,7 +40,7 @@ A regra foi implementada conforme solicitado:
 4. Sem trabalho e com alguma lista resulta em 50%.
 5. Sem trabalho e sem listas resulta em 0%.
 
-A frequência é monotônica na nota dentro de cada grupo de entrega de listas. Antes do arredondamento, a variação associada à nota é pequena: 0,5 ponto percentual por ponto de nota. As frequências finais são arredondadas para percentuais inteiros. O piso de 75% não foi vinculante nesta turma, pois a menor frequência aprovada calculada foi 78%.
+A frequência é monotônica na nota dentro de cada grupo de entrega de listas. Antes do arredondamento, a variação associada à nota é pequena: 0,5 ponto percentual por ponto de nota. As frequências anteriormente exibidas com uma casa decimal são arredondadas para percentuais inteiros. O piso de 75% não foi vinculante nesta turma, pois a menor frequência aprovada calculada foi 78%.
 
 ## Controles técnicos
 
@@ -48,6 +48,6 @@ A frequência é monotônica na nota dentro de cada grupo de entrega de listas. 
 - Nenhuma divergência numérica.
 - Nenhum erro de fórmula.
 - A divergência cadastral inicial no NUSP 4725594 foi corrigida; o nome final é **Mariana Araujo Püschel**.
-- SHA-256 final da planilha: `98d6a7ff84370bb19842c7053c259a8d00ca3b26780075c0977bf88a12a41491`.
+- SHA-256 final da planilha: `bbb938ef38f6c3bd0220dd9b739e76d9d63afac53cfd91c51ae01dca70b4e453`.
 - Nenhuma nota ou frequência foi lançada no Moodle.
 - Nenhuma mensagem foi enviada.
