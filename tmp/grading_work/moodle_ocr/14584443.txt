@@ -1,0 +1,570 @@
+
+===== page_001_bot.png =====
+MNNONO, SEIDOS 05: MINISSÓNIOS POSSUEM: prOpOrÇÕES prúxinIaS Co lados e não irem suistancinimente ds
+
+outros órgãos públicos em termos de orçamento:
+O MinC e o MAPA seriam mais suscetíveis à ação de grupos de interesse: teriam mais fiiados/as e
+menos servidores de carreira ocupando cargos. Iso resultaria da estratégia presidencial em deixar
+a burocracia mais partidária em ministérios regulatórios e distributivos. MAPA e MinC possuem.
+proporções similares de fiiados/as, embora o percentual do MinC seja levemente superior. As
+pastas não diferem substancialmente em termos de orçamento e tamanho quando comparadas
+aos outros úrgãos do serviço público, embora o MAPA tenha uma estrutura maior de cargos
+(Albrecist; Rúbeiro, 2025, p. 8)
+
+Do ponto de vista metodológico, os pesquisadores constituíram uma base composta por 890 observações ref-
+
+erentes a 568 servidores públicos, contemplando as seguintes variáveis: (L formação acadêmica; IL. instituição
+
+de origem; IL. experiência em administração pública; IV. experiência em cargo comissionado; V. partido; VI.
+
+cargo eletivo: VIL. liderança partidária; VIII. experiência associativa: IX. mandato). A unidadede de análise
+
+adotada foi a nomeação dos cargos e foi justificada pelos pesquisadores, pois, dessa maneira, um mesmo
+
+indivíduo pode figurar mais de uma vez na base, caso tenha sido nomeado para distintos de um cargo ao
+
+longo do período estudado. Assim, cada nomeação corresponde à uma linha, ou observação, na base razão
+
+pela qual o número de observações supera o de indivíduos nela registrados.
+
+TA Introdução responde os tópicos da pergunta 1. Artigo, pergunta « Unidade de análise da avaliação.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+|
+
+===== page_001_mid.png =====
+€ Cultura do Executivo Federal (Albrecht; Ribeiro, 2025). À partir da base de dados disponibilizada pub-
+licamente pelos antores (Albrecht, 2023), busca-se replicar parte da lógica analítica empregada no estudo
+original, submetendo os dados a etapas de validação, tratamento de inconsistências e testes de hipótese.
+Este documento não pretende reproduzir integralmente a análise das autoras, mas sim aplicar ferramentas
+«de inferência estatística a variáveis selecionadas da base original.
+Ademais, o artigo analisado tem como questão central a análise das estratégias de nomeação para os cargos
+públicos, tomando como estudo de caso comparado as pastas do Ministério da Cultura (MinC/SECULT) e
+do Ministério da Agricultura (MAPA) no recorte de 2011 a 2021. Objetiva-se, ademais, responder em que
+medida os perfis dos nomeados para esses cargos variam em órgãos responsáveis por políticas regulatórias,
+partindo-se da premissa, sustentada pela literatura revisada no artigo, de que pastas de natureza regulatória
+seriam mais permeáveis à influência de partidos políticos e grupos de interesse (Baptista; Lopes, 2021 apud
+Albrecht; Ribeiro, 2025).
+A seleção do MAPA e do MinC foi justificada pelo nível de partidarização e pela natureza regulatória das
+políticas por eles desenvolvidas, o que contribui para uma maior suscetibilidade à atuação de grupos de
+interesse e reflete na maior nomeação de filiados para cargos de liderança nesses Ministérios. Comparati-
+vamente, ambos os Ministérios possuem proporções próximas de filiados e não diferem substancialmente de
+“outros órgãos públicos em termos de orçamento:
+O MinC e o MAPA seriam mais suscetíveis à ação de grupos do interesse: teriam mais filiados /as e
+menos servidores de carreira ocupando cargos. Isso resultaria da estratégia presidencial em deixar
+à burocracia mais partidária em minfstários regulatórios e distibutivos. MAPA e MinC possuem
+proporções similares de filiados/as, embora o percentual do MinC seja levemente superior. As
+Irutura imulor de cargos
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+k — — = + 890 observações ref.
+erentes a 568 servidores públicos, contemplando as seguintes variáveis: (L formação acadêmica; IL. instituição
+
+===== page_001_top.png =====
+Relatório de inferência de dados - FLP0406 |
+Júlia França e Castilho
+2026-07-21
+Introdução!
+O presente relatório tem como objetivo realizar um exercício de inferência estatística a partir dos dados
+utilizados no artigo Nomeação a cargos públicos no Brasil: um estudo comparado das pastas de Agricultura
+“disponibilizada pub-
+| Alguns arquivos neste envio só podem ser acessados através de download direto. DE ben
+aplicar ferramentas
+“e inibisln De net dr sotritiana datada ela: ligo ria
+
+===== page_002_bot.png =====
+4% mapa mcti minc
+** 525 148 365
+Ao escolher 5 variáveis relevantes para conferir possíveis valores ausentes (experiência em órgãos da ad-
+ministração pública; experiências em cargos de gestão; nível da função; instrução; presidente no momento
+da nomeação), nota-se que somente a variável experiências em cargos de gestão (exp. car) apresentou esta
+questão?:
+4% expadm expcar nível  instr indicacao
+“ o 1 o º o
+É necessário realizar a checagem dos valores observados em cada uma das 5 variáveis escolhidas:
+1.Experiência em órgãos da administração pública
+A variável exp adm apresentou incongruências na checagem. O artigo define a variável como dicotômica,
+apresentando somente as categorias 1 e 0. Porém a tabela mostra cinco categorias: "1, 0, 1, 3 e NA. O
+valor duplicado "L provavelmente se trata de um erro de importação, já o valor 3 não deveria existir em uma
+variável binária e pode ser um erro de digitação. A categoria NA existe por uma escolha de registrar valores
+ausentes manualmente como NA e não é necessariamente um problema:
+
+AVeremos posteriormente que as variáveis csp. car e inatr também apresentam valores ausentes (NA), que foram inseridos
+manualmente na planilha base, incluindo mais valores NA de exp. adm.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+*8 (1) “orgao sup" "setor" “chave” "ido
+
+*8 [5] "cargo" “funcao” “nível* “instr”
+
+*8 [9) “area” “inst ensino” “inst origem" “car pub”
+
+48 [13) "partido" “cargo. ele” “id part" “exp ado”
+
+48 [17] “exp car" “exp mer" “exp soc" cure
+
+48 [21] “partido pr” “partido ministro" “índicacao* “entrada”
+
+ae (25) “saida” “pera”
+
+“Após conferir à quantidade de observações por órgão superior, vê-se que o MAPA possui mais observações
+
+que o MinC, com 525 para 365 observações respectivamente. Além disso, os dados mostram um terceiro
+
+órgão, que não foi incluso no artigo, o Ministério da Ciência, Tecnologia e Inovação (MCTT). Os números
+
+de linhas observadas no MCTI (148), explicam a quantidade divergente de observações do artigo para a
+
+conferência, uma vez que, ao excluir as linhas refrente a ele, há um total de 890 linhas:
+
+“
+
+48 mapa meti minc
+
+*s 525 148 365
+
+Ao escolher 5 variáveis relevantes para conferir possíveis valores ausentes (experiência em órgãos da ad-
+
+ministração pública; experiências em cargos de gestão; nível da função; instrução; presidente no momento
+
+da nomeação), nota-se que somente a variável experiências em cargos de gestão (exp. car) apresentou esta
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_002_top.png =====
+Validação dos Dados
+
+Importar a base de dados, disponibilizada pela pesquisadora em seu repositório burocraciaBR (Albrecht,
+2023), permite conferir os dados coletados pelo R.
+
+dados <- read excel("-/Documents/Metodos Politica/BASE cargos2.xlsx", sheet = "BASE cargos")
+dados original <- dados
+
+codebook <- read excel("-/Documents/Metodos Politica/BASE cargos2.x1sx”, sheet = "Codebook*)
+Ao conferir o número de linhas e colunas, observa-se que a base possui 1038 observações e 26 variáveis ao
+todo. O que indica uma divergência no número de observações mencionadas no artigo (890):
+
+*s [1) 1038 26
+
+Os nomes das variáveis correspodem à:
+
+===== page_003_bot.png =====
+Para conferir a correção:
+
+“
+
+es O NA 1 235
+
+e 23 51 2 762
+
+3. Nível da função
+
+Não foi observado incongruências na checagem desta variável:
+“
+
+“ 4 5 6
+
+*8 652 275 111
+
+4. Instrução
+
+Não há incongruências nos valores desta variável, porém observa-se que os valores ausentes foram inseridos
+manualmente:
+
+===== page_003_mid.png =====
+di MNpersincias Sum Cargos ds gestão
+O artigo define a escala da variável exp. car como: “nenhum = O: níveis 1-2 = 1; níveis 3-4 = 2; níveis
+5-6 = 5" (Albrecht; Ribeiro, 2025, p. 10) porém a aba Codebook apresenta os valores possíveis de erp car
+“como apenas níveis 1-2 = 1; níveis 3-4 = 2; níveis 5-6 = 3. Observa-se que há uma incongruência entre o
+Codebook e o artigo que gerou um erro de codificação na construção da base:
+“
+0123 5 MA
+ssiu7 1 2509253 75
+Para solucionar esse erro, podemos inferir que os valores 3 e 5 significam a mesma categoria, podendo juntá-
+los, assim como os valores O e NA. Vale ressaltar que não é possível inferir com certeza que esse erro poderá
+ser solucionado, ao passo que há nao acompanhamos a constituicao da base e as categorias sao incongruentes:
+dados <- dados 1>% mutate(exp car = case vhen(exp car Jin) c("3", "5º) - “3.5”, TRUE - exp car)) >)
+Para conferir a correção:
+“
+s0m 1 235
+me xo e o To
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+CO av VUSCR dO ICON UcACiAS UM Cueca esta var
+
+===== page_003_top.png =====
+“
+eco 1 3 Ma
+e 3 sos 111
+Para resolver esse problema, pode-se usar o comando mutate para incorporar a categoria duplicada V'em 1
+e tratar o valor inválido 3 como valor ausente NA:
+dados <- dados >% mutate(exp adm = case vhen(str detect(exp adm, “1") & exp adm != “1” - “1”, exp adm
+Para conferir a correção:
+“
+0 1 Ma
+es essas 11
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. . íveis 3-4 = 2; níveis
+possíveis de exp car
+“como apenas níveis 1-2 = 1; níveis 3-4 = 2; níveis 5-6 = 3. Observa-se que há uma incongruência entre o
+
+===== page_004_bot.png =====
+E ct eo etio tired
+dados filtrados <- dados 1>% filter (orgao sup Link c(mapa”, “minc"))
+Assim, pode-se apresentar uma tabela contendo o número de observações válidas por pasta, bem como o
+número de pessons/nomeações com experiência administrativa, a proporção com experiência administrativa,
+o intervalo de confiança de 95% e, por fim, a margem de erro associada ao intervalo de confiança:
+ss Atibble:2x8
+4% orgao sup n valido n com exp proporcao erro padrao margem erro ic inferior
+8 <chr cin O cin  <abb <abi> <ab> <abr>
+81 mapa sa 482 0.920 0.019 0.0232 0.897
+48 2 minc asa 312 0.881 0.0172 o.0337 0.848
+4444 1 more variable: ic superior <dbl>
+Para melhor visualização:
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_004_mid.png =====
+Segundo a aba Codebook, a variável Experiência em órgãos da administração pública (exp adm) é codificada
+como variável dicotômica (1 = SIM, O = NÃO). Após o tratamento dos valores inconsistentes identificados
+na checagem anterior, pode-se converter a coluna para o formato binário, transformando os valores ausentes.
+(NA) escritos manualmente em NA reais:
+dados <- dados 1% mutate(exp ads bin = as.numeric(exp adm))
+Para conferir o resultado:
+“
+ms 01
+* es 938
+Como o artigo não utiliza as observações do MCTI, opta-se por filtrar somente os órgãos MAPA e MinC
+dados filtrados <- dados Y>/ tilter(orgao. sup inf c(“mapa”, “minc"))
+Assim, pode-se apresentar uma tabela contendo o número de observações válidas por pasta, bem como o
+número de pessoas/nomeações com experiência administrativa, à proporção com experiência administrativa,
+a imtervalo de confianca de 95% e nor fim. a marsem de erro associada ao intervalo de confiança:
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+|
+
+Cao ragaecaae mosconoo mosoccomp ponpoacio ooncpooio oro onno —- onferior
+
+48 <chr cinto cin cab <abi> <abl> <ábl>
+
+===== page_004_top.png =====
+“
+*8 doutorado especializacao — graduacao mestrado na
+.. 159 203 1 259 95
+.. superior tecnico
+“ 297 u
+5. Indicação
+Não foi observado incongruências na checagem desta variável:
+“e
+&8 Bolsonaro Lula Rousseff Temer
+. 396 8 as1 204
+Tabela descritiva: experiência administrativa
+E a E p adm) é codificada
+à Alguns arquivos neste envio só podem ser acessados através de download direto. . istentes identificados
+“o os valores ausentes
+(NA) escritos manualmente em NA reais:
+
+===== page_005_bot.png =====
+Poesia re oie  anadh  rr penaparr spider in AS e, tira Enc ço ea
+524 nomeações válidas do MAPA e as 354 nomeações válidas do MinC quanto à experiência administrativa
+prévia:
+teste <- prop.test(x = c(x mapa, x minc), n = c(n mapa, n.minc), correct = FALSE)
+teste
+“
+
+4% 2-sample test for equality of proportions vithout continuity correction
+“
+4% data: c(x.mapa, x.minc) out of c(n mapa, nminc)
+4% X-squared = 3.6179, df = 1, p-value = 0.05716
+4% alternative hypothesis: tuo.sided
+4% 95 percent confidence interval:
+48 -0.00243815 0.07942094
+4% sample estimates:
+** propl prop2
+48 0.9198473 0.8813559
+Para calcular a estatística qui-quadrado:
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+|
+
+===== page_005_mid.png =====
+E ns EDS AS pi and cg dg ria mir corda fo ao pr caca
+
+diretamente seu tamanho amostral menor (354 observações válidas, contra 524 do MAPA).
+Primeiro teste de hipótese bivariado
+Para realizar o primeiro teste de hipótese bivariado é necessário, primeiramente, extrair os valores da tabela
+previamente calculada:
+n mapa <- resultadoSn valido[resultadoSorgao. sup == “=apa")
+x.mapa <- resultadoSn com exp[resultadoSorgao. sup == "rapa”)
+nm minc <- resultadoSn valido[resultadoSorgao. sup == “ninc")
+x.minc <- resultadoSn com explresultadoSorgao. sup == "sinc")
+Continuamente usa-se o teste de diferença entre duas proporções com aproximação normal, comparando as
+524 nomeações válidas do MAPA e as 354 nomeações válidas do MinC quanto à experiência administrativa
+prévia:
+teste <- prop.test(x = c(x mapa, x minc), n = c(n mapa, n minc), correct = FALSE)
+teste
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. ion
+48 data: c(x.mapa, x.minc) out of c(n mapa, nminc)
+
+===== page_005_top.png =====
+Table 1: Experiência prévia em administração pública, por pasta
+
+Pasta Nválido Com experiência Proporção TC 95% Margem de erro
+
+MAPA 52 4s2 920% 897% — 94,3% 23%
+
+MINC sa 312 SAX BAS% - 915% 3AK
+A proporção no MAPA de nomeados com experiência prévia em órgãos da administração pública foi de
+92,0% (482 de 524 observações válidas). No MinC, essa proporção foi de 88,1% (312 de 354 observações
+válidas). Em ambas as pastas, portanto, a grande maioria dos/as nomeados /as já havia passado pelo serviço.
+público antes de assumir o cargo. O intervalo de confiança de 95% para o MAPA foi de 89,7% a 94,3%, e
+para o MinC, de 84,8% a 91,5%. Isso significa que, se o processo de coleta de dados fosse repetido diversas
+vezes em condições semelhantes, em 95% dessas repetições o intervalo calculado conteria o verdadeiro valor
+da proporção de nomeados/as com experiência administrativa na população de referência de cada pasta.Já a
+margem de erro foi de 2,3 pontos percentuais no MAPA e 3,4 pontos percentuais no MinC e ela representa a
+variação máxima esperada, para mais ou para menos, entre a proporção observada na amostra e o verdadeiro
+
+o o o o aior no MinC reflete
+i Alguns arquivos neste envio só podem ser acessados através de download direto. PA)
+
+Primeiro teste de hipótese bivariado
+
+===== page_006_bot.png =====
+MAFA e 0 Mint.
+Hipótese alternativa: A proporção de nomeações com experiência prévia em administração pública é diferente
+entre o MAPA e o MinC.
+
+Desse modo, o p-valor de 0,0572 representa a probabilidade de se observar uma diferença entre as proporções
+amostrais tão grande quanto a diferença de 3.85 pontos percentuais encontrada entre o MAPA (91,98%) e o
+MinC (88,14%), o que faz com que a Hipótese nula não seja rejeitada. Como esse valor (5,72%) é ligeiramente
+superior ao limiar de 5% adotado, o resultado indica que uma diferença dessa magnitude teria uma proba-
+bilidade relativamente pequena, mas não suficientemente rara, de ocorrer só por variação amostral aleatória.
+Esse resultado é corroborado pelo intervalo de confiança de 95% para a diferença entre as proporções, que
+vai de «0,24% a 7,94%. O valor de p muito próximo do limiar de 5% (0,0572, contra um corte de 0,05)
+sugere que o resultado está no limite da significância convencional, ou seja, uma diferença ligeiramente mais
+acentuada entre as proporções observadas, poderia ter levado à rejeição da Hipótese nula.
+Segundo teste de hipótese bivariado
+Para o segundo teste de hipótese, 'cria-seé necessário criar uma variável chamada alto nivel dicotômica (1
+= para nível 5 ou 6; 0 = para nível 4):
+
+6
+
+===== page_006_mid.png =====
+testeSestimate
+
+ss propi prop2
+
+4% 0.9198473 0.8813559
+
+testeSconf. int
+
+48 [1) -0.00243815 0.07942094
+
+4% attr(, "conf .level")
+
+** [1] 0.95
+
+As hipóteses para este teste são:
+
+Hipótese nula: A proporção de nomeações com experiência prévia em administração pública é igual entre o
+MAPA e o MinC.
+
+Hipótese alternativa: A proporção de nomeações com experiência prévia em administração pública é diferente
+entre o MAPA e o MinC.
+
+Desse modo, o p-valor de 0,0572 representa a probabilidade de se observar uma diferença entre as proporções
+amostrais tão grande quanto a diferença de 3,85 pontos percentuais encontrada entre o MAPA (91,98%) e o
+MinC (88,14%), o que faz com que a Hipótese nula não seja rejeitada. Como esse valor (5,72%) é ligeiramente
+superior ao limiar de 5% adotado, o resultado indica que uma diferença dessa magnitude teria uma proba-
+bilidade relativamente pequena, mas não suficientemente rara, de ocorrer só por variação amostral aleatória.
+Esse resultado é corroborado pelo intervalo de confiança de 95% para a diferença entre as proporções, que
+vai de “0,24% a 7,94%. O valor de p muito próximo do limiar de 5% (0,0572, contra um corte de 0,05)
+
+===== page_006_top.png =====
+testeSstatistic
+48 X-squared
+“ 3.6179
+Observa-se que o p-valor apresenta como resultado: p = 0,0572. Como o p-valor obtido (0,0572) é maior
+que o nível de significância adotado ( = (0,05), não se rejeita a hipótese nula. A diferença observada entre
+as proporções não é suficiente, a esse nível de confiança, para ser considerada estatisticamente significativa.
+testeSp.value
+as [1) 0.0s716097
+Para calcular as proporções e o intervalo de confiança para a diferença entre elas:
+à Alguns SfapafestdBare anvio só podem ser acessados através de download direto.
+** propi prop2
+
+===== page_007_bot.png =====
+Para realizar o teste de diferença de proporções:
+
+“
+
+4% 2-sample test for equality of proportions vithout contínuity correction
+
+“
+
+4% data: c(x.mapa nível, x.minc nível) out of c(n mapa nível, n minc nível)
+
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+
+4% alternative hypothesis: two.sided
+
+4% 95 percent confidence interval:
+
+48 -0.13365398 -0.00328014
+
+4% sample estimates:
+
+** propi prop2
+
+48 0.3561905 0.4246575
+
+As Hipóteses para esse teste são:
+
+Hipótese nula: A proporção de cargos de alto nível é igual entre o MAPA e o MinC
+
+Hipótese alternativa: A proporção de cargos de alto nível é diferente entre o MAPA e o MinC
+
+Assim, observa-se que no MAPA, de um total de 525 observações válidas, 187 correspondiam a cargos de
+
+alto nível, resultando em uma proporção de 35,6%, com intervalo de confiança de 95% entre 31,5% e 39,7%
+ê
+
+===== page_007_mid.png =====
+*8 8 Atibble: 2x8
+4% orgao sup n valido n alto proporcao erro padrao margem erro ic inferior
+*8 cho <in> cin cab <ab> <abi> <ab>
+481 mapa sos 187 0.356 0.0209 0.0410 0.315
+48 2 minc 365 155 0.425 0.0259 0.0507 o.374
+4441 1 more variable: ic superior <dbl>
+Para melhor visualização:
+Table 2: Proporção de cargos de alto nível (5-6), por pasta
+
+Pasta Nválido Cargos alto nível Proporção TC 95% Margem de erro
+MAPA 525 187 35.0% 315% — 39.7% AX
+MINC, 365 155 425% BTA% — 475% 5%
+Para realizar o teste de diferença de proporções:
+“
+4% 2-sample test for equality of proportions vithout continuity correction
+“
+4% data: c(x.mapa nível, x.minc nivel) out of c(n mapa nível, n minc nivel)
+48 X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+48 -0.13365398 -0.00328014
+
+===== page_007_top.png =====
+dados <- dados 4>% mutate(alto nível = case vhen(nivel Kink c(S, 6) - 1, nível == 4 - O, TRUE - NA real
+table (dadosSalto nível, useNA = "alvaya")
+“
+so 14
+** 62 386 O
+Com a criação da nova variável é necessário atualisar a base filtrada (MAPA, MinC):
+dados filtrados <- dados Y>%
+
+filter(orgao sup lin) c(ºmapa”, "minc"))
+Desse modo, é possível criar uma segunda tabela com a nova variável:
+ses Atibble: 2x8
+4% orgao sup n valido n alto proporcao erro padrao margem erro ic inferior
+*8 <chr cin cin cab <ab> <abr> <a>
+481 mapa sos 187 0.356 0.0209 0.0410 0.315
+
+===== page_008_bot.png =====
+aÃ a ni a ic a ai dc ló a
+A conclusão mudaria. Com o nível de significância a 0,01, a regra de decisão exige que p seja menor que
+0,01 para rejeitar a Hipótese nula.Como o p-valor observado (0,0389) é maior que 0,01, a conclusão se
+inverteria: não se rejeitaria a hipótese nula a esse nível de significância mais rigoroso. Ou seja, ao exigir um
+padrão de evidência mais exigente, a diferença encontrada entre MAPA e MinC deixaria de ser considerada
+estatisticamente significativa.
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+Esse exercício evidencia que a significância estatística não é uma propriedade fixa e objetiva do fenômeno
+estudado, mas depende diretamente do nível de significância escolhido pelo pesquisador como critério de
+decisão. Um mesmo p-valor (0,0389) pode levar a conclusões divergentes, dependendo de qual convenção de
+corte se adota, sem que nada tenha mudado nos dados observados ou na magnitude real da diferença entre
+as pastas.
+O que aconteceria se a amostra fosse maior?
+Para responder a essa questão, toma-se como referência a proporção de cargos de alto nível estimada para o
+MAPA (35,6%, com n = 525 e erro-padrão de 2,09 pontos percentuais). Supondo que essa mesma proporção.
+fosse observada em uma amostra duas vezes maior, ou seja, com n = 1.050, 0 novo erro-padrão poderia ser
+calculado, resultando em aproximadamente LAS pontos percentuais.
+
+s
+
+===== page_008_mid.png =====
+O MinC apresenta uma proporção de cargos de alto nível praticamente 7 pontos percentuais maior que o
+MAPA, o que representa uma proporção mais de 1.2 vezes superior. Essa diferença sugere que o MinC
+concentra proporcionalmente mais nomeações nos cargos mais altos da hierarquia em relação ao total de
+suas nomeações, quando comparado ao MAPA.
+
+Significância estatística e nível de significância
+
+Levando em consideração o segundo teste de hipóteses, as seguintes perguntas foram respondidas:
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+
+A conclusão não mudaria. A regra de decisão passaria a ser rejeitar a hipótese nula somente se o p fosse
+menor que 10%. Como o p-valor observado (0,0389) já é menor que 0,10, a conclusão permanece a mesma a
+hipótese mula é rejeitada. Ampliar o nível de significância para 10% apenas tornaria ainda mais fácil rejeitar
+essa hipótese, e como ela já era rejeitada a 5%, o resultado não se altera.
+
+2. A conclusão mudaria se o nível de significância fosse 1%?
+
+A conclusão mudaria. Com o nível de significância a 0,01, a regra de decisão exige que p seja menor que
+0,01 para rejeitar a Hipótese nula.Como o p-valor observado (0,0389) é maior que 0,01, a conclusão se
+inverteria: não se rejeitaria a hipótese nula a esse nível de significância mais rigoroso. Ou seja, ao exigir um
+padrão de evidência mais exigente, a diferença encontrada entre MAPA e MinC deixaria de ser considerada
+estatisticamente significativa.
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+Esse exercício evidencia que a significância estatística não é uma propriedade fixa e objetiva do fenômeno
+estudado, mas depende diretamente do nível de significância escolhido pelo pesquisador como critério de
+decisão. Um mesmo p-valor (00389) pode levar a conclusões divergentes, dependendo de qual convenção de
+
+===== page_008_top.png =====
+e margem de erro de 4,1 pontos percentuais. No MinC, de 365 observações válidas, 155 correspondiam a
+cargos de alto nível, resultando em uma proporção de 42,5%, com intervalo de confiança de 95% entre 37,4%
+€ 47,5% e margem de erro de 5,1 pontos percentuais.
+
+Para testar se essa diferença observada entre as pastas é estatisticamente significativa, formulou-se a hipótese
+nula de que a proporção de cargos de alto nível é igual entre MAPA e MinC, contra a hipótese alternativa
+de que essa proporção é diferente entre as duas pastas, O teste resultou em uma estatística X? = 4.2658 (g]
+= 1), com intervalo de confiança de 95% para a diferença entre as proporções de -13,4% a «0,3%. O pevalor
+obtido foi de 0,0389. Esse valor representa a probabilidade de se observar uma diferença entre as proporções
+amostrais tão grande quanto a diferença de 6,9 pontos percentuais encontrada entre o MAPA (35,6%) e o
+MinC (42,5%), assumindo que a hipótese mula seja verdadeira. Como esse p-valor é menor que o nível de
+significância adotado (= 0,05), rejeita-se a hipótese nula. Isso indica que a diferença observada entre as
+pastas é estatisticamente significativa Esse resultado é reforçado pelo intervalo de confiança da diferença
+entre as proporções, que não inclui o valor zero, confirmando por outra via que a hipótese de igualdade entre
+as pastas pode ser descartada com 95% de confiança.
+
+Destarte, diferentemente do primeiro teste realizado neste relatório, em que a diferença entre MAPA e MinC
+não se mostrou estatisticamente significativa, neste segundo teste a diferença é estatisticamente relevante.
+O MinC apresenta uma proporção de cargos de alto nível praticamente 7 pontos percentuais maior que o
+MAPA, o que representa uma proporção mais de 1,2 vezes superior. Essa diferença sugere que o MinC
+concentra proporcionalmente mais nomeações nos cargos mais altos da hierarquia em relação ao total de
+suas nomeações, quando comparado ao MAPA.
+
+===== page_009_bot.png =====
+
+
+===== page_009_mid.png =====
+BATISTA, Mariana; LOPEZ, Felix. Ministerial typology and political appointments: where and how do
+presidents politicize the bureaucracy. Brazilian Political Science Review, v. 15, n. 1, p. 1-34, 2021.
+
+===== page_009_top.png =====
+O erro-padrão, portanto, tenderia a diminuir de 2,09% para aproximadamente 1,48%, uma redução de cerca
+de 30%. Como consequência direta, a margem de erro também diminuiria (de aproximadamente 4,1% para
+2,9%), é o intervalo de confiança de 95% ficaria mais estreito, passando de uma amplitude de 8,2 pontos
+percentuais (31,5% a 39,7%) para uma amplitude próxima de 5.8 pontos percentuais (32,7% a 38,5%).
+Esse resultado ilustra que quanto maior a amostra, mais informação se tem sobre a população e menor
+é a incerteza em torno da estimativa da proporção. Amostras maiores captam com mais precisão o ver-
+dadeiro valor populacional, reduzindo a variabilidade amostral e, consequentemente, produzindo intervalos
+de confiança mais estreitos.
+
+Referências Bibliográficas
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos públicos no
+Brasil: um estudo comparado das pastas de Agricultura e Cultura do Exceutivo Federal (2011-2021). Revista.
+Brasileira de Ciência Política, 2025. DOE: https://doi.org/10.1590/01033352.2025.44.285564.
+
+ALBRECHT, Nayara F. burocraciaBR. Github. 2023. https://github.com /nayalbrecht /burocraciaBR.
+BATISTA, Mariana; LOPEZ, Felix. Ministerial typology and political appointments: where and how do
+presidents politicize the bureaucracy. Brazilian Political Science Review, v. 15, n. 1, p. 1-34, 2021.

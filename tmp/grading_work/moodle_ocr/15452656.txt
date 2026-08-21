@@ -1,0 +1,340 @@
+
+===== page_001_bot.png =====
+Indicado pode aparecer mais de uma vez, pois pode ter sido nomeado mais de uma vez.
+
++2.
+
+Número de linhas e colunas
+
+*s (1) 1038 26
+
+São, portanto, 1038 linhas e 26 colunas.
+
+Nomes das variáveis
+Tabela 1: Nome
+Variaveis
+orgao sup
+setor
+chave
+id
+
+===== page_001_mid.png =====
+https://github.com /nayalbrecht /burocraciaBR/raw /main/BASE. cargos? xls Acesso em
+18/07/2026
+FL. > A pergunta central do artigo “Nomeação a cargos públicos no Brasil: um estudo comparado das
+pastas de Agricultura e Cultura do Executivo Federal (2011-2021)", publicado na Revista Brasileira de
+Ciência Política, 2025 parte de uma revisão fundamental da literatura da Ciência Política no que tange às
+nomeações na burocracia federal, questionando se a ênfase dada pela literatura anterior é demasiado focada
+nos partidos políticos. Seriam os partidos um preditor eficaz para as nomeações na burocracia federal? Isto
+posto, a dúvida fundante é o quanto variam os indicados (perfil da indicação) em órgãos federais encarregados.
+de política regulatória. No caso, o foco do artigo é o Ministério da Agricultura (MAPA) e o Ministério da
+Cultura (MinC). Ao invés de focalizar os partidos como centro da equação e preditor, o trabalho pretende
+investigar a própria estrutura interna do órgão articulada com conjuntura política e outros fatores referentes.
+a experiência e relações do burocrata. Com este fim, o artigo apresenta uma base de dados com as nomeações
+na burocracia federal selecionada; base essa que tem como unidade de análise as nomeações em si. Cada
+linha da base equivale a uma nomeação para cargos determinados nas pastas referenciadas. Na base, um
+indicado pode aparecer mais de uma vez, pois pode ter sido nomeado mais de uma vez.
++
+Número de linhas e colunas
+ae ml rosa 26
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_top.png =====
+Relatório final |
+Francisco Zardo de Melo - NºUSP: 15452656
+18.07.2026
+Relatório final - ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano.
+Nomeação a cargos públicos no Brasil: um estudo comparado das pastas de Agricultura e
+Cultura do Executivo Federal (2011-2021). Revista Brasileira de Ciência Política, 2025. DOI:
+https://doi.org/10.1590/0103
+i Alguns arquivos neste envio só podem ser acessados através de download direto. Acesso em
+
+AL SÁ umeensiti menizilida eita Biomas dir a caneca níilizos noi Biel suma: peido ceoeesemadi la
+
+===== page_002_bot.png =====
+meti Ms
+mine 305
+São, portanto, 525 obs. em “mapa”, 148 em “meti” e 365 em “mine”
+Ausentes em pelo menos cinco variáveis relevantes.
+Busca por “NAs” na base de dados.
+Tabela 3: Valores ausentes (NAs)
+categoria ausentes
+Partido 253
+Tempo no cargo 20
+Nivel o
+Carreira publica mm
+Indicação o
+
+===== page_002_mid.png =====
+ad
+partido pr
+partido ministro
+indicacao
+entrada
+saida
+o.
+Número de observações por orgao sup
+Tabela 2: Observacoes por Orgao da Burocracia Federal
+
+Orgao da BF Numero de Observacoes
+
+mapa 525
+
+meti us
+
+mine 365
+
+São, portanto, 525 obs. em “mapa”, 148 em “meti” e 365 em “mine”
+
+===== page_002_top.png =====
+Variaveis
+cargo
+funcao
+nivel
+
+instr
+
+area
+
+inst ensino
+inst. origem
+car pub
+partido
+cargo. ele
+id part
+exp. adm
+exp car
+exp mer
+exp soc
+entrada
+
+===== page_003_bot.png =====
+*% 2 doutorado 159 15.3
+
+48 3 especializacao 203 19.6
+
+48 4 graduacao 1 0.0963
+
+48 5 mestrado 259 25.0
+
+4% 6 superior 297 28.6
+
+48 7 tecnico 2 231
+
+ss 8 A tibble: 4x3
+
+*s valor n prop
+
+se ch  <int> cab
+
+4% 1 Bolsonaro 396 38.2
+
+&8 2 Lula 87 8.38
+
++83 Rousseff 351 33.8
+
+48 4 Temer 204 19.7
+
+Explique qualquer problema encontrado
+Variáveis que deveriam ser binárias e que eventualmente apresentam valores inesperados podem
+estar assim por problemas de digitação e registro dos dados — na realidade é impossível que não
+sejam binárias; como “3” e 1" com crase em “exp. adm”, que espera apenas valores binários (O
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+|
+
+===== page_003_mid.png =====
+ma3 509 49.0
+
+“ss 253 24.4
+
+es 6 NA 75 7.23
+
+“e 7 <a 1 0.0963
+
+“8 8 A tibble: 3x3
+
+*s valor n prop
+
+“8 <dbl> <int> <ábl>
+
+es1 4 652 62.8
+
+m2 5 275 26.5
+
+“3 6 11 10.7
+
+ses A tibble: 7x3
+
+*8 valor an prop
+
+“<o> cinto <abl>
+
+ss 1 NA 95 9.15
+
+48 2 doutorado 159 15.3
+
+44 3 especializacao 203 19.6
+
+4% 4 graduacao 1 0.0963
+
+48 5 mestrado 259 25.0
+
+48 6 superior 297 28.6
+
+48 7 tecnico 2 2.31
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+|
+
+48 1 Bolsonaro 396 38.2
+
+===== page_003_top.png =====
+checagem dos valores observados em exp. adm, exp car, nivel, instr e indicacao.
+ses A tibble: 5x3
++ valor n  prop
+8 <chr> cint> cab
+ss10 es 8.48
+“21 935 90.1
+33 1 0.0963
+se 4 MA nu 1.06
+ss 3 0.289
+ses Atibble: 7x3
+*8 valor n  prop
+48 <chr> cint> cab
+s10 147 14.2
+“21 s1 4.81
+s32 2 0.189
+Co mta 100063
+
+===== page_004_bot.png =====
+Primeiro teste de hipótese bivariado
+Teste a hipótese de que a proporção de nomeações com experiência administrativa é igual nas
+duas pastas.
+Use a aproximação normal para a diferença entre proporções.
+No relatório, apresente:
+1. Hipótese nula.
+2. Hipótese alternativa.
+3. Teste usado no R.
+4. P-valor.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+Tabela final de exp. administrativa:
+Tabela 4: Experiencia administrativa previa entre nomeados do
+MAPA e MinC (2011-2021)
+MAPA 525 482 0.918 0.023 (0.895; 0.942)
+MINC 365 312 0.855 0.036 (0.819; 0.891
+Observa-se uma diferença marcante na relação entre indicados com exp adm no MAPA e no
+312 no MINC) e com maior proporção (91% x 85%). Os dados de margem de erro e IC indicam
+diferenças no tamanho da amostra, mas mostram solidez nos resultados — os IC's não se sobrepõem.
+Primeiro teste de hipótese bivariado
+Teste a hipótese de que a proporção de nomeações com experiência administrativa é igual nas
+duas pastas.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_top.png =====
+Experiência administrativa
+Variável binária para indicar experiência prévia em órgãos da administração
+pública
+Ao analisar a tabela de “exp. adm” com check values temos valores problemáticos: o 3 e o “L
+(com crase). Ambos precisam ser tratados para termos uma variável binária limpa indicando
+exp. prévia em órgãos de AP - além de tratar os valores NA.
+“
+“01
+*s es 905
+Para tratar o problema descrito acima a escolha foi anular todos os valores 'não-binários', inter-
+pretados como erro, além de anular os NAs (com o código useNA “no”).
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+Tabela 4: Experiencia administrativa previa entre nomeados do
+
+===== page_005_bot.png =====
+Tabela 7: Proporcao de cargos de alto nivel
+Pasta N Altonível Proporção 1C95%
+mapa 525 IST 356% — [0.315 0.397]
+mine 365 155 425% — Jo374; 0475]
+Tabela 8: Teste de hipotese para cargos de alto nivel entre MAPA
+e MinC
+Medida Valor
+Diferenca observada -685 pp.
+Estatistica qui-quadrado 4.266
+Pevalor 0.0389
+1C 95% da diferenca [1337 pps 0.33 pp)
+Ainda que p-valor (0.0389) esteja significativamente mais próximo do índice de 5% - diferença
+pequena desde o substantivo -, H(0) permanece rejeitado.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_005_mid.png =====
+Tabela 6: Teste de hipotese para diferença de proporções de expe-
+riencia administrativa entre MAPA e MinC
+Medida Valor
+Diferenca observada 633 pp.
+Estatística qui-quadrado (X2) 8.965
+Pevalor 000275
+IC 95% da diferenca [202 pps 10.64 pp]
+Dado o P-valor consideravelmente menor que o limite-padrãpo de 0,05 rejeita-se H(0); há, assim,
+relevância estatística.
+Segundo teste de hipótese bivariado
+Tabela 7: Proporeao de cargos de alto nivel
+Pasta N Altonível Proporção IC9%
+mapa 525 187 356% [0.315 0.397]
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+eMinC O MEME
+
+===== page_005_top.png =====
+5. Decisão usando nível de significância de 5%.
+6. Interpretação substantiva.
+Importante: não escreva apenas “rejeita” ou “não rejeita”. Explique o que o p-valor quer dizer
+neste caso.
+“Tabela 5: Proporção de nomeações com experiencia administrativa
+por pasta
+Pasta N Comexperiencia Proporcao
+MAPA 525 182 D9IS
+MINC 365 a12 0555
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+. Medida Valor
+
+===== page_006_bot.png =====
+1. O que tenderia a acontecer com o erro-padrão?
+
+2. Por que isso acontece?
+
+Não é necessário simular uma nova base, mas você pode fazer a conta aproximada se quiser.
+Considerando o segundo teste com o dobro de observações, a tendência seria de diminuição do
+erro padrão - quanto maior a amostra, menor o erro. Quão maior for o espaço amostral, menor
+erro; menos flutuações, concentração em torno da média.
+
+===== page_006_mid.png =====
+significância substantiva?
+O exercício mostra que a arbitrariedade do p-valor pode alterar a interpretação dos resultados; é
+necessário lidar com a significância substantiva para saber o efeito prático da coisa.
+O que aconteceria se a amostra fosse maior?
+Escolha uma das proporções estimadas nas perguntas anteriores.
+Suponha que a proporção observada fosse a mesma, mas o número de observações fosse duas
+vezes maior.
+Responda:
+1. O que tenderia a acontecer com o erro-padrão?
+2. Por que isso acontece?
+Não é necessário simular uma nova base, mas você pode fazer a conta aproximada se quiser.
+diminuição do
+i Alguns arquivos neste envio só podem ser acessados através de download direto. mostral, menor
+
+===== page_006_top.png =====
+Significância estatística
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+
+A conclusão não mudaria. Ambas os testes tem hipótese nula rejeitada a 5% de significância. O
+p-valor, assim, ainda seria menor que a significância mesmo que fosse 10%.
+
+2. A conclusão mudaria se o nível de significância fosse 1%?
+Sim. Considerando o segundo texto, com p-valor 0,0389, a hipótese nula seria aceita com signi-
+ficância a 0,1% (0,03 < 0,1).
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+O carataLio umotia que a arumtiarieuade uu pera pon aucias a ue presaças vos resultados; é
+necessário lidar com a sienificância substantiva para saber o efeito prático da coisa.

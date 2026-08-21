@@ -1,0 +1,264 @@
+
+===== page_001_bot.png =====
+Cada linha da base corresponde a uma nomeação específica realizada para um cargo público.
+1.4 Por que a mesma pessoa pode aparecer mais de uma vez?
+Como a unidade de análise é a nomeação, um mesmo indivíduo pode aparecer mais de uma vez caso tenha
+sido nomeada para diferentes cargos.
+1.5 Quais são as duas pastas comparadas no artigo?
+As duas pastas investigadas são do Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC).
+2. Leitura e validação dos dados.
+2.1 Dimensões da base
+Inicialmente, verificon-se o número de observações e variáveis da base de dados.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+1.1 Qual a pergunta geral do artigo?
+A questão geral do artigo diz respeito às motivações por trás das nomeações para cargos públicos e aos
+efeitos do contexto institucional nas estratégias adotadas por presidentes e organizações partidárias. O
+artigo busca analisar em que medida os perfis dos nomeados variam em órgãos responsáveis por diferentes
+tipos de políticas regulatórias.
+1.2 Qual a unidade de análise da base?
+A unidade de análise da base é a nomeação para cargo público.
+1.3 O que significa uma linha da base?
+Cada linha da base corresponde a uma nomeação específica realizada para um cargo público.
+1.4 Por que a mesma pessoa pode aparecer mais de uma vez?
+Como a unidade de análise é a nomeação, um mesmo indivíduo pode aparecer mais de uma vez caso tenha
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+: 1.4 wquais nau as uuas pastas vumiparauas uu augu:
+
+===== page_001_top.png =====
+Trabalho Final - Metodos em Ciência Política |
+Anne Louise Dias
+2026-06-30
+1. Artigo, pergunta e unidade de análise
+Os dados utilizados para esa avaliação foram obtidos do repositório público do artigo de Albrecht e Ribeiro,
+
+===== page_002_bot.png =====
+É observado que há uma concentração no MAPA, com 525, seguido pelo MinC, 365 e pelo MCTI, 148
+observações.
+
+2.4 Número de valores ausentes em cinco variáveis.
+
+Também foi realizada uma inspeção de valores ausentes em cinco variáveis relevantes para a análise.
+
++ expada expcar nível  instr indicacao
+
+“ o 1 o o o
+
+A inspeção indicou ausência de valores ansentes formais, com apenas um valor NA em exp car. Porém,
+verificou-se a presença de valores codificados como “NA” em formato de texto, que não são reconhecidos
+pelo R como valores ausentes, o que exige tratamento adicional.
+
+===== page_002_mid.png =====
+A base contém variáveis relacionadas ao cargo ocupado, trajetória profissional, vínculos políticos e carae-
+terísticas institucionais das nomeações.
+2.3 Número de observações por orgao sup
+Foi calculado o número de observações em cada órgão superior.
+88 8 A tibble: 3x2
+*s orgo sup n
+* <cho  <imt>
+48 1 mapa 525
+as 2 meti 148
+48 3 minc E
+É observado que há uma concentração no MAPA, com 525, seguido pelo MinC, 365 e pelo MCTI, 148
+observações.
+2.4 Número de valores ausentes em cinco variáveis.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. ]
+|
+E O O O DR DR
+
+===== page_002_top.png =====
+as (1) 1038 26
+A base contém 1038 observações e 26 variáveis
+2.2 Nomes das variáveis
+Em seguida, foram inspecionados os nomes das varíaveis na base
+48 [1) "orgao sup! "setor" rchaver “ide
+*s [5] "cargo" “funcao” “nivel” “instr”
+*s [9] “area” “inst, ensino" “inst, origem" "car pub”
+48 [13] “partido” "cargo ele" “Lid part” “exp ada”
+as [17] “exp car" “exp mor” “exp soc" vupe
+48 [21) “partido pr” “partido ministro” "indicacao” “entrada”
+44 [25] "saida" "pera"
+
+|
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. po políticos e carac-
+|
+
+===== page_003_bot.png =====
+mapa dom a MP Ab NNE MES]
+mine 354 312 0881 003 [08480915]
+Observa-se que a proporção de nomeações com experiência é elevada em ambas as pastas. No MAPA, 482
+das 524 observações válidas (91,98%) apresentaram experiência administrativa prévia. Enquanto, no MinC,
+essa proporção foi de 88,03%, correspondendo a 309 nomeações entre 351 observações válidas. O intervalo de
+confiança de 95% indica a faixa de valores plausíveis para a proporção populacional real de nomeações com
+experiência administrativa em cada pasta. Para o MAPA, o intervalo estimado é de aproximadamente entre
+89,7% e 94,3%, enquanto para o MinC varia entre 84,6% e 914%. A margem de erro representa a incerteza
+associada à estimativa amostral. Quanto menor a margem de erro, maior a precisão da estimativa. Como o
+MAPA possui maior número de observações, sua margem de erro é menor que a observada no MinC.
+4. Primeiro teste de hipótese bivariado
+Para avaliar se à proporção de nomeações com experiência administrativa diferente entre as duas pastas, foi
+realizado um teste de diferença entre proporções utilizando aproximação normal.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+em formato textual. Esses casos foram tratados por recodificação, convertendo valores válidos para formato
+numérico e tratando códigos inválidos como valores ausentes. Já a variável “nivel” apresentou codificação
+consistente, contendo apenas os valores 4, 5 e 6. As variáveis “instr” e “indicacao” também apresentaram
+categorias substantivamente coerentes, embora “instr” contenha valores “NA” representados como texto.
+3. Tabela descritiva: experiência administrativa
+Foi criada uma variável binária para indicar a experiência prévia em órgãos administrativos. Dessa forma,
+seguindo o Codebook, a variável “exp adm” deve assumir valor 1 para a presença de experiência e O para
+Table 1: Tabela 1. Experiência por pasta
+Pasta N Exp Prop ME 1095
+mapa 524 482 0.920 0.023 (0.897; 0.943]
+mine 354 312 0881 003 (0.848; 0.915]
+Observa-se que a proporção de nomeações com experiência é elevada em ambas as pastas. No MAPA, 482
+das 524 observações válidas (91,98%) apresentaram experiência administrativa prévia. Enquanto, no MinC,
+essa proporção foi de 88,03%, correspondendo a 309 nomeações entre 351 observações válidas. O intervalo de
+al de nomeações com
+Alguns arquivos neste envio só podem ser acessados através de download direto. . Joximadamente entre
+apresenta a incerteza
+associada à esmativa amostras. Quanto menor a margem ae erro, maior a precisao aa estimativa. Como o
+JADA semi onitia siroacn da dlmormnelioa ima: maaramen da sena À smence emo ibosmenda meio
+
+===== page_003_top.png =====
+2.5 Checagem de valores observados
+es Ca) cam cor mequ cenas ego
+es Ca) c6s eme cor ope MAMA a2o
+mesa
+es (1) mar “especializacao" "mestrado" "superior"
+48 [5] "tecnico" "doutorado" “graduacao”
+48 (1) “Lula” “Rousseff” "Temer" “Bolsonaro”
+A validação mostrou inconsistências em variáveis que deveriam apresentar codificação categórica simples. Em
+“exp adm”, por exemplo, além dos valores esperados, foram identificados valores como “*1”, “3” e “NA”
+válidos para formato
+i Alguns arquivos neste envio só podem ser acessados através de download direto. »resentou codificação
+l o mbém apresentaram
+CO categorias substantivamente coerentes, embora “ist” contenha valores “NA” representados como texto.
+
+===== page_004_bot.png =====
+PA A SO ED:
+Table 2: Tabela 2. Proporção de cargos de alto nível por pasta
+Pasta N Alto nivel Proporao ME 1095
+mapa 525 187 0.356 0.041 0.315; 0.397]
+mine 365 155 0425 0051 [0.374; 0475]
+Observa-se que a proporção de cargos de alto nível é maior na pasta MinC do que em MAPA, 42,5% e 35,6%
+das nomeações correspondem a cargos de alto nível, respectivamente. Os intervalos de confiança de 95%
+indicam os valores plausíveis para as proporções populacionais de cargos de alto nível em cada pasta. A
+margem de erro expressa a incerteza associada a essas estimativas.
+“
+4º 2-sample test for equality of proportions vithout continuity correction
+“
+48 data: c(187, 155) out of c(525, 365)
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+Hipótese alternativa (H1)
+A hipótese alternativa afirma que as proporções são diferentes entre as duas pastas, MAPA e MinC.
+O teste de diferença entre proporções resultou em p-valor = 0,05187.. Adotando o nível de significância
+de 5%, não se rejeita a hipótese nula, pois o p-valor é ligeiramente superior a 0,05. Isso significa que não
+há evidência estatística suficiente para afirmar que a proporção de nomeações com experiência difere entre
+MAPA e MinC. Embora a proporção observada no MAPA, 91,98%, seja maior do que no MinC, 88,03%,
+essa diferença pode ser explicada por variação amostral.
+5. Segundo teste de hipótese bivariado
+Para analisar diferenças na distribuição de cargos na alta hierarquia das pastas, foi construída a variável
+binária que indica se a nomeação corresponde a cargo de alto nível.
+
+Table 2: Tabela 2. Proporção de cargos de alto nível por pasta
+
+Pasta N Alto nivel Proporao ME 1095
+
+mapa 525 187 0.356 0041 [0.315; 0.397]
+
+mine 288, ass. nao most nara m 475]
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+| “APA, 42,5% e 35,6%
+
+das nomeações correspondem a cargos de alto nível, respectivamente. Os intervalos de confiança de 95%
+
+===== page_004_top.png =====
+“
+48 2-sample test for equality of proportions without continuity correction
+..
+48 data: c(482, 30) out of c(524, 351)
+48 X-squared = 3.7801, df = 1, p-value = 0.05187
+48 alternative hypothesis: tuo.sided
+48 95 percent confidence interval:
+48 -0.001645247 O.080656143
+48 sample estimates:
+*s  propi prop2
+48 0.9198473 0.8803419
+Hipótese nula (HO)
+A hipótese mula afirma que a proporção de nomeações com experiência é igual entre as duas pastas, MAPA
+e MinC.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+l
+
+A hipótese alternativa afirma que as proporções são diferentes entre as duas pastas, MAPA e MinC.
+
+===== page_005_bot.png =====
+7. Dobro da amostra
+
+Para essa análise, utilizou-se a proporção de nomeações com experiência administrativa no MAPA, estimada
+em 91,98%. A fórmula do erro padrão, nos mostra que o erro-padrão da proporção é inversamente propor-
+cional à raiz quadrada do tamanho amostral. Ou seja, quando a amostra aumenta, a variabilidade amostral
+diminui e a estimativa se torna mais precisa. Com isso, os intervalos de confiança também tenderiam a ficar
+menores, reduzindo a margem de erro.
+
+===== page_005_mid.png =====
+Para discutir o efeito da escolha do nível de significância sobre a conclusão inferencial, utilizou-se o teste de
+
+diferença entre proporções referente à experiência administrativa entre as pastas. Se o nível de significância
+
+fosse de 10%, a conclusão mudaria. Como o p-valor é de 0,05187, ou seja, inferior a 0,10, rejeitamos a
+
+hipótese nula. Porém, se o nível de significância fosse de 1%, a conclusão não mudaria e não rejeita-se a
+
+hipótese nula já que o p-valor é maior que 0,01, não há evidência estatística suficiente para rejeitar a hipótese
+
+de igualdade.
+
+6.3 A diferença entre p-valor e significância substantiva
+
+O exercício mostra que o p-valor e significância substantiva não são equivalentes. O p-valor informa quão
+
+compatíveis os dados são com a hipótese nula, considerando a variabilidade amostral. Já a significância
+
+substantiva diz respeito à relevância prática ou teórica da diferença observada. No caso estudado, embora a
+
+diferença entre as proporções seja de 4 pontos porcentuais, sua interpretação substantiva depende da relevân-
+
+cia dessa magnitude para entender os padrões de nomeação. Assim, uma diferença pode ser estatisticamente
+
+significativa, mas não substantivamente. Ou vice-versa.
+
+7. Dobro da amostra
+
+Para essa análise, utilizou-se a proporção de nomeações com experiência administrativa no MAPA, estimada
+
+em 91,98%. A fórmula do erro padrão, nos mostra que o erro-padrão da proporção é inversamente propor-
+i Alguns arquivos neste envio só podem ser acessados através de download direto.  “m tenderiam a ficar
+
+===== page_005_top.png =====
+48 -0.13365398 -0.00328014
+48 sample estimates:
+ss  propi prop2
+88 0,3561905 0.4246575
+O teste de diferença entre proporções resultou em p-valor = 0,03889. Como esse valor é inferior ao nível
+de significância de 5%, se rejeita a hipótese nula de igualdade entre as proporções. Isso indica evidência
+estatística de que a proporção de cargos de alto nível difere entre MAPA e MinC. Assim, substantivamente,
+a diferença observada entre as pastas é moderada. O MinC apresenta proporção aproximadamente 6,9 pontos
+percentuais (42.5% - 35.6%) maior de cargos de alto nível em relação ao MAPA. Embora a diferença não seja
+extremamente grande, ela parece relevante substantivamente, pois sugere estruturas hierárquicas distintas
+entre as pastas analisadas.
+6. Significância estatística e nível de significância
+“utilizou-se o teste de
+i Alguns arquivos neste envio só podem ser acessados através de download direto. — nível de significância
+| a 0,10, rejeitamos a
+E hipótese mula. Porém, se o nível de significância fosse de 1%, a conclusão não mudaria e não rejeita-se a

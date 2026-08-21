@@ -1,0 +1,1181 @@
+
+===== page_001_bot.png =====
+44 [1] "C:/Users/Del1/OneDrive/Docunentos"
+readxl::read x1sx("BASE cargos2.x1sx")
+48 4 À tibble: 1,038 x 26
+48 — orgao sup setor chave id cargo funcao nível instr area inst ensino
+48 <chr  <chr> <chr> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+48 1 minc secdc Cult-SCO-S1 VSCA Secr- DAS 6NA arte NA
+4% 2minc secdc Cult-SCC-DA- OGRJ Dire- DAS 5 espe- admi- UFPA
+48 3 minc secdc Cult-SCC-CG- JNPE Coor- DAS 4 mest- arte UERJ
+48 4 minc secdc Cult-SCC-CG- ECBR Coor- DAS AMA NA MA
+48 Sminc secdc Cult-SCC-CG- ESTO Coor- DAS 4 supe- hist- PUC
+48 6 minc secdc Cult-SCO-S2 MPPO Secr- DAS 6 espe- comu- NA
+48 7 minc secdc Cult-SCC-S3 MHGR Secr- DAS 6 espe- arte- UnB
+4% 8 minc secdc Cult-SCC-DA- RAMS Dire- DAS SMA NA MA
+48 9 minc secdc Cult-SCC-DA- INCA Dire- DAS 5 mest- hist- PUC
+4% 10 minc secdc Cult-SCO-CG- AMTP Coor- DAS 4 supe- dire- UniCEUB
+48 4 1 1,028 more rous
+48 4 1 16 more variables: inst origem <chr>, car pub <chr>, partido <chr>,
+44% cargo ele <chr>, lid part <chr>, exp ade <chr>, exp car <chr>,
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+3. O que significa uma linha da base?
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+5. Quais são as duas pastas comparadas no artigo
+O artigo parte da pergunta geral sobre em que medida os perfis dos nomeados variam em órgãos responsáveis
+por políticas regulatórias, questão fundamentada nos trabalhos de Batista e Lopez, que apontam a possi-
+bilidade de essas pastas serem mais abertas a partidos e grupos de interesse. Para respondê-la, a unidade
+de análise da base é a nomeação, a partir da qual se analisam as trajetórias dos funcionários nomeados, de
+modo que cada linha da base corresponde a uma nomeação específica. Por essa razão, a mesma pessoa pode
+aparecer mais de uma vez na base, uma vez que pode ter sido nomeada mais de uma vez ao longo do período
+analisado pela pesquisa. Com base nesse desenho, o artigo compara duas pastas: o Ministério da Cultura
+(MinC) e o Ministério da Agricultura, Pecuária e Abastecimento (Mapa).
+getudO)
+48 [1) "C:/Users/Dell/OneDrive/Docunentos"
+readyl::read xlsx("BASE, cargos? x1sx*)
+48 8 A tibble: 1,038 x 26
+di dna iniinacda a ahead di di q
+. º . cchr>
+à Alguns arquivos neste envio só podem ser acessados através de download direto. «a
+E JEPA
+48 3 minc secdc Cult-SCO-CG- JNPE Coor- DAS 4 mest- arte UERJ
+
+===== page_001_top.png =====
+Trabalho Final |
+Yasmim 14612631
+2026-07-19
+4. Artigo, pergunta e unidade de análise
+1. Qual é a pergunta geral do artigo?
+2. Qual é a unidade de análise da base?
+E
+
+===== page_002_bot.png =====
+Os dados utilizados nesta análise foram obtidos do repositório oficial do artigo de Albrecht e Ribeiro (2025),
+
+disponível em https://github.com/nayalbrecht/bnrocraciaBR, acessado em 19/07/2026
+
+2. Leitura e validação dos dados
+
+Elizpse (Banco)
+
+4% Rous: 1,038
+
+48 Columns: 26
+
+48 $ orgao sup <chr> “minc*, "min, “minc*, "minc”, "minc”, “minc", “minc-
+
+48 $ setor <chr> "secdc*, "secdc*, "secdc*, "secdc”, "secdc”, "secdo*,-
+
+8 $ chave <chr> "Cult-SCO-S1*, "Cult-SCO-DACI”, "Cult-SCO-COMARI*, "C-
+
+essi <chr> "VSCA”, "OGRJ", "JNPE”, “ECBR”, “ESTO”, "MPPO", "MHGR-
+
+48$ cargo <chr> "Secretário da Cidadania Cultural”, "Diretor de Acess-
+
+48 $ funcao <chr> "DAS", "DAS", "DAS*, “DAS”, "DAS", "DAS", "DAS, "DAS-
+
+48 $ nivel <dbl> 6, 5,4,4,4,6,6,5,5,4,4,4,4,4,6,5,4,4,
+
+48 $ instr <chr> “NA”, “especializacao”, “mestrado”, "NA", "superior",
+
+48 $ area <chr> "arte", "administracao", “arte”, "NA, "historia", “c-
+
+48 $ inst ensino <chr> “NA”, "UFPA, "UERJ", “NA”, "PUC", "NAM, "UnB", PNAM,-
+
+48 $ inst origem <chr> “NA”, “publica”, “publica”, “NA”, “privada”, "NA", “p-
+
+48 $ car pub <chr> "SVE", "EPPGG", "OUTRO", "SE INT", "SVE, "SVE", "SVE-
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+“. = no o
+
+48 betucen, first, last
+48 Os seguintes objetos são mascarados por 'package:stats':
+“
+48 filter, lag
+48 Os seguintes objetos são mascarados por 'package:base':
+“
+48 | intersect, setdiff, setequal, union
+library(knitr")
+Banco <- read x1sz("BASE cargos2.xlox*)
+Os dados utilizados nesta análise foram obtidos do repositório oficial do artigo de Albrecht e Ribeiro (2025),
+disponível em https: //github.com/nayalbrecht/burocraciaBR, acessado em 19/07/2026
+2. Leitura e validação dos dados
+Elimpse(Banco)
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+48 $ setor <chr> "secdc”", “secdc", “secdc", “secdc”, “secde", “secde",-
+
+===== page_002_top.png =====
+48 4 exp mer <chr>, exp soc <chr>, “UP*! cchr>, partido pr <chr>,
+$s 4 partido ministro <chr>, indicacao <chr>, entrada <chr>, saida <chr>,
++84 pera cchr>
+library(“data.table*)
+48 Warning: pacote 'data table” foi compilado no R versão 4.5.3
+library(*readxl*)
+1ibrary("dplyr)
+“
+4% Anexando pacote: "dplyr"
+44 Os secuintes objetos são mascarados por 'packageidata.table!:
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+44 Os seguintes objetos são mascarados por “package:stats':
+
+===== page_003_bot.png =====
+o RN E raça É aa nte. dic det É ris Agar adoisand
+4% Class :character Class :character Class :character Class :character
+48 Mode :character Mode :character Mode “character Mode :character
+“
+
+“
+“
+*s partido cargo ele lid part exp adm
+48 Length: 1038 Length: 1038 Length:1038 Length:1038
+48 Class :character Class :character Class :character Class :character
+4 Mode :character Mode “character Mode “character Mode :character
+“
+“
+“
+*  expcar exp mer exp soc ur+
+8 Length: 1038 Length: 1038 Length: 1038 Length: 1038
+48 Class :character Class :character Class :character Class :character
+48 Mode :character Mode :character Mode “character Mode :character
+“
+“
+“=
+*s partido pr partido ministro — indicacao entrada
+48 Length: 1038 Length:1038 Length:1038 Length:1038
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+48 orgao sup setor chave iá
+48 Length:1038 Length: 1038 Length: 1038 Length: 1038
+48 Class icharacter Class :character Class :character Class character
+48 Mode icharacter Mode icharacter Mode :character Mode :character
+“e
+“
+“
++ cargo funcao nível ânstr
+48 Length:1038 Length:1038 Min. :4.000 Length:1038
+48 Class character Class icharacter 1st Qu.:4.000 Class :character
+4% Mode icharacter Modo icharacter Median :4.000 Mode :character
+“ Mean :4.479
+“ 3rd Qu.:5.000
+“ Max. 26.000
++ area ánst ensino inst origem car pub
+48 Lengrh:1038 Length: 1038 Length: 1038 Length: 1038
+48 Class icharacter Class :character Class :character Class character
+48 Mode icharacter Mode icharacter Mode :character Mode :character
+“
+“
+“
+ss partido cargo ele lid part exp ada
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. acer
+PM
+
+===== page_003_top.png =====
+48 $ partido <chr> “NA”, "NA", “PCdoB”, “NAM, MPT", MPT*, MNAM, "NAM, =
+48 $ cargo ele cche> "OM, “O, NON, NON, NOM, NON, NON, NOM, NOM, MOR, ngr
+48 $ lid part echr> "O", 00%, “ON, 005, MOr, 200, mOr, nOM, agr, 000, ngu
+48 $ explada echr> njo) apo, uqul ugul uqul ago, mjul ujo) aquo ago, age.
+48 $ expicar echr> “Ee 0go, ugel ago, MQro 050, mge. ago, age, ngo, age
+48 $ expmer cchr> mio) ojol njol NAS, “OR, 242, NOM, NÃO, “io, “NAS, -
+48 $ exp soc <chr> "1%, NAM, MIM, NAM, MIM, MNAM, CNAS, MNAM, MARS, MN
+ms ups echr> "DP%, “DE*, “DEM, *DE*, NAS, "MG", “DES, MRJM, NA, *-
+44 $ partido pr echr> "PT" “Pre, apro, oppe) apro, apre) «pre, apra epre,-
+4% $ partido ministro <chr> "PU", “PU", “PU”, "PU", “PUM, MNAM, MNAM, MNAM, “NAM,
+48 $ indicacao <chr> “Lula”, "Lula", “Lula”, “Lula”, “Lula”, “Rousseff”, *-
+48 $ entrada <chr> "40280", "40288", "39972", "40007", "40007", "40668",
+48 $ saida <chr> "40668", "40668", "40732", "40613", "40638", "40800", -
+44 $ pera <chr> "12.9", "12.7%, "25.39, "20.2", "21%, "4.400000000000-
+summary (Banco)
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+Dm
+
+4% Mode :character Mode :character Mode :character Mode :character
+
+===== page_004_bot.png =====
+Métrica número
+Número de linhas 1038
+Número de colunas 2%
+2.2 Nomes das variáveis.
+names (Banco)
+48 [1) "orgao sup" "setor" "chave" cido
+48 [5] “cargo” “funcao” “nível" “instr*
+48 [0] “area” “inst, ensino" “inst origen" “car pub”
+48 [13] “partido” "cargo ele” “Lid part” “exp ada”
+48 [17] “exp car" “exp mor” “exp soc” nuPos
+4% [21) “partido pre “partido ministro" "índicacao” “entrada”
+48 [25] “saida” "pera"
+2.3 Número de observações por orgao sup
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_mid.png =====
+ss (1) 1038
+ncol (Banco)
+es (1) 26
+Tong TES ARA a
+Métrica = c("Número de linhas”, "Número de colunas"),
+número = c(nrou(Banco), ncol(Banco))
+,
+Xable(Tamanho, caption = “Tabela 1. Taxanho da base de dados*)
+“Table 1: Tabela 1. Tamanho da base de dados
+Métrica número
+Número de linhas 1038
+Número de colunas 26
+
+===== page_004_top.png =====
+48 Class icharacter Class :character Class :character Class character
+48 Mode icharacter Mode icharacter Mode icharacter Mode :character
+..
+..
+.
++ saida pera
+*8 Length:1038 Length: 1038
+48 Class character Class character
+48 Mode icharacter Mode “character
+“.
+“e
+“
+2.1 Número de linhas e colunas.
+mrow(Banco)
+CC nelBmo)
+
+===== page_005_bot.png =====
+colSuns(is.na(Banco))
+“ orgao sup setor chave 4a
+. o o o o
+“ cargo funcao nável ánstr
+. o o o o
+“ area instensino  inst origem car pub
+“ o o o o
+“ partido cargo ele 1id part exp ada
+“ o o o o
+“ exp.car exp mer exp.soc ve
+“ 1 1 4 a
+“ partido, pr partido ministro indicacao entrada
+“ º o º o
+“ saida perm
+. 5 4
+2.5, Checagem dos valores observados em exp. adm, exp. car, nivel, instr e indicacao.
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_005_mid.png =====
+Table 2: Tabela 2. Número de observações por órgão superior
+
+Órgão superior N de observações
+
+mapa 52
+
+meti us
+
+mine 305
+2.4. Número de valores ausentes em pelo menos cinco variáveis relevantes
+any(is.na(Banco))
+as [1) TRUE
+colSuns(is.na(Banco))
+“ orgao. sup setor chave sa
+“ º o o o
+pa cimo Simca, aizad jnate
+“ partido cargo ele lid part exp adm
+
+===== page_005_top.png =====
+Bancoi>%,
+
+count (orgao. sup)
+
+se 8 A tibblo: 3x2
+
+*s orgao sup n
+
+* <cdhr  <int>
+
+48 1 mapa 525
+
+482 meti 148
+
+48 3 minc 365
+
+tabela orgao <- Banco >),
+
+count(orgao. sup)
+
+kable(tabela orgao,
+col.names = c("Nu00d3rglu00e30 superior”, "N de observaluO0e7lu00fSes*),
+cembáma m Mabnda O NbnDhtamano do nbnnomoh AA nONEE na mem )vONF3FEUO0E3O Superior")
+
+===== page_006_bot.png =====
+Table 3: Tabela 3. Frequência dos valores de exp adm
+
+exp adm N
+1 E
+o ss
+NA un
+Hm 3
+3 1
+
+exp car
+
+Banco 4>%,
+
+count (exp car, sort = TRUE)
+
+48 8 A tibble: 7x2
+
+* expcar n
+
+ss <chr> <int>
+
+6
+
+===== page_006_mid.png =====
+Banco >) count(exp. ada, sort = TRUE)
+48 8 A tibble: 5x2
+*% expada n
+“8 <cho <int>
+mais sas
+20 ss
+“e 3 Na u
+mas 3
+53 1
+Xable(Banco 1>% count (exp adm, sort = TRUE),
+col.names = c(*exp ada”, "Nº'),
+caption = “Tabela 3. Frequência dos valores de exp ada")
+“Table 3: Tabela 3. Frequência dos valores de exp adm
+expadm N
+1 E
+o ss
+NA u
+Ei 3
+3 1
+
+===== page_006_top.png =====
+colSuns(!is.na(Banco))
+“ orgao sup setor chave ja
+“ ioss 1038 1038 1038
+“ cargo funcao nável ânstr
+“ 1038 1038 1038 1038
+“ area instensino  inst origen car pub
+“ 1038 1038 1038 1038
+“ partido cargo ele 1id part exp adm
+“ 1038 1038 1038 1038
+“ expcar exp mer exp soc ur
+“ ios7 1037 ios4 1017
+“ partido pr partido ministro indicacao entrada
+“ 1038 1038 1038 1038
+“ saida pern
+“ 1033 1034
+
+à Alguns paguivos Desta atado afmp ogia sepangssados através de download direto.
+
+===== page_007_bot.png =====
+88 <abl cint>
+“1 4 652
+e2 5 25
+3 6 mu
+Xable(Banco >% count (nivel, sort = TRUE),
+col.names = c(*nivel", "Nº),
+caption = "Tabela 5. Frequência dos valores de nivel")
+Table 5: Tabela 5. Frequência dos valores de nível
+nivel N
+4 62
+5 25
+6 am
+instr |
+E
+
+===== page_007_mid.png =====
+é Dog
+
+5 253
+o 147
+NA 75
+1 51
+2 2
+NA 1
+
+nivel
+
+Banco 4>%,
+
+count (nivel, sort = TRUE)
+
+ss A tibble: 3x2
+
+*8 nível n
+
+“8 <abl> cint>
+
+m1 4 652
+
+m2 5 275
+
+m3 6 1
+
+Xable(Banco 4>% count(nivel, sort = TRUE),
+
+col.names = c("nivel", "Nº),
+caption = "Tabela 5. Frequência dos valores de nível")
+Table 5: Tabela 5. Frequência dos valores de nível
+
+===== page_007_top.png =====
+m13 509
+“25 253
+s30 147
+ssa na 75
+51 st
+62 2
+“87 <a 1
+kable(Banco 4>% count(exp car, sort = TRUE),
+col.names = c(*exp car”, "Nº),
+caption = “Tabela 4. Frequência dos valores de exp car")
+Table 4: Tabela 4. Frequência dos valores de exp. car
+expear N
+3 509
+5 253
+o 147
+NA 7
+1 5
+
+===== page_008_bot.png =====
+dent ad
+Banco 1>%
+count (indicacao, sort = TRUE)
+se 4 A tibble: 4x2
+48 indicacao  n
++ cho cin
+48 1 Bolsonaro 396
++42 Roussett 351
+48 3 Temer 204
+48 4 Lula El
+Xable(Banco 1>% count (indicacao, sort = TRUE),
+col.names = c("indicacao”, "Nº),
+caption = "Tabela 7. Frequência dos valores de indicacao")
+|
+
+===== page_008_mid.png =====
+caption = "Tabela 6. Frequência dos valores de instr")
+Table 6: Tabela 6. Frequência dos valores de instr
+
+instr N
+Superior 297
+mestrado 259
+especialização 203
+doutorado 159
+NA 9
+tecnico ”
+graduncao 1
+
+di
+
+Banco Y>%
+
+count (indicacao, sort = TRUE)
+
+ss 8 A tibble: 4x2
+
+*s indicacao  n
+
+ss cho  <mt>
+
+&s 1 Bolsonaro 396
+
+88 2 Roussott 351
+
+44 3 Temer 204
+
+===== page_008_top.png =====
+Banco 1>%
+count(instr, sort = TRUE)
+se MA tibble: 7x2
+48 instr n
++ cho cint>
+48 1 superior 297
+48 2 mestrado 259
+48 3 especializacao 203
+48 4 doutorado 159
+se 5 NA 95
+48 6 tecnico 24
+48 7 graduacao 1
+Xable(Banco 1>% count(instr, sort = TRUE),
+col.names = c(“instr”, “Nº),
+caption = “Tabela 6. Frequência dos valores de instr”)
+Table 6: Tabela 6. Frequência dos valores de instr
+
+===== page_009_bot.png =====
+Crgirbra cenas pi dona ppp nd SS SO
+caption = "Tabela 8. Frequência dos valores de exp ada")
+Table 8: Tabela 8. Frequência dos valores de exp. adm
+expadm N
+1 ES
+9 ss
+NA un
+3 1
+3. Tabela descritiva: experiência administrativa Crie uma variável binária para indicar experiência prévia
+em órgãos da administração pública.
+A variável binária exp admp foi construída com base na variável exp adm do codebook, que indica se
+o nomeado teve experiência prévia em órgãos da administração pública. Essa foi a variável escolhida por
+corresponder diretamente à definição de “experiência administrativa prévia” adotada no artigo, permitindo
+comparar diretamente essa dimensão do perfil dos nomeados entre as duas pastas.
+9
+
+===== page_009_mid.png =====
+ss A tibble: 5x2
+** expada mn
+ss <cho c<in>
+ss11 sas
+*20 es
+ss 3 MA u
+mas 3
+“53 1
+Correção
+Banco <- Banco %>%
+mutate(oxp ado = ifelse(exp ada == "1", "1º, exp adn))
+Xable(Banco 1>% count (exp adm, sort = TRUE),
+col.names = c(*exp ada”, Nº),
+caption = “Tabela 8. Frequência dos valores de exp adn”)
+Table 8: Tabela 8. Frequência dos valores de exp. adm
+expadm N
+1 ES
+o ss
+NA u
+3 1
+
+===== page_009_top.png =====
+Table 7: Tabela 7. Frequência dos valores de indicacao
+
+indicacao  N
+
+Bolsonaro 396
+
+Rousseff 351
+
+Temer 20
+
+Lula 8
+Ajuste dos problemas encontrados O problema encontrado foi a presença de “1º na variável exp adm onde
+as opções de acordo com o codebook são 1 on 0, para ajustar isso foi criado um códio que substituia a
+anomalia para a versão correta.
+Banco Y>%
+count (exp adm, sort = TRUE)
+ss A tibble: 5x2
+* expada n
+*8 <cho c<in>
+11 935
+
+===== page_010_bot.png =====
+rango. sondas iu ES ira dies rara Eai gi
+4% Class :character Class :character Class :character Class :character
+48 Mode :character Mode :character Mode “character Mode :character
+“
+“
+“
+*  expcar exp mer exp soc ur+
+48 Length:890 Length:890 Length:890 Length:890
+*8 Class :character Class :character Class :character Class :character
+4 Mode :character Mode “character Mode “character Mode :character
+“
+“
+“
+*s partido pr partido ministro — indicacao entrada
+48 Length:890 Length:890 Length:890 Length:890
+48 Class :character Class :character Class :character Class :character
+48 Mode :character Mode :character Mode “character Mode :character
+“
+“
+“=
+“8 saida pera exp.admp
+8 Length:890 Length:890 Min. 0.000
+10
+
+===== page_010_mid.png =====
+ss cargo funcao nável instr
+
+48 Length:890 Length:890 Min. :4.000  Length:890
+
+48 Class character Class :character 1st Qu.:4.000 Class :character
+48 Mode :character Mode :character Median :4.000 Mode :character
+as Men :4.492
+
+“ 3rd Qu.:5.000
+
+“ Max. :6.000
+
+ss area inst ensino inst origem car pub
+
+48 Length:890 Length:890 Length:880 Length:890
+
+48 Class character Class character Class :character Class :character
+4º Mode icharacter Mode :character Mode :character Mode :character
+“
+
+“
+
+“
+
+*s partido cargo ele 1ád part exp ado
+
+48 Length:a90 Length:880 Length:890 Length:890
+
+48 Class character Class :character Class :character Class character
+48 Modo icharacter Mode :character Mode :character Mode :character
+“
+
+“
+
+“
+
+es expcar exp mer exp soc ve
+
+48 Length:890 Length:890 Length:890 Length:890
+
+48 Class character Class :character Class :character Class :character
+4º Mode icharacter Mode icharacter Mode “character Mode :character
+“
+
+“e
+
+===== page_010_top.png =====
+Banco <- Banco %>%
+
+mutate(oxp. adep = ifelse(exp ada == "1º, 1, 0))
+
+3. filtre a base para orgao. sup igual a mapa ou mine e apresente uma tabela com
+
+bancoi <- Banco [BancoSorgao sup linY c('mapa”, "minc"), )
+
+summary (banco1)
+
+8 orgao sup setor chave sa
+
+48 Length:890 Length:890 Length:890 Length:890
+
+45 Class character Class character Class :character Class :character
+4º Mode icharacter Mode :character Mode “character Modo :character
+“
+
+“
+
+“
+
+es cargo funcao nível ánstr
+
+88 Length:890 Length:890 Min. :4.000 Length:890
+
+48 Class character Class :character ist Qu.:4.000 Class :character
+44 Mode “character Mode “character Median :4.000 Mode :character
+
+===== page_011_bot.png =====
+"Proporu00e7u00e30 (K)", "IC inferior (W)”,
+"IC superior (4)", "Margem de erro (1)"),
+caption = "Tabela 9. Proporlu00e7Nu00e30 de nomeados com experiVu00eancia administrativa prW
+Table 9: Tabela 9. Proporção de nomeados com experiência ad-
+ministrativa prévia, por pasta
+Ncom — Proporção TC superior — Margem de erro
+Órgão N válido experiência (9%) IC inferior (%) (9%) (%)
+mapa 525 as2 918 89.5 42 23
+mine 365 az 855 sL9 891 36
+Entre os nomeados do MAPA, a proporção com experiência administrativa prévia foi de 91,8%, com intervalo.
+de confiança de 95% entre 89,5% e 94,2%. Isso significa que, se o processo de amostragem fosse repetido
+diversas vezes, em 95% dos casos o intervalo calculado conteria a verdadeira proporção de nomeados com
+experiência administrativa na população de referência. A margem de erro de 2.3 pontos percentuais indica
+a distância máxima esperada, com 95% de confiança, entre a proporção estimada na amostra e o valor real
+na população. No MinC, a proporção foi de 85,5%, com intervalo de confiança entre 81,9% e 89,1%, e
+margem de erro de 3,6 pontos percentuais, maior do que no MAPA, refletindo o tamanho amostral menor
+u
+
+===== page_011_mid.png =====
+erro padrao = sqrt((proporcao * (1 - proporcao)) / n valido),
+
+margem erro = qnora(0.975) + erro padrao,
+
+ác inferior = proporcao - margem erro,
+
+ic superior = proporcao + margea erro
+Lica
+mutate(
+
+proporcao. pct = round(proporcao + 100, 1),
+
+ác inferior pct = round(ic inferior + 100, 1),
+
+ic superior pct = round(ic superior + 100, 1),
+
+=argem erro pct = round(margem erro + 100, 1)
+2%
+select(orgao sup, n valido, n com experiencia, proporcao pct,
+
+ic inferior pet, ic superior pct, margem erro pct)
+Xable(tabela final,
+
+col.names = c("Nu00d3rgNu00e30", "N viu00eilido”, "H com experiluOOeancia",
+“Proporu00eTu00e3o (K)*, "IC inferior ())",
+“IC superior (4)", "Margem de erro (4)"),
+caption = “Tabela 9. ProporNu00e7Nu00e3o de nomeados com experiNu00eancia administrativa prW
+Table 9: Tabela 9. Proporção de nomeados com experiência ad-
+ministrativa prévia, por pasta
+Ncom — Proporção TC superior — Margem de erro
+
+Órgão N válido experiência (%) TC inferior (%) (%) (%)
+ADA 525 482 9LS RH 942 23
+
+===== page_011_top.png =====
+*s Class character Class :character ist Qu.:1.0000
+8º Mode scharacter Mode :character Median :1.0000
+. Mean :0.8921
+“ 3rd Qu.:1.0000
+“ Max. :1.0000
+Tabela condições 1. Número de observações válidas por pasta. 2. Número de pessoas/nomeações com
+experiência administrativa. 3. Proporção com experiência administrativa. 4. Intervalo de confiança de 95%
+para essa proporção. 5. Margem de erro associada ao intervalo de confiança
+tabela final <- bancoi Y>%
+filter(!is.na(exp. adup)) 1>%
+group. by(orgao sup) 1>%
+summarise(
+nvalido = n(),
+n.com experiencia = sun(exp adup == 1, na.r= = TRUE),
+proporcao = n com experiencia / n valido,
+erro. padrao = sqrt((proporcao * (1 - proporcao)) / n valido),
+margem erro = qnorn(0.975) + erro padrao,
+ic inferior = proporcao - margem. erro,
+ác superior = proporcao + margem erro
+
+===== page_012_bot.png =====
+kable(resumo teste,
+col.names = c("Nw00d3rglu00e30", "N", "N com experiluO0eancia”, "Propor Vu00e7lu00e30"),
+caption = "Tabela 10. Resuno de sucessos e observalw00e7Nu00fSes Nu2014 experilu00eancia administ;
+Table 10: Tabela 10. Resumo de sucessos e observações — exper-
+iência administrativa.
+Órgão N Ncom experiência Proporção
+mapa 525 AS? 09180952
+mine 365 312 O85T9S
+44 Pevalor.
+nmapa <- resuno testeSn[resuno testeSorgao. sup == “napa”)
+mminc <- resuno testeSn[resuno testeSorgao sup == "ninc"]
+x.mapa <- resumo testessucessos[resuno testeSorgao. sup == "napa”)
+x minc <- resuno, testeSsucessos[resuno, testeSorgao, sup == "ninc"]
+pompa <- x mapa / n mapa
+pominc <- x mánc / nminc
+12
+
+===== page_012_mid.png =====
+sumarise(
+n=n(),
+sucessos = sun(exp ada == 1, na.rm = TRUE),
+proporcao = sucessos / n,
+> 1%
+arrange(orgao. sup)
+resumo. teste
+28 4 A tibble: 2x4
+8 orgao sup mn sucessos proporcao
+ss <ch  <int> <int> <a
+481 mapa 525 482 0.98
+48 2 minc ss 312 0.855
+Xable(resuno teste,
+col.names = c("lu00d3rglu00e30", "Nº, "N com experilu00eancia”, “Propor u00e7lu00e30"),
+caption = "Tabela 10. Resumo de sucessos e observalu00e7Nu00fSes Nu2014 experiluO0eancia administ;
+Table 10: Tabela 10. Resumo de sucessos e observações — exper-
+iência administrativa
+Órgão N Nom experiência Proporção
+mapa 525 482 0,9180952
+mine 365 312 O.85T94S
+
+===== page_012_top.png =====
+(365 nomeações válidas contra 525 no MAPA). Os intervalos de confiança das duas pastas não se sobrepõem
+(o limite inferior do MAPA, 89,5%, é maior que o limite superior do MinC, 89,1%), o que informa, de forma
+preliminar, que a diferença entre as proporções pode ser estatisticamente significativa.
+4. Primeiro teste de hipótese bivariado Teste a hipótese de que a proporção de nomeações com experiência
+administrativa é igual nas duas pastas.
+4.1. Hipótese nula - HO A proporção de nomeações com experiência administrativa pe igual nas duas pastas.
+4.2, Hipótese alternativa (H1) A proporção de nomeações com experiência administrativa prévia é diferente
+entre as duas pastas.
+4.3 Teste usado no R.
+bancoi <- Banco >
+tilter(orgao. sup tin) c(ºmapa”, “minc"))
+resumo teste <- bancol 1>%
+filter(!is.na(exp adm)) >
+group by(orgao sup) 1%
+sunmariso(
+n=n0,
+sucessos = sun(exp adm == 1, na.rm = TRUE),
+proporcao = sucessos / n,
+
+===== page_013_bot.png =====
+*- Não se rejeita HO: não há evidência estatística suficiente de diferença entre as proporções.”)
+,
+
+4% P-valor = 0.0028 - Rejeita-se HO: há evidência estatística de diferença entre as proporções.
+4.6 Interpretação : Com um p-valor de 0,0028, abaixo do nível de significância de 5%, é pouco provável que
+
+a diferença observada entre as proporções de nomeados com experiência administrativa prévia (91,8% no
+MAPA vs. 85,5% no MinC) . Isso indica de forma estatística de que o MAPA e o MinC diferem quanto à
+proporção de nomeados com experiência prévia na administração pública. Esse resultado é consistente com
+o argumento do artigo de que as duas pastas podem adotar critérios distintos de indicação.
+
+5. Segundo teste de hipótese bivariado
+
+Crie uma variável chamada alto. nivel, igual à 1 quando nível for 5 ou 6, e O quando nível for 4.
+banco! <- Banco 1>%
+filter(orgao sup Yin c('napa”, “minc")) 1%
+mutate(alto nível = case vhen(
+
+nivel Yink c(s, 6) - 1,
+
+nível == 4-0,
+
+TRUE - NA real.
+
+»
+
+13
+
+===== page_013_mid.png =====
+4% sample estimates:
+
+ss propi prop2
+
+48 0.9180952 0.8547945
+
+teste, propSp.value
+
+*8 [1) 0.002751466
+
+4.5 Decisão com nível de significância de 5%
+
+alpha <- 0.05
+
+àf (teste propSp.value < alpha) (
+
+cat('P-valor =", round(teste propóp.value, 4),
+
+*- Rejeita-so HO: há evidência estatística de diferença entre as proporções.)
+
+> else £
+
+cat("P-valor =*, round(teste. prop$p.value, 4),
+
+*- Não se rejeita HO: não há evidência estatística suficiente de diferença entre as proporções.”)
+>
+
+48 P-valor = 0.0028 - Rejeita-se HO: há evidência estatística de diferença entre as proporções.
+4.6 Interpretação : Com um p-valor de 0,0028, abaixo do nível de significância de 5%, é pouco provável que
+
+a diferença observada entre as proporções de nomeados com experiência administrativa prévia (91,8% no
+MAPA vs. 85,5% no MinC) . Isso indica de forma estatística de que o MAPA e o MinC diferem quanto à
+proporção de nomeados com experiência prévia na administração pública. Esse resultado é consistente com
+
+o argumento do artigo de que as duas pastas podem adotar critérios distintos de indicação.
+
+===== page_013_top.png =====
+teste prop <- prop.test(
+
+x = c(x mapa, x minc),
+
+n = c(n mapa, nmínc),
+
+alternativo = "tuo. sided",
+
+correct = FALSE
+
+,
+
+teste prop
+
+“
+
+4º 2-sample test for equality of proportions vithout continuity correction
+.
+
+&8 data: c(x.mapa, x.minc) out of c(n mapa, n mínc)
+4% X-squared = 8.9654, df = 1, p-value = 0.002751
+4% alternative hypothesis: two.sided
+
+4% 95 percent confidence interval:
+
+48 0.02021322 0.10638821
+
+48 sample estimates:
+
+** propi prop2
+
+48 0.9180952 0.8547945
+
+===== page_014_bot.png =====
+Orgão sup  n sucessos proporcao pet ic inferior pet ie superior pet margem erro pet
+mapa 525 187 35.6 315 397 41
+mine 365 155 425 sa 475 51
+5.2, Um intervalo de confiança de 95% para cada proporção
+PD]
+filter(tis.na(alto nível)) %>%
+group. by(orgao sup) 4>%
+summarise(
+n=20,
+sucessos = sun(alto nível == 1)
+> 1%
+arrange (orgao. sup)
+tabela nível <- resumo nivel D%
+mutate(
+proporcao = sucessos / n,
+erro padrao = sqrt((proporcao + (1 - proporcao)) / n),
+“u
+
+===== page_014_mid.png =====
+ic inferior = proporcao - margem erro,
+
+ic superior = proporcao + margem erro
+3 oh
+mutate(
+
+proporcao pct = round(proporcao + 100, 1),
+
+ác inferior pct = round(ic inferior * 100, 1),
+
+ic superior pct = round(ic superior + 100, 1),
+
+margem erro pct = round(margem erro + 100, 1)
+wi
+select(orgao sup, n, sucessos, proporcao pct, ic inferior pct, ic superior pct, margem erro pct)
+library (Qmitr)
+Xable(tabela nível, caption = “Tabela 11. Proporção de cargos de alto nível por pasta (MAPA e MinC)")
+
+Table 1: Tabela 11. Proporção de cargos de alto nível por pasta
+(MAPA e MinC)
+
+orgao sup  n sucessos proporcao pet ic inferior pet ie superior pet margem erro pet
+mapa 525 187 35.6 315 397 41
+mine 365 155 425 34 475 51
+5.2. Um intervalo de confiança de 95% para cada proporção
+resuno nível <- bancot 1%
+
+filter(tis.na(alto nível)) %l
+
+group by(orgao sup) >),
+
+===== page_014_top.png =====
+5.1. Uma tabela com as proporções por pasta
+resumo nível <- bancoi Y>%
+filter(!is.na(alto nivel)) 14
+group by(orgao sup) 1>
+summarise(
+n= nO,
+sucessos = sum(alto nivel == 1),
+«groups = "drop"
+2%
+arrange(orgao. sup)
+tabela nivel <- resumo nível >)
+mutate(
+proporcao = sucessos / n,
+erro padrao = sqrt((proporcao * (1 - proporcao)) / n),
+margem erro = quora(0.975) « erro padrao,
+ic inferior = proporcao - margem erro,
+ic superior = proporcao + margem erro
+2%
+mutate( .
+
+===== page_015_bot.png =====
+7 = =p ce a sp 2d
+x.minc <- resumo nivel$sucessos [resuno nivel$orgao. sup == "ninc"]
+teste prop nivel <- prop.test(
+
+x c(x.mapa, x minc),
+
+» = c(n mapa, n minc),
+
+alternative = "tuo.sided",
+
+correct = FALSE
+,
+teste prop nível
+“
+4% 2-sample test for equality of proportions vithout contínuity correction
+“
+48 data: c(x.mapa, x.minc) out of c(n mapa, n.minc)
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+48 -0.13365398 -0.00328014
+4% sample estimates:
+
+15
+
+===== page_015_mid.png =====
+Table 12: Tabela 16. Intervalo de confiança de 95% para a pro-
+porção de cargos de alto nível, por pasta
+Órgão N N alto nível Proporção (%) IC inferior (%) TC superior (%)
+mapa 525 187 356 315 39.7
+mine 365 155 425 BA 475
+5.3, Um teste de hipótese para a diferença entre as proporções.
+HO : Puapa = Pminc à proporção de cargos de alto nível é igual nas duas pastas.
+HI: mapa É Pminc à proporção de cargos de alto nível é diferente entre as duas pastas.
+nmapa <- resumo nivel$n[resuno nivelforgao. sup == “mapa”
+nm minc <- resumo nivel$n[resuno nivel$orgao sup == "ninc")
+x mapa <- resuno nivel$sucessos [resumo nivelSorgao sup == “zapa”]
+x.minc <- resumo nivel$sucessos [resuno nivel$orgao. sup == "ninc"]
+teste prop. nivel <- prop.test(
+== c(x mapa, x minc),
+» = c(nmapa, nminc),
+alternative = “tuo.sided”,
+correct = FALSE
+,
+teste prop nível
+
+===== page_015_top.png =====
+margen erro = quora(0.975) + erro padrao,
+ic inferior = proporcao - margem erro,
+ic superior = proporcao + margem erro
+> ok
+mutate(
+proporcao pct = round(proporcao * 100, 1),
+ác inferior pct = round(ic inferior + 100, 1),
+ic superior pct = round(ic superior + 100, 1)
+) or
+select(orgao sup, n, sucessos, proporcao pt, ic inferior pet, ic superior pet)
+Xable(tabela nivel,
+col.names = c("Nu00d3rglu00630*, "Nº, "N alto nluO0edvel*, "Proporlu00e7Nu00e3o (J)*,
+"IC inferior (K)", "IC superior ())"),
+caption = “Tabela 16. Intervalo de confiantu00e7a de 95% para a proporlu00e7Nu00s3o de cargos de
+Table 12: Tabela 16. Intervalo de confiança de 95% para a pro-
+porção de cargos de alto nível, por pasta
+Órgão N N alto nível Proporção (%) IC inferior (%) IC superior (%)
+
+===== page_016_bot.png =====
+ARG EE SP PEN
+P-valor nível
+48 [1) 0.0388873
+alpha <- 0.05
+áf (p.valor nivel < alpha) (
+cat(*P-valor =", round(p valor nível, 4),
+*- Rejeita-se HO: há evidência estatística de diferença entre as proporções de alto nível.")
+Yelse (
+cat('P-valor =", round(p valor nível, 4),
+*- Não se rejeita HO: não há evidência estatística suficiente de diferença entro as proporções")
+>
+4% P-valor = 0.0389 - Rejeita-se HO: há evidência estatística de diferença entre as proporções de alto
+O p-valor de 0,0389 representa a probabilidade de observar uma diferença entre as proporções de cargos de
+alto nível tão grande quanto (ou maior do que) a diferença encontrada na amostra, caso a hipótese mula
+(proporções iguais) fosse verdadeira. Com nível de significância de 5%, rejeitamos HO, o que indica que há
+evidência estatística de que a proporção de cargos de alto nível difere entre MAPA e MinC.
+16
+
+===== page_016_mid.png =====
+Table 13: Tabela 17. Teste de diferença entre proporções — cargos
+de alto nível (MAPA vs. MinC)
+Estatística Valor
+Qui-quadrado (X2) 42058
+Graus de liberdade 1.000.
+P-valor 0.0389
+IC 95% da diferenca (inferior) -13.4000
+IC 95% da diferenca (superior) -0.3000
+54. O p-alor e sua interpretação
+p.valor nível <- teste prop nívelSp.value
+P-valor nível
+*s (1) 0.o38ss73
+alpha <- 0.05
+if (p.valor nível < alpha) (
+cat("P-valor =", round(p valor nivel, 4),
+*- Rejeita-se HO: há evidência estatística de diferença entre as proporções de alto nível.)
+) else (
+cat(*P-ynlor =*. xound(o valor nível. 4)..
+
+===== page_016_top.png =====
+*s propi prop2
+48 0.3561905 0.4246575
+tabela teste nível <- data.frame(
+Estatistica = c(“Qui-quadrado (X2)*, "Graus de liberdade”, "P-valor*,
+“IC 95) da diferenca (inferior)*, "IC 95% da diferenca (superior)*),
+Valor = e(
+round (unname(teste prop nivel$statistic), 4),
+unnane(teste prop nivelSparaneter),
+round(teste prop nivelSp.value, 4),
+round(teste prop nivelSconf.int(1] + 100, 1),
+round(teste, prop.nivel$conf .int[2) + 100, 1)
+,
+,
+Xable(tabela teste nivel,
+caption = "Tabela 17. Teste de diferença entre proporções - cargos de alto nível (MAPA vs. Minc)"
+Table 13: Tabela 17. Teste de diferença entre proporções — cargos
+de alto nível (MAPA vs, MinC)
+
+===== page_017_bot.png =====
+48 Decisão a 1%: Não rejeita HO
+7. O que aconteceria se a amostra fosse maior?
+P.exemplo <- pmapa
+& Cenário original
+n.original <- n mapa
+erro padrao original <- sqrt((p exemplo » (1 - p exemplo) / n original)
+& Cenário com o dobro de observações, mesma proporção
+n dobro <- n mapa + 2
+erro paárao dobro <- sqrt((p exemplo + (1 - p exemplo) / n dobro)
+cat('Erro-padrão com n original (*, moriginal, "):”, round(erro. padrao original, 4), "lm”)
+44 Erro-padrão com n original ( 525 ): 0.012
+cat("Erro-padrão com n dobrado (*, n dobro, "):", round(erro padrao dobro, 4), “Na")
+44 Erro-padrão com n dobrado ( 1050 ): 0.0085
+1
+
+===== page_017_mid.png =====
+significância substantiva não depende desse limiar: ela avalia se a diferença observada (em pontos percentuais)
+é grande ou relevante na prática, independentemente do alpha adotado.
+decisao 10 <- ifelse(p valor nível < 0.10, "Rojeita HO”, “Não rejeita HO%)
+decisao 1 <- ifelse(p valor nivel < 0.01, “Rejeita HO", “Não rejeita HO")
+cat('P-valor:”, round(p. valor nivel, 4), "Ma"
+48 P-valor: 0.0389
+cat("Decisão a 10%:*, decisao 10, "Na')
+48 Decisão a 10%: Rejeita HO
+cat("Decisão a 1%:", decisao 1, "la")
+48 Decisão a 14: Não rejeita HO
+7. O que aconteceria se a amostra fosse maior?
+p.exemplo <- p mapa
+& Cenário original
+noriginal <- n mapa
+erro padrao original <- sqrt((p exemplo + (1 - p.exemplo)) / noriginal)
+& Cenário com o dobro de observações, mesma proporção
+
+===== page_017_top.png =====
+5. 5. Conclusão substantiva (grande, pequena ou irrelevante) À diferença observada entre as proporções
+de cargos de alto nível foi de 6,9 pontos percentuais entre MAPA e MinC (35,6% no MAPA
+vs. 42,5% no MinC). Embora estatisticamente significativa a 5%, essa diferença pode ser con-
+siderada moderada do ponto de vista substantivo — indicando alguma distinção relevante entre
+os perfis de nomeação das duas pastas quanto a cargos de alto nível, mas sem representar uma
+disparidade extrema entre elas.
+
+6. Significância estatística e nível de significância
+
+Escolha um dos dois testes anteriores e responda: 6.1. A conclusão mudaria se o nível de significância fosse
+10%? Não. O p-valor (0,0389) é menor que 0,05, então também é menor que 0,10.
+
+6.2. A conclusão mudaria se o nível de significância fosse 1%? Sim, o p-valor (0,0389) é maior que o nível
+de significância
+
+6.3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva? O exercício
+evidecia como a significância não é um resultado fixo, ela depende do rigor que o pesquisador decide aodtar.
+o mesmo p-valor pode indicar “diferença significativa” a 5% ou 10%, mas “sem diferença” a 1%. Já a
+significância substantiva não depende desse limiar: ela avalia se a diferença observada (em pontos percentuais)
+é grande ou relevante na prática, independentemente do alpha adotado.
+
+decisao 10 <- ifelse(p valor nivel < 0.10, “Rejeita HO", “Não rejeita HO")
+
+===== page_018_bot.png =====
+18 |
+
+===== page_018_mid.png =====
+
+
+===== page_018_top.png =====
+71. O que tenderia a acontecer com o erro-padrão? O erro-padrão diminuiria. Ao dobrar o número de
+observações de 525 para 1.050, mantendo a mesma proporção observada, o erro-padrão caiu de 0,0209 para
+0,0148, uma redução de aproximadamente 29%.
+
+7.2. Por que isso acontece? Isso ocorre porque o erro-padrão de uma proporção é , é inversamente
+proporcional à raiz quadrada do tamanho da amostra n n aumenta, o denominador dentro da raiz
+cresce, reduzindo o valor do erro-padrão — mas essa redução não é proporcional ao aumento de
+um nm: como o cálculo envolve uma raiz quadrada, é preciso quadruplicar à amostra para reduzir
+o erro-padrão pela metade (e não apenas dobrá-la).. Isso explica por que dobrar mm n (de 525
+para 1.050) reduz o erro-padrão em cerca de 29%, e não em 50%. Na prática, isso significa que
+amostras maiores produzem estimativas mais precisas da proporção populacional, com intervalos
+de confiança mais estreitos e maior poder estatístico para deteetar diferenças reais entre grupos.

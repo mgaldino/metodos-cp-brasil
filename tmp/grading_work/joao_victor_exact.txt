@@ -1,0 +1,562 @@
+    Avaliação Final – Métodos e Técnicas de Pesquisa em Ciência
+                        Política - FLP 0406
+
+                    João Victor Ricchini Freire de Carvalho N USP 10765228
+
+                                                19/07/2026
+
+
+
+Preparação da base de dados
+Os dados utilizados neste relatório foram obtidos do repositório público disponibilizado pelos autores do
+artigo. A base utilizada foi BASE_cargos2.xlsx, acessada em 2026-07-19.
+
+# Endereço da base
+url_base <- "https://raw.githubusercontent.com/nayalbrecht/burocraciaBR/main/BASE_cargos2.xlsx"
+
+# Download da base
+download.file(
+  url = url_base,
+  destfile = "BASE_cargos2.xlsx",
+  mode = "wb"
+)
+
+# Leitura da aba BASE_cargos
+base <- read_xlsx(
+  "BASE_cargos2.xlsx",
+  sheet = "BASE_cargos"
+)
+
+# Leitura do Codebook
+codebook <- read_xlsx(
+  "BASE_cargos2.xlsx",
+  sheet = "Codebook"
+)
+
+
+
+Artigo, pergunta e unidade de análise
+
+1. Qual é a pergunta geral do artigo?
+
+O artigo busca analisar se o perfil das pessoas nomeadas para cargos de médio e alto escalão difere entre
+o Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC) no período de 2011 a 2021. Para
+isso, os autores investigam características como experiência administrativa, trajetória profissional, formação
+educacional e vínculos políticos, buscando compreender como essas características influenciam o padrão de
+recrutamento para cargos públicos federais.
+
+
+
+                                                      1
+2. Qual é a unidade de análise da base?
+
+A unidade de análise da base é a nomeação para um cargo público. Dessa forma, cada observação corresponde
+a uma nomeação para cargos de níveis 4, 5 ou 6 da estrutura administrativa dos ministérios analisados.
+
+
+3. O que significa uma linha da base?
+
+Cada linha da base representa uma nomeação realizada para um cargo de direção ou assessoramento. Além
+da identificação do cargo e do órgão, cada registro reúne informações sobre o perfil da pessoa nomeada,
+como escolaridade, experiência profissional, experiência administrativa e outras características utilizadas na
+análise do artigo.
+
+
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+
+A mesma pessoa pode aparecer mais de uma vez porque a base registra nomeações, e não indivíduos únicos.
+Assim, caso uma pessoa tenha sido nomeada para diferentes cargos ou tenha ocupado mais de um cargo
+durante o período analisado, cada nomeação será registrada como uma observação distinta.
+
+
+5. Quais são as duas pastas comparadas no artigo?
+
+O artigo compara as nomeações realizadas no Ministério da Agricultura, Pecuária e Abastecimento (MAPA)
+e no Ministério da Cultura (MinC). Essas duas pastas constituem o foco da análise comparativa desenvolvida
+pelos autores, permitindo investigar diferenças no perfil dos nomeados para cargos de médio e alto escalão
+da administração pública federal.
+
+
+Leitura e validação dos dados
+
+  1. Número de linhas e colunas.
+
+dim(base)
+
+
+## [1] 1038      26
+
+A base de dados fornecida possuí 1038 linhas e 26 colunas.
+
+  2. Nomes das variáveis.
+
+kable(
+  data.frame(Variáveis = names(base)),
+  caption = "Tabela 1. Nomes das variáveis da base de dados."
+)
+
+
+                         Table 1: Tabela 1. Nomes das variáveis da base de dados.
+
+                                              Variáveis
+                                              orgao_sup
+                                              setor
+                                              chave
+
+
+                                                      2
+                                             Variáveis
+                                             id
+                                             cargo
+                                             funcao
+                                             nivel
+                                             instr
+                                             area
+                                             inst_ensino
+                                             inst_origem
+                                             car_pub
+                                             partido
+                                             cargo_ele
+                                             lid_part
+                                             exp_adm
+                                             exp_car
+                                             exp_mer
+                                             exp_soc
+                                             UF*
+                                             partido_pr
+                                             partido_ministro
+                                             indicacao
+                                             entrada
+                                             saida
+                                             perm
+
+
+Fonte: Elaboração própria a partir da base BASE_cargos2.xlsx.
+As variáveis apresentadas na Tabela 1 correspondem às informações utilizadas para caracterizar as
+nomeações, incluindo dados sobre o órgão, cargo, experiência profissional, formação acadêmica e trajetória
+política dos nomeados.
+
+  3. Número de observações por orgao_sup.
+
+obs_orgao <- base %>%
+  count(orgao_sup)
+
+kable(
+  obs_orgao,
+  caption = "Tabela 2. Número de observações por órgão superior."
+)
+
+                      Table 2: Tabela 2. Número de observações por órgão superior.
+
+                                             orgao_sup       n
+                                             mapa          525
+                                             mcti          148
+                                             minc          365
+
+
+Fonte: Elaboração própria a partir da base BASE_cargos2.xlsx
+É possível observar que a base de dados contém informações referentes a três órgãos superiores: Ministério da
+Agricultura (MAPA), Ministério da Cultura (MinC) e Ministério da Ciência, Tecnologia e Inovação (MCTI).
+
+
+                                                     3
+Contudo, conforme indicado no artigo de referência, as análises comparativas desenvolvidas nas próximas
+seções considerarão apenas as observações referentes ao MAPA e ao MinC. Sendo assim, tem-se que a variável
+“orgao_sup” tem 525 observações “MAPA”, 365 “MINC” e 148 “MCTI”.
+
+  4. Número de valores ausentes em pelo menos cinco variáveis relevantes.
+
+base <- base %>%
+  mutate(across(where(is.character), ~na_if(.x, "NA")))
+
+ausentes <- data.frame(
+  Variável = c("inst_ensino",
+               "inst_origem",
+               "car_pub",
+               "partido",
+               "cargo_ele"),
+  Valores_ausentes = c(
+    sum(is.na(base$inst_ensino)),
+    sum(is.na(base$inst_origem)),
+    sum(is.na(base$car_pub)),
+    sum(is.na(base$partido)),
+    sum(is.na(base$cargo_ele))
+  )
+)
+
+kable(
+  ausentes,
+  caption = "Tabela 3. Número de valores ausentes em variáveis selecionadas."
+)
+
+                    Table 3: Tabela 3. Número de valores ausentes em variáveis sele-
+                    cionadas.
+
+                                     Variável      Valores_ausentes
+                                     inst_ensino                 266
+                                     inst_origem                 269
+                                     car_pub                      17
+                                     partido                     909
+                                     cargo_ele                    29
+
+
+Fonte: Elaboração própria a partir da base BASE_cargos2.xlsx.
+Foram selecionadas cinco variáveis para verificar a presença de dados ausentes. Antes da contagem, os
+valores “NA” armazenados como texto foram transformados para valores ausentes reconhecidos pelo R uti-
+lizando a função na_if(). Nesse sentido, as variáveis “inst_ensino”, “inst_origem”, “car_pub”, “partido” e
+“cargo_ele” tem, em ordem, 266, 269, 17, 909 e 29 valores ausentes.
+
+  5. Uma checagem dos valores observados em exp_adm, exp_car, nivel, instr e indicacao.
+
+unique(base$exp_adm)
+
+
+## [1] "1"    "0"   "‘1" NA    "3"
+
+
+
+                                                    4
+unique(base$exp_car)
+
+
+## [1] "5" "3" "0" "1" NA       "2"
+
+unique(base$nivel)
+
+
+## [1] 6 5 4
+
+unique(base$instr)
+
+
+## [1] NA                   "especializacao" "mestrado"              "superior"
+## [5] "tecnico"            "doutorado"      "graduacao"
+
+unique(base$indicacao)
+
+
+## [1] "Lula"         "Rousseff"      "Temer"      "Bolsonaro"
+
+As funções unique() permitem verificar todos os valores observados nas variáveis analisadas e compará-los
+com as definições apresentadas no Codebook.
+Problemas encontrados nesse bloco: O principal problema identificado foi a presença de valores “NA”
+registrados como texto em algumas variáveis do tipo caractere. Caso esses valores não fossem transformados
+para valores ausentes (NA), eles seriam tratados pelo R como uma categoria válida, comprometendo a
+contagem de dados faltantes e as análises posteriores.
+
+
+Tabela descritiva: experiência administrativa
+
+**Crie uma variável binária para indicar experiência prévia em órgãos da administração pública. Use o
+codebook para justificar a escolha.*
+
+  1. Número de observações válidas por pasta.
+  2. Número de pessoas/nomeações com experiência administrativa.
+  3. Proporção com experiência administrativa.
+  4. Intervalo de confiança de 95% para essa proporção.
+  5. Margem de erro associada ao intervalo de confiança.
+
+Interprete os resultados em linguagem substantiva. A interpretação deve mencionar explici-
+tamente o que significa o intervalo de confiança e o que significa a margem de erro.
+
+
+Experiência administrativa
+
+Segundo o Codebook da base de dados, a variável exp_adm identifica se a pessoa nomeada possuía experiência
+prévia em órgãos da administração pública, sendo codificada como 1 = Sim e 0 = Não. Como essa variável
+já possui codificação binária, ela foi utilizada para criar a variável exp_administrativa, mantendo a mesma
+classificação.
+
+
+
+                                                    5
+base <- base %>%
+  mutate(
+    exp_administrativa = if_else(exp_adm == 1, 1, 0)
+  )
+
+base_mapa_minc <- base %>%
+  filter(orgao_sup %in% c("mapa", "minc"))
+
+
+Tabela descritiva
+
+
+tabela_exp <- base_mapa_minc %>%
+  group_by(orgao_sup) %>%
+  summarise(
+    n_validas = sum(!is.na(exp_administrativa)),
+    n_experiencia = sum(exp_administrativa == 1, na.rm = TRUE),
+    proporcao = n_experiencia / n_validas,
+    erro_padrao = sqrt(proporcao * (1 - proporcao) / n_validas),
+    margem_erro = 1.96 * erro_padrao,
+    IC_inferior = proporcao - margem_erro,
+    IC_superior = proporcao + margem_erro
+  )
+
+kable(
+  tabela_exp,
+  digits = 3,
+  caption = "Tabela 4. Experiência administrativa prévia entre os nomeados do MAPA e do MinC."
+)
+
+                    Table 4: Tabela 4. Experiência administrativa prévia entre os
+                    nomeados do MAPA e do MinC.
+
+orgao_sup n_validas    n_experiencia proporcao     erro_padrao margem_erro IC_inferior       IC_superior
+mapa             524             482        0.92         0.012         0.023         0.897        0.943
+minc             355             309        0.87         0.018         0.035         0.835        0.905
+
+
+Fonte: Elaboração própria a partir da base BASE_cargos2.xlsx.
+
+
+Interpretação
+
+Os resultados indicam que a maioria das nomeações em ambas as pastas corresponde a pessoas que já
+possuíam experiência prévia na administração pública - 92% no MAPA e 87% no MinC. Entretanto, essa
+proporção é mais elevada no Ministério da Agricultura (MAPA) do que no Ministério da Cultura (MinC),
+sugerindo que, na amostra analisada, o MAPA apresentou maior proporção de nomeações com experiência
+administrativa..
+De acordo com os dados obtidos pela análise, caso fossem obtidas diversas amostras semelhantes e o mesmo
+procedimento fosse repetido, aproximadamente 95% dos intervalos construídos conteriam a verdadeira pro-
+porção populacional.
+Quanto menor a margem de erro, maior é a precisão da estimativa obtida. Nesse sentido,a margem de
+erro é de aproximadamente 2,3 pontos percentuais para o MAPA e 3,5 pontos percentuais para o MinC,
+
+
+                                                   6
+indicando que a estimativa do MAPA é ligeiramente mais precisa, provavelmente em razão do maior número
+de observações. Dessa forma, as estimativas apresentadas para MAPA e MinC podem ser consideradas
+relativamente precisas, permitindo comparar o perfil das nomeações nas duas pastas com um nível conhecido
+de incerteza estatística.
+
+
+4. Primeiro teste de hipótese bivariado
+O objetivo deste teste é verificar se a proporção de nomeações com experiência administrativa é a mesma no
+Ministério da Agricultura (MAPA) e no Ministério da Cultura (MinC). Para isso, utiliza-se um teste para
+comparação entre duas proporções independentes, baseado na aproximação normal.
+
+
+Hipóteses
+
+A hipótese nula (H0 ) afirma que a proporção de nomeações com experiência administrativa é igual nas duas
+pastas.
+
+
+                                           H0 : pM AP A = pM inC
+
+A hipótese alternativa (H1 ) afirma que as proporções são diferentes entre as duas pastas.
+
+
+                                           H1 : pM AP A ̸= pM inC
+
+
+Teste utilizado
+
+No R foi utilizada a função prop.test(), que realiza o teste para comparação entre duas proporções uti-
+lizando a aproximação normal com correção de continuidade.
+
+mapa <- base_mapa_minc %>%
+  filter(orgao_sup == "mapa")
+
+minc <- base_mapa_minc %>%
+  filter(orgao_sup == "minc")
+
+teste_exp <- prop.test(
+  x = c(
+    sum(mapa$exp_administrativa == 1, na.rm = TRUE),
+    sum(minc$exp_administrativa == 1, na.rm = TRUE)
+  ),
+  n = c(
+    sum(!is.na(mapa$exp_administrativa)),
+    sum(!is.na(minc$exp_administrativa))
+  )
+)
+
+teste_exp
+
+
+##
+##   2-sample test for equality of proportions with continuity correction
+##
+
+
+                                                     7
+## data: c(sum(mapa$exp_administrativa == 1, na.rm = TRUE), sum(minc$exp_administrativa == 1, na.rm = T
+## X-squared = 5.2027, df = 1, p-value = 0.02255
+## alternative hypothesis: two.sided
+## 95 percent confidence interval:
+## 0.005098176 0.093751410
+## sample estimates:
+##    prop 1    prop 2
+## 0.9198473 0.8704225
+
+O teste apresentou um p-valor de 0,022, inferior ao nível de significância de α = 0, 05. Assim, rejeita-se a
+hipótese nula de igualdade entre as proporções.
+
+
+Interpretação substantiva
+
+O teste apresentou um p-valor de 0,022, inferior ao nível de significância de α = 0, 05. Assim, rejeita-se a
+hipótese nula e conclui-se que há evidências estatísticas de que a proporção de nomeações com experiência
+administrativa difere entre o MAPA e o MinC.
+Esse resultado é condizente com o argumento desenvolvido no artigo, segundo o qual o Ministério da Agri-
+cultura e o Ministério da Cultura apresentam padrões distintos de recrutamento para cargos de médio e alto
+escalão.
+
+
+5. Segundo teste de hipótese bivariado
+Nesta etapa, foi criada uma variável binária denominada alto_nivel, que identifica as nomeações para
+cargos de maior nível hierárquico. De acordo com a classificação da variável nivel, foram considerados
+cargos de alto nível aqueles classificados como níveis 5 e 6, enquanto os cargos de nível 4 foram classificados
+como baixo nível.
+
+base_mapa_minc <- base_mapa_minc %>%
+  mutate(
+    alto_nivel = case_when(
+      nivel %in% c(5, 6) ~ 1,
+      nivel == 4 ~ 0,
+      TRUE ~ NA_real_
+    )
+  )
+
+
+Proporção de cargos de alto nível por pasta
+
+tabela_alto <- base_mapa_minc %>%
+  group_by(orgao_sup) %>%
+  summarise(
+    n_validas = sum(!is.na(alto_nivel)),
+    n_alto = sum(alto_nivel == 1, na.rm = TRUE),
+    proporcao = n_alto / n_validas,
+    erro_padrao = sqrt(proporcao * (1 - proporcao) / n_validas),
+    margem_erro = 1.96 * erro_padrao,
+    IC_inferior = proporcao - margem_erro,
+    IC_superior = proporcao + margem_erro
+
+
+                                                      8
+  )
+
+kable(
+  tabela_alto,
+  digits = 3,
+  caption = "Tabela 5. Proporção de cargos de alto nível por pasta."
+)
+
+
+                     Table 5: Tabela 5. Proporção de cargos de alto nível por pasta.
+
+orgao_sup    n_validas    n_alto   proporcao    erro_padrao     margem_erro    IC_inferior     IC_superior
+mapa               525       187        0.356          0.021          0.041            0.315         0.397
+minc               365       155        0.425          0.026          0.051            0.374         0.475
+
+
+Fonte: Elaboração própria a partir da base BASE_cargos2.xlsx.
+A Tabela 5 apresenta, para cada ministério, o número de observações válidas, a quantidade de nomeações
+para cargos de alto nível, a proporção correspondente, o intervalo de confiança de 95% e a margem de erro
+da estimativa.
+
+
+Teste de hipótese
+
+
+teste_alto <- prop.test(
+  x = c(
+    sum(base_mapa_minc$alto_nivel[base_mapa_minc$orgao_sup == "mapa"], na.rm = TRUE),
+    sum(base_mapa_minc$alto_nivel[base_mapa_minc$orgao_sup == "minc"], na.rm = TRUE)
+  ),
+  n = c(
+    sum(base_mapa_minc$orgao_sup == "mapa"),
+    sum(base_mapa_minc$orgao_sup == "minc")
+  )
+)
+
+teste_alto
+
+
+##
+## 2-sample test for equality of proportions with continuity correction
+##
+## data: c(sum(base_mapa_minc$alto_nivel[base_mapa_minc$orgao_sup == "mapa"], na.rm = TRUE), sum(base_m
+## X-squared = 3.9813, df = 1, p-value = 0.04601
+## alternative hypothesis: two.sided
+## 95 percent confidence interval:
+## -0.1359762203 -0.0009578958
+## sample estimates:
+##    prop 1    prop 2
+## 0.3561905 0.4246575
+
+O teste realizado foi o teste para comparação entre duas proporções (prop.test()), baseado na aproximação
+normal.
+
+
+                                                   9
+O p-valor indica a evidência estatística contra a hipótese nula. Como o p-valor obtido foi inferior ao nível de
+significância de 5%, rejeita-se a hipótese nula e conclui-se que há evidências estatísticas de diferença entre
+as proporções de cargos de alto nível no MAPA e no MinC
+
+
+Interpretação substantiva
+
+O teste de comparação entre duas proporções apresentou um p-valor de 0,046, inferior ao nível de significância
+de α = 0, 05. Assim, rejeita-se a hipótese nula e conclui-se que há evidências estatísticas de diferença entre
+a proporção de cargos de alto nível no MAPA e no MinC.
+Observa-se que a proporção de cargos de alto nível é maior no MinC (42,5%) do que no MAPA (35,6%). No
+entanto, essa diferença é relativamente pequena. Portanto, embora seja estatisticamente significativa, ela
+não parece ser muito relevante do ponto de vista substantivo, indicando que os dois ministérios apresentam
+perfis relativamente semelhantes quanto à proporção de cargos de níveis 5 e 6.
+
+
+6. Significância estatística e nível de significância
+Nesta seção será utilizado o teste de hipótese realizado para comparar a proporção de nomeações com
+experiência administrativa entre o Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC).
+
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+
+Não. Como o p-valor obtido no teste é inferior a 10%, a hipótese nula também seria rejeitada utilizando
+esse nível de significância. Nesse caso, a conclusão permanece a de que existem evidências estatísticas de
+diferença entre as proporções de nomeações com experiência administrativa nas duas pastas.
+
+
+2. A conclusão mudaria se o nível de significância fosse 1%?
+
+Sim. Ao utilizar um nível de significância de 1%, a hipótese nula deixaria de ser rejeitada, pois o p-valor é
+superior a 0,01.
+
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+
+Esse exercício mostra que p-valor e significância substantiva não são a mesma coisa. O p-valor indica se
+há evidências estatísticas para rejeitar a hipótese nula, enquanto a significância substantiva mostra se a
+diferença encontrada é importante na prática. Assim, uma diferença pode ser estatisticamente significativa,
+mas ter pouca relevância prática, e por isso os resultados devem ser interpretados considerando tanto a
+evidência estatística quanto o contexto da pesquisa.
+
+
+7. O que aconteceria se a amostra fosse maior?
+Como exemplo, considera-se a proporção de nomeações com experiência administrativa estimada para o
+Ministério da Agricultura (MAPA). Suponha que essa proporção permanecesse exatamente a mesma, mas
+que o número de observações válidas fosse duas vezes maior.
+
+
+1. O que tenderia a acontecer com o erro-padrão?
+
+O erro-padrão tenderia a diminuir
+
+
+                                                      10
+2. Por que isso acontece?
+
+Isso acontece porque, quanto maior o número de observações, mais precisa tende a ser a estimativa da
+proporção. Com uma amostra maior, a variabilidade dos resultados diminui, reduzindo o erro-padrão e a
+margem de erro. Como consequência, o intervalo de confiança fica mais estreito, aumentando a precisão da
+estimativa sem alterar a proporção observada.
+
+
+
+
+                                                  11
+

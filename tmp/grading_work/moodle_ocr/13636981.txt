@@ -1,0 +1,692 @@
+
+===== page_001_bot.png =====
+Isso não representa uma duplicação dos dados, pois o objeto da análise são os cargos ocupados ao longo do
+tempo, e não apenas a pessoa que os ocupou.
+5. Quais são as duas pastas comparadas no
+artigo?
+As duas pastas apresentadas no artigo são a pasta da Cultura — MinC/SECULT — e a pasta da Agricultura —
+MAPA.
+Elas foram selecionadas tendo em vista que, quando a pesquisa foi realizada, esses eram dados inéditos, que
+abrangiam as experiências profissionais e políticas de burocratas que ocuparam cargos públicos nesses
+setores entre 2011 e 2021.
+Parte 2 — Leitura e validação dos dados
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+aÃ E E TS TENTE ND O E NR
+A unidade de análise representa a ocupação de determinado cargo por uma pessoa durante um período
+específico.
+3. O que significa uma linha da base?
+Cada linha representa uma nomeação e contém informações sobre o cargo, o órgão, o período, entre outras
+informações de tipo semelhante.
+4. Por que a mesma pessoa pode aparecer mais
+de uma vez?
+A informação fundamental aqui é entender o perfil das pessoas que ocupam cargos públicos. Assim, uma
+mesma pessoa pode assumir mais de um cargo em diferentes períodos, assumir o mesmo cargo em períodos
+diferentes ou passar por qualquer outra situação que a faça aparecer mais de uma vez na base.
+Isso não representa uma duplicação dos dados, pois o objeto da análise são os cargos ocupados ao longo do
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+eras eeno pre errprerseiS NO
+
+===== page_001_top.png =====
+Avaliação de Métodos CP
+Luccas Eduardo Ferraz da Silva
+Parte 1 — Artigo, pergunta e unidade de
+análise
+1. Qual é a pergunta geral do artigo?
+A pergunta do artigo é: como as informações sobre o perfil dos funcionários públicos em determinadas pastas
+do governo federal demonstram a atuação do presidencialismo de coalizão?
+O Mani A a smidada da anmáliasa da bkanaD
+i Alguns arquivos neste envio só podem ser acessados através de download direto. brarts um período
+
+===== page_002_bot.png =====
+“4 [1] "orgao sup” "setor" “chave” cid"
+“4 [5] "cargo" “funcao” “nível” “instr”
+“m [9] “area” “inst ensino” “inst origem" "car pub”
+“a [13] “partido” "cargo ele” “lid part” "exp adm”
+“4 [17] “exp car” “exp mer” “exp soc” ups
+“4 [21] “partido pr” “partido ministro" "indicacao” “entrada”
+“4 [25] "saida" “pera”
+3. Número de observações por orgao sup
+table(Base cargos$orgao sup)
+“”
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+Base cargos <- read excel
+*C; JUsers/Luccas/Downloads/BASE. cargos2.x1sx,
+sheet = "BASE cargos”
+)
+View(Base cargos)
+| dim(Base cargos)
+| “e [1] 1038 26
+2. Nomes das variáveis
+| names(Base cargos)
+"48 [1] “orgão sup" “setor” *chaver “ade
+au [17] “oun cart “exn mer” axa danço per
+
+===== page_002_top.png =====
+voa onia nação de ta o
+
+1. Número de linhas e colunas
+library(readx1)
+
+4% Warning: pacote 'readxl' foi compilado no R versão 4.5.3
+library(dplyr)
+
+4% Warning: pacote 'dplyr' foi compilado no R versão 4.5.3
+library(tidyr)
+
+4% Warning: pacote 'tidyr' foi compilado no R versão 4.5.3
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_bot.png =====
+| table(Base cargos$exp adm, useNA = "ifany") |
+
+“a
+
+esmo o 13 NA
+
+e 3 88935 1 11
+
+| tabte(õase cargossep car, useNA = “ifany") |
+
+“a
+
+“a e 1 2 3 5 NA <NA»
+
+e 147 51 2509253 75 1
+
+| table(Base cargos$nivel, useNA = "ifany") |
+ane
+
+===== page_003_mid.png =====
+[1] 0
+
+sum(is.na(Base cargos$instr))
+
+e (1) 06
+
+sum(is.na(Base cargos$indicacao))
+
+e (1) 06
+5. Checagem dos valores observados em exp adm,
+exp car, nivel, instr e indicacao
+
+table(Base cargos$exp adm, useNA = "ifany”)
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_top.png =====
+4. Número de valores ausentes em pelo menos
+cinco variáveis relevantes
+sum(is.na(Base cargos$exp adm))
+es (1) 0
+sum(is.na(Base cargos$exp car))
+es (1) 1
+sum(is.na(Base cargos$nivel))
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+sum(is.na(Base cargos$instr))
+
+===== page_004_bot.png =====
+Marea =
+,
+,
+table(
+Base cargos$experiencia adm,
+useNA = "ifany"
+,
+e
+“o O 1<N4
+e 88 995 15
+Em seguida, a base foi filtrada para manter apenas as pastas mapa € minc.
+ane |
+
+===== page_004_mid.png =====
+4% Bolsonaro Lula Rousseff Temer
+“ 396 87 351 204
+Segundo o Codebook , a variável exp. adm indica se a pessoa nomeada possuía experiência prévia em órgãos
+da administração pública. Assim, para criar a variavel binária, irei considerar que:
+1= possui experiência administrativa; O = não possui experiência administrativa.
+Base cargos$experiencia adm «<- ifelse(
+Base cargos$exp adm == 1, 1,
+ifelse(
+Base cargos$exp adm == 0, 6,
+NA real
+à
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+Base cargos$experiencia adm,
+
+===== page_004_top.png =====
+140712026, 00:42 Avaliação de Métodos CP.
+
+“e
+mas 6
+um 652 275 111
+
+| table(Base cargos$instr, useNA = "ifany")
+“e
+“e doutorado especializacao graduacao mestrado NA
+“e 159 203 1 259 ss
+“e superior tecnico
+“e 297 2
+
+| table(Base cargos$indicacao, useNA = “ifany") |
+
+===== page_005_bot.png =====
+o
+
+===== page_005_mid.png =====
+E
+
+===== page_005_top.png =====
+14/07/2026, 00:42 Avaliação de Métodos CP.
+Base filtr <- subset(
+Base cargos,
+orgao sup Xink c("mapa”, "minc")
+,
+table(Base filtr$orgao sup)
+“a
+4% mapa minc
+ua 525 365
+Atabela abaixo apresenta o número de observações válidas, o número de nomeações com experiência
+administrativa, a proporção, o intervalo de confiança de 95% e a margem de erro em cada pasta.
+
+===== page_006_bot.png =====
+ie cbn SR die encarada cia caril o
+col.names = c(
+“pasta”,
+“Observações válidas”,
+*Com experiência”,
+“Proporção (%)",
+*Erro-padrão (%)",
+“Margem de erro (p.p.)",
+“IC 95% — inferior (3%),
+“IC 95% — superior (%)*
+,
+,
+Tabela 1 — Experiência administrativa prévia por pasta
+Erro-
+Observações Com Proporção padrão Margem de IC 95% — IC 95% —
+Pasta válidas experiência (%) (%) — erro(pp) inferior(%) superior (%)
+mapa 524 482 92 12 23 89.7 943
+| i Alguns arquivos neste envio só podem ser acessados através de download direto.
+Mio10 Users uccas/Desktop/Avaliação. metodosCP him sn
+
+===== page_006_mid.png =====
+proporcao * (1 - proporcao) /
+observacoes validas
+j;
+margem erro = 1.96 * erro padrao,
+ic inferior = proporcao - margem erro,
+ic superior = proporcao + margem erro
+» >
+mutate(
+proporcao = round(proporcao * 100, 1),
+erro padrao = round(erro padrao * 160, 1),
+margem erro = round(margem erro * 100, 1),
+ic inferior = round(ic inferior * 100, 1),
+ic superior = round(ic superior * 100, 1)
+,
+knitr::kable(
+tabela,
+caption = “Tabela 1 - Experiência administrativa prévia por pasta”,
+col.names = c(
+Lo cepastar :
+à Alguns arquivos neste envio só podem ser acessados através de download direto. ]
+aiine madino: PSA
+
+===== page_006_top.png =====
+14jorraças, 0042 Avatação de Métodos CP
+library(dplyr)
+tabela <- Base filtr |>
+group. by(orgao sup) |>
+summarise(
+observacoes validas = sum(!is.na(experiencia adm)),
+com experiencia = sum(
+experiencia adm == 1,
+na.em = TRUE
+»
+proporcao = mean(
+experiencia adm,
+na.rm = TRUE
+,
+db
+mutate(
+erro padrao = sqrt(
+margem erro = 1.96 * erro padrao,
+
+===== page_007_bot.png =====
+fle:/1C./Users/Luccas/DesktoplAvaliação. metodosCP-htmi me |
+
+===== page_007_mid.png =====
++. MIpOLESE TUla
+
+A hipótese nula afirma que a proporção de nomeações com experiência administrativa é igual nas duas
+pastas:
+
+2. Hipótese alternativa
+
+A hipótese alternativa afirma que as proporções de nomeações com experiência administrativa são diferentes
+entre as duas pastas:
+
+3. Teste usado no R
+
+Primeiro, foram calculados o número de nomeações com experiência administrativa e o número de
+observações válidas em cada pasta.
+
+===== page_007_top.png =====
+Erro-
+Observações Com Proporção padrão Margem de IC 95% — IC 95% —
+
+Pasta válidas experiência (%) (%) erro(p.p) inferior (%) superior (%)
+minc 351 309 as 17 34 846 914
+O intervalo de confiança de 95% apresenta uma faixa de valores plausíveis para a proporção de nomeações
+com experiência administrativa em cada pasta. Isso significa que, se o procedimento fosse repetido muitas
+vezes com diferentes amostras, aproximadamente 95% dos intervalos calculados conteriam a verdadeira
+proporção.
+
+1. Hipótese nula
+A hipótese nula afirma que a proporção de nomeações com experiência administrativa é igual nas duas
+pastas:
+
+===== page_008_bot.png =====
+n = teste hip$observacoes validas,
+alternative = "two.sided”,
+correct = FALSE
+,
+teste 4
+“e
+4 2-sample test for equality of proportions without continuity correction
+“
+44 data: teste hip$com experiencia out of teste hip$observacoes validas
+4H X-squared = 3.7801, df = 1, p-value = 0.05187
+44 alternative hypothesis: two.sided
+44 95 percent confidence interval:
+44 -0. 001645247 0.080656143
+44 sample estimates:
+id prop 1 prop 2
+4H 0,9198473 0,8803419
+MIC /Users/LuccasDesktopiAvaliação. metodosCP im ane
+
+===== page_008_mid.png =====
+col.names = c(
+“pasta”,
+“Com experiência administrativa”,
+“Observações válidas”
+,
+,
+Tabela 2 — Dados utilizados no teste de diferença entre proporções
+Pasta Com experiência administrativa Observações válidas
+mapa 482 524
+minc 309 351
+teste 4 <- prop.test(
+x = teste hip$com experiencia,
+n = teste hip$observacoes validas,
+alternative = "two.sided”,
+correct = FALSE
+,
+teste 4
+
+===== page_008_top.png =====
+14/07/2026, 00:42 Avaliação de Métodos CP.
+Mibrary(dplyr)
+teste hip <- Base filtr |>
+group by(orgao sup) |>
+summarise(
+com experiencia = sun(
+experiencia adm == 1,
+na.em = TRUE
+»
+observacoes validas = sum(
+tis.na(experiencia adm)
+j ,
+knitr::kable(
+teste hip,
+caption = "Tabela 2 — Dados utilizados no teste de diferença entre proporções",
+col.names = c(
+“Pasta”,
+“Com experiência administrativa”,
+"Observações válidas"
+
+===== page_009_bot.png =====
+mesma proporção de nomeações com experiência administrativa.
+Um p-valor pequeno indica que a diferença observada seria pouco provável caso as proporções fossem
+realmente iguais. Um p-valor elevado indica que a diferença encontrada pode ser explicada pela variação
+amostral, não havendo evidências suficientes para afirmar que as pastas apresentam proporções diferentes.
+O objetivo desta análise é comparar a proporção de cargos de alto nível nas pastas da Agricultura ( mapa ) e da
+Cultura (mínc ).
+Criação da variável alto nivel
+Avariável alto nível foi definida como:
+1=cargo de nível 5 ou 6; O = cargo de nível 4
+
+hedlerscasDestolAvalação metodos im ais
+
+===== page_009_mid.png =====
+if (teste 4$p.value < 0.05) (
+print(“O p-valor é menor que 0,05. A hipótese nula é rejeitada.")
+) else (
+print(“O p-valor é maior ou igual a 0,05. A hipótese nula não é rejeitada.”)
+;
+*m [1] “O p-valor é maior ou igual a 8,05. A hipótese nula não é rejeitada.”
+Como o p-valor é maior ou igual a 0,05, não se rejeita a hipótese nula de igualdade entre as proporções. Os
+resultados não apresentam evidências estatísticas suficientes para afirmar que a proporção de nomeações
+com experiência administrativa é diferente entre o MAPA e o MinC.
+6. Interpretação substantiva
+O p-valor representa a probabilidade de observar uma diferença entre as proporções igual ou mais extrema do
+que a encontrada, supondo que a hipótese nula seja verdadeira, isto é, supondo que as duas pastas tenham a
+mesma proporção de nomeações com experiência administrativa.
+Um p-valor pequeno indica que a diferença observada seria pouco provável caso as proporções fossem
+realmente iguais. Um p-valor elevado indica que a diferença encontrada pode ser explicada pela variação
+“amostral, não havendo evidências suficientes para afirmar que as pastas apresentam proporções diferentes.
+
+===== page_009_top.png =====
+4. P-valor
+O p-valor encontrado foi:
+teste 4$p.value
+“4 [1] 0.05186519
+O p-valor arredondado é 0.0519.
+5. Decisão com nível de significância de 5%
+Foi adotado um nível de significância de 5%, representado por:
+[=0,05]
+if (teste 4$p.value < 0.805) (
+print(“O p-valor é menor que 8,85. A hipótese nula é rejeitada.)
+> else (
+print(“O p-valor é maior ou igual a 0,05. A hipótese nula não é rejeitada.")
+
+===== page_010_bot.png =====
+fle:/1C./Users/Luccas/DesktoplAvaliação. metodosCP-htmi 1016 |
+
+===== page_010_mid.png =====
+Foram calculados o número de observações válidas, o número de cargos de alto nível, a proporção e o
+intervalo de confiança de 95% para cada pasta.
+
+===== page_010_top.png =====
+Base filtr$alto nível <- ifelse(
+as.character(Base filtr$nivel) Xink c("S", "6"), 1,
+ifelse(
+as.character(Base filtr$nivel) == "4", O,
+NA real
+,
+,
+table(Base filtr$alto nivel, useNA = “ifany")
+“”
+1. Proporções e intervalos de confiança por pasta
+Foram calculados o número de observações válidas, o número de cargos de alto nível, a proporção e o
+intervalo de confiança de 95% para cada pasta.
+
+===== page_011_bot.png =====
+knitr::kable(
+tab nivel,
+caption = “Tabela 3 - Proporção de cargos de alto nível por pasta”,
+col.names = c(
+“Pasta”,
+“Observações válidas”,
+“Cargos de alto nível",
+“Proporção (X)",
+“Margem de erro (p.p.)",
+“IC 95% — inferior (%)",
+“IC 95% — superior (%)*
+,
+,
+Tabela 3 — Proporção de cargos de alto nível por pasta
+Observações Cargos de alto Proporção Margem de erro 1c95% — 10 95% —
+Pasta válidas nível (4) (pp) inferior(%) superior (%)
+mapa 525 187 35.6 “41 35 39.7
+Mo:NG UsersA uccas/DesktopiAvaliação. metodosCP html uns
+
+===== page_011_mid.png =====
+tab. nível <- prop nível |>
+mutate(
+proporcao = round(proporcao * 180, 1),
+margem erro = round(nargem erro * 100, 1),
+ic inferior = round(ic inferior * 100, 1),
+ic superior = round(ic superior * 100, 1)
+» >
+select(
+orgao sup,
+observacoes validas,
+cargos alto. nível,
+proporcao,
+margem erro,
+ic inferior,
+ic superior
+,
+knitr: :kable(
+tab nivel,
+caption = “Tabela 3 — Proporção de cargos de alto nível por pasta”,
+col.names = c(
+“Pasta”,
+enencenchas sálidast
+
+===== page_011_top.png =====
+14/07/2026, 00:42 Avaliação de Métodos CP.
+Mibrary(dplyr)
+prop nível <- Base filtr |>
+group by(orgao sup) |>
+summarise(
+observacoes validas = sun(!is.na(alto nível),
+cargos alto nível = sum(alto nível == 1),
+proporcao = mean(alto nível)
+21
+mutate(
+erro padrao = sqrt(
+proporcao * (1 - proporcao) / observacoes validas
+»
+margem erro = 1.96 * erro padrao,
+ic inferior = proporcao - margem erro,
+ic superior = proporcao + margem erro
+,
+tab nível <- prop nível |>
+mutate(
+proporcao = round(proporcao * 166, 1),
+
+===== page_012_bot.png =====
+“- propi propa
+4H 0.3561905 0.4246575
+Mle:IC /Users/Luccas/DesktoplAvaliação. metodosCP html 1216 |
+
+===== page_012_mid.png =====
+teste nível <- prop.test(
+x = prop nivel$cargos alto nível,
+n = prop nivel$observacoes validas,
+,
+teste nível
+“
+44 2-sample test for equality of proportions with continuity correction
+“
+4 data: prop nivel$cargos alto, nível out of prop nivel$observacoes validas
+44 X-squared = 3.9813, df = 1, p-value = 0.04601
+44 alternative hypothesis: two.sided
+44 95 percent confidence interval:
+4 -0.1359762203 -0.0009578958
+44 sample estimates:
+“mt propi prop2
+4H 0.3561905 0,4246575
+
+===== page_012_top.png =====
+Observações Cargos de alto Proporção Margem de erro 1C 95% — IC 95% —
+Pasta válidas nível (%) (pp) inferior (%) superior (%)
+minc 365 155 425 51 374 475
+O intervalo de confiança de 95% apresenta uma faixa de valores plausíveis para a verdadeira proporção de
+cargos de alto nível em cada pasta. A margem de erro indica a distância entre a proporção estimada e cada
+limite do intervalo.
+2. Hipóteses
+A hipótese nula afirma que a proporção de cargos de alto nível é igual nas duas pasta. Já a hipótese
+alternativa afirma que as proporções são diferentes:
+3. Teste de hipótese
+teste nível <- prop.test(
+x = prop nivel$cargos alto nível,
+n = prop nivel$observacoes validas,
+
+===== page_013_bot.png =====
+Como o p-valor é menor que 0,05, rejeita-se a hipótese nula. Os resultados apresentam evidências
+estatísticas de que a proporção de cargos de alto nível é diferente entre o MAPA e o MinC.
+
+5. Conclusão substantiva
+
+A proporção de cargos de alto nível foi de 35.6% no MAPA e de 42.5% no MinC. Ou sea, a diferença absoluta
+entre as duas proporções foi de 6,9% pontos percentuais. Creio que do ponto de vista substantivo representa
+uma grande diferença.
+
+Parte 6 — Significância estatística e nível de
+significância
+
+Para analisar o efeito da escolha do nível de significância, foi utilizado o teste sobre a proporção de cargos de
+alto nível.
+
+===== page_013_mid.png =====
+paste(
+“Como o p-valor é menor que 8,05, rejeita-se a hipótese nula. Os resultados apresentam qu
+e a proporção de cargos de alto nível é diferente entre o MAPA e o MinC.”
+,
+) else (
+paste(
+“Como o p-valor é menor que 8,05, rejeita-se a hipótese nula. Os resultados apresentam qu
+e a proporção de cargos de alto nível é diferente entre o MAPA e o MinC.”
+>
+O p-valor encontrado foi
+teste nivel$p.value
+“a [1] 0.04600749
+Como o p-valor é menor que 0,05, rejeita-se a hipótese nula. Os resultados apresentam evidências
+estatísticas de que a proporção de cargos de alto nível é diferente entre o MAPA e o MinC.
+5. Conclusão substantiva
+
+===== page_013_top.png =====
+soa opa ação de Métos CP
+4. P-valor e interpretação
+p.nível <- teste nivel$p.value
+prop mapa <- prop nivel$proporcao[
+prop nivel$orgao sup == "mapa"
+]
+prop minc <- prop nivel$proporcao[
+prop nivel$orgao sup == "minc*
+|
+dif nivel pp <- abs(
+prop:tapa =: prop. mir
+) + 100
+decisao nivel <- if (p nível < 0.05) (
+paste(
+“Como o p-valor é menor que 8,05, rejeita-se a hipótese nula. Os resultados apresentam qu
+e a proporção de cargos de alto nível é diferente entre o MAPA e o MinC."
+NR
+
+===== page_014_bot.png =====
+fle:/1C./Users/Luccas/DesktoplAvaliação. metodosCP-htmi 1416 |
+
+===== page_014_mid.png =====
+Portanto, a conclusão mudaria em relação ao nível de significância de 5%.
+
+3. P-valor e significância substantiva
+
+O p-valor é um resultado calculado a partir dos dados e não muda quando se escolhe um nível de significância
+diferente. O que muda é o critério utilizado para decidir se a hipótese nula será rejeitada.
+
+Uma diferença pode ser estatisticamente significativa, mas pequena ou pouco relevante do ponto de vista
+substantivo. Da mesma forma, uma diferença substantivamente importante pode não ser estatisticamente
+significativa quando o número de observações é pequeno.
+
+Parte 7 — O que aconteceria se a amostra
+fosse maior?
+
+===== page_014_top.png =====
+1410712026, 00:42 Avaliação de Métodos CP
+rejeita 5 <- p nível « 0.05
+rejeita 10 <- p nível « 6.10
+rejeita 1 <- p nível « 6.01
+muda 16 «- rejeita 5 != rejeita 10
+muda 1 <- rejeita 5 != rejeita 1
+' PR o
+1. Nível de significância de 10%
+Com nível de significância de 10%, a hipótese nula seria rejeitada.
+Portanto, a conclusão não mudaria em relação ao nível de significância de 5%
+p Ea Rondo o
+2. Nível de significância de 1%
+Com nível de significância de 1%, a hipótese nula não seria rejeitada.
+Portanto, a conclusão mudaria em relação ao nível de significância de 5%.
+Q P.yalar a cinnificânria ernhetantiva
+
+===== page_015_bot.png =====
+“Cenário”,
+
+“Número de observações”,
+
+“Erro-padrão (p.p.)”
+
+,
+,
+
+Tabela 4 — Erro-padrão com o aumento do número de observações
+Cenário Número de observações Erro-padrão (p.p.)
+Amostra original 525 209
+Amostra duas vezes maior 1050 148
+1. O que aconteceria com o erro-padrão?
+O erro-padrão tenderia a diminuir. A tabela mostra o erro-padrão da amostra original e o erro-padrão que seria
+obtido caso o número de observações fosse 2 vezes maior, mantendo a mesma proporção.
+
+===== page_015_mid.png =====
+Cenario = c(
+“Amostra original",
+“Amostra duas vezes maior”
+»
+Observacoes = c(
+nmapa,
+nmapa * 2
+»
+Erro padrao = round(
+e(erro original, erro amostra maior) * 100,
+2
+,
+,
+knitr::kable(
+amostra maior,
+caption = "Tabela 4 — Erro-padrão com o aumento do número de observações”,
+col.names = c(
+“Cenário”,
+“Número de observações”,
+“Erro-padrão (p.p.)"
+,
+,
+
+===== page_015_top.png =====
+14/07/2026, 00:42 Avaliação de Métodos CP.
+prop mapa <- prop nivel$proporcao[
+prop. nivel$orgao sup == "mapa”
+]
+nmapa <- prop nivel$observacoes validas[
+prop nivel$orgao sup == "mapa”
+]
+erro original <- sqrt(
+prop.mapa * (1 - prop mapa) / n mapa
+,
+erro amostra maior <- sqrt(
+prop mapa * (1 - prop mapa) / (n mapa * 2)
+,
+amostra maior <- data.frane(
+Cenario = c(
+“Amostra original",
+“Amostra duas vezes maior”
+»
+
+===== page_016_bot.png =====
+fle:/1C./Users/Luccas/DesktoplAvaliação. metodosCP-htmi 1816 |
+
+===== page_016_mid.png =====
+
+
+===== page_016_top.png =====
+2. Por que isso acontece?
+
+O erro-padrão diminui porque o número de observações aparece no denominador da fórmula. Quanto maior
+for a amostra, menor será a incerteza associada à proporção estimada.
+
+Ao dobrar o número de observações, o erro-padrão não é dividido por dois. Ele é dividido pela raiz quadrada
+de 2. Por isso, passa a corresponder a aproximadamente 70,7% do erro-padrão original, o que representa
+uma redução de cerca de 29,3%.
+
+Assim, uma amostra maior produz uma estimativa mais precisa e um intervalo de confiança mais estreito.

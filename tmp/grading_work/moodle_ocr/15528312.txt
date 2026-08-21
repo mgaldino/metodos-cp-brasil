@@ -1,0 +1,670 @@
+
+===== page_001_bot.png =====
+url <- “https://github.com/nayalbrecht/burocraciaBR/raw/refs/heads/main/BASE cargos2.xisx”
+download.file(url, destfile = "BASE cargos2.xlsx”, mode = “wb")
+dados sujos <- read excel("BASE cargos2.x1sx")
+1.Artigo, pergunta e unidade de análise
+1. Qual é a pergunta geral do artigo?
+R: Os perfis dos nomeados para cargos de confiança diferem entre ministérios de áreas distintas?
+2. Qual é a unidade de análise da base?
+R: A unidade de análise é a nomeação de uma pessoa para um cargo.
+
+===== page_001_mid.png =====
+caia Senise a Eee q
+library('ggplot2')
+library('tinytex')
+library('tidyr')
+Fonte dos dados
+A base de dados utilizada nesta análise foi disponibilizada pelos autores no repositório do projeto no GitHub.
+O arquivo utilizado é a base BASE cargos2.x1sx, disponível no repositório burocraciaBR.
+A base foi acessada pela última vez em 20/07/2026.
+Importação dos dados
+url <- “https: //github.com/nayalbrecht/burocraciaBR/raw/refs/heads/main/BASE cargos2.xlsx”
+download .file(url, destfile = “BASE cargos? x1sx”, mode = “ub*)
+dados sujos <- read excel("BASE cargos? x1sx")
+
+| Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_top.png =====
+Trabalho Final Métodos II |
+Gustavo Campos dos Santos - Nº USP: 15528312
+2026-07-20
+Pacotes
+library('readx1')
+
+===== page_002_bot.png =====
+48 Número de colunas: 26
+
+2. Nomes das variáveis
+names (dados)
+*s [1] “orgao sup" "setor" “chave “ide
+48 [5] “cargo” “funcao” “nivel” “instr”
+*s [9) “area” “inst ensino” “inst origem" "car pub"
+48 [13] “partidos “cargo ele” “lid part” “exp ada”
+48 [17] “exp car" “exp mor" “exp soc" cupes
+48 [21) "partido pre “partido ministro” "indicacao” “entrada”
+48 [25] “saida” “pera”
+
+3. Número de observações por orgao. sup
+
+===== page_002_mid.png =====
+R: MAPA (Ministério da Agricultura e Pecuária do Brasil) e MinC (Ministério da Cultura)
+2.Leitura e validação dos dados
+1. Número de linhas e colunas
+cat("Número de linhas:*, nrow(dados), “Nn")
+44 Número do linhas: 1038
+cat("Número de colunas:”, ncol(dados))
+44 Nmero de colunas: 26
+2. Nomes das variáveis
+Eai
+
+===== page_002_top.png =====
+3. O que significa uma linha da base?
+R: Uma linha da base representa uma nomeação de uma determinada pessoa para um determinado cargo,
+em um determinado momento, em um dos ministérios analisados.
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+R: Pois uma mesma pessoa pode ocupar cargos diferentes em momentos diferentes.
+5. Quais são as duas pastas comparadas no artigo?
+ES
+
+===== page_003_bot.png =====
+names to = “variavel”,
+values. to = “numero, de NAs*
+2%
+rename(
+“Variável = variavel,
+“Número de valores ausentes" = numero de NAs
+,
+kmátr: ikablo(
+tabela nas,
+caption = “Numero de valores ausentes nas variaveis selecionadas”,
+label = “tab:valores-ausentes”
+,
+Table 2: Numero de valores ausentes nas variaveis selecionadas
+Variável | Número de valores ausentes
+exp adm 15
+exp car %
+nivel o
+
+===== page_003_mid.png =====
+hameened aa
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+4. Número de valores ausentes em pelo menos cinco variáveis relevantes
+tabela nas <- dados >)
+summarise(
+across(
+c(exp adm, exp car, nivel, instr, indicacao),
+-su(is.na(.))
+,
+> ox
+pivot longer(
+cols = everythingO),
+names to = “variavel”,
+values to = "nuzero de Nás*
+>» pk
+renane(
+"Variável" = variavel,
+“Número de valores ausentes" = numero, de NAs
+,
+caption = “Numero de valores ausentes nas variaveis selecionadas",
+
+===== page_003_top.png =====
+tabela orgao <- as.data.frame (table (dadosSorgao sup))
+nanos(tabela orgao) <- c("Orgao”, "Numero de observacoes")
+knitr: ikable(
+tabela orgao,
+caption = "Numero de observacoes por orgao superior”,
+label = "tab:observacoes-orgao”
+,
+Table 1: Numero de observacoes por orgao superior
+Orgao Numero de observacoes
+mapa 525
+meti 148
+no cg pra o prt mo ms a o pe mes
+
+===== page_004_bot.png =====
+Pnboinad “VRSODOR, CNCONÉTAIOS
+expadm 1,0,1,NA,3
+exp car 5,3,0,1, NA, NA,2
+nível 6,5,4
+instr NA, espeeializacao, mestrado, superior, tecnico, dontorado, graduacao
+indicacao Lula, Rousseff, Temer, Bolsonaro
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+Problema
+A base apresenta diversas inconsistências. Há valores com crase, e até mesmo números distintos em colunas
+que deveriam representar variáveis binárias. Tendo em vista esse problema, decidi tomar algumas medidas
+para padronizar o banco. Primeiro, nas colunas de variáveis binárias, alterei qualquer valor que não fosse O
+el para NA.
+> wr
+mutate(
+across(
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+) or E o E
+pivot longer(
+col = everythingO,
+nanes to = "variavel",
+values to = "valores encontrados”
+,
+knitr::kable(
+tabela, checagem,
+caption = "Valores observados nas variaveis selecionadas”,
+label = "tab:valores-observados”
+,
+Table 3: Valores observados nas variaveis selecionadas
+variavel valores encontrados
+exp adm 1,0,:1,NA,3
+exp car 5,3,0,1,NA,NA,2
+nivel 65,4
+instr NA, especializacao, mestrado, superior, tecnico, doutorado, graduacao
+indicacao Lula, Rousseff, Temer, Bolsonaro
+Alguns arquivos neste envio só podem ser acessados através de download direto. .
+Denhlnma
+
+===== page_004_top.png =====
+Variável | Número de valores ausentes
+instr 5
+indicacao ú
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+5. Uma checagem dos valores observados em exp adm, exp car, nivel, instr e indicacao
+tabela checagem <- dados, sujos >)
+summarise(
+exp adm = paste(unique(exp adm), collapse = *, "),
+exp.car = paste(unique(exp car), collapse = ", "),
+nível = paste(unique(nivel), collapse = *, *),
+instr = paste(unique(instr), collapse = ", "),
+indicacao = vaste(uniaue(indicacao). collanse = *. ")
+names to = “variavel”,
+
+===== page_005_bot.png =====
+1. Número de observações válidas por pasta.
+2. Número de pessoas /nomeações com experiência administrativa.
+3. Proporção com experiência administrativa.
+4. Intervalo de confiança de 95% para essa proporção.
+5. Margem de erro associada ao intervalo de confiança.
+tabela resultados <- dados mapa minc 1>%
+group by(orgao sup) 4>
+summarise(
+observacoes validas = sun(tis.na(experiencia adm)),
+com experiencia aduinistrativa = sun(
+experiencia adm == 1,
+na.rm = TRUE
+De
+proporcao, experiencia = mean(
+experiencia adm == 1,
+nara = TRUÊ
+
+===== page_005_mid.png =====
+3.Tabela descritiva: experiência administrativa
+dados <- dados %>%
+mutate(
+experiencia ada = case uhen(
+expada == "1" - 1,
+exp ada == "0" - 0,
+,
+)
+dados mapa minc <- dados %>%
+tilter(orgao. sup linf c('napa”, “mincr))
+1. Número de observações válidas por pasta.
+2. Número de pessoas/nomeações com experiência administrativa.
+3. Proporção com experiência administrativa.
+4. Intervalo de confiança de 95% para essa proporção.
+5. Margem de erro associada ao intervalo de confianca.
+]
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+summariso( o .
+
+===== page_005_top.png =====
+c(cargo ele, lid part, exp adm, exp mer, exp soc),
+-replace(.x, !(.x link c('0", “1º)), NA)
+,
+,
+Outra questão era que as células sem valor eram representadas por “NA”, como um texto. Para padronização
+e falicitar a manipulação dos dados da base, alterei todos os “NA” em forma de texto para NA como valor
+“vazio da maneira que o R interpreta.
+dados <- dados. sujos 12%,
+mutate(
+across(
+vhere(is. character),
+-na if(.x, “NAS)
+,
+
+===== page_006_bot.png =====
+) E
+tabela resultados bonita >),
+mutate(
+mapa = ifelse(
+indicador inf c(
+“Observacoes validas",
+"Com experiencia administrativa”
+5
+fornat(round(mapa, 0), nssall = 0),
+format (round(napa, 3), nszall = 3)
+»
+mínc = ifelse(
+indicador Yin c(
+"Observacoes validas",
+“Com experiencia administrativa”
+De
+format (round(minc, 0), nsmall = 0),
+format (round(minc, 3), nsmall = 3)
+,
+
+===== page_006_mid.png =====
+rename(
+“Observacoes validas' = observacoes validas,
+“Com experiencia administrativa” = com experiencia administrativa,
+“Proporcao com experiencia” = proporcao, experiencia,
+“Margem de erro = margem erro,
+“Limite inferior IC 954 = limite inferior. ic95,
+“Limite superior IC 954" = limite superior ic95
+
+> om
+
+tidyr: pivot. longer(
+cols = orgao. sup,
+names to = "indicador",
+values to = "valor"
+
+Dor
+
+tidyr: :pivot víder(
+names from = orgao sup,
+values from = valor
+
+,
+
+tabela resultados bonita 1>%
+
+mutate(
+
+mapa = ifelse(
+indicador Yin% c(
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+format (round(mapa, 3), nsmall = 3)
+
+===== page_006_top.png =====
+,
+2%
+mutate(
+margem erro = 1.96 + sqrt(
+proporcao experiencia +
+(4 - proporcao experiencia) /
+observacoes validas
+»
+limite inferior 1095 =
+proporcao experiencia - margem erro,
+limite superior 1c95 =
+proporcao experiencia + margem erro
+,
+“Proporcao com axpériencia” = proporcao experiencia,
+
+===== page_007_bot.png =====
+PM pa o O A lr SS OESTE Ar O AS air e cn
+a incerteza decorrente da amostragem. À margem de erro é de 3,40 pontos percentuais, indicando que a
+estimativa de 88% está sujeita a uma variação amostral de aproximadamente 3,40 pontos percentuais para
+mais ou para menos.
+
+Os resultados indicam uma presença muito elevada de experiência administrativa prévia nos dois órgãos
+analisados. A proporção estimada é maior no MAPA do que no MINC, embora ambas as estimativas
+apresentem intervalos de confiança bastante elevados. A margem de erro é menor no primeiro do que no
+segundo, principalmente porque o número de observações válidas é maior no mesmo.
+4. Primeiro teste de hipótese bivariado
+teste proporcoes <- prop.test(
+
+x = tabela resultadosScom experiencia administrativa,
+
+n = tabela resultadosSobservacoes validas,
+
+correct = FALSE
+,
+
+ê
+
+===== page_007_mid.png =====
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+Interpretação
+Entre as 524 observações válidas do MAPA, 482 correspondem a nomeações com experiência administrativa
+prévia, o que representa uma proporção 92%. O intervalo de confiança de 95% para essa proporção varia de
+89,7% a 94,3%. Isso significa que, considerando o procedimento de estimação utilizado, o intervalo construído
+a partir da amostra fornece uma faixa de valores plansíveis para a proporção de pessoas com experiência
+administrativa na população de referência, com nível de confiança de 95%. A margem de erro associado
+é de 2,32 pontos percentuais: portanto, a estimativa amostral de 92% apresenta uma incerteza amostral
+de aproximadamente 2,32 pontos percentuis para mais ou para menos. No MINC, entre as 351 observações
+válidas, 309 apresentam experiência administrativa prévia, correspondendo a 88,0%. O intervalo de confiança
+de 95% varia de 84,6% a 914%. Assim como no caso do MAPA, o intervalo de confiança representa a faixa
+de valores plausíveis para a proporção populacional associada ao procedimento de estimação, considerando
+à incerteza decorrente da amostragem. À margem de erro é de 3,40 pontos percentuais, indicando que a
+estimativa de 88% está sujeita a uma variação amostral de aproximadamente 3,40 pontos percentuais para
+mais ou para menos.
+Os resultados indicam uma presença muito elevada de experiência administrativa prévia nos dois órgãos
+analisados. A proporção estimada é maior no MAPA do que no MINC, embora ambas as estimativas
+apresentem intervalos de confiança bastante elevados. A margem de erro é menor no primeiro do que no
+segundo, principalmente porque o número de observações válidas é maior no mesmo.
+
+===== page_007_top.png =====
+3%
+knitr: :kable(
+caption = "Experiencia administrativa dos nomeados por orgao”,
+label = "tabiexperiencia-aduinistrativa”
+,
+Table 4: Experiencia administrativa dos nomeados por orgao
+indicador mapa min
+Observacoes validas 5H 35
+Com experiencia administrativa 482 309
+Proporeao com experiencia 0.920 0.880
+Margem de erro 0023 0.034
+Limite inferior IC 95% 0897 0.846
+Limite superior IC 95% 0943 0914
+à Alguns arquivos neste eng só podem ser accnsados arranca de dolor distoda.
+
+===== page_008_bot.png =====
+perdi neta aa DRA peso
+Pevalor 0.0519
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+
+Relatório
+
+Para testar a hipótese de que a proporção de nomeações com experiência administrativa é igual entre as duas.
+pastas, foi realizado um teste bicaudal de igualdade entre duas proporções, utilizando a aproximação normal
+para a diferença entre proporções. A hipótese nula afirma que as proporções de nomeações com experiência.
+administrativa no MAPA e no MINC são iguais, isto é, com experiência administrativa no MAPA e no
+MINC são iguais. A hipótese alternativa, por sua vez, afirma que essas proporções são diferentes. O teste
+foi realizado no R por meio da função prop.test() para realizar a aproximação normal. A estimativa das
+proporções observadas foi de aproximadamente 91,98% no MAPA e 88,03% no MINC, correspondendo à
+uma diferença de aproximadamente 3,95 pontos percentuais.
+
+O teste produziu um p-valor de 0,05187.0 p-valor indica a probabilidade de observar, supondo que a hipótese
+nula de igualdade entre as proporções seja verdadeira, uma diferença entre as proporções tãg rande quanto
+a observada — ou ainda maior — apenas em razão da variação amostral. Neste caso, essa probabilidade é
+de aproximadamente 5,19%. Como o p-valor é ligeiramente superior ao nível de significância de 5%, não se
+rejeita a hipótese mula. Isso não significa que as proporções tenham sido demonstradas como exatamente
+
+s
+
+===== page_008_mid.png =====
+knitr: ikable(
+tabela teste proporcoes,
+dígito = 4,
+col.names = c(“Variavel", "Valor"),
+caption = "Teste de diferenca entre proporcoes”,
+label = "tab:teste-proporcoes”
+,
+Table 5: Teste de diferenca entre proporcoes
+Variavel Valor
+Proporcao 1 09195
+Proporcao 2 0.8803
+Limite inferior IC 95% — -0.0016
+Limite superior IC 95%  0.0807
+P-valor 0.0519
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+Relatório
+Para testar a hipótese de que a proporção de nomeações com experiência administrativa é igual entre as duas
+pastas, foi realizado um teste bicaudal de igualdade entre duas proporções, utilizando a aproximação normal
+para a diferença entre proporções. À hipótese nula afirma que as proporções de nomeações com experiência
+
+===== page_008_top.png =====
+tabela teste proporcoes <- data.frane(
+variável = e(
+"Proporcao 1º,
+“Proporcao 2º,
+"Limite inferior IC 95%",
+"Limite superior IC 95%",
+"P-valor"
+de
+valor = e(
+as.numeric(teste proporcoesSestimate(1)),
+as nuneric(teste proporcoestestimate(2]),
+teste. proporcoesiconf .int(1],
+teste, proporcoesScont .int (2),
+teste proporcoes$p.value
+,
+,
+knitr: ikable(
+tabela teste proporcoes,
+digito = 4,
+col.names = c("Variavel", "Valor"),
+
+===== page_009_bot.png =====
+observacoes. validas
+Da
+zargem erro = 1.96 + erro. padrao,
+lim inf altoniv = proporcao alto nível - margem erro,
+1im/ sup altoniv = proporcao alto nivel + margem erro
+,
+tabela alto nivel bonita <- tabela alto nível i>%
+rename(
+“Observacoes validas: = observacoes validas,
+“Cargos de alto nivel: = cargos alto. nivel,
+“Proporcao: = proporcao alto nivel,
+“Erro-padrao” = erro, padrao,
+“Margem de erro" = margem erro,
+“Limite inferior (95%) = lim inf altoniv,
+“Limite superior (95%): = lim sup altoniv
+2%
+pivot longer(
+cols = “orgao. sup,
+nanes to = "medida”,
+values. to = "valor*
+9
+
+===== page_009_mid.png =====
+nivel Kink c(5, 6) - 1,
+TRUE - NA real.
+,
+,
+tabela alto nivel <- dados mapa minc >)
+group. by(orgao sup) 4>)
+summarise(
+observacoes validas = sun(!is.na(alto nível),
+cargos alto nivel = sun(alto nível == 1, na.rm = TRUE),
+proporcao alto nível = mean(alto nivel, na.rm = TRUE)
+> ox
+mutate(
+erro, padrao = sqrt(
+proporcao, alto nivel +
+(4 - proporcao alto nivel) /
+observacoes, validas
+Da
+margem erro = 1.96 + erro padrao,
+lim inf altoniv = proporcao alto nível - margem erro,
+lim cup altoniv = proporcao alto nível + margem erro
+,
+tabela alto nivel bonita <- tabela alto nível 1>%
+rename(
+“Observacoes validas' = observacoes validas,
+“Cargos de alto nivel" = cargos alto nivel,
+
+===== page_009_top.png =====
+iguais, mas sim que, com base nos dados e utilizando o critério de significância de 5%, não há evidência
+estatística suficiente para concluir que exista uma diferença entre as proporções de nomeações com experiência
+administrativa no MAPA e no MINC. Dessa forma, embora a proporção observada seja maior no MAPA,
+a diferença de aproximadamente quatro pontos percentuais pode ser compatível com a variação amostral
+esperada caso as duas pastas apresentem, na população de referência, proporções iguais de nomeações com
+5. Segundo teste de hipótese bivariado
+dados mapa minc <- dados mapa minci>/
+mutate(
+alto nivel = case uhen(
+nivel == 4-0,
+nivel Yin c(5, 6) - 1,
+TRUE - NA real.
+,
+,
+
+===== page_010_bot.png =====
+medida mapa mine
+Observacoes validas 525 305
+Cargos de alto nível 187 155
+Proporeao 0.356 0425
+Erro-padrao 0021 0026
+Margem de erro 0041 0.051
+Limite inferior (95%) 0.315 0.374
+Limite superior (95%) 0.397 0475
+teste alto nivel <- prop.test(
+x = tabela alto nivelScargos alto nível,
+n = tabela alto nivelSobservacoes  validas,
+correct = FALSE
+,
+tabela teste alto nível <- data.frane(
+variavel = c(
+“Proporcao 2º,
+"Limite inferior IC 954",
+10
+
+===== page_010_mid.png =====
+medida Yin c(
+"Observacoes validas”,
+“Cargos de alto nivel”
+Do
+format (round(minc, 0), nsmall = 0),
+format (round(minc, 3), nsmall = 3)
+,
+ox
+knitr: :kable(
+caption = "Distribuicao de cargos de alto nivel por orgao",
+label = "tab:alto-nivel"
+,
+Table 6: Distribuicao de cargos de alto nivel por orgao
+medida mapa mine
+Observacoes validas 525 305
+Cargos de altonivel IST 155
+Proporeao 0.356 0425
+Erro-padrao 0021 0.026
+Margem de erro 0041 0.051
+Limite inferior (95%) 0.315 0.374
+Limite superior (95%) 0.397 0475
+teste alto nível <- prop.test(
+
+===== page_010_top.png =====
+3 pr
+pivot vider(
+nanes from = orgao sup,
+values. from = valor
+,
+tabela alto nível bonita >),
+mutate(
+mapa = ifelse(
+medida Zini c(
+“Observacoes valídas",
+“Cargos de alto nivel"
+De
+format (round (mapa, 0), nsmall = 0),
+format (round(mapa, 2), nszall = 3)
+e
+minc = ifelse(
+medida Yin% c(
+“Cargos de alto nível"
+»
+
+===== page_011_bot.png =====
+Relatório (questões 5.4 e 5.5)
+O teste de diferença entre proporções apresentou p-valor = 0,039. Isso significa que, supondo que a proporção
+verdadeira de cargos de alto nível fosse igual no MAPA e no MINC, a probabilidade de observar uma diferença
+entre as proporções tão grande quanto à encontrada — ou ainda maior — seria de aproximadamente 3,9%
+apenas devido à variação amostral. Como esse valor é inferior ao nível de significância de 5%, rejeita-se a
+hipótese nula de igualdade das proporções. Portanto, há evidência estatística de que a proporção de cargos
+de alto nível difere entre as duas pastas.
+A diferença entre as proporções parece moderada e potencialmente relevante: a proporção de cargos de alto
+nível é cerca de 7,3 pontos percentuais maior no MINC do que no MAPA — aproximadamente 43% contra
+36%. Assim, embora não seja uma diferença enorme, ela representa uma diferença substantiva perceptível
+na composição dos cargos das duas pastas.
+6. Significância estatística e nível de significância
+Considerando a questão 5: 1. A conclusão mudaria se o nível de significância fosse 10%?
+
+u
+
+===== page_011_mid.png =====
+Ea Siqueira eos nt ação crista cas copia Se eca.  cucâduis fetgac rs imorais O
+label = “tab:teste-alto-nivel"
+,
+Table 7: Teste de diferenca entre as proporcoes de cargos de alto
+nivel
+Variavel Valor
+Proporcao 1 0.3562
+Proporcao 2 04247
+Limite inferior IC 95% — -0.1337
+Limite superior IC 95% -0.0033
+Pevalor 0.0389
+Fonte: elaboração própria a partir dos dados da base ja assinalada.
+Relatório (questões 5.4 e 5.5)
+O teste de diferença entre proporções apresentou p-valor = 0,039. Isso significa que, supondo que a proporção
+verdadeira de cargos de alto nível fosse igual no MAPA e no MINC, a probabilidade de observar uma diferença
+entre as proporções tão grande quanto à encontrada — ou ainda maior — seria de aproximadamente 3,9%
+apenas devido à variação amostral. Como esse valor é inferior ao nível de significância de 5%, rejeita-se a
+hipótese mula de igualdade das proporções. Portanto, há evidência estatística de que a proporção de cargos
+de alto nível difere entre as duas pastas.
+A diferença entre as proporções parece moderada e potencialmente relevante: a proporção de cargos de alto
+
+===== page_011_top.png =====
+“Limite superior IC 95%,
+“P-valor”
+Ja
+valor = c(
+as.nuneric(teste alto nivelsestimate(1]),
+as .nuneric(teste alto nivel$estimate[2]),
+teste alto nivelSconf int (1),
+teste alto nivel$conf.int[2),
+teste alto nivel$p.value
+,
+,
+Kmátr: ckable(
+tabela teste alto nivel,
+digits = 4,
+col.names = c("Variavel", "Valor"),
+caption = "Teste de diferenca entre as proporcoes de cargos de alto nivel",
+label = "tabiteste-alto-nivel”
+5)
+
+===== page_012_bot.png =====
+“Tomando os números doe exercício 5.
+
+1. O que tenderia a acontecer com o erro-padrão?
+R: O erro-padrão tenderia a diminuir
+
+2. Por que isso acontece?
+R: Isso ocorre porque o erro-padrão de uma proporção depende do tamanho da amostra.
+
+se = /20-9)
+Se a proporção p permanece a mesma e o número de observações n dobra, o denominador da fórmula
+aumenta. Consequentemente, o erro-padrão diminui Portanto, amostras maiores produzem estimativas mais.
+precisas. No caso de uma diferença entre duas proporções, a mesma lógica se aplica: ao aumentar o número
+de observações nos grupos, diminui a incerteza da diferença estimada, o que tende a reduzir a margem de
+erro e tornar o teste estatístico mais sensível para detectar diferenças reais.
+2
+
+===== page_012_mid.png =====
+R: Mostra que significância estatística e significância substantiva são conceitos diferentes. O p-valor indicaq
+vão compatíveis os dados observados são com a hipótese nula, sendo comparado a um nível de significância
+escolhido pelo pesquisador. Já a significância substantiva diz respeito à importância ou magnitude concreta
+da diferença. Neste caso, a diferença entre as proporções foi de aproximadamente 7,3 pontos percentuais: ela
+foi estatisticamente significativa ao nível de 5% (p=0,039), mas deixou de ser estatisticamente significativa
+ao nível mais rigoroso de 1%. Isso mostra que a decisão estatística depende do limiar adotado, enquanto
+a magnitude substantiva da diferença — cerca de 7,3 pontos percentuais a mais de cargos de alto nível no
+MINC — permanece a mesma. Portanto, uma diferença pode ser substantivamente relevante mesmo quando
+não alcança determinado nível convencional de significância estatística, e uma diferença estatisticamente
+significativa também deve ser avaliada quanto à sua importância prática ou substantiva.
+7. O que aconteceria se a amostra fosse maior?
+Tomando os números doe exercício 5.
+
+1. O que tenderia a acontecer com o erro-padrão?
+R: O erro-padrão tenderia a diminuir
+
+2. Por que isso acontece?
+
+===== page_012_top.png =====
+R: Não. Com significância igual a 10% a hipótese mula continuaria sendo rejeitada (0,0389 < 0,10). Haveria.
+evidência estatística de que a proporção de cargos de alto nível difere entre MAPA e MINC.
+
+2. A conclusão mudaria se o nível de significância fosse 1%?
+R: Sim. Com a significância igual à 1% a hipótese nula não seria rejeitada (00389 > 0,01). Portanto, não
+haveria evidência estatística suficiente para concluir que as proporções de cargos de alto nível diferem entre
+as duas pastas.
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+R: Mostra que significância estatística e significância substantiva são conceitos diferentes. O p-valor indicaq
+uão compatíveis os dados observados são com a hipótese nula, sendo comparado a um nível de significância.
+escolhido pelo pesquisador. Já a significância substantiva diz respeito à importância ou magnitude concreta
+da diferença. Neste caso, a diferença entre as proporções foi de aproximadamente 7,3 pontos percentuais: ela

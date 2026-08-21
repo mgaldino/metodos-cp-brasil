@@ -1,0 +1,1718 @@
+
+===== page_001_bot.png =====
+Disciplina: FLP0406 - Métodos e Técnicas de Pesquisa em Ciência Política
+Turma: 2026101 - Vespertino
+Professor: Manoel Galdino Pereira Neto
+Aluno: Luiz Antonio Eleutério de Lima - Nusp 14759962
+São Paulo - 2026
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_001_mid.png =====
+Avaliação Final
+Disciplina: FLP0406 - Métodos e Técnicas de Pesquisa em Ciência Política
+Turma: 2026101 - Vespertino
+Professor: Manoel Galdino Pereira Neto
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_top.png =====
+UNIVERSIDADE DE SÃO PAULO
+FFLCH - Faculdade de Filosofia, Letras e Ciências Humanas
+Departamento de Ciência Política
+
+===== page_002_bot.png =====
+10 Parte X - Respostas ao Bloco 7. O que aconteceria se a amostra fosse maior? 42
+10.1 Estimativas de Nomeações com Experiência Administrativa por Órgão . ...... 42
+M Anexo | - Inventário dos Scripts Executados 44
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_002_mid.png =====
+Rr e carioca id ne
+
+5 Parte V - Respostas ao Bloco 2. Leitura e validação dos dados 13
+6 Parte VI - Respostas ao Bloco 3. Tabela descritiva: experiência administrativa 2”
+7 Parte VII - Respostas ao Bloco 4. Primeiro teste de hipótese bivariado 2
+8 Parte VIII - Respostas ao Bloco 5. Segundo teste de hipótese bivariado 36
+9 Parte IX- Respostas ao Bloco 6. Significância estatística e nível de significância 39
+10 Parte X - Respostas ao Bloco 7. O que aconteceria se a amostra fosse maior? a
+
+10.1 Estimativas de Nomeações com Experiência Administrativa por Órgão . ...... 42
+Poa RR E u
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_top.png =====
+Sumário
+1 Parte 1- Instruções da Avaliação Final 3
+2 Parte II - Procedimentos de Estruturação e Desenvolvimento do Projeto de Avaliação
+Final 8
+3 Parte HI Estrutura do Projeto - Limitado a 4 níveis (a pasta principal e três níveis de
+subpastas) 9
+POE RES O SS RO u
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+E - 13
+
+===== page_003_bot.png =====
+
+
+===== page_003_mid.png =====
+
+
+===== page_003_top.png =====
+3
+1 Parte I- Instruções da Avaliação Final
+| Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_004_bot.png =====
+Mang=pt.
+Repositório de dados e código: https://github.com/nayalbrecht /burocraciaBR.
+Base sugerida para à avaliação: BASE, cargos2.x1sx, disponível em https://raw.githubusercontent.
+com /nayalbrecht /burocraciaBR /main/BASE. cargos2.xlsx.
+O artigo também informa disponibilidade dos materiais no Dataverse: https://doi.org/10.7910/
+DVN/BOBG39.
+Entrega
+A entrega deve conter:
+
+1. Um relatório final em PDF.
+
+2. O arquivo-fonte usado para gerar o relatório, em RMarkdown (.Rnd) ou Quarto (.qud).
+O PDF deve ser gerado a partir do .Rnd ou .qnd. Não serão aceitos relatórios em Word, prints do
+console ou arquivos sem código reprodutível.
+O código deve baixar a base diretamente do repositório, ou então ler a base a partir de uma pasta
+dados/ incluída no projeto. Em ambos os casos, o relatório deve informar a fonte dos dados e a data
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+aplicar os conceitos das aulas sobre probabilidade, distribuição amostral, erro-padrão, intervalo de
+confiança, margem de erro, teste de hipótese e p-valor.
+O objetivo não é replicar todos os modelos do artigo. O objetivo é usar a base do artigo para fazer
+análises bivariadas simples, explicar as escolhas feitas no R e interpretar corretamente os resultados.
+Artigo e dados
+Artigo:
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos públi-
+cos no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal
+(2011-2021). Revista Brasileira de Ciência Política, 2025. DOI: https://doi.org/10.1590/0103-
+Página do artigo na SciELO: https://www.scielo.br/j/rbepol/a/JQ8sGpRL3MCJZCI9XDTCXNa/
+?ang=pt.
+Repositório de dados e código: https:/ /github.com /nayalbrecht /burocraciaBR.
+Base sugerida para a avaliação: BASE, cargos2.x1sx, disponível em https://raw.githubusercontent.
+com/nayalbrecht /burocraciaBR /main/BASE. cargos2.xlsx.
+A cbimo dotes informa Aiomonfkálidado dos conbeminio no Datmencoos Matra; doi 0r8/10.7910/
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+. Entrega
+
+===== page_004_top.png =====
+4
+Avaliação: inferência básica com dados reais de Ciência Política
+Aulas 6 a 9
+Métodos Quantitativos
+25/06/2026
+Objetivo
+
+Esta avaliação usa um artigo recente de Ciência Política em português, com dados disponíveis, para
+. “adrão, intervalo de
+O ODJeUIVO HO E Fepucar LOMOS US MONCIOS GO AFUgO. U OJeLvO é usar a vase do artigo para fazer
+andiica iimniidos siorelas-sorribona naicrnciina foftone mo: e drndiemnodia:mcmnoê amo ami: sc ns
+
+===== page_005_bot.png =====
+2. Leitura e validação dos dados
+Importe a base no R e apresente:
+
+1. Número de linhas e colunas.
+
+2. Nomes das variáveis.
+
+3, Número de observações por orgao sup.
+
+4, Número de valores ausentes em pelo menos cinco variáveis relevantes.
+
+5. Uma checagem dos valores observados em exp. adm, exp. car, nível, instr e indicacao.
+Depois, explique qualquer problema encontrado. Por exemplo, algumas variáveis que deveriam ser
+binárias podem ter valores inesperados. Diga como você tratou esses casos.
+
+3. Tabela descritiva: experiência administrativa
+Crie uma variável binária para indicar experiência prévia em órgãos da administração pública. Use
+o codebook para justificar a escolha.
+Depois, filtre a base para orgao. sup igual a mapa ou ninc e apresente uma tabela com:
+1. Número de observações válidas por pasta.
+2. Número de pessoas /nomeações com experiência administrativa.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+library (dplyr)
+library (ggplot2)
+Perguntas obrigatórias
+1. Artigo, pergunta e unidade de análise
+Responda em texto:
+1. Qual é a pergunta geral do artigo?
+2. Qual é à unidade de análise da base?
+3. O que significa uma linha da base?
+4, Por que a mesma pessoa pode aparecer mais de uma vez?
+5. Quais são as duas pastas comparadas no artigo?
+2. Leitura e validação dos dados
+Importe a base no R e apresente:
+1. Número de linhas e colunas.
+2. Nomes das variáveis.
+3. Número de observações por orgao. sup.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. | r e indicacao.
+he Vepois, expuque quaquer proviema encontrado. ror exempio, agumas variaveis que deveriam ser
+
+===== page_005_top.png =====
+5
+de acesso.
+Todas as tabelas e figuras devem ter título, numeração e legenda. O texto deve estar em português
+claro, com interpretação substantiva dos resultados.
+Instruções iniciais
+1. Crie um projeto ou pasta própria para a avaliação.
+2. Baixe a planilha BASE cargos2.x1sx ou escreva código para baixá-la automaticamente.
+3. Leia a aba BASE cargos.
+4. Use a aba Codebook para identificar o significado das variáveis.
+5. Para as perguntas obrigatórias, concentre à análise nas pastas mapa e minc, pois elas corre-
+spondem ao foco comparativo do artigo.
+Sugestão mínima de pacotes:
+library(readx1)
+Alguns arquivos neste envio só podem ser acessados através de download direto. ]
+l
+comia oiiadimeiiênio.
+
+===== page_006_bot.png =====
+Apresente:
+1./Uma tabela com as proporções por pasta.
+2. Um intervalo de confiança de 95% para cada proporção.
+3. Um teste de hipótese para a diferença entre as proporções.
+4. O p-valor e sua interpretação.
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+6. Significância estatística e nível de significância
+Escolha um dos dois testes anteriores e responda:
+1. A conclusão mudaria se o nível de significância fosse 10%?
+2. A conclusão mudaria se o nível de significância fosse 1%?
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+7. O que aconteceria se a amostra fosse maior?
+Escolha uma das proporções estimadas nas perguntas anteriores.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+ico cia corr
+3. Teste usado no R.
+4. P-valor.
+5. Decisão usando nível de significância de 5%.
+6. Interpretação substantiva.
+Importante: não escreva apenas “rejeita” ou “não rejeita”. Explique o que o p-valor quer dizer neste
+caso.
+5. Segundo teste de hipótese bivariado
+Crie uma variável chamada alto nível, igual à 1 quando nível for 5 ou 6, e O quando nível for 4.
+Compare a proporção de cargos de alto nível entre mapa e minc.
+Use novamente a aproximação normal para a diferença entre proporções.
+Apresente:
+1. Uma tabela com as proporções por pasta.
+2. Um intervalo de confiança de 95% para cada proporção.
+3. Um teste de hipótese para a diferença entre as proporções.
+4. O p-valor e sua interpretação.
+ias anda
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+o 6. Signiticância estatística e nivel de signiticância
+
+===== page_006_top.png =====
+6
+3. Proporção com experiência administrativa.
+4. Intervalo de confiança de 95% para essa proporção.
+5. Margem de erro associada ao intervalo de confiança.
+Interprete os resultados em linguagem substantiva. A interpretação deve mencionar explicitamente
+o que significa o intervalo de confiança e o que significa a margem de erro.
+4. Primeiro teste de hipótese bivariado
+Teste a hipótese de que a proporção de nomeações com experiência administrativa é igual nas duas
+pastas.
+Use a aproximação normal para a diferença entre proporções.
+No relatório, apresente:
+1. Hipótese nula.
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+O: pecasão usando mvei de sgnineancia e sr.
+
+===== page_007_bot.png =====
+
+
+===== page_007_mid.png =====
+E = EP SCE AR A
+uma vez.
+Construa uma versão da base com uma linha por id. Explique a regra usada para lidar com pessoas
+que aparecem mais de uma vez. Depois, repita um dos testes obrigatórios.
+Responda:
+1. O resultado muda quando a unidade passa de nomeação para indivíduo?
+2. Qual unidade de análise é mais adequada para a pergunta que você está respondendo?
+P2. Intervalo de confiança para diferença de proporções
+Em vez de apresentar apenas intervalos de confiança separados por pasta, calcule um intervalo de
+confiança para a diferença entre as proporções.
+Interprete a diferença em pontos percentuais e diga se o intervalo inclui zero.
+
+===== page_007_top.png =====
+7
+
+Suponha que a proporção observada fosse à mesma, mas o número de observações fosse duas vezes
+maior.
+Responda:
+
+1. O que tenderia a acontecer com o erro-padrão?
+
+2. Por que isso acontece?
+Não é necessário simular uma nova base, mas você pode fazer à conta aproximada se quiser.
+Perguntas exclusivas para pós-graduação
+As perguntas abaixo são exclusivas e obrigatórias para estudantes de pós-graduação. Estudantes de
+graduação não devem respondê-las.
+P1. Unidade de análise: nomeação ou indivíduo?
+A base tem a nomeação como unidade de análise, mas uma mesma pessoa pode aparecer mais de
+uma vez.
+Construa uma versão da base com uma linha por id. Explique a regra usada para lidar com pessoas
+que aparecem mais de uma vez. Denois. revita um dos testes obrigatórios.
+
+===== page_008_bot.png =====
+“Relatório de Avaliação”, foi construído a partir da execução sequencial de uma lista de
+Scripts utilizando o comando source ().
+Ao final do relatório, é apresentada a relação dos Scripts utilizados na construção da análise, que
+estão disponível na pasta scripts.
+
+===== page_008_mid.png =====
+“03 leitura planilha abas base cargos e codebook.R”.
+
+4. Foram criados dois Scripts de configuração e preparação do ambiente, os quais foram
+ajustados ao longo do desenvolvimento da atividade com o objetivo de garantir maior
+reprodutibilidade da análise:
+
+4.1. O Script “00 config.R” tem como objetivo preparar o ambiente de trabalho, incluindo
+a remoção dos objetos existentes na memória da sessão do Projeto “ProjRec.Rproj”.
+
+42. O Script “01 pacotes.R” tem como objetivo instalar e carregar os pacotes necessários
+para a execução do projeto “ProjRec.Rproj”.
+
+5. O objeto R Markdown denominado “ProjRec.Rmd”, responsável pela geração do
+“Relatório de Avaliação”, foi construído a partir da execução sequencial de uma lista de
+Scripts utilizando o comando source O.
+
+Ao final do relatório, é apresentada a relação dos Scripts utilizados na construção da análise, que
+estão disponível na pasta scripts.
+
+===== page_008_top.png =====
+8
+2 Parte II - Procedimentos de Estruturação e Desenvolvimento
+do Projeto de Avaliação Final
+Em atenção às instruções estabelecidas, foram realizados os seguintes procedimentos:
+1. Foi criado o Projeto “ProjRec”.
+2. Foi realizada a importação da planilha “BASE.cargos2.xisx” por meio do Seript
+“02 importacao.R”.
+3. Foram realizadas as leituras da abas “BASE.cargos” e Codebook por meio do Script
+“03 leitura planilha abas base cargos e codebook.R”.
+4. Foram criados dois Scripts de configuração e preparação do ambiente, os quais foram
+
+===== page_009_bot.png =====
+ee | N-- windows
+
+el N-- R-4.5
+
+es | + settings.json
+
+es | N-- staging
+
+48 +-- renv.lock
+
+88 À scripts
+
+“ +-- 00 config.R
+
+“ +-- 01 pacotes.R
+
+4” + 02 importacao.R
+
+“ +-- 03 leitura abas base cargos e codebook da planilha.R
+“ +-- 04 exibe total linhas e colunas.R
+
+“e +-- 06 exibe nomes das colunas(variaveis).R
+
+“ +-- 08 calcula num observ por orgao sup.R
+
+“ +-- 10 calcula valores ausentes das variaveis.R
+
+“ +-- 12 tabela filtro somente ausentes nas variaveis.R
+
+===== page_009_mid.png =====
+HH + outputs
+
+4% +- ProjRec.log
+
+4% +- ProjRec.pdf
+
+4% +- ProjRec.Rnd
+
+44 +-- ProjRec.Rproj
+
+4% +- ProjRecanterior.. pdf
+44 +-- relatorio
+
+ss |  N-- ProjRec.Rmd
+88 +-- renv
+
+“8 +-- activate.R
+es 1 + library
+
+es | | N-- vindous
+ei N-- R-4.5
+*m | + settings.json
+88 N-- staging
+
+4% +-- renv.lock
+
+HH N-- scripts
+
+88 +00 config.R
+
+===== page_009_top.png =====
+9
+3 Parte III Estrutura do Projeto - Limitado a 4 níveis (a pasta
+principal e três níveis de subpastas)
+44 C:/Users/luiza/Downloads/ProjRec
+4H +-- dados
+*4 | + originais
+em 1 | N-- BASE cargos2.xlsx
+44 | N-- processados
+4% +-- documentos
+48 | N-- QuestoesAvaliacaoFinal.pdf
+4% + outputs
+4% +-- ProjRec.log
+4% +-- ProjRec.pdf
+
+===== page_010_bot.png =====
+
+
+===== page_010_mid.png =====
+ser O EE NRE Ds AE RAR 50 Ao TS = SAS o oa MA DE
+“a +-- 34 teste hip exp adm mapa minc ns10p - Copia.R
+4% +34 teste hip exp adm mapa minc ns10p.R
+8% — +-- 36 teste hip exp adm mapa minc nsip.R
+8% +38 inventario scripts rmd.R
+8! +40 barras estimativa mapa minc ic95.R
+“a +-- 42 curva normal estimativa mapa minc.R
+“e N-- scriptsProf
+“ +-- aula 06 probabilidade minima alunos.R
+“ *-- aula 07 distribuicao amostral tcl lgn alunos.R
+
+===== page_010_top.png =====
+10
+“a +-- 14 analise exploratoria de variaveis.R
+4 | + 16 frequencia exploratoria de variaveis.R
+4 — + 18 agrupar dados de variaveis.R
+4 +20 gerar base consis exp adm exp car instr.R
+44 | + 22 rel antes e depois das excl exp adm exp car instr.R
+4! + 24 criar variavel exp adm bin.R
+“a +-- 26 criar tabela descritiva.R
+4% +27 criar tab desc analise exp adm mapa minc.R
+4 — + 28 teste hip exp adm mapa minc nsSp.R
+8% — +--30 criar variavel alto nível.R
+4% — +32 teste hip alto nível mapa minc.R
+44 — +34 teste hip exp adn mapa minc ns10p - Copia.R
+“a +-- 34 teste hip exp adm mapa minc ns10p.R
+E jmiifitngia Eiocomcadnmana mincmái di
+
+===== page_011_bot.png =====
+DD E E
+Uma linha ou observação da base de dados sobre o Executivo Federal brasileiro representa uma
+nomeação individual para cargos de médio e alto escalão nas pastas de Agricultura e Cultura.
+
+A tese metodológica utilizada pelos autores do artigo é a de que cada observação representa o ato
+administrativo da ocupação do cargo.
+
+Elemento Representação
+
+Linha da base de dados Uma nomeação individual
+
+Observação Ato administrativo de ocupação do cargo
+
+Unidade central Nomeação
+1.4 Por que a mesma pessoa pode aparecer mais de uma vez?
+A mesma pessoa pode aparecer em mais de uma observação (em mais de uma linha) na base de
+dados, desde que tenha sido nomeada para diferentes funções entre 2011 e 2021.
+
+===== page_011_mid.png =====
+Em síntese, entendo que a pergunta geral do artigo questiona quais são as características
+predominantes dos burocratas de médio e alto escalão nessas pastas e de que forma os diferentes
+contextos institucionais e setoriais moldam os perfis das nomeações federais.
+1.2 Qual é a unidade de análise da base de dados?
+A base de dados construída para o estudo da burocracia federal brasileira nas pastas de Agricultura
+e Cultura adota como unidade de análise a nomeação.
+Entendo que a tese central dessa escolha metodológica é que focar no ato da nomeação, em vez de
+apenas no indivíduo, permite capturar de forma mais precisa as dinâmicas de ocupação de cargos e
+trajetórias públicas desses ocupantes ao longo de diferentes mandatos.
+1.3 O que significa uma linha da base de dados?
+Uma linha ou observação da base de dados sobre o Executivo Federal brasileiro representa uma
+nomeação individual para cargos de médio e alto escalão nas pastas de Agricultura e Cultura.
+A tese metodológica utilizada pelos autores do artigo é a de que cada observação representa o ato
+administrativo da ocupação do cargo.
+
+Elemento Representação
+
+===== page_011_top.png =====
+n
+
+4 Parte IV - Respostas ao Bloco 1. Artigo, pergunta e unidade
+de análise
+
+Artigo de ALBRECHT, N. F. M. DE M.; RIBEIRO, P. F. Nomeação a cargos públicos no
+Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal
+(2011-2021)
+1.1 Qual é a pergunta geral do artigo?
+O artigo investiga as dinâmicas de nomeação para cargos públicos no Executivo Federal brasileiro,
+focando especificamente nas pastas de Agricultura e Cultura entre 2011 e 2021
+Em síntese, entendo que a pergunta geral do artigo questiona quais são as características
+predominantes dos burocratas de médio e alto escalão nessas pastas e de que forma os diferentes
+contextos institucionais e setoriais moldam os perfis das nomeações federais.
+
+===== page_012_bot.png =====
+estudo centra-se especiticamente nas pastas da Agricultura (MAPA) é da Uuliura (MI ASENULI)
+durante o periodo de 2011 a 2021.
+
+===== page_012_mid.png =====
+Nesse sentido, o artigo realiza uma análise comparativa focada no preenchimento de cargos em
+setores distintos do Executivo Federal brasileiro.
+
+Pasta Sigla Período
+
+Agricultura MAPA 2011-2021
+
+Cultura MinC/SECULT 2011-2021
+O artigo realiza uma análise comparativa focada no preenchimento de cargos em setores distintos
+do Executivo Federal brasileiro.
+O estudo centra-se especificamente nas pastas da Agricultura (MAPA) e da Cultura (MinC/SECULT)
+durante o período de 2011 a 2021.
+
+===== page_012_top.png =====
+12
+
+Isso ocorre porque a estrutura da base de dados sobre o Executivo Federal brasileiro está
+categorizada pela nomeação e não pelo indivíduo isolado como a unidade de análise central.
+
+Situação Registro na base
+
+Pessoa nomeada para uma função Uma observação
+
+Pessoa nomeada para diferentes funções . Mais de uma observação
+1.5 Quais são as duas pastas comparadas no artigo?
+As duas pastas comparadas no artigo são da Agricultura (MAPA) e da Cultura (MinC/SECULT)
+durante o período de 2011 a 2021.
+Nesse sentido, o artigo realiza uma análise comparativa focada no preenchimento de cargos em
+setores distintos do Executivo Federal brasileiro.
+
+===== page_013_bot.png =====
+auxiliares DIPL: diplomata OUTRO: qualquer
+outra carreira, inclusive aquelas pertencentes às
+vinculadas SEV: sem vínculo efetivo
+
+partido partido do/a nomeado/a
+
+cargo ele se já concorreu ou ocupou cargo eletivo | =
+SIMO=NÃO
+
+lid part se já exerceu qualquer tipo de liderança
+partidária 1 = SIM 0= NÃO
+
+exp adm experiência em órgãos da administração pública
+1=SIMO=NÃO
+
+exp car experiências em cargos de gestão | =
+DAS/FCPE 1-22 = DAS/FCPE 3-43 = DAS
+56
+
+exp mer experiência no setor privado | =SIM 0=NÃO
+
+===== page_013_mid.png =====
+did Ea acid
+
+nível nível da função
+
+instr instrução (maior nível)
+
+area área de graduação
+
+inst ensino instituição de ensino da graduação
+
+inst origem origem da instituição: se pública ou privada
+
+car pub carreira pública: EPPGG: especialista em
+gestão SE INT: carreira do org. SE AG:
+servidor de agência reguladora ADV. UN:
+advogado procurador da União MAG SUP:
+Magistério superior MIL.: forças armadas ou
+auxiliares DIPL: diplomata OUTRO: qualquer
+outra carreira, inclusive aquelas pertencentes às
+vinculadas SEV: sem vínculo efetivo
+
+partido partido do/a nomeado/a
+
+cargo ele se já concorreu ou ocupou cargo eletivo | =
+SIMO=NÃO
+
+lid part se já exerceu qualquer tipo de liderança
+partidária | = SIM 0 = NÃO
+
+===== page_013_top.png =====
+13
+5 Parte V- Respostas ao Bloco 2. Leitura e validação dos dados
+Codebook (Dicionário dos Dados)
+Variável Descrição
+orgao sup órgão superior em lotação
+setor setor dentro do órgão superior: secretarias
+chave chave primária (nomeação)
+id chave secundária (código do nome)
+cargo cargo
+funcao função
+nivel nível da função
+instr instrução (maior nível)
+
+===== page_014_bot.png =====
+
+
+===== page_014_mid.png =====
+2.0.0 Preparação do ambiente de execução para reprodutibilidade
+* Executa o script de configuração do ambiente
+source(here: :here("scripts", "00 config.R")) |
+
+===== page_014_top.png =====
+14
+Variável Descrição
+exp soc experiência em associações e grupos de
+interesse 1 = SIM 0= NÃO
+[a UF antes da nomeação
+partido pr partido do presidente
+partido ministro partido do ministro
+indicacao presidente no momento da nomeação
+entrada entrada no cargo
+saida saída do cargo
+perm permanência (saída - entrada)
+2.0.0 Preparação do ambiente de execução para reprodutibilidade
+
+===== page_015_bot.png =====
+
+
+===== page_015_mid.png =====
+
+
+===== page_015_top.png =====
+15
+4% Nenhum varning ocorreu.
+44 Script 00 config.R executado com sucesso em: 19/07/2026 01:29:11
+
+===== page_016_bot.png =====
+“e
+
+4% Anexando pacote: 'kableExtra'
+
+*% O seguinte objeto é mascarado por 'package:dplyr':
+
+“a
+
+“e group rows
+
+&% -- Attaching core tidyverse packages ---------———-—-...... tidyverse 2.0.0 -—
+st v forcats 1.0.1  vreadr 2.2.0
+
+** v lubridate 1.9.5 vw stringr 1.6.0
+
+es vpurrr 1.2.2  vtiíbble 3.3.1
+
+4% -- Conflicts --="""""——......... on o tidyverse conflicts() -—
+&4 x dplyr::filter() masks stats: :filter()
+
+44 x kableExtra::group rows() masks dplyr::group rows()
+
+===== page_016_mid.png =====
+“
+
+4% Anexando pacote: 'dplyr'
+
+*% Os seguintes objetos são mascarados por 'package:stats':
+“
+
+8% filter, lag
+
+4% Os seguintes objetos são mascarados por 'package:base':
+“
+
+4! | intersect, setdiff, setequal, union
+
+“
+
+4% Anexando pacote: 'kableExtra'
+
+** O seguinte objeto é mascarado por 'package:dplyr':
+
+“
+
+** — group rous
+
+===== page_016_top.png =====
+16
+2.0.1 Verificação dos Pacotes necessários
+* Executa o script de verificação dos pacotes necessários para a execução dos
+& Scritps e geração do Relatório
+source(here: :here("scripts", "01 pacotes.Rº))
+*% here() starts at C:/Users/luiza/Downloads/ProjRec
+“
+4% Anexando pacote: 'dplyr'
+
+===== page_017_bot.png =====
+Eid
+44 Script 01 pacotes.R executado com sucesso em: 19/07/2026 01:29:12
+
+===== page_017_mid.png =====
+** O seguinte objeto é mascarado por 'package:tidyr':
+“
+
+88 extract
+
+“
+
+“
+
+*% Todos os pacotes foram carregados com sucesso.
+
+“
+
+*% Versão do R: R version 4.5.2 (2025-10-31 ucrt)
+
+“
+
+4% Nenhum warning ocorreu.
+
+“
+
+4% Script 01 pacotes.R executado com sucesso em: 19/07/2026 01:29:12
+
+===== page_017_top.png =====
+7
+4% x dplyr::lagO masks stats: : lag)
+44 i Use the conflicted package (chttp://conflicted.r-lib.org/>) to force all conflis
+“e
+4% Anexando pacote: 'magrittr'
+“
+“e
+4% O seguinte objeto é mascarado por 'package:purrr':
+“
+“ set names
+“
+“
+44 O seguinte objeto é mascarado por 'package:tidyr':
+“
+
+===== page_018_bot.png =====
+*% Script 02 importacao.R executado com sucesso em: 19/07/2026 01:29:13
+
+===== page_018_mid.png =====
+4% Baixando BASE cargos2.x1sx ...
+
+“e «-. de https://raw.githubusercontent .com/nayalbrecht/burocraciaBR/main/ ..
+4% Nenhum warning ocorreu.
+
+4% BASE cargos2.xlsx ...
+
+“ -.. de https: //raw.githubusercontent . com/nayalbrecht /burocraciaBR/main/ ..
+4% Base de Dados importada ou atualizada com sucesso
+
+44 Script 02 importacao.R executado com sucesso em: 19/07/2026 01:29:13
+
+===== page_018_top.png =====
+18
+2.0.2 Importação da Base de Dados
+* Esecuta o script de importação dos dados da planilha BASE. cargos2.alsz.
+* https://github. com/nayalbrecht/burocraciaBR.
+4 https://raw.githubusercontent. com/nayalbrecht /burocraciaBR/main/BASE. cargos2.alsz.|
+source(here: :here("scripts”, "02 importacao.R"))
+*% Baixando BASE cargos2.xlsx ...
+
+===== page_019_bot.png =====
+
+
+===== page_019_mid.png =====
+4% Script 03 leitura planilha aba base cargos.R executado com sucesso em: 19/07/2026
+
+===== page_019_top.png =====
+19
+2.0.3 Leituras das abas BASE cargos e Codbook da Planilha
+& Executa O script de Leitura das abas BASE cargos e Codbook da Planilha
+* BASE, cargos2.aiso.
+source(here: :here("scripts”, "03 leitura abas base cargos e codebook da planilha.R"))
+4% Nenhum warning ocorreu.
+4% Script 03 leitura planilha aba base cargos.R executado com sucesso em: 19/07/2026
+
+===== page_020_bot.png =====
+
+
+===== page_020_mid.png =====
+RE RNP
+4% Total de colunas: 26
+4% Nenhum varning ocorreu.
+48 Script 04 exibe total linhas e colunas.R executado com sucesso em: 19/07/2026 01:28 |
+
+===== page_020_top.png =====
+20
+2.1 Número de linhas e colunas da base de dados BASE cargos
+& Executa O script que exibe o total de linhas e o total de colunas da
+* base de dados BASE cargos
+& .. /MT3 Relatorio Avaliacao ldadosloriginais
+sesenereneneaeaaaEaraaran ac ea ac eRanEcacErEnEREnERaararaan asas aaas esses
+source(here: :here("scripts", "04 exibe total linhas e colunas.R"))
+4% Total de linhas: 1038
+4% Total de colunas: 26
+
+===== page_021_bot.png =====
+0 exp dam
+17 exp car
+18 exp mer
+19 exp soc
+20 UF*
+21 partido pr
+22 partido ministro
+23  indicacao
+24 entrada
+25 saida
+26 pem |
+
+===== page_021_mid.png =====
+o tuncão
+
+7 nível
+
+8 instr
+
+9 area
+
+10 inst ensino
+11 inst origem
+12 car pub
+13 partido
+
+14 cargo ele
+15 lid part
+16 exp adm
+17 exp ear
+18 exp mer
+19 exp soc
+20 UF*
+
+21 partido pr
+22 partido ministro
+É dsdicanas.
+
+===== page_021_top.png =====
+nu
+2.2 Nomes das variáveis da base de dados BASE. cargos
+Tabela 1: Relação das Variáveis
+posicao  Variavel
+1 orgao sup
+2 setor
+3 chave
+4 id
+5 cargo
+6 funcao
+7 nivel
+8 instr
+
+===== page_022_bot.png =====
+exp mer exp mer character
+exp soc exp soe character
+UF UF character
+partido pr partido pr character
+partido ministro partido ministro character
+indicacao indicacao character
+entrada entrada character
+saida saida character
+perm perm character
+
+===== page_022_mid.png =====
+instr instr character
+area area character
+inst ensino inst ensino character
+inst origem inst origem character
+car pub car pub character
+partido partido character
+cargo ele cargo ele character
+lid part lid part character
+exp adm exp adm character
+exp car exp car character
+exp mer exp mer character
+exp soc exp soc character
+UF* UF character
+partido pr partido pr character
+partido ministro partido ministro character
+indicacao indicacao character
+entrada entrada character
+
+===== page_022_top.png =====
+pr)
+Tabela 2: Dicionário da Estrutura das Variaveis
+variavel classe
+orgao sup orgao sup character
+setor setor character
+chave chave character
+id id character
+cargo cargo character
+funcao funcao character
+nivel nível numeric
+instr instr character
+area area character
+inst ensino inst ensino character
+
+===== page_023_bot.png =====
+
+
+===== page_023_mid.png =====
+
+
+===== page_023_top.png =====
+23
+2.3 Número de observações por orgao sup.
+Categoria Frequencia
+mapa 525
+meti 148
+mine 365
+
+===== page_024_bot.png =====
+ap ma hd “ AA
+exp car exp car 1 0.10
+exp mer exp mer 1 0.10
+exp soc exp soc 4 0.39
+ur+ ur 2 202
+partido pr partido pr o 0.00
+partido ministro. partido ministro o 0.00
+indicacao indicacao o 0.00
+entrada entrada o 0.00
+saida saida 5 0.48
+perm perm 4 0.39 |
+
+===== page_024_mid.png =====
+tuncão tTuncão v Lad
+nível nivel o 0.00
+instr instr o 0.00
+area area o 0.00
+inst ensino inst ensino o 0.00
+inst origem inst origem o 0.00
+car pub car pub o 0.00
+partido partido o 0.00
+cargo ele cargo ele o 0.00
+lid part lid part o 0.00
+exp adm exp adm o 0.00
+exp car exp car 1 0.10
+exp mer exp mer 1 0.10
+exp soc exp soc 4 0.39
+ur* UF+ 2 202
+partido pr partido pr o 0.00
+partido ministro . partido ministro o 0.00
+adia: idos. à. am
+
+===== page_024_top.png =====
+2”
+2.4. Número de valores ausentes em pelo menos cinco variáveis relevantes.
+Tabela 3: Valores ausentes por variável
+
+Variavel N Ausentes Percentual
+orgao sup orgao sup o 0.00
+setor setor o 0.00
+chave chave o 0.00
+id id o 0.00
+cargo cargo o 0.00
+funcao funcao o 0.00
+nivel nível o 0.00
+instr instr o 0.00
+
+===== page_025_bot.png =====
+exp soc 4 1038 0.39
+saida 5 1038 048
+perm 4 1038 039
+
+===== page_025_mid.png =====
+2.4.2 Exibe as 5 Variáveis Relevantes escolhidas:
+Tabela 4: Seleção de 5 Variaveis escolhidas com Valores
+ausentes
+Variavel Valores Ausentes Total Registros Percentual Ausente
+org sup o 1038 0.00
+instr o 1038 0.00
+exp car 1 1038 0.10
+exp mer 1 1038 0.10
+exp soc 4 1038 0.39
+saida 5 1038 0.48
+perm 4 1038 0.39
+
+===== page_025_top.png =====
+25
+
+2.4.1 Variáveis escolhidas:
+Escolhi as seguintes variáveis:
+
+a) “org sup” (órgão superior em lotação)
+
+b) “instr” (instrução (maior nível))
+
+c) “exp car” (experiências em cargos de gestão)
+
+d) “exp mer” (experiência no setor privado)
+
+e) “exp soc” (experiência em associações e grupos de interesse)
+
+f) “saida” (saída do cargo)
+
+£) “perm” (permanência (saída - entrada)
+2.4.2 Exibe as 5 Variáveis Relevantes escolhidas:
+
+Tabela 4: Seleção de 5 Variaveis escolhidas com Valores
+
+===== page_026_bot.png =====
+Es trinco nt nen Sea e Mon reias os reror sanada se À Rino cova E trono uia Dr rd nes ag ce ria e ai
+observações pertencentes aos domínios literais “doutorado” ou “especializacao” ou “graduacao”,
+ou “mestrado” ou “superiortecnico”.. Não foram encontradas inconsistências em relação ao
+domínios. Entretanto, foram identificadas 95 ocorrências com valores “NA” (consideradas
+ausentes).
+5. indicacao
+Para a variável indicacao (presidente no momento da nomeação), segundo o Codebook, somente são
+válidas as observações pertencentes aos domínios literais “Bolsonaro” ou “Rousself” ou “Temer”,
+ou “Lula”. Não foram encontradas inconsistências em relação ao domínios.
+A partir da base de dados BASE cargos? trabalho que é uma cópia da BASE cargos? xisx, foi
+gerada uma nova base de dados (BASE. cargos? trabalho02 sem os registros inconsistentes. Ou
+seja, não considerei essas observações para a seguência do trabalho. |
+
+===== page_026_mid.png =====
+Para a variável exp car (experiência em cargos de gestão), segundo o Codebook, somente são
+válidas as observações pertencentes aos domínios numéricos e iguais a “1” ou “2 ou “3”,
+Entretanto, foram encontrados valores não válidos (0 e 5), ou seja, inconsistentes. Além disso,
+também foram encontrados encontradas 76 ocorrências com valores “NA” (consideradas ausentes).
+3. nivel
+Para a variável nivel (nível da função), segundo o Codebook, somente são válidas as observações
+pertencentes aos domínios numéricos e iguais a “4” ou “5” ou “67). Não foram encontradas
+inconsistências.
+
+4. instr
+
+Para a variável instr (instrução (maior nível), segundo o Codebook, somente são válidas as
+observações pertencentes aos domínios literais “doutorado” ou “especializacao” ou “graduacao”,
+ou “mestrado” ou “superior”tecnico”.. Não foram encontradas inconsistências em relação ao
+domínios. Entretanto, foram identificadas 95 ocorrências com valores “NA” (consideradas
+ausentes).
+
+5. indicacao
+
+Para a variável indicacao (presidente no momento da nomeação), segundo o Codebook, somente são
+
+===== page_026_top.png =====
+26
+2.5.2 Checagem dos valores observados nas variaveis exp adm, exp car, nivel, instr e
+indicacao. Depois, explique qualquer problema encontrado. Por exemplo, algumas variáveis
+que deveriam ser binárias podem ter valores inesperados. Diga como você tratou esses casos.
+1. exp adm
+Para a variável exp adm (experiência em órgãos da administração pública), segundo o Codebook,
+somente são válidas as observações pertencentes aos domínios numéricos e iguais a “1” ou “2.
+Entretanto, foram encontrados valores não válidos (“1 e 3), ou seja, inconsistente. Além disso,
+também foram encontradas 11 ocorrências com valores “NA” (consideradas ausentes).
+2. exp ca
+Para a variável exp car (experiência em cargos de gestão), segundo o Codebook, somente são
+válidas as observações pertencentes aos domínios numéricos e iguais a “1” ou “2º ou *3").
+Entretanto, foram encontrados valores não válidos (0 e 5), ou seja, inconsistentes. Além disso,
+
+===== page_027_bot.png =====
+ni mena nn inned D Ddo  Cn iE “rmtea À
+
+3.2 Número de pessoas/nomeações com experiência administrativa;
+
+3.3 Proporção com experiência administrativa;
+
+3.4 Intervalo de confiança de 95% para essa proporção;
+
+3.5 Margem de erro associada ao intervalo de confiança.
+
+Análise da experiência administrativa por órgão superior
+
+A análise utiliza a variável binária exp adm bin, que classifica as observações em duas categorias:
++ Sim: possui experiência administrativa;
++ Não; não possui experiência administrativa.
+
+Base de dados utilizada
+
+Foi utilizada a base BASE cargos2 exp adm bin (base auxiliar).
+
+===== page_027_mid.png =====
+1.023 observações (1038 menos 15). | o o
+
+3. Tabela descritiva: experiência administrativa
+
+Nota: A variável “exp adm” já é uma variável binária, pois possui apenas duas categorias
+possíveis:1 = Sim; e O = Não
+
+De toda forma, criei uma nova variável do tipo fator para tratamento com rótulos, ou seja, O = Não
+el=Sim.
+
+3.0 Criação da variável binária
+
+Apresentação da Tabela Descritiva com as informações abaixo:
+
+3.1 Número de observações válidas por pasta;
+
+3.2 Número de pessoas/nomeações com experiência administrativa;
+
+3.3 Proporção com experiência administrativa;
+
+3.4 Intervalo de confiança de 95% para essa proporção;
+
+3.5 Margem de erro associada ao intervalo de confiança.
+
+Análise da experiência administrativa por órgão superior
+
+===== page_027_top.png =====
+2
+
+6 Parte VI - Respostas ao Bloco 3. Tabela descritiva: experiência
+administrativa
+
+Crie uma variável binária para indicar experiência prévia em órgãos da administração
+pública. Use o codebook para justificar a escolha. Depois, filtre a base para orgao sup igual
+a mapa ou mine e apresente uma tabela com:
+Nota: Como vamos trabalhar na variável “exp adm (experiência administratia”), a base de dados
+limpa (consistente) nessa variável, ou seja, base de dados original menos 15 ocorrências não
+consistentes, sendo: 11 (para domínio igual a NA) inconsistentes/ausentes); 3 (para domínio igual
+a ““1º); inconsistentes; 1 (para domínio igual a “3"); inconsistentes ou seja, base de dados com
+1.023 observações (1038 menos 15).
+3. Tabela descritiva: experiência administrativa
+
+===== page_028_bot.png =====
+Calculada pela razão entre o número de pessoas com experiência administrativa e o total de
+observações válidas:
+E
+Pa
+onde:
++ p= proporção estimada;
+* = número de pessoas com experiência administrativa;
++ n= número de observações válidas.
+O resultado é apresentado em percentual.
+O intervalo de confiança de 95% para a proporção é calculado manualmente utilizando à
+aproximação normal:
+
+===== page_028_mid.png =====
+bb na EBD 299712: MA | VEN ES PRA E DRA SST PR AS PPS ARS TEN A ENT
+proporção, sendo consideradas apenas as observações válidas.
+Para cada órgão superior são calculados os seguintes indicadores:
+1. Número de observações válidas
+Quantidade total de registros com informação disponível para a variável exp adm bin.
+2. Número de pessoas/nomeações com experiência administrativa
+Contagem das observações classificadas como "Sim" na variável exp adm bin.
+3. Proporção com experiência administrativa
+Calculada pela razão entre o número de pessoas com experiência administrativa e o total de
+observações válidas:
+SÊ
+Pa
+onde:
+
+===== page_028_top.png =====
+28
+
+A base contém informações sobre órgãos superiores e características das nomeações, incluindo a
+variável de experiência administrativa.
+Foram consideradas apenas as observações pertencentes aos seguintes órgãos superiores:
+
++ mapa
+
+* minc
+O filtro é aplicado sobre a variável:
+orgao sup
+Observações com valores ausentes (NA) na variável exp. adm bin são excluídas do cálculo da
+proporção, sendo consideradas apenas as observações válidas.
+Para cada órgão superior são calculados os seguintes indicadores:
+
+===== page_029_bot.png =====
+
+
+===== page_029_mid.png =====
+LS=p+1,96x EP
+A margem de erro representa a distância entre a proporção estimada e cada limite do intervalo de
+confiança:
+ME=1,96x EP |
+
+===== page_029_top.png =====
+29
+
+ICosx =P +1,96x EP
+
+onde o erro padrão da proporção é:
+Ep = [PA-P)
+n
+
+Os limites inferior e superior são calculados como:
+
+LI=p-1,96x EP
+
+LS=p+1,96x EP
+
+===== page_030_bot.png =====
+
+
+===== page_030_mid.png =====
+
+
+===== page_030_top.png =====
+30
+Por fim, o resultado é apresentado em pontos percentuais.
+Nota:
+O intervalo de confiança utilizado corresponde à aproximação normal para uma proporção. Esse
+método é apresentado neste script com finalidade didática e transparência dos cálculos estatísticos,
+permitindo visualizar cada etapa da estimação.
+
+===== page_031_bot.png =====
+Dc a SE E aÃ a a da
+que essa proporção esteja entre 89,66% e 94,31%, enquanto, para o MinC, situa-se entre 84,64%.
+e 91,43%. Em síntese, considerando o procedimento de amostragem adotado, espera-se que
+a verdadeira proporção de nomeações com experiência administrativa em cada órgão esteja
+compreendida nesses respectivos intervalos, com um nível de confiança de 95%.
+A margem de erro expressa a precisão da estimativa obtida. No MAPA, a margem de erro foi de
+2,32 pontos percentuais, indicando que a estimativa de 91,98% pode variar aproximadamente
+2,32 pontos percentuais em relação ao valor populacional. No MinC, a margem de erro foi
+de 3,40 pontos percentuais, refletindo uma estimativa ligeiramente menos precisa em razão do
+menor número de observações válidas. De modo geral, as reduzidas margens de erro e os estreitos
+intervalos de confiança indicam que as estimativas apresentam boa precisão estatística e fornecem
+evidências consistentes sobre a elevada presença de experiência administrativa entre os nomeados.
+dos dois órgãos. |
+
+===== page_031_mid.png =====
+Interprete os resultados em linguagem substantiva. A interpretação deve mencionar
+explicitamente o que significa o intervalo de confiança e o que significa a margem de erro.
+
+A Tabela 8 evidencia que a proporção de nomeações de pessoas com experiência administrativa é
+elevada em ambos os órgãos analisados. No MAPA, das 524 observações válidas, 482 (91,98%)
+correspondem a nomeações de individuos com experiência administrativa. No MinC, das 351
+observações válidas, 309 (88,03%) apresentam essa mesma característica. Esses resultados
+sugerem que a experiência administrativa constitui um atributo predominante no perfil dos
+nomeados em ambos os ministérios.
+
+O intervalo de confiança de 95% indica a faixa de valores plausíveis para a verdadeira proporção
+de nomeações com experiência administrativa na população de referência. Para o MAPA, estima-se
+que essa proporção esteja entre 89,66% e 94,31%, enquanto, para o MinC, situa-se entre 84,64%
+e 91,43%. Em síntese, considerando o procedimento de amostragem adotado, espera-se que
+a verdadeira proporção de nomeações com experiência administrativa em cada órgão esteja
+compreendida nesses respectivos intervalos, com um nível de confiança de 95%.
+
+A margem de erro expressa a precisão da estimativa obtida. No MAPA, a margem de erro foi de
+2,32 pontos percentuais, indicando que a estimativa de 91,98% pode variar aproximadamente
+2.32 nontos percentuais em relacão ao valor populacional. No MinC. a marvem de erro foi
+
+===== page_031_top.png =====
+31
+
+Exibição da Tabela Descritiva
+
+Tabela 5: Tabela Descritiva de Comparação das Pastas
+
+“mapa” versus “mine”
+
+Nomeações
+Observações — comexp adm Estimativa IC IC Margem
+Órgão válidas (n) (n) (%) Inferior Superior de Erro Erro-Padrão
+
+2 mapa s24 482 9198 8966 9431 232 119
+1 mine 351 309 8803 8464 9143 340 173
+Interprete os resultados em linguagem substantiva. A interpretação deve mencionar
+explicitamente o que significa o intervalo de confiança e o que significa a margem de erro.
+
+===== page_032_bot.png =====
+Hmm
+A hipótese alternativa afirma que as duas pastas possuem proporções diferentes de pessoas/nomeações
+com experiência administrativa.
+Para comparar as duas proporções usa-se
+-Pri—do
+Z="PPº
+em que:
+* Py é a proporção observada no mapa;
+* Pa é a proporção observada no minc;
+* EP erro-padrão da diferença entre as proporções, calculado sob a hipótese nula.
+
+===== page_032_mid.png =====
+* Po: proporção de pessoas/nomeações com experiencia administrativa no mine.
+As hipóteses do teste são:
+Hipótese nula (1)
+Ho: =P2
+A hipótese nula afirma que as duas pastas possuem a mesma proporção de pessoas/nomeações
+com experiência administrativa.
+Hipótese alternativa (17,)
+Hmm
+A hipótese alternativa afirma que as duas pastas possuem proporções diferentes de pessoas/nomeações
+com experiência administrativa.
+Para comparar as duas proporções usa-se
+
+===== page_032_top.png =====
+32
+7 Parte VII - Respostas ao Bloco 4. Primeiro teste de hipótese
+bivariado
+
+Teste a hipótese de que a proporção de nomeações com experiência administrativa é igual nas duas
+pastas (mapa e minc).
+Hipóteses
+Sejam:
+
+* py: proporção de pessoas/nomeações com experiência administrativa no mapa;
+
+* py: proporção de pessoas/nomeações com experiência administrativa no mine.
+As hipóteses do teste são:
+
+===== page_033_bot.png =====
+que as proporções são diferentes.
+Estatística Z = 1.944 p-valor = 0.05187 Como o p-valor é maior ou igual a 0,05, não há evidências
+estatísticas suficientes para rejeitar a hipótese nula de igualdade entre as proporções de pessoas com
+experiência administrativa nas pastas mapa e Minc.
+Tabela 6: Resumo das proporções observadas
+
+Pasta Observacoes Experiencia Administrativa Proporcao
+
+mapa 524 482 E)
+
+mine 351 309 88
+Estatística Z = 1.944 p-valor = 0.05187 Como o p-valor é maior ou igual a 0,05 (nível de
+significância de 5%), não há evidências estatísticas suficientes para rejeitar a hipótese nula
+de igualdade entre as proporções de pessoas com experiência administrativa nas pastas mapa
+emince.
+
+===== page_033_mid.png =====
+A A
+=pa-p(—+—).
+Sob a hipótese nula, segue-se aproximadamente uma distribuição Normal padrão, permitindo
+calcular o p-valor do teste.
+O teste será realizado adotando-se um nível de significância de 5% (o = (0,05).
+A decisão será baseada no p-valor obtido:
+* se p-valor < 0,05, há evidências estatísticas para concluir que as proporções diferem entre as
+duas pastas;
+* se p-valor > 0,05, os dados não fornecem evidências estatísticas suficientes para concluir
+que as proporções são diferentes.
+Estatística Z = 1.944 p-valor = 0.05187 Como o p-valor é maior ou igual a 0,05, não há evidências
+estatísticas suficientes para rejeitar a hipótese nula de igualdade entre as proporções de pessoas com
+experiência administrativa nas pastas mapa e Minc.
+Tabela 6: Resumo das proporções observadas
+Pasta Observacoes Experiencia Administrativa Proporcao
+
+===== page_033_top.png =====
+33
+A proporção combinada é dada por
+PR À +27,
+ma
+em que:
++ 4, er; representam o número de pessoas com experiência administrativa em cada pasta;
++ my € my representam o número de observações válidas em cada pasta.
+O erro-padrão da diferença é calculado por
+[ E:
+EP=p(1-p) (145).
+Ma Ta,
+Soh a hinátese nula. seoue-se anroximadamente uma distribuição Normal nadrão. nermitindo.
+
+===== page_034_bot.png =====
+
+
+===== page_034_mid.png =====
+| Maid
+1d 30%
+20%
+= 1] [1]
+0%
+ini Órgão e
+
+===== page_034_top.png =====
+3
+Exibe Gráfico de Barras
+Nomeações com experiência administrativa por órgão
+Estimativa percentual e intervalo de confiança de 95%
+
+100%.
+90%
+80%
+
+£ 70%:
+s 60%
+E 0%
+E so
+dd 30%
+20%
+
+===== page_035_bot.png =====
+
+
+===== page_035_mid.png =====
+1
+E a sa”, is,
+so 8s 90 95 100
+Estimativa (%6)
+Órgão —- mapa —- mine
+
+===== page_035_top.png =====
+3s
+Exibe Gráfico de Curva Normal
+Distribuição normal das estimativas de experiência administrativa
+Estimativa percentual e erro-padrão por órgão
+1
+03 1
+1
+E)
+e
+80
+00
+E 8 .» 95 100
+
+===== page_036_bot.png =====
+Hom =p,
+A hipótese nula afirma que as duas pastas possuem a mesma proporção de cargos de alto nível.
+Hipótese alternativa (11,)
+Humm
+A hipótese alternativa afirma que as duas pastas possuem proporções diferentes de cargos de alto
+nível.
+Inicialmente calcula-se a proporção observada em cada pasta:
+sm
+=
+
+===== page_036_mid.png =====
+Para comparar as proporções entre as duas pastas, utilizaremos um teste de hipótese para duas
+proporções independentes, bascado na aproximação da distribuição Normal.
+Sejam:
+* py: proporção de cargos de alto nível no mapa;
+* pa: proporção de cargos de alto nível no mine.
+As hipóteses do teste são:
+Hipótese nula (11,)
+Hom =p,
+A hipótese nula afirma que as duas pastas possuem a mesma proporção de cargos de alto nível.
+Hipótese alternativa (17,)
+Hemp
+
+===== page_036_top.png =====
+36
+
+8 Parte VIII - Respostas ao Bloco 5. Segundo teste de hipótese
+bivariado
+
+Crie uma variável chamada alto nivel, igual a 1 quando nivel for 5 ou 6, e O quando nivel for 4.
+Compare a proporção de cargos de alto nível entre mapa e minc.
+Teste de Hipótese para Comparação das Proporções de Cargos de Alto Nível
+A análise é verificar se a proporção de cargos de alto nível é a mesma nas pastas mapa e mine.
+Considera-se como cargo de alto nível aquele em que a variável alto nível assume valor igual
+a 1, correspondente aos níveis 5 ou 6. Os cargos de nível 4 recebem valor 0.
+Para comparar as proporções entre as duas pastas, utilizaremos um teste de hipótese para duas
+proporções independentes, baseado na aproximação da distribuição Normal.
+
+===== page_037_bot.png =====
+Sob a hipótese nula, essa estatística segue aproximadamente uma distribuição Normal padrão.
+Além do teste de hipótese, será estimado um intervalo de confiança de 95% para a proporção de
+cargos de alto nível em cada pasta.
+O intervalo será calculado por:
+ICosx =P + 1,96 x EP,
+
+em que
+
+gp= PUB
+
+n
+
+Nível de significância
+Será adotado um nível de significância de 5% (a = 0,05).
+
+===== page_037_mid.png =====
+Po m+na
+O erro-padrão da diferença entre as proporções é dado por:
+Ea 4 1 1
+BR = at =) (+)
+A estatística de teste é
+cido
+2=»
+Sob a hipótese nula, essa estatística segue aproximadamente uma distribuição Normal padrão.
+Além do teste de hipótese, será estimado um intervalo de confiança de 95% para a proporção de
+cargos de alto nível em cada pasta.
+O intervalo será calculado por:
+1Cosu =P + 1,96 x EP,
+
+===== page_037_top.png =====
+3
+n=2
+"a
+em que:
++ x, e x; representam o número de cargos de alto nível em cada pasta;
++ ny en, representam o número de observações válidas.
+Sob a hipótese nula calcula-se a proporção combinada:
+ mtã
+"mma
+O erro-padrão da diferença entre as proporções é dado por:
+
+===== page_038_bot.png =====
+suficientes para concluir que as proporções de cargos de alto nível sejam diferentes entre as pastas
+mapa e minc;
+
+O p-valor representa a probabilidade de observar uma diferença entre as proporções igual ou maior
+do que a encontrada na amostra, supondo que as duas pastas possuam a mesma proporção de cargos
+de alto nível;
+
+Como essa probabilidade não é pequena (maior ou igual a 5%), a diferença observada pode ser
+explicada pela variabilidade amostral, não sendo suficiente para concluir que exista diferença entre
+as proporções na população.
+
+===== page_038_mid.png =====
+cargos de alto nível nas pastas mapa e minc.
+
+Tabela 7: Resumo das proporções observadas
+Pasta Observacoes Alto nivel Proporcao IC Inferior IC Superior Margem Erro
+mapa s2s 187 356 31.5 39.7 41
+mine 365 155 42.5 314 475 s1
+Estatística Z = -2.065 p-valor = 0.03889
+Considerando um nível de significância de 5%, os resultados não fornecem evidências estatísticas
+suficientes para concluir que as proporções de cargos de alto nível sejam diferentes entre as pastas
+mapa e minc;
+O p-valor representa a probabilidade de observar uma diferença entre as proporções igual ou maior
+do que a encontrada na amostra, supondo que as duas pastas possuam a mesma proporção de cargos
+de alto nível;
+Como essa probabilidade não é pequena (maior ou igual a 5%), a diferença observada pode ser
+explicada nela variabilidade âmoutral. não senda nificiente para consbiir one exista dificenca Entre.
+
+===== page_038_top.png =====
+38
+A decisão será bascada no p-valor obtido:
++ se p-valor < 0,05, os dados fornecem evidências estatísticas de que as proporções diferem
+entre as duas pastas;
+* se p-valor > 00,05, os dados não fornecem evidências estatísticas suficientes para concluir
+que as proporções são diferentes.
+Estatística Z = -2.065 P-valor = 0.03889 Estatística de teste (Z): -2.065
+P-valor: 0.03889
+Como o p-valor é inferior a 0,05, rejeita-se a hipótese nula de igualdade entre as proporções de
+cargos de alto nível nas pastas mapa e minc.
+Tabela 7: Resumo das proporções observadas
+
+===== page_039_bot.png =====
+de 22%, como o p-valor igual a U,05186517 € maior ou igual à U,01, não há evidências estatisticas
+suficientes para rejeitar a hipótese nula de igualdade entre as proporções de pessoas com experiência
+administrativa nas pastas mapa e Minc.
+Resumo:
+5%: não rejeita HO; 10%: rejeita HO; 1%: não rejeita HO.
+6.3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+A análise realizada mostra a importância de distinguir entre significância estatística e significância
+substantiva.
+O p-valor responde à seguinte pergunta:
+
+“Existe evidência estatística suficiente para afirmar que as proporções entre mapa e
+
+mine são diferentes?”
+
+===== page_039_mid.png =====
+para rejeitar a hipótese nula de igualdade entre as proporções de pessoas com experiência
+administrativa nas pastas mapa e Minc.
+6.1 A conclusão mudaria se o nível de significância fosse 10%?
+Sim, mudaria, pois para nível de significância de 10%, equivalente a um intervalo de confiança de
+90%, como o p-valor igual a 0,05186519 é inferior a 0,10, rejeita-se a hipótese nula de igualdade
+entre as proporções de pessoas com experiência administrativa nas pastas mapa e minc.
+6.2 A conclusão mudaria se o nível de significância fosse 1%?
+Não, não mudaria, pois para nível de significância de 1%, equivalente a um intervalo de confiança
+de 99%, como o p-valor igual a 0,05 186519 é maior ou igual a 0,01, não há evidências estatísticas
+suficientes para rejeitar a hipótese nula de igualdade entre as proporções de pessoas com experiência
+administrativa nas pastas mapa e Minc.
+Resumo:
+5%: não rejeita HO; 10%: rejeita HO; 1%: não rejeita HO.
+6.3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+inibiionadBinida moneireia inererdiiieidi Airis ori ei CAE mo E Ê
+
+===== page_039_top.png =====
+39
+9 Parte IX - Respostas ao Bloco 6. Significância estatística e
+nível de significância
+Escolha um dos dois testes anteriores e responda:
+Escolhido o Primeiro teste de hipótese bivariado, ou seja, o Teste da hipótese de que a proporção
+de nomeações com experiência administrativa é igual nas duas pastas, que resultou na conclusão
+abaixo:
+
++ Para nível de significância de 5%, equivalente a um intervalo de confiança de 95%, como o
+p-valor igual a 0,05186519 é maior ou igual a 0,05, não há evidências estatísticas suficientes
+para rejeitar a hipótese nula de igualdade entre as proporções de pessoas com experiência
+administrativa nas pastas mapa e Minc.
+
+===== page_040_bot.png =====
+interpretada com cautela, pois o tamanho do efeito observado é reduzido.
+Significância estatística versus importância substantiva
+Um resultado estatisticamente significativo não implica necessariamente uma diferença
+substantivamente importante.
+Em amostras grandes, diferenças pequenas podem apresentar baixos valores de p-valor, pois o teste
+possui maior capacidade de detectar pequenas variações.
+Assim, a interpretação deve considerar:
+1. O pevalor, que indica a evidência estatística contra a hipótese nula;
+2. A magnitude da diferença, que indica o tamanho real do efeito observado. |
+
+===== page_040_mid.png =====
+* mapa: aproximadamente 92% de nomeações com experiência administrativa;
+
+* minc: aproximadamente 88% de nomeações com experiência administrativa.
+A diferença observada foi de aproximadamente:
+
+92% — 88% = 4 pontos percentuais
+
+Portanto, embora exista uma diferença entre as proporções, sua magnitude é relativamente pequena.
+Quando considerado um nível de significância de 10%, o teste estatístico indica evidências para
+rejeitar a hipótese de igualdade entre as proporções. Entretanto, essa diferença estatística deve ser
+interpretada com cautela, pois o tamanho do efeito observado é reduzido.
+Significância estatística versus importância substantiva
+Um resultado estatisticamente significativo não implica necessariamente uma diferença
+substantivamente importante.
+Em amostras grandes, diferenças pequenas podem apresentar baixos valores de p-valor, pois o teste
+possui maior capacidade de detectar pequenas variações.
+
+===== page_040_top.png =====
+“0
+Já a significância substantiva responde a outra questão:
+“A diferença encontrada é suficientemente grande para possuir importância prática,
+teórica ou política?”
+Essas duas dimensões devem ser analisadas conjuntamente. Uma diferença pode ser
+estatisticamente significativa, mas apresentar pouca relevância substantiva.
+Interpretação substantiva dos resultados
+No caso analisado, as proporções observadas foram:
++ mapa: aproximadamente 92% de nomeações com experiência administrativa;
++ minc: aproximadamente 88% de nomeações com experiência administrativa.
+
+===== page_041_bot.png =====
+Essa interpretação evita concluir que qualquer diferença estatística representa necessariamente uma
+diferença relevante do ponto de vista social ou político.
+
+===== page_041_mid.png =====
+A análise indica que a pasta mapa e a pasta minc apresentam proporções elevadas de nomeações
+com experiência administrativa.
+Embora a diferença observada seja estatisticamente detectável quando utilizado um nível de
+significância de 10%, a magnitude da diferença é pequena, aproximadamente quatro pontos
+percentuais.
+Portanto, a conclusão substantiva é que:
+A diferença entre as duas pastas parece ser pequena do ponto de vista substantivo,
+indicando que mapa e minc apresentam perfis semelhantes quanto à presença de
+experiência administrativa entre os nomeados.
+Essa interpretação evita concluir que qualquer diferença estatística representa necessariamente uma
+diferença relevante do ponto de vista social ou político.
+
+===== page_041_top.png =====
+a
+
+No presente caso:
+
+Critério Resultado
+
+Diferença entre mapa e minc Aproximadamente 4 pontos percentuais
+
+Evidência estatística a 5% Não rejeita a hipótese nula
+
+Evidência estatística a 10% — Rejeita a hipótese nula
+
+Magnitude da diferença Pequena
+
+Interpretação substantiva Perfis semelhantes entre as duas pastas
+Conelusão substantiva
+A análise indica que a pasta mapa e a pasta minc apresentam proporções elevadas de nomeações
+com experiência administrativa.
+
+===== page_042_bot.png =====
+Nesse cenário temos a seguinte tabela:
+10.1 Estimativas de Nomeações com Experiência Administrativa por Órgão
+Nomeações
+Observações com
+válidas exp adm Estimativa IC IC Margem
+
+Órgão (mn) (mn) (%) — Inferior Superior — deErro Erro-Padrão
+MAPA 1048 964 91,98 9034 93,63 1,64 0,84
+MINC 702 618 88,03 85,63 90,44 2,40 1,22
+
+===== page_042_mid.png =====
+Órgão válidas (n) exp adm (n) (%) Inferior Superior de Erro Erro-Padrão
+mapa 524 482 91,98 89,66 9431 2,32 119
+minc 351 309 88,03 84,64 91,43 3,40 1,73
+p.mapa = [1] 0.9198473 margem erro mapa = [1] 0.02324873 erro padrao mapa = [1]
+0.01186182
+p mine = [1] 0.8803419 margem erro mine = [1] 0.0339540 erro padrao mine = [1] 0.0173238
+Agora, adotando o críterio de que a proporção observada fosse a mesma, mas o número de
+observações fosse duas vezes maior.
+Nesse cenário temos a seguinte tabela:
+10.1 Estimativas de Nomeações com Experiência Administrativa por Órgão
+Nomeações
+Observações com
+
+===== page_042_top.png =====
+E)
+
+10 Parte X - Respostas ao Bloco 7. O que aconteceria se a
+amostra fosse maior?
+
+7. O que aconteceria se a amostra fosse maior?
+Escolha uma das proporções estimadas nas perguntas anteriores.
+Foi escolhida a proporção relativa ao Primeiro teste de hipótese bivariado, que testa a hipótese de
+que a proporção de nomeações com experiência administrativa é igual nas duas pastas.
+No teste, obtivemos o seguinte resultado:
+“7 Observações Nomeaçõescom Estimativa IC IC Magem
+Órgão  válidas(n) exp adm(n) (%) Inferior Superior de Erro Erro-Padrão
+mapa s24 482 9198 89,66 9431 232 1419
+
+===== page_043_bot.png =====
+* EP(p) = erro-padrão da proporção;
+
+* P'= proporção observada na amostra;
+
++ 1— p= proporção complementar;
+
++ n:= tamanho da amostra.
+Portanto, o aumento do tamanho da amostra reduz o erro-padrão, pois o número de observações
+aparece no denominador do cálculo.
+
+===== page_043_mid.png =====
+TRANSA Ro SAS CU PIRES ea DDS E TSE SPA SEIA a RAN nl A mn A
+2. Por que isso acontece?
+Isso acontece porque o erro-padrão de uma proporção amostral é calculado pela raiz quadrada
+do produto entre a proporção observada na amostra e sua proporção complementar, dividido pelo
+tamanho da amostra.
+O erro-padrão da proporção é calculado pela seguinte fórmula:
+ay = [PU
+EPD)=V—
+onde:
+* EPf(p) = erro-padrão da proporção;
+* p= proporção observada na amostra;
+* 1 p= proporção complementar;
++ = tamanho da amostra.
+Portanto, o aumento do tamanho da amostra reduz o erro-padrão, pois o número de observações
+
+===== page_043_top.png =====
+a
+Os valores recalculados no R foram:
+Resultado:
+p mapa = [1] 0.9198473 margem erro mapa = [1] 0.01643964 erro padrao mapa = [1]
+0.008387572
+p mine = [1] 0.8789174 margem erro mine = [1] 0.0241325 erro padrao mine = [1] 0.0123125
+Resposta
+1. O que tenderia a acontecer com o erro-padrão?
+O erro-padrão tende a diminuir, pois a proporção observada permaneceu a mesma, mas o número
+de observações da amostra foi duplicado.
+2. Por que isso acontece?
+Isso acontece porque o erro-padrão de uma proporção amostral é calculado pela raiz quadrada
+
+===== page_044_bot.png =====
+
+
+===== page_044_mid.png =====
+source(here::here("scripis”, “IO calcula valores ausentes das variaveis. R)
+source(here:-here('scripis”, “IE agrupar dados de variaveis RJ)
+source(here::here("scripis”, 720. gerar base consis exp adm exp car insirR))
+source(here:-here('scripis”, 722 rel antes e depois das exci exp adm exp car instrR))
+source(here:-here("scripis”, "24 criar variavel exp adm bin R7))
+source(here::here("scripis”, "27. criar tab desc analise exp adm mapa mincR)
+source(here::here('scripis”, "28 teste hip exp adm mapa minc ns5pR))
+source(here::here("scripis”, 740. barras estimativa mapa minc 1c95.R”))
+source(here:-here('scripis”, 742 curva normal estimativa mapa mincR)
+source(here::here( scripts”, 730 criar variavel alto nivel.RT))
+
+source(here::here( scripts”, 732 teste hip alto nivel mapa minc.R”))
+source(here:-here("scripis”, "38 Inventario scripts rmdR))
+
+===== page_044_top.png =====
+“4
+11 Anexo I- Inventário dos Scripts Executados
+Tabela 8: Relação Sequencial de Execução dos Scripts
+Súpoo
+source(here:-here( scripts”, “00 config R”))
+source(here:=here( scripts”, "OI pacotes.R”))
+source(here:-here( scripts”, "OZ importacao.R”))
+source(here::here( scripts”, “03 leitura abas base cargos e codebook da planilha R))
+source(here::here(Tscripis”, “04 exibe total linhas e colunas.R”))
+source(here:-here( scripts”, "06 exibe nomes das colunas(variaveis).R))
+source(here:-here( scripts”, “08 calcula num observ por orgao sup.R”))
+source(here::here(Tscripis”, “10. calcula valores ausentes das variaveis.R”))
+source(here:-here( scripts”, “IE agrupar dados de variaveis.R”))
+source(here:-here( scripts”, "20 gerar base consis exp adm exp car instrR))

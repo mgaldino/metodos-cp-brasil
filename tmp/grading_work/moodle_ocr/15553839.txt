@@ -1,0 +1,373 @@
+
+===== page_001_bot.png =====
+44 Os seguintes objetos são mascarados por “package:stats:
+“
+48 filter, lag
+44 Os seguintes objetos são mascarados por “package:base!:
+“
+4% intersect, setdiff, setequal, union
+print(paste0("1. Número de linhas e colunas = *, dim(dados) [1], “ linhas e ”, dim(dados) [2], " colunas”
+48 [1] "1. Número de linhas e colunas = 1038 linhas e 26 colunas”
+print(paste0("2. Nones das variáveis = *, paste(nanes(dados), collapse = *, *)))
+48 [1) "2. Nomes das variáveis = orgao sup, setor, chave, id, cargo, funcao, nivel, instr, area, inst «
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_001_mid.png =====
+Os nomeados /as das pastas DAS 4 a 6 e FCPE 4
+Pergunta 1.3: O que significa uma linha da base?
+Um dos/das nomeados/das de cargos políticos das determinadas pastas
+Pergunta LA: Por que a mesma pessoa pode aparecer mais de uma vez?
+A faixa do tempo de 20011 a 2021 permite com que diferentes atores ocupem diferentes cargos em momentos
+diferentes do tempo
+Pergunta 1.5: Quais são as duas pastas comparadas no artigo?
+Cultura e Agricultura
+Exercício 2
+“
+4% Anoxando pacote: "dplyr”
+4% Os seguintes objetos são mascarados por package:stats':
+“
+“8 filter, lag
+4% Os seguintes objetos são mascarados por “package:base!:
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+CO PrameApasteuÇL. nuxero ae Linnas 6 coiunas = ", aimtaagos/ LL), - iinnas e *, din(dados) [2], ” colunas”
+
+===== page_001_top.png =====
+Avaliação: inferência básica com dados reais de Ciência Política |
+2026-07-19
+Exercício 1
+Pergunta 1.1: Qual é a pergunta geral do artigo?
+O artigo busca investigar se o perfil de burocratas de diferentes pastas ministeriais (Cultura e Agro) difere,
+por meio de dados sobre filiação partidaria, experiência adminsitrativa e técnica, formação, dentre outros.
+Pergunta 1.2: Qual é a unidade de análise da base?
+2 Um dos/das nomeados/das de cargos políticos das determinadas pastas
+
+===== page_002_bot.png =====
+oo 1a
+
+* 88 935 15
+
+em
+
+print(*Tabela 3.2: Distribuição de exp car:")
+48 [1] “Tabela 3.2: Distribuição de exp car:"
+print(table(dadosSexp. car, uselA = "aluays"))
+“
+
+so 1.2 3 5<
+
+su s1 2 500 253 76
+
+a.
+
+print(*Tabela 3.3: Distribuição de nível:")
+4 [1) “Tabela 3.3: Distribuição de nivel:"
+
+===== page_002_mid.png =====
+a ONPNR O BMBIÇOO USO Ear RA
+“ “ 76 o 95 o
+print(“Checagem dos valores observados por variável:")
+48 [1] *Checagem dos valores observados por variável:*
+print(“Tabela 3.1: Distribuição de exp adm:*)
+48 [1] “Tabela 3.1: Distribuição de exp adm:"
+print(table(ifelse(dadosSexp adm == 1, 1,
+ifelse(dadosSexp adm == 0, O, NA)), usoNA = “aluays"))
+“
+e o 1<u
+. ss 936 15
+ese
+print("Tabela 3.2: Distribuição de exp car;*)
+
+===== page_002_top.png =====
+print (table(dadosSorgao sup, useNA = “alvays*, dnn = “Tabela 1: Número de observações por orgao sup ="),
+48 Tabela 1: Número de observações por orgao sup =
+
+48 mapa meti minc <MA>
+
+ss 525 148 365 O
+
+print(“Tabela 2: Número de valores ausentes nas variáveis selecionadas:")
+
+48 [1] “Tabela 2: Número de valores ausentes nas variáveis selecionadas:*
+
+variaveis relevantes <- c(“exp adn", “exp car”, “nivel”, “instr”, “indicacao")
+
+valores ausentes <- colSuns(is.na(dados[, variaveis relevantes]))
+
+print(valores ausentes)
+
+===== page_003_bot.png =====
+End so Lad 1 so nad o
+Com isso, temos 1038 linhas em 26 colunas, com as variaveis: orgao. sup, setor, chave, id, cargo, funcao, nivel,
+instr, area, inst. ensino, inst origem, car. pub, partido, cargo. cle, lid part, exp adm, exp. car, exp. mer,
+exp. soc, UF*, partido. pr, partido. ministro, indicacao, entrada, saida, perm. Na variavel “orgao sup”,
+temos as pastas MAPA (Ministério da Agricultura e Pecuária), o MCTI (Ministério da Ciência, Tecnologia e
+Inovação) e o MINC (Ministério da Cultura). Na variaveis selecionadas para contagem de valores ausentes,
+foram escolhidas as proprias do exercicio seguinte: exp. adm (experiência administrativa - O não, 1 sim),
+exp. car (se tem experiência em outros cargos - 0, 1, 2, 3 € 5, escala da antora), nivel (nível na pasta - 4a 6),
+instr (grau de instrução) e indicacao (quem indicou). Entretanto, na variável experiência administrativa, que
+era pra conter somente 0 e 1, foi encontrado dois valores discidentes. Nesse sentido criou-se um filtro para
+que somente os resultados O e 1 aparecessem na tabela resumo, colocando como NA os valores diferentes.
+dadosSexp ade bin <- ifelse(dadosSexp adm == 1, 1, 0)
+
+A escolha de excluir os dados diferentes de O e 1 serve não privilegiar uma interpretação, colocando, assim,
+Exercício 3
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+|
+
+===== page_003_mid.png =====
+Eid doutorado especializacao Eraduacao mestrado superior
+“ 159 203 1 259 297
+“ tecnico «ua
+“ zu ss
+E
+print("Tabela 3.5: Distribuição de indicacao:*)
+48 [1) “Tabela 3.5: Distribuição de indicacao:”
+print(table(dadosSindicacao, useNA = “alvays"))
+“
+48 Bolsonaro Lula Lula Rousseff Temer «ua
+“ 396 86 1 as 204 o
+Com isso, temos 1038 linhas em 26 colunas, com as variaveis: orgao. sup, setor, chave, id, cargo, funcao, nivel,
+instr, area, inst. ensino, inst origem, car. pub, partido, cargo. cle, lid part, exp adm, exp. car, exp mer,
+exp. soc, UF*, partido. pr, partido. ministro, indicacao, entrada, saida, perm. Na variavel “orgao sup”,
+temos as pastas MAPA (Ministério da Agricultura e Pecuária), o MCTI (Ministério da Ciência, Tecnologia e
+Incnadoi o o MINC Mislotónio da Cita No sm nia caio colenioadas vaso union de valores auemies,
+E E : tiva - O não, 1 sim),
+Alguns arquivos neste envio só podem ser acessados através de download direto. . ivel na pasta - 4 a 6),
+| 1 administrativa, que
+era pra conter somente 0 e 1, foi encontrado dois valores discidentes. Nesse sentido crion-se um filtro para
+
+===== page_003_top.png =====
+print(table(dadosSnivel, useNA = “alvays*))
+
+“
+
+mo a 5 <p
+
+* 652 215 111 O
+
+..
+
+print(*Tabela 3.4: Distribuição de instr:*)
+
+48 [1) “Tabela 3.4: Distribuição de instr:”
+
+print(table(dadosSinstr, useNA = “alvays"))
+rior
+297
+
+===== page_004_bot.png =====
+puta so ME 5d Pt A esrad tona] Pei iria] stand
+48 minc 355 309  o.8704 0.0349 0.8355 0.9054
+Os resultados da tabela demonstram uma proporção substancialmente superior de experiência administrativa
+prévia nas nomeações vinculadas ao MAPA em comparação ao MINC. Com o Intervalo de Confiança igual
+a 0.95, ou 95%, temos a garantia de que se o teste fosse repetido outras vezes com as mesmas variaveis sobre
+condições minimamente iguais, obteriamos, em 95% dos teste, os mesmo resultado. O resultado demonstra
+estatisticamente diferença entre a experiência administrativa prévia entre nomeados do MAPA e do MINC a
+medida em que, quando caleulamos a margem de erro inferior e superior, a proporção mais alta de indicações
+no MINC equivale aproximadamente ao valor mais baixo do MAPA, o que nos indica essa diferença entre
+as duas pastas. A fins teóricos, a margem de erro nos indica, contemplada pelo intervalo de confiança, qual
+o maior e menor falor que nossa proporção pode apresentar dentre desses possíveis testes do intervalo de
+confiança, ou seja, 95% dos casos na repetição do experimento as proporções maximas e minimas para pasta
+MAPA e MINC seriam, respectivamente, 0.89 à 0.94 e 0.83 a 0.90, aproximadamente.
+Exercício 4
+teste proporcao <- prop.test(x = n experiencia, n = n valido, correct = FALSE)
+print(*Figura 1: Igualdade de Proporções (MAPA vs MinC) ---*)
+48 [1) “Figura 1: Igualdade de Proporções (MAPA vs MinC) ---*
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+WCom Exp = n experiencia,
+Proporcao = round(proporcao, 4),
+Margem Erro = round(margem erro, 4),
+IC Inferior = round(ic inferior, 4),
+IC Superior = round(ic superior, 4)
+,
+print(*Tabela 4: Experiência Administrativa por Pasta (MAPA vs MinC)*)
+4% [1] “Tabela 4: Experiência Administrativa por Pasta (MAPA vs MinC)"
+print(tabela resultados)
+48 N Valido N Com Exp Proporcao Margem Erro IC Inferior IC. Superior
+sema 5% as2 O.9198 0022 0.896 — 0.931
+seminc 35 308 o.gT0s 0.034 0.835 — 0.5054
+Os resultados da tabela demonstram uma proporção substancialmente superior de experiência administrativa
+prévia nas nomeações vinculadas ao MAPA em comparação ao MINC. Com o Intervalo de Confiança igual
+a 0.95, ou 95%, temos a garantia de que se o teste fosse repetido outras vezes com as mesmas variaveis sobre
+condições minimamente iguais, obteriamos, em 95% dos teste, os mesmo resultado. O resultado demonstra
+MAPA e do MINC a
+à Alguns arquivos neste envio só podem ser acessados através de download direto. Ne alte de indicações
+| essa diferença entre
+ds UMAS pastas. As ts UCUFICOS, a mALgemM Ve CLTO MOS INCA, convem pinus peio muervalo de confiança, qual
+o snaloe e iminaro BUlOE oie capa petnnneio nedá apresentar tie denso: noncdfna: fesb do dadarmaão. des
+
+===== page_004_top.png =====
+dados. pastas <- dados [dadosSorgao sup Yin c(zapa”, “ninc") & !is.na(dadosSorgao sup) & !is.na(dadosSe:
+
+pastas <- split(dados pastastexp adm bin, dados pastasorgao sup)
+
+n valido <- sapply(pastas, length)
+
+n experiencia <- sapply(pastas, sum)
+
+proporcao <- sapply(pastas, mean)
+
+erro padrao <- sqrt((proporcao + (1 - proporcao)) / n valido)
+
+zargem erro <- 1.96 + erro padrao
+
+ic inferior <- proporcao - margem erro
+
+ic superior <- proporcao + margem erro
+
+tabela resultados <- data.frame(
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+IC Inferior = round(ic inferior, 4),
+
+===== page_005_bot.png =====
+proporcao2 <- sapply (pastas2, mean)
+erro, padrao? <- sgrt((proporcao2 + (1 - proporcao2)) / n valido?)
+margem erro2 <- 1.96 + erro padrao?
+ic inferior? <- proporcao? - margem erro?
+ic superior? <- proporcao2 + margem erro?
+tabela alto nivel <- data.frame(
+NValido = n valido2,
+NUAIto Nível = n alto nível,
+Proporcao = round(proporcao2, 4),
+IC Inferior = round(ic, inferior2, 4),
+IC Superior = round(ic, superior2, 4)
+,
+print(“Tabela 5: Tabela Descritiva e ICs ('Alto Nível! por Pasta)*)
+4% [1) “Tabela 5: Tabela Descritiva e ICs (*Alto Nível! por Pasta)"
+print(tabela alto nível)
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_005_mid.png =====
+Ena rr serie ni gra ceia mare eia eçÃ ineo cipeam. cdlrinreros msn fai cms sedento em
+p-valor muito baixo (0.01 ou 1%). O p-valor indica na análise a possibilidade de rejeitar a hipotese nula com
+base em se ele é menor do que o nível de significância. A um nível de significância de 5%, ou seja, p-valor é
+menor que nível de , temos a rejeição da hipótese nula e consequente aprovação da hipótese alternativa.
+Exercício 5
+dadosSalto nivel <- ifelse(dadosSnivel Yin% c(5, 6), 1,
+
+ifelse(dadosSnivel == 4, O, NA))
+dados? <- subset(dados,
+tolover(orgao. sup) Jin% c("napa”, “minc") &
+tis.na(orgao sup) &
+tis.na(alto nível))
+pastas? <- split(dados2$alto nível, dados2$orgao. sup)
+n valido? <- sapply(pastas2, length)
+n.alto nivel <- sapply(pastas2, sum)
+proporcao2 <- sapply (pastas2, mean)
+erro padrao? <- sqrt((proporcao? + (1 - proporcao2)) / n valido?)
+margem erro2 <- 1.96 + erro padrao?
+ic inferior2 <- proporcao? - margem erro?
+ic superior? <- proporcao?2 + margem erro?
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+Proporcao = round(proporcao?, 4),
+
+===== page_005_top.png =====
+print(teste. proporcao)
+
+“
+
+4% 2-sample test for equality of proportions vithout continuity correction
+
+“
+
+4% data: n experiencia out of n valido
+
+48 X-squared = 5.7382, df = 1, p-value = 0.0166
+
+44 alternative hypothesis: tvo.sided
+
+44 95 percent confidence interval:
+
+48 0.007460825 0.091388761
+
+4% sample estimates:
+
+e propt prop2
+
+48 0.9198473 0.8704225
+
+Frente a uma hipotese mula onde a proporção da experiência administrativa prévia das pastas MINC E
+A : j ; +a hipotese nula com
+i Alguns arquivos neste envio só podem ser acessados através de download direto. a o é
+
+| h à
+cana aqu amet 4 cm eras ca apre am means prereções me mepótese alternativa.
+
+===== page_006_bot.png =====
+Exercício 6
+Caso escolhido: Caso da experiência administrativa
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+Logicamente não, visto que, à um nível de significância de 10% frente ao valor de 1,6%, o p-valor ainda
+continuaria menor que o nível de significância
+
+2. A conclusão mudaria se o nível de significância fosse 1
+No caso do um nível de significância de 1%, já não haveria rejeição da hipótese nula, já que o p-valor (1,6%),
+mesmo que por seis décimos, ainda estaria maior que o nível de significância.
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+Quanto menor o p-valor, mais robusta é a evidência da rejeição da hipótese nula, ao passo em que nível de
+significância maior da maior margem para a rejeição da hipótese, ao custo de uma evidência pouco robusta.
+Exercício 7
+
+===== page_006_mid.png =====
+4% data: n alto nivel out of n valido?
+48 X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: tvo.sided
+4 95 percent confidence interval:
+48 -0.13365398 -0.00328014
+4% sample estimates:
+* propi prop2
+48 0.3561905 0,4246575
+Assim como no exercício anterior, agora em função da variável “alto nível” (que pega os números de cargos
+de 5 para cima considernado-os como alto nível (1) e 4 como baixo nível (0)), temos a proporção de 35%
+dos para o MAPA e 42% para o MINC, onde, aplicando o mesmo intervalo de confiança de 95%, obtemos
+um p-valor de 0:03, ou 3%. Sendo assim, num nível de confiança de 5%, temos novamente a rejeição da
+hipótese nula, que seria da igualdade estatistica entre as proporções nas diferentes pastas, e ficando com o
+alternativa, há diferença na proporção entre as diferentes pastas. Vale ressaltar neste exercício e no passado
+a diferença no n de observações, que pode ter alguma relevância estatística em outros casos.
+Exercício 6
+Caso escolhido: Caso da experiência administrativa
+1. A conclusão mudaria se o nível de significância fosse 10%?
+19%, o p-valor ainda
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+o 2. A conclusão mudaria se o nível de significância fosse 1
+
+===== page_006_top.png =====
+48 N Valido N Alto Nivel Proporcao IC. Inferior IC. Superior
+semapa 525 187 03562  oa1s2 — o.3972
+seminc 365 155 0427  O3739 o.a7sa
+teste prop2 <- prop.test(x = n alto nivel, n = n valído?, correct = FALSE)
+print(“Figura 2: Teste de Hipótese do Alto Nível")
+48 [1) “Figura 2: Teste de Hipótese do Alto Nível”
+print(teste prop2)
+“
+44 2-sample test for equality of proportions vithout continuity correction
+“
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+48 Sb percent contagence anterval
+
+===== page_007_bot.png =====
+
+
+===== page_007_mid.png =====
+
+
+===== page_007_top.png =====
+No caso de uma proporção duas vezes maior das duas pastas, teriamos uma margem de erro e um erro
+padrão menores, fazendo com que os intervalos de confiança fossem mais precisos. Num ponto de vista mais.
+matemático, na operação do erro padrão, um n maior na fórmula, que divide a multiplicação da proporção por
+um menos a proporção (p(1-p)/n), diminuiria significantemente o valor do erro padrão e, consequentemente
+da margem de erro. Num sentido mais estatístico, coletar maior número de observações significa também
+ter uma informação mais precisa do grupo observado, o que nos indicaria evidÊncias mais concretas do que
+representa determinado padrão de grupo (Lei dos Grandes Números)
+Alguns arquivos neste envio só podem ser acessados através de download direto.

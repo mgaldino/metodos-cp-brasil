@@ -1,0 +1,631 @@
+
+===== page_001_bot.png =====
+fa so oa Pinda ci
+
+Ainda sobre a parte visual, na Seção 2 cu optei por apresentar os dados em formato de tabelas,
+também para tornar a apresentação dos dados mais aprazível ao olhar. Diante disso, esse relatório
+conterá mais tabelas do que o exigido.
+Finalmente, é preciso mencionar que este Relatório se bascia no artigo “Nomeação a cargos
+públicos no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo
+Federal (2011-2021)", de Albrecht e Ribeiro (2025), e em sua base de dados. Esta, que foi obtida
+em planilha do Excel, atende pelo nome de “BASE. cargos?” e foi baixada via link disponibilizado
+pelo professor nas instruções da avaliação. A base foi inserida manualmente neste RStudio, pelo
+trajeto File > Import Database > From Excel, e foi por último acessada em 20/07/2026.
+
+1. Artigo, pergunta e unidade de análise
+
+1.1. Qual é a pergunta geral do artigo?
+O primeiro norte dos autores reside na investigação dos motivos pelos quais os funcionários
+públicos são nomeados e os efeitos das estratégias de seleção adotados pelos mandatários, como
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+Ciência Política. Antes de proceder ao conteúdo propriamente dito, julgo necessário pontuar
+algumas observações preliminares. Em primeiro lugar, não ficou claro se as perguntas devem ser
+respondidas em respeito à separação por tópicos ou em texto corrido. O enunciado da questão
+1, por exemplo, inclina-se à segunda opção. O enunciado da questão 2, por outro lado, que pede
+os dados sejam apresentados antes e uma explicação posterior (“Depois, explique. ..”) enseja o
+emprego da primeira opção, a fim de que a disposição dos valores permaneça mais bem organizada.
+Sendo assim, optou-se por separar cada demanda por cada subtópico, tendo em vista a priorizar a
+visualização mais clara do atendimento de cada um dos comandos dos enunciados, além de facilitar
+o trabalho do professor durante a correção. Caso a opção correta fosse o texto corrido, espero que
+a justificativa supracitada ao menos minore eventuais descontos de nota pela compartimentação
+espelhada às instruções da avaliação.
+Nesse sentido, outra escolha que fiz foi esconder os códigos no PDF gerado via RMarkdown.
+Embora não haja nenhuma instrução específica quanto a isso, creio que a entrega separada do
+PDF e dos códigos sirva justamente para que o Relatório não fique poluído com tantas linhas a
+cada poucos trechos de texto e tabelas.
+Ainda sobre a parte visual, na Seção 2 eu optei por apresentar os dados em formato de tabelas,
+também para tornar a apresentação dos dados mais aprazível ao olhar. Diante disso, esse relatório
+conterá mais tabelas do que o exigido.
+PRP PD PP RR
+1 do Executivo
+i Alguns arquivos neste envio só podem ser acessados através de download direto. , que foi obtida
+l disponibilizado
+pelo professor nas instruções da avaliação. A base foi inserida manualmente neste RStudio, pelo
+
+===== page_001_top.png =====
+Relatório final |
+Guilherme Salamuni Gonzaga de Oliveira - NUSP: 15585578
+20.07.2026
+0. Questões preliminares
+Este relatório final contempla as demandas requeridas pela “Avaliação: inferência básica com
+Andos ronia do Ciância Dolítioa” da dliarintina ELDOAOS — Mátedos a Táomicas de Pesquisa em
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. ntas devem ser
+ENO Às. quatão
+1, por exemplo, inclina-se à segunda opção. O enunciado da questão 2, por outro lado, que pede
+
+===== page_002_bot.png =====
+Pessoas podem aparecer repetidamente porque a unidade de análise da base de dados são as
+nomeações, e não os indivíduos. Diante disso, se determinado funcionário foi nomeado por mais
+de uma vez no período sob escrutínio, seu nome aparecerá em quantidade correspondente ao
+número de nomeações acumuladas no intervalo.
+
+1.5.Quais são as duas pastas comparadas no artigo?
+As duas pastas comparadas são o Ministério da Agricultura, Pecuária e Abastecimento (MAPA) e
+o Ministério da Cultura (MinC), que por certo período atendeu pelo nome de Secretaria Especial
+da Cultura (SECULT).
+
+2. Leitura e validação dos dados
+
+2.1. Número de linhas e colunas
+
+es [1) 1038 26
+R-A base tem 1.038 linhas (nomeações) e 26 colunas (variáveis).
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+poa o TA LD GSE APRESENTE DRE RO SR SESI Ne READER E STS. NESSE a
+
+dezembro de 2021.
+
+1.3. O que significa uma linha da base?
+Cada linha corresponde a uma nomeação específica, contendo as informações de quem foi no-
+meado, para qual cargo foi nomeado, a qual nível hierárquico tal cargo pertence, em qual setor
+tal cargo está alocado, qual o Presidente da República responsável pela nomeação e as datas
+de entrada e saída do funcionário. Ainda constam os atributos do nomeado, tais quais o nível
+de instrução, área e instituição de formação, carreira pública de origem, filiação partidária e
+experiências prévias.
+
+1.4.Por que a mesma pessoa pode aparecer mais de uma vez?
+Pessoas podem aparecer repetidamente porque a unidade de análise da base de dados são as
+nomeações, e não os indivíduos. Diante disso, se determinado funcionário foi nomeado por mais
+de uma vez no período sob escrutínio, seu nome aparecerá em quantidade correspondente ao
+número de nomeações acumuladas no intervalo.
+
+EE Aa VER PRE PER ENI DER DES RARE PP SS
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. ento (MAPA) e
+
+O mussuctm ua Uuicura (oo), que por vero pesouu avcaueis peso vue ue oceretaria Especial
+da Cultura (SECULT).
+
+===== page_002_top.png =====
+se observa em trecho da página 1: “Assim, a questão central reside nas motivações por trás
+das nomeações e efeitos do contexto institucional nas estratégias adotadas por presidentes e
+organizações partidárias” De certa maneira, essa é uma pergunta geral, mas que está subsumida
+a praticamente toda literatura sobre o assunto. Nesse caso, é preciso identificar a pergunta geral
+que guia o artigo em panta. Trata-se daquela encontrada em trecho da página 2, embora não em
+formato de frase interrogativa: *(...) em que medida os perfis dos/as nomeados/as variaram em
+órgãos responsáveis por políticas regulatórias, considerando que tais pastas seriam mais abertas
+a partidos e grupos de interesse (Batista; Lopez, 2021)[7]”. Ou seja, como uma das formas de
+estudar a motivação das nomeações, os autores se questionam acerca da variação do perfil dos
+funcionários públicos nomeados para órgãos regulatórios, tendo como objeto repartições ligadas
+aos ministérios da Cultura e da Agricultura, em perspectiva comparada.
+
+1.2. Qual é a unidade de análise da base?
+A unidade de análise da base de dados são as nomeações. Cada observação registra, portanto,
+
+à ê FE * veiro de 2011 e
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+1.3. O que significa uma linha da base?
+
+===== page_003_bot.png =====
+2.3. Número de observações por orgao sup.
+Tabela 2: Observacoes por orgao superior
+Orgao superior Numero de nomeacoes
+mapa 535
+mine 365
+meti “us
+
+2.4. Número de valores ausentes em pelo menos cinco variáveis
+
+relevantes.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+car pub
+
+partido
+
+cargo ele
+
+id part
+
+exp adm
+
+exp car
+
+exp mer
+
+exp soc
+
+um
+
+partido pr
+
+partido ministro
+
+indicacao
+
+entrada
+
+saida
+
+perm
+
+2.3. Número de observações por orgao sup.
+Tabela 2: Observacoes por orgao superior
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+meti us
+
+===== page_003_top.png =====
+2.2. Nomes das variáveis.
+
+Tabela 1: Variaveis da base de dados.
+Nome das variaveis.
+orgao sup
+setor
+chave
+id
+cargo
+funcao
+nivel
+instr
+area
+inst. ensino
+
+===== page_004_bot.png =====
+“ od
+5 253
+NA 76
+Tabela 6: Valores observados: nivel do cargo
+Valor observado — Nomeacoes.
+4 652
+5 275
+6 mm
+Tabela 7: Valores observados: instrucao
+Valor observado — Nomeacoes.
+doutorado 159
+especializacao E
+graduacao 1
+mestrado 259
+
+===== page_004_mid.png =====
+Valor observado Nomeações
+a 3
+o ss
+1 935
+3 1
+NA n
+Tabela 5: Valores observados: experiencia em cargos de gestao
+Valor observado Nomeações
+o um
+1 51
+2 2
+3 509
+5 253
+NA 7%
+Tabela 6: Valores observados: nivel do cargo
+6 im
+
+===== page_004_top.png =====
+Tabela 3: Valores ausentes em variaveis selecionadas
+Variavel Valores ausentes
+Experiencia administrativa. nu
+Experiencia em cargos de gestao 7%
+Imtrncoo 95
+Partido 909
+Experiencia associativa 78
+2.5. Uma checagem dos valores observados em exp adm, exp car,
+nivel, instr e indicacao.
+Tabela 4: Valores observados: experiencia administrativa
+É. Alguns arquivos neste envio só podem ser acessados através de download direto.
+o ss
+
+===== page_005_bot.png =====
+ARENA AS E SP RP E 1 E
+recodificação.
+Nas tabelas abaixo, reapresento os dados das colunas problemáticas. Nas tabelas anteriores,
+reproduzi-os fielmente; nas abaixo, recodifiquei-os. Primeiro, a experiência administrativa con-
+tendo apenas os valores “07, “17 e “NA”; segundo, a instrução contendo apenas “superior”, em.
+vez de “superior” e “graduacao”.
+Tabela 9: Valores recodificados: experiencia administrativa
+
+Valor observado Nomeacoes
+
+o ss
+
+1 sas
+
+NA 12
+
+===== page_005_mid.png =====
+definida pelo codebook como binária (O ou 1), apresenta onze casos com valor ausente, além
+de três com o valor “*1º (um acento grave digitado antes do 1) e um caso com o valor “3”.
+Por conta desses caracteres anômalos, que fogem do “0” e do “1” previstos, o RStudio leu a
+coluna como texto, e não como número. Tratei esses casos como erros de digitação e os corrigi
+da seguinte forma: os **1” com acento grave foram recodificados como “1” sem acento grave,
+dada a proximidade entre ambos, e o “3” foi incorporado ao grupo dos ausentes, visto que não
+há interpretação segura junto ao codebook para classificá-lo de outra maneira. Desse modo, os
+valores válidos inicialmente obtidos - 935 nomeações com valor 1, 88 com valor O e 11 ausentes -
+passariam a 938 nomeações com valor 1 e 12 ausentes, mantidas as 88 com valor 0.
+Outro problema encontrado reside na coluna “instr” (instrução): além das cinco categorias pre-
+vistas, há um único caso rotulado “graduacao” e 95 ausentes. Nesse caso, tratei novamente o
+equívoco como um erro de digitação, haja vista que 1) “graduacao” equivale ao nível “superior”
+indicado aos nomeados com diploma universitário: e 2) ao abordar essa dimensão no artigo,
+os autores não mencionam a variável “graduação” na seção Formação Educacional (Albrecht e
+Ribeiro, 2025, p. 15-17), apenas “superior”. Sendo assim, procedi outrossim nesse caso para a
+recodificação.
+Nas tabelas abaixo, reapresento os dados das colunas problemáticas. Nas tabelas anteriores,
+reproduzi-os fielmente; nas abaixo, recodifiquei-os. Primeiro, a experiência administrativa con-
+tendo apenas os valores “0”, “1” e “NA”; segundo, a instrução contendo apenas “superior”, em
+vez de “amerior” e “oraduacao”
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_top.png =====
+Valor observado Nomeacoes
+
+superior 297
+
+tecnico u
+
+NA 9
+
+Tabela 8: Valores observados: presidente que fez a nomeacao
+
+Valor observado Nomeacoes
+
+“Bolsonaro” 396
+
+“Lula” srt
+
+“Rousseff” 351
+
+“Temer” 2
+EP SS
+à Alguns arquivos neste envio só podem ser acessados através de download direto. m o valor “3”.
+E) RStodio ley à
+coluna como texto, e não como número. Tratei esses casos como erros de digitação e os corrigi
+
+===== page_006_bot.png =====
+o 8
+1 sas
+NA 2
+Partamos agora para a filtragem da base para orgao. sup igual a mapa ou min e para a apresen-
+tação da tabela requerida, que apresenta as observações válidas, as nomeações com experiência
+administrativa, a proporção correspondente, o intervalo de confiança de 95% (calculado pela
+aproximação normal, com valor crítico de 1,96) e a margem de erro associada:
+Tabela 12: Experiencia administrativa por pasta
+Nomeacoes com Margem de
+Pasta — Observacoes validas experiencia Proporcao IC 95% erro
+mapa 5a 482 0.920 [0.897; 0.943] 0.023
+mine ES 312 0881 fosas; 0915] 008
+Os dados, referentes apenas às observações válidas - ou seja, os casos nos quais foi possível
+identificar se o funcionário possuía experiência prévia na administração pública ou não - denotam
+que, tanto no Ministério da Agricultura, quanto no da Cultura, a maioria dos nomeados outrora
+6
+
+===== page_006_mid.png =====
+à terreiro dg ad eee coimas trio co SR sumi Deer Apr E oia ad
+experiência. Sendo assim, é o caminho natural produzir uma variável a partir dela.
+Na tabela a seguir, mostro que há 938 nomeações de servidores com experiência, 88 nomeações
+de servidores sem experiência e 12 casos ausentes, nos quais não foi possível identificar se há
+experiência ou não, que não serão considerados como observações válidas na variável binária
+criada. A escolha por não os considerar em minha variável se deve ao fato de que a ansência desses
+casos na tabela não significa automaticamente falta (ou não) de experiência; pelo contrário, seria
+impreciso adotar tal pressuposição. Haja vista que o desconhecimento não me permite atribuí-los
+a nenhuma das variáveis binárias, considero que o melhor procedimento, nesse caso, é tomá-los
+Tabela 11: Variavel binaria de experiencia administrativa
+
+Valor observado Nomeacoes
+
+o ss
+
+1 938
+
+NA 12
+Partamos agora para a filtragem da base para orgao sup igual a mapa ou mine e para a apresen-
+tação da tabela requerida, que apresenta as observações válidas, as nomeações com experiência
+administrativa, a proporção correspondente, o intervalo de confiança de 95% (calculado pela
+
+à Alguns arquisesHiEnde agrarab prantos er tica les 8) a sto aeejada:
+Tabela 12: Experiencia administrativa por pasta
+
+===== page_006_top.png =====
+Tabela 10: Valores recodificados: instrucao
+
+Valor observado Nomeacoes
+
+doutorado 159
+
+especializacao 203
+
+mestrado 259
+
+superior 298
+
+tecnico u
+
+NA 9
+
+3. Tabela descritiva: experiência administrativa
+A variável binária criada para indicar a experiência prévia na administração pública é a
+“exp adm bin” e provém da coluna “exp adm”. Afinal, conforme o codebook, essa coluna
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+“xa tabs à Seguir, HMOSLTO Que tia 99 HOlCAÇÕES Ge servidures cum experiencia, 88 nomeações
+da nerd hai, sein (UL EA ALA A, CUL A JN Iodo 2 DÁ
+
+===== page_007_bot.png =====
+H POPORCRO BAJAE A, EVA
+Proporeao MinC s8A%
+Diferenca observada 38 pp.
+Estatistica qui-quadrado (X2) 3.62
+p-valor 0.057
+1€ 95% da diferenca 0.002: 0.079]
+Hipótese nula. A proporção de nomeações com experiência administrativa é igual nas duas pastas; a
+diferença vista na amostra seria fruto do acaso.
+Ho : puara — Paisc = 0
+Hipótese alternativa. As proporções são diferentes. O teste é bilateral, pois não há aposta prévia sobre
+qual pasta teria a proporção maior.
+Hi: puara — painc É O
+O teste usado no RStudio foi o duas proporções, feito com a função prop.test, aplicada aos
+totais de observações válidas da tabela descritiva da Seção 3 (482 de 524 no MAPA e 312 de 354
+no MinC), com a aproximação normal.
+ê
+
+===== page_007_mid.png =====
+menos. Trata-se de uma espécie de tolerância ao erro da estimativa. No caso do MinC, tolera-se
+que a proporção verdadeira esteja a até 3,4% de distância, para cima ou para baixo, da proporção
+obtida na amostra em análise. No caso do MAPA, a diferença tolerada pode ser de até 2,3% nas.
+duas direções.
+4. Primeiro teste de hipótese bivariado
+O teste compara as duas pastas quanto à proporção de nomeações com experiência administrativa. A tabela
+abaixo resume os resultados:
+Tabela 13: Resultado do teste de hipoteses para a diferenca de
+proporcoes entre MAPA e MinC
+Estatistica do teste Resultado
+Proporcao MAPA 920%
+Proporcao MinC 881%
+Diferenca observada 38 pp.
+Estatistica qui-quadrado (X2) 3.62
+p-valor 0057
+IC 95% da diferenca [0.002: 0.079]
+Hipótese nula. A proporção de nomeações com experiência administrativa é igual nas duas pastas; a
+diferença vista na amostra seria fruto do acaso.
+
+===== page_007_top.png =====
+integrou o funcionalismo público: no MAPA, o índice chega a 92% (482 das 524 observações
+válidas) e, no MinC, a 88,1% (312 das 354 observações válidas). Em diálogo com a investigação
+feita pelo artigo, é possível afirmar que, a despeito de mais suscetíveis a indicações políticas,
+por conta do caráter regulatório de ambas, as pastas em pauta são, em larga medida, formada
+por quadros que dispõem de conhecimento prévio acerca da máquina governamental. Esse é
+um predicado relevante para quem se habilita a nelas trabalhar. Vale ressaltar que a diferença
+entre as pastas está dentro da margem de erro, que é de 2,3% para a Agricultura e 3,4% para
+a Cultura. Há, inclusive, uma sobreposição entre o intervalo de confiança de uma e de outra.
+O intervalo de confiança, nesse caso de 95%, é utilizado quando os dados obtidos advêm de
+amostras. Como não é possível atingir com exatidão a proporção verdadeira, recorre-se a uma
+faixa na qual, caso o levantamento amostral seja repetido muitas vezes, há 95% de chance de
+a proporção verdadeira estar inserida. Ou seja, no MAPA, a percentagem de nomeados com
+experiência prévia na administração pública tem 95% de chance de estar entre 89,7% e 94,3%
+dos funcionários; no MinC, entre 84,8% e 91,5%. Como a amostra na Agricultura (524 nomeados
+cuja experiência ou inexperiência prévia é sabida, contra 354 da Cultura) é maior, o tamanho
+de seu intervalo de confiança é menor - ou seja, mais preciso. A margem de erro é a metade
+da amplitude do intervalo de confiança, indicando o quanto este pode variar para mais ou para
+menos. Trata-se de uma espécie de tolerância ao erro da estimativa. No caso do Min, tolera-se
+que a proporção verdadeira esteja a até 3,4% de distância, para cima ou para baixo, da proporção
+obtida na amostra em análise. No caso do MAPA, a diferença tolerada pode ser de até 2,3% nas
+duas direções.
+
+===== page_008_bot.png =====
+coluna nivel só contém os valores 4, 5 e 6, sem ausentes, todas as nomeações do MAPA e do MinC
+entram na comparação. Antes de proceder ao teste propriamente dito, a tabela abaixo realiza.
+o mesmo procedimento observado na Seção 3: apresenta as observações válidas, as nomeações a
+cargos de alto nível (1), a proporção correspondente, o intervalo de confiança de 95% (calculado
+pela aproximação normal, com valor crítico de 1.96) e a margem de erro.
+“Tabela 14: Proporcao de cargos de alto nivel por pasta (níveis 5 e
+Gs. nível 4)
+Margem de
+Ministerio Obs. validas (N) Cargos de alto nível (1) Proporeno erro IC 95%
+MAPA 535 IST 0356 001 [o315; 0307]
+MINC 365 155 0425 0051 losra; 0475)
+No MAPA, a proporção de cargos de alto nível é de 35,6% (intervalo de 31,5% a 39,7%), com
+margem de erro de 4.15%; no MinC, de 42,5% (intervalo de 37:4% a 475%), com margem de erro
+de 5,1%. As margens de erro são maiores aqui porque a proporção se aproxima de 50%, ponto
+em que a incerteza da estimativa é maior. Na sequência, faz-se o teste de hipótese a partir de
+tais dados:
+s
+
+===== page_008_mid.png =====
+Mint, têm proporções musto parecidas de nomeados com passagem prévia pela administração
+pública, ambas em patamar alto, na casa dos 90%. O resultado corrobora a afirmação contida na
+seção anterior: não obstante a maior porosidade a interesses político-partidários, os Ministérios
+da Agricultura e da Cultura tendem a, quase que igualmente, não prescindir de funcionários
+experientes na burocracia estatal. Pertine ressaltar, sem embargo, que a manutenção da hipótese
+nula não prova que as proporções sejam iguais, apenas indica que a evidência não bastou para
+afirmar uma eventual diferença entre as pastas. Ademais, como o p-valor ficou colado no limite,
+a decisão é sensível ao nível de significância adotado, ponto explorado nas próximas seções. Por
+fim, vale ainda anotar que considerei apenas as observações válidas - aquelas em que se há certeza
+de que o nomeado possui ou não possui experiência prévia no setor público.
+
+5. Segundo teste de hipótese bivariado
+
+Para este segundo teste de hipótese, criei a variável binária “alto nivel” a partir da seguinte
+divisão: os níveis 5 ou 6 são representados pelo 1 e 0 nível 4 é representado pelo 0. Como a
+coluna nivel só contém os valores 4, 5 e 6, sem ausentes, todas as nomeações do MAPA e do MinC
+entram na comparação. Antes de proceder ao teste propriamente dito, a tabela abaixo realiza
+o mesmo procedimento observado na Seção 3: apresenta as observações válidas, as nomeações a
+cargos de alto nível (1), a proporção correspondente, o intervalo de confiança de 95% (calculado
+pela aproximação normal, com valor crítico de 1,96) e a margem de erro.
+
+Tabela 14: Proporcao de cargos de alto nivel por pasta (níveis 5 e
+
+6 vs. nível 4)
+
+Margem de
+
+===== page_008_top.png =====
+O p-valor foi de 0,057. Ou seja, se as duas pastas tivessem, na verdade, a mesma proporção
+de nomeados com experiência prévia na administração pública, uma diferença de 3.8 pontos
+percentuais ou mais, para qualquer lado, apareceria por puro acaso amostral em cerca de 6 a
+cada 100 amostras. O p-valor mede o quão surpreendente seria a diferença observada em um
+mundo no qual à hipótese nula é verdadeira: quanto menor ele é, mais surpreendente é o dado e
+mais difícil fica atribuí-lo ao acaso. Como 0,057 é maior que 0,05, não se rejeita a hipótese mula.
+A inclusão do O no intervalo da diferença [-0.002; 0.079) é coerente com a não rejeição da hipótese
+mula.
+
+Pelo nível de significância de 5%, a diferença de 3,8 pontos percentuais observada entre as pas-
+tas não pode descartar o acaso como explicação. O resultado, porém, fica próximo do limite:
+por pouco o teste não rejeita a hipótese mula. Em outras palavras, por uma estreita margem
+não se descobriu uma diferença entre à percentagem de nomeados com experiência prévia na
+administração pública de um Ministério para outro.
+
+Isso significa dizer que, de acordo com o teste de hipótese bivariado acima realizado, MAPA e
+MinC têm proporções muito parecidas de nomeados com passagem prévia pela administração
+pública, ambas em patamar alto, na casa dos 90%. O resultado corrobora a afirmação contida na
+seção anterior: não obstante a maior porosidade a interesses político-partidários, os Ministérios
+da Agricultura e da Cultura tendem a, quase que igualmente, não prescindir de funcionários
+coeneeiamina na hnrocraria estatal Dertine ressaltar sem emberen eme a noanntenção da. hinótes.
+
+===== page_009_bot.png =====
+há uma significância estatística na constatação de que a Cultura dispõe de maior proporção de
+nomeados nos níveis 5 e 6. No entanto, do ponto de vista qualitativo, a distância de 6,8 pontos
+percentuais encontrada entre a amostra de um ministério e a de outro não é o suficiente para
+perceber uma alteração geral do perfil da composição das pastas. Assim, tal diferença parece
+pequena do ponto de vista substantivo.
+
+6. Significância estatística e nível de significância
+Se eu modificasse o nível de significância do primeiro teste para 10%, o resultado do teste também
+mudaria. Com o p-valor, de 0,057, abaixo do limiar estabelecido, a hipótese nula, de que a pro-
+porção de nomeações com experiência administrativa é igual no MAPA e no MinC, seria rejeitada
+= o que não acontece ao nível original de 5%. Nesse sentido, pela régua mais permissiva de 10%,
+a diferença de 3.8 pontos percentuais entre as pastas passaria a ser considerada estatisticamente
+significativa.
+Caso a modificação fosse de 5% para 1%, o resultado do teste não mudaria. O p-valor continuaria
+acima do nível de significância - dessa vez, inclusive, com mais folga. O critério mais exigente,
+bem como o original, resulta na manutenção de validade da hipótese nula, qual seja, a de que as
+pastas de Agricultura e Cultura nomeiam em igual proporção funcionários com passagem prévia
+por outros órgãos públicos.
+
+9
+
+===== page_009_mid.png =====
+com aproximação normal.
+Nesse caso, o p-valor foi de 0,039. Sob tal perspectiva, se as duas pastas tivessem, de fato,
+a mesma proporção de cargos de alto nível, uma diferença de 6,8 pontos percentuais ou mais,
+para qualquer lado, apareceria por acaso amostral em cerca de 4 a cada 100 amostras. Nao
+obstante, por ser menor que 0,05, o p-valor leva a rejeitar a hipótese nula, ao nível de 5%, de
+que a proporção de nomeações a cargos de alto nível nos dois ministérios é igual: a diferença é
+demasiado relevante para que a atribuamos a mero acaso. O intervalo da diferença, de «0,134 a
+“0,003, não inclui o zero, corroborando a significância estatística do teste.
+À luz dos dados amealhados, o MinC (42,5%) tem proporção maior de cargos de alto nível que o
+MAPA (35,6%). Do ponto de vista substantivo, porém, a magnitude é modesta. A diferença de
+6,8 pontos percentuais entre as duas pastas não altera a paisagem geral da composição de cargos
+de ambas: aproximadamente (e considerando a margem de erro), algo em torno de três quintos
+das nomeações para a Cultura e para Agricultura são destinadas a cargos “baixos”, de nível 4,
+enquanto à menor parte - cerca de dois quintos - ocupa cargos altos, dos níveis 5 e 6. De fato,
+há uma significância estatística na constatação de que a Cultura dispõe de maior proporção de
+nomeados nos níveis 5 e 6. No entanto, do ponto de vista qualitativo, a distância de 6,8 pontos
+percentuais encontrada entre a amostra de um ministério e a de outro não é o suficiente para
+perceber uma alteração geral do perfil da composição das pastas. Assim, tal diferença parece
+pequena do ponto de vista substantivo.
+
+6. Significância estatística e nível de significância
+Se eu modificasse o nível de significância do primeiro teste para 10%, o resultado do teste também
+mudaria. Com o p-valor, de 0,057, abaixo do limiar estabelecido, a hipótese nula, de que a pro-
+
+===== page_009_top.png =====
+Tabela 15: Resultado do teste de hipoteses para a diferenca de
+proporcoes de alto nível
+Metrica do teste Resultado
+Diferenca observada “68 pp.
+Estatística qui-quadrado (X2) 4.27
+p-valor 0.039
+IC 95% da diferenca [0.134 -0.003]
+Teste de hipótese. A hipótese nula é que a proporção de cargos de alto nível é igual nas duas pastas; a
+alternativa, é de que a proporção é diferente, sem especificar se para mais ou para menos (teste bilateral).
+Ho: pura —Pmuc =0 Hi: puara — puinc É O
+Assim como na seção anterior, o teste foi o de duas proporções, feito com a função prop.test,
+com aproximação normal.
+Nesse caso, o p-valor foi de 0,039. Sob tal perspectiva, se as duas pastas tivessem, de fato,
+a mesma proporção de cargos de alto nível, uma diferença de 68 pontos percentuais ou mais,
+
+===== page_010_bot.png =====
+amostra o o o
+
+Medida Valor
+
+Erro padrao original 0.0259
+
+Erro padrao com amostra dobrada 0.0183
+Como se percebe, o erro padrão tende a cair de aproximadamente 0,026 para 0,018 quando a
+amostra é dobrada. Isso acontece porque o erro-padrão mede o quanto a proporção estimada
+tenderia a variar de uma amostra para outra, e essa variação diminui à medida que se acumula
+mais informação. A relação, porém, não é nem direta, nem inversamente proporcional: o n da
+amostra está sob uma raiz quadrada, de modo que o erro-padrão cai conforme a raiz do tamanho
+da amostra, não acompanhando par-e-passo a variação absoluta na amostra. É por isso que
+dobrar as observações não corta o erro-padrão pela metade. Para isso, seria preciso quadruplicar
+a amostra. No plano conceitual, isso reflete o comportamento da distribuição amostral da pro-
+porção, que se concentra em torno do valor verdadeiro conforme o valor de n cresce, tornando a
+estimativa mais precisa, com margem de erro e intervalo de confiança mais estreitos.
+
+10
+
+===== page_010_mid.png =====
+O exercício, portanto, ilustra o lado frágil de confiar apenas no plano da significância estatéstica.
+Seja o resultado do teste significativo a 10% ou não significativo a 1% ou 5%, a significância
+substantiva continua a mesma: a diferença de 3.8 pontos percentuais permancee pequena, a
+despeito do nível adotado. Conclno que o p-valor não pode ser utilizado como ferramenta única
+para verificar a importância de uma determinada distância entre variáveis em um teste, sendo a
+avaliação da significância substantiva outro mecanismo importante no processo.
+7. O que aconteceria se a amostra fosse maior?
+Escolhida a proporção referente aos cargos de alto nível do MinC - 42,5% de uma amostra de 365
+=, registro abaixo o cálculo do erro padrão com n dobrado:
+Tabela 16: Erro padrao da proporcao antes e depois de dobrar a
+amostra
+Medida Valor
+Erro padrao original 0.0259
+Erro padrao com amostra dobrada 0.0183
+Como se percebe, o erro padrão tende a cair de aproximadamente 0,026 para 0,018 quando a
+amostra é dobrada. Isso acontece porque o erro-padrão mede o quanto a proporção estimada
+tenderia a variar de uma amostra para outra, e essa variação diminui à medida que se acumula
+mais informação. A relação, porém, não é nem direta, nem inversamente proporcional: o n da
+
+===== page_010_top.png =====
+Desse modo, como se pode perceber, o exercício denota que a fronteira entre “significativo” e “não
+significativo”, do ponto de vista da significância estatística é uma convenção, e não uma propri-
+edade dos dados. O mesmo teste, com o mesmo p-valor de 0,057, é declarado não significativo a
+5% e a 19%, mas significativo a 10%, sem que nada nos dados tenha mudado. A única mudança,
+no caso, reside no limiar escolhido pelo pesquisador. A significância substantiva, por ontro lado,
+procura medir 0 tamanho e o impacto da diferença constatada nos dados. No teste em pauta,
+essa segunda perspectiva avalia, por exemplo, se a distância de 3.8 pontos percentuais entre os
+nomeados com experiência no setor público é muito ou pouco impactante para a pesquisa.
+
+Os dois planos são independentes, de maneira tal que deles é possível depreender quatro combina-
+qões possíveis: mma diferença pode ser estatisticamente significativa e substantivamente grande;
+estatisticamente significativa e substantivamente pequena; estatisticamente não significativa e
+substantivamente grande; ou estatisticamente não significativa e substantivamente pequena. É
+por serem independentes que um resultado não decide o outro. Em outras palavras, um p-valor
+baixo em relação ao nível de significância não garante que a diferença importe, da mesma maneira.
+que um pevalor alto não a torna automaticamente irrelevante.
+
+O exercício, portanto, ilustra o lado frágil de confiar apenas no plano da significância estatéstica.
+Seja o resultado do teste significativo a 10% ou não significativo a 1% ou 5%, a significância
+substantiva continua a mesma: a diferença de 38 pontos percentuais permanece pequena, a
+osnalio. do olied ditado, Phone caso. encon io: aiii modãa suco iifiimadia Frio: Arabia Dart

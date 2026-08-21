@@ -1,0 +1,221 @@
+
+===== page_001_bot.png =====
+Agricultura (MAPA), mais especificamente “as experiências profissionais e políticas de buro-
+cratas que ocuparam cargos entre 2011 e 2021” (ALBRECHT e RIBEIRO, 2025, p.2) nessas
+pastas. Logo, possui como unidade de análise a nomeação de candidatos a essas pastas.
+Por conta disso, uma mesma pessoa pode aparecer mais de uma vez na base de dados que
+eles utilizaram, o que corresponderia a mais de uma nomeação no período analisado. Cada
+linha dessa base de dados corresponde a características políticas e profissionais dos nomeados
+interessantes à análise, como cargo, função e partido, por exemplo.
+2. Leitura e validação dos dados
+
+A base de dados utilizada no artigo, denominada BASE. cargos2, possui 890 linhas e 26
+colunas. As linhas dizem respeito as informações de uma pessoa que foi nomeada para uma
+das duas pastas. Enquanto as colunas são as variáveis analisadas, mais especificamente,
+orgao sup, setor, chave, id, cargo, funcao, nivel, instr, arca, inst ensino, inst origem,
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+O banco de dados utilizado nesta avaliação foi obtido em https://raw.githubusercontent.
+com/nayalbrecht/ burocracia BR/main/ BASE. cargos2.1lsz. Data de acesso: 19/07/2025.
+1. Artigo, pergunta e unidade de análise
+O artigo intitulado “Nomeação a cargos públicos no Brasil: um estudo comparado das
+pastas de Agricultura e Cultura do Executivo Federal 2011-2021)” escrito por Albrecht e
+Ribeiro possui como pergunta geral analisar “em que medida os perfis dos/as nomeados/as
+variam em órgãos responsáveis por políticas regulatórias” (ALBRECHT e RIBEIRO, 2025,
+p.2) ?. Para responder essa pergunta o artigo compara as pastas de Cultura (Minc) e de
+Agricultura (MAPA), mais especificamente “as experiências profissionais e políticas de buro-
+cratas que ocuparam cargos entre 2011 e 2021” (ALBRECHT e RIBEIRO, 2025, p.2) nessas
+pastas. Logo, possui como unidade de análise à nomeação de candidatos a essas pastas.
+Por conta disso. uma mesma nessoa node anarecer mais de uma vez na base de dados que
+i Alguns arquivos neste envio só podem ser acessados através de download direto. »do analisado. Cada
+' tuas vens Disc uc Uuaos Corresponae a caracverrsacas porracuse proustionais dos nomeados
+
+===== page_001_top.png =====
+El ar da a
+
+Eis o Doria Bina.
+ie rn ee
+
+nin e
+
+===== page_002_bot.png =====
+Foi visto para retirar os valores NA de todas as variáveis, mas caso isso fosse feito so sobraria
+11 linhas, por conta so foi retirado os valores NA das variáveis que vão ser utilizadas nesse
+trabalho. Caso fosse necessário utilizar todas as variáveis seria necessário utilizar técnicas de
+imputação de valores, para tentar contornar o problema.
+3. Tabela descritiva: experiência administrativa
+
+A variável exp. adm fala se o nomeado possui experiência em órgãos públicos, entretanto
+possui erros. Logo, foi tratada para se tornar binária, retirando os valores errados NA e 3,
+mudando “1 pra 1, como falado na questão acima. À filtragem para minc e mapa foi feita logo
+após a importação da base de dados, então, todos os resultados mostrados neste trabalho
+possuem tal filtragem. A seguir é possível ver uma tabela com o número e a proporção de
+nomeados com experiência prévia em órgãos da administração pública por pasta:
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+especialização, mestrado, superior, “tecnico” e “doutorado”; os observados na indicacao são:
+Rousseff, Temer, Bolsonaro e Lula.
+
+É importante destacar alguns problemas encontrados. O primeiro é que na variável
+exp adm que deveria ser binária (0 ou 1) apresenta casos “1, NA e 3. Para contornar
+esses problemas os casos NA e 3 foram retirados da análise e os casos “1 transformados em
+1. O segundo é que a variável exp. car deveria ser 1,2 e 3, mas aparece os valores 0,5 e NA.
+Os valores 0) e NA foram retirados da análise e os valores 5 foram transformados em 3, tendo
+em vista que no livro de códigos é falado que o valor 3 engloba experiências em cargos de
+gestão 5 e 6, logo esses valores 5 devem ter sido um engano e deveria-ter sido colocoado 3.
+Foi visto para retirar os valores NA de todas as variáveis, mas caso isso fosse feito so sobraria
+11 linhas, por conta so foi retirado os valores NA das variáveis que vão ser utilizadas nesse
+trabalho. Caso fosse necessário utilizar todas as variáveis seria necessário utilizar técnicas de
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_002_top.png =====
+car pub, partido, cargo. ele, lid part, exp adm, exp car, exp mer, exp soc, UF., par-
+tido. pr, partido ministro, indicacao, entrada, saida e perm. Na variável orgao sup, que
+diz em qual pasta aquele candidato foi nomeado, nota-se que 525 observações são da pasta
+de Agricultura e 365 da pasta de Cultura.
+
+Outro ponto importante dessa base de dados é a grande quantidade de valores NA (not
+available). Das 26 variáveis, 17 possuem valores NA. As variáveis instr, area, car pub,
+exp mer e exp soc possuem, respectivamente 83, 170, 17, 247 e 671 valores NA.
+
+Os valores observados na variável exp. adm são: 1,0, 1, NA e 3; os observados na exp. car
+são: 0, 1,2,3,5€ NA; os observados na nivel são: 6, 5 e 4; os observados na instr são: NA,
+
+À. Alguns arquivos neste envio só podem ser acessados através de download direto, Jos na indicação são:
+|
+
+===== page_003_bot.png =====
+4. Primeiro teste de hipótese bivariado
+
+Tendo como hipótese nula que a proporção de nomeações com experiência administrativa
+é igual nas pastas (HO = Pminc = Pmapa) e hipótese alternativa que essa proporção é
+diferente nas duas pastas (H1 = Pmine £ Pmapa), foi realizado o teste prop.test com correct
+= FALSE no r. Ou seja, um teste de hipótese para ver se as proporções são iguais, sem a
+correção de continuidade de Yates (que serve para melhorar a aproximação do teste quando
+as amostras são pequenas, o que não é o caso). Com o teste chegou-se ao resultado de X2
+= 3,6179, com 1 grau de liberdade e p-valor igual a 0,05716. Para um nível de significância.
+de 5% com 1 grau de liberdade era preciso chegar ao valor de 3,841 (calculado à partir da
+distribuição qui-quadrado) para rejeitar a hipótese nula. Logo, juntamente com o p-valor que
+é superior a 0,05 (valor utilizado com nível de significância de 5%) não se rejeita a hipótese
+nula, então, não há evidências estatísticas de que a proporção seja diferente nas pastas.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+ini o ice ota nin e nan
+
+tração pública na pasta de Agricultura, com 482 nomeados. Já a pasta de Cultura, possui
+312 nomeados com essa experiência prévia. A respeito da proporção de nomeados com ex-
+periência, na pasta mapa é de 0,92, enquanto na pasta minc é de 0,88. Sendo que o intervalo
+de confiança de 95% para esses valores - ou seja, a faixa de valores na qual esse valor da
+proporção pode se encontrar dependendo da amostra, sendo que possui 95% de chance do
+valor se encontrar nesse intervalo - é [0,892:/0,941] para a pasta mapa e [0,842;0,912] para a
+pasta minc. Já a margem de erro do intervalo de confiança, quanto o resultado da amostra
+
+pode variar da população, é 0,024 na pasta mapa e 0,035 na pasta minc.
+
+4. Primeiro teste de hipótese bivariado
+
+Tendo como hipótese nula que a proporção de nomeações com experiência administrativa
+é igual nas pastas (HO = Pminc = Pmapa) e hipótese alternativa que essa proporção é
+a , ms o - o vo o orop.test com correct
+i Alguns arquivos neste envio só podem ser acessados através de download direto. ses são iguais, sem a
+correção de continuidade de Yates (que serve para melhorar a aproximação do teste quando
+
+===== page_003_top.png =====
+Table 1: Tabela do número e da proporção de nomeados com experiência prévia em órgãos
+da administração pública por pasta.
+Pasta Observações Com Proporção IC de95% — Margem de
+válidas experiência com erro do IC
+experiência
+mapa Em 482 0,920 10.892; 0,024
+0,941]
+mine 354 312 0,881 (0.842; 0,035
+0,912]
+Fonte: Elaborado a partir da base de dados BASE. cargo?.
+E 5 E E Ê 1 órgãos de adminis-
+i Alguns arquivos neste envio só podem ser acessados através de download direto. qe Cultura, possui
+312 nomeados com essa experiência prévia. A respeito da proporção de nomeados com ex-
+
+===== page_004_bot.png =====
+6. Significância estatística e nível de significância
+
+A partir do teste realizado na questão 5, caso o nível de significância fosse 10%, o p-valor
+teria que ser menor que 0,10, o que é. E caso o nível de significância fosse 1%, o p-valor teria
+q ser menor que 0,01, o que não é. Portanto, em um nível de significância de 10% rejeita-se a
+hipótese nula, enquanto, em um nível de 1% não se rejeita. Isso mostra, que dependendo do
+nível de significância estipulado, o critério de decisão atrelado ao p-valor muda, o que muda à
+interpretação acerca da rejeição da hipótese nula e torna mais rigoroso para rejeitá-la quanto
+menor for o nível de significância. Já a significância substantiva é depende da diferença
+observada na amostra, logo não envolve nível de significância.
+7. O que aconteceria se a mostra fosse maior
+
+Caso o número de observações fosse duas vezes maior e as proporções observadas na
+questão 5 fossem as mesmas, o erro-padrão diminuiria. Isso porque o erro padrão da proporção
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+Percebe-se que na pasta mapa 35,7% dos nomeados possuem alto nivel, enquanto na pasta
+mine 42,9% possuem alto nível. O intervalo de confiança de 95% para a pasta mapa é [0,316;
+0,400) e para a pasta mine é [0,377; 0,483). O teste prop.test com correct = FALSE teve como
+resultado X2 igual 4,6861, com 1 grau de liberdade e p-valor igual a 0,03. O esperado para
+um nível de significância de 5% é 3,841 (feito a partir do valor crítico de uma distribuição qui
+quadrado). Logo o X2 é maior que o esperado e o p-valor é menor que 0,05, então, rejeita-se
+a hipótese nula de que as proporções são iguais nas duas pastas. Ademais, do ponto de vista
+
+substantivo há uma diferença grande entre as pastas de 7,2 pontos percentuais.
+
+6. Significância estatística e nível de significância
+
+A partir do teste realizado na questão 5, caso o nível de significância fosse 10%, o p-valor
+teria que ser menor que 0,10, o que é. E caso o nível de significância fosse 1%, o p-valor teria
+suma Et fama Coto seo sa de 10% rejeita-se a
+à Alguns arquivos neste envio só podem ser acessados através de download direto. . que dependendo do
+nível de significância estipulado, o critério de decisão atrelado ao p-valor muda, o que muda a
+
+===== page_004_top.png =====
+5. Segundo teste de hipótese bivariado
+Table 2: Tabela do número e da proporção de nomeados alto nivel por pasta.
+Pasta Observações Altonivel Proporção IC de95% Margem de
+válidas com alto erro do IC
+nivel
+mapa 24 187 0,357 [0,316; 0,400] 0,042
+mine 3a 152 0,429 (0,377; 0,483] 0,053
+” Fonte: Elaborado a partir da base de dados BASE cargo.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. | enquanto na pasta
+É mine 42,9% possuem alto nível. O intervalo de confiança de 95% para a pasta mapa é [0,316;
+
+===== page_005_bot.png =====
+
+
+===== page_005_mid.png =====
+Referência Bibliográfica
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos
+
+públi cos no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo
+
+Federal (2011-2021). Revista Brasileira de Ciência Política, 2025. DOI: https://doiorg/10.
+
+1590/0103 3352.2025.41.285564. Acesso em: 19/07/2025. |
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_top.png =====
+é calculado a partir da seguinte fórmula: |
+EP(- fra»
+m
+
+Então, caso o tamanho da amostra (n) aumente, o erro-padrão diminui. Se o n dobrar, o
+valor do erro-padrão cai para aproximadamente 70,7% do original. Ou seja, como o o cálculo
+do erro padrão depende do tamanho da amostra, mudanças neste tamanho afetam a incerteza
+do modelo. Sendo que, em uma amostra maior à incerteza é reduzida.
+
+à Alguns arquivos neste envio;só.padem ser acessados através de download direto.
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos

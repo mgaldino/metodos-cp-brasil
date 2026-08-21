@@ -1,0 +1,458 @@
+
+===== page_001_bot.png =====
+Po dd oa a ie orcs
+Cada linha da base de dados corresponde a uma nomeação realizada para um determinado cargo
+nas pastas ministeriais em pauta.
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+Tal fenômeno pode ocorrer caso um mesmo indivíduo tenha sido nomeado mais de uma vez no
+período entre 2011 e 2021.
+5. Quais são as duas pastas comparadas no artigo?
+As duas pastas comparadas são o Ministério da Agricultura (MAPA) e o Ministério da Cultura
+(MinC) - ou Secretaria Especial da Cultura (SECULT), em dados momentos.
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. | |
+
+===== page_001_mid.png =====
+A tiso, peiguitta € uiitdde UE diiadiist
+1. Qual é a pergunta geral do artigo?
+O artigo em questão tem como pergunta central o quanto variam os perfis dos indivíduos nome-
+ados em órgãos responsáveis por políticas regulatórias, neste caso, o Ministério da Agricultura
+(MAPA) e o Ministério da Cultura (MinC). Esta pergunta articula, aínda, a forma como a estru-
+tura de cada ministério afeta tal incidência e como diferentes estratégias presidenciais refletem
+certos padrões de nomeações.
+2. Qual é a unidade de análise da base?
+A unidade de análise da base de dados é cada nomeação em específico.
+3. O que significa uma linha da base?
+Cada linha da base de dados corresponde à uma nomeação realizada para um determinado cargo
+nas pastas ministeriais em pauta.
+4. Por que à mesma pessoa pode aparecer mais de uma vez?
+ã E E ; de uma vez no
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_top.png =====
+Relatório final |
+André Praça Susemihl - NºUSP: 15510702
+17.07.2026
+Fonte dos dados: https://github.com /nayalbrecht /burocraciaBR /raw /main/BASE. cargos2.xIsx (Acesso
+em: 17.07.2026).
+
+===== page_002_bot.png =====
+exp. soc
+
+urr
+
+partido pr
+
+partido ministro
+
+indicacao
+
+entrada
+
+saida
+
+perm
+
+3. Número de observações por orgao sup.
+Tabela 2: Quantidade de Observacoes por Orgao Supervisor
+
+Orgao Supervisor Numero de Observacoes
+mapa 525
+meti 14s
+mine 365
+
+===== page_002_mid.png =====
+chave
+id
+cargo
+funcao
+nível
+instr
+area
+inst ensino
+inst origem
+car pub
+partido
+cargo. ele
+lid part
+exp adm
+exp car
+exp mer
+exp soc
+Ur*
+partido pr
+partido ministro
+indicacao
+entrada
+
+3. Número de observações por orgao sup.
+
+===== page_002_top.png =====
+Leitura e validação dos dados
+
+1. Número de linhas e colunas.
+
+es [1] 1038 26
+
+Os dados-base possuem 1038 linhas e 26 colunas.
+2. Nomes das variáveis.
+Tabela 1: Nome das variaveis
+
+Variaveis da base de dados
+Piso :
+funcao
+
+===== page_003_bot.png =====
+Tabela 6: Valores observados em nivel
+
+===== page_003_mid.png =====
+ai iai dai aid
+
+EE Frequencia
+O ES
+
+T E
+
+E 3
+
+Tabela 5: Valores observados em experiencia cargo
+
+Expocar [ Frequencia
+
+T 5
+
+z E?
+
+E 509
+
+5 E
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_003_top.png =====
+4. Número de valores ausentes em pelo menos cinco variáveis relevantes.
+Tabela 3: Número de valores ausentes (NAs)
+
+Variaveis Numero de valores ansentes
+Partido do ministro 253
+Permanencia mo
+Nivel o
+Carreira publica Nr
+Indicacao o
+
+5. Uma checagem dos valores observados em exp. adm, exp. car, nivel, instr e indicacao.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+TO ES
+
+===== page_004_bot.png =====
+barra vertical (|) para indicar ao r que as células com ausência são aquelas realmente nulas —
+“sum(is.na(xxx)” — OU aquelas que possuem “NA” escrito por extenso — “xxx == “NA”,
+
+Tabela descritiva: experiência administrativa
+
+Crie uma variável binária para indicar experiência prévia em órgãos da adminis-
+
+tração pública. Use o codebook para justificar a escolha.
+
+“
+
+“O 1<u
+
+*s 100 938 O
+Com base no codebook, optou-se por transformar todos os valores ansentes/ desconhecidos —
+contando com *NAs” escritos na tabela — em valores nulos, dado que, primeiramente, a ausência
+de informação sobre experiência pregressa no âmbito da administração pública sugere fortemente
+que tal experiência é mula. Ademais, no caso de uma variável binária, entende-se que, caso
+as células nulas sejam alocadas sob outro valor, o manejo da variável em diferentes modelos
+exeluiria tais ocorrências, acarretando resultados que não contemplam a base de dados inteira —
+como ocorre quando os ausentes são computados enquanto nulos.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+sr E
+Explique qualquer problema encontrado. Por exemplo, algumas variáveis que deveriam ser
+binárias podem ter valores inesperados. Diga como você tratou esses casos.
+De fato, algumas varáveis binárias apresentaram mais de dois valores possíveis, fenômeno que se
+justifica por eventuais erros de digitação, pelo preenchimento automático da tabela, entre outras.
+possibilidades. Ao fazer a checagem dos valores, observa-se, em “exp. adm”, por exemplo, os
+valores “37 e “1” — prováveis erros de digitação — e a ocorrência de “NAs” no lugar de valores
+nulos — em decorrência de um provável preenchimento antomático da tabela. Já em “exp. car”,
+tem-se duas ocorrências distintas para “NA”: uma que traduz as verdadeiras ausências na tabela
+e a outra que evidência a digitação literal de “NA” entre os dados. Para tratar estes casos,
+em especial ao contabilizar o número de ausências em cinco variáveis relevantes, utilizou-se a
+barra vertical (/) para indicar ao r que as células com ausência são aquelas realmente nulas —
+“sum(is.na(xxx)” — OU aquelas que possuem “NA” escrito por extenso — “xxx == "NA".
+Tabela descritiva: experiência administrativa
+ãos da adminis-
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+“
+
+===== page_004_top.png =====
+Tabela 7: Valores observados em instrucao
+instr” requencia
+or:
+especialização EI
+juacao T
+mestr: 59
+Superior 29
+Tecnico,
+Tabela $: Valores observados em indicacao
+ie Frequencia
+nlenmaro EUA
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_005_bot.png =====
+Tesultados em vista da limitação do espaço amostral. Por este mesmo motivo, observa-se que
+a margem de erro é maior para o MINC, que possui uma amostra mais restrita em relação ao
+outro ministério. Desta margem de erro, obtem-se o Intervalo de Confiança (IC), que expressa a
+variação possível nos resultados levando em conta a margem de erro para cada um. Disto, tem-se,
+no âmbito do MAPA, um intervalo entre 89,5% e 94,2%, ao passo que, no MINC, uma variação
+de 81,9% a 89,1%. Em suma, tal análise conduz à conclusão que o percentual de indivíduos
+com experiência administrativa é maior no MAPA em relação ao MINC. Mesmo com as possíveis
+variações percentuais refletidas na margem de erro, nota-se que os Intervalos de Confiança não
+se sobrepoem, reafirmando a solidez da proposição anterior.
+
+Primeiro teste de hipótese bivariado
+
+Teste a hipótese de que a proporção de nomeações com experiência administrativa é igual nas
+
+duas pastas.
+
+Use a aproximação normal para a diferença entre proporções.
+
+No relatório, apresente:
+
+1. Hipótese nula.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+Tabela 9: Analise Comparativa de Experiencia Administrativa por
+Pasta
+Ministerio Obs. Validas (N) Com Experiencia (n) Proporcao Margem de Erro TC (95%)
+MAPA 525 as2 0.918 0.023 [0.895 ; 0.942]
+MINC, 365 az 0.855 0036 [0.819 ; 0.891]
+Com base nos dados analisados e na tabela criada a partir destes, conclui-se que há uma diferença
+quantitativa no que tange o total de funcionários com experiência entre as pastas ministeriais
+abordadas - o MAPA (Ministério da Agricultura e Pecuária) e o MINC (Ministério da Cultura). O
+MAPA, além de possuir quantitativamente mais cargos ocupados por indivíduos com experiência.
+administrativa prévia, possui um índice proporcionalmente maior. Se, por um lado, a proporção
+de indicíduos com experiência no MAPA é de 91,8% do total (525), no MINC este índice é de
+apenas 85,5% do total (365). Adicionalmente, observa-se, para o MAPA, uma margem de erro
+de 2,3% e, para o MINC, 3,6%. A margem de erro reflete a possível variação percentual dos
+resultados em vista da limitação do espaço amostral. Por este mesmo motivo, observa-se que
+a margem de erro é maior para o MINC, que possui uma amostra mais restrita em relação ao
+ontro ministério. Desta margem de erro, obtem-se o Intervalo de Confiança (IC), que expressa a
+variação possível nos resultados levando em conta a margem de erro para cada um. Disto, tem-se,
+no âmbito do MAPA, um intervalo entre 89,5% e 94,2%, ao passo que, no MINC, uma variação
+de 81,9% a 89,1%. Em suma, tal análise conduz à conclusão que o percentual de indivíduos
+com experiência administrativa é maior no MAPA em relação ao MINC. Mesmo com as possíveis
+Confiança não
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_top.png =====
+Depois, filtre a base para orgao sup igual a mapa ou minc e apresente uma
+tabela com:
+1. Número de observações válidas por pasta.
+2. Número de pessoas/nomeações com experiência administrativa.
+3. Proporção com experiência administrativa.
+4. Intervalo de confiança de 95% para essa proporção.
+5. Margem de erro associada ao intervalo de confiança.
+Interprete os resultados em linguagem substantiva. A interpretação deve mencionar explici-
+tamente o que significa o intervalo de confiança e o que significa a margem de erro.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+Mumistero US. valdas (X) Om Experiencia (n) rroporcao margemacerro IC(95%)
+
+===== page_006_bot.png =====
+Ho: puara—Pminc=0
+2. Hipótese Alternativa (H 1)
+A hipótese alternativa é que a proporção de indivíduos com experiência administrativa prévia é
+Ha spuara = pranc É O
+3. Teste Usado no R
+O teste utilizado no R foi o Teste de Proporções de Duas Amostras (prop.test).
+4. P-valor.
+O p-valor obtido foi de 0.00392.
+6
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+Proporcoes (MAPA vs. MINC)
+Estatistica do Teste Resultado
+Proporcao MAPA 918%
+Proporeao MINC 85.5%
+Diferenca Observada 63 pp.
+Estatistica Qui-Quadrado (X2) 832
+prvalor 0.00392
+IC (95%) da Diferenca [o.018 ; 0.109]
+1. Hipótese Nula (H. 0)
+A Hipótese nula é de que a proporção de nomeações de indivíduos com experiência administrativa
+prévia é igual em ambos ministérios.
+Ho: papa —Puinc=0
+2. Hipótese Alternativa (H. 1)
+: : “ativa prévia é
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_006_top.png =====
+2. Hipótese alternativa.
+3. Teste usado no R.
+4. P-valor.
+5. Decisão usando nível de significância de 5%.
+6. Interpretação substantiva.
+Importante: não escreva apenas “rejeita” ou “não rejeita”. Explique o que o p-valor quer dizer
+neste caso.
+oxalá 10: Daioliado dá Dieta ca Uoiidaça ada Dilecssida da
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+TD EPE TT
+
+===== page_007_bot.png =====
+E e dad ne edi dna cê sra dida pn ia
+3. Um teste de hipótese para a diferença entre as proporções.
+4. O p-valor e sua interpretação.
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+Tabela 11: Proporcao de Cargos de Alto Nivel por Pasta (Niveis 5
+e6ws. Nivel 4)
+Ministerio Obs. Validas (N) Cargos Alto Nivel (n) Proporcao Margem de Erro IC (95%)
+MAPA 525 187 0.356 0041 [0.315 : 0.397]
+MINC 365 155 0.425 0051 (0374; 0.475] |
+T
+
+===== page_007_mid.png =====
+Segundo teste de hipótese bivariado
+Crie uma variável chamada alto. nivel, igual a 1 quando nível for 5 ou 6, e O quando nivel for
+a
+Compare a proporção de cargos de alto nível entre mapa e mine.
+Use novamente a aproximação normal para a diferença entre proporções.
+Apresente:
+1. Uma tabela com as proporções por pasta.
+2. Um intervalo de confiança de 95% para cada proporção.
+3. Um teste de hipótese para a diferença entre as proporções.
+4. O p-valor e sua interpretação.
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+Tabela 11: Proporcao de Cargos de Alto Nivel por Pasta (Niveis 5
+
+===== page_007_top.png =====
+5. Decisão usando nível de significância de 5%.
+Dado que o p-valor obtido (0.00392) é consideravelmente menor que o nível de significância de
+5% (0.05), rejeita-se a hipótese mula (H. 0).
+
+6. Interpretação substantiva
+Ao rejeitar a hipótese nula (H. 0), de que a proporção de nomeações de indivíduos com experi-
+ência administrativa prévia é igual em ambos ministérios, conclui-se que há uma diferença nas
+taxas destes indivíduos entre as pastas. Neste caso, tem-se que a proporção de indivíduos com
+experiência é maior no MAPA (91,8%) em comparação ao MINC (85,5%). O p-valor, por sua
+vez, representa a probabilidade de se encontrar uma diferença de proporções igual ou maior em
+comparação àquela observada na amostra (6,33%), assumindo como verdadeira a hipótese mula.
+Dado que o valor encontrado é consideravelmente baixo (0,392%), pode-se afirmar que há uma
+diferença entre os ministérios.
+
+Segundo teste de hipótese bivariado
+
+Cria uma variável chamada alto nivel. lemal a 1 cuando nivel for 5 ou 8. a O quando nivel for
+
+===== page_008_bot.png =====
+igual ou maior àquela observada é de 4,6%. Tal dado conduz à rejeição, ao nível de significância
+de 59%, da hipótese nula (H. 0).
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+Neste contexto, deve-se ponderar que o p-valor está consideravelmente próximo ao nível de signi-
+ficância de 5%, indicando que, embora haja uma diferença detectável estatisticamente, esta pode
+ser considerada pequena do ponto de vista substantivo. Não obstante, ao nível de significância.
+de 5%, a conclusão permanece sendo de rejeição da hipótese nula (HL 0).
+Significância estatística e nível de significância
+Escolha um dos dois testes anteriores e responda:
+1. A conclusão mudaria se o nível de significância fosse 10%?
+Tendo em vista o segundo teste de hipótese bivariado, tem-se que, para o p-valor de 4,6%, caso
+o nível de significância fosse 10%, a conclusão não mudaria.
+8
+
+===== page_008_mid.png =====
+Ho : pasa — puixc = 0
+Hipótese Alternativa (H. 1): A proporção de cargos de alto nível (níveis 5 e 6 em relação ao nível
+4) é diferente no MAPA e no MINC.
+Hi: pura — prxc £ O
+4. O p-valor e sua interpretação.
+O p-valor representa a probabilidade de obter-se uma diferença nas proporções de cargos de alto
+nível maior que aquela observada nos ministérios, partindo do pressuposto de que a hipótese mula
+(H..0) é verdadeira, isto é, de que o MAPA e o MINC possuem exatamente a mesma proporção
+de cargos de alto nível entre seus funcionários. Dado que, neste caso, o p-valor obtido foi de
+0,046. Ao assumir a hipótese nula como verdadeira, a probabilidade de encontrar uma diferença
+igual ou maior àquela observada é de 4,6%. Tal dado conduz à rejeição, ao nível de significância
+de 5%, da hipótese mula (H.. 0).
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+Neste contexto, deve-se ponderar que o p-valor está consideravelmente próximo ao nível de signi-
+ficância de 5%, indicando que, embora haja uma diferença detectável estatisticamente, esta pode
+ser considerada pequena do ponto de vista substantivo. Não obstante, ao nível de significância
+de 5%, a conclusão permanece sendo de rejeição da hipótese nula (H. 0).
+
+===== page_008_top.png =====
+Tabela 12: Resultado do teste de hipoteses para diferenca de pro-
+porcoes de alto nivel
+Metrica do teste Resultado
+Diferenca Obscrvada “68 pp.
+Estatistica Qui-Quadrado (X2) 3.981
+p-valor 0.046
+TC (95%) da Diferenca [0.136 ; -0.001)
+3. Um teste de hipótese para a diferença entre as proporções.
+Hipótese Nula (HL 0): A proporção de cargos de alto nível (níveis 5 e 6 em relação ao nível 4) é
+igual no MAPA e no MINC. |
+Ho : pasa — puixc = 0
+Hipótese Alternativa (H. 1): A proporção de cargos de alto nível (níveis 5 e 6 em relação ao nível
+4) é diferente no MAPA e no MINC.
+
+===== page_009_bot.png =====
+Não é necessário simular uma nova base, mas você pode fazer a conta aproximada se quiser.
+Caso o número de observações fosse maior, a tendência seria de diminuição do erro padrão,
+aproximadamente de 2,09% para 1,48%. Tal fenômeno se deve ao fato de que, ao coletar mais
+dados, ampliando-se o espaço amostral, diminuem-se as flutuações aleatórias às quais tal amostra
+está submetida. Levando em consideração o Teorema do Limite Central, tem-se que, conforme
+a amostra aumenta, concentra-se a distribuição das estimativas amostrais em torno da média
+populacional, refletindo diretamente em um erro-padrão menor.
+|
+
+===== page_009_mid.png =====
+O que aconteceria se a amostra fosse maior?
+
+Escolha uma das proporções estimadas nas perguntas anteriores.
+
+Suponha que a proporção observada fosse a mesma, mas o número de observações fosse duas
+
+vezes maior.
+
+Responda:
+
+1. O que tenderia a acontecer com o erro-padrão?
+
+2. Por que isso acontece?
+
+Não é necessário simular uma nova base, mas você pode fazer a conta aproximada se quiser.
+Caso o número de observações fosse maior, a tendência seria de diminuição do erro padrão,
+aproximadamente de 2,09% para 1,48%. Tal fenômeno se deve ao fato de que, ao coletar mais
+dados, ampliando-se o espaço amostral, diminuem-se as flutuações aleatórias às quais tal amostra
+está submetida. Levando em consideração o Teorema do Limite Central, tem-se que, conforme
+a amostra aumenta, concentra-se a distribuição das estimativas amostrais em torno da média
+populacional, refletindo diretamente em um erro-padrão menor.
+
+===== page_009_top.png =====
+2. A conclusão mudaria se o nível de significância fosse 1%?
+Neste caso, a um nível de significância de 1%, a conclusão mudaria. Dado o p-valor de 4,6%,
+o nível de significância de 1% conduziria à não rejeição da hipótese nula (H. 0) e, portanto, à
+conclusão de que não há indícios suficientes para afirmar que há uma diferença expressiva entre
+as proporções de cargos de alto nível entre os ministérios.
+
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+O exercício em questão ilustra que a adoção arbitrária de um limite para o p-valor pode conduzir
+a conclusões distintas e, assim, alterar os rumos de um estudo. Dado que o p-valor é altamente
+influenciado pelo tamanho da amostra, toda análise necessita de uma abordagem substantiva para
+garantir que tal índice não esteja rejeitando a H. O por uma diferença marginal ou mantendo a
+H.0 mesmo diante de diferenças qualitativamente significativas. A distinção, em suma, diz
+respeito à incapacidade prática da interpretação restrita ao p-valor em considerar ontros fatores
+essenciais para as conclusões de uma análise.
+
+O que aconteceria se a amostra fosse maior?

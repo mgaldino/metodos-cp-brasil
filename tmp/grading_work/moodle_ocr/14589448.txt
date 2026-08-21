@@ -1,0 +1,431 @@
+
+===== page_001_bot.png =====
+O número de linhas corresponde a:
+as (1) 1038
+O número de colunas corresponde a:
+se [1] 26
+2.2. Nomes das variáveis.
+Os nomes das variáveis são as seguintes:
+we [1] "orgao sup" "setor" "chave" midr
+ve (5) "cargo" "funcao" “nivel” "instr”
+ee [9] “area” “ánst ensino” “ínst origen" "car pub"
+*% [13] "partido" "cargo ele” vlid pare" vexp ada”
+“8 [17] "expcar" “exp mer” vexp soc” nur
+48 [21] "partido pr” “partido ministro" “indicacao" "entrada"
+8 [25] “saida” “perm"
+
+1
+
+===== page_001_mid.png =====
+Qual é a pergunta geral do artigo?
+1.2 Qual é a unidade de análise da base? 1.3. O que significa uma linha da base?
+1.4. Por que a mesma pessoa pode aparecer mais de uma vez? 1.5. Quais são as duas pastas
+comparadas no artigo?
+O presente trabalho analisa o artigo acadêmico elaborado por Albrecht e Ribeiro (2025). A questão central
+se divide em duas perguntas de pesquisa: a) quais as motivações por trás das nomeações aos cargos das pas-
+tas da Cultura (MinC/SECULT) e da Agricultura(MAPA) ocorridas no período compreendido entre 2071 e
+2021?
+b) quais os efeitos do contexto institucional nas estratégias adotadas por presidentes e organizações par.
+tidárias para as nomeações aos cargos das pastas da Cultura (MinC'/SECULT) e da Agricultura(MAPA)
+ocorridas no período compreendido entre 2011 e 20217
+A unidade de análise da base são as pessoas nomeadas para as Pastas da Agricultura (MAPA) e da Cultura
+(MinC) do Executivo Federal no período compreendido entre 2011 é 2021.
+Para a comproensão dos dados aqui lançados, é necessário recordar que os autores justificam o fato do uma
+mesma pessoa aparecer em mais de uma variável porque ela pode ter sido nomcada para a assunção de
+algun cargo em mais de uma vez no período pesquisado (página 9 do texto) Para que não haja dúvidas,
+compreende-se por linha de base o conjunto de dados observados antes de qualquer mudança ou intervenção.
+2. Leitura e validação dos dados
+Importe a base no R e apresente:
+2.1. Número de linhas e colunas.
+O número de linhas corresponde a:
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+POSSE
+
+===== page_001_top.png =====
+Trabalho Final - Métodos III - Prof. Galdino
+lincoln antonio andrade de moura
+2026-07-17
+Lincoln Antonio Andrade de Moura USP n. 14589448
+Perguntas obrigatórias 1. Artigo. pergunta e unidade de análise. Responda em texto: 1.1.
+À guns nvio só podem ser acessad e download direto. vaser
+com no
+
+===== page_002_bot.png =====
+or oro ee a do pda pe sm ao a tua sopas apoc o
+iguais a “NA” e iguais a “observações vazias”. O artigo acadêmico em análise (Albrecht e Ribeiro 2025)
+indica que as variáveis utilizadas no estudo foram:
+
+a) formação acadêmica (variável categórica “area") b) instituição de origem (variável categórica
+“inst origem”)
+e) experiência em administração pública (variável dicotômica “exp. adm”) d) experiência em cargo comis-
+sionado (variável ordinal NÃO HÁ VARIÁVEL NA DATA. BASE “CARGOS” SOB TAL RUBRICA)
+e) partido ao qual a pessoa era vinculada (variável categórica “partido”)
+£) cargo cletivo (variável dicotômica “cargo. ele”) £) liderança partidária (variável dicotômica “lid DR
+h) experiência associativa (variável dicotômica “exp. soc”) 1) mandato (variável categórica - NÃO
+VARIÁVEL NA DATA.BASE “CARGOS” SOB TAL RUBRICA).
+É interessante observar que as variáveis relativas à “EXPERIÊNCIA EM CARGO COMISSIONADO” e
+“MANDATO” não existem na data.base “CARGOS”
+Porque todas as variáveis supramencionadas são importantes para algum aspecto da pesquisa, impõe-se que
+sejam identificados os valores iguais a “NA” e iguais às “observações vazias” em todas as variáveis susci-
+tadas. Apenas serão excluídas as variáveis relativas à “EXPERIÊNCIA EM CARGO COMISSIONADO” o
+“MANDATO” porque ambas não existem na data base “CARGOS” em razão do acima exposto.
+O resultado é exposto na tabela abaixo:
+2
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+Logo, do total de observações existentes na coluna orgao, sup, é pomível identificar o número de observações
+para cada valor encontrado na coluna orgão. sup. Assim, temos que:
+para o valor de orgao. sup igual a mine, o número de observações existentes na coluna orgao. sup é (inclusive
+observações vazias e NA's, se existentes):
+ss (1) 365
+para o valor de orgao. sup igual a mapa, o número de observações existentes na coluna orgao. sup é (inclusive
+observações vazias e NA's, se existentes):
+es (1) 525
+para o valor de orgao. sup igual à meti, o número de observações existentes na coluna orgao. sup é (inclusive
+observações vazias e NA's, se existentes):
+“e (1) 148
+2.4. Número de valores ausentes em pelo menos cinco variáveis relevantes.
+O enunciado da pergunta se refere aos valores ausentes. Compreendo que os valores ausentes são aqueles
+iguais a “NA” e iguais a “observações vazias”. O artigo acadêmico em análise (Albrecht e Ribeiro 2025)
+indica que as variáveis utilizadas no estudo foram:
+variável categórica
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+. cia em cargo comis-
+- É “AL RUBRICA)
+
+al miontiÃo om medal 4 ponta dm. ctinciidaddo. fnciinca! enbnalisios: des nRaDA
+
+===== page_002_top.png =====
+2.3. Número de observações por orgao. sup. O número total de observações, à luz dos dados constantes. |
+da coluna orgao. sup é (inclusive observações vazias e NA's, se existentes):
+*s (1) 1038
+Os valores encontrados na coluna orgao. sup são:
+gare
+mine
+mapa
+meti
+observações vazias e NA's, se existentes): e
+
+===== page_003_bot.png =====
+Entrar Areas dec a pn id PO o a sa recado cai É REA A ii
+ser desconsiderados: ambos não fornecem evidências para saber se determinada pessoa já
+teria ocupado cargo de administração (1), ou não (0). No que tange ao valor igual a “1º,
+revela-se possível admitir que houve a intenção do operador em informar o valor “1”. Logo, os valores
+indicados como “1º devem ser tratados como "1º. Assim, eliminados os resultados iguais a
+"NA" e "3º da análise, bem como após a correção do valor “1” para “1”.
+
+Em seguida, conforme a metodologia supramencionada, foi necessário obter um exemplo de resultado con-
+
+stante da variável “exp. car”, O resultado foi o seguinte:
+“Table 2: Valores encontrados na coluna exp. car
+Valores distintos de exp. car
+0
+1
+2
+3
+5
+NA
+3
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+ES ig
+Por exemplo, algumas variáveis que deveriam ser binárias podem ter valores inesperados. Diga
+como você tratou esses casos. A checagem de dados consiste, em sua acepção mais simples, na conferência
+dos valores obtidos para cada variável de interesse. Na medida em que os resultados podem se repetir, bastará.
+obter um exemplo de cada resultado em cada variável de interesse. Em seguida, será necessário observar
+a amostra obtida, para saber se houve algum valor inesperado. Para os fins do enunciado, as variáveis de
+interesse foram “exp. adm”, “exp, car”, “nivel”, “instr” e “indicacao”. Conforme a metodologia acima, foi
+necessário obter um exemplo de resultado constante da variável “exp. adm”. O resultado foi o seguinte:
+se SA tibble: 5x1
+*% exp.ade
+8 <ch
+ER
+s20
+eau
++84 au
+53
+Os valores 1, NA e 3 são inesperados porque a variável “exp adn” é dicotômica. Conforme
+o artigo em análise (Albrecht e Ribeiro 2025), os valores previstos para a referida
+variável serian O e 1. Es razão do exposto, os valores correspondentes a "NA" e "3º dever
+ser desconsiderados: arbos não fornecen evidências para saber se deterninada pessoa já
+teria ocupado cargo de administração (1), ou não (0). No que tange ao valor igual a "1",
+
+”. Logo, os valores
+Alguns arquivos neste envio só podem ser acessados através de download direto. Jultados iguais a
+Em seguida, conforme a metodologia supramencionada, foi necessário obter um exemplo de resultado con-
+
+===== page_003_top.png =====
+Table 1: Resumo de vazios e NA por variável |
+Variável Observações vazias Valores NA
+area o 183
+cargo. ele o 29
+exp. adm o un
+exp soc o 84
+inst origem o 269
+lid part o a
+partido o 909
+2.5. Uma checagem dos valores observados em exp adm, exp. car, nivel, instr e indicacao.
+]
+a ari a ireto | nesperados. Di
+à Alguns arquivos neste envio só podem ser acessados através de download direto. (es, fps
+m se repetir, bastará
+obter um exemplo de cada resultado em cada variável de interesse. Em seguida, será necessário observar
+
+===== page_004_bot.png =====
+especializacao
+graduacao
+mestrado
+superior
+tecnico
+NA
+O artigo estudado revela que a variável “instr” informa o nível de ensino da pessoa estudada. Tal como acima
+exposto, “NA” é valor que não traz informações úteis à pesquisa, de maneira que ele deverá ser excluído.
+Em seguida, foram extraídos os exemplos de resultados constantes da variável “indicacao”. O resultado foi
+o seguinte,
+Table 5: Valores encontrados na coluna indicacao
+Valores distintos de indicacao
+Bolsonaro
+Lula
+4
+
+===== page_004_mid.png =====
+Table 3: Valores encontrados na coluna nivel
+Valores distintos de nível
+4
+5
+6
+O artigo em estudo esclarece que a variável “nivel” informaria o nível da função exercida pela pessoa estudada.
+Os valores obtidos na amostra variam de 4 até 6 porque os níveis hierárquicos de interesse foram DAS-4,
+DAS-5 e DAS-6, conforme os autores . Não foram identificados valores inesperados, de maneira que inexistem.
+correções a serem feitas junto aos dados respectivos.
+Em seguida, foram extraídos os exemplos de resultados constantes da variável “instr”. O resultado foi o
+seguinte:
+Table 4: Valores encontrados na coluna instr
+Valores distintos de instr
+doutorado
+especialização
+graduacao
+
+===== page_004_top.png =====
+Conforme o texto (Albrecht e Ribeiro 2025), a variável “exp. car” informaria que a pessoa estudada teria |
+tido experiência em cargos de gestão. Trata-se de variável ordinal.
+Conforme o Codebook respectivo, os resultados poderiam variar de 1 a 3 1= DAS/FCPE 1.2; 2 =
+DAS/FCPE 34; 3 =* DAS 5-6 (grifo nosso)
+Ocorre que os valores constantes da tabela variaram de “O” a “5" (não há resultado igual a 4º).
+Não há explicação para a divergência apontada.
+Em razão do exposto, os dados relativos à variável “exp. car” estão prejudicados. De fato, não é possível
+saber se o valor “1” corresponderá ao DAS/FCPE 1 ou 2, ou se apenas corresponderá ao DAS/FCPE 1
+Não é possível saber se o valor “2" corresponderá ao DAS/ECPE 2 ou se ao DAS/FCPE 3-4. Não é possível
+saber se o valor “3” corresponde ao DAS/FCPE 3 ou ao DAS/FCPE 5-6. Não é possível saber se o valor
+“5º cortesponderá ao DAS 5, ou se foi meto erro de digitação. Enfim, não é possível afirmar que o valor “O”
+significa que a pessoa não tem experência em cargos de gestão ou se houve mero erro de digitação.
+Em seguida, foram extraídos os exemplos de resultados constantes da variável “nivel”, O resultado foi o
+aevinte:
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+alores distintos de nivel
+
+===== page_005_bot.png =====
+NURgA QUEDA PEA:
+No relatório, apresente: 4.1. Hipótese nula. A hipótese mula é: a proporção de nomeações com
+experiência administrativa é igual nas duas pastas.
+42. Hipótese alternativa. A hipótese alternativa é a proporção de nomeações com experiência admin-
+istrativa NÃO é igual nas duas pastas.
+4.3. Teste usado no R(função interna do R = t.test).
+4.4 Pevalor.
+4.5. Decisão usando nível de significância de 5%.
+4.6. Interpretação substantiva.
+Importante: não escreva apenas “rejeita” ou “não rejeita”. Explique o que o p-valor quer dizer
+neste caso.
+O t.test é uma função interna do R utilizada para viabilizar o teste t.Student. À luz do enunciado, o
+teste em apreço será utilizado para conferir se as médias de dois grupos de dados são diferentes. Espeei-
+ficamente, pretende-se comparar a proporção de nomeações com experiência entre as pastas da Cultura
+(MinC/SECULT) e da Agricultura(MAPA) ocorridas no período compreendido entre 2011 e 2021
+Assim, serão levados considerados os dados constantes da data base CARGOS, coluna “exp. adm”.
+O resultado é tal como segue
+
+5
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_005_mid.png =====
+iência prévia em órgãos da administração pública. Use o codebook para justificar a escolha.
+Na verdade, esta variável já existe, Trata-se da variável dicotômica denominada “exp. adm”
+Depois, filtre a base para orgao. sup igual a mapa ou minc e apresente uma tabela com: 3.1.
+Número de observações válidas por pasta. 3.2. Número de pessoas /nomeações com experiência
+administrativa.
+3.3. Proporção com experiência administrativa. 3.4. Intervalo de confiança de 95% para essa
+proporção. 3.5. Margem de erro associada ao intervalo de confiança.
+Table 6: Proporção de experiência administrativa por órgão
+Tom
+
+Órgão expradm=1 Total Proporção (IC95%) Margem de erro (%)
+mapa 482 524 0198% (80,34% a 9402%) 234
+mine 309 351 BB.03% (R4.22% a 91,02%) 340
+total. mapa. mine TOLO BT5 904% (BS. 27% a 92,18%) 1.96
+4. Primeiro teste de hipótese bivariado Teste a hipótese de que a proporção de nomeações
+com experiência administrativa é igual nas duas pastas. Use a aproximação normal para a
+diferença entre proporções.
+No relatório, apresente: 4.1. Hipótese nula. A hipótese nula é a proporção de nomeações com
+experiência administrativa é irval nas duas pastas
+
+a : : ; experiência admin-
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+44 P-valor. Vo í
+
+===== page_005_top.png =====
+Valores distintos de indicacao |
+
+Rousseff
+
+Temer
+O texto indicado (Albrecht e Ribeiro 2025) revela que a variável indicacao informa o nome do presidente
+da república no momento da nomeação. O recorte temporal da pesquisa se refere ao período compreen-
+dido entre 2011 e 2021. Os presidentes respectivos, para o período sob análise, foram justamente aqueles
+supramencionados, Não houve nenhum resultado inesperado, Logo, não existe providência a ser adotada.
+Em razão das correções feitas, foram criadas novas database denominadas “exp. adm, corrig” e “im-
+str. corrig”. Referidas database, todavia, não são necessárias para as demais etapas do presente relatório.
+Elas servem apenas para documentar as alterações realizadas.
+2 Tohelo descritiva: awnariância adminietestivs Cla mma variável binário nara indicar exper-
+
+. º . dificar a escolha.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+Depois, filtre a base para orgao. sup igual a mapa ou minc e apresente uma tabela com: 3.1.
+
+===== page_006_bot.png =====
+pa ira pos Duas posa sirene cerco cniania credora Jedi Au coreano ami
+No presente estudo, observado um intervalo de confiança correspondente a 95%, o valor mínimo oi fixado
+em -0.0018, ao passo que o limite superior foi fixado em 0.0808. Logo, os valores abrangidos pelo intervalo
+de confiança reafirmam a hipótese de nula. Valores além dos limites do intervalo de confiança, afastam a
+hipótese nula.
+O segundo critério para rejeitar, ou não, a hipótese-nula, leva em consideração o nível de significância (ou
+prvalor) é o nível descritivo (e o correspondente valor de alpha).
+O nível de significância indicará, antes do teste, qual o limite tolerado de erro consistente em rejeitar a
+hipótese nula, quando ela for verdadeira (erro do tipo 1). O valor informado para antes do teste é chamado
+de alpha.O valor alpha indica o risco aceito, isto é, o parâmetro dentro do qual a hipótese-mila é rejeitada.
+O nível descritivo está baseado no resultado obtido por meio do teste. Trata-se de valor obtido depois do
+teste. Aqui, o risco é aceitar o resultado para manter a hipótese nula, quando ela deveria ter sido rejeitada.
+(erro tipo 11). valor obtido após o teste é chamado de p-valor.
+A comparação entre o valor de alpha(nível de significância) e o p-valor (nível descritivo) permitirão concluir
+pela rejeição, ou não, da hipótese nula.
+Esta comparação se dará da seguinte forma: uma vez fixado o valor alpha (nível de significiância), se o pevalor
+foi menor ou igual a alpha, a hipótese-nula é rejeitada. Se o p-valor for maior do que alpha, a hipótese-nula
+é mantida.
+No caso concreto, o nível de significância (alpha) foi fixao em 0,05. O p-valor encontrado correspondeu a
+6
+ij Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+a do Do ec É
+Interprete os resultados em linguagem substantiva.
+A interpretação deve mencionar explicitamente o que significa o intervalo de confiança e o que
+significa a margem de erro.
+Para a interpretação dos resultados, revela-se necessário fixar algumas premissas.
+No campo da estatística, existem critérios distintos para rejeitar, ou não, uma hipótese nula.
+O primeiro critério se bascia na observação do intervalo de confiança.
+O intervalo de confiança informa um intervalo de valores com relação aos quais a hipótese nula é mantida.
+Este intervalo de confiança poderá ser maior ou menor, a depender do Z-score, do tamanho da amostra (ou
+do tamanhao da população) e do desvio padrão da amostra (ou populacional)
+Note-se que o Z-score, o tamanho da amostra (ou o tamanho da população) e o desvio padrão da amostra
+(ou populacional) são os clementos necessários para o cálculo do erro-padrão (isto é, margem de erro).
+Em razão do acima exposto, é possível reformular a frase para afirmar que o intervalo de confiança poderá
+ser maior ou menor a depender da margem de exro assumida.
+Assim, com base no intervalo de confiança, o Z-score igual a zero corresponderá aos valores que mais for-
+talecem a hipótese mula. Logo, quanto mais distante o valor de Z-score igual zero, maior a evidência
+contra hipótese nula. Noutras palavras, Z-score indicará quantos desvios-padrão um determinado valor se
+distanciará de Z-score igual a zero.
+Assim, uma vez identificados os limites máximo e mínimo do intervalo de confiança, será possível afirmar
+que qualquer valor incluído no referido intervalo indicará que a hipótese nula não poderá ser rejeitada.
+No presente estudo, observado um intervalo de confiança correspondente a 95%, o valor mínimo oi fixado
+em -0.0018, ao passo que o limite superior foi fixado em 0.0808. Logo, os valores abrangidos pelo intervalo
+1 confiança, afastam a
+i Alguns arquivos neste envio só podem ser acessados através de download direto. N
+de significância (ou
+y pevaior e O miver descrinvo (e 0 correspondente vaiur e aspnay
+nível. do ainnificência indicará antas do. tania. calo liniite Enlscadia die. stro acopiiiséia. dim osiliae à.
+
+===== page_006_top.png =====
+Table 7: Resumo por grupo |
+Grupo N Média de exp. adm (proporção com experiência)
+mapa 524 09198473
+mine 351 O.8803419
+Table 8: Resultado do teste t
+Diferença das médias 1C95. .. limite inferior 1095... limitesuperior  povalor
+0.0395 -0.0018 00808 00607
+== sesst nc e rapa).
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+“a Mikerpretação aevs imencionar expuicisamente o que mgninca o imvervaio as confiança e o que
+
+===== page_007_bot.png =====
+a hipótese nula é rejeitada. o o
+6.2. A conclusão mudaria se o nível de significância fosse 1%?
+4% +sConclusão:++ Não rejeitar HO (não há evidência de diferença entre minc e mapa).
+A conclusão acima exposta se justifica porque, ao nível de significância correspondente a 0,01 (1%), o
+resultado muda porque, agora, o p-valor é maior do que alpha (alpha igual a 0.0607, conforme Table 8). Logo,
+a hipótese nula NÃO é rejeitada
+6.3. O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva?
+O exercício demonstra que o p-valor será comparado com o nível de significância (alpha). O resultado da
+“comparação terá significância estatístic quando for capaz de alterar a conclusão do teste (a ponto de rejeitar
+a hipótese nula). A significância substantiva refere-se à importância prática ou teórica do efeito observado.
+7. O que aconteceria se a amostra fosse maior?
+Escolha uma das proporções estimadas nas perguntas anteriores.
+Suponha que a proporção observada fosse a mesma, mas o número de observações fosse duas
+vezes maior.
+Responda:
+
+7
+
+===== page_007_mid.png =====
+“able 9: Resumo por órgão (alto nível)
+Óreio Ano riei(t) Bamoniei(o) Total Proporção MAPA Proporção MINC Margem de erro
+mapa sr 238 325 562% (ICON SIGAE A SUSI) NA aoioszro
+mine ass mo des NA aero (casa: 373% a ar0086) mosoasos
+Table 10: Teste de hipótese para diferença entre proporções
+Quiquadrado GL palor Interpretação
+A6STRL 1 00588873 Rejatar HO (59%) há diferença estatisticamente significativa (MAPA ve MINC)
+6. Significância estatística e nível de significância Escolha um dos dois testes anteriores e
+responda: 6.1. A conclusão mudaria se o nível de significância fosse 10%?
+4% +sConclusão:+e Rejeitar HO (há diferença entre minc e mapa)
+A conclusão acima exposta se justifica porque, ao nível de significância correspondente a 0,1 (10%), o
+resultado muda porque, agora, o p-valor é menor do que alpha (alpha igual a 0.0607, conforme Table 8).Logo,
+a hipótese nula é rejeitada.
+6.2. A conclusão mudaria se o nível de significância fosse 1%?
+48 *sConclusão:+s Não rejeitar HO (não há evidência de diferença entre minc e mapa)
+A conclusão acima exposta se justifica porque, ao nível de significância correspondente a 0,01 (1%), o
+
+===== page_007_top.png =====
+0.0607. Porque o p-valor é maior do que alpha então, ao nível de significância igual a 0,05, NÃO
+existem evidências para rejeitar a hipótese-nula.
+5. Segundo teste de hipótese bivariado
+Crie uma variável chamada alto. nivel, igual a 1 quando nivel for 5 ou 6, e O quando nivel for
+4.
+Compare a proporção de cargos de alto nível entre mapa e minc.
+Use novamente a aproximação normal para a diferença entre proporções.
+Apresente:
+5.1, Uma tabela com as proporções por pasta.
+5.2. Um intervalo de confiança de 95% para cada proporção.
+5.3. Um teste de hipótese para a diferença entre as proporções
+5.4. O p-valor e sua interpretação.
+5.5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto
+de vista substantivo?
+Table 9: Resurso por órgão (alto nivel)
+Greão Afoniel(T) Hamoniwei (0) Total Proporção MAPA Proporção MINC Margem de erro
+mapa 18 338 525 502% (ICON SOAK A SUSI] NA aowszro
+
+===== page_008_bot.png =====
+| |
+
+===== page_008_mid.png =====
+
+
+===== page_008_top.png =====
+7.1. O que tenderia a acontecer com o erro-padrão? |
+7.2. Por que isso acontece?
+
+Não é necessário simular uma nova base, mas você pode fazer a conta aproximada se quiser.
+
+Em razão da fómula (o número de observações está no denominador), o aumento no número de observações
+implicará na redução do erro. padrão.

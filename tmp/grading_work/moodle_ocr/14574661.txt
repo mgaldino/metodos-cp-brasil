@@ -1,0 +1,516 @@
+
+===== page_001_bot.png =====
+que a unidade de análise é o objeto sobre o qual se infere), embora, dadas diferentes definições de unidade
+de análise, seja possível argumentar que os indivíduos (representando o objeto instrmentalizado para a
+inferência) também scjam unidades de análise.
+1.3. O que significa uma linha da base?
+Cada linha da base de dados diz respeito às informações de um indivíduo nomeado a um cargo público (rel-
+ativas à trajetória profissional, formação acadêmica e experiência política), bem como informações relativas
+ao seu exercício da função (duração, presidente que o nomeou, qual cargo ocupou).
+1.4. Por que a mesma pessoa pode aparecer mais de uma vez?
+Uma pessoa pode ser repetida na base caso tenha sido nomeada para mais de um dos cargos alvos da pesquisa.
+no período entre 2011 e 2021.
+1.5. Quais são as duas pastas comparadas no artigo?
+Os autores focalizam sobre duas pastas regulatórias: a da agricultura e da cultura. A escolha por essas duas.
+se dá no considerar que ambas são percebidas como “mais abertas a partidos e grupos de interesse devido ao
+seu poder regulatório e à falta de efeitos redistributivos que levariam à priorização da nomeação de pessoas
+de confiança como estratégia presidencial” na literatura dominante (Albrecht; Ribeiro, 2025).
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+VelALOTIO FINAL
+
+1. Artigo, pergunta e unidade de análise
+
+1.1. Qual é a pergunta geral do artigo?
+
+O artigo indaga acerca das características predominantes nos perfis dos nomeados para cargos nas pastas
+
+regulatórias da agricultura e da cultura no Brasil.
+
+1.2. Qual é a unidade de análise da base?
+
+A unidade de análise diz respeito ao objeto de estudo. O artigo em questão indaga acerca das características
+
+gerais dos indivíduos nomeados a cargos públicos, utilizando os profissionais nomeados para funções e cargos
+
+comissionados das pastas de agricultura e cultura no Executivo Federal brasileiro. De modo a especificar as
+
+“ocupações dos nomeados, debruça-se sobre postos DAS 4 a 6 e FCPE 4 ocupados entre janeiro de 2011 e
+
+dezembro de 2021 nas secretarias finalísticas dos ministérios da Cultura e da Agricultura (Albrecht; Ribeiro,
+
+2025). Os autores destacam que a unidade de análise inicial foi a nomeação (congruente com a visão de
+
+que à unidade de análise é o objeto sobre o qual se infere), embora, dadas diferentes definições de unidade
+
+de análise, seja possível argumentar que os indivíduos (representando o objeto instrmentalizado para a
+
+inferência) também sejam unidades de análise.
+
+1.3. O que significa uma linha da base?
+
+Cada linha da base de dados diz respeito às informações de um indivíduo nomeado a um cargo público (rel-
+
+ativas à trajetória profissional, formação acadêmica e experiência política), bem como informações relativas.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+Uma pessoa pode ser repetida na base caso tenha sido nomeada para mais de um dos cargos alvos da pesquisa
+
+===== page_001_top.png =====
+Avaliação de FLP0406-6 (Métodos e Técnicas de Pesquisa em |
+Ciência Política): inferência básica com dados reais de Ciência
+Política
+Giovanna Ellen Honório Braga
+17/07/2026
+
+===== page_002_bot.png =====
+base cargosi>%
+count (orgao. sup)
+
+ss A tibble: 3x2
+
+** orgao sup nm
+
+* <ho  <int>
+
+as 1 mapa sas
+
+as 2 meti 148
+
+48 3 mínc 365
+
+2.4. Número de valores ausentes em pelo menos cinco variáveis relevantes
+
+variáveis relevantes <- c(“instr”, “pern*, "fe", “partido”, *1d)
+colSuns(is.na(base cargos, variáveis relevantes]))
+
+*s instr pers UF partido ia
+
+“ o 4 a o o
+
+2.5. Uma checagem dos valores observados em exp. adm, exp. car, nivel, instr e indicacao
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+as (1) 26
+2.2. Nomes das variáveis
+colnames(base, cargos)
+es [1) “orgao sup" "setor" rchaver "sa
+** [5] "cargo" “funcao” “nivel” “instr”
+** [9) area” “inst, ensino" “inst origem" “car pub”
+48 [13] “partido” "cargo ele" “Lid part” “exp ada”
+“8 [17] “exp car" “exp mor" peido euros
+48 [21) “partido pr” “partido ministro" "indicacao” “entrada”
+48 [25] "saida" “pera”
+2.3. Número de observações por orgao. sup
+base, cargos1>
+count (orgao. sup)
+48 4 A tibble: 3x2
+*s orgo sup n
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_002_top.png =====
+2. Leitura e validação dos dados
+library(readxl)
+library (dplyr)
+library(geplot2)
+base cargos = read excel("C:/Desktop/USPDF/R-STUDIO/avaliacaof1p0406/BASE, cargos2.x1sx*)
+2.1. Número de linhas e colunas
+nrov(base. cargos)
+as (1) 1038
+ncol (base, cargos)
+CO az Nomesansvanaves
+
+===== page_003_bot.png =====
+4% instr pem  UFspartido id
+95 20 192 909 o
+summary (base, cargos[, c("exp ada”, “exp car”, "nível", “instr, "indicacao*)))
+*s  expada exp.car nível ânstr
+48 Min. :0.000 Min. :0.000 Min. :4.000 Length:1038
+*8 1st Qu.:1.000 1st Qu.:3.000 ist Qu.:4.000 Class :character
+48 Median :1.000 Median :3.000 Median :4.000 Mode :character
+8 Mean :0.916 Mean :2.959 Mean :4.479
+*s 3rd Qu.:1.000 3rd Qu.:5.000 3rd Qu.:5.000
++ Max. :3.000 Max. :5.000 Max. :6.000
+e MAs c14 MAS 76
+48 —indicacao
+48 Length:1038
+48 Class character
+48 Mode :character
+“.
+“e
+.s
+“s
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_003_mid.png =====
+As variáveis “exp.adm” e “exp.car” dispõem de cédulas de tipo 'charachter, já que a indicação de “NA” se
+deu em texto. Assim, as variáveis, que deveriam ser binárias ou numéricas, se encontram em formato de
+texto, dificultando à análise. Do mesmo modo, esse fator dificulta à contagem de cédulas vazias, uma vez
+que o texto “NA” as transforma em informação válida e essas não são contabilizadas. É possível corrigir a
+tabela usando o seguinte argumento:
+base, cargos [base cargos == "1A"] «<- NA
+base cargosSexp adm <- as .numeric(base cargosSexp adm)
+base cargosSexp. car <- as .numeric(base, cargosSexp. car)
+& Assim, é possível refazer e obter resultados corretos das seguintes análises:
+variáveis relevantes <- c(“instr”, "pera, “UFs", "partido", "id")
+colSuns(is.na(base, cargos[, variáveis relevantes]))
+os instr pers UF+ partido ia
+“ ss 20 192 909 o
+summary (base cargos(, c(“exp ada”, “exp car", "nivel", “instr", "indicacao")))
+es expado exp.car nável ânstr
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+és rd Qu.:1.000 3rd Qu.:5.000 3rd Qu.:5.000
+
+===== page_003_top.png =====
+sumary(base cargos[, c(“exp adn*, “exp car*, “nivel”, “instr”, “indicacao*)))
+* expada espiar nível ânstr
+48 Length: 1038 Length: 1038 Min. :4.000 Length:1038
+44 Class icharacter Class character st Qu.:4.000 Class :character
+44 Mode icharactor Mode scharacter Media :4.000 Mode :character
+pn Mean :4.479
+pr 3rd Qu.:5.000
+pr Max. :6.000
+44 | indicacao
+*% Length:1038
+84 Class character
+44 Mode :character
+pr
+pn
+a
+à Alguns arquivos neste envio só podem ser acessados através de download direto. pico de NAT
+| ara em formato
+
+===== page_004_bot.png =====
+digits = 3,
+col.names = c("Órgão”, "Observações Válidas*, "Com Exp. Administrativa”, “Proporção, "Margem de
+align = C("1*, "c*, "ct, "c%, "e", “ct, "c"), caption = "Tabela descritiva de experiência adminis
+Table 1: Tabela descritiva de experiência administrativa
+Órgão Observações Válidas Com Exp. Administrativa Proporção Margem de Erro IC inferior IC superior
+mapa 525 E 0.920 0.023] 0.897 0.943
+mine 365 as 0.858 0.036 0822 0.893
+Avaliando os resultados obtidos em cada etapa, tem-se que:
++ O número de observações válidas, quando filtradas pelo procedimento realizado, diz respeito aos indi-
+víduos que fizeram parte dos órgãos-alvo da pesquisa. Assim, tem-se já um afastamento da “baseline”
+do banco de dados por meio de tratamento e seleção para análise.
++ Consequentemente, a presença do número de observações válidas na tabela só reforça o espaço amostral
+que é tratado nas análises posteriores (uma métrica de valor, ao ser comparada com a quantidade
+de observações iniciais do estudo). A proporção de pessoas com experiência administrativa, quando
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+com exp adm = sun(exp adm > O | exp car>0, na.rm = TRUE),
+
+43.3. Proporção com experiência administrativa
+
+proporcao = com exp ada / n.validas,
+
+43.5. Margem de erro associada (95% de confiança -> 2 = 1.96)
+
+margem erro = ifelse(
+n.validas > O & proporcao > O & proporcao < 1,
+1.96 + sqrt((proporcao + (1 - proporcao)) / n validas),
+o,
+
+43.4. Limites do Intervalo de Confiança de 95%
+
+ic inferior = paax(0, proporcao - margem erro),
+
+ic superior = prin(1, proporcao + margem erro)
+
+library (knitr)
+Xable(head(base final), format = "pandoc”, booktabs = TRUE,
+dígito = 3,
+col.names = c("Órgão", "Observações Válidas*, "Com Exp. Administrativa”, “Proporção, "Margem de
+align = e(*1*, *cº, *c*, "e", “cº, *c*, "c"), caption = "Tabela descritiva de experiência adminis
+Table 1: Tabela descritiva de experiência administrativa
+: j j Sro 1C inferior IC superior
+i Alguns arquivos neste envio só podem ser acessados através de download direto. a DS
+Ê mme E st voos vaso 0822 0.893
+
+===== page_004_top.png =====
+3. Tabela descritiva: experiência administrativa
+À princípio, é relevante mencionar que, a diante, considera-se a experiência em cargos comissionados como
+“participação em órgãos de administração pública”, tendo as variáveis “exp. adm'e 'exp. car' como determi-
+antes. Assim, tem-se:
+base, cargosSexperiencia <- as. integer (base cargosSexp ade |= O | base cargosSexp car != 0)
+base cargos filtrada <- base cargos 1>/
+filter(orgao. sup == “napa” | orgao sup == “minc")
+base final <- base cargos filtrada >
+filter(!is.na(orgao sup) >
+group. by(orgao, sup) 12%
+summarise(
+43.1. Número de observações válidas por pasta
+n valídas = n(),
+43.2. Múmero de vessoas/nomeacões com esneriência administrativa
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+o 43.5. Margem de erro associada (95% de confiança -> 2 = 1.96)
+
+===== page_005_bot.png =====
+N$Z1)- PMAPA FP PMinC
+4.3. Teste usado no R
+ni <- base finalsn validas(1)
+n2 <- base finalsn validas(2]
+pi <- base finalproporcao[1]
+P2 <- base finalproporcao[2]
+= <pieni
+x2<p2en2
+p.conbinada <- (x1 + x2) / (nt + n2)
+erro. padrao <- sart(p combinada + (1 - p combinada) + ((1/ nt) + (1 / n2)))
+2 <-(p! - p2) / erro padrao
+P.valor <- 2 + prora(abs(2), lover.tail = FALSE)
+resultado teste <- data.frane(
+Diferenca Proporcoes = pi - p2,
+Estatistica Z = 2,
+P.Valor = p valor
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_005_mid.png =====
+intervalo esperado para a população com 95% de precisão, são argumentos de extrema validade para
+posteriores inferências sobre as características dos funcionários nomeados para cargos de alto escalão
+nas pastas adotadas.
+
+4. Primeiro teste de hipótese bivariado
+
+4.1, Hipótese Nula
+
+A hipótese nula é que as proporções de indivíduos nomeados que têm experiência na administração pública
+
+ou em cargos comissionados é igual para as pastas da argicultura e da cultura:
+
+(Ho): para = Prúsc
+
+4.2. Hipótese alternativa
+
+A hipótese alternativa é que há diferença na proporção das duas pastas:
+
+(Hh): paara É Paimc
+
+4.3. Teste usado no R
+
+nt <- base final$n validas(1)
+
+n2 <- base final$n validas(2)
+
+mt <= haso finaltnronorcanttl
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_005_top.png =====
+feita sobre a base filtrada (demandada no início do exercício 3), passa a permitir inferência sobre
+as características profissionais dos indivíduos nomeados (permitindo a generalização para o quadro
+político brasileiro). Desse modo, a métrica de proporção vai de encontro com a proposta da tese de
+Albrecht e Ribeiro (2025).
+
++ De modo complementar, a margem de erro se torna uma estatística de extrema relevância. Esse termo
+se refere à incerteza relacionada à amostragem usada, dado que a coleta de dados de toda a população
+culminaria em um espaço histórico e uma extensão de dados que cobriria todos os órgãos do Executivo
+Federal brasileiro. A margem de erro, essencialmente, é a estatística que indica a possível variação
+dos resultados obtidos com relação à população, mensurando o quanto as observações podem divergir
+da realidade generalizada. No caso da base de dados apresentada, tem-se que a margem de erro se
+mantém em aproximadamente 3%, que, por ser um valor baixo, permite a conclusão de que o fenômeno
+observado corresponde à configuração real da política no Brasil e a precisão da tese pode ser confiada.
+
++ Nesse mesmo sentido, o intervalo de confiança também tem um papel crucial. Essa estatística consiste
+em um intervalo de valores nos quais pode residir o real valor da variável quando mensurada na
+população (com uma probabilidade determinada de aproximação correta, que, nesse caso, é 95%).
+DO SS do
+' E strema validade para
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. os de alto escalão
+
+===== page_006_bot.png =====
+nivel == 4 -0,
+TRUE - NA real.
+»
+tabela teste de alto nível <- base teste >),
+filter(tolover(orgao. sup) Yin c( mapa”, "ninc")) Wo)
+filter(!is.na(alto nível)) %>%
+group by(orgao sup) 1>
+summarise(
+nvalidos = n(),
+cargos alto nivel = sun(alto nível == 1),
+proporcao = mean(alto nivel),
+erro. padrao = sqrt((proporcao + (1 - proporcao)) / n validos),
+margem erro = 1.96 + erro padrao,
+ic inferior = prax(0, proporcao - margem erro),
+ic superior = pain(1, proporcao + margem erro)
+)
+kable(head(tabela teste de alto nível), format = “pandoc”, booktabs = TRUE,
+digits = 3,
+col.names = c("Órgão”, "N Válidas", "Cargos de Alto Nível", “Proporção”, “Erro Padrão”, “Margem
+6
+
+===== page_006_mid.png =====
+PR A
+O p-valor é de 8,2%, que, por ser maior que o valor de 5%, não nos permite rejeitar a hipótese nula sob esse
+nível de significância. Assim, afirma-se a hipótese nula.
+
+4.6. Interpretação substantiva
+Desse modo, não há evidências estatísticas substantivas para afirmar que a proporção de nomeação de pessoas
+com experiência na administração pública ou em cargos comissionados sejam diferntes nas duas pastas.
+5. Segundo teste de hipótese bivariado
+5.1 e 5.2. Tabela com as proporções por pasta e intervalo de confiança de 95%
+base teste <- base cargos filtrada 1%
+mutate(alto nível = case uhen(
+nivel Yin c(s, 6) - 1,
+nível == 4 -0,
+TRUE - Ná real.
+»
+tabela teste; de alto nível <= base teste 14
+filter(tolower (orgao. sup) Yin c('napa”, “minc")) 4
++slter(ise malato nivel) 1%
+group by (orgão. sup) 1>% º
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+n.validos = a),
+cargos alto nível = sun(alto nível == 1),
+
+===== page_006_top.png =====
+,
+kable(head(resultado teste), format = “pandoc”, booktabs = TRUE,
+digits = 3,
+col.names = c("Diferênça entre proporções”, "Estatística 2º, "P-valor"),
+align = c(fc*, "cº, "c"),
+caption = “Resultado do Teste de Hipótese sobre Experiência Administrativa”)
+Table 2: Resultado do Teste de Hipótese sobre Experiência Admin-
+istrativa
+Diferênça entre proporções Estatística Z  P-valor
+0.062 2982 0.003
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. ipótese aula sob esse
+4.6. Internretação suhetantiva
+
+===== page_007_bot.png =====
+erro. padrao dif <- sqrt(p combinada + (1 - p.combinada) + ((1 / n mapa) + (1 / nminc)))
+22 <- (pmapa - pminc) / erro padrao dif
+Pp.valor. 2 <- 2 + prorn(abs(22), lover.tail = FALSE)
+resultado teste 2 <- data.frane(
+Diferenca Observada = round(p mapa - pminc, 4),
+Proporcao Combinada = round(p. combinada, 4),
+Erro Padrão Dif | = round(erro padrao dif, 4),
+Estatistica Z = rouná(Z2, 4),
+P.Valor = p.valor 2
+,
+Xable (head(resultado teste 2), format = “pandoc”, booktabs = TRUE,
+dígits = 3,
+col.names = c("Diferênça entre Pastas”, “Proporção Combinada”, “Erro Padrão da Diferença”, “Estat|
+aliga = e(fc*, Nº, 4%, Mot, “ct,
+caption = "Resultado do Teste de Hipótese sobre Cargos de Alto Nível”)
+E
+
+===== page_007_mid.png =====
+(Ho): puara = Pino
+A hipótese alternativa é que as duas pastas têm proporções diferentes de nomeações para o “alto escalão”:
+(Hh): para É Paiao
+n.mapa <- tabela teste de alto nível$n validos[tabela teste de alto nívelSorgao. sup == “sapa”)
+mminc <- tabela teste de alto nívelSn validos [tabela teste, de alto nivelSorgao sup == "ninc"]
+x mapa <- tabela teste de alto nívelScargos alto nivel (tabela teste de alto nívelSorgao. sup == "sapa"]
+xminc <- tabela teste de alto nívelScargos alto nivel (tabela teste de alto nívelSorgao. sup == "ninc"]
+P.mapa <- tabela teste de alto nivelSproporcao[tabela teste de alto nívelSorgao sup == "sapa")
+p-minc <- tabela teste de alto nivel$proporcao [tabela teste de alto nívelSorgao sup == "ninc']
+P-conbinada <- (x. mapa + x.minc) / (nmapa + n min)
+erro padrao dif <- sqrt(p combinada + (1 - p combinada) + ((1 / nmapa) + (1 / nmínc)))
+22 <- (p.mapa - pminc) / erro padrao dif
+P.valor.2 <- 2 + prorn(abs(22), lover.tail = FALSE)
+resultado teste 2 <- data.framo(
+Diferenca Obsorvada = round(p mapa - p.minc, 4),
+Proporcao Combinada = round(p. combinada, 4),
+Erro Padrão Dif = round(erro padrao dif, 4),
+Estatística Z = round(22, 4),
+
+===== page_007_top.png =====
+align = c(*1º, “ct, “ct, tct, “ct, ter, tee, tc),
+caption = "Cargos de alto nível por pasta”)
+Table 3: Cargos de alto nível por pasta
+
+Órgão N Válidas Cargos de Alto Nível Proporção Erro Padrão Margem de Erro IC inferior IC superior
+mapa 525 187 0.356 0.021 0.041 0315 0.397
+mine 365 155 0.425 0.026 0051 0374 0475
+5.3, Teste de Hipótese
+As seguintes hipóteses pretendem testar se há diferença entre as proporções de cargos de alto nível das
+pastas. A hipótese nula é de que não há evidências de que as pastas diferem em proporção de nomeações a
+cargos de alto nível:
+(Ho): papa = Paúsc
+A hipótese alternativa é que as duas pastas têm proporções diferentes de nomeações para o “alto escalão”:
+(Hh): prara É Painc
+
+===== page_008_bot.png =====
+e, posteriormente, permitindo exibtiidade ua conclusão sobre os dados.
+7. O que aoenteceria se a amostra fosse maior?
+TleT2
+O erro padrão tenderia a diminuir. Esse fenômeno ocorre pois o número da amostra é um denominador, que,
+ao aumentar numéricamente, reduz 0 impacto da variabilide na fórmula. Ademais, o erro padrão representa.
+uma métrica de ruído ou incerteza amostral Isso ocorre porque a variabilidade de resultados individuais é
+grande, mas, com maiores observações, a média tende a se estabilizar. Dada à amostra maior, ganha-se
+mais precisão, uma vez que o ruído é dissipado e há mais peso empírico sustentando a mesma proporção.
+A sustentação teórica por trás dessa conclusão advém da Lei dos Grandes Números, que determina que, à
+medida que o número observações na amostra aumenta, a média dos resultados tende a se aproximar do
+valor esperado na população.
+8. Referências e Base de Dados
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos públicos
+no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal
+(2011-2021). Revista Brasileira de Ciência Política, 2025.
+
+s
+
+===== page_008_mid.png =====
+inferir uma congruência fundamental em como os cargos são distribuídos nas pastas da agricultura e cultura
+no Executivo Federal brasileiro.
+
+6. Significância estatística e nível de significância
+
+Adotando o segundo teste de hipótese (acerca de cargos de alto nível) para a análise seguinte, tem-se que:
+61,62c63.
+
+A conclusão do item 5.5 não mudaria se o nível de significância adotado para O teste fosse 10% ou 1%.
+Entretanto, esse exercício demonstra que o nível de significância substantiva é relativo à necessidade de
+precisão adotada para a pesquisa, afetando o que é considerado relevante para tomada de conclusões. Assim,
+inferências podem ser consideradas insignificantes a nível estatístico, mesmo que, pensando na realidade e
+adotando outro valor de significância, possam ser relevantes de modo substantivo. O P-valor, ao mensurar
+a probabilidade de eventos permanecerem sob a hipótese nula, permite uma interpretação sobre o gran de
+substância da inferência, sem desqualificá-la prontamente de acordo com um valor de significância adotado,
+e, posteriormente, permitindo flexibilidade na conclusão sobre os dados.
+
+7. O que aocnteceria se a amostra fosse maior?
+
+TleT2
+
+O erro padrão tenderia a diminuir. Esse fenômeno ocorre pois o número da amostra é um denominador, que,
+ao aumentar muméricamente, reduz 0 impacto da variabilide na fórmula. Ademais, o erro padrão representa
+uma métrica de ruído ou incerteza amostral Isso ocorre porque à variabilidade de resultados individuais é
+grande, mas, com maiores observações, a média tende a se estabilizar. Dada à amostra maior, ganha-se
+mais precisão, uma vez que o ruído é dissipado e há mais peso empírico sustentando a mesma proporção.
+
+===== page_008_top.png =====
+Table 4: Resultado do Teste de Hipótese sobre Cargos de Alto
+Nível
+Diferênça entre Pastas Proporção Combinada Erro Padrão da Diferença Estatística Z  Pevalor
+-0.068 0384 0.033] -2,065 0.039]
+
+5.4. P-Valor e sua interpretação
+O P-Valor encontrado foi de 0.38. Ao adotar o nível de significância de 0.05, tem-se que esse resultado
+indica que não há, na amostra, evidências significativas para rejeitar a hipótese nula. Essa inferência advém
+do conceito de P-Valor como a probabilidade de que os dados observados ocorram se a hipótese nula for
+verdadeira. Dado que o valor é maior do que 5%, pode-se adotar a hipótese mula.
+5.5. Conclusão substantiva
+A partir do P-valor encontrado, tem-se que a diferença entre as pastas, no que concerne à proporção de
+nomeações a cargos de alto escalão, são pequenas do ponto de vista substantivo. Pode-se, desse modo,
+inferir uma congruência fundamental em como os cargos são distribuídos nas pastas da agricultura e cultura
+no Executivo Federal brasileiro.
+A. Sionificância estatística e nível de aionificância.
+
+===== page_009_bot.png =====
+
+
+===== page_009_mid.png =====
+
+
+===== page_009_top.png =====
+ALBRECHT, Nayara. BASE. cargos2xlsx In: ALBRECHT, Nayara. burocraciaBR: Pesquisa sobre buro-
+eracia pública federal no Brasil / Rescarch on the federal bureaucracy in Brazil. GitHub, 2023. Disponível em:
+https://github.com /nayalbrecht /burocraciaBR /blob/main/BASE. cargos2.xlsx. Acesso em: 17 jul. 2026.

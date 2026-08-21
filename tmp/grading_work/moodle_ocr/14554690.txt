@@ -1,0 +1,724 @@
+
+===== page_001_bot.png =====
+me OK IEL. horta
+
+mine secde — Cult-SCDC-S2 1BOL
+
+mine secde — Cult-SCDC-CGAF2 ICRA
+
+mine secde — Cult-SCDC-DCDC3 ASSR
+
+mine secde — Cult-SCDC-CGCAI3 cMMo
+
+mine secde — Cult-SCDC-CGCAIA DPFA
+
+mine secde — Cult-SCDC-CGCAIS MNLC
+
+mine secdc — Cult-SCDC-S3 ReIT
+
+mine secde — Cult-SCDC-CGAPCI NPSI
+
+mine secde — Cult-SCDC-CGAIL sccH
+
+mine secde — Cult-SCDC-CGAIZ AHOM
+
+mine secde — Cult-SCDC-DDCI RCGC
+
+mine secde — Cult-SCDC-CGPCDCI DCOM
+
+mine secde — Cult-SCDC-CGMI MNLC
+
+mine secde — Cult-SCDC-CGM2 JAFS
+
+mine secde — Cult-SCDC-CGCEI VLBA
+
+mine secde — Cult-SEC-DLLLBI cosB
+
+mine secdc  Cult-DLLB-CGLLELI MRBM
+
+mine secde  Cult-DLLLB-CGSNBP1 vBES
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+me sec  TAESNDSS Leonid
+mine secde — Cult-SID-DMPDIL RABL
+mine secde  Cult-SID-CGFIDEI POMI
+mine secde — Cult-SID-CGFIDEZ LLGU
+mine secde — Cult-SID-CGPDDICI JCMG
+mine secde — Cult-SID-S2 CsLE
+mine secde — Cult-SID-DMPDIZ tGoL
+mine secde — Cult-SID-CGFIDE3 TRAO
+mine secde — Cult-SID-CGPDDICZ MBNM
+mine secde — Cult-SCDC-S1 MHGR
+mine secde — Cult-SCDC-CGAFI MGMM
+mine secde — Cult-SCDC-CGAFI MNML
+mine secde  Cult-SCDC-DCDCI IMCA
+mine secde — Cult-SCDC-DCDC2 PAVA
+mine secde — Cult-SCDC-CGPPCI PDM!
+mine secde — Cult-SCDC-CGPPCZ DCOM
+mine secde — Cult-SCDC-CGCAN AMCR
+mine secde — Cult-SCDC-CGCAIZ PDM
+mine secde — Cult-SCDC-S2 1BOL
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+mine secde — Cult-SCDC-CGCAIS DPFA
+
+===== page_001_top.png =====
+orgao sup setor chave id
+
+mine secde  Cult-SCC-s1 VSCA
+mine secde — Cult-SCC-DAC1 OGRI
+mine secde — Cult-SCC-CGMAR1 INPE
+mine secde — Cult-SCC-CGGPCI ECBR
+mine secde — Cult-SCC-CGCC1 EsTO
+mine secde  Cult-SCC-S2 MPPO
+mine secde  Cult-SCC-s3 MHGR
+mine secde — Cult-SCC-DACZ RAMS
+mine secde — Cult-SCC-DAC3 IMCA
+mine secde — Cult-SCC-CGMARZ AMTP
+mine secde — Cult-SCC-CGGPCZ scoL
+mine secde — Cult-SCC-CGGPC3 MGMM
+mine secde — Cult-SCC-CGCC2 CcPR
+mine secde — Cult-SCC-CGCC3 POMI
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+mine secde — Cult-SID-CGFIDEZ LLGU
+
+===== page_197_bot.png =====
+experiências em cargos de gestão
+1= DAS/FCPE 1-2
+2=DAS/FCPE 3-4
+exp car 3=DASS6
+experiência no setor privado
+1=SIM
+exp mer O=NÃO
+experiência em associações e grupos de interesse
+ASSIM
+exp soc O=NÃO
+ur UF antes da nomeação
+partido. pr partido do presidente
+partido. ministro partido do ministro
+indicacao presidente no momento da nomeação
+entrada entrada no cargo
+saida saída do cargo
+perm permanência (saída - entrada)
+
+===== page_197_mid.png =====
+SE INT:carreiradoorg. | o
+SECAG: servidor de agência reguladora
+ADV. UN: advogado/procurador da União
+MAG, SUP: Magistério superior
+MIL: forças armadas ou auxiliares
+DIPL: diplomata
+OUTRO: qualquer outra carreira, inclusive aquelas pertencentes às vinculadas
+car pub SEV: sem vínculo efetivo
+partido partido do/a nomeado/a
+se já concorreu ou ocupou cargo eletivo
+1=SIM
+cargo ele O=NÃO
+se já exerceu qualquer tipo de liderança partidária
+15SIM
+lid part O=NÃO
+experiência em órgãos da administração pública
+1=SIM
+exp adm O=NÃO
+experiências em cargos de gestão
+1= DAS/FCPE 1-2
+2=DAS/FCPE 3-4
+exp car 3=DAS5S-6
+experiência no setor privado
+15SIM
+
+===== page_197_top.png =====
+orgao sup órgão superior em lotação
+
+setor setor dentro do órgão superior: secretarias
+
+Chave chave primária (nomeação)
+
+id chave secundária (código do nome)
+
+cargo cargo
+
+funcao função
+
+nivel nível da função
+
+instr instrução (maior nível)
+
+area área de graduação
+
+inst ensino instituição de ensino da graduação
+
+inst origem origem da instituição: se pública ou privada
+carreira pública: EPPGG: especialista em gestão
+SE, INT: carreira do org.
+SE AG: servidor de agência reguladora
+ADV. UN: advogado/procurador da União
+MAG SUP: Magistério superior
+pau: foreas armadas ou servilianes.
+
+===== page_198_bot.png =====
+cargos VASO FREI do niveis € a à ciltrom cure as pastas comparados (NAFA e Minis), considerando
+suas trajetórias profissionais, acadêmicas e políticas. Nesse sentido, o artigo visa testar a expectativa teórica
+de que “MAPA e MinC teriam perfis de funcionários /as semelhantes devido à natureza regulatória de suas
+políticas” (p. 26).
+2. A unidade de análise da base são as nomeações para cargos DAS e FCPE de níveis 4 a 6 realizadas entre
+2011 e 2021, nas pastas consideradas.
+3. Uma linha da base significa uma nomeação específica de um indivídio para um cargo. As variáveis,
+portanto, dizem respeito ao indivíduo nomeado e às características do cargo.
+4. Uma mesma pessoa pode aparecer mais de uma vez na base na medida em que pode ter sido nomeada
+para mais de um cargo no período analisado. Dessa forma, duas linhas na base podem dizer respeito a duas
+nomeações diferentes de um mesmo indivíduo.
+5. As duas pastas comparadas são a da Agricultura (MAPA) e a da Cultura (MinC/SECULT).
+2. Leitura e validação dos dados
+1. A base contém 1038 linhas e 26 colunas. |
+1
+
+===== page_198_mid.png =====
+Instruções iniciais
+
+2/3/4. Baixando e lendo a planilha
+
+dados <- read excel(*dados/BASE, cargos2.x1sx*, sheet = "BASE, cargos")
+
+codebook <-read excel("dados/BASE cargos? .x1sx*, sheet = "Codebook")
+
+Perguntas obrigatórias
+
+1. Artigo, pergunta e unidade de análise
+
+1. A pergunta geral que o artigo busca investigar é em que medida os perfis dos burocratas nomeados para
+cargos DAS e FCPE de níveis 4 a 6 diferem entre as pastas comparadas (MAPA e MinC), considerando
+suas trajetórias profissionais, acadêmicas e políticas. Nesse sentido, o artigo visa testar a expectativa teórica
+de que “MAPA e MinC teriam perfis de funcionários /as semelhantes devido à natureza regulatória de suas
+políticas” (p. 26).
+
+2. A unidade de análise da base são as nomeações para cargos DAS e FCPE de níveis 4 a 6 realizadas entre
+2011 e 2021, nas pastas consideradas.
+
+3. Uma linha da base significa uma nomeação específica de um indivídio para um cargo. As variáveis,
+portanto, dizem respeito ao indivíduo nomeado e às características do cargo.
+
+4. Uma mesma pessoa pode aparecer mais de uma vez na base na medida em que pode ter sido nomeada
+para mais de um cargo no período analisado. Dessa forma, duas linhas na base podem dizer respeito a duas
+
+===== page_198_top.png =====
+Trabalho final |
+Agnes Kiinsch
+2026-07-16
+Fonte dos dados: BASE cargos2.xlsx, disponível em https: / /raw.githubusercontent. com /nayalbrecht /burocraciaBR /mair
+Data de acesso: 15 de julho de 2026.
+Instruções iniciais
+2/3/4. Baixando e lendo a planilha
+
+===== page_199_bot.png =====
+table (dadosfexp car)
+
+table (dadosênivel)
+
+table (dadostinstr)
+
+table (dadosSindicacao)
+
+Problemas encontrados e decisões tomadas:
+
+1. “exp. adm” deveria ser uma variável binária. Porém, essa coluna contém 1 linha com valor “3” e três
+linhas com valor “1º.
+
++ Decisão: assumi que “1” foi um erro de digitação, e que esses dados poderiam ser substituídos por “1”.
+Já em relação ao valor “3”, como não tenho evidências para afirmar se deveria ser O ou 1, transformei
+em NA.
+
+2. “exp car” deveria, segundo o codebook, conter os valores de 1 a 3. Porém, essa coluna contém 136
+linhas com valor *0” e 235 linhas com valor “5”.
+
++ Decisão: consultei o artigo e verifiquei que a escala apresentada é incongruente com o codebook. No
+artigo (p.10), consta a seguinte escala: “(nenhum = O, níveis 1 e 2 = 1, níveis 3€ 4 = 2, níveis 5 e 6
+= 5). Portanto:
+
+2
+
+===== page_199_mid.png =====
+48 mapa mcti minc
+** 525 148 365
+4. Número de valores ausentes: Variável “instr”: 95 / Variável “partido”: 909 / Variável “cargo. ele”: 29 /
+Variável “exp. mer”: 259 / Variável “exp. soc”: 780
+table (dadosSinstr)
+table (dadosSpartido)
+table (dadosScargo. ele)
+table (dadosSexp mer)
+table (dadosSexp. soc)
+5 Checagem dos valores.
+table (dadosSexp ada)
+table (dadosSexp. car)
+table (dadosnivel)
+table (dadosSinstr)
+table (dadosSindicacao)
+Problemas encontrados e decisões tomadas:
+1. “exp. adm” deveria ser uma variável binária. Porém, essa coluna contém 1 linha com valor *3” e três
+linhas com valor “1”.
+
+===== page_199_top.png =====
+nrou(dados)
+
+ncol (dados)
+
+2 Nomes das variáveis na base: “orgao sup”, “setor”, “chave”, “id”, “cargo”, “funcao”, “nivel”, “in-
+str”, “area”, “inst. ensino”, “inst origem”, “car pub”, “partido”, “cargo. ele”, “lid. part”, “exp. adm”,
+“exp car”, “exp mer”, “exp soc”, “UP”, “partido pr”, “partido. ministro”, “indicacao”, “entrada”,
+Elimpse(dados)
+
+3. Número de observações por “org sup”:
+
+table (dadosSorgao. sup)
+
+“
+
+4% mapa mctá minc
+
+** 525 148 365
+
+4. Número de valores ausentes: Variável “Instr”: 95 / Variável “partido”: 909 / Variável “cargo. ele”: 29 /
+
+===== page_200_bot.png =====
+table (dados limposinstr)
+“
+“ doutorado especializacao mestrado na superior
+“ 159 203 259 95 208
+“ tecnico
+“ u
+3. Tabela descritiva: experiência administrativa
+Conforme o codebook, a variável “exp adm” é uma variável binária (1= SIM; 0=NÃO) que indica se o
+nomeado já teve “experiência em órgãos da administração pública”.
+dados limpo <- dados limpo %>%
+
+mutate (experiencia admpublica = exp ada)
+dados mapa minc <- dados limpo >),
+
+tilter(orgao. sup == “zinc" | orgao sup == “napa”)
+
+3
+
+===== page_200_mid.png =====
+codebook limpo <- read excel ("dados/Base cargos limpa.xlsx”, sheet = "Codebook limpo")
+REMORSO
+
+“
+
+e 0 1m
+
+*s es 938 12
+
+table (dados linposezp. car)
+
+“
+
+e 012 3n
+
+est s1 2762 75
+
+table (dados Lisposinstr)
+
+“
+
+48 doutorado especializacao mestrado a superior
+“ 159 203 259 ES 298
+“ tecnico
+
+“ 24
+
+3. Tabela descritiva: experiência administrativa
+
+===== page_200_top.png =====
+— Adotei a escala do artigo, mantendo o O como “nenhum”, 1 como “níveis 1 e 2” e 2 como “níveis
+3e4;
+— As células que contêm os dados 3 e 5 passam a ser apenas 3, que, na nova escala ado-
+tada, corresponde aos níveis 5 e 6.
+— Alterei o codebook conforme essa nova escala.
+3. “dados instr” contém uma linha com valor “graduacao”, que é uma categoria redundante em relação
+a “superior”.
++ Decisão: o valor “graduacao” foi transformado em “superior”.
+Limpeza da base de dados: como eu não tinha conhecimento suficiente de como fazer essas alterações
+pelo R, optei por criar uma cópia da base original e fazer a limpeza (conforme as alterações indicadas acima)
+pelo Excel. A partir de agora, vou trabalhar em cima da base limpa (dados. limpo).
+dados limpo <- read excel ("dados/Base cargos limpa.xlox*, sheet = "BASE cargos limpa”)
+codebook limpo <- read excel ("dados/Base cargos limpa.x1sx", sheet = "Codebook Limpo")
+table (dados limpoSexp adm)
+
+===== page_201_bot.png =====
+tabela exp ade publica <- tabela exp adm publica 1>%
+mutate(
+erro padrao = sqrt(prop.exp adm + (1 - prop exp adm) / n obs validas)
+,
++ Margem de erro
+2.95 <- quora(o.875)
+tâbela exp ade publica <- tabela exp ads publica 1>%
+mutate(nargem erro = 2.95 + erro padrao)
+* Limites inferior e superior do IC
+tabela exp ads publica <- tabela exp ada publica 1>%
+mutate(
+limite inferior = prop exp ada - margem erro,
+limite superior = prop exp adm + margem erro
+,
+4
+
+===== page_201_mid.png =====
+filter (experiencia admpublica == 1) 4%
+summarise(n com exp = n()))
+3. Proporção com experiência administrativa.
+tabela exp ade publica <- tabela exp adm publica 1
+mutato(dados mapa minc 1>%
+group. by(orgao. sup) %>%
+filter (experiencia admpublica lin c(0,1)) >%
+summarise (prop exp ad = mean (as.numeric (experiencia admpublica))))
+4/5. Intervalo de confiança de 95% para essa proporção e margem de erro associada ao IC
++ Erro-padrão
+tabela exp ade publica <- tabela exp adm publica >
+mutate(
+erro padrao = sqrt(prop exp ada * (1 - prop exp ads) / n obs validas)
+,
++ Margem de erro
+2.95 <- quora(0.975)
+tabela exp adm publica <- tabela exp adm publica 1>%
+mutato(nargem erro = 2.95 + erro, padrao)
+
+===== page_201_top.png =====
+“
+48 mapa minc
+e 525 365
+1. Número de observações válidas por pasta
+tabela exp ade publica <- dados mapa minc 1>/
+group by(orgao. sup) 1>%
+filter (experiencia adpublica Yin c(0,1)) 1%
+sunmarise(n obs validas = n())
+2. Número de pessoas /nomeações com experiência administrativa
+tabela exp ade publica <- tabela exp. ade publica >
+mutate (dados mapa minc Y>I
+group. by(orgao. sup) 1>%
+filter (experiencia admpublica == 1) 1>%
+sunmarise(n com exp = n()))
+3. Proporção com experiência administrativa.
+
+===== page_202_bot.png =====
+TOprosantam as GIRÊNCIAS GNRTO ES CSTIMASIVAS PONTULIS (VS) 6 057) O cada um dus Times DO MisruaO 08
+
+confiança. Neste caso, ela foi de aproximadamente 2,3% para o MAPA e 3,4% para o MinC, ao nível de
+
+confiança de 95%.
+
+4. Primeiro teste de hipótese bivariado
+
+1/2. Definindo as hipóteses 1. Hipótese nula: a proporção de nomeações com experiência administrativa é
+
+igual nas duas pastas.
+
+Ho: Papa = Painc
+2. Hipótese alternativa: a proporção de nomeações com experiência administrativa é diferente nas duas
+pastas.
+Hi: puara É Pane
+
+3. Teste usado no R: teste para igualdade de duas proporções, com aproximação normal. Obs.: essa parte
+
+foi elaborada a partir de consulta à página https://rpubs.com/StevenDuttRoss/proporcoes e à seção Help |
+
+doR.
+
+5
+
+===== page_202_mid.png =====
+Observações Com Erro: Margem de Limite Limite
+Pasta válidas — experiência Proporção padrão erro inferior superior
+mapa E 482 09198473 O.OLISGIS 00232487 08965986 0.9430961
+mine ES 312 08813559 00171869 00336857 08476703 09150416
+A partir das observações válidas da base de dados, estima-se que aproximadamente 92% (0.919) das
+nomeações para o MAPA e 88% (0,881) das nomeações para o MinC, no período considerado, foram de
+pessoas com experiência prévia na administração pública. Os intervalos de confiança construídos foram
+de aproximadamente 89% a 94% para a estimativa das nomeações para o MAPA, e de aproximadamente
+85% a 92% para o MinC. Isso significa que, se repetissemos o processo de amostragem inúmeras vezes,
+aproximadamente 95% dos intervalos de confiança conteriam o parâmetro (verdadeiro valor da proporção
+na população). A construção dos intervalos baseia-se no Teorema Central do Limite, que permite considerar
+que a distribuição amostral da estimativa é aproximadamente Normal. As margens de erro, por sua vez,
+representam as distâncias entre as estimativas pontuais (92% e 88%) e cada um dos limites do intervalo de
+confiança. Neste caso, ela foi de aproximadamente 2,3% para o MAPA e 3,4% para o MinC, ao nível de
+confiança de 95%.
+4. Primeiro teste de hipótese bivariado
+1/2. Definindo as hipóteses 1. Hipótese nula: a proporção de nomeações com experiência administrativa é
+igual nas duas pastas.
+
+Ho: PMara =Ptinc
+
+===== page_202_top.png =====
+tabela exp lada pública 5%
+rename(
+“Pasta! = orgao sup,
+“Observações válidas! = n obs validas,
+'Com experiência" = n com exp,
+“Proporção = prop.exp. adm,
+*Erro-padrão' = erro, padrao,
+"Margem de erro' = margem erro,
+“Limite inferior! = limite inferior,
+'Limite superior! = limite superior) >)
+knitr: kable(
+caption = "seTabela 1. Experiência prévia na administração pública nas nomeações para o MAPA e o MinC
+Table 1: Tabela 1. Experiência prévia na administração
+pública nas nomeações para o MAPA e o MinC (2011-
+2021).
+Observações Com Erro-— Margem de Limite Limite
+Pasta válidas — experiência Proporção padrão erro inferior superior
+pesso EM AR? MQIGRATA ONNIAGIS MOPAMIRT O MRORSORA NQLAaAI
+
+===== page_203_bot.png =====
+5. Segundo teste de hipótese bivariado
+* Criando a variável:
+dados mapa minc <- dados mapa min 1>/
+mutate(
+alto nível = ifelse(nivel Yin c(5, 6), 1, 0)
+,
+1
+tabela alto nível <- dados mapa mínc 1>
+group. by(orgao. sup) >)
+sumsarise(
+n.obs = n(),
+malto nível = sun(alto nível),
+prop.aito nivel = mean(alto nível)
+,
+6
+
+===== page_203_mid.png =====
+4% sample estimates:
+ss  propi prop2
+48 0.9198473 0.8813559
+4. O p-valor obtido foi 0.07424.Isso significa que, assumindo que a hipótese nula seja verdadeira, haveria.
+aproximadamente 7,4% de probabilidade de se observar uma diferença entre as proporções igual ou mais
+extrema do que a estimativa.
+5. Como o p-valor é maior que o nível de significância adotado (0.05), não rejeitamos a hipótese nula
+de igualdade entre as proporções.
+6. Embora a proporção observada na amostra de nomeações com experiência administrativa seja maior
+no MAPA (92%) do que no MinC (88%), essa diferença não foi estatisticamente significativa ao nível de
+significância de 5%. Portanto, conclui-se que os dados não fornecem evidência estatística suficiente para
+rejeitar a hipótese de igualdade entre as proporções.
+5. Segundo teste de hipótese bivariado
+
++ Criando a variável:
+dados mapa minc <- dados mapa minc >
+
+mutate(
+
+alto nivel = ifelse(nivel 1inY c(5, 6), 1, 0)
+
+,
+
+E?
+
+===== page_203_top.png =====
+teste prop <- prop.test(
+x = c(482, 312),
+n = c(524, 354),
+alternative = “tuo.sided",
+conf.level = 0.95)
+teste prop
+=
+4º 2-sanplo test for equality of proportions vith continuity correction
+pn
+48 data: c(482, 312) out of c(524, 354)
+4% X-squared = 3.1867, df = 1, p-valuo = 0.07424
+44 alternative hypothesis: tuo.sidod
+4º 95 percent confidence interval:
+*s -0.008804778. O.O81TET5TO
+4% sample estimates:
+e propt prop2
+as 0. 9198473 0,8813559
+
+===== page_204_bot.png =====
+margem erro = margem erro2,
+limite inferior = limite inferior2,
+limite superior = linite superior?
+,
+tabela alto nível 1%
+rename(
+“Pasta” = orgao sup,
+"Observações" = n obs,
+“Cargos de alto nível (5 e 6)" = n alto nível,
+“Proporção de noneações de alto nível" = prop alto nível,
+“Erro-padrão" = erro, padrao,
+"Margem de erro” = margem erro,
+“Limite inferior do IC* = limite inferior,
+“Limite superior do IC* = limite, superior
+wr
+kmitr: kable(
+caption = "esTabela 3. Nomeações para cargos de alto nível no MAPA e HinC (2011-2021).+e" |
+,
+ê
+
+===== page_204_mid.png =====
+2
+erro padrao? <- sart(prop alto nível + (1 - prop alto nível) / n.0bs)
+2.95 <- quora(0.975)
+margem erro2 <- 2.95 * erro padrao?
+limite inferior? <- prop.alto nivel - margem erro?
+limite superior? <- prop.alto nivel + margem erro?
+tabela alto nível <- tabela alto nível 1>%
+mutate(
+erro padrao = erro padrao,
+margem erro = margem erro2,
+limite inferior = limite inferior2,
+limite superior = limite, superior?
+,
+tabela alto nível >
+renane(
+“Pasta” = orgao sup,
+“Observações” = n obs,
+“Cargos de alto nivel (5 e 6)* = n alto nível,
+“Proporção de nomeações de alto nível" = prop alto nivel,
+
+===== page_204_top.png =====
+tabela alto nível %>%
+rename(
+“Pasta” = orgao sup,
+“Observações! = n obs,
+'Cargos de alto nível (5 e 6)! = n.alto nível,
+'Proporção de nomeações de alto nível! = prop alto nível) >
+knitr: :kable(
+caption = "ssTabela 2. Nomeações para cargos de alto nível no MAPA e MinC (2011-2021) .es")
+Table 2: Tabela 2. Nomeações para cargos de alto nível no
+MAPA e MinC (2011-2021).
+Pasta Observações Cargos de alto nível (5 e 6) Proporção de nomeações de alto nível
+mapa 525 187 0.3561905
+mine 305 155 04246575
+2
+
+===== page_205_bot.png =====
+hor neo cera nicia di pre irem iad
+4% 95 percent confidence interval:
+4% -0.1359762203 -0.0009578958
+4% sample estimates:
+** prop1 prop2
+48 0.3561905 0.4246575
+4 O p-valor obtido foi 0.04601.1sso significa que, assumindo que a hipótese mula seja verdadeira, haveria
+aproximadamente 4,6% de probabilidade de se observar uma diferença entre as proporções igual ou mais
+extrema do que a estimativa. Como o p-valor (0,04601) é inferior ao nível de significância de 5%, rejeita-se
+a hipótese nula de igualdade entre as proporções.
+5. Embora a diferença observada seja estatisticamente significativa ao nível de 5%, em termos substantivos,
+ela corresponde, na amostra, a uma diferença de aproximadamente 6,8% entre as pastas. Isso significa que o
+MinC apresenta uma proporção ligeiramente maior de nomeações para cargos de alto nível do que o MAPA;
+no entanto, a diferença não aparenta substantivamente grande a ponto de indicar uma diferença de perfil
+entre as pastas nesse aspecto.
+Significância estatística e nível de significância
+Acerca do primeiro teste de hipótese, onde p-valor=0.07424.
+
+s
+
+===== page_205_mid.png =====
+SAR AN
+teste, prop <- prop.test(
+x = (187, 155),
+m = c(625, 365),
+alternative = "tuo.sided”,
+conf. level = 0.95)
+teste prop
+"
+48 2-sample test for equality of proportions with continuity correction
+“.
+48 data: c(187, 155) out of c(525, 365)
+48 X-squared = 3.9813, df = 1, p-value = 0.04601
+48 alternative hypothesis: two.sided
+4º 95 percent confidence interval:
+48 -0.1359762203 -0.0009578958
+48 sample estimates:
+** propi prop2
+48 0.3561905 0.4246575
+4. O pevalor obtido foi 0.04601 Isso significa que, assumindo que a hipótese nula seja verdadeira, haveria
+aproximadamente 4,6% de probabilidade de se observar uma diferença entre as proporções igual ou mais
+extrema do que a estimativa. Como o p-valor (004601) é inferior ao nível de significância de 5%, rejeita-se
+a hipótese nula de igualdade entre as proporções.
+
+===== page_205_top.png =====
+Table 3: Tabela 3. Nomeações para cargos de alto nível no
+MAPA e MinC (2011-2021).
+Proporção de Limite Limite
+Cargos de alto nomeações dealto Erro: Margem — inferior do — superior do
+Pasta Observações nível (5 e 6) nível padrão de erro 1 IC
+mapa 525 187 0.3561905  0.02089970.0409627 03152278 03971531
+mine 365 155 04246575 002587240. 0507089 03730486 0,4753664
+3.1. Hipótese nula: a proporção de nomeações para cargos de alto nível é igual nas duas pastas.
+Ho: pêmara = Pino
+2. Hipótese alternativa: à proporção de nomeações para cargos de alto nível é diferente nas duas pastas.
+Hi: p2mara É Plstimo
+teste prop <- prop.test(
+x = (187, 155),
+n = c(525. 365).
+
+===== page_206_bot.png =====
+erro padrao movo
+
+*s [1) O.o1477832
+
+4. O erro-padrão tenderia a diminuir. Se a proporção observada permanecesse a mesma, mas 0 número de
+
+observações fosse duplicado para 1.050, o erro-padrão diminuiria para aproximadamente 0,0148.
+
+2. Isso acontece porque o erro-padrão de uma proporção é inversamente relacionado à raiz quadrada do
+
+tamanho da amostra. Ou seja, quanto maior a amostra, menor o erro padrão, diminuindo, portanto, a
+
+incerteza em torno da estimativa.
+
+Declaração sobre uso de inteligência artificial
+
+Durante a elaboração do trabalho, foi utilizado o ChatGPT (OpenAI, modelo GPT-5.5) como ferramenta
+
+de apoio para explicar mensagens de erro no R e revisar trechos de código. A execução das análises, a
+
+interpretação dos resultados e a redação do relatório foram feitas pela autora. |
+9
+
+===== page_206_mid.png =====
+O que aconteceria se a amostra fosse maior?
+
+Acerca do segundo teste de hipótese, em que a proporção estimada para o MAPA foi de 0.3561905; o
+erro-padrão, de 0.02089971.
+
+erro padrao original <- sqrt(0.3561905 + (1 - 0.3561905) / 525)
+
+erro, padrao novo <- sqrt(0.3561905 + (1 - 0.3561905) / 1050)
+
+erro padrao original
+
+48 [1] 0.02089971
+
+erro padrao. novo
+
+48 [1) o.osarrss2
+
+1. O erro-padrão tenderia a diminuir. Se a proporção observada permanecesse a mesma, mas o número de
+observações fosse duplicado para 1.050, o erro-padrão diminuiria para aproximadamente 0,0148.
+
+2. Isso acontece porque o erro-padrão de uma proporção é inversamente relacionado à raiz quadrada do
+tamanho da amostra. Ou seja, quanto maior a amostra, menor o erro padrão, diminuindo, portanto, a
+incerteza em torno da estimativa.
+
+===== page_206_top.png =====
+1. Com a adoção do nível de significância a 10%, a conclusão do teste mudaria, porque passaríamos a rejeitar
+a hipótese nula. A nível de 5%, consideramos que 0.07424 > 0.05 -> Não rejeitamos HO. A nível de 10%,
+consideramos que 0.07424 < 0.10 -> Rejeitamos HO.
+
+2. Com a adoção do nível de significância a 1%, a conclusão do teste não mudaria, pois o p-valor permanece
+superior ao nível de significância adotado. Nesse sentido, não rejeitaríamos HO, como a nível de significância
+de 5%.
+
+3. O exercício evidencia que, enquanto o p-valor diz respeito a um critério estatístico para a tomada de
+decisão (que, dependendo do nível de significância estatística adotada, faz com que o pesquisador rejeite
+ou não a hipótese nula), a significância substantiva refere-se a um aspecto de avaliação da importância
+prática da diferença encontrada. Nesse sentido, a pesquisa pode concluir que uma diferença é estatisticamente
+significativa (o que depende do nível de significância adotado, cujas boas práticas variam entre áreas de
+conhecimento), mas irrelevante do ponto de vista substantivo. Ao mesmo tempo, uma diferença pode ser
+substantivamente importante, mas não alcançar significância estatística em uma amostra pequena. Isso
+implica a necessidade de interpretar e considerar, na pesquisa, não apenas o resultado do teste de hipóteses,
+mas também a magnitude do efeito observado, o nível de incerteza associado às estimativas e o desenho da
+pesquisa que den origem ao teste.
+
+O que aconteceria se a amostra fosse maior?

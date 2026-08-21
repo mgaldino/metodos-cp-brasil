@@ -1,0 +1,372 @@
+
+===== page_001_bot.png =====
+questionando em que medida os perhs e trajetórias dos ocupantes de cargos de confiança
+(DAS e FCPE 4, 5 e 6) variam entre órgãos do Executivo Federal de natureza regu-
+Iatória. Para responder a essa questão, os autores comparam as pastas da Agricultura
+(Ministério da Agricultura e Pecuária - MAPA) e da Cultura (Ministério da Cultura -
+MinC).
+A unidade de análise adotada na base de dados é a nomeação, o que significa que cada
+linha (observação) da base corresponde à uma nomeação para um cargo comissionado
+específico no período analisado. Os autores chamam a atenção para o fato de que, em
+função desse desenho metodológico, a mesma pessoa pode aparecer mais de uma vez
+na base caso tenha sido nomeada para posições diferentes ao longo do recorte temporal
+analisado, cada um desses eventos será registrado como uma observação distinta.
+2. Leitura e validação dos dados
+A base possui 1038 linhas e 26 colunas. Os nomes das variáveis são: orgao sup,
+setor, chave, id, cargo, funcao, nivel, instr, area, inst ensino, inst origem, car pub,
+1
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+Para a realização das análises desta atividade foi utilizada a base de dados original
+construída por ALBRECHT, N. F. M. DE M.; RIBEIRO, P. F. (2025), mobilizada no
+artigo “Nomeação a cargos públicos no Brasil: um estudo comparado das pastas de
+Agricultura e Cultura do Executivo Federal (2011-2021)”. Acessado em 16/07/2026.
+ALBRECHT, N. F. M. DE M.: RIBEIRO, P. F.. Nomeação a cargos públicos no Brasil:
+um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal (2011-
+2021). Revista Brasileira de Ciência Política, v. 44, p. e285564, 2025. Disponível em
+https://doi.org/10.1590/0103-3352.2025.44.285564 . Acesso em 16/07/2026.
+1. Artigo, pergunta e unidade de análise
+O artigo busca compreender os padrões de nomeação para cargos públicos no Brasil,
+questionando em que medida os perfis e trajetórias dos ocupantes de cargos de confiança
+(DAS e FCPE 4, 5 e 6) variam entre órgãos do Executivo Federal de natureza regu-
+latória. Para responder a essa questão, os autores comparam as pastas da Agricultura
+(Ministério da Agricultura e Pecuária - MAPA) e da Cultura (Ministério da Cultura -
+MinC).
+AE ” «cnifica que
+Alguns arquivos neste envio só podem ser acessados através de download direto. O comissionado
+'ato de que, em
+função desse desenho metodológico, a mesma pessoa pode aparecer mais de uma vez
+
+===== page_001_top.png =====
+Análise de Nomeação a Cargos Públicos no MAPA e
+MinC
+Atividade Final - FLP0406
+Pedro Lucas Godoi
+
+º | dados original
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. mobilizada no
+go iceeagas o cegos pramao o mica ee emo compoemms das pastas de
+
+Agricultura e Cultura do Execntivo Federal (2011-2021 Acessado em 16/07/2026.
+
+===== page_002_bot.png =====
+Não foram encontradas inconsistências nas variáveis nível, instr e indicacao.
+Para as demais variáveis que deveriam ser estritamente binárias (id part, exp. soc,
+cargo ele e exp mer), além da aplicação str trim(), foi utilizada a estrutura
+case when() para validar e manter apenas os códigos O (Não) e 1 (Sim). Qualquer
+outra ocorrência inesperada ou textos perdidos digitados como “NA” foram convertidos
+para o formato de omissão padrão do R (com NA. real ), eliminando ruídos.
+3. Tabela descritiva: experiência administrativa
+Variável binária de experiência prévia em órgãos da administração pública:
+exp adm limpo
+De acordo com o Codebook a variável exp adm define experiência em órgãos da admin-
+istração pública em que “1” indica a presença de experiência prévia e “0”, a ausência.
+Não foi necessária mais nenhuma ação para criação da variável já que no tratamento
+da base na seção anterior já havia sido feita sua limpeza e padronização.
+2
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+“Não toi reconhecido os textos “NA em algumas dessas variáveis, como em Liderança
+partidária.
+Limpeza e tratamento dos dados
+Para garantir a consistência dos dados, a primeira etapa aplicou a função str trim() em
+nas variáveis de interesse indicadas na atividade que estavam erroneamente classificadas
+como “chr”, removendo espaços em branco invisíveis que poderiam estar causando o
+erro de categorização quando números são importados como texto (chr).
+Em seguida, foram corrigiadas falhas de digitação específicas, como o caractere estranho
+**]” na variável exp. adm (recodificado para 1), e foram tratadas inconsistências que
+não constavam no Codebook (como o valor 3 em exp adm e os valores O e 5 em
+exp. car), convertendo-os em valores ausentes oficiais (NA) como não temos como saber
+seu valor correto.
+Não foram encontradas inconsistências nas variáveis nível, instr e indicacao.
+Para as demais variáveis que deveriam ser estritamente binárias (id part, exp soc,
+cargo ele e exp mer), além da aplicação str trim(), foi utilizada a estrutura
+case when() para validar e manter apenas os códigos O (Não) e 1 (Sim). Qualquer
+outra ocorrência inesperada ou textos perdidos digitados como “NA” foram convertidos
+uídos.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+3. Tabela descritiva: experiência administrativa
+
+===== page_002_top.png =====
+partido, cargo. ele, lid part, exp adm, exp car, exp mer, exp soc, UF*, partido. pr,
+partido ministro, indicacao, entrada, saida, perm.
+São encontradas a seguinte quantidade de observações para cada ministério na base
+(orgão sup): mapa (525), minc (365), meti (148).
+Número de valores ausentes nas variáveis:
+- nível mais alto de instrução: O
+- partido do/a nomeado/a: O
+- liderança partidária: O
+- experiência em cargos de gestão: 1
+- experiência em associações e grupos de interesse: 4
+» em Liderança
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+o Lunpeza e vravamento uus uauos
+
+===== page_003_bot.png =====
+coletadas para este ministério em comparação ao MAPA.
+Os intervalos de confiança de 95% representam faixas de valores plausíveis para a verdadeira
+proporção populacional de nomeados com experiência administrativa em cada órgão. O inter-
+valo significa que, se o processo de amostragem e estimação fosse repetido infinitas vezes sob
+as mesmas condições, esperaríamos que 95% dos intervalos gerados contivessem o verdadeiro
+parâmetro populacional.
+No MAPA, temos 95% de confiança de que a real proporção de gestores experientes na adminis-
+tração pública está compreendida entre 89.66% e 94,31%. Para o MinC, o intervalo estimado
+com o mesmo nível de confiança indica que à proporção real de nomeados experientes na
+população situa-se entre 84,77% e 91,50%. Como há uma intersecção considerável entre as
+duas faixas estimadas, não é possível afirmar com segurança estatística que a proporção de
+nomeados com experiência prévia seja de fato diferente entre as duas pastas.
+2
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+Fonte: Elaboração própria com dados da Base Cargos 2 (Albrecht, N.).
+A análise dos dados revela que a grande maioria das pessoas nomeadas para cargos de gestão
+tanto no Ministério da Agricultura e Pecuária quanto no Ministério da Cultura possui ex-
+periência prévia na administração pública. No MAPA, a proporção observada de nomeados
+experientes é de aproximadamente 91,98% (482 de 524 observações válidas), enquanto no
+MinC essa proporção é ligeiramente menor, atingindo 88,14% (312 de 354 observações váli-
+das).
+Como esses dados representam uma amostra das nomeações, a inferência estatística permite
+estimar a margem de erro para as estimativas. Para o MAPA a margem de erro é de 2,32
+pontos percentuais, o que significa que, devido à variabilidade amostral do processo de seleção
+dos dados, a estimativa pontual de 91,98% pode flutuar para mais ou para menos em até
+essa quantidade. No caso do MinC, a margem de erro é um pouco maior, de 3,37 pontos
+percentuais, o que pode ser explicado em razão do menor número de observações válidas
+coletadas para este ministério em comparação ao MAPA.
+Os intervalos de confiança de 95% representam faixas de valores plausíveis para a verdadeira
+proporção populacional de nomeados com experiência administrativa em cada órgão. O inter-
+valo significa que, se o processo de amostragem e estimação fosse repetido infinitas vezes sob
+as mesmas condições, esperaríamos que 95% dos intervalos gerados contivessem o verdadeiro
+Alguns arquivos neste envio só podem ser acessados através de download direto. — ntes na adminis-
+= E e “ervalo estimado
+com o mesmo nível de confianca indica que a proporção real de nomeados experientes na
+
+===== page_003_top.png =====
+Table 1: Tabela 1: Comparativo da experiência adminis-
+trativa prévia dos nomeados entre o MAPA e o MinC.
+MAPA MinC
+Número de Obs. Válidas 524 354
+Casos com Exp. Adm. 482 312
+Proporção (p) 09198473 0,8813559
+IC 95% (Limite Inferior) 0.8965982 0,8476696
+IC 95% (Limite Superior) 0.9430965  0.9150422
+Margem de Erro (ME) 0.02324916 0.03368629
+Intervalo de confianca (IC) e margem de erro calculados com 95% de nível de confiança.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+= o - = = cargos de gestão
+tanto no Ministério da Agricultura e Pecuária quanto no Ministério da Cultura possui ex-
+
+===== page_004_bot.png =====
+o valor zero, permanece plausível a hipótese de que a diisrença real entre as duas pastas seja
+nula.
+5. Segundo teste de hipótese bivariado
+A distribuição de cargos de alto nível, definidos como nível 5 ou 6, contrapondo-se ao nível
+4 também presente na base, foi analisada. A tabela abaixo consolida esses indicadores e
+apresenta as estimativas para cada uma das pastas.
+Table 2: Tabela 2: Comparativo do número de cargos de alto
+nível dos nomeados entre o MAPA e o MinC.
+MAPA MinC
+Número de Obs. Válidas 525 365
+Cargos de Alto Nível (5 ou 6) 187 155
+Proporção (p) 0.3561905 0,4246575
+IC 95% (Limite Inferior) 03152271 0,8739477
+4
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+Z = 1.9020779.
+O p-valor bicaudal resultante do teste foi de 0.057161 (ou 5,72%). O p-valor representa
+a probabilidade de ser encontrada uma diferença amostral tão grande ou maior do que a
+observada (de 3,85 pontos percentuais) sob a premissa de que a hipótese nula é verdadeira
+(parapa = PMinc)-
+Adotando o nível de significância padrão de 5% (a = 0,05), como o p-valor encontrado (5,72%)
+é superior ao limite estabelecido, a hipótese nula de igualdade de proporções não é rejeitada.
+Os dados analisados não trazem evidências estatisticamente seguras para afirmar que os min-
+istérios se comportam de forma diferente na nomeação de cargos de gestão. Embora a amostra
+do MAPA apresente uma taxa amostral ligeiramente superior (91,98% contra 88,14%), o teste
+estatístico demonstra que essa oscilação de 3,85% pode ser explicada pela variabilidade da
+amostra. Essa conclusão também é corroborada pelo intervalo de confiança de 95% para a
+diferença entre as duas proporções, que varia de -0,24% a 7,94%. Como esse intervalo contém
+o valor zero, permanece plausível a hipótese de que a diferença real entre as duas pastas seja
+nula.
+5. Segundo teste de hipótese bivariado
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.  *s indicadores e
+
+PR
+
+===== page_004_top.png =====
+4. Primeiro teste de hipótese bivariado
+Para avaliar se a diferença observada na proporção de nomeações com experiência admin-
+istrativa entre o MAPA e o MinC é estatisticamente significante, foi realizado um teste de
+hipóteses.
+A hipótese nula (HO) foi definida como a igualdade entre as proporções populacionais das
+duas pastas (parAPA = PstinC), postula, portanto, que proporção populacional de pessoas
+com experiência administrativa prévia nomeadas para cargos de gestão é a mesma no MAPA
+e no MinC. Em contraposição, a hipótese alternativa (H1) postula que as proporções de
+gestores experientes diferem entre os órgãos na população (papa É PMrinc).
+O utilizado o Teste de Hipóteses para a Diferença entre Duas Proporções por meio da Aprox-
+imação Normal (calculado manualmente no R passo a passo utilizando a proporção combi-
+nada para o erro padrão sob a hipótese de igualdade). A estatística de teste encontrada foi
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+| valor representa
+
+a probabinaade de ser encontrada uma arerença amostras tao granae ou maior do que a
+
+===== page_005_bot.png =====
+a diferença observada (de 6,85 pontos percentuais), assumindo que os ministérios tivessem
+exatamente a mesma proporção de cargos altos na população.
+
+Adotando novamente um nível de significância de 5% (a = 0,05), como o p-valor de 3,89%
+é inferior a esse limite, a decisão metodológica é rejeitar a hipótese nula (H0). Logo, há
+evidências estatisticamente seguras para afirmar que a proporção de cargos de alta liderança
+difere entre as duas pastas.
+
+A diferença de 6,85 pontos percentuais entre o MAPA e o MinC pode, portanto, ser classificada
+como substantivamente importante. Embora a diferença seja pequena, cla demonstra um
+desenho organizacional que no Ministério da Cultura, quase 43% de toda a estrutura de
+cargos médios e altos está concentrada nos níveis mais elevados de chefia (5 e 6), enquanto
+no MAPA essa concentração é mais enxuta, cerca de 36%. Isso indica que a burocracia do
+MinC é proporcionalmente constituída por cargos de níveis mais altos, possuindo um perfil
+de governança que delega maior prestígio e nível hierárquico aos seus quadros internos se
+comparado ao Ministério da Agricultura.
+
+É importante notar que, embora ocorra uma leve sobreposição entre os intervalos de confi-
+ança de 95% das duas pastas (na faixa de 37,39% a 39,72%), o teste de hipóteses conjunto
+5
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+Ee int er papiro cien ea a dog SAR 0 Re Sead Adir od Di op saciar
+menos observações válidas e, consequentemente, maior variabilidade amostral, a margem de
+erro é de 5,07 pontos percentuais, resultando em um intervalo de confiança de 95% de 37,39%
+a 47%.
+
+Para testar se a diferença observada nas amostras reflete uma real diferença populacional
+entre os órgãos, foi realizado um teste bicaudal bascado na aproximação normal. À hipótese
+nula (HO) foi definida como a igualdade de proporções (papa = Patinc'), indicando que as
+estruturas organizacionais das duas pastas possuem a mesma proporção de cargos altos na
+população. A hipótese alternativa (H1) diz que a proporção de cargos de alto nível difere
+entre as duas pastas (pyApA É PMinc)-
+O teste de hipótese foi realizado também de forma manual para a diferença entre as duas pro-
+porções, utilizando a estimativa do erro padrão combinado, gerou uma estatística de teste de
+Z = —2.0653774 e um p-valor de 0.0388873 (ou 3,89%). O p-valor representa a probabilidade
+de encontrarmos amostras aleatórias cuja diferença entre proporções seja igual ou maior que
+a diferença observada (de 6.85 pontos percentuais), assumindo que os ministérios tivessem
+exatamente a mesma proporção de cargos altos na população.
+Adotando novamente um nível de significância de 5% (a = 0,05), como o p-valor de 3,89%
+é inferior a esse limite, a decisão metodológica é rejeitar à hipótese nula (HO). Logo, há
+evidências estatisticamente seguras para afirmar que a proporção de cargos de alta liderança
+Alguns arquivos neste envio só podem ser acessados através de download direto.» ser classificada
+. RR 4 demonstra um
+desenho organizacional que no Ministério da Cultura, quase 43% de toda a estmtura de
+
+===== page_005_top.png =====
+MAPA MinC
+TC 95% (Limite Superior) 0,3971539 0,4753674
+Margem de Erro (ME) 0.04096343  0.05070984
+Intervalo de confiança (IC) e margem de erro calculados com 95% de nível de confiança.
+Fonte: Elaboração própria com dados da Base Cargos 2 (Albrecht, N.).
+Os resultados amostrais indicam que a proporção de ocupantes em cargos de alto nível é de
+35,62% no MAPA (187 de 525 observações válidas) e de 42,47% no MinC (155 de 365 obser-
+vações válidas). Para avaliar a precisão dessas estimativas frente à população de nomeados,
+calculou-se a margem de erro de cada ministério. Para o MAPA, a margem de erro é de 4,10
+pontos percentuais com 95% de confiança, de modo que a real proporção de cargos de alto
+id Fo a * > finC, que possui
+A E A j al, a margem de
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. | 95% de S7.39%
+o nana.
+
+===== page_006_bot.png =====
+FARA PR SE O DD RR NR PN AVR SP RN
+muda muito dependendo da regra de corte que o pesquisador escolhe (como anteriormente, a
+mesma diferença passa no teste de 5%, mas reprova no teste de 1%) e do tamanho da amostra.
+Já a significância substantiva tem a ver com o tamanho e o impacto prático dessa diferença. Na
+população (os Ministérios na vida real), descobrir que o MinC tem quase 7 pontos percentuais
+a mais de cargos de alta chefia do que o MAPA é uma diferença relevante na forma como os
+ministérios se organizam administrativamente e politicamente.
+
+Desse modo, selecionar um nível de significância adequado para a análise é tão importante
+quando os cáleulos estatísticos feitos, com o risco de escolher um nível com rigor inadequado
+e não reconhecer, neste caso, uma diferente importante na prática.
+7. O que aconteceria se a amostra fosse maior?
+Supondo que o número de observações fosse o dobro, qual o comportamento esperado do teste
+de hipótese realizado sobre a experiência administrativa prévia.
+O que tenderia a acontecer com o erro-padrão e por quê?
+
+6
+
+===== page_006_mid.png =====
+Dessa forma, mesmo com um nível de significância mais flexível, continuaríamos rejeitando a
+hipótese nula.
+
+A conclusão mudaria se o nível de significância fosse 1%?
+
+Sim. Um nível de significância de 1% (0,01) é extremamente rigoroso. Nesse caso, o p-valor
+de 3,89% passa a ser maior do que o limite tolerado (0,0389 > 0,01). Isso siguifica que não
+foi atingido o nível de evidência necessário exigido pelo nível de significância de 1%. Desse
+modo, não rejeitaríamos a hipótese nula. A conclusão passaria a ser de que não há evidências
+estatísticas suficientes para afirmar que as proporções diferem, tratando a diferença observada
+nas amostras como possível acaso.
+
+O que esse exercício mostra sobre a diferença entre p-valor e significância sub-
+stantiva?
+
+Ele mostra que a significância estatística do p-valor vem de ser uma ferramenta que ajuda a ver
+se a diferença que encontramos na amostra foi apenas sorte ou acaso. Mas sua interpretação
+muda muito dependendo da regra de corte que o pesquisador escolhe (como anteriormente, a
+mesma diferença passa no teste de 5%, mas reprova no teste de 1%) e do tamanho da amostra.
+Já a significância substantiva tem a ver com o tamanho e o impacto prático dessa diferença. Na
+população (os Ministérios na vida real), descobrir que o MinC tem quase 7 pontos percentuais
+a mais de cargos de alta chefia do que o MAPA é uma diferença relevante na forma como os
+ministérios se organizam administrativamente e politicamente.
+
+Desse modo, selecionar um nível de significância adequado para a análise é tão importante
+quando os cálculos estatísticos feitos, com o risco de escolher um nível com rigor inadequado
+E
+
+===== page_006_top.png =====
+para a diferença de proporções é um procedimento mais robusto e de maior poder analítico.
+Como o teste bicaudal rejeitou a hipótese nula com um p-valor de 0.0388873, fica confir-
+mado que a diferença de 6,85 pontos percentuais entre as duas estruturas de cargos é de fato
+estatisticamente siguificante ao nível de 5%.
+
+6. Significância estatística e nível de significância
+
+Sobre o teste de igualdade de proporções de cargos de alto nível entre as duas pastas:
+
+A conclusão mudaria se o nível de significância fosse 10%?
+
+Não, a conclusão permaneceria a mesma. O nível de significância de 10% equivale a um limite
+de 0,10 para o p. valor. Como o p-valor calculado no teste foi de aproximadamente 0,0389 (ou
+3,89%), ele continua sendo menor do que o nível de significância estabelecido (0,0389 < 0,10).
+Dessa forma, mesmo com um nível de significância mais flexível, continuaríamos rejeitando a
+A conclusão mudaria se o nível de significância fosse 1%?
+
+===== page_007_bot.png =====
+
+
+===== page_007_mid.png =====
+
+
+===== page_007_top.png =====
+O erro-padrão diminuiria se o tamanho da amostra dobrasse. |
+€rTOpadrao < —SQrH(Pcombinado * (1 — Peombinado) * (1/n1 + 1/n2))
+
+Na fórmula do erro-padrão utilizada no cálculo das proporções (acima), o tamanho da amostra
+
+fica no denominador das frações. Como o n (nl e n2) eresce no denominador, o resultado da
+
+divisão fica menor, de modo que o valor final do erro-padrão também será menor.
+
+No raciocínio prático, quando dobramos o número de observações, estamos coletando mais
+
+informação sobre a população. Quanto mais dados (numa amostra aleatória), maior a confi-
+
+ança e menor a margem para flutuações aleatórias. Logo, com mais informação, a incerteza
+
+(erro-padrão) diminui.

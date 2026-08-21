@@ -1,0 +1,1283 @@
+{
+  "collectedAt": "2026-08-21T17:13:34.504Z",
+  "activityId": 6364861,
+  "courseId": 139474,
+  "participants": [
+    {
+      "email": "pedro.henrique.franco@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=16630",
+      "modified": "-",
+      "moodleUserId": "16630",
+      "name": "Pedro Henrique Abbonizio Franco",
+      "nusp": "7618206",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "guilherme.pereira.ferreira@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=29276",
+      "modified": "-",
+      "moodleUserId": "29276",
+      "name": "Guilherme Pereira Ferreira",
+      "nusp": "8539774",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "bruno8.silva@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=198977",
+      "modified": "-",
+      "moodleUserId": "198977",
+      "name": "Bruno da Silva",
+      "nusp": "9875681",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "joaovitor.ricchini@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho_Final_Metodos_Revisado_Acabado_Rmarkdown.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14405436/Trabalho_Final_Metodos_Revisado_Acabado_Rmarkdown.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho_Final_Metodos_Revisado_Acabado.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14405436/Trabalho_Final_Metodos_Revisado_Acabado.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=257308",
+      "modified": "domingo, 19 jul. 2026, 15:34",
+      "moodleUserId": "257308",
+      "name": "João Victor Ricchini Freire de Carvalho",
+      "nusp": "10765228",
+      "status": "Enviado"
+    },
+    {
+      "email": "joao.neto.santos@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=277559",
+      "modified": "-",
+      "moodleUserId": "277559",
+      "name": "Joao Neto Campos dos Santos",
+      "nusp": "8579081",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "vitor.bsilva@usp.br",
+      "files": [
+        {
+          "fileName": "relatorio_final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14421094/relatorio_final.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "relatorio_final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14421094/relatorio_final.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=288370",
+      "modified": "segunda-feira, 20 jul. 2026, 21:24",
+      "moodleUserId": "288370",
+      "name": "Vitor Barbosa Silva",
+      "nusp": "9825991",
+      "status": "Enviado"
+    },
+    {
+      "email": "sara22.pereira@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=294234",
+      "modified": "-",
+      "moodleUserId": "294234",
+      "name": "Sara Pereira da Silva",
+      "nusp": "11816341",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "biargferreira@usp.br",
+      "files": [
+        {
+          "fileName": "relatorio_final_beatriz_galli.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14365551/relatorio_final_beatriz_galli.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "relatorio_final_beatriz_galli.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14365551/relatorio_final_beatriz_galli.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=297307",
+      "modified": "segunda-feira, 20 jul. 2026, 16:47",
+      "moodleUserId": "297307",
+      "name": "Beatriz Ribeiro Galli Ferreira",
+      "nusp": "11760430",
+      "status": "Enviado"
+    },
+    {
+      "email": "salgueiro@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=300040",
+      "modified": "-",
+      "moodleUserId": "300040",
+      "name": "Pedro Henrique Nunes Salgueiro",
+      "nusp": "11316163",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "eamigogamo@usp.br",
+      "files": [
+        {
+          "fileName": "GAMO. Emilio. Avaliação_ inferência básica com dados reais de Ciência Política (Metodos III - Politica_USP).pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14420787/GAMO.%20Emilio.%20Avalia%C3%A7%C3%A3o_%20infer%C3%AAncia%20b%C3%A1sica%20com%20dados%20reais%20de%20Ci%C3%AAncia%20Pol%C3%ADtica%20%28Metodos%20III%20-%20Politica_USP%29.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_metodos_Emilio.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14420787/trabalho_metodos_Emilio.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=305934",
+      "modified": "segunda-feira, 20 jul. 2026, 23:22",
+      "moodleUserId": "305934",
+      "name": "Emilio Amigo Gamo",
+      "nusp": "5549811",
+      "status": "Enviado"
+    },
+    {
+      "email": "fellipeb@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho_Fellipe.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14400337/Trabalho_Fellipe.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho_Fellipe.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14400337/Trabalho_Fellipe.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=313364",
+      "modified": "segunda-feira, 20 jul. 2026, 19:14",
+      "moodleUserId": "313364",
+      "name": "Fellipe Matheus Bernardino Pereira",
+      "nusp": "11330361",
+      "status": "Enviado"
+    },
+    {
+      "email": "rafaelpepe@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação – Inferência Básica com Dados Reais de Ciência Política.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14368433/Avalia%C3%A7%C3%A3o%20%E2%80%93%20Infer%C3%AAncia%20B%C3%A1sica%20com%20Dados%20Reais%20de%20Ci%C3%AAncia%20Pol%C3%ADtica.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "AvaliacaoRafaelPepeRomano_Noturno_versão final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14368433/AvaliacaoRafaelPepeRomano_Noturno_vers%C3%A3o%20final.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "AvaliacaoRafaelPepeRomano_Noturno.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14368433/AvaliacaoRafaelPepeRomano_Noturno.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "AvaliacaoRafaelPepeRomano_Noturno.tex",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14368433/AvaliacaoRafaelPepeRomano_Noturno.tex?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=316358",
+      "modified": "quarta-feira, 15 jul. 2026, 13:35",
+      "moodleUserId": "316358",
+      "name": "Rafael Pepe Romano",
+      "nusp": "12507571",
+      "status": "Enviado"
+    },
+    {
+      "email": "teopimenta@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=316718",
+      "modified": "-",
+      "moodleUserId": "316718",
+      "name": "TdTeodoro de Almeida Alkmim Pimenta",
+      "nusp": "12507630",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "paulagonzales@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=319557",
+      "modified": "-",
+      "moodleUserId": "319557",
+      "name": "Paula Juliana Rubio Gonzales",
+      "nusp": "12521185",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "murilorsm@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho_final_Murilo_Noturno_13636574.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14372718/Trabalho_final_Murilo_Noturno_13636574.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho_final_Murilo_Noturno_13636574.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14372718/Trabalho_final_Murilo_Noturno_13636574.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=335296",
+      "modified": "segunda-feira, 20 jul. 2026, 19:30",
+      "moodleUserId": "335296",
+      "name": "Murilo Rocha Souto Maior",
+      "nusp": "13636574",
+      "status": "Enviado"
+    },
+    {
+      "email": "egomes@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho_Métodos_Emerson13713872.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14361200/Trabalho_M%C3%A9todos_Emerson13713872.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "TrabalhoMetodos_Emerson13713872.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14361200/TrabalhoMetodos_Emerson13713872.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=336121",
+      "modified": "domingo, 12 jul. 2026, 19:17",
+      "moodleUserId": "336121",
+      "name": "EdEmerson de Lima Gomes",
+      "nusp": "13713872",
+      "status": "Enviado"
+    },
+    {
+      "email": "luccas.eduardo@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação de Métodos CP.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14415392/Avalia%C3%A7%C3%A3o%20de%20M%C3%A9todos%20CP.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliação_metodosCP.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14415392/Avalia%C3%A7%C3%A3o_metodosCP.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=336166",
+      "modified": "terça-feira, 14 jul. 2026, 00:44",
+      "moodleUserId": "336166",
+      "name": "Luccas Eduardo Ferraz da Silva",
+      "nusp": "13636981",
+      "status": "Enviado"
+    },
+    {
+      "email": "psombra@usp.br",
+      "files": [
+        {
+          "fileName": "TrabalhoFinal13636719.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14424237/TrabalhoFinal13636719.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "TrabalhoFinal13636719.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14424237/TrabalhoFinal13636719.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=336584",
+      "modified": "segunda-feira, 20 jul. 2026, 11:14",
+      "moodleUserId": "336584",
+      "name": "Pedro Sombra de Souza",
+      "nusp": "13636719",
+      "status": "Enviado"
+    },
+    {
+      "email": "jaqueline.lorenseti@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=337463",
+      "modified": "-",
+      "moodleUserId": "337463",
+      "name": "Jaqueline Lorenseti dos Santos",
+      "nusp": "13723971",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "nicolaskahli@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=337581",
+      "modified": "-",
+      "moodleUserId": "337581",
+      "name": "Nicolas Kahli Dourado Maciel",
+      "nusp": "13721986",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "marianapatrone@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=339830",
+      "modified": "-",
+      "moodleUserId": "339830",
+      "name": "Mariana Sarmento Patrone",
+      "nusp": "12234981",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "plgodoi@usp.br",
+      "files": [
+        {
+          "fileName": "[Pedro Godoi NUSP_13721516] Avaliação final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14413949/%5BPedro%20Godoi%20NUSP_13721516%5D%20Avalia%C3%A7%C3%A3o%20final.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "[Pedro Godoi NUSP_13721516] Avaliação-final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14413949/%5BPedro%20Godoi%20NUSP_13721516%5D%20Avalia%C3%A7%C3%A3o-final.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=340786",
+      "modified": "quinta-feira, 16 jul. 2026, 19:59",
+      "moodleUserId": "340786",
+      "name": "Pedro Lucas Godoi",
+      "nusp": "13721516",
+      "status": "Enviado"
+    },
+    {
+      "email": "debritofranciele@usp.br",
+      "files": [
+        {
+          "fileName": "relatorio_final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14352130/relatorio_final.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "relatorio_final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14352130/relatorio_final.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=343683",
+      "modified": "segunda-feira, 20 jul. 2026, 22:45",
+      "moodleUserId": "343683",
+      "name": "Franciele de Brito Leite",
+      "nusp": "13825860",
+      "status": "Enviado"
+    },
+    {
+      "email": "thiago.simoni@usp.br",
+      "files": [
+        {
+          "fileName": "trabalhofinal.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14352128/trabalhofinal.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "trabalhofinal.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14352128/trabalhofinal.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=344266",
+      "modified": "segunda-feira, 20 jul. 2026, 16:26",
+      "moodleUserId": "344266",
+      "name": "Thiago Simoni",
+      "nusp": "13838774",
+      "status": "Enviado"
+    },
+    {
+      "email": "giovannas@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação MTPCP III.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14423727/Avalia%C3%A7%C3%A3o%20MTPCP%20III.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliação-MTPCP-III.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14423727/Avalia%C3%A7%C3%A3o-MTPCP-III.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=346357",
+      "modified": "domingo, 19 jul. 2026, 19:13",
+      "moodleUserId": "346357",
+      "name": "Giovanna dos Santos Chistoni Silva",
+      "nusp": "13860449",
+      "status": "Enviado"
+    },
+    {
+      "email": "jessica.morais@usp.br",
+      "files": [
+        {
+          "fileName": "trabalho_jessica_batista.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14418439/trabalho_jessica_batista.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_jessica_batista.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14418439/trabalho_jessica_batista.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=346755",
+      "modified": "sábado, 18 jul. 2026, 22:27",
+      "moodleUserId": "346755",
+      "name": "Jéssica de Morais Batista",
+      "nusp": "10437013",
+      "status": "Enviado"
+    },
+    {
+      "email": "agneskunsch@usp.br",
+      "files": [
+        {
+          "fileName": "BASE_cargos_limpa.xlsx",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14376662/trabalho_final/dados/BASE_cargos_limpa.xlsx?forcedownload=1"
+        },
+        {
+          "fileName": "BASE_cargos2.xlsx",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14376662/trabalho_final/dados/BASE_cargos2.xlsx?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14376662/trabalho_final/trabalho_final.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14376662/trabalho_final/trabalho_final.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_final.Rproj",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14376662/trabalho_final/trabalho_final.Rproj?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=353276",
+      "modified": "sexta-feira, 17 jul. 2026, 18:34",
+      "moodleUserId": "353276",
+      "name": "Agnes Francisca Carraro Kunsch",
+      "nusp": "14554690",
+      "status": "Enviado"
+    },
+    {
+      "email": "marianapuschel@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação Final MTPCPIII_Mariana Araujo Püschel_4725594.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14402716/Avaliac%CC%A7a%CC%83o%20Final%20MTPCPIII_Mariana%20Araujo%20Pu%CC%88schel_4725594.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliação-Final-MTPCPIII_Mariana-Araujo-Püschel_4725594.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14402716/Avaliac%CC%A7a%CC%83o-Final-MTPCPIII_Mariana-Araujo-Pu%CC%88schel_4725594.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=354324",
+      "modified": "quinta-feira, 16 jul. 2026, 23:11",
+      "moodleUserId": "354324",
+      "name": "Mariana Araujo Puschel",
+      "nusp": "4725594",
+      "status": "Enviado"
+    },
+    {
+      "email": "lincolnm@usp.br",
+      "files": [
+        {
+          "fileName": "GALDINO_TRABALHOFINAL.RData",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14407447/GALDINO_TRABALHOFINAL.RData?forcedownload=1"
+        },
+        {
+          "fileName": "GALDINO_TRABALHOFINAL.Rproj",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14407447/GALDINO_TRABALHOFINAL.Rproj?forcedownload=1"
+        },
+        {
+          "fileName": "TRABALHO FINAL GALDINO.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14407447/TRABALHO%20FINAL%20GALDINO.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=354513",
+      "modified": "domingo, 19 jul. 2026, 16:08",
+      "moodleUserId": "354513",
+      "name": "Lincoln Antonio Andrade de Moura",
+      "nusp": "14589448",
+      "status": "Enviado"
+    },
+    {
+      "email": "veronicaguibu@usp.br",
+      "files": [
+        {
+          "fileName": "Código veronica.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14420123/C%C3%B3digo%20veronica.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Código-veronica.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14420123/C%C3%B3digo-veronica.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=355777",
+      "modified": "domingo, 19 jul. 2026, 21:38",
+      "moodleUserId": "355777",
+      "name": "Veronica Maia Schlickmann Guibu",
+      "nusp": "14610153",
+      "status": "Enviado"
+    },
+    {
+      "email": "annelouisedias@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho final MTP III.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14373414/Trabalho%20final%20MTP%20III.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho-final-MTP-III.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14373414/Trabalho-final-MTP-III.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=356339",
+      "modified": "terça-feira, 30 jun. 2026, 22:31",
+      "moodleUserId": "356339",
+      "name": "Anne Louise Dias Ferreira",
+      "nusp": "14558926",
+      "status": "Enviado"
+    },
+    {
+      "email": "fernando.04chaves@usp.br",
+      "files": [
+        {
+          "fileName": "trabalho_final_luiz-1.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14425600/trabalho_final_luiz-1.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_final_luiz.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14425600/trabalho_final_luiz.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=356875",
+      "modified": "segunda-feira, 20 jul. 2026, 14:14",
+      "moodleUserId": "356875",
+      "name": "Luiz Fernando Lima Chaves",
+      "nusp": "14678357",
+      "status": "Enviado"
+    },
+    {
+      "email": "larissagarcez@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacao_final_LARISSAGARCEZRIBEIRO.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14350088/avaliacao_final_LARISSAGARCEZRIBEIRO.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "avaliaçãofinalEstatisticaRMD.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14350088/avalia%C3%A7%C3%A3ofinalEstatisticaRMD.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=357090",
+      "modified": "quinta-feira, 2 jul. 2026, 14:28",
+      "moodleUserId": "357090",
+      "name": "Larissa Garcez Ribeiro",
+      "nusp": "14655362",
+      "status": "Enviado"
+    },
+    {
+      "email": "yasmim.aparecida@usp.br",
+      "files": [
+        {
+          "fileName": "14612631-Yasmim Aparecida - Trabalho final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14349320/14612631-Yasmim%20Aparecida%20-%20Trabalho%20final.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "14612631-Yasmim-Aparecida---Trabalho-final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14349320/14612631-Yasmim-Aparecida---Trabalho-final.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=357117",
+      "modified": "segunda-feira, 20 jul. 2026, 15:22",
+      "moodleUserId": "357117",
+      "name": "Yasmim Aparecida Silva Almeida",
+      "nusp": "14612631",
+      "status": "Enviado"
+    },
+    {
+      "email": "juliamagalhaes@usp.br",
+      "files": [
+        {
+          "fileName": "_quarto.yml",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14378334/_quarto.yml?forcedownload=1"
+        },
+        {
+          "fileName": "relatórioMTPIII .pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14378334/relat%C3%B3rioMTPIII%20.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=357383",
+      "modified": "terça-feira, 21 jul. 2026, 01:31",
+      "moodleUserId": "357383",
+      "name": "Ju Magalhães",
+      "nusp": "14654997",
+      "status": "Enviado"
+    },
+    {
+      "email": "otaviocardosodemoraes@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliacao-de-Inferencia-Basica-FINAL.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14425842/Avaliacao-de-Inferencia-Basica-FINAL.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliacao-de-Inferencia-Basica-FINAL.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14425842/Avaliacao-de-Inferencia-Basica-FINAL.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=357482",
+      "modified": "segunda-feira, 20 jul. 2026, 23:03",
+      "moodleUserId": "357482",
+      "name": "Otavio Cardoso de Moraes",
+      "nusp": "14657447",
+      "status": "Enviado"
+    },
+    {
+      "email": "lara.nl@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho Final - Lara Lacerda.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14414660/Trabalho%20Final%20-%20Lara%20Lacerda.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho-Final---Lara-Lacerda.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14414660/Trabalho-Final---Lara-Lacerda.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=357617",
+      "modified": "quinta-feira, 16 jul. 2026, 21:04",
+      "moodleUserId": "357617",
+      "name": "Lara Nunes de Lacerda",
+      "nusp": "14586921",
+      "status": "Enviado"
+    },
+    {
+      "email": "mariana.rodcs@usp.br",
+      "files": [
+        {
+          "fileName": "Trab. final - métodos quantitativos cp.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14400243/Trab.%20final%20-%20m%C3%A9todos%20quantitativos%20cp.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Trab.-final---métodos-quantitativos-cp.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14400243/Trab.-final---m%C3%A9todos-quantitativos-cp.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=358505",
+      "modified": "domingo, 19 jul. 2026, 17:03",
+      "moodleUserId": "358505",
+      "name": "Mariana Rodrigues Carneiro Silva",
+      "nusp": "14596738",
+      "status": "Enviado"
+    },
+    {
+      "email": "juliafrancaecastilho@usp.br",
+      "files": [
+        {
+          "fileName": "FLP0406_relatorio.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14383666/FLP0406_relatorio.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "FLP0406_relatorio.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14383666/FLP0406_relatorio.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=359603",
+      "modified": "terça-feira, 21 jul. 2026, 01:21",
+      "moodleUserId": "359603",
+      "name": "Julia Franca e Castilho",
+      "nusp": "14584443",
+      "status": "Enviado"
+    },
+    {
+      "email": "jvfaverobarros@usp.br",
+      "files": [
+        {
+          "fileName": "Relatório.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14384288/Relat%C3%B3rio.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Relatório.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14384288/Relat%C3%B3rio.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_final_flp0406_compactado.zip",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14384288/trabalho_final_flp0406_compactado.zip?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=359733",
+      "modified": "segunda-feira, 20 jul. 2026, 21:03",
+      "moodleUserId": "359733",
+      "name": "João Vítor Fávero Barros",
+      "nusp": "14583212",
+      "status": "Enviado"
+    },
+    {
+      "email": "jhonathanoliveira151@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=360447",
+      "modified": "-",
+      "moodleUserId": "360447",
+      "name": "Jhonathan Rafael Oliveira",
+      "nusp": "14678166",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "godoyeduardoo@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho_final_FLP0406_EduardoGodoy.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14351561/Trabalho_final_FLP0406_EduardoGodoy.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho_final_FLP0406_EduardoGodoy.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14351561/Trabalho_final_FLP0406_EduardoGodoy.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=360480",
+      "modified": "segunda-feira, 20 jul. 2026, 22:52",
+      "moodleUserId": "360480",
+      "name": "eduardo de oliveira godoy",
+      "nusp": "14567093",
+      "status": "Enviado"
+    },
+    {
+      "email": "ghonorio@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacaoflp0406.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14395627/avaliacaoflp0406.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "avaliacaoflp0406.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14395627/avaliacaoflp0406.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=361302",
+      "modified": "sexta-feira, 17 jul. 2026, 16:21",
+      "moodleUserId": "361302",
+      "name": "Giovanna Ellen Honório Braga",
+      "nusp": "14574661",
+      "status": "Enviado"
+    },
+    {
+      "email": "pedrohenriqueamaral@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliacao_PedroAmaral.pdf.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14424147/Avaliacao_PedroAmaral.pdf.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliacao_PedroAmaral.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14424147/Avaliacao_PedroAmaral.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=361559",
+      "modified": "segunda-feira, 20 jul. 2026, 21:32",
+      "moodleUserId": "361559",
+      "name": "Pedro Henrique Rocha Ribeiro Costa do Amaral",
+      "nusp": "14602925",
+      "status": "Enviado"
+    },
+    {
+      "email": "gabiassano@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacaofinalMetodos.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14406066/avaliacaofinalMetodos.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "TRABALHOFINAL.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14406066/TRABALHOFINAL.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=361950",
+      "modified": "quarta-feira, 8 jul. 2026, 20:02",
+      "moodleUserId": "361950",
+      "name": "Gabriela Yumi Fraga Assano",
+      "nusp": "14573451",
+      "status": "Enviado"
+    },
+    {
+      "email": "filipeotuka@usp.br",
+      "files": [
+        {
+          "fileName": "Filipe_Otuka_trabalho_final_metodos_CP.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14350010/Filipe_Otuka_trabalho_final_metodos_CP.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Filipe_Otuka_trabalho_final_metodos_CP.rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14350010/Filipe_Otuka_trabalho_final_metodos_CP.rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=361960",
+      "modified": "domingo, 19 jul. 2026, 11:05",
+      "moodleUserId": "361960",
+      "name": "Filipe Kiyoshi Otuka",
+      "nusp": "14780870",
+      "status": "Enviado"
+    },
+    {
+      "email": "felicio.caio@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacao_final2.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14421727/avaliacao_final2.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "CaioFelicioavaliacao_final2.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14421727/CaioFelicioavaliacao_final2.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=363281",
+      "modified": "sexta-feira, 17 jul. 2026, 12:13",
+      "moodleUserId": "363281",
+      "name": "Caio Felicio Razera",
+      "nusp": "14562914",
+      "status": "Enviado"
+    },
+    {
+      "email": "beatriz.pessoni@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação de Métodos - Beatriz Pessoni.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14417221/Avalia%C3%A7%C3%A3o%20de%20M%C3%A9todos%20-%20Beatriz%20Pessoni.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliação de Métodos - Galdino.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14417221/Avalia%C3%A7%C3%A3o%20de%20M%C3%A9todos%20-%20Galdino.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373026",
+      "modified": "sexta-feira, 17 jul. 2026, 18:30",
+      "moodleUserId": "373026",
+      "name": "Beatriz Pessoni",
+      "nusp": "15442662",
+      "status": "Enviado"
+    },
+    {
+      "email": "guilherme.lauro@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação Final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14356353/Avalia%C3%A7%C3%A3o%20Final.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliação-Final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14356353/Avalia%C3%A7%C3%A3o-Final.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373069",
+      "modified": "segunda-feira, 20 jul. 2026, 12:16",
+      "moodleUserId": "373069",
+      "name": "Guilherme Francisco de Lauro",
+      "nusp": "15456813",
+      "status": "Enviado"
+    },
+    {
+      "email": "joao.cgalhianne@usp.br",
+      "files": [
+        {
+          "fileName": "graduacao_noturno_joao_galhianne_8682184.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14363900/graduacao_noturno_joao_galhianne_8682184.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "graduacao_noturno_joao_galhianne_8682184.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14363900/graduacao_noturno_joao_galhianne_8682184.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373112",
+      "modified": "domingo, 19 jul. 2026, 16:19",
+      "moodleUserId": "373112",
+      "name": "João Pedro Prates da Conceição Galhianne",
+      "nusp": "8682184",
+      "status": "Enviado"
+    },
+    {
+      "email": "enzoaltavista@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373125",
+      "modified": "-",
+      "moodleUserId": "373125",
+      "name": "Enzo Rosa Chiavarini Altavista",
+      "nusp": "15450000",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "franciscozmelo@usp.br",
+      "files": [
+        {
+          "fileName": "Francisco Zardo de Melo - 15452656 - Trabalho final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14415962/Francisco%20Zardo%20de%20Melo%20-%2015452656%20-%20Trabalho%20final.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Francisco-Zardo-de-Melo---15452656---Trabalho-final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14415962/Francisco-Zardo-de-Melo---15452656---Trabalho-final.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373132",
+      "modified": "segunda-feira, 20 jul. 2026, 19:02",
+      "moodleUserId": "373132",
+      "name": "Francisco Zardo de Melo",
+      "nusp": "15452656",
+      "status": "Enviado"
+    },
+    {
+      "email": "guhdutra21@usp.br",
+      "files": [
+        {
+          "fileName": "AvaliacaoFLP406.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14364405/AvaliacaoFLP406.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "AvaliacaoFLP406.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14364405/AvaliacaoFLP406.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373141",
+      "modified": "domingo, 19 jul. 2026, 13:49",
+      "moodleUserId": "373141",
+      "name": "Gustavo Henrique Garcia Dutra",
+      "nusp": "15553839",
+      "status": "Enviado"
+    },
+    {
+      "email": "melyssabortuluzi@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacao_final_metodosp.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14425703/avaliacao_final_metodosp.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "avaliacao_final_metodosp.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14425703/avaliacao_final_metodosp.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373251",
+      "modified": "segunda-feira, 20 jul. 2026, 19:46",
+      "moodleUserId": "373251",
+      "name": "Melyssa da Mata Bortuluzi",
+      "nusp": "15524472",
+      "status": "Enviado"
+    },
+    {
+      "email": "carmen.maria@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373283",
+      "modified": "-",
+      "moodleUserId": "373283",
+      "name": "Carmen Maria Serrano dos Santos",
+      "nusp": "15445370",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "mirela.mattos@usp.br",
+      "files": [
+        {
+          "fileName": "final_project_Mirela_Mattos.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14424890/final_project_Mirela_Mattos.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "final_project_Mirela_Mattos.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14424890/final_project_Mirela_Mattos.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373376",
+      "modified": "segunda-feira, 20 jul. 2026, 23:16",
+      "moodleUserId": "373376",
+      "name": "Mirela Gabriela Martins de Mattos",
+      "nusp": "15361241",
+      "status": "Enviado"
+    },
+    {
+      "email": "andre.calia@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliacao+metodos_3_andre_calia.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14349624/Avaliacao%2Bmetodos_3_andre_calia.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliacao+metodos_3_andre_calia.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14349624/Avaliacao%2Bmetodos_3_andre_calia.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373557",
+      "modified": "domingo, 19 jul. 2026, 13:30",
+      "moodleUserId": "373557",
+      "name": "Andre Beraldo Calia",
+      "nusp": "15439907",
+      "status": "Enviado"
+    },
+    {
+      "email": "dayanenogueira2000@usp.br",
+      "files": [
+        {
+          "fileName": "arquivo-fonte.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14429020/arquivo-fonte.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Relatório - Avaliação de Metódos III.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14429020/Relat%C3%B3rio%20-%20Avalia%C3%A7%C3%A3o%20de%20Met%C3%B3dos%20III.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373676",
+      "modified": "segunda-feira, 20 jul. 2026, 22:48",
+      "moodleUserId": "373676",
+      "name": "Dayane Nogueira dos Santos",
+      "nusp": "15514004",
+      "status": "Enviado"
+    },
+    {
+      "email": "cavergara@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho_Final_Métodos_III.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14361017/Trabalho_Final_M%C3%A9todos_III.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho_Final_Métodos_III.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14361017/Trabalho_Final_M%C3%A9todos_III.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=373728",
+      "modified": "domingo, 19 jul. 2026, 19:56",
+      "moodleUserId": "373728",
+      "name": "Carlos Alberto Vergara",
+      "nusp": "3464981",
+      "status": "Enviado"
+    },
+    {
+      "email": "fernand1.cristina05@usp.br",
+      "files": [
+        {
+          "fileName": "Avaliação.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14428062/Avalia%C3%A7%C3%A3o.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Avaliação.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14428062/Avalia%C3%A7%C3%A3o.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=374196",
+      "modified": "segunda-feira, 20 jul. 2026, 17:39",
+      "moodleUserId": "374196",
+      "name": "Fernanda Cristina de Oliveira da Silva",
+      "nusp": "15451867",
+      "status": "Enviado"
+    },
+    {
+      "email": "guisalamuni@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacao_final_metodos Guilherme Salamuni Gonzaga de Oliveira.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14418546/avaliacao_final_metodos%20Guilherme%20Salamuni%20Gonzaga%20de%20Oliveira.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "avaliacao_final_metodos.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14418546/avaliacao_final_metodos.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=374282",
+      "modified": "segunda-feira, 20 jul. 2026, 23:44",
+      "moodleUserId": "374282",
+      "name": "Guilherme Salamuni Gonzaga de Oliveira",
+      "nusp": "15585578",
+      "status": "Enviado"
+    },
+    {
+      "email": "letumrodriguesz@usp.br",
+      "files": [
+        {
+          "fileName": "document.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14403137/document.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Relatório Final - Métodos.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14403137/Relat%C3%B3rio%20Final%20-%20M%C3%A9todos.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=374754",
+      "modified": "segunda-feira, 20 jul. 2026, 23:59",
+      "moodleUserId": "374754",
+      "name": "Leticia Rodrigues de Sousa",
+      "nusp": "15582209",
+      "status": "Enviado"
+    },
+    {
+      "email": "joao.barbosamf@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacao_final.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14426278/avaliacao_final.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "avaliacao_final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14426278/avaliacao_final.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=374812",
+      "modified": "segunda-feira, 20 jul. 2026, 11:11",
+      "moodleUserId": "374812",
+      "name": "Joao Vitor Barbosa Mariano Ferreira",
+      "nusp": "15464083",
+      "status": "Enviado"
+    },
+    {
+      "email": "andrepraca@usp.br",
+      "files": [
+        {
+          "fileName": "avaliacao.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14367204/avaliacao.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "avaliacao.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14367204/avaliacao.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=376149",
+      "modified": "sexta-feira, 17 jul. 2026, 16:05",
+      "moodleUserId": "376149",
+      "name": "Andre Praça Susemihl",
+      "nusp": "15510702",
+      "status": "Enviado"
+    },
+    {
+      "email": "gustavo.madureira@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho Final 15457821 pdf.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14386986/Trabalho%20Final%2015457821%20pdf.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho Final 15457821 RMD.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14386986/Trabalho%20Final%2015457821%20RMD.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=376664",
+      "modified": "segunda-feira, 20 jul. 2026, 16:30",
+      "moodleUserId": "376664",
+      "name": "Gustavo Lopes Rangel Madureira",
+      "nusp": "15457821",
+      "status": "Enviado"
+    },
+    {
+      "email": "guto.stos@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho Final Metódos III - Gustavo Campos.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14422427/Trabalho%20Final%20Met%C3%B3dos%20III%20-%20Gustavo%20Campos.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "trabalho_final.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14422427/trabalho_final.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=376667",
+      "modified": "segunda-feira, 20 jul. 2026, 18:12",
+      "moodleUserId": "376667",
+      "name": "Gustavo Campos dos Santos",
+      "nusp": "15528312",
+      "status": "Enviado"
+    },
+    {
+      "email": "caua.vigiani@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=378100",
+      "modified": "-",
+      "moodleUserId": "378100",
+      "name": "Caua Vigiani Cavaliere",
+      "nusp": "15573943",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "luiz.eleuterio@usp.br",
+      "files": [
+        {
+          "fileName": "Luiz_Nusp14759962.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14379592/Luiz_Nusp14759962.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "ProjRec.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14379592/ProjRec.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "ProjRec.zip",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14379592/ProjRec.zip?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=379378",
+      "modified": "domingo, 19 jul. 2026, 01:43",
+      "moodleUserId": "379378",
+      "name": "Luiz Antonio Eleuterio de Lima",
+      "nusp": "14759962",
+      "status": "Enviado"
+    },
+    {
+      "email": "and.raposo@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=380338",
+      "modified": "-",
+      "moodleUserId": "380338",
+      "name": "Andre Raposo Santos",
+      "nusp": "15652600",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "isabelchinen@usp.br",
+      "files": [
+        {
+          "fileName": "TRABALHO FINAL MIII.rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14418707/TRABALHO%20FINAL%20MIII.rmd?forcedownload=1"
+        },
+        {
+          "fileName": "trabalhofinal2Métodos III.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14418707/trabalhofinal2Me%CC%81todos%20III.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=382081",
+      "modified": "segunda-feira, 20 jul. 2026, 20:13",
+      "moodleUserId": "382081",
+      "name": "Isabel Chinen Nascimento Godoy",
+      "nusp": "15676771",
+      "status": "Enviado"
+    },
+    {
+      "email": "lucasglima@usp.br",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=386254",
+      "modified": "-",
+      "moodleUserId": "386254",
+      "name": "Lucas Gonçalves de Lima",
+      "nusp": "11075655",
+      "status": "Nenhum envio"
+    },
+    {
+      "email": "nathanhsouzafonseca@usp.br",
+      "files": [
+        {
+          "fileName": "relatorio_metodologia_ciencia_politica.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14371625/Nova%20pasta/relatorio_metodologia_ciencia_politica.pdf?forcedownload=1"
+        },
+        {
+          "fileName": "relatorio_metodologia_ciencia_politica.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14371625/Nova%20pasta/relatorio_metodologia_ciencia_politica.Rmd?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=391147",
+      "modified": "segunda-feira, 20 jul. 2026, 21:50",
+      "moodleUserId": "391147",
+      "name": "Nathan Henrique de Souza Fonseca",
+      "nusp": "16894387",
+      "status": "Enviado"
+    },
+    {
+      "email": "malu.reismelo@usp.br",
+      "files": [
+        {
+          "fileName": "Trabalho final Maria Luisa Reis Melo.Rmd",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14426388/Trabalho%20final%20Maria%20Luisa%20Reis%20Melo.Rmd?forcedownload=1"
+        },
+        {
+          "fileName": "Trabalho final pdf Maria Luisa Reis Melo.pdf",
+          "url": "https://edisciplinas.usp.br/pluginfile.php/9591276/assignsubmission_file/submission_files/14426388/Trabalho%20final%20pdf%20Maria%20Luisa%20Reis%20Melo.pdf?forcedownload=1"
+        }
+      ],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=393827",
+      "modified": "segunda-feira, 20 jul. 2026, 11:01",
+      "moodleUserId": "393827",
+      "name": "Maria Luisa Reis Melo",
+      "nusp": "16889846",
+      "status": "Enviado"
+    },
+    {
+      "email": "woshidongzishuo@126.com",
+      "files": [],
+      "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=424065",
+      "modified": "-",
+      "moodleUserId": "424065",
+      "name": "Dong Zishuo",
+      "nusp": "17117294",
+      "status": "Nenhum envio"
+    }
+  ]
+}

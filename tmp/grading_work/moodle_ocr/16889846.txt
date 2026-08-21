@@ -1,0 +1,317 @@
+
+===== page_001_bot.png =====
+de agricultura e de cultura entre 2011 e 2021 e como esses perfis variam entre as duas pastas?. A unidade
+de analise base é a nomeação.
+Uma linha base é a representação da nomeação de uma pessoa para um cargo em um certo orgão/ setor, com
+informações sobre nivel, trajetoria, vinculo partidario, experiencia e datas de entrada e saída. Percebe-se tal
+informação devido ao codebook que identifica “chave” como a chave primaria da nomeação e “id” como uma
+chave secundaria associada ao nome da pessoa.
+Uma mesma pessoa pode aparecer mais de uma vez devido à base não estar organizada como uma linha
+por individuo. Desse modo, uma pessoa pode ocupar mais de um cargo, mudar de setor ou aparecer em
+momentos diferentes.
+As duas pastas comparadas no artigo sçao o Ministerio da Agricultura, identificado na base como “mapa” e
+o Ministario da Cultura que é identificado como “minc”
+2. Leitura e validação dos dados
+Tabela 1 - Dimensões da base BASE. cargos.
+Os nomes das variáveis originais importadas da aba BASE, cargos são:
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_mid.png =====
+Este relatório usa a base BASE. cargos2.x1sx, disponível no repositório burocraciaBR, para aplicar conceitos
+de inferência estatística a dados reais de Ciência Política. A análise foi feita com a aba BASE, cargos e com
+apoio da aba Codebook. A fonte dos dados é o repositório https://github.com/nayalbrecht /burocraciaBR,
+ea data de acesso considerada neste relatório é 13/07/2026. A base também é indicada nas instruções da
+avaliação como disponível em https://raw githubusercontent.com /nayalbrecht /burocraciaBR /main/BASE.
+cargos2.xisx.
+O foco substantivo é a comparação entre as pastas mapa e minc, correspondentes ao Ministério da Agricultura
+e ao Ministério da Cultura. A pasta nctá aparece na base e é considerada apenas na etapa inicial de validação.
+1. Artigo, pergunta e unidade de análise
+A perguta geral que o artigo se propoe a debruçar pode ser identificada como quais são as caracteristicas.
+predominantes das pessoas nomeadas para cargos de nivel 4 a 6 nas secretarias finalisticas dos ministerios
+de agricultura e de cultura entre 2011 e 2021 e como esses perfis variam entre as duas pastas?. A unidade
+de analise base é a nomeação.
+Uma linha base é a representação da nomeação de uma pessoa para um cargo em um certo orgão/ setor, com
+informações sobre nivel, trajetoria, vinculo partidario, experiencia e datas de entrada e saída. Percebe-se tal
+informação devido ao codebook que identifica “chave” como à chave primaria da nomeação e “id' como uma
+chave secundaria associada ao nome da pessoa.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. etor ou aparecer em
+o ora ii np
+
+===== page_001_top.png =====
+Trabalho final de metodos e tecnicas de pesquisa em ciencia politica |
+Maria Luisa Reis Melo
+2026-07-15
+Introdução É
+| Alguns arquivos neste envio só podem ser acessados através de download direto. npc nc
+
+===== page_002_bot.png =====
+Variável Valor observado n
+expoadm 3
+expoadm O ss
+expadm 1 35
+expadm 3 1
+expoadm NA n
+exp car O ur
+expcar 1 5
+epear 2 2
+epcar 3 509
+expear 5 253
+expcar NA %
+nv 4 652
+nível 5 25
+nivel 6 ur
+instr doutorado 159
+instr especializacao 203
+instr graduacao 1
+instr mestrado 259
+instr NA %
+
+===== page_002_mid.png =====
+SE n
+
+id id o
+
+nível nivel o
+
+jose dane o
+
+exp adm exp adm o
+
+exprcar — expocar 1
+
+entrada entrada o
+
+saida saida 5
+
+e em í
+
+Tabela 4 - Checagem dos valores observados em variáveis selecionadas.
+Variável Valor observado n
+ada q 3
+exp adm O es
+exp adm 1 935
+exp adm 3 1
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+exp car 3 509
+
+===== page_002_top.png =====
+Table 1: Tabela 1 - Dimensões da base BASE cargos
+informacao valor
+Número de linhas 1038
+Número de colunas 3
+Tabela 2 - Número de observações por orgao sup.
+orgmo sup mn
+mapa 525
+meti “us
+mine 365,
+Tabela 3. Valoros antentos am uoriâunia salacionadas. ,
+> >>———>—— guie gem
+id id o
+
+===== page_003_bot.png =====
+E rir? 12 A aeee e Str E err Ersgáspd
+MAPA E! AS? 920% [89,7%:943%] 23 pp.
+MINC 354 312 88X [SASK:9LSK] SA pp.
+No mapa, 92% dentre as nomeações validas havia experiencia administrativa prévia. O intervalo de confiança
+de 95% vai de 89,7% a 94,3%. O significado é que, usando esta base como amostra para inferencia, o processo
+de contrução de intervalo de confiança tende a capturar o valor populacional da proporção em 95% das
+repetições do processo amostras.
+No MINC, a proporção estimada foi 88,1% , com intervalo de confiança de 95% entre 84,8% e 91,5%. A
+margem de erro é igigual a distancia entre a proporção observada e os limites do intervalo. Assim, a margem
+de erro de 3,4p.p. indica incerteza aproximada da estimativa para mais ou para menos considerando o nivel
+de confiança de 95%
+Comparando as duas pastas, a experiência administrativa é majoritária em ambas. O MAPA apresenta
+proporção observada maior, mas a diferença inicial é relativamente pequena em termos absolutos: 3,8 p.p.-.
+4. Primeiro teste de hipótese bivariado
+O primeiro teste compara a proporção de nomeações com experiência administrativa entre MAPA e MINC.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+de 717 e uma ocorrencia de “3”. Para lidar com essa questão a solução encontrada foi tratar ” “17 como um
+exro de digitação do que seria apenas “1” e tratar “3” como valor invalido. A variavel “exp. car” também
+apresenta o valor “5”, mas o codebook descreve apenas as categorias 1,2 e 3 para experiencia em cargos de
+gestão. Como “exp. car” não é usada nos testes obrigatórios, o valor foi apenas registrado e não recodificado.
+3. Tabela descritiva: experiência administrativa
+Para criar a variavel “exp adm bin”, foi usado uma outra variavel chamada “exp adm”. Com base no
+codebook tal variavel identifica a experiencia em órgãos da administração publica, sendo 1 sim e O não. No
+processo de recodificação “1” e 7 “1 ” foram tratados como 1 e “07 como 0, os valores ausentes ou invalidos
+foram removidos do cálculo da proporção.
+Tabela 5 - Proporção de nomeações com experiência administrativa por pasta.
+
+Pasta válido Comep. adm. Prop. IC95% ME
+
+MAPA 524 482 920% [89,7%; 94,3%) 2,3 pp.
+
+MINC ES 312 881% |SA8%;9LSK] 34 pp.
+No mapa, 92% dentre as nomeações validas havia experiencia administrativa prévia. O intervalo de confiança
+de 95% vai de 89.7% a 94.3%. O sisnificado é que, usando esta base como amostra para inferencia, o processo
+
+porção em 95% das
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+RE SONO 64,5% e 91,5%. A
+margem de erro é igigual a distancia entre a proporção observada e os limites do intervalo. Assim, a margem
+
+===== page_003_top.png =====
+Variável Valorobservado mn
+
+instr superior 297
+
+instr tecnico A
+
+indicacao — Bolsonaro 396
+
+indicacao Lula s7
+
+indicacao Rousseff 351
+
+indicacao — Temer E
+A variácel “nivel” está de acordo com a analise proposta no artigo pois contem os niveis de 4 a 6. A variavel
+“instr” contem categorias coerentes como “superior”, “especialização”, “mestrado” e “doutorado”, e valores.
+ausentes. A variavel “indicação” apresenta uma inconsistencia ao apresentar “lula” em vez de um espaço
+
+excedente.
+
+O principal problema a ser observado em relação as variaveis, está no fato de que elas deveriam seguir
+codigos fechamos. Em “exp. adm”, o codebook indica uma codificação binaria sendo 1 experiencia em orgão
+asno iiioi mao ibiza O acata o isola ia al eoeoniênaia = Nesémuannreco (res ocoerencias
+tratar 771º como um
+à Alguns arquivos neste envio só podem ser acessados através de download direto. | “exp. car” também
+| riencia em cargos de
+gestão. Como “exp. car” não é usada nos testes obrigatórios, o valor foi apenas registrado e não recodificado.
+
+===== page_004_bot.png =====
+ie ir LIGA cnc ir re er dee or o in in rio age no Aedo ão rd ar
+uma proporção observada maior de cargos classificados como alto nível. A diferença estimada, calculada
+como MAPA menos MINC, é de -6,8 p.p..
+Hipótese nula: a proporção de cargos de alto nível é igual nas duas pastas, isto é, Ho : parAPA = PMiNC-
+Hipótese alternativa: as proporções são diferentes, isto é, Hi : papa É puisc-
+Tabela 8 - Teste de diferença entre proporções de cargos de alto nível.
+Prop.
+Comparação — MAPA Prop. MINC Diferença x p-valor Decisão a 5%
+MAPA - 35,6% 42,5% 6Spp 2065 00389 — RejeitaH0a 5%
+MINC
+O p-valor do teste foi 0,0389. Isso indica que, se não houvesse diferença real entre as proporções de cargos
+de alto nível nas duas pastas, a probabilidade de observar uma diferença igual ou maior que a estimada
+seria de aproximadamente 3,9%. Como esse valor é menor do que 5%, rejeitamos a hipótese nula ao nível de
+significância de 5%.
+Do ponto de vista substantivo, a diferença não parece irrelevante. A distância de aproximadamente 68 p.p.
+indica que o MINC tem maior concentração relativa de cargos de nível 5 ou 6. Ao mesmo tempo, a diferença
+não é enorme: ela deve ser interpretada como uma diferença moderada, que pode ter importância política.
+porque cargos mais altos tendem a envolver maior autoridade decisória.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+“Cia SANUIIISTAS TVA GO QUE O MESINNA FIOEÓIR, CON GRSA SORO O ESSO 1HVES FO SiNNCANCIA, A GVITÓNCIA astaNintica
+
+não é forte o suficiente para afirmar que as proporções diferem de forma significativa.
+5. Segundo teste de hipótese bivariado
+A variável “alto nivel” foi criada com valor 1 quando “nivel” é 5 ou 6 valor O quando “nivel” é 4. O objetivo
+é comparar à proporção de cargos de alto nível entre MAPA e MINC.
+Tabela 7 - Proporção de cargos de alto nível por pasta.
+
+Pasta nválido Altonívl Prop. IC 95% ME
+
+MAPA 525 187 350% [815% 39,7%] 41 pp.
+
+MINC 365 155 425% (874%; 475%) 51 pp.
+A proporção de cargos de alto nível é de 35,6% no MAPA e de 42,5% no MINC. Portanto, o MINC apresenta
+uma proporção observada maior de cargos classificados como alto nível. A diferença estimada, calculada
+como MAPA menos MINC, é de -6,8 p.p..
+Hipótese nula: a proporção de cargos de alto nível é igual nas duas pastas, isto é, Ho : parApA = PsiNc.
+Hipótese alternativa: as proporções são diferentes, isto é, Hi : puApA É puixc-
+Tabela 8 - Teste de diferença entre proporções de cargos de alto nível.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. Decisão a 5%
+
+E ia a Re aros cosmo Rejeita HO a 5%
+MINC
+
+===== page_004_top.png =====
+Hipótese nula: a proporção de nomeações com experiência administrativa é igual nas duas pastas, isto é,
+
+Ho : puapa = puixc- Hipótese alternativa: as proporções são diferentes, isto é, Hj : para É PMINC-
+
+O teste usado no R foi prop.test(x, n, correct = FALSE), que aplica a aproximação normal para a
+
+diferença entre proporções, sem correção de continuidade.
+
+Tabela 6 - Teste de diferença entre proporções de experiência administrativa.
+
+Prop.
+
+Comparação MAPA Prop. MINC Diferença pevalor Decisão a 5%
+
+MAPA - 92,0% 881% 38 pp. 1902 00572 — Não rejeita HO a 5%
+
+MINC
+
+O p-valor foi 0,0572. Isso significa que se a hipótese nula fosse verdadeira, a probabilidade de observar uma
+
+diferença tão grande quanto a encontrada, seria de aproximadamente 5,7%. Como esse valor é maior do que
+
+59%, não rejeitamos a hipótese nula ao nível de significância de 5%.
+
+Os dados mostram que o MAPA tem uma proporção observada um pouco maior de nomeações com experiên-
+evidência estatística
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+E Qorunda tonto da hinftasa hiuariada
+
+===== page_005_bot.png =====
+Amostra dobrada MD DEVA UUUSA 16 pp.
+
+Quando o tamanho da amostra dobra e a proporção observada permanece a mesma, o erro-padrão dimimi.
+Isso acontece porque, na fórmula do erro-padrão da proporção, EP = VP(T— P)/n, o tamanho da amostra
+aparece no denominador. Ao dobrar n, o erro-padrão é multiplicado por aproximadamente 1/2, ou seja, cai
+para cerca de 70,7% do valor anterior. Por isso, amostras maiores tendem a produzir intervalos de confiança
+mais estreitos e margens de erro menores, mantendo a mesma proporção observada.
+Referências
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos públicos
+no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal
+(2011-2021). Revista Brasileira de Ciência Política, 2025. DOU: https://doi.org/10.1590/0103-3352.2025.
+44285564.
+ALBRECHT, Nayara F. Macedo de Medeiros. burocraciaBR. Repositório de dados e código. Disponível
+em: https:/ /github.com /nayalbrecht /burocraciaBR. Acesso em: 13 jul. 2026.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+de chamar um resultado de estatisticamente significativo depende do nível de significância escolhido. Além
+disso, significância estatística não é igual a significância substantiva, estatisticamente significativa e pequena
+em termos substantivos, ou pode ser substantivamente relevante e não atingir um limiar convencional de
+significância estatística.
+7. O que aconteceria se a amostra fosse maior?
+Foi usado a proporção de experiência administrativa no MAPA. A proporção observada foi mantida constante
+em 92,0%, mas o número de observações foi hipoteticamente dobrado.
+Tabela 10 - Efeito aproximado de dobrar o tamanho da amostra sobre o erro-padrão.
+Cenário m Proporção Erropadrão Margem de erro
+Original 52 920% 0019 23 pp.
+Amostra dobrada 1048 920% 0,084 16 pp.
+Quando o tamanho da amostra dobra e a proporção observada permanece a mesma, o erro-padrão diminui.
+Esso acontece porque, na fórmula do erro-padrão da proporção, EP = VP(L— P)/n, o tamanho da amostra
+aparece no denominador. Ao dobrar n, o erro-padrão é multiplicado por aproximadamente 1/3, ou seja, cai
+para cerca de 70.7% do valor anterior, Por isso, amostras maiores tendem a produzir intervalos de confiança
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+Referências
+
+===== page_005_top.png =====
+6. Significância estatística e nível de significância
+É neessario retomar aqui ao primeiro teste. O p-valor desse teste foi 0,0572.
+Tabela 9 - Decisão do primeiro teste em diferentes níveis de significância.
+Nível de significância pvalor Decisão
+10% 00572 Rejeita HO
+5% 0,0572 Não rejeita HO
+1% 0,0572 Não rejeita HO
+Se o nível de significância fosse 10%, rejeitaría-se a hipótese nula de igualdade entre as proporções. Com
+nível de 5%, a conclusão adotada foi não rejeitar a hipótese nula. Com nível de 1%, a conclusão continuaria
+sendo não rejeitar a hipótese nula.
+O exercício demonstra me o nevalor é mma medida contínma de evidência contra a hinótese mula. A decisão
+. º º ncia escolhido. Além
+i Alguns arquivos neste envio só podem ser acessados através de download direto.  anificativa e pequena
+| niar convencional de
+significância estatística.

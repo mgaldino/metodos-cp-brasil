@@ -1,0 +1,307 @@
+
+===== page_001_bot.png =====
+2. Leitura e validação dos dados
+
+& Baizar e ler a base
+
+dowmload.file("httpo: //rav. githubusercontent .com/nayalbrecht/burocraciaBR/main/BASE. cargos?.x1sx”,
+destfile = "BASE cargos2.x1sx”, mode = *eb")
+
+dados <- read excel("BASE cargos2.xlsx”, sheet = “BASE cargos")
+
+Validação:
+
+& Número de Vinhas e colunas
+
+nrow(dados)
+
+“8 (1) 1038
+
+ncol (dados)
+
+===== page_001_mid.png =====
+Engano, irao ai pci tar Ea carrear noir penta ne ricas ret ind aci ftaad began
+Cultura (MinC) variam entre essas duas pastas, considerando não apenas a filiação partidária, mas também
+outras dimensões como formação educacional, experiência no setor privado e vínculos associativos? Além
+disso, como as diferenças internas entre as secretarias de cada ministério se manifestam?”
+Os autores explicitam que o estudo busca “testar dois aspectos teórico-metodológicos: 1) as previsões teóricas
+sobre a relação entre áreas de políticas e perfil da burocracia pública; i) as estratégias metodológicas para
+identificar burocratas, ou seja, à utilização da “filiação partidária” como proxy para identificar perfis mais.
+políticos”.
+A unidade de análise inicial adotada pelos pesquisadores foi a nomeação a um cargo comissionado nas pastas
+analisadas. Sendo assim, cada linha representa uma nomeação de uma pessoa à um cargo de nível 4 a 6
+em uma das secretarias do MAPA ou do MinC, contendo informações sobre a pessoa nomeada, o cargo, o
+período e variáveis de perfil. Portanto, a mesma pessoa pode aparecer mais de uma vez caso ocupe diferentes.
+cargos ao longo do período disponível na base dados, dado que a base registra nomeações, não indivíduos.
+Para o exercício comparativo, as duas pastas selecionadas foram o MAPA (Ministério da Agricultura) e o
+MINC (Ministério da Cultura).
+2. Leitura e validação dos dados
+* Baizor e ler a base
+download.file("httos: //raw.rithubusercontent.con/navalbrecht/burocraciaBR/nain/BASE, cargos?.x1sx",
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+Validação:
+
+===== page_001_top.png =====
+Relatório Final de Métodos Quantitativos |
+Vitor Barbosa Silva
+2026-07-18
+1. Artigo, pergunta e unidade de análise
+A pergunta central do artigo pode ser formulada da seguinte forma: “Em que medida os perfis dos nomeados
+Pa sabem jsd aia cia (APA) ea
+, erra
+| Alguns arquivos neste envio só podem ser acessados através de download direto. | moi e AD
+oo
+
+===== page_002_bot.png =====
+ii sa RESID rag
+“. 0 o o 0
+“e partido cargo ele 1id part exp ado
+“ o o o o
+“ exp.car exp mer exp soc ure
+se 1 1 4 a
+.. partido pr partido ministro indicacao entrada
+.. 0 o o 0
+. saida pern
+“. 5 4
+& Mas em 5 vartáveis
+vars na <- c("exp ada", "exp car", "nivel", “instr”, "indicacao")
+sappiy(dados(, vars. na), function(x) sun(is.na(x)))
+
+4% expadm expcar nível  instr indicacao
+“ o 1 o o o
+
+===== page_002_mid.png =====
+table(dadosorgao. sup)
+
+"
+
+48 mapa meti minc
+
+es 525 148 365
+
+& Contar NAs em cada variável
+
+sapply(dados, function(x) sun(is.na(x)))
+
+“ orgão sup setor chave sa
+
+“e b) o º o
+
+“. cargo funcao nível ánstr
+
+“e 0 o o o
+
+. area instensino  inst origem car pub
+
+se 0 o o 0
+
+se partido cargo ele lid part exp ado
+
+.. o o o o
+
+.. exp.car exp mer exp soc ves
+
+“. 1 1 4 a
+
+“. partido pr partido ministro indicacao entrada
+
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+l
+
+PNR a
+
+===== page_002_top.png =====
+es (1) 26
+& Nomes das variáveis
+names (dados)
+*s [1] “orgao sup" "setor" "chave" “ido
+*8 [5] “cargo “funcao” enivel" “instrt
+48 (9) carca” “inst, ensino" “inst origen" "car pub”
+44 [13] "partido" “cargo ele" “lid part" “exp ada”
+48 [17] "exp car" “exp mer” “exp soc" nuper
+44 [21) “partido pr” “partido ministro” “indicacao" “entrada”
+48 [25] “saida” "pera"
+& Frequência de orgao sup
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+E IZ.J.J£AABRZDZSZXKRZESSS
+A ana Sina
+
+===== page_003_bot.png =====
+“
+4% Bolsonaro Lula Rousseff Temer
+“” 306 sr 351 204
+A base de dados possui 1.038 linhas e 26 colunas. As variáveis incluem identificadores da nomeação, infor-
+mações sobre o cargo, características dos nomeados e contextos das nomeações. Identificou-se um problema
+de codificação na variável exp. adm, que deveria ser binária (0 = sem experiência, 1 = com experiência), mas
+apresenta valores 2, 3 e 5. Segundo o codebook, estes valores correspondem a diferentes níveis hierárquicos.
+de experiência administrativa. Para fins de elaboração de uma variável capaz indicar o número de nomea-
+dos com experiência administrativa prévia, ptou-se por recodificar a variável como binária (exp adm bin),
+atribuindo valor 1 a todas as observações com qualquer tipo de experiência (valores 1, 2, 3 0u 5), mantendo
+valores iguais a 0.
+3. Tabela descritiva: experiência administrativa
+Primeiro, filtramos para MAPA e MINC e criamos a variável para cargos de alto nível.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+“
+ma sé
+as 652 275 111
+table(dadostinstr)
+“e
+48 doutorado especializacao — graduacao mestrado na
+“ 159 203 1 259 95
+“ superior tecnico
+“ 297 u
+table (dadosindicacao)
+“
+&8 Bolsonaro Lula Rousseff Temer
+“ 396 er as1 204
+A base de dados possui 1.038 linhas e 26 colunas. As variáveis incluem identificadores da nomeação, infor-
+cou-se um problema
+à Alguns arquivos neste envio só podem ser acessados através de download direto. om experiência), mas
+| . =s níveis hierárquicos
+CO de experiência administrativa. Para fins de elaboração de uma variável capaz indicar o múmero de nomca-
+
+===== page_003_top.png =====
+& Valores observados
+table(dadosSexp. adm)
+
+“
+
+e 1 0 1 3 NA
+.“ 3 88935 1 11
+table (dadosSexp. car)
+
+“
+
+mo 1 23 5 NA
+e 147 51 2509253 75
+
+===== page_004_bot.png =====
+Xable(tab exp, digits = 3, format = “latex”,
+caption = "Proporção de nomeações com experiência administrativa por pasta")
+
+& Teste de diferença de proporções (experiência administrativa)
+
+teste exp <- prop.test(x = tab expcom exp, n = tab expSn, correct = FALSE)
+
+Interpretação:
+No MAPA, a proporção de nomeações com experiência administrativa foi de 0.92 (Intercalo de
+confiança 95%: [0.8967932, 0.9432068)), com margem de erro de 0.0232068 pontos percentuais.
+No MINC, a proporção foi de 0.8839779 (Intervalo de confiança 95%: [0.851123, 0.9168328)),
+com margem de erro de 0,0328549 p.p. Esses intervalos indicam que, com 95% de confiança, a
+proporção está dentro desses limites. A margem de erro é a metade da largura do intervalo de
+confiança. Ela indica o quanto a proporção observada pode variar, e é maior no MINC porque o
+número de observações (365) é menor que no MAPA (525).
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_004_mid.png =====
+ea
+tab exp <- dados filtro ol
+group. by(orgao sup) 1>
+summarise(
+n=nQ,
+com exp = sun(exp adm bin, na.rm = TRUE),
+prop = mean(exp. ada bin, na.rm = TRUE)
+> a
+rowvise() Yo
+mutate(
+se = sqrt(prop + (1 - prop) / n),
+ic inf = prop - 1.96 » se,
+iclsup = prop + 1.96 * se,
+zargem erro = 1.96 + se
+,
+Xable(tab exp, digits = 3, format = "latex",
+caption = "Proporção de nomeações com experiência administrativa por pasta")
+4 Teste de diferença de proporções (experiência administrativa)
+, se)
+| à Alguns arquivos neste envio só podem ser acessados através de download direto.
+> mapremg—>w>w>w>—>—>—>—>—>—>—>>>>
+
+===== page_004_top.png =====
+Table 1: Proporção de nomeações com experiência administrativa por pasta
+EE A ET A ET ET ET
+à Púttrar para MAPA e HtNO
+dados filtro <- dados Y>%
+filter(orgao sup link c('mapa”, “minc")) Y>%
+mutate(
+isola fica am od atos Abadia unique Guior & O inúica pmpariênio
+exp adm bin = ifelse(exp adm > O & tis.na(exp adm), 1,
+ifelse(exp adm == 0, O, NA)),
+& Criar variável para cargos de alto nível (DAS 5 e 6)
+alto nivel = ifelse(nivel tink c(5,6), 1, 0)
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+. Eroup. bytorgao sup) 1>%
+
+===== page_005_bot.png =====
+a hipótese, pois o valor de p é menor que 0,10. No entanto, se adotássemos um nível de significância mais
+rigoroso de 1%, não rejeitaríamos a hipótese, pois o valor de p é maior que 0,01.
+7. O que aconteceria se a amostra fosse maior?
+& Escolhendo a proporção do NAPA como ezemplo
+P <- tab, expSpropítab expSorgao. sup == "napa")
+n <- tab, expnítab, exporgao. sup == "zapa")
+se atual <- sqrt(p * (1 - p) /n)
+se dobro <- sqrt(p * (1 -p) / (2+ 0)
+A proporção de nomeações com experiência administrativa no MAPA, por exemplo, foi de 92%, com uma
+amostra de 525 observações.
+O erro-padrão dessa estimativa é de aproximadamente 1.18 %.
+Se o tamanho da amostra fosse o dobro (1050 observações), mantendo-se a mesma proporção observada de
+92%, o erro-padrão cairia para cerca de 0.84 %.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_005_mid.png =====
+5. Teste de cargos de alto nível
+Interpretação:
+A proporção de cargos de alto nível no MAPA foi de 0.356 (35.6%) e no MINC de 0.425 (42.5%), com
+diferença de 0.068 pontos percentuais. O teste resultou em p-valor = 0.0389. Como o p-valor é menor
+que 0,05, rejeita-se a hipótese de que as proporções são iguais. Entretanto, essa diferença de 6.8 pontos
+percentuais é moderada, indicando uma relevância prática limitada.
+6. Significância estatística e nível de significância
+O valor de p obtido foi de 0.0325. Se adotássemos um nível de significância de 10%, também rejeitaríamos
+a hipótese, pois o valor de p é menor que 0,10. No entanto, se adotássemos um nível de significância mais
+rigoroso de 1%, não rejeitaríamos a hipótese, pois o valor de p é maior que 0,01.
+7. O que aconteceria se a amostra fosse maior?
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_top.png =====
+Table 2: Proporção de cargos de alto nível (nível 5 ou 6) por pasta
+
+orgao mp | n [alo [ prop[ se [ic inf Tic sup [ margem. emo
+
+mepa [526 | 187 [0366 [DOM | 0315] 0.557 | Seo
+
+mino [58 [168 [UAM [UM | USM| UAM] A
+4. Teste de hipótese de igualdade de proporções
+Interpretação:
+O teste de diferença de proporções resultou em X-squared = 4,57, gl = 1, p-valor = 0,0325. Como p-valor
+< 0,05, rejeitamos a hipótese de que as proporções de nomeações com experiência administrativa são iguais
+entre os ministérios avaliados. O p-valor indica que, se as proporções fossem realmente iguais, a probabilidade
+de observar uma diferença maior ou igual a encontrada seria de apenas 3,25%. Assim, há evidência estatística
+de diferença entre as pastas, embora a magnitude dessa diferença não seja tão grande (cerca de 3,6 pontos
+percentisnia)
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_bot.png =====
+O
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_006_mid.png =====
+
+
+===== page_006_top.png =====
+Isso acontece porque o erro-padrão é inversamente proporcional ao tamanho da amostra. Desta forma, quanto
+maior a amostra, menor a variabilidade da estimativa. Ao dobrar o número de observações, o denominador
+da fórmula aumenta, fazendo com que o erro diminua.
+
+Fonte dos dados:
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos públicos
+no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal (2011-2021).
+Revista Brasileira de Ciência Política, 2025. DOI: 10.1590/0103-3352.2025.44.285564. Base disponível em:
+https://github.com /nayalbrecht /burocraciaBR. Último acesso em: 20 de julho de 2026.

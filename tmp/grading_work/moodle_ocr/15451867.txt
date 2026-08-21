@@ -1,0 +1,289 @@
+
+===== page_001_bot.png =====
+1e 2: linhas: 1038 variáveis: 26
+
+48 Rous: 1,038
+
+48 Columns: 26
+
+48 $ orgao sup <chr> “minc”, “minc*, “minc*, “minc”, “minc”, “minc", “minc-
+48 $ setor <chr> "secdc”, "secdc*, "secdc*, "secdc”, "secdc", "secde*,-
+8 $ chave <chr> "Cult-SCO-S1", "Cult-SCO-DACI”, "Cult-SCO-COMARI*, "C-
+ess id <chr> "VSCA”, "OGRJ", "JNPE, “ECBR", “ESTO”, "MPPO", "MHGR-
+48 $ cargo <chr> "Secretário da Cidadania Cultural”, "Diretor de Acess-
+48 $ funcao <chr> "DAS", "DAS”, "DAS", “DAS, "DAS", "DAS", "DAS", "DAS-
+48 $ nível <dbl> 6, 5,4,4,4,6,6,5,5,4,4,4,4,4,6,5,4, 4,
+48 $ instr <chr> "NA”, “especializacao”, "mestrado", "NA, "superior",
+48 $ area <chr> “arte”, “administracao”, “arte”, "NA", “historia”, “c-
+48 $ ánst ensino <chr> “NA”, "UFPA, "UERJ", "NAM, "PUC", "NAM, "UnB", "NAM,
+48 $ inst origem <chr> “NA”, “publica”, “publica”, “NA”, “privada”, “NA”, “p-
+48 $ car pub <chr> "SVE", "EPPGG", “OUTRO”, "SE INT", "SVE", "SVE", "SVE-
+48 $ partido <chr> “NA”, “NA”, "PCdoB", “NAS, “PT”, "PT", MNAM, "NAM, MN-
+48 $ cargo ele echr> "0º, “0%, “0%, 00%, “0%, 20%, “0%, “0%, “04, 200, “gr
+48 $ lid part echr> "O" 00%, “ON 000, MON) 209, nge; ago, agu, go, age
+48 $ explada echr> MIS) apo) mqu) njol nqul ago, mqu) ajo) uquo ago, ngue
+48 $ explcar cchr> "5% 030, nge] age, ngo) ago, mge. ago, age, ago, age
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+1. Qual é a pergunta geral do artigo? R: quais as motivações por trás das nomeações e efeitos do contexto
+institucional nas estratégias adotadas por presidentes e organizações partidárias
+2. Qual é à unidade de análise da base? R: os burocratas nomeados para funções e cargos comissionados
+nas secretarias finalísticas das duas pastas
+3. O que significa uma linha da base? Rio perfil de um funcionário pública das duas pastas selecionadas
+4. Por que a mesma pessoa pode aparecer mais de uma vez? R: a mesma pessoa pode aparecer mais de
+uma vez porque ela passou a ocupar cargos e funções diferentes em um determinado período na mesma
+pasta
+5. Quais são as duas pastas comparadas no artigo? R: a pasta da Cultura (MinC /SECULT) e da Agri-
+cultura (MAPA)
+2. Leitura e validação dos dados
+1e 2: linhas: 1038 variáveis: 26
+48 Rous: 1,038
+48 Columns: 26
+48 $ orgao sup <chr> "ninc*, "minc*, “minc*, "minc*, “minc”, "minc”, “minc-
+ss $ setor <chr> "secdc", "secdc", "secdc", "secdc”, “secdc", "secdc",-
+i Alguns arquivos neste envio só podem ser acessados através de download direto. 4» (Mica
+hm —  suucau cur uno, uma, um, uns, uns, ums, vAS", "DAS-
+“8 $ nivel <dbl> 6,5,4,4,4,6,6,5,5,4,4,4,4,4,6,5,4,4,-
+
+===== page_001_top.png =====
+Avaliação - Métodos Quantitativos |
+15451867 - Fernanda Silva
+2026-07-20
+repositório: BurocraciaBR arquivo: BASE. dados2.xlsx *data de acesso: 08-07-2026
+1. Artigo
+[5 Menos miar,
+nas secretarias finalísticas das duas pastas
+
+===== page_002_bot.png =====
+“
+
+0123 5 Ma
+
+ss 147 51 2509253 75
+
+“
+
+e 456
+
+as 652 275 111
+
+“
+
+8 doutorado especializacao  graduacao mestrado na
+“e 159 203 1 259 ES
+“. superior tecnico
+
+“e 287 u
+
+"
+
+*8 Bolsonaro Lula Rousseff Temer
+
+“ 396 er as1 204
+
+Um problema encontrado foi quando utilizei glimpse() e verifiquei que 6 variáveis que são númericas de
+acordo com o codebook da base estavam com o status “chr” ao ínves de “dbl”, então corrigi-las:
+
+===== page_002_mid.png =====
++ exp mer: NAs=1
++ exp soc: NAs=4
+e UF:NAs=21
++ saida: NAs = 5
++ perm: NAs=4
+5. Uma checagem dos valores observados em exp adm, exp. car, nivel, instr e indicacao.
+“
+es 1 0 1 3 NA
+“e 3 88935 1 1
+“
+so 1 23 5 NA
+a 147 51 2509253 75
+“
+“ 4 5 6
+omega ss ct comes na
+“ 159 203 1 259 ES
+
+===== page_002_top.png =====
+*8 $ exp mer *ohrd Pio; Mih, DANÇAS, SON CRÃO, NOM, ORAR, NEM, NÃO,
+48 $ exp soc <chr> "1º, CNA", MLº, NAM, LM, CNAS, CNAS, NAM, NAS, CN
+es $ cure! <chr> "DE", "DF", "DE", "DF", "NA", "MG", "DE", "RJ", NA, "=
+8 $ partido pr deli PPTR, PTN, SPTM, “Pre, PTS, epTe, ePrr, Pro, *Praço
+4% $ partido ministro <chr> "PV", "PV", "PU", “PU”, "PU", "NA", "NAS, “NA”, "NA",-
+4% $ indicacao <chr> "Lula", "Lula", “Lula”, "Lula", “Lula”, "Rousseff", "-
+48 $ entrada <chr> "40280", "40288", "39972", "40007", "40007", "40668", -
+“8 $ saida <chr> "40668", "40668", "40732", "40613", "40638", "40800", -
+*8 $ perm <chr> "12.9", "12.7", "25.3", “20.2”, "21", "4.400000000000-
+3. Número de observações por orgao sup.
+“
+48 mapa netá minc
+ss 525 148 365
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+o NÃ À
+
+===== page_003_bot.png =====
+AR seria e a a aci a
++ P-valor: P valor = 0.001
++ Decisão usando nível de significância de 5%: O p-valor é um número significamente pequeno a um nível
+de significância de 0.05, portanto rejeita-se a hipotese mula.
++ Interpretação substantiva: Se p-valor fosse maior a p=0.05, a hipótese nula não seria rejeitada e sua
+interpretação é que haveria uma probabilidade, a um valor de p-valor maior, de observar nos testes.
+a proporção das pastas serem iguais ao que foi encontrado. Contudo, o p-valor nesse teste é menor
+que p= 0,05, à hipótese nula é rejeitada, portanto considera-se que as proporções entre as pastas são
+diferentes.
+5. Segundo teste de hipótese bivariado
++ Alto nível por pasta:
+ss A tibble: 2x2
+4% orgao sup pastas
+*8 <chr <int>
+“81 mapa 187
+48 2 minc 155
++ intervalo de confiança de 95% para cada proporção:
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_003_mid.png =====
+Lei 0.881
+LCs 0.921
+erro 0.020
+A amostra com 890 observações válidas e com uma proporção de 90,4% de burocratas que já possuiam
+experiência administrava, estima-se estatisticamente que a população dessa proporção represente 88,1% a
+92,1%, tendo em vista um intervalo de confiança de 95%. Isto significa que se repetirmos esse teste várias
+vezes, 95% deles apresentariam o intervalo 88% e 92%. A margem de erro desse teste é de 0.020, ou seja, 2
+pontos percentuais para mais ou para menos.
+4. Primeiro teste de hipótese bivariado
++ Hipótese nula: a proporção é igual nas duas pastas
++ Hipótese alternativa: a proporcao é diferente nas duas pastas
++ Teste usado no R: prop.test( x = nova. tabelaezperiencia,n = nova abelatotal, correct = FALSE)
++ Pexalor: P valor = 0.001
++ Decisão usando nível de significância de 5%: O p-valor é um número significamente pequeno a um nível
+de significância de 0.05, portanto rejeita-se a hipotese mula.
++ Interpretação substantiva: Se p-valor fosse maior a p=0.05, a hipótese mula não seria rejeitada e sua
+interpretação é que haveria uma probabilidade, a um valor de p-valor maior, de observar nos testes
+a proporção das pastas serem iguais ao que foi encontrado. Contudo, o p-valor nesse teste é menor
+s entre as pastas são
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+E 5. Segundo teste de hipótese bivariado
+
+===== page_003_top.png =====
+BASE cargos2$cargo ele = as.numeric(BASE. cargos2Scargo. ele)
+
+BASE cargos2$lid part = as.numeric(BASE, cargos2Slid part)
+
+BASE, cargos2Sexp adm = as.nuneric(BASE cargos2$exp. adm)
+
+BASE cargos2$exp. car = as.nuneric(BASE cargos2$exp. car)
+
+BASE, cargos2exp, mer= as.nuneric(BASE cargos2exp. mer)
+
+BASE, cargos2$exp. soc = as.nuneric(BASE, cargos2$exp. soc)
+
+3. Tabela descritiva
+
+Table 1: Tabela — experiência administrativa
+Legenda Resultados
+Observacoes válidas 890.000
+n. experiencia 791.000
+ponoeao. nam
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_bot.png =====
+Ena oneaddinã urna
+
++ conclusão substantiva:
+
+Proporção de alto nível por pasta
+ss A tibble: 2x2
+4% orgao sup pastas
+“8 <chr <abr>
+481 mapa 0.356
+48 2 mínc 0.425
+0.425 - 0.356 = 0.069, a diferença substantiva é de aproximadamente 7 pontos percentuais. Embora estatis-
+ticamente a análise mostra-se signifi cativamente diferente e válida para rejeitar a igualdade entre as pastas,
+a diferença de 7 pontos não apresenta uma diferença relevante.
+6. Significância estatística e nível de significância
+
++ A conclusão mudaria se o nível de significância fosse 10%? Considerando o segundo teste, não.
+
++ A conclusão mudaria se o nível de significância fosse 1%? Considerando o segundo teste, sim. A
+conclusão seria de que há evidências que não permitem rejeitar a hipótese nula, isso significa que
+haveria uma probabilidade de 39% de observar que as pastas são iguais ao resultado encontrado.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_004_mid.png =====
+& 2-sample test for equality of proportions vithout continuity correction
+
+“
+
+4% data: tabelaSSexperiencia out of tabelasStotal
+
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+
+48 alternative hypothesis: two.sided
+
+4% 95 percent confidence interval:
+
+48 -0.13365398 -0.00328014
+
+48 sample estimates:
+
+es propi prop2
+
+4% 0,3561905 0.4246575
+
++ p-valor e sua interpretação: 0.039. o p-valor a um nivel de significância = 0.05 é um valor
+pequeno. Rejeita-se a hipótese nula. Assumindo que a hipótese mula é verdadeira, isso significaria que
+haveria uma probabilidade, a um valor de p-valor maior, de observar nos testes a proporção das pastas
+serem iguais a esse resultado. Porém, nesse caso à hipótese nula é rejcitada, isto é a proporção das
+pastas não é igual.
++ conclusão substantiva:
+
+Proporção de alto nível por pasta
+
+ss 8 A tibble: 2x2
+
+48 orgao sup pastas
+
+8 <chr> <abi>
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+0.425 - 0.356 = 0.069, a diferença substantiva é de aproximadamente 7 pontos percentuais. Embora estatis-
+
+===== page_004_top.png =====
+mapa = prop.test(187, 876)
+mincic= prop.test(155, 876)
+mapa li = 0.187 mapa |s = 0.242
+mine. li = 0.153 mine. 1s = 0.204
+
++ teste de hipótese para a diferença entre as proporções.
+tabelas = Cinco 1%
+
+group. by(orgao. sup) >)
+
+summariso(experiencia = sun(alto nível== 1, nara = TRUE),
+
+total = nO)
+prop.test(x = tabelaSSexperiencia, n = tabelaSStotal, correct = FALSE )
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. IB
+
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+
+===== page_005_bot.png =====
+
+
+===== page_005_mid.png =====
+
+
+===== page_005_top.png =====
++ O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva O exercício
+mostra que a interpreção sobre os dados obtidos requer mais evidências para que se possa concluir que
+há igualdade ou diferença entre as pastas.
+
+7. O que aconteceria se a amostra fosse maior?
+
+Considerando o primeiro teste, o erro padrao reduziria 29,3% aproximadamente, conforme observações válidas
+«de 890 e erro 0.02, o numero de observações dobraria para 1780 e o erro para (,0143. Isso acontece por conta
+da fórmula do erro padrao, quando voce aumenta o denominador que é raiz de n, o resultado do erro padrao
+diminui por ser indiretamente proporcional

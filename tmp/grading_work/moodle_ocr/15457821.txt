@@ -1,0 +1,370 @@
+
+===== page_001_bot.png =====
+A mesma pessoa pode aparecer mais de uma vez porque ela pode ter sido nomeada em diferentes cargos
+ou em momentos distintos. Cada nomeação é registrada como uma nova linha na base, mesmo que seja da
+mesma pessoa.
+Fonte dos dados: arquivo BASE, cargos2.x1sx, pasta dados/. Data de acesso: 2026-07-20.
+2. Importação e preparação dos dados
+library(readx1)
+library (dplyr)
+& Importar base da pasta dados/
+dados <- read excel("dados/BASE cargos2.x1sx*)
+din(dados) 4 número de Linhas e colunas
+es (1) 1038 26
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_001_mid.png =====
+entre 2011 e 2021. A pergunta geral é se existem diferenças sistemáticas nos perfis dos nomeados entre
+essas duas pastas e em que medida essas diferenças confirmam ou desafiam as explicações da literatura sobre
+nomeações no Executivo Federal. Em particular, os autores investigam se os perfis dos nomeados diferem
+entre as duas pastas e se a filiação partidária é suficiente para explicar o caráter político das nomeações.
+A unidade de análise da base é cada nomeação individual registrada no Executivo Federal. Assim, uma
+linha da base representa uma nomeação de uma pessoa para um cargo público em determinado momento,
+contendo informações sobre o cargo, nível, experiência, indicação política, entre outras variáveis. Cada
+observação corresponde a um ato de nomeação para cargos DAS e FCPE de níveis 4 a 6.
+Cada linha da base representa uma nomeação específica de um indivíduo para um cargo comissionado ou
+função comissionada. À base contém 1038 observações (nomeações) referentes a 664 indivíduos, ou seja, cada
+linha registra uma nomeação individual, com suas respectivas características (formação, carreira, filiação
+partidária, experiência profissional, ete.).
+No artigo, os antores indicaram uma base de 890 observações (nomeações) referentes a 568 servidores. Isso
+indica que a base foi ampliada ou atualizada com dados mais recentes.
+A mesma pessoa pode aparecer mais de uma vez porque ela pode ter sido nomeada em diferentes cargos
+ou em momentos distintos. Cada nomeação é registrada como uma nova linha na base, mesmo que seja da
+mesma pessoa.
+Fonte dos dados: arquivo BASE, cargos2.x1sx, pasta dados/. Data de acesso: 2026-07-20.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+library(readx1)
+
+===== page_001_top.png =====
+Avaliação: inferência básica com dados reais de Ciência Política |
+Gustavo Madureira - NUSP 15457821
+2026-07-20
+1. Introdução
+O artigo de Albrecht e Ribeiro, busca compreender quais são os padrões de nomeação para cargos públicos no
+Dont Emma comem amálino onemnnenttam bom om Minintfoiom da A minutos LMADAS nda Cultura (MINC),
+o o o “dos nomeados entre
+| à Alguns arquivos neste envio só podem ser acessados através de download direto... da literatura sobre
+CS 35 nomeados diferem
+entre as duas pastas e se a filiação partidária é suficiente para explicar o caráter político das nomeações.
+
+===== page_002_bot.png =====
+id
+4% mapa mctá minc
+** 525 148 365
+& Contagem de valores ausentes em variáveis relevantes
+colSuns(is.na(dados(, c("exp ada”, “exp. car”, "nivel", “instr”,"indicacao")]))
+*s expada expcar nivel  instr indicacao
+“ º 1 o º )
+Na checagem de valores ausentes, verificou-se que apenas a variável exp. car apresentou 1 valor faltante,
+enquanto exp. adm, nivel, instr e indicacao não apresentaram valores ausentes. Portanto, não há problemas
+relevantes de missing data nessas variáveis”
+& Inspeção dos valores originais
+unique (dadosSexp, adm)
+es Ca) cam cor meg comam ug
+
+===== page_002_mid.png =====
+*8 imínc  secdc Cult-SCC-S1 VSCA Secr- DAS 6MA arte NA
+
+48 2minc — secde Cult-SCC-DACI OGRJ Dire DAS 5 espe- adui- UFPA
+
+48 3minc  secde Cult-SCC-COM- INPE Coor- DAS à mest- arte UERJ
+
+48 4minc — secdo Cult-SCC-COG- ECER Coor- DAS aus NA NA
+
+48 Sminc  secde Cult-SCC-COC- ESTO Coor- DAS à supe- hist- PUC
+
+48 Gminc  secde Cult-SCC-S2 MPPO Secr- DAS 6 espe- com- NA
+
+48 4 à 16 nore variables: inst origen <chr>, car pub <chr>, partido <chr>,
+
+48 4 cargo ele <chr>, lid part <chr>, exp ads <chr>, exp car <chr>,
+
+48 4 expner <chr>, exp soc <chr>, “UPs' Cchr>, partido pr <chr>,
+
+44 4 partido ministro <chr>, indicacao <chr>, entrada <chr>, saida <chr>,
+
+484 pera <chr>
+
+& Observações por órgão supertor
+
+table(dadosSorgao. sup)
+
+“
+
+44 mapa meti mine
+
++ 525 148 365
+
+4 Contagem de valores ausentes em variáveis relevantes
+
+colSuns(is.na(dados[, c("exp adn","exp car”, "nivel", “instr”,"indicacao")]))
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_top.png =====
+names (dados) & nomes das variáveis
+*s [1] “orgao sup" "setor" "chave" “ide
+as [5] “cargo” “funcao” enivel” “instrt
+4 [9] “area” “inst ensino” “inst origem" “car pub"
+*s [13] “partido” "cargo ele" “lid part" “exp ado"
+as [17] “exp car" “exp mor” “exp soc" nu es
+e (21) “partido pr” “partido ministro" "indicacao* “entrada”
+»s [25) “saida” “pera”
+head(dados) 4 primeiras Linhas
+48 4 A tibble: 6x 26
+48 orgão sup setor chave id cargo funcao nível instr area inst ensino
+ss <chr  <chr> <chr> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+nu
+1 Alguns arquivos neste envio só podem ser acessados através de download direto. JEPA
+| JERI
+o 48 4 minc secdc Cult-SCC-CGG- ECBR Coor- DAS a na NA NA
+
+===== page_003_bot.png =====
+A variável de experiência administrativa (exp. adm) deveria ser binária (sim /não ou 1/0), mas apareciam
+diferentes formas de escrita, como "1", "sim, "SIM".
+Para resolver, foi feita uma recodificação, transformando todos esses valores em uma variável binária
+padronizada (exp. adm bin), com 1 = sim e O = não.
+
++ Valores faltantes (NA):
+Algumas variáveis apresentavam valores ausentes. Esses casos foram mantidos como NA, para não
+distorcer as proporções calculadas.
+Assim, as análises consideram apenas os casos válidos, sem imputação artificial.
+
++ Níveis de cargo:
+A variável nível também apresentou inconsistências. Para simplificar, foram recodificados apenas os
+cargos DAS 5 e 6 como “alto nível” (valor 1), enquanto cargos DAS 4 foram considerados “não alto
+nível” (valor 0).
+Valores fora desse padrão foram tratados como NA.
+Esses ajustes garantem maior consistência na base e permitem comparações confiáveis entre os min-
+
+3. Resultados descritivos
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+& Recodificação
+dadosSexp. adm bin <- ifelse(dadosSexp adm Lin) c("1", "sin", SIM"), 1,
+ifelso(dadosSexp ada YinY c("0", “não”, NAO"), O, NA))
+dadosSalto nível <- ifelse(dadosSnivel Yin) c(5,6), 1,
+ifelse(dadosSnivel==4, O, N4))
+subset <- dados > filter(orgao sup lin c('mapa”,“minc"))
+2.1 Problemas encontrados e tratamento
+Durante a preparação dos dados, foram identificados alguns problemas:
+* Variáveis binárias com valores inesperados:
+A variável de experiência administrativa (exp. adm) deveria ser binária (sim /não ou 1/0), mas apareciam
+diferentes formas de escrita, como "1%, “sim”, "SIN".
+Para resolver, foi feita uma recodificação, transformando todos esses valores em uma variável binária
+padronizada (exp adm bin), com 1 = sim e O = não.
++ Valores faltantes (NA):
+Algumas variáveis apresentavam valores ausentes. Esses casos foram mantidos como NA, para não
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+A variável nível também apresentou inconsistências. Para simplificar, foram recodificados apenas os.
+
+===== page_003_top.png =====
+table(dadostexp adm, useNA = “ifany*)
+“
+mL 0 13 NA
+* 3 6895 111
+unique(dadosSnivel)
+e (1654
+table(dados$nivel, uselA = “ifany")
+“
+mas 6
+Free E Gs a] 0, NA))
+DEN e TE EEE E
+
+===== page_004_bot.png =====
+EP A CER QN NR,
+6
+orgao sup mn alto prop
+mapa 525 187 0,3561905
+mine 365 155 04246575
+3.1 Gráficos de comparação
+Os gráficos abaixo ilustram as diferenças entre MAPA e MINC em termos de experiência administrativa e
+cargos de alto nível, em uma única figura compacta.
+library(ggplot2)
+library (patchvork) 4 para combinar gráficos
+& Gráfico de barras - Experiência administrativa
+Et <- geplot(tab exp, aes(x = orgao sup, y = prop, fill = orgao sup)) +
+geom bar(stat = "identity*) +
+labeítitle = “Experiência administrativa”,
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_004_mid.png =====
+mapa 525 As? O.9198473
+mine 365 309 0.8803419
+& Tabela 2 - Cargos de alto nível
+tab nível <- subset Di
+group. by(orgao. sup) 1>%
+summarise(
+n= nO,
+alto = sun(alto nivel, na.rm=TRUE),
+prop = nean(alto nível, na.r=TRUE)
+,
+imitr::kable(tab nível, caption = "Tabela 2 - Proporção de nomeados em cargos DAS 5 ou 6º)
+Table 2: Tabela 2 - Proporção de nomeados em cargos DAS 5 ou
+6
+orgao sup nu alto prop
+mapa 525 187 03561905
+mine 365 155 0426575
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_top.png =====
+& Tabela 1 - Esperiência administrativa
+tab exp <- subset 1
+group. by(orgao. sup) 1>%
+summarise(
+n=n(),
+com exp = sun(exp adm bin, na.rm=TRUE),
+prop = mean(exp adm bin, na.rn=TRUE)
+5)
+knitr: :kablo(tab exp, caption = "Tabela 1 - Proporção de nomeados com experiência aduinistrativa”)
+Table 1: Tabela 1 - Proporção de nomeados com experiência ad-
+ministrativa
+orgao sup un com exp prop
+Ai
+
+===== page_005_bot.png =====
+donde rcenociaçd nda
+4. Testes de hipótese
+& Teste para experiência administrativa
+prop-test(tab expscom exp, tab expsn)
+“
+4º 2-sample test for equality of proportions vith continuity correction
+“
+48 data: tab exp$com exp out of tab expsn
+48 X-squared = 10.428, df = 1, p-value = 0.001241
+4% alternative hypothesis: two.sided
+48 95 percent confidence interval:
+48 0.02541178 0.11762801
+48 sample estimates:
+** propi prop2
+48 0.9180952 0.8465753
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+Experiência administrativa Cargos DAS 5 ou 6
+ao
+75%
+so%
+fm É
+20%
+Ê Ê
+2% nn
+ox om
+mapa mag mapa mao
+Ministério Ministério
+4. Testes de hipótese
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+Do RB
+
+===== page_005_top.png =====
+x = "Ministério", y = "Proporção") +
+scale y continucus(labels = scales::percent format()) +
+theme minimal() +
+thene (legend. position = “none")
+& Gráfico de barras - Cargos de alto nível
+E2 < ggplot(tab nivel, aes(x = orgao sup, y = prop, fill = orgao sup)) +
+geom bar(stat = “identity") +
+labs(title = "Cargos DAS 5 ou 6º,
+x = "Hinistério”, y = "Proporção") +
+scale y continuous(labels = scales: :percent format()) +
+theme minimal() +
+theme(legend position = none")
+& Combinar os dois gráficos lado a lado
+s+m
+== 40% Too
+
+===== page_006_bot.png =====
+4% X-squared = 3.9813, df = 1, p-value = 0.04601
+48 alternative hypothesis: tuo.sided
+4º 95 percent confidence interval:
+4º -o.1359762203 -0.00005T8058
+45 dlmpio cotinatoa)
+** propi prop2
+48 0,3561905 0,4246575
+Hipótese nula: A proporção de cargos de alto nível (DAS 5 ou 6) é igual no MAPA e no MINC.
+Hipótese alternativa: A proporção de cargos de alto nível difere entre MAPA e MINC.
+Teste usado no R: prop.test(tab  nivelalto, tab,iveln)
+P-valor: 0.04601
+Decisão (nível de significância 5%): Como o p-valor < 0.05, rejeitamos HO.
+Interpretação: Há evidência estatística de que o MINC tem uma proporção maior de cargos de alto nível
+do que o MAPA. No entanto, a diferença, embora significativa, é pequena em termos substantivos. Isso
+mostra que significância estatística não implica necessariamente relevância política: a diferença pode não
+alterar de forma decisiva o perfil burocrático das nomeações.
+O que aconteceria se a amostra fosse maior?
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+Rida one inca dinamite preco trniroçd lah Secco ii eira eia iii
+significativa mesmo em um critério mais rigoroso. Isso mostra que o resultado é robusto.
+O que esse exercício mostra sobre a diferença entre p-valor e significância substantiva? O P-valor
+é uma medida estatística que indica a probabilidade de observar uma diferença tão grande (ou maior) entre
+os grupos se, na verdade, não honvesse diferença real. Ou seja, é um critério formal para decidir se rejeitamos
+ou não a hipótese nula enquanto a significância substantiva é uma avaliação de relevância prática ou política.
+Mesmo que uma diferença seja estatisticamente significativa (p-valor baixo), ela pode ser pequena demais.
+para ter impacto real nas políticas públicas.
+& Teste para cargos de alto nível
+prop.test(tab nivelSalto, tab nivel$n)
+“
+4 2-sample test for equality of proportions uith continuity correction
+“
+48 data: tab nivelSalto out of tab nivel$n
+48 X-squared = 3.9813, df = 1, p-value = 0.04601
+48 alternative hypothesis: two.sided
+44 95 percent confidence interval:
+48 -0.1359762203 -0.0009578958
+4% sample estimates:
+DE ii SAD ne 26
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. À ING.
+
+Hipótese alternativa: A proporção de cargos de alto nível difere entre MAPA e MINC.
+
+===== page_006_top.png =====
+Hipótese nula: A proporção de nomeados com experiência administrativa é igual no MAPA e no MINC.
+Hipótese alternativa: A proporção de nomeados com experiência administrativa é diferente entre MAPA e
+MINC.
+Teste usado no R: prop.test(tab  expcomezp, tab.zpn)
+P.valor: 0.001241
+Decisão (nível de significância 5%): Como o p-valor < 0.05, rejeitamos HO.
+Interpretação: Existe evidência estatística de que o MAPA tem uma proporção maior de nomeados com
+experiência administrativa do que o MINC. Em termos políticos, o MAPA parece privilegiar perfis técnicos
+e burocráticos, enquanto o MINC é menos dependente dessa experiência.
+A conclusão mudaria se o nível de significância fosse 10%? Como o p-valor é muito menor que
+0.10, a conclusão não mudaria. Permanece a rejeução a hipótese nula. Então, pode ser interpretado que a
+diferença entre MAPA e MINC é estatisticamente robusta, mesmo em um critério mais flexível.
+A conclusão mudaria se o nível de significância fosse 1%? O P-valor é 0.001241 Como o p-valor <
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+| stantiva? O P-valor
+
+é uma medida estatística que indica a probabilidade de observar uma diferença tão grande (ou maior) entre
+
+===== page_007_bot.png =====
+
+
+===== page_007_mid.png =====
+relevância política.
+
+===== page_007_top.png =====
+Se a amostra fosse maior, os intervalos de confiança seriam mais estreitos, aumentando a precisão das
+estimativas. Nesse cenário, diferenças pequenas tenderiam a se tornar estatisticamente significativas, pois
+o erro-padrão diminuiria. Esso reforça a importância de considerar tanto o tamanho da amostra quanto a
+relevância substantiva dos resultados. Neste caso em particular, para os cargos de alto nível, o p-valor foi
+0.04601, ou seja, significativo a 5% mas não a 1%. Diferenças que parecem significativas à 5% mas não a
+1%, tenderiam a se tornar significativas mesmo em níveis mais rigorosos e a diferença entre MAPA e MINC
+poderia ganhar robustez estatística.
+
+5. Conclusão
+
+Os resultados mostram diferenças entre os ministérios analisados. O MAPA apresenta proporção significati-
+vamente maior de nomeados com experiência administrativa, enquanto o MINC tem proporção ligeiramente
+maior de cargos de alto nível.
+
+É importante destacar que a diferença em cargos de alto nível, embora estatisticamente significativa a 5%,
+é pequena em termos substantivos. Isso mostra que significância estatística não implica necessariamente
+relevância política.

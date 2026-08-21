@@ -1,0 +1,758 @@
+
+===== page_001_bot.png =====
+| 4H Marning: package 'dplyr' was built under R version 4.5.2
+
+4H Marning: package 'stringr! was built under R version 4.5.2 |
+| 4H Marning: package 'forcats' was built under R version 4.5.2 ]
+| 4H Marning: package 'lubridate' was built under R version 4.5.2 |
+
+===== page_001_mid.png =====
+Pi,
+
+| library(tidyverse)
+
+| 4% Warning: package 'tidyverse' was built under R version 4.5.2
+
+| 4% Warning: package 'tibble' was built under R version 4.5.2
+
+| 4% Marning: package 'tidyr' was built under R version 4.5.2
+
+| 4% Warning: package 'readr' was built under R version 4.5.2
+
+| 4% Marning: package 'purrr' mas built under R version 4.5.2
+
+| 4% Warning: package 'dplyr' was built under R version 4.5.2
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. r
+
+===== page_001_top.png =====
+Avaliação: inferência básica com dados
+reais de Ciência Política (Metodos III -
+Politica/USP)
+Emilio Amigo Gamo - nUSP: 5549811
+2026-07-18
+PACOTES:
+library(readxl)
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_bot.png =====
+INTRODUÇÃO:
+O trabalho a seguir é um relatório dos resultados da avaliação final da disciplina FLPO406 - Métodos e
+Técnicas de Pesquisa em Ciência Política (2026) oferecida pelo docente Manoel Galdino. O objetivo do
+trabalho foi usar a base de dados do artigo “Nomeação a cargos públicos no Brasil: um estudo comparado das
+pastas de Agricultura e Cultura do Executivo Federal (2011-2021).* para realizar análises bivariadas simples,
+explicar as escolhas feitas no R e interpretar corretamente os resultados.Em relação a base e ferramentas
+utilizadas, utilizei a BASE cargos 2.x1sx (acessada dia 18 às 18:40) sugerida nas próprias instruções para a
+avaliação (disponível em
+https:/raw-githubusercontent.com/nayalbrecht/burocraciaBR/main/BASE. cargos2.xisx
+(https://raw-githubusercontent.cominayalbrecht/burocraciaBR/main/BASE. cargos? xisx).) e utilizei,
+logicamente, o R studios para a análise e o relatorio em RMarkdown.
+Aorganização deste relatório vai ser estruturada seguindo os blocos das próprias perguntas obrigatórias. Em
+geral os sub-blocos correspondem a uma respectiva pergunta, além do caso do bloco 3,4 e 5 que demandam
+um formato de relatório. Essa escolha de organização foi feita tanto para uma melhor clareza do professor na
+hora da correção quanto para uma melhor organização na separação dos chunks de códigos. Enfim, cabe
+o cj a nã
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+ana
+
+===== page_002_mid.png =====
+library(dplyr)
+library(ggplot2)
+FONTES DE DADOS:
+base bruta <- read xIsx(“BASE cargos2.xlsx", sheet = "BASE cargos")
+base <- base bruta %o%
+mutate(across(where(is.character), = na if(., "NA"))) %%
+mutate(
+across(
+c(cargo ele, lid part, exp adm, exp mer, exp soc),
+- replace(.x, I(.x Xink c("0", "1")), NA)
+|
+,
+base filtro <- base %% filter(orgao sup Xink c("mapa”, “minc"))
+INTRODHICÃO:
+à Alguns arquivos neste envio só podem ser acessados através de download direto. 406 - Métodos e
+OUT GE OQUE UPOrenear een (een roroome pos cepas merssrsesáino. O objetivo do
+pa
+
+===== page_002_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Politica (Metodos 1 - PolticalUSP)
+
+44 — Attaching core tidyverse packages ——————————— tidyverse 2.0.0 —
+we dolyr 1.1.4  Vreadr 2.1.6
+mv forcats 1.0.1 Vstringr 1.6.0
+w / egplot2 4.0.0  Vtible 3.3.0
+wt v lubridate 1.9.4 Vtidyr 1.3.1
+sv pure 1.2.0
+a — Conflicts ———————>>>>>>>> tigyverse conflicts() —
+“4 X dplyr::filter() masks stats: :filter()
+“8 X dplyr::lag() — masks stats::lag()
+4 à Use the conflicted package (chttp://conflicted.r-lib.org/>) to force all conflicts to be
+come errors
+library(knitr)
+“4 Warning: package 'knitr' was built under R version 4.5.2
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_bot.png =====
+reestruturado em uma Secretaria Especial durante o governo Bolsonaro.
+2. Leitura e validação dos dados:
+Neste bloco me proponho em fazer uma leitura e validação inicial dos dados transferidos, mas antes cabe
+denotar uma tendência que irá se repetir em todas as observações. Dada a instrução inicial indicada no pdf
+compartilhado pelo professor "5. Para as perguntas obrigatórias, concentre a análise nas pastas MAPA e
+MinC, pois elas correspondem ao foco comparativo do artigo”, criei um data frame “base. filtro” que,
+justamente, filtra os dados por MAPA e MinC.
+Por outro lado, dado que as instruções específicas para este bloco não instruíam esse filtramento enquanto
+que em outras sim, não ficou claro se deveria me concentrar neste blocos nas pastas de interesse ou não.
+Dessa forma, já que a leitura muda dependendo da base que eu utilize, quando necessário, irei evidenciar o
+resultado que seria utilizando a “base, filtro” e o resultado que seria utilizando a “base”.
+2.1.Número de linhas e colunas.
+dim(base)
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+an4
+
+===== page_003_mid.png =====
+secretarias finalísticas dos ministérios analisados. Nesse sentido e, em termos práticos, além das
+especificidades do cargo em si, cada linha registra às caracteristicas socioeconômicas, profissionais e político-
+partidárias da pessoa no momento em que foi nomeada.
+1.4.Por que a mesma pessoa pode aparecer mais de uma vez?
+A mesma pessoa pode aparecer mais de uma vez e, na prática, em mais de uma linha da base, pois a
+unidade de análise do banco de dados são as nomeações em si e não o indivíduo nomeado. Tendo em vista
+que a pesquisa se propõe em cobrir o periodo entre 2011-2021, isso abre margem para uma pessoa ser
+nomeada para mais de um cargo ao longo do recorte temporal (seja promoção, realocação, etc). Em síntese:
+cada linha corresponderia a um vínculo específico e o banco de dados poderia corresponder a uma trajetória
+ocupacional em vez, do que digamos, o cadastro fixo de algum servidor.]
+1.5.Quais são as duas pastas comparadas no artigo?
+Recapitulando o já evidenciado tanto no título do texto analisado quanto no articulado anteriormente, as duas
+pastas que o artigo compara são os Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC). Nessa
+temática, vale ressaltar a decisão operacional dos autores de manter o MinC como pasta apesar dele ter sido
+reestruturado em uma Secretaria Especial durante o governo Bolsonaro.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+os, mas antes cabe
+
+denotar uma tendência que irá se repetir em todas as observações. Dada a instrução inicial indicada no pdf
+
+===== page_003_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos ll - PolticalUSP)
+1. Artigo, pergunta e unidade de análise
+1.1 Qual é a pergunta geral do artigo?
+Como vimos em aula, a pergunta deve ser tratável, relevante, contestada, original, aberta e precisa. Nesse
+sentido, Albrecht e Ribeiro propõem desenvolver em seu artigo uma pesquisa ao redor da pergunta: Em que
+medida os perfis dos nomeados para cargos de médio escalão (4-6) nos Ministérios da Agricultura e da
+Cultura variam entre si no período de 2011 a 2021?
+1.2 Qual é a unidade de análise da base?
+A partir da pergunta geral do artigo a unidade de análise da base tem de ser a nomeação para cargos
+comissionados ou funções de confiança (DAS/FCPE) de níveis 4 a 6, no recorte temporal (2011-2021) e de
+pastas analisadas (MAPA/MinC).
+1.3.0 que significa uma linha da base?
+Tendo em conta isso, a linha de base. que equivale a observação de uma unidade básica de análise,
+representa neste caso alguma nomeação para algum cargo seja DAS ou FCPE de nível 4 a 6 em uma das
+
+a, além das
+i Alguns arquivos neste envio só podem ser acessados através de download direto. , profissionais e político-
+
+===== page_004_bot.png =====
+inst origem
+car pub
+partido
+cargo ele
+lid part
+exp adm
+exp car
+exp mer
+exp soc
+urr
+partido. pr
+ans
+
+===== page_004_mid.png =====
+observacoes-orgao
+
+orgao sup
+
+setor
+
+chave
+
+id
+
+cargo
+
+funcao
+
+nivel
+
+instr
+
+instensno
+instoigem
+
+===== page_004_top.png =====
+2010712026, 23:21 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos ll - Poltica/USP)
+dim(base filtro)
+we [1] 890 26
+A quantidade de linhas e colunas sem filtrar por Mapa e Minc são respectivamente 1038 linhas e 26 colunas.
+Ja a base filtrada possui 890 linhas e 26 colunas.
+2.2.Nomes das variáveis.
+tabela nomes <- data.frame(Variavel = colnames(base filtro))
+kable(tabela nomes,
+caption = "Tabela 1: Variáveis na base”,
+col.names = "observacoes-orgao")
+Tabela 1: Variáveis na base
+à Alguns arquivos neste envio só podem ser acessados através de download direto. r
+
+===== page_005_bot.png =====
+nas nível = sun(is.na(nível)), —
+nas ânstr = sun(is.na(instr)),
+nas indicacao = sun(is.na(indicacao)),
+na inst ensino = sun(is.na(inst ensino)),
+na inst origem = sun(is.na(inst origem)),
+na car pub = sun(is.na(car pub)),
+na partido = sun(is.na(partido)),
+na cargo ele = sun(is.na(cargo ele))
+,
+kable(tabela nas,
+caption = "Tabela 3: Numero de valores ausentes por variavel - base filtro ",
+col.nanes = c("exp adm”, “exp car”, "nivel", “instr”, "indicacao", "inst ensino”, "ínst
+-origem”, “car pub”, “partido”, "cargo ele" ))
+Tabela 3: Numero de valores ausentes por variavel - base filtro
+exp adm exp car nivel instr indicacao inst ensino inst origem car pub partido cargo ele
+7 769 25
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+E
+
+===== page_005_mid.png =====
+ein a  setÃ caacinçl
+Pasta Observações validas
+mapa 525
+meti 148
+mine 365
+Como demonstrado pelo output o numero de observações das pastas comparadas MAPA e MinC são
+respectivamente 525 e 365 Além disso, as do MCTI são 158.
+2.4.Número de valores ausentes em pelo menos cinco variáveis relevantes.
+tabela nas <- base filtro %%
+sumarise(
+nas exp adm = sun(is.na(exp adm)),
+nas exp car = sun(is.na(exp car),
+nas nível = sun(is.na(nivel)),
+nas instr = sun(is.na(instr)),
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+na car pub = sun(is.na(car pub)),
+
+===== page_005_top.png =====
+2010712026, 23:21 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos ll - PolticalUSP)
+observacoes-orgao
+indicacao
+entrada
+saida
+perm
+2.3.Número de observações por orgao sup.
+tabela por orgao sup <- count(base, orgao sup)
+kable(tabela por orgao sup,
+caption = "Tabela 2: Observações validas por pasta”,
+col.names = c("Pasta”, "Observações validas"))
+i Alguns arquivos neste envio só podem ser acessados através de download direto. q, das validas
+mapa 525
+
+===== page_006_bot.png =====
+2.5.Uma checagem dos valores observados em exp adm, exp car, nivel, instr e
+indicacao.
+tabela valores <- data.frane(
+Variavel = c(“exp adm”, “exp car”, "nivel", “instr”, "indicacao"),
+Valores, observados = c(
+paste(unique(base filtrogexp adm), collapse = ", "),
+paste(unique(base filtrogexp car), collapse = ", *),
+paste(unique(base filtrognível), collapse = ", "),
+paste(unique(base filtrosinstr), collapse = ", *),
+paste(unique(base filtrogindicacao), collapse = ", ")
+,
+,
+kable(tabela valores,
+caption = "Tabela 5: Valores observados - base filtro”,
+col.nanes = c("Variavel”, "Valores"))
+Tabela 5: Valores observados - base. filtro
+Mie IC Users/eamig/DownloadsArabalho. metodos. Emílio html ena
+
+===== page_006_mid.png =====
+origem”, “car pub”, “partido”, “cargo ele” ))
+Tabela 4: Numero de valores ausentes por variavel - base
+
+exp adm exp car nivel instr indicacao inst ensino inst origem car pub partido cargo ele
+
+15 7% 0 9 [) 266 269 17º 909 29
+A partir da “base filtro”, após indentificar a quantidade de valores ausentes em 5 variveis (exp. adm (15),
+exp car (66), nivel (0), instr (83), indicacao(0)), o resultado sugeriu que a base filtrada (MAPA e MinC) teria um
+relativo prenchimento de suas variveis. Em seguida, para coomprender se essa tendencia se mantem analisei
+mais 5 variveis que pintaram um quadro muito difemte em relação aos valores ausentes nas pastas de
+interesse (inst ensino(250), inst origem (253), car. pub (17), partido (769) e cargo. ele (25)).
+Por outro lado, cabe denotar que se fossemos usar a “base” não filtrada o resultado mudaria relativamente:
+exp adm (11) exp. car (76) nível (0) instr (95) indicacao(0) inst ensino (266) inst origem (269) car. pub (17)
+partido (909) cargo, ele (29).
+2.5.Uma checagem dos valores observados em exp adm, exp car, nivel, instr e
+indicacao.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+Variavel = c("exp adm”, “exp car”, "nivel", “instr”, "indicacao"),
+
+===== page_006_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Politica (Metodos 1 - PolticalUSP)
+tabela nas2 <- base %%
+summarise(
+nas. exp adm = sun(is.na(exp adm)),
+nas exp car = sun(is.na(exp car)),
+nas nível = sun(is.na(nivel)),
+nas instr = sun(is.na(instr)),
+nas indicacao = sun(is.na(indicacao)),
+na inst ensino = sun(is.na(inst ensino),
+na inst origem = sun(is.na(inst origem)),
+na car pub = sun(is.na(car pub)),
+na partido = sun(is.na(partido)),
+na cargo ele = sun(is.na(cargo ele))
+,
+kable(tabela nas2,
+caption = "Tabela 4: Numero de valores ausentes por variavel - base”,
+col.nanes = c("exp adm”, “exp car”, “nivel”, “instr”, "indicacao”, “inst ensino", "inst
+à Alguns arquivos neste envio só podem ser acessados através de download direto. -
+abela 4: Numero a s por vi -base
+
+===== page_007_bot.png =====
+instr NA, especializacao, mestrado, superior, tecnico, doutorado, graduacao
+
+indicacao Lula, Rousseff, Temer, Bolsonaro
+
+Problemas encontrados nesse bloco:
+
+Foram encontrados três problemas principais que tive que solucionar: 1. a existência de "NAS" importados
+“como texto e não computacionais como valor ausente e 2. dada a instrução de concentrar a análise nas
+pastas de interesses, tive que criar uma forma de filtrar a base trabalhada.
+
+1. Para o primeiro problema eu utilizei o argumento mutate() justo depois da criação do dataframe:
+
+base <- base bruta %%
+
+mutate(across(uhere(is.character), = na if(., “NA"))) 35%
+
+2. Por não estar explicito nas intruções se ja na segunda questão eu deveria utilizar os resultados
+unicamente referentes ao Mapa e Minc me propus a apresentar os dois resultados em cada questão.
+Nesse sentido, decidi conservar a base bruta com todos as unidades de governo, mas criar um data
+frame a partir dela que possuisse apenas as observações de interesse:
+
+fie:/C:Users/eamig/Downloadsfrabaiho. metodos. Emílio html ma
+
+===== page_007_mid.png =====
+paste(unique(base$instr), collapse = ", "),
+paste(unique(base$indicacao), collapse = ", ")
+à ,
+kable(tabela valores,
+caption = "Tabela 6: Valores observados - base”,
+col.names = c(“Variavel”, “Valores"))
+Tabela 6: Valores observados - base
+Variavel Valores
+expadm 1,0,NA
+expcar 5,3,0,1,NA,2
+nivel 8,5,4
+instr NA, especializacao, mestrado, superior, tecnico, doutorado, graduacao
+indicacao — Lula, Rousseff, Temer, Bolsonaro
+Problemas encontrados nesse bloco:
+
+===== page_007_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos ll - PolticalUSP)
+Variavel Valores
+exp adm 1,0,NA
+exp car 5,3,0,1,NA,2
+nivel 6,5,4
+instr NA, especializacao, mestrado, superior, tecnico, doutorado
+indicacao Lula, Rousseff, Temer, Bolsonaro
+tabela valores <- data.frane(
+Variavel = c(“exp adm”, “exp car”, "nivel", "instr", “indicacao"),
+Valores observados = c(
+paste(unique(base$exp adm), collapse = ", "),
+paste(unique(base$exp car), collapse = ", "),
+paste(unique(base$nivel), collapse = ", "),
+paste(unique(base$instr), collapse = ", "),
+paste(unique(base$indicacao), collapse = ", ”)
+,
+E O E
+
+===== page_008_bot.png =====
+| base filtro <- base %% filter(orgao sup Xink c(“mapa”, “minc"))
+Em relação às especificidades da tabela, comparando as duas pastas, irei incluir na tabela respectivamente: o
+Número de observações válidas por pasta; o Número de pessoas/nomeações com experiência administrativa;
+Proporção de nomeações com experiência administrativa; Intervalo de confiança de 95% para essa
+proporção;Margem de erro associada ao intervalo de confiança.
+foIC AUsersleamig Dowmloadstrabalho, metodos. Emio html ams |
+
+===== page_008_mid.png =====
+ia apoiar tiene creia fraco Criei rindo ducto a rop ciente cornea de erp ori fe td
+“limpa”. Em um movimento puritano de sua binariedade, cabe resolver duas questões evidenciadas durante a
+checagem de valores (questão 2.5). Em primeiro lugar, indentificou-se um unico caso de um valor 3 que fugia
+da dicotomia apresentada no codebook. Além disso, a variavel apresentava um valor *"1º erroneamente
+indentificado como texto. Pela baixa frequencia dos casos e por fugirtem da binariedade sugerida pelo propio
+codeebook, busquei padronizar a variavel convertendo toda a coluna para o formato numerico e subnstituindo
+o valor 3 por NA. Em todo caso, escolhi manter a base, filtro antiga pre limpeza de valores inesperados para
+ilustrar da melhor forma possivel o processo de inferencia e poder os justificar. Dessa forma, temos uma
+variavel binária enfim limpa.
+base filtrol <- base filtro %o%
+mutate(exp adm = as.numeric(exp adm))
+base filtro2 <- base filtrol %%
+mutate(exp adm = ifelse(exp adm == 3, NA, exp adm))
+Além disso, para considerar unicamente os orgao. sup mapa e minc, utiizarei integralmente para a tabela
+descritiva a base filtro2 que se baseia numa base, filro já realizada.
+base filtro <- base %% filter(orgao sup Xin c("mapa”, “minc"))
+Em relação às especificidades da tabela, comparando as duas pastas, irei incluir na tabela respectivamente: o
+Número de observações válidas por pasta; o Número de pessoas/nomeações com experiência administrativa;
+Pronarrãn da nomaarãas ram avnariância adminietrativa: Intaruala da confianra de 0% nara aces.
+
+===== page_008_top.png =====
+200772026, 2321 Avaliação: inferência básica com dados reais de Clência Poltica (Metodos Il - PolticatuSP)
+base filtro <- base %% filter(orgao sup XinX c("mapa”, "minc"))
+
+3. Enfim, outro problema apresentado foi a variavel “exp adm” que deveria ser binaria apresentar valores
+inesperados na leitura realizada no sub-bloco 2.5. O tratamento dessa questão sera evidenciado no
+proximo bloco.
+
+3. Tabela descritiva: experiência administrativa:
+
+3.1 Criação da tabela descritiva:
+
+O fim deste bloco é criar e analisar uma tabela descritiva em relação às observações válidas com nomeações
+com experiências administrativas. Como já indicado pelo resultado da questão 2.5 e respaldado pelo próprio
+“codebook" da base de dados disponibilizada para a análise, a variável de interesse “exp adm” já
+operacionaliza a experiência prévia em órgãos da administração pública como uma variável binária, sendo:
+1= SIM (tem experiencia) O = NÃO (não tem experiencia)
+
+Tendo em conta a existencia previa de uma variavel binaria, cabe somente garantir que ela se mantenha
+“limpa”. Em um movimento puritano de sua binariedade, cabe resolver duas questões evidenciadas durante a
+checagem de valores (questão 2.5). Em primeiro lugar, indentificou-se um unico caso de um valor 3 que fugia
+da dicotomia apresentada no codebook. Além disso, a variavel apresentava um valor “1º erroneamente
+
+===== page_009_bot.png =====
+o a o dc dci ic aca ia ac
+porcentagem é de 88% em uma relação de 309 sob 351.
+O intervalo de confiança de 95% é a faixa de valores que, segundo o procedimento estatístico, conteria a
+verdadeira proporção de alguma população. Nesse sentido, se nos propusermos a repetir esse estudo
+múltiplas vezes, mas com diferentes amostras (com o mesmo procedimento de amostragem, claro), em 95%
+dos casos os intervalos calculados conteriam a proporção real. No caso estudado, no MAPA, o intervalo vai de
+0,897 a 0,943 (89,7% a 94,3%), enquanto no MinC, o intervalo vai de 0,846 a 0,914 (84,6% a 91,4%).
+Exemplificando em termos práticos, no caso do MAPA, teríamos 95% de confiança que a proporção real da
+população com experiência administrativa estaria entre 89,7% e 94,3%.
+Além disso, cabe notar a margem de erro, isso é o índice que indica o quanto a proporção que observamos na
+amostra pode se afastar (pra cima ou para baixo) da proporção verdadeira na população de interesse. Dessa
+forma, no caso estudado, o MAPA demonstrou uma margem de erro de 2,3% enquanto que o Minc de 3,4%, o
+que indicaria, respectivamente, que a proporção real de nomeadas com experiências nas pastas de interesses
+estão entre 89,7% e 94,3% (MAPA) e 84,6% e 91,4% (MinC).
+Cabe nesta análise breve delimitar que apesar dos indicadores do intervalo de confiança do MAPA poder ser
+potencialmente maior que o do MinC (respectivamente 94,3% contra 91,4%), isso não é uma estatística
+estatisticamente significante e portanto ainda não temos segurança para afirmar se há de fato uma diferença
+na proporção real das nomeações de pessoas com experiências administrativas prévias entre as pastas. Isso
+
+fie/1CUsersioamig/Downloadshrabalho. metodos. Emilio mtml ana
+
+===== page_009_mid.png =====
+“Proporção”, “Erro-padrão”, “Margem de erro”,
+“IC 95% inferior", "IC 95% superior"))
+Tabela 7: Proporção de nomeações com experiência administrativa prévia, por pasta (MAPA e MinC)
+N Ncom Erro- Margem de 10 95% 1€ 95%
+Pasta válido experiência Proporção padrão erro inferior superior
+mapa 524 482 09198473 00118618 00232492  0.8965982 09430965
+mine 351 309 08803419 00173238 00339547  0.8463872 0,9142965
+3.2 Analise Substantiva:
+Em uma análise substantiva breve notamos desde já que considerando apenas as observações válidas sobre
+experiências administrativas (portanto desconsiderando N/A ou valores que fugissem da binariedade)
+podemos notar que, no Ministérios da Agricultura (MAPA), das 524 nomeações, 482 (92%) foram de pessoas
+que já tinham experiência administrativa. Sem fugir tanto dessa tendencia, no Ministério da Cultura, a
+porcentagem é de 88% em uma relação de 309 sob 351.
+O intervalo de confiança de 95% é a faixa de valores que, segundo o procedimento estatístico, conteria a
+verdadeira proporção de alguma população. Nesse sentido, se nos propusermos a repetir esse estudo
+múltiplas vezes, mas com diferentes amostras (com o mesmo procedimento de amostragem, claro), em 95%.
+dna onaon os intantelna cale lindos: nonineioen-a nononento cmol. Ar. com apiidada no. MARA - o etomenia saido:
+
+===== page_009_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Politica (Metodos 1 - PolticalUSP)
+tabela questao3 <- base filtroz %%
+group. by(orgao sup) %%
+summarise(
+nvalidos = sun(!is.na(exp adm)),
+ncom exp = sun(exp adm == 1, na.rm = TRUE),
+prop = n.com exp / n validos,
+erro padrao = sqrt(prop * (1 - prop) / n validos),
+margem erro = 1.96 * erro padrao,
+ic inferior = prop - margem erro,
+ic superior = prop + margem erro
+,
+kable(tabela questao3,
+caption = "Tabela 7: Proporção de nomeações com experiência administrativa prévia, por
+pasta (MAPA e MinC)",
+col.nanes = c("Pasta”, "N válido", "N com experiência”,
+“Proporção”, “Erro-padrão", "Margem de erro”,
+"IC 95% inferior”, "IC 95% superior”))
+
+===== page_010_bot.png =====
+Estatística Valor
+prop 1 Proporção MAPA 0.9198
+prop 2 Proporção MinC 0.8803
+P-valor 0.0519
+4.2 Analise estatistica e substantiva:
+Em primeiro lugar cabe formalizar tanto a hipótese nula quanto a hipótese alternativa que serão testadas e
+analisadas. Nesse sentido, formalizo as hipóteses respectivamente:
+HO:Não há nenhuma diferença real, estatisticamente significante, entre as proporções de nomeações com
+experiência administrativa entre as duas pastas (MAPA e MinC)
+Hi:Há alguma diferença (para mais ou para menos) entre as proporções de nomeações com experiência
+administrativa entre as duas pastas (MAPA e MinC).
+A partir dessa base, testei a hipótese nula de que a proporção de nomeações com experiência administrativa é
+igual entre as duas pastas (MAPA e MinC) a partir de um teste bicaudal de igualdade entre duas proporções,
+utilizando a aproximação normal para a diferença entre proporções. Dessa forma, realizei a aproximação
+fie:/C:Users/eamig/Downloadsfrabaiho. metodos. Emílio html tona
+
+===== page_010_mid.png =====
+cida ass e
+“Proporção Minc",
+“p-valor"
+»
+Valor = c(
+round(teste exp$estimate[1], 4),
+round(teste exp$estimate(2], 4),
+round(teste exp$p.value, 4)
+,
+,
+kable(tabela teste exp,
+caption = "Tabela 8: Teste de hipótese e proporção amostral: experiência administrativa
+MAPA e MinC",
+col.names = c(*Estatística”, "Valor"))
+Tabela 8: Teste de hipótese e proporção amostral: experiência administrativa MAPA e MinC
+Estatística Valor
+prop 1 Proporção MAPA 0.9198
+prop2 Proporção MinC 0.8803
+
+===== page_010_top.png =====
+200772026, 2321 Avaliação: inferência básica com dados reais de Clência Potica (Metodos ll - PoltcatuSP)
+pois o intervalo de confiança das duas pastas se sobrepõem na faixa de 89,7% a 91,4%, dando margem a
+possibilidade de terem a mesma proporção (por exemplo, 90%). Em todo caso, mesmo se a diferença na
+proporção em nosso caso amostral se refletisse na realidade, a diferença é no limite moderada, ambas
+nomearam majoritariamente pessoas com experiência prévia, sem indicar, em uma análise substantiva, uma
+diferença significante para sustentar um argumento de diferença entre as duas pastas.
+4. Primeiro teste de hipótese bivariado
+4.1 Teste de hipotese:
+Teste de hipótese de que a proporção de nomeações com experiência administrativa é igual nas duas
+pastas
+teste exp <- prop.test(x = c(482, 309), n = c(524, 351), correct = FALSE)
+tabela teste exp <- data.frame(
+Estatística = c(
+“Proporção MAPA”,
+“Proporção MinC",
+“P-valor"
+»
+
+===== page_011_bot.png =====
+5. Segundo teste de hipótese bivariado
+Neste bloco irei realizar um segundo teste de hitese bivariado. Para isso irei criar uma variavel chamada
+alto. nível, igual a 1 quando nivel for 5 ou 6, e O quando nivel for 4. Em seguida, irei comparar a proporção de
+cargos altos entre mapa e mic.
+base filtro2 <- base filtrol %%
+mutate(alto nível = ifelse(nivel XinX c(5, 6), 1, 0))
+5.1.Uma tabela com as proporções por pasta e seus respectivos intervalos de
+confiança
+fio:IIC:Users/oamig/Downloadstrabaiho. metodos. Emilio htm mns
+
+===== page_011_mid.png =====
+PED A E AS
+necessário um estudo com uma amostra maior para determinar com maior confiança se há ou não uma
+diferença real, estatisticamente significante, entre as proporções de nomeações com experiência
+administrativas entre as duas pastas (MAPA e MinC).
+
+Do ponto de vista substantivo, esse resultado indica que, na prática, ambas as pastas têm uma burocracia
+majoritariamente composta por pessoas com experiência administrativa prévia sem que seu processo de
+nomeação se diferencie muito uma da outra com significância estatística uma da outra. A diferença amostral
+observada por si só já é pequena e, como demonstrado pelo p-valor, pode ser atribuída ao acaso tendo em
+conta nosso limiar de significância. Nesse sentido, que em uma análise substantiva, esse teste impacta a
+resolução do problema geral do artigo, dado que para ambas pastas, não havendo significância para afirmar
+que uma pasta privilegie esse requisito menos ou mais do que a outra, o critério de experiência administrativa
+pode ser um critério compartilhado nas nomeações para cargos de médio escalão. Isso não invalida a
+hipótese de partidarização ou de influência de grupos de interesse, somente que no que diz a respeito da
+variável exp adm, às pastas MAPA e MinC se assemelham estruturalmente sugerindo que seguem uma
+tendência de prezar a experiencia na burocracia de médio escalão.
+
+5. Segundo teste de hipótese bivariado
+
+Neste bloco irei realizar um segundo teste de hítese bivariado. Para isso irei criar uma variavel chamada
+
+alto nivel, igual a 1 quando nivel for 5 ou 6, e O quando nivel for 4. Em seguida, irei comparar a proporção de
+cargos altos entre mapa e mic.
+
+===== page_011_top.png =====
+2ow7r2026, 2321 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos 1 - olticalUSP)
+argumento prop.test(), com o argumento correct = FALSE para manter a aproximação normal pura. Para a
+função, utilizei o número de observações válidas (n) e o número de nomeações com experiência
+administrativa (x) de ambas pastas que já apresentei no último bloco. Enfim, para fins práticos, também
+adicionei na tabela a proporção observada da variável analisada em nosso caso amostral.
+Como observado na tabela, tivemos as proporções observadas, sem considerar a margem de erro, foram de
+aproximadamente 91,98% no MAPA e 88,03%. Além disso, no que cabe ao escopo deste bloco, o p valor
+conseguido foi de 0.0519 sendo maior do parâmetro de significância de 5%. Dessa forma, sendo o p-valor
+maior que 0,05 não rejeitamos a hipótese nula. A partir dessas informações, podemos partir para uma análise
+substantiva.O p-valor de 5,2% nos diz que, se a proporção real de nomeações com experiência administrativa
+fosse igual nas duas pastas, a probabilidade de observarmos uma diferença de 4 pontos percentuais (ou mais)
+em uma amostra como a nossa seria de aproximadamente 5,2%. Dessa forma, se repetissemos o estudo
+múltiplas vezes, em 5,2% das vezes haveria uma diferença igual ou maior.
+No entanto, como o valor é ligeiramente superior ao nível de significância de 5 por cento, não temos
+significância estatística para inferir uma diferença real entre as pastas admitindo a possibilidade da diferença
+apresentada em nosso caso amostral ter sido ao acaso (variação amostral). Nesse sentido que não podemos
+rejeitar a hipótese nula, apesar de existir uma diferença em nosso recorte amostral específico, seria
+necessário um estudo com uma amostra maior para determinar com maior confiança se há ou não uma
+diferença real, estatisticamente significante, entre as proporções de nomeações com experiência
+administrativas entre as duas pastas (MAPA e MinC).
+
+===== page_012_bot.png =====
+prop.test(
+x = c(x1, x2),
+n=c(ni, n2),
+correct = FALSE
+,
+“e
+4 2-sample test for equality of proportions without continuity correction
+e
+44 data: c(x1, x2) out of c(n1, n2)
+4H X-squared = 4.2658, df = 1, p-value = 0.03889
+44 alternative hypothesis: two.sided
+44 95 percent confidence interval:
+4 -0.13365398 -0.00328014
+44 sample estimates:
+* propl prop2
+4H 0.3561905 0,4246575
+5.4.0 p-valor e sua interpretação.
+fie/1CUsersioamig/Downloadshrabalho. metodos. Emilio mtml ama
+
+===== page_012_mid.png =====
+Tabela 9: Proporção de cargos de alto nivel
+N Erro- — Margem de IC 95%
+Pasta valido Altonivel Proporcao padrao erro IC 95% inferior superior
+mapa 525 187 0.3561905 00208997 — 0.0409634 0,3152271 0.3971539
+mine 365 155 04246575 00258724  0.0507098 0.3739477 0.4753674
+5.2.Um teste de hipótese para a diferença entre as proporções:
+ni <- tabela q5$n validos(1]
+x1 <- tabela q5$n alto(1]
+n2 <- tabela q5$n validos[2]
+x2 <- tabela q5$n alto(2]
+prop.test(
+x = (xi, 12),
+n= (ni, n2),
+correct = FALSE
+,
+
+===== page_012_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Politica (Metodos 1 - PolticalUSP)
+tabela q5 <- base filtroz %%
+group. by(orgao sup) %>%
+summarise(
+nvalidos = n(),
+n.alto = sun(alto nível == 1),
+prop = n.alto / n valídos,
+erro = sqrt(prop * (1 - prop) / n validos),
+margem = 1.96 * erro,
+dc ânf = prop - margem,
+ic sup = prop + margem
+,
+kable(tabela q5,
+caption = "Tabela 9: Proporção de cargos de alto nivel",
+col.names = c("Pasta”, "N valido”, "Alto nivel",
+“Proporcao", "Erro-padrao", "Margem de erro",
+"IC 95% inferior", "IC 95% superior"))
+Tabela 9: Proporção de cargos de alto nivel
+n Ema renam da 1º ceu
+
+===== page_013_bot.png =====
+No caso proposto, a conclusão mudaria. Com a = 1%, a diferença observada não seria mais estatisticamente
+significativa dado nosso p-valor ser 0,38. Dessa forma, não seria mais possivel rejeitar HO.
+6.3 O que isso nos mostra sobre a diferença entre p-valor e significância
+substantiva?
+Os cenários recém propostos demonstram uma ensiná do p valor que nos permite contrapó-lo melhor com a
+significância substantiva. Nesse sentido, a significância estatística é arbitrária, quer dizer, sensível ao
+parâmetro de significância que determinamos (seja 5%, 1% ou 10%). Ou seja, a significância estatística ela
+não é absoluta e depende da convenção adotada no determinado contexto. Por outro lado, enquanto o p-valor
+e sua relação com certo nível de significância indicam se podemos confiar ou não em algo, a significância
+substantiva nos diz quanto essa diferença ou tendência de fato importa no fenômeno estudado. Dessa forma,
+esse último tipo de análise, diz a respeito da magnitude e relevância prática do efeito no mundo real
+Nesse sentido, que um resultado pode ser estatisticamente significativo (p < 0,05) ao mesmo tempo sem ser
+substantivamente significativo para o caso, política, etc. Por outro lado, em uma amostra pequena, por
+exemplo, um resultado pode ser substantivamente importante mas estatisticamente insignificante.
+Extrapolando o p-valor, uma análise substantiva tem que olhar para o tamanho de seu efeito.
+fie:/C:Users/eamig/Downloadsfrabaiho. metodos. Emílio html rara
+
+===== page_013_mid.png =====
+Em conclusão, existe uma diferença e podem ser relevante a depender do quadro analítico como um todo,
+mas o resultado tende a apontar mais à uma tendência do que uma separação clara das estrutura de
+nomeação entre pastas.
+
+6. Significância estatística e nível de significância
+
+Neste bloco irei responder como a conclusão do bloco anterior mudaria se alteraramos o nivel de significancia.
+Enfim, a partir dessa discusão, irei concluir o bloco analisando a difemeça entre o p-valor e signfiicancia
+substantiva.
+
+6.1 A conclusão mudaria se o nível de significância fosse 10%?
+
+No caso proposto, a conclusão não mudaria. Tanto com a = 5% quanto com a = 10%, a decisão se manteria
+pelo p-valor ser menor que o nível de significância: rejeitamos a hipótese nula e afirmar que há diferença
+estatisticamente significativa.
+
+6.2 A conclusão mudaria se o nível de significância fosse 1%?
+
+No caso proposto, a conclusão mudaria. Com a = 1%, a diferença observada não seria mais estatisticamente
+significativa dado nosso p-valor ser 0,38. Dessa forma, não seria mais possivel rejeitar HO.
+
+6.3 O que isso nos mostra sobre a diferença entre p-valor e significância
+substantiva?
+
+===== page_013_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos ll - PolticalUSP)
+Nas tabelas acima podemos notar que a proporção de alto. nível em MAPA é de 35,61% e, em minc, de
+42,46%. Enquanto que o intervalo de confiança de 95% em MAPA vai de 31,52% a 39,71%, com a margem de
+erro de 4,09% e, em MinC esse intervalo vai de 37,39% a 47,53%, com uma margem de erro de 5,07%.
+Tendo em conta a diferença nas proporções de nomeações de alto nível entre as duas pastas e tendo
+realizado um teste de hipótese, passamos agora a interpretação dos resultados. Nesse sentido, tendo um p
+valor de 0,038, ou seja menor do que o nível de significância de 5%, podemos enfim rejeitar a hipótese nula e
+afirmar com significância estatística que a proporção real de nomeações para cargos de alto nível são
+diferentes entre as duas pastas.
+5.5.Conslusão substantiva
+Enquanto por um lado a diferença é estatisticamente significante entre as duas pastas que possa ser
+articulada para respaldar que os ministérios adotem estratégias distintas de alocação de cargos de confiança,
+na prática, a diferença é, no limite, moderada. Em um cenário especulativo, se a cada de 10 cargos
+aproximadamente 4 são de alta escala, no MAPA são aproximadamente 3.5. Ainda nesse tom, cabe notar que
+p-valor obtido é próximo do limite de 5%, considerando que as duas pastas têm intervalos de confiança que se
+sobrepõem uma à outra, a diferença, apesar de estatisticamente significante, é frágil.
+Em conclusão, existe uma diferença e podem ser relevante a depender do quadro analítico como um todo,
+mas o resultado tende a apontar mais à uma tendência do que uma separação clara das estrutura de
+nomeação entre pastas.
+
+===== page_014_bot.png =====
+fle:/1C./Users/camig/Downloadsrabaiho. metodos. Emilio him! nana |
+
+===== page_014_mid.png =====
+7.2. Por que isso acontece?
+Isso acontece porque o erro-padrão é inversamente proporcional à raiz quadrada do tamanho da amostra.
+
+1—
+
+sp= |PU-P)
+n
+
+Quanto mais aumentamos o tamanho da nossa amostra, consequentemente a nossa media amostral se
+aproxime da media populacional. Além disso, na pratica, outra consequentencia é que valores extremos ou
+atípicos tem menos peso.
+
+===== page_014_top.png =====
+20/07/2026, 23:21 Avaliação: inferência básica com dados reais de Ciência Poltica (Metodos ll - PolticalUSP)
+7. O que aconteceria se a amostra fosse maior?
+Neste bloco irei me questionar o que ocorreria se eu duplicasse o número de observações, mas mantivesse a
+proporção observada nos resultados do bloco 5.
+7.1. O que tenderia a acontecer com o erro-padrão?
+Logicamente o erro padrão iria diminuir. No caso do bloco 5, se duplicasse o número de observações, mas
+mantivesse a proporção observada, ou seja 1050 observações em vez de 525
+Para ser preciso em relação a mudança no erro padrão, irei realizar o calculo a partir do R:
+ep.novo <- sqrt(9.3561905 * (1 - 0.3561905) / 1050)
+ep.novo
+“4 [1] 0.01477832
+Nota-se que o erro padrão dimuiu de 0,0208997, para 0,0147783 (uma redução de cerca de 29,3%)
+7.2. Por que isso acontece?
+Isso acontece porque o erro-padrão é inversamente proporcional à raiz quadrada do tamanho da amostra.

@@ -1,0 +1,245 @@
+
+===== page_001_bot.png =====
+2.Leitura e validação dos dados
+Número de linhas e colunas
+es [1) 1038 26
+Nome das variáveis
+ss [1) "orgao sup" "setor" "chave" Eru
+as [5] “cargo” “funcao” nível" “instrr
+4 [9] “area” “inst ensino” “inst origem" "car pub”
+48 [13) “partido” “cargo ele" “id part” “explada”
+as [17] “exp car" “exp mer” “exp soc" vu er
+*s [21] “partido pr” “partido ministro” “índicacao* “entrada”
+48 (25) “saida” “pera?
+Alguns arquivos neste envio só podem ser acessados através de download direto. | |
+l
+
+===== page_001_mid.png =====
+Qual é a pergunta geral do artigo?
+Qual o perfil dos administradores públicos nomeados no Ministérios da Agricultura e no Ministério da Cultura
+entre 2011 e 2021?
+Qual é a unidade de análise da base?
+Cada nomeação para um cargo administrativo nos ministérios estudados.
+O que significa uma linha da base?
+Cada linha representa uma nomeação.
+Por que a mesma pessoa pode aparecer mais de uma vez?
+Uma mesma pessoa pode ter sido nomeada para cargos diferentes no período estudado.
+Quais são as duas pastas comparadas no artigo? Ministério da Agricultura (MAPA) Ministério da Cultura
+(MinC/SECULT)
+2.Leitura e validação dos dados
+Número de linhas e colunas
+*s [1) 1038 26
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+|
+Cê TH) “orgao sup? setor” chave mato
+
+===== page_001_top.png =====
+Trabalho Métodos - Emerson Gomes 13713872 |
+Emerson Gomes
+2026-07-10
+Emerson de Lima Gomes - N 13713872
+1. Artigo, perguntas e unidade de análise
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. o da Cs
+CO eme AC MIL
+
+===== page_002_bot.png =====
+"
+
+ea se
+
+as 652 275 111
+
+instr
+
+“
+
+88 doutorado especializacao — graduacao mestrado na
+“ 159 203 1 259 95
+“e superior tecnico
+
+“ 287 u
+
+indicacao
+
+“
+
+&8 Bolsonaro Lula Rousseff Temer
+
+“e 306 ar 351 204
+
+A coluna exp. adm apresenta alguns valores exteriores ao esperado no Codebook, sendo estes a string “1º e
+o número 3. No tratamento, '1' foi tratado como 1 e o valor 3 foi descartado.
+
+===== page_002_mid.png =====
+Valores observados (exp adm, exp car, nivel, instr, indicacao)
+
+exp adm
+
+“
+
+sí 0 1 3 NA
+
+. 3 88935 1 11
+
+exp car
+
+“
+
+oo 1 2 3 5 mp
+
+es 147 51 2 509 253 75 1
+
+nivel
+
+“
+
+“ 4 5 6
+
+48 652 275 111
+
+instr
+85
+a 95
+
+“ superior tecnico
+
+===== page_002_top.png =====
+se 4 A tibblo: 3x2
+
+*8 orgao sup n
+
++ cc cimo
+
+48 1 mapa sas
+
+“8 2 meti 148
+
+48 3 mine 365
+
+Valores ausentes (exp adm, exp car, nivel, instr, indicacao)
+ses A tibblo: 1x5
+
+4% exp ada exp car nível instr indicacao
+ee cint> <int> cinto cin cmo
+“1 o 10 O o
+
+===== page_003_bot.png =====
+it ht otica to cancion o Ciara eado Pcirictaiachs
+“
+48 data: c(482, 312) out of c(524, 354)
+4% X-squared = 3.6179, df = 1, p-value = 0.05716
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+48 -0.00243815 0.07942094
+4% sample estimates:
+** propi prop2
+48 0.9198473 0.8813559
+O p-valor representa a tolerância a erro na prova da hipótese alternativa. Neste caso, p = 0,05716, ou
+seja, supondo que a hípose nula é válida, a possibilidade de se encontrar uma diferença igual ou maior na
+população do que foi observado na amostra (ou seja, de estar errado) é de mais de 0,05%. Como estamos
+operando como uma significância de 5%, se rejeita hipótese alternativa em favor da mula.
+5. Teste bivariado - variável alto nível
+Tabela 2 - Mapa e MinC por alto nível
+ss 8 A tibble: 2x8
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+experiência em cargos públicos, há 95% de certeza que o valor populacional seria igual a 91,8%, com 0,02%
+de erro para mais e para menos. Dessa forma, o valor populacional se encontraria no intervalo entre 0,89%
+e 0M%
+4. Teste de hipótese
+Hipóteses:
+HO: A proporção de nomeações com experiência administrativa é igual nas duas pastas.
+Hi: As proporções são diferentes.
+Teste de proporções - exp. admin
+“
+4º 2-sample test for equality of proportions vithout continuity correction
+“
+48 data: c(482, 312) out of c(524, 354)
+4% X-squared = 3.6179, df = 1, p-value = 0.05716
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+48 -0.00243815 0.07942094
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+O adido moi a Pã caia io pn ja Rito ii q
+
+===== page_003_top.png =====
+3. Experiência administrativa
+
+Utiliza-se a variável exp adm, visto representar a presença de experiência em cargos públicos. Valores
+
+inconsistentes foram tratados como ausentes
+
+Tabela 1 - MAPA e MinC por experiência administrativa
+
+ss Atibble:2x8
+
+4% orgao sup mn experiencia proporcao erro padrao margem erro IC inf IC sup
+
+ss cho  <mt> <a  <abD <abi> <abl> <abl> <ab>
+
+81 mapa E 482 91.8 0.0120 0.0235 0.895 0.942
+
+48 2 mínc ase 312 8s.5 0.0187 0.0367 0.818 0.891
+
+O intervalo de confiança representa possíveis valores que a proporção populacional pode atingir, além da
+
+proporção amostral calculada. A margem de erro serve como ajuste do IC, adicionando uma margem de
+
+possibilidades para p valor estimado. Assim, para a estimativa de 91.8% dos nomeados pelo MAPA terem
+
+191,8%, com 0,02%
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. intervalo entre 020%
+
+===== page_004_bot.png =====
+tolerância a erro no teste de estatística, ou seja, ao nível de significância escolhido pelo cientista.
+
+7. O que aconteceria se a amostra fosse maior?
+
+Tomando o valor de experiência administrativa no MAPA (91,8%), com uma quantidade de observações
+dobradas (1048), o erro padrão diminui, visto que o erro para distribuições binomais é dado por:
+
+e = sqrt(x * (1:5)/n)
+
+Como o todo da operação é divido por n, quanto maior a amostra, menor o erro.
+
+===== page_004_mid.png =====
+” popi popa
+48 0.3561905 0.4246575
+Com p < 5%, se rejeita a hipótese nula em favor da hipótese alternativa. A chance de se encontrar valores
+iguais ou mais extremos do que observado na amostra é de 0,03%- A diferença encontrada na amostra é
+relevante e, dentro das possibilidades de erro assumidas, tem boas chances de ser observada na população.
+6. Significância estatística e nível de significância
+Utilizando os valores do segundo teste realizado:
+-A 10% de significância, a conclusão se mantém visto que 0,03889 < 0,10
+-A 1% de significância, a conclusão mudará. Como 0,03889 > 0,01, se rejeita a hipótese alternative em favor
+da hipótese mula
+Fica evidente que, apesar de o p-valor ser uma medida constante, sua interpretação muda a partir da
+tolerância a erro no teste de estatística, ou seja, no nível de significância escolhido pelo cientista.
+7. O que aconteceria se a amostra fosse maior?
+Tomando o valor de experiência administrativa no MAPA (91,8%), com uma quantidade de observações
+dobradas (1048), o erro padrão diminui, visto que o erro para distribuicões binomais é dado por:
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_004_top.png =====
+4% orgao sup n alto proporcao erro margem erro IC inf IC sup
+ss <ch>  <int><abDb  <abb <abD <abl> <dbl> <abl>
+88 1 mapa sos 187 35.60.0209 0.0410 0.315 0.397
+48 2 minc as 155 42.50.0259 0.0507 0.374 0.475
+Teste de proporções - alto. nivel
+“
+4º 2-sample test for equality of proportions vithout continuity correction
+“
+48 data: c(187, 155) out of c(525, 365)
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: txo.sided
+4% 95 percent confidence interval:
+&8 -0.13365308 -0.00328014
+48 sample estimates:
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+o Com p < 5%, se rejeita a hipótese nula em favor da hipótese alternativa. A chance de se encontrar valores

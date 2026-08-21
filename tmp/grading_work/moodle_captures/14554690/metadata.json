@@ -1,0 +1,23 @@
+{
+  "nusp": "14554690",
+  "name": "Agnes Francisca Carraro Kunsch",
+  "userId": "353276",
+  "graderUrl": "https://edisciplinas.usp.br/mod/assign/view.php?id=6364861&rownum=0&action=grader&userid=353276",
+  "status": "captured_sampled_long_pdf",
+  "pages": 206,
+  "capturedPages": [
+    1,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206
+  ],
+  "segmentsPerPage": 3,
+  "reason": "PDF com 206 páginas; página 1 e páginas finais 197-206 preservadas, miolo composto por impressão extensa da base."
+}

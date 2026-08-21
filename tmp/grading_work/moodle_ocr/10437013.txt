@@ -1,0 +1,833 @@
+
+===== page_001_bot.png =====
+2.5 Uma checagem dos valores observados em exp. adm, exp. car, nível, instr cindicacao .... 5
+26 Explicação e Tratamento dos Problemas Encontrados... ..ccccccccccccccioo 6
+3 Tabela descritiva: experiência administrativa 7
+3.1 Número de observações válidas por pasta ....ccccccscsicesscsesisecio 8
+32 Número de pessoas/nomeações com experiência administrativa ....cccccccccccoo 8
+33. Proporção com experiência administrativa . ....icccccccccecccssociccioo 8
+34 Intervalo de confiança de 95% para essa proporção ....ccccccececscccccceo 9
+35 Margem de erro associada ao intervalo de confiança . . ...ccccccccscecccccee 9
+36 Interpretação dos Resultados .....cccccccsecessssesesccesccscee 9
+4 Primeiro teste de hipótese bivariado 10
+44 Hipótese Nula (Ho) . cc ccc css ceccseciecereesenercesscrceeo O
+42 Hipótese Altermativa (1) . cocos cccccccsececsssesese cesso O
+A BR cen qa eres eras ce ranma nc en a gs
+| Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_mid.png =====
+1 Artigo, pergunta e unidade de análise 3
+11 Pergunta geral do artigo . ic ccccccecsescssssessesseseceseie
+Ea ORE cs eum ones sarro perene me mo mes À
+13 Descritivo da organização da base de dados ....ccccccscsceccesecescoieo 3
+
+2 Leitura e validação dos dados 4
+PARE EE CR
+23 Número de observações por orgao. sup. ...ccccccecscsisesissesesec 4
+24 Número de valores ausentes em pelo menos cinco variáveis relevantes... ...ccccc000 5
+25 Uma checagem dos valores observados em exp. adm, exp. car, nivel, instr e indicacao .... 5
+26 Explicação e Tratamento dos Problemas Encontrados. . ....cccccccccccccioo 6
+
+3 Tabela descritiva: experiência administrativa 7
+3.1 Número de observações válidas por pasta ....cccccccccicccccicccscciio 8
+
+ss ess É
+à Alguns arquivos neste envio só podem ser acessados através de download direto. s
+34 Intervalo de confiança de 95% para essa proporção ....cccccceseccsccscsioo 9
+
+===== page_001_top.png =====
+Trabalho Final | FLP0406 - Métodos e Técnicas de Pesquisa em |
+Ciência Política
+Relatório de Análise dos Perfis de Nomeações na Burocracia Federal
+Jéssica de Morais Batista | USP: 10437013
+16 de Julho de 2026
+doi
+| Alguns arquivos neste envio só podem ser acessados através de download direto. | ;
+14 Pergunta geral do artigo .....ccccccsiiciesisssssssssecrcercoio 3
+
+===== page_002_bot.png =====
+
+
+===== page_002_mid.png =====
+dr
+62 A conclusão mudaria se o nível de significância fosse 1X? ...iccccccccccccsioo 3
+6.3 Diferença entre p-valor e significância substantiva .....ccccccccccecccsio 13
+7 O que aconteceria se a amostra fosse maior 14
+74 O que tenderia a acontecer com o erro-padrão . .....cccccicecicisscsccioo MU
+8 Bibliografia 15 |
+
+===== page_002_top.png =====
+45 Decisão usando nível de significância de 5% ....ccccccccccccccseccrccsoo MH
+46 Tnisepretação mobstantitm cá sis sua usasse pus soa ares MH
+5 Segundo teste de hipótese bivariado u
+5.1 Tabela com as proporções por pasta . ....iccccccicicciciicicciico MH
+5.2 Intervalo de confiança de 95% para cada proporção . ......cccccciiiciiciciio 0
+5.3 Teste de hipótese para a diferença entre as proporções ......ccccccccccicco
+54 O pvalore interpretação ....ccccccccscsccieiiiiereceseri
+6 Significância estatística e nível de significância 13
+
+===== page_003_bot.png =====
+do registro de filiação partidária e de seu histórico de atuação política. Por fim, a quarta dimensão diz
+respeito ao contexto temporal da nomeação, compreendendo as datas de ingresso e desligamento, o tempo
+de permanência no cargo (perm) e o governo responsável pela indicação.
+Um mesmo indivíduo pode estar representado em múltiplas linhas da base de dados em decorrência da
+dinâmica de sua trajetória na administração pública. Essa recorrência decorre de diferentes formas de mobil-
+idade ao longo da carreira, incluindo a mobilidade vertical, caracterizada por promoções ou rebaixamentos de
+nível dentro do mesmo órgão; a mobilidade horizontal, resultante da transferência entre setores ou secretarias;
+e a descontinuidade temporal, quando ocorre à exoneração seguida de uma nova nomeação após um período
+de afastamento da administração pública.
+A Tabela 1 apresenta os cinco indivíduos que concentram o maior número de eventos de ocupação de cargos
+ou funções comissionadas registrados na base de dados, evidenciando que um mesmo servidor pode ser
+representado em múltiplos registros ao longo do período analisado.
+Table 1: Os cinco servidores com maior frequência de nomeações
+TD do Servidor Frequência de Nomeações
+WVAR 19
+SIFA 5
+ESMA 7
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+A unidade de análise da base de dados corresponde à nomeação para cargo ou função comissionada, entendida
+como o evento de ocupação do cargo ao longo do tempo, e não ao indivíduo de forma isolada. Essa opção
+metodológica decorre do fato de que a base acompanha a trajetória dos burocratas durante o período anal-
+isado, permitindo registrar múltiplas nomeações de um mesmo servidor. Assim, como um mesmo indivíduo
+pode ter ocupado diferentes cargos ou ter sido renomeado entre 2011 e 2021, a base contabiliza 1.038 eventos
+de ocupação, correspondentes a 664 indivíduos distintos.
+1.3 Descritivo da organização da base de dados
+Cada linha da base de dados representa um evento único de ocupação de cargo ou função comissionada,
+reunindo informações organizadas em quatro dimensões analíticas. À primeira refere-se à identificação do
+cargo e do órgão, contemplando dados sobre o órgão superior (orgao sup), o setor de atuação e o nível
+hierárquico do cargo (níveis 4 a 6). A segunda dimensão corresponde ao perfil do burocrata, incluindo
+a identificação do ocupante (id), sua formação educacional, o vínculo com a administração pública e as
+experiências profissionais anteriores. A terceira dimensão abrange o perfil político dos nomeados, por meio
+do registro de filiação partidária e de seu histórico de atuação política. Por fim, a quarta dimensão diz
+respeito ao contexto temporal da nomeação, compreendendo as datas de ingresso e desligamento, o tempo
+de permanência no cargo (perm) e o governo responsável pela indicação.
+Um mesmo indivíduo pode estar representado em múltiplas linhas da base de dados em decorrência da
+dinâmica de sua trajetória na administração pública. Essa recorrência decorre de diferentes formas de mobil-
+idade ao longo da carreira, incluindo a mobilidade vertical, caracterizada por promoções ou rebaixamentos de
+Jetores ou secretarias;
+Alguns arquivos neste envio só podem ser acessados através de download direto. . ção após um período
+A Tabela 1 apresenta os cinco indivíduos que concentram o maior número de eventos de ocupação de cargos
+
+===== page_003_top.png =====
+1 Artigo, pergunta e unidade de análise
+1.1 Pergunta geral do artigo
+A questão central do artigo consiste em analisar em que medida os perfis dos nomeados variaram nos órgãos
+responsáveis por políticas regulatórias, partindo da premissa de que determinadas pastas, como Agricultura
+e Cultura, apresentam maior abertura à influência de partidos políticos e grupos de interesse. Para respon-
+der a essa questão, a pesquisa busca identificar as características predominantes dos funcionários públicos
+comissionados de médio e alto escalão (níveis 4 a 6) nas secretarias finalísticas dessas áreas entre 2011 e
+2021, examinando aspectos como formação educacional, experiência profissional prévia no setor privado e
+vínculos associativos. Além disso, procura compreender as estratégias de nomeação adotadas, investigando
+de que forma a estrutura das carreiras estatais e as especificidades das políticas desenvolvidas por cada órgão
+influenciam a composição desse segmento da burocracia pública.
+1.2 Unidade de análise da base
+à Alguns arquivos neste envio só podem ser acessados através de download direto. cotada. Essa opção
+
+k = . : : “tante o período anal-
+
+isado, permitindo registrar múltiplas nomeações de um mesmo servidor. Assim, como um mesmo indivíduo
+
+===== page_004_bot.png =====
+exp adm expo car Spanar
+exp soc ur partido. pr
+partido ministro indicacao entrada
+saida perm
+2.3 Número de observações por orgao sup
+A distribuição das observações por órgão superior constitui uma etapa importante da caracterização da base
+de dados, permitindo identificar como os eventos de nomeação se distribuem entre os ministérios analisados.
+Como a unidade de análise corresponde ao evento de ocupação de cargo ou função comissionada, e não ao
+indivíduo, o número de observações reflete à quantidade de nomeações registradas em cada órgão ao longo
+do período de 2011 a 2021. A Tabela 3 apresenta essa distribuição.
+Table 3: Distribuição do número de observações (nomeações) por
+Órgão Superior
+Ministério Número de Observações
+MAPA 525
+MCTI us
+MinC 365,
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_mid.png =====
+2.2 Nomes das variáveis
+Após a verificação da dimensão da base de dados, procede-se à identificação das variáveis que a compõem.
+Essa etapa permite conhecer à estrutura das informações disponíveis, facilitando a compreensão do conjunto
+de dados e subsidiando a definição das variáveis relevantes para as análises subsequentes. A Tabela 2 apresenta
+o conjunto de variáveis presentes na base de dados.
+Table 2: Dicionário de variáveis presentes na base de dados
+
+Variáveis (Grupo A) Variáveis (Grupo B) Variáveis (Grupo C)
+
+orgao. sup setor chave
+
+id cargo funcao
+
+nível instr area
+
+inst. ensino inst. origem car pub
+
+partido cargo ele id part
+
+exp adm exp car exp mer
+
+exp. soc ur* partido. pr
+
+partido ministro indicacao entrada
+
+saida perm
+22 Número do aheorvarãos nor arena. «mm
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. — iracterização da base
+
+Como a unidade de análise corresponde ao evento de ocupação de cargo ou função comissionada, e não ao
+
+===== page_004_top.png =====
+TD do Servidor Frequência de Nomeações
+
+JAFS 7
+
+JMAN 7
+2 Leitura e validação dos dados
+2.1 Número de linhas e colunas
+Como procedimento inicial de validação, procede-se à verificação da dimensão da base de dados, por meio da
+quantificação do número de observações e de variáveis. Essa etapa permite confirmar a estrutura dos dados
+e constitui um diagnóstico preliminar da base empregada na pesquisa.
+A base de dados possui 1038 linhas e 26 colunas.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+| veis que a compõem.
+
+Essa etapa permite conhecer a estrutura das informações disponíveis, facilitando a compreensão do conjunto
+
+===== page_005_bot.png =====
+Table 5: Valores observados na variável: exp adm
+Categoria Encontrada Quantidade
+a 3
+o ss
+1 935
+3 1
+NA un
+Table 6: Valores observados na variável: exp car
+Categoria Encontrada Quantidade
+o ur
+1 5
+2 2
+3 509
+5 253
+NA 7%
+
+===== page_005_mid.png =====
+Filiação Partidária (partido) o
+Experiência em Movimentos/Sociedade Civil (exp soc) 4
+Vínculo com Carreira Pública (car. pub) o
+Data de Saída do Cargo (saida) 5
+2.5 Uma checagem dos valores observados em exp adm, exp car, nivel, instr
+e indicacao
+Além da verificação da completude dos dados, realizou-se uma inspeção dos valores observados em variáveis
+categóricas selecionadas, com o objetivo de verificar a consistência da codificação adotada na base de dados.
+Esse procedimento permite identificar a presença de categorias não previstas, inconsistências de preenchi-
+mento ou registros ausentes, contribuindo para assegurar a qualidade dos dados antes da realização das
+análises. As tabelas a seguir apresentam a distribuição dos valores observados para as variáveis exp. adm,
+exp. car, nivel, instr e indicacao.
+Table 5: Valores observados na variável: exp adm
+Categoria Encontrada Quantidade
+a 3
+o ss
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_top.png =====
+Ministério Número de Observações
+2.4 Número de valores ausentes em pelo menos cinco variáveis relevantes
+Como parte do processo de validação da base de dados, procede-se à verificação da ocorrência de valores
+ausentes (missing values) em variáveis consideradas relevantes para a análise. À identificação desses registros
+permite avaliar o grau de completude das informações disponíveis e antecipar possíveis limitações decorrentes
+da ansência de dados, que podem influenciar a realização de análises descritivas ou inferenciais. A Tabela 4
+apresenta a frequência de valores ansentes nas variáveis selecionadas.
+Table 4: Frequência de valores ausentes (NAs) nas principais var-
+Variável Valores Ausentes (NAs)
+É SE E
+o
+j Alguns arquivos neste envio só podem ser acessados através de download direto. 4
+| o
+Data de Saída do Cargo (saida) 5
+
+===== page_006_bot.png =====
+2.6 Explicação e Tratamento dos Problemas Encontrados
+26.1 Descrição dos tratamentos
+A inspeção das variáveis revelou a existência de inconsistências pontuais decorrentes de erros de codificação e
+padronização, situação recorrente em bases de dados administrativas. Embora essas ocorrências representem
+uma parcela reduzida dos registros, sua correção é necessária para assegurar a consistência das informações
+e evitar distorções nas análises subsequentes. Assim, procedeu-se ao tratamento dos dados mediante a
+padronização das categorias e a correção de valores inconsistentes.
+Na variável exp adm, destinada à registrar a existência de experiência administrativa por meio de uma
+codificação binária (0 e 1), foram identificados três registros contendo o valor 1, decorrente de erro
+de digitação, e um registro com o valor 3, incompatível com a estrutura da variável. Os
+registros contendol foram recodificados para o valor 1, enquanto o valor 3, por não possuir interpretação
+compatível com a codificação prevista, foi convertido para NA, indicando informação ausente.
+Na variável instr, responsável por registrar o grau de instrução dos indivíduos, verificou-se a ocorrência de
+um registro classificado como “graduacao”, o passo que os demais registros utilizavam a categoria “superior”
+para representar o mesmo nível educacional. Para garantir a uniformidade da classificação, o valor divergente
+foi recodificado para “superior”.
+
+a 6
+
+i
+
+===== page_006_mid.png =====
+soro: Ea
+especializacao 203
+graduacao 1
+mestrado 29
+NA 9
+superior 297
+tecnico u
+Table 9: Valores observados na variável: indicacao
+Categoria Encontrada Quantidade
+Bolsonaro 396
+Lula st
+Rousseff 351
+Temer 2a
+2.6 Explicação e Tratamento dos Problemas Encontrados
+2.6.1 Descrição dos tratamentos
+A inspeção das variáveis revelou a existência de inconsistências pontuais decorrentes de erros de codificação e
+à Alguns Bus festá envio so puder sbre cesâdos através dê dowload trato ve vrréncias representem
+dA A arceia enfusida da nigeiioa, RUN GORTEÇÃO 6 nccoReAcia fara GaopUiar à Cooilsiência das informações
+e evitar distorções nas análises subsequentes. Assim, procedeu-se ao tratamento dos dados mediante a
+pi
+
+===== page_006_top.png =====
+Categoria Encontrada Quantidade
+Ausente (NA) 1
+Table 7: Valores observados na variável: nível
+Categoria Encontrada Quantidade
+4 652
+5 2.
+6 m
+Table 8: Valores observados na variável: instr
+Categoria Encontrada Quantidade
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+NA as
+
+===== page_007_bot.png =====
+E re eta, ipa na
+Table 1: Valores da variável indicacao após o tratamento
+Indicação Presidencial (indicacao) Quantidade
+Bolsonaro 396
+Lula sr
+Rousseff 351
+Temer 204
+3 Tabela descritiva: experiência administrativa
+A experiência prévia na administração pública é operacionalizada por meio da variável exp adm. De acordo
+com o Codebook da pesquisa, essa variável possui natureza binária, assumindo o valor 1 para indicar que
+o indivíduo nomeado possui experiência administrativa anterior e o valor O quando essa experiência não
+está presente. A análise dessa variável permite comparar a presença de experiência administrativa entre os
+nomeados dos ministérios investigados.
+7
+
+===== page_007_mid.png =====
+& tratamento da variável indicacao
+dadosSindicacao <- trimus(dadosSindicacao)
+Após a realização das correções, procedeu-se à verificação das variáveis modificadas, com o objetivo de
+confirmar a efetividade dos tratamentos aplicados. As Tabelas 10 e 11 apresentam as distribuições das
+categorias após o processo de limpeza, evidenciando a eliminação dos erros de codificação e de padronização
+anteriormente identificados.
+Table 10: Valores da variável exp. adm após o tratamento
+Experiência Administrativa (exp adm) Quantidade
+o ss
+1 sas
+NA un
+Ausente (NA) 1
+Table 1: Valores da variável indicacao após o tratamento
+Indicação Presidencial (indicacao) Quantidade
+Bolsonaro 396
+Lula sT
+Rousseff 351
+Temer 204
+
+===== page_007_top.png =====
+Por fim, na variável indicacao, observou-se a existência de categorias distintas geradas exclusivamente pela
+presença de espaços em branco no início ou no final das cadeias de caracteres. Em particular, foram iden-
+tificados registros classificados como “Lula” e “Lula”, os quais representam a mesma categoria substantiva,
+mas são interpretados como valores distintos pelo R. Para eliminar essa inconsistência, aplicou-se a função
+trimws(), responsável pela remoção automática de espaços excedentes nas extremidades dos textos.
+
+26.2 Código de correção e tabelas de validação
+
+A seguir apresenta-se o código utilizado para realizar as correções na base de dados.
+
+£ tratamento da variável ezp adm
+
+dadosSexp, adn[dadosSexp. adm == ""1"] «- "1º
+
+dadosSexp ada [dadosSexp. adm == "3"] <- NA
+
+& tratamento da variável instr
+
+dadosSinstr [dadosSinstr == "graduacao") «- “superior”
+
+& tratamento da variável indicacao
+
+dadosSindicacao <- trinus(dadosSindicacao)
+
+===== page_008_bot.png =====
+MAPA asse
+MinC az
+3.3 Proporção com experiência administrativa
+Após à quantificação do número absoluto de nomeações com experiência administrativa, procede-se ao cálculo
+de sua frequência relativa em cada ministério. Para esse fim, a proporção foi obtida pela razão entre o número
+de nomeações de indivíduos com experiência administrativa prévia (valor 1 na variável exp. adm) e o total
+de observações válidas da respectiva pasta, excluindo-se os registros com informações ausentes. A utilização
+de medidas proporcionais permite comparar os ministérios independentemente do número de nomeações
+registradas em cada um deles. A Tabela 14 apresenta os percentuais obtidos para cada ministério.
+Table 14: Proporção (percentual) de nomeações com experiência
+administrativa prévia por pasta
+Ministério Proporção (%)
+MAPA 9LSI
+MinC 8571
+8
+
+===== page_008_mid.png =====
+MinC 34
+3.2 Número de pessoas /nomeações com experiência administrativa
+Após a identificação do número de observações válidas, procede-se à contabilização das nomeações referentes
+a indivíduos com experiência prévia na administração pública. Para esse fim, foram considerados os registros
+em que a variável exp. adm assume o valor 1, conforme a codificação estabelecida no Codebook da pesquisa.
+Essa etapa permite identificar o volume absoluto de nomeações de indivíduos com experiência administrativa
+em cada um dos ministérios analisados. A Tabela 13 apresenta a distribuição dessas nomeações.
+Table 13: Quantidade de nomeações com experiência administra-
+tiva prévia por pasta
+Ministério Nomeações com Experiência
+MAPA E)
+MinC az
+3.3 Proporção com experiência administrativa
+Após à quantificação do número absoluto de nomeações com experiência administrativa, procede-se ao cáleulo
+de sua frequência relativa em cada ministério. Para esse fim, a proporção foi obtida pela razão entre o número
+de nomeações de indivíduos com experiência administrativa prévia (valor 1 na variável exp. adm) e o total
+de observações válidas da respectiva pasta, excluindo-se os registros com informações ausentes. À utilização
+de medidas proporcionais permite comparar os ministérios independentemente do número de nomeações
+
+===== page_008_top.png =====
+3.1 Número de observações válidas por pasta
+Como etapa preliminar da análise descritiva, identificou-se o número de observações válidas da variável
+exp. adm para cada um dos órgãos analisados. Para esse fim, à base de dados foi restrita aos registros refer-
+entes ao Ministério da Agricultura, Pecuária e Abastecimento (MAPA) e ao Ministério da Cultura (MinC),
+excluindo-se as observações com informação ausente para a variável de interesse (NA). Esse procedimento
+garante que as análises subsequentes sejam realizadas exclusivamente com registros que apresentam infor-
+mação válida sobre experiência administrativa. A Tabela 12 apresenta a distribuição das observações válidas
+por ministério.
+O resultado final é apresentado na tabela abaixo:
+Table 12: Número de observações válidas com informação de ex-
+periência administrativa por pasta
+Ministério Observações Válidas
+MAPA 525
+MinC ES
+3.2 Número de pessoas/nomeações com experiência administrativa
+
+===== page_009_bot.png =====
+MAPA + 235%
+
+MinC + 3.59%
+3.6 Interpretação dos Resultados
+A análise da experiência administrativa dos indivíduos nomeados para cargos de confiança no Ministério da
+Agricultura, Pecuária e Abastecimento (MAPA) e no Ministério da Cultura (MinC) permite caracterizar o
+perfil burocrático predominante em cada órgão, contribuindo para a compreensão das estratégias de recruta-
+mento adotadas. Em termos analíticos, uma maior proporção de nomeações de indivíduos com experiência
+prévia na administração pública pode indicar maior valorização de trajetórias burocráticas e de conhecimentos
+acumulados na gestão estatal. Em contrapartida, proporções menores sugerem maior participação de indiví-
+duos oriundos de outros setores, como organizações da sociedade civil, instituições privadas ou indicações de
+natureza predominantemente política.
+A proporção de nomeações com experiência administrativa constitui a principal medida descritiva analisada
+nesta seção, expressando a participação relativa de indivíduos que já exerceram atividades na administração
+pública entre o conjunto de nomeações válidas de cada ministério. Por se tratar de uma medida relativa, ela
+possibilita a comparação entre órgãos com diferentes números de observações.
+A margem de erro representa a precisão associada à estimativa da proporção. Seu valor corresponde à
+variação esperada entre a estimativa obtida na amostra e o parâmetro populacional, considerando o nível
+
+9
+
+===== page_009_mid.png =====
+ET oca À sons ida À
+3.5 Margem de erro associada ao intervalo de confiança
+Como complemento à apresentação dos intervalos de confiança, calcula-se a margem de erro associada às
+estimativas da proporção de nomeações com experiência administrativa. A margem de erro corresponde à
+distância entre a estimativa pontual e cada um dos limites do intervalo de confiança, constituindo uma medida
+da precisão da estimativa. Quanto menor a margem de erro, maior é a precisão da proporção estimada; em
+contrapartida, margens de erro mais elevadas indicam maior incerteza em torno do parâmetro de interesse.
+A Tabela 16 apresenta a margem de erro estimada para cada ministério.
+Table 16: Margem de erro associada ao Intervalo de Confiança de
+95% por pasta.
+Ministério Margem de Erro
+MAPA +235%
+MinC + 3.59%
+3.6 Interpretação dos Resultados
+A análise da experiência administrativa dos indivíduos nomeados para cargos de confiança no Ministério da
+Agricultura, Pecuária e Abastecimento (MAPA) e no Ministério da Cultura (MinC) permite caracterizar o
+perfil burocrático predominante em cada órgão, contribuindo para a compreensão das estratégias de recruta-
+mento adotadas. Em termos analíticos, uma maior proporção de nomeações de indivíduos com experiência
+vrévia na administração pública node indicar maior valorizacão de traietórias burocráticas e de conhecimentos
+
+===== page_009_top.png =====
+3.4 Intervalo de confiança de 95% para essa proporção
+Além da estimativa pontual da proporção de nomeações com experiência administrativa, calculon-se o respec-
+tivo intervalo de confiança de 95% para cada ministério. O intervalo de confiança constitui uma medida de
+precisão da estimativa amostral, indicando a faixa de valores plausíveis para a proporção populacional corre-
+spondente, considerando um nível de confiança de 95%. Dessa forma, intervalos mais estreitos indicam maior
+precisão da estimativa, enquanto intervalos mais amplos refletem maior incerteza associada ao parâmetro
+estimado. Para o cálculo, utilizou-se a aproximação normal para proporções, sendo o erro-padrão obtido
+a partir da distribuição binomial. A Tabela 15 apresenta os intervalos de confiança estimados para cada
+ministério.
+Table 15: Intervalo de Confiança de 95% para à proporção de
+nomeações com experiência por pasta
+Ministério Intervalo de Confiança (95%)
+MAPA [89.469%; 94.167]
+MinC [82.12%; 89.319]
+3.5 Margem de erro associada ao intervalo de confiança
+
+===== page_010_bot.png =====
+Hi: puara É PMinc
+4.3 Teste usado no R
+Para testar essas hipóteses, utilizou-se a função prop.test() do software R, que realiza o teste de igualdade
+entre duas proporções com base na aproximação normal, equivalente ao teste Qui-quadrado de Pearson para
+comparação de proporções. O resultado do teste é apresentado na Tabela 17.
+Table 17: Resultado do Teste de Proporções (Diferença entre
+MAPA e MinC)
+Estatística (Qui-Quadrado) Graus de Liberdade Valor-p
+3.618] 1 0,057161
+44 P-valor
+A Tabela 17 apresenta o resultado do teste de hipótese. O teste resultou em um valor-p de aproximadamente
+0,057.
+10
+
+===== page_010_mid.png =====
+discrepância observada entre os ministérios reflete padrões sistemáticos de recrutamento ou se é compatível
+com fintuações aleatórias dos dados.
+4.1 Hipótese Nula (Hs)
+A hipótese nula estabelece que a proporção de nomeações de indivíduos com experiência administrativa prévia.
+é igual nos dois ministérios analisados, isto é,
+Ho: pMAPA = PMinC
+4.2 Hipótese Alternativa (H;)
+A hipótese alternativa estabelece que as proporções diferem entre os ministérios, isto é,
+Hi: papa É Pine
+4.3 Teste usado no R
+Para testar essas hipóteses, utilizou-se a função prop. test () do software R, que realiza o teste de igualdade
+entre duas proporções com base na aproximação normal, equivalente ao teste Qui-quadrado de Pearson para
+comparação de proporções. O resultado do teste é apresentado na Tabela 17.
+Table 17: Resultado do Teste de Proporções (Diferença entre
+MAPA e MinC)
+
+===== page_010_top.png =====
+de confiança adotado. Dessa forma, margens de erro menores indicam estimativas mais precisas, enquanto
+margens maiores refletem maior incerteza estatística.
+
+O intervalo de confiança de 95% complementa essa análise ao fornecer uma faixa de valores plausíveis para a
+proporção populacional de nomeações com experiência administrativa. No contexto da inferência estatística
+frequentista, sua interpretação é baseada no procedimento de estimação: caso fossem obtidas sucessivas
+amostras da mesma população e construídos intervalos de confiança pelo mesmo método, aproximadamente
+95% desses intervalos conteriam o verdadeiro valor do parâmetro populacional. Assim, o intervalo de confiança
+oferece uma medida da precisão da estimativa e auxilia na interpretação dos resultados obtidos.
+
+4 Primeiro teste de hipótese bivariado
+
+Nesta etapa, investiga-se se a diferença observada na proporção de nomeações de indivíduos com experiência
+administrativa entre o Ministério da Agricultura, Pecuária e Abastecimento (MAPA) e o Ministério da
+Cultura (MinC) é estatisticamente significativa ou se pode ser atribuída à variabilidade amostral. Para
+esse fim, emprega-se um teste de hipótese para comparação entre duas proporções, permitindo avaliar se a
+discrepância observada entre os ministérios reflete padrões sistemáticos de reerutamento ou se é compatível
+com flutuações aleatórias dos dados.
+
+AA Uinstnoa Mada LUA
+
+===== page_011_bot.png =====
+5.1 Tabela com as proporções por pasta
+Para caracterizar a distribuição dos cargos de maior hierarquia, caleulou-se, para cada ministério, o número
+total de nomeações, a quantidade de cargos classificados como de alto nível e a respectiva proporção em
+relação ao total de observações. Além disso, estimaram-se à margem de erro e o intervalo de confiança de
+95% para cada proporção. Os resultados são apresentados na Tabela 18.
+Table 18: Proporção de cargos de alto nível por ministério
+
+orgao sup N Total Cargos Alto Nivel Proporcao Margem Erro IC Inferior IC Superior
+
+mapa 525 187 35.62 410 31.52 39:72
+
+mine 365 155 A2z47 507 3739 ata
+5.2 Intervalo de confiança de 95% para cada proporção
+A Tabela 18 indica que, no MAPA, foram identificadas 187 nomeações para cargos de alto nível entre
+525 observações, correspondendo à uma proporção de 35,62%. O intervalo de confiança de 95% para essa
+estimativa varia entre 31,52% e 39,72%.
+
+u
+
+===== page_011_mid.png =====
+ira pi screen care iç rn rice cid pa route icmtr rd ficicesroreieçã Jipe Rr e
+hantes de recrutamento quanto à experiência administrativa dos indivíduos nomeados para cargos comission-
+ados de níveis 4 a 6. Embora a análise descritiva tenha indicado proporções de aproximadamente 92% no
+MAPA e 88% no MinC, essa diferença não se mostrou estatisticamente significativa, não permitindo concluir
+que os ministérios adotem estratégias distintas de recrutamento quanto à experiência administrativa dos
+indivíduos nomeados.
+
+5 Segundo teste de hipótese bivariado
+Nesta etapa, investiga-se se a distribuição dos cargos comissionados segundo seu nível hierárquico difere entre
+o Ministério da Agricultura, Pecuária e Abastecimento (MAPA) e o Ministério da Cultura (MinC). Para esse
+fim, foi construída a variável alto. nivel, que assume valor 1 para as nomeações destinadas aos cargos de
+níveis 5 e 6 e valor O para aquelas referentes aos cargos de nível 4. Essa recodificação permite comparar a
+participação relativa dos cargos de maior hierarquia entre os dois ministérios.
+5.1 Tabela com as proporções por pasta
+Para caracterizar a distribuição dos cargos de maior hierarquia, caleulou-se, para cada ministério, o número
+total de nomeações, a quantidade de cargos classificados como de alto nível e a respectiva proporção em
+relação ao total de observações. Além disso, estimaram-se a margem de erro e o intervalo de confiança de
+95% para cada proporção. Os resultados são apresentados na Tabela 18.
+
+Table 18: Proporção de cargos de alto nível por ministério
+orgao sup N Total Cargos Alto Nivel Proporcao Margem Erro IC Inferior IC Superior
+
+===== page_011_top.png =====
+4.5 Decisão usando nível de significância de 5%
+
+Considerando um nível de significância de 5% (a = 0,05), observa-se que o valor-p é superior ao nível de
+significância adotado. Dessa forma, não se rejeita a hipótese nula, indicando que os dados analisados não
+fornecem evidências estatísticas suficientes para afirmar que as proporções de nomeações de indivíduos com
+experiência administrativa diferem entre o MAPA e o MinC.
+
+Em termos estatísticos, o valor-p representa a probabilidade de se observar uma diferença igual ou mais
+extrema do que a encontrada na amostra, supondo que a hipótese mula seja verdadeira. Assim, um valor-p de
+aproximadamente 0,057 indica que diferenças dessa magnitude podem ocorrer em decorrência da variabilidade
+amostral, não sendo possível descartar essa explicação ao nível de significância adotado. Em consequência, a
+diferença observada entre os ministérios não fornece evidências estatísticas suficientes para rejeitar a hipótese
+de igualdade entre as proporções.
+
+4.6 Interpretação substantiva
+
+Sob uma perspectiva substantiva, os resultados sugerem que os dois ministérios apresentam padrões semel-
+hantes de recrutamento quanto à experiência administrativa dos indivíduos nomeados para cargos comission-
+ados de níveis 4 a 6. Embora a análise descritiva tenha indicado proporções de aproximadamente 92% no
+MAPA e 88% no MinC, essa diferença não se mostrou estatisticamente significativa, não permitindo concluir
+que os ministérios adotem estratégias distintas de recrutamento quanto à experiência administrativa dos
+
+===== page_012_bot.png =====
+O teste produziu um valor-p de aproximadamente 0,039.
+
+Considerando um nível de significância de 5% (a = 0,05), observa-se que o valor-p é inferior ao nível de
+
+significância adotado. Dessa forma, rejeita-se a hipótese nula de igualdade entre as proporções, indicando
+
+que os dados fornecem evidências estatísticas de que à participação de cargos de alto nível difere entre o
+
+MAPA e o MinC.
+
+Em termos estatísticos, o valor-p representa a probabilidade de se observar uma diferença igual ou mais
+
+extrema do que a encontrada na amostra, supondo que a hipótese nula seja verdadeira. Assim, um valor-
+
+p de aproximadamente 0,039 indica que diferenças dessa magnitude dificilmente seriam observadas apenas
+
+em decorrência da variabilidade amostral, fortalecendo a evidência de que os dois ministérios apresentam
+
+distribuições hierárquicas distintas quanto aos cargos comissionados analisados.
+
+5.5 Conclusão Substantiva
+
+Sob a perspectiva substantiva, a diferença observada entre os ministérios pode ser considerada de magnitude
+
+moderada, mas institucionalmente relevante.
+
+Enquanto aproximadamente 42% das nomeações do Ministério da Cultura correspondem a cargos de níveis
+
+5 e 6, essa proporção é de cerca de 36% no Ministério da Agricultura. Os resultados indicam, portanto,
+
+que o MinC apresenta uma estrutura de cargos comissionados relativamente mais concentrada nos níveis
+12
+
+===== page_012_mid.png =====
+A hipótese alternativa estabelece que as proporções diferem entre os ministérios:
+Hi: puara É Pranc
+O resultado do teste é apresentado na Tabela 19.
+Table 19: Resultado do Teste de Proporções (Diferença entre
+MAPA e MinC)
+Estatística (Qui-Quadrado) Graus de Liberdade Valor-p
+3.618] 1 0057161
+5.4 O p-valor e interpretação
+O teste produziu um valor-p de aproximadamente 0,039.
+Considerando um nível de significância de 5% (a = 0,05), observa-se que o valor-p é inferior ao nível de
+significância adotado. Dessa forma, rejeita-se a hipótese nula de igualdade entre as proporções, indicando
+que os dados fornecem evidências estatísticas de que à participação de cargos de alto nível difere entre o
+MAPA eo MinC.
+Em termos estatísticos, o valor-p representa a probabilidade de se observar uma diferença igual ou mais
+extrema do que a encontrada na amostra, supondo que a hipótese nula seja verdadeira. Assim, um valor-
+p de aproximadamente 0,039 indica que diferenças dessa magnitude dificilmente seriam observadas apenas
+em decorrência da variabilidade amostral, fortalecendo a evidência de que os dois ministérios apresentam
+distribuições hierárquicas distintas quanto aos cargos comissionados analisados.
+
+===== page_012_top.png =====
+No MinC, observaram-se 155 nomeações para cargos de alto nível entre 365 registros, resultando em uma
+proporção de 42,47%. O respectivo intervalo de confiança de 95% situa-se entre 37,39% e 47,54%.
+Os intervalos de confiança fornecem uma medida da precisão das estimativas obtidas, indicando a faixa de
+valores plausíveis para a proporção populacional de cargos de alto nível em cada ministério.
+5.3 Teste de hipótese para a diferença entre as proporções
+Com base nas proporções estimadas, procedeu-se no teste de hipótese para verificar se a diferença observada
+entre os dois ministérios é estatisticamente significativa. Para esse fim, utilizou-se novamente a função
+prop.test O do software R, que realiza o teste de igualdade entre duas proporções com base na aproximação
+normal.
+A hipótese nula estabelece que a proporção de cargos de alto nível é igual nos dois ministérios:
+
+Ho : para = Minc
+A hipótese alternativa estabelece que as proporções diferem entre os ministérios:
+
+Hi: puaPa É PMnc
+
+===== page_013_bot.png =====
+o pipa cao, grep porca nadÃ nerds ni aii oeiras ei tica pi acenda enero
+MAPA e o MinC.
+A utilização de um nível de significância mais restritivo reduz a probabilidade de ocorrência de um erro do
+Tipo 1, mas exige evidências empíricas mais fortes para que a hipótese nula seja rejeitada.
+6.3 Diferença entre p-valor e significância substantiva
+A comparação entre diferentes níveis de significância evidencia que a decisão estatística depende do limiar
+adotado para rejeição da hipótese nula. No presente caso, a alteração do nível de significância de 5% para
+10% modifica a decisão do teste, embora os dados analisados permaneçam exatamente os mesmos. Esse
+resultado demonstra que o valor-p deve ser interpretado em conjunto com outros elementos da análise, não
+constituindo, isoladamente, uma medida da importância do fenômeno investigado.
+O valor-p expressa a compatibilidade entre os dados observados e a hipótese nula, indicando a probabilidade de
+se obter um resultado igual ou mais extremo que o observado, caso essa hipótese seja verdadeira. Entretanto,
+ele não informa a magnitude da diferença encontrada nem sua relevância prática, institucional ou teórica.
+Por sua vez, a significância substantiva refere-se à importância efetiva do fenômeno analisado para a com-
+precnsão do problema de pesquisa. No presente estudo, a diferença observada entre os ministérios corresponde
+a aproximadamente quatro pontos percentuais na proporção de nomeações de indivíduos com experiência ad-
+ministrativa. Embora essa diferença possa ser considerada estatisticamente significativa sob um nível de
+significância de 10%, sua magnitude permanece relativamente reduzida.
+
+13
+
+===== page_013_mid.png =====
+Sim, a conclusão mudaria. Caso fosse adotado um nível de significância de 10% (a = 0,10), o valor-
+p obtido (0,057) seria inferior ao nível de significância estabelecido. Nesse cenário, a hipótese nula seria
+rejeitada, indicando evidências estatísticas de que a proporção de nomeações de indivíduos com experiência
+administrativa difere entre os dois ministérios.
+
+A adoção de um nível de significância mais elevado implica aceitar uma probabilidade maior de cometer um
+erro do Tipo 1, isto é, rejeitar uma hipótese nula verdadeira. Em contrapartida, aumenta-se a sensibilidade
+do teste para detectar diferenças entre os grupos analisados.
+
+6.2 A conclusão mudaria se o nível de significância fosse 1%?
+
+Não, a conclusão permaneceria a mesma que a adotada no nível de 5%. Caso fosse adotado um nível de
+significância de 1% (a = 0,01), o valor-p permaneceria superior ao limite estabelecido. Consequentemente,
+não se rejeitaria a hipótese nula, mantendo-se a conclusão de que os dados não fornecem evidências estatísticas
+suficientes para afirmar que as proporções de nomeações com experiência administrativa diferem entre o
+MAPA e o MinC.
+
+A utilização de um nível de significância mais restritivo reduz a probabilidade de ocorrência de um erro do
+Tipo 1, mas exige evidências empíricas mais fortes para que a hipótese nula seja rejeitada.
+
+6.3 Diferença entre p-valor e significância substantiva
+
+A comparação entre diferentes níveis de significância evidencia que a decisão estatística depende do limiar
+adotado para rejeição da hipótese nula. No presente caso, a alteração do nível de significância de 5% para
+10% modifica a decisão do teste, embora os dados analisados permaneçam exatamente os mesmos. Esse
+amttlidio, Aomectaltos: citoa-m malas Senso ao inibe edándo. an cenlânido: india stone alnnceaáio: dá amélico sito.
+
+===== page_013_top.png =====
+Embora a diferença observada seja inferior a dez pontos percentuais, o teste estatístico indica que ela difi-
+cilmente pode ser atribuída apenas à variabilidade amostral. Esse resultado sugere que os dois ministérios
+apresentam desenhos organizacionais ou estratégias de ocupação dos cargos comissionados distintas, refletindo
+possíveis diferenças na estrutura administrativa, nas características das políticas públicas desenvolvidas ou
+nos mecanismos de coordenação e distribuição de posições de maior hierarquia.
+
+6 Significância estatística e nível de significância
+
+Nesta etapa, retoma-se o primeiro teste de hipótese bivariado, que avaliou se à proporção de nomeações de
+indivíduos com experiência administrativa difere entre o Ministério da Agricultura, Pecuária e Abastecimento
+(MAPA) e o Ministério da Cultura (MinC). Conforme apresentado anteriormente, o teste resultou em um
+valor-p de aproximadamente 0,057, permitindo discutir como diferentes níveis de significância influenciam a
+decisão estatística, bem como a distinção entre significância estatística e significância substantiva.
+
+6.1 A conclusão mudaria se o nível de significância fosse 10%?
+
+Sim, a conclusão mudaria. Caso fosse adotado um nível de significância de 10% (a = 0,10), o valor-
+p obtido (0,057) seria inferior ao nível de significância estabelecido. Nesse cenário, a hipótese nula seria
+rejeitada, indicando evidências estatísticas de que a proporção de nomeações de indivíduos com experiência
+
+===== page_014_bot.png =====
+estreito, indicando uma estimativa mais precisa da proporção populacional. o
+7.2 Por que isso acontece
+Esse comportamento decorre diretamente da expressão matemática utilizada para caleular o erro-padrão de
+uma proporção:
+
+EP = (BIB
+Observa-se que o tamanho da amostra (n) aparece no denominador da expressão. Mantida constante a
+proporção observada (f), o aumento do número de observações reduz o valor da fração e, consequentemente,
+diminui o erro-padrão da estimativa.
+Sob a perspectiva estatística, esse resultado evidencia que estimativas obtidas a partir de amostras maiores
+tendem à apresentar menor variabilidade amostral e, portanto, maior precisão. Em outras palavras, à medida
+que o tamanho da amostra aumenta, reduz-se a influência das Autuações aleatórias inerentes ao processo de
+amostragem, tornando a estimativa da proporção populacional mais estável.
+Do ponto de vista substantivo, isso siguífica que a ampliação da amostra aumenta a confiabilidade das
+inferências realizadas sobre a população estudada. Embora o aumento do tamanho amostral não altere
+
+“
+
+===== page_014_mid.png =====
+para fins de comparação, que essa mesma proporção permanecesse inalterada, mas que o tamanho da amostra
+fosse ampliado para 1.050 observações, correspondendo ao dobro do número inicialmente analisado.
+7.1 O que tenderia a acontecer com o erro-padrão
+Mantida constante a proporção observada, o erro-padrão da estimativa tenderia à diminuir em decorrência
+do aumento do tamanho da amostra.
+Como o número de observações seria duplicado, o erro-padrão passaria a ser dividido por VZ, o que corre.
+sponde a uma redução de aproximadamente 29%.
+
++ Erro-padrão original (n = 525): = 0,0209
+
++ Novo erro-padrão (n = 1050): = 0,0148
+Como consequência, a margem de erro também seria reduzida e o intervalo de confiança tornar-se-ia mais
+estreito, indicando uma estimativa mais precisa da proporção populacional.
+7.2 Por que isso acontece
+Esse comportamento decorre diretamente da expressão matemática utilizada para calcular o erro-padrão de
+
+EP = (BIB
+
+===== page_014_top.png =====
+Sob a perspectiva das políticas públicas e da burocracia estatal, o aspecto mais relevante consiste no fato
+de que ambos os ministérios apresentam proporções muito elevadas de indivíduos com experiência prévia
+na administração pública, próximas de 90%. Esse resultado sugere que, independentemente do nível de
+significância adotado, os dois órgãos compartilham um padrão semelhante de recrutamento para cargos
+comissionados de médio e alto escalão.
+
+Assim, a interpretação dos resultados deve considerar simultaneamente a evidência estatística e a relevância
+substantiva das diferenças observadas. A significância estatística informa se a diferença encontrada é com-
+patível com a variabilidade amostral, enquanto a significância substantiva permite avaliar se essa diferença
+possui importância prática para responder ao problema de pesquisa.
+
+7 O que aconteceria se a amostra fosse maior
+
+Para esta análise hipotética, considera-se a estimativa obtida no segundo teste de hipótese bivariado, referente
+à proporção de cargos de alto nível no Ministério da Agricultura, Pecuária e Abastecimento (MAPA). Na
+amostra analisada, à proporção observada foi de aproximadamente 35,6%, com 525 observações. Supõe-se,
+para fins de comparação, que essa mesma proporção permanecesse inalterada, mas que o tamanho da amostra
+fosse ampliado para 1.050 observações, correspondendo ao dobro do número inicialmente analisado.
+
+FÃ Dema dhendeninia masminans mao mam mnidiifto.
+
+===== page_015_bot.png =====
+15 |
+
+===== page_015_mid.png =====
+PE RANA PRA GEO EA O
+
+===== page_015_top.png =====
+a proporção observada, ele reduz a incerteza associada à estimativa, permitindo que os resultados sejam
+interpretados com maior grau de precisão.
+
+Este exercício evidencia um dos princípios fundamentais da inferência estatística: a precisão das estimativas
+depende não apenas do valor observado na amostra, mas também da quantidade de informações disponíveis
+para estimá-lo. Assim, amostras maiores tendem a produzir estimativas mais precisas, com menores margens
+de erro e intervalos de confiança mais estreitos, fortalecendo a confiabilidade das conclusões obtidas.
+
+8 Bibliografia
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação cargos públicos no
+Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo Federal (2011-2021). Revista
+Brasileira de Ciência Política, 2025. DOI: https://doi.org/10.1590/0103-3352.2025.44.285564.
+
+As informações utilizadas nesta avaliação foram obtidos a partir da base de dados: BASE. cargos2alsr,
+disponível publicamente no repositório https://raw.githubusercontent.com/ nayalbrecht/ burocracia BR /main/
+BASE. cargos2.tlsr. O acesso € download foram realizados em 16 de julho de 2026.

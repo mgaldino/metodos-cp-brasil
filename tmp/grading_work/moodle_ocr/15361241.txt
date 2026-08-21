@@ -1,0 +1,875 @@
+
+===== page_001_bot.png =====
+6 Segundo teste de hipótese bivariado 12
+7 Significância estatística e nível de significância 15
+8 O que aconteceria se a amostra fosse maior? 16
+9 Conclusão a
+10 Referências 18
+à Alguns arquivos neste envio só podem ser acessados através de download direto. | |
+l
+
+===== page_001_mid.png =====
+2 Artigo, pergunta de pesquisa e unidade de análise 3
+3 Leitura e validação dos dados 4
+31 Estrutura geral da base... iccccccccsesiesecesiaseririro A
+3.2 Observações por órgão superior . ....iccccccccicisiccccscicico A
+3.3 Valores ausentes em variáveis relevantes ......cccccciccscccccseso 5
+34 Checagem dos valores observados .....icicccccicesisicserero 5
+4 Tabela descritiva: experiência administrativa 8
+5 Primeiro teste de hipótese bivariado 10
+5.1 Cálculo manual (proporções, erro-padrão combinado e estatística 2) ......... 10
+6 Segundo teste de hipótese bivariado 12
+7 Sionificância estatística e nível de sionificância 15
+Alguns arquivos neste envio só podem ser acessados através de download direto. 16
+
+===== page_001_top.png =====
+Perfil de Nomeados no Executivo Federal |
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021)
+Mirela Mattos
+Conteúdo
+1 Introdução 2
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. | 3
+3 Leitura e validacão dos dados cá
+
+===== page_002_bot.png =====
+FP Metodos/
+data/
+BASE cargos2.x1sx
+output/
+report/
+final project Mirela Mattos. Rnd
+base <- read excel(*../data/BASE cargos2.xlsx”, sheet = "BASE cargos")
+
+===== page_002_mid.png =====
+alização de sua burocracia de carreira, a área de formação predominante entre os nomeados e à
+natureza de sua clientela política.
+Este trabalho não pretende replicar os modelos multivariados do artigo original, mas sim utilizar a
+base de dados pública que o sustenta (BASE, cargos2.x1sx) para exercitar, de forma aplicada, os
+conceitos de inferência estatística básica trabalhados em aula: distribuição amostral, erro-padrão,
+intervalo de confiança, margem de erro, teste de hipótese e p-valor. O recorte concentra-se em duas
+variáveis substantivas, experiência prévia na administração pública e ocupação de cargos de alto
+nível hierárquico, comparando sistematicamente as pastas de Agricultura e Cultura.
+Fonte dos dados e reprodutibilidade Os dados utilizados são os mesmos disponibilizados publi-
+camente pelas autoras do artigo, na planilha BASE, cargos2.x1sx (aba BASE. cargos, com dicionário
+de variáveis na aba Codebook), disponível no repositório github. com/nayalbrecht /burocraciaBR.
+Data de acesso: 03 de julho de 2026. O código abaixo lê a base a partir da pasta local data/, con-
+forme a estrutura de projeto:
+FP Metodos/
+
+data/
+
+BASE cargos2.x1sx
+output/
+report/
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+. - - =—- - 08")
+
+===== page_002_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+1 Introdução
+O provimento de cargos de livre nomeação no Executivo federal brasileiro é, tradicionalmente,
+interpretado pela Ciência Política através da chave do presidencialismo de coalizão, os cargos fun-
+cionariam como “moeda de troca” entre o presidente e os partidos de sua base de apoio. Essa
+leitura, embora dominante, tende a reduzir à burocracia pública a um instrumento de barganha
+partidária, deixando pouco espaço para investigar outras lógicas de recrutamento (técnicas, corpo-
+rativas, associativas) que também operam na distribuição de cargos de confiança.
+É nesse contexto que se insere o artigo de Albrecht e Ribeiro (2025), que compara os padrões de
+nomeação em duas pastas ministeriais de natureza regulatória e distributiva, o Ministério da Agri-
+cultura, Pecuária e Abastecimento (MAPA) e o Ministério da Cultura (MinC), no período de 2011
+a 2021. A escolha dessas duas pastas não é arbitrária, ambas seriam, segundo a literatura, mais
+suscetíveis à ação de partidos e grupos de interesse do que ministérios de política econômica ou de
+políticas sociais estruturadas, mas diferem substancialmente entre si quanto ao grau de profission-
+e os nomeados e à
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+e Cr v No USO PETI epoca vs oa Urano os Gu arg oruguss, mas sim utilizar a
+uma duda modo line ema stone essi PAR ceara? se Les) inner ereta rr 0
+
+===== page_003_bot.png =====
+Quais são as pastas analisadas!
+O recorte desta avaliação concentra-se nas duas pastas centrais do artigo: o Ministério da Agri-
+cultura, Pecuária e Abastecimento (código mapa) e o Ministério da Cultura (código mínc).
+A base contém ainda um terceiro órgão (mctá, Ciência e Tecnologia), que não integra o escopo
+comparativo do artigo nem desta avaliação e é excluído das análises que seguem.
+i Alguns arquivos neste envio só podem ser acessados através de download direto. | |
+|
+
+===== page_003_mid.png =====
+o ato de ocupação de um cargo por um individuo em um recorte temporal dehnido.
+O que representa uma linha da base?
+Cada linha corresponde à uma nomeação individual, uma pessoa (id) ocupando um cargo/funcao
+de determinado nivel hierárquico, em um setor de um orgao. sup, com datas de entrada e saida,
+sob a indicação (indicacao) de um presidente. A linha também carrega os atributos de perfil da
+pessoa associados àquele vínculo específico (escolaridade, experiências prévias, filiação partidária
+etc).
+Por que uma mesma pessoa pode aparecer mais de uma vez?
+Porque a base é organizada por nomeação, e não por indivíduo. Uma mesma pessoa pode ter
+ocupado mais de um cargo ao longo do período 2011-2021, em momentos diferentes, em setores
+diferentes, ou sob presidentes diferentes, e cada uma dessas ocupações gera uma linha própria na
+base. Isso é evidenciado adiante: há mais nomeações do que indivíduos distintos.
+Quais são as pastas analisadas?
+O recorte desta avaliação concentra-se nas duas pastas centrais do artigo: o Ministério da Agri-
+cultura, Pecuária e Abastecimento (código mapa) e o Ministério da Cultura (código minc).
+A base contém ainda um terceiro órgão (meti, Ciência e Tecnologia), que não integra o escopo
+comparativo do artigo nem desta avaliação e é excluído das análises que seguem.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+2 Artigo, pergunta de pesquisa e unidade de análise
+Qual é a pergunta geral do artigo?
+Albrecht e Ribeiro (2025) investigam em que medida o perfil dos/as burocratas nomeados/as para
+cargos de confiança (níveis 4 a 6, incluindo DAS e FCPE) varia entre pastas ministeriais de na-
+tureza regulatória, tomando como casos comparativos o MAPA e o MinC. A pergunta subjacente
+problematiza a leitura dominante do presidencialismo de coalizão, que reduz as nomeações à bar-
+ganha entre presidente e partidos, propondo investigar outras dimensões do recrutamento, como a
+formação educacional, o vínculo com a carreira de Estado, experiência associativa e a atuação no
+setor privado.
+Qual é a unidade de análise da base?
+A unidade de análise é a nomeação, o vínculo entre uma pessoa, um cargo e um período específico,
+identificado pela chave primária chave. Não é a pessoa em abstrato nem o cargo em abstrato, mas
+vido.
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+Cada linha corresponde a uma nomeação individual, uma pessoa (id) ocupando um cargo/funcao
+
+===== page_004_bot.png =====
+PRESA EP AR PR DN PAN SE
+3.2 Observações por órgão superior
+tab orgao <- base 1>) count(orgao sup, name = “n noncacoes") > arrange(desc(n nomeacoes))
+tab orgao
+se 8 A tibble: 3x2
++ orgao sup n nomeacoes
+“8 <chr> <int>
++81 mapa 525
+44 2 minc 365
+s8 3 mcti 148
+Table 2: Número de nomeações por órgão superior
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_mid.png =====
+as [9] “area” “inst ensino" “inst origem" “car pub"
+wa [13] "partido" "cargo ele" "lid part" “exp adm"
+*8 [17] “exp car" “exp mer” “exp soc” nuper
+ws [21] "partido pr” "partido ministro" "indicacao” "entrada"
++% [25] “saida” "pera"
+Table 1: Dimensões da base BASE. cargos2.xlsx
+
+Característica Valor
+
+Número de linhas (nomeações) 1038
+
+Número de colunas (variáveis) 26
+A base contém 1038 linhas (nomeações) e 26 colunas (variáveis).
+3.2 Observações por órgão superior
+tab orgao <- base >) count(orgao sup. name = “n noneacoes") >% arrange(desc(n nomeacoes))
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+BE BA tibble: 3x2
+
+===== page_004_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+
+3 Leitura e validação dos dados
+
+3.1 Estrutura geral da base
+
+dim(base)
+
++ [1) 1038 26
+
+names (base)
+
+*8 [1) "orgao sup" "setor" "chave" jar
+
+es [5) "cargo" "funcao" “nivel” "instr”
+
+car pub”
+à Alguns arquivos neste envio só podem ser acessados através de download direto. exp adm"
+l Ure"
+e [21] "partido pr” "partido ministro" “indicacao" "entrada"
+
+===== page_005_bot.png =====
+exp car 1 01%
+nivel o 0%
+instr o 0%
+indicacao o 0%
+As cinco variáveis exigidas pelo enunciado apresentam poucos ou nenhum valor ausente na base
+completa, a exceção é exp. car, com uma única observação faltante. Isso não significa, porém,
+que os valores observados estejam todos dentro do domínio esperado, como a checagem a seguir
+demonstra.
+3.4 Checagem dos valores observados
+1apply(base [c("exp. adm”, “exp car", "nivel", “instr*, “indicacao")],
+function(x) table(x, useNA = "ifany*))
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_005_mid.png =====
+vars rel <- c("exp adm”, “exp car", "nivel", “instr”, "indicacao")
+na count <- sapply(base[vars rel), function(x) sun(is.na(x)))
+na cout
+*t expadm expcar nivel — instr indicacao
+" o 1 o o o
+Table 3: Valores ausentes (NA) em cinco variáveis relevantes
+Variável Ausentes Pet. do total
+exp adm o 0%
+exp car 1 01%
+nível o 0%
+instr o 0%
+indicacao o 0%
+or ausente na base
+i Alguns arquivos neste envio só podem ser acessados através de download direto. o significa, porém,
+l . “checagem a seguir
+demonstra.
+
+===== page_005_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+Órgão superior Nomeações
+mapa 525
+mine 365
+meti 148
+O MAPA concentra o maior número de nomeações (525), seguido do MinC (365) e do MCTI (148),
+que é excluído das análises obrigatórias por não integrar o foco comparativo do artigo.
+Nomeações versus indivíduos: A distinção discutida na Seção 2 é verificável nos dados: há 1038
+nomeações na base completa, mas apenas 664 indivíduos distintos (id), confirmando que muitas
+pessoas aparecem em mais de uma linha.
+3.3 Valores ausentes em variáveis relevantes
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+. na count <- sappiy(vaselvars rei), IUNCLION(X) sumtis-na(x)/)
+
+===== page_006_bot.png =====
++ exp adm deveria ser uma variável binária (0/1), conforme o Codebook (“experiência em órgãos
+da administração pública”, 1 = SIM, 0 = NÃO). No entanto, ela é lida como texto e apresenta
+valores fora do domínio esperado: três casos com o valor “1 (crase seguida de 1 - um erro
+de digitação) e um caso isolado com valor 3. Os três casos “1 pertencem todos a nomeações
+do MinC. Tratamento adotado: por prudência metodológica, optei por não presumir que
+a crase sinaliza necessariamente o valor “1”, trata-se de uma inconsistência de digitação cuja
+intenção original não pode ser confirmada apenas pelo padrão gráfico. Os três casos “1 e o caso
+3 foram recodificados como ausentes (NA), e não recuperados como “1”. Essa é uma escolha
+conservadora, pois ela reduz o n válido do MinC em três observações, mas evita introduzir
+um viés de correção não verificável.
+
++ indicacao não apresentou, nesta consulta ao repositório, duplicidade de rótulos por espaça-
+mento (por exemplo, "Lula" e "Lula *), mas por segurança o código aplica trimus() a todos
+os valores antes de qualquer contagem, prevenindo esse tipo de inconsistência.
+
++ exp car é uma variável ordinal (o Codebook define os valores 0, 1, 2 e 5, conforme a escala de
+nível do cargo comissionado ocupado anteriormente), e os valores observados (0, 1, 2, 3,
+5) incluem um 3 fora da escala documentada. Como essa variável não é utilizada nos testes
+obrigatórios desta avaliação, à inconsistência é apenas registrada, sem recodificação.
+
+» nivel (4, 5, 6) e instr estão dentro do esperado; instr apresenta um único caso de
+“graduacao", provavelmente sinônimo de "superior", sem impacto relevante nas análises
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+4% Sinstr
+
+ss
+
+“ doutorado especializacao graduacao mestrado NA
+“e 159 203 1 259 95
+“ superior tecnico
+
+“e 297 24
+
+“
+
+4% Sindicacao
+
+sx
+
+4% Bolsonaro Lula Rousseff Temer
+
+“e 396 sr 351 204
+
+Problemas encontrados e tratamento adotado:
+
++ exp adm deveria ser uma variável binária (0/1), conforme o Codebook (“experiência em órgãos
+da administração pública”, 1 = SIM, 0 = NÃO). No entanto, ela é lida como texto e apresenta
+valores fora do domínio esperado: três casos com o valor “1 (crase seguida de 1 - um erro
+de digitação) e um caso isolado com valor 3. Os três casos “1 pertencem todos a nomeações
+do MinC. Tratamento adotado: por prudência metodológica, optei por não presumir que
+a crase sinaliza necessariamente o valor “1”. trata-se de nma inconsistência de digitação cuja
+
+“ês casos “Leo caso
+
+Alguns arquivos neste envio só podem ser acessados através de download direto. aca é uma escolha
+
+, EEE Ts  mase a mes susaageesilas evita introduzir
+um viés de correção não verificável.
+
+===== page_006_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+44 Sexp adm
+mx
+so 0 1 3 NA
+“e 3 88935 1 11
+"
+48 Sexp car
+mx
+“ o 1 2 3 5 NA <NA>
+e. 147 51 2 509 253 75 1
+"
+4% $nivel
+mx
+4 5 6
+“a 652 275 111
+as
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+l NA
+
+PM 159 203 1 259 95
+
+===== page_007_bot.png =====
+
+
+===== page_007_mid.png =====
+Após a limpeza, exp adm bin contém apenas 0, 1 e NA, com os quatro valores inconsistentes tratados
+como ausentes.
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_007_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+seguintes.
+base <- base 1>%
+mutate(
+4 ezp adm: mantém apenas "0" e "1" originais; demais valores (1, 3) -> NA
+exp adm bin = ifelse(exp adm 4ink c("0", "1"), as.integer(exp adm), NA integer ),
+indicacao = trimus(indicacao)
+,
+table(baseSexp adm bin, useNA = "ifany")
+“
+0 1<>
+e 88 935 15
+à Alguns arquivos neste envio só podem ser acessados através de download direto. | endos
+como ausentes.
+
+===== page_008_bot.png =====
+8% 1 mapa 524 482 0.920 0.0119 0.0232 0.897 0.943
+&8 2minc 351 309 0.880 0.0173 0.0340 0.846 0.914
+Table 4: Experiência prévia na administração pública, por
+pasta (MAPA e MinC)
+Pasta Nválido Com exp. adm. Proporção IC 95% Margem de erro
+MAPA 524 482 92% [89.7%; 94.3%] 2,3%
+MINC 351 309 88% [84.6%; OLA] 34%
+gsplot(tab adm, aes(x = toupper(pasta), y = p)) +
+geom col(fill = "grey35", width = 0.55) +
+geom errorbar(aes(ymin = ic inf, ymax = ic sup), width = 0.15, linewidth = 0.6) +
+scale y continuous(labels = scales::percent, limits = c(O, 1)) +
+labs(x = "Pasta", y = "Proporção com experiência administrativa") +
+theme minimal (base size = 12) +
+theme (panel .grid.minor = element blank())
+s
+
+===== page_008_mid.png =====
+SA
+sub <- base Y>) filter(orgao sup Xink c(“mapa”, “minc"))
+tab adm <- sub %>%
+group by(pasta = orgao sup) 1%
+group modify(- resuno prop(.xSexp adm bin)) />%
+ungroupO
+tab adm
+ss SA tíbble: 2x8
+** pasta no k p se me icinf ic sup
+&% <chr> <int> <int> <abl> <dbl> <dbl> <abl> <abl>
+*8 1 mapa 524 482 0.920 0.0119 0.0232 0.897 0.943
+4% 2minc 351 309 0.880 0.0173 0.0340 0.846 0.914
+Table 4: Experiência prévia na administração pública, por
+pasta (MAPA e MinC)
+Pasta Nálido Com exp. adm. Proporção IC 95% Margem de erro
+MAPA 524 as2 92% [89.7%; 94.3%] 2,3%
+MINC as ETA IRA: QUA] RAY
+
+===== page_008_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+4 Tabela descritiva: experiência administrativa
+Escolha da variável binária: O Codebook define exp. adm como “experiência em administração
+pública”, variável dicotômica (1 = SIM, 0 = NÃO). Trata-se da operacionalização direta do conceito
+solicitado pelo enunciado (“experiência prévia em órgãos da administração pública”), de modo que a
+variável binária utilizada é a própria exp. adm limpa (exp. adm bin), sem necessidade de combiná-la
+com outras colunas.
+resumo prop <- function(x, 2 = 1.96) 4
+
+x <- x[!ís.na(x)]
+
+n <- length(x); k <- sun(x); p<-k/n
+
+se<-sqrt(p+ (1-p)/n)
+
+ne <-z+se
+
+data.frame(n=n, k=k, p=p,se=se,me =ne,
+
+icinf=p-me, icsup=p+ne)
+
++
+sub <- base Y>) filter(orgao sup Kin) c(“mapa”, “minc"))
+
+===== page_009_bot.png =====
+um padrão que contraria a imagem de cargos de conhança como via de entrada de “estranhos à
+burocracia, e que é consistente com a leitura do artigo original sobre a persistência de carreiras de
+Estado mesmo em cargos de livre provimento.
+O intervalo de confiança de 95% do MAPA, [89.7%: 94.37), deve ser interpretado da seguinte
+forma: se o processo de amostragem fosse repetido inúmeras vezes e um intervalo dessa forma
+fosse construído em cada réplica, aproximadamente 95% desses intervalos conteriam a verdadeira
+proporção populacional. Não siguifica que há 95% de probabilidade de o valor populacional estar
+dentro deste intervalo específico, a proporção populacional é fixa; o que varia, de amostra para
+amostra, é o intervalo. A margem de erro (2.3% no MAPA; 3.4% no MinC) corresponde à
+metade da largura do intervalo, ou seja, o quanto, para mais ou para menos, à estimativa pontual
+pode se afastar do valor populacional verdadeiro, dado o nível de confiança adotado. A margem é
+maior no MinC porque essa pasta possui um número menor de observações válidas, o que aumenta
+o erro-padrão da estimativa.
+|
+
+===== page_009_mid.png =====
+a
+o.
+2 ox
+MAPA MINC
+Pasta
+Figure 1: Proporção de nomeações com experiência administrativa prévia, por pasta, com intervalo
+de confiança de 95% (barras de erro).
+Interpretação substantiva: No MAPA, 92% das 524 nomeações válidas correspondem a pessoas
+com experiência prévia na administração pública; no MinC, 88% de 351. Em ambas as pastas, por-
+tanto, à maioria esmagadora dos nomeados já havia passado pelo serviço público antes da nomeação,
+um padrão que contraria a imagem de cargos de confiança como via de entrada de “estranhos” à
+burocracia, e que é consistente com a leitura do artigo original sobre a persistência de carreiras de
+Estado mesmo em cargos de livre provimento.
+O intervalo de confiança de 95% do MAPA, [89.7%: 94.37], deve ser interpretado da seguinte
+forma: se o processo de amostragem fosse repetido inúmeras vezes e um intervalo dessa forma
+fosse construído em cada réplica, aproximadamente 95% desses intervalos conteriam a verdadeira
+proporção populacional. Não significa que há 95% de probabilidade de o valor populacional estar
+dentro deste intervalo específico, a proporção populacional é fixa; o que varia, de amostra para
+amostra, é o intervalo. A margem de erro (2.3% no MAPA: 34% no MinC) corresponde à
+metade da lareura do intervalo. ón ógia. O quanto. nara mais Gu para ménos. a estimativa. pontual l
+
+===== page_009_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+eg 100%
+z
+g
+5
+E
+E 75%
+8
+o
+8
+ê
+E
+5 50%
+a
+2
+õ
+E
+8
+
+25%
+8
+e
+&
+e
+2 o%
+
+===== page_010_bot.png =====
++ Teste utilizado: prop.test (), aproximação normal para diferença de duas proporções, com
+correção de continuidade (padrão da função em R). A estatística qui-quadrado reportada
+é o quadrado da estatística z equivalente.
+* Estatística do teste: X? = 3.339 (equivalente a = = 1.827).
++ P-valor: 0.067.
+* Decisão a 5%: como 0.067 > 0.05, não se rejeita Ho.
+5.1 Cálculo manual (proporções, erro-padrão combinado e estatística Z)
+p.mapa <- ka/na.
+p-minc <- kb/nb
+P.pool <- (ka + kb) / (na + nb)
+se pool <- sgrt(p.pool + (1 - p pool) + (1/na + 1/nb))
+z adm <- (p mapa - pminc) / se pool
+p.valor manual <- 2 + pnorn(-abs(z adm))
+10
+
+===== page_010_mid.png =====
+teste adm <- prop.testíc(ka, kb), cína., nb))
+teste adm
+“
+4% 2-sample test for equality of proportions with continuity correction
+“
+4% data: c(ka, kb) out of c(na., nb)
+4% X-squared = 3.3386, df = 1, p-value = 0.06767
+4% alternative hypothesis: tuo.sided
+4% 95 percent confidence interval:
+*8 -0.004023947 0.083034843
+4% sample estimates:
+e" propi prop2
+4% 0.9198473 0.8803419
++ Teste utilizado: prop.test(), aproximação normal para diferença de duas proporções, com
+correção de continuidade (padrão da função em R). A estatística qui-quadrado reportada
+é o quadrado da estatística z equivalente.
+* Estatística do teste: X? = 3.339 (equivalente a 2 = 1.827).
++ Pevalor: 0.067.
++ Decisão a 5%: como 0.0677 > 0,05, não se rejeita Ho.
+5.1 Cálculo manual (proporções, erro-padrão combinado e estatística Z)
+
+===== page_010_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+5 Primeiro teste de hipótese bivariado
+Testa-se aqui se a proporção de nomeações com experiência administrativa prévia é igual nas duas
+pastas, usando à aproximação normal para a diferença entre duas proporções.
++ Hipótese nula (Ho): puara = PMiuc — à proporção de nomeações com experiência adminis-
+trativa é igual nas duas pastas.
++ Hipótese alternativa (H,): puara £ Pumnc (teste bilateral).
+a <- subfexp adm bin[subforgao sup == "mapa")
+b <- subfexp adm bin[subforgao sup == “minc"]
+ka <- sun(a, na.rm = TRUE); na <- sum(!is.na(a))
+kb <- sun(b, na.rm = TRUE); nb <- sum(t!is.na(b))
+teste adm <- prop.test(c(ka, kb), c(na., nb))
+teste adm
+
+===== page_011_bot.png =====
+suficientemente forte, ao nível de 5%, para descartar que essa diferença seja fruto de ruído amostral.
+Trata-se de um caso claramente “de fronteira”, retomado na Seção 7.
+u |
+
+===== page_011_mid.png =====
+O cálculo manual, sem correção de continuidade, produz z = 1.944 e p-valor = 0.0519 - muito
+próximo, mas não idêntico, ao p-valor de 0.0677 do prop.test(), que aplica por padrão a correção
+de continuidade de Yates. Essa correção ajusta a aproximação normal para o fato de a distribuição
+binomial ser discreta, tornando o teste ligeiramente mais conservador (p-valor um pouco maior). A
+diferença é pequena, mas relevante justamente por este caso estar “na fronteira” do limiar de 5%,
+como discutido a seguir.
+
+O p-valor de 0.0677 significa: se a proporção de experiência administrativa fosse, de fato, idêntica
+nas duas pastas (mundo em que Hy é verdadeira), a probabilidade de observar, apenas por variação
+amostral, uma diferença entre pastas tão grande ou maior (em módulo) do que a diferença de 4
+pontos percentuais observada seria de aproximadamente 6.8%. É um valor baixo, mas acima do
+limiar convencional de 5%. Substantivamente, os dados sugerem uma tendência de o MAPA recrutar
+mais quadros com experiência administrativa prévia do que o MinC, mas a evidência amostral não é
+suficientemente forte, ao nível de 5%, para descartar que essa diferença seja fruto de ruído amostral.
+Trata-se de um caso claramente “de fronteira”, retomado na Seção 7.
+
+===== page_011_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+data.frame(
+p-mapa = p mapa, p.minc = pminc, p pool = p pool,
+se pool = se pool, 2 = 2 adm, p valor sem cc = p valor manual
+,
+“” pmapa pmincppool se pool 2 p.valor sem cc
+4% 1 0.9198473 0.8803419 0.904 0.02031911 1.944251 0.05186519
+Table 5: Comparação entre o cálculo manual e o prop.test()
+Método Estatística P-valor
+Manual (z, sem correção de continuidade) 1.944 0.0519
+prop.test() (com correção de continuidade) 1827 0.067
+O cálculo manual, sem correção de continuidade, produz = = 1.944 e p-valor = 0.0519 - muito
+próximo, mas não idêntico, ao p-valor de 0.0677 do prop.test (), que aplica por padrão a correção
+
+===== page_012_bot.png =====
+Pasta Nválido Alto nível (5-6) Proporção IC 95%
+
+MAPA 525 187 356% [81.5%; 39.77]
+
+MINC 365 155 425% [87.4%; 47.59]
+
+ggplot(tab nivel, aes(x = toupper(pasta), y = p)) +
+geom col(fill = "grey35", width = 0.55) +
+geom errorbar(aes(ymin = ic inf, ymax = ic sup), wídth = 0.15, linewidth = 0.6) +
+scale y continuous(labels = scales::percent, limits = c(0, 0.55)) +
+labs(x = "Pasta", y = "Proporção de cargos de alto nível") +
+theme minimal (base size = 12) +
+theme(panel.grid.minor = element blank())
+12 |
+
+===== page_012_mid.png =====
+À ssogio do cquasiadas Al toi ias ddr ata asa AD
+ungroup()
+tab nível
+se BA tíbble: 2x8
+*s pasta n k p se meicinf ic sup
+$8 <chr> <int> <int> <abl> <dbl> <abl> <abl> <abl>
+*% 1 mapa 525 187 0.356 0.0209 0.0410 0.315 0.397
+*4 2minc 365 155 0.425 0.0259 0.0507 0.374 0.475
+Table 6: Proporção de cargos de alto nível (níveis 5-6 vs. 4),
+por pasta, com IC de 95%
+Pasta N válido Alto nível (5-6) Proporção IC 95%
+MAPA 525 187 35.6% [81.5%; 39.79%]
+MINC 365 155 425% [87.4%; 47.59]
+esplot(tab nível, aes(x = toupper(pasta), y = p)) +
+geom col(fill = “grey35", width = 0.55) +
+geom errorbar(aes(ymin = ic inf, ymax = ic sup), width = 0.15, linewidth = 0.6) +
+scale y continuous(labels = scales::percent, límits = c(0, 0.55)) +
+
+===== page_012_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+6 Segundo teste de hipótese bivariado
+Cria-se a variável alto nível, igual a 1 quando nível é 5 ou 6, e O quando nível é 4, comparando
+a proporção de cargos de alto nível entre MAPA e MinC.
+sub <- sub >)
+mutate(alto nível = case vhen(
+nivel Xin) c(5, 6) - 1L,
+nível == 4 - OL,
+TRUE - NA integer
+»
+tab nível <- sub J>%
+group by(pasta = orgao sup) Y>
+group modify(- resumo prop(.xSalto nivel)) %>%
+ungroup()
+tab nível
+
+===== page_013_bot.png =====
+sa oaçã raapiciaçãos reis e re ido denise
+teste nível <- prop.test(c(kan, kbn), c(nan., nbn))
+teste nível
+“
+48 2-sample test for equality of proportions with continuity correction
+“
+4% data: c(kan, kbn) out of c(nan., nbn)
+4% X-squared = 3.9813, df = 1, p-value = 0.04601
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+4% -0.1359762203 -0.0009578958
+44% sample estimates:
+ss propi prop2
+4% 0.3561905 0.4246575
++ P-valor: (0.046; decisão a 5%: como 0.046 < 0,05, rejeita-se H,.
+13
+
+===== page_013_mid.png =====
+-
+- E E
+0%
+MAPA MINC
+Pasta
+
+Figure 2: Proporção de cargos de alto nível (DAS 5-6), por pasta, com intervalo de confiança de
+95%
+an <- subsalto nível [subforgao sup == “napa")
+bn <- subsalto nível (subSorgao, sup == “minc"]
+Xan <- sun(an, na.rm = TRUE); nan, <- sum(tis.na(an))
+kbn <- sun(bn, na.rm = TRUE); nbn <- sun(!is.na(bn))
+teste nível <- prop.test(c(kan, kbn), c(nan, nbn))
+teste nivel
+“
+4% 2-sample test for equality of proportions with continuity correction
+“
+48 data: c(kan, kbn) out of c(nan., nbn)
+4% X-squared = 3.9813, df = 1, p-value = 0.04601
+
+===== page_013_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+E)
+s
+E
+2 40%
+540%
+2
+o
+2
+8
+a
+5
+o 2%
+8
+8
+e
+a
+0%
+
+===== page_014_bot.png =====
+
+
+===== page_014_mid.png =====
+
+
+===== page_014_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
++ Interpretação do p-valor: se as duas pastas tivessem, de fato, a mesma proporção de cargos
+de alto nível, à chance de observar por acaso, apenas por variação amostral, uma diferença
+tão grande quanto a de 6.8 pontos percentuais seria de apenas 4.6%, baixa o suficiente para
+tratar a diferença observada como sinal, e não como ruído amostral.
+Conclusão substantiva: O MinC apresenta proporção maior de cargos de alto nível (42.5%)
+do que o MAPA (35.6%), uma diferença de aproximadamente 6.8 pontos percentuais. A diferença
+é estatisticamente detectável a 5%, mas, do ponto de vista substantivo, é moderada. Os dois
+ministérios possuem estruturas de cargos de confiança comparáveis, com o MinC ligeiramente mais
+concentrado no topo da hierarquia (DAS 5-6). Não configura uma clivagem dramática de desenho
+institucional entre as pastas, e sim uma diferença de grau, coerente com o achado do artigo original
+de que o MinC tende a concentrar perfis mais diversos e com maior presença de doutorado justamente
+nos cargos DAS-6.
+
+===== page_015_bot.png =====
+3. O que esse exercício mostra?
+O mesmo conjunto de dados, a mesma diferença estimada e o mesmo p-valor levam a rótulos opostos
+(“significante” versus “não significante”) apenas porque o limiar a, uma convenção de decisão,
+não uma propriedade do fenômeno, é alterado. Isso evidencia que significância estatística não
+é sinônimo de relevância substantiva, uma diferença pode ser estatisticamente significante
+e substantivamente trivial (basta um n grande o suficiente), ou substantivamente interessante e
+estatisticamente inconclusiva a um dado nível de confiança, como no presente caso. O p-valor
+mede a força da evidência amostral contra Hg; o tamanho do efeito e seu significado no contexto
+da pergunta de pesquisa são perguntas distintas, que exigem julgamento substantivo, não apenas
+o teste formal. Além disso, o exercício ilustra o erro do tipo E: ao fixar a = 10%, aceita-se
+conscientemente um risco maior (10%, contra 5% ou 1%) de rejeitar Ho quando ela é, na verdade,
+verdadeira.
+15 |
+
+===== page_015_mid.png =====
+“4 alfa p valor decisao
+*8 1 10% 0.0677 Rejeita HO
+“4 2 5% 0.0677 Não rejeita HO
+ss 3 1% 0.0677 Não rejeita HO
+
+1. A conclusão mudaria a 10%?
+Sim, como 0.0677 < 0,10, a 10% a decisão passa a ser rejeitar Hg, é à diferença passaria a ser
+chamada de “estatisticamente significante”.
+
+2. A conclusão mudaria a 1%?
+Não, como 0.0677 > 0,01, a 1% a decisão continua sendo não rejeitar H,, tal como a 5%.
+
+3. O que esse exercício mostra?
+O mesmo conjunto de dados, a mesma diferença estimada e o mesmo p-valor levam a rótulos opostos.
+(significante” versus “não significante”) apenas porque o limiar a, uma convenção de decisão,
+não uma propriedade do fenômeno, é alterado. Isso evidencia que significância estatística não
+é sinônimo de relevância substantiva, uma diferença pode ser estatisticamente significante
+e substantivamente trivial (basta um n grande o suficiente), ou substantivamente interessante e
+estatisticamente inconclusiva a um dado nível de confiança, como no presente caso. O p-valor
+
+===== page_015_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+7 Significância estatística e nível de significância
+Retoma-se o primeiro teste (experiência administrativa, p-valor = 0.067), por ser o caso “de fron-
+teira” mais informativo para esta discussão.
+p-val adm <- teste adn$p.value
+decisao <- function(p, alfa) ifelse(p < alfa, “Rejeita HO", “Não rejeita HO")
+data.frame(
+
+alfa = c("10K", "SH", MIN,
+
+p.valor = round(p val adm, 4),
+
+decisao = c(decisao(p val adm, 0.10), decisao(p val adm, 0.05), decisao(p val adm, 0.01))
+,
+*8 alfa p valor decisao
+88 1 10% 0.067 | Rejeita HO
+$8 2 SK 0.067 Não rejeita HO
+*8 3 1% 0.0677 Não rejeita HO
+
+===== page_016_bot.png =====
+Por que isso acontece?
+
+O erro-padrão de uma proporção varia com 1//%, e não com 1/n, dobrar o tamanho da amostra
+não corta o erro-padrão pela metade, apenas o multiplica por 1/V2. Para reduzir o erro-padrão (e,
+consequentemente, à margem de erro) à metade, seria necessário quadruplicar o número de obser-
+vações, não apenas dobrá-lo. Essa relação de raiz quadrada é central para a inferência estatística:
+ganhos de precisão exigem aumentos desproporcionalmente maiores no tamanho amostral, o que
+explica por que pesquisas com n pequeno tendem a produzir intervalos de confiança largos e testes
+de hipótese pouco conclusivos, exatamente o padrão observado no teste “de fronteira” da Seção
+4. Com uma amostra maior, mantido o mesmo 5, o intervalo de confiança seria mais estreito e o
+p-valor do teste da Seção 4 tenderia a ser menor, sem que a magnitude do efeito estimado tivesse
+mudado.
+
+16 |
+
+===== page_016_mid.png =====
+sn SE razao
+4% 1 351 0.01732380 1.0000000
+4% 2 702 0.01224978 0.7071068
+Demonstração matemática Mantendo 7 fixo e dobrando n, o denominador dentro da raiz dobra:
+= |PU-D 1 [PAP SE
+
+SEn= TE = [EA = ES OI-SE,
+O que tenderia a acontecer com o erro-padrão?
+Ele diminuiria de 0.0173 para 0.0122, uma redução para aproximadamente 0.707 ( 70,7%) do valor
+original, ou seja, uma queda de cerca de 29%.
+Por que isso acontece?
+O erro-padrão de uma proporção varia com 1/T, e não com 1/n, dobrar o tamanho da amostra
+não corta o erro-padrão pela metade, apenas o multiplica por 1/2. Para reduzir o erro-padrão (e,
+consequentemente, à margem de erro) à metade, seria necessário quadruplicar o número de obser-
+vações, não apenas dobrá-lo. Essa relação de raiz quadrada é central para a inferência estatística:
+ganhos de precisão exigem aumentos desproporcionalmente maiores no tamanho amostral, o que
+explica por que pesquisas com n pequeno tendem a produzir intervalos de confiança largos e testes
+de hipótese pouco conclusivos, exatamente o padrão observado no teste “de fronteira” da Seção
+4. Com uma amostra maior, mantido o mesmo 7, o intervalo de confiança seria mais estreito e o
+
+===== page_016_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+8 O que aconteceria se a amostra fosse maior?
+
+Toma-se a proporção de experiência administrativa no MinC (p = 0.8803, n = 351) como referência,
+supondo que a mesma proporção observada fosse mantida, mas o número de observações dobrasse.
+sE= [pa=D)
+
+n
+PO <- kb / nb
+nO <- nb
+sen <- sqrt(po + (1 - po) / no)
+se 2n <- sqrt(po + (1 - p0) / (2 + n0))
+data.frame(n = c(n0, 2+n0), SE = c(se n, se 2n), razao = c(1, se 2n/se n))
+son SE razao
+4% 1 351 0.01732380 1.0000000
+4% 2 702 0.01224978 0.7071068
+
+===== page_017_bot.png =====
+Erd |
+
+===== page_017_mid.png =====
+cio sobre níveis de significância e tamanho amostral evidencia, de forma concreta, que significância
+
+estatística e relevância substantiva são conceitos distintos, e que a leitura de qualquer resultado
+
+inferencial em Ciência Política exige julgamento substantivo, não apenas o resultado formal do
+
+teste.
+
+Do ponto de vista substantivo, esses achados dialogam com a proposta do artigo original de rela-
+
+tivizar a leitura do presidencialismo de coalizão centrada exclusivamente nos partidos. Os dados
+
+aqui analisados sugerem que a experiência prévia no Estado, e não apenas o vínculo partidário, é
+
+um traço comum e relevante do recrutamento em ambas as pastas, reforçando a ideia de que os
+
+partidos não são os únicos, nem necessariamente os principais, “patronos” na distribuição de cargos
+
+de confiança no Executivo federal brasileiro. |
+
+===== page_017_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+9 Conclusão
+
+Este trabalho utilizou a base de dados pública do artigo de Albrecht e Ribeiro (2025) para comparar,
+por meio de inferência estatística básica, os padrões de recrutamento das pastas de Agricultura
+(MAPA) e Cultura (MinC) do Executivo federal brasileiro entre 2011 e 2021. A pergunta de
+pesquisa original, em que medida o perfil dos nomeados varia entre pastas de natureza regulatória
+e distributiva, foi retomada aqui em duas dimensões específicas e tratáveis por inferência bivariada:
+experiência administrativa prévia e ocupação de cargos de alto nível hierárquico.
+
+Os principais achados indicam que: (i) ambas as pastas recrutam majoritariamente quadros com
+experiência prévia na administração pública, e a diferença entre elas nessa dimensão, embora suges-
+tiva (MAPA acima do MinC), é estatisticamente inconclusiva ao nível de 5%; (ii) há uma diferença
+detectável na proporção de cargos de alto nível, com o MinC ligeiramente mais concentrado no topo
+da hierarquia, uma diferença de magnitude moderada, mais provavelmente associada à estrutura de
+carreiras de cada pasta do que a uma diferença qualitativa no grau de partidarização; e (ii) o exerct-
+cio sobre níveis de significância e tamanho amostral evidencia, de forma concreta, que significância
+estatística e relevância substantiva são conceitos distintos, e que a leitura de qualquer resultado
+inferencial em Ciência Política exige julgamento substantivo, não apenas o resultado formal do
+teste,
+
+===== page_018_bot.png =====
+18 |
+
+===== page_018_mid.png =====
+
+
+===== page_018_top.png =====
+Um Teste de Hipóteses sobre MAPA e MinC (2011-2021) Mirela Mattos
+10 Referências
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos
+públicos no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Execu-
+tivo Federal (2011-2021). Revista Brasileira de Ciência Política, v. 44, 285564, 2025.
+DOE: 10.1590/0103-3352.2025.44.285564. Disponível em: https://www-scielo.br/j/rbepol/a/
+JQSSGpRLIMCIZCIXDTCXNa/. Acesso em: 03 jul. 2026.
+
+ALBRECHT, Nayara F. Macedo de Medeiros. Repositório burocraciaBR: base de dados e
+código. Disponível em: https://github.com /nayalbrecht /burocraciaBR. Acesso em: 03 jul. 2026.

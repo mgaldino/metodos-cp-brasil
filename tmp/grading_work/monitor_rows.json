@@ -1,0 +1,527 @@
+[
+  [
+    "nome",
+    "email",
+    "NUSP",
+    "Lista 1",
+    "Lista 2"
+  ],
+  [
+    "Agnes Francisca Carraro Kunsch",
+    "agneskunsch@usp.br",
+    14554690,
+    10,
+    10
+  ],
+  [
+    "Andre Beraldo Calia",
+    "andre.calia@usp.br",
+    15439907,
+    10,
+    10
+  ],
+  [
+    "Andre Praça Susemihl",
+    "andrepraca@usp.br",
+    15510702,
+    10,
+    10
+  ],
+  [
+    "Andre Raposo Santos",
+    "and.raposo@usp.br",
+    15652600,
+    0,
+    0
+  ],
+  [
+    "Anne Louise Dias Ferreira",
+    "annelouisedias@usp.br",
+    14558926,
+    10,
+    10
+  ],
+  [
+    "Beatriz Pessoni",
+    "beatriz.pessoni@usp.br",
+    15442662,
+    10,
+    10
+  ],
+  [
+    "Beatriz Ribeiro Galli Ferreira",
+    "biargferreira@usp.br",
+    11760430,
+    10,
+    10
+  ],
+  [
+    "Bruno da Silva",
+    "bruno8.silva@usp.br",
+    9875681,
+    0,
+    0
+  ],
+  [
+    "Caio Felicio Razera",
+    "felicio.caio@usp.br",
+    14562914,
+    10,
+    10
+  ],
+  [
+    "Carlos Alberto Vergara",
+    "cavergara@usp.br",
+    3464981,
+    10,
+    10
+  ],
+  [
+    "Carmen Maria Serrano dos Santos",
+    "carmen.maria@usp.br",
+    15445370,
+    10,
+    10
+  ],
+  [
+    "Caua Vigiani Cavaliere",
+    "caua.vigiani@usp.br",
+    15573943,
+    10,
+    0
+  ],
+  [
+    "Dayane Nogueira dos Santos",
+    "dayanenogueira2000@usp.br",
+    15514004,
+    10,
+    0
+  ],
+  [
+    "Dong Zishuo",
+    "woshidongzishuo@126.com",
+    17117294,
+    0,
+    0
+  ],
+  [
+    "eduardo de oliveira godoy",
+    "godoyeduardoo@usp.br",
+    14567093,
+    10,
+    10
+  ],
+  [
+    "Emerson de Lima Gomes",
+    "egomes@usp.br",
+    13713872,
+    10,
+    10
+  ],
+  [
+    "Emilio Amigo Gamo",
+    "eamigogamo@usp.br",
+    5549811,
+    10,
+    10
+  ],
+  [
+    "Enzo Rosa Chiavarini Altavista",
+    "enzoaltavista@usp.br",
+    15450000,
+    0,
+    0
+  ],
+  [
+    "Fellipe Matheus Bernardino Pereira",
+    "fellipeb@usp.br",
+    11330361,
+    10,
+    10
+  ],
+  [
+    "Fernanda Cristina de Oliveira da Silva",
+    "fernand1.cristina05@usp.br",
+    15451867,
+    10,
+    10
+  ],
+  [
+    "Filipe Kiyoshi Otuka",
+    "filipeotuka@usp.br",
+    14780870,
+    10,
+    10
+  ],
+  [
+    "Franciele de Brito Leite",
+    "debritofranciele@usp.br",
+    13825860,
+    10,
+    10
+  ],
+  [
+    "Francisco Zardo de Melo",
+    "franciscozmelo@usp.br",
+    15452656,
+    10,
+    10
+  ],
+  [
+    "Gabriela Yumi Fraga Assano",
+    "gabiassano@usp.br",
+    14573451,
+    10,
+    10
+  ],
+  [
+    "Giovanna dos Santos Chistoni Silva",
+    "giovannas@usp.br",
+    13860449,
+    10,
+    10
+  ],
+  [
+    "Giovanna Ellen Honório Braga",
+    "ghonorio@usp.br",
+    14574661,
+    10,
+    10
+  ],
+  [
+    "Guilherme Francisco de Lauro",
+    "guilherme.lauro@usp.br",
+    15456813,
+    10,
+    10
+  ],
+  [
+    "Guilherme Pereira Ferreira",
+    "guilherme.pereira.ferreira@usp.br",
+    8539774,
+    10,
+    0
+  ],
+  [
+    "Guilherme Salamuni Gonzaga de Oliveira",
+    "guisalamuni@usp.br",
+    15585578,
+    10,
+    10
+  ],
+  [
+    "Gustavo Campos dos Santos",
+    "guto.stos@usp.br",
+    15528312,
+    10,
+    10
+  ],
+  [
+    "Gustavo Henrique Garcia Dutra",
+    "guhdutra21@usp.br",
+    15553839,
+    10,
+    10
+  ],
+  [
+    "Gustavo Lopes Rangel Madureira",
+    "gustavo.madureira@usp.br",
+    15457821,
+    10,
+    10
+  ],
+  [
+    "Isabel Chinen Nascimento Godoy",
+    "isabelchinen@usp.br",
+    15676771,
+    10,
+    10
+  ],
+  [
+    "Jaqueline Lorenseti dos Santos",
+    "jaqueline.lorenseti@usp.br",
+    13723971,
+    0,
+    10
+  ],
+  [
+    "Jéssica de Morais Batista",
+    "jessica.morais@usp.br",
+    10437013,
+    10,
+    10
+  ],
+  [
+    "Jhonathan Rafael Oliveira",
+    "jhonathanoliveira151@usp.br",
+    14678166,
+    0,
+    0
+  ],
+  [
+    "Joao Neto Campos dos Santos",
+    "joao.neto.santos@usp.br",
+    8579081,
+    0,
+    0
+  ],
+  [
+    "João Pedro Prates da Conceição Galhianne",
+    "joao.cgalhianne@usp.br",
+    8682184,
+    10,
+    10
+  ],
+  [
+    "João Victor Ricchini Freire de Carvalho",
+    "joaovitor.ricchini@usp.br",
+    10765228,
+    0,
+    10
+  ],
+  [
+    "Joao Vitor Barbosa Mariano Ferreira",
+    "joao.barbosamf@usp.br",
+    15464083,
+    10,
+    0
+  ],
+  [
+    "João Vítor Fávero Barros",
+    "jvfaverobarros@usp.br",
+    14583212,
+    10,
+    10
+  ],
+  [
+    "Ju Magalhães",
+    "juliamagalhaes@usp.br",
+    14654997,
+    10,
+    10
+  ],
+  [
+    "Julia Franca e Castilho",
+    "juliafrancaecastilho@usp.br",
+    14584443,
+    10,
+    10
+  ],
+  [
+    "Lara Nunes de Lacerda",
+    "lara.nl@usp.br",
+    14586921,
+    10,
+    10
+  ],
+  [
+    "Larissa Garcez Ribeiro",
+    "larissagarcez@usp.br",
+    14655362,
+    10,
+    10
+  ],
+  [
+    "Leticia Rodrigues de Sousa",
+    "letumrodriguesz@usp.br",
+    15582209,
+    10,
+    0
+  ],
+  [
+    "Lincoln Antonio Andrade de Moura",
+    "lincolnm@usp.br",
+    14589448,
+    10,
+    0
+  ],
+  [
+    "Lucas Gonçalves de Lima",
+    "lucasglima@usp.br",
+    11075655,
+    0,
+    0
+  ],
+  [
+    "Luccas Eduardo Ferraz da Silva",
+    "luccas.eduardo@usp.br",
+    13636981,
+    10,
+    10
+  ],
+  [
+    "Luiz Antonio Eleuterio de Lima",
+    "luiz.eleuterio@usp.br",
+    14759962,
+    10,
+    10
+  ],
+  [
+    "Luiz Fernando Lima Chaves",
+    "fernando.04chaves@usp.br",
+    14678357,
+    10,
+    10
+  ],
+  [
+    "Maria Luisa Reis Melo",
+    "malu.reismelo@usp.br",
+    16889846,
+    10,
+    10
+  ],
+  [
+    "Mariana Araujo Puschel",
+    "marianapuschel@usp.br",
+    4725594,
+    10,
+    10
+  ],
+  [
+    "Mariana Rodrigues Carneiro Silva",
+    "mariana.rodcs@usp.br",
+    14596738,
+    10,
+    0
+  ],
+  [
+    "Mariana Sarmento Patrone",
+    "marianapatrone@usp.br",
+    12234981,
+    0,
+    0
+  ],
+  [
+    "Melyssa da Mata Bortuluzi",
+    "melyssabortuluzi@usp.br",
+    15524472,
+    10,
+    10
+  ],
+  [
+    "Mirela Gabriela Martins de Mattos",
+    "mirela.mattos@usp.br",
+    15361241,
+    10,
+    10
+  ],
+  [
+    "Murilo Rocha Souto Maior",
+    "murilorsm@usp.br",
+    13636574,
+    10,
+    10
+  ],
+  [
+    "Nathan Henrique de Souza Fonseca",
+    "nathanhsouzafonseca@usp.br",
+    16894387,
+    0,
+    0
+  ],
+  [
+    "Nicolas Kahli Dourado Maciel",
+    "nicolaskahli@usp.br",
+    13721986,
+    0,
+    0
+  ],
+  [
+    "Otavio Cardoso de Moraes",
+    "otaviocardosodemoraes@usp.br",
+    14657447,
+    10,
+    0
+  ],
+  [
+    "Paula Juliana Rubio Gonzales",
+    "paulagonzales@usp.br",
+    12521185,
+    0,
+    0
+  ],
+  [
+    "Pedro Henrique Abbonizio Franco",
+    "pedro.henrique.franco@usp.br",
+    7618206,
+    0,
+    0
+  ],
+  [
+    "Pedro Henrique Nunes Salgueiro",
+    "salgueiro@usp.br",
+    11316163,
+    10,
+    0
+  ],
+  [
+    "Pedro Henrique Rocha Ribeiro Costa do Amaral",
+    "pedrohenriqueamaral@usp.br",
+    14602925,
+    10,
+    10
+  ],
+  [
+    "Pedro Lucas Godoi",
+    "plgodoi@usp.br",
+    13721516,
+    10,
+    10
+  ],
+  [
+    "Pedro Sombra de Souza",
+    "psombra@usp.br",
+    13636719,
+    10,
+    10
+  ],
+  [
+    "Rafael Pepe Romano",
+    "rafaelpepe@usp.br",
+    12507571,
+    10,
+    10
+  ],
+  [
+    "Sara Pereira da Silva",
+    "sara22.pereira@usp.br",
+    11816341,
+    10,
+    0
+  ],
+  [
+    "Teodoro de Almeida Alkmim Pimenta",
+    "teopimenta@usp.br",
+    12507630,
+    0,
+    10
+  ],
+  [
+    "Thiago Simoni",
+    "thiago.simoni@usp.br",
+    13838774,
+    10,
+    10
+  ],
+  [
+    "Veronica Maia Schlickmann Guibu",
+    "veronicaguibu@usp.br",
+    14610153,
+    10,
+    10
+  ],
+  [
+    "Vitor Barbosa Silva",
+    "vitor.bsilva@usp.br",
+    9825991,
+    10,
+    0
+  ],
+  [
+    "Yasmim Aparecida Silva Almeida",
+    "yasmim.aparecida@usp.br",
+    14612631,
+    10,
+    10
+  ]
+]

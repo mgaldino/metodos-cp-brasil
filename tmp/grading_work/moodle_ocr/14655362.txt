@@ -1,0 +1,477 @@
+
+===== page_001_bot.png =====
+Fonte dos dados: base BASE. cargos2.x1sx, obtida do repositório https: //github. com/nayalbrecht/burocraciaBR,
+aba BASE, cargos (dados) e aba Codebook (dicionário de variáveis) .
+Data de acesso: 02/07/2026.
+àf (ldir.exists("dados*)) dir.create("dados”)
+url base <- "hitps://rau.githubusercontent.con/nayalbrecht/burocraciaBR/nain/BASE, cargos2.x1sx"
+destino <- "dados/BASE, cargos2.x1sx”
+4f (file exists(destino)) (
+download .file(url. base, destino, mode = "ub")
+>
+dados <- read excel(destino, sheet = "BASE cargos")
+codebook <- read excel (destino, sheet = "Codebook")
+nrow(dados)
+as (1) 1038
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_001_mid.png =====
+reator ci trio ras pre e cep nr tr E terna cer ormcaco ease pão etnia]
+Pecuária e Abastecimento (MAPA) e o Ministério da Cultura (MinC), no período de 2011 a 2021.
+Qual é a unidade de análise da base? A nomeação, e não o indivíduo.
+O que significa uma linha da base? Cada linha corresponde a uma nomeação: um indivíduo ocupando
+um cargo específico, em um órgão específico, em um momento específico.
+Por que à mesma pessoa pode aparecer mais de uma vez? Porque uma mesma pessoa pode ser
+nomeada para mais de um cargo ao longo do período analisado, seja em momentos diferentes, seja em cargos
+ou órgãos diferentes. Como a unidade de análise é a nomeação, isso gera múltiplas linhas para o mesmo id.
+Quais são as duas pastas comparadas no artigo? MAPA (Agricultura) e MinC (Cultura). Historica-
+mente, o MAPA foi uma pasta mais partidarizada, enquanto o MinC concentrou nomeações mais associadas
+a critérios distintos, o que motiva a comparação proposta pelo artigo.
+2. Leitura e validação dos dados
+Fonte dos dados: base BASE cargos2.x1sx, obtida do repositório https: //github. com/nayalbrecht /burocraciaBR,
+aba BASE, cargos (dados) e aba Codebook (dicionário de variáveis).
+Data de acesso: 02/07/2026.
+if (idir.exists("dados")) dir.create(“dados”)
+
+Alguns arquivos neste envio só podem ser acessados através de download direto. "2/7/2485. cargos2.x1sx
+
+if (lfile.exists(destino)) (
+
+===== page_001_top.png =====
+Avaliação Inferência Básica |
+Larissa Garcez
+2026-07-02
+1. Artigo, pergunta e unidade de análise
+Qual é a pergunta geral do artigo? O artigo investiga o grau de politização das nomeações na burocracia.
+trt ro o o o o “e sério da Agricultura,
+a 2021.
+É Alguns arquivos neste envio só podem ser acessados através de download direto. pe com
+l
+O que significa uma linha da base? Cada linha corresponde a uma nomeação: um indivíduo ocupando
+
+===== page_002_bot.png =====
+vars relevantes <- c(“exp adn”, “exp car”, “nivel*, “instr”, “indicacao")
+na tab <- sapply(dados[vars relevantes], function(x) sun(is.na(x)))
+nactab <- data.frane(variavel = names(na tab), n ausentes = as.numeric(na tab))
+Xable(na tab, caption = "Tabela 3. Número de valores ausentes por variável.*)
+“Tabela 2: Tabela 3. Número de valores ausentes por variável.
+
+variavel n ausentes
+
+exp adm 0
+
+exp car 1
+
+nivel o
+
+instr o
+
+indicacao o
+
+===== page_002_mid.png =====
+tab orgao <- dados 1%
+count (orgao sup, name = “n noncacoes*) 1%
+arrange(desc(n nomeacoes))
+Xable(tab orgao, caption = "Tabela 2. Número de noncações por órgão superior (orgao. sup).*)
+Tabela 1: Tabela 2. Número de nomeações por órgão superior
+(orgao sup).
+orgao sup nm momeacoes
+mapa 525
+mine 305
+meti us
+vars relevantes <- c("exp adm”, “exp car", "nivel", “instr”, “indicacao")
+na tab <- sapply(dados[vars relevantes], function(x) sun(is.na(x)))
+na tab <- data.frame(variavel = names(na tab), n ausentes = as.nuneric(na tab))
+PO)
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_002_top.png =====
+ncol (dados)
+es (1) 26
+names (dados)
+*s [1) “orgao sup" "setor" "chave" “ide
+48 [5] “cargo* “funcao” enivel" “instrt
+*s [9] “area” “inst ensino” “inst origem" “car pub"
+48 [13] "partido" "cargo ele" “lid part" “exp ado"
+48 [17] “exp car" “exp mor” “exp soc" nu es
+48 [21) “partido pr” “partido ministro" "indicacao” “entrada”
+48 [25] “saida” “pera”
+abunda 1 A qu reomeni IOAS ehas Lnomannâos) a 98 smriâumia
+
+arrange(desc(n nomeacoes))
+
+===== page_003_bot.png =====
+A checagem inicial revelou duas inconsistências relevantes. Primeiro, a variável exp. ads, que segundo
+o codebook deveria ser estritamente binária (1 = teve experiência administrativa prévia, O = não teve),
+apresentava três valores digitados como 1 (com um acento grave anexado, provavelmente decorrente de um
+erro de digitação ou de exportação da planilha) e um único caso codificado como 3, sem correspondência
+definida no codebook. Os valores “1 foram recodificados para 1, por serem inequivocamente uma variação
+do valor esperado; já o valor 3 foi tratado como ansente, por não haver base documental para interpretá-lo.
+Segundo, a variável exp. car apresentava tanto valores NA quanto <NA>, sugerindo que parte dos valores
+ausentes foi registrada como o texto literal “NA” em vez de célula vazia, algo a considerar caso essa variável
+seja usada em análises futuras.
+dados <- dados 1>%
+mutate(
+exp adm limpo = case uhen(
+trimus(geub(""”, “", as.character(exp adn))) == "1" - 1,
+trinvs(as.character(exp adm)) == "0" - 0,
+TRUE - NA real.
+,
+,
+table(dadosSexp. adm limpo, uselA = “ifany*)
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+Se DS E
+as 652 275 111
+table(dadosSinstr, useNA = “ifany")
+“
+“ doutorado especializacao graduacao mestrado na
+“ 159 203 1 259 ss
+“ superior tecnico
+“ 287 2%
+table (dadosSindicacao, useNh = "itany*)
+“
+4% Bolsonaro Lula Rousseff Temer
+“ 396 sr as 204
+A checagem inicial revelou duas inconsistências relevantes. Primeiro, a variável exp. adm, que segundo
+o codebook deveria ser estritamente binária (1 = teve experiência administrativa prévia, O = não teve),
+apresentava três valores digitados como “1 (com um acento grave anexado, provavelmente decorrente de um
+erro de digitação ou de exportação da planilha) e um único caso codificado como 3, sem correspondência
+definida no codebook. Os valores “1 foram recodificados para 1, por serem inequivocamente uma variação
+do cniao memmandan té — abio 9 Et foco do mma neranto mom 3 nano bone domemamtal para interpretáco.
+E E j ne parte dos valores.
+i Alguns arquivos neste envio só podem ser acessados através de download direto. (ur caso essa variável
+|
+
+===== page_003_top.png =====
+table(dadostexp adm, useNA = “ifany*)
+“
+
+mo 0 13 NA
+
+* 36895 111
+table(dadosSexp. car, useNA = “ifany")
+“
+
+moo 12 3 5 Nic
+es 17 S1 2500 253 75 1
+table(dados$nivel, useNA = “ifany*)
+“
+
+===== page_004_bot.png =====
+48 4 Atibble: 2x4
+48 orgao sup n validos n com exp proporcao
+8 <chr cinto cinto <a
+48 1 mapa 524 482 0.920
+48 2 mine asa a12 os
+calcula ác <- function(x, n, conf = 0.95) (
+p <x/n
+z <- quora(i - (1 - conf) / 2)
+se <-sqrtlpe (1-9) /m)
+ne <- 2» se
+elprop =p, se=se,me=ne,icinf=p-ne,icsup=p+ne)
+>
+ic mapa <- calcula ic(resumo expên com exp[resuno expSorgao sup == "napa'],
+resumo, expsn. validos resumo. exporgao. sup == “napa”])
+ic minc <- calcula ic(resumo expsn com explresuno expiorgao. sup == “ninc"),
+resumo expsn validos (resumo exporgao sup == “ninc"])
+tabela final <- resumo exp >%
+mutate(
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+dados 2p <- dados 1%,
+filter (orgao. sup Kin c('mapa”, “mincr))
+resuno exp <- dados 2p >
+filter(!is.na(exp adm Límpo)) “>
+group by(orgao sup) 15%
+summarise(
+n validos = n(),
+n.com exp = sun(exp adm limpo == 1),
+proporcao = n com exp / n validos
+,
+resumo. exp
+88 8 A tibblo: 2x4
+4 orgao sup n valídos n com exp proporcao
+ss ch cin cin <a
+481 mapa sz a82 0.920
+48 2 minc asa 312 0.881
+calenta de <- fumetiontr mn conf = 0.95) 4
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+me <-z+se
+
+===== page_004_top.png =====
+“
+e 0 1
+e es sos 12
+3. Tabela descritiva: experiência administrativa
+De acordo com o Codebook, exp. adm já indica diretamente se a pessoa nomeada teve experiência prévia
+em órgãos da administração pública (1 = SIM, O = NÃO), de modo que a versão limpa exp. ade Limpo foi
+utilizada diretamente como a variável binária de interesse, sem necessidade de recodificação adicional além
+do tratamento de inconsistências já descrito.
+unique(dadosSorgao. sup)
+ss [1) “minc" “mapa” "meti
+à Alguns arquivos neste envio só podem ser acessados através de download direto. ]
+|
+
+===== page_005_bot.png =====
++ HO: p mapa = p mine (a proporção de nomeações com experiência administrativa prévia é igual nas
+duas pastas).
++ Hi: p mapa diferente de p mine (as proporções são diferentes).
+x mapa <- resumo expên com explresuno. expsorgao sup == "napa”)
+n.mapa <- resumo exp$n validos (resumo, expsorgao. sup == "zapa”]
+x minc <- resumo exp$n com exp[resuno, expiorgao. sup == "=inc")
+mminc <- resuno, exp$n validos [resuno, expSorgao, sup == "ainc"]
+testei <- prop.test(
+x = c(x mapa, x minc),
+n = c(n mapa, nminc),
+correct = FALSE
+,
+testei
+“
+4º 2-sample test for equality of proportions vithout continuity correction
+“
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_005_mid.png =====
+Entre as nomeações válidas, 91,98% das ocorridas no MAPA e 88,14% das ocorridas no MinC envolveram
+indivíduos com experiência prévia em órgãos da administração pública. O intervalo de confiança de 95%
+construído para cada proporção significa que, se o processo de amostragem fosse repetido inúmeras vezes
+nas mesmas condições, aproximadamente 95% dos intervalos construídos dessa forma conteriam a verdadeira
+proporção populacional de nomeações com experiência administrativa naquela pasta. No caso do MAPA,
+o intervalo foi de 89,66% a 94,31%; no MinC, de S477% a 91,50%. A margem de erro, de 2,32 pontos
+percentuais no MAPA e +3,37 no MinC, expressa a imprecisão da estimativa pontual decorrente do tamanho
+amostral: como o MinC tem menos observações válidas (354 contra 524 do MAPA), sua margem de erro é
+proporcionalmente maior. Vale notar que os dois intervalos se sobrepõem em uma faixa considerável (entre
+89,66% e 91,50%), o que já sugere que a diferença entre as pastas pode não ser estatisticamente robusta,
+hipótese testada formalmente na seção seguinte.
+4. Primeiro teste de hipótese bivariado
+
++ HO: p mapa = p mine (a proporção de nomeações com experiência administrativa prévia é igual nas
+
+duas pastas).
+
++ Hi: p mapa diferente de p mine (as proporções são diferentes).
+x mapa <- resumo exp$n com exp[resuno, expsorgao sup == "=apa")
+n.mapa <- resumo exp$n validos [resuno, expsorgao sup == "=apa")
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+: vestes <= propvesr
+ES E
+
+===== page_005_top.png =====
+margem erro = c(ic mapa['ne'), ic minc['no')),
+ic inf = e(ic mapa[*ic inf], ic minc(*ic inf]),
+ic sup = (ic mapa(“ic sup"), ic minc[*ic sup'))
+,
+Xable(tabela final, diígits = 3,
+caption = "Tabela 4. Proporção de noneações com experiência administrativa prévia, por pasta, com
+Tabela 3: Tabela 4. Proporção de nomeações com experiência
+administrativa prévia, por pasta, com IC 95% e margem de erro.
+orgao sup m validos un comexp — proporcao margem crro  icimf dc sup
+mapa 524 as? 0.920 0.023] 0897 0943
+mine ES az 0.881 0.034 0848 0915
+i Alguns arquivos envio só podem ser acessados através de download direto. ao MinC envolveram
+| i Alguns arquivos neste Pp a de 95%
+construido para cada proporção sigmihica que, se o processo de amostragem tosse repetido inúmeras vezes
+
+===== page_006_bot.png =====
+table(dados 2pSnivel, dados 2pSalto nível, uselA = “ifany")
+“
+“ 01
+e ass O
+“e 5 0246
+6 0 96
+“resumo nível <- dados 2p 5%
+tilter(!1s.na(alto nivel) il
+group by(orgao sup) 4>),
+summarise(
+n validos = n(),
+nalto = sun(alto nível == 1),
+proporcao = n alto / n validos
+)
+ic mapa n <- calcula ic(resuno nivel$n altofresuno nivelSorgao sup == “napa'),
+resumo, nivel$n validos [resumo nivel$orgao. sup == "zapa'])
+ic minc n <- calcula ic(resuno nivel$n alto[resuno nivel$orgao sup == "ninc"],
+5
+
+===== page_006_mid.png =====
+rp ns tio rtbês. repara acoes dio c Soria a  o i  i a ic o ecead
+considerando o contraste teórico entre as duas pastas discutido pelo artigo.
+5. Segundo teste de hipótese bivariado
+dados 2p <- dados 2p %>
+mutate(
+alto nivel = case uhen(
+nivel Xinf (5, 6) - 1,
+nivel == 4-0,
+TRUE - NA real.
+,
+,
+table(dados. 2pSnivel, dados 2p$alto nivel, useNA = “i£any*)
+“e
+“ oa
+* ass O
+“5 0246
+e 6 0 96
+resumo. nível <- dados 2p >
+tilter(!1s.na(alto nivel) 11
+
+===== page_006_top.png =====
+48 data: c(x mapa, x minc) out of c(n mapa, nminc)
+
+48 X-aquared = 3.6179, df = 1, p-valuo = 0.08716
+
+48 alternative hypothési: tvo.aided
+
+48 95 percent confidence interval:
+
+88 -0.00243815 0.07942094
+
+48 unção estimitas:
+
+e mpi pó?
+
+48 0.9198473 08813559
+
+O p-valor de 0,0572 indica a probabilidade de observarmos uma diferença de proporções tão grande quanto (ou
+
+maior do que) a diferença de 3,85 pontos percentuais encontrada entre MAPA e MinC, caso a hipótese nula,
+
+de que as proporções são de fato iguais nas duas pastas, fosse verdadeira. Como esse valor é (ligeiramente)
+
+superior ao nível de significância de 5%, não rejeitamos HO: não há evidência estatística suficiente, neste
+
+nível de confiança, para afirmar que a proporção de nomeações com experiência administrativa prévia difere
+
+entre as duas pastas. É importante notar, contudo, que o p-valor está muito próximo do limiar convencional
+
+de 0,05, e que o intervalo de confiança para a diferença ([-0,24 p.p.; 7,94 p.p.]) mal inclui o zero, um resultado
+
+que, embora não atinja significância estatística a 5%, não deve ser descartado como trrelevante, sobretudo
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+5. Seonndo teste de hinótese hivariado
+
+===== page_007_bot.png =====
+PSAMRINA
+“
+4% 2-sample test for equality of proportions vithout continuity correction
+“
+4% data: c(x.mapan, x mínc.n) out of c(n mapa n, nminc.n)
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: tuo.sided
+4% 95 percent confidence interval:
+48 -0.13365308 -0.00328014
+4% sample estimates:
+** propi prop2
+48 0.3561905 0.4246575
+A proporção de cargos de alto nível (nível 5 ou 6) foi de 35,62% no MAPA e 42,47% no MinC, uma diferença de
+aproximadamente 6,85 pontos percentuais. O teste de proporções resultou em Xº = 4,2658 e p-valor = 0,0389,
+abaixo do nível de significância de 5%: rejeitamos HO, havendo evidência estatística de que a proporção de
+cargos de alto nível é de fato maior no MinC do que no MAPA. O intervalo de confiança de 95% para a
+diferença ([-13,37 pps «0,33 p:p.]) não inclui o zero, reforçando essa conclusão. Substantivamente, uma
+diferença de quase 7 pontos percentuais parece relevante: sugere que o MinC concentra proporcionalmente
+mais nomeações em postos de maior hierarquia do que o MAPA, o que é compatível com a leitura do artigo.
+
+ê
+
+===== page_007_mid.png =====
+mapa 53 ISTO 0356 001 035 0397
+mine 365 155 0.425 0051 0374 0475
+
+x.mapa n <- resuro nível$n alto[resuno nivel$orgao. sup == "sapa")
+n mapa n <- resuro nivel$n validos [resuso nivelSorgao. sup == “sapa")
+xminc n <- resuro nivel$n alto[resuno nivel$orgao. sup == "ninc"]
+mminc.n <- resuno nivelSn validos [resumo nivelSorgao. sup == “ninc*)
+teste? <- prop.test(
+
+x = c(xmapan, x mincn),
+
+n = c(n mapa n, n ninc.n),
+
+correct = FALSE
+,
+teste?
+“
+4% 2-sample test for equality of proportions vithout continuity correction
+“
+4% data: c(x.mapan, x.míncn) out of c(n mapa n, nmínc.n)
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+4% alternative hypothesis: two. sided
+4% 95 percent confidence interval:
+48 -0.13365398 -0.00328014
+4% sample estimates:
+
+===== page_007_top.png =====
+resuno nivel$n validos [resumo nivel$orgao. sup == “sinc"))
+tabela nivel final <- resumo nivel 4>%
+mutate(
+margem erro = c(ic mapa n(*ne'], ic minc n("ne')),
+ic inf = c(ic mapa n["ic inf*), ic minc n(“ic int"),
+ic.sup = c(ic mapa n“ic sup"), ic minc n[“ic sup'])
+,
+Xable(tabela nivel final, digits = 3,
+caption = “Tabela 5. Proporção de cargos de alto nível (5 ou 6), por pasta, com IC 954.")
+Tabela 4: Tabela 5. Proporção de cargos de alto nível (5 ou 6), por
+pasta, com IC 95%.
+orgao sup nm validos n alto proporcao margem erro ie inf ic sup
+mapa 525; asT 0.356 001 0315 0397
+mine 365 155 0.425 0051 0374 0475
+
+===== page_008_bot.png =====
+*s 2 n dobrado 1048 0.008387572
+
+Mantendo à mesma proporção observada no MAPA (91,98%) e dobrando o número de observações de 524
+para 1048, o erro-padrão da estimativa caíria de 0,0119 para 0,0084, uma redução, mas não pela metade.
+Isso ocorre porque o erro-padrão de uma proporção é dado por SE = ((p(1-p)/n): como n aparece dentro
+de uma raiz quadrada, dobrar o tamanho amostral reduz o erro-padrão por um fator de 1//2 (= 0,71), e
+não por um fator de 1/2. Em outras palavras, o ganho de precisão obtido ao aumentar à amostra cresce a
+uma taxa decrescente, para reduzir o erro-padrão pela metade, seria necessário quadruplicar (e não apenas
+dobrar) o número de observações.
+
+|
+
+===== page_008_mid.png =====
++. Q que aconteceria se a amostra tosse maior *
+P.obs <- resumo. exp$proporcao[resuno exp$orgao. sup == "napa”)
+n.obs <- resumo, exp$n validos [resuno exp$orgao sup == "napa”]
+se original <- sqrt(p.obs + (1 - p.obs) / n.obs)
+sedobro  <- sqrt(pobs + (1 - p.obs) / (2 * n.obs))
+data.frane(cenario = c(*n original", “n dobrado),
+
+n= c(nobs, 2 + nbs),
+
+erro padrao = c(se original, se dobro))
+“ cenario n erro padrao
+44 1 n original 524 0.011861817
+442 n dobrado 1048 0.008387572
+Mantendo à mesma proporção observada no MAPA (91,98%) e dobrando o número de observações de 524
+para 1048, o erro-padrão da estimativa cairia de 0,0119 para 0,0084, uma redução, mas não pela metade.
+Esso ocorre porque o erro-padrão de uma proporção é dado por SE = /(p(1-p)/n): como n aparece dentro
+de uma raiz quadrada, dobrar o tamanho amostral reduz o erro-padrão por um fator de 1//2 (= 0,71), e
+não por um fator de 1/2. Em outras palavras, o ganho de precisão obtido ao aumentar à amostra cresce a
+uma taxa decrescente, para reduzir o erro-padrão pela metade, seria necessário quadruplicar (e não apenas
+dobrar) o número de observações.
+
+===== page_008_top.png =====
+de que as duas pastas seguem lógicas distintas de ocupação de cargos, ainda que a magnitude da diferença
+não seja avassaladora, ela é substantiva o suficiente para não ser tratada como ruído estatístico.
+
+6. Significância estatística e nível de significância
+
+Tomando o teste da Parte 5 como referência (p = 00389): a 10% de significância, a conclusão não mudaria,
+ainda rejeitaríamos HO, já que 0,0389 < 0,10. A 1%, porém, a conclusão se inverteria: como 0,0389 > 0,01,
+não rejeitaríamos mais HO nesse nível mais rigoroso. Esse exercício ilustra bem a diferença entre significância
+estatística e significância substantiva: o nível de significância (a) é um limiar arbitrário, escolhido pelo
+pesquisador antes da análise, e não uma propriedade intrínseca dos dados. Um mesmo resultado pode
+ser “estatisticamente significativo” ou não dependendo apenas dessa escolha convencional, o que reforça a
+importância de reportar o p-valor exato, e não apenas a decisão binária de rejeitar ou não rejeitar, e de
+sempre acompanhar essa decisão de uma avaliação da magnitude substantiva do efeito encontrado.
+
+7. O que aconteceria se a amostra fosse maior?
+
+P.obs <- resuno. exp$proporcao[resuno expforgao. sup == “napa']

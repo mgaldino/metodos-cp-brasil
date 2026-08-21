@@ -1,0 +1,1467 @@
+
+===== page_001_bot.png =====
+3. O que significa uma linha da base? Cada linha da base representa um evento de nomeação específico.
+Ela registra quem foi nomeado, para qual cargo (DAS ou FCPE de níveis 4 a 6), em que data e qual era
+o perfil biográfico (acadêmico, profissional e político) do burocrata naquele exato momento da ocupação do
+posto (ALBRECHT; RIBEIRO, 2025, p. 28, 29).
+
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+Como a unidade de análise é o evento de nomeação e não o indivíduo isoladamente, uma mesma pessoa pode
+aparecer em múltiplas linhas caso tenha sido nomeada para cargos diferentes ou tenha passado por processos
+de renomeação ao longo do período de 201 a 2021 (ALBRECHT; RIBEIRO, 2025, p. 29).
+
+5. Quais são as duas pastas comparadas no artigo?
+O estudo realiza uma análise comparada aprofundada entre o Ministério da Agricultura, Pecuária e Abastec-
+imento (MAPA) e o Ministério da Cultura (MinC) — tratando este último como ministério mesmo nos
+períodos em que sua estrutura foi reduzida ao status de Secretaria Especial (ALBRECHT; RIBEIRO, 2025,
+p. 4,6).
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_001_mid.png =====
+Freiiminares
+
+1. Qual é a pergunta geral do artigo?
+
+A questão central do artigo busca compreender quais são as motivações por trás das nomeações para cargos.
+públicos no Brasil e como o contexto institucional do presidencialismo de coalizão afeta as estratégias ado-
+tadas por presidentes e partidos (ALBRECHT; RIBEIRO, 2025, p. 1). O estudo analisa especificamente em
+que medida os perfis dos nomeados variam em órgãos responsáveis por políticas regulatórias, que teorica-
+mente seriam mais permeáveis a influências partidárias e de grupos de interesse (ALBRECHT; RIBEIRO,
+2025, p. 4).
+
+2. Qual é a unidade de análise da base?
+
+A unidade de análise fundamental da base de dados utilizada é a nomeação (ALBRECHT; RIBEIRO, 2025,
+p. 29).
+
+3. O que significa uma linha da base? Cada linha da base representa um evento de nomeação específico.
+Ela registra quem foi nomeado, para qual cargo (DAS ou FCPE de níveis 4 a 6), em que data e qual era
+o perfil biográfico (acadêmico, profissional e político) do burocrata naquele exato momento da ocupação do
+posto (ALBRECHT; RIBEIRO, 2025, p. 25, 29).
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+Como a unidade de análise é o evento de nomeação e não o indivíduo isoladamente, uma mesma pessoa pode
+
+===== page_001_top.png =====
+Relatório de Metodologia em Ciências Políticas |
+Nathan Fonseca
+2026-07-18
+Fonte dos dados: repositório GitHub nayalbrecht /burocraciaBR, arquivo BASE. cargos2.xisx. Data de
+acesso: 09 de julho de 2026.
+
+===== page_002_bot.png =====
+Após o carregamento, a função read excel() realiza a importação da planilha para um objeto do tipo
+data frame no R. Por fim, o objeto é renomeado como base bruta, enquanto a variável intermediária base
+é removida por meio da função rR(), mantendo apenas o objeto necessário para as etapas posteriores da
+análise.
+4º (curl::has internet (0)
+url <- “https://rav githubusercontent..com/nayalbrecht/burocraciaBR/nain/BASE. cargos2.x1sx*
+temp <- tempfile(fileext="x1sx")
+download. file(
+
+url,
+
+temp,
+
+mode="ub"
+,
+base <- read excol (temp)
+) else £
+
+===== page_002_mid.png =====
+A coleta dos dados foi realizada a partir do repositório original disponibilizado pelos autores no GitHub,
+garantindo a utilização da versão mais recente da base BASE, cargos2.x1sx. O arquivo contém 890 obser-
+vações referentes às trajetórias biográficas dos indivíduos nomeados para cargos de alto escalão (ALBRECHT;
+RIBEIRO, 2025, p. 3, 29).
+O código foi estruturado para permitir tanto o carregamento remoto quanto local da base de dados. Ini-
+cialmente, à função curl: :has, internet () verifica a disponibilidade de conexão com a intemet. Caso
+exista acesso à rede, o arquivo é baixado diretamente do repositório oficial dos autores por meio da função
+download.file(). Para isso, utiliza-se tempfile() na criação de um diretório temporário, evitando a
+geração de arquivos permanentes durante a execução do código.
+O download é realizado em modo binário (mode = "yb"), procedimento adequado para arquivos no formato
+Excel (.x1sx), pois preserva sua estrutura original.
+Na ausência de conexão, o código utiliza uma alternativa local, buscando o arquivo diretamente no diretório
+de dados do projeto. Essa estrutura permite a execução do relatório em diferentes ambientes, mantendo a
+reprodutibilidade da análise.
+Após o carregamento, a função read excel() realiza a importação da planilha para um objeto do tipo
+data frame no R. Por fim, o objeto é renomeado como base. bruta, enquanto a variável intermediária base
+é removida por meio da função rR(), mantendo apenas o objeto necessário para as etapas posteriores da
+àf (curl::has internet())(
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. J4SE. cargos? x1ex*
+
+temp <- tempfile(fileert="x1sx")
+
+===== page_002_top.png =====
+Bibliotecas utilizadas
+Inicialmente, foi criado um vetor contendo os pacotes necessários para a execução das etapas posteriores.
+Em seguida, um laço de repetição (for) verifica a presença de cada biblioteca no sistema. Caso determinado
+pacote não esteja instalado, o código realiza sua instalação automaticamente, incluindo suas dependências.
+Após essa etapa, as bibliotecas são carregadas por meio da função library(), disponibilizando as funções e
+recursos necessários para o tratamento, análise e visualização dos dados.
++ Nota: esse modelo de código, copiei de um modelo na internet. Vi ele enquanto estava estudando um
+curso de introdução à econometria no R, no youtube.
+Coleta da base
+3. Coleta e Carregamento dos Dados
+i ih ) i autores no GitHub,
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. à contéis 690 lar
+(ALBRECHT:
+RIREIRO 9075 m 2 90)
+
+===== page_003_bot.png =====
+í
+$ 1. Wâmero de Linhas e Colunas, 2. Nomes das Variáveis
+card
+pasteo(
+“A base apresenta “, nrov(base bruta), " línhas.la”,
+“A base apresenta *, ncol(base bruta), " colunas.”
+,
+,
+42. Nomes das variáveis.
+colnanes(base bruta)
+& 3. Número de observações por orgao sup.
+bases orgao <- split(
+base bruta,
+
+===== page_003_mid.png =====
+Inicialmente, foram utilizadas as funções nrow() e ncol() para identificar, respectivamente, o número de
+observações e variáveis presentes na base. O resultado esperado é de 890 linhas, correspondentes ao conjunto
+de nomeações analisadas pelos autores no período de 2011 a 2021 (ALBRECHT; RIBEIRO, 2025, p. 27).
+Essa etapa permite verificar se o carregamento do arquivo ocorreu corretamente e se a dimensão da base
+permanece consistente com a pesquisa original.
+Em seguida, o comando colnames(base bruta) foi utilizado para listar as variáveis disponíveis. Essa inspeção
+permite identificar a presença de informações fundamentais para a análise, como formação acadêmica, filiação
+partidária e experiência prévia na administração pública, ntilizadas pelos antores para caracterizar o perfil
+dos nomeados e sua relação com dimensões técnicas on políticas do recrutamento burocrático (ALBRECHT:
+RIBEIRO, 2025, p. 13, 29).
+Por fim, a função split() foi aplicada para segmentar a base de dados conforme a variável orgao. sup,
+criando subconjuntos específicos para cada órgão analisado. Os objetos foram posteriormente renomeados
+para facilitar sua manipulação nas etapas seguintes. Essa divisão permite concentrar a análise comparativa
+nos órgãos selecionados, especialmente o MAPA e o MinC, que apresentam, respectivamente, 525 e 365
+nomeações no período estudado (ALBRECHT; RIBEIRO, 2025, p. 38).
+1
+& 1. Wimero de Linhas e Colunas, 2. Nomes das Variáveis
+cat
+pasteo(
+RED a e Ve PE
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_top.png =====
+base <- read excel ("BASE cargos? x1sx*)
+x
+base bruta <- base
+re(base)
+Leitura da base
+Após o carregamento da base, foi realizada uma etapa inicial de inspeção e validação dos dados. Essa
+verificação tem como objetivo confirmar a integridade estrutural do arquivo importado e assegurar sua
+compatibilidade com a descrição metodológica apresentada no estudo original (ALBRECHT; RIBEIRO,
+2025).
+5 a . mente, o número de
+Alguns arquivos neste envio só podem ser acessados através de download direto... sudentes ao conjunto
+JEIRO, 2025, p. 27).
+Essa etapa permite verificar se o carregamento do arquivo ocorreu corretamente e se à dimensão da base
+
+===== page_004_bot.png =====
+EPA OR SE A SE
+identificar inconsistências de preenchimento e possíveis erros decorrentes do processo de coleta automatizada.
+Essa etapa é particularmente relevante devido às limitações apontadas pelos autores em relação às fontes.
+utilizadas, como o Diário Oficial da União (DOU) e o Portal da Transparência, que podem apresentar
+divergências entre registros (ALBRECHT; RIBEIRO, 2025, p. 78).
+Inicialmente, foi estabelecido um conjunto de regras de validação (regras) para definir os valores considerados.
+aceitáveis em cada grupo de variáveis. As variáveis binárias, utilizadas para representar características
+“como experiência no mercado (exp. mer), experiência no setor social (exp. soc), ocupação de cargo eletivo
+(cargo. ele) e liderança partidária (lid. part), foram restringidas aos valores O e 1 (ALBRECHT; RIBEIRO,
+2025, p. 31, 32).
+Para as variáveis categóricas e de escala, foram definidos limites específicos conforme a metodologia do estudo.
+A variável nivel foi restringida aos valores 4, 5 e 6, correspondentes aos níveis hierárquicos analisados na
+pesquisa, enquanto a variável exp. car seguiu a classificação estabelecida pelos autores para experiência em
+cargos comissionados (ALBRECHT: RIBEIRO, 2025, p. 28, 31).
+Antes da aplicação dos testes de consistência, o código realiza uma etapa de padronização dos dados. A
+função gsub() remove caracteres inseridos indevidamente durante a importação, como aspas e crases. Em
+seguida, valores armazenados como texto “NA” são convertidos para o formato de ausência reconhecido pelo
+R (NA), permitindo seu tratamento adequado em operações estatísticas. Por fim, a função as.numeric()
+realiza a conversão de variáveis textuais para o formato numérico quando necessário.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+ra ira nenErdA
+nrou(bases. orgaoSMINC BRUTA) ,
+“observações do Ministério da Cultura (MINC).*
+)
+,
+48 A base apresenta 1038 linhas.
+4% A base apresenta 26 colunas.A base apresenta 525 observações do Ministério da Agricultura, Pecuária
+4% A base apresenta 365 observações do Ministério da Cultura (MINC).
+Regras de validação
+Após a organização inicial da base, foi realizada uma etapa de validação e limpeza dos dados com o objetivo de
+identificar inconsistências de preenchimento e possíveis erros decorrentes do processo de coleta automatizada.
+Essa etapa é particularmente relevante devido às limitações apontadas pelos autores em relação às fontes.
+utilizadas, como o Diário Oficial da União (DOU) e o Portal da Transparência, que podem apresentar
+divergências entre registros (ALBRECHT; RIBEIRO, 2025, p. 78).
+Inicialmente, foi estabelecido um conjunto de regras de validação (regras) para definir os valores considerados
+aii acenda cn do ca sidneia md drimniania idea iss crnana dadas És cáraiterigticas
+5 E i o: ação de cargo eletivo
+à Alguns arquivos neste envio só podem ser acessados através de download direto. ;RECHT: RIBEIRO,
+Dara ne srariávnia catonóricas a da necala fnram definidos Renitos cenaríficns contvrma a metndolnsta de aetudo.
+
+===== page_004_top.png =====
+, base brutaforgao sup
+names (bases. orgao) <- c(
+"MAPA. BRUTA? ,
+"MCT BRUTA”,
+"MINC. BRUTA”
+,
+car(
+paste(
+“A base apresenta”,
+nrow(bases. orgaoSMAPA BRUTA) ,
+“observações do Ministério da Agricultura, Pecuária e Abastecimento (MAPA).n",
+,
+
+===== page_005_bot.png =====
+presentes nas variáveis. Após essa etapa, a função as.numerie() converte os valores tratados para o formato
+mumérico adequado. Esse procedimento garante que variáveis como experiência administrativa (exp. adm) e
+experiência social (exp. soc) sejam representadas corretamente como indicadores binários, contendo apenas
+os valores esperados para as análises posteriores.
+Tratando dos Agregados Binários
+O tratamento da base de dados foi realizado por meio de procedimentos manuais e automatizados, com
+o objetivo de corrigir inconsistências de preenchimento e padronizar o formato das variáveis utilizadas na
+análise. Essas correções são necessárias devido à possibilidade de ocorrência de erros durante a extração e
+organização de informações provenientes de bases governamentais, como o Diário Oficial da União (DOU) e
+o Portal da Transparência.
+Inicialmente, foi realizado um ajuste pontual na linha 577 da base. O comando base. tratamento/[UF*"]]
+< base. tratamento([“exp. soc”]] corrige um deslocamento identificado durante a inspeção dos dados, no
+qual uma informação referente à Unidade da Federação havia sido armazenada incorretamente na variável
+de experiência social.
+Posteriormente, foi aplicada uma rotina de limpeza nas variáveis binárias identificadas como problemáticas.
+Por meio da função gsub(), o código remove caracteres adicionais, como aspas e crases, que acompanhavam
+determinados valores e impediam sua correta interpretação pelo R como dados numéricos.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+Tratamento da Base
+Após a etapa de validação, foi realizado o tratamento dos dados com o objetivo de corrigir inconsistências.
+identificadas durante a inspeção da base. O procedimento combina ajustes pontuais e rotinas automatizadas.
+de limpeza, considerando possíveis problemas decorrentes da extração de informações provenientes de fontes
+governamentais, como o Diário Oficial da União (DOU) e o Portal da Transparência.
+Inicialmente, foi realizada uma correção específica na linha 577 da base. O comando base. tratamento|[“UF*”]]
+<- base. tratamento(["exp. soc”)] ajusta um deslocamento de coluna identificado durante a inspeção, no
+qual uma informação referente à Unidade da Federação havia sido registrada incorretamente na variável de
+Em seguida, foi aplicada uma rotina de limpeza das variáveis binárias por meio da função gsub(). O código
+percorre as variáveis selecionadas e remove caracteres inseridos indevidamente, como aspas e crases, que
+poderiam impedir o reconhecimento dos valores como números pelo R.
+Além disso, foi utilizada a expressão regular gsub(*[70-9]", **, .) para eliminar caracteres não numéricos.
+presentes nas variáveis. Após essa etapa, a função as.numerie() converte os valores tratados para o formato
+tumérico adequado. Esse procedimento garante que variáveis como experiência administrativa (exp. adm) e
+experiência social (exp. soc) sejam representadas corretamente como indicadores binários, contendo apenas
+os valores esperados para as análises posteriores.
+Tratando dos Agregados Rinários
+à Alguns arquivos neste envio só podem ser acessados através de download direto. automatizados, com
+
+| triáveis utilizadas na
+
+análise. Essas correções são necessárias devido à possibilidade de ocorrência de erros durante a extração e
+
+===== page_005_top.png =====
+E
+
+===== page_006_bot.png =====
+O tratamento dos valores ansentes foi realizado de forma seletiva, evitando a exclusão de observações por
+variáveis que não seriam utilizadas em determinada análise. Dessa forma, a estratégia adotada busca preser-
+var o maior número possível de casos, mantendo a representatividade do universo de nomeações analisado
+(ALBRECHT; RIBEIRO, 2025, p. 29).
+Inicialmente, foram definidas as variáveis consideradas relevantes para as análises posteriores (var relevantes).
+Esse conjunto inclui informações sobre o órgão superior (orgao. sup), experiência administrativa (exp adm),
+nível do cargo (nivel), identificador do indivíduo (id), instrução (instr) e indicação (indicacao). Essas
+variáveis correspondem aos principais elementos utilizados pelos autores para caracterizar o perfil dos
+nomeados (ALBRECHT; RIBEIRO, 2025, p. 29, 30).
+Em seguida, foi aplicada a função complete.cases() exclusivamente sobre essas variáveis selecionadas. O
+procedimento remove observações que apresentam valores ausentes apenas nos campos necessários para cada
+etapa da análise, evitando uma redução desnecessária da base completa. Dessa forma, os testes bivariados
+posteriores são realizados sobre um conjunto de dados consistente.
+A variável referente à experiência em cargos comissionados (exp. car) recebeu um tratamento específico. Foi
+criada uma base separada (base exp. car), na qual foram removidas observações sem informação disponível
+e aplicados filtros para manter apenas os valores pertencentes à escala definida pelos autores. Assim, per-
+maneceram somente os valores 0, 1, 2 € 5, correspondentes aos diferentes níveis de experiência prévia em
+cargos DAS/FCPE (ALBRECHT: RIBEIRO, 2025, p. 31).
+6
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+o base tratamento([variável]],
+fixed = TRUE)
+base tratanento[[variável]] < gsub("'1º, “1º,
+base tratamento[[variável]],
+fixed = TRUE)
+base tratamento [variável] <- as.museric(
+Esub("["0-9]*, “”, base tratamento([variável]])
+,
++
+,
+Tratando os valores NA na base.
+O tratamento dos valores ausentes foi realizado de forma seletiva, evitando a exclusão de observações por
+variáveis que não seriam utilizadas em determinada análise. Dessa forma, a estratégia adotada busca preser-
+var o maior número possível de casos, mantendo a representatividade do universo de nomeações analisado
+(ALBRECHT; RIBEIRO, 2025, p. 29).
+Inicialmente, foram definidas as variáveis consideradas relevantes para as análises posteriores (var relevantes).
+istrativa (exp adm),
+à. Alguns arquivos neste envio só podem ser acessados através de download direto... (inicacao) Essas
+eterizar o perf
+nomeados (ALBRECHT; RIBEIRO, 2025, p. 29, 30).
+
+===== page_006_top.png =====
+Além disso, foi utilizada a expressão regular gsub(*[0-9)”, **, -.) para remover todos os caracteres não
+numéricos presentes nas entradas. Após essa etapa, a função as.numeric() converte os valores tratados para
+o formato numérico. Esse procedimento garante a padronização das variáveis binárias, como experiência
+administrativa (exp adm) e experiência social (exp soc), mantendo apenas os valores esperados de O e 1
+para as análises estatísticas posteriores.
+«
+base tratamento <- base bruta
+4 Somente por garantia. Na pasta de observações da base, a UF surgiu em ezp soc.
+& Alteres por via das dúvidas, mas no relatório não fez diferença alguma.
+base tratamento [["UF+"]] [577] <- base tratamento[[“exp soc"]) [877]
+for (variável in observações base[["agregado binário"]]Svariável)
+hasa tratamento! variável <= esmhtroso. vs
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+base tratamento([variável]] <- gsub("'1", “1º,
+
+===== page_007_bot.png =====
+O resultado dessa operação é atribuído ao objeto base por meio do operador <-, que passa a representar
+a base definitiva utilizada nas análises bivariadas (CRAWLEY, 2007, p. 110). Essa versão contém apenas
+as observações consideradas válidas após o tratamento dos valores ausentes e as variáveis necessárias para a
+investigação, incluindo orgao. sup, exp. adm, nivel, id, instr e indicacao.
+
+base tratamento NA <- base tratamento(, var relevantes]
+
+base <- base tratamento NA
+Criando listas de armazenamento.
+Após a definição da base de análise, foi realizada uma ctapa de organização e segmentação dos dados, com
+o objetivo de estruturar diferentes versões da base e facilitar sua utilização nas análises posteriores.
+Inicialmente, foi criada uma lista (base. gerais) para armazenar as principais versões do conjunto de dados: a
+base bruta original, a base tratada utilizada nas análises gerais e à base específica para análise da variável de
+experiência em cargos comissionados (exp. car). A utilização de listas permite organizar diferentes objetos
+em uma única estrutura, facilitando o acesso e a manipulação dos dados durante o desenvolvimento do código
+(CRAWLEY, 2007, p. 73).
+
+ê
+
+===== page_007_mid.png =====
+base exp car <- base exp car[
+tis .na(base exp. carSexp. car) &
+base exp. carsexp. car Zini c(O, 1, 2, 5),
+
+1
+Seleção de variáveis relevantes para a análise.
+Após o tratamento dos dados, foi realizada uma etapa de seleção das variáveis utilizadas nas análises posteri-
+ares, O objetivo dessa operação é restringir a base ao conjunto de informações necessárias para a comparação
+dos perfis de profissionalização e atuação política entre os órgãos analisados, especialmente o MAPA eo MinC.
+A seleção foi realizada por meio do comando base tratamentol, var. relevantes), utilizando a estrutura de
+indexação por colchetes do R. Nesse formato, o espaço anterior à vírgula representa a seleção de linhas e,
+por estar vazio, indica que todas as observações devem ser mantidas. Após a vírgula, o vetor var relevantes.
+especifica as colunas que serão preservadas no novo objeto (CRAWLEY, 2007, p. 116).
+O resultado dessa operação é atribuído ao objeto base por meio do operador <-, que passa a representar
+a base definitiva utilizada nas análises bivariadas (CRAWLEY, 2007, p. 110). Essa versão contém apenas
+as observações consideradas válidas após o tratamento dos valores ausentes e as variáveis necessárias para a
+investigação, incluindo orgao. sup, exp. adm, nivel, id, instr e indicacao.
+
+base tratamento NA <- base tratamento(, var relevantes]
+
+base <- base tratamento NA
+Criando listas de armazenamento.
+
+===== page_007_top.png =====
+Esse procedimento garante que cada variável seja analisada considerando apenas observações válidas para.
+seu respectivo objetivo, preservando informações relevantes da base original.
+var relevantes <- c("orgao sup", "exp ada”, "nivel", "id", “instr*, "indicacao”)
+base tratamento <- base tratamento(, c(var relevantes, “exp car')]
+base tratamento <- base tratamento[
+complete .cases (base tratanento[, var relevantes]),
+E]
+& Criando base específica para ezp car.
+base, exp. car <- base tratamento
+base exp car <- base exp car(
+tis.na(base exp carsexp car) &
+base, exp. carsexp. car inf c(O, 1, 2, 5),
+1
+
+===== page_008_bot.png =====
+observações baseSbase tratamento prim <- base
+ra(var relevantes,
+base tratamento NA,
+base tratamento,
+base exp car,
+bases. tratadas,
+bases exp car)
+Hipóteses Bivariadas
+Esta seção marca a transição da limpeza de dados para à fase de inferência estatística bivariada. O objetivo
+é preparar as estruturas que permitirão testar as hipóteses de que os perfis burocráticos variam conforme a
+natureza das políticas públicas e as estratégias de recrutamento de cada ministério (ALBRECHT; RIBEIRO,
+2025, p. 16, 23).
+s
+
+===== page_008_mid.png =====
+bases tratadas <- split(base,
+baseSorgao, sup)
+names(bases tratadas) <- c("MAPA TRATADA”,
+"HCTI. TRATADA”,
+"MINC. TRATADA")
+bases exp car <- split(base exp car,
+base, exp. carSorgao. sup)
+names (bases. exp. car) <- c("HAPA EXP CAR",
+"NCTI EXP-CARº,
+"MINC EXP. CAR")
+observações baseSbase tratamento prim <- base
+ra(var relevantes,
+base, tratamento NA,
+base, tratamento,
+base, exp car,
+bases tratadas,
+
+===== page_008_top.png =====
+Em seguida, a função split() foi utilizada para dividir a base tratada de acordo com a variável orgao sup,
+criando subconjuntos correspondentes aos diferentes órgãos presentes na base. Essa segmentação permite
+isolar as observações referentes ao MAPA e ao MinC, conforme definido pela estratégia analítica da pesquisa
+e pelos critérios apresentados na avaliação (2026, p. 778).
+Após a divisão, os subconjuntos foram renomeados como MAPA 'TRATADA e MINC. TRATADA, facili-
+tando a identificação das bases utilizadas nos cálculos de proporção e nos testes de hipótese relacionados às
+diferenças entre os órgãos analisados (ALBRECHT; RIBEIRO, 2025, p. 28, 38).
+Por fim, foi realizada uma etapa de organização do ambiente de trabalho por meio da função rm(), respon-
+sável pela remoção de objetos temporários e variáveis intermediárias que deixaram de ser necessárias. Esse
+procedimento reduz à possibilidade de conflitos entre objetos e contribui para uma execução mais organizada.
+do código (CRAWLEY, 2007, p. 8).
+base gerais <- list("BASE BRUTA” = base bruta,
+“BASE TRATADA” = base,
+“BASE EXP CAR" = base exp. car)
+bases tratadas <- split(base,
+baseforgao. sup)
+
+===== page_009_bot.png =====
+Ed
+names (bases. brutas) <- c(
+"MAPA BRUTA”,
+"HCTI BRUTA”,
+"MINC. BRUTA”
+5)
+* Separação da base tratada geral por órgão
+bases tratadas <- split(
+dase,
+daseSorgao. sup
+,
+names (bases tratadas) <- c(
+"MAPA TRATADA GERAL",
+"HCTI TRATADA. GERAL",
+"MINC. TRATADA, GERAL"
+,
+9
+
+===== page_009_mid.png =====
+RR E E A E
+Em seguida, todas as segmentações foram agrupadas no objeto bases. orgao por meio da função list(). Essa
+organização permite armazenar diferentes conjuntos de dados em uma única estrutura e facilita a aplicação
+de procedimentos antomatizados sobre grupos com características semelhantes (CRAWLEY, 2007, p. 73,
+132).
+
+Por fim, os objetos temporários utilizados durante o processo foram removidos com a função rm(), mantendo
+no ambiente apenas a estrutura consolidada necessária para as etapas seguintes da análise. Essa prática
+contribui para uma maior organização do código e reduz possíveis conflitos entre objetos durante a execução
+do relatório (CRAWLEY, 2007, p. 8).
+& Separação da base bruta por órgão
+bases brutas <- split(
+base bruta,
+base brutaSorgao. sup
+,
+names(bases brutas) <- c(
+"MAPA BRUTA”,
+PHCTI BRUTA”,
+"MINC BRUTA”
+,
+& Separação da base tratada geral por órgão
+hasca tratados <= anlitt
+
+===== page_009_top.png =====
+Organização das bases por órgão
+
+Para a realização das análises comparativas entre o MAPA e o MinC, conforme definido pela Avaliação de
+Métodos (2026, p. 738), a base de dados foi segmentada em diferentes conjuntos organizados por órgão
+superior.
+
+A função split() foi utilizada em três etapas distintas para criar listas de data frames agrupadas pela variável
+orgao. sup. Essa estrutura permite separar os dados conforme diferentes momentos do tratamento e análise:
+Bases brutas: preservadas para conferência dos dados originais e comparação com os quantitativos apresenta-
+dos pelos autores (ALBRECHT; RIBEIRO, 2025, p. 28). Bases tratadas gerais: compostas pelas observações
+após os procedimentos de limpeza e remoção de valores ausentes nas variáveis necessárias para as análises.
+Bases de experiência de carreira (exp. car): conjunto específico utilizado para analisar a trajetória profis-
+sional dos nomeados, mantendo apenas os valores pertencentes à escala definida pelos antores (0, 1, 2 e 5)
+(ALBRECHT; RIBEIRO, 2025, p. 31).
+
+Após a criação das listas, a função names() foi utilizada para atribuir identificadores aos objetos gerados,
+como MAPA TRATADA GERAL e MINC TRATADA GERAL. Essa etapa facilita a manipulação das
+bases e reduz o risco de utilização incorreta dos subconjuntos durante os testes estatísticos posteriores.
+
+Em seguida, todas as segmentações foram agrupadas no objeto bases. orgao por meio da função list(). Essa
+organização permite armazenar diferentes conjuntos de dados em uma única estrutura e facilita a aplicação
+de procedimentos antomatizados sobre grupos com características semelhantes (CRAWLEY, 2007, p. 73,
+
+===== page_010_bot.png =====
+Experiência administrativa por órgão
+A tabela descritiva foi construída com o objetivo de comparar a proporção de nomeados com experiência
+administrativa prévia entre os órgãos analisados (MAPA, MCTI e MinC). Para isso, o código consolida as
+informações em um único objeto (observações. orgao), reunindo medidas descritivas e intervalos de confiança.
+para cada grupo.
+O cáleulo foi automatizado por meio da função map. dbl(), pertencente ao pacote purrr do conjunto tidyverse.
+Essa função percorre a lista de bases selecionadas (bases. teste) e aplica os mesmos procedimentos estatísticos.
+a cada órgão.
+Inicialmente, a quantidade de indivíduos com experiência administrativa é obtida pela soma da variável
+binária exp adm. Como essa variável assume valores O e 1, a expressão sum(-x$exp adm) corresponde ao
+número de nomeações que apresentam experiência prévia na administração pública (ALBRECHT; RIBEIRO,
+2025, p. 31). O tamanho da amostra é calculado pela função nrow(), considerando apenas as observações
+válidas após o tratamento dos valores ausentes (AVALIAÇÃO, 2026, p. 703).
+Além das estatísticas descritivas, o código calcula intervalos de confiança de 95% para as proporções esti-
+madas. Para isso, utiliza-se a aproximação normal da distribuição amostral da proporção. O valor crítico
+é obtido pela função quorm(0.975), correspondente aproximadamente a 1,96 para um nível de confiança de
+95% (HEISS, 2020, po. 544).
+
+10
+
+===== page_010_mid.png =====
+& Consolidação das bases organizadas
+bases orgao <- líst(
+
+BASES, BRUTAS = bases brutas,
+
+BASES, TRATADAS = bases, tratadas,
+
+BASES EXP. CAR = bases, exp. car
+,
+ra(
+
+bases brutas,
+
+bases tratadas,
+
+bases exp. car
+,
+Experiência administrativa por órgão
+A tabela descritiva foi construída com o objetivo de comparar a proporção de nomeados com experiência
+administrativa prévia entre os órgãos analisados (MAPA, MCTI e MinC). Para isso, o código consolida as
+informações em um único objeto (observações. orgao), reunindo medidas descritivas e intervalos de confiança
+para cada grupo.
+O cáleulo foi automatizado por meio da função map. dbl(), pertencente ao pacote purrr do conjunto tidyverse.
+Essa função percorre a lista de bases selecionadas (bases. teste) e aplica os mesmos procedimentos estatísticos
+a cada órgão.
+
+===== page_010_top.png =====
+& Separação da base tratada de experiência de carreira |
+bases exp car <- split(
+
+base geraisSBASE EXP.CAR,
+
+base geraisSBASE. EXP. CAR$orgao sup
+5)
+names(bases exp. car) <- c(
+
+"MAPA TRATADA EXP.CAR",
+
+"NCTI TRATADA EXP.CAR",
+
+"MINC. TRATADA, EXP. CAR”
+,
+4 Consolidação das bases organizadas
+bases orgao <- 1ist(
+
+===== page_011_bot.png =====
+& Proporção de esperiência administrativa
+observações. orgaoSprop. exp. adm <-
+observações. orgaoStotal. exp. adm /
+observações. orgaoStotal. obs
+4 Intervalo de confiança de 95%
+z <- quorn(0.975)
+observações orgaoSmargem erro exp adm <-
+= + sqrt(
+observações, orgaoSprop. exp. adm +
+(1 - observações. orgaoSprop. exp. adm) /
+observações. orgaoStotal. obs
+,
+u
+
+===== page_011_mid.png =====
+b) o o
+E]
+& Número de indivíduos com esperiência administrativa
+observações orgaoStotal exp adm <- map dbl(
+bases testo,
+- sun(.xSexp. ada)
+,
+observações, orgaoStotal. obs <- map dbl(
+bases testo,
+nrou
+,
+& Proporção de experiência administrativa
+observações. orgaoSprop. exp adm <-
+observações. orgaoStotal. exp. ade /
+observações. orgaoStotal. obs
+& Intervalo de confiança de 95%
+
+===== page_011_top.png =====
+Dessa forma, a tabela permite comparar não apenas os valores observados de experiência administrativa,
+mas também a precisão das estimativas para cada órgão analisado.
+& Criando tabela inicial dos órgãos
+observações orgao <- data.frame(
+orgao sup = C("MAPA", "MCTI", "MINC")
+,
+& Selecionando as bases tratadas utilizadas na análise
+bases, teste <- bases orgaoSBASES, TRATADAS(
+e
+“MAPA TRATADA. GERAL",
+“MCTI TRATADA. GERAL",
+"MINC. TRATADA. GERAL"
+,
+]
+
+===== page_012_bot.png =====
+estatisticamente significativa na proporção de nomeações com experiência administrativa entre o MAPA e o
+MinC.
+As hipóteses formuladas foram:
+Hipótese mula (H): a proporção de nomeações com experiência administrativa é igual nos dois órgãos
+analisados, ou seja, não há diferença entre as proporções do MAPA e do MinC (AVALIAÇÃO, 2026, p. 652).
+Hipótese alternativa (H ): as proporções de nomeações com experiência administrativa são diferentes entre
+MAPA e MinC (AVALIAÇÃO, 2026, p. 652).
+O teste foi implementado no R por meio da função prop.test(), que realiza uma comparação entre duas pro-
+porções independentes utilizando uma aproximação baseada na distribuição qui-quadrado (2) (CRAWLEY,
+2007, p. 301; HEISS, 2020, p. 644).
+Para a execução do teste, o argumento x recebe o número de casos positivos, isto é, o número de nomeações
+com exp. adm = 1 em cada órgão. Já o argumento n corresponde ao número total de observações válidas de
+cada grupo, obtido a partir da base previamente tratada. Dessa forma, o teste utiliza exatamente os mesmos
+dados empregados na construção da tabela descritiva (HEISS, 2020, p. 487).
+O parâmetro conflevel = 0.95 estabelece um intervalo de confiança de 95%, equivalente a um nível de
+significância de 5% ( = 0,05). Além disso, foi utilizado o argumento correct = FALSE, desativando a
+correção de continuidade de Yates. Essa escolha se justifica pelo tamanho da amostra analisada, no qual a
+aproximação assintótica do teste apresenta desempenho adequado (CRAWLEY, 2007, p. 306).
+
+12
+
+===== page_012_mid.png =====
+de nomeação e não aos indivíduos. Dessa forma, um mesmo servidor pode aparecer mais de uma vez na base
+caso tenha sido nomeado para diferentes cargos ao longo do período analisado (ALBRECHT; RIBEIRO,
+2025, p. 29).
+
+A margem de erro indica a precisão da estimativa da proporção observada em cada órgão. Em geral, amostras
+com maior número de observações produzem margens de erro menores e, consequentemente, estimativas mais
+precisas (HEISS, 2020).
+
+Por sua vez, o intervalo de confiança fornece uma medida da incerteza associada à proporção estimada. A
+comparação entre os intervalos dos diferentes órgãos auxilia na avaliação das diferenças observadas, embora
+a verificação formal de significância estatística deva ser realizada por meio do teste de hipótese apresentado
+Teste de diferença entre proporções
+
+Após a construção da tabela descritiva, foi realizado um teste de hipótese para verificar se existe diferença
+estatisticamente significativa na proporção de nomeações com experiência administrativa entre o MAPA e o
+MinC.
+
+As hipóteses formuladas foram:
+
+Hipótese mula (H): a proporção de nomeações com experiência administrativa é igual nos dois órgãos
+analisados, ou seja, não há diferença entre as proporções do MAPA e do MinC (AVALIAÇÃO, 2026, p. 652).
+Hipótese alternativa (H ): as proporções de nomeações com experiência administrativa são diferentes entre
+MAPA e MinC (AVALIAÇÃO, 2026, p. 652).
+
+O teste foi implementado no R por meio da função prop.test(), que realiza uma comparação entre duas pro-
+porções independentes utilizando uma aproximação baseada na distribuição qui-quadrado (2) (CRAWLEY,
+2007. mn 201: HEISS. 2020. n 6441
+
+===== page_012_top.png =====
+observações orgao$IC. inf exp adm <-
+
+observações. orgaoSprop. exp. adm -
+
+observações. orgaoSuargem erro exp. ada
+observações. orgaoSIC. sup. exp ada <-
+
+observações. orgao$prop. exp. adm +
+
+observações. orgaoSmargem erro exp. adm
+EA
+
+bases teste,
+
+z
+,
+Os resultados apresentados referem-se à unidade de análise adotada no estudo, que corresponde aos eventos
+de nomeação e não aos indivíduos. Dessa forma, um mesmo servidor pode aparecer mais de uma vez na base
+caso tenha sido nomeado para diferentes cargos ao longo do período analisado (ALBRECHT; RIBEIRO,
+2025, p. 29).
+
+===== page_013_bot.png =====
+& Armazenamento dos resultados
+observações, orgaoSp. valor <- teste proporcaoSp.value
+observações orgaoSestatistica chi2 <-
+
+unname(teste, proporcaoSstatistic)
+teste, proporcao
+“
+4% 2-sample test for equality of proportions vithout continuity correction
+“
+48 data: c(observações orgaoStotal exp adm[observações. orgaoSorgao. sup == "MAPA"], observações. orgaoSt:
+4% X-squared = 2.6465, df = 1, p-value = 0.1038
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+48 -0.007755519 0.072802288
+
+13
+
+===== page_013_mid.png =====
+nec
+observações, orgaoStotal obs[
+observações. orgaoSorgao. sup == "MAPA"
+),
+observações, orgaoStotal obs
+observações. orgaoSorgao. sup == "MINC"
+E]
+do
+conf level = 0.95,
+correct = FALSE
+,
+& Armazenamento dos resultados
+observações. orgaoSp valor <- teste proporcao$p.value
+observações orgaoSestatística chi2 <-
+unname (teste proporcao$statistic)
+
+===== page_013_top.png =====
+Os resultados do teste, incluindo a estatística * e o p-valor, são extraídos pelo código e incorporados ao
+objeto observações. orgao. Essa organização permite consolidar as informações descritivas e inferenciais em
+uma única estrutura, facilitando sua apresentação no relatório final (HEISS, 2020, p. 491).
+teste proporcao <- prop.test(
+x=«
+observações orgaoStotal exp adm(
+observações. orgaoSorgao. sup == "MAPA"
+),
+observações orgaoStotal, exp adm[
+; observações. orgaoSorgao. sup == "KINC"
+Da
+n=c
+observações, orgaoStotal obs
+observações. orgaoSorgao. sup == "MAPA"
+),
+
+===== page_014_bot.png =====
+A regra utilizada foi:
+valores de nivel maiores ou iguais a 5 recebem o valor 1, indicando uma nomeação em cargo de alto nível:
+valores inferiores a 5 recebem o valor 0, representando os demais cargos analisados.
+Essa classificação considera como cargos de maior hierarquia os níveis 5 é 6, correspondentes respectiva-
+mente às posições de Direção e Secretarias Nacionais, conforme a categorização apresentada pelos autores.
+(ALBRECHT; RIBEIRO, 2025, p. 40). Dessa forma, a variável criada permite comparar a distribuição de
+posições hierarquicamente superiores entre os órgãos analisados, mantendo a distinção entre diferentes níveis.
+da burocracia federal (ALBRECHT; RIBEIRO, 2025, p. 6, 29).
+& Criação da variável auziliores
+bases orgaoSBASES. TRATADASSMAPA TRATADA GERALSalto nivel <-
+
+bases, orgaoSBASES. TRATADASSMAPA. TRATADA, GERAL$nivel
+bases, orgaoSBASES. TRATADASSMINC. TRATADA GERALSalto nivel <-
+
+bases, orgaoSBASES, TRATADASSMINC. TRATADA, GERALSnivel
+& Transformação em variável binária
+bases orgaoSBASES TRATADASSMAPA, TRATADA GERALSalto nível <-
+
+“
+
+===== page_014_mid.png =====
+Cargos de Alto Nível por órgão
+
+Para analisar a concentração de nomeações em posições de maior hierarquia administrativa, foi criada uma
+variável binária a partir da variável original de nível do cargo (nivel). Foram classificados como cargos de
+alto nível aqueles correspondentes aos níveis 5 e 6 da estrutura utilizada na base de dados.
+
+Inicialmente, o código realiza uma cópia da variável nivel nos objetos MAPA TRATADA GERAL e
+MINC TRATADA GERAL, criando a nova variável alto. nivel, Esse procedimento preserva a informação
+original e permite a criação de uma classificação adicional sem alterar os dados de origem (CRAWLEY, 2007,
+p. 95).
+
+Em seguida, foi aplicada a função ifelse(), responsável por realizar a transformação da variável de forma
+vetorizada. Diferentemente de uma estrutura de repetição, essa função permite aplicar a mesma regra
+simultaneamente à todas as observações da base (CRAWLEY, 2007, p. 152: HEISS, 2020, p. 70).
+
+A regra utilizada foi:
+
+valores de nivel maiores ou iguais a 5 recebem o valor 1, indicando uma nomeação em cargo de alto nível;
+valores inferiores a 5 recebem o valor 0, representando os demais cargos analisados.
+
+Essa classificação considera como cargos de maior hierarquia os níveis 5 e 6, correspondentes respectiva-
+mente às posições de Direção e Secretarias Nacionais, conforme a categorização apresentada pelos autores.
+(ALBRECHT; RIBEIRO, 2025, p. 40). Dessa forma, à variável criada permite comparar a distribuição de
+posições hierarquicamente superiores entre os órgãos analisados, mantendo a distinção entre diferentes níveis
+da burocracia federal (ALBRECHT; RIBEIRO, 2025, p. 6, 29).
+
+& Criação da variável auziliares
+
+===== page_014_top.png =====
+48 sample estimates:
+
+ss propi prop2
+
+4% 0.9198473 0.8873239
+
+O p-valor representa a probabilidade de observar uma diferença entre as proporções igual ou superior à
+encontrada nos dados, assumindo que a hipótese nula seja verdadeira (HEISS, 2020, p. 482).
+
+O critério de decisão adotado considera o nível de significância de 5%:
+
+caso o p-valor seja inferior a 0,05, rejeita-se a hipótese nula, indicando evidências estatísticas de diferença
+entre as proporções de experiência administrativa do MAPA e do MinC: caso o p-valor seja superior a 0,05,
+não há evidências suficientes para rejeitar a hipótese nula.
+
+A interpretação dos resultados deve considerar não apenas a significância estatística, mas também a mag-
+nitude da diferença observada entre as proporções. Assim, a análise permite avaliar se existem padrões
+distintos de recrutamento burocrático entre os órgãos, contribuindo para a discussão sobre a diferenciação
+entre perfis mais técnicos e políticos na composição da burocracia federal (ALBRECHT; RIBEIRO, 2025,
+p- 1,10).
+
+Cargos de Alto Nível por órgão
+
+===== page_015_bot.png =====
+Inicialmente, o código seleciona as bases correspondentes ao MAPA e ao MinC, reunindo-as no objeto
+bases alto nivel. Essa etapa restringe a análise aos dois órgãos definidos como foco da comparação (AVALI-
+AÇÃO, 2026, p. 610).
+Em seguida, a função sum() é aplicada à variável binária alto nivel. Como essa variável assume valor 1
+para cargos de níveis 5 e 6 e valor O para cargos de nível 4, sua soma corresponde diretamente ao número
+de nomeações para posições de maior hierarquia administrativa (CRAWLEY, 2007, p. 118; ALBRECHT;
+RIBEIRO, 2025, p. 6, 29).
+Os resultados obtidos são armazenados na coluna total alto. nivel do objeto observações orgao. Inicial-
+mente, essa coluna é preenchida com valores NA, sendo posteriormente atualizada apenas para os órgãos
+analisados, Esse procedimento facilita a organização dos resultados e evita o preenchimento indevido de
+observações não contempladas nessa etapa da análise (HEISS, 2020, p. 469).
+A partir desses valores, também é calculada a proporção de cargos de alto nível em cada órgão, permitindo
+comparar a distribuição relativa das posições hierárquicas superiores entre o MAPA e o MinC.
+& Selecionando as bases tratadas utilizadas na análise
+bases alto nivel <- bases orgaoSBASES. TRATADAS[
+«
+"MAPA TRATADA GERAL”,
+15
+
+===== page_015_mid.png =====
+estudados. Segundo Albrecht e Ribeiro (2025), a posição ocupada na estrutura organizacional constitui
+um elemento relevante para compreender as estratégias de nomeação adotadas pela administração pública.
+(ALBRECHT; RIBEIRO, 2025, p. 40).
+
+A distinção entre cargos de nível 4 e cargos de níveis 5 e 6 possibilita investigar se a composição do alto
+escalão apresenta características distintas daquelas observadas nos demais níveis hierárquicos. Dessa forma,
+a variável criada fornece um instrumento para comparar a distribuição das nomeações entre o MAPA e o
+MinC, contribuindo para a análise das diferenças de perfil entre os órgãos ao longo do período estudado
+(ALBRECHT; RIBEIRO, 2025, p. 44, 45, 62, 66).
+
+Proporção de cargos de alto nível por órgão
+
+Após a criação da variável alto. nível, foram calculadas estatísticas descritivas para identificar a distribuição
+dos cargos de maior hierarquia entre os órgãos analisados. Para cada órgão, foram obtidos o número absoluto
+de nomeados classificados como ocupantes de cargos de alto nível e a proporção desses cargos em relação ao
+total de observações válidas.
+
+Inicialmente, o código seleciona as bases correspondentes ao MAPA e ao MinC, reunindo-as no objeto
+bases alto nível. Essa etapa restringe a análise aos dois órgãos definidos como foco da comparação (AVALI-
+AÇÃO, 2026, p. 610).
+
+Em seguida, a função sum() é aplicada à variável binária alto nível. Como essa variável assume valor 1
+para cargos de níveis 5 e 6 e valor O para cargos de nível 4, sua soma corresponde diretamente ao número
+de nomeações para posições de maior hierarquia administrativa (CRAWLEY, 2007, p. 118; ALBRECHT:
+RIBEIRO, 2025, p. 6, 29).
+
+Os resultados obtidos são armazenados na coluna total alto. nivel do objeto observações orgao. Inicial-
+mente, essa coluna é preenchida com valores NA, sendo posteriormente atualizada apenas para os órgãos
+analicados Fova nencedimento farilita « oemanização dos eomltados a mito n necanehimento indevido da
+
+===== page_015_top.png =====
+ifelse(
+bases, orgaoSBASES, TRATADASSHAPA. TRATADA, GERALSalto nivel >= 5,
+1
+o
+,
+bases orgaoSBASES. TRATADASSMINC. TRATADA. GERALSalto nível <-
+ifelse(
+bases, orgaoSBASES. TRATADASSMINC. TRATADA, GERALSalto nível >= 5,
+1
+o
+,
+A criação da variável alto. nivel permite analisar a distribuição das nomeações nos cargos de maior hierarquia.
+administrativa, possibilitando verificar se existem diferenças no padrão de recrutamento entre os órgãos
+estudados. Segundo Albrecht e Ribeiro (2025), a posição ocupada na estrutura organizacional constitui
+um elemento relevante para compreender as estratégias de nomeação adotadas pela administração pública
+(ALBRECHT; RIBEIRO, 2025, p. 40).
+A distinção entre cargos de nível 4 e cargos de níveis 5 e 6 possibilita investigar se a composição do alto
+
+===== page_016_bot.png =====
+Intervalo de confiança da proporção de cargos de alto nível
+Após o cálculo das proporções de cargos de alto nível, foram construídos intervalos de confiança de 95% para
+cada órgão, utilizando a aproximação normal para à proporção amostral.
+Inicialmente, o código obtém o valor crítico da distribuição normal padrão por meio da função quorm(0.975),
+correspondente aproximadamente a 1,96 para um nível de confiança de 95%.
+Em seguida, é calculada a margem de erro de cada proporção, considerando a proporção observada
+(pro. alto. nivel) e o número de observações válidas (total obs). A partir dessa margem, são obtidos os
+limites inferior (IC. inf. alto. nível) e superior (IC. sup. alto. nivel) do intervalo de confiança.
+Esses intervalos permitem avaliar a precisão das proporções estimadas para cada órgão e fornecem uma
+medida da incerteza associada às estimativas obtidas. Dessa forma, torna-se possível comparar não apenas
+as proporções observadas de cargos de alto nível, mas também a variabilidade esperada dessas estimativas
+observações. orgaoSprop alto nível <-
+
+observações. orgaoStotal. alto nivel /
+
+observações, orgaoStotal. obs
+observações orgao
+
+16
+
+===== page_016_mid.png =====
+A análise da distribuição dos cargos de alto nível permite examinar diferenças na composição hierárquica dos
+órgãos estudados, aspecto relacionado à organização da burocracia federal descrita por Albrecht e Ribeiro
+(2025). Como os cargos de níveis mais elevados concentram maiores responsabilidades administrativas e
+decisórias, sua distribuição constitui um indicador relevante para a caracterização da estrutura organizacional
+dos ministérios (ALBRECHT; RIBEIRO, 2025, p. 40).
+
+Cabe destacar que a unidade de análise adotada é a nomeação, e não o indivíduo (ALBRECHT; RIBEIRO,
+2025, p. 29). Assim, o número de cargos de alto nível observado em cada órgão reflete o conjunto de
+nomeações registradas ao longo do período analisado (2011-2021), sendo influenciado tanto pela estrutura
+administrativa quanto pela dinâmica de ocupação desses cargos (ALBRECHT; RIBEIRO, 2025, p. 28, 75).
+Por esse motivo, a interpretação das proporções deve considerar as diferenças estruturais entre os órgãos
+analisados. Em particular, o MAPA apresenta uma estrutura administrativa historicamente mais ampla que
+ado MinC, fator que pode influenciar a distribuição observada dos cargos de maior hierarquia (ALBRECHT:
+RIBEIRO, 2025, p. 24).
+
+Intervalo de confiança da proporção de cargos de alto nível
+
+Após o cálculo das proporções de cargos de alto nível, foram construídos intervalos de confiança de 95% para
+cada órgão, utilizando a aproximação normal para à proporção amostral.
+
+Inicialmente, o código obtém o valor crítico da distribuição normal padrão por meio da função quorm(0.975),
+correspondente aproximadamente a 1,96 para um nível de confiança de 95%.
+
+Em seguida, é calculada a margem de erro de cada proporção, considerando a proporção observada
+(prop. alto. nivel) e o número de observações válidas (total obs). A partir dessa margem, são obtidos os
+limites inferior (IC. inf. alto. nível) e superior (IC. sup. alto. nivel) do intervalo de confiança.
+
+===== page_016_top.png =====
+“MINC. TRATADA. GERAL* |
+,
+E]
+& Número absoluto de cargos de alto nível por órgão
+observações. orgaoStotal alto nivel <- NA
+observações. orgaoStotal alto nível[
+observações. orgaoSorgao. sup == "MAPA"
+) < sun(bases alto nivelSMAPA TRATADA, GERALSalto nível)
+observações. orgaoStotal alto nivel [
+observações. orgaoSorgao sup =» "MINC"
+] <- sun(bases alto nivelSMINC, TRATADA GERALSalto nivel)
+A análise da distribuição dos cargos de alto nível permite examinar diferenças na composição hierárquica dos.
+órgãos estudados, aspecto relacionado à organização da burocracia federal descrita por Albrecht e Ribeiro
+(2025). Como os cargos de níveis mais elevados concentram maiores responsabilidades administrativas e
+
+===== page_017_bot.png =====
+Tabelas de resultados
+Estatísticas descritivas por órgão
+A tabela abaixo apresenta as estatísticas descritivas das variáveis analisadas para cada órgão. São apresen-
+tados o número total de observações válidas, a quantidade absoluta de indivíduos classificados nas categorias.
+analisadas e as respectivas proporções.
+library(knitr)
+4% Warning: pacote 'knitr' foi compilado no R versão 4.5.3
+tabela resultados <- observações orgao />/
+seleci(
+
+orgao sup,
+
+total obs,
+
+total exp adm,
+
+Prop. exp. ada,
+
+W
+
+===== page_017_mid.png =====
+mesmo
+observações, orgaoSprop alto nível +
+(1 - observações orgaoSprop alto nível) /
+observações, orgaoStotal. obs
+,
+observações, orgao$IC. inf alto nível <-
+observações. orgaoSprop alto nível -
+observações orgaoSmargem erro alto nível
+observações, orgao$IC. sup alto nível <-
+observações, orgaoSprop alto nível +
+observações. orgaoSmargem erro alto nível
+Tabelas de resultados
+Estatísticas descritivas por órgão
+A tabela abaixo apresenta as estatísticas descritivas das variáveis analisadas para cada órgão. São apresen-
+tados o número total de observações válidas, a quantidade absoluta de indivíduos classificados nas categorias.
+analisadas e as respectivas proporções.
+library (knitr)
+
+===== page_017_top.png =====
+4% orgao sup total exp ade total obs prop exp adm margem erro exp adm
+“1 MAPA as2 sz — O-9198473 0.02324873
+2 MCTI 144 148 — 0.9729730 0.02612563
+“3 MINC as 355 0.8873239 0.03289204
+4% IC inf exp adm IC sup exp adm  p valor estatística chi? total alto nível
+Ra 0. 8965986 09430961 0.1037798 2.646475 187
+“2 0.S468473 0.9990986 0. 1037798 2.646475 Na
+“3 0.8544319 0.9202160 0.1037798 2.646475 152
+48 prop alto nível
+“1 o.3568702
+“2 na
+“3 o.4281690
+= <- quorn(o.975)
+observações, orgaoSnargem, erro alto nível <-
+z* sqrt(
+observações, orgaoSprop. alto nível +
+(1 - observações, orgaoSprop. alto nivel) /
+observações. orgaoStotal. obs
+
+===== page_018_bot.png =====
+ARE EaE
+Inicialmente, observa-se que a base analisada compreende 524 nomeações válidas para o MAPA, 355 para
+o MinC e 148 para o MCTI. Dentre essas observações, 482 nomeações no MAPA, 315 no MinC e 144 no
+MCTI correspondem a indivíduos que possuíam experiência anterior na administração pública. Em termos
+proporcionais, isso representa 92,0%, 88,7% e 97,3%, respectivamente.
+
+Os resultados evidenciam que a experiência administrativa constitui uma característica predominante nos.
+três órgãos analisados. Em todos eles, mais de quatro quintos das nomeações recaíram sobre indivíduos.
+com passagem prévia pelo setor público, indicando que a experiência administrativa representa um critério
+amplamente presente no recrutamento para cargos de direção e assessoramento.
+Os intervalos de confiança de 95% reforçam a precisão dessas estimativas. Para o MAPA, a proporção
+estimada situa-se entre 89,7% e 94,3%: para o MinC, entre 85,4% e 92,0%; e para o MCTI, entre 94,7%
+e 99,9%. A reduzida amplitude desses intervalos decorre do elevado número de observações disponíveis,
+produzindo estimativas relativamente precisas para cada órgão.
+Comparativamente, o MCTI apresenta a maior proporção de nomeações com experiência administrativa,
+seguido pelo MAPA e, por fim, pelo MinC. Embora MAPA e MinC apresentem percentuais relativamente
+próximos, observa-se uma diferença de aproximadamente 3,3 pontos percentuais entre ambos, indicando
+participação ligeiramente maior de servidores experientes no Ministério da Agricultura.
+Esse resultado mostra-se compatível com a discussão desenvolvida por Albrecht e Ribeiro (2025), segundo
+a qual o MAPA possui uma burocracia fortemente vinculada às carreiras permanentes do Estado e ao
+18
+
+===== page_018_mid.png =====
+e Sra aa ir irei iso ra das fr pad mio ea
+,
+Table 1: Características dos nomeados por órgão
+
+Observações Experiência Proporção cxp- Cargos alto Proporção alto
+Órgão válidas administrativa (N) administrativa nível (N) nível
+MAPA 52 as2 0.920 187 0357
+MCTI 14s us 0.3 NA NA
+MINC 355 315 0.887 152 0428
+A Tabela 1 apresenta as estatísticas descritivas referentes à experiência administrativa dos nomeados em
+cada órgão analisado. Além do número de observações válidas, são apresentados o total de indivíduos com
+experiência prévia na administração pública, a proporção correspondente e o respectivo intervalo de confiança
+de 95%.
+Inicialmente, observa-se que a base analisada compreende 524 nomeações válidas para o MAPA, 355 para
+o MinC e 148 para o MCTI. Dentre essas observações, 482 nomeações no MAPA, 315 no MinC e 144 no
+MCTI correspondem a indivíduos que possuíam experiência anterior na administração pública. Em termos
+proporcionais, isso representa 92,0%, 88,7% e 97,3%, respectivamente.
+Os resultados evidenciam que a experiência administrativa constitui uma característica predominante nos
+três órgãos analisados. Em todos eles, mais de quatro quintos das nomeações recaíram sobre indivíduos
+com passagem prévia pelo setor público, indicando que a experiência administrativa representa um critério
+amplamente presente no recrutamento para cargos de direção c assessoramento.
+Os intervalos de confiança de 95% reforçam a precisão dessas estimativas. Para o MAPA, a proporção
+
+===== page_018_top.png =====
+total alto nível,
+prop.alto nível
+b)
+kable(
+tabela resultados,
+dígits = 3,
+col.names = c(
+"Orgão",
+“Observações válidas”,
+“Experiência administrativa (N)",
+“Proporção exp. administrativa",
+“Cargos alto nível (N)*,
+“Proporção alto nível"
+»
+caption = “Características dos nomeados por órgão”
+,
+Table 1: Características dos nomeados por órgão
+
+===== page_019_bot.png =====
+Etapas É
+“IC superior”
+
+»
+
+caption = "Intervalos de confiança das proporções estinadas”
+,
+
+“Table 2: Intervalos de confiança das proporções estimadas
+Prop. exp.
+Órgão administrativa IC inferior IC superior Prop. alto nível IC inferior IC superior
+MCTI 0973 0.947 0.999 NA NA NA
+MINC 0.887 0.854 0.920 0.428 037 0.480
+A Tabela 2 resume a distribuição dos cargos classificados como alto nível, definidos neste trabalho como
+aqueles pertencentes aos níveis 5 e 6 da estrutura hierárquica da administração pública federal. Para cada
+“órgão são apresentados o número absoluto de nomeações nessa categoria, sua proporção em relação ao total
+de observações válidas e os respectivos intervalos de confiança de 95%.
+No MAPA, foram identificadas 187 nomeações para cargos de alto nível dentre as 524 observações válidas,
+correspondendo a uma proporção de 35,7%. Já no MinC, registraram-se 152 nomeações entre 355 observações,
+19
+
+===== page_019_mid.png =====
+CND an
+prop.alto nível,
+TC. inf alto nivel,
+IC. sup alto nível
+,
+Xable(
+tabela intervalos,
+digito =3,
+col.names = c(
+"Orgão",
+“IC inferior",
+“IC superior",
+"Prop. alto nível”,
+“IC inferior”,
+“IC superior"
+de
+caption = "Intervalos de confiança das proporções estimadas"
+,
+Table 2: Intervalos de confiança das proporções estimadas
+Prop. exp.
+Órgão administrativa IC inferior IC superior Prop. alto nível 1C inferior IC superior
+MAPA 0.920 0.597] 0.943 0.357 0.316 0.398
+
+===== page_019_top.png =====
+conhecimento técnico especializado. Ao mesmo tempo, o elevado percentual observado no MinC demonstra
+que a experiência administrativa também constitui característica predominante naquele órgão, ainda que
+em menor intensidade. Assim, a análise descritiva sugere diferenças graduais entre os ministérios, e não
+perfis burocráticos radicalmente distintos, cabendo aos testes de hipótese verificar se essas diferenças são
+estatisticamente significativas.
+Intervalos de confiança das proporções
+A tabela abaixo apresenta os intervalos de confiança de 95% calculados para as proporções estimadas de
+experiência administrativa e cargos de alto nível.
+tabela intervalos <- observações orgao 1>%
+select(
+orgao sup,
+Prop. exp. adm,
+IC. inf exp ade,
+IC. sup. exp ade,
+prop.alto nível,
+IC. inf alto nível,
+IC. sup alto nível
+,
+
+===== page_020_bot.png =====
+,
+Kable(
+tabela teste,
+digits = 4,
+col.names = c(
+“Estatística 2",
+“Graus de liberdade,
+err
+caption = "Teste de diferença entre proporções: MAPA versus MINC”
+)
+Table 3: Teste de diferença entre proporções: MAPA versus MINC
+Estatística * Graus de liberdade Valor-p
+2.665 1 01088
+2
+
+===== page_020_mid.png =====
+Por fim, deve-se ressaltar que essa análise possui natureza estritamente descritiva. Embora as diferenças
+observadas sejam compatíveis com a literatura utilizada como referência, sua interpretação deve ser comple-
+mentada pelos testes inferenciais apresentados nas seções seguintes, responsáveis por avaliar se as diferenças
+entre os órgãos podem ser atribuídas à variabilidade amostral ou representam diferenças estatisticamente
+significativas.
+Teste de diferença entre proporções
+A tabela apresenta o resultado do teste de igualdade de proporções aplicado entre MAPA e MINC para à
+variável de experiência administrativa.
+tabela teste <- data.frane(
+Estatística qui? = unname(teste proporcaoSstatístic),
+Graus liberdade = unname(teste proporcao$paraneter),
+Valor.p = teste proporcao$p.value
+,
+kable(
+tabela teste,
+digits = 4,
+col.names = c(
+“Estatística 2",
+“Graus de liberdade”,
+“Valor-p*
+do
+
+===== page_020_top.png =====
+resultando em uma proporção de 42,8%. O MCTI não foi considerado nesta etapa da análise, razão pela
+qual não são apresentados valores para esse órgão.
+
+Os intervalos de confiança estimados situam-se entre 31,6% e 39,8% para o MAPA e entre 37,7% e 45,0%
+para o MinC. Ambos apresentam amplitude semelhante, indicando nível comparável de precisão estatística
+entre as estimativas.
+
+Em termos descritivos, observa-se que o MinC apresenta maior participação relativa de cargos pertencentes
+aos níveis superiores da estrutura administrativa. Enquanto aproximadamente um terço das nomeações do
+MAPA corresponde aos níveis 5 e 6, no MinC essa participação aproxima-se de quase metade das observações
+analisadas, A diferença entre as proporções corresponde a aproximadamente 7 pontos percentuais, sugerindo
+padrões distintos de distribuição hierárquica das nomeações.
+
+Esse resultado é consistente com a caracterização institucional apresentada por Albrecht e Ribeiro (2025). Os
+autores destacam que o MAPA possui uma estrutura burocrática extensa, apoiada em carreiras permanentes
+e em grande número de cargos de coordenação (nível 4), enquanto o MinC apresenta estrutura relativamente
+mais concentrada em posições de direção. Dessa forma, a menor proporção de cargos de alto nível no MAPA
+não indica menor relevância administrativa, mas reflete a composição hierárquica específica da pasta.
+
+Por fim, deve-se ressaltar que essa análise possui natureza estritamente descritiva. Embora as diferenças
+observadas sejam compatíveis com a literatura utilizada como referência, sua interpretação deve ser comple-
+mentada pelos testes inferenciais apresentados nas seções seguintes, responsáveis por avaliar se as diferenças
+entre os órgãos podem ser atribuídas à variabilidade amostral ou representam diferenças estatisticamente
+
+===== page_021_bot.png =====
+Eid sapo staind
+IC. sup alto nível
+,
+cores ministerios <- c(
+"MAPA" = "8000000",
+"MINC" = "SAGAGA6”
+,
+egplot(
+dados grafico,
+aes(
+x = orgao sup,
+y = prop.exp adm,
+f111 = orgao sup
+,
+»+
+goom col(
+width = 0.6
+E
+
+===== page_021_mid.png =====
+Experiência administrativa por órgão
+O primeiro gráfico apresenta a proporção de nomeados com experiência administrativa prévia em cada órgão.
+dados grafico <- observações orgao 11,
+filter(
+orgao. sup ink c(MAPA", "MINC")
+2%
+select(
+orgao sup,
+prop.exp.adm,
+IC. inf exp ada,
+IC. sup exp ada,
+prop.alto nivel,
+TC. inf alto nivel,
+IC. sup. alto nivel
+,
+cores ministerios <- c(
+,
+Egploe(
+
+===== page_021_top.png =====
+Embora a diferença de 35,7% (MAPA) para 42,8% (MinC) pareça relevante à primeira vista, o teste mostra
+que ela não atinge a significância estatística convencional. Substantivamente, isso sugere uma certa con-
+vergência na estrutura de comando das pastas regulatórias analisadas. Os autores destacam que os cargos
+de DAS-6 são partidarizados em ambos os ministérios, funcionando como “moedas de troca” para garan-
+tir apoio na coalizão (ALBRECHT; RIBEIRO, 2025, pg. 40, 44). No entanto, o fato de o MAPA ter
+uma proporção menor de cargos 5 e 6 pode refletir sua estrutura organizacional mais densa no nível 4
+(Coordenadores-Gerais), ocupada predominantemente por servidores de carreira do próprio órgão, como os
+fiscais agropecuários (ALBRECHT; RIBEIRO, 2025, pg. 66, 73). No MinC, a maior proporção relativa
+de altos cargos pode ser um reflexo de uma estrutura mais “enxuta” ou de uma rotatividade política mais
+acentuada nas secretarias finalísticas (ALBRECHT; RIBEIRO, 2025, pg. 80).
+
+Gráficos de resultados
+
+Os gráficos abaixo apresentam visualmente as diferenças observadas entre os órgãos analisados. As barras
+representam as proporções estimadas, enquanto as barras de erro indicam os intervalos de confiança de 95%.
+Experiência administrativa por órgão
+
+O primeiro gráfico apresenta a proporção de nomeados com experiência administrativa prévia em cada órrão.
+
+===== page_022_bot.png =====
+
+
+===== page_022_mid.png =====
+labs(
+title = "Proporção de nomeados com experiência administrativa”,
+x= "Ministério",
+y = “Proporção”
+PES
+theme mininal() +
+theme(
+legend.position = "none"
+,
+
+===== page_022_top.png =====
+»+
+geom errorbar(
+aes(
+ymin = IC. inf exp ado,
+yzax = IC sup exp adm
+de
+width = 0.15
+»+
+scale 111 manual(
+values = cores ministerios
+»+
+scale y continuous(
+labels = scales: :percent
+»+
+labs(
+title = "Proporção de nomeados com experiência administrativa",
+x = "Ministério",
+
+===== page_023_bot.png =====
+dados grafico <- observações orgao 1>/
+filter(
+orgao sup ink c("MAPA”, "MINC")
+3%
+select(
+orgao sup,
+Prop. exp. adm,
+IC. inf exp adm,
+IC. sup exp adm,
+prop.alto nível,
+IC. inf alto nivel,
+IC sup. alto nivel
+,
+Egplor(
+dados, grafico,
+aes(
+x = orgao sup,
+y = prop.alto nivel,
+fi11 = orgao sup
+E
+
+===== page_023_mid.png =====
+Ministério
+
+Cargos de alto nível por órgão
+dados grafico <- observações orgao 1>
+
+orgao, sup
+
+prop.exp. ada,
+
+IC. inf exp ada
+
+IC] sup exp ade
+
+prop alto nível
+
+===== page_023_top.png =====
+Proporção de nomeados com experiência administrativa
+2
+E
+5
+8
+E
+| E
+
+===== page_024_bot.png =====
+Ext iseaçÃo. artrite eira)
+,
+É |
+
+===== page_024_mid.png =====
+iscas esc dD os areia sniciavneciaciearicad
+»+
+scale y continuous
+labels = scales: percent
+»+
+labs(
+title = "Proporção de cargos de alto nível”,
+x = "Ministério",
+y = "Proporção"
+»+
+theme minimal() +
+theme(
+legend. position = “none”
+,
+
+===== page_024_top.png =====
+,
+»+
+geom col(
+width = 0.6
+»+
+gem errorbar(
+aes(
+ymin = IC inf alto nível,
+ymax = IC. sup alto nível
+do
+width = 0.15
+»+
+scale fil manual(
+values = cores ministerios
+»+
+scale y continuous(
+labels = scales: :percent
+
+===== page_025_bot.png =====
+O teste de igualdade entre proporções resultou em um p-valor de 0,103, comparando as proporções de
+nomeações com experiência administrativa no MAPA (92,0%) e no MinC (88,7%). Considerando que o
+p-valor representa a probabilidade de observar uma diferença igual ou mais extrema que a encontrada,
+assumindo verdadeira a hipótese nula de igualdade entre as proporções, procede-se à análise da robustez da
+conclusão sob diferentes níveis de significância.
+A conclusão mudaria se o nível de significância fosse 10%?
+Não. Embora a adoção de um nível de significância de 10% represente um critério menos restritivo para a
+rejeição da hipótese nula, o resultado obtido permanece inalterado. Como o p-valor (0,103) ainda supera o
+nível de significância adotado (. = 0,10), não há evidências estatísticas suficientes para rejeitar a hipótese de
+igualdade entre as proporções observadas. Assim, a diferença identificada entre o MAPA e o MinC contina
+sendo compatível com a variabilidade amostral.
+A conclusão mudaria se o nível de significância fosse 1%?
+Também não. A adoção de um nível de significância de 1% torna o critério de decisão ainda mais rigoroso,
+reduzindo a probabilidade de ocorrência de erro do Tipo L. Entretanto, como o p-valor observado permanece
+substancialmente superior a 0,01, a decisão estatística permanece idêntica: não se rejeita a hipótese mula
+Nesse cenário, as evidências empíricas continuam insuficientes para concluir que os dois órgãos apresentam
+proporções distintas de nomeações com experiência administrativa.
+O que esse exercício evidencia sobre a diferença entre p-valor e significância substantiva?
+
+2
+
+===== page_025_mid.png =====
+Ministério
+Perguntas finais do Relatório
+
+===== page_025_top.png =====
+Proporção de cargos de alto nível
+2
+s
+5
+8
+E
+
+===== page_026_bot.png =====
+
+
+===== page_026_mid.png =====
+Para a amostra original, o erro-padrão é aproximadamente 0,018. Com o dobro de observações, esse
+valor seria reduzido para aproximadamente 0,0084, correspondendo a uma diminuição de cerca de 29%.
+Consequentemente, os intervalos de confiança tornar-se-iam mais estreitos, produzindo estimativas mais
+precisas para a proporção populacional.
+
+Por que isso acontece?
+
+O erro-padrão de uma proporção é inversamente proporcional à raiz quadrada do tamanho da amostra.
+Assim, quanto maior o número de observações, menor a variabilidade esperada entre diferentes amostras e
+maior a precisão da estimativa.
+
+Entretanto, essa redução ocorre de forma não linear. Dobrar o tamanho da amostra não reduz o erro-padrão
+pela metade; sua redução ocorre pelo fator 1/sqrt(2) (não sei se há como escrever raíz). Da mesma forma,
+para reduzir o crro-padrão em aproximadamente 50%, seria necessário quadruplicar o tamanho da amostra.
+
+===== page_026_top.png =====
+Este exercício evidencia que significância estatística e significância substantiva constituem conceitos distintos.
+e complementares. O p-valor informa apenas se a diferença observada pode ser atribuída ao acaso sob a
+hipótese mula, não fornecendo qualquer medida sobre sua magnitude ou relevância prática.
+No presente caso, a diferença observada entre as proporções corresponde a aproximadamente 3,3 pontos
+percentuais. Ainda que essa diferença viesse à tornar-se estatisticamente significativa em uma amostra
+de maior dimensão, isso não implicaria, necessariamente, relevância substantiva para a interpretação do
+fenômeno estudado. Sob a perspectiva da Ciência Política, ambos os órgãos apresentam níveis muito elevados
+de experiência administrativa — superiores a 88% das nomeações —, indicando um padrão amplamente
+profissionalizado de recrutamento.
+
+7. O que aconteceria se a amostra fosse maior?
+O que tenderia a acontecer com o erro-padrão?
+Mantida constante a proporção observada e supondo o aumento do tamanho da amostra para 1.048 obser-
+vações, o erro-padrão da estimativa diminuiria.
+Para à amostra original, o erro-padrão é aproximadamente 0,018. Com o dobro de observações, esse
+valor seria reduzido para aproximadamente 0,0084, correspondendo a uma diminuição de cerca de 29%.
+Consequentemente, os intervalos de confiança tornar-se-iam mais estreitos, produzindo estimativas mais
+precisas para a proporção populacional.

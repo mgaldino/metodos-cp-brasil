@@ -1,0 +1,665 @@
+
+===== page_001_bot.png =====
+* Compreender as estratégias de nomeação, observando como a estrutura das carreiras estatais,
+o engajamento em diferentes setores e a natureza das políticas do órgão incidem sobre essas escolhas,
+buscando superar 0 foco analítico restrito apenas às filiações partidárias.
+2. Qual é a unidade de análise da base?
+A unidade de análise da base de dados é a nomeação para o cargo/função comissionada (o evento de
+ocupação do cargo no tempo), e não o indivíduo de forma isolada.
+Isso ocorre porque a base acompanha à trajetória dos burocratas ao longo do tempo. Assim, cada obser-
+vação (linha) representa o período em que um indivíduo ocupou um cargo específico de nível médio ou alto
+(DAS/FCPE 4 a 6) nas secretarias finalísticas da Cultura ou da Agricultura. Como um mesmo servidor
+pode ter ocupado mais de um cargo ou sido renomeado no período de 2011 a 2021, a base registra 1.038
+eventos de ocupação distribuídos entre 664 indivíduos únicos.
+Essa estrutura permite não apenas analisar o perfil do burocrata (como formação, experiência e filiação par-
+tidária), mas também o tempo de permanência (perm) c as mudanças de governo (indicacao, partido, pr,
+partido ministro) associadas a cada cargo.
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+1. Artigo, pergunta e unidade de análise
+
+1. Qual é a pergunta geral do artigo?
+
+A pergunta central do artigo consiste em analisar em que medida os perfis dos nomeados variaram
+em órgãos responsáveis por políticas regulatórias, considerando a premissa de que tais pastas
+(como Agricultura e Cultura) seriam mais abertas à influência de partidos e grupos de interesse.
+Para responder a essa questão geral, a pesquisa se desdobra nos seguintes objetivos específicos de investigação:
+
++ Identificar as características predominantes dos funcionários públicos nomeados para cargos e
+funções comissionadas de médio e alto escalão (níveis 4 a 6) nas secretarias fnalísticas das pastas da
+Cultura e da Agricultura, no período compreendido entre 2011 e 2021.
+
++ Investigar o perfil desses burocratas de forma abrangente, analisando variáveis como a formação
+educacional, a experiência anterior no setor privado e a existência de vínculos associativos (participação
+em conselhos e entidades da sociedade civil).
+
++ Compreender as estratégias de nomeação, observando como a estrutura das carreiras estatais,
+o engajamento em diferentes setores e a natureza das políticas do órgão incidem sobre essas escolhas,
+buscando superar o foco analítico restrito apenas às filiações partidárias.
+
+2. Qual é a unidade de análise da base?
+ionada (o evento de
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+E O RO Ateim, cds obecr-
+vação (linha) representa o período em que um indivíduo ocupou um cargo específico de nível médio ou alto
+
+===== page_001_top.png =====
+Trabalho Final - Métodos e Técnicas de Pesquisa em Ciência |
+Política
+Luiz Fernando Lima Chaves | Nº USP: 14678357
+17-07-2026
+Perguntas obrigatórias
+
+===== page_002_bot.png =====
+É derrote laico oro eat caia ira na a ia fold rio ide cd
+pública:
+
+1. Mobilidade Vertical (Promoção ou Rebaixamento): A pessoa é exonerada de um cargo de nível
+menor (ex: um Coordenador-Geral, nível 4) e imediatamente nomeada para um cargo superior (ex:
+um Diretor, nível 5) dentro do mesmo órgão.
+
+2. Mobilidade Horizontal (Troca de Setor): A pessoa muda de secretaria ou de departamento dentro
+do mesmo Ministério, assumindo um novo cargo, mesmo que mantenha o mesmo nível hierárquico.
+
+3. Descontinuidade Temporal: O indivíduo atua em um cargo comissionado, é exonerado (passando
+um período fora da gestão ou retornando ao seu cargo de carreira base, se for servidor) e, anos depois,
+em outro governo, é nomeado novamente para um cargo de confiança.
+
+4 Mudança de Titularidade (Interinidade): Em alguns casos, a mesma pessoa pode aparecer as-
+sumindo um cargo como substituta ou interina e, posteriormente, sendo efetivada no mesmo cargo ou
+em outro.
+
+Dessa forma, a repetição do mesmo indivíduo é essencial para a base, pois é ela que permite analisar a
+sobrevivência no cargo, o tempo médio de permanência sob diferentes arranjos políticos e as dinâmicas de
+mudança de governo.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+4. O Contexto Temporal e Governamental: Registra a data em que a pessoa assumiu o cargo
+(entrada), a data em que saiu (saída), o tempo total de permanência (perm), além de mapear sob
+qual governo essa indicação ocorreu e os partidos do Presidente da República e do Ministro da pasta
+na época.
+
+Em resumo, uma linha conta a história de “quem” ocupou “qual” cargo, “quando” e “com qual bagagem”
+institucional e política.
+
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+
+A mesma pessoa (identificada por um íd único) pode aparecer em mais de uma linha na base de dados
+porque a pesquisa acompanha a trajetória temporal e institucional dos burocratas, e não apenas
+uma “fotografia” estática deles no governo.
+
+Um indivíduo aparecerá em múltiplas linhas sempre que ocorrer um novo “evento de nomeação” dentro do
+período analisado (2011 a 2021). Isso acontece, na prática, em algumas situações comuns na administração
+pública:
+
+1. Mobilidade Vertical (Promoção ou Rebaixamento): A pessoa é exoncrada de um cargo de nível
+menor (ex: um Coordenador-Geral, nível 4) é imediatamente nomeada para um cargo superior (ex:
+um Diretor, nível 5) dentro do mesmo órgão.
+
+2. Mobilidade Horizontal (Troca de Setor): A pessoa muda de secretaria ou de departamento dentro
+
+nível hierárquico.
+i Alguns arquivos neste envio só podem ser acessados através de download direto. exonerado (passando
+idor) e, anos depois,
+em outro governo, é nomeado novamente para um cargo de confiança.
+
+===== page_002_top.png =====
+3. O que significa uma linha da base?
+
+Cada linha da base de dados representa um evento único de ocupação de um cargo comissionado,
+ou seja, a passagem de um indivíduo específico por um determinado cargo ao longo de um recorte de tempo.
+Ao ler uma única linha (uma observação) da base, estamos acessando um “retrato” completo dessa nomeação,
+que consolida quatro dimensões principais de informações:
+
+1. A Identificação do Cargo e do Órgão: Informa onde a pessoa foi alocada, detalhando o órgão
+superior (orgao. sup), o setor específico, o nome do cargo (cargo), o tipo de função e o seu nível
+hierárquico (de 4 a 6).
+
+2. A Identificação do Burocrata e seu Perfil: Apresenta quem é o ocupante (por meio de um id
+único) e suas características individuais, incluindo formação acadêmica (instr, area, inst. ensino),
+se possui vínculo prévio com o setor público (car. pub) e suas experiências profissionais anteriores
+(administrativa, de mercado ou em organizações da sociedade civil).
+
+3. O Perfil Político: Indica se o nomeado possui filiação partidária (partido), histórico de cargos
+eletivos ou experiência em lideranca partidária.
+
+voa assumiu o cargo
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. além de mapear sob
+
+| lo Ministro da pasta
+na época.
+
+===== page_003_bot.png =====
+2. Leitura e validação dos dados
+
+1. Número de linhas e colunas.
+
+A base de dados possui 1038 linhas e 26 colunas.
+
+2. Nomes das variáveis.
+
+Table 3: Dicionário de variáveis presentes na base de dados
+Variáveis (Grupo A) Variáveis (Grupo B) Variáveis (Grupo C)
+orgao sup setor chave
+id cargo funcao
+nível instr area
+inst. ensino inst. origem car pub
+partido cargo ele id part
+exp adm exp car expiomer
+exp. soc uF+ partido pr
+partido ministro indicacao entrada
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_003_mid.png =====
+abertas e permeáveis à influência de grupos de interesse específicos: * De um lado, o agronegócio e os
+produtores rurais (na Agricultura). * De outro, a classe artística e os produtores culturais (na
+Cultura).
+Essa comparação permite aos autores observar como as estratégias de nomeação para o alto é médio escalão
+variam de acordo com a natureza da política pública de cada órgão, mesmo que ambas as pastas sofram
+pressões políticas e partidárias.
+Table 2: Distribuição de cargos por Ministério na base de dados
+Ministério Quantidade de Cargos
+
+MAPA 525
+
+MCTI 148
+
+MinC 365
+2. Leitura e validação dos dados
+1. Número de linhas e colunas.
+A base de dados possui 1038 linhas e 26 colunas.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+ma ameno o. LUMARO UE variaveis presentes tia vase ur uauvo
+
+===== page_003_top.png =====
+Table 1: Servidores com maior número de nomeações na base
+TD do Servidor Frequência
+WVAR 10
+SIFA s
+ESMA 7
+JAFS 7
+JMAN 7
+5. Quais são as duas pastas comparadas no artigo?
+As duas pastas (Ministérios) comparadas no artigo são a Cultura e a Agricultura.
+A escolha de comparar o Ministério da Cultura (MinC) e o Ministério da Agricultura, Pecuária e Abasteci-
+mento (MAPA) não é aleatória. O desenho de pesquisa do artigo contrapõe essas duas pastas porque ambas
+a a de di anaconda andei oia alo ionencilongcnciacáacas Eradisionelisonão
+E i O: + agronegócio e os
+à Alguns arquivos neste envio só podem ser acessados através de download direto. .ores culturais (na
+| |
+ia si ai,
+
+===== page_004_bot.png =====
+Table 6: Valores observados na variável: exp adm
+Categoria Encontrada Quantidade
+q 3
+o ss
+1 935
+3 1
+NA nu
+Table 7: Valores observados na variável: exp car
+Categoria Encontrada Quantidade
+o um
+1 51
+2 2
+3 509
+5 253
+NA 75
+
+===== page_004_mid.png =====
+4. Número de valores ausentes em pelo menos cinco variáveis relevantes.
+Table 5: Frequência de valores ansentes (NAs) nas principais var-
+Variável Valores Ausentes (NAs)
+Grau de Instrução (instr) o
+Filiação Partidária (partido) o
+Esperiência em Movimentos/Sociedade Civil (exp soc) 4
+Vínculo com Carreira Pública (car. pub) o
+Data de Saída do Cargo (saida) 5
+5. Uma checagem dos valores observados em exp. adm, exp. car, nivel, instr e indicacao.
+Table 6: Valores observados na variável: exp adm
+Categoria Encontrada Quantidade
+
+a 3
+
+o ss
+
+1 sas
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_top.png =====
+Variáveis (Grupo A) Variáveis (Grupo B) Variáveis (Grupo C)
+saída perm
+3. Número de observações por orgao sup.
+Table 4: Distribuição do número de observações (nomeações) por
+Órgão Superior
+Ministério Número de Observações
+MAPA 525
+MCTI us
+MinC 365
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_005_bot.png =====
+Explicação e Tratamento dos Problemas Encontrados
+A checagem anterior revelou algumas inconsistências comuns em bases de dados reais, que precisaram ser
+tratadas para não comprometerem as análises futuras:
+
+1. Problema em variáveis binárias (exp. adm): A variável de experiência administrativa deveria ser
+binária (O ou 1). No entanto, encontramos 3 observações com o valor “1 (um elaro erro de digitação
+incluindo uma crase) e 1 observação com o valor 3 (inesperado para uma variável binária).
+
++ Tratamento: Substituímos o erro “1 pelo valor correto 1. O valor 3, por ser inexplicável no
+contexto binário, foi transformado em NA (dado ausente).
+
+2. Redundância categórica (instr): Encontramos 1 registro classificado como "graduacao”, enquanto
+o restante da base utiliza o termo “superior” para o mesmo nível educacional.
+
++ Tratamento: O valor "graduacao” foi recodificado para "superior", unificando a categoria.
+
+3. Caracteres invisíveis (indicacao): O R diferencia strings por qualquer caractere, incluindo espaços.
+Havia 86 registros para “Lula” e 1 registro para "Lula * (com um espaço no final), criando duas
+categorias separadas para o mesmo governo.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+doutorado 159
+especialização 208
+graduação 1
+mestrado 259
+NA 95
+superior 297
+tecnico A
+Table 10: Valores observados na variável: indicacao
+Categoria Encontrada Quantidade
+Bolsonaro 396
+Lula s7
+Rousseff 351
+Temer 204
+Explicação e Tratamento dos Problemas Encontrados
+A checagem anterior revelou algumas inconsistências comuns em bases de dados reais, que precisaram ser
+tratadas para não comprometerem as análises futuras:
+à Alguns arquivos neste envio só podem ser acessados através de download direto. úistrativa deveria ser
+| aro erro de digitação
+incluindo uma crase) e 1 observação com o valor 3 (inesperado para uma variável binária).
+
+===== page_005_top.png =====
+Categoria Encontrada Quantidade
+Ausente (NA) 1
+Table 8: Valores observados na variável: nível
+Categoria Encontrada Quantidade
+4 652
+5 2
+6 m
+Table 9: Valores observados na variável: instr
+Categoria Encontrada Quantidade
+| Alguns arquivos neste envio só podem ser acessados através de download direto. |
+o mestrado BD
+
+===== page_006_bot.png =====
+Lula st
+Rousseff 351
+Temer 204
+3. Tabela descritiva: experiência administrativa
+Justificativa da Variável (com base no Codebook)
+A variável escolhida para identificar a experiência prévia na administração pública é a exp. adm. Conforme
+descrito no Codebook oficial da pesquisa, essa variável é de natureza binária, onde o valor 1 indica que o
+nomeado possui experiência administrativa prévia (*Sim”) e o valor O indica que não possui (“Não”).
+1. Número de observações válidas por pasta.
+Para calcular o número de observações válidas, filtrou-se a base para manter apenas os ministérios MAPA
+e MinC e removeuse-se todos os casos em que a informação de experiência administrativa estava ausente
+(valores NA).
+O resultado final é apresentado na tabela abaixo:
+6
+
+===== page_006_mid.png =====
+frequência atualizadas para verificação:
+Table 11: Valores da variável exp. adm após o tratamento
+Experiência Administrativa (exp adm) Quantidade
+o ss
+1 sas
+NA u
+Ausente (NA) 1
+Table 12: Valores da variável indicacao após o tratamento
+Indicação Presidencial (indicacao) Quantidade
+Bolsonaro 396
+Lula sT
+Rousseff 351
+Temer 204
+3. Tabela descritiva: experiência administrativa
+2 Alguns Ipgtidentia drcNordável (com beso no Cadelanh) as de download direto
+A variável escolhida para identificar a experiência prévia na administração pública é a exp adm. Conforme
+descrito no Codebook oficial da pesquisa. essa variável é de natureza binária. onde o valor 1 indica que o
+
+===== page_006_top.png =====
++ Tratamento: Utilizamos a função trimus () para remover quaisquer espaços em branco sobrando
+Abaixo, apresenta-se o código utilizado para realizar essas correções diretamente na base de dados:
+& tratamento da variável exp adm
+dadosSexp. ada [dadosSexp. ada == "1º] <- "1º
+dadosSexp. ade dadosSexp. ada == "3"] <- NA
+& tratamento da variável instr
+dadosSinstr [dadosSinstr == "graduacao*] <- "superior"
+& tratamento da vartável indicacao
+dadosSindicacao < trinus(dadosSindicacao)
+Para provar que os erros de digitação e espaçamento foram corrigidos com sucesso, gerou-se as tabelas de
+
+dE pune arca Neste eriio nb ndo apra caa sa os ao ad to
+ETR SR E A SE PD
+
+===== page_007_bot.png =====
+Ministério Proporção (%)
+MAPA 9L81
+MinC 851
+4. Intervalo de confiança de 95% para essa proporção.
+Table 16: Intervalo de Confiança de 95% para à proporção de
+nomeações com experiência por pasta
+Ministério Intervalo de Confiança (95%)
+MAPA [89.40%; 94.10%]
+MinC [82.12%; 89.31%]
+5. Margem de erro associada ao intervalo de confiança. |
+ê
+
+===== page_007_mid.png =====
+Ministério Nomeações com Experiência
+MAPA as?
+MinC az
+3. Proporção com experiência administrativa.
+Nesta etapa, calculamos a proporção (percentual) de nomeações que possuíam experiência administrativa
+prévia em relação ao total de observações válidas dentro de cada pasta.
+O resultado por ministério é apresentado na tabela abaixo:
+Table 15: Proporção (percentual) de nomeações com experiência
+administrativa prévia por pasta
+Ministério Proporção (%)
+MAPA 9181
+MinC 8571
+4. Intervalo de confiança de 95% para essa proporção.
+Table 16: Intervalo de Confiança de 95% para a proporção de
+nomeações com experiência por pasta
+
+===== page_007_top.png =====
+Table 13: Número de observações válidas com informação de ex-
+periência administrativa por pasta
+Ministério Observações Válidas
+MAPA 525
+MinC 304
+2. Número de pessoas/nomeações com experiência administrativa.
+Nesta etapa, contabilizamos quantas dessas nomeações válidas correspondem a indivíduos que de fato pos-
+suem experiência prévia no setor público (ou seja, onde a variável exp. adm é igual a 1).
+O resultado por ministério é apresentado na tabela abaixo:
+Table 14: Quantidade de nomeações com experiência administra-
+MAPA as2
+MinC a
+
+===== page_008_bot.png =====
+Nesta etapa, testou-se se a diferença observada na proporção de burocratas com experiência administrativa
+entre o Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC) é estatisticamente significativa
+ou se pode ser fruto do acaso.
+1. Hipótese Nula (Hy)
+A proporção de nomeações de indivíduos com experiência administrativa prévia é igual nas duas pastas
+(Pmapa = Pmínc).
+2. Hipótese Alternativa (H1)
+A proporção de nomeações de indivíduos com experiência administrativa prévia é diferente entre as duas
+pastas (Pmapa É Pminc).
+3. Teste usado no R
+Utilizou-se a função prop. test), que realiza o teste de proporções com aproximação normal (Qui-quadrado
+de Pearson para duas proporções).
+
+s
+
+===== page_008_mid.png =====
+proporção menor sugere a abertura de espaço para atores da sociedade civil ou indicações estritamente
+políticas e externas.
+
+A Margem de Erro: Na prática, a margem de erro funciona como uma zona de tolerância (“para mais ou
+para menos”). Como estamos trabalhando com os dados disponíveis na amostra, a margem de erro reconhece
+“que pode haver pequenas futuações casuais. Substantivamente, ela nos diz que o percentual real de gestores
+experientes em cada ministério pode oscilar ligeiramente acima ou abaixo da taxa exata que caleulamos,
+definindo o teto e o piso dessa variação.
+
+O Intervalo de Confiança de 95%: Este intervalo representa à nossa margem de segurança científica. Ele
+estabelece uma faixa de valores (por exemplo, entre 85% e 91%) dentro da qual temos 95% de certeza de
+que se encontra a verdadeira taxa de servidores experientes daquela população de nomeados. Em termos
+práticos, significa que se repetissemos essa coleta de dados 100 vezes sob as mesmas condições, em 95 delas
+o percentual real de pessoas com experiência administrativa estaria dentro desse intervalo que calenlamos.
+4. Primeiro teste de hipótese bivariado
+
+Nesta etapa, testou-se se a diferença observada na proporção de burocratas com experiência administrativa
+entre o Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC) é estatisticamente significativa
+ou se pode ser fruto do acaso.
+
+1. Hipótese Nula (Hy)
+
+A proporção de nomeações de indivíduos com experiência administrativa prévia é igual nas duas pastas
+(Pmapa = Pminc).
+
+===== page_008_top.png =====
+Table 17: Margem de erro associada ao Intervalo de Confiança de
+95% por pasta
+Ministério Margem de Erro
+MAPA + 2.35%
+MinC + 3.59%
+Interpretação dos Resultados
+A análise do perfil dos nomeados para os cargos de confiança no MAPA e no MinC nos permite compreender
+a estratégia de ocupação burocrática de cada pasta, revelando se há uma preferência por perfis mais técnicos
+(com bagagem prévia na máquina pública) ou por perfis externos à administração.
+A Proporção de Experiência: Este indicador aponta diretamente o percentual de nomeações na nossa base
+que foram preenchidas por pessoas que já haviam trabalhado no setor público antes. Uma proporção elevada
+indica um processo de seleção focado em profissionalização e continuidade administrativa, enquanto uma
+proporção menor sugere à abertura de espaço para atores da sociedade civil ou indicações estritamente
+políticas e externas.
+A Margem de Erro: Na prática, a margem de erro funciona como uma zona de tolerância (“para mais ou
+ping cepas epi ans Ci plane pio var gta gp nom
+
+===== page_009_bot.png =====
+Total Cargos de Alto Proporção  Margemde — Intervalo de Conhança
+Ministério Analisado Nível (%) Erro (95%)
+MAPA 525 187 35.62 +Al% [81.52%; 39.729%]
+MinC 365 155 4247 + 5.07% [87.399%; a7.549%)
+A tabela gerada pelo código acima revela a seguinte estrutura:
+MAPA: Do total de 525 cargos nomeados, 187 são de alto nível. A proporção é de 35,62%, com um Intervalo
+de Confiança de 95% variando de 31,52% a 39,72%. MinC: Do total de 365 cargos nomeados, 155 são de alto
+nível. A proporção é de 42,47%, com um Intervalo de Confiança de 95% variando de 37,39% a 47,54%.3.
+Teste de Hipótese para a Diferença entre ProporçõesPara verificar se a diferença observada nas proporções
+(aproximadamente 35,6% contra 42,5%) é estatisticamente significativa, aplicamos o teste de proporções
+com aproximação normal. Hipótese Nula (Ho): A proporção de cargos de alto nível é igual no MAPA e no
+MinC. Hipótese Alternativa (H1): A proporção de cargos de alto nível difere entre as duas pastas.
+
+|
+
+===== page_009_mid.png =====
+com experiência no setor público), existiria uma probabilidade de 5,7% de encontrarmos uma diferença igual
+“ou maior do que esta em nossa base de dados apenas por futuação amostral (acaso).
+Como essa probabilidade é superior ao limite de tolerância ao erro de 5%, conclui-se que não há evidências
+estatísticas suficientes para afirmar que as pastas divergem. Em termos substantivos, isso sugere que, apesar
+de atuarem em setores distintos (agronegócio vs. cultura), ambas as pastas adotam uma estratégia notavel-
+mente similar para seus cargos de confiança de médio e alto escalão: uma forte dependência de burocratas
+que já possuem vivência prévia na administração pública (os chamados insiders do Estado). A pequena
+diferença percentual que vimos na tabela descritiva (92% no MAPA contra 88% no MinC) não é forte o
+suficiente para configurar um padrão distinto de nomeação.
+Nesta etapa, investigou-se se a estrutura hicrárquica das nomeações difere entre as duas pastas. Para isso,
+criou-se à variável alto nível, que agrupa os cargos de direção mais altos (níveis 5 e 6) e os contrapõe aos
+de nível 4.
+Table 19: Proporção e Intervalo de Confiança (95%) de cargos de
+alto nível (níveis 5 e 6) por pasta
+Total Cargos de Alto Proporção  Margemde — Intervalo de Confiança
+Ministério Analisado Nível (%) Erro (95%)
+MAPA 525 187 35.62 + AI% [BL.529%; 39.729]
+MinC 365 155 4247 + 507% [87.399%; 47.549)
+A tabela gerada pelo código acima revela a seguinte estrutura:
+MAPA: Do total de 525 cargos nomeados, 187 são de alto nível. A proporção é de 35,62%, com um Intervalo
+de Confiança de 95% variando de 31,52% a 39,72%. MinC: Do total de 365 cargos nomeados, 155 são de alto
+nível. A proporção é de 42.47%. com um Intervalo de Confianca de 95% variando de 37.39% a 47.54%.3.
+
+===== page_009_top.png =====
+Table 18: Resultado do Teste de Proporções (Diferença entre
+MAPA e MinC)
+Estatística (Qui-Quadrado) Graus de Liberdade Valor-p
+3.618 1 0,057161
+
+O p-valor resultante do teste é de aproximadamente 0.0571 (ou 5,71%).
+Decisão (Nível de significância de 5%) Como o p-valor (0.0571) é estritamente maior que o nosso nível de
+significância de 0.05 (5%), não rejeitamos a hipótese nula.
+Interpretação Substantiva
+O p-valor de 0.057 significa que, partindo da premissa de que a hipótese nula é verdadeira (ou seja, se na
+realidade não houvesse absolutamente nenhuma diferença na forma como MAPA e MinC recrutam pessoas
+com experiência no setor público), existiria uma probabilidade de 5,7% de encontrarmos uma diferença igual
+“ou maior do que esta em nossa base de dados apenas por flutuação amostral (acaso).
+Como essa probabilidade é superior ao limite de tolerância ao erro de 5%, conclui-se que não há evidências.
+estatísticas suficientes para afirmar que as pastas divergem. Em termos substantivos, isso sugere que, apesar
+
+===== page_010_bot.png =====
+Para esta análise, optou-se por revisitar o Primeiro Teste de Hipótese, que investigou se a proporção de
+
+nomeações com experiência administrativa é igual entre o MAPA e o MinC. O p-valor obtido naquele teste
+
+foi de aproximadamente 0.057.
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+
+Sim, a conclusão mudaria. Se adotássemos um nível de significância (a) de 10% (0.10), passaríamos a
+
+aceitar um risco maior de cometer um erro do Tipo I (rejeitar um padrão verdadeiro). Como o nosso p-valor
+
+(0.057) é estritamente menor do que 0.10, nós rejeitaríamos a hipótese nula (Ho). A nova conclusão
+
+estatística seria de que há, de fato, uma diferença na proporção de burocratas com experiência administrativa
+
+entre as pastas.
+
+2. A conclusão mudaria se o nível de significância fosse 1%?
+
+Não, a conclusão permaneceria a mesma que a adotada no nível de 5%. Ao adotar um nível de
+
+significância (a) de 1% (0.01), estamos sendo extremamente rigorosos, exigindo evidências fortíssimas para
+
+rejeitar o acaso. Como o p-valor (0.057) é maior do que 0.01, nós não rejeitaríamos a hipótese nula
+
+(Ho). Continuaríamos concluindo que não há evidências estatísticas suficientes para afirmar que as pastas
+10
+
+===== page_010_mid.png =====
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+
+Do ponto de vista substantivo, a diferença é de magnitude moderada, mas institucionalmente relevante. A
+diferença de quase 7 pontos percentuais entre as pastas indica que o Ministério da Cultura (MinC) possui
+uma estrutura comissionada proporcionalmente mais concentrada no alto escalão (níveis 5 e 6) do que o
+Ministério da Agricultura (MAPA). Enquanto o MAPA possui uma base mais “pesada” de cargos de nível 4
+(aproximadamente 64% de suas nomeações), o MinC opera com uma dinâmica mais “top-heavy” (onde o alto
+escalão representa mais de 42% de suas nomeações finalísticas) Essa diferença, embora não seja massiva, é
+substantiva o suficiente para sugerir que o formato de distribuição de poder, à negociação política para cargos
+de maior prestígio ou o próprio desenho hierárquico das secretarias variam de acordo com as especificidades
+do setor ou com a base de sustentação política que o órgão atende.
+
+6. Significância estatística e nível de significância
+
+Para esta análise, optou-se por revisitar o Primeiro Teste de Hipótese, que investigou se a proporção de
+nomeações com experiência administrativa é igual entre o MAPA e o MinC. O p-valor obtido naquele teste
+foi de aproximadamente 0.057.
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+
+Sim, a conclusão mudaria. Se adotássemos um nível de significância (a) de 10% (0.10), passaríamos a
+aceitar um risco maior de cometer um erro do Tipo I (rejeitar um padrão verdadeiro). Como o nosso p-valor
+(0.057) é estritamente menor do que 0.10, nós rejeitaríamos a hipótese nula (Ho). A nova conclusão
+
+===== page_010_top.png =====
+Table 20: Resultado do Teste de Proporções: Ocupação de Cargos
+de Alto Nível (MAPA vs MinC)
+Estatística (Qui-Quadrado) Grans de Liberdade Valor-p
+4.266] 1 0,0385887
+4. P-valor e sua Interpretação
+O p-valor retornado pelo teste é de aproximadamente 0.0389 (ou 3,89%).O p-valor significa a probabilidade
+de encontrarmos uma diferença de proporções tão grande (ou maior) quanto a que observamos na nossa
+amostra, assumindo que, na realidade (na população), não exista diferença nenhuma entre os Ministérios.
+Como esse valor (0.0389) é menor do que o nosso nível de significância de 0.05 (5%), a probabilidade de esse
+resultado ser um mero acaso amostral é muito baixa. Portanto, rejeitamos a hipótese nula e aceitamos que
+existe, de fato, uma diferença estatisticamente significativa na proporção de cargos de alto nível entre os dois
+5. Uma conclusão substantiva: a diferença parece grande, pequena ou irrelevante do ponto de
+vista substantivo?
+
+===== page_011_bot.png =====
+O erro-padrão da nossa estimativa diminuiria.
+Especificamente, como o tamanho da amostra foi multiplicado por 2, o erro-padrão seria dividido pela raiz
+quadrada de 2 (reduzindo em aproximadamente 29%). * Erro-padrão original (n = 525): = 0,0209 *
+Novo erro-padrão (n = 1050): = 0,0148
+Consequentemente, a Margem de Erro também diminuiria e o nosso Intervalo de Confiança ficaria mais
+estreito, indicando uma estimativa mais precisa.
+2. Por que isso acontece?
+Isso acontece devido à própria fórmula matemática do erro-padrão (EP) para proporções:
+
+EP = (PIB)
+Na fórmula, o tamanho da amostra (n) encontra-se no denominador da fração. Mantendo o numerador
+constante (já que a proporção P não mudou), qualquer aumento no valor de 1 resultará em um quociente
+menor e, consequentemente, em uma raiz quadrada menor.
+Do ponto de vista substantivo e estatístico, isso reflete a Lei dos Grandes Números e o princípio fm-
+damental da amostragem: mais dados significam mais informação e menos incerteza. Quando
+
+u
+
+===== page_011_mid.png =====
+Portanto, a diferença é substantivamente pequena e indica que os perfis de recrutamento se assemelham
+fortemente na prática, mesmo que um teste estatístico a 10% pudesse tecnicamente nos obrigar a classificá-
+los como “diferentes”. A significância estatística nunca deve substituir a avaliação crítica da magnitude da
+diferença no mundo real.
+
+7. O que aconteceria se a amostra fosse maior?
+
+Para este exercício mental, utilizaremos a estimativa do Segundo Teste de Hipótese referente à proporção de
+cargos de alto nível no MAPA, onde a proporção observada (p) foi de aproximadamente 35,6% e o número de
+observações (n) foi 525. Suponha que a proporção permanecesse exatamente a mesma, mas conseguíssemos
+dobrar o tamanho da amostra para 1.050 observações.
+
+1. O que tenderia a acontecer com o erro-padrão?
+
+O erro-padrão da nossa estimativa diminuiria.
+
+Especificamente, como o tamanho da amostra foi multiplicado por 2, o erro-padrão seria dividido pela raiz
+quadrada de 2 (reduzindo em aproximadamente 29%). * Erro-padrão original (n = 525): = 0,0209 *
+Novo erro-padrão (n = 1050): = 0,048
+
+Consequentemente, a Margem de Erro também diminuiria e o nosso Intervalo de Confiança ficaria mais
+estreito, indicando uma estimativa mais precisa.
+
+2. Por que isso acontece?
+
+===== page_011_top.png =====
+3. Diferença entre p-valor e significância substantiva
+Esse exercício ilustra perfeitamente as limitações práticas de se basear exclusivamente no p-valor e nos cortes
+arbitrários de significância estatística (1%, 5%, 10%).
+
++ A armadilha estatística: Como vimos, a mesma base de dados, com os mesmos percentuais reais.
+(92% no MAPA vs. 88% no MinC), pode levar a decisões dicotômicas (“as pastas são iguais” vs. “as
+pastas são diferentes”) apenas pela mudança de um limite teórico preestabelecido pelo pesquisador. O
+p-valor informa apenas a probabilidade de encontrarmos os dados sob a hipótese nula; ele não mede a
+importância real do fenômeno.
+
++ A significância substantiva: Refere-se à importância prática, teórica ou institucional do “tamanho
+do efeito” encontrado. Independentemente de o teste “passar” ou não no corte de 5% ou 10%, a diferença
+real entre as duas pastas é de aproximadamente 4 pontos percentuais. Para um cientista político ou
+analista de políticas públicas, o fato substantivo mais importante aqui não é a rejeição matemática
+da igualdade, mas sim o fato de que ambos os ministérios operam com taxas altíssimas de
+insiders do Estado (em torno de 90%).
+
+Portanto, a diferença é substantivamente pequena e indica que os perfis de recrutamento se assemelham
+fortemente na prática, mesmo que um teste estatístico a 10% pudesse tecnicamente nos obrigar a classificá-
+los como “diferentes”. A significância estatística nunca deve substituir a avaliação crítica da magnitude da
+diferenca no mundo real.
+
+===== page_012_bot.png =====
+12 |
+
+===== page_012_mid.png =====
+
+
+===== page_012_top.png =====
+dobramos o tamanho da nossa amostra coletando mais observações reais, a chance de a nossa proporção
+amostral divergir fortemente da verdadeira proporção populacional por mero acaso (fintuação amostral) cai
+drasticamente. Assim, a estimativa se torna mais confiável e o “erro” esperado na nossa medida encolhe.

@@ -1,0 +1,296 @@
+
+===== page_001_bot.png =====
+asno exirçoi cin ca ndo ha a ei ari ei É
+base cargos? <- base cargos? >),
+mutate(across (uhere(is.character), -na if(trimes(.x), "HA")))
+base cargos? 1>%
+select(orgao sup, instr, exp adm, exp car, exp mer, partido, car pub) 1%
+is.na() 1%
+colSuss()
+base, cargos? 1>% count(exp adm)
+base cargos? 1>) count(exp car)
+base cargos? Y>% count(nivel)
+base cargos? %>% count(instr)
+base cargos? %>% count(indicacao)
+base cargos <- base cargos? >
+mutate(oxp adm = case vhen(exp adm == "3" - NA character,
+"Repositório burocraciaBR (https://github.com /nayalbrecht /burocraciaBR). Acesso em: 14 jul. 2026.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_mid.png =====
+na repetição de indivíduos, caso tenha sido nomeado para mais de um cargo nesse período.
+1. Leitura dos Dados
+A base de dados abaixo foi extraída do repositório da autora, Nayara Albrecht!
+library(readxl)
+library (dplyr)
+library (ggplot2)
+library (imitr)
+base cargos? <- read excel('dados/BASE cargos? x1sx*, sheet = "BASE cargos")
+codebook <- read excel("dados/BASE. cargos? .x1ox”, sheet = "Codebook?)
+base, cargos? 1) count (orgao. sup)
+base cargos? <- base cargos? >),
+mutate(across(vhere(is.character), -na if(trimus(.x), “NAº)))
+base cargos? 12%,
+select(orgao sup, instr, exp adm, exp car, exp mer, partido, car pub) >)
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+base, cargos? 4>/ count (exp. ada)
+
+===== page_001_top.png =====
+Trabalho Final - Métodos HI |
+Lara Nunes de Lacerda - nºUSP 14586921
+O artigo Nomeação a cargos públicos no Brasil: um estudo comparado das pastas de Agricultura e
+Cultura do Executivo Federal (2011-2021), publicado em 2025 por Nayara Albrecht e Pedro Ribeiro, é um
+estudo comparativo entre as nomeações para cargos comissionados, de níveis 4 a 6, nas pastas da Cultura
+(MinC/SECULT) e da Agricultura (MAPA). A pergunta que fundamenta a pesquisa é: Em que medida a
+trajetória política « profissional importa para a nomeação de cargos nas secretárias dos ministérios?. Dessa
+maneira, a base de dados formulada pelos antores tem como unidade de análise à nomeação, portanto cada
+linha corresnende à ma nomenção feita nor um nresidente. nos anos de 9011 a 221 - o que pode ocasionar
+vodo.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+CA LeturadosDados
+
+===== page_002_bot.png =====
+tabela descritiva <- base cargos 1>%
+filter(orgao. sup link c('eapa”, “minc")) Jp%
+group. by(orgao. sup) >),
+sumsarise(obs validas = sun(!is .na(exp. ade)),
+com experiencia = sun(oxp ada == 1, na.rm = TRUE),
+proporcao = com experiencia / obs validas,
+zargen erro = 1.96 + sqrt((proporcao * (1 - proporcao)) / obs validas),
+ác inferior = proporcao - margem erro,
+ic superior = proporcao + margem erro)
+knitr: :kable(tabela descritiva,
+col.names = c("Órgão Superior”, "Indicações", "Com Experiência",
+“Proporção”, "Marges de Erro (954)*,
+"IC Inferior", "IC Superior"),
+digits = 4, alíga = “c*,
+caption = "Proporção de indicações com experiência administrativa")
+Alguns arquivos neste envio só podem ser acessados através de download direto. | |
+l
+
+===== page_002_mid.png =====
+Eidos aci fo iprntuaç a  n , P  PSD  a
+da função mutate, para que o R identificasse esses valores como NAs.
+
+Na checagem específica das variáveis indicadas, foram encontrados dois problemas, em exp. adm quatro
+informações estavam preenchidas como “1 e 3, e em exp. car 253 informações apresentavam o número 5
+(apesar da classificação ir de 1 a 3). Para a primeira variável, removi a crase do 1, transformei o 3 em
+NA, e tornei a variável númerica, pois estava classificada como nominal. Em seguida, acredito que a grande
+repetição do número 5 em exp. car se dá por uma falha na padronização da base de dados, pois no codebook
+a classificação é de 1 a 3, sendo o 3 = DAS 5-6; portanto, poderia ser uma confusão entre a numeração
+original e a dos autores. Sendo assim, alterei todos os valores 5 por 3 e também transformei a variável em
+numérica, para facilitar futuras análises.
+
+2. Tabela Descritiva
+
+Para formular a tabela abaixo, foi utilizada a variável exp, adm, pois indica experiência em órgãos da
+administração pública (Codebook) de maneira binária, 1 = SIM; 0 = NÃO.
+tabela descritiva <- base cargos >),
+
+filter(orgao. sup Yin c(mapa”, "minc")) Y%
+group. by(orgao. sup) 1>%
+summarise(obs validas = sun(!is.na(exp adm)),
+com experiencia = sun(exp adm == 1, na.rm = TRUE),
+proporcao = com experiencia / obs validas.
+s.validas),
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_top.png =====
+exp adm == "1º - "1º, TRUE - expada),
+exp adm = as .nuneric(exp adm),
+exp.car = ifelse(exp car == 5, 3, exp car),
+exp car = as.nuneric(exp. car))
+
+1. A base consta com 1038 linhas e 26 colunas.
+
+2. As variáveis são: orgao. sup, setor, chave, id, cargo, funcao, nivel, instr, area, inst ensino, inst. origem,
+car pub, partido, cargo. ele, lid. part, exp adm, exp car, exp. mer, exp. soc, UF*, partido. pr,
+partido. ministro, indicacao, entrada, saida e perm.
+
+3. Para o MAPA foram encontradas 525 observações, para o MCTI 148 e para o MINC 365.
+
+4. Quantidade de valores ausentes nas colunas: exp. adm = 1; car pub = 17; exp. car = 76; instr =
+95; exp. mer = 260; partido = 909.
+
+5. Checagem feita no último chunk acima.
+
+A checagem de valores ausentes apresentou problema devido à sinalização manualmente escrita das
+= o “o o : 2 ase de dados, através
+à Alguns arquivos neste envio só podem ser acessados através de download direto. —
+| + em exp, ada quatro
+2 informações estavam preenchidas como “1 e 3, e em exp car 253 informações apresentavam O número 5
+
+===== page_003_bot.png =====
+tis .na(exp ada)
+testei <- In(exp adm - orgao sup, data = dados testei)
+summary(teste!)
+“
+as can:
+48 In(formula = exp ada - orgao sup, data = dados testei)
+“
+48 Residuals:
+ss Min 10 Median 3 Max
+48 -0.91985 0.08015 0.08015 0.11864 0.11864
+“
+48 Coefticients:
+“ Estimate Std. Error t value Pr(>It|)
+*8 (Intercept) 0.91985 0.01284 71.652 <20-16 +e+
+48 orgao supminc -0.03849  0.02022 -1.904 0.0573 .
+48 —
+48 Signif. codes: O '++*! 0.001 se! 0.01 +! 0.051." 0.111
+“
+48 Residual standard error: 0.2939 on 876 degrees of freedom
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_003_mid.png =====
+estima, com 95% de certeza, que a proporção de indicações com experiência se situa entre 89,66% e 94,31%
+(intervalo de confiança) para o MAPA, e entre 84,77% e 91,50% para o MinC. Ambos valores são altos, e
+se considerada essa variável sozinha, relatam maioria expressiva de funcionários públicos experientes nestes
+3. Primeiro Teste de Hipótese Bivariado
+
+Nessa etapa será testada a hipótese de que a proporção de nomeações com experiência administrativa
+é igual nas pastas do MAPA e MinC, a partir de um teste bilateral.
+Ho: prsapa = pru
+Hi: para É Puc
+dados testei <- base cargos 1%
+
+filter(orgao. sup Xin) c('mapa”, “minct),
+tis.na(oxp,ada))
+testei <- In(exp adm - orgao sup, data = dados testei)
+summary(testel)
+se
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+“ Min : 10 Median 30 Max
+
+===== page_003_top.png =====
+Table 1: Proporção de indicações com experiência administrativa
+Órgão Com Margem de Erro 1C
+Superior Indicações — Experiência Proporção (959%) IC Inferior — Superior
+mapa E! 482 09198 0.0232 0.8966 0.9431
+mine ES E 08814 00337 osarT 0.9150
+Fonte: Elaboração própria com base no banco de dados do artigo.
+Como observado na Tabela 1, existe uma proporção similar de indicações de pessoas com experiência em
+administração pública entre as pastas de agricultura (92%) e cultura (88%). A margem de erro encontrada,
+de 0.0232 para a pasta de agricultura e 0.0337 para a de cultura, nada mais é do que quanto espera-se que o
+resultado pode variar, e a partir dela surge o intervalo de confiança, que soma e subtrai este valor, gerando
+um intervalo de possíveis resultados esperados. É importante ressaltar que a margem de erro pode variar
+conforme o intervalo de confiança descjado, e nesse caso foi utilizado um intervalo que corresponde a 95%
+de certeza. nortanto 5% de erro. Sendo assim. à análise estatística a partir dos dados do MAPA e MinC
+. º o. tre 89,06% e 94,31%
+i Alguns arquivos neste envio só podem ser acessados através de download direto. = valores são altos, e
+| bs experientes nestes
+
+===== page_004_bot.png =====
+caption = "Proporção de indicações para cargos de alto nível")
+teste? <- In(alto nível - orgao sup, data = dados teste?)
+summary (teste2)
+“
+ss call:
+4% In(formula = alto nível - orgao sup, data = dados teste?)
+..
+48 Residuais:
+“ Min 1Q Median 3 Max
+48 -0.4247 -0.3562 -0.3562 0.5753 0.6438
+“
+48 Coefficients:
+“ Estimate Std. Error t value Pr(>It|)
+48 (Intercept) 0.35619 0.02120 16.800 <20-16 ses
+48 orgao supmínc 0.06847 0.03311 2.068 0.0389 +
+48
+48 Signif. codes: O see! 0.001 'se' 0.01 8º 0.051." 0.1º 1
+“s
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_mid.png =====
+mutate(alto nivel = ifelse(nivel Yin) c(5, 6), 1, 0))
+tabela teste? <- dados teste? 1>%
+group. by (orgao. sup) 7%
+summarise(n. valido = nO),
+casos alto nivel = sus(alto nível == 1),
+proporcao = mean(alto nível),
+=arges erro = 1.96 + sqre((proporcao + (1 - proporcao)) / n valido),
+ác inf » proporcao - nargem erro,
+ic sup = proporcao + margem erro)
+knitr: -kable(tabela teste2,
+col.names = c(Órgão Superior", "Indicações", “Cargos Alto Nível”,
+“Proporção”, “Margem de Erro (954)",
+“IC Inferior", "IC Superior"),
+digits = 4, align = "c",
+caption = "Proporção de indicações para cargos de alto nível")
+teste? <- In(alto nível - orgao sup, data = dados teste?)
+sunmary(teste?)
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+É5 Resíduals:
+
+===== page_004_top.png =====
+4% Multiple R-squared: 0.004121, Adjusted R-squared: 0.002984
+88 E-statástic: 3.625 on 1 and 876 DF, p-value: 0.05726
+O primeiro código rodado, filter, filtra as informações vazias na coluna exp. adm para garantir um
+resultado mais confiável. Em seguida, foi feito um modelo de regressão linear para testar a hipótese nula,
+de que não existe diferença na proporção de nomeações experientes das pastas. Levando em conta o nível
+de significância de 5%, a hipótese nula não é rejeitada, já que o p-valor apresentado de 0.0573 é maior que
+o limite estabelecido (p > 0.05). Isso indica que se a taxa real de nomeações experientes fosse totalmente
+idêntica nos dois ministérios, haveria uma chance de 5,75% de encontrarmos a diferença observada de 3,8
+pontos, ou maior.
+4. Segundo Teste de Hipótese Bivariado
+dados teste? <- base cargos >
+AiSimmirmena sam NÃ af Bmama MoimaR Aim ma fodian A Me
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+E group. by(orgao, sup) Yi
+
+===== page_005_bot.png =====
+significância para 5%, que procura garantir relevância estatística nos resultados. Assim, quanto menor o
+nível de significância, maior a rigidez para a comprovação da hipótese a partir do p-valor.
+6. Maior Amostra: Caso da Experiência Administrativa
+summary (teste!) Scoefficients[, “Std. Error") / sqrt(2)
+4% —(Intercept) orgao supainc
+48 0.009077647  0.014296145
+Duplicando a quantidade de informações nas pastas do MAPA e do MinC, o erro padrão de 0.02022
+(calculado no primeiro teste) cairia para 0.01429. Pensando que o modelo estatístico busca previsibilidade,
+é lógico pensar que uma amostra maior delimitará um modelo mais preciso, pois carrega mais informações
+(Lei dos Grandes Números). Assim, o erro padrão, que é a incerteza da estimativa, tende à diminuir, como
+observado neste caso.
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_005_mid.png =====
+RN EAD TD NO LE E
+implica na rejeição da hipótese nula, pois o p-valor é menor que 0.10. Então, a conclusão seria outra: existe
+diferença na proporção de nomeações experientes entre as pastas de agricultura e cultura.
+
+2. Nível de Significância 1%
+Com um nível de significância tão baixo, a barra para rejeitar a hipótese nula fica muito alta, pois exige
+um p-valor seja menor que 0.01. Portanto, como 0.0573 > 0.01, a hipótese não é rejeitada, e o resultado
+seria que os dois ministérios possuem proporções iguais, pois não há evidências suficientes para afirmar o
+contrário.
+3. Conclusão
+O nível de significância é arbitrário, uma vez que é definido pelo próprio pesquisador, e a confirmação
+ou não da hipótese depende dele. Por isso, existe uma tendência acadêmica à padronização do valor de
+significância para 5%, que procura garantir relevância estatística nos resultados. Assim, quanto menor o
+nível de significância, maior a rigidez para a comprovação da hipótese a partir do p-valor.
+6. Maior Amostra: Caso da Experiência Administrativa
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+= ms Uintercopty vrgao supainc
+48 O MNQNTIAAT  N NIAdORIAs
+
+===== page_005_top.png =====
+4 Residual standard error: 0.4858 on 888 degrees of freedom
+4º Multiple R-squared: 0.004793, — Adjusted R-squared: 0.003672
+4º F-statistic: 4.277 on 1 and 888 DF, p-valus: 0.03893
+Este segundo teste de hipótese avalia a hipótese nula de que a proporção de cargos para o alto nível
+é idêntica nas duas pastas. Com um p-valor de 0.0389, rejeita-se essa hipótese a 5% de significância, o que
+significa que a diferença de 0.06847 pontos apresentada é grande o suficiente para comprovar que a proporção
+de cargos não é a mesma. Contudo, do ponto de vista substantivo a diferença parece, sim, pequena, pois a
+proporção é de 35,62% no MAPA e 42,47% no MinC, são apenas 6,85% de vagas a mais, mas é um valor
+grande o suficiente para apresentar relevância estatística.
+5. Análise do primeiro teste de hipóteses: Experiência Administrativa
+1. Nível de Significância 10%
+significância de 10%
+Alguns arquivos neste envio só podem ser acessados através de download direto. gi utrÃs. emiato.

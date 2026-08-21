@@ -1,0 +1,400 @@
+
+===== page_001_bot.png =====
+A unidade de análisa inicial 6 a nomeação para cargo públicos nas secretarias finalísticas dos ministérios da
+Cultura e da Agricultura entre 2011 e 2021.
+3. O que significa uma linha da base?
+Cada linha representa um evento único de entrada ou movimentação de um indivíduo em um determinado
+nível de cargo, registrando seus atributos sociodemográficos, carreira e experiência.
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+Uma mesma pessoa pode ter sido nomeada para diferentes cargos ou ter ocupado o mesmo cargo em momentos
+distintos durante o período analisado.
+5. Quais são as duas pastas comparadas no artigo?
+As duas pastas comparadas são o Ministério da Agricultura (MAPA) e o Ministério da Cultura (MinC).
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_mid.png =====
+de Ciência Política, v. 44, p. 285564, 2025. Disponível em: https: //doi org/10.1590/0103-3352.2025.44.
+285564.
+1. Artigo, pergunta e unidade de análise
+1. Qual é a pergunta geral do artigo?
+Quais são os perfis e trajetórias políticas e profissionais dos burocratas nomeados para cargos comissionados
+nas pastas da Agricultura e da Cultura entre 2011 e 2021, e em que medida esses perfis variam em função
+do contexto institucional e da natureza das políticas públicas?
+2. Qual é a unidade de análise da base?
+A unidade de análise inicial é a nomeação para cargo públicos nas secretarias finalísticas dos ministérios da
+Cultura e da Agricultura entre 2011 e 2021.
+3. O que significa uma linha da base?
+Cada linha representa um evento único de entrada ou movimentação de um indivíduo em um determinado
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+E su qua anais pra prosas magras asma vas tese vis
+
+===== page_001_top.png =====
+Avaliação: inferência básica com dados reais de Ciência Política |
+Giovanna dos Santos Chistoni Silva n. USP 13860449
+20/07/2026
+
+Os dados foram obtidos do repositório GitHub do artigo de Albrecht e Ribeiro (2025), acessados em
+17/07/2026.
+Referência: ALBRECHT, Nayara; RIBEIRO, Pedro. Nomeação a cargos públicos no Brasil: um estudo
+commarado das nastas de Avrienltnra e Cultura do Execntivo Federal (2011.2091), Revista Brasileira
+
+m a E 9/0103-3352.2025.44.
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_002_bot.png =====
+48 [17] “exp car? “exp mer” “exp. soc” cUP es
+44 [21) “partido pr” “partido ministro” “indicacao" “entrada”
+48 [25] “saida” "pera"
+3. Número de observações por orgao sup
+A tabela abaixo demonstra o número de observações de cada órgão superior.
+BASE, cargos? > count(orgao. sup) 1>% arrange(desc(n))
+ss 8 A tibble: 3x2
+ss orgao sup n
++ <cho cin
+48 1 mapa sas
+48 2 mine 365
+48 3 meti 148
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_002_mid.png =====
+Eni o ca sia
+
+es (1) 26
+2. Nome das variáveis
+names (BASE. cargos?)
+*8 [1) "orgao sup" "setor" “chave” made
+8 [5) “cargo” “funcao” “nível" “instrt
+8 [9] tarea” “inst ensino”  *instoriges” “car pub”
+*s [13] "partido" "cargo ele” "lid part” rexp ada”
+44 [17] vexp car" “exp mer” rexp. soc" ups
+44 [21) "partido pr” “partido ministro" "indicacao” “entrada”
+“8 (25) “saida” "pera"
+3. Número de observações por orgao sup
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+l
+
+===== page_002_top.png =====
+2. Leitura e validação dos dados
+1. Número de linhas e colunas
+A base de dados possui 1038 linhas e 26 colunas.
+dim(BASE cargos2)
+es [1) 1038 26
+nrov(BASE cargos?)
+“e [1) 1038
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. ]
+
+===== page_003_bot.png =====
+cargo ele exp car Tid part ánstr partido exp soc
+5 1 0 0 O 4
+BASE, cargos? 1>%
+summarise(across(c(exp adm, exp car, nível, instr, indicacao), - sun(is.na(.))))
+
+ss SA tibble: 1x5
+4% exp ada exp car nível instr indicacao
+*s  <int> <int> <int> Gob  <int>
+“1 o 10 0 º
+
+Table 3: Tabela 3. Número de valores ausentes em
+
+pelo menos cinco variáveis relevantes (exp adm, exp car,
+
+nivel, instr, indicacao)
+exp adm exp car nável instr indicacao
+o 1 o o 0
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+exp.car = sum(is.na(exp car)),
+1id part = sun(is.na(lid part)),
+instr = sun(is.na(instr)),
+partido = sun(is.na(partido)),
+exp.soc = sun(is.na(exp. soc))
+,
+ss A tibblo: 1x6
+4º cargo ele exp car lid part instr partido exp soc
+“ <int> <int>  <int> cin) cin <int>
+“1 o 1 o o o 4
+Table 2: Tabela 2. Número de valores ausentes em
+pelo menos cinco variáveis relevantes (cargo. ele, exp. car,
+lid part, instr, partido, exp soc)
+cargo ele exp car lid part ánstr partido exp soc
+õ 1 0 0 O 4
+BASE cargos? 1%
+s-na(o))))
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+48 exp ada exp car nível instr indicacao
+
+===== page_003_top.png =====
+Table 1: Tabela 1. Número de observações por orgao. sup
+(órgão superior)
+orgao sup n
+mapa 525
+ninc 365
+neti 148
+4. Número de valores ausentes em pelo menos cinco variáveis relevantes
+As tabelas abaixo demonstram o número de valores ansentes em pelo menos cinco variáveis, cada tabela.
+BASE, cargos? >
+summarise(
+cargo ele = sun(is.na(cargo ele)),
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+CO partido = sun(is.na(partádo)),
+
+===== page_004_bot.png =====
+“
+*8 doutorado especializacao — graduacao mestrado na
+“. 159 203 1 259 95
+“e superior tecnico ET
+. 287 u o
+table(BASE cargos2$indicacao, useNA = "aluays")
+“
++ Bolsonaro Lula Rousseff Tener <>
+“ 396 er as1 204 o
+3. Tabela descritiva: experiência administrativa
+* Criando variável binária e filtrando a base
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_mid.png =====
+table(BASE cargos2$exp. car, useNA = “always*)
+
+“
+
+oo 1 2 3 5 wi
+
+es 17 s1 2500255 75 1
+
+table(BASE, cargos?Snivel, useNA = “alvays")
+
+“e
+
+“o 4 5 ca
+
+e 62 215 111 O
+
+table(BASE. cargos2$instr, useA = “aluays")
+
+“
+
+8 doutorado especializacao — graduacao mestrado na
+se 159 203 1 259 95
+“ superior tecnico «a
+
+. 287 u o
+
+4% Bolsonaro Lula Rousseff Temer «NA
+
+===== page_004_top.png =====
+Um problema encontrado foi que, ao usar a função table, variáveis como exp. adm e exp car identificon-se
+registros sujos (textos ou decimais como “1.0”, em vez de numéricos puros), além disso, os valores omissos
+(NA) aparecem nas variáveis de interesse. Foram usadas novas variáveis binárias estritas com case, when ou
+if else, forçando valores válidos a serem 1 ou O e isolando os NAs na hora dos testes.
+5. Conferência dos valores
+Checagem dos valores observados em exp adm, exp car, nivel, instr e indicacao.
+table(BASE, cargos2$exp adm, usellA = “aluays")
+“
+ía o 1 3 NA <NA>
+mo 3 ss 935 141 O
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+oo 1 2 à 5 naca
+
+===== page_005_bot.png =====
+orgao sup obs validascom exp — proporcao erro padraomargem erroic inf ic sup
+mapa ET as2 09198 00119 00232 0.8966. 0.9431
+mine 32 so 0.807 00173 0.0339 0.8468. 09145
+O intervalo de confiança (IC) indica que, se repetíssemos a amostragem infinitas vezes sob as mesmas
+condições, 95% dos intervalos construídos conteriam a verdadeira proporção populacional de burocratas
+experientes na pasta.
+A margem de erro representa a imprecisão máxima esperada (para mais ou para menos) da nossa estimativa
+pontual em relação à realidade.
+O MAPA possui uma proporção de experiência administrativa notavelmente superior e com menor margem
+de erro (devido ao maior N) em relação ao MinC.
+4. Primeiro teste de hipótese bivariado
+Hipótese nula (Ho): A proporção de nomeações com experiência administrativa é igual no MAPA e no
+MinC (praga — Pine = 0).
+Hipótese alternativa (H.): A proporção é diferente entre as pastas (Pmopa — Princ É O).
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+com experiência administrativa, intervalo de confiança de 95% e margem de erro associado.
+tabela exp <- dados filtrados >),
+group. by(orgao sup) 12%
+summarise(
+obs validas = n(),
+com exp = sun(exp adm bin),
+proporcao = com exp / obs validas,
+erro padrao = sqrt((proporcao + (1 - proporcao)) / obs validas),
+margen erro = quora(0.975) + erro padrao,
+ác inf = proporcao - margem erro,
+Dc asa o peogareao À aargua ácro
+Table 4: Tabela 4. Experiência administrativa por pasta
+orgao sup obs validascom exp — proporcao erro padraomargem erroic inf ic sup
+mapa 2 482 09198 00119 00232 0.5966. 0.9431
+mine 32 so 0.8s07 00173 0.039 0.8468. 09145
+O intervalo de confiança (IC) indica que, se repetíssemos a amostragem infinitas vezes sob as mesmas
+cional de burocratas
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+) da nossa estimativa
+pontual em relação à realidade.
+
+===== page_005_top.png =====
+library (dplyr)
+dados filtrados <- BASE cargos? %>%
+filter(orgao. sup Yin c(mapa”, "minc")) fo%
+mutate(
+exp adm bin = case uhen(
+as numeric(exp adm) > 0 - 1,
+as .numeric(exp. adm) == 0 - 0,
+TRUE - NA real.
+,
+,
+* Criando a tabela descritiva
+Tabela descritiva filtrando a base para orgao sup igual a mapa e mine, com dados sobre o número de
+observações válidas por pasta, número de pessoas /nomenções com experiência administrativa, proporção
+rodo ey (orgão. SUP) wa
+
+===== page_006_bot.png =====
+Eee peneira na Score in ni pintor a ci O E araras Sete nd adj cio
+mais burocratas de carreira experientes e o MinC recrutar mais outsiders do setor cultural ou social.
+5. Segundo teste de hipótese bivariado
+dados alto nivel <- BASE cargos? >)
+
+filter(orgao sup lin) c('napa”, “rinc*) & nível Linl c(4, 5, 6)) 1%
+mutate(alto nível = if else(nivel Yiny c(5, 6), 1, 0))
+tabela alto <- dados alto nível 1>%,
+group. by(orgao sup) 1>%
+summarise(
+ntotal = n(),
+nalto = sun(alto nível),
+prop = n.alto / n.total,
+erro padrao = sqrt((prop * (1 - prop)) / n.total),
+ác inf = prop - quora(0.975) + erro padrao,
+ic sup = prop + quora(0.975) » erro. padrao
+,
+5
+
+===== page_006_mid.png =====
+Saito asso
+“
+4º 2-sample test for equality of proportions vithout continuity correction
+“
+&% data: n sucesso out of n total
+48 X-squared = 3.7255, df = 1, p-value = 0.05359
+4% alternative hypothesis: txo.sided
+4% 95 percent confidence interval:
+48 -0.001911019 0.080242039
+48 sample estimates:
+** propt prop2
+48 0.9198473 0.8806818
+O p-valor encontrado foi 0,0572. Como 0,0572 é maior que 0,05, não rejeitamos a hipótese nula. Do ponto
+de vista substantivo, não há grandes divergências no perfil recrutado pelas pastas, apesar do MAPA recrutar
+mais burocratas de carreira experientes e o MinC recrutar mais outsiders do setor cultural ou social.
+5. Segundo teste de hipótese bivariado
+dados alto nível <- BASE cargos? >)
+filter (orgao sup Lin) C('napa”, nine") E nivel Lºn ela 556) 1%
+mutate(alto nivel = if else(nivel link c(S, 6), 1, 0))
+
+===== page_006_top.png =====
+&1. Oriar tabela agregando os dados filtrados antes
+tabela exp <- dados filtrados 1>),
+4 Remover os Ns para não dar erro na soma
+filter(!is .na(exp. adm bin)) >
+group. by(orgao. sup) 1>%
+summarise(
+obs validas = nO),
+com exp = sun(exp adm bin)
+,
+42. Estrair os vetores para o teste
+n sucesso <- tabela expicom exp
+n.total <- tabela expsobs validas
+43. Rodar o teste de proporção
+teste propi <- prop.test(x = n sucesso, n = n total, correct = FALSE)
+teste propi
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+“e
+48 2-sample test for equality of proportions without continuity correction
+
+===== page_007_bot.png =====
+6. Significância estatística e nível de significância
+Analisando o primeiro teste (p-valor = 0,0572):
+1. A conclusão mudaria se o nível de significância fosse 10%?
+Sim, como 0,0572 é menor que 0,10, à hipótese nula seria rejeitada em nível de 10%.
+2. A conclusão mudaria se o nível de significância fosse 1%?
+Não, como 0,0572 é maior que 0,01, a hipótese nula não seria rejeitada.
+3. O que esse exercício mostra sobre a diferença entre p-valor e significância
+substantiva?
+A decisão estatística depende do nível de significância escolhido. O p-valor pode levar a diferentes decisões
+quando o limite muda.
+A
+
+===== page_007_mid.png =====
+“
+
+4% 2-sample test for equality of proportions vithout continuity correction
+
+“
+
+4% data: tabela altoSn alto out of tabela altoSn total
+
+4% X-squared = 4.2658, df = 1, p-value = 0.03889
+
+4% alternative hypothesis: tvo.sided
+
+4% 95 percent confidence interval:
+
+48 -0.13365398 -0.00328014
+
+44 sample estimates:
+
+* propi prop2
+
+4% 0.3561905 0.4246575
+
+O p-valor foi 0,0389. Como ele é menor que 0,05, rejeitamos a hipótese de que as duas proporções são iguais.
+Do ponto de vista substantivo, a diferença estrutural no topo da pirâmide (DAS 5 e 6 contra DAS 4) entre
+MAPA e MinC é irrelevante.
+
+6. Significância estatística e nível de significância
+
+Analisando o primeiro teste (p-valor = 0,0572):
+
+1. A conclusão mudaria se o nível de significância fosse 10%?
+
+Sim, como 0,0572 é menor que 0,10, a hipótese nula seria rejeitada em nível de 10%.
+
+===== page_007_top.png =====
+knitr: :kable(
+tabela alto, digits = 4, caption = "Tabela 5. Proporção de Cargos de Alto Nível (DAS 5 e 6)*)
+Table 5: Tabela 5. Proporção de Cargos de Alto Nível (DAS 5 e 6)
+orgao sup mn total malto prop erro padrao ic inf ic sup
+mapa 525 IST 03562 00209 03152 03972
+mine 365 155 04247 00259 03739 04754
++ Teste de hipótese
+teste, prop2 <- prop.test(x = tabela altosn alto, n = tabela altosn total, correct = FALSE)
+teste. prop2
+“
+48 2-sample test for equality of proportions vithout continuity correction
+“
+48 data: tabela alto$n alto out of tabela alto$n total
+
+===== page_008_bot.png =====
+|
+
+===== page_008_mid.png =====
+
+
+===== page_008_top.png =====
+7. O que aconteceria se a amostra fosse maior?
+
+Analisando a estimativa do MAPA, se o número de observações (1) fosse o dobro (2n), mantendo a proporção
+observada (f), erro-padrão diminuiria, pois o erro-padrão de uma proporção é SE = /2E,
+
+Como n está no denominador da raiz, aumentar 0 tamanho da amostra aumenta a quantidade de informação,
+reduzindo a variância do estimador pelo fator de VZ (redução de -29,3% no erro-padrão)

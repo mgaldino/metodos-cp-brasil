@@ -1,0 +1,163 @@
+
+===== page_001_bot.png =====
+201 a 2021, a mesma pessoa pode ter sido nomeada para mais de um cargo.
+5. Quais são as duas pastas comparadas no artigo?
+As pastas do Ministério da Agricultura(MAPA) e do Ministério da Cultura (MinC/Secretaria
+Especial da Cultura).
+- momento do r
+para baixar a base de dados no r tentei utilizar:
+* Link de acesso: https://github.com/nayalbrecht'burocraciaBR acesso em 19/07/2026
+link: "https://raw.githubusercontent.
+com/nayalbrecht/burocraciaBR/main/BASE. cargos2.xisx”
+entretanto não obtive sucesso, então optei por importar o arquivo de uma pasta nomeada
+como “dados”
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_001_mid.png =====
+de direção nas pastas de Agricultura e Cultura entre 2011 e 2021 variam, averiguando
+também se atributos como a filiação partidária poderiam explicar esses perfis.
+2. Qual é a unidade de análise da base?
+A nomeação para um cargo, sendo ele DAS ou FCPE de níveis 4 a 6.
+3. O que significa uma linha da base?
+Cada linha é a nomeação de um indivíduo para um cargo específico, contendo informações
+sobre formação, filiação partidária, experiência profissional, experiência associativa, carreira
+e as demais variáveis que aparecerão em breve.
+4. Por que a mesma pessoa pode aparecer mais de uma vez?
+Por que a unidade de análise é a nomeação e, no recorte de tempo da pesquisa, que é de
+2011 a 2021, a mesma pessoa pode ter sido nomeada para mais de um cargo.
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. ncisecretaria
+Especial da Cultura).
+
+===== page_001_top.png =====
+Julia Raphaela de Moura Magalhães 14654997
+
+MTPIII- trabalho final
+
+Perguntas Obrigatórias sobre o artigo:
+
+ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos
+
+públi-cos no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo
+
+Federal (2011-2021). Revista Brasileira de Ciência Política, 2025.
+
+DOI:hitps:/doi.org/10.1590/0103-3352.2025.44.285564.
+
+1. Qual é a pergunta geral do artigo?
+
+A narnunta dn artino viea raenondar como ne narfie doe carvirinras nomaados para cargos
+Alguns arquivos neste envio só podem ser acessados através de download direto. Im, averiguando
+
+s.
+
+===== page_002_bot.png =====
+Para a codificação da variável binária, tive um problema de
+execução com a variável exp adm e tinha valores e letras no
+console que não pareciam fazer sentido. Minha melhor tentativa
+foi pesquisar e tentar retirar os caracteres especiais da seguinte
+forma:
+exp adm = trimws(exp. adm), remove espaços
+
+exp adm = gsub(””, ”, exp adm), remove o acento grave
+
+exp adm =na if(exp adm, "3”), — transforma 3em NA
+
+exp adm = na if(exp adm, NA"), transforma "NA" em NA
+verdadeiro
+
+exp. adm = as.numeric(exp adm) converte para número
+
+y
+Depois disso, a variável apresentou apenas os valores binários
+(081)
+i Alguns arquivos neste envio só podem ser acessados através de download direto. |
+
+===== page_002_mid.png =====
+tentei por muito tempo realizar esta e não obtive sucesso, modifiquei várias vezes meu
+código e passei para as outras questões.
+3. TABELA DESCRITIVA
+orgao sup observacoes experiencia proporcao
+<cho <int  <dbl <dd>
+1 mapa 524 482 0.920
+2 mine 354 312 0.881
+Para a codificação da variável binária, tive um problema de
+execução com a variável exp adm e tinha valores e letras no
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+exp adm = trimws(exp adm), remove espaços
+
+===== page_002_top.png =====
+Perguntas obrigatórias 2:
+número de linhas e colunas: 1038 linhas e 26 colunas
+2. Nomes das variáveis: "orgao. sup” ; “setor”; "chave" id”; "cargo": "funcao"; "nivel"; "instr”;
+"area"; "inst ensino”; "inst origem"; "car. pub”; “partido”; "cargo. ele”; “lid part”; "exp. adm;
+“exp. car; "exp mer”; "exp soc"; "UF"; "partido pr”; "partido. ministro”; “indicacao" ;
+“entrada”, "saida”, "perm”
+3. Número de observações por orgao sup.
+mapa meti minc
+525 148 365
+4. Número de valores ausentes em pelo menos cinco variáveis relevantes
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. Vozes meu
+vouiyo é passe para as vuuas queswes.
+
+===== page_003_bot.png =====
+Te aaa A a fo DRT ERA ERAS ES CNN E ESPE SN GO ODE ARS EAV E Ea
+amostra, fazendo também com que a amostra tivesse uma margem de erro menor
+Não é necessário simular uma nova base, mas você pode fazer a conta aproximada
+se quiser.
+dificuldades:
+Para a codificação da variável binária, tive um problema de execução com a variável
+exp adm e tinha valores e letras no console que não pareciam fazer sentido. Minha melhor
+tentativa foi tentar retirar os caracteres especiais da seguinte forma:
+exp adm = trimws(exp adm), remove espaços
+exp adm = gsub(””, ”, exp adm), remove o acento grave
+exp adm = na if(exp adm, "3º), — transforma 3em NA
+exp adm = na if(exp adm, NA"), transforma "NA" em NA verdadeiro
+exp adm = as.numeric(exp adm) . converte para número
+)
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+prop 2 = 0.8813559
+[E
+
+com 10% de significância, podemos rejeitar a hipótese nula, de que a proporção de
+MAPA e Minc é igual
+Com 1% de significância,
+isso significa que o MAPA tem uma proporção maior que o MINC, mas que p valor
+equivale a 0.05716. Assim, há evidências suficientes para rejeitar a hipótese nula ao
+nível de 5%, entretanto não tem como afirmar com 95% de confiança, que exista
+diferença entre os dois ministério, uma vez que p valor não é maior que 10%.
+7. O que aconteceria se a amostra fosse maior
+1. O que tenderia a acontecer com o erro-padrão? tenderia a diminuir
+2. Por que isso acontece? porque ele é inversamente proporcional ao tamanho da
+amostra, fazendo também com que a amostra tivesse uma margem de erro menor
+
+4 Não é necessário cimular uma nova haca mas vncê noda fazer a ronta aproximada
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_top.png =====
+INTERVALOS DE CONFIANÇA |
+No MAPA, aproximadamente 91,5% dos ocupantes possuíam experiência administrativa. O
+intervalo de confiança de 95% indica que a proporção populacional provavelmente está
+entre 89% e 94%.
+Já no MINC aproximadamente 85,5% dos ocupantes possuíam experiência administrativa.
+O intervalo de confiança de 95% indica que a proporção populacional provavelmente está
+entre 84% e 91%.
+- comparação entre MAPA e MINC
+sample estimates:
+prop 1 = 0.9198473
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+A
+
+===== page_004_bot.png =====
+o
+
+===== page_004_mid.png =====
+o
+
+===== page_004_top.png =====
+Depois disso, a variável apresentou apenas os valores binários (0 e 1) |

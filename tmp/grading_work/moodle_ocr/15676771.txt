@@ -1,0 +1,581 @@
+
+===== page_001_bot.png =====
+pacotes indicados:
+
+library(readx1)
+
+library(dplyr)
+
+=
+
+4% Attaching package: “dplyr”
+
+44 The folloving objects are nasked from “package:stats”:
+44 The folloving objects are nasked from "package:base”:
+É8 dntersect, setditt, setequal, union
+library(ggplot2)
+
+===== page_001_mid.png =====
+e dio ra near inerte "ogper prt Rr. corretos psbnis ado pac ai perene
+Revista Brasileira de Ciência Política, 2025. DOI: https:/ /doi.org/10.1590/0103- 3352.2025.44.285564.
+Repositório de dados e código: https://github.com /nayalbrecht /burocraciaBR.
+Base: BASE. cargos2.xlsx, disponível em https://raw.githubusercontent. com /nayalbrecht /burocraciaBR /main/BASE. c:
+Acesso no dia 15/07/2026.
+Exercício 1.
+R: O artigo referido buscou analisar a burocracia brasileira, buscando mais especificamente responder à
+pergunta “Qual o perfil dos burocratas que tomaram posse entre os anos de 2011-2021 nos Ministérios da
+Cultura e da Agricultura do Brasil?” A unidade de análise inicial foi a nomeação aos cargos desses ministérios
+e, por isso, a mesma pessoa pode aparecer mais de uma vez no banco de dados. As duas pastas ministeriais
+analisadas no artigo foram a de Cultura e a de Agricultura. Uma linha de base é uma espécie de ponto de
+partida ou valor de referência usado para comparações futuras.
+library(readxl)
+library(dplyr)
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+= o HS IULIUWINE ULJUCLS GrU maSAeU LIUM “pacaageistars:
+o
+
+===== page_001_top.png =====
+trabalho final métodos HI |
+Isabel Chinen Nascimento Godoy
+2026-07-20
+NUSP: 15676771
+Dados e Artigo utilizados:
+Artigo: ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a cargos públi-
+Pai É Pa E dr
+Base: BASE. cargos2.xisx, disponível em https: / /raw.githubusercontent. com /nayalbrecht /burocraciaBR /main/BASE «
+
+===== page_002_bot.png =====
+“8 $ saida <chr> "40668", "40668", "40732", "40613", "40638", "40800", -
+ss $ porn <chr> "12.9", "12.7%, *25.3º, "20.2", “21%, "4.400000000000-
+head(dadosburocracia)
+88 8 A tibble: 6 x 26
+48 orgao sup setor chave id cargo funcao nível instr arca ánst ensino
++ cho  <chr> <cho> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+88 Iminc — secdo Cult-SCC-Si VSCA Secr- DAS 6 NA arte NA
+*s 2mínc — secdo Cult-SCC-DACI OGRJ Dire- DAS 5 espe- admi- UFPA
+*s 3mínc secde Cult-SCC-COM- JNPE Coor- DAS 4 mest- arte UERJ
+45 4mínc — secdc Cult-SCC-COG- ECBR Coor- DAS AM NA MA
+88 Sminc — secdo Cult-SCC-COC- ESTO Coor- DAS 4 supo- hást- PUC
+88 Gminc secdo Cult-SCC-S2  MPPO Secr- DAS 6 espo- comu- NA
+48 4 1 16 more variables: inst origen <chr>, car pub <chr>, partido <chr>,
+488 cargo ele <chr>, lid part <chr>, exp adu <chr>, exp car <chr>,
+488 exp nor <chr>, exp soc <chr>, “UF <chr>, partido pr <chr>,
+ss partido ministro <chr>, indicacao <chr>, entrada <chr>, saida <chr>,
+888 pera cch>
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_002_mid.png =====
+*8 $ area <chr> "arte", "adninistracao", “arte”, "NA", "historia", "c-
+48 $ ánst ensino <chr> “NA”, "UFPA, "UERJ", "NAM, "PUC", "NAM, "UnB, "NAM,
+48 $ inst origem <chr> “NA”, “publica”, “publica”, “NA”, “privada”, "NA", “p-
+48 $ car pub <chr> "SVE", "EPPGG", "OUTRO", "SE INT", "SVEM, "SVE", "SVE-
+48 $ partido <chr> “NA”, “NA”, "PCdoB", "NAM, MPTM, "PIO, MNAM, MNAM, MN-
+24:85 Cpo alo <chr> "0º, 00", 20", “0%, 40”, “0%, "0", “05, “0%, 200, ege
+“88 lid part echr> “0% 000, “ON 0O0, nQu, 000, mgr. ngo, ngu, 00, age
+44 $ explada echr> ngs) apo) uqu) njo, nqul ago, mju) ujo) uquo ago, age.
+GE dopiG echr> »5e! ago, ugel mge, ngu) ogo] mge) ago, agua” ago) age.
+00 4 pias echr> mis) ajol vje) NAO, “OM, 042, NO%, NAM, n1o, “NAM, -
+48 $ exp soc <chr> "1º, "NAM, MIS, MNAM, MIM, MNAM, CNAS, MNAM, MNAM, MN
+ass super <chr> "DE”, "DE", "DE", "DE*, "NAM, "MO", “DES, “RIM, NA, =
+48 $ partido pr echr> “PTM, “Pre, apre, epre. apre, apra, «pre, apra apre.
+4% $ partido ministro <chr> “PU”, "PU", "PU", "PU", "PUM, CNAS, MNAM, MNAM, PNAS,-
+48 $ índicacao <chr> "Lula", “Lula”, "Lula", “Lula”, “Lula”, "Rousseff", *-
+48 $ entrada <chr> "40280", "40288", "39972", "40007", "40007", "40668", -
+48 $ saida <chr> "40668", "40668", "40732", "40613", "40638", "40800", -
+$$ pera <chr> "12.9", "12.7", "25.3%, "20,2%, "21%, "4.400000000000-
+head(dadosburocracia)
+ae aa tinha: 8 7 06
+
+inst ensino
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto. <chr>
+
+na
+
+48 2 mínc secdc Cult-SCO-DACI OGRJ Dire- DAS 5 espe- admi- UFPA
+
+===== page_002_top.png =====
+importando base de dados, visualizar e entendê-lo
+dadosburocracia <- read xlsx("-/Downloads/burocraciaBR-nain/BASE cargos2.x1sx*)
+Elizpse(dadosburocracia) fuer a quantidade de colunas
+48 Rous: 1,038
+48 Columns: 26
+*8 $ orgao sup <chr> "ninc*, “minc*, *minc*, *minc*, *minc*, *minc”, “ninc-
+48 $ setor <chr> "secdc", “secdc”, "secdc”, "secdc", “secde”, "secde",-
+88 $ chave <chr> "Cult-SCC-S1”, "Cult-SCC-DACI", "Cult-SCC-COMAR1", "C-
+ss sia <chr> "VSCA", "OGRI", *JNPE*, "ECBR", "ESTO", "MPPOM, "MEGA
+88 $ cargo <chr> "Secretário da Cidadania Cultural”, “Diretor de Acess-
+48 $ funcao <chr> "DAS", “DAS”, "DAS", “DAS”, "DAS", "DAS", "DAS", "DAS-
+48 $ nível <b> 6, 5,4,4,4,6,6,5,5,4,4,4,4,4,6,5,4, 4,
+aa é inato cnhes MUAM anemarêatêmanant Munntmada! aUAM “oyperiort,-
+aria”, “em
+à Alguns arquivos neste envio só podem ser acessados através de download direto. 3», «yar,-
+4º $ car pub <chr> "SVE”, "EPPGG", "OUTRO", "SE. INT", "SVE", "SVEM, "SVE-
+
+===== page_003_bot.png =====
+insista a oneroso cair nd a RE
+48 10minc  secdc Cult-SID-DM- LGOL Diro- DAS 5 mest- econ- NA
+48 & 1 256 more rous
+48 8 í 16 more variables: inst origen <chr>, car pub <chr>, partido <chr>,
+88% cargo ele <chr>, lid part <chr>, exp ado <chr>, exp car <chr>,
+454 exp mer <chr>, exp soc <chr>, “UF <chr>, partido pr <chr>,
+4% 4 partido ministro <chr>, indicacao <chr>, entrada <chr>, saída <chr>,
+ss * pera cch>
+dadosburocracia 1>%
+filter(exp mer == "NA”)
+48 8 A tibble: 259 x 26
+&s orgao sup setor chave 4d cargo funcao nível instr area ínst ensino
++ ch cchr> <chr> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+48 Iminc — secdo Cult-SCC-CG- ECBR Coor- DAS AM NA MA
+48 2minc — secdc Cult-SCC-DA- RANS Dire- DAS SMA NA MA
+48 3minc — secde Cult-SCC-CG- AMTP Coor- DAS 4 supe- dire- UniCEUB
+48 4minc — secde Cult-SCC-CG- MONK Coor- DAS 4 supe- dire- UniCEUB
+4% Sminc  secdc Cult-SID-DM- RABL Dire- DAS SMA NA MA
+*s Gminc — secdo Cult-SID-CG- JONG Coor- DAS AM NA MA
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+dadosburocracia 1>
+filter(inst, ensino == "NAº)
+88 4 A tibble: 266 x 26
+48 orgao sup setor chave id cargo funcao nível instr area inst ensino
++ ch <chr> <chr> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+8 Iminc — secdc Cult-SCC-Si VSCA Secr- DAS 6 MA arte NA
+48 2minc  secdc Cult-SCC-CG- ECBR Coor- DAS AM NA MA
+88 3minc — secdc Cult-SCC-S2 MPPO Secr- DAS 6 espo- comu- NA
+48 4minc — secdc Cult-SCC-DA- RAMS Dire- DAS SMA NA NA
+*s Sminc — secde Cult-SCO-CG- GCOL Coor- DAS 4 supe- soci- NA
+ss Gminc — secde Cult-SCO-CG- PDMI Coor- DAS 4 tecn- arte NA
+48 7minc — secdc Cult-SID-DM- RABL Dire- DAS SMA NA MA
+4% Sminc  secdo Cult-SID-CG- PDM] Coor- DAS 4 tecn- arte NA
+88 9minc — secde Cult-SID-CG- JCMG Coor- DAS AMA MA NA
+88 10 minc secde Cult-SID-DM- LGOL Dire- DAS 5 mest- econ- NA
+48 4 1 256 more rous
+4 4 í 16 more variables: inst origen <chr>, car pub <chr>, partido <chr>,
+45% cargo ele <chr>, lid part <chr>, exp adu <chr>, exp car <chr>,
+45 exp mer <chr>, exp soc <chr>, “UF* <chr>, partido pr <chr>,
+ss partido ministro <chr>, indicacao <chr>, entrada <Chr>, saida <chr>,
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+filter(exp mer == "14")
+
+===== page_003_top.png =====
+2.1. R: Contém 27 colunas e 1038 linhas 2.2. R: Nome das variáveis: orgao sup, setor, chave, id, cargo, fm-
+cao, nivel, instr, area, inst. ensino, inst origem, car pub, partido, cargo ele, lid part, exp adm, exp car,
+exp mer, exp soc, uf, partido pr, partido ministro, indicacao, entrada, saida, perm e alto nivel.
+dadosburocracia >%
+group by(orgao sup) 1>%
+summarize(total observacoes = n())
+ss 4 A tibble: 3x2
+48 orgão sup total observacoes
+8 <cho cinto
+48 1 mapa sos
+48 2 meti us
+“8 3 minc 365
+2.3. R: MAPA - 525 observações: MCTI - 148: MINC - 365. q
+
+===== page_004_bot.png =====
+.. pera <cir>
+dadosburocracia >
+filter (exp. soc == "NA")
+48 8 A tibble: 780 x 26
+*s orgao sup setor chave id cargo funcao nível instr area inst ensino
+ss ch <chr> cchr> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+88 Iminc — secde Cult-SCO-DA- OGRJ Dire- DAS 5 espo- admi- UFPA
+ss 2minc — secde Cult-SCO-CG- ECBR Coor- DAS AM MNA NA
+&s 3minc — secdc Cult-SCC-S2 MPPO Secr- DAS 6 espe- comu- NA
+*8 4minc  secdc Cult-SCO-S3 MHGR Secr- DAS 6 espe arto- UnB
+ss Sminc — secdc Cult-SCO-DA- RAMS Dire- DAS SMA MNA NA
+*s Gminc — secdc Cult-SCO-DA- INCA Dire- DAS 5 mest- hist- PUC
+48 Tminc — secdo Cult-SCC-CG- AMTP Coor- DAS 4 supe- dire- UniCEUB
+48 Sminc — secdo Cult-SCC-CG- MONK Coor- DAS 4 supe- dire- UniCEUB
+48 9minc  secde Cult-SCC-CG- PINI Coor- DAS 4 tecn- arte NA
+48 10minc  secde Cult-SID-S1 ACIT Secr- DAS 6 supe- comp- Mackenzie
+48 & 4 770 more rous
+48 8 í 16 more variables: inst origen <chr>, car pub <chr>, partido <chr>,
+48% cargo ele <chr>, lid part <chr>, exp adu <chr>, exp car <chr>,
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_004_mid.png =====
+o  <che> <chr> <chr> <chr> <chr> <chr> <dbl> <chr> <chr> <chr>
+48 Iminc  secdo Cult-SCC-S2 MPPO Secr- DAS 6 espe comu- NA
+48 2minc  secdo Cult-SCC-S3 MHGR Secr- DAS 6 espe- arte- UnB
+48 3minc  secdo Cult-SCC-DA- RANS Dire- DAS SMA NA MA
+48 Gminc  secdo Cult-SCC-DA- INCA Dire- DAS 5 mest- hist- PUC
++ Sminc — secde Cult-SCC-CG- AMTP Coor- DAS 4 supe- dire- UniCEUB
++ Gminc — secde Cult-SCC-CG- GCOL Coor- DAS 4 supe soci- NA
+48 Tminc  secdo Cult-SCC-CG- MOMM Coor- DAS à supe- dire- UniCEus
+4 Gminc  secdo Cult-SCC-CG- CCPR Coor- DAS à espe- arte UNICAMP
+48 Ominc  secdo Cult-SCC-CG- PDM) Coor- DAS 4 tecn- arte NA
+48 10 mine secde Cult-SID-S! ACIT Secr- DAS 6 supe- comp- Mackenzie
+48 4 1 243 more rous
+48 4 à 16 nore variables: inst origen <chr>, car pub <chr>, partido <chr>,
+48 4 cargo ele <chr>, lid part <chr>, exp ads <chr>, exp car <chr>,
+48 4 expner <chr>, exp soc <chr>, “UPs' Cchr>, partido pr <chr>,
+48 4 partido ministro <chr>, indicacao <chr>, entrada <chr>, saida <chr>,
+484 pera <chr>
+dadosburocracia >)
+filter(exp soc == "NA")
+48 4 A tibblo: 780 x 26
+inst ensino
+i Alguns arquivos neste envio só podem ser acessados através de download direto. Pd
+q o se ssS os Spas pqenrE pena cai
+48 3minc — secdc Cult-SCC-S2 MPPO Secr- DAS 6 embs- comi= NA
+
+===== page_004_top.png =====
+48 Tminc  secdo Cult-SID-CG- TRAO Coor- DAS a supe NA NA
+és Gminc  secdo Cult-SCDC-S1 MHGR Secr DAS 6 espe- arte- UnB
+48 Ominc  secdo Cult-SCDC-C- MMK Coor- DAS 4 supe- dire- UniCEUB
+48 10 minc  secdo Cult-SCDC-C- MML Coor- DAS ana NA NA
+48 4 1 249 more rous
+4% 4 à 16 nore variables: inst origen <chr>, car pub <chr>, partido <chr>,
+44 4 cargo ele <chr>, lid part <chr>, exp ade <chr>, exp car <chr>,
+48 4 expor <chr>, exp soc <chr>, “UPs' <chr>, partido pr <chr>,
+48 4 partido ministro <chr>, indicacao <chr>, entrada <chr>, saida <chr>,
+484 pera <chr>
+dadosburocracia %>%
+filter(partido ministro == "HA")
+48 4 A tibblo: 253 x 26
+48 orgao cup setor chave ád cargo funcao nível instr area inst ensino
+cchr>
+À. Alguns arquivos neste envio só podem ser acessados através de download direto. ta
+=» mino secar Cuit-su-va- mars uire- uns ona ma NA
+
+===== page_005_bot.png =====
+“
+
+sos o 13 wc
+
+“3 88935 11 O
+table(dadosburocraciatexp car, useNA = “aluays")
+“
+
+. º E 2 3 5 NA <Na»
+
+.s 147 51 2 509 253 75 1
+
+table (dadosburocraciasnivel, useNA = “alvays*)
+“
+
+. 4 5 6 <NA>
+
+** 652 215 111 O
+table(dadosburocraciaSinstr, useNA = “alvays")
+
+===== page_005_mid.png =====
+*s 7 minc sav Cult-SAV-DG- JBSI Dire- DAS 5 espe- admi- NA
+*s Eminc sefic Cult-SEFIC-- ACSI Coor- DAS AMA NA MA
+48 9minc sefic Cult-SEFIC-- ACSI Coor- DAS ama NA NA
+48 10 minc sadi Cult-SAI-S3 MAPE Secr- DAS 6tecn-NA NA
+48 8 1 24 more rous
+48 8 i 16 more variables: inst origen <chr>, car pub <chr>, partido <chr>,
+88 cargo ele <chr>, lid part <chr>, exp ado <chr>, exp car <chr>,
+454 exp mer <chr>, exp soc <chr>, “UF <chr>, partido pr <chr>,
+4% 4 partido ministro <chr>, indicacao <chr>, entrada <chr>, saída <chr>,
+ss * pera cch>
+24. R: Valores ausentes: em inst. ensino - 266; em exp. mer - 259; em partido. ministro - 253; em exp. soc
+= 780; em lid. part - 34.
+table(dadosburocraciasexp. adm, uselA = "aluays")
+“
+eos o 1 3 mac
+“eo 3 ses 14 O
+table (dadosburocraciaSexp car, useNA = “aluays*)
+
+i Alguns arquivos neste envio só podem ser acessados através de download direto.
+es 17 51 2509253 75 1
+
+===== page_005_top.png =====
+488 exp mer <chr>, exp soc <chr>, “UF <chr>, partido pr <chr>,
+ss partido ministro <chr>, indicacao <chr>, entrada <chr>, saida <chr>,
+88 * pera <chr>
+dadosburocracia 1>%
+filter(lid part == “HA”)
+48 8 A tibble: 34 x 26
+&s orgao sup setor chave 4d cargo funcao nível instr area ínst ensino
+“8 <chr  <chr> <chr> <chr> <chr> <chr> <ábl> <chr> <chr> <chr>
+48 1minc secdc Cult-SID-DM- RABL Dire- DAS SMA NA MA
+48 2minc secdc Cult-SCDC-S5 DFPA Secr- DAS 6 supe- soci- NA
+48 3minc secdc Cult-SDC-DS- MGOL Dire- DAS 5 espe- dire- Fundação E-
+** 4 minc secdc Cult-SEC-CG- ISAC Coor- DAS A tecn-NA NA
+** 5 minc secdc Cult-SEC-CG- ALPL Coor- DAS 4 supe- medi- Escola de -
+as Gminc sav  Cult-SAV-CG- ERSI Coor- DAS ANA MA NA
+ua
+i Alguns arquivos neste envio só podem ser acessados através de download direto. ua
+| ua
+48 10 minc sadi Cult-SAI-S3 MAPE Secr- DAS 6 tecn- NA NA
+
+===== page_006_bot.png =====
+dadosburocracia <- dadosburocracia > fmudar pra numérico
+mutate(exp. ada = as.numeric(exp adn))
+48 Warning: There vas 1 varning in “mutate()*.
+48 à In argument: “exp adm = as.numeric(oxp ado).
+48 Caused by varning:
+48 ! NAs introduced by coercion
+unáque (dadosburocraciaSexp adm) fnostra quais categorias existem nesta variável, quais respostas
+es 01) 1 0M 3
+class (dadosburocraciaSexp adm) &mostra o tipo de dado da variável
+48 (1) “mumeric*
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+|
+
+===== page_006_mid.png =====
+Para o próximo exercício, os valores 'L serão recodificados para 1, enquanto o valor 3 será tratado como
+ausente (NA), por não ser possível identificar seu significado. A variável exp. car admite, de acordo com
+a documentação da base, os valores 0, 1, 2 e 5. À checagem identificou registros com o valor 3, que não
+faz parte da codificação prevista, além de valores ausentes (NA). À variável nível não apresentou valores
+inconsistentes em relação às categorias esperadas. À variável instr apresentou um registro com a categoria
+“graduação”, que não está prevista na codificação descrita no artigo, além de 95 valores ausentes (NA). Por
+fim, a variável indicacao não apresentou valores fora do padrão.
+Exercício 3.
+Tabela descritiva: experiência administrativa
+Liteny(gt)
+dadosburocracia <- dadosburocracia 12) fmudor pro nunérico
+mutate(exp ada = as muneric(exp adm)
+4º Varning: There vas 1 vaming in “mutate().
+48 à In argument: “exp ado = as numeric(oxp ads).
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+unique (dadosburocraciafexp. adm) Anostra quais categorias existem nesta variável, quais respostas
+
+===== page_006_top.png =====
+“
+88 doutorado especializacao — graduacao mestrado na
+. 159 203 1 259 ss
+“ superior tecnico «ua
+“ 297 u o
+table (dadosburocraciaSindicacao, useNA = "alvays")
+“e
+4% Bolsonaro Lula Rousseff Temer «<a>
+.. 396 sr as 204 o
+25. R: A checagem das variáveis revelou algumas inconsistências na base de dados. A variável exp. adm,
+embora devesse ser binária (0 = não e 1 = sim), apresenta valores fora do padrão. Além dos valores
+ausentes (NA), há três registros codificados como "1, que representam a categoria 1, mas foram armazenados
+aa aaa ata ca a ema categoria válida,
+E y i 3 será tratado como
+à Alguns arquivos neste envio só podem ser acessados através de download direto. mite, de acordo com
+e 0 valor 8, que não
+faz parte da codificação prevista, além de valores ausentes (NA). A variável nível não apresentou valores.
+
+===== page_007_bot.png =====
+mn = sum(lis.na(exp adm)),
+experiencia = sun(exp ada =» 1, na.rm = TRUE),
+proporcao = mean(exp. adm, na.rm = TRUE),
+erro = 1.96 + sqrt(proporcao + (1 - proporcao) / n),
+ác inf = proporcao - erro,
+ác sup = proporcao + erro
+,
+tabelas 1%
+EO pr
+tab header(
+title = nd("esTabela 1. Experiência aduinistrativa dos dirigentes por Ministérios")
+> ok
+tab source note(
+source note = "Fonte: Elaboração própria com dados da pesquisa."
+,
+Exercício 4.
+Primeiro teste de hipótese bivariado
+7
+
+===== page_007_mid.png =====
+. e 935 1 14
+dadosburocracia <- dadosburocracia 1%
+mutate(exp adm = if else(exp adm == 3, Ná real, exp adm)) stransformar o 3 em NA
+table(dadosburocraciaSexp adm, uscHA = "ifany*) £ checar se deu certo
+“
+e 0 1<u
+. es 995 15
+tabela! <- dadosburocracia >) 4 refazer a tabela, agora deu certo.
+filter(orgao. sup fin c('mapa”, "minc")) Jo%,
+group. by(orgao. sup) 1>%
+summarise(
+n = sun(!is.na(exp. adn)),
+experiencia = sun(exp adm == 1, na.rm = TRUE),
+proporcao = nean(exp adm, na.rm = TRUE),
+erro = 1.96 + sqrt(proporcao * (1 - proporcao) / n),
+ic inf = proporcao - erro,
+ic sup = proporcao + erro
+5
+tabelai 1%
+SEO ok
+tab header(
+title = md(“+sTabela 1. Experiência administrativa dos dirigentes por Ministériose")
+
+===== page_007_top.png =====
+Tabela 1. Experiência administrativa dos diri-
+gentes por Ministério
+orgao sup n experiencia proporcao erro ic inf ie sup
+mapa 5a 482 0.9198473 0.02324916 0.8965982 0,9430965
+mine 351 309 0.8S03419 0.03395465 0.8463872 0.9142965
+Fonte: Elaboração própria com dados da pesquisa.
+table(dadosburocraciaexp adm, useNA = “ifany') Smostra quantas vezes aparecem cada resposta
+“
+»oo 1 sa
+e 006 1 14
+dadosburocracia <- dadosburocracia )>%
+
+mutate(exp adm = if else(exp adm == 3, NA real , exp adm)) gtransformar o 3 em NA
+
+===== page_008_bot.png =====
+Exercício 5
+table(dadosburocraciasnivel, useNh="ifany*) gver quais numeros tem como rsp
+“
+ms 4 s 6
+as 652 275 111
+dadosburocracia <- dadosburocracia 1>) gcriar a variavel altonivel
+
+mutate(
+
+alto nivel = if else(nivel Xin c(5, 6), 1, 0)
+
+,
+table(dadosburocraciafalto nível) fchecar pra ver se fot, se tá binária
+“
+ms 01
+as 652 386
+
+s
+
+===== page_008_mid.png =====
+áf(pvalor < 0.054
+
+print(*Rejeita KO)
+Yelse(
+
+print("Não rejeita HO")
+,
+48 [1) “Não rejeita HO"
+R: Não rejeita HO, que diz que a proporção dos funcionários com experiência administrativa nos dois min-
+istérios é igual, porque o pvalor é menor que o nível de significância. O resultado sugere que a diferença
+observada entre as proporções de servidores com experiência administrativa nos dois ministérios pode ser
+atribuída à variabilidade amostral. Assim, ao nível de significância de 5%, não há evidências estatísticas
+suficientes para afirmar que as proporções populacionais diferem. Mas vale ressaltar que se trata de um
+resultado limítrofe, muito perto do nível de significância.
+Exercício 5
+table(dadosburocraciaSnivel, useNA="ifany") fuer quais numeros tem como rsp
+“
+ms 456
+as 652 275 111
+
+===== page_008_top.png =====
+1 <- 482
+nt <- 524
+x2 <- 309
+n2 <- 351
+pl<xt/nt
+Pê <- 22 / n2 sualores
+p< (xt + x2)/(nt + n2) é hipótese nula
+ep <- sqrt(p+(1-p)+(1/nt + 1/n2)) gerro padrão
+= <- (pl-P2)/0p fquantos erros-paárão separam as duas proporções
+Pralor <- 2+(1-prora(abs(z))) Scalcular o p-valor. teste bilateral. pega o valor absoluto do Z; calcula,
+if(pvalor < 0.05)
+print(*Rejeita HO")
+Yelseí
+print("ião rejeita HO")
+
+===== page_009_bot.png =====
+=1 <- 187
+
+ni <- 525
+
+=2<- 155
+
+n2 <- 365
+
+pi<-xt/nt
+
+P2 <- 22 / n2 fvalores
+
+P<- (xi + x2)/(n1 + n2) é hipótese nula
+
+ep <- sart(p+(1-p)+(1/nt + 1/02)
+
+z<- (pi-p2)/ep
+
+pvalor <- 2e(1-pnora(abs(z))) gcalcuta o p-vator
+
+R: O teste resultou em um p-valor de 0,039. Considerando o intervalo de confiança de 95% solicitado no
+
+exercício (equivalente a um nível de significância de 5%), esse resultado fornece evidências estatísticas de que
+
+a proporção de cargos de alto nível difere entre o MAPA e o MINC, então a hipótese nula pode ser rejeitada.
+9
+
+===== page_009_mid.png =====
+Pproporcao = meantalto nivel),
+erro = 1.96 + sqrt(proporcao + (1 - proporcao) / n),
+ic inf = proporcao - erro,
+ic sup = proporcao + erro
+,
+tabela? 1%,
+80 ok
+tab header(
+title = md(“+sTabela 2. Cargos de Alto Nível por Ministérios")
+2%
+tab. source note(
+source note = "Fonte: Elaboração própria com dados da pesquisa.”
+,
+sFeita a tabela, agora o teste de hipótese.
+= <- 187
+ni <- 525
+x2 <- 155
+n2 <- 365
+pi<xt/nt
+p2 <-x2 / n2 sualores
+P<- (x + x2)/(n1 + n2) é hipótese nula
+
+===== page_009_top.png =====
+Tabela 2. Cargos de Alto Nível por Ministério
+orgao sup n alto — proporcao erro ie inf ie sup
+mapa 525 IST 03561905 001096313 0315227] 03971539]
+mine 365 155 0,4246575 0.05070984 03739477 04753674
+Fonte: Elaboração própria com dados da pesquisa.
+tabela? <- dadosburocracia 1>/ scriar tabela de acordo com o que foi pedido
+
+filter(orgao sup lin c('napa”, “minc")) Jo%
+
+group. by(orgão. sup) 1>%
+
+summarise(
+
+n = sum(!ís.na(alto nível)),
+alto = sun(alto nível == 1),
+proporcao = mean(alto nível),
+erro = 1.96 * sqrt(proporcao * (1 - proporcao) / n),
+ie inf = proporcao = erro,
+Eni cesa eo
+ã
+
+===== page_010_bot.png =====
+10 |
+
+===== page_010_mid.png =====
+Exercício 7
+
+R: Com o aumento do número de observações, o erro-padrão tende a diminuir. Isso ocorre porque quanto
+
+maior à amostra, mais informação você possui. O erro padrão é inversamente proporcional à raiz quadrada
+
+do tamanho da amostra. Assim, ao dobrar o número de observações, o erro-padrão é multiplicado por
+aproximadamente 0,71, tornando-se cerca de 29% menor. Como consequência, a estimativa da proporção
+
+torna-se mais precisa e os intervalos de confiança ficam mais estreitos, refletindo uma menor incerteza
+
+associada à estimativa. |
+
+===== page_010_top.png =====
+Porém, numa visão substantiva, vale notar que a diferença de proporções é de 6,8%, o que não é muito alto.
+Mas, ao mesmo tempo, não é irrelevante, me parece uma diferença moderada.
+
+Exercício 6
+
+1- R: Levando em consideração o segundo teste de hipótese, que teve como p-valor 0.0389, a conclusão não
+mudaria se o nível de significância fosse 10%. Isso porque 0.0389 < 0.10, ou seja, continua sendo inferior
+ao nível de significância. Portanto, a hipótese nula também seria rejeitada. 2- R: Nesse caso mudaria.
+Com um nível de significância de 1%, o p-valor (0,0389) é superior ao valor crítico de 0,01. Assim, não
+haveria evidências estatísticas suficientes para rejeitar a hipótese nula. 3- R: Ele mostra que p-valor e
+significância substantiva não são a mesma coisa. O p-valor indica se há evidências estatísticas de diferença
+entre as proporções, enquanto a significância substantiva depende do tamanho e da relevância prática dessa
+diferença. No presente caso, embora o teste indique uma diferença estatisticamente significativa ao nível de
+5%, a diferença observada entre as proporções é de aproximadamente 6,8 pontos percentuais, devendo ser
+avaliada também quanto à sua importância prática.
+
+Exercício 7

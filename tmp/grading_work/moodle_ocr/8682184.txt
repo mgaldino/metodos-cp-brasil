@@ -1,0 +1,694 @@
+
+===== page_001_bot.png =====
+8 O que aconteceria se a amostra fosse maior? 10
+9 GRADUAÇÃO - P1. Unidade de análise: nomeação ou indivíduo? u
+10 GRADUAÇÃO - P2. Intervalo de confiança para a diferença de proporções 12
+11 Síntese 13
+1 Fonte dos dados e reprodutibilidade
+Artigo. ALBRECHT, Nayara F. Macedo de Medeiros; RIBEIRO, Pedro Floriano. Nomeação a
+cargos públicos no Brasil: um estudo comparado das pastas de Agricultura e Cultura do Executivo
+Federal (2011-2021). Revista Brasileira de Ciência Política, v. 44, €285564, 2025. DOI: 10.1590/0103-
+3352.2025.44.285564.
+Dados. Planilha BASE, cargos2.x1sx, repositório github.com/nayalbrecht/burocraciaBR (aba
+BASE, cargos: dicionário na aba Codebook). Data de acesso: 11/07/2026.
+O bloco abaixo lê a base da pasta local dados/ se ela existir e, caso contrário, baixa o arquivo
+diretamente do repositório. Todas as tabelas e valores numéricos do relatório são gerados por código
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_mid.png =====
+* FURO GUS GATOS 9 TAprOGUIDGadO +
+
+2 Artigo, pergunta e unidade de análise 3
+3 Leitura e validação dos dados 3
+
+31 Valores ausentes em variáveis relevantes ...iiccccccccesiccicicieo 4
+
+32 Checagem dos valores observados ......cicccciccisisiccicivio 4
+4 Tabela descritiva: experiência administrativa 6
+5 Primeiro teste de hipótese bivariado 7
+6 Segundo teste de hipótese bivariado 9
+7 Significância estatística e nível de significância 10
+8 O que aconteceria se a amostra fosse maior? 10
+9 GRADUAÇÃO - P1. Unidade de análise: nomeação ou indivíduo? u
+10 GRADUAÇÃO - P2. Intervalo de confiança para a diferença de proporções 12
+o 13
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_001_top.png =====
+Inferência básica com dados reais de Ciência Política |
+FLP0406 - Métodos e Técnicas de Pesquisa em Ciência Política (2026)
+João Galhianne - Graduação Noturno - NUSP 8682184
+Acesso aos dados: 11 de julho de 2026
+Sumário
+à 1
+| à Alguns arquivos neste envio só podem ser acessados através de download direto. | g
+SE taiima a seiliicaiio. dosdailos, A
+
+===== page_002_bot.png =====
+
+
+===== page_002_mid.png =====
+
+
+===== page_002_top.png =====
+a partir dessa leitura.
+url base <- “https://raw.githubusercontent .com/nayalbrecht/burocraciaBR/nain/BASE cargos2.x1:
+arq local <- "dados/BASE cargos2.x1sx"
+1f (!file.exists(arq local)) €
+dir.create("dados”, showwarnings = FALSE)
+download.file(url base, arq local, mode = "wb”)
+SA
+base <- read excel(arq local, sheet = "BASE cargos”)
+codebook <- read excel(arq local, sheet = "Codebook", col names = c("variavel”, "descricao"))
+
+===== page_003_bot.png =====
+mine). 71 VADE STAS RINGS UM SESCOITO CFERO (ECVA, LINCE 6 LOCNCIOHIR), QUE HO Integra o Toco
+comparativo desta avaliação e é excluído das análises obrigatórias.
+3 Leitura e validação dos dados
+dim(base) £ linhas z colunas
+es [1) 1038 26
+A base tem 1038 linhas (nomeações) e 26 colunas (variáveis).
+names (base) 4 nomes das variáveis
+*8 (1) "orgao sup" "setor" "chave" ar
+es [5] "cargo" "funcao" "nivel" "instr"
+48 [9] "area" “inst ensino” "inst origen” "car pub"
+** [13] “partido” "cargo ele" "lid part” "exp adm"
+*8 [17) “exp car” "exp mer” “exp soc" nuper
+es [21] "partido pr" "partido ministro" "indicacao" “entrada”
++ (25) "saida” "pera"
+
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_003_mid.png =====
+chave. Não é a pessoa nem o cargo em abstrato: é o vínculo pessoa-cargo-período.
+
+3. O que significa uma linha da base? Cada linha corresponde a uma nomeação individual:
+
+uma pessoa (id) ocupando um cargo/funcao de um determinado nível, em um setor de um
+
+orgao. sup, com data de entrada e saida, sob a indicacao de um presidente. A linha reúne
+
+também os atributos de perfil da pessoa naquele vínculo (escolaridade, carreira, experiências prévias
+
+etc).
+
+4. Por que a mesma pessoa pode aparecer mais de uma vez? Porque a base é organizada
+
+por nomeação, não por indivíduo. Uma mesma pessoa (id) pode ter ocupado mais de um cargo
+em momentos diferentes, em setores diferentes ou sob presidentes diferentes —, e cada ocupação
+
+gera uma linha própria. Como se vê adiante, há muito mais nomeações do que pessoas distintas.
+
+5. Quais são as duas pastas comparadas no artigo? O Ministério da Agricultura,
+
+Pecuária e Abastecimento (MAPA, código mapa) e o Ministério da Cultura (MinC, código
+
+minc). A base traz ainda um terceiro órgão (mcti, Ciência e Tecnologia), que não integra o foco
+
+comparativo desta avaliação e é excluído das análises obrigatórias.
+
+3 Leitura e validação dos dados
+
+Persas PE PRA VD
+
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+A base tem 1038 linhas (nomeações) e 26 colunas (variáveis).
+
+===== page_003_top.png =====
+2 Artigo, pergunta e unidade de análise
+1. Qual é a pergunta geral do artigo? O artigo investiga quais lógicas orientam o
+provimento de cargos de livre nomeação (cargos de confiança) no Executivo federal
+brasileiro e como o perfil das pessoas nomeadas varia conforme a natureza da pasta. À literatura
+dominante lê essas nomeações pela chave do presidencialismo de coalizão, tratando os cargos como
+“moeda de troca” partidária entre presidente e partidos da base. Albrecht e Ribeiro problematizam
+essa leitura: comparam duas pastas de naturezas de política pública contrastantes — Agricultura,
+associada a um setor econômico forte e organizado, e Cultura, de constituência mais difusa — para.
+verificar se o padrão de recrutamento (experiência prévia na administração, escolaridade, tipo de
+carreira, filiação partidária etc.) difere entre elas. A comparação dialoga com a agenda da autora
+sobre uma tipologia de patronagem que não se reduz aos partidos (“os partidos não são os únicos
+patronos”).
+2. Qual é a unidade de análise da base? A unidade de análise é a nomeação (o ato de nomear
+a ci eid a detonado dardo cidentiGaacánbela Chave primária
+i Alguns arquivos neste envio só podem ser acessados através de download direto. “de
+
+ieação individual:
+
+uma pessoa (id) ocupando um cargo/funcao de um determinado nível, em um setor de um
+
+===== page_004_bot.png =====
+Tabela 2: Valores ausentes (NA) em seis variáveis relevantes,
+base completa.
+Variável Ausentes Pet do total
+exp adm o 00%
+exp car 1 01%
+nivel o 0,0%
+instr o 00%
+area o 00%
+partido o 00%
+Chama atenção partido: a ausência é a regra, não a exceção — coerente com o fato de a maioria
+das pessoas nomeadas não ter filiação partidária declarada. Já nivel não tem ausências.
+3.2 Checagem dos valores observados
+Alguns arquivos neste envio só podem ser acessados através de download direto. |
+l
+
+===== page_004_mid.png =====
+meti 148
+Nomeações x indivíduos. A distinção da seção anterior é verificável nos dados: há 1038 nomeações,
+1018 chaves distintas e apenas 664 indivíduos distintos — ou seja, muitas pessoas aparecem em mais
+de uma linha.
+3.1 Valores ausentes em variáveis relevantes
+vars rel <- c(“exp adn", “exp car”, “nivel”, “instr*, “area”, “partido")
+sapply(base [vars rel), function(x) sun(is.na(x)))
+w% exp adm exp car nivel instr area partido
+“a o 1 o º o o
+Tabela 2: Valores ausentes (NA) em seis variáveis relevantes,
+base completa.
+Variável Ausentes Pet do total
+eso adm o 00%
+à Alguns arquivos neste envio só podem ser acessados através de download direto. |
+area o 00%
+
+===== page_004_top.png =====
+base %>% count (orgao. sup, name = “n nomeacoes”) Y>% arrange(desc(n noneacoes))
+BE RA tibble: 3x2
+&% orgao sup n nomeacoes
+se <chr> <im>
+*8 1 mapa 525
+&% 2 minc 365
+se 3 meti 148
+Tabela 1: Número de observações (nomeações) por órgão
+superior.
+orgao sup Nomeações
+mapa. 525
+Nensanaiiaa se diiitáiiioa: À Aiii dê asia saia E iii aiii EE
+
+===== page_005_bot.png =====
+End faia ae ema Driniod
+Problemas encontrados e tratamento.
++ exp adm deveria ser binária (0/1), mas aparece como texto e traz dois valores inesperados: -1
+(com crase, claramente erro de digitação de 1) e um único 3 (fora do domínio). Tratamento:
+Temovo a crase e converto para inteiro; “1 vira 1 e o 3, inválido, vira NA. Os NA originais
+permanecem NA.
++ indicacao traz “Lula” e "Lula * (com espaço no fim) como se fossem categorias distintas.
+Tratamento: aplico trimes(), unificando os rótulos.
++ exp.car é ordinal (o codebook define 1, 2 e 3) mas contém O e 5. Como não é usada nos testes
+obrigatórios, apenas registro a inconsistência e não a recodifico aqui.
++ núvel (4, 5, 6) e instr estão dentro do esperado; instr tem “graduacao" (1 caso) que é
+sinônimo de “superior”, sem impacto nas análises seguintes.
+& Limpeza de exp adm -> binária; e de indicacao (espaços)
+base <- base >%,
+mutate(
+exp adm bin = suppressWarnings(as. integer (gsub(""", “”, trimus(as.character (exp adm))))),
+exp adm bin = ifelse(exp adm bin Lin c(O, 1), exp adm bin, NA integer ),
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_005_mid.png =====
+E
+4 5 6
+“e 652 275 111
+”
+“8 Sinstr
+sx
+“ doutorado especializacao graduacao mestrado NA
+. 159 203 1 259 95
+” superior tecnico
+“e 297 24
+”
+4% Sindicacao
+sx
+4% Bolsonaro Lula Rousseff Temer
+“e 396 sr 351 204
+Problemas encontrados e tratamento.
++ exp. adm deveria ser binária (0/1), mas aparece como texto e traz dois valores inesperados: “1
+(com crase, claramente erro de digitação de 1) e um único 3 (fora do domínio). Tratamento:
+removo a crase e converto para inteiro; “1 vira 1 e o 3, inválido, vira NA. Os NA originais
+i Alguns arquivos neste envio só podem ser acessados através de download direto... ategorias distintas.
+. * exp. car é ordinal (o codebook detine 1, 2 e 3) mas contém O e 5. Como não é usada nos testes
+
+===== page_005_top.png =====
+lapply(base[c("exp adn", “exp car”, "nivel", “instr", “indicacao")],
+function(x) table(x, useNA = "itany"))
+
+*4 Sexp adm
+
+sx
+
+mo o 13 NA
+
+* 3 68935 111
+
+“
+
+44 Sexp car
+
+sx
+
+Mo 0 1 2 3 5 NA<NA>
+
+e 147 51 2509 253 75 1
+
+“a
+
+4% $nivel
+
+“
+
+===== page_006_bot.png =====
+tab adm <- sub 4)
+group by(pasta = orgao sup) Y>%
+group modity(- resuno. prop(.xSexp adm bin)) >
+ungroup()
+tab, ada
+se BA tíbble: 2x8
+* pasta no k p se me icinf ic sup
+8% <chr> <int> <int> <abl> <dbl> <abl> <abl> <abl>
+*% 1 mapa 524 482 0.920 0.0119 0.0232 0.897 0.943
+&4 2minc 354 312 0.881 0.0172 0.0337 0.848 0.915
+Tabela 3: Experiência prévia na administração pública, por
+pasta (MAPA e MinC). IC de 95% pela aproximação normal
+(Wald).
+Alguns arquivos neste envio só podem ser acessados através de download direto.
+
+===== page_006_mid.png =====
+administração pública” com 1=SIM e 0=NÃO. Ela já é a operacionalização direta do conceito pedido
+(“experiência prévia em órgãos da administração pública”), então a variável binária é a própria
+exp adn limpa (exp. adm bin), sem necessidade de combinar outras colunas.
+* Foco comparativo: apenas MAPA e MinC
+sub <- base >) filter(orgao sup Yin) c('mapa”, "minc"))
+* IC de Wald (aproximação normal) para uma proporção
+resumo prop <- function(x, z = 1.96) (
+x < x[tis.na()]
+n <- length(x); k <- sun(x); p<-k/n
+se<-sqrt(p+ (1-p)/n);me<-z+*se
+data.frame(n=n, k=k,p=p,se=se,nme=me,
+icinf=p-ne, icsup=p+me)
+3
+tab adm <- sub 4)
+group by(pasta = orgao sup) >
+group modify(- resumo. prop(.x$exp. adm bin)) >)
+ungroup()
+à Alguns arquivos neste envio só podem ser acessados através de download direto.
+es pasta n k Pp se me ic inf ic sup
+
+===== page_006_top.png =====
+indicacao = trimus(indicacao)
+,
+table(base$exp adm bin, useNA = “ifany")
+“
+“e o 1 <NA>
+“e. ss 938 12
+Após a limpeza, exp. adm bin tem apenas O, 1 e NA: Os três casos “1 foram recuperados como 1 e o
+3 isolado foi tratado como ausente.
+4 Tabela descritiva: experiência administrativa
+Escolha da variável binária. O codebook define exp adm como “experiência em órgãos da
+o º o. do conceito pedido
+à Alguns arquivos neste envio só podem ser acessados através de download direto. . sinária é a própria
+asa a SA
+
+===== page_007_bot.png =====
+Interpretação substantiva. No MAPA, 92,0% das 524 nomeações válidas correspondem a pessoas
+com experiência prévia na administração pública; no MinC, 88,1% de 354. As duas pastas recrutam
+predominantemente quadros com trajetória prévia no Estado — não é um padrão de “estranhos ao
+serviço público”.
+O intervalo de confiança de 95% do MAPA, [89,7%; 94,3%), deve ser lido assim: se repetíssemos
+o processo amostral muitas vezes e construíssemos um intervalo dessa forma em cada réplica, cerca de
+95% desses intervalos conteriam a proporção populacional verdadeira. Não é “95% de probabilidade
+de o valor estar aqui”; a proporção verdadeira é fixa, quem varia é o intervalo. A margem de erro
+(2,3% no MAPA, 34% no MinC) é a metade da largura do intervalo — o quanto, para mais ou para
+menos, à estimativa pontual pode sc afastar do valor verdadeiro nesse nível de confiança. A margem
+é maior no MinC porque ele tem menos observações válidas.
+5 Primeiro teste de hipótese bivariado
+Testa-se se a proporção de nomeações com experiência administrativa é igual nas duas pastas.
+
++ Hipótese nula (Ho): puapa = pMinC (a diferença de proporções é zero).
+
+7
+
+===== page_007_mid.png =====
+Ea
+
+õ
+
+E
+
+8
+
+o 2%
+
+E
+
+8
+
+E
+
+[E
+
+0%
+mapa mine
+Pasta
+
+Figura 1: Proporção de nomeações com experiência administrativa próvia, por pasta, com intervalo
+de confiança de 95% (barras de erro),
+Interpretação substantiva. No MAPA, 92,0% das 524 nomeações válidas correspondem a pessoas
+com experiência prévia na administração pública; no MinC, 88,1% de 354. As duas pastas recrutam
+predominantemente quadros com trajetória prévia no Estado — não é um padrão de “estranhos ao
+serviço público”.
+O intervalo de confiança de 95% do MAPA, (89,7%; 94,3%), deve ser lido assim: se repetíssemos
+o processo amostral muitas vezes e construíssemos um intervalo dessa forma em cada réplica, cerca de
+95% desses intervalos conteriam a proporção populacional verdadeira. Não é “95% de probabilidade
+de o valor estar aqui”; a proporção verdadeira é fixa, quem varia é o intervalo. A margem de erro
+
+===== page_007_top.png =====
+Pasta N válido Comexp. adm. Proporção 1C95% Margem de erro
+mapa 52 as2 92,0% [89,7%; 94,3%] 23%
+mine 35 312 88,1% [84,8%; 91,5%] 3A%
+100%
+
+g
+
+4
+
+E
+
+E
+
+E
+
+E 75%
+
+8
+
+1
+
+e
+
+1
+
+E 50%
+
+E
+
+8
+
+o 25%
+
+===== page_008_bot.png =====
+“ z p.valor
+4% 1,90208 0,05716
+
++ Teste usado: prop.test (aproximação normal, sem correção de continuidade), equivalente
+
+ao teste = para diferença de duas proporções com erro-padrão combinado.
+
+* Estatística: z = 1,902 (equivalentemente y? = 3,618).
+
++ P-valor: 0,057.
+
++ Decisão a 5%: como 0,057 > 0,05, não se rejeita Hp.
+Interpretação substantiva. O p-valor de 0,057 significa: se a proporção fosse de fato idêntica
+nas duas pastas (mundo em que Hg é verdadeira), a probabilidade de observar, só por variação
+amostral, uma diferença entre pastas tão grande ou maior (em módulo) do que a diferença de
+3,8% que encontramos seria de cerca de 5,7%. É um valor baixo, mas acima do limiar de 5%.
+Substantivamente: os dados sugerem uma tendência de o MAPA ter mais experiência
+administrativa que o MinC, mas a evidência não é forte o suficiente, ao nível convencional
+de 5%, para descartar que a diferença observada seja apenas ruído amostral. É um caso claramente
+“de fronteira” — ponto retomado na Seção 7.
+
+8
+
+===== page_008_mid.png =====
+Ltd
+4% data: c(ka, kb) out of c(na., nb)
+4% X-squared = 3,6, df = 1, p-value = 0,06
+44 alternative hypothesis: tuo.sided
+4% 95 percent confidence interval:
+*8 -0,002438 0,079421
+4% sample estimates:
+44 prop 1 prop 2
+*% 0,9198 0,8814
+& z manual com erro-padrão combinado (pooled), coerente com HO
+P.pool <- (ka + kb) / (na + nb)
+se pool <- sgrt(p pool + (1 - p pool) * (1/na + 1/nb))
+z ado <- (ka/na - kb/nb) / se pool
+e(z = z adm, p valor = 2 + pnorm(-abs(z adm)))
+“ z p.valor
+48 1,90208 0,05716
++ Teste usado: prop.test (aproximação normal, sem correção de continuidade), equivalente
+ao teste = para diferença de duas proporções com erro-padrão combinado.
+* Estatística: z = 1,902 (equivalentemente x? = 3,618).
++ P-valor: 0,057.
++ Decisão a 5%: como 0,057 > 0,05, não se rejeita Ho.
+Interpretação substantiva. O p-valor de 0,057 significa: se a proporção fosse de fato idêntica
+
+===== page_008_top.png =====
++ Hipótese alternativa (H1): puspa É Psúsc (teste bilateral).
+Uso a aproximação normal para a diferença entre proporções. O prop.test do R, com
+correct = FALSE (sem correção de continuidade), implementa exatamente esse teste: a estatística
+qui-quadrado é o quadrado da estatística 2.
+a <- subfexp adm bin[sub$orgao sup == "napa")
+b <- subsexp adm bin[suborgao sup == “nínc"]
+Xa <- sun(a, na.rm = TRUE); na <- sun(tis.na(a))
+kb <- sun(b, na.rm = TRUE); nb <- sun(tis.na(b))
+teste adm <- prop.test(c(ka, kb), c(na., nb), correct = FALSE)
+teste ada
+“
+48 2-sample test for equality of proportions without continuity correction
+“
+4% data: c(ka, kb) out of c(na., nb)
+4% X-squared = 3,6, df = 1, p-value = 0,06
+4% alternative hypothesis: two.sided
+
+===== page_009_bot.png =====
+am <- subvalto nivel LEUDVORGAD SUP ** “mapa )
+bn <- subfalto nível [subforgao sup == “minc"]
+kan <- sum(an, na.rm = TRUE); nan <- sum(!is.na(an))
+Xkbn <- sum(bn, na.rm = TRUE); nbn <- sum(!is.na(bn))
+teste nível <- prop.test(c(kan, kbn), c(nan, nbn), correct = FALSE)
+teste nível
+“
+4% 2-sample test for equality of proportions without continuity correction
+“
+4% data: c(kan, kbn) out of c(nan., nbn)
+4% X-squared = 4,3, df = 1, p-value = 0,04
+4% alternative hypothesis: two.sided
+4% 95 percent confidence interval:
+*% -0,13365 -0,00328
+4% sample estimates:
+4% prop 1 prop 2
+4% 0,3562 0,4247
+9
+
+===== page_009_mid.png =====
+WE RA tibble: 2x8
+* pasta no k p se me icinf ic sup
+8% <chr> <int> <int> <abl> <abl> <abl> <abl> <abl>
+*% 1 mapa 525 187 0.356 0.0209 0.0410 0.315 0.397
+*4 2minc 365 155 0.425 0.0259 0.0507 0.374 0.475
+Tabela 4: Proporção de cargos de alto nível (níveis 5-6 vs. 4),
+por pasta, com IC de 95%.
+Pasta N válido Alto nível (5-6) Proporção IC 95%
+mapa 525 187 35,6% — [31,5%; 39,7%]
+mine 365 155 42,5% [87,4%; 47,5%]
+an <- subsalto nível [subsorgao sup == “napa")
+bn <- subfalto nível [sub$orgao. sup == "nínc"]
+Xan <- sun(an, na.rm = TRUE); nan <- sun(!is.na(an))
+Xbn <- sum(bn, na.rm = TRUE); nbn <- sum(!is.na(bn))
+teste nível <- prop.test(c(kan, kbn), c(nan , nbn), correct = FALSE)
+teste nível
+“
+4% 2-sample test for equality of proportions without continuity correction
+
+===== page_009_top.png =====
+6 Segundo teste de hipótese bivariado
+Cria-se alto nível = 1 quando nível é 5 ou 6, e O quando nível é 4, comparando a proporção de
+cargos de alto nível entre MAPA e MinC.
+sub <- sub Y>k
+mutate(alto nível = case when(nivel Kin) c(5, 6) - 1L,
+nível == 4 - OL,
+TRUE - NA integer ))
+tab nivel <- sub Y>)
+group by(pasta = orgao sup) Y>%
+group modify(- resumo prop(.xSalto nivel)) %>%
+ungroup O)
+tab nível
+sE 8 A tíbble: 2x8
+e" pasta no k p se me ic inf ic sup
+8% <chr> <int> <int> <abl> <dbl> <abl> <abl> <abl>
+*% 1 mapa 525 187 0.356 0.0209 0.0410 0.315 0.397
+
+===== page_010_bot.png =====
+3. O que isso mostra. O mesmo dado, a mesma diferença estimada (3,8%) e o mesmo p-
+valor levam a rótulos opostos (“significante” /“não siguificante”) só porque mudamos o limiar
+arbitrário a. Isso deixa claro que “significância estatística” não é propriedade do
+fenômeno, mas de uma convenção de decisão, e que ela não se confunde com relevância
+substantiva: uma diferença pode ser estatisticamente significante e substantivamente trivial
+(basta n grande), ou substantivamente interessante e estatisticamente inconelusiva (como aqui).
+O p-valor mede força de evidência contra Ho; a importância da diferença é uma pergunta
+separada, respondida pelo tamanho do efeito e por seu siguificado no contexto.
+
+8 O que aconteceria se a amostra fosse maior?
+Tomo a proporção com experiência administrativa no MinC (p = 0,881, n = 354).
+PO <- kb/nb; nO <- nb
+sen <- sqrt(po+(1-p0)/n0)
+se 2n <- sqrt(pOs(1-p0)/(2en0))
+c(sen = sen, se 2n = se 2n, razao = se 2n/se n)
+* sen se2n razao
+10
+
+===== page_010_mid.png =====
+de [-13,.4%: -0,3%], que não inclui zero. A diferença é estatisticamente detectável, mas do ponto de
+vista substantivo é moderada: os dois ministérios têm estruturas de cargos de confiança comparáveis,
+com o MinC ligeiramente mais concentrado no topo da hierarquia (DAS 5-6). Não é uma clivagem
+dramática de desenho institucional, e sim uma diferença de grau.
+
+7 Significância estatística e nível de significância
+
+Tomo o primeiro teste (experiência administrativa, p-valor = 0,057), justamente por ser de
+fronteira.
+
+1. A 10%? Como 0,057 < 0,10, a conclusão mudaria: passaríamos a rejeitar Ho e a chamar a
+diferença de “significante”.
+
+2. A 1%? Como 0,057 > 0,01, a conclusão não mudaria em relação aos 5%: continuaríamos
+sem rejeitar Ho.
+
+3. O que isso mostra. O mesmo dado, a mesma diferença estimada (3,8%) e o mesmo p-
+valor levam à rótulos opostos (“significante” /*não significante”) só porque mudamos o limiar
+arbitrário a. Isso deixa claro que “significância estatística” não é propriedade do
+fenômeno, mas de uma convenção de decisão, e que ela não se confunde com relevância
+substantiva: uma diferença pode ser estatisticamente significante e substantivamente trivial
+(basta n grande), ou substantivamente interessante e estatisticamente inconclusiva (como aqui).
+O p-valor mede força de evidência contra Ho; a importância da diferença é uma pergunta
+separada, respondida pelo tamanho do efeito e por seu significado no contexto.
+
+e A un annntnannia na a amante Ennon canina?
+
+===== page_010_top.png =====
+* IC de 95% para a diferença (erro-padrão não combinado)
+
+Pi <- kan/nan ; p2 <- kbn/nbn
+
+se dif <- sqrt(pi*(1-p1)/nan + p2+(1-p2)/nbn)
+
+dif <-p1 - p2
+
+c(diferenca = dif, ic inf = dif - 1.96+se dif, ic sup = dif + 1.96+se dif)
+* diferenca ic inf ic sup
+
+4% -0,068467 -0,133655 -0,003279
+
++ P-valor: 0,039; decisão a 5%: como 0,039 < 0,05, rejeita-se Ho.
+
++ Interpretação do p-valor: se as duas pastas tivessem a mesma proporção de cargos de alto
+nível, a chance de observar por acaso uma diferença tão grande quanto a de 6,8% pontos seria
+de apenas 3,9% — baixa o bastante para tratar a diferença como sinal, não ruído.
+
+Conclusão substantiva. O MinC tem proporção maior de cargos de alto nível (42,5%) do que o
+MAPA (35,0%) — diferença de cerca de 6,8% pontos percentuais, com IC de 95% para a diferença
+de [-13,4%; -0,3%], que não inclui zero. A diferença é estatisticamente detectável, mas do ponto de
+vista substantivo é moderada: os dois ministérios têm estruturas de cargos de confiança comparáveis,
+com o MinC ligeiramente mais concentrado no topo da hierarquia (DAS 5-6). Não é uma clivagem
+Avormática-da dosenho institucional e sima ma difarones. de senti
+
+===== page_011_bot.png =====
+O
+
+===== page_011_mid.png =====
+|
+
+===== page_011_top.png =====
+|
+
+===== page_012_bot.png =====
+REA E A E: AE E ELAS SR AN OR
+de experiência administrativa (unidade = nomeação), usando o erro-padrão não combinado.
+pla <- ka/na.; p2a <- kb/nb
+dif adm <- pla - p2a
+se dif adn <- sqrt(plas(1-pia)/na. + p2a*(1-p2a)/nb)
+ic dif <- c(dif adm - 1.96+se dif adm, dif adm + 1.96+se dif adm)
+c(diferenca pp = 100+dif adm,
+
+ic inf pp = 100+ic dif(1),
+
+ic sup pp = 100+ic dif[2])
+4 diferenca pp  icinf pp ic suppp
+“ 3,8491 -0,2439 7,9422
+& checagem: prop.test devolve o mesmo IC (não combinado) para a diferença
+prop-test(c(ka, kb), c(na., nb), correct = FALSE)$conf. int
+4% [1) -0,002438  0,079421
+4% attr(, "conf level")
+*s (1) 0,95
+
+2
+
+===== page_012_mid.png =====
+limiar. Ou seja, parte da “quase significância” da Seção 4 vinha de contar pessoas mais de uma
+vez, o que infla artificialmente o n e viola a hipótese de independência das observações.
+2. Qual unidade é mais adequada? Depende da pergunta. Se ela é sobre quem é recrutado
+o perfil das pessoas que o Executivo nomeia —, a unidade correta é o indivíduo, porque
+tratar cada nomeação como independente superdimensiona quem acumula vários cargos e
+subestima os erros-padrão. Se a pergunta é sobre como os cargos são preenchidos (fluxo de
+provimento, rotatividade, alocação de postos), então a nomeação é a unidade natural. Para a
+afirmação “pessoas com experiência administrativa têm mais chance de serem nomeadas”, a
+unidade indivíduo é a mais defensável.
+10 GRADUAÇÃO - P2. Intervalo de confiança para a diferença
+de proporções
+Em vez de dois ICs separados, calculo um IC de 95% para a diferença pyaPa — psiuc na variável
+de experiência administrativa (unidade = nomeação), usando o erro-padrão não combinado.
+pla <- ka/na ; p2a <- kb/nb
+dif adm <- pla - p2a
+se dif adm <- sqrt(pias(1-pia)/na. + p2as(1-p2a)/nb)
+ic dif <- c(dif adm - 1.96+se dif adm, dif adm + 1.96+se dif adm)
+cldiferenca pp = 100*dif adm,
+ic inf pp = 100sic dif[1],
+ic sup pp = 100+ic, dif(2))
+
+===== page_012_top.png =====
+“E -0,01075 0,10418
+4% sample estimates:
+*% prop 1 prop 2
+*% 0,8882 0,8415
+Tabela 5: Teste de experiência administrativa: nomeação vs.
+indivíduo como unidade de análise.
+Unidade PMAPA pMinC P-valor Decisão 5%
+Nomeação (Seção 4) 920% 88% 0,057 Não rejeita
+Indivíduo (P1) BSS%  SAIX 0,106 Não rejeita
+1. O resultado muda? A direção se mantém (MAPA acima do MinC) e a decisão a 5%
+também (não se rejeita Ho nos dois casos). Muda a força da evidência: com uma linha por
+indivíduo o n cai (para 568 pessoas) e o p-valor sobe para 0,106, ficando ainda mais longe do
+limiar. Ou seja, parte da “quase significância” da Seção 4 vinha de contar pessoas mais de uma
+vez, o que infla artificialmente o n c viola a hipótese de independência das observações.
+2. Qual unidade é mais adequada? Depende da pergunta. Se ela é sobre quem é recrutado
+o perfil das pessoas que o Executivo nomeia —, a unidade correta é o indivíduo. noraue
+
+===== page_013_bot.png =====
+
+
+===== page_013_mid.png =====
+Depp cada iai AM od o oie ed pn De]
+significância e de tamanho de amostra evidencia que significância estatística e relevância
+substantiva são coisas distintas; e (iv) passar de nomeação para indivíduo como unidade de
+análise não inverte as conclusões, mas corrige a inflação de n e é a escolha mais adequada quando a
+pergunta é sobre o perfil de quem é nomeado.
+
+===== page_013_top.png =====
+Interpretação. A diferença estimada é de 3,8 pontos percentuais (MAPA acima do MinC), com
+IC de 95% de [-0,2; 7,9] pontos percentuais. O intervalo inclui o zero, o que é totalmente
+coerente com a Seção 4: não rejeitar Ho a 5% e ter um IC da diferença que contém zero são as duas
+faces da mesma conclusão. O que o IC acrescenta é a magnitude plausível do efeito: os dados
+são compatíveis desde uma diferença praticamente nula (ou levemente favorável ao MinC) até uma
+vantagem de cerca de 8 pontos para o MAPA. A imprecisão vem sobretudo do MinC, com menos
+observações válidas.
+
+11 Síntese
+
+Comparando MAPA e MinC no provimento de cargos de confiança (2011-2021): (i) ambas as
+pastas recrutam majoritariamente quadros com experiência administrativa prévia, e a diferença
+entre elas nessa dimensão é sugestiva mas estatisticamente inconclusiva a 5% (p = 0,057):
+(ii) há diferença detectável na proporção de cargos de alto nível, com o MinC ligeiramente mais
+concentrado no topo (p = 0,039), embora de magnitude moderada; (iii) o exercício de níveis de
+significância e de tamanho de amostra evidencia que significância estatística e relevância
+substantiva são coisas distintas; e (iv) passar de nomeação para indivíduo como unidade de
+análise não inverte as conclusões, mas corrige a inflação de n e é a escolha mais adequada quando a
+oomeento Amora o masfil do omnes A mosmando:
